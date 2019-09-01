@@ -3,36 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace WarhammerArmyAssembler.Units
 {
-    class Unit : IUnit
+    public class Unit : IUnit
     {
-        public string Name { get; }
+        public string Name { get; set; }
 
-        public int Movement { get; }
-        public int WeaponSkill { get; }
-        public int BallisticSkill { get; }
-        public int Strength { get; }
-        public int Toughness { get; }
-        public int Wounds { get; }
-        public int Initiative { get; }
-        public int Attacks { get; }
-        public int Leadership { get; }
-        public int Armour { get; }
-        public int Ward { get; }
+        public int Movement { get; set; }
+        public int WeaponSkill { get; set; }
+        public int BallisticSkill { get; set; }
+        public int Strength { get; set; }
+        public int Toughness { get; set; }
+        public int Wounds { get; set; }
+        public int Initiative { get; set; }
+        public int Attacks { get; set; }
+        public int Leadership { get; set; }
+        public int Armour { get; set; }
+        public int Ward { get; set; }
 
-        public bool HitFirst { get; }
-        public bool ImmuneToPsychology { get; }
-        public bool Stubborn { get; }
-        public bool KillingBlow { get; }
-        public bool Hate { get; }
-        public bool Regeneration { get; }
-        public bool Fear { get; }
-        public bool Terror { get; }
-        public bool Frenzy { get; }
-        public bool PoisonAttack { get; }
-        public bool Unbreakable { get; }
-        public bool ColdBlooded { get; }
+        public bool HitFirst { get; set; }
+        public bool ImmuneToPsychology { get; set; }
+        public bool Stubborn { get; set; }
+        public bool KillingBlow { get; set; }
+        public bool Hate { get; set; }
+        public bool Regeneration { get; set; }
+        public bool Fear { get; set; }
+        public bool Terror { get; set; }
+        public bool Frenzy { get; set; }
+        public bool PoisonAttack { get; set; }
+        public bool Unbreakable { get; set; }
+        public bool ColdBlooded { get; set; }
     }
 }
