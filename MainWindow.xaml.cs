@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WarhammerArmyAssembler.ArmyBook;
 
 namespace WarhammerArmyAssembler
 {
@@ -20,6 +21,8 @@ namespace WarhammerArmyAssembler
         public MainWindow()
         {
             InitializeComponent();
+
+            LoadArmyFromXml.LoadArmy("Orcs&Goblins.xml");
         }
     }
 }

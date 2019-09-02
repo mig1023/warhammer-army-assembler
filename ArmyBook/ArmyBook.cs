@@ -9,6 +9,6 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     public class ArmyBook
     {
-        public static Dictionary<string, IUnit> Units = new Dictionary<string, IUnit>();
+        public static Dictionary<string, Unit> Units = new Dictionary<string, Unit>();
     }
 }

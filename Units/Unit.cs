@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace WarhammerArmyAssembler.Units
 {
-    public class Unit : IUnit
+    public class Unit
     {
         public string Name { get; set; }
 
