@@ -28,34 +28,71 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             Unit newUnit = new Unit();
 
-            newUnit.Type = TypeParse(xmlUnit["Name"].InnerText);
+            newUnit.Type = TypeParse(xmlUnit["Name"]);
             newUnit.Name = xmlUnit["Type"].InnerText;
 
-            newUnit.Movement = IntParse(xmlUnit["M"].InnerText);
-            newUnit.WeaponSkill = IntParse(xmlUnit["WS"].InnerText);
-            newUnit.BallisticSkill = IntParse(xmlUnit["BS"].InnerText);
-            newUnit.Strength = IntParse(xmlUnit["S"].InnerText);
-            newUnit.Toughness = IntParse(xmlUnit["T"].InnerText);
-            newUnit.Wounds = IntParse(xmlUnit["W"].InnerText);
-            newUnit.Initiative = IntParse(xmlUnit["I"].InnerText);
-            newUnit.Attacks = IntParse(xmlUnit["A"].InnerText);
-            newUnit.Leadership = IntParse(xmlUnit["LD"].InnerText);
+            XmlNode mainParam = xmlUnit["MainParam"];
+
+            newUnit.Movement = IntParse(mainParam["M"]);
+            newUnit.WeaponSkill = IntParse(mainParam["WS"]);
+            newUnit.BallisticSkill = IntParse(mainParam["BS"]);
+            newUnit.Strength = IntParse(mainParam["S"]);
+            newUnit.Toughness = IntParse(mainParam["T"]);
+            newUnit.Wounds = IntParse(mainParam["W"]);
+            newUnit.Initiative = IntParse(mainParam["I"]);
+            newUnit.Attacks = IntParse(mainParam["A"]);
+            newUnit.Leadership = IntParse(mainParam["LD"]);
+
+            XmlNode psychology = xmlUnit["Psychology"];
+
+            newUnit.ImmuneToPsychology = BoolParse(mainParam["ImmuneToPsychology"]);
+            newUnit.Stubborn = BoolParse(mainParam["Stubborn"]);
+            newUnit.Hate = BoolParse(mainParam["Hate"]);
+            newUnit.Fear = BoolParse(mainParam["Fear"]);
+            newUnit.Terror = BoolParse(mainParam["Terror"]);
+            newUnit.Frenzy = BoolParse(mainParam["Frenzy"]);
+            newUnit.Unbreakable = BoolParse(mainParam["Unbreakable"]);
+            newUnit.ColdBlooded = BoolParse(mainParam["ColdBlooded"]);
+
+            XmlNode additionalParam = xmlUnit["AdditionalParam"];
 
             return newUnit;
         }
 
-        private static int IntParse(string xmlText)
+        private static int IntParse(XmlNode xmlNode)
         {
-            return Int32.Parse(xmlText);
+            if (xmlNode == null)
+                return 0;
+
+            int value = 0;
+
+            bool success = Int32.TryParse(xmlNode.InnerText, out value);
+
+            return (success ? value : 0);
         }
 
-        private static UnitType TypeParse(string xmlText)
+        private static UnitType TypeParse(XmlNode xmlNode)
         {
-            UnitType Type;
+            if (xmlNode == null)
+                return 0;
 
-            Enum.TryParse(xmlText, out Type);
+            UnitType value;
 
-            return Type;
+            bool success = Enum.TryParse(xmlNode.InnerText, out value);
+
+            return (success ? value : UnitType.Core);
+        }
+
+        private static bool BoolParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return false;
+
+            bool value;
+
+            bool success = bool.TryParse(xmlNode.InnerText, out value);
+
+            return (success ? value : false);
         }
 
         public static List<string> GetAllXmlArmyBooks()
