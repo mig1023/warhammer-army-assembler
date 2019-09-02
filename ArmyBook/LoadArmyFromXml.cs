@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using WarhammerArmyAssembler.Units;
+using static WarhammerArmyAssembler.Units.Unit;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
@@ -23,30 +24,38 @@ namespace WarhammerArmyAssembler.ArmyBook
                 ArmyBook.Units.Add(xmlUnit["ID"].InnerText, LoadUnit(xmlUnit));
         }
 
-        public static IUnit LoadUnit(XmlNode xmlUnit)
+        public static Unit LoadUnit(XmlNode xmlUnit)
         {
-            Unit newUnit;
+            Unit newUnit = new Unit();
 
-            if (xmlUnit["Type"].InnerText == "Rare")
-                newUnit = new Rare();
-            else if (xmlUnit["Type"].InnerText == "Special")
-                newUnit = new Special();
-            else
-                newUnit = new Core();
+            newUnit.Type = TypeParse(xmlUnit["Name"].InnerText);
+            newUnit.Name = xmlUnit["Type"].InnerText;
 
-            newUnit.Name = xmlUnit["Name"].InnerText;
-
-            newUnit.Movement = Int32.Parse(xmlUnit["M"].InnerText);
-            newUnit.WeaponSkill = Int32.Parse(xmlUnit["WS"].InnerText);
-            newUnit.BallisticSkill = Int32.Parse(xmlUnit["BS"].InnerText);
-            newUnit.Strength = Int32.Parse(xmlUnit["S"].InnerText);
-            newUnit.Toughness = Int32.Parse(xmlUnit["T"].InnerText);
-            newUnit.Wounds = Int32.Parse(xmlUnit["W"].InnerText);
-            newUnit.Initiative = Int32.Parse(xmlUnit["I"].InnerText);
-            newUnit.Attacks = Int32.Parse(xmlUnit["A"].InnerText);
-            newUnit.Leadership = Int32.Parse(xmlUnit["LD"].InnerText);
+            newUnit.Movement = IntParse(xmlUnit["M"].InnerText);
+            newUnit.WeaponSkill = IntParse(xmlUnit["WS"].InnerText);
+            newUnit.BallisticSkill = IntParse(xmlUnit["BS"].InnerText);
+            newUnit.Strength = IntParse(xmlUnit["S"].InnerText);
+            newUnit.Toughness = IntParse(xmlUnit["T"].InnerText);
+            newUnit.Wounds = IntParse(xmlUnit["W"].InnerText);
+            newUnit.Initiative = IntParse(xmlUnit["I"].InnerText);
+            newUnit.Attacks = IntParse(xmlUnit["A"].InnerText);
+            newUnit.Leadership = IntParse(xmlUnit["LD"].InnerText);
 
             return newUnit;
+        }
+
+        private static int IntParse(string xmlText)
+        {
+            return Int32.Parse(xmlText);
+        }
+
+        private static UnitType TypeParse(string xmlText)
+        {
+            UnitType Type;
+
+            Enum.TryParse(xmlText, out Type);
+
+            return Type;
         }
 
         public static List<string> GetAllXmlArmyBooks()
