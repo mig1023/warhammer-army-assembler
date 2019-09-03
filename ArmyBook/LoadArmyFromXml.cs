@@ -21,27 +21,37 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlFile.Load(xmlFileName);
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
-                ArmyBook.Units.Add(xmlUnit["ID"].InnerText, LoadUnit(xmlUnit));
+                ArmyBook.Units.Add(GetUnitID(xmlUnit), LoadUnit(xmlUnit));
+        }
+
+        public static string GetUnitID(XmlNode xmlUnit)
+        {
+            XmlNode genaralParam = xmlUnit["General"];
+
+            return genaralParam["ID"].InnerText;
         }
 
         public static Unit LoadUnit(XmlNode xmlUnit)
         {
             Unit newUnit = new Unit();
 
-            newUnit.Type = TypeParse(xmlUnit["Name"]);
-            newUnit.Name = xmlUnit["Type"].InnerText;
+            XmlNode generalParam = xmlUnit["General"];
+
+            newUnit.Type = TypeParse(generalParam["Name"]);
+            newUnit.Name = generalParam["Type"].InnerText;
+            newUnit.Price = IntParse(generalParam["Price"]);
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
-            newUnit.Movement = IntParse(mainParam["M"]);
-            newUnit.WeaponSkill = IntParse(mainParam["WS"]);
-            newUnit.BallisticSkill = IntParse(mainParam["BS"]);
-            newUnit.Strength = IntParse(mainParam["S"]);
-            newUnit.Toughness = IntParse(mainParam["T"]);
-            newUnit.Wounds = IntParse(mainParam["W"]);
-            newUnit.Initiative = IntParse(mainParam["I"]);
-            newUnit.Attacks = IntParse(mainParam["A"]);
-            newUnit.Leadership = IntParse(mainParam["LD"]);
+            newUnit.Movement = IntParse(mainParam["Movement"]);
+            newUnit.WeaponSkill = IntParse(mainParam["WeaponSkill"]);
+            newUnit.BallisticSkill = IntParse(mainParam["BallisticSkill"]);
+            newUnit.Strength = IntParse(mainParam["Strength"]);
+            newUnit.Toughness = IntParse(mainParam["Toughness"]);
+            newUnit.Wounds = IntParse(mainParam["Wounds"]);
+            newUnit.Initiative = IntParse(mainParam["Initiative"]);
+            newUnit.Attacks = IntParse(mainParam["Attacks"]);
+            newUnit.Leadership = IntParse(mainParam["Leadership"]);
 
             XmlNode psychology = xmlUnit["Psychology"];
 
@@ -55,6 +65,11 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.ColdBlooded = BoolParse(mainParam["ColdBlooded"]);
 
             XmlNode additionalParam = xmlUnit["AdditionalParam"];
+
+            newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
+            newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
+            newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
+            newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
 
             return newUnit;
         }

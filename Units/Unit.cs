@@ -22,6 +22,8 @@ namespace WarhammerArmyAssembler.Units
 
         public UnitType Type { get; set; }
 
+        public int Price { get; set; }
+
         public int Movement { get; set; }
         public int WeaponSkill { get; set; }
         public int BallisticSkill { get; set; }
