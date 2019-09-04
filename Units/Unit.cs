@@ -49,7 +49,7 @@ namespace WarhammerArmyAssembler.Units
         public bool Regeneration { get; set; }
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
-        
 
+        public List<Ammunition> Weapons = new List<Ammunition>();
     }
 }

@@ -71,6 +71,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
             newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
 
+            foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Ammunition/*"))
+                newUnit.Weapons.Add(LoadWeapon(xmlAmmunition));
+
             return newUnit;
         }
 
@@ -126,6 +129,15 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             return allXmlArmyBooks;
+        }
+
+        public static Ammunition LoadWeapon(XmlNode xmlNode)
+        {
+            Ammunition newWeapon = new Ammunition();
+
+            newWeapon.Name = xmlNode["Name"].InnerText;
+
+            return newWeapon;
         }
 
         public static List<string> FindAllXmlFiles(string programDirectory)
