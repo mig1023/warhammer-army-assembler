@@ -137,6 +137,20 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newWeapon.Name = xmlNode["Name"].InnerText;
 
+            newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
+            newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
+            newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
+
+            newWeapon.AddToMovement = IntParse(xmlNode["AddToMovement"]);
+            newWeapon.AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]);
+            newWeapon.AddToBallisticSkill = IntParse(xmlNode["AddToBallisticSkill"]);
+            newWeapon.AddToStrength = IntParse(xmlNode["AddToStrength"]);
+            newWeapon.AddToToughness = IntParse(xmlNode["AddToToughness"]);
+            newWeapon.AddToWounds = IntParse(xmlNode["AddToWounds"]);
+            newWeapon.AddToInitiative = IntParse(xmlNode["AddToInitiative"]);
+            newWeapon.AddToAttacks = IntParse(xmlNode["AddToAttacks"]);
+            newWeapon.AddToLeadership = IntParse(xmlNode["AddToLeadership"]);
+
             return newWeapon;
         }
 
