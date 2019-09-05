@@ -28,5 +28,19 @@ namespace WarhammerArmyAssembler
 
             Interface.Interface.LoadArmyList();
         }
+
+        private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock t = sender as TextBlock;
+            DragDrop.DoDragDrop(t, t.Text, DragDropEffects.Copy);
+        }
+
+        private void ArmyGrid_Drop(object sender, DragEventArgs e)
+        {
+            string name = (string)e.Data.GetData(DataFormats.Text);
+
+            DataGrid l = sender as DataGrid;
+            l.Items.Add(new ArmyListViewItem { Name = name, Points = "XX" });
+        }
     }
 }
