@@ -37,9 +37,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             XmlNode generalParam = xmlUnit["General"];
 
-            newUnit.Type = TypeParse(generalParam["Name"]);
-            newUnit.Name = generalParam["Type"].InnerText;
-            newUnit.Price = IntParse(generalParam["Price"]);
+            newUnit.Name = generalParam["Name"].InnerText;
+            newUnit.Type = TypeParse(generalParam["Type"]);
+            newUnit.Points = IntParse(generalParam["Points"]);
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
