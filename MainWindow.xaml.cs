@@ -21,6 +21,12 @@ namespace WarhammerArmyAssembler
         public MainWindow()
         {
             InitializeComponent();
+
+            LoadArmyFromXml.LoadArmy("Orcs&Goblins.xml");
+
+            Interface.Interface.main = this;
+
+            Interface.Interface.LoadArmyList();
         }
     }
 }

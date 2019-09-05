@@ -5,8 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="721">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate DataType="{x:Type MenuItem}" ItemsSource="{Binding Items}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Title}" />
+                        <TextBlock Text="{Binding Points}" Foreground="Green"/>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+        <GridSplitter  Grid.Row="0" Grid.Column="1" Width="5" ResizeDirection="Columns" 
+                      VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <DataGrid x:Name="StatisticGrid" Grid.Row="0" Grid.Column="2" ColumnWidth="*" GridLinesVisibility="Horizontal" IsReadOnly="True">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridCell" x:Key="grayCell">
+                    <Setter Property="Background" Value="#FFBFBFBF"/>
+                </Style>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding badTime}"/>
+                <DataGridTextColumn Header="" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Отряд" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="M" Binding="{Binding shellsFired}" CellStyle="{StaticResource grayCell}"/>
+                <DataGridTextColumn Header="WS" Binding="{Binding inTarget}"/>
+                <DataGridTextColumn Header="BS" Binding="{Binding inTargetPercent}" CellStyle="{StaticResource grayCell}"/>
+                <DataGridTextColumn Header="S" Binding="{Binding shutdown}"/>
+                <DataGridTextColumn Header="T" Binding="{Binding shutdownPercent}" CellStyle="{StaticResource grayCell}"/>
+                <DataGridTextColumn Header="W" Binding="{Binding damaged}"/>
+                <DataGridTextColumn Header="I" Binding="{Binding damagedPercent}" CellStyle="{StaticResource grayCell}"/>
+                <DataGridTextColumn Header="A" Binding="{Binding hasGone}"/>
+                <DataGridTextColumn Header="LD" Binding="{Binding withoutDamage}" CellStyle="{StaticResource grayCell}"/>
+                <DataGridTextColumn Header="Point" Binding="{Binding amountOfDamage}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
