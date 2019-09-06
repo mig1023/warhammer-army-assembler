@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WarhammerArmyAssembler.ArmyBook;
+using WarhammerArmyAssembler.Units;
 
 namespace WarhammerArmyAssembler
 {
@@ -32,15 +33,29 @@ namespace WarhammerArmyAssembler
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock t = sender as TextBlock;
-            DragDrop.DoDragDrop(t, t.Text, DragDropEffects.Copy);
+            DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
         {
-            string name = (string)e.Data.GetData(DataFormats.Text);
+            string id = (string)e.Data.GetData(DataFormats.Text);
+
+            Unit unit = ArmyBook.ArmyBook.Units[id];
 
             DataGrid l = sender as DataGrid;
-            l.Items.Add(new ArmyListViewItem { Name = name, Points = "XX" });
+            l.Items.Add(new ArmyListViewItem {
+                Name = unit.Name,
+                Movement = unit.Movement,
+                WeaponSkill = unit.WeaponSkill,
+                BallisticSkill = unit.BallisticSkill,
+                Strength = unit.Strength,
+                Toughness = unit.Toughness,
+                Wounds = unit.Wounds,
+                Initiative = unit.Initiative,
+                Attacks = unit.Attacks,
+                Leadership = unit.Leadership,
+                Points = unit.Points,
+            });
         }
     }
 }
