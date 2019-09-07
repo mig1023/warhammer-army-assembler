@@ -54,7 +54,8 @@ namespace WarhammerArmyAssembler
                 Initiative = unit.Initiative,
                 Attacks = unit.Attacks,
                 Leadership = unit.Leadership,
-                Points = unit.Points,
+                Points = (unit.Points * unit.Size),
+                Size = unit.Size,
             });
         }
     }

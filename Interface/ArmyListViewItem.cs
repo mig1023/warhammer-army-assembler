@@ -12,6 +12,8 @@ namespace WarhammerArmyAssembler
 
         public int Points { get; set; }
 
+        public int Size { get; set; }
+
         public int Movement { get; set; }
         public int WeaponSkill { get; set; }
         public int BallisticSkill { get; set; }

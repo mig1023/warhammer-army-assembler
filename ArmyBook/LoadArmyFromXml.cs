@@ -40,6 +40,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.Name = generalParam["Name"].InnerText;
             newUnit.Type = TypeParse(generalParam["Type"]);
             newUnit.Points = IntParse(generalParam["Points"]);
+            newUnit.Size = IntParse(generalParam["MinSize"]);
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
