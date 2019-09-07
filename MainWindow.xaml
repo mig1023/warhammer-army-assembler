@@ -46,8 +46,8 @@
                 <DataGridTextColumn Header="I" Binding="{Binding Initiative}" Width="40"/>
                 <DataGridTextColumn Header="A" Binding="{Binding Attacks}" Width="40"/>
                 <DataGridTextColumn Header="LD" Binding="{Binding Leadership}" Width="40"/>
-                <DataGridTextColumn Header="Особые правила" Binding="{Binding Points}"/>
                 <DataGridTextColumn Header="Очки" Binding="{Binding Points}" Width="100"/>
+                <DataGridTextColumn Header="Особые правила" Binding="{Binding SpecialRules}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

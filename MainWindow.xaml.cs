@@ -42,6 +42,8 @@ namespace WarhammerArmyAssembler
 
             Unit unit = ArmyBook.ArmyBook.Units[id];
 
+            Army.Army.Units.Add(unit.ID, unit);
+
             DataGrid l = sender as DataGrid;
             l.Items.Add(new ArmyListViewItem {
                 Name = unit.Name,
@@ -54,8 +56,9 @@ namespace WarhammerArmyAssembler
                 Initiative = unit.Initiative,
                 Attacks = unit.Attacks,
                 Leadership = unit.Leadership,
-                Points = (unit.Points * unit.Size),
+                Points = Army.Army.GetUnitPoints(unit.ID),
                 Size = unit.Size,
+                SpecialRules = Army.Army.GetSpecialRules(unit.ID),
             });
         }
     }

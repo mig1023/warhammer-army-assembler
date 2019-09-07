@@ -38,6 +38,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlNode generalParam = xmlUnit["General"];
 
             newUnit.Name = generalParam["Name"].InnerText;
+            newUnit.ID = generalParam["ID"].InnerText;
             newUnit.Type = TypeParse(generalParam["Type"]);
             newUnit.Points = IntParse(generalParam["Points"]);
             newUnit.Size = IntParse(generalParam["MinSize"]);
@@ -107,11 +108,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return false;
 
-            bool value;
-
-            bool success = bool.TryParse(xmlNode.InnerText, out value);
-
-            return (success ? value : false);
+            return (xmlNode.InnerText == "true" ? true : false);
         }
 
         public static List<string> GetAllXmlArmyBooks()

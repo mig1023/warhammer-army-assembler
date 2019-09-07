@@ -25,5 +25,7 @@ namespace WarhammerArmyAssembler
         public int Leadership { get; set; }
 
         public int ID { get; set; }
+
+        public string SpecialRules { get; set; }
     }
 }
