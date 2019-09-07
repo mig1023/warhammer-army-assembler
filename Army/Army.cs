@@ -21,40 +21,43 @@ namespace WarhammerArmyAssembler.Army
             string rules = String.Empty;
 
             if (Units[unitID].ImmuneToPsychology)
-                rules += "иммунен к психологии;";
+                rules += "иммунен к психологии; ";
 
             if (Units[unitID].Stubborn)
-                rules += "упорность;";
+                rules += "упорность; ";
 
             if (Units[unitID].Hate)
-                rules += "ненависть;";
+                rules += "ненависть; ";
 
             if (Units[unitID].Fear)
-                rules += "страх;";
+                rules += "страх; ";
 
             if (Units[unitID].Terror)
-                rules += "ужас;";
+                rules += "ужас; ";
 
             if (Units[unitID].Frenzy)
-                rules += "бешенство;";
+                rules += "бешенство; ";
 
             if (Units[unitID].Unbreakable)
-                rules += "несломимость;";
+                rules += "несломимость; ";
 
             if (Units[unitID].ColdBlooded)
-                rules += "хладнокровие;";
+                rules += "хладнокровие; ";
 
             if (Units[unitID].HitFirst)
-                rules += "всегда бьёт первым;";
+                rules += "всегда бьёт первым; ";
 
             if (Units[unitID].Regeneration)
-                rules += "регенерация;";
+                rules += "регенерация; ";
 
             if (Units[unitID].KillingBlow)
-                rules += "смертельный удар;";
+                rules += "смертельный удар; ";
 
             if (Units[unitID].PoisonAttack)
-                rules += "ядовитые атаки;";
+                rules += "ядовитые атаки; ";
+
+            if (!String.IsNullOrEmpty(rules))
+                rules = rules.Remove(rules.Length - 2);
 
             return rules;
         }

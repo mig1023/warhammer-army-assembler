@@ -38,28 +38,7 @@ namespace WarhammerArmyAssembler
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
         {
-            string id = (string)e.Data.GetData(DataFormats.Text);
-
-            Unit unit = ArmyBook.ArmyBook.Units[id];
-
-            Army.Army.Units.Add(unit.ID, unit);
-
-            DataGrid l = sender as DataGrid;
-            l.Items.Add(new ArmyListViewItem {
-                Name = unit.Name,
-                Movement = unit.Movement,
-                WeaponSkill = unit.WeaponSkill,
-                BallisticSkill = unit.BallisticSkill,
-                Strength = unit.Strength,
-                Toughness = unit.Toughness,
-                Wounds = unit.Wounds,
-                Initiative = unit.Initiative,
-                Attacks = unit.Attacks,
-                Leadership = unit.Leadership,
-                Points = Army.Army.GetUnitPoints(unit.ID),
-                Size = unit.Size,
-                SpecialRules = Army.Army.GetSpecialRules(unit.ID),
-            });
+            Interface.Interface.ArmyGridDrop(sender, e);
         }
     }
 }
