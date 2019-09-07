@@ -57,14 +57,14 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             XmlNode psychology = xmlUnit["Psychology"];
 
-            newUnit.ImmuneToPsychology = BoolParse(mainParam["ImmuneToPsychology"]);
-            newUnit.Stubborn = BoolParse(mainParam["Stubborn"]);
-            newUnit.Hate = BoolParse(mainParam["Hate"]);
-            newUnit.Fear = BoolParse(mainParam["Fear"]);
-            newUnit.Terror = BoolParse(mainParam["Terror"]);
-            newUnit.Frenzy = BoolParse(mainParam["Frenzy"]);
-            newUnit.Unbreakable = BoolParse(mainParam["Unbreakable"]);
-            newUnit.ColdBlooded = BoolParse(mainParam["ColdBlooded"]);
+            newUnit.ImmuneToPsychology = BoolParse(psychology["ImmuneToPsychology"]);
+            newUnit.Stubborn = BoolParse(psychology["Stubborn"]);
+            newUnit.Hate = BoolParse(psychology["Hate"]);
+            newUnit.Fear = BoolParse(psychology["Fear"]);
+            newUnit.Terror = BoolParse(psychology["Terror"]);
+            newUnit.Frenzy = BoolParse(psychology["Frenzy"]);
+            newUnit.Unbreakable = BoolParse(psychology["Unbreakable"]);
+            newUnit.ColdBlooded = BoolParse(psychology["ColdBlooded"]);
 
             XmlNode additionalParam = xmlUnit["AdditionalParam"];
 
