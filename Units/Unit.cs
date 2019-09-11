@@ -19,6 +19,7 @@ namespace WarhammerArmyAssembler.Units
         }
 
         public string Name { get; set; }
+        public string ID { get; set; }
 
         public UnitType Type { get; set; }
 
