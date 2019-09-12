@@ -29,10 +29,13 @@ namespace WarhammerArmyAssembler.Interface
 
             Unit unit = ArmyBook.ArmyBook.Units[id];
 
-            Army.Army.Units.Add(unit.ID, unit);
+            string armyIndex = String.Format("{0}_{1}", unit.ID, Army.Army.GetNextIndex());
+
+            Army.Army.Units.Add(armyIndex, unit);
 
             unit.InterfaceRules = unit.GetSpecialRules();
             unit.InterfacePoints = unit.GetUnitPoints();
+            unit.ID = armyIndex;
 
             DataGrid l = sender as DataGrid;
             l.Items.Add(unit);

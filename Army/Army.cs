@@ -10,5 +10,10 @@ namespace WarhammerArmyAssembler.Army
     class Army
     {
         public static Dictionary<string, Unit> Units = new Dictionary<string, Unit>();
+
+        public static int GetNextIndex()
+        {
+            return Units.Count;
+        }
     }
 }
