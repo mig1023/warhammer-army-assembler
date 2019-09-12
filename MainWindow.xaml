@@ -59,7 +59,7 @@
 
         <Canvas Grid.Row="2" Grid.Column="2">
             <Label x:Name="unitName" Content="X" Height="37" Canvas.Left="22" Canvas.Top="25" Width="192" FontSize="20"/>
-            <TextBox x:Name="unitSize" Height="32" Canvas.Left="130" TextWrapping="Wrap" Text="" Canvas.Top="63" Width="116" TextChanged="unitSize_TextChanged"/>
+            <TextBox x:Name="unitSize" Height="32" Canvas.Left="130" TextWrapping="Wrap" Text="" AllowDrop="False" Canvas.Top="63" Width="116" TextChanged="unitSize_TextChanged"/>
             <Label x:Name="unitSizeLabel" Content="размер отряда" Height="29" Canvas.Left="25" Canvas.Top="66" Width="114"/>
         </Canvas>
 
