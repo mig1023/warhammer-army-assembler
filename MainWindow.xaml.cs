@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,8 @@ namespace WarhammerArmyAssembler
 {
     public partial class MainWindow : Window
     {
+        public static int? CurrentEditedUnit = null;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -39,6 +42,34 @@ namespace WarhammerArmyAssembler
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
         {
             Interface.Interface.ArmyGridDrop(sender, e);
+        }
+
+        private void ArmyGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DataGrid grid = sender as DataGrid;
+
+            if ((grid == null) || (grid.Items.Count <= 0))
+                return;
+
+            Unit unitRow = grid.SelectedItems[0] as Unit;
+
+            if (unitRow == null)
+                return;
+
+            unitName.Content = unitRow.Name;
+            unitSize.Text = unitRow.Size.ToString();
+            CurrentEditedUnit = Int32.Parse(unitRow.ID);
+        }
+
+        private void unitSize_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (CurrentEditedUnit != null)
+            {
+                int currentEditedUnit = CurrentEditedUnit ?? 0;
+
+                Army.Army.Units[currentEditedUnit].Size = Int32.Parse(unitSize.Text);
+                Interface.Interface.ReloadArmyData();
+            }
         }
     }
 }

@@ -31,7 +31,7 @@
 
         <GridSplitter  Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" GridLinesVisibility="None"  IsReadOnly="True" AllowDrop="True" Drop="ArmyGrid_Drop">
+        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" GridLinesVisibility="None"  IsReadOnly="True" AllowDrop="True" Drop="ArmyGrid_Drop" SelectionChanged="ArmyGrid_SelectionChanged">
             <DataGrid.Resources>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="FontSize" Value="12"/>
@@ -57,7 +57,11 @@
 
         <GridSplitter Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-        <Canvas Grid.Row="2" Grid.Column="2"/>
+        <Canvas Grid.Row="2" Grid.Column="2">
+            <Label x:Name="unitName" Content="X" Height="37" Canvas.Left="22" Canvas.Top="25" Width="192" FontSize="20"/>
+            <TextBox x:Name="unitSize" Height="32" Canvas.Left="130" TextWrapping="Wrap" Text="" Canvas.Top="63" Width="116" TextChanged="unitSize_TextChanged"/>
+            <Label x:Name="unitSizeLabel" Content="размер отряда" Height="29" Canvas.Left="25" Canvas.Top="66" Width="114"/>
+        </Canvas>
 
     </Grid>
 </Window>

@@ -29,16 +29,23 @@ namespace WarhammerArmyAssembler.Interface
 
             Unit unit = ArmyBook.ArmyBook.Units[id];
 
-            string armyIndex = String.Format("{0}_{1}", unit.ID, Army.Army.GetNextIndex());
+            Army.Army.Units.Add(Army.Army.GetNextIndex(), unit);
 
-            Army.Army.Units.Add(armyIndex, unit);
+            ReloadArmyData();
+        }
 
-            unit.InterfaceRules = unit.GetSpecialRules();
-            unit.InterfacePoints = unit.GetUnitPoints();
-            unit.ID = armyIndex;
+        public static void ReloadArmyData()
+        {
+            main.ArmyGrid.Items.Clear();
 
-            DataGrid l = sender as DataGrid;
-            l.Items.Add(unit);
+            foreach (KeyValuePair<int, Unit> entry in Army.Army.Units)
+            {
+                entry.Value.InterfaceRules = entry.Value.GetSpecialRules();
+                entry.Value.InterfacePoints = entry.Value.GetUnitPoints();
+                entry.Value.ID = entry.Key.ToString();
+
+                main.ArmyGrid.Items.Add(entry.Value);
+            }
         }
     }
 }

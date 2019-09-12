@@ -9,7 +9,7 @@ namespace WarhammerArmyAssembler.Army
 {
     class Army
     {
-        public static Dictionary<string, Unit> Units = new Dictionary<string, Unit>();
+        public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
 
         public static int GetNextIndex()
         {
