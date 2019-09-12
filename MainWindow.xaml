@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="317.42" Width="992.809">
+        Title="Warhammer Army Assembler (WAAgh)" Height="317.42" Width="992.809">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"></ColumnDefinition>
@@ -16,7 +18,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate DataType="{x:Type MenuItem}" ItemsSource="{Binding Items}">
                     <StackPanel Orientation="Horizontal">
@@ -26,8 +28,10 @@
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>
-        <GridSplitter  Grid.Row="0" Grid.Column="1" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="2" ColumnWidth="*" GridLinesVisibility="None"  IsReadOnly="True" AllowDrop="True" Drop="ArmyGrid_Drop">
+
+        <GridSplitter  Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" GridLinesVisibility="None"  IsReadOnly="True" AllowDrop="True" Drop="ArmyGrid_Drop">
             <DataGrid.Resources>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="FontSize" Value="12"/>
@@ -50,5 +54,10 @@
                 <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <GridSplitter Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+        <Canvas Grid.Row="2" Grid.Column="2"/>
+
     </Grid>
 </Window>
