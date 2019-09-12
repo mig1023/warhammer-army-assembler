@@ -54,5 +54,60 @@ namespace WarhammerArmyAssembler.Units
         public bool PoisonAttack { get; set; }
 
         public List<Ammunition> Weapons = new List<Ammunition>();
+
+        public string InterfaceRules { get; set; }
+
+        public int InterfacePoints { get; set; }
+
+        public int GetUnitPoints()
+        {
+            return Size * Points;
+        }
+
+        public string GetSpecialRules()
+        {
+            string rules = String.Empty;
+
+            if (ImmuneToPsychology)
+                rules += "иммунен к психологии; ";
+
+            if (Stubborn)
+                rules += "упорность; ";
+
+            if (Hate)
+                rules += "ненависть; ";
+
+            if (Fear)
+                rules += "страх; ";
+
+            if (Terror)
+                rules += "ужас; ";
+
+            if (Frenzy)
+                rules += "бешенство; ";
+
+            if (Unbreakable)
+                rules += "несломимость; ";
+
+            if (ColdBlooded)
+                rules += "хладнокровие; ";
+
+            if (HitFirst)
+                rules += "всегда бьёт первым; ";
+
+            if (Regeneration)
+                rules += "регенерация; ";
+
+            if (KillingBlow)
+                rules += "смертельный удар; ";
+
+            if (PoisonAttack)
+                rules += "ядовитые атаки; ";
+
+            if (!String.IsNullOrEmpty(rules))
+                rules = rules.Remove(rules.Length - 2);
+
+            return rules;
+        }
     }
 }
