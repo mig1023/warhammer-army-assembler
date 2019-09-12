@@ -64,6 +64,46 @@ namespace WarhammerArmyAssembler.Units
             return Size * Points;
         }
 
+        public Unit Clone()
+        {
+            Unit newUnit = new Unit();
+
+            newUnit.Name = this.Name;
+            newUnit.ID = this.ID;
+            newUnit.Type = this.Type;
+            newUnit.Size = this.Size;
+            newUnit.Points = this.Points;
+            newUnit.Movement = this.Movement;
+            newUnit.WeaponSkill = this.WeaponSkill;
+            newUnit.BallisticSkill = this.BallisticSkill;
+            newUnit.Strength = this.Strength;
+            newUnit.Toughness = this.Toughness;
+            newUnit.Wounds = this.Wounds;
+            newUnit.Initiative = this.Initiative;
+            newUnit.Attacks = this.Attacks;
+            newUnit.Leadership = this.Leadership;
+            newUnit.Armour = this.Armour;
+            newUnit.Ward = this.Ward;
+            newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
+            newUnit.Stubborn = this.Stubborn;
+            newUnit.Hate = this.Hate;
+            newUnit.Fear = this.Fear;
+            newUnit.Terror = this.Terror;
+            newUnit.Frenzy = this.Frenzy;
+            newUnit.Unbreakable = this.Unbreakable;
+            newUnit.ColdBlooded = this.ColdBlooded;
+            newUnit.HitFirst = this.HitFirst;
+            newUnit.Regeneration = this.Regeneration;
+            newUnit.KillingBlow = this.KillingBlow;
+            newUnit.PoisonAttack = this.PoisonAttack;
+
+            List <Ammunition> Weapons = new List<Ammunition>();
+            foreach (Ammunition ammunition in this.Weapons)
+                newUnit.Weapons.Add(ammunition);
+
+            return newUnit;
+        }
+
         public string GetSpecialRules()
         {
             string rules = String.Empty;

@@ -27,11 +27,20 @@ namespace WarhammerArmyAssembler.Interface
         {
             string id = (string)e.Data.GetData(DataFormats.Text);
 
-            Unit unit = ArmyBook.ArmyBook.Units[id];
+            Unit unit = ArmyBook.ArmyBook.Units[id].Clone();
 
             Army.Army.Units.Add(Army.Army.GetNextIndex(), unit);
 
             ReloadArmyData();
+        }
+
+        public static int IntParse(string line)
+        {
+            int value = 0;
+
+            bool success = Int32.TryParse(line, out value);
+
+            return (success ? value : 0);
         }
 
         public static void ReloadArmyData()

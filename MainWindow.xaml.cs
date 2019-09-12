@@ -56,9 +56,10 @@ namespace WarhammerArmyAssembler
             if (unitRow == null)
                 return;
 
+            CurrentEditedUnit = Interface.Interface.IntParse(unitRow.ID);
+
             unitName.Content = unitRow.Name;
             unitSize.Text = unitRow.Size.ToString();
-            CurrentEditedUnit = Int32.Parse(unitRow.ID);
         }
 
         private void unitSize_TextChanged(object sender, TextChangedEventArgs e)
@@ -67,7 +68,7 @@ namespace WarhammerArmyAssembler
             {
                 int currentEditedUnit = CurrentEditedUnit ?? 0;
 
-                Army.Army.Units[currentEditedUnit].Size = Int32.Parse(unitSize.Text);
+                Army.Army.Units[currentEditedUnit].Size = Interface.Interface.IntParse(unitSize.Text);
                 Interface.Interface.ReloadArmyData();
             }
         }
