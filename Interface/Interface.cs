@@ -23,13 +23,9 @@ namespace WarhammerArmyAssembler.Interface
             main.ArmyList.Items.Add(UnitType);
         }
 
-        public static void ArmyGridDrop(object sender, DragEventArgs e)
+        public static void ArmyGridDrop(string id)
         {
-            string id = (string)e.Data.GetData(DataFormats.Text);
-
-            Unit unit = ArmyBook.ArmyBook.Units[id].Clone();
-
-            Army.Army.Units.Add(Army.Army.GetNextIndex(), unit);
+            Army.Army.AddUnitByID(id);
 
             ReloadArmyData();
         }

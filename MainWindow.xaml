@@ -22,7 +22,7 @@
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate DataType="{x:Type MenuItem}" ItemsSource="{Binding Items}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Title}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown" />
+                        <TextBlock Text="{Binding Title}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown"/>
                         <TextBlock Text="{Binding Points}"  Foreground="Green"/>
                     </StackPanel>
                 </HierarchicalDataTemplate>

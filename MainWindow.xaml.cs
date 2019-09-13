@@ -36,12 +36,24 @@ namespace WarhammerArmyAssembler
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock t = sender as TextBlock;
+
+            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
+            {
+                FrameworkElement f = sender as FrameworkElement;
+
+                string id = f.Tag as string;
+
+                Interface.Interface.ArmyGridDrop(id);
+            }
+
             DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
         {
-            Interface.Interface.ArmyGridDrop(sender, e);
+            string id = (string)e.Data.GetData(DataFormats.Text);
+
+            Interface.Interface.ArmyGridDrop(id);
         }
 
         private void ArmyGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

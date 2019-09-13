@@ -15,5 +15,12 @@ namespace WarhammerArmyAssembler.Army
         {
             return Units.Count;
         }
+
+        public static void AddUnitByID(string id)
+        {
+            Unit unit = ArmyBook.ArmyBook.Units[id].Clone();
+
+            Units.Add(GetNextIndex(), unit);
+        }
     }
 }
