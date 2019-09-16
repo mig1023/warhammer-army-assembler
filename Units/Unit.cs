@@ -81,7 +81,7 @@ namespace WarhammerArmyAssembler.Units
         {
             Unit newUnit = new Unit();
 
-            Brush originalColor = Brushes.White;
+            Brush originalColor = null;
 
             newUnit.Name = this.Name;
             newUnit.ID = this.ID;
