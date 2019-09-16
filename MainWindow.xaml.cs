@@ -43,10 +43,12 @@ namespace WarhammerArmyAssembler
 
                 string id = f.Tag as string;
 
-                Interface.Interface.ArmyGridDrop(id);
+                if ((t.Tag != null) && !String.IsNullOrEmpty(t.Tag.ToString()))
+                    Interface.Interface.ArmyGridDrop(id);
             }
 
-            DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
+            if ((t.Tag != null) && !String.IsNullOrEmpty(t.Tag.ToString()))
+                DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
