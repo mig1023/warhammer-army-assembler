@@ -45,11 +45,15 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (KeyValuePair<int, Unit> entry in Army.Army.Units)
             {
-                entry.Value.InterfaceRules = entry.Value.GetSpecialRules();
-                entry.Value.InterfacePoints = entry.Value.GetUnitPoints();
-                entry.Value.ID = entry.Key.ToString();
+                Unit unit = entry.Value.Clone();
 
-                main.ArmyGrid.Items.Add(entry.Value);
+                unit.InterfaceRules = unit.GetSpecialRules();
+                unit.InterfacePoints = unit.GetUnitPoints();
+                unit.ID = entry.Key.ToString();
+
+                unit = unit.GetWeaponsRules();
+
+                main.ArmyGrid.Items.Add(unit);
             }
         }
     }
