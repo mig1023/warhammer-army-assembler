@@ -57,11 +57,22 @@
 
         <GridSplitter Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-        <Canvas Grid.Row="2" Grid.Column="2">
-            <Label x:Name="unitName" Content="X" Height="37" Canvas.Left="22" Canvas.Top="25" Width="192" FontSize="20"/>
-            <TextBox x:Name="unitSize" Height="32" Canvas.Left="130" TextWrapping="Wrap" Text="" AllowDrop="False" Canvas.Top="63" Width="116" TextChanged="unitSize_TextChanged"/>
-            <Label x:Name="unitSizeLabel" Content="размер отряда" Height="29" Canvas.Left="25" Canvas.Top="66" Width="114"/>
-        </Canvas>
+        <Grid Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
+            <Label x:Name="unitName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="X" Height="42" Width="Auto" FontSize="24"/>
+            <Label x:Name="unitSizeLabel"  Grid.Row="1" Grid.Column="0" Content="размер отряда" Height="29" Width="Auto"/>
+            <TextBox x:Name="unitSize" Grid.Row="1" Grid.Column="1" Height="32" TextWrapping="Wrap" Text="" FontSize="16" AllowDrop="False" Width="Auto" TextChanged="unitSize_TextChanged"/>
+
+        </Grid>
     </Grid>
 </Window>
