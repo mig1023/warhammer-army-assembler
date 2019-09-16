@@ -81,6 +81,8 @@ namespace WarhammerArmyAssembler.Units
         {
             Unit newUnit = new Unit();
 
+            Brush originalColor = Brushes.White;
+
             newUnit.Name = this.Name;
             newUnit.ID = this.ID;
             newUnit.Type = this.Type;
@@ -99,17 +101,17 @@ namespace WarhammerArmyAssembler.Units
             newUnit.Armour = this.Armour;
             newUnit.Ward = this.Ward;
 
-            newUnit.MovementModificated = Brushes.Gray;
-            newUnit.WeaponSkillModificated = Brushes.Gray;
-            newUnit.BallisticSkillModificated = Brushes.Gray;
-            newUnit.StrengthModificated = Brushes.Gray;
-            newUnit.ToughnessModificated = Brushes.Gray;
-            newUnit.WoundsModificated = Brushes.Gray;
-            newUnit.InitiativeModificated = Brushes.Gray;
-            newUnit.AttacksModificated = Brushes.Gray;
-            newUnit.LeadershipModificated = Brushes.Gray;
-            newUnit.ArmourModificated = Brushes.Gray;
-            newUnit.WardModificated = Brushes.Gray;
+            newUnit.MovementModificated = originalColor;
+            newUnit.WeaponSkillModificated = originalColor;
+            newUnit.BallisticSkillModificated = originalColor;
+            newUnit.StrengthModificated = originalColor;
+            newUnit.ToughnessModificated = originalColor;
+            newUnit.WoundsModificated = originalColor;
+            newUnit.InitiativeModificated = originalColor;
+            newUnit.AttacksModificated = originalColor;
+            newUnit.LeadershipModificated = originalColor;
+            newUnit.ArmourModificated = originalColor;
+            newUnit.WardModificated = originalColor;
 
             newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
             newUnit.Stubborn = this.Stubborn;
@@ -135,72 +137,74 @@ namespace WarhammerArmyAssembler.Units
         {
             Unit unit = this.Clone();
 
+            Brush modificationColor = Brushes.Aquamarine;
+
             foreach (Ammunition ammunition in this.Weapons)
             {
                 if (ammunition.AddToMovement > 0)
                 {
                     unit.Movement += ammunition.AddToMovement;
-                    unit.MovementModificated = Brushes.LimeGreen;
+                    unit.MovementModificated = modificationColor;
                 };
 
                 if (ammunition.AddToWeaponSkill > 0)
                 {
                     unit.WeaponSkill += ammunition.AddToWeaponSkill;
-                    unit.WeaponSkillModificated = Brushes.LimeGreen;
+                    unit.WeaponSkillModificated = modificationColor;
                 };
 
                 if (ammunition.AddToBallisticSkill > 0)
                 {
                     unit.BallisticSkill += ammunition.AddToBallisticSkill;
-                    unit.BallisticSkillModificated = Brushes.LimeGreen;
+                    unit.BallisticSkillModificated = modificationColor;
                 };
 
                 if (ammunition.AddToStrength > 0)
                 {
                     unit.Strength += ammunition.AddToStrength;
-                    unit.StrengthModificated = Brushes.LimeGreen;
+                    unit.StrengthModificated = modificationColor;
                 };
 
                 if (ammunition.AddToToughness > 0)
                 {
                     unit.Toughness += ammunition.AddToToughness;
-                    unit.ToughnessModificated = Brushes.LimeGreen;
+                    unit.ToughnessModificated = modificationColor;
                 };
 
                 if (ammunition.AddToWounds > 0)
                 {
                     unit.Wounds += ammunition.AddToWounds;
-                    unit.WoundsModificated = Brushes.LimeGreen;
+                    unit.WoundsModificated = modificationColor;
                 };
 
                 if (ammunition.AddToInitiative > 0)
                 {
                     unit.Initiative += ammunition.AddToInitiative;
-                    unit.InitiativeModificated = Brushes.LimeGreen;
+                    unit.InitiativeModificated = modificationColor;
                 };
 
                 if (ammunition.AddToAttacks > 0)
                 {
                     unit.Attacks += ammunition.AddToAttacks;
-                    unit.AttacksModificated = Brushes.LimeGreen;
+                    unit.AttacksModificated = modificationColor;
                 };
 
                 if (ammunition.AddToLeadership > 0)
                 {
                     unit.Leadership += ammunition.AddToLeadership;
-                    unit.LeadershipModificated = Brushes.LimeGreen;
+                    unit.LeadershipModificated = modificationColor;
                 };
 
                 if (ammunition.AddToArmour > 0)
                 {
                     unit.Armour += ammunition.AddToArmour;
-                    unit.ArmourModificated = Brushes.LimeGreen;
+                    unit.ArmourModificated = modificationColor;
                 };
 
                 if (ammunition.AddToWard > 0)
                 {
                     unit.Ward += ammunition.AddToWard;
-                    unit.WardModificated = Brushes.LimeGreen;
+                    unit.WardModificated = modificationColor;
                 };
             }
 
