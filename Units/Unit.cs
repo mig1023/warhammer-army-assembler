@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,8 @@ namespace WarhammerArmyAssembler.Units
         public int Size { get; set; }
 
         public int Points { get; set; }
+
+        public string PointsModifecated { get; set; }
 
         public int Movement { get; set; }
         public int WeaponSkill { get; set; }
@@ -67,6 +70,13 @@ namespace WarhammerArmyAssembler.Units
         public bool PoisonAttack { get; set; }
 
         public List<Ammunition> Weapons = new List<Ammunition>();
+
+        public ObservableCollection<Unit> Items { get; set; }
+
+        public Unit()
+        {
+            this.Items = new ObservableCollection<Unit>();
+        }
 
         public string InterfaceRules { get; set; }
 

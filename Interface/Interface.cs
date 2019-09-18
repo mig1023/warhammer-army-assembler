@@ -15,10 +15,14 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void LoadArmyList()
         {
-            MenuItem UnitType = new MenuItem() { Title = "Основные", Points = String.Empty };
+            Unit UnitType = new Unit() { Name = "Основные" };
 
             foreach (KeyValuePair<string, Unit> entry in ArmyBook.ArmyBook.Units)
-                UnitType.Items.Add(new MenuItem() { ID = entry.Key, Title = entry.Value.Name, Points = string.Format(" ({0} pts)", entry.Value.Points) });
+            {
+                Unit unit = entry.Value.Clone();
+                unit.PointsModifecated = String.Format(" {0} pts", unit.Points);
+                UnitType.Items.Add(unit);
+            }
 
             main.ArmyList.Items.Add(UnitType);
         }

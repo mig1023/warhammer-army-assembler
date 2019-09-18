@@ -20,10 +20,10 @@
 
         <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate DataType="{x:Type MenuItem}" ItemsSource="{Binding Items}">
+                <HierarchicalDataTemplate ItemsSource="{Binding Items}">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Title}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown"/>
-                        <TextBlock Text="{Binding Points}"  Foreground="Green"/>
+                        <TextBlock Text="{Binding Name}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown"/>
+                        <TextBlock Text="{Binding PointsModifecated}"  Foreground="Green"/>
                     </StackPanel>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
