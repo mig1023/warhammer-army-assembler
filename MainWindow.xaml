@@ -29,7 +29,7 @@
             </TreeView.ItemTemplate>
         </TreeView>
 
-        <GridSplitter  Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
         <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" GridLinesVisibility="None"  IsReadOnly="True" AllowDrop="True" Drop="ArmyGrid_Drop" SelectionChanged="ArmyGrid_SelectionChanged">
             <DataGrid.Resources>
@@ -41,69 +41,15 @@
                 <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding id}"/>
                 <DataGridTextColumn Header="" Binding="{Binding Size}" Width="60"/>
                 <DataGridTextColumn Header="Отряд" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="M" Binding="{Binding Movement}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding MovementModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkill}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding WeaponSkillModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkill}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding BallisticSkillModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="S" Binding="{Binding Strength}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding StrengthModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="T" Binding="{Binding Toughness}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding ToughnessModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="W" Binding="{Binding Wounds}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding WoundsModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="I" Binding="{Binding Initiative}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding InitiativeModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="A" Binding="{Binding Attacks}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding AttacksModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="LD" Binding="{Binding Leadership}" Width="40">
-                    <DataGridTextColumn.CellStyle>
-                        <Style TargetType="DataGridCell">
-                            <Setter Property="Background" Value="{Binding LeadershipModificated}" />
-                        </Style>
-                    </DataGridTextColumn.CellStyle>
-                </DataGridTextColumn>
+                <DataGridTextColumn Header="M" Binding="{Binding Movement}" Width="40" />
+                <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkill}" Width="40" />
+                <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkill}" Width="40" />
+                <DataGridTextColumn Header="S" Binding="{Binding Strength}" Width="40" />
+                <DataGridTextColumn Header="T" Binding="{Binding Toughness}" Width="40" />
+                <DataGridTextColumn Header="W" Binding="{Binding Wounds}" Width="40" />
+                <DataGridTextColumn Header="I" Binding="{Binding Initiative}" Width="40" />
+                <DataGridTextColumn Header="A" Binding="{Binding Attacks}" Width="40" />
+                <DataGridTextColumn Header="LD" Binding="{Binding Leadership}" Width="40" />
                 <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100"/>
                 <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}"/>
             </DataGrid.Columns>

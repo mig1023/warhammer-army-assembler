@@ -40,18 +40,6 @@ namespace WarhammerArmyAssembler.Units
         public int Armour { get; set; }
         public int Ward { get; set; }
 
-        public Brush MovementModificated { get; set; }
-        public Brush WeaponSkillModificated { get; set; }
-        public Brush BallisticSkillModificated { get; set; }
-        public Brush StrengthModificated { get; set; }
-        public Brush ToughnessModificated { get; set; }
-        public Brush WoundsModificated { get; set; }
-        public Brush InitiativeModificated { get; set; }
-        public Brush AttacksModificated { get; set; }
-        public Brush LeadershipModificated { get; set; }
-        public Brush ArmourModificated { get; set; }
-        public Brush WardModificated { get; set; }
-
         public bool ImmuneToPsychology { get; set; }
         public bool Stubborn { get; set; }
         public bool Hate { get; set; }
@@ -81,8 +69,6 @@ namespace WarhammerArmyAssembler.Units
         {
             Unit newUnit = new Unit();
 
-            Brush originalColor = null;
-
             newUnit.Name = this.Name;
             newUnit.ID = this.ID;
             newUnit.Type = this.Type;
@@ -100,18 +86,6 @@ namespace WarhammerArmyAssembler.Units
             newUnit.Leadership = this.Leadership;
             newUnit.Armour = this.Armour;
             newUnit.Ward = this.Ward;
-
-            newUnit.MovementModificated = originalColor;
-            newUnit.WeaponSkillModificated = originalColor;
-            newUnit.BallisticSkillModificated = originalColor;
-            newUnit.StrengthModificated = originalColor;
-            newUnit.ToughnessModificated = originalColor;
-            newUnit.WoundsModificated = originalColor;
-            newUnit.InitiativeModificated = originalColor;
-            newUnit.AttacksModificated = originalColor;
-            newUnit.LeadershipModificated = originalColor;
-            newUnit.ArmourModificated = originalColor;
-            newUnit.WardModificated = originalColor;
 
             newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
             newUnit.Stubborn = this.Stubborn;
@@ -142,70 +116,37 @@ namespace WarhammerArmyAssembler.Units
             foreach (Ammunition ammunition in this.Weapons)
             {
                 if (ammunition.AddToMovement > 0)
-                {
                     unit.Movement += ammunition.AddToMovement;
-                    unit.MovementModificated = modificationColor;
-                };
 
                 if (ammunition.AddToWeaponSkill > 0)
-                {
                     unit.WeaponSkill += ammunition.AddToWeaponSkill;
-                    unit.WeaponSkillModificated = modificationColor;
-                };
 
                 if (ammunition.AddToBallisticSkill > 0)
-                {
                     unit.BallisticSkill += ammunition.AddToBallisticSkill;
-                    unit.BallisticSkillModificated = modificationColor;
-                };
 
                 if (ammunition.AddToStrength > 0)
-                {
                     unit.Strength += ammunition.AddToStrength;
-                    unit.StrengthModificated = modificationColor;
-                };
 
                 if (ammunition.AddToToughness > 0)
-                {
                     unit.Toughness += ammunition.AddToToughness;
-                    unit.ToughnessModificated = modificationColor;
-                };
 
                 if (ammunition.AddToWounds > 0)
-                {
                     unit.Wounds += ammunition.AddToWounds;
-                    unit.WoundsModificated = modificationColor;
-                };
 
                 if (ammunition.AddToInitiative > 0)
-                {
                     unit.Initiative += ammunition.AddToInitiative;
-                    unit.InitiativeModificated = modificationColor;
-                };
 
                 if (ammunition.AddToAttacks > 0)
-                {
                     unit.Attacks += ammunition.AddToAttacks;
-                    unit.AttacksModificated = modificationColor;
-                };
 
                 if (ammunition.AddToLeadership > 0)
-                {
                     unit.Leadership += ammunition.AddToLeadership;
-                    unit.LeadershipModificated = modificationColor;
-                };
 
                 if (ammunition.AddToArmour > 0)
-                {
                     unit.Armour += ammunition.AddToArmour;
-                    unit.ArmourModificated = modificationColor;
-                };
 
                 if (ammunition.AddToWard > 0)
-                {
                     unit.Ward += ammunition.AddToWard;
-                    unit.WardModificated = modificationColor;
-                };
             }
 
             return unit;
