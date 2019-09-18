@@ -47,11 +47,11 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Unit unit = entry.Value.Clone();
 
+                unit = unit.GetWeaponsRules();
+
                 unit.InterfaceRules = unit.GetSpecialRules();
                 unit.InterfacePoints = unit.GetUnitPoints();
                 unit.ID = entry.Key.ToString();
-
-                unit = unit.GetWeaponsRules();
 
                 main.ArmyGrid.Items.Add(unit);
             }
