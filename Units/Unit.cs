@@ -40,6 +40,18 @@ namespace WarhammerArmyAssembler.Units
         public int Armour { get; set; }
         public int Ward { get; set; }
 
+        public string MovementModifecated { get; set; }
+        public string WeaponSkillModifecated { get; set; }
+        public string BallisticSkillModifecated { get; set; }
+        public string StrengthModifecated { get; set; }
+        public string ToughnessModifecated { get; set; }
+        public string WoundsModifecated { get; set; }
+        public string InitiativeModifecated { get; set; }
+        public string AttacksModifecated { get; set; }
+        public string LeadershipModifecated { get; set; }
+        public string ArmourModifecated { get; set; }
+        public string WardModifecated { get; set; }
+
         public bool ImmuneToPsychology { get; set; }
         public bool Stubborn { get; set; }
         public bool Hate { get; set; }
@@ -116,38 +128,83 @@ namespace WarhammerArmyAssembler.Units
             foreach (Ammunition ammunition in this.Weapons)
             {
                 if (ammunition.AddToMovement > 0)
+                {
                     unit.Movement += ammunition.AddToMovement;
+                    unit.MovementModifecated += '*';
+                }
 
                 if (ammunition.AddToWeaponSkill > 0)
+                {
                     unit.WeaponSkill += ammunition.AddToWeaponSkill;
+                    unit.WeaponSkillModifecated += '*';
+                }
 
                 if (ammunition.AddToBallisticSkill > 0)
+                {
                     unit.BallisticSkill += ammunition.AddToBallisticSkill;
+                    unit.BallisticSkillModifecated += '*';
+                }
 
                 if (ammunition.AddToStrength > 0)
+                {
                     unit.Strength += ammunition.AddToStrength;
-
+                    unit.StrengthModifecated += '*';
+                }
+                    
                 if (ammunition.AddToToughness > 0)
+                {
                     unit.Toughness += ammunition.AddToToughness;
-
+                    unit.ToughnessModifecated += '*';
+                }
+                    
                 if (ammunition.AddToWounds > 0)
+                {
                     unit.Wounds += ammunition.AddToWounds;
+                    unit.WoundsModifecated += '*';
+                }
 
                 if (ammunition.AddToInitiative > 0)
+                {
                     unit.Initiative += ammunition.AddToInitiative;
+                    unit.InitiativeModifecated += '*';
+                }
 
                 if (ammunition.AddToAttacks > 0)
+                {
                     unit.Attacks += ammunition.AddToAttacks;
+                    unit.AttacksModifecated += '*';
+                }
 
                 if (ammunition.AddToLeadership > 0)
+                {
                     unit.Leadership += ammunition.AddToLeadership;
+                    unit.LeadershipModifecated += '*';
+                }
 
                 if (ammunition.AddToArmour > 0)
+                {
                     unit.Armour += ammunition.AddToArmour;
-
+                    unit.ArmourModifecated += '*';
+                }
+                    
                 if (ammunition.AddToWard > 0)
+                {
                     unit.Ward += ammunition.AddToWard;
+                    unit.WardModifecated += '*';
+                }
             }
+
+            unit.MovementModifecated = unit.Movement.ToString() + unit.MovementModifecated;
+            unit.WeaponSkillModifecated = unit.WeaponSkill.ToString() + unit.WeaponSkillModifecated;
+            unit.BallisticSkillModifecated = unit.BallisticSkill.ToString() + unit.BallisticSkillModifecated;
+            unit.StrengthModifecated = unit.Strength.ToString() + unit.StrengthModifecated;
+            unit.ToughnessModifecated = unit.Toughness.ToString() + unit.ToughnessModifecated;
+            unit.WoundsModifecated = unit.Wounds.ToString() + unit.WoundsModifecated;
+            unit.InitiativeModifecated = unit.Initiative.ToString() + unit.InitiativeModifecated;
+            unit.AttacksModifecated = unit.Attacks.ToString() + unit.AttacksModifecated;
+            unit.LeadershipModifecated = unit.Leadership.ToString() + unit.LeadershipModifecated;
+            unit.ArmourModifecated = unit.Armour.ToString() + unit.ArmourModifecated;
+            unit.WardModifecated = unit.Ward.ToString() + unit.WardModifecated;
 
             return unit;
         }

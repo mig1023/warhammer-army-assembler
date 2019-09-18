@@ -41,15 +41,15 @@
                 <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding id}"/>
                 <DataGridTextColumn Header="" Binding="{Binding Size}" Width="60"/>
                 <DataGridTextColumn Header="Отряд" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="M" Binding="{Binding Movement}" Width="40" />
-                <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkill}" Width="40" />
-                <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkill}" Width="40" />
-                <DataGridTextColumn Header="S" Binding="{Binding Strength}" Width="40" />
-                <DataGridTextColumn Header="T" Binding="{Binding Toughness}" Width="40" />
-                <DataGridTextColumn Header="W" Binding="{Binding Wounds}" Width="40" />
-                <DataGridTextColumn Header="I" Binding="{Binding Initiative}" Width="40" />
-                <DataGridTextColumn Header="A" Binding="{Binding Attacks}" Width="40" />
-                <DataGridTextColumn Header="LD" Binding="{Binding Leadership}" Width="40" />
+                <DataGridTextColumn Header="M" Binding="{Binding MovementModifecated}" Width="40" />
+                <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillModifecated}" Width="40" />
+                <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillModifecated}" Width="40" />
+                <DataGridTextColumn Header="S" Binding="{Binding StrengthModifecated}" Width="40" />
+                <DataGridTextColumn Header="T" Binding="{Binding ToughnessModifecated}" Width="40" />
+                <DataGridTextColumn Header="W" Binding="{Binding WoundsModifecated}" Width="40" />
+                <DataGridTextColumn Header="I" Binding="{Binding InitiativeModifecated}" Width="40" />
+                <DataGridTextColumn Header="A" Binding="{Binding AttacksModifecated}" Width="40" />
+                <DataGridTextColumn Header="LD" Binding="{Binding LeadershipModifecated}" Width="40" />
                 <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100"/>
                 <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}"/>
             </DataGrid.Columns>
