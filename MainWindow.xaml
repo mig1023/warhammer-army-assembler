@@ -4,12 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
-        xmlns:staticData="clr-namespace:WarhammerArmyAssembler.Interface"
         mc:Ignorable="d"
         Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="992.809">
-    <Window.Resources>
-        <staticData:SizeList x:Key="SizeList"/>
-    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -35,7 +31,7 @@
 
         <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" GridLinesVisibility="None"  AllowDrop="True" Drop="ArmyGrid_Drop" SelectionChanged="ArmyGrid_SelectionChanged" BeginningEdit="ArmyGrid_BeginningEdit">
+        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" GridLinesVisibility="None"  IsReadOnly="True" AllowDrop="True" Drop="ArmyGrid_Drop" SelectionChanged="ArmyGrid_SelectionChanged">
             <DataGrid.Resources>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="FontSize" Value="12"/>
@@ -43,19 +39,7 @@
             </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding id}"/>
-                <!--<DataGridTextColumn Header="" Binding="{Binding Size}" Width="60"/>-->
-                <DataGridTemplateColumn Header="" Width="60">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Size}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                    <DataGridTemplateColumn.CellEditingTemplate>
-                        <DataTemplate>
-                            <ComboBox Height="22" SelectedItem="{Binding Size}" ItemsSource="{StaticResource SizeList}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellEditingTemplate>
-                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="" Binding="{Binding Size}" Width="60"/>
                 <DataGridTextColumn Header="Отряд" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="M" Binding="{Binding MovementModifecated}" Width="40" />
                 <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillModifecated}" Width="40" />
