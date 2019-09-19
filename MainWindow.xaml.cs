@@ -73,6 +73,7 @@ namespace WarhammerArmyAssembler
             unitName.Content = unitRow.Name;
             unitSize.Text = unitRow.Size.ToString();
             spetialRules.Content = unitRow.GetSpecialRules();
+            spetialAmmunition.Content = unitRow.GetAmmunition();
         }
 
         private void unitSize_TextChanged(object sender, TextChangedEventArgs e)

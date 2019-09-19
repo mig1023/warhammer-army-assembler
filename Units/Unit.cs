@@ -219,6 +219,19 @@ namespace WarhammerArmyAssembler.Units
             return unit;
         }
 
+        public string GetAmmunition()
+        {
+            string allAmmunition = String.Empty;
+
+            foreach (Ammunition ammunition in this.Weapons)
+                allAmmunition += ammunition.Name + "; ";
+
+            if (!String.IsNullOrEmpty(allAmmunition))
+                allAmmunition = allAmmunition.Remove(allAmmunition.Length - 2);
+
+            return allAmmunition;
+        }
+
         public string GetSpecialRules()
         {
             string rules = String.Empty;
