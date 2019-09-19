@@ -37,6 +37,9 @@ namespace WarhammerArmyAssembler
         {
             TextBlock t = sender as TextBlock;
 
+            if (t.Tag == null || String.IsNullOrEmpty(t.Tag.ToString()))
+                return;
+
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
                 FrameworkElement f = sender as FrameworkElement;
@@ -60,7 +63,7 @@ namespace WarhammerArmyAssembler
         {
             DataGrid grid = sender as DataGrid;
 
-            if ((grid == null) || (grid.Items.Count <= 0))
+            if (grid == null || grid.Items.Count <= 0)
                 return;
 
             Unit unitRow = grid.SelectedItems[0] as Unit;
