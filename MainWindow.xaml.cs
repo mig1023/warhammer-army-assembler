@@ -43,12 +43,10 @@ namespace WarhammerArmyAssembler
 
                 string id = f.Tag as string;
 
-                if ((t.Tag != null) && !String.IsNullOrEmpty(t.Tag.ToString()))
-                    Interface.Interface.ArmyGridDrop(id);
+                Interface.Interface.ArmyGridDrop(id);
             }
 
-            if ((t.Tag != null) && !String.IsNullOrEmpty(t.Tag.ToString()))
-                DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
+            DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
@@ -74,6 +72,7 @@ namespace WarhammerArmyAssembler
 
             unitName.Content = unitRow.Name;
             unitSize.Text = unitRow.Size.ToString();
+            spetialRules.Content = unitRow.GetSpecialRules();
         }
 
         private void unitSize_TextChanged(object sender, TextChangedEventArgs e)
