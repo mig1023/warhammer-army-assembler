@@ -23,7 +23,7 @@
                 <HierarchicalDataTemplate ItemsSource="{Binding Items}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Name}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown"/>
-                        <TextBlock Text="{Binding PointsModifecated}"  Foreground="Green"/>
+                        <TextBlock Text="{Binding PointsModifecated}" MouseDown="UnitInArmyList_MouseDown" Foreground="Green"/>
                     </StackPanel>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
@@ -31,7 +31,7 @@
 
         <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" GridLinesVisibility="None"  IsReadOnly="True" AllowDrop="True" Drop="ArmyGrid_Drop" SelectionChanged="ArmyGrid_SelectionChanged">
+        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" GridLinesVisibility="None"  AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" SelectionChanged="ArmyGrid_SelectionChanged">
             <DataGrid.Resources>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="FontSize" Value="12"/>
@@ -39,19 +39,19 @@
             </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding id}"/>
-                <DataGridTextColumn Header="" Binding="{Binding Size}" Width="60"/>
-                <DataGridTextColumn Header="Отряд" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="M" Binding="{Binding MovementModifecated}" Width="40" />
-                <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillModifecated}" Width="40" />
-                <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillModifecated}" Width="40" />
-                <DataGridTextColumn Header="S" Binding="{Binding StrengthModifecated}" Width="40" />
-                <DataGridTextColumn Header="T" Binding="{Binding ToughnessModifecated}" Width="40" />
-                <DataGridTextColumn Header="W" Binding="{Binding WoundsModifecated}" Width="40" />
-                <DataGridTextColumn Header="I" Binding="{Binding InitiativeModifecated}" Width="40" />
-                <DataGridTextColumn Header="A" Binding="{Binding AttacksModifecated}" Width="40" />
-                <DataGridTextColumn Header="LD" Binding="{Binding LeadershipModifecated}" Width="40" />
-                <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100"/>
-                <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}"/>
+                <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="60"/>
+                <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="M" Binding="{Binding MovementModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="S" Binding="{Binding StrengthModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="T" Binding="{Binding ToughnessModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="W" Binding="{Binding WoundsModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="I" Binding="{Binding InitiativeModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="A" Binding="{Binding AttacksModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="LD" Binding="{Binding LeadershipModifecated}" Width="40" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
 
@@ -72,12 +72,12 @@
             </Grid.ColumnDefinitions>
 
             <Label x:Name="unitName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="" Height="42" Width="Auto" FontSize="24"/>
-            <Label x:Name="unitSizeLabel" Grid.Row="1" Grid.Column="0" Content="размер отряда" FontSize="16" Height="30" Width="Auto"/>
+            <Label x:Name="unitSizeLabel" Grid.Row="1" Grid.Column="0" Content="размер отряда" FontSize="16" Height="32" Width="Auto"/>
             <TextBox x:Name="unitSize" Grid.Row="1" Grid.Column="1" Height="32" TextWrapping="Wrap" Text="" FontSize="16" AllowDrop="False" Width="Auto" TextChanged="unitSize_TextChanged"/>
-            <Label x:Name="spetialRulesLabel" Grid.Row="2" Grid.Column="0" Content="специальные правила" FontSize="16" Height="29" Width="Auto"/>
-            <Label x:Name="spetialRules" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Content="" FontSize="16" Height="29" Width="Auto"/>
-            <Label x:Name="spetialAmmunitionLabel" Grid.Row="3" Grid.Column="0" Content="оружие" FontSize="16" Height="29" Width="Auto"/>
-            <Label x:Name="spetialAmmunition" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Content="" FontSize="16" Height="29" Width="Auto" />
+            <Label x:Name="spetialRulesLabel" Grid.Row="2" Grid.Column="0" Content="специальные правила" FontSize="16" Height="32" Width="Auto"/>
+            <Label x:Name="spetialRules" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Content="" FontSize="16" Height="32" Width="Auto"/>
+            <Label x:Name="spetialAmmunitionLabel" Grid.Row="3" Grid.Column="0" Content="оружие" FontSize="16" Height="32" Width="Auto"/>
+            <Label x:Name="spetialAmmunition" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Content="" FontSize="16" Height="32" Width="Auto" />
         </Grid>
 
     </Grid>

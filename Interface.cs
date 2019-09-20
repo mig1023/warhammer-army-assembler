@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace WarhammerArmyAssembler
     class Interface
     {
         public static MainWindow main = null;
+
+        public static ObservableCollection<Unit> ArmyInInterface = new ObservableCollection<Unit>();
 
         public static void LoadArmyList()
         {
@@ -44,7 +47,7 @@ namespace WarhammerArmyAssembler
 
         public static void ReloadArmyData()
         {
-            main.ArmyGrid.Items.Clear();
+            ArmyInInterface.Clear();
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
             {
@@ -56,8 +59,10 @@ namespace WarhammerArmyAssembler
                 unit.InterfacePoints = unit.GetUnitPoints();
                 unit.ID = entry.Key.ToString();
 
-                main.ArmyGrid.Items.Add(unit);
+                ArmyInInterface.Add(unit);
             }
+
+            main.ArmyGrid.ItemsSource = ArmyInInterface;
         }
     }
 }

@@ -61,7 +61,7 @@ namespace WarhammerArmyAssembler
         {
             DataGrid grid = sender as DataGrid;
 
-            if (grid == null || grid.Items.Count <= 0)
+            if (grid == null || grid.Items.Count <= 0 || grid.SelectedItems.Count <= 0)
                 return;
 
             Unit unitRow = grid.SelectedItems[0] as Unit;
