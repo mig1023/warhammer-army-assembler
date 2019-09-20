@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Xml;
 
-namespace WarhammerArmyAssembler.Units
+namespace WarhammerArmyAssembler
 {
     public class Unit
     {

@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using WarhammerArmyAssembler.Units;
 
-namespace WarhammerArmyAssembler.Interface
+namespace WarhammerArmyAssembler
 {
     class Interface
     {
@@ -17,7 +16,7 @@ namespace WarhammerArmyAssembler.Interface
         {
             Unit UnitType = new Unit() { Name = "Основные" };
 
-            foreach (KeyValuePair<string, Unit> entry in ArmyBook.ArmyBook.Units)
+            foreach (KeyValuePair<string, Unit> entry in ArmyBook.Units)
             {
                 Unit unit = entry.Value.Clone();
                 unit.PointsModifecated = String.Format(" {0} pts", unit.Points);
@@ -29,7 +28,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void ArmyGridDrop(string id)
         {
-            Army.Army.AddUnitByID(id);
+            Army.AddUnitByID(id);
 
             ReloadArmyData();
         }
@@ -47,7 +46,7 @@ namespace WarhammerArmyAssembler.Interface
         {
             main.ArmyGrid.Items.Clear();
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
             {
                 Unit unit = entry.Value.Clone();
 

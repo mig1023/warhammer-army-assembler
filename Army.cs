@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WarhammerArmyAssembler.Units;
 
-namespace WarhammerArmyAssembler.Army
+namespace WarhammerArmyAssembler
 {
     class Army
     {
@@ -18,7 +17,7 @@ namespace WarhammerArmyAssembler.Army
 
         public static void AddUnitByID(string id)
         {
-            Unit unit = ArmyBook.ArmyBook.Units[id].Clone();
+            Unit unit = ArmyBook.Units[id].Clone();
 
             Units.Add(GetNextIndex(), unit);
         }

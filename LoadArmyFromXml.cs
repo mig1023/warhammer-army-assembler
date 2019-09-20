@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-using WarhammerArmyAssembler.Units;
-using static WarhammerArmyAssembler.Units.Unit;
 
-namespace WarhammerArmyAssembler.ArmyBook
+using static WarhammerArmyAssembler.Unit;
+
+namespace WarhammerArmyAssembler
 {
     class LoadArmyFromXml
     {
@@ -86,7 +86,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             int value = 0;
 
-            bool success = Int32.TryParse(xmlNode.InnerText, out value);
+            bool success = int.TryParse(xmlNode.InnerText, out value);
 
             return (success ? value : 0);
         }

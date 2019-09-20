@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WarhammerArmyAssembler.Units;
 
-namespace WarhammerArmyAssembler.ArmyBook
+namespace WarhammerArmyAssembler
 {
     public class ArmyBook
     {

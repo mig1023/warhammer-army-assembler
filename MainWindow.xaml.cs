@@ -13,8 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WarhammerArmyAssembler.ArmyBook;
-using WarhammerArmyAssembler.Units;
 
 namespace WarhammerArmyAssembler
 {
@@ -28,9 +26,9 @@ namespace WarhammerArmyAssembler
 
             LoadArmyFromXml.LoadArmy("Orcs&Goblins.xml");
 
-            Interface.Interface.main = this;
+            Interface.main = this;
 
-            Interface.Interface.LoadArmyList();
+            Interface.LoadArmyList();
         }
 
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
@@ -46,7 +44,7 @@ namespace WarhammerArmyAssembler
 
                 string id = f.Tag as string;
 
-                Interface.Interface.ArmyGridDrop(id);
+                Interface.ArmyGridDrop(id);
             }
 
             DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
@@ -56,7 +54,7 @@ namespace WarhammerArmyAssembler
         {
             string id = (string)e.Data.GetData(DataFormats.Text);
 
-            Interface.Interface.ArmyGridDrop(id);
+            Interface.ArmyGridDrop(id);
         }
 
         private void ArmyGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -71,7 +69,7 @@ namespace WarhammerArmyAssembler
             if (unitRow == null)
                 return;
 
-            CurrentEditedUnit = Interface.Interface.IntParse(unitRow.ID);
+            CurrentEditedUnit = Interface.IntParse(unitRow.ID);
 
             unitName.Content = unitRow.Name;
             unitSize.Text = unitRow.Size.ToString();
@@ -85,8 +83,8 @@ namespace WarhammerArmyAssembler
             {
                 int currentEditedUnit = CurrentEditedUnit ?? 0;
 
-                Army.Army.Units[currentEditedUnit].Size = Interface.Interface.IntParse(unitSize.Text);
-                Interface.Interface.ReloadArmyData();
+                Army.Units[currentEditedUnit].Size = Interface.IntParse(unitSize.Text);
+                Interface.ReloadArmyData();
             }
         }
     }
