@@ -34,7 +34,7 @@
                 </HandWeapon>
             </Ammunition>
         </Unit>
-        <Unit>
+	<Unit>
             <General>
                 <ID>01G004</ID>
                 <Type>Core</Type>
@@ -58,6 +58,9 @@
             <AdditionalParam>
             </AdditionalParam>
             <Ammunition>
+	        <HandWeapon>
+                    <Name>ручное оружие</Name>
+                </HandWeapon>
                 <HandWeapon>
                     <Name>большое оружие</Name>
 		    <AddToStrength>2</AddToStrength>
@@ -87,6 +90,14 @@
             </Psychology>
             <AdditionalParam>
             </AdditionalParam>
+	    <Ammunition>
+	        <HandWeapon>
+                    <Name>ручное оружие</Name>
+                </HandWeapon>
+                <RangedWeapon>
+                    <Name>короткий лук</Name>
+                </RangedWeapon>
+            </Ammunition>
         </Unit>
         <Unit>
             <General>
@@ -112,6 +123,11 @@
             </Psychology>
             <AdditionalParam>
             </AdditionalParam>
+	    <Ammunition>
+                <HandWeapon>
+                    <Name>ручное оружие</Name>
+                </HandWeapon>
+            </Ammunition>
         </Unit>
     </Units>
 </ArmyBook>
