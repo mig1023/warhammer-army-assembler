@@ -21,5 +21,25 @@ namespace WarhammerArmyAssembler
 
             Units.Add(GetNextIndex(), unit);
         }
+
+        public static int GetArmyPoints()
+        {
+            int points = 0;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                points += entry.Value.GetUnitPoints();
+
+            return points;
+        }
+
+        public static int GetArmySize()
+        {
+            int size = 0;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                size += entry.Value.Size;
+
+            return size;
+        }
     }
 }
