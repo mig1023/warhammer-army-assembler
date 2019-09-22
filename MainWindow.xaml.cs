@@ -87,5 +87,12 @@ namespace WarhammerArmyAssembler
                 Interface.ReloadArmyData();
             }
         }
+
+        private void ArmyGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+        {
+            Unit u = e.Row.Item as Unit;
+            Army.Units[Interface.IntParse(u.ID)].Size = u.Size;
+            Interface.ReloadArmyData();
+        }
     }
 }
