@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"></ColumnDefinition>
@@ -31,7 +31,7 @@
 
         <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None" AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" SelectionChanged="ArmyGrid_SelectionChanged" RowEditEnding="ArmyGrid_RowEditEnding">
+        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None" AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding">
             <DataGrid.Resources>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="FontSize" Value="12"/>
@@ -59,10 +59,7 @@
 
         <Grid Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto">
             <Grid.RowDefinitions>
-                <RowDefinition Height="55"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
@@ -71,13 +68,10 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Label x:Name="unitName" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="" Height="42" Width="Auto" FontSize="24"/>
-            <Label x:Name="unitSizeLabel" Grid.Row="1" Grid.Column="0" Content="размер отряда" FontSize="16" Height="32" Width="Auto"/>
-            <TextBox x:Name="unitSize" Grid.Row="1" Grid.Column="1" Height="32" TextWrapping="Wrap" Text="" FontSize="16" AllowDrop="False" Width="Auto" TextChanged="unitSize_TextChanged"/>
-            <Label x:Name="spetialRulesLabel" Grid.Row="2" Grid.Column="0" Content="специальные правила" FontSize="16" Height="32" Width="Auto"/>
-            <Label x:Name="spetialRules" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Content="" FontSize="16" Height="32" Width="Auto"/>
-            <Label x:Name="spetialAmmunitionLabel" Grid.Row="3" Grid.Column="0" Content="оружие" FontSize="16" Height="32" Width="Auto"/>
-            <Label x:Name="spetialAmmunition" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Content="" FontSize="16" Height="32" Width="Auto" />
+            <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="Очков:" Height="40" Width="Auto" FontSize="18"/>
+            <Label x:Name="armySize" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Content="Моделей:" Height="40" Width="Auto" FontSize="18"/>
+            <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Content="Каст:" Height="40" Width="Auto" FontSize="18"/>
+            <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="4" Content="Диспелл:" Height="40" Width="Auto" FontSize="18"/>
         </Grid>
 
     </Grid>

@@ -18,8 +18,6 @@ namespace WarhammerArmyAssembler
 {
     public partial class MainWindow : Window
     {
-        public static int? CurrentEditedUnit = null;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -55,37 +53,6 @@ namespace WarhammerArmyAssembler
             string id = (string)e.Data.GetData(DataFormats.Text);
 
             Interface.ArmyGridDrop(id);
-        }
-
-        private void ArmyGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            DataGrid grid = sender as DataGrid;
-
-            if (grid == null || grid.Items.Count <= 0 || grid.SelectedItems.Count <= 0)
-                return;
-
-            Unit unitRow = grid.SelectedItems[0] as Unit;
-
-            if (unitRow == null)
-                return;
-
-            CurrentEditedUnit = Interface.IntParse(unitRow.ID);
-
-            unitName.Content = unitRow.Name;
-            unitSize.Text = unitRow.Size.ToString();
-            spetialRules.Content = unitRow.GetSpecialRules();
-            spetialAmmunition.Content = unitRow.GetAmmunition();
-        }
-
-        private void unitSize_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (CurrentEditedUnit != null)
-            {
-                int currentEditedUnit = CurrentEditedUnit ?? 0;
-
-                Army.Units[currentEditedUnit].Size = Interface.IntParse(unitSize.Text);
-                Interface.ReloadArmyData();
-            }
         }
 
         private void ArmyGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
