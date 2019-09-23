@@ -17,16 +17,24 @@ namespace WarhammerArmyAssembler
 
         public static void LoadArmyList()
         {
-            Unit UnitType = new Unit() { Name = "Основные" };
+            List<Unit> categories = new List<Unit>
+            {
+                new Unit() { Name = "Лорды" },
+                new Unit() { Name = "Герои" },
+                new Unit() { Name = "Основные" },
+                new Unit() { Name = "Специальные" },
+                new Unit() { Name = "Редкие" },
+            };
 
             foreach (KeyValuePair<string, Unit> entry in ArmyBook.Units)
             {
                 Unit unit = entry.Value.Clone();
                 unit.PointsModifecated = String.Format(" {0} pts", unit.Points);
-                UnitType.Items.Add(unit);
+                categories[(int)unit.Type].Items.Add(unit);
             }
 
-            main.ArmyList.Items.Add(UnitType);
+            foreach (Unit unitType in categories)
+                main.ArmyList.Items.Add(unitType);
         }
 
         public static void ArmyGridDrop(string id)

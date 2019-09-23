@@ -4,6 +4,41 @@
         <ArmyName>Орки и Гоблины</ArmyName>
         <ArmyBookVersion>7</ArmyBookVersion>
     </Info>
+    <Heroes>
+	<Hero>
+            <General>
+                <ID>01G005</ID>
+                <Type>Lord</Type>
+                <Name>Орк Большой Босс</Name>
+                <Points>115</Points>
+		<MinSize>1</MinSize>
+            </General>
+            <MainParam>
+                <Movement>4</Movement>
+                <WeaponSkill>6</WeaponSkill>
+                <BallisticSkill>3</BallisticSkill>
+                <Strength>5</Strength>
+                <Toughness>5</Toughness>
+                <Wounds>3</Wounds>
+                <Initiative>4</Initiative>
+                <Attacks>4</Attacks>
+                <Leadership>9</Leadership>
+            </MainParam>
+            <Psychology>
+                <Frenzy>true</Frenzy>
+            </Psychology>
+            <AdditionalParam>
+            </AdditionalParam>
+	    <Ammunition>
+                <HandWeapon>
+                    <Name>ручное оружие</Name>
+                </HandWeapon>
+		<HandWeapon>
+                    <Name>лёгкая броня</Name>
+                </HandWeapon>
+            </Ammunition>
+        </Hero>
+    </Heroes>
     <Units>
         <Unit>
             <General>

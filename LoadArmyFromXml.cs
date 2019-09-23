@@ -22,6 +22,9 @@ namespace WarhammerArmyAssembler
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
                 ArmyBook.Units.Add(GetUnitID(xmlUnit), LoadUnit(xmlUnit));
+
+            foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Heroes/Hero"))
+                ArmyBook.Units.Add(GetUnitID(xmlUnit), LoadUnit(xmlUnit));
         }
 
         public static string GetUnitID(XmlNode xmlUnit)

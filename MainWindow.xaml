@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="250"></ColumnDefinition>
@@ -59,19 +59,23 @@
 
         <Grid Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="Очков:" Height="40" Width="Auto" FontSize="18"/>
-            <Label x:Name="armySize" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Content="Моделей:" Height="40" Width="Auto" FontSize="18"/>
-            <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Content="Каст:" Height="40" Width="Auto" FontSize="18"/>
-            <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="4" Content="Диспелл:" Height="40" Width="Auto" FontSize="18"/>
+            <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="Героев:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Content="Отрядов:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Content="Очков:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="4" Content="Моделей:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" Content="Каст:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="4" Content="Диспелл:" Height="30" Width="Auto" FontSize="12"/>
         </Grid>
 
     </Grid>
