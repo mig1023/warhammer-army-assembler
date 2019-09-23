@@ -4,14 +4,22 @@
         <ArmyName>Орки и Гоблины</ArmyName>
         <ArmyBookVersion>7</ArmyBookVersion>
     </Info>
+    <Artefacts>
+        <Artefact>
+	    <ID>01G006</ID>
+	    <Name>Меч Силы</Name>
+	    <AddToStrength>2</AddToStrength>
+	    <Points>25</Points>
+	</Artefact>
+    </Artefacts>
     <Heroes>
-	<Hero>
+        <Hero>
             <General>
                 <ID>01G005</ID>
                 <Type>Lord</Type>
                 <Name>Орк Большой Босс</Name>
                 <Points>115</Points>
-		<MinSize>1</MinSize>
+                <MinSize>1</MinSize>
             </General>
             <MainParam>
                 <Movement>4</Movement>
@@ -29,11 +37,11 @@
             </Psychology>
             <AdditionalParam>
             </AdditionalParam>
-	    <Ammunition>
+            <Ammunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
-		<HandWeapon>
+                <HandWeapon>
                     <Name>лёгкая броня</Name>
                 </HandWeapon>
             </Ammunition>
@@ -46,7 +54,7 @@
                 <Type>Core</Type>
                 <Name>Ватага орков</Name>
                 <Points>6</Points>
-		<MinSize>10</MinSize>
+        <MinSize>10</MinSize>
             </General>
             <MainParam>
                 <Movement>4</Movement>
@@ -69,13 +77,13 @@
                 </HandWeapon>
             </Ammunition>
         </Unit>
-	<Unit>
+    <Unit>
             <General>
                 <ID>01G004</ID>
                 <Type>Core</Type>
                 <Name>Ватага орков с большими топорами</Name>
                 <Points>8</Points>
-		<MinSize>10</MinSize>
+        <MinSize>10</MinSize>
             </General>
             <MainParam>
                 <Movement>4</Movement>
@@ -93,12 +101,12 @@
             <AdditionalParam>
             </AdditionalParam>
             <Ammunition>
-	        <HandWeapon>
+            <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
                 <HandWeapon>
                     <Name>большое оружие</Name>
-		    <AddToStrength>2</AddToStrength>
+                    <AddToStrength>2</AddToStrength>
                 </HandWeapon>
             </Ammunition>
         </Unit>
@@ -108,7 +116,7 @@
                 <Type>Core</Type>
                 <Name>Ватага орков-лучников</Name>
                 <Points>7</Points>
-		<MinSize>10</MinSize>
+        <MinSize>10</MinSize>
             </General>
             <MainParam>
                 <Movement>4</Movement>
@@ -125,8 +133,8 @@
             </Psychology>
             <AdditionalParam>
             </AdditionalParam>
-	    <Ammunition>
-	        <HandWeapon>
+        <Ammunition>
+            <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
                 <RangedWeapon>
@@ -140,7 +148,7 @@
                 <Type>Core</Type>
                 <Name>Дикие орки</Name>
                 <Points>6</Points>
-		<MinSize>10</MinSize>
+        <MinSize>10</MinSize>
             </General>
             <MainParam>
                 <Movement>4</Movement>
@@ -158,7 +166,7 @@
             </Psychology>
             <AdditionalParam>
             </AdditionalParam>
-	    <Ammunition>
+        <Ammunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>

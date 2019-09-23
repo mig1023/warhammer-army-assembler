@@ -40,6 +40,17 @@ namespace WarhammerArmyAssembler
 
             foreach (Unit unitType in categories)
                 main.ArmyList.Items.Add(unitType);
+
+            Ammunition artefacts = new Ammunition() { Name = "Артефакты" };
+
+            foreach (KeyValuePair<string, Ammunition> entry in ArmyBook.Artefact)
+            {
+                Ammunition artefact = entry.Value.Clone();
+                artefact.PointsModifecated = String.Format(" {0} pts", artefact.Points);
+                artefacts.Items.Add(artefact);
+            }
+
+            main.ArmyList.Items.Add(artefacts);
         }
 
         public static void ArmyGridDrop(string id)

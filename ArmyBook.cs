@@ -13,26 +13,30 @@ namespace WarhammerArmyAssembler
     public class ArmyBook
     {
         public static Dictionary<string, Unit> Units = new Dictionary<string, Unit>();
+        public static Dictionary<string, Ammunition> Artefact = new Dictionary<string, Ammunition>();
 
         public static void LoadArmy(string xmlFileName)
         {
-            ArmyBook.Units.Clear();
+            Units.Clear();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
-                ArmyBook.Units.Add(GetUnitID(xmlUnit), LoadUnit(xmlUnit));
+                Units.Add(GetID(xmlUnit), LoadUnit(xmlUnit));
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Heroes/Hero"))
-                ArmyBook.Units.Add(GetUnitID(xmlUnit), LoadUnit(xmlUnit));
+                Units.Add(GetID(xmlUnit), LoadUnit(xmlUnit));
+
+            foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
+                Artefact.Add(GetID(xmlArtefact, artefact: true), LoadWeapon(xmlArtefact));
         }
 
-        public static string GetUnitID(XmlNode xmlUnit)
+        public static string GetID(XmlNode xmlUnit, bool artefact = false)
         {
             XmlNode genaralParam = xmlUnit["General"];
 
-            return genaralParam["ID"].InnerText;
+            return (artefact ? xmlUnit["ID"].InnerText : genaralParam["ID"].InnerText);
         }
 
         public static Unit LoadUnit(XmlNode xmlUnit)
@@ -138,11 +142,12 @@ namespace WarhammerArmyAssembler
             Ammunition newWeapon = new Ammunition();
 
             newWeapon.Name = xmlNode["Name"].InnerText;
-
+            
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
 
+            newWeapon.Points = IntParse(xmlNode["Points"]);
             newWeapon.AddToMovement = IntParse(xmlNode["AddToMovement"]);
             newWeapon.AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]);
             newWeapon.AddToBallisticSkill = IntParse(xmlNode["AddToBallisticSkill"]);
