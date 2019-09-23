@@ -41,5 +41,27 @@ namespace WarhammerArmyAssembler
 
             return size;
         }
+
+        public static int GetArmyLords()
+        {
+            int lords = 0;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                if (entry.Value.Type == Unit.UnitType.Lord)
+                    lords += entry.Value.Size;
+
+            return lords;
+        }
+
+        public static int GetArmyHero()
+        {
+            int heroes = 0;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                if (entry.Value.Type == Unit.UnitType.Hero)
+                    heroes += entry.Value.Size;
+
+            return heroes;
+        }
     }
 }

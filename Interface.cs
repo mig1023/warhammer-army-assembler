@@ -99,6 +99,7 @@ namespace WarhammerArmyAssembler
 
 
             main.ArmyGrid.ItemsSource = ArmyInInterface;
+            main.armyHeroes.Content = String.Format("Героев: {0}/{1}", Army.GetArmyLords(), Army.GetArmyHero());
             main.armyPoints.Content = String.Format("Очков: {0}", Army.GetArmyPoints());
             main.armySize.Content = String.Format("Моделей: {0}", Army.GetArmySize());
             main.armyCasting.Content = String.Format("Каст: {0}", 4);
