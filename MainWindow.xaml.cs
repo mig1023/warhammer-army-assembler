@@ -22,7 +22,7 @@ namespace WarhammerArmyAssembler
         {
             InitializeComponent();
 
-            LoadArmyFromXml.LoadArmy("Orcs&Goblins.xml");
+            ArmyBook.LoadArmy("Orcs&Goblins.xml");
 
             Interface.main = this;
 
