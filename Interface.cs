@@ -15,9 +15,9 @@ namespace WarhammerArmyAssembler
 
         public static ObservableCollection<Unit> ArmyInInterface = new ObservableCollection<Unit>();
 
-        public static void LoadArmyList()
+        private static List<Unit> GetArmyCategories()
         {
-            List<Unit> categories = new List<Unit>
+            return new List<Unit>
             {
                 new Unit() { Name = "Лорды" },
                 new Unit() { Name = "Герои" },
@@ -25,6 +25,11 @@ namespace WarhammerArmyAssembler
                 new Unit() { Name = "Специальные" },
                 new Unit() { Name = "Редкие" },
             };
+        }
+
+        public static void LoadArmyList()
+        {
+            List<Unit> categories = GetArmyCategories();
 
             foreach (KeyValuePair<string, Unit> entry in ArmyBook.Units)
             {
@@ -57,6 +62,8 @@ namespace WarhammerArmyAssembler
         {
             ArmyInInterface.Clear();
 
+            List<Unit> categories = GetArmyCategories();
+
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
             {
                 Unit unit = entry.Value.Clone();
@@ -67,8 +74,18 @@ namespace WarhammerArmyAssembler
                 unit.InterfacePoints = unit.GetUnitPoints();
                 unit.ID = entry.Key.ToString();
 
-                ArmyInInterface.Add(unit);
+                categories[(int)unit.Type].Items.Add(unit);
             }
+
+            foreach (Unit unitType in categories)
+            {
+                if (unitType.Items.Count <= 0)
+                    continue;
+
+                foreach (Unit unit in unitType.Items)
+                    ArmyInInterface.Add(unit);
+            }
+
 
             main.ArmyGrid.ItemsSource = ArmyInInterface;
             main.armyPoints.Content = String.Format("Очков: {0}", Army.GetArmyPoints());
