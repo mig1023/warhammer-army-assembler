@@ -63,29 +63,23 @@ namespace WarhammerArmyAssembler
             return MaxPoints;
         }
 
-        public static int GetArmyMaxLords()
+        public static int GetArmyMaxUnitsNumber(Unit.UnitType type)
         {
-            return (MaxPoints < 2000 ? 0 : 1 + ((MaxPoints - 2000) / 1000));
-        }
-
-        public static int GetArmyMaxHeroes()
-        {
-            return (MaxPoints < 1000 ? 1 : (MaxPoints / 1000) * 2);
-        }
-
-        public static int GetMinCore()
-        {
-            return 1 + (MaxPoints / 1000);
-        }
-
-        public static int GetMaxSpecial()
-        {
-            return (MaxPoints < 2000 ? 2 : (MaxPoints / 1000) * 2);
-        }
-
-        public static int GetMaxRare()
-        {
-            return (MaxPoints < 2000 ? 0 : (MaxPoints / 1000));
+            switch(type)
+            {
+                case Unit.UnitType.Lord:
+                    return (MaxPoints < 2000 ? 0 : 1 + ((MaxPoints - 2000) / 1000));
+                case Unit.UnitType.Hero:
+                    return (MaxPoints < 1000 ? 1 : (MaxPoints / 1000) * 2);
+                case Unit.UnitType.Core:
+                    return 1 + (MaxPoints / 1000);
+                case Unit.UnitType.Special:
+                    return (MaxPoints < 2000 ? 2 : (MaxPoints / 1000) * 2);
+                case Unit.UnitType.Rare:
+                    return (MaxPoints < 2000 ? 0 : (MaxPoints / 1000));
+                default:
+                    return 0;
+            }
         }
     }
 }

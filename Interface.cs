@@ -55,9 +55,19 @@ namespace WarhammerArmyAssembler
 
         public static void ArmyGridDrop(string id)
         {
-            Army.AddUnitByID(id);
+            bool slotExists = (Army.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
+            bool coreUnit = (ArmyBook.Units[id].Type == Unit.UnitType.Core);
 
-            ReloadArmyData();
+            if (slotExists || coreUnit)
+            {
+                Army.AddUnitByID(id);
+                ReloadArmyData();
+            }
+            else
+            {
+                string unitType = (ArmyBook.Units[id].Type == Unit.UnitType.Lord || ArmyBook.Units[id].Type == Unit.UnitType.Hero ? "героев" : "отрядов");
+                MessageBox.Show(String.Format("Количество {0} данного типа исчерпано", unitType), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public static int IntParse(string line)
@@ -101,16 +111,16 @@ namespace WarhammerArmyAssembler
             main.armyHeroes.Content = String.Format("Героев: {0}/{1} из {2}/{3}",
                 Army.GetArmyUnitsNumber(Unit.UnitType.Lord),
                 Army.GetArmyUnitsNumber(Unit.UnitType.Hero),
-                Army.GetArmyMaxLords(),
-                Army.GetArmyMaxHeroes()
+                Army.GetArmyMaxUnitsNumber(Unit.UnitType.Lord),
+                Army.GetArmyMaxUnitsNumber(Unit.UnitType.Hero)
             );
             main.armyUnits.Content = String.Format("Отрядов: {0}/{1}/{2} из {3}+/{4}/{5}",
                 Army.GetArmyUnitsNumber(Unit.UnitType.Core),
                 Army.GetArmyUnitsNumber(Unit.UnitType.Special),
                 Army.GetArmyUnitsNumber(Unit.UnitType.Rare),
-                Army.GetMinCore(),
-                Army.GetMaxSpecial(),
-                Army.GetMaxRare()
+                Army.GetArmyMaxUnitsNumber(Unit.UnitType.Core),
+                Army.GetArmyMaxUnitsNumber(Unit.UnitType.Special),
+                Army.GetArmyMaxUnitsNumber(Unit.UnitType.Rare)
             );
             main.armyPoints.Content = String.Format("Очков: {0} из {1}", Army.GetArmyPoints(), Army.GetArmyMaxPoints());
             main.armySize.Content = String.Format("Моделей: {0}", Army.GetArmySize());
