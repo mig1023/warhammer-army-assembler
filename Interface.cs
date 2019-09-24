@@ -58,6 +58,11 @@ namespace WarhammerArmyAssembler
             return (ArmyBook.Units[id].Size * ArmyBook.Units[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
+        public static bool EnoughPointsForAddArtefact(string id)
+        {
+            return (ArmyBook.Artefact[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
+        }
+
         public static bool EnoughPointsForEditUnit(int id, int newSize)
         {
             int newPrice = (newSize * Army.Units[id].Points);

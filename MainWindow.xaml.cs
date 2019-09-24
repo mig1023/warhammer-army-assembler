@@ -42,7 +42,8 @@ namespace WarhammerArmyAssembler
 
                 string id = f.Tag as string;
 
-                Interface.ArmyGridDrop(id);
+                if (!ArmyBook.Artefact.ContainsKey(id))
+                    Interface.ArmyGridDrop(id);
             }
 
             DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
@@ -52,7 +53,45 @@ namespace WarhammerArmyAssembler
         {
             string id = (string)e.Data.GetData(DataFormats.Text);
 
-            Interface.ArmyGridDrop(id);
+            if (ArmyBook.Artefact.ContainsKey(id))
+            {
+                DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
+
+                if (container != null)
+                {
+                    Unit unit = container.DataContext as Unit;
+
+                    if (unit.Type != Unit.UnitType.Hero && unit.Type != Unit.UnitType.Lord)
+                        MessageBox.Show("Отряд не может брать магические предметы", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    else if (!Interface.EnoughPointsForAddArtefact(id))
+                        MessageBox.Show("Количество очков недостаточно добавления предмета", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    else
+                    {
+                        Army.Units[Interface.IntParse(unit.ID)].AddAmmunition(id);
+                        Interface.ReloadArmyData();
+                    }
+                }
+            }
+            else
+                Interface.ArmyGridDrop(id);
+        }
+
+
+
+        static T FindVisualParent<T>(UIElement element) where T : UIElement
+        {
+            UIElement parent = element;
+            while (parent != null)
+            {
+                T correctlyTyped = parent as T;
+                if (correctlyTyped != null)
+                {
+                    return correctlyTyped;
+                }
+
+                parent = VisualTreeHelper.GetParent(parent) as UIElement;
+            }
+            return null;
         }
 
         private void ArmyGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)

@@ -10,6 +10,7 @@ namespace WarhammerArmyAssembler
     public class Ammunition
     {
         public string Name { get; set; }
+        public string ID { get; set; }
 
         public int Points { get; set; }
 
@@ -45,6 +46,7 @@ namespace WarhammerArmyAssembler
             Ammunition newAmmunition = new Ammunition();
 
             newAmmunition.Name = this.Name;
+            newAmmunition.ID = this.ID;
             newAmmunition.Points = this.Points;
 
             newAmmunition.HitFirst = this.HitFirst;

@@ -29,27 +29,23 @@ namespace WarhammerArmyAssembler
                 Units.Add(GetID(xmlUnit), LoadUnit(xmlUnit));
 
             foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
-                Artefact.Add(GetID(xmlArtefact, artefact: true), LoadWeapon(xmlArtefact));
+                Artefact.Add(GetID(xmlArtefact), LoadWeapon(xmlArtefact));
         }
 
-        public static string GetID(XmlNode xmlUnit, bool artefact = false)
+        public static string GetID(XmlNode xmlUnit)
         {
-            XmlNode genaralParam = xmlUnit["General"];
-
-            return (artefact ? xmlUnit["ID"].InnerText : genaralParam["ID"].InnerText);
+            return xmlUnit["ID"].InnerText;
         }
 
         public static Unit LoadUnit(XmlNode xmlUnit)
         {
             Unit newUnit = new Unit();
 
-            XmlNode generalParam = xmlUnit["General"];
-
-            newUnit.Name = generalParam["Name"].InnerText;
-            newUnit.ID = generalParam["ID"].InnerText;
-            newUnit.Type = TypeParse(generalParam["Type"]);
-            newUnit.Points = IntParse(generalParam["Points"]);
-            newUnit.Size = IntParse(generalParam["MinSize"]);
+            newUnit.Name = xmlUnit["Name"].InnerText;
+            newUnit.ID = xmlUnit["ID"].InnerText;
+            newUnit.Type = TypeParse(xmlUnit["Type"]);
+            newUnit.Points = IntParse(xmlUnit["Points"]);
+            newUnit.Size = IntParse(xmlUnit["MinSize"]);
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
@@ -142,7 +138,10 @@ namespace WarhammerArmyAssembler
             Ammunition newWeapon = new Ammunition();
 
             newWeapon.Name = xmlNode["Name"].InnerText;
-            
+
+            if (xmlNode["ID"] != null)
+                newWeapon.ID = xmlNode["ID"].InnerText;
+
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);

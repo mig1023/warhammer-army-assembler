@@ -84,7 +84,12 @@ namespace WarhammerArmyAssembler
 
         public int GetUnitPoints()
         {
-            return Size * Points;
+            int points = Size * Points;
+
+            foreach (Ammunition ammunition in Weapons)
+                points += ammunition.Points;
+
+            return points;
         }
 
         public Unit Clone()
@@ -230,6 +235,11 @@ namespace WarhammerArmyAssembler
                 allAmmunition = allAmmunition.Remove(allAmmunition.Length - 2);
 
             return allAmmunition;
+        }
+
+        public void AddAmmunition(string id)
+        {
+            Weapons.Add(ArmyBook.Artefact[id].Clone());
         }
 
         public string GetSpecialRules()
