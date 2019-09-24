@@ -53,25 +53,43 @@ namespace WarhammerArmyAssembler
             main.ArmyList.Items.Add(artefacts);
         }
 
+        public static bool EnoughPointsForAddUnit(string id)
+        {
+            return (ArmyBook.Units[id].Size * ArmyBook.Units[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
+        }
+
+        public static bool EnoughPointsForEditUnit(int id, int newSize)
+        {
+            int newPrice = (newSize * Army.Units[id].Points);
+            int currentPrice = (Army.Units[id].Size * Army.Units[id].Points);
+
+            return (newPrice - currentPrice) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
+        }
+
         public static void ArmyGridDrop(string id)
         {
             bool slotExists = (Army.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
             bool coreUnit = (ArmyBook.Units[id].Type == Unit.UnitType.Core);
 
             int allHeroes = Army.GetArmyUnitsNumber(Unit.UnitType.Lord) + Army.GetArmyUnitsNumber(Unit.UnitType.Hero);
-            int tmp = Army.GetArmyUnitsNumber(Unit.UnitType.Hero);
             bool lordInHeroSlot = (ArmyBook.Units[id].Type == Unit.UnitType.Hero) && (allHeroes >= Army.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
 
-            if ((slotExists || coreUnit) && !lordInHeroSlot)
-            {
-                Army.AddUnitByID(id);
-                ReloadArmyData();
-            }
-            else
+            if ((!slotExists && !coreUnit) || lordInHeroSlot)
             {
                 string unitType = (ArmyBook.Units[id].Type == Unit.UnitType.Lord || ArmyBook.Units[id].Type == Unit.UnitType.Hero ? "героев" : "отрядов");
                 MessageBox.Show(String.Format("Количество {0} данного типа исчерпано", unitType), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            else if (!EnoughPointsForAddUnit(id))
+            {
+                string unitType = (ArmyBook.Units[id].Type == Unit.UnitType.Lord || ArmyBook.Units[id].Type == Unit.UnitType.Hero ? "героя" : "отряда");
+                MessageBox.Show(String.Format("Недостаточно очков для добавления {0}", unitType), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                Army.AddUnitByID(id);
+                ReloadArmyData();
+            }
+           
         }
 
         public static int IntParse(string line)

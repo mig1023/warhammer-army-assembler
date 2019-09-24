@@ -58,8 +58,17 @@ namespace WarhammerArmyAssembler
         private void ArmyGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
             Unit u = e.Row.Item as Unit;
-            Army.Units[Interface.IntParse(u.ID)].Size = u.Size;
-            Interface.ReloadArmyData();
+
+            if (Interface.EnoughPointsForEditUnit(Interface.IntParse(u.ID), u.Size))
+            {
+                Army.Units[Interface.IntParse(u.ID)].Size = u.Size;
+                Interface.ReloadArmyData();
+            }
+            else
+            {
+                u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
+                MessageBox.Show("Количество очков недостаточно для изменения", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
