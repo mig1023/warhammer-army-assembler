@@ -8,7 +8,10 @@ namespace WarhammerArmyAssembler
 {
     class Army
     {
+
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
+
+        private static int MaxPoints = 2000;
 
         public static int GetNextIndex()
         {
@@ -42,26 +45,47 @@ namespace WarhammerArmyAssembler
             return size;
         }
 
-        public static int GetArmyLords()
+        public static int GetArmyUnitsNumber(Unit.UnitType type)
         {
-            int lords = 0;
+            Dictionary<Unit.UnitType, int> units = new Dictionary<Unit.UnitType, int>();
+
+            foreach(Unit.UnitType u in Enum.GetValues(typeof(Unit.UnitType)))
+                units.Add(u, 0);
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
-                if (entry.Value.Type == Unit.UnitType.Lord)
-                    lords += entry.Value.Size;
+                units[entry.Value.Type] += 1;
 
-            return lords;
+            return units[type];
         }
 
-        public static int GetArmyHero()
+        public static int GetArmyMaxPoints()
         {
-            int heroes = 0;
+            return MaxPoints;
+        }
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
-                if (entry.Value.Type == Unit.UnitType.Hero)
-                    heroes += entry.Value.Size;
+        public static int GetArmyMaxLords()
+        {
+            return (MaxPoints < 2000 ? 0 : 1 + ((MaxPoints - 2000) / 1000));
+        }
 
-            return heroes;
+        public static int GetArmyMaxHeroes()
+        {
+            return (MaxPoints < 1000 ? 1 : (MaxPoints / 1000) * 2);
+        }
+
+        public static int GetMinCore()
+        {
+            return 1 + (MaxPoints / 1000);
+        }
+
+        public static int GetMaxSpecial()
+        {
+            return (MaxPoints < 2000 ? 2 : (MaxPoints / 1000) * 2);
+        }
+
+        public static int GetMaxRare()
+        {
+            return (MaxPoints < 2000 ? 0 : (MaxPoints / 1000));
         }
     }
 }

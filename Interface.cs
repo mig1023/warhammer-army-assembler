@@ -97,10 +97,22 @@ namespace WarhammerArmyAssembler
                     ArmyInInterface.Add(unit);
             }
 
-
             main.ArmyGrid.ItemsSource = ArmyInInterface;
-            main.armyHeroes.Content = String.Format("Героев: {0}/{1}", Army.GetArmyLords(), Army.GetArmyHero());
-            main.armyPoints.Content = String.Format("Очков: {0}", Army.GetArmyPoints());
+            main.armyHeroes.Content = String.Format("Героев: {0}/{1} из {2}/{3}",
+                Army.GetArmyUnitsNumber(Unit.UnitType.Lord),
+                Army.GetArmyUnitsNumber(Unit.UnitType.Hero),
+                Army.GetArmyMaxLords(),
+                Army.GetArmyMaxHeroes()
+            );
+            main.armyUnits.Content = String.Format("Отрядов: {0}/{1}/{2} из {3}+/{4}/{5}",
+                Army.GetArmyUnitsNumber(Unit.UnitType.Core),
+                Army.GetArmyUnitsNumber(Unit.UnitType.Special),
+                Army.GetArmyUnitsNumber(Unit.UnitType.Rare),
+                Army.GetMinCore(),
+                Army.GetMaxSpecial(),
+                Army.GetMaxRare()
+            );
+            main.armyPoints.Content = String.Format("Очков: {0} из {1}", Army.GetArmyPoints(), Army.GetArmyMaxPoints());
             main.armySize.Content = String.Format("Моделей: {0}", Army.GetArmySize());
             main.armyCasting.Content = String.Format("Каст: {0}", 4);
             main.armyDispell.Content = String.Format("Диспелл: {0}", 2);
