@@ -58,7 +58,11 @@ namespace WarhammerArmyAssembler
             bool slotExists = (Army.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
             bool coreUnit = (ArmyBook.Units[id].Type == Unit.UnitType.Core);
 
-            if (slotExists || coreUnit)
+            int allHeroes = Army.GetArmyUnitsNumber(Unit.UnitType.Lord) + Army.GetArmyUnitsNumber(Unit.UnitType.Hero);
+            int tmp = Army.GetArmyUnitsNumber(Unit.UnitType.Hero);
+            bool lordInHeroSlot = (ArmyBook.Units[id].Type == Unit.UnitType.Hero) && (allHeroes >= Army.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
+
+            if ((slotExists || coreUnit) && !lordInHeroSlot)
             {
                 Army.AddUnitByID(id);
                 ReloadArmyData();

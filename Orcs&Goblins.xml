@@ -17,7 +17,7 @@
             <General>
                 <ID>01G005</ID>
                 <Type>Lord</Type>
-                <Name>Орк Большой Босс</Name>
+                <Name>Орк Очень Большой Босс</Name>
                 <Points>115</Points>
                 <MinSize>1</MinSize>
             </General>
@@ -45,6 +45,38 @@
                 </HandWeapon>
             </Ammunition>
         </Hero>
+	<Hero>
+            <General>
+                <ID>01G010</ID>
+                <Type>Hero</Type>
+                <Name>Орк Большой Босс</Name>
+                <Points>55</Points>
+                <MinSize>1</MinSize>
+            </General>
+            <MainParam>
+                <Movement>4</Movement>
+                <WeaponSkill>5</WeaponSkill>
+                <BallisticSkill>3</BallisticSkill>
+                <Strength>4</Strength>
+                <Toughness>5</Toughness>
+                <Wounds>2</Wounds>
+                <Initiative>3</Initiative>
+                <Attacks>3</Attacks>
+                <Leadership>8</Leadership>
+            </MainParam>
+            <Psychology>
+            </Psychology>
+            <AdditionalParam>
+            </AdditionalParam>
+            <Ammunition>
+                <HandWeapon>
+                    <Name>ручное оружие</Name>
+                </HandWeapon>
+                <HandWeapon>
+                    <Name>лёгкая броня</Name>
+                </HandWeapon>
+            </Ammunition>
+        </Hero>
     </Heroes>
     <Units>
         <Unit>
@@ -53,7 +85,7 @@
                 <Type>Core</Type>
                 <Name>Ватага орков</Name>
                 <Points>6</Points>
-        <MinSize>10</MinSize>
+                <MinSize>10</MinSize>
             </General>
             <MainParam>
                 <Movement>4</Movement>
@@ -76,13 +108,13 @@
                 </HandWeapon>
             </Ammunition>
         </Unit>
-    <Unit>
+        <Unit>
             <General>
                 <ID>01G004</ID>
                 <Type>Core</Type>
                 <Name>Ватага орков с большими топорами</Name>
                 <Points>8</Points>
-        <MinSize>10</MinSize>
+                <MinSize>10</MinSize>
             </General>
             <MainParam>
                 <Movement>4</Movement>
@@ -100,7 +132,7 @@
             <AdditionalParam>
             </AdditionalParam>
             <Ammunition>
-            <HandWeapon>
+                <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
                 <HandWeapon>
@@ -115,7 +147,7 @@
                 <Type>Core</Type>
                 <Name>Ватага орков-лучников</Name>
                 <Points>7</Points>
-        <MinSize>10</MinSize>
+                <MinSize>10</MinSize>
             </General>
             <MainParam>
                 <Movement>4</Movement>
@@ -132,8 +164,8 @@
             </Psychology>
             <AdditionalParam>
             </AdditionalParam>
-        <Ammunition>
-            <HandWeapon>
+            <Ammunition>
+                <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
                 <RangedWeapon>
@@ -165,7 +197,68 @@
             </Psychology>
             <AdditionalParam>
             </AdditionalParam>
-        <Ammunition>
+            <Ammunition>
+                <HandWeapon>
+                    <Name>ручное оружие</Name>
+                </HandWeapon>
+            </Ammunition>
+        </Unit>
+	<Unit>
+            <General>
+                <ID>01G008</ID>
+                <Type>Special</Type>
+                <Name>Чёрные орки</Name>
+                <Points>12</Points>
+                <MinSize>10</MinSize>
+            </General>
+            <MainParam>
+                <Movement>4</Movement>
+                <WeaponSkill>4</WeaponSkill>
+                <BallisticSkill>3</BallisticSkill>
+                <Strength>4</Strength>
+                <Toughness>4</Toughness>
+                <Wounds>1</Wounds>
+                <Initiative>2</Initiative>
+                <Attacks>1</Attacks>
+                <Leadership>8</Leadership>
+            </MainParam>
+            <Psychology>
+		<ImmuneToPsychology>true</ImmuneToPsychology>
+            </Psychology>
+            <AdditionalParam>
+            </AdditionalParam>
+            <Ammunition>
+                <HandWeapon>
+                    <Name>ручное оружие</Name>
+                </HandWeapon>
+            </Ammunition>
+        </Unit>
+	<Unit>
+            <General>
+                <ID>01G009</ID>
+                <Type>Rare</Type>
+                <Name>Речные тролли</Name>
+                <Points>45</Points>
+                <MinSize>1</MinSize>
+            </General>
+            <MainParam>
+                <Movement>6</Movement>
+                <WeaponSkill>3</WeaponSkill>
+                <BallisticSkill>1</BallisticSkill>
+                <Strength>5</Strength>
+                <Toughness>4</Toughness>
+                <Wounds>3</Wounds>
+                <Initiative>1</Initiative>
+                <Attacks>3</Attacks>
+                <Leadership>4</Leadership>
+            </MainParam>
+            <Psychology>
+	        <Fear>true</Fear>
+            </Psychology>
+            <AdditionalParam>
+	        <Regeneration>true</Regeneration>
+            </AdditionalParam>
+            <Ammunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
