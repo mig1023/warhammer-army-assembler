@@ -46,6 +46,8 @@ namespace WarhammerArmyAssembler
                     Interface.ArmyGridDrop(id);
             }
 
+            Interface.DragSender = sender;
+
             DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
         }
 
@@ -53,7 +55,7 @@ namespace WarhammerArmyAssembler
         {
             string id = (string)e.Data.GetData(DataFormats.Text);
 
-            if ((sender as FrameworkElement).Name == "ArmyGrid")
+            if ((Interface.DragSender as FrameworkElement).Name == "ArmyGrid")
                 return;
 
             if (ArmyBook.Artefact.ContainsKey(id))
@@ -138,6 +140,8 @@ namespace WarhammerArmyAssembler
                 return;
 
             Unit unit = container.DataContext as Unit;
+
+            Interface.DragSender = sender;
 
             DragDrop.DoDragDrop(container, unit.ID, DragDropEffects.Copy);
         }

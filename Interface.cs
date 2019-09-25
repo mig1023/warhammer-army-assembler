@@ -15,6 +15,8 @@ namespace WarhammerArmyAssembler
 
         public static ObservableCollection<Unit> ArmyInInterface = new ObservableCollection<Unit>();
 
+        public static object DragSender = null;
+
         private static List<Unit> GetArmyCategories()
         {
             return new List<Unit>
