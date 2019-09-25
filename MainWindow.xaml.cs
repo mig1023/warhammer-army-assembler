@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace WarhammerArmyAssembler
 {
@@ -39,11 +40,15 @@ namespace WarhammerArmyAssembler
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
                 FrameworkElement f = sender as FrameworkElement;
-
                 string id = f.Tag as string;
 
-                if (!ArmyBook.Artefact.ContainsKey(id))
-                    Interface.ArmyGridDrop(id);
+                unitName.Content = ArmyBook.Units[id].Name;
+
+                ThicknessAnimation move = new ThicknessAnimation();
+                move.Duration = TimeSpan.FromSeconds(0.2);
+                move.From = mainGrid.Margin;
+                move.To = new Thickness(250, 0, 0, 0);
+                mainGrid.BeginAnimation(MarginProperty, move);
             }
 
             Interface.DragSender = sender;
@@ -108,7 +113,6 @@ namespace WarhammerArmyAssembler
             }
             else if (u.IsHero() && u.Size > 1)
             {
-                
                 MessageBox.Show("Герои всегда одиноки", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
             }
@@ -156,6 +160,22 @@ namespace WarhammerArmyAssembler
             string id = (string)e.Data.GetData(DataFormats.Text);
 
             Interface.UnitDeleteDrop(id);
+        }
+
+        private void mainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            mainGrid.Height = e.NewSize.Height;
+            armybookDetail.Height = e.NewSize.Height;
+            mainGrid.Width = e.NewSize.Width;
+        }
+
+        private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
+        {
+            ThicknessAnimation move = new ThicknessAnimation();
+            move.Duration = TimeSpan.FromSeconds(0.2);
+            move.From = mainGrid.Margin;
+            move.To = new Thickness(0, 0, 0, 0);
+            mainGrid.BeginAnimation(MarginProperty, move);
         }
     }
 }

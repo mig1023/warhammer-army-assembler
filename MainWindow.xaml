@@ -6,79 +6,84 @@
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
         Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="992.809">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="30"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"></ColumnDefinition>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-
-        <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding Items}">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Name}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown"/>
-                        <TextBlock Text="{Binding PointsModifecated}" MouseDown="UnitInArmyList_MouseDown" Foreground="Green"/>
-                    </StackPanel>
-                </HierarchicalDataTemplate>
-            </TreeView.ItemTemplate>
-        </TreeView>
-
-        <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-
-        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None" AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding" LoadingRow="ArmyGrid_LoadingRow" MouseDown="ArmyGrid_MouseDown" >
-            <DataGrid.Resources>
-                <Style TargetType="DataGridColumnHeader">
-                    <Setter Property="FontSize" Value="12"/>
-                </Style>
-            </DataGrid.Resources>
-            <DataGrid.Columns>
-                <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding id}"/>
-                <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="60"/>
-                <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="M" Binding="{Binding MovementModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="S" Binding="{Binding StrengthModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="T" Binding="{Binding ToughnessModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="W" Binding="{Binding WoundsModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="I" Binding="{Binding InitiativeModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="A" Binding="{Binding AttacksModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="LD" Binding="{Binding LeadershipModifecated}" Width="40" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}" IsReadOnly="True"/>
-            </DataGrid.Columns>
-        </DataGrid>
-
-        <GridSplitter Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-
-        <Grid Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto">
+    <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
+        <Canvas x:Name="armybookDetail" Width="250">
+            <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="154" Margin="20,20" Click="closeArmybookDetail_Click"/>
+            <Label x:Name="unitName" Content="" Height="30" Width="Auto" FontSize="12" Margin="18,60"/>
+        </Canvas>
+        <Grid x:Name="mainGrid">
             <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.7*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="0.7*"></ColumnDefinition>
-                <ColumnDefinition Width="0.6*"></ColumnDefinition>
-                <ColumnDefinition Width="0.4*"></ColumnDefinition>
-                <ColumnDefinition Width="0.4*"></ColumnDefinition>
-                <ColumnDefinition Width="45"></ColumnDefinition>
+                <ColumnDefinition Width="250"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="Героев:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Отрядов:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Content="Очков:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Content="Моделей:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="Каст:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="Диспелл:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" Content="[ del ]" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop"/>
-        </Grid>
+            <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Items}">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Name}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown"/>
+                            <TextBlock Text="{Binding PointsModifecated}" MouseDown="UnitInArmyList_MouseDown" Foreground="Green"/>
+                        </StackPanel>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
 
-    </Grid>
+            <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+            <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None" AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding" LoadingRow="ArmyGrid_LoadingRow" MouseDown="ArmyGrid_MouseDown" >
+                <DataGrid.Resources>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="FontSize" Value="12"/>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding id}"/>
+                    <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="60"/>
+                    <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="M" Binding="{Binding MovementModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="S" Binding="{Binding StrengthModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="T" Binding="{Binding ToughnessModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="W" Binding="{Binding WoundsModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="I" Binding="{Binding InitiativeModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="A" Binding="{Binding AttacksModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="LD" Binding="{Binding LeadershipModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <GridSplitter Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+            <Grid Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    <ColumnDefinition Width="45"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="Героев:" Height="30" Width="Auto" FontSize="12"/>
+                <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Отрядов:" Height="30" Width="Auto" FontSize="12"/>
+                <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Content="Очков:" Height="30" Width="Auto" FontSize="12"/>
+                <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Content="Моделей:" Height="30" Width="Auto" FontSize="12"/>
+                <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="Каст:" Height="30" Width="Auto" FontSize="12"/>
+                <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="Диспелл:" Height="30" Width="Auto" FontSize="12"/>
+                <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" Content="[ del ]" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop"/>
+            </Grid>
+        </Grid>
+    </Canvas>
 </Window>
