@@ -53,6 +53,9 @@ namespace WarhammerArmyAssembler
         {
             string id = (string)e.Data.GetData(DataFormats.Text);
 
+            if ((sender as FrameworkElement).Name == "ArmyGrid")
+                return;
+
             if (ArmyBook.Artefact.ContainsKey(id))
             {
                 DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
@@ -64,7 +67,7 @@ namespace WarhammerArmyAssembler
                     if (!Interface.EnoughPointsForAddArtefact(id))
                         MessageBox.Show("Количество очков недостаточно добавления предмета", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     else if (!Interface.EnoughUnitPointsForAddArtefact(id, Interface.IntParse(unit.ID)))
-                        MessageBox.Show("Недостаточно очков магичсеких предметов для добавления", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show("Недостаточно очков магических предметов для добавления", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     else
                     {
                         Army.Units[Interface.IntParse(unit.ID)].AddAmmunition(id);
@@ -115,16 +118,35 @@ namespace WarhammerArmyAssembler
 
         private void ArmyGridRow_DragOver(object sender, DragEventArgs e)
         {
-            DataGridRow row = (DataGridRow)sender;
+            DataGridRow row = sender as DataGridRow;
+            Unit unit = row.DataContext as Unit;
+
             ArmyGrid.SelectedItem = row.Item;
             ArmyGrid.ScrollIntoView(row.Item);
-
-            Unit unit = row.DataContext as Unit;
 
             string id = (string)e.Data.GetData(DataFormats.Text);
 
             if (ArmyBook.Artefact.ContainsKey(id))
                 e.Effects = (unit.MagicItems > 0 ? DragDropEffects.Copy : DragDropEffects.None);
+        }
+
+        private void ArmyGrid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
+
+            if (container == null)
+                return;
+
+            Unit unit = container.DataContext as Unit;
+
+            DragDrop.DoDragDrop(container, unit.ID, DragDropEffects.Copy);
+        }
+
+        private void unitDelete_Drop(object sender, DragEventArgs e)
+        {
+            string id = (string)e.Data.GetData(DataFormats.Text);
+
+            Interface.UnitDeleteDrop(id);
         }
     }
 }

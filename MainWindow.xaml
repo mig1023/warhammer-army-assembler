@@ -31,7 +31,7 @@
 
         <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None" AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding" LoadingRow="ArmyGrid_LoadingRow">
+        <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None" AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding" LoadingRow="ArmyGrid_LoadingRow" MouseDown="ArmyGrid_MouseDown" >
             <DataGrid.Resources>
                 <Style TargetType="DataGridColumnHeader">
                     <Setter Property="FontSize" Value="12"/>
@@ -67,15 +67,17 @@
                 <ColumnDefinition Width="0.7*"></ColumnDefinition>
                 <ColumnDefinition Width="0.6*"></ColumnDefinition>
                 <ColumnDefinition Width="0.4*"></ColumnDefinition>
-                <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Content="Героев:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Content="Отрядов:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Content="Очков:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="4" Content="Моделей:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="4" Content="Каст:" Height="30" Width="Auto" FontSize="12"/>
-            <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="4" Content="Диспелл:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="Героев:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Отрядов:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Content="Очков:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Content="Моделей:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="Каст:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="Диспелл:" Height="30" Width="Auto" FontSize="12"/>
+            <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" Content="[ удалить ]" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop"/>
         </Grid>
 
     </Grid>

@@ -24,6 +24,11 @@ namespace WarhammerArmyAssembler
 
             Units.Add(GetNextIndex(), unit);
         }
+        
+        public static void DeleteUnitByID(string id)
+        {
+            Units.Remove(Interface.IntParse(id));
+        }
 
         public static int GetArmyPoints()
         {

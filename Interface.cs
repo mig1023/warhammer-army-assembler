@@ -106,6 +106,13 @@ namespace WarhammerArmyAssembler
             }
            
         }
+        
+        public static void UnitDeleteDrop(string id)
+        {
+            
+            Army.DeleteUnitByID(id);
+            ReloadArmyData();
+        }
 
         public static int IntParse(string line)
         {
