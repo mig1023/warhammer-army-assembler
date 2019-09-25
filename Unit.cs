@@ -291,5 +291,10 @@ namespace WarhammerArmyAssembler
 
             return rules;
         }
+
+        public bool IsHero()
+        {
+            return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero ? true : false);
+        }
     }
 }

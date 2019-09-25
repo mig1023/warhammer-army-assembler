@@ -101,16 +101,21 @@ namespace WarhammerArmyAssembler
         {
             Unit u = e.Row.Item as Unit;
 
-            if (Interface.EnoughPointsForEditUnit(Interface.IntParse(u.ID), u.Size))
-            {
-                Army.Units[Interface.IntParse(u.ID)].Size = u.Size;
-                Interface.ReloadArmyData();
-            }
-            else
+            if (!Interface.EnoughPointsForEditUnit(Interface.IntParse(u.ID), u.Size))
             {
                 u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
                 MessageBox.Show("Количество очков недостаточно для изменения", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            else if (u.IsHero() && u.Size > 1)
+            {
+                
+                MessageBox.Show("Герои всегда одиноки", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
+            }
+            else
+                Army.Units[Interface.IntParse(u.ID)].Size = u.Size;
+
+            Interface.ReloadArmyData();
         }
 
         private void ArmyGrid_LoadingRow(object sender, DataGridRowEventArgs e)

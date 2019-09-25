@@ -93,12 +93,12 @@ namespace WarhammerArmyAssembler
 
             if ((!slotExists && !coreUnit) || lordInHeroSlot)
             {
-                string unitType = (ArmyBook.Units[id].Type == Unit.UnitType.Lord || ArmyBook.Units[id].Type == Unit.UnitType.Hero ? "героев" : "отрядов");
+                string unitType = (ArmyBook.Units[id].IsHero() ? "героев" : "отрядов");
                 MessageBox.Show(String.Format("Количество {0} данного типа исчерпано", unitType), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (!EnoughPointsForAddUnit(id))
             {
-                string unitType = (ArmyBook.Units[id].Type == Unit.UnitType.Lord || ArmyBook.Units[id].Type == Unit.UnitType.Hero ? "героя" : "отряда");
+                string unitType = (ArmyBook.Units[id].IsHero() ? "героя" : "отряда");
                 MessageBox.Show(String.Format("Недостаточно очков для добавления {0}", unitType), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
