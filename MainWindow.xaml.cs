@@ -61,9 +61,7 @@ namespace WarhammerArmyAssembler
                 {
                     Unit unit = container.DataContext as Unit;
 
-                    if (unit.Type != Unit.UnitType.Hero && unit.Type != Unit.UnitType.Lord)
-                        MessageBox.Show("Отряд не может брать магические предметы", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                    else if (!Interface.EnoughPointsForAddArtefact(id))
+                    if (!Interface.EnoughPointsForAddArtefact(id))
                         MessageBox.Show("Количество очков недостаточно добавления предмета", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     else
                     {
@@ -75,8 +73,6 @@ namespace WarhammerArmyAssembler
             else
                 Interface.ArmyGridDrop(id);
         }
-
-
 
         static T FindVisualParent<T>(UIElement element) where T : UIElement
         {
@@ -107,6 +103,30 @@ namespace WarhammerArmyAssembler
             {
                 u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
                 MessageBox.Show("Количество очков недостаточно для изменения", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void ArmyGrid_LoadingRow(object sender, DataGridRowEventArgs e)
+        {
+            e.Row.DragOver += new DragEventHandler(ArmyGridRow_DragOver);
+        }
+
+        private void ArmyGridRow_DragOver(object sender, DragEventArgs e)
+        {
+            DataGridRow row = (DataGridRow)sender;
+            ArmyGrid.SelectedItem = row.Item;
+            ArmyGrid.ScrollIntoView(row.Item);
+
+            Unit unit = row.DataContext as Unit;
+
+            string id = (string)e.Data.GetData(DataFormats.Text);
+
+            if (ArmyBook.Artefact.ContainsKey(id))
+            {
+                if (unit.Type == Unit.UnitType.Hero || unit.Type == Unit.UnitType.Lord)
+                    e.Effects = DragDropEffects.Copy;
+                else
+                    e.Effects = DragDropEffects.None;
             }
         }
     }
