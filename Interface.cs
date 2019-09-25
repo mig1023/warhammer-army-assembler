@@ -63,6 +63,16 @@ namespace WarhammerArmyAssembler
             return (ArmyBook.Artefact[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
+        public static bool EnoughUnitPointsForAddArtefact(string artefactID, int unitID)
+        {
+            int pointsAlreayUsed = 0;
+
+            foreach (Ammunition ammunition in Army.Units[unitID].Weapons)
+                pointsAlreayUsed += ammunition.Points;
+
+            return ((ArmyBook.Artefact[artefactID].Points + pointsAlreayUsed) <= Army.Units[unitID].MagicItems);
+        }
+
         public static bool EnoughPointsForEditUnit(int id, int newSize)
         {
             int newPrice = (newSize * Army.Units[id].Points);

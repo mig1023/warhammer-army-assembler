@@ -63,6 +63,8 @@ namespace WarhammerArmyAssembler
 
                     if (!Interface.EnoughPointsForAddArtefact(id))
                         MessageBox.Show("Количество очков недостаточно добавления предмета", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    else if (!Interface.EnoughUnitPointsForAddArtefact(id, Interface.IntParse(unit.ID)))
+                        MessageBox.Show("Недостаточно очков магичсеких предметов для добавления", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     else
                     {
                         Army.Units[Interface.IntParse(unit.ID)].AddAmmunition(id);
@@ -122,12 +124,7 @@ namespace WarhammerArmyAssembler
             string id = (string)e.Data.GetData(DataFormats.Text);
 
             if (ArmyBook.Artefact.ContainsKey(id))
-            {
-                if (unit.Type == Unit.UnitType.Hero || unit.Type == Unit.UnitType.Lord)
-                    e.Effects = DragDropEffects.Copy;
-                else
-                    e.Effects = DragDropEffects.None;
-            }
+                e.Effects = (unit.MagicItems > 0 ? DragDropEffects.Copy : DragDropEffects.None);
         }
     }
 }

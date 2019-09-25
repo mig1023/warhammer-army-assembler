@@ -77,6 +77,8 @@ namespace WarhammerArmyAssembler
             newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
             newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
 
+            newUnit.MagicItems = IntParse(xmlUnit["MagicItems"]);
+
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Ammunition/*"))
                 newUnit.Weapons.Add(LoadWeapon(xmlAmmunition));
 

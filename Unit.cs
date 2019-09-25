@@ -69,6 +69,8 @@ namespace WarhammerArmyAssembler
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
 
+        public int MagicItems { get; set; }
+
         public List<Ammunition> Weapons = new List<Ammunition>();
 
         public ObservableCollection<Unit> Items { get; set; }
@@ -126,6 +128,8 @@ namespace WarhammerArmyAssembler
             newUnit.Regeneration = this.Regeneration;
             newUnit.KillingBlow = this.KillingBlow;
             newUnit.PoisonAttack = this.PoisonAttack;
+
+            newUnit.MagicItems = this.MagicItems;
 
             List <Ammunition> Weapons = new List<Ammunition>();
             foreach (Ammunition ammunition in this.Weapons)
