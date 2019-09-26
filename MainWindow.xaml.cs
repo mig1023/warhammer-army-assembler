@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Media.Animation;
 
 namespace WarhammerArmyAssembler
 {
@@ -42,13 +41,9 @@ namespace WarhammerArmyAssembler
                 FrameworkElement f = sender as FrameworkElement;
                 string id = f.Tag as string;
 
-                unitName.Content = ArmyBook.Units[id].Name;
+                armyUnitName.Content = ArmyBook.Units[id].Name;
 
-                ThicknessAnimation move = new ThicknessAnimation();
-                move.Duration = TimeSpan.FromSeconds(0.2);
-                move.From = mainGrid.Margin;
-                move.To = new Thickness(250, 0, 0, 0);
-                mainGrid.BeginAnimation(MarginProperty, move);
+                Interface.Move(Interface.MovingType.ToLeft);
             }
 
             Interface.DragSender = sender;
@@ -72,9 +67,9 @@ namespace WarhammerArmyAssembler
                     Unit unit = container.DataContext as Unit;
 
                     if (!Interface.EnoughPointsForAddArtefact(id))
-                        MessageBox.Show("Количество очков недостаточно добавления предмета", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Interface.Error("Количество очков недостаточно добавления предмета");
                     else if (!Interface.EnoughUnitPointsForAddArtefact(id, Interface.IntParse(unit.ID)))
-                        MessageBox.Show("Недостаточно очков магических предметов для добавления", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Interface.Error("Недостаточно очков магических предметов для добавления");
                     else
                     {
                         Army.Units[Interface.IntParse(unit.ID)].AddAmmunition(id);
@@ -109,11 +104,11 @@ namespace WarhammerArmyAssembler
             if (!Interface.EnoughPointsForEditUnit(Interface.IntParse(u.ID), u.Size))
             {
                 u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
-                MessageBox.Show("Количество очков недостаточно для изменения", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                Interface.Error("Количество очков недостаточно для изменения");
             }
             else if (u.IsHero() && u.Size > 1)
             {
-                MessageBox.Show("Герои всегда одиноки", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                Interface.Error("Герои всегда одиноки");
                 u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
             }
             else
@@ -150,6 +145,13 @@ namespace WarhammerArmyAssembler
 
             Unit unit = container.DataContext as Unit;
 
+            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
+            {
+                unitName.Content = Army.Units[Interface.IntParse(unit.ID)].Name;
+
+                Interface.Move(Interface.MovingType.ToRight);
+            }
+
             Interface.DragSender = sender;
 
             DragDrop.DoDragDrop(container, unit.ID, DragDropEffects.Copy);
@@ -165,17 +167,20 @@ namespace WarhammerArmyAssembler
         private void mainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             mainGrid.Height = e.NewSize.Height;
-            armybookDetail.Height = e.NewSize.Height;
             mainGrid.Width = e.NewSize.Width;
+
+            armybookDetail.Height = e.NewSize.Height;
+
+            unitDetail.Height = e.NewSize.Height;
+            unitDetail.Margin = new Thickness(e.NewSize.Width - unitDetail.Width, 0, 0, 0);
+
+            errorDetail.Width = e.NewSize.Width;
+            closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
         }
 
-        private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
+        private void closeDetail_Click(object sender, RoutedEventArgs e)
         {
-            ThicknessAnimation move = new ThicknessAnimation();
-            move.Duration = TimeSpan.FromSeconds(0.2);
-            move.From = mainGrid.Margin;
-            move.To = new Thickness(0, 0, 0, 0);
-            mainGrid.BeginAnimation(MarginProperty, move);
+            Interface.Move(Interface.MovingType.ToMain);
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 namespace WarhammerArmyAssembler
 {
@@ -16,6 +17,14 @@ namespace WarhammerArmyAssembler
         public static ObservableCollection<Unit> ArmyInInterface = new ObservableCollection<Unit>();
 
         public static object DragSender = null;
+
+        public enum MovingType
+        {
+            ToMain,
+            ToRight,
+            ToLeft,
+            ToTop,
+        }
 
         private static List<Unit> GetArmyCategories()
         {
@@ -94,12 +103,12 @@ namespace WarhammerArmyAssembler
             if ((!slotExists && !coreUnit) || lordInHeroSlot)
             {
                 string unitType = (ArmyBook.Units[id].IsHero() ? "героев" : "отрядов");
-                MessageBox.Show(String.Format("Количество {0} данного типа исчерпано", unitType), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                Error(String.Format("Количество {0} данного типа исчерпано", unitType));
             }
             else if (!EnoughPointsForAddUnit(id))
             {
                 string unitType = (ArmyBook.Units[id].IsHero() ? "героя" : "отряда");
-                MessageBox.Show(String.Format("Недостаточно очков для добавления {0}", unitType), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                Error(String.Format("Недостаточно очков для добавления {0}", unitType));
             }
             else
             {
@@ -172,6 +181,52 @@ namespace WarhammerArmyAssembler
             main.armySize.Content = String.Format("Моделей: {0}", Army.GetArmySize());
             main.armyCasting.Content = String.Format("Каст: {0}", 4);
             main.armyDispell.Content = String.Format("Диспелл: {0}", 2);
+        }
+
+        public static void Error(string text)
+        {
+            main.errorText.Content = text;
+
+            Move(MovingType.ToTop);
+        }
+
+        private static void HideAllDetails()
+        {
+            main.errorDetail.Visibility = Visibility.Hidden;
+            main.unitDetail.Visibility = Visibility.Hidden;
+            main.armybookDetail.Visibility = Visibility.Hidden;
+        }
+
+        public static void Move(MovingType moveTo)
+        {
+            Thickness newPosition = new Thickness(0, 0, 0, 0);
+
+            if (moveTo == MovingType.ToLeft)
+            {
+                newPosition = new Thickness(250, 0, 0, 0);
+                HideAllDetails();
+                main.armybookDetail.Visibility = Visibility.Visible;
+            }
+                
+            if (moveTo == MovingType.ToRight)
+            {
+                newPosition = new Thickness(-250, 0, 0, 0);
+                HideAllDetails();
+                main.unitDetail.Visibility = Visibility.Visible;
+            }
+
+            if (moveTo == MovingType.ToTop)
+            {
+                newPosition = new Thickness(0, 50, 0, 0);
+                HideAllDetails();
+                main.errorDetail.Visibility = Visibility.Visible;
+            }
+
+            ThicknessAnimation move = new ThicknessAnimation();
+            move.Duration = TimeSpan.FromSeconds(0.2);
+            move.From = main.mainGrid.Margin;
+            move.To = newPosition;
+            main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
         }
     }
 }
