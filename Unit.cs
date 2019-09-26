@@ -31,6 +31,8 @@ namespace WarhammerArmyAssembler
 
         public string PointsModifecated { get; set; }
 
+        public string Description { get; set; }
+
         public int Movement { get; set; }
         public int WeaponSkill { get; set; }
         public int BallisticSkill { get; set; }
@@ -103,6 +105,7 @@ namespace WarhammerArmyAssembler
             newUnit.Type = this.Type;
             newUnit.Size = this.Size;
             newUnit.Points = this.Points;
+            newUnit.Description = this.Description;
 
             newUnit.Movement = this.Movement;
             newUnit.WeaponSkill = this.WeaponSkill;

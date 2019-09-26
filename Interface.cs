@@ -115,7 +115,6 @@ namespace WarhammerArmyAssembler
                 Army.AddUnitByID(id);
                 ReloadArmyData();
             }
-           
         }
         
         public static void UnitDeleteDrop(string id)

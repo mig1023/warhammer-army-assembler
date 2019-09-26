@@ -41,7 +41,17 @@ namespace WarhammerArmyAssembler
                 FrameworkElement f = sender as FrameworkElement;
                 string id = f.Tag as string;
 
-                armyUnitName.Content = ArmyBook.Units[id].Name;
+                if (ArmyBook.Units.ContainsKey(id))
+                {
+                    armyUnitName.Content = ArmyBook.Units[id].Name;
+                    armyUnitDescription.Text = ArmyBook.Units[id].Description;
+                }
+
+                if (ArmyBook.Artefact.ContainsKey(id))
+                {
+                    armyUnitName.Content = ArmyBook.Artefact[id].Name;
+                    armyUnitDescription.Text = ArmyBook.Artefact[id].Description;
+                }
 
                 Interface.Move(Interface.MovingType.ToLeft);
             }

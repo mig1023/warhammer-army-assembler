@@ -16,6 +16,8 @@ namespace WarhammerArmyAssembler
 
         public string PointsModifecated { get; set; }
 
+        public string Description { get; set; }
+
         public bool HitFirst { get; set; }
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
@@ -48,6 +50,7 @@ namespace WarhammerArmyAssembler
             newAmmunition.Name = this.Name;
             newAmmunition.ID = this.ID;
             newAmmunition.Points = this.Points;
+            newAmmunition.Description = this.Description;
 
             newAmmunition.HitFirst = this.HitFirst;
             newAmmunition.KillingBlow = this.KillingBlow;

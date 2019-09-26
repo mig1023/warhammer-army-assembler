@@ -41,11 +41,13 @@ namespace WarhammerArmyAssembler
         {
             Unit newUnit = new Unit();
 
-            newUnit.Name = xmlUnit["Name"].InnerText;
-            newUnit.ID = xmlUnit["ID"].InnerText;
+            newUnit.Name = StringParse(xmlUnit["Name"]);
+            newUnit.ID = StringParse(xmlUnit["ID"]);
             newUnit.Type = TypeParse(xmlUnit["Type"]);
             newUnit.Points = IntParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
+
+            newUnit.Description = StringParse(xmlUnit["Description"]);
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
@@ -97,6 +99,14 @@ namespace WarhammerArmyAssembler
             return (success ? value : 0);
         }
 
+        private static string StringParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return String.Empty;
+
+            return xmlNode.InnerText.Replace("|", "\n");
+        }
+
         private static UnitType TypeParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
@@ -139,10 +149,10 @@ namespace WarhammerArmyAssembler
         {
             Ammunition newWeapon = new Ammunition();
 
-            newWeapon.Name = xmlNode["Name"].InnerText;
+            newWeapon.Name = StringParse(xmlNode["Name"]);
+            newWeapon.Description = StringParse(xmlNode["Description"]);
 
-            if (xmlNode["ID"] != null)
-                newWeapon.ID = xmlNode["ID"].InnerText;
+            newWeapon.ID = StringParse(xmlNode["ID"]);
 
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);

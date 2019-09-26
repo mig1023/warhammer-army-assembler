@@ -9,7 +9,8 @@
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
         <Canvas x:Name="armybookDetail" Width="250">
             <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="154" Margin="20,20" Click="closeDetail_Click"/>
-            <Label x:Name="armyUnitName" Content="" Height="30" Width="Auto" FontSize="12" Margin="18,60"/>
+            <Label x:Name="armyUnitName" Content="" Height="30" Width="Auto" Margin="18,60"/>
+            <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="210" TextWrapping="Wrap" Margin="20,100"/>
         </Canvas>
         <Canvas x:Name="unitDetail" Width="250">
             <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="154" Margin="20,20" Click="closeDetail_Click"/>
