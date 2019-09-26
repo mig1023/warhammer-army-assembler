@@ -52,11 +52,11 @@ namespace WarhammerArmyAssembler
             foreach (Unit unitType in categories)
                 main.ArmyList.Items.Add(unitType);
 
-            Ammunition artefacts = new Ammunition() { Name = "Артефакты" };
+            Option artefacts = new Option() { Name = "Артефакты" };
 
-            foreach (KeyValuePair<string, Ammunition> entry in ArmyBook.Artefact)
+            foreach (KeyValuePair<string, Option> entry in ArmyBook.Artefact)
             {
-                Ammunition artefact = entry.Value.Clone();
+                Option artefact = entry.Value.Clone();
                 artefact.PointsModifecated = String.Format(" {0} pts", artefact.Points);
                 artefacts.Items.Add(artefact);
             }
@@ -78,8 +78,9 @@ namespace WarhammerArmyAssembler
         {
             int pointsAlreayUsed = 0;
 
-            foreach (Ammunition ammunition in Army.Units[unitID].Weapons)
-                pointsAlreayUsed += ammunition.Points;
+            foreach (Option option in Army.Units[unitID].Option)
+                if (option.IsMagicItem())
+                    pointsAlreayUsed += option.Points;
 
             return ((ArmyBook.Artefact[artefactID].Points + pointsAlreayUsed) <= Army.Units[unitID].MagicItems);
         }
@@ -143,7 +144,7 @@ namespace WarhammerArmyAssembler
             {
                 Unit unit = entry.Value.Clone();
 
-                unit = unit.GetWeaponsRules();
+                unit = unit.GetOptionRules();
 
                 unit.InterfaceRules = unit.GetSpecialRulesLine();
                 unit.InterfacePoints = unit.GetUnitPoints();

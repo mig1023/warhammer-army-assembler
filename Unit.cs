@@ -73,7 +73,7 @@ namespace WarhammerArmyAssembler
 
         public int MagicItems { get; set; }
 
-        public List<Ammunition> Weapons = new List<Ammunition>();
+        public List<Option> Option = new List<Option>();
 
         public ObservableCollection<Unit> Items { get; set; }
 
@@ -90,8 +90,9 @@ namespace WarhammerArmyAssembler
         {
             int points = Size * Points;
 
-            foreach (Ammunition ammunition in Weapons)
-                points += ammunition.Points;
+            foreach (Option option in Option)
+                if (!option.IsOption() || (option.IsOption() && option.Realised))
+                    points += option.Points;
 
             return points;
         }
@@ -134,84 +135,84 @@ namespace WarhammerArmyAssembler
 
             newUnit.MagicItems = this.MagicItems;
 
-            List <Ammunition> Weapons = new List<Ammunition>();
-            foreach (Ammunition ammunition in this.Weapons)
-                newUnit.Weapons.Add(ammunition);
+            List <Option> Option = new List<Option>();
+            foreach (Option option in this.Option)
+                newUnit.Option.Add(option);
 
             return newUnit;
         }
 
-        public Unit GetWeaponsRules()
+        public Unit GetOptionRules()
         {
             Unit unit = this.Clone();
 
             Brush modificationColor = Brushes.Aquamarine;
 
-            foreach (Ammunition ammunition in this.Weapons)
+            foreach (Option option in this.Option)
             {
-                if (ammunition.AddToMovement > 0)
+                if (option.AddToMovement > 0)
                 {
-                    unit.Movement += ammunition.AddToMovement;
+                    unit.Movement += option.AddToMovement;
                     unit.MovementModifecated += '*';
                 }
 
-                if (ammunition.AddToWeaponSkill > 0)
+                if (option.AddToWeaponSkill > 0)
                 {
-                    unit.WeaponSkill += ammunition.AddToWeaponSkill;
+                    unit.WeaponSkill += option.AddToWeaponSkill;
                     unit.WeaponSkillModifecated += '*';
                 }
 
-                if (ammunition.AddToBallisticSkill > 0)
+                if (option.AddToBallisticSkill > 0)
                 {
-                    unit.BallisticSkill += ammunition.AddToBallisticSkill;
+                    unit.BallisticSkill += option.AddToBallisticSkill;
                     unit.BallisticSkillModifecated += '*';
                 }
 
-                if (ammunition.AddToStrength > 0)
+                if (option.AddToStrength > 0)
                 {
-                    unit.Strength += ammunition.AddToStrength;
+                    unit.Strength += option.AddToStrength;
                     unit.StrengthModifecated += '*';
                 }
                     
-                if (ammunition.AddToToughness > 0)
+                if (option.AddToToughness > 0)
                 {
-                    unit.Toughness += ammunition.AddToToughness;
+                    unit.Toughness += option.AddToToughness;
                     unit.ToughnessModifecated += '*';
                 }
                     
-                if (ammunition.AddToWounds > 0)
+                if (option.AddToWounds > 0)
                 {
-                    unit.Wounds += ammunition.AddToWounds;
+                    unit.Wounds += option.AddToWounds;
                     unit.WoundsModifecated += '*';
                 }
 
-                if (ammunition.AddToInitiative > 0)
+                if (option.AddToInitiative > 0)
                 {
-                    unit.Initiative += ammunition.AddToInitiative;
+                    unit.Initiative += option.AddToInitiative;
                     unit.InitiativeModifecated += '*';
                 }
 
-                if (ammunition.AddToAttacks > 0)
+                if (option.AddToAttacks > 0)
                 {
-                    unit.Attacks += ammunition.AddToAttacks;
+                    unit.Attacks += option.AddToAttacks;
                     unit.AttacksModifecated += '*';
                 }
 
-                if (ammunition.AddToLeadership > 0)
+                if (option.AddToLeadership > 0)
                 {
-                    unit.Leadership += ammunition.AddToLeadership;
+                    unit.Leadership += option.AddToLeadership;
                     unit.LeadershipModifecated += '*';
                 }
 
-                if (ammunition.AddToArmour > 0)
+                if (option.AddToArmour > 0)
                 {
-                    unit.Armour += ammunition.AddToArmour;
+                    unit.Armour += option.AddToArmour;
                     unit.ArmourModifecated += '*';
                 }
                     
-                if (ammunition.AddToWard > 0)
+                if (option.AddToWard > 0)
                 {
-                    unit.Ward += ammunition.AddToWard;
+                    unit.Ward += option.AddToWard;
                     unit.WardModifecated += '*';
                 }
             }
@@ -233,22 +234,46 @@ namespace WarhammerArmyAssembler
 
         public string GetFullDescription()
         {
-            string description = "СПЕЦИАЛЬНЫЕ ПРАВИЛА:\n";
+            string description = String.Empty;
 
-            foreach (string rule in GetSpecialRules())
-                description += rule + "\n";
+            if (GetSpecialRules().Count > 0)
+            {
+                description += "СПЕЦИАЛЬНЫЕ ПРАВИЛА:\n";
 
-            description += "\nСНАРЯЖЕНИЕ:\n";
+                foreach (string rule in GetSpecialRules())
+                    description += rule + "\n";
 
-            foreach (Ammunition ammunition in this.Weapons)
-                description += ammunition.Name + "\n";
+                description += "\n";
+            }
+
+            if (Option.Count > 0)
+            {
+                description += "СНАРЯЖЕНИЕ:\n";
+
+                foreach (Option option in Option)
+                    if (option.IsMagicItem())
+                        description += option.Name + "\n";
+
+                description += "\n";
+            }
+
+            if (Option.Count > 0)
+            {
+                description += "ОПЦИИ:\n";
+
+                foreach (Option option in Option)
+                    if (option.IsOption())
+                        description += option.Name + (option.Realised ? " (удалить)" : " (добавить)") + "\n";
+
+                description += "\n";
+            }
 
             return description;
         }
 
         public void AddAmmunition(string id)
         {
-            Weapons.Add(ArmyBook.Artefact[id].Clone());
+            Option.Add(ArmyBook.Artefact[id].Clone());
         }
 
         public string GetSpecialRulesLine()

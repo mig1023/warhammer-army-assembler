@@ -8,6 +8,7 @@
         <Artefact>
 	    <ID>01G006</ID>
 	    <Name>Меч Силы</Name>
+	    <Type>Weapon</Type>
 	    <AddToStrength>2</AddToStrength>
 	    <Points>25</Points>
 	    <Description>+2 к силе|25 очков</Description>
@@ -19,6 +20,7 @@
             <Type>Lord</Type>
             <Name>Орк Очень Большой Босс</Name>
             <Points>115</Points>
+	    <Description>Описание описание описание описание описание|описание описание описание описание описание описание описание |описание |описание описание описание описание |описание описание описание описание описание |описание описание описание |описание описание |описание</Description>
             <MinSize>1</MinSize>
             <MainParam>
                 <Movement>4</Movement>
@@ -44,6 +46,13 @@
                     <Name>лёгкая броня</Name>
                 </HandWeapon>
             </Ammunition>
+	    <Options>
+	        <Option>
+	            <Name>Купить ему чего-то нужного</Name>
+		    <Type>Option</Type>
+		    <Points>10</Points>
+	        </Option>
+	    </Options>
         </Hero>
 	<Hero>
             <ID>01G010</ID>

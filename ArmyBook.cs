@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-
+using static WarhammerArmyAssembler.Option;
 using static WarhammerArmyAssembler.Unit;
 
 namespace WarhammerArmyAssembler
@@ -13,7 +13,7 @@ namespace WarhammerArmyAssembler
     public class ArmyBook
     {
         public static Dictionary<string, Unit> Units = new Dictionary<string, Unit>();
-        public static Dictionary<string, Ammunition> Artefact = new Dictionary<string, Ammunition>();
+        public static Dictionary<string, Option> Artefact = new Dictionary<string, Option>();
 
         public static void LoadArmy(string xmlFileName)
         {
@@ -29,7 +29,7 @@ namespace WarhammerArmyAssembler
                 Units.Add(GetID(xmlUnit), LoadUnit(xmlUnit));
 
             foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
-                Artefact.Add(GetID(xmlArtefact), LoadWeapon(xmlArtefact));
+                Artefact.Add(GetID(xmlArtefact), LoadOption(xmlArtefact));
         }
 
         public static string GetID(XmlNode xmlUnit)
@@ -43,7 +43,7 @@ namespace WarhammerArmyAssembler
 
             newUnit.Name = StringParse(xmlUnit["Name"]);
             newUnit.ID = StringParse(xmlUnit["ID"]);
-            newUnit.Type = TypeParse(xmlUnit["Type"]);
+            newUnit.Type = UnitTypeParse(xmlUnit["Type"]);
             newUnit.Points = IntParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
 
@@ -82,7 +82,10 @@ namespace WarhammerArmyAssembler
             newUnit.MagicItems = IntParse(xmlUnit["MagicItems"]);
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Ammunition/*"))
-                newUnit.Weapons.Add(LoadWeapon(xmlAmmunition));
+                newUnit.Option.Add(LoadOption(xmlAmmunition));
+
+            foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
+                newUnit.Option.Add(LoadOption(xmlAmmunition));
 
             return newUnit;
         }
@@ -107,7 +110,7 @@ namespace WarhammerArmyAssembler
             return xmlNode.InnerText.Replace("|", "\n");
         }
 
-        private static UnitType TypeParse(XmlNode xmlNode)
+        private static UnitType UnitTypeParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return 0;
@@ -117,6 +120,18 @@ namespace WarhammerArmyAssembler
             bool success = Enum.TryParse(xmlNode.InnerText, out value);
 
             return (success ? value : UnitType.Core);
+        }
+
+        private static OptionType OptionTypeParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return 0;
+
+            OptionType value;
+
+            bool success = Enum.TryParse(xmlNode.InnerText, out value);
+
+            return (success ? value : Option.OptionType.Option);
         }
 
         private static bool BoolParse(XmlNode xmlNode)
@@ -145,12 +160,14 @@ namespace WarhammerArmyAssembler
             return allXmlArmyBooks;
         }
 
-        public static Ammunition LoadWeapon(XmlNode xmlNode)
+        public static Option LoadOption(XmlNode xmlNode)
         {
-            Ammunition newWeapon = new Ammunition();
+            Option newWeapon = new Option();
 
             newWeapon.Name = StringParse(xmlNode["Name"]);
             newWeapon.Description = StringParse(xmlNode["Description"]);
+            newWeapon.Type = OptionTypeParse(xmlNode["Type"]);
+            newWeapon.Realised = false;
 
             newWeapon.ID = StringParse(xmlNode["ID"]);
 
