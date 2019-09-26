@@ -15,7 +15,7 @@
         <Canvas x:Name="unitDetail" Width="250">
             <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="154" Margin="20,20" Click="closeDetail_Click"/>
             <Label x:Name="unitName" Content="" Height="30" Width="Auto" FontSize="12" Margin="18,60"/>
-            <TextBlock x:Name="unitDescription" Height="Auto" Width="210" TextWrapping="Wrap" Margin="20,100"/>
+            <TextBlock x:Name="unitDescription" Height="Auto" Width="210" TextWrapping="Wrap"/>
         </Canvas>
         <Canvas x:Name="errorDetail" Background="Red" Height="50" Width="Auto">
             <Button x:Name="closeErrorDetail" Content="Закрыть" Height="30" Width="154" Click="closeDetail_Click"/>

@@ -92,7 +92,7 @@ namespace WarhammerArmyAssembler
 
             foreach (Option option in Option)
                 if (!option.IsOption() || (option.IsOption() && option.Realised))
-                    points += option.Points;
+                    points += option.Points * (option.PerModel ? Size : 1);
 
             return points;
         }
@@ -257,23 +257,19 @@ namespace WarhammerArmyAssembler
                 description += "\n";
             }
 
-            if (Option.Count > 0)
-            {
-                description += "ОПЦИИ:\n";
-
-                foreach (Option option in Option)
-                    if (option.IsOption())
-                        description += option.Name + (option.Realised ? " (удалить)" : " (добавить)") + "\n";
-
-                description += "\n";
-            }
-
             return description;
         }
 
         public void AddAmmunition(string id)
         {
             Option.Add(ArmyBook.Artefact[id].Clone());
+        }
+
+        public void AddOption(string id, Unit unit)
+        {
+            foreach (Option option in unit.Option)
+                if (option.ID == id)
+                    option.Realised = true;
         }
 
         public string GetSpecialRulesLine()

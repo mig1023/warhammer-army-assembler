@@ -176,6 +176,8 @@ namespace WarhammerArmyAssembler
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
 
             newWeapon.Points = IntParse(xmlNode["Points"]);
+            newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);
+
             newWeapon.AddToMovement = IntParse(xmlNode["AddToMovement"]);
             newWeapon.AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]);
             newWeapon.AddToBallisticSkill = IntParse(xmlNode["AddToBallisticSkill"]);

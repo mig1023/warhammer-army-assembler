@@ -93,6 +93,77 @@ namespace WarhammerArmyAssembler
             return (newPrice - currentPrice) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
+        public static double AddOptionsList(Unit unit)
+        {
+            double topMargin = main.unitName.Margin.Top + main.unitName.Height;
+
+            List<FrameworkElement> elementsForRemoving = new List<FrameworkElement>();
+
+            foreach (FrameworkElement element in main.unitDetail.Children)
+                if (element.Name != "closeUnitDetail" && element.Name != "unitName" && element.Name != "unitDescription")
+                    elementsForRemoving.Add(element);
+
+            foreach (FrameworkElement element in elementsForRemoving)
+                main.unitDetail.Children.Remove(element);
+
+            topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20);
+
+            foreach (Option option in unit.Option)
+                if (option.IsOption())
+                    topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40, String.Format("{0}|{1}", unit.ID, option.ID), option);
+
+            return topMargin + 25;
+        }
+
+        private static void AddOption_Click(object sender, RoutedEventArgs e)
+        {
+            string id_tag = (sender as Button).Tag.ToString();
+
+            string[] id = id_tag.Split('|');
+
+            Army.Units[Interface.IntParse(id[0])].AddOption(id[1], Army.Units[Interface.IntParse(id[0])]);
+            Interface.ReloadArmyData();
+
+            Interface.Move(Interface.MovingType.ToMain);
+        }
+
+        private static double AddLabel(string caption, double left, double top, double height)
+        {
+            Label newOption = new Label();
+            newOption.Content = caption;
+            newOption.Margin = Thick(newOption, left, top);
+            main.unitDetail.Children.Add(newOption);
+
+            return height;
+        }
+
+        private static double AddButton(string caption, double left, double top, double height, string id, Option option)
+        {
+            AddLabel(caption, left, top, height);
+
+            Button newButton = new Button();
+            newButton.Content = (option.Realised ? "отменить" : "добавить");
+            newButton.Margin = Thick(newButton, left + 2, top + 20);
+            newButton.Tag = id;
+            newButton.Click += AddOption_Click;
+            newButton.Width = 210;
+            main.unitDetail.Children.Add(newButton);
+
+            return height;
+        }
+
+        public static Thickness Thick(object element, double? left = null, double? top = null, double? right = null, double? bottom = null)
+        {
+            FrameworkElement control = element as FrameworkElement;
+
+            double newLeft = left ?? control.Margin.Left;
+            double newTop = top ?? control.Margin.Top;
+            double newRight = right ?? control.Margin.Right;
+            double newBottom = bottom ?? control.Margin.Bottom;
+
+            return new Thickness(newLeft, newTop, newRight, newBottom);
+        }
+
         public static void ArmyGridDrop(string id)
         {
             bool slotExists = (Army.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));

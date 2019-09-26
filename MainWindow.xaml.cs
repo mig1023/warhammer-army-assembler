@@ -158,6 +158,10 @@ namespace WarhammerArmyAssembler
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
                 unitName.Content = unit.Name;
+
+                double newTop = Interface.AddOptionsList(unit);
+
+                unitDescription.Margin = Interface.Thick(unitDescription, left: (unitName.Margin.Left + 5), top: newTop);
                 unitDescription.Text = unit.GetFullDescription();
 
                 Interface.Move(Interface.MovingType.ToRight);

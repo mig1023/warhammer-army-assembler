@@ -25,6 +25,7 @@ namespace WarhammerArmyAssembler
         public bool Realised { get; set; }
 
         public int Points { get; set; }
+        public bool PerModel { get; set; }
 
         public string PointsModifecated { get; set; }
 
@@ -62,6 +63,7 @@ namespace WarhammerArmyAssembler
             newOption.Name = this.Name;
             newOption.ID = this.ID;
             newOption.Points = this.Points;
+            newOption.PerModel = this.PerModel;
             newOption.Type = this.Type;
             newOption.Description = this.Description;
             newOption.Realised = this.Realised;
