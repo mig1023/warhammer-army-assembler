@@ -24,6 +24,8 @@ namespace WarhammerArmyAssembler
 
         public bool Realised { get; set; }
 
+        public bool Multiple { get; set; }
+
         public int Points { get; set; }
         public bool PerModel { get; set; }
 
@@ -67,6 +69,7 @@ namespace WarhammerArmyAssembler
             newOption.Type = this.Type;
             newOption.Description = this.Description;
             newOption.Realised = this.Realised;
+            newOption.Multiple = this.Multiple;
 
             newOption.HitFirst = this.HitFirst;
             newOption.KillingBlow = this.KillingBlow;

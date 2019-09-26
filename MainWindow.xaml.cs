@@ -36,11 +36,11 @@ namespace WarhammerArmyAssembler
             if (t.Tag == null || String.IsNullOrEmpty(t.Tag.ToString()))
                 return;
 
+            FrameworkElement f = sender as FrameworkElement;
+            string id = f.Tag as string;
+
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
-                FrameworkElement f = sender as FrameworkElement;
-                string id = f.Tag as string;
-
                 if (ArmyBook.Units.ContainsKey(id))
                 {
                     armyUnitName.Content = ArmyBook.Units[id].Name;
@@ -56,9 +56,14 @@ namespace WarhammerArmyAssembler
                 Interface.Move(Interface.MovingType.ToLeft);
             }
 
-            Interface.DragSender = sender;
+            if (ArmyBook.Artefact.ContainsKey(id) && Army.ArtefactAlreadyUsed(id) && (!ArmyBook.Artefact[id].Multiple))
+                return;
+            else
+            {
+                Interface.DragSender = sender;
 
-            DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
+                DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
+            }
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)

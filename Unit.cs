@@ -149,73 +149,74 @@ namespace WarhammerArmyAssembler
             Brush modificationColor = Brushes.Aquamarine;
 
             foreach (Option option in this.Option)
-            {
-                if (option.AddToMovement > 0)
+                if (option.IsMagicItem() || (option.IsOption() && option.Realised))
                 {
-                    unit.Movement += option.AddToMovement;
-                    unit.MovementModifecated += '*';
-                }
+                    if (option.AddToMovement > 0)
+                    {
+                        unit.Movement += option.AddToMovement;
+                        unit.MovementModifecated += '*';
+                    }
 
-                if (option.AddToWeaponSkill > 0)
-                {
-                    unit.WeaponSkill += option.AddToWeaponSkill;
-                    unit.WeaponSkillModifecated += '*';
-                }
+                    if (option.AddToWeaponSkill > 0)
+                    {
+                        unit.WeaponSkill += option.AddToWeaponSkill;
+                        unit.WeaponSkillModifecated += '*';
+                    }
 
-                if (option.AddToBallisticSkill > 0)
-                {
-                    unit.BallisticSkill += option.AddToBallisticSkill;
-                    unit.BallisticSkillModifecated += '*';
-                }
+                    if (option.AddToBallisticSkill > 0)
+                    {
+                        unit.BallisticSkill += option.AddToBallisticSkill;
+                        unit.BallisticSkillModifecated += '*';
+                    }
 
-                if (option.AddToStrength > 0)
-                {
-                    unit.Strength += option.AddToStrength;
-                    unit.StrengthModifecated += '*';
-                }
+                    if (option.AddToStrength > 0)
+                    {
+                        unit.Strength += option.AddToStrength;
+                        unit.StrengthModifecated += '*';
+                    }
                     
-                if (option.AddToToughness > 0)
-                {
-                    unit.Toughness += option.AddToToughness;
-                    unit.ToughnessModifecated += '*';
-                }
+                    if (option.AddToToughness > 0)
+                    {
+                        unit.Toughness += option.AddToToughness;
+                        unit.ToughnessModifecated += '*';
+                    }
                     
-                if (option.AddToWounds > 0)
-                {
-                    unit.Wounds += option.AddToWounds;
-                    unit.WoundsModifecated += '*';
-                }
+                    if (option.AddToWounds > 0)
+                    {
+                        unit.Wounds += option.AddToWounds;
+                        unit.WoundsModifecated += '*';
+                    }
 
-                if (option.AddToInitiative > 0)
-                {
-                    unit.Initiative += option.AddToInitiative;
-                    unit.InitiativeModifecated += '*';
-                }
+                    if (option.AddToInitiative > 0)
+                    {
+                        unit.Initiative += option.AddToInitiative;
+                        unit.InitiativeModifecated += '*';
+                    }
 
-                if (option.AddToAttacks > 0)
-                {
-                    unit.Attacks += option.AddToAttacks;
-                    unit.AttacksModifecated += '*';
-                }
+                    if (option.AddToAttacks > 0)
+                    {
+                        unit.Attacks += option.AddToAttacks;
+                        unit.AttacksModifecated += '*';
+                    }
 
-                if (option.AddToLeadership > 0)
-                {
-                    unit.Leadership += option.AddToLeadership;
-                    unit.LeadershipModifecated += '*';
-                }
+                    if (option.AddToLeadership > 0)
+                    {
+                        unit.Leadership += option.AddToLeadership;
+                        unit.LeadershipModifecated += '*';
+                    }
 
-                if (option.AddToArmour > 0)
-                {
-                    unit.Armour += option.AddToArmour;
-                    unit.ArmourModifecated += '*';
-                }
+                    if (option.AddToArmour > 0)
+                    {
+                        unit.Armour += option.AddToArmour;
+                        unit.ArmourModifecated += '*';
+                    }
                     
-                if (option.AddToWard > 0)
-                {
-                    unit.Ward += option.AddToWard;
-                    unit.WardModifecated += '*';
+                    if (option.AddToWard > 0)
+                    {
+                        unit.Ward += option.AddToWard;
+                        unit.WardModifecated += '*';
+                    }
                 }
-            }
 
             unit.MovementModifecated = unit.Movement.ToString() + unit.MovementModifecated;
             unit.WeaponSkillModifecated = unit.WeaponSkill.ToString() + unit.WeaponSkillModifecated;

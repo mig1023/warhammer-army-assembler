@@ -86,5 +86,15 @@ namespace WarhammerArmyAssembler
                     return 0;
             }
         }
+
+        public static bool ArtefactAlreadyUsed(string id)
+        {
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                foreach (Option option in entry.Value.Option)
+                    if (option.ID == id)
+                        return true;
+
+            return false;
+        }
     }
 }
