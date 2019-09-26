@@ -145,7 +145,7 @@ namespace WarhammerArmyAssembler
 
                 unit = unit.GetWeaponsRules();
 
-                unit.InterfaceRules = unit.GetSpecialRules();
+                unit.InterfaceRules = unit.GetSpecialRulesLine();
                 unit.InterfacePoints = unit.GetUnitPoints();
                 unit.ID = entry.Key.ToString();
 

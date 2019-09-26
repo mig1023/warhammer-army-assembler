@@ -231,17 +231,19 @@ namespace WarhammerArmyAssembler
             return unit;
         }
 
-        public string GetAmmunition()
+        public string GetFullDescription()
         {
-            string allAmmunition = String.Empty;
+            string description = "СПЕЦИАЛЬНЫЕ ПРАВИЛА:\n";
+
+            foreach (string rule in GetSpecialRules())
+                description += rule + "\n";
+
+            description += "\nСНАРЯЖЕНИЕ:\n";
 
             foreach (Ammunition ammunition in this.Weapons)
-                allAmmunition += ammunition.Name + "; ";
+                description += ammunition.Name + "\n";
 
-            if (!String.IsNullOrEmpty(allAmmunition))
-                allAmmunition = allAmmunition.Remove(allAmmunition.Length - 2);
-
-            return allAmmunition;
+            return description;
         }
 
         public void AddAmmunition(string id)
@@ -249,48 +251,58 @@ namespace WarhammerArmyAssembler
             Weapons.Add(ArmyBook.Artefact[id].Clone());
         }
 
-        public string GetSpecialRules()
+        public string GetSpecialRulesLine()
         {
             string rules = String.Empty;
 
-            if (ImmuneToPsychology)
-                rules += "иммунен к психологии; ";
-
-            if (Stubborn)
-                rules += "упорность; ";
-
-            if (Hate)
-                rules += "ненависть; ";
-
-            if (Fear)
-                rules += "страх; ";
-
-            if (Terror)
-                rules += "ужас; ";
-
-            if (Frenzy)
-                rules += "бешенство; ";
-
-            if (Unbreakable)
-                rules += "несломимость; ";
-
-            if (ColdBlooded)
-                rules += "хладнокровие; ";
-
-            if (HitFirst)
-                rules += "всегда бьёт первым; ";
-
-            if (Regeneration)
-                rules += "регенерация; ";
-
-            if (KillingBlow)
-                rules += "смертельный удар; ";
-
-            if (PoisonAttack)
-                rules += "ядовитые атаки; ";
+            foreach (string rule in GetSpecialRules())
+                rules += rule + "; ";
 
             if (!String.IsNullOrEmpty(rules))
                 rules = rules.Remove(rules.Length - 2);
+
+            return rules;
+        }
+
+        public List<string> GetSpecialRules()
+        {
+            List<string> rules = new List<string>();
+
+            if (ImmuneToPsychology)
+                rules.Add("иммунен к психологии");
+
+            if (Stubborn)
+                rules.Add("упорность;");
+
+            if (Hate)
+                rules.Add("ненависть");
+
+            if (Fear)
+                rules.Add("страх");
+
+            if (Terror)
+                rules.Add("ужас");
+
+            if (Frenzy)
+                rules.Add("бешенство");
+
+            if (Unbreakable)
+                rules.Add("несломимость");
+
+            if (ColdBlooded)
+                rules.Add("хладнокровие");
+
+            if (HitFirst)
+                rules.Add("всегда бьёт первым");
+
+            if (Regeneration)
+                rules.Add("регенерация");
+
+            if (KillingBlow)
+                rules.Add("смертельный удар");
+
+            if (PoisonAttack)
+                rules.Add("ядовитые атаки");
 
             return rules;
         }

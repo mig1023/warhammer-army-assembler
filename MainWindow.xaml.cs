@@ -157,7 +157,8 @@ namespace WarhammerArmyAssembler
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
-                unitName.Content = Army.Units[Interface.IntParse(unit.ID)].Name;
+                unitName.Content = unit.Name;
+                unitDescription.Text = unit.GetFullDescription();
 
                 Interface.Move(Interface.MovingType.ToRight);
             }
