@@ -106,13 +106,40 @@ namespace WarhammerArmyAssembler
             foreach (FrameworkElement element in elementsForRemoving)
                 main.unitDetail.Children.Remove(element);
 
-            topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20);
+            if (unit.ExistsOptions())
+            {
+                topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20);
 
-            foreach (Option option in unit.Option)
-                if (option.IsOption())
-                    topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40, String.Format("{0}|{1}", unit.ID, option.ID), option);
+                foreach (Option option in unit.Option)
+                    if (option.IsOption())
+                        topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40, String.Format("{0}|{1}", unit.ID, option.ID), option);
 
-            return topMargin + 25;
+                topMargin += 25;
+            }
+
+            if (unit.ExistsMagicItems())
+            {
+                topMargin += AddLabel("МАГИЧЕСКИЕ ПРЕДМЕТЫ", main.unitName.Margin.Left, topMargin, 20);
+
+                foreach (Option option in unit.Option)
+                    if (option.IsMagicItem() && (option.Points > 0))
+                        topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40, String.Format("{0}|{1}", unit.ID, option.ID), option);
+
+                topMargin += 25;
+            }
+
+            if (unit.ExistsOrdinaryItems())
+            {
+                topMargin += AddLabel("ОБЫЧНЫЕ ПРЕДМЕТЫ", main.unitName.Margin.Left, topMargin, 20);
+
+                foreach (Option option in unit.Option)
+                    if (option.IsMagicItem() && (option.Points == 0))
+                        topMargin += AddLabel(option.Name, main.unitName.Margin.Left, topMargin, 20);
+
+                topMargin += 25;
+            }
+
+            return topMargin;
         }
 
         private static void AddOption_Click(object sender, RoutedEventArgs e)
@@ -142,7 +169,12 @@ namespace WarhammerArmyAssembler
             AddLabel(caption, left, top, height);
 
             Button newButton = new Button();
-            newButton.Content = (option.Realised ? "отменить" : "добавить");
+
+            if (option.IsMagicItem())
+                newButton.Content = "отказаться";
+            else
+                newButton.Content = (option.Realised ? "отменить" : "добавить");
+
             newButton.Margin = Thick(newButton, left + 2, top + 20);
             newButton.Tag = id;
             newButton.Click += AddOption_Click;

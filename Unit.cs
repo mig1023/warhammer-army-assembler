@@ -247,17 +247,6 @@ namespace WarhammerArmyAssembler
                 description += "\n";
             }
 
-            if (Option.Count > 0)
-            {
-                description += "СНАРЯЖЕНИЕ:\n";
-
-                foreach (Option option in Option)
-                    if (option.IsMagicItem())
-                        description += option.Name + "\n";
-
-                description += "\n";
-            }
-
             return description;
         }
 
@@ -270,7 +259,14 @@ namespace WarhammerArmyAssembler
         {
             foreach (Option option in unit.Option)
                 if (option.ID == id)
-                    option.Realised = !option.Realised;
+                {
+                    if (option.IsMagicItem())
+                        unit.Option.Remove(option);
+                    else
+                        option.Realised = !option.Realised;
+
+                    return;
+                }
         }
 
         public string GetSpecialRulesLine()
@@ -332,6 +328,33 @@ namespace WarhammerArmyAssembler
         public bool IsHero()
         {
             return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero ? true : false);
+        }
+
+        public bool ExistsOptions()
+        {
+            foreach (Option option in Option)
+                if (option.IsOption())
+                    return true;
+
+            return false;
+        }
+
+        public bool ExistsMagicItems()
+        {
+            foreach (Option option in Option)
+                if (option.IsMagicItem() && (option.Points > 0))
+                    return true;
+
+            return false;
+        }
+
+        public bool ExistsOrdinaryItems()
+        {
+            foreach (Option option in Option)
+                if (option.IsMagicItem() && (option.Points == 0))
+                    return true;
+
+            return false;
         }
     }
 }
