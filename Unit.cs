@@ -270,7 +270,7 @@ namespace WarhammerArmyAssembler
         {
             foreach (Option option in unit.Option)
                 if (option.ID == id)
-                    option.Realised = true;
+                    option.Realised = !option.Realised;
         }
 
         public string GetSpecialRulesLine()
