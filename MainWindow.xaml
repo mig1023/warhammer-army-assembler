@@ -8,12 +8,12 @@
         Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="992.809">
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
         <Canvas x:Name="armybookDetail" Width="250" Height="50" Background="White">
-            <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="154" Margin="20,20" Click="closeDetail_Click"/>
+            <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="210" Margin="20,20" Click="closeDetail_Click"/>
             <Label x:Name="armyUnitName" Content="" Height="30" Width="Auto" Margin="18,60"/>
             <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="210" TextWrapping="Wrap" Margin="20,100"/>
         </Canvas>
         <Canvas x:Name="unitDetail" Width="250" Height="50" Background="White">
-            <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="154" Margin="20,20" Click="closeDetail_Click"/>
+            <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="210" Margin="20,20" Click="closeDetail_Click"/>
             <Label x:Name="unitName" Content="" Height="30" Width="Auto" FontSize="12" Margin="18,60"/>
             <TextBlock x:Name="unitDescription" Height="Auto" Width="210" TextWrapping="Wrap"/>
         </Canvas>
