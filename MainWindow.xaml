@@ -21,7 +21,7 @@
                 <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
             </Canvas>
         </ScrollViewer>
-        <Canvas x:Name="errorDetail" Background="Red" Height="50" Width="Auto">
+        <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
             <Button x:Name="closeErrorDetail" Content="Закрыть" Height="30" Width="154" Click="closeDetail_Click"/>
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
