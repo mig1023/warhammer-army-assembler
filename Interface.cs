@@ -178,7 +178,7 @@ namespace WarhammerArmyAssembler
             newButton.Margin = Thick(newButton, left + 2, top + 20);
             newButton.Tag = id;
             newButton.Click += AddOption_Click;
-            newButton.Width = 210;
+            newButton.Width = 200;
             main.unitDetail.Children.Add(newButton);
 
             return height;

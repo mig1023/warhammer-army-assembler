@@ -191,10 +191,10 @@ namespace WarhammerArmyAssembler
             mainGrid.Height = e.NewSize.Height;
             mainGrid.Width = e.NewSize.Width;
 
-            armybookDetail.Height = e.NewSize.Height;
-
             unitDetailScroll.Height = e.NewSize.Height;
             unitDetailScroll.Margin = new Thickness(e.NewSize.Width - unitDetailScroll.Width, 0, 0, 0);
+
+            armybookDetailScroll.Height = e.NewSize.Height;
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
