@@ -169,6 +169,8 @@ namespace WarhammerArmyAssembler
                 unitDescription.Margin = Interface.Thick(unitDescription, left: (unitName.Margin.Left + 5), top: newTop);
                 unitDescription.Text = unit.GetFullDescription();
 
+                unitDetail.Height = newTop + ( unitDescription.Height > 0 ? unitDescription.Height : 20) + 20;
+
                 Interface.Move(Interface.MovingType.ToRight);
             }
 
@@ -191,8 +193,8 @@ namespace WarhammerArmyAssembler
 
             armybookDetail.Height = e.NewSize.Height;
 
-            unitDetail.Height = e.NewSize.Height;
-            unitDetail.Margin = new Thickness(e.NewSize.Width - unitDetail.Width, 0, 0, 0);
+            unitDetailScroll.Height = e.NewSize.Height;
+            unitDetailScroll.Margin = new Thickness(e.NewSize.Width - unitDetailScroll.Width, 0, 0, 0);
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
