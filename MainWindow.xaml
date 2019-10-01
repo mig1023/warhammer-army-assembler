@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="992.809">
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
-        <ScrollViewer x:Name="armybookDetailScroll" Width="250" Height="50">
+        <ScrollViewer x:Name="armybookDetailScroll" Width="250" Height="50" VerticalScrollBarVisibility="Auto">
             <Canvas x:Name="armybookDetail" Width="250" Height="50" VerticalAlignment="Top" Background="White">
                 <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="200" Margin="20,20" Click="closeDetail_Click"/>
                 <Label x:Name="armyUnitName" Content="" Height="30" Width="Auto" Margin="18,60"/>
                 <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,100"/>
             </Canvas>
         </ScrollViewer>
-        <ScrollViewer x:Name="unitDetailScroll" Width="250" Height="50">
+        <ScrollViewer x:Name="unitDetailScroll" Width="250" Height="50" VerticalScrollBarVisibility="Auto">
             <Canvas x:Name="unitDetail" Width="250" Height="50" Background="White" VerticalAlignment="Top">
                 <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="200" Margin="20,20" Click="closeDetail_Click"/>
                 <Label x:Name="unitName" Content="" Height="30" Width="Auto" FontSize="12" Margin="18,60"/>
