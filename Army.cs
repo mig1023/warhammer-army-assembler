@@ -8,14 +8,15 @@ namespace WarhammerArmyAssembler
 {
     class Army
     {
-
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
 
         private static int MaxPoints = 2000;
 
+        private static int MaxIDindex = 0;
+
         public static int GetNextIndex()
         {
-            return Units.Count;
+            return MaxIDindex += 1;
         }
 
         public static void AddUnitByID(string id)
