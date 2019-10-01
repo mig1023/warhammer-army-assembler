@@ -7,28 +7,34 @@
         mc:Ignorable="d"
         Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="992.809">
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
+        
         <Canvas  x:Name="armybookDetailScrollHead" Width="250" Height="50" VerticalAlignment="Top" Background="White">
             <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="210" Margin="20,20" Click="closeDetail_Click"/>
         </Canvas>
+        
         <ScrollViewer x:Name="armybookDetailScroll" Width="250" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
             <Canvas x:Name="armybookDetail" Width="250" Height="50" VerticalAlignment="Top" Background="White">
                 <Label x:Name="armyUnitName" Content="" Height="30" Width="Auto" Margin="18,5"/>
                 <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
             </Canvas>
         </ScrollViewer>
+        
         <Canvas  x:Name="unitDetailScrollHead" Width="250" Height="50" VerticalAlignment="Top" Background="White">
             <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="210" Margin="20,20" Click="closeDetail_Click"/>
         </Canvas>
+        
         <ScrollViewer x:Name="unitDetailScroll" Width="250" Height="50" VerticalScrollBarVisibility="Auto">
             <Canvas x:Name="unitDetail" Width="250" Height="50" Background="White" VerticalAlignment="Top">
                 <Label x:Name="unitName" Content="" Height="30" Width="Auto" FontSize="12" Margin="18,5"/>
                 <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
             </Canvas>
         </ScrollViewer>
+        
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
             <Button x:Name="closeErrorDetail" Content="Закрыть" Height="30" Width="154" Click="closeDetail_Click"/>
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
+        
         <Grid x:Name="mainGrid">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>

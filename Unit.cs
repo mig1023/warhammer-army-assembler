@@ -153,68 +153,101 @@ namespace WarhammerArmyAssembler
                 {
                     if (option.AddToMovement > 0)
                     {
-                        unit.Movement += option.AddToMovement;
                         unit.MovementModifecated += '*';
+                        unit.Movement += option.AddToMovement;
+
+                        if (unit.Movement > 10)
+                            unit.Movement = 10;
                     }
 
                     if (option.AddToWeaponSkill > 0)
                     {
-                        unit.WeaponSkill += option.AddToWeaponSkill;
                         unit.WeaponSkillModifecated += '*';
+                        unit.WeaponSkill += option.AddToWeaponSkill;
+
+                        if (unit.WeaponSkill > 10)
+                            unit.WeaponSkill = 10;
                     }
 
                     if (option.AddToBallisticSkill > 0)
                     {
-                        unit.BallisticSkill += option.AddToBallisticSkill;
                         unit.BallisticSkillModifecated += '*';
+                        unit.BallisticSkill += option.AddToBallisticSkill;
+
+                        if (unit.BallisticSkill > 10)
+                            unit.BallisticSkill = 10;
                     }
 
                     if (option.AddToStrength > 0)
                     {
-                        unit.Strength += option.AddToStrength;
                         unit.StrengthModifecated += '*';
+                        unit.Strength += option.AddToStrength;
+
+                        if (unit.Strength > 10)
+                            unit.Strength = 10;
                     }
                     
                     if (option.AddToToughness > 0)
                     {
-                        unit.Toughness += option.AddToToughness;
                         unit.ToughnessModifecated += '*';
+                        unit.Toughness += option.AddToToughness;
+
+                        if (unit.Toughness > 10)
+                            unit.Toughness = 10;
                     }
                     
                     if (option.AddToWounds > 0)
                     {
-                        unit.Wounds += option.AddToWounds;
                         unit.WoundsModifecated += '*';
+                        unit.Wounds += option.AddToWounds;
+
+                        if (unit.Wounds > 10)
+                            unit.Wounds = 10;
                     }
 
                     if (option.AddToInitiative > 0)
                     {
-                        unit.Initiative += option.AddToInitiative;
                         unit.InitiativeModifecated += '*';
+                        unit.Initiative += option.AddToInitiative;
+
+                        if (unit.Initiative > 10)
+                            unit.Initiative = 10;
                     }
 
                     if (option.AddToAttacks > 0)
                     {
-                        unit.Attacks += option.AddToAttacks;
                         unit.AttacksModifecated += '*';
+                        unit.Attacks += option.AddToAttacks;
+
+                        if (unit.Attacks > 10)
+                            unit.Attacks = 10;
                     }
 
                     if (option.AddToLeadership > 0)
                     {
-                        unit.Leadership += option.AddToLeadership;
                         unit.LeadershipModifecated += '*';
+                        unit.Leadership += option.AddToLeadership;
+
+                        if (unit.Leadership > 10)
+                            unit.Leadership = 10;
                     }
 
                     if (option.AddToArmour > 0)
                     {
-                        unit.Armour += option.AddToArmour;
                         unit.ArmourModifecated += '*';
+                        unit.Armour += option.AddToArmour;
+
+                        if (unit.Armour > 10)
+                            unit.Armour = 10;
                     }
                     
                     if (option.AddToWard > 0)
                     {
-                        unit.Ward += option.AddToWard;
                         unit.WardModifecated += '*';
+                        unit.Ward += option.AddToWard;
+
+                        if (unit.Ward > 10)
+                            unit.Ward = 10;
                     }
                 }
 
