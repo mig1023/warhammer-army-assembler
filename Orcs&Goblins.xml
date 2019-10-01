@@ -9,9 +9,33 @@
 	    <ID>01G006</ID>
 	    <Name>Меч Силы</Name>
 	    <Type>Weapon</Type>
-	    <AddToStrength>2</AddToStrength>
+	    <AddToStrength>1</AddToStrength>
 	    <Points>25</Points>
-	    <Description>+2 к силе|25 очков</Description>
+	    <Description>+1 к силе|25 очков</Description>
+	</Artefact>
+	<Artefact>
+	    <ID>01G015</ID>
+	    <Name>Меч Большой Силы</Name>
+	    <Type>Weapon</Type>
+	    <AddToStrength>2</AddToStrength>
+	    <Points>35</Points>
+	    <Description>+2 к силе|35 очков</Description>
+	</Artefact>
+	<Artefact>
+	    <ID>01G016</ID>
+	    <Name>Меч Огромной Силы</Name>
+	    <Type>Weapon</Type>
+	    <AddToStrength>3</AddToStrength>
+	    <Points>45</Points>
+	    <Description>+3 к силе|45 очков</Description>
+	</Artefact>
+	<Artefact>
+	    <ID>01G017</ID>
+	    <Name>Меч Силищи Неописуемой</Name>
+	    <Type>Weapon</Type>
+	    <AddToStrength>4</AddToStrength>
+	    <Points>50</Points>
+	    <Description>+4 к силе|50 очков</Description>
 	</Artefact>
     </Artefacts>
     <Heroes>
@@ -42,9 +66,10 @@
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
-                <HandWeapon>
+                <Armour>
                     <Name>лёгкая броня</Name>
-                </HandWeapon>
+		    <AddToArmour>6</AddToArmour>
+                </Armour>
             </Ammunition>
 	    <Options>
 	        <Option>
