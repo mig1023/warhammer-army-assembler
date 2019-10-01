@@ -61,6 +61,9 @@ namespace WarhammerArmyAssembler
             newUnit.Attacks = IntParse(mainParam["Attacks"]);
             newUnit.Leadership = IntParse(mainParam["Leadership"]);
 
+            newUnit.Armour = IntNullableParse(mainParam["Armour"]);
+            newUnit.Ward = IntNullableParse(mainParam["Ward"]);
+
             XmlNode psychology = xmlUnit["Psychology"];
 
             newUnit.ImmuneToPsychology = BoolParse(psychology["ImmuneToPsychology"]);
@@ -100,6 +103,18 @@ namespace WarhammerArmyAssembler
             bool success = int.TryParse(xmlNode.InnerText, out value);
 
             return (success ? value : 0);
+        }
+
+        private static int? IntNullableParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            int value = 0;
+
+            bool success = int.TryParse(xmlNode.InnerText, out value);
+
+            return (success ? value : (int?)null);
         }
 
         private static string StringParse(XmlNode xmlNode)
@@ -188,6 +203,8 @@ namespace WarhammerArmyAssembler
             newWeapon.AddToInitiative = IntParse(xmlNode["AddToInitiative"]);
             newWeapon.AddToAttacks = IntParse(xmlNode["AddToAttacks"]);
             newWeapon.AddToLeadership = IntParse(xmlNode["AddToLeadership"]);
+            newWeapon.AddToArmour = IntParse(xmlNode["AddToArmour"]);
+            newWeapon.AddToWard = IntParse(xmlNode["AddToWard"]);
 
             return newWeapon;
         }

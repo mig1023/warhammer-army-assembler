@@ -79,6 +79,8 @@
                     <DataGridTextColumn Header="I" Binding="{Binding InitiativeModifecated}" Width="40" IsReadOnly="True"/>
                     <DataGridTextColumn Header="A" Binding="{Binding AttacksModifecated}" Width="40" IsReadOnly="True"/>
                     <DataGridTextColumn Header="LD" Binding="{Binding LeadershipModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="AS" Binding="{Binding ArmourModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Ward" Binding="{Binding WardModifecated}" Width="40" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}" IsReadOnly="True"/>
                 </DataGrid.Columns>

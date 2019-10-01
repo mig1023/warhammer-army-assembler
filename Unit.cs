@@ -42,8 +42,8 @@ namespace WarhammerArmyAssembler
         public int Initiative { get; set; }
         public int Attacks { get; set; }
         public int Leadership { get; set; }
-        public int Armour { get; set; }
-        public int Ward { get; set; }
+        public int? Armour { get; set; }
+        public int? Ward { get; set; }
 
         public string MovementModifecated { get; set; }
         public string WeaponSkillModifecated { get; set; }
@@ -234,20 +234,20 @@ namespace WarhammerArmyAssembler
 
                     if (option.AddToArmour > 0)
                     {
-                        unit.ArmourModifecated += '*';
-                        unit.Armour += option.AddToArmour;
+                        if (unit.Armour == null)
+                            unit.Armour = 7;
 
-                        if (unit.Armour > 10)
-                            unit.Armour = 10;
+                        unit.Armour -= (7 - option.AddToArmour);
+                        unit.ArmourModifecated = "+";
                     }
                     
                     if (option.AddToWard > 0)
                     {
-                        unit.WardModifecated += '*';
-                        unit.Ward += option.AddToWard;
+                        if (unit.Ward == null)
+                            unit.Ward = 7;
 
-                        if (unit.Ward > 10)
-                            unit.Ward = 10;
+                        unit.Ward -= (7 - option.AddToWard);
+                        unit.WardModifecated = "+";
                     }
                 }
 
