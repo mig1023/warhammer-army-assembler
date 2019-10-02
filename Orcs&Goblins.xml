@@ -53,6 +53,14 @@
 	    <Description>+1 к рассеиванию|50 очков</Description>
 	</Artefact>
 	<Artefact>
+	    <ID>01G042</ID>
+	    <Name>Маг-помощник</Name>
+	    <Type>Arcane</Type>
+	    <Points>25</Points>
+            <AddToCast>1</AddToCast>
+	    <Description>+1 на катинг|25 очков</Description>
+	</Artefact>
+	<Artefact>
 	    <ID>01G020</ID>
 	    <Name>Боевой стяг</Name>
 	    <Type>Banner</Type>
@@ -127,6 +135,45 @@
 	            <Name>Купить ему чего-то совсем не нужное, но с очень длинным названием</Name>
 		    <Type>Option</Type>
 		    <Points>50</Points>
+	        </Option>
+	    </Options>
+        </Hero>
+        <Hero>
+            <ID>01G041</ID>
+            <Type>Lord</Type>
+            <Name>Орк Великий шаман</Name>
+            <Mage>3</Mage>
+            <Points>165</Points>
+            <MinSize>1</MinSize>
+            <MainParam>
+                <Movement>4</Movement>
+                <WeaponSkill>3</WeaponSkill>
+                <BallisticSkill>3</BallisticSkill>
+                <Strength>4</Strength>
+                <Toughness>5</Toughness>
+                <Wounds>3</Wounds>
+                <Initiative>2</Initiative>
+                <Attacks>1</Attacks>
+                <Leadership>8</Leadership>
+            </MainParam>
+            <Psychology>
+            </Psychology>
+            <AdditionalParam>
+                <MagicItems>100</MagicItems>
+		<MagicItemsType>Mage</MagicItemsType>
+            </AdditionalParam>
+            <Ammunition>
+                <HandWeapon>
+                    <Name>ручное оружие</Name>
+                </HandWeapon>
+            </Ammunition>
+            <Options>
+	        <Option>
+		    <ID>01G040</ID>
+	            <Name>сделать магом 4 уровня</Name>
+		    <Type>Option</Type>
+		    <Points>35</Points>
+                    <AddToCast>1</AddToCast>
 	        </Option>
 	    </Options>
         </Hero>
