@@ -20,6 +20,13 @@ namespace WarhammerArmyAssembler
             Rare,
         }
 
+        public enum MagicItemsTypes
+        {
+            Hero,
+            Mage,
+            Unit,
+        }
+
         public string Name { get; set; }
         public string ID { get; set; }
 
@@ -72,6 +79,7 @@ namespace WarhammerArmyAssembler
         public bool PoisonAttack { get; set; }
 
         public int MagicItems { get; set; }
+        public MagicItemsTypes MagicItemsType { get; set; }
 
         public List<Option> Option = new List<Option>();
 
@@ -134,6 +142,7 @@ namespace WarhammerArmyAssembler
             newUnit.PoisonAttack = this.PoisonAttack;
 
             newUnit.MagicItems = this.MagicItems;
+            newUnit.MagicItemsType = this.MagicItemsType;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Option)

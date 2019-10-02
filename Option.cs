@@ -13,7 +13,7 @@ namespace WarhammerArmyAssembler
         {
             Weapon,
             Armour,
-            Arkana,
+            Arcane,
             Banner,
             Option
         }
@@ -94,7 +94,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsMagicItem()
         {
-            if (this.Type == OptionType.Weapon || this.Type == OptionType.Armour || this.Type == OptionType.Arkana || this.Type == OptionType.Banner)
+            if (this.Type == OptionType.Weapon || this.Type == OptionType.Armour || this.Type == OptionType.Arcane || this.Type == OptionType.Banner)
                 return true;
             else
                 return false;
@@ -106,6 +106,20 @@ namespace WarhammerArmyAssembler
                 return true;
             else
                 return false;
+        }
+
+        public bool IsUsableByUnit(Unit.MagicItemsTypes unitType)
+        {
+            if ((unitType == Unit.MagicItemsTypes.Unit) && (Type != OptionType.Banner))
+                return false;
+
+            if ((unitType == Unit.MagicItemsTypes.Mage) && (Type == OptionType.Banner))
+                return false;
+
+            if ((unitType == Unit.MagicItemsTypes.Hero) && (Type == OptionType.Arcane))
+                return false;
+
+            return true;
         }
     }
 }

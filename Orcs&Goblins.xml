@@ -45,6 +45,20 @@
 	    <Points>10</Points>
 	    <Description>5+ к броне|10 очков</Description>
 	</Artefact>
+	<Artefact>
+	    <ID>01G019</ID>
+	    <Name>Посох волшебства</Name>
+	    <Type>Arcane</Type>
+	    <Points>50</Points>
+	    <Description>+1 к рассеиванию|50 очков</Description>
+	</Artefact>
+	<Artefact>
+	    <ID>01G020</ID>
+	    <Name>Боевой стяг</Name>
+	    <Type>Banner</Type>
+	    <Points>25</Points>
+	    <Description>1+ к результату боя|25 очков</Description>
+	</Artefact>
     </Artefacts>
     <Heroes>
         <Hero>
@@ -68,8 +82,9 @@
             <Psychology>
             </Psychology>
             <AdditionalParam>
+                <MagicItems>100</MagicItems>
+		<MagicItemsType>Hero</MagicItemsType>
             </AdditionalParam>
-	    <MagicItems>100</MagicItems>
             <Ammunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
@@ -127,14 +142,44 @@
             <Psychology>
             </Psychology>
             <AdditionalParam>
+	        <MagicItems>50</MagicItems>
+		<MagicItemsType>Hero</MagicItemsType>
             </AdditionalParam>
-	    <MagicItems>50</MagicItems>
             <Ammunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
                 <HandWeapon>
                     <Name>лёгкая броня</Name>
+                </HandWeapon>
+            </Ammunition>
+        </Hero>
+	<Hero>
+            <ID>01G021</ID>
+            <Type>Hero</Type>
+            <Name>Орк шаман</Name>
+            <Points>65</Points>
+            <MinSize>1</MinSize>
+            <MainParam>
+                <Movement>4</Movement>
+                <WeaponSkill>3</WeaponSkill>
+                <BallisticSkill>3</BallisticSkill>
+                <Strength>3</Strength>
+                <Toughness>4</Toughness>
+                <Wounds>2</Wounds>
+                <Initiative>2</Initiative>
+                <Attacks>1</Attacks>
+                <Leadership>7</Leadership>
+            </MainParam>
+            <Psychology>
+            </Psychology>
+            <AdditionalParam>
+                <MagicItems>50</MagicItems>
+		<MagicItemsType>Mage</MagicItemsType>
+            </AdditionalParam>
+            <Ammunition>
+                <HandWeapon>
+                    <Name>ручное оружие</Name>
                 </HandWeapon>
             </Ammunition>
         </Hero>
@@ -277,6 +322,8 @@
 		<ImmuneToPsychology>true</ImmuneToPsychology>
             </Psychology>
             <AdditionalParam>
+                <MagicItems>50</MagicItems>
+		<MagicItemsType>Unit</MagicItemsType>
             </AdditionalParam>
             <Ammunition>
                 <HandWeapon>

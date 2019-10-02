@@ -155,7 +155,11 @@ namespace WarhammerArmyAssembler
             string id = (string)e.Data.GetData(DataFormats.Text);
 
             if (ArmyBook.Artefact.ContainsKey(id))
-                e.Effects = (unit.MagicItems > 0 ? DragDropEffects.Copy : DragDropEffects.None);
+            {
+                bool usable = ArmyBook.Artefact[id].IsUsableByUnit(unit.MagicItemsType);
+                e.Effects = ((unit.MagicItems > 0) && usable ? DragDropEffects.Copy : DragDropEffects.None);
+            }
+                
         }
 
         private void ArmyGrid_MouseDown(object sender, MouseButtonEventArgs e)

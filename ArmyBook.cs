@@ -82,7 +82,8 @@ namespace WarhammerArmyAssembler
             newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
             newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
 
-            newUnit.MagicItems = IntParse(xmlUnit["MagicItems"]);
+            newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
+            newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Ammunition/*"))
                 newUnit.Option.Add(LoadOption(xmlAmmunition));
@@ -128,13 +129,25 @@ namespace WarhammerArmyAssembler
         private static UnitType UnitTypeParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
-                return 0;
+                return UnitType.Core;
 
             UnitType value;
 
             bool success = Enum.TryParse(xmlNode.InnerText, out value);
 
             return (success ? value : UnitType.Core);
+        }
+
+        private static MagicItemsTypes MagicItemsTypeParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return MagicItemsTypes.Hero;
+
+            MagicItemsTypes value;
+
+            bool success = Enum.TryParse(xmlNode.InnerText, out value);
+
+            return (success ? value : MagicItemsTypes.Hero);
         }
 
         private static OptionType OptionTypeParse(XmlNode xmlNode)
