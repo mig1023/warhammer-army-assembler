@@ -146,7 +146,7 @@ namespace WarhammerArmyAssembler
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Option)
-                newUnit.Option.Add(option);
+                newUnit.Option.Add(option.Clone());
 
             return newUnit;
         }
