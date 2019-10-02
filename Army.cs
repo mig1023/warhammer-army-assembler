@@ -88,6 +88,41 @@ namespace WarhammerArmyAssembler
             }
         }
 
+        public static int GetArmyCast()
+        {
+            int cast = 2;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            {
+                cast += entry.Value.Mage;
+
+                foreach (Option option in entry.Value.Option)
+                    if (option.Realised)
+                        cast += option.AddToCast;
+            }
+                
+            return cast;
+        }
+
+        public static int GetArmyDispell()
+        {
+            int dispell = 2;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            {
+                if (entry.Value.Mage > 2)
+                    dispell += 2;
+                else if (entry.Value.Mage > 0)
+                    dispell += 1;
+
+                foreach (Option option in entry.Value.Option)
+                    if (option.Realised)
+                        dispell += option.AddToDispell;
+            }
+
+            return dispell;
+        }
+
         public static bool ArtefactAlreadyUsed(string id)
         {
             foreach (KeyValuePair<int, Unit> entry in Army.Units)

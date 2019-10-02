@@ -59,6 +59,14 @@
 	    <Points>25</Points>
 	    <Description>1+ к результату боя|25 очков</Description>
 	</Artefact>
+	<Artefact>
+	    <ID>01G022</ID>
+	    <Name>Талисман</Name>
+	    <Type>Armour</Type>
+            <AddToWard>6</AddToWard>
+	    <Points>25</Points>
+	    <Description>6+ к особой защите|25 очков</Description>
+	</Artefact>
     </Artefacts>
     <Heroes>
         <Hero>
@@ -158,6 +166,7 @@
             <ID>01G021</ID>
             <Type>Hero</Type>
             <Name>Орк шаман</Name>
+            <Mage>1</Mage>
             <Points>65</Points>
             <MinSize>1</MinSize>
             <MainParam>
@@ -182,6 +191,15 @@
                     <Name>ручное оружие</Name>
                 </HandWeapon>
             </Ammunition>
+            <Options>
+	        <Option>
+		    <ID>01G040</ID>
+	            <Name>сделать магом 2 уровня</Name>
+		    <Type>Option</Type>
+		    <Points>35</Points>
+                    <AddToCast>1</AddToCast>
+	        </Option>
+	    </Options>
         </Hero>
     </Heroes>
     <Units>
@@ -211,6 +229,17 @@
                     <Name>ручное оружие</Name>
                 </HandWeapon>
             </Ammunition>
+            <Options>
+	        <Option>
+		    <ID>01G023</ID>
+	            <Name>Улучшить до бигансов</Name>
+		    <Type>Option</Type>
+		    <Points>2</Points>
+                    <PerModel>true</PerModel>
+                    <AddToWeaponSkill>1</AddToWeaponSkill>
+                    <AddToStrength>1</AddToStrength>
+	        </Option>
+	    </Options>
         </Unit>
         <Unit>
             <ID>01G004</ID>

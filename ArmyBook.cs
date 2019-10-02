@@ -46,6 +46,7 @@ namespace WarhammerArmyAssembler
             newUnit.Type = UnitTypeParse(xmlUnit["Type"]);
             newUnit.Points = IntParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
+            newUnit.Mage = IntParse(xmlUnit["Mage"]);
 
             newUnit.Description = StringParse(xmlUnit["Description"]);
 
@@ -63,7 +64,7 @@ namespace WarhammerArmyAssembler
 
             newUnit.Armour = IntNullableParse(mainParam["Armour"]);
             newUnit.Ward = IntNullableParse(mainParam["Ward"]);
-
+           
             XmlNode psychology = xmlUnit["Psychology"];
 
             newUnit.ImmuneToPsychology = BoolParse(psychology["ImmuneToPsychology"]);
@@ -218,6 +219,8 @@ namespace WarhammerArmyAssembler
             newWeapon.AddToLeadership = IntParse(xmlNode["AddToLeadership"]);
             newWeapon.AddToArmour = IntParse(xmlNode["AddToArmour"]);
             newWeapon.AddToWard = IntParse(xmlNode["AddToWard"]);
+            newWeapon.AddToCast = IntParse(xmlNode["AddToCast"]);
+            newWeapon.AddToDispell = IntParse(xmlNode["AddToDispell"]);
 
             return newWeapon;
         }

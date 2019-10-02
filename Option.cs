@@ -50,6 +50,8 @@ namespace WarhammerArmyAssembler
         public int AddToLeadership { get; set; }
         public int AddToArmour { get; set; }
         public int AddToWard { get; set; }
+        public int AddToCast { get; set; }
+        public int AddToDispell { get; set; }
 
         public ObservableCollection<Option> Items { get; set; }
 
@@ -88,6 +90,8 @@ namespace WarhammerArmyAssembler
             newOption.AddToLeadership = this.AddToLeadership;
             newOption.AddToArmour = this.AddToArmour;
             newOption.AddToWard = this.AddToWard;
+            newOption.AddToCast = this.AddToCast;
+            newOption.AddToDispell = this.AddToDispell;
 
             return newOption;
         }

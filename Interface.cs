@@ -282,8 +282,8 @@ namespace WarhammerArmyAssembler
             );
             main.armyPoints.Content = String.Format("Очков: {0} из {1}", Army.GetArmyPoints(), Army.GetArmyMaxPoints());
             main.armySize.Content = String.Format("Моделей: {0}", Army.GetArmySize());
-            main.armyCasting.Content = String.Format("Каст: {0}", 4);
-            main.armyDispell.Content = String.Format("Диспелл: {0}", 2);
+            main.armyCasting.Content = String.Format("Каст: {0}", Army.GetArmyCast());
+            main.armyDispell.Content = String.Format("Диспелл: {0}", Army.GetArmyDispell());
         }
 
         public static void Error(string text)

@@ -52,6 +52,8 @@ namespace WarhammerArmyAssembler
         public int? Armour { get; set; }
         public int? Ward { get; set; }
 
+        public int Mage { get; set; }
+
         public string MovementView { get; set; }
         public string WeaponSkillView { get; set; }
         public string BallisticSkillView { get; set; }
@@ -127,6 +129,7 @@ namespace WarhammerArmyAssembler
             newUnit.Leadership = this.Leadership;
             newUnit.Armour = this.Armour;
             newUnit.Ward = this.Ward;
+            newUnit.Mage = this.Mage;
 
             newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
             newUnit.Stubborn = this.Stubborn;
