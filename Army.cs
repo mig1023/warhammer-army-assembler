@@ -76,13 +76,13 @@ namespace WarhammerArmyAssembler
                 case Unit.UnitType.Lord:
                     return (MaxPoints < 2000 ? 0 : 1 + ((MaxPoints - 2000) / 1000));
                 case Unit.UnitType.Hero:
-                    return (MaxPoints < 1000 ? 1 : (MaxPoints / 1000) * 2);
+                    return (MaxPoints < 2000 ? 3 : (MaxPoints / 1000) * 2);
                 case Unit.UnitType.Core:
-                    return 1 + (MaxPoints / 1000);
+                    return (MaxPoints < 2000 ? 2 : 1 + (MaxPoints / 1000));
                 case Unit.UnitType.Special:
-                    return (MaxPoints < 2000 ? 2 : (MaxPoints / 1000) * 2);
+                    return (MaxPoints < 2000 ? 3 : 2 + (MaxPoints / 1000));
                 case Unit.UnitType.Rare:
-                    return (MaxPoints < 2000 ? 0 : (MaxPoints / 1000));
+                    return (MaxPoints < 2000 ? 1 : (MaxPoints / 1000));
                 default:
                     return 0;
             }

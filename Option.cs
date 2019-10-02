@@ -29,7 +29,7 @@ namespace WarhammerArmyAssembler
         public int Points { get; set; }
         public bool PerModel { get; set; }
 
-        public string PointsModifecated { get; set; }
+        public string PointsView { get; set; }
 
         public string Description { get; set; }
 

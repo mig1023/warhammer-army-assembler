@@ -45,7 +45,7 @@ namespace WarhammerArmyAssembler
             foreach (KeyValuePair<string, Unit> entry in ArmyBook.Units)
             {
                 Unit unit = entry.Value.Clone();
-                unit.PointsModifecated = String.Format(" {0} pts", unit.Points);
+                unit.PointsView = String.Format(" {0} pts", unit.Points);
                 categories[(int)unit.Type].Items.Add(unit);
             }
 
@@ -57,7 +57,7 @@ namespace WarhammerArmyAssembler
             foreach (KeyValuePair<string, Option> entry in ArmyBook.Artefact)
             {
                 Option artefact = entry.Value.Clone();
-                artefact.PointsModifecated = String.Format(" {0} pts", artefact.Points);
+                artefact.PointsView = String.Format(" {0} pts", artefact.Points);
                 artefacts.Items.Add(artefact);
             }
 

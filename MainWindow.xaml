@@ -52,7 +52,7 @@
                     <HierarchicalDataTemplate ItemsSource="{Binding Items}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Name}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown"/>
-                            <TextBlock Text="{Binding PointsModifecated}" MouseDown="UnitInArmyList_MouseDown" Foreground="Green"/>
+                            <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="Green"/>
                         </StackPanel>
                     </HierarchicalDataTemplate>
                 </TreeView.ItemTemplate>
@@ -70,17 +70,17 @@
                     <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding id}"/>
                     <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="60"/>
                     <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="M" Binding="{Binding MovementModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="S" Binding="{Binding StrengthModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="T" Binding="{Binding ToughnessModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="W" Binding="{Binding WoundsModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="I" Binding="{Binding InitiativeModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="A" Binding="{Binding AttacksModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="LD" Binding="{Binding LeadershipModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="AS" Binding="{Binding ArmourModifecated}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Ward" Binding="{Binding WardModifecated}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="S" Binding="{Binding StrengthView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="T" Binding="{Binding ToughnessView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="W" Binding="{Binding WoundsView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="I" Binding="{Binding InitiativeView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="A" Binding="{Binding AttacksView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="LD" Binding="{Binding LeadershipView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="40" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="40" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}" IsReadOnly="True"/>
                 </DataGrid.Columns>

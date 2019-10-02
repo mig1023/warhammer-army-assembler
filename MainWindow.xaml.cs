@@ -27,6 +27,8 @@ namespace WarhammerArmyAssembler
             Interface.main = this;
 
             Interface.LoadArmyList();
+
+            Interface.ReloadArmyData();
         }
 
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)

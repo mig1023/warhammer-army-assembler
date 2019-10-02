@@ -29,7 +29,7 @@ namespace WarhammerArmyAssembler
 
         public int Points { get; set; }
 
-        public string PointsModifecated { get; set; }
+        public string PointsView { get; set; }
 
         public string Description { get; set; }
 
@@ -45,17 +45,17 @@ namespace WarhammerArmyAssembler
         public int? Armour { get; set; }
         public int? Ward { get; set; }
 
-        public string MovementModifecated { get; set; }
-        public string WeaponSkillModifecated { get; set; }
-        public string BallisticSkillModifecated { get; set; }
-        public string StrengthModifecated { get; set; }
-        public string ToughnessModifecated { get; set; }
-        public string WoundsModifecated { get; set; }
-        public string InitiativeModifecated { get; set; }
-        public string AttacksModifecated { get; set; }
-        public string LeadershipModifecated { get; set; }
-        public string ArmourModifecated { get; set; }
-        public string WardModifecated { get; set; }
+        public string MovementView { get; set; }
+        public string WeaponSkillView { get; set; }
+        public string BallisticSkillView { get; set; }
+        public string StrengthView { get; set; }
+        public string ToughnessView { get; set; }
+        public string WoundsView { get; set; }
+        public string InitiativeView { get; set; }
+        public string AttacksView { get; set; }
+        public string LeadershipView { get; set; }
+        public string ArmourView { get; set; }
+        public string WardView { get; set; }
 
         public bool ImmuneToPsychology { get; set; }
         public bool Stubborn { get; set; }
@@ -153,7 +153,7 @@ namespace WarhammerArmyAssembler
                 {
                     if (option.AddToMovement > 0)
                     {
-                        unit.MovementModifecated += '*';
+                        unit.MovementView += '*';
                         unit.Movement += option.AddToMovement;
 
                         if (unit.Movement > 10)
@@ -162,7 +162,7 @@ namespace WarhammerArmyAssembler
 
                     if (option.AddToWeaponSkill > 0)
                     {
-                        unit.WeaponSkillModifecated += '*';
+                        unit.WeaponSkillView += '*';
                         unit.WeaponSkill += option.AddToWeaponSkill;
 
                         if (unit.WeaponSkill > 10)
@@ -171,7 +171,7 @@ namespace WarhammerArmyAssembler
 
                     if (option.AddToBallisticSkill > 0)
                     {
-                        unit.BallisticSkillModifecated += '*';
+                        unit.BallisticSkillView += '*';
                         unit.BallisticSkill += option.AddToBallisticSkill;
 
                         if (unit.BallisticSkill > 10)
@@ -180,7 +180,7 @@ namespace WarhammerArmyAssembler
 
                     if (option.AddToStrength > 0)
                     {
-                        unit.StrengthModifecated += '*';
+                        unit.StrengthView += '*';
                         unit.Strength += option.AddToStrength;
 
                         if (unit.Strength > 10)
@@ -189,7 +189,7 @@ namespace WarhammerArmyAssembler
                     
                     if (option.AddToToughness > 0)
                     {
-                        unit.ToughnessModifecated += '*';
+                        unit.ToughnessView += '*';
                         unit.Toughness += option.AddToToughness;
 
                         if (unit.Toughness > 10)
@@ -198,7 +198,7 @@ namespace WarhammerArmyAssembler
                     
                     if (option.AddToWounds > 0)
                     {
-                        unit.WoundsModifecated += '*';
+                        unit.WoundsView += '*';
                         unit.Wounds += option.AddToWounds;
 
                         if (unit.Wounds > 10)
@@ -207,7 +207,7 @@ namespace WarhammerArmyAssembler
 
                     if (option.AddToInitiative > 0)
                     {
-                        unit.InitiativeModifecated += '*';
+                        unit.InitiativeView += '*';
                         unit.Initiative += option.AddToInitiative;
 
                         if (unit.Initiative > 10)
@@ -216,7 +216,7 @@ namespace WarhammerArmyAssembler
 
                     if (option.AddToAttacks > 0)
                     {
-                        unit.AttacksModifecated += '*';
+                        unit.AttacksView += '*';
                         unit.Attacks += option.AddToAttacks;
 
                         if (unit.Attacks > 10)
@@ -225,7 +225,7 @@ namespace WarhammerArmyAssembler
 
                     if (option.AddToLeadership > 0)
                     {
-                        unit.LeadershipModifecated += '*';
+                        unit.LeadershipView += '*';
                         unit.Leadership += option.AddToLeadership;
 
                         if (unit.Leadership > 10)
@@ -238,7 +238,7 @@ namespace WarhammerArmyAssembler
                             unit.Armour = 7;
 
                         unit.Armour -= (7 - option.AddToArmour);
-                        unit.ArmourModifecated = "+";
+                        unit.ArmourView = "+";
                     }
                     
                     if (option.AddToWard > 0)
@@ -247,21 +247,21 @@ namespace WarhammerArmyAssembler
                             unit.Ward = 7;
 
                         unit.Ward -= (7 - option.AddToWard);
-                        unit.WardModifecated = "+";
+                        unit.WardView = "+";
                     }
                 }
 
-            unit.MovementModifecated = unit.Movement.ToString() + unit.MovementModifecated;
-            unit.WeaponSkillModifecated = unit.WeaponSkill.ToString() + unit.WeaponSkillModifecated;
-            unit.BallisticSkillModifecated = unit.BallisticSkill.ToString() + unit.BallisticSkillModifecated;
-            unit.StrengthModifecated = unit.Strength.ToString() + unit.StrengthModifecated;
-            unit.ToughnessModifecated = unit.Toughness.ToString() + unit.ToughnessModifecated;
-            unit.WoundsModifecated = unit.Wounds.ToString() + unit.WoundsModifecated;
-            unit.InitiativeModifecated = unit.Initiative.ToString() + unit.InitiativeModifecated;
-            unit.AttacksModifecated = unit.Attacks.ToString() + unit.AttacksModifecated;
-            unit.LeadershipModifecated = unit.Leadership.ToString() + unit.LeadershipModifecated;
-            unit.ArmourModifecated = unit.Armour.ToString() + unit.ArmourModifecated;
-            unit.WardModifecated = unit.Ward.ToString() + unit.WardModifecated;
+            unit.MovementView = unit.Movement.ToString() + unit.MovementView;
+            unit.WeaponSkillView = unit.WeaponSkill.ToString() + unit.WeaponSkillView;
+            unit.BallisticSkillView = unit.BallisticSkill.ToString() + unit.BallisticSkillView;
+            unit.StrengthView = unit.Strength.ToString() + unit.StrengthView;
+            unit.ToughnessView = unit.Toughness.ToString() + unit.ToughnessView;
+            unit.WoundsView = unit.Wounds.ToString() + unit.WoundsView;
+            unit.InitiativeView = unit.Initiative.ToString() + unit.InitiativeView;
+            unit.AttacksView = unit.Attacks.ToString() + unit.AttacksView;
+            unit.LeadershipView = unit.Leadership.ToString() + unit.LeadershipView;
+            unit.ArmourView = unit.Armour.ToString() + unit.ArmourView;
+            unit.WardView = unit.Ward.ToString() + unit.WardView;
 
             return unit;
         }
