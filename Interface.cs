@@ -42,7 +42,7 @@ namespace WarhammerArmyAssembler
         {
             List<Unit> categories = GetArmyCategories();
 
-            foreach (KeyValuePair<string, Unit> entry in ArmyBook.Units)
+            foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)
             {
                 Unit unit = entry.Value.Clone();
                 unit.PointsView = String.Format(" {0} pts", unit.Points);
@@ -54,7 +54,7 @@ namespace WarhammerArmyAssembler
 
             Option artefacts = new Option() { Name = "Артефакты" };
 
-            foreach (KeyValuePair<string, Option> entry in ArmyBook.Artefact)
+            foreach (KeyValuePair<int, Option> entry in ArmyBook.Artefact)
             {
                 Option artefact = entry.Value.Clone();
                 artefact.PointsView = String.Format(" {0} pts", artefact.Points);
@@ -64,17 +64,17 @@ namespace WarhammerArmyAssembler
             main.ArmyList.Items.Add(artefacts);
         }
 
-        public static bool EnoughPointsForAddUnit(string id)
+        public static bool EnoughPointsForAddUnit(int id)
         {
             return (ArmyBook.Units[id].Size * ArmyBook.Units[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
-        public static bool EnoughPointsForAddArtefact(string id)
+        public static bool EnoughPointsForAddArtefact(int id)
         {
             return (ArmyBook.Artefact[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
-        public static bool EnoughUnitPointsForAddArtefact(string artefactID, int unitID)
+        public static bool EnoughUnitPointsForAddArtefact(int artefactID, int unitID)
         {
             int pointsAlreayUsed = 0;
 
@@ -115,7 +115,7 @@ namespace WarhammerArmyAssembler
                     bool canBeUsed = (
                         !option.OnlyOneInArmy ||
                         (Army.OptionAlreadyUsed(option.ID) == 0) ||
-                        (Army.OptionAlreadyUsed(option.ID).ToString() == unit.ID)
+                        (Army.OptionAlreadyUsed(option.ID) == unit.ID)
                     );
 
                     if (option.IsOption() && canBeUsed)
@@ -156,7 +156,7 @@ namespace WarhammerArmyAssembler
 
             string[] id = id_tag.Split('|');
 
-            Army.Units[Interface.IntParse(id[0])].AddOption(id[1], Army.Units[Interface.IntParse(id[0])]);
+            Army.Units[Interface.IntParse(id[0])].AddOption(Interface.IntParse(id[1]), Army.Units[Interface.IntParse(id[0])]);
             Interface.ReloadArmyData();
 
             Interface.Move(Interface.MovingType.ToMain);
@@ -204,7 +204,7 @@ namespace WarhammerArmyAssembler
             return new Thickness(newLeft, newTop, newRight, newBottom);
         }
 
-        public static void ArmyGridDrop(string id)
+        public static void ArmyGridDrop(int id)
         {
             bool slotExists = (Army.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
             bool coreUnit = (ArmyBook.Units[id].Type == Unit.UnitType.Core);
@@ -229,9 +229,8 @@ namespace WarhammerArmyAssembler
             }
         }
         
-        public static void UnitDeleteDrop(string id)
+        public static void UnitDeleteDrop(int id)
         {
-            
             Army.DeleteUnitByID(id);
             ReloadArmyData();
         }
@@ -259,7 +258,7 @@ namespace WarhammerArmyAssembler
 
                 unit.InterfaceRules = unit.GetSpecialRulesLine();
                 unit.InterfacePoints = unit.GetUnitPoints();
-                unit.ID = entry.Key.ToString();
+                unit.ID = entry.Key;
 
                 categories[(int)unit.Type].Items.Add(unit);
             }

@@ -28,7 +28,8 @@ namespace WarhammerArmyAssembler
         }
 
         public string Name { get; set; }
-        public string ID { get; set; }
+        public int ID { get; set; }
+        public string IDView { get; set; }
 
         public UnitType Type { get; set; }
 
@@ -113,6 +114,7 @@ namespace WarhammerArmyAssembler
 
             newUnit.Name = this.Name;
             newUnit.ID = this.ID;
+            newUnit.IDView = this.IDView;
             newUnit.Type = this.Type;
             newUnit.Size = this.Size;
             newUnit.Points = this.Points;
@@ -295,12 +297,12 @@ namespace WarhammerArmyAssembler
             return description;
         }
 
-        public void AddAmmunition(string id)
+        public void AddAmmunition(int id)
         {
             Option.Add(ArmyBook.Artefact[id].Clone());
         }
 
-        public void AddOption(string id, Unit unit)
+        public void AddOption(int id, Unit unit)
         {
             foreach (Option option in unit.Option)
                 if (option.ID == id)

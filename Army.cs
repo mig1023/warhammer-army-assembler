@@ -19,16 +19,16 @@ namespace WarhammerArmyAssembler
             return MaxIDindex += 1;
         }
 
-        public static void AddUnitByID(string id)
+        public static void AddUnitByID(int id)
         {
             Unit unit = ArmyBook.Units[id].Clone();
 
             Units.Add(GetNextIndex(), unit);
         }
         
-        public static void DeleteUnitByID(string id)
+        public static void DeleteUnitByID(int id)
         {
-            Units.Remove(Interface.IntParse(id));
+            Units.Remove(id);
         }
 
         public static int GetArmyPoints()
@@ -123,7 +123,7 @@ namespace WarhammerArmyAssembler
             return dispell;
         }
 
-        public static bool ArtefactAlreadyUsed(string id)
+        public static bool ArtefactAlreadyUsed(int id)
         {
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
                 foreach (Option option in entry.Value.Option)
@@ -133,7 +133,7 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
-        public static int OptionAlreadyUsed(string id)
+        public static int OptionAlreadyUsed(int id)
         {
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
                 foreach (Option option in entry.Value.Option)

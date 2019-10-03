@@ -12,8 +12,15 @@ namespace WarhammerArmyAssembler
 {
     public class ArmyBook
     {
-        public static Dictionary<string, Unit> Units = new Dictionary<string, Unit>();
-        public static Dictionary<string, Option> Artefact = new Dictionary<string, Option>();
+        public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
+        public static Dictionary<int, Option> Artefact = new Dictionary<int, Option>();
+
+        private static int MaxIDindex = 0;
+
+        public static int GetNextIndex()
+        {
+            return MaxIDindex++;
+        }
 
         public static void LoadArmy(string xmlFileName)
         {
@@ -23,13 +30,23 @@ namespace WarhammerArmyAssembler
             xmlFile.Load(xmlFileName);
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
-                Units.Add(GetID(xmlUnit), LoadUnit(xmlUnit));
+            {
+                int newID = GetNextIndex();
+                Units.Add(newID, LoadUnit(newID, xmlUnit));
+            }
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Heroes/Hero"))
-                Units.Add(GetID(xmlUnit), LoadUnit(xmlUnit));
+            {
+                int newID = GetNextIndex();
+                Units.Add(newID, LoadUnit(newID, xmlUnit));
+            }
 
             foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
-                Artefact.Add(GetID(xmlArtefact), LoadOption(xmlArtefact));
+            {
+                int newID = GetNextIndex();
+                Artefact.Add(newID, LoadOption(newID, xmlArtefact));
+            }
+                
         }
 
         public static string GetID(XmlNode xmlUnit)
@@ -37,12 +54,14 @@ namespace WarhammerArmyAssembler
             return xmlUnit["ID"].InnerText;
         }
 
-        public static Unit LoadUnit(XmlNode xmlUnit)
+        public static Unit LoadUnit(int id, XmlNode xmlUnit)
         {
             Unit newUnit = new Unit();
 
+            newUnit.ID = id;
+            newUnit.IDView = id.ToString();
+
             newUnit.Name = StringParse(xmlUnit["Name"]);
-            newUnit.ID = StringParse(xmlUnit["ID"]);
             newUnit.Type = UnitTypeParse(xmlUnit["Type"]);
             newUnit.Points = IntParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
@@ -87,10 +106,10 @@ namespace WarhammerArmyAssembler
             newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Ammunition/*"))
-                newUnit.Option.Add(LoadOption(xmlAmmunition));
+                newUnit.Option.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
-                newUnit.Option.Add(LoadOption(xmlAmmunition));
+                newUnit.Option.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
             return newUnit;
         }
@@ -189,9 +208,12 @@ namespace WarhammerArmyAssembler
             return allXmlArmyBooks;
         }
 
-        public static Option LoadOption(XmlNode xmlNode)
+        public static Option LoadOption(int id, XmlNode xmlNode)
         {
             Option newWeapon = new Option();
+
+            newWeapon.ID = id;
+            newWeapon.IDView = id.ToString();
 
             newWeapon.Name = StringParse(xmlNode["Name"]);
             newWeapon.Description = StringParse(xmlNode["Description"]);
@@ -199,8 +221,6 @@ namespace WarhammerArmyAssembler
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
             newWeapon.OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]);
-
-            newWeapon.ID = StringParse(xmlNode["ID"]);
 
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);

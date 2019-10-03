@@ -19,7 +19,8 @@ namespace WarhammerArmyAssembler
         }
 
         public string Name { get; set; }
-        public string ID { get; set; }
+        public int ID { get; set; }
+        public string IDView { get; set; }
         public OptionType Type { get; set; }
 
         public bool Realised { get; set; }
@@ -66,6 +67,7 @@ namespace WarhammerArmyAssembler
 
             newOption.Name = this.Name;
             newOption.ID = this.ID;
+            newOption.IDView = this.IDView;
             newOption.Points = this.Points;
             newOption.PerModel = this.PerModel;
             newOption.Type = this.Type;

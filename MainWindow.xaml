@@ -51,7 +51,7 @@
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate ItemsSource="{Binding Items}">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Name}" Tag="{Binding ID}" MouseDown="UnitInArmyList_MouseDown"/>
+                            <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown"/>
                             <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="Green"/>
                         </StackPanel>
                     </HierarchicalDataTemplate>
@@ -69,7 +69,7 @@
                     </Style>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding id}"/>
+                    <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding IDView}"/>
                     <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="60"/>
                     <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" IsReadOnly="True"/>
                     <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="40" IsReadOnly="True"/>

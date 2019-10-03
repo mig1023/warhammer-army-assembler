@@ -39,7 +39,7 @@ namespace WarhammerArmyAssembler
                 return;
 
             FrameworkElement f = sender as FrameworkElement;
-            string id = f.Tag as string;
+            int id = Interface.IntParse(f.Tag.ToString());
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
@@ -75,7 +75,7 @@ namespace WarhammerArmyAssembler
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
         {
-            string id = (string)e.Data.GetData(DataFormats.Text);
+            int id = Interface.IntParse((string)e.Data.GetData(DataFormats.Text));
 
             if ((Interface.DragSender as FrameworkElement).Name == "ArmyGrid")
                 return;
@@ -90,11 +90,11 @@ namespace WarhammerArmyAssembler
 
                     if (!Interface.EnoughPointsForAddArtefact(id))
                         Interface.Error("Количество очков недостаточно добавления предмета");
-                    else if (!Interface.EnoughUnitPointsForAddArtefact(id, Interface.IntParse(unit.ID)))
+                    else if (!Interface.EnoughUnitPointsForAddArtefact(id, unit.ID))
                         Interface.Error("Недостаточно очков магических предметов для добавления");
                     else
                     {
-                        Army.Units[Interface.IntParse(unit.ID)].AddAmmunition(id);
+                        Army.Units[unit.ID].AddAmmunition(id);
                         Interface.ReloadArmyData();
                     }
                 }
@@ -123,18 +123,18 @@ namespace WarhammerArmyAssembler
         {
             Unit u = e.Row.Item as Unit;
 
-            if (!Interface.EnoughPointsForEditUnit(Interface.IntParse(u.ID), u.Size))
+            if (!Interface.EnoughPointsForEditUnit(u.ID, u.Size))
             {
-                u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
+                u.Size = Army.Units[u.ID].Size;
                 Interface.Error("Количество очков недостаточно для изменения");
             }
             else if (u.IsHero() && u.Size > 1)
             {
                 Interface.Error("Герои всегда одиноки");
-                u.Size = Army.Units[Interface.IntParse(u.ID)].Size;
+                u.Size = Army.Units[u.ID].Size;
             }
             else
-                Army.Units[Interface.IntParse(u.ID)].Size = u.Size;
+                Army.Units[u.ID].Size = u.Size;
 
             Interface.ReloadArmyData();
         }
@@ -152,7 +152,7 @@ namespace WarhammerArmyAssembler
             ArmyGrid.SelectedItem = row.Item;
             ArmyGrid.ScrollIntoView(row.Item);
 
-            string id = (string)e.Data.GetData(DataFormats.Text);
+            int id = Interface.IntParse((string)e.Data.GetData(DataFormats.Text));
 
             if (ArmyBook.Artefact.ContainsKey(id))
             {
@@ -189,12 +189,12 @@ namespace WarhammerArmyAssembler
 
             Interface.DragSender = sender;
 
-            DragDrop.DoDragDrop(container, unit.ID, DragDropEffects.Copy);
+            DragDrop.DoDragDrop(container, unit.ID.ToString(), DragDropEffects.Copy);
         }
 
         private void unitDelete_Drop(object sender, DragEventArgs e)
         {
-            string id = (string)e.Data.GetData(DataFormats.Text);
+            int id = Interface.IntParse((string)e.Data.GetData(DataFormats.Text));
 
             Interface.UnitDeleteDrop(id);
         }
