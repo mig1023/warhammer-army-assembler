@@ -132,5 +132,15 @@ namespace WarhammerArmyAssembler
 
             return false;
         }
+
+        public static int OptionAlreadyUsed(string id)
+        {
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                foreach (Option option in entry.Value.Option)
+                    if ((option.ID == id) && option.Realised)
+                        return entry.Key;
+
+            return 0;
+        }
     }
 }

@@ -198,6 +198,7 @@ namespace WarhammerArmyAssembler
             newWeapon.Type = OptionTypeParse(xmlNode["Type"]);
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
+            newWeapon.OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]);
 
             newWeapon.ID = StringParse(xmlNode["ID"]);
 

@@ -23,8 +23,8 @@ namespace WarhammerArmyAssembler
         public OptionType Type { get; set; }
 
         public bool Realised { get; set; }
-
         public bool Multiple { get; set; }
+        public bool OnlyOneInArmy { get; set; }
 
         public int Points { get; set; }
         public bool PerModel { get; set; }
@@ -72,6 +72,7 @@ namespace WarhammerArmyAssembler
             newOption.Description = this.Description;
             newOption.Realised = this.Realised;
             newOption.Multiple = this.Multiple;
+            newOption.OnlyOneInArmy = this.OnlyOneInArmy;
 
             newOption.HitFirst = this.HitFirst;
             newOption.KillingBlow = this.KillingBlow;

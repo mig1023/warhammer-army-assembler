@@ -111,8 +111,16 @@ namespace WarhammerArmyAssembler
                 topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20);
 
                 foreach (Option option in unit.Option)
-                    if (option.IsOption())
+                {
+                    bool canBeUsed = (
+                        !option.OnlyOneInArmy ||
+                        (Army.OptionAlreadyUsed(option.ID) == 0) ||
+                        (Army.OptionAlreadyUsed(option.ID).ToString() == unit.ID)
+                    );
+
+                    if (option.IsOption() && canBeUsed)
                         topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40, String.Format("{0}|{1}", unit.ID, option.ID), option);
+                }
 
                 topMargin += 25;
             }
