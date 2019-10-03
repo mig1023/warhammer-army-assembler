@@ -62,7 +62,7 @@
 
             <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None"
                       AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
-                      LoadingRow="ArmyGrid_LoadingRow" MouseDown="ArmyGrid_MouseDown" >
+                      LoadingRow="ArmyGrid_LoadingRow" MouseDown="ArmyGrid_MouseDown" AlternatingRowBackground="#FFE4E4E4">
                 <DataGrid.Resources>
                     <Style TargetType="DataGridColumnHeader">
                         <Setter Property="FontSize" Value="12"/>
