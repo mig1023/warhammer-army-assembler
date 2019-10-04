@@ -47,7 +47,7 @@ namespace WarhammerArmyAssembler
             {
                 Unit unit = entry.Value.Clone();
                 unit.PointsView = String.Format(" {0} pts", unit.Points);
-                unit.InterfaceColor = ArmyBook.MainColor;
+                unit.InterfaceColor = ArmyBook.AdditionalColor;
                 categories[(int)unit.Type].Items.Add(unit);
             }
 
@@ -56,7 +56,6 @@ namespace WarhammerArmyAssembler
                 unitType.GroopBold = true;
                 main.ArmyList.Items.Add(unitType);
             }
-                
 
             Option artefacts = new Option() { Name = "Артефакты" };
 
@@ -64,7 +63,7 @@ namespace WarhammerArmyAssembler
             {
                 Option artefact = entry.Value.Clone();
                 artefact.PointsView = String.Format(" {0} pts", artefact.Points);
-                artefact.InterfaceColor = ArmyBook.MainColor;
+                artefact.InterfaceColor = ArmyBook.AdditionalColor;
                 artefacts.Items.Add(artefact);
             }
 
