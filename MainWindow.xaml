@@ -52,7 +52,17 @@
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate ItemsSource="{Binding Items}">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown"/>
+                            <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding GroopBold}" Value="True">
+                                                <Setter Property="FontWeight" Value="Bold"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
                             <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="{Binding InterfaceColor}"/>
                         </StackPanel>
                     </HierarchicalDataTemplate>

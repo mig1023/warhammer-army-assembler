@@ -52,7 +52,11 @@ namespace WarhammerArmyAssembler
             }
 
             foreach (Unit unitType in categories)
+            {
+                unitType.GroopBold = true;
                 main.ArmyList.Items.Add(unitType);
+            }
+                
 
             Option artefacts = new Option() { Name = "Артефакты" };
 
@@ -64,6 +68,7 @@ namespace WarhammerArmyAssembler
                 artefacts.Items.Add(artefact);
             }
 
+            artefacts.GroopBold = true;
             main.ArmyList.Items.Add(artefacts);
         }
 

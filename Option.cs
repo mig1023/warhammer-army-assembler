@@ -58,6 +58,7 @@ namespace WarhammerArmyAssembler
         public ObservableCollection<Option> Items { get; set; }
 
         public Brush InterfaceColor { get; set; }
+        public bool GroopBold { get; set; }
 
         public Option()
         {

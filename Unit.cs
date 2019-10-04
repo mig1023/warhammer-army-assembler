@@ -85,6 +85,7 @@ namespace WarhammerArmyAssembler
         public MagicItemsTypes MagicItemsType { get; set; }
 
         public Brush InterfaceColor { get; set; }
+        public bool GroopBold { get; set; }
 
         public List<Option> Option = new List<Option>();
 
@@ -150,8 +151,6 @@ namespace WarhammerArmyAssembler
 
             newUnit.MagicItems = this.MagicItems;
             newUnit.MagicItemsType = this.MagicItemsType;
-
-            newUnit.InterfaceColor = this.InterfaceColor;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Option)
