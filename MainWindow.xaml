@@ -74,7 +74,7 @@
 
             <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-            <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None"
+            <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" CanUserAddRows="False" GridLinesVisibility="None"
                       AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
                       LoadingRow="ArmyGrid_LoadingRow" MouseDown="ArmyGrid_MouseDown">
                 <DataGrid.Resources>
@@ -97,8 +97,8 @@
                     <DataGridTextColumn Header="LD" Binding="{Binding LeadershipView}" Width="35" IsReadOnly="True"/>
                     <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="35" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="60" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}" Width="0.5*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Очки" Binding="{Binding PointsView}" Width="60" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Особые правила" Binding="{Binding RulesView}" Width="0.5*" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
 

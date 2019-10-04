@@ -275,8 +275,8 @@ namespace WarhammerArmyAssembler
 
                 unit = unit.GetOptionRules();
 
-                unit.InterfaceRules = unit.GetSpecialRulesLine();
-                unit.InterfacePoints = unit.GetUnitPoints();
+                unit.RulesView = unit.GetSpecialRulesLine();
+                unit.PointsView = unit.GetUnitPoints().ToString();
                 unit.ID = entry.Key;
 
                 categories[(int)unit.Type].Items.Add(unit);

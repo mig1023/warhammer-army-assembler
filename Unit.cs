@@ -91,14 +91,12 @@ namespace WarhammerArmyAssembler
 
         public ObservableCollection<Unit> Items { get; set; }
 
+        public string RulesView { get; set; }
+
         public Unit()
         {
             this.Items = new ObservableCollection<Unit>();
         }
-
-        public string InterfaceRules { get; set; }
-
-        public int InterfacePoints { get; set; }
 
         public int GetUnitPoints()
         {
@@ -162,8 +160,6 @@ namespace WarhammerArmyAssembler
         public Unit GetOptionRules()
         {
             Unit unit = this.Clone();
-
-            Brush modificationColor = Brushes.Aquamarine;
 
             foreach (Option option in this.Option)
                 if (option.IsMagicItem() || (option.IsOption() && option.Realised))
