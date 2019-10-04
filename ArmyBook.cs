@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 using System.Xml;
 using static WarhammerArmyAssembler.Option;
 using static WarhammerArmyAssembler.Unit;
@@ -17,6 +18,9 @@ namespace WarhammerArmyAssembler
 
         private static int MaxIDindex = 0;
 
+        public static Brush MainColor = null;
+        public static Brush AdditionalColor = null;
+
         public static int GetNextIndex()
         {
             return MaxIDindex++;
@@ -28,6 +32,14 @@ namespace WarhammerArmyAssembler
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
+
+            string mainColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+            MainColor = (SolidColorBrush)new BrushConverter().ConvertFromString(mainColor);
+
+            string additionalColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
+            AdditionalColor = (SolidColorBrush)new BrushConverter().ConvertFromString(additionalColor);
+
+            Interface.SetArmyGridAltColor(AdditionalColor);
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
             {
@@ -47,11 +59,6 @@ namespace WarhammerArmyAssembler
                 Artefact.Add(newID, LoadOption(newID, xmlArtefact));
             }
                 
-        }
-
-        public static string GetID(XmlNode xmlUnit)
-        {
-            return xmlUnit["ID"].InnerText;
         }
 
         public static Unit LoadUnit(int id, XmlNode xmlUnit)

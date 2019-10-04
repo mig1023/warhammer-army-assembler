@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
         Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="992.809">
+    
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
         
         <Canvas  x:Name="armybookDetailScrollHead" Width="250" Height="50" VerticalAlignment="Top" Background="White">
@@ -52,7 +53,7 @@
                     <HierarchicalDataTemplate ItemsSource="{Binding Items}">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown"/>
-                            <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="Green"/>
+                            <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="{Binding InterfaceColor}"/>
                         </StackPanel>
                     </HierarchicalDataTemplate>
                 </TreeView.ItemTemplate>
@@ -62,7 +63,7 @@
 
             <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" ColumnWidth="*" CanUserAddRows="False" GridLinesVisibility="None"
                       AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
-                      LoadingRow="ArmyGrid_LoadingRow" MouseDown="ArmyGrid_MouseDown" AlternatingRowBackground="#FFE4E4E4">
+                      LoadingRow="ArmyGrid_LoadingRow" MouseDown="ArmyGrid_MouseDown">
                 <DataGrid.Resources>
                     <Style TargetType="DataGridColumnHeader">
                         <Setter Property="FontSize" Value="12"/>

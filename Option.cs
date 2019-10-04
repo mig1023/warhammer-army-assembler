@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
 {
@@ -56,6 +57,8 @@ namespace WarhammerArmyAssembler
 
         public ObservableCollection<Option> Items { get; set; }
 
+        public Brush InterfaceColor { get; set; }
+
         public Option()
         {
             this.Items = new ObservableCollection<Option>();
@@ -95,6 +98,8 @@ namespace WarhammerArmyAssembler
             newOption.AddToWard = this.AddToWard;
             newOption.AddToCast = this.AddToCast;
             newOption.AddToDispell = this.AddToDispell;
+
+            newOption.InterfaceColor = this.InterfaceColor;
 
             return newOption;
         }

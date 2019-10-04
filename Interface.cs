@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 
 namespace WarhammerArmyAssembler
@@ -46,6 +47,7 @@ namespace WarhammerArmyAssembler
             {
                 Unit unit = entry.Value.Clone();
                 unit.PointsView = String.Format(" {0} pts", unit.Points);
+                unit.InterfaceColor = ArmyBook.MainColor;
                 categories[(int)unit.Type].Items.Add(unit);
             }
 
@@ -58,10 +60,16 @@ namespace WarhammerArmyAssembler
             {
                 Option artefact = entry.Value.Clone();
                 artefact.PointsView = String.Format(" {0} pts", artefact.Points);
+                artefact.InterfaceColor = ArmyBook.MainColor;
                 artefacts.Items.Add(artefact);
             }
 
             main.ArmyList.Items.Add(artefacts);
+        }
+
+        public static void SetArmyGridAltColor(Brush color)
+        {
+            main.ArmyGrid.AlternatingRowBackground = color;
         }
 
         public static bool EnoughPointsForAddUnit(int id)
@@ -162,11 +170,18 @@ namespace WarhammerArmyAssembler
             Interface.Move(Interface.MovingType.ToMain);
         }
 
-        private static double AddLabel(string caption, double left, double top, double height)
+        private static double AddLabel(string caption, double left, double top, double height, bool selected = false)
         {
             Label newOption = new Label();
             newOption.Content = caption;
             newOption.Margin = Thick(newOption, left, top);
+
+            if (selected)
+            {
+                newOption.FontWeight = FontWeights.Bold;
+                newOption.Foreground = ArmyBook.MainColor;
+            }
+            
             main.unitDetail.Children.Add(newOption);
 
             return height;
@@ -174,7 +189,7 @@ namespace WarhammerArmyAssembler
 
         private static double AddButton(string caption, double left, double top, double height, string id, Option option)
         {
-            AddLabel(caption, left, top, height);
+            AddLabel(caption, left, top, height, (option.Realised ? true : false));
 
             Button newButton = new Button();
 
