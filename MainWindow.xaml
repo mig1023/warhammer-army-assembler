@@ -84,21 +84,21 @@
                 </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding IDView}"/>
-                    <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="60"/>
-                    <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="S" Binding="{Binding StrengthView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="T" Binding="{Binding ToughnessView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="W" Binding="{Binding WoundsView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="I" Binding="{Binding InitiativeView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="A" Binding="{Binding AttacksView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="LD" Binding="{Binding LeadershipView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="40" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="100" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="45"/>
+                    <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="S" Binding="{Binding StrengthView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="T" Binding="{Binding ToughnessView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="W" Binding="{Binding WoundsView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="I" Binding="{Binding InitiativeView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="A" Binding="{Binding AttacksView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="LD" Binding="{Binding LeadershipView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="35" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Очки" Binding="{Binding InterfacePoints}" Width="60" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Особые правила" Binding="{Binding InterfaceRules}" Width="0.5*" IsReadOnly="True"/>
                 </DataGrid.Columns>
             </DataGrid>
 
