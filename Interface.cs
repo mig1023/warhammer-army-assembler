@@ -116,6 +116,8 @@ namespace WarhammerArmyAssembler
             {
                 topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20);
 
+                bool secondColumn = true;
+
                 foreach (Option option in unit.Option)
                 {
                     bool canBeUsed = (
@@ -125,7 +127,12 @@ namespace WarhammerArmyAssembler
                     );
 
                     if (option.IsOption() && canBeUsed)
-                        topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40, String.Format("{0}|{1}", unit.ID, option.ID), option);
+                    {
+                        secondColumn = !secondColumn;
+
+                        topMargin += AddButton(option.Name, main.unitName.Margin.Left + (secondColumn ? 110 : 0), topMargin, 40,
+                            String.Format("{0}|{1}", unit.ID, option.ID), option, width: 90, column: secondColumn);
+                    }
                 }
 
                 topMargin += 25;
@@ -137,7 +144,8 @@ namespace WarhammerArmyAssembler
 
                 foreach (Option option in unit.Option)
                     if (option.IsMagicItem() && (option.Points > 0))
-                        topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40, String.Format("{0}|{1}", unit.ID, option.ID), option);
+                        topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40,
+                            String.Format("{0}|{1}", unit.ID, option.ID), option, width: 200, column: true);
 
                 topMargin += 25;
             }
@@ -186,7 +194,8 @@ namespace WarhammerArmyAssembler
             return height;
         }
 
-        private static double AddButton(string caption, double left, double top, double height, string id, Option option)
+        private static double AddButton(string caption, double left, double top, double height,
+            string id, Option option, double width, bool column = false)
         {
             AddLabel(caption, left, top, height, (option.Realised ? true : false));
 
@@ -200,10 +209,13 @@ namespace WarhammerArmyAssembler
             newButton.Margin = Thick(newButton, left + 2, top + 20);
             newButton.Tag = id;
             newButton.Click += AddOption_Click;
-            newButton.Width = 200;
+            newButton.Width = width;
             main.unitDetail.Children.Add(newButton);
 
-            return height;
+            if (column)
+                return height;
+            else
+                return 0;
         }
 
         public static Thickness Thick(object element, double? left = null, double? top = null, double? right = null, double? bottom = null)
