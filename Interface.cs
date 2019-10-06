@@ -101,7 +101,7 @@ namespace WarhammerArmyAssembler
 
         public static double AddOptionsList(Unit unit)
         {
-            double topMargin = main.unitName.Margin.Top + main.unitName.Height;
+            double topMargin = main.unitName.Margin.Top + main.unitName.ActualHeight + 10;
 
             List<FrameworkElement> elementsForRemoving = new List<FrameworkElement>();
 
@@ -135,12 +135,12 @@ namespace WarhammerArmyAssembler
 
                         topMargin += AddButton(option.Name, main.unitName.Margin.Left + (secondColumn ? 145 : 0), topMargin, 40,
                             String.Format("{0}|{1}", unit.ID, option.ID), option, width: 125, column: secondColumn);
-                    }
 
-                    buttonsNum += 1;
+                        buttonsNum += 1;
+                    }
                 }
 
-                topMargin += (buttonsNum <= 2 ? 50 : 25);
+                topMargin += (buttonsNum <= 2 ? 65 : 25);
             }
 
             if (unit.ExistsMagicItems())

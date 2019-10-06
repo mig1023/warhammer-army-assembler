@@ -183,7 +183,11 @@ namespace WarhammerArmyAssembler
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
-                unitName.Content = unit.Name;
+                unitName.Content = unit.Name.ToUpper();
+
+                unitName.Foreground = Brushes.White;
+                unitName.Background = ArmyBook.MainColor;
+                unitName.FontWeight = FontWeights.Bold;
 
                 double newTop = Interface.AddOptionsList(unit);
 
