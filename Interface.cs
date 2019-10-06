@@ -117,6 +117,7 @@ namespace WarhammerArmyAssembler
                 topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20);
 
                 bool secondColumn = true;
+                int buttonsNum = 0;
 
                 foreach (Option option in unit.Option)
                 {
@@ -133,9 +134,11 @@ namespace WarhammerArmyAssembler
                         topMargin += AddButton(option.Name, main.unitName.Margin.Left + (secondColumn ? 110 : 0), topMargin, 40,
                             String.Format("{0}|{1}", unit.ID, option.ID), option, width: 90, column: secondColumn);
                     }
+
+                    buttonsNum += 1;
                 }
 
-                topMargin += 25;
+                topMargin += (buttonsNum <= 2 ? 50 : 25);
             }
 
             if (unit.ExistsMagicItems())
@@ -177,7 +180,8 @@ namespace WarhammerArmyAssembler
             Move(MovingType.ToMain);
         }
 
-        private static double AddLabel(string caption, double left, double top, double height, bool selected = false)
+        private static double AddLabel(string caption, double left, double top, double height,
+            bool selected = false, int points = 0)
         {
             Label newOption = new Label();
             newOption.Content = caption;
@@ -191,13 +195,24 @@ namespace WarhammerArmyAssembler
             
             main.unitDetail.Children.Add(newOption);
 
+            main.UpdateLayout();
+
+            if (points > 0)
+            {
+                Label optionPoints = new Label();
+                optionPoints.Content = points.ToString() + " pts";
+                optionPoints.Margin = Thick(optionPoints, left + newOption.ActualWidth, top);
+                optionPoints.Foreground = ArmyBook.MainColor;
+                main.unitDetail.Children.Add(optionPoints);
+            }
+
             return height;
         }
 
         private static double AddButton(string caption, double left, double top, double height,
             string id, Option option, double width, bool column = false)
         {
-            AddLabel(caption, left, top, height, (option.Realised ? true : false));
+            AddLabel(caption, left, top, height, (option.Realised ? true : false), option.Points);
 
             Button newButton = new Button();
 
