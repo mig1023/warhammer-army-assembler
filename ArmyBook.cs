@@ -39,7 +39,7 @@ namespace WarhammerArmyAssembler
             string additionalColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
             AdditionalColor = (SolidColorBrush)new BrushConverter().ConvertFromString(additionalColor);
 
-            Interface.SetArmyGridAltColor(AdditionalColor);
+            Interface.SetArmyGridAltColor(MainColor);
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
             {

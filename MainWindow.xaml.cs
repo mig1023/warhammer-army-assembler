@@ -47,15 +47,20 @@ namespace WarhammerArmyAssembler
             {
                 if (ArmyBook.Units.ContainsKey(id))
                 {
-                    armyUnitName.Content = ArmyBook.Units[id].Name;
+                    armyUnitName.Content = ArmyBook.Units[id].Name.ToUpper();
                     armyUnitDescription.Text = ArmyBook.Units[id].Description;
+
                 }
 
                 if (ArmyBook.Artefact.ContainsKey(id))
                 {
-                    armyUnitName.Content = ArmyBook.Artefact[id].Name;
+                    armyUnitName.Content = ArmyBook.Artefact[id].Name.ToUpper();
                     armyUnitDescription.Text = ArmyBook.Artefact[id].Description;
                 }
+
+                armyUnitName.Foreground = Brushes.White;
+                armyUnitName.Background = ArmyBook.MainColor;
+                armyUnitName.FontWeight = FontWeights.Bold;
 
                 UpdateLayout();
 

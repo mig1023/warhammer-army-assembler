@@ -41,7 +41,7 @@ namespace WarhammerArmyAssembler
             {
                 Unit unit = entry.Value.Clone();
                 unit.PointsView = String.Format(" {0} pts", unit.Points);
-                unit.InterfaceColor = ArmyBook.AdditionalColor;
+                unit.InterfaceColor = ArmyBook.MainColor;
                 categories[(int)unit.Type].Items.Add(unit);
             }
 
@@ -57,7 +57,7 @@ namespace WarhammerArmyAssembler
             {
                 Option artefact = entry.Value.Clone();
                 artefact.PointsView = String.Format(" {0} pts", artefact.Points);
-                artefact.InterfaceColor = ArmyBook.AdditionalColor;
+                artefact.InterfaceColor = ArmyBook.MainColor;
                 artefacts.Items.Add(artefact);
             }
 
@@ -114,7 +114,9 @@ namespace WarhammerArmyAssembler
 
             if (unit.ExistsOptions())
             {
-                topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20);
+                topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20, bold: true);
+
+                topMargin += 10;
 
                 bool secondColumn = true;
                 int buttonsNum = 0;
@@ -131,8 +133,8 @@ namespace WarhammerArmyAssembler
                     {
                         secondColumn = !secondColumn;
 
-                        topMargin += AddButton(option.Name, main.unitName.Margin.Left + (secondColumn ? 110 : 0), topMargin, 40,
-                            String.Format("{0}|{1}", unit.ID, option.ID), option, width: 90, column: secondColumn);
+                        topMargin += AddButton(option.Name, main.unitName.Margin.Left + (secondColumn ? 145 : 0), topMargin, 40,
+                            String.Format("{0}|{1}", unit.ID, option.ID), option, width: 125, column: secondColumn);
                     }
 
                     buttonsNum += 1;
@@ -143,19 +145,23 @@ namespace WarhammerArmyAssembler
 
             if (unit.ExistsMagicItems())
             {
-                topMargin += AddLabel("МАГИЧЕСКИЕ ПРЕДМЕТЫ", main.unitName.Margin.Left, topMargin, 20);
+                topMargin += AddLabel("МАГИЧЕСКИЕ ПРЕДМЕТЫ", main.unitName.Margin.Left, topMargin, 20, bold: true);
+
+                topMargin += 10;
 
                 foreach (Option option in unit.Option)
                     if (option.IsMagicItem() && (option.Points > 0))
                         topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40,
-                            String.Format("{0}|{1}", unit.ID, option.ID), option, width: 200, column: true);
+                            String.Format("{0}|{1}", unit.ID, option.ID), option, width: 270, column: true);
 
                 topMargin += 25;
             }
 
             if (unit.ExistsOrdinaryItems())
             {
-                topMargin += AddLabel("ОБЫЧНЫЕ ПРЕДМЕТЫ", main.unitName.Margin.Left, topMargin, 20);
+                topMargin += AddLabel("ОБЫЧНЫЕ ПРЕДМЕТЫ", main.unitName.Margin.Left, topMargin, 20, bold: true);
+
+                topMargin += 10;
 
                 foreach (Option option in unit.Option)
                     if (option.IsMagicItem() && (option.Points == 0))
@@ -181,18 +187,24 @@ namespace WarhammerArmyAssembler
         }
 
         private static double AddLabel(string caption, double left, double top, double height,
-            bool selected = false, int points = 0)
+            bool selected = false, int points = 0, bool bold = false)
         {
             Label newOption = new Label();
             newOption.Content = caption;
             newOption.Margin = Thick(newOption, left, top);
 
             if (selected)
-            {
-                newOption.FontWeight = FontWeights.Bold;
                 newOption.Foreground = ArmyBook.MainColor;
+
+            if (selected || bold)
+                newOption.FontWeight = FontWeights.Bold;
+
+            if (bold)
+            {
+                newOption.Foreground = Brushes.White;
+                newOption.Background = ArmyBook.MainColor;
             }
-            
+
             main.unitDetail.Children.Add(newOption);
 
             main.UpdateLayout();
@@ -201,7 +213,7 @@ namespace WarhammerArmyAssembler
             {
                 Label optionPoints = new Label();
                 optionPoints.Content = points.ToString() + " pts";
-                optionPoints.Margin = Thick(optionPoints, left + newOption.ActualWidth, top);
+                optionPoints.Margin = Thick(optionPoints, left + newOption.ActualWidth - 5, top);
                 optionPoints.Foreground = ArmyBook.MainColor;
                 main.unitDetail.Children.Add(optionPoints);
             }
@@ -354,14 +366,14 @@ namespace WarhammerArmyAssembler
 
             if (moveTo == MovingType.ToLeft)
             {
-                newPosition = new Thickness(250, 0, 0, 0);
+                newPosition = new Thickness(320, 0, 0, 0);
                 HideAllDetails();
                 main.armybookDetail.Visibility = Visibility.Visible;
             }
                 
             if (moveTo == MovingType.ToRight)
             {
-                newPosition = new Thickness(-250, 0, 0, 0);
+                newPosition = new Thickness(-320, 0, 0, 0);
                 HideAllDetails();
                 main.unitDetail.Visibility = Visibility.Visible;
             }
