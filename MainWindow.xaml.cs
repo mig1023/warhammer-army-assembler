@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,8 @@ namespace WarhammerArmyAssembler
         public MainWindow()
         {
             InitializeComponent();
+
+            this.DataContext = this;
 
             Interface.main = this;
 
@@ -62,7 +65,7 @@ namespace WarhammerArmyAssembler
                 Interface.Move(Interface.MovingType.ToLeft);
             }
 
-            if (ArmyBook.Artefact.ContainsKey(id) && Army.ArtefactAlreadyUsed(id) && (!ArmyBook.Artefact[id].Multiple))
+            if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
                 return;
             else
             {
@@ -95,6 +98,9 @@ namespace WarhammerArmyAssembler
                     {
                         Army.Units[unit.ID].AddAmmunition(id);
                         Interface.ReloadArmyData();
+
+                        if (!ArmyBook.Artefact[id].Multiple)
+                            Interface.SetArtefactAlreadyUsed(id, true);
                     }
                 }
             }

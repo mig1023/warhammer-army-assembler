@@ -123,16 +123,6 @@ namespace WarhammerArmyAssembler
             return dispell;
         }
 
-        public static bool ArtefactAlreadyUsed(int id)
-        {
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
-                foreach (Option option in entry.Value.Option)
-                    if (option.ID == id)
-                        return true;
-
-            return false;
-        }
-
         public static int OptionAlreadyUsed(int id)
         {
             foreach (KeyValuePair<int, Unit> entry in Army.Units)

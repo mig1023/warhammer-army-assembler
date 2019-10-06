@@ -62,6 +62,10 @@
                                             <DataTrigger Binding="{Binding GroopBold}" Value="True">
                                                 <Setter Property="FontWeight" Value="Bold"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding ArtefactAlreadyUsed}" Value="true">
+                                                <Setter Property="TextBlock.TextDecorations" Value="Strikethrough"/>
+                                                <Setter Property="TextBlock.Foreground" Value="Gray"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </TextBlock.Style>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +9,9 @@ using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
 {
-    public class Option
+    public class Option : INotifyPropertyChanged
     {
-        public enum OptionType
-        {
-            Weapon,
-            Armour,
-            Arcane,
-            Banner,
-            Option
-        }
+        public enum OptionType { Weapon, Armour, Arcane, Banner, Option }
 
         public string Name { get; set; }
         public int ID { get; set; }
@@ -59,6 +53,29 @@ namespace WarhammerArmyAssembler
 
         public Brush InterfaceColor { get; set; }
         public bool GroopBold { get; set; }
+
+        private bool artefactAlreadyUsed = false;
+        public bool ArtefactAlreadyUsed
+        {
+            get
+            {
+                return artefactAlreadyUsed;
+            }
+            set
+            {
+                artefactAlreadyUsed = value;
+                OnPropertyChanged("ArtefactAlreadyUsed");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChanged(string propName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+                handler(this, new PropertyChangedEventArgs(propName));
+        }
 
         public Option()
         {

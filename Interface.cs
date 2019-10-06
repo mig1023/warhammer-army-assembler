@@ -19,13 +19,7 @@ namespace WarhammerArmyAssembler
 
         public static object DragSender = null;
 
-        public enum MovingType
-        {
-            ToMain,
-            ToRight,
-            ToLeft,
-            ToTop,
-        }
+        public enum MovingType { ToMain, ToRight, ToLeft, ToTop }
 
         private static List<Unit> GetArmyCategories()
         {
@@ -168,10 +162,11 @@ namespace WarhammerArmyAssembler
 
             string[] id = id_tag.Split('|');
 
-            Army.Units[Interface.IntParse(id[0])].AddOption(Interface.IntParse(id[1]), Army.Units[Interface.IntParse(id[0])]);
-            Interface.ReloadArmyData();
+            Army.Units[IntParse(id[0])].AddOption(IntParse(id[1]), Army.Units[IntParse(id[0])]);
+            ReloadArmyData();
+            SetArtefactAlreadyUsed(IntParse(id[1]), false);
 
-            Interface.Move(Interface.MovingType.ToMain);
+            Move(MovingType.ToMain);
         }
 
         private static double AddLabel(string caption, double left, double top, double height, bool selected = false)
@@ -356,6 +351,24 @@ namespace WarhammerArmyAssembler
             move.From = main.mainGrid.Margin;
             move.To = newPosition;
             main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
+        }
+
+        public static void SetArtefactAlreadyUsed(int id, bool value)
+        {
+            foreach (Object group in main.ArmyList.Items)
+            {
+                if (group is Option)
+                    foreach (Object item in (group as Option).Items)
+                    {
+                        Option artefact = item as Option;
+
+                        if (artefact.ID == id)
+                        {
+                            artefact.ArtefactAlreadyUsed = value;
+                            ArmyBook.Artefact[artefact.ID].ArtefactAlreadyUsed = value;
+                        }
+                    }
+            }
         }
     }
 }

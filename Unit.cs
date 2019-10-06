@@ -11,21 +11,9 @@ namespace WarhammerArmyAssembler
 {
     public class Unit
     {
-        public enum UnitType
-        {
-            Lord,
-            Hero,
-            Core,
-            Special,
-            Rare,
-        }
+        public enum UnitType { Lord, Hero, Core, Special, Rare }
 
-        public enum MagicItemsTypes
-        {
-            Hero,
-            Mage,
-            Unit,
-        }
+        public enum MagicItemsTypes { Hero, Mage, Unit }
 
         public string Name { get; set; }
         public int ID { get; set; }
