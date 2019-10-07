@@ -38,6 +38,16 @@ namespace WarhammerArmyAssembler
 
         public static void DeleteUnitByID(int id)
         {
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                if (entry.Value.MountOn == id)
+                {
+                    foreach (Option option in entry.Value.Option)
+                        if (option.Name == Units[id].Name)
+                            option.Realised = false;
+
+                    entry.Value.MountOn = 0;
+                }
+
             Units.Remove(id);
         }
 
