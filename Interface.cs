@@ -325,6 +325,8 @@ namespace WarhammerArmyAssembler
         {
             if (!EnoughPointsForAddMount(points))
                 Error("Недостаточно очков для добавления скакуна");
+            else if (Army.Units[unit].MountOn > 0)
+                Error("Герой уже имеет скакуна");
             else
             {
                 Army.AddMountByID(id, points, unit);
