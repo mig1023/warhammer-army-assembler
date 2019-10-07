@@ -184,7 +184,10 @@ namespace WarhammerArmyAssembler
 
             string[] id = id_tag.Split('|');
 
-            Army.Units[IntParse(id[0])].AddOption(IntParse(id[1]), Army.Units[IntParse(id[0])]);
+            int optionID = IntParse(id[1]);
+            int unitID = IntParse(id[0]);
+
+            Army.Units[unitID].AddOption(optionID, Army.Units[unitID], unitID);
             ReloadArmyData();
             SetArtefactAlreadyUsed(IntParse(id[1]), false);
 
@@ -262,12 +265,12 @@ namespace WarhammerArmyAssembler
             return new Thickness(newLeft, newTop, newRight, newBottom);
         }
 
-        public static void ArmyGridDrop(int id, DataGridRow container = null, int points = 0)
+        public static void ArmyGridDrop(int id, DataGridRow container = null, int points = 0, int unit = 0)
         {
             if (ArmyBook.Artefact.ContainsKey(id))
                 Interface.ArmyGridDropArtefact(id, container);
             else if (ArmyBook.Mounts.ContainsKey(id))
-                Interface.ArmyGridDropMount(id, points);
+                Interface.ArmyGridDropMount(id, points, unit);
             else
                 Interface.ArmyGridDropUnit(id);
         }
@@ -318,13 +321,13 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static void ArmyGridDropMount(int id, int points)
+        public static void ArmyGridDropMount(int id, int points, int unit)
         {
             if (!EnoughPointsForAddMount(points))
                 Error("Недостаточно очков для добавления скакуна");
             else
             {
-                Army.AddMountByID(id, points);
+                Army.AddMountByID(id, points, unit);
                 ReloadArmyData();
             }
         }

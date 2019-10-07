@@ -49,7 +49,7 @@ namespace WarhammerArmyAssembler
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
 
-        public string MountOn { get; set; }
+        public bool Mount { get; set; }
 
         public ObservableCollection<Option> Items { get; set; }
 
@@ -119,7 +119,7 @@ namespace WarhammerArmyAssembler
             newOption.AddToCast = this.AddToCast;
             newOption.AddToDispell = this.AddToDispell;
 
-            newOption.MountOn = this.MountOn;
+            newOption.Mount = this.Mount;
 
             newOption.InterfaceColor = this.InterfaceColor;
 

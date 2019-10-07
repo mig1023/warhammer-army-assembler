@@ -80,6 +80,7 @@ namespace WarhammerArmyAssembler
             newUnit.Points = IntParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
             newUnit.Mage = IntParse(xmlUnit["Mage"]);
+            newUnit.MountOn = IntParse(xmlUnit["MountOn"]);
 
             newUnit.Description = StringParse(xmlUnit["Description"]);
 
@@ -262,7 +263,7 @@ namespace WarhammerArmyAssembler
             newWeapon.AddToCast = IntParse(xmlNode["AddToCast"]);
             newWeapon.AddToDispell = IntParse(xmlNode["AddToDispell"]);
 
-            newWeapon.MountOn = StringParse(xmlNode["MountOn"]);
+            newWeapon.Mount = BoolParse(xmlNode["Mount"]);
 
             return newWeapon;
         }

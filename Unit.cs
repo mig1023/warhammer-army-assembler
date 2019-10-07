@@ -72,6 +72,8 @@ namespace WarhammerArmyAssembler
         public int MagicItems { get; set; }
         public MagicItemsTypes MagicItemsType { get; set; }
 
+        public int MountOn { get; set; }
+
         public Brush InterfaceColor { get; set; }
         public bool GroopBold { get; set; }
 
@@ -107,6 +109,7 @@ namespace WarhammerArmyAssembler
             newUnit.Type = this.Type;
             newUnit.Size = this.Size;
             newUnit.Points = this.Points;
+            newUnit.MountOn = this.MountOn;
             newUnit.Description = this.Description;
 
             newUnit.Movement = this.Movement;
@@ -289,20 +292,27 @@ namespace WarhammerArmyAssembler
             Option.Add(ArmyBook.Artefact[id].Clone());
         }
 
-        public void AddOption(int id, Unit unit)
+        public void AddOption(int optionID, Unit unit, int unitID)
         {
             foreach (Option option in unit.Option)
-                if (option.ID == id)
+                if (option.ID == optionID)
                 {
                     if (option.IsMagicItem())
                         unit.Option.Remove(option);
                     else
                         option.Realised = !option.Realised;
 
-                    if (!String.IsNullOrEmpty(option.MountOn))
-                        foreach(KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
+                    if (option.Mount && option.Realised)
+                    {
+                        foreach (KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
                             if (mount.Value.Name == option.Name)
-                                Interface.ArmyGridDrop(mount.Key, points: option.Points);
+                                Interface.ArmyGridDrop(mount.Key, points: option.Points, unit: unitID);
+                    }
+                    else if (option.Mount && !option.Realised)
+                    {
+                        Army.DeleteUnitByID(Army.Units[unitID].MountOn);
+                        Army.Units[unitID].MountOn = 0;
+                    }
 
                     return;
                 }
