@@ -109,9 +109,10 @@
 		    <Points>10</Points>
 	        </Option>
 		<Option>
-	            <Name>Скакун</Name>
+	            <Name>Виверна</Name>
 		    <Type>Option</Type>
 		    <Points>20</Points>
+		    <MountOn>Виверна</MountOn>
 	        </Option>
 		<Option>
 	            <Name>Топор</Name>
@@ -232,6 +233,25 @@
 	    </Options>
         </Hero>
     </Heroes>
+    <Mounts>
+	<Mount>
+            <Type>Mount</Type>
+            <Name>Виверна</Name>
+            <Points>0</Points>
+            <MinSize>1</MinSize>
+            <MainParam>
+                <Movement>4</Movement>
+                <WeaponSkill>5</WeaponSkill>
+                <BallisticSkill>0</BallisticSkill>
+                <Strength>6</Strength>
+                <Toughness>5</Toughness>
+                <Wounds>5</Wounds>
+                <Initiative>3</Initiative>
+                <Attacks>3</Attacks>
+                <Leadership>6</Leadership>
+            </MainParam>
+        </Mount>
+    </Mounts>
     <Units>
         <Unit>
             <Type>Core</Type>

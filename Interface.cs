@@ -75,6 +75,11 @@ namespace WarhammerArmyAssembler
             return (ArmyBook.Units[id].Size * ArmyBook.Units[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
+        public static bool EnoughPointsForAddMount(int points)
+        {
+            return points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
+        }
+
         public static bool EnoughPointsForAddArtefact(int id)
         {
             return (ArmyBook.Artefact[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
@@ -257,32 +262,35 @@ namespace WarhammerArmyAssembler
             return new Thickness(newLeft, newTop, newRight, newBottom);
         }
 
-        public static void ArmyGridDrop(int id, DataGridRow container)
+        public static void ArmyGridDrop(int id, DataGridRow container = null, int points = 0)
         {
             if (ArmyBook.Artefact.ContainsKey(id))
-            {
-                if (container != null)
-                {
-                    Unit unit = container.DataContext as Unit;
-
-                    if (!Interface.EnoughPointsForAddArtefact(id))
-                        Interface.Error("Количество очков недостаточно добавления предмета");
-                    else if (!Interface.EnoughUnitPointsForAddArtefact(id, unit.ID))
-                        Interface.Error("Недостаточно очков магических предметов для добавления");
-                    else
-                    {
-                        Army.Units[unit.ID].AddAmmunition(id);
-                        Interface.ReloadArmyData();
-
-                        if (!ArmyBook.Artefact[id].Multiple)
-                            Interface.SetArtefactAlreadyUsed(id, true);
-                    }
-                }
-            }
+                Interface.ArmyGridDropArtefact(id, container);
             else if (ArmyBook.Mounts.ContainsKey(id))
-                Interface.ArmyGridDropMount(id);
+                Interface.ArmyGridDropMount(id, points);
             else
                 Interface.ArmyGridDropUnit(id);
+        }
+
+        public static void ArmyGridDropArtefact(int id, DataGridRow container)
+        {
+            if (container != null)
+            {
+                Unit unit = container.DataContext as Unit;
+
+                if (!Interface.EnoughPointsForAddArtefact(id))
+                    Interface.Error("Количество очков недостаточно добавления предмета");
+                else if (!Interface.EnoughUnitPointsForAddArtefact(id, unit.ID))
+                    Interface.Error("Недостаточно очков магических предметов для добавления");
+                else
+                {
+                    Army.Units[unit.ID].AddAmmunition(id);
+                    Interface.ReloadArmyData();
+
+                    if (!ArmyBook.Artefact[id].Multiple)
+                        Interface.SetArtefactAlreadyUsed(id, true);
+                }
+            }
         }
 
         public static void ArmyGridDropUnit(int id)
@@ -310,16 +318,13 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static void ArmyGridDropMount(int id)
+        public static void ArmyGridDropMount(int id, int points)
         {
-            //if (!EnoughPointsForAddUnit(id))
-            //{
-            //    string unitType = (ArmyBook.Units[id].IsHero() ? "героя" : "отряда");
-            //    Error(String.Format("Недостаточно очков для добавления {0}", unitType));
-            //}
-            //else
+            if (!EnoughPointsForAddMount(points))
+                Error("Недостаточно очков для добавления скакуна");
+            else
             {
-                Army.AddMountByID(id);
+                Army.AddMountByID(id, points);
                 ReloadArmyData();
             }
         }

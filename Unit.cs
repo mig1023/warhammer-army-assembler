@@ -302,7 +302,7 @@ namespace WarhammerArmyAssembler
                     if (!String.IsNullOrEmpty(option.MountOn))
                         foreach(KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
                             if (mount.Value.Name == option.Name)
-                                Interface.ArmyGridDrop(mount.Key, null);
+                                Interface.ArmyGridDrop(mount.Key, points: option.Points);
 
                     return;
                 }
