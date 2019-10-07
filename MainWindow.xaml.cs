@@ -87,33 +87,12 @@ namespace WarhammerArmyAssembler
             if ((Interface.DragSender as FrameworkElement).Name == "ArmyGrid")
                 return;
 
-            if (ArmyBook.Artefact.ContainsKey(id))
-            {
-                DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
+            DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
 
-                if (container != null)
-                {
-                    Unit unit = container.DataContext as Unit;
-
-                    if (!Interface.EnoughPointsForAddArtefact(id))
-                        Interface.Error("Количество очков недостаточно добавления предмета");
-                    else if (!Interface.EnoughUnitPointsForAddArtefact(id, unit.ID))
-                        Interface.Error("Недостаточно очков магических предметов для добавления");
-                    else
-                    {
-                        Army.Units[unit.ID].AddAmmunition(id);
-                        Interface.ReloadArmyData();
-
-                        if (!ArmyBook.Artefact[id].Multiple)
-                            Interface.SetArtefactAlreadyUsed(id, true);
-                    }
-                }
-            }
-            else
-                Interface.ArmyGridDrop(id);
+            Interface.ArmyGridDrop(id, container);
         }
 
-        static T FindVisualParent<T>(UIElement element) where T : UIElement
+        public static T FindVisualParent<T>(UIElement element) where T : UIElement
         {
             UIElement parent = element;
             while (parent != null)

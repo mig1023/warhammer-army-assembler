@@ -49,6 +49,8 @@ namespace WarhammerArmyAssembler
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
 
+        public string MountOn { get; set; }
+
         public ObservableCollection<Option> Items { get; set; }
 
         public Brush InterfaceColor { get; set; }
@@ -116,6 +118,8 @@ namespace WarhammerArmyAssembler
             newOption.AddToWard = this.AddToWard;
             newOption.AddToCast = this.AddToCast;
             newOption.AddToDispell = this.AddToDispell;
+
+            newOption.MountOn = this.MountOn;
 
             newOption.InterfaceColor = this.InterfaceColor;
 

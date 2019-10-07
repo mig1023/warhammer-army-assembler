@@ -14,6 +14,7 @@ namespace WarhammerArmyAssembler
     public class ArmyBook
     {
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
+        public static Dictionary<int, Unit> Mounts = new Dictionary<int, Unit>();
         public static Dictionary<int, Option> Artefact = new Dictionary<int, Option>();
 
         private static int MaxIDindex = 0;
@@ -51,6 +52,12 @@ namespace WarhammerArmyAssembler
             {
                 int newID = GetNextIndex();
                 Units.Add(newID, LoadUnit(newID, xmlUnit));
+            }
+
+            foreach (XmlNode xmlMount in xmlFile.SelectNodes("ArmyBook/Mounts/Mount"))
+            {
+                int newID = GetNextIndex();
+                Mounts.Add(newID, LoadUnit(newID, xmlMount));
             }
 
             foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
@@ -93,24 +100,29 @@ namespace WarhammerArmyAssembler
            
             XmlNode psychology = xmlUnit["Psychology"];
 
-            newUnit.ImmuneToPsychology = BoolParse(psychology["ImmuneToPsychology"]);
-            newUnit.Stubborn = BoolParse(psychology["Stubborn"]);
-            newUnit.Hate = BoolParse(psychology["Hate"]);
-            newUnit.Fear = BoolParse(psychology["Fear"]);
-            newUnit.Terror = BoolParse(psychology["Terror"]);
-            newUnit.Frenzy = BoolParse(psychology["Frenzy"]);
-            newUnit.Unbreakable = BoolParse(psychology["Unbreakable"]);
-            newUnit.ColdBlooded = BoolParse(psychology["ColdBlooded"]);
+            if (psychology != null)
+            {
+                newUnit.ImmuneToPsychology = BoolParse(psychology["ImmuneToPsychology"]);
+                newUnit.Stubborn = BoolParse(psychology["Stubborn"]);
+                newUnit.Hate = BoolParse(psychology["Hate"]);
+                newUnit.Fear = BoolParse(psychology["Fear"]);
+                newUnit.Terror = BoolParse(psychology["Terror"]);
+                newUnit.Frenzy = BoolParse(psychology["Frenzy"]);
+                newUnit.Unbreakable = BoolParse(psychology["Unbreakable"]);
+                newUnit.ColdBlooded = BoolParse(psychology["ColdBlooded"]);
+            }
 
             XmlNode additionalParam = xmlUnit["AdditionalParam"];
 
-            newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
-            newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
-            newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
-            newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
-
-            newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
-            newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
+            if (additionalParam != null)
+            {
+                newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
+                newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
+                newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
+                newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
+                newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
+                newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
+            }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Ammunition/*"))
                 newUnit.Option.Add(LoadOption(GetNextIndex(), xmlAmmunition));
@@ -249,6 +261,8 @@ namespace WarhammerArmyAssembler
             newWeapon.AddToWard = IntParse(xmlNode["AddToWard"]);
             newWeapon.AddToCast = IntParse(xmlNode["AddToCast"]);
             newWeapon.AddToDispell = IntParse(xmlNode["AddToDispell"]);
+
+            newWeapon.MountOn = StringParse(xmlNode["MountOn"]);
 
             return newWeapon;
         }

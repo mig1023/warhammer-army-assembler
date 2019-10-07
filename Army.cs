@@ -25,7 +25,14 @@ namespace WarhammerArmyAssembler
 
             Units.Add(GetNextIndex(), unit);
         }
-        
+
+        public static void AddMountByID(int id)
+        {
+            Unit mount = ArmyBook.Mounts[id].Clone();
+
+            Units.Add(GetNextIndex(), mount);
+        }
+
         public static void DeleteUnitByID(int id)
         {
             Units.Remove(id);

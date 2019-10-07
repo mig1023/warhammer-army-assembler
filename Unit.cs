@@ -299,6 +299,11 @@ namespace WarhammerArmyAssembler
                     else
                         option.Realised = !option.Realised;
 
+                    if (!String.IsNullOrEmpty(option.MountOn))
+                        foreach(KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
+                            if (mount.Value.Name == option.Name)
+                                Interface.ArmyGridDrop(mount.Key, null);
+
                     return;
                 }
         }

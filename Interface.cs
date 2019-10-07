@@ -194,7 +194,7 @@ namespace WarhammerArmyAssembler
             newOption.Margin = Thick(newOption, left, top);
 
             if (selected)
-                newOption.Foreground = ArmyBook.MainColor;
+                newOption.Foreground = ArmyBook.AdditionalColor;
 
             if (selected || bold)
                 newOption.FontWeight = FontWeights.Bold;
@@ -257,7 +257,35 @@ namespace WarhammerArmyAssembler
             return new Thickness(newLeft, newTop, newRight, newBottom);
         }
 
-        public static void ArmyGridDrop(int id)
+        public static void ArmyGridDrop(int id, DataGridRow container)
+        {
+            if (ArmyBook.Artefact.ContainsKey(id))
+            {
+                if (container != null)
+                {
+                    Unit unit = container.DataContext as Unit;
+
+                    if (!Interface.EnoughPointsForAddArtefact(id))
+                        Interface.Error("Количество очков недостаточно добавления предмета");
+                    else if (!Interface.EnoughUnitPointsForAddArtefact(id, unit.ID))
+                        Interface.Error("Недостаточно очков магических предметов для добавления");
+                    else
+                    {
+                        Army.Units[unit.ID].AddAmmunition(id);
+                        Interface.ReloadArmyData();
+
+                        if (!ArmyBook.Artefact[id].Multiple)
+                            Interface.SetArtefactAlreadyUsed(id, true);
+                    }
+                }
+            }
+            else if (ArmyBook.Mounts.ContainsKey(id))
+                Interface.ArmyGridDropMount(id);
+            else
+                Interface.ArmyGridDropUnit(id);
+        }
+
+        public static void ArmyGridDropUnit(int id)
         {
             bool slotExists = (Army.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
             bool coreUnit = (ArmyBook.Units[id].Type == Unit.UnitType.Core);
@@ -281,7 +309,21 @@ namespace WarhammerArmyAssembler
                 ReloadArmyData();
             }
         }
-        
+
+        public static void ArmyGridDropMount(int id)
+        {
+            //if (!EnoughPointsForAddUnit(id))
+            //{
+            //    string unitType = (ArmyBook.Units[id].IsHero() ? "героя" : "отряда");
+            //    Error(String.Format("Недостаточно очков для добавления {0}", unitType));
+            //}
+            //else
+            {
+                Army.AddMountByID(id);
+                ReloadArmyData();
+            }
+        }
+
         public static void UnitDeleteDrop(int id)
         {
             Army.DeleteUnitByID(id);
