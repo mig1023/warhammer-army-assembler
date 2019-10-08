@@ -193,12 +193,11 @@ namespace WarhammerArmyAssembler
             int optionID = IntParse(id[1]);
             int unitID = IntParse(id[0]);
 
-            if (Army.Units[unitID].AddOption(optionID, Army.Units[unitID], unitID))
-            {
-                ReloadArmyData();
-                SetArtefactAlreadyUsed(IntParse(id[1]), false);
-                UpdateUnitDescription(unitID, Army.Units[unitID]);
-            }
+            Army.Units[unitID].AddOption(optionID, Army.Units[unitID], unitID);
+            
+            ReloadArmyData();
+            SetArtefactAlreadyUsed(IntParse(id[1]), false);
+            UpdateUnitDescription(unitID, Army.Units[unitID]);
         }
 
         public static void UpdateUnitDescription(int unitID, Unit unit)
@@ -293,17 +292,17 @@ namespace WarhammerArmyAssembler
             return new Thickness(newLeft, newTop, newRight, newBottom);
         }
 
-        public static bool ArmyGridDrop(int id, DataGridRow container = null, int points = 0, int unit = 0)
+        public static void ArmyGridDrop(int id, DataGridRow container = null, int points = 0, int unit = 0)
         {
             if (ArmyBook.Artefact.ContainsKey(id))
-                return Interface.ArmyGridDropArtefact(id, container);
+                Interface.ArmyGridDropArtefact(id, container);
             else if (ArmyBook.Mounts.ContainsKey(id))
-                return Interface.ArmyGridDropMount(id, points, unit);
+                Interface.ArmyGridDropMount(id, points, unit);
             else
-                return Interface.ArmyGridDropUnit(id);
+                Interface.ArmyGridDropUnit(id);
         }
 
-        public static bool ArmyGridDropArtefact(int id, DataGridRow container)
+        public static void ArmyGridDropArtefact(int id, DataGridRow container)
         {
             if (container != null)
             {
@@ -320,15 +319,11 @@ namespace WarhammerArmyAssembler
 
                     if (!ArmyBook.Artefact[id].Multiple)
                         Interface.SetArtefactAlreadyUsed(id, true);
-
-                    return true;
                 }
             }
-
-            return false;
         }
 
-        public static bool ArmyGridDropUnit(int id)
+        public static void ArmyGridDropUnit(int id)
         {
             bool slotExists = (Army.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
             bool coreUnit = (ArmyBook.Units[id].Type == Unit.UnitType.Core);
@@ -350,14 +345,10 @@ namespace WarhammerArmyAssembler
             {
                 Army.AddUnitByID(id);
                 ReloadArmyData();
-
-                return true;
             }
-
-            return false;
         }
 
-        public static bool ArmyGridDropMount(int id, int points, int unit)
+        public static void ArmyGridDropMount(int id, int points, int unit)
         {
             if (!EnoughPointsForAddMount(points))
                 Error("Недостаточно очков для добавления скакуна");
@@ -367,11 +358,7 @@ namespace WarhammerArmyAssembler
             {
                 Army.AddMountByID(id, points, unit);
                 ReloadArmyData();
-
-                return true;
             }
-
-            return false;
         }
 
         public static void UnitDeleteDrop(int id)
