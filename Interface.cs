@@ -145,7 +145,7 @@ namespace WarhammerArmyAssembler
                     }
                 }
 
-                topMargin += (buttonsNum <= 2 ? 65 : 25);
+                topMargin += (buttonsNum % 2 != 0 ? 65 : 25);
             }
 
             if (unit.ExistsMagicItems())
