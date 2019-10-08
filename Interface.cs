@@ -376,6 +376,19 @@ namespace WarhammerArmyAssembler
             return (success ? value : 0);
         }
 
+        public static Unit ReloadArmyUnit(int id, Unit unit)
+        {
+            Unit newUnit = unit.Clone();
+
+            newUnit = newUnit.GetOptionRules();
+
+            newUnit.RulesView = newUnit.GetSpecialRulesLine();
+            newUnit.PointsView = newUnit.GetUnitPoints().ToString();
+            newUnit.ID = id;
+
+            return newUnit;
+        }
+
         public static void ReloadArmyData()
         {
             ArmyInInterface.Clear();
@@ -384,15 +397,13 @@ namespace WarhammerArmyAssembler
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
             {
-                Unit unit = entry.Value.Clone();
+                if (entry.Value.Type != Unit.UnitType.Mount)
+                    categories[(int)entry.Value.Type].Items.Add(ReloadArmyUnit(entry.Key, entry.Value));
 
-                unit = unit.GetOptionRules();
-
-                unit.RulesView = unit.GetSpecialRulesLine();
-                unit.PointsView = unit.GetUnitPoints().ToString();
-                unit.ID = entry.Key;
-
-                categories[(int)unit.Type].Items.Add(unit);
+                if ((entry.Value.MountOn > 0) && (Army.Units[entry.Value.MountOn].Wounds > 1))
+                    categories[(int)entry.Value.Type].Items.Add(
+                        ReloadArmyUnit(entry.Value.MountOn, Army.Units[entry.Value.MountOn])
+                    );
             }
 
             foreach (Unit unitType in categories)
