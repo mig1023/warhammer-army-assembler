@@ -152,5 +152,16 @@ namespace WarhammerArmyAssembler
 
             return 0;
         }
+
+        public static int GetMountOption(Unit unit)
+        {
+            foreach (KeyValuePair<int, Unit> armyUnit in Army.Units)
+                if (armyUnit.Key == unit.MountOn)
+                    foreach (Option option in unit.Option)
+                        if (option.Name == armyUnit.Value.Name)
+                            return option.ID;
+
+            return 0;
+        }
     }
 }

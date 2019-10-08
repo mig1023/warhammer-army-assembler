@@ -126,6 +126,11 @@ namespace WarhammerArmyAssembler
                 bool secondColumn = true;
                 int buttonsNum = 0;
 
+                int mountAlreadyOn = 0;
+
+                if (unit.MountOn > 0)
+                    mountAlreadyOn = Army.GetMountOption(unit);
+
                 foreach (Option option in unit.Option)
                 {
                     bool canBeUsed = (
@@ -139,7 +144,8 @@ namespace WarhammerArmyAssembler
                         secondColumn = !secondColumn;
 
                         topMargin += AddButton(option.Name, main.unitName.Margin.Left + (secondColumn ? 145 : 0), topMargin, 40,
-                            String.Format("{0}|{1}", unitID, option.ID), option, width: 125, column: secondColumn);
+                            String.Format("{0}|{1}", unitID, option.ID), option, width: 125, column: secondColumn,
+                            mountAlreadyOn: mountAlreadyOn);
 
                         buttonsNum += 1;
                     }
@@ -249,7 +255,7 @@ namespace WarhammerArmyAssembler
         }
 
         private static double AddButton(string caption, double left, double top, double height,
-            string id, Option option, double width, bool column = false)
+            string id, Option option, double width, bool column = false, int mountAlreadyOn = 0)
         {
             AddLabel(caption, left, top, height, (option.Realised ? true : false), option.Points);
 
@@ -259,6 +265,9 @@ namespace WarhammerArmyAssembler
                 newButton.Content = "отказаться";
             else
                 newButton.Content = (option.Realised ? "отменить" : "добавить");
+
+            if (option.Mount && (mountAlreadyOn > 0) && (option.ID != mountAlreadyOn))
+                newButton.IsEnabled = false;
 
             newButton.Margin = Thick(newButton, left + 2, top + 20);
             newButton.Tag = id;
