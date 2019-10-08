@@ -162,21 +162,7 @@ namespace WarhammerArmyAssembler
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
             {
-                unitName.Content = unit.Name.ToUpper();
-
-                unitName.Foreground = Brushes.White;
-                unitName.Background = ArmyBook.MainColor;
-                unitName.FontWeight = FontWeights.Bold;
-
-                double newTop = Interface.AddOptionsList(unit);
-
-                unitDescription.Margin = Interface.Thick(unitDescription, left: (unitName.Margin.Left + 5), top: newTop);
-                unitDescription.Text = unit.GetFullDescription();
-
-                UpdateLayout();
-
-                unitDetail.Height = newTop + ( unitDescription.ActualHeight > 0 ? unitDescription.ActualHeight : 20);
-
+                Interface.UpdateUnitDescription(unit.ID, unit);
                 Interface.Move(Interface.MovingType.ToRight);
             }
 

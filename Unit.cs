@@ -292,7 +292,7 @@ namespace WarhammerArmyAssembler
             Option.Add(ArmyBook.Artefact[id].Clone());
         }
 
-        public void AddOption(int optionID, Unit unit, int unitID)
+        public bool AddOption(int optionID, Unit unit, int unitID)
         {
             foreach (Option option in unit.Option)
                 if (option.ID == optionID)
@@ -306,7 +306,7 @@ namespace WarhammerArmyAssembler
                     {
                         foreach (KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
                             if (mount.Value.Name == option.Name)
-                                Interface.ArmyGridDrop(mount.Key, points: option.Points, unit: unitID);
+                                return Interface.ArmyGridDrop(mount.Key, points: option.Points, unit: unitID);
                     }
                     else if (option.Mount && !option.Realised)
                     {
@@ -314,8 +314,10 @@ namespace WarhammerArmyAssembler
                         Army.Units[unitID].MountOn = 0;
                     }
 
-                    return;
+                    return true;
                 }
+
+            return false;
         }
 
         public string GetSpecialRulesLine()
