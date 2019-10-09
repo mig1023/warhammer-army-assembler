@@ -333,6 +333,9 @@ namespace WarhammerArmyAssembler
         {
             List<string> rules = new List<string>();
 
+            if (MountOn > 0)
+                rules.Add(String.Format("верхом на: {0};", Army.Units[MountOn].Name));
+
             if (ImmuneToPsychology)
                 rules.Add("иммунен к психологии");
 
