@@ -13,10 +13,13 @@ namespace WarhammerArmyAssembler
     {
         public enum OptionType { Weapon, Armour, Arcane, Banner, Option }
 
+        public enum OnlyForType { All, Infantry, Mount }
+
         public string Name { get; set; }
         public int ID { get; set; }
         public string IDView { get; set; }
         public OptionType Type { get; set; }
+        public OnlyForType OnlyFor { get; set; }
 
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
@@ -98,6 +101,7 @@ namespace WarhammerArmyAssembler
             newOption.Realised = this.Realised;
             newOption.Multiple = this.Multiple;
             newOption.OnlyOneInArmy = this.OnlyOneInArmy;
+            newOption.OnlyFor = this.OnlyFor;
 
             newOption.HitFirst = this.HitFirst;
             newOption.KillingBlow = this.KillingBlow;

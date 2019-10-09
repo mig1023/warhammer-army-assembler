@@ -202,6 +202,18 @@ namespace WarhammerArmyAssembler
             return (success ? value : Option.OptionType.Option);
         }
 
+        private static OnlyForType OnlyForParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return 0;
+
+            OnlyForType value;
+
+            bool success = Enum.TryParse(xmlNode.InnerText, out value);
+
+            return (success ? value : Option.OnlyForType.All);
+        }
+
         private static bool BoolParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
@@ -238,6 +250,7 @@ namespace WarhammerArmyAssembler
             newWeapon.Name = StringParse(xmlNode["Name"]);
             newWeapon.Description = StringParse(xmlNode["Description"]);
             newWeapon.Type = OptionTypeParse(xmlNode["Type"]);
+            newWeapon.OnlyFor = OnlyForParse(xmlNode["OnlyFor"]);
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
             newWeapon.OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]);

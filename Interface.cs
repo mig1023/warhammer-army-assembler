@@ -268,6 +268,12 @@ namespace WarhammerArmyAssembler
             if (option.Mount && (mountAlreadyOn > 0) && (option.ID != mountAlreadyOn))
                 newButton.IsEnabled = false;
 
+            if ((option.OnlyFor == Option.OnlyForType.Mount) && (mountAlreadyOn == 0))
+                newButton.IsEnabled = false;
+
+            if ((option.OnlyFor == Option.OnlyForType.Infantry) && (mountAlreadyOn > 0))
+                newButton.IsEnabled = false;
+
             newButton.Margin = Thick(newButton, left + 2, top + 20);
             newButton.Tag = id;
             newButton.Click += AddOption_Click;
