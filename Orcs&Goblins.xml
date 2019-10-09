@@ -104,8 +104,9 @@
             </Ammunition>
 	    <Options>
 	        <Option>
-	            <Name>Копьё</Name>
+	            <Name>Кавалер.копьё</Name>
 		    <Type>Option</Type>
+		    <OnlyFor>Mount</OnlyFor>
 		    <Points>10</Points>
 	        </Option>
 		<Option>
@@ -123,6 +124,7 @@
 		<Option>
 	            <Name>Топор</Name>
 		    <Type>Option</Type>
+		    <OnlyFor>Infantry</OnlyFor>
 		    <Points>30</Points>
 	        </Option>
 		<Option>
@@ -200,6 +202,19 @@
                     <Name>лёгкая броня</Name>
                 </HandWeapon>
             </Ammunition>
+	    <Options>
+	        <Option>
+	            <Name>Копьё</Name>
+		    <Type>Option</Type>
+		    <Points>10</Points>
+	        </Option>
+		<Option>
+	            <Name>Кабан</Name>
+		    <Type>Option</Type>
+		    <Points>15</Points>
+		    <Mount>true</Mount>
+	        </Option>
+	    </Options>
         </Hero>
 	<Hero>
             <Type>Hero</Type>
@@ -281,6 +296,7 @@
             <Name>Ватага орков</Name>
             <Points>6</Points>
             <MinSize>10</MinSize>
+	    <MaxSize>40</MaxSize>
             <MainParam>
                 <Movement>4</Movement>
                 <WeaponSkill>3</WeaponSkill>

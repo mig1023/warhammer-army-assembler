@@ -79,6 +79,8 @@ namespace WarhammerArmyAssembler
             newUnit.Type = UnitTypeParse(xmlUnit["Type"]);
             newUnit.Points = IntParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
+            newUnit.MinSize = newUnit.Size;
+            newUnit.MaxSize = IntParse(xmlUnit["MaxSize"]);
             newUnit.Mage = IntParse(xmlUnit["Mage"]);
             newUnit.MountOn = IntParse(xmlUnit["MountOn"]);
 

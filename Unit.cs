@@ -22,6 +22,8 @@ namespace WarhammerArmyAssembler
         public UnitType Type { get; set; }
 
         public int Size { get; set; }
+        public int MinSize { get; set; }
+        public int MaxSize { get; set; }
 
         public int Points { get; set; }
 
@@ -108,6 +110,8 @@ namespace WarhammerArmyAssembler
             newUnit.IDView = this.IDView;
             newUnit.Type = this.Type;
             newUnit.Size = this.Size;
+            newUnit.MinSize = this.MinSize;
+            newUnit.MaxSize = this.MaxSize;
             newUnit.Points = this.Points;
             newUnit.MountOn = this.MountOn;
             newUnit.Description = this.Description;

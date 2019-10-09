@@ -122,6 +122,16 @@ namespace WarhammerArmyAssembler
                 Interface.Error("Герои всегда одиноки");
                 u.Size = Army.Units[u.ID].Size;
             }
+            else if ((u.MaxSize != 0) && (u.Size > u.MaxSize))
+            {
+                Interface.Error("Размер отряда превышает максимально допустимый");
+                u.Size = Army.Units[u.ID].Size;
+            }
+            else if (u.Size < u.MinSize)
+            {
+                Interface.Error("Размер отряда меньше минимально допустимого");
+                u.Size = Army.Units[u.ID].Size;
+            }
             else
                 Army.Units[u.ID].Size = u.Size;
 
