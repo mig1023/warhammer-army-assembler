@@ -164,6 +164,22 @@ namespace WarhammerArmyAssembler
             return 0;
         }
 
+        public static string UnitTypeName(Unit.UnitType type)
+        {
+            if (type == Unit.UnitType.Lord)
+                return "лордов";
+            else if (type == Unit.UnitType.Hero)
+                return "героев";
+            else if (type == Unit.UnitType.Core)
+                return "основных подразделений";
+            else if (type == Unit.UnitType.Special)
+                return "специальных подразделений";
+            else if (type == Unit.UnitType.Rare)
+                return "редких подразделений";
+
+            return String.Empty;
+        }
+
         public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, int points)
         {
             Dictionary<Unit.UnitType, int> units = new Dictionary<Unit.UnitType, int>();
@@ -183,6 +199,24 @@ namespace WarhammerArmyAssembler
                 return (units[type] + points > (twentyFivePercent * 2) ? false : true);
 
             return true;
+        }
+
+        public static bool IsArmyDublicationOk(Unit unit)
+        {
+            int alreadyInArmy = 0;
+
+            foreach (KeyValuePair<int, Unit> armyUnit in Army.Units)
+                if (armyUnit.Value.ID == unit.ID)
+                    alreadyInArmy += 1;
+
+            int limitForArmy = -1;
+
+            if (unit.Type == Unit.UnitType.Special)
+                limitForArmy = (Army.MaxPoints >= 3000 ? 6 : 3);
+            else if (unit.Type == Unit.UnitType.Rare)
+                limitForArmy = (Army.MaxPoints >= 3000 ? 4 : 2);
+
+            return (limitForArmy < 0 ? true : (alreadyInArmy < limitForArmy));
         }
     }
 }

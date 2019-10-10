@@ -331,24 +331,6 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static string UnitPercentError(Unit.UnitType type)
-        {
-            string unitTypeName = String.Empty;
-
-            if (type == Unit.UnitType.Lord)
-                unitTypeName = "лордов";
-            else if (type == Unit.UnitType.Hero)
-                unitTypeName = "героев";
-            else if (type == Unit.UnitType.Core)
-                unitTypeName = "основных подразделений";
-            else if (type == Unit.UnitType.Special)
-                unitTypeName = "специальных подразделений";
-            else if (type == Unit.UnitType.Rare)
-                unitTypeName = "редких подразделений";
-
-            return String.Format("Для {0} достигнут лимит затраты очков", unitTypeName);
-        }
-
         public static void ArmyGridDropUnit(int id)
         {
             bool slotExists = (Army.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
@@ -368,7 +350,9 @@ namespace WarhammerArmyAssembler
                 Error(String.Format("Недостаточно очков для добавления {0}", unitType));
             }
             else if (!Army.IsArmyUnitsPointsPercentOk(ArmyBook.Units[id].Type, ArmyBook.Units[id].Points))
-                Error(UnitPercentError(ArmyBook.Units[id].Type));
+                Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(ArmyBook.Units[id].Type)));
+            else if(!Army.IsArmyDublicationOk(ArmyBook.Units[id]))
+                Error(String.Format("Армия не может включать столько дублирующих {0}", Army.UnitTypeName(ArmyBook.Units[id].Type)));
             else
             {
                 Army.AddUnitByID(id);
@@ -383,7 +367,7 @@ namespace WarhammerArmyAssembler
             else if (Army.Units[unit].MountOn > 0)
                 Error("Герой уже имеет скакуна");
             else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[id].Type, points))
-                Error(UnitPercentError(Army.Units[id].Type));
+                Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(Army.Units[id].Type)));
             else
             {
                 Army.AddMountByID(id, points, unit);
