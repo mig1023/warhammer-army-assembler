@@ -108,30 +108,28 @@ namespace WarhammerArmyAssembler
             return null;
         }
 
+        private int ErrorAndReturnSizeBack(string error, int id)
+        {
+            Interface.Error(error);
+            return Army.Units[id].Size;
+        }
+
         private void ArmyGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
             Unit u = e.Row.Item as Unit;
 
+            int pointsDiff = u.GetUnitPoints() - Army.Units[u.ID].GetUnitPoints();
+
             if (!Interface.EnoughPointsForEditUnit(u.ID, u.Size))
-            {
-                u.Size = Army.Units[u.ID].Size;
-                Interface.Error("Количество очков недостаточно для изменения");
-            }
+                u.Size = ErrorAndReturnSizeBack("Количество очков недостаточно для изменения", u.ID);
             else if (u.IsHero() && u.Size > 1)
-            {
-                Interface.Error("Герои всегда одиноки");
-                u.Size = Army.Units[u.ID].Size;
-            }
+                u.Size = ErrorAndReturnSizeBack("Герои всегда одиноки", u.ID);
             else if ((u.MaxSize != 0) && (u.Size > u.MaxSize))
-            {
-                Interface.Error("Размер отряда превышает максимально допустимый");
-                u.Size = Army.Units[u.ID].Size;
-            }
+                u.Size = ErrorAndReturnSizeBack("Размер отряда превышает максимально допустимый", u.ID);
             else if (u.Size < u.MinSize)
-            {
-                Interface.Error("Размер отряда меньше минимально допустимого");
-                u.Size = Army.Units[u.ID].Size;
-            }
+                u.Size = ErrorAndReturnSizeBack("Размер отряда меньше минимально допустимого", u.ID);
+            else if ((u.Size > Army.Units[u.ID].Size) && (!Army.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
+                u.Size = ErrorAndReturnSizeBack("Для данного типа достигнут лимит затраты очков", u.ID);
             else
                 Army.Units[u.ID].Size = u.Size;
 
@@ -158,7 +156,6 @@ namespace WarhammerArmyAssembler
                 bool usable = ArmyBook.Artefact[id].IsUsableByUnit(unit.MagicItemsType);
                 e.Effects = ((unit.MagicItems > 0) && usable ? DragDropEffects.Copy : DragDropEffects.None);
             }
-                
         }
 
         private void ArmyGrid_MouseDown(object sender, MouseButtonEventArgs e)

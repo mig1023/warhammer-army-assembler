@@ -163,5 +163,26 @@ namespace WarhammerArmyAssembler
 
             return 0;
         }
+
+        public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, int points)
+        {
+            Dictionary<Unit.UnitType, int> units = new Dictionary<Unit.UnitType, int>();
+
+            foreach (Unit.UnitType u in Enum.GetValues(typeof(Unit.UnitType)))
+                units.Add(u, 0);
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                units[entry.Value.Type] += entry.Value.GetUnitPoints();
+
+            int twentyFivePercent = (int)(MaxPoints * 0.25);
+
+            if (type == Unit.UnitType.Lord || type == Unit.UnitType.Hero || type == Unit.UnitType.Rare)
+                return (units[type] + points > twentyFivePercent ? false : true);
+
+            if (type == Unit.UnitType.Special)
+                return (units[type] + points > (twentyFivePercent * 2) ? false : true);
+
+            return true;
+        }
     }
 }

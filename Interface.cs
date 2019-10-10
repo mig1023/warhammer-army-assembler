@@ -318,6 +318,8 @@ namespace WarhammerArmyAssembler
                     Interface.Error("Количество очков недостаточно добавления предмета");
                 else if (!Interface.EnoughUnitPointsForAddArtefact(id, unit.ID))
                     Interface.Error("Недостаточно очков магических предметов для добавления");
+                else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unit.ID].Type, ArmyBook.Artefact[id].Points))
+                    Interface.Error("Для данного типа достигнут лимит затраты очков");
                 else
                 {
                     Army.Units[unit.ID].AddAmmunition(id);
@@ -347,6 +349,8 @@ namespace WarhammerArmyAssembler
                 string unitType = (ArmyBook.Units[id].IsHero() ? "героя" : "отряда");
                 Error(String.Format("Недостаточно очков для добавления {0}", unitType));
             }
+            else if (!Army.IsArmyUnitsPointsPercentOk(ArmyBook.Units[id].Type, ArmyBook.Units[id].Points))
+                Error("Для данного типа достигнут лимит затраты очков");
             else
             {
                 Army.AddUnitByID(id);
@@ -360,6 +364,8 @@ namespace WarhammerArmyAssembler
                 Error("Недостаточно очков для добавления скакуна");
             else if (Army.Units[unit].MountOn > 0)
                 Error("Герой уже имеет скакуна");
+            else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[id].Type, points))
+                Error("Для данного типа достигнут лимит затраты очков");
             else
             {
                 Army.AddMountByID(id, points, unit);
