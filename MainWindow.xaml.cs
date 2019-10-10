@@ -129,7 +129,7 @@ namespace WarhammerArmyAssembler
             else if (u.Size < u.MinSize)
                 u.Size = ErrorAndReturnSizeBack("Размер отряда меньше минимально допустимого", u.ID);
             else if ((u.Size > Army.Units[u.ID].Size) && (!Army.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
-                u.Size = ErrorAndReturnSizeBack("Для данного типа достигнут лимит затраты очков", u.ID);
+                u.Size = ErrorAndReturnSizeBack(Interface.UnitPercentError(u.Type), u.ID);
             else
                 Army.Units[u.ID].Size = u.Size;
 
