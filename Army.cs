@@ -48,6 +48,10 @@ namespace WarhammerArmyAssembler
                     entry.Value.MountOn = 0;
                 }
 
+            foreach (Option option in Army.Units[id].Options)
+                if (option.IsMagicItem())
+                    Interface.SetArtefactAlreadyUsed(option.ID, false);
+
             Units.Remove(id);
         }
 
