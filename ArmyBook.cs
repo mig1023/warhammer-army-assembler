@@ -21,6 +21,7 @@ namespace WarhammerArmyAssembler
 
         public static Brush MainColor = null;
         public static Brush AdditionalColor = null;
+        public static Brush BackgroundColor = null;
 
         public static int GetNextIndex()
         {
@@ -40,7 +41,10 @@ namespace WarhammerArmyAssembler
             string additionalColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
             AdditionalColor = (SolidColorBrush)new BrushConverter().ConvertFromString(additionalColor);
 
-            Interface.SetArmyGridAltColor(MainColor);
+            string backgroundColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
+            BackgroundColor = (SolidColorBrush)new BrushConverter().ConvertFromString(backgroundColor);
+
+            Interface.SetArmyGridAltColor(BackgroundColor);
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
             {

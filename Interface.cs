@@ -181,6 +181,18 @@ namespace WarhammerArmyAssembler
                 topMargin += 25;
             }
 
+            if (unit.GetSpecialRules().Count > 0)
+            {
+                topMargin += AddLabel("СПЕЦИАЛЬНЫЕ ПРАВИЛА", main.unitName.Margin.Left, topMargin, 20, bold: true);
+
+                topMargin += 10;
+
+                foreach (string rule in unit.GetSpecialRules())
+                    topMargin += AddLabel(rule, main.unitName.Margin.Left, topMargin, 20);
+
+                topMargin += 25;
+            }
+
             return topMargin;
         }
 
@@ -209,11 +221,6 @@ namespace WarhammerArmyAssembler
             main.unitName.FontWeight = FontWeights.Bold;
 
             double newTop = Interface.AddOptionsList(unitID, unit);
-
-            main.unitDescription.Margin = Interface.Thick(main.unitDescription, left: (main.unitName.Margin.Left + 5), top: newTop);
-            main.unitDescription.Text = unit.GetFullDescription();
-
-            main.UpdateLayout();
 
             main.unitDetail.Height = newTop + (main.unitDescription.ActualHeight > 0 ? main.unitDescription.ActualHeight : 20);
         }

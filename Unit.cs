@@ -275,23 +275,6 @@ namespace WarhammerArmyAssembler
             return unit;
         }
 
-        public string GetFullDescription()
-        {
-            string description = String.Empty;
-
-            if (GetSpecialRules().Count > 0)
-            {
-                description += "СПЕЦИАЛЬНЫЕ ПРАВИЛА:\n";
-
-                foreach (string rule in GetSpecialRules())
-                    description += rule + "\n";
-
-                description += "\n";
-            }
-
-            return description;
-        }
-
         public void AddAmmunition(int id)
         {
             Options.Add(ArmyBook.Artefact[id].Clone());
@@ -299,7 +282,9 @@ namespace WarhammerArmyAssembler
 
         public void AddOption(int optionID, Unit unit, int unitID)
         {
-            foreach (Option option in unit.Options)
+            for(int i = 0; i < unit.Options.Count; i++)
+            {
+                Option option = unit.Options[i];
                 if (option.ID == optionID)
                 {
                     if (option.IsMagicItem())
@@ -319,6 +304,7 @@ namespace WarhammerArmyAssembler
                         Army.Units[unitID].MountOn = 0;
                     }
                 }
+            }
         }
 
         public string GetSpecialRulesLine()
