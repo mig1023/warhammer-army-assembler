@@ -128,10 +128,10 @@ namespace WarhammerArmyAssembler
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Ammunition/*"))
-                newUnit.Option.Add(LoadOption(GetNextIndex(), xmlAmmunition));
+                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
-                newUnit.Option.Add(LoadOption(GetNextIndex(), xmlAmmunition));
+                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
             return newUnit;
         }

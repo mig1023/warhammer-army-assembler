@@ -89,7 +89,7 @@ namespace WarhammerArmyAssembler
         {
             int pointsAlreayUsed = 0;
 
-            foreach (Option option in Army.Units[unitID].Option)
+            foreach (Option option in Army.Units[unitID].Options)
                 if (option.IsMagicItem())
                     pointsAlreayUsed += option.Points;
 
@@ -131,7 +131,7 @@ namespace WarhammerArmyAssembler
                 if (unit.MountOn > 0)
                     mountAlreadyOn = Army.GetMountOption(unit);
 
-                foreach (Option option in unit.Option)
+                foreach (Option option in unit.Options)
                 {
                     bool canBeUsed = (
                         !option.OnlyOneInArmy ||
@@ -160,7 +160,7 @@ namespace WarhammerArmyAssembler
 
                 topMargin += 10;
 
-                foreach (Option option in unit.Option)
+                foreach (Option option in unit.Options)
                     if (option.IsMagicItem() && (option.Points > 0))
                         topMargin += AddButton(option.Name, main.unitName.Margin.Left, topMargin, 40,
                             String.Format("{0}|{1}", unitID, option.ID), option, width: 270, column: true);
@@ -174,7 +174,7 @@ namespace WarhammerArmyAssembler
 
                 topMargin += 10;
 
-                foreach (Option option in unit.Option)
+                foreach (Option option in unit.Options)
                     if (option.IsMagicItem() && (option.Points == 0))
                         topMargin += AddLabel(option.Name, main.unitName.Margin.Left, topMargin, 20);
 
@@ -366,7 +366,7 @@ namespace WarhammerArmyAssembler
                 Error("Недостаточно очков для добавления скакуна");
             else if (Army.Units[unit].MountOn > 0)
                 Error("Герой уже имеет скакуна");
-            else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[id].Type, points))
+            else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unit].Type, points))
                 Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(Army.Units[id].Type)));
             else
             {

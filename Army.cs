@@ -41,7 +41,7 @@ namespace WarhammerArmyAssembler
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
                 if (entry.Value.MountOn == id)
                 {
-                    foreach (Option option in entry.Value.Option)
+                    foreach (Option option in entry.Value.Options)
                         if (option.Name == Units[id].Name)
                             option.Realised = false;
 
@@ -116,7 +116,7 @@ namespace WarhammerArmyAssembler
             {
                 cast += entry.Value.Mage;
 
-                foreach (Option option in entry.Value.Option)
+                foreach (Option option in entry.Value.Options)
                     if (!option.IsOption() || (option.IsOption() && option.Realised))
                         cast += option.AddToCast;
             }
@@ -135,7 +135,7 @@ namespace WarhammerArmyAssembler
                 else if (entry.Value.Mage > 0)
                     dispell += 1;
 
-                foreach (Option option in entry.Value.Option)
+                foreach (Option option in entry.Value.Options)
                     if (!option.IsOption() || (option.IsOption() && option.Realised))
                         dispell += option.AddToDispell;
             }
@@ -146,7 +146,7 @@ namespace WarhammerArmyAssembler
         public static int OptionAlreadyUsed(int id)
         {
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
-                foreach (Option option in entry.Value.Option)
+                foreach (Option option in entry.Value.Options)
                     if ((option.ID == id) && option.Realised)
                         return entry.Key;
 
@@ -157,7 +157,7 @@ namespace WarhammerArmyAssembler
         {
             foreach (KeyValuePair<int, Unit> armyUnit in Army.Units)
                 if (armyUnit.Key == unit.MountOn)
-                    foreach (Option option in unit.Option)
+                    foreach (Option option in unit.Options)
                         if (option.Name == armyUnit.Value.Name)
                             return option.ID;
 

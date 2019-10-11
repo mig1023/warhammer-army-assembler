@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
@@ -79,7 +80,7 @@ namespace WarhammerArmyAssembler
         public Brush InterfaceColor { get; set; }
         public bool GroopBold { get; set; }
 
-        public List<Option> Option = new List<Option>();
+        public List<Option> Options = new List<Option>();
 
         public ObservableCollection<Unit> Items { get; set; }
 
@@ -94,7 +95,7 @@ namespace WarhammerArmyAssembler
         {
             int points = Size * Points;
 
-            foreach (Option option in Option)
+            foreach (Option option in Options)
                 if (!option.IsOption() || (option.IsOption() && option.Realised))
                     points += option.Points * (option.PerModel ? Size : 1);
 
@@ -146,8 +147,8 @@ namespace WarhammerArmyAssembler
             newUnit.MagicItemsType = this.MagicItemsType;
 
             List <Option> Option = new List<Option>();
-            foreach (Option option in this.Option)
-                newUnit.Option.Add(option.Clone());
+            foreach (Option option in this.Options)
+                newUnit.Options.Add(option.Clone());
 
             return newUnit;
         }
@@ -156,7 +157,7 @@ namespace WarhammerArmyAssembler
         {
             Unit unit = this.Clone();
 
-            foreach (Option option in this.Option)
+            foreach (Option option in this.Options)
                 if (option.IsMagicItem() || (option.IsOption() && option.Realised))
                 {
                     if (option.AddToMovement > 0)
@@ -293,16 +294,16 @@ namespace WarhammerArmyAssembler
 
         public void AddAmmunition(int id)
         {
-            Option.Add(ArmyBook.Artefact[id].Clone());
+            Options.Add(ArmyBook.Artefact[id].Clone());
         }
 
         public void AddOption(int optionID, Unit unit, int unitID)
         {
-            foreach (Option option in unit.Option)
+            foreach (Option option in unit.Options)
                 if (option.ID == optionID)
                 {
                     if (option.IsMagicItem())
-                        unit.Option.Remove(option);
+                        unit.Options.Remove(option);
                     else
                         option.Realised = !option.Realised;
 
@@ -333,6 +334,25 @@ namespace WarhammerArmyAssembler
             return rules;
         }
 
+        public bool RuleFromAnyOption(string name)
+        {
+            bool anyIsTrue = false;
+
+            foreach(Option option in Options)
+            {
+                PropertyInfo field = typeof(Option).GetProperty(name);
+
+                if (field == null)
+                    continue;
+
+                object fieldValue = field.GetValue(option);
+                bool isValueTrue = (bool)fieldValue;
+                anyIsTrue = (isValueTrue ? true : anyIsTrue);
+            }
+
+            return anyIsTrue;
+        }
+
         public List<string> GetSpecialRules()
         {
             List<string> rules = new List<string>();
@@ -341,7 +361,7 @@ namespace WarhammerArmyAssembler
                 rules.Add(String.Format("верхом на: {0};", Army.Units[MountOn].Name));
 
             if (ImmuneToPsychology)
-                rules.Add("иммунен к психологии");
+                rules.Add("иммунен к психологии;");
 
             if (Stubborn)
                 rules.Add("упорность;");
@@ -364,16 +384,16 @@ namespace WarhammerArmyAssembler
             if (ColdBlooded)
                 rules.Add("хладнокровие");
 
-            if (HitFirst)
+            if (HitFirst || RuleFromAnyOption("HitFirst"))
                 rules.Add("всегда бьёт первым");
 
             if (Regeneration)
                 rules.Add("регенерация");
 
-            if (KillingBlow)
+            if (KillingBlow || RuleFromAnyOption("KillingBlow"))
                 rules.Add("смертельный удар");
 
-            if (PoisonAttack)
+            if (PoisonAttack || RuleFromAnyOption("PoisonAttack"))
                 rules.Add("ядовитые атаки");
 
             return rules;
@@ -386,7 +406,7 @@ namespace WarhammerArmyAssembler
 
         public bool ExistsOptions()
         {
-            foreach (Option option in Option)
+            foreach (Option option in Options)
                 if (option.IsOption())
                     return true;
 
@@ -395,7 +415,7 @@ namespace WarhammerArmyAssembler
 
         public bool ExistsMagicItems()
         {
-            foreach (Option option in Option)
+            foreach (Option option in Options)
                 if (option.IsMagicItem() && (option.Points > 0))
                     return true;
 
@@ -404,7 +424,7 @@ namespace WarhammerArmyAssembler
 
         public bool ExistsOrdinaryItems()
         {
-            foreach (Option option in Option)
+            foreach (Option option in Options)
                 if (option.IsMagicItem() && (option.Points == 0))
                     return true;
 
