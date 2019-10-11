@@ -336,18 +336,18 @@ namespace WarhammerArmyAssembler
 
         public bool RuleFromAnyOption(string name)
         {
-            bool anyIsTrue = false;
+            PropertyInfo unitField = typeof(Unit).GetProperty(name);
+            object unitValue = unitField.GetValue(this);
+
+            bool anyIsTrue = (bool)unitValue ? true : false;
 
             foreach(Option option in Options)
             {
-                PropertyInfo field = typeof(Option).GetProperty(name);
+                PropertyInfo optionField = typeof(Option).GetProperty(name);
+                object fieldValue = optionField.GetValue(option);
 
-                if (field == null)
-                    continue;
-
-                object fieldValue = field.GetValue(option);
                 bool isValueTrue = (bool)fieldValue;
-                anyIsTrue = (isValueTrue ? true : anyIsTrue);
+                anyIsTrue = isValueTrue ? true : anyIsTrue;
             }
 
             return anyIsTrue;
@@ -360,41 +360,25 @@ namespace WarhammerArmyAssembler
             if (MountOn > 0)
                 rules.Add(String.Format("верхом на: {0};", Army.Units[MountOn].Name));
 
-            if (ImmuneToPsychology)
-                rules.Add("иммунен к психологии;");
+            Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
+            {
+                ["ImmuneToPsychology"] = "иммунен к психологии",
+                ["Stubborn"] = "упорность",
+                ["Hate"] = "ненависть",
+                ["Fear"] = "страх",
+                ["Terror"] = "ужас",
+                ["Frenzy"] = "бешенство",
+                ["Unbreakable"] = "несломимость",
+                ["ColdBlooded"] = "хладнокровие",
+                ["HitFirst"] = "всегда бьёт первым",
+                ["Regeneration"] = "регенерация",
+                ["KillingBlow"] = "смертельный удар",
+                ["PoisonAttack"] = "ядовитые атаки",
+            };
 
-            if (Stubborn)
-                rules.Add("упорность;");
-
-            if (Hate)
-                rules.Add("ненависть");
-
-            if (Fear)
-                rules.Add("страх");
-
-            if (Terror)
-                rules.Add("ужас");
-
-            if (Frenzy)
-                rules.Add("бешенство");
-
-            if (Unbreakable)
-                rules.Add("несломимость");
-
-            if (ColdBlooded)
-                rules.Add("хладнокровие");
-
-            if (HitFirst || RuleFromAnyOption("HitFirst"))
-                rules.Add("всегда бьёт первым");
-
-            if (Regeneration)
-                rules.Add("регенерация");
-
-            if (KillingBlow || RuleFromAnyOption("KillingBlow"))
-                rules.Add("смертельный удар");
-
-            if (PoisonAttack || RuleFromAnyOption("PoisonAttack"))
-                rules.Add("ядовитые атаки");
+            foreach(KeyValuePair<string, string> specialRule in allSpecialRules)
+                if (RuleFromAnyOption(specialRule.Key))
+                    rules.Add(specialRule.Value);
 
             return rules;
         }

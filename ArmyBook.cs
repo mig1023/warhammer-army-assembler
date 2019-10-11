@@ -260,6 +260,15 @@ namespace WarhammerArmyAssembler
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
+            newWeapon.Regeneration = BoolParse(xmlNode["Regeneration"]);
+            newWeapon.ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]);
+            newWeapon.Stubborn = BoolParse(xmlNode["Stubborn"]);
+            newWeapon.Hate = BoolParse(xmlNode["Hate"]);
+            newWeapon.Fear = BoolParse(xmlNode["Fear"]);
+            newWeapon.Terror = BoolParse(xmlNode["Terror"]);
+            newWeapon.Frenzy = BoolParse(xmlNode["Frenzy"]);
+            newWeapon.Unbreakable = BoolParse(xmlNode["Unbreakable"]);
+            newWeapon.ColdBlooded = BoolParse(xmlNode["ColdBlooded"]);
 
             newWeapon.Points = IntParse(xmlNode["Points"]);
             newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);

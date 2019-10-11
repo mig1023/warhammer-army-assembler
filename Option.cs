@@ -35,6 +35,15 @@ namespace WarhammerArmyAssembler
         public bool HitFirst { get; set; }
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
+        public bool Regeneration { get; set; }
+        public bool ImmuneToPsychology { get; set; }
+        public bool Stubborn { get; set; }
+        public bool Hate { get; set; }
+        public bool Fear { get; set; }
+        public bool Terror { get; set; }
+        public bool Frenzy { get; set; }
+        public bool Unbreakable { get; set; }
+        public bool ColdBlooded { get; set; }
 
         public bool BigWeapon { get; set; }
 
@@ -51,6 +60,7 @@ namespace WarhammerArmyAssembler
         public int AddToWard { get; set; }
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
+
 
         public bool Mount { get; set; }
 
@@ -106,6 +116,15 @@ namespace WarhammerArmyAssembler
             newOption.HitFirst = this.HitFirst;
             newOption.KillingBlow = this.KillingBlow;
             newOption.PoisonAttack = this.PoisonAttack;
+            newOption.Regeneration = this.HitFirst;
+            newOption.ImmuneToPsychology = this.HitFirst;
+            newOption.Stubborn = this.HitFirst;
+            newOption.Hate = this.HitFirst;
+            newOption.Fear = this.HitFirst;
+            newOption.Terror = this.HitFirst;
+            newOption.Frenzy = this.HitFirst;
+            newOption.Unbreakable = this.HitFirst;
+            newOption.ColdBlooded = this.HitFirst;
 
             newOption.BigWeapon = this.BigWeapon;
 
