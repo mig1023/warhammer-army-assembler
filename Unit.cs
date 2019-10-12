@@ -72,6 +72,11 @@ namespace WarhammerArmyAssembler
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
 
+        public int SlotsOfLords { get; set; }
+        public int SlotsOfHero { get; set; }
+        public int SlotsOfSpecial { get; set; }
+        public int SlotsOfRare { get; set; }
+
         public int MagicItems { get; set; }
         public MagicItemsTypes MagicItemsType { get; set; }
 
@@ -144,6 +149,11 @@ namespace WarhammerArmyAssembler
             newUnit.Regeneration = this.Regeneration;
             newUnit.KillingBlow = this.KillingBlow;
             newUnit.PoisonAttack = this.PoisonAttack;
+
+            newUnit.SlotsOfLords = this.SlotsOfLords;
+            newUnit.SlotsOfHero = this.SlotsOfHero;
+            newUnit.SlotsOfSpecial = this.SlotsOfSpecial;
+            newUnit.SlotsOfRare = this.SlotsOfRare;
 
             newUnit.MagicItems = this.MagicItems;
             newUnit.MagicItemsType = this.MagicItemsType;

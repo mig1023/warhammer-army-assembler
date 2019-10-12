@@ -105,7 +105,12 @@ namespace WarhammerArmyAssembler
 
             newUnit.Armour = IntNullableParse(mainParam["Armour"]);
             newUnit.Ward = IntNullableParse(mainParam["Ward"]);
-           
+
+            newUnit.SlotsOfLords = IntParse(xmlUnit["SlotsOfLords"]);
+            newUnit.SlotsOfHero = IntParse(xmlUnit["SlotsOfHero"]);
+            newUnit.SlotsOfSpecial = IntParse(xmlUnit["SlotsOfSpecial"]);
+            newUnit.SlotsOfRare = IntParse(xmlUnit["SlotsOfRare"]);
+
             XmlNode psychology = xmlUnit["Psychology"];
 
             if (psychology != null)

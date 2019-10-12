@@ -105,7 +105,14 @@ namespace WarhammerArmyAssembler
                 units.Add(u, 0);
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            {
                 units[entry.Value.Type] += 1;
+
+                units[Unit.UnitType.Lord] += entry.Value.SlotsOfLords;
+                units[Unit.UnitType.Hero] += entry.Value.SlotsOfHero;
+                units[Unit.UnitType.Special] += entry.Value.SlotsOfSpecial;
+                units[Unit.UnitType.Rare] += entry.Value.SlotsOfRare;
+            }
 
             return units[type];
         }
