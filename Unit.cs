@@ -76,6 +76,7 @@ namespace WarhammerArmyAssembler
         public MagicItemsTypes MagicItemsType { get; set; }
 
         public int MountOn { get; set; }
+        public string MountInit { get; set; }
 
         public Brush InterfaceColor { get; set; }
         public bool GroopBold { get; set; }
@@ -115,6 +116,7 @@ namespace WarhammerArmyAssembler
             newUnit.MaxSize = this.MaxSize;
             newUnit.Points = this.Points;
             newUnit.MountOn = this.MountOn;
+            newUnit.MountInit = this.MountInit;
             newUnit.Description = this.Description;
 
             newUnit.Movement = this.Movement;

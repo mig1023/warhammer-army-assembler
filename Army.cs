@@ -23,12 +23,26 @@ namespace WarhammerArmyAssembler
         {
             Unit unit = ArmyBook.Units[id].Clone();
 
-            Units.Add(GetNextIndex(), unit);
+            int newUnitID = GetNextIndex();
+
+            Units.Add(newUnitID, unit);
+
+            if (!String.IsNullOrEmpty(unit.MountInit))
+            {
+                foreach(KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
+                    if (mount.Value.Name == unit.MountInit)
+                    {
+                        int newMountID = GetNextIndex();
+                        Units[newUnitID].MountOn = newMountID;
+                        Units.Add(newMountID, mount.Value.Clone());
+                    }
+            }
         }
 
         public static void AddMountByID(int id, int points, int unit)
         {
             Unit mount = ArmyBook.Mounts[id].Clone();
+
             mount.Points = points;
 
             int newID = GetNextIndex();
@@ -38,6 +52,8 @@ namespace WarhammerArmyAssembler
 
         public static void DeleteUnitByID(int id)
         {
+            int removeUnitAlso = -1;
+
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
                 if (entry.Value.MountOn == id)
                 {
@@ -46,11 +62,17 @@ namespace WarhammerArmyAssembler
                             option.Realised = false;
 
                     entry.Value.MountOn = 0;
+
+                    if (Army.Units[id].Points == 0)
+                        removeUnitAlso = entry.Key;
                 }
 
             foreach (Option option in Army.Units[id].Options)
                 if (option.IsMagicItem())
                     Interface.SetArtefactAlreadyUsed(option.ID, false);
+
+            if (removeUnitAlso > 0)
+                Units.Remove(removeUnitAlso);
 
             Units.Remove(id);
         }
