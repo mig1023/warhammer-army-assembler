@@ -1,74 +1,95 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArmyBook>
-    <Info>
-        <ArmyName>Орки и Гоблины</ArmyName>
-        <ArmyBookVersion>7</ArmyBookVersion>
-        <MainColor>#99CC99</MainColor>
-        <AdditionalColor>#009900</AdditionalColor>
-    </Info>
-    <Artefacts>
-        <Artefact>
-	    <Name>Меч Силы</Name>
-	    <Type>Weapon</Type>
-	    <AddToStrength>1</AddToStrength>
-	    <Points>25</Points>
-	    <Description>+1 к силе|25 очков</Description>
-	</Artefact>
-	<Artefact>
-	    <Name>Меч Большой Силы</Name>
-	    <Type>Weapon</Type>
-	    <AddToStrength>2</AddToStrength>
-	    <Points>35</Points>
-	    <Description>+2 к силе|35 очков</Description>
-	</Artefact>
-	<Artefact>
-	    <Name>Меч Огромной Силы</Name>
-	    <Type>Weapon</Type>
-	    <AddToStrength>3</AddToStrength>
-	    <Points>45</Points>
-	    <Description>+3 к силе|45 очков</Description>
-	</Artefact>
-	<Artefact>
-	    <Name>Меч Силищи Неописуемой</Name>
-	    <Type>Weapon</Type>
-	    <AddToStrength>4</AddToStrength>
-	    <Points>50</Points>
-	    <Description>+4 к силе|50 очков</Description>
-	</Artefact>
-	<Artefact>
-	    <Name>Зачарованный щит</Name>
-	    <Type>Armour</Type>
-	    <AddToArmour>5</AddToArmour>
-	    <Points>10</Points>
-	    <Description>5+ к броне|10 очков</Description>
-	</Artefact>
-	<Artefact>
-	    <Name>Посох волшебства</Name>
-	    <Type>Arcane</Type>
-	    <Points>50</Points>
-	    <Description>+1 к рассеиванию|50 очков</Description>
-	</Artefact>
-	<Artefact>
-	    <Name>Маг-помощник</Name>
-	    <Type>Arcane</Type>
-	    <Points>25</Points>
-            <AddToCast>1</AddToCast>
-	    <Description>+1 на каст|25 очков</Description>
-	</Artefact>
-	<Artefact>
-	    <Name>Боевой стяг</Name>
-	    <Type>Banner</Type>
-	    <Points>25</Points>
-	    <Description>1+ к результату боя|25 очков</Description>
-	</Artefact>
-	<Artefact>
-	    <Name>Талисман</Name>
-	    <Type>Armour</Type>
-            <AddToWard>6</AddToWard>
-	    <Points>25</Points>
-	    <Description>6+ к особой защите|25 очков</Description>
-	</Artefact>
-    </Artefacts>
+	<Info>
+		<ArmyName>Орки и Гоблины</ArmyName>
+		<ArmyBookVersion>7</ArmyBookVersion>
+		<MainColor>#99CC99</MainColor>
+		<AdditionalColor>#009900</AdditionalColor>
+		<BackgroundColor>#FFF4FFF0</BackgroundColor>
+	</Info>
+	<Artefacts>
+		<Artefact>
+			<Name>Меч Точности</Name>
+			<Type>Weapon</Type>
+			<Points>15</Points>
+			<SpecialRuleDescription>+1 на попадание в ближнем бою</SpecialRuleDescription>
+			<Description>+1 на попадание в ближнем бою</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Меч Битвы</Name>
+			<Type>Weapon</Type>
+			<Points>15</Points>
+			<AddToAttacks>6</AddToAttacks>
+			<Description>+1 к Атакам</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Меч Силы</Name>
+			<Type>Weapon</Type>
+			<Points>10</Points>
+			<AddToStrength>1</AddToStrength>
+			<Description>+1 к Силам</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Жалящий меч</Name>
+			<Type>Weapon</Type>
+			<Points>5</Points>
+			<SpecialRuleDescription>-1 на спас-бросок за доспех</SpecialRuleDescription>
+			<Description>-1 на спас-бросок за доспех</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Магический щит</Name>
+			<Type>Armour</Type>
+			<Points>15</Points>
+			<AddToArmour>5</AddToArmour>
+			<Description>5+ спас-бросок за доспех</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Защитный талисман</Name>
+			<Type>Armour</Type>
+			<Points>15</Points>
+			<AddToWard>6</AddToWard>
+			<Description>6+ магический спас-бросок</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Посох волшебства</Name>
+			<Type>Arcane</Type>
+			<Points>30</Points>
+			<SpecialRuleDescription>+1 к разрушению заклинаний</SpecialRuleDescription>
+			<Description>+1 к разрушению заклинаний</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Свиток разрушения заклинаний</Name>
+			<Type>Arcane</Type>
+			<Points>25</Points>
+			<Multiple>true</Multiple>
+			<Description>автоматически разрушает вражеское заклинание, одноразовый</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Камень Силы</Name>
+			<Type>Arcane</Type>
+			<Points>25</Points>
+			<Multiple>true</Multiple>
+			<Description>+2 кубика при сотворении заклинания, одноразовый</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Боевое знамя</Name>
+			<Type>Banner</Type>
+			<Points>25</Points>
+			<SpecialRuleDescription>+1 к результату боя</SpecialRuleDescription>
+			<Description>+1 к Результату боя</Description>
+		</Artefact>
+		
+		<Artefact>
+			<Name>Тесак "Ваагх!"</Name>
+			<Type>Weapon</Type>
+			<Points>100</Points>
+			<SpecialRuleDescription>все попадания автоматически наносят раны</SpecialRuleDescription>
+			<SpecialRuleDescription>без спас-бросков за броню</SpecialRuleDescription>
+			<Description>Все попадания этого оружия автоматически наносят раны, и от них неприменимы спас-броски за броню</Description>
+		</Artefact>
+	</Artefacts>
+	
+	
     <Heroes>
         <Hero>
             <Type>Lord</Type>
@@ -76,6 +97,8 @@
             <Points>115</Points>
 	    <Description>Описание описание описание описание описание|описание описание описание описание описание описание описание |описание |описание описание описание описание |описание описание описание описание описание |описание описание описание |описание описание |описание |описание |описание |описание |описание |описание |описание |описание|описание описание описание описание описание |описание</Description>
             <MinSize>1</MinSize>
+	    <MountInit>Виверна</MountInit>
+	    <SlotsOfRare>2</SlotsOfRare>
             <MainParam>
                 <Movement>4</Movement>
                 <WeaponSkill>6</WeaponSkill>
