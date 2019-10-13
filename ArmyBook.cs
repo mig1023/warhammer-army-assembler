@@ -261,6 +261,7 @@ namespace WarhammerArmyAssembler
 
             newWeapon.Name = StringParse(xmlNode["Name"]);
             newWeapon.Description = StringParse(xmlNode["Description"]);
+            newWeapon.SpecialRuleDescription = StringParse(xmlNode["SpecialRuleDescription"]);
             newWeapon.Type = OptionTypeParse(xmlNode["Type"]);
             newWeapon.OnlyFor = OnlyForParse(xmlNode["OnlyFor"]);
             newWeapon.Realised = false;

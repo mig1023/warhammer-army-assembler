@@ -61,6 +61,7 @@ namespace WarhammerArmyAssembler
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
 
+        public string SpecialRuleDescription { get; set; }
 
         public bool Mount { get; set; }
 
@@ -108,6 +109,7 @@ namespace WarhammerArmyAssembler
             newOption.PerModel = this.PerModel;
             newOption.Type = this.Type;
             newOption.Description = this.Description;
+            newOption.SpecialRuleDescription = this.SpecialRuleDescription;
             newOption.Realised = this.Realised;
             newOption.Multiple = this.Multiple;
             newOption.OnlyOneInArmy = this.OnlyOneInArmy;

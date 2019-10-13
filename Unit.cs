@@ -378,6 +378,10 @@ namespace WarhammerArmyAssembler
                 if (RuleFromAnyOption(specialRule.Key))
                     rules.Add(specialRule.Value);
 
+            foreach (Option option in Options)
+                if (!String.IsNullOrEmpty(option.SpecialRuleDescription))
+                    rules.Add(option.SpecialRuleDescription);
+
             return rules;
         }
 
