@@ -61,7 +61,7 @@ namespace WarhammerArmyAssembler
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
 
-        public string SpecialRuleDescription { get; set; }
+        public string[] SpecialRuleDescription { get; set; }
 
         public bool Mount { get; set; }
 

@@ -381,8 +381,9 @@ namespace WarhammerArmyAssembler
                     rules.Add(specialRule.Value);
 
             foreach (Option option in Options)
-                if (!String.IsNullOrEmpty(option.SpecialRuleDescription))
-                    rules.Add(option.SpecialRuleDescription);
+                if (option.SpecialRuleDescription.Length > 0)
+                    foreach(string specialRule in option.SpecialRuleDescription)
+                        rules.Add(specialRule);
 
             return rules;
         }

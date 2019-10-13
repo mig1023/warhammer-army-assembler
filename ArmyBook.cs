@@ -178,6 +178,16 @@ namespace WarhammerArmyAssembler
             return xmlNode.InnerText.Replace("|", "\n");
         }
 
+        private static string[] AllStringParse(XmlNode xmlNode)
+        {
+            List<string> allString = new List<string>();
+
+            foreach (XmlNode xmlSpecialRule in xmlNode.SelectNodes("SpecialRuleDescription"))
+                allString.Add(xmlSpecialRule.InnerText);
+
+            return allString.ToArray();
+        }
+
         private static UnitType UnitTypeParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
@@ -261,12 +271,13 @@ namespace WarhammerArmyAssembler
 
             newWeapon.Name = StringParse(xmlNode["Name"]);
             newWeapon.Description = StringParse(xmlNode["Description"]);
-            newWeapon.SpecialRuleDescription = StringParse(xmlNode["SpecialRuleDescription"]);
             newWeapon.Type = OptionTypeParse(xmlNode["Type"]);
             newWeapon.OnlyFor = OnlyForParse(xmlNode["OnlyFor"]);
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
             newWeapon.OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]);
+
+            newWeapon.SpecialRuleDescription = AllStringParse(xmlNode);
 
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
