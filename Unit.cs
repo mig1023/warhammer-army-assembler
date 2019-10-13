@@ -315,6 +315,8 @@ namespace WarhammerArmyAssembler
                         Army.DeleteUnitByID(Army.Units[unitID].MountOn);
                         Army.Units[unitID].MountOn = 0;
                     }
+
+                    return;
                 }
             }
         }
