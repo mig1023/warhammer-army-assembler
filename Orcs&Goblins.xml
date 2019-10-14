@@ -87,6 +87,51 @@
 			<SpecialRuleDescription>без спас-бросков за броню</SpecialRuleDescription>
 			<Description>Все попадания этого оружия автоматически наносят раны, и от них неприменимы спас-броски за броню</Description>
 		</Artefact>
+		<Artefact>
+			<Name>Боевой топор Рагнаорка</Name>
+			<Type>Weapon</Type>
+			<Points>100</Points>
+			<SpecialRuleDescription>бонус к силе и атакам равный кол-ву бонусов за ряды подразденения</SpecialRuleDescription>
+			<Description>Носитель этого оружия считает бонус к Силе и Атакам равный Бонусу за ряды того подразделения к которому присоединился персонаж</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Кровавый топор Башши</Name>
+			<Type>Weapon</Type>
+			<Points>50</Points>
+			<AddToStrength>1</AddToStrength>
+			<Frenzy>true</Frenzy>
+			<Description>Это оружие даёт +1 к Силе, кроме того носитель подчиняется правилу Бешенства на +D6 атак, которое не теряется после поражения в раунде. Носитель не может присоединяться к отрядам</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Матерящийся меч</Name>
+			<Type>Weapon</Type>
+			<Points>50</Points>
+			<SpecialRuleDescription>+1 к силе и +1 к атакам за каждого персонажа рядом</SpecialRuleDescription>
+			<Description>Носитель этого оружия имеет +1 к Силе и +1 к Атакам за каждого персонажа в 12 дюймах от него</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Череп Калота</Name>
+			<Type>Weapon</Type>
+			<Points>40</Points>
+			<SpecialRuleDescription>смерть без каких-либо спас-бросков по тесту на Лидерство за каждое попадание</SpecialRuleDescription>
+			<Description>За каждое попадание  этим оружием противник должен пройти тест на Лидерство, если он провален, то противник умирает без каких либо спас-бросков, даже магических. Если тест пройден, то проводятся тесты на ранение как обычно. Только для Шаманов</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Свинобой Порки</Name>
+			<Type>Weapon</Type>
+			<Points>40</Points>
+			<SpecialRuleDescription>бонус к атакам равный бонусу за ряды атакуемого отряда</SpecialRuleDescription>
+			<Description>Копьё. Во время атаки владелец получает бонус к атакам, равный бонусу за ряды атакуемого подразделения (до максимума в +3)</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Живой топор Улага</Name>
+			<Type>Weapon</Type>
+			<Points>25</Points>
+			<AddToStrength>1</AddToStrength>
+			<SpecialRuleDescription>бонус +1 к силе в первый раунд</SpecialRuleDescription>
+			<SpecialRuleDescription>перебрасывает броски на попадание</SpecialRuleDescription>
+			<Description>Владелец этого оружия получает бонус в +1 к Силе в первый раунд и может перебрасывать проваленные броски на попадание в ближнем бою</Description>
+		</Artefact>
 	</Artefacts>
 	
 	
@@ -317,9 +362,8 @@
         <Unit>
             <Type>Core</Type>
             <Name>Ватага орков</Name>
-            <Points>6</Points>
+            <Points>5</Points>
             <MinSize>10</MinSize>
-	    <MaxSize>40</MaxSize>
             <MainParam>
                 <Movement>4</Movement>
                 <WeaponSkill>3</WeaponSkill>
@@ -346,13 +390,47 @@
             </Ammunition>
             <Options>
 	        <Option>
-	            <Name>Улучшить до бигансов</Name>
+	            <Name>бигансы</Name>
 		    <Type>Option</Type>
-		    <Points>2</Points>
+		    <Points>4</Points>
                     <PerModel>true</PerModel>
                     <AddToWeaponSkill>1</AddToWeaponSkill>
                     <AddToStrength>1</AddToStrength>
                     <OnlyOneInArmy>true</OnlyOneInArmy>
+	        </Option>
+		<Option>
+	            <Name>парный чоппы</Name>
+		    <Type>Option</Type>
+		    <Points>2</Points>
+                    <PerModel>true</PerModel>
+                    <AddToAttacks>1</AddToAttacks>
+	        </Option>
+		<Option>
+	            <Name>копья</Name>
+		    <Type>Option</Type>
+		    <Points>1</Points>
+                    <PerModel>true</PerModel>
+	        </Option>
+		<Option>
+	            <Name>щиты</Name>
+		    <Type>Option</Type>
+		    <Points>1</Points>
+                    <PerModel>true</PerModel>
+	        </Option>
+		<Option>
+	            <Name>музыкант</Name>
+		    <Type>Option</Type>
+		    <Points>5</Points>
+	        </Option>
+		<Option>
+	            <Name>знаменосец</Name>
+		    <Type>Option</Type>
+		    <Points>10</Points>
+	        </Option>
+		<Option>
+	            <Name>босс</Name>
+		    <Type>Option</Type>
+		    <Points>10</Points>
 	        </Option>
 	    </Options>
         </Unit>
