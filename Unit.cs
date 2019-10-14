@@ -357,6 +357,22 @@ namespace WarhammerArmyAssembler
         {
             List<string> rules = new List<string>();
 
+            if (!IsHero())
+            {
+                int fullCommand = 0;
+
+                foreach (Option option in Options)
+                    if (option.FullCommand && option.Realised)
+                        fullCommand += 1;
+
+                if (fullCommand == 3)
+                    rules.Add("FC");
+                else
+                    foreach (Option option in Options)
+                        if (option.FullCommand && option.Realised)
+                            rules.Add(option.Name);
+            } 
+
             if (MountOn > 0)
                 rules.Add(String.Format("верхом на: {0};", Army.Units[MountOn].Name));
 
