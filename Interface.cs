@@ -219,7 +219,7 @@ namespace WarhammerArmyAssembler
                 topMargin += 10;
 
                 foreach (string rule in unit.GetSpecialRules())
-                    topMargin += AddLabel(rule, main.unitName.Margin.Left, topMargin, 20);
+                    topMargin += AddLabel((rule == "FC" ? "полная команда" : rule), main.unitName.Margin.Left, topMargin, 20);
 
                 topMargin += 25;
             }
