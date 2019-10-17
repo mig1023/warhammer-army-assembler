@@ -418,6 +418,15 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
+        public bool ExistsCommand()
+        {
+            foreach (Option option in Options)
+                if (option.FullCommand)
+                    return true;
+
+            return false;
+        }
+
         public bool ExistsMagicItems()
         {
             foreach (Option option in Options)

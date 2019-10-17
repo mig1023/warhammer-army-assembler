@@ -139,7 +139,38 @@ namespace WarhammerArmyAssembler
                         (Army.OptionAlreadyUsed(option.ID) == unitID)
                     );
 
-                    if (option.IsOption() && canBeUsed)
+                    if (option.IsOption() && !option.FullCommand && canBeUsed)
+                    {
+                        secondColumn = !secondColumn;
+
+                        topMargin += AddButton(option.Name, main.unitName.Margin.Left + (secondColumn ? 145 : 0), topMargin, 40,
+                            String.Format("{0}|{1}", unitID, option.ID), option, width: 125, column: secondColumn,
+                            mountAlreadyOn: mountAlreadyOn);
+
+                        buttonsNum += 1;
+                    }
+                }
+
+                topMargin += (buttonsNum % 2 != 0 ? 65 : 25);
+            }
+
+            if (unit.ExistsCommand())
+            {
+                topMargin += AddLabel("КОМАНДА", main.unitName.Margin.Left, topMargin, 20, bold: true);
+
+                topMargin += 10;
+
+                bool secondColumn = true;
+                int buttonsNum = 0;
+
+                int mountAlreadyOn = 0;
+
+                if (unit.MountOn > 0)
+                    mountAlreadyOn = Army.GetMountOption(unit);
+
+                foreach (Option option in unit.Options)
+                {
+                    if (option.FullCommand)
                     {
                         secondColumn = !secondColumn;
 
