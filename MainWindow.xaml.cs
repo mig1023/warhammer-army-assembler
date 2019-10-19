@@ -167,11 +167,10 @@ namespace WarhammerArmyAssembler
 
             Unit unit = container.DataContext as Unit;
 
+            Interface.UpdateUnitDescription(unit.ID, unit);
+
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-            {
-                Interface.UpdateUnitDescription(unit.ID, unit);
                 Interface.Move(Interface.MovingType.ToRight);
-            }
 
             Interface.DragSender = sender;
 
