@@ -143,6 +143,8 @@ namespace WarhammerArmyAssembler
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
                 newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
+            newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount));
+
             return newUnit;
         }
 

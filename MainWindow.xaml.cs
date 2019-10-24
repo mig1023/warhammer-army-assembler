@@ -123,8 +123,6 @@ namespace WarhammerArmyAssembler
 
             if (!Interface.EnoughPointsForEditUnit(u.ID, u.Size))
                 u.Size = ErrorAndReturnSizeBack("Количество очков недостаточно для изменения", u.ID);
-            else if (u.IsHero() && u.Size > 1)
-                u.Size = ErrorAndReturnSizeBack("Герои всегда одиноки", u.ID);
             else if ((u.MaxSize != 0) && (u.Size > u.MaxSize))
                 u.Size = ErrorAndReturnSizeBack("Размер отряда превышает максимально допустимый", u.ID);
             else if (u.Size < u.MinSize)

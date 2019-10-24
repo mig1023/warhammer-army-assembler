@@ -21,6 +21,7 @@ namespace WarhammerArmyAssembler
         public string IDView { get; set; }
 
         public UnitType Type { get; set; }
+        public bool SizableType { get; set; }
 
         public int Size { get; set; }
         public int MinSize { get; set; }
@@ -157,6 +158,8 @@ namespace WarhammerArmyAssembler
 
             newUnit.MagicItems = this.MagicItems;
             newUnit.MagicItemsType = this.MagicItemsType;
+
+            newUnit.SizableType = this.SizableType;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)
