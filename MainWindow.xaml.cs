@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -164,6 +165,15 @@ namespace WarhammerArmyAssembler
 
             if (container == null)
                 return;
+
+            DependencyObject clickedColumn = (DependencyObject)e.OriginalSource;
+
+            while ((clickedColumn != null) && !(clickedColumn is DataGridCell) && !(clickedColumn is DataGridColumnHeader))
+                clickedColumn = VisualTreeHelper.GetParent(clickedColumn);
+
+            if (clickedColumn != null && clickedColumn is DataGridCell)
+                if ((clickedColumn as DataGridCell).Column.DisplayIndex == 1)
+                    return;
 
             Unit unit = container.DataContext as Unit;
 
