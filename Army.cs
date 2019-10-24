@@ -50,6 +50,12 @@ namespace WarhammerArmyAssembler
             Units.Add(newID, mount);
         }
 
+        public static void DeleteAllUnits()
+        {
+            for (int i = (Units.Count - 1); i >= 0 ; i--) 
+                DeleteUnitByID(Units.ElementAt(i).Key);
+        }
+
         public static void DeleteUnitByID(int id)
         {
             int removeUnitAlso = -1;

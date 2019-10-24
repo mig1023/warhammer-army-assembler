@@ -419,6 +419,12 @@ namespace WarhammerArmyAssembler
             ReloadArmyData();
         }
 
+        public static void AllUnitDelete()
+        {
+            Army.DeleteAllUnits();
+            ReloadArmyData();
+        }
+
         public static int IntParse(string line)
         {
             int value = 0;

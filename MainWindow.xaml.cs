@@ -211,5 +211,12 @@ namespace WarhammerArmyAssembler
         {
             Interface.Move(Interface.MovingType.ToMain);
         }
+
+        private void unitDelete_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
+                if (MessageBox.Show("Очистить армию?", String.Empty, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    Interface.AllUnitDelete();
+        }
     }
 }
