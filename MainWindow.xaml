@@ -80,7 +80,8 @@
 
             <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" CanUserAddRows="False" GridLinesVisibility="None"
                       AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
-                      LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False">
+                      LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False"
+                      HeadersVisibility="Column">
                 <DataGrid.Resources>
                     <Style TargetType="DataGridColumnHeader">
                         <Setter Property="FontSize" Value="12"/>
@@ -88,7 +89,13 @@
                 </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding IDView}"/>
-                    <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="45"/>
+                    <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="45">
+                        <DataGridTextColumn.CellStyle>
+                            <Style>
+                                <Setter Property="FrameworkElement.HorizontalAlignment" Value="Right"/>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
                     <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
                     <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="35" IsReadOnly="True"/>
                     <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="35" IsReadOnly="True"/>
