@@ -168,124 +168,58 @@ namespace WarhammerArmyAssembler
             return newUnit;
         }
 
+        public string AddFromAnyOption(string name, bool reversParam = false)
+        {
+            PropertyInfo unitParam = typeof(Unit).GetProperty(name);
+            object paramObject = unitParam.GetValue(this);
+            int? paramValue = (int?)paramObject;
+
+            string paramModView = String.Empty;
+
+            foreach (Option option in Options)
+                if (option.IsMagicItem() || (option.IsOption() && option.Realised))
+                {
+                    PropertyInfo optionParam = typeof(Option).GetProperty(String.Format("AddTo{0}", name));
+                    object optionObject = optionParam.GetValue(option);
+                    int optionValue = (int)optionObject;
+
+                    if (optionValue > 0 && reversParam)
+                    {
+                        if (paramValue == null)
+                            paramValue = 7;
+
+                        paramValue -= (7 - optionValue);
+                        paramModView = "+";
+                    }
+                    else if (optionValue > 0)
+                    {
+                        paramModView += '*';
+                        paramValue += optionValue;
+
+                        if (paramValue > 10)
+                            paramValue = 10;
+                    }
+                }
+
+            return paramValue.ToString() + paramModView;
+        }
+
         public Unit GetOptionRules()
         {
             Unit unit = this.Clone();
 
-            foreach (Option option in this.Options)
-                if (option.IsMagicItem() || (option.IsOption() && option.Realised))
-                {
-                    if (option.AddToMovement > 0)
-                    {
-                        unit.MovementView += '*';
-                        unit.Movement += option.AddToMovement;
+            unit.MovementView = AddFromAnyOption("Movement");
+            unit.WeaponSkillView = AddFromAnyOption("WeaponSkill");
+            unit.BallisticSkillView = AddFromAnyOption("BallisticSkill");
+            unit.StrengthView = AddFromAnyOption("Strength");
+            unit.ToughnessView = AddFromAnyOption("Toughness");
+            unit.WoundsView = AddFromAnyOption("Wounds");
+            unit.InitiativeView = AddFromAnyOption("Initiative");
+            unit.AttacksView = AddFromAnyOption("Attacks");
+            unit.LeadershipView = AddFromAnyOption("Leadership");
 
-                        if (unit.Movement > 10)
-                            unit.Movement = 10;
-                    }
-
-                    if (option.AddToWeaponSkill > 0)
-                    {
-                        unit.WeaponSkillView += '*';
-                        unit.WeaponSkill += option.AddToWeaponSkill;
-
-                        if (unit.WeaponSkill > 10)
-                            unit.WeaponSkill = 10;
-                    }
-
-                    if (option.AddToBallisticSkill > 0)
-                    {
-                        unit.BallisticSkillView += '*';
-                        unit.BallisticSkill += option.AddToBallisticSkill;
-
-                        if (unit.BallisticSkill > 10)
-                            unit.BallisticSkill = 10;
-                    }
-
-                    if (option.AddToStrength > 0)
-                    {
-                        unit.StrengthView += '*';
-                        unit.Strength += option.AddToStrength;
-
-                        if (unit.Strength > 10)
-                            unit.Strength = 10;
-                    }
-                    
-                    if (option.AddToToughness > 0)
-                    {
-                        unit.ToughnessView += '*';
-                        unit.Toughness += option.AddToToughness;
-
-                        if (unit.Toughness > 10)
-                            unit.Toughness = 10;
-                    }
-                    
-                    if (option.AddToWounds > 0)
-                    {
-                        unit.WoundsView += '*';
-                        unit.Wounds += option.AddToWounds;
-
-                        if (unit.Wounds > 10)
-                            unit.Wounds = 10;
-                    }
-
-                    if (option.AddToInitiative > 0)
-                    {
-                        unit.InitiativeView += '*';
-                        unit.Initiative += option.AddToInitiative;
-
-                        if (unit.Initiative > 10)
-                            unit.Initiative = 10;
-                    }
-
-                    if (option.AddToAttacks > 0)
-                    {
-                        unit.AttacksView += '*';
-                        unit.Attacks += option.AddToAttacks;
-
-                        if (unit.Attacks > 10)
-                            unit.Attacks = 10;
-                    }
-
-                    if (option.AddToLeadership > 0)
-                    {
-                        unit.LeadershipView += '*';
-                        unit.Leadership += option.AddToLeadership;
-
-                        if (unit.Leadership > 10)
-                            unit.Leadership = 10;
-                    }
-
-                    if (option.AddToArmour > 0)
-                    {
-                        if (unit.Armour == null)
-                            unit.Armour = 7;
-
-                        unit.Armour -= (7 - option.AddToArmour);
-                        unit.ArmourView = "+";
-                    }
-                    
-                    if (option.AddToWard > 0)
-                    {
-                        if (unit.Ward == null)
-                            unit.Ward = 7;
-
-                        unit.Ward -= (7 - option.AddToWard);
-                        unit.WardView = "+";
-                    }
-                }
-
-            unit.MovementView = unit.Movement.ToString() + unit.MovementView;
-            unit.WeaponSkillView = unit.WeaponSkill.ToString() + unit.WeaponSkillView;
-            unit.BallisticSkillView = unit.BallisticSkill.ToString() + unit.BallisticSkillView;
-            unit.StrengthView = unit.Strength.ToString() + unit.StrengthView;
-            unit.ToughnessView = unit.Toughness.ToString() + unit.ToughnessView;
-            unit.WoundsView = unit.Wounds.ToString() + unit.WoundsView;
-            unit.InitiativeView = unit.Initiative.ToString() + unit.InitiativeView;
-            unit.AttacksView = unit.Attacks.ToString() + unit.AttacksView;
-            unit.LeadershipView = unit.Leadership.ToString() + unit.LeadershipView;
-            unit.ArmourView = unit.Armour.ToString() + unit.ArmourView;
-            unit.WardView = unit.Ward.ToString() + unit.WardView;
+            unit.ArmourView = AddFromAnyOption("Armour", reversParam: true);
+            unit.WardView = AddFromAnyOption("Ward", reversParam: true);
 
             return unit;
         }
@@ -377,7 +311,7 @@ namespace WarhammerArmyAssembler
             } 
 
             if (MountOn > 0)
-                rules.Add(String.Format("верхом на: {0};", Army.Units[MountOn].Name));
+                rules.Add(String.Format("{0};", Army.Units[MountOn].Name));
 
             Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
             {
