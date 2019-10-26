@@ -120,15 +120,15 @@ namespace WarhammerArmyAssembler
             newOption.HitFirst = this.HitFirst;
             newOption.KillingBlow = this.KillingBlow;
             newOption.PoisonAttack = this.PoisonAttack;
-            newOption.Regeneration = this.HitFirst;
-            newOption.ImmuneToPsychology = this.HitFirst;
-            newOption.Stubborn = this.HitFirst;
-            newOption.Hate = this.HitFirst;
-            newOption.Fear = this.HitFirst;
-            newOption.Terror = this.HitFirst;
-            newOption.Frenzy = this.HitFirst;
-            newOption.Unbreakable = this.HitFirst;
-            newOption.ColdBlooded = this.HitFirst;
+            newOption.Regeneration = this.Regeneration;
+            newOption.ImmuneToPsychology = this.ImmuneToPsychology;
+            newOption.Stubborn = this.Stubborn;
+            newOption.Hate = this.Hate;
+            newOption.Fear = this.Fear;
+            newOption.Terror = this.Terror;
+            newOption.Frenzy = this.Frenzy;
+            newOption.Unbreakable = this.Unbreakable;
+            newOption.ColdBlooded = this.ColdBlooded;
 
             newOption.BigWeapon = this.BigWeapon;
 
