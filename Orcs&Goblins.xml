@@ -132,11 +132,160 @@
 			<SpecialRuleDescription>перебрасывает броски на попадание</SpecialRuleDescription>
 			<Description>Владелец этого оружия получает бонус в +1 к Силе в первый раунд и может перебрасывать проваленные броски на попадание в ближнем бою</Description>
 		</Artefact>
+		<Artefact>
+			<Name>Клинок удара в спину</Name>
+			<Type>Weapon</Type>
+			<Points>25</Points>
+			<PoisonAttack>true</PoisonAttack>
+			<SpecialRuleDescription>+1 к Силе за атаку во фланг</SpecialRuleDescription>
+			<SpecialRuleDescription>+2 к Силе за атаку в тыл</SpecialRuleDescription>
+			<Description>Атаки этого оружия считаются ядовитыми. Носитель получает бонус +1 к Силе, если атакует подразделение противника во фланг и +2 к Силе, если атакует в тыл</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Одноразовая бня Валлопы</Name>
+			<Type>Weapon</Type>
+			<Points>15</Points>
+			<SpecialRuleDescription>Сила равна 10 один раз за игру</SpecialRuleDescription>
+			<Description>Один раз за игру оружие даст носителя Силу равную 10</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Лучший топор Моргота</Name>
+			<Type>Weapon</Type>
+			<Points>15</Points>
+			<AddToWeaponSkill>1</AddToWeaponSkill>
+			<AddToStrength>1</AddToStrength>
+			<AddToInitiative>1</AddToInitiative>
+			<Description>Носитель имеет +1 к Владению оружием, Силе и Инициативе</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Хитрый штопор</Name>
+			<Type>Weapon</Type>
+			<Points>10</Points>
+			<SpecialRuleDescription>-3 к спас-броску за доспехи</SpecialRuleDescription>
+			<Description>Раны, нанесённые этим оружие имеют модификатор к спас-браоску за доспехи в -3</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Кинжал удачи</Name>
+			<Type>Weapon</Type>
+			<Points>5</Points>
+			<SpecialRuleDescription>+1 к Силе за каждый артефакт противника</SpecialRuleDescription>
+			<Description>+1 к Силе за каждый артефакт противника, которого атакует носитель</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Доспехи Горка</Name>
+			<Type>Armour</Type>
+			<Points>50</Points>
+			<AddToArmour>6</AddToArmour>
+			<AddToToughness>1</AddToToughness>
+			<Description>Лёгкие доспехи, дают бонус +1 к Стойкости</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Злобный щит</Name>
+			<Type>Armour</Type>
+			<Points>25</Points>
+			<AddToArmour>5</AddToArmour>
+			<SpecialRuleDescription>попадание с Силой 5 противнику за промах</SpecialRuleDescription>
+			<Description>Если в ближнем бою противник кинет 1 на попадание, то получит одно попадание с Силой 5 за каждый такой промах</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Идол Морка</Name>
+			<Type>Armour</Type>
+			<Points>35</Points>
+			<SpecialRuleDescription>-1 на попадание</SpecialRuleDescription>
+			<Description>Все попадания по носителю этого предмета в ближнем бою имеют пенальти в -1 к попаданию</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Сплющенные шлем</Name>
+			<Type>Armour</Type>
+			<Points>30</Points>
+			<AddToWard>5</AddToWard>
+			<Description>Носитель имеет магический спас-бросок на 5+</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Амулет защиты</Name>
+			<Type>Armour</Type>
+			<Points>25</Points>
+			<SpecialRuleDescription>броня и особа защита противника</SpecialRuleDescription>
+			<Description>После того, как носитель получет рану, он имеет тот же спас-бросок за достехи и за особую защиту, что и модель, которая нанесла ему рану</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Ошейник Зорги</Name>
+			<Type>Armour</Type>
+			<Points>5</Points>
+			<SpecialRuleDescription>бросок на атаки скакунов</SpecialRuleDescription>
+			<Description>Для того, чтобы атаковать носителя, скакуны всех типов, ездовые животные и звери, везущие колесницу должны выкинуть 6</Description>
+		</Artefact>
 	</Artefacts>
 	
 	
-    <Heroes>
-        <Hero>
+	<Heroes>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Горбад Железный Коготь</Name>
+			<Points>310</Points>
+			<Description>Горбад Железный Коготь</Description>
+			<MinSize>1</MinSize>
+			<MountInit>Гнарла</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<Psychology>
+			</Psychology>
+			<Ammunition>
+				<HandWeapon>
+					<Name>Морглор Крушитель</Name>
+					<HitFirst>true</HitFirst>
+					<SpecialRuleDescription>без спас-бросков за броню и особой защиты</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>тяжёлые доспехи</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</Ammunition>
+			<Options>
+				<Option>
+				    <Name>Кавалер.копьё</Name>
+				    <Type>Option</Type>
+				    <OnlyFor>Mount</OnlyFor>
+				    <Points>10</Points>
+				</Option>
+				<Option>
+				    <Name>Виверна</Name>
+				    <Type>Option</Type>
+				    <Points>20</Points>
+				    <Mount>true</Mount>
+				</Option>
+				<Option>
+				    <Name>Кабан</Name>
+				    <Type>Option</Type>
+				    <Points>15</Points>
+				    <Mount>true</Mount>
+				</Option>
+				<Option>
+				    <Name>Топор</Name>
+				    <Type>Option</Type>
+				    <OnlyFor>Infantry</OnlyFor>
+				    <Points>30</Points>
+				</Option>
+				<Option>
+				    <Name>Тяжёлый доспех</Name>
+				    <Type>Option</Type>
+				    <Points>50</Points>
+				    <AddToArmour>5</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
+	
+	
+	<Hero>
             <Type>Lord</Type>
             <Name>Орк Очень Большой Босс</Name>
             <Points>115</Points>
@@ -322,7 +471,7 @@
 	    </Options>
         </Hero>
     </Heroes>
-    <Mounts>
+	<Mounts>
 	<Mount>
             <Type>Mount</Type>
             <Name>Виверна</Name>
@@ -350,6 +499,23 @@
                 <WeaponSkill>3</WeaponSkill>
                 <BallisticSkill>0</BallisticSkill>
                 <Strength>3</Strength>
+                <Toughness>4</Toughness>
+                <Wounds>1</Wounds>
+                <Initiative>3</Initiative>
+                <Attacks>1</Attacks>
+                <Leadership>3</Leadership>
+            </MainParam>
+        </Mount>
+	<Mount>
+            <Type>Mount</Type>
+            <Name>Гнарла</Name>
+            <Points>0</Points>
+            <MinSize>1</MinSize>
+            <MainParam>
+                <Movement>7</Movement>
+                <WeaponSkill>3</WeaponSkill>
+                <BallisticSkill>0</BallisticSkill>
+                <Strength>4</Strength>
                 <Toughness>4</Toughness>
                 <Wounds>1</Wounds>
                 <Initiative>3</Initiative>
