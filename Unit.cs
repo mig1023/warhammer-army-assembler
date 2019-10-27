@@ -311,7 +311,7 @@ namespace WarhammerArmyAssembler
             } 
 
             if (MountOn > 0)
-                rules.Add(String.Format("{0};", Army.Units[MountOn].Name));
+                rules.Add(Army.Units[MountOn].Name);
 
             Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
             {
