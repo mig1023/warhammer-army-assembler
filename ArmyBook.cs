@@ -49,19 +49,19 @@ namespace WarhammerArmyAssembler
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
             {
                 int newID = GetNextIndex();
-                Units.Add(newID, LoadUnit(newID, xmlUnit));
+                Units.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
             }
 
             foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Heroes/Hero"))
             {
                 int newID = GetNextIndex();
-                Units.Add(newID, LoadUnit(newID, xmlUnit));
+                Units.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
             }
 
             foreach (XmlNode xmlMount in xmlFile.SelectNodes("ArmyBook/Mounts/Mount"))
             {
                 int newID = GetNextIndex();
-                Mounts.Add(newID, LoadUnit(newID, xmlMount));
+                Mounts.Add(newID, LoadUnit(newID, xmlMount, xmlFile));
             }
 
             foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
@@ -72,7 +72,17 @@ namespace WarhammerArmyAssembler
                 
         }
 
-        public static Unit LoadUnit(int id, XmlNode xmlUnit)
+        private static XmlNode AddFrenzyAttack(XmlDocument xml)
+        {
+            XmlNode nodeName = xml.CreateNode(XmlNodeType.Element, "AdditionalAttackByFrenzy", String.Empty);
+            XmlNode nodeParam = xml.CreateNode(XmlNodeType.Element, "AddToAttacks", String.Empty);
+            nodeParam.InnerText = "1";
+            nodeName.AppendChild(nodeParam);
+
+            return nodeName;
+        }
+
+        public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml)
         {
             Unit newUnit = new Unit();
 
@@ -111,33 +121,30 @@ namespace WarhammerArmyAssembler
             newUnit.SlotsOfSpecial = IntParse(xmlUnit["SlotsOfSpecial"]);
             newUnit.SlotsOfRare = IntParse(xmlUnit["SlotsOfRare"]);
 
-            XmlNode psychology = xmlUnit["Psychology"];
-
-            if (psychology != null)
-            {
-                newUnit.ImmuneToPsychology = BoolParse(psychology["ImmuneToPsychology"]);
-                newUnit.Stubborn = BoolParse(psychology["Stubborn"]);
-                newUnit.Hate = BoolParse(psychology["Hate"]);
-                newUnit.Fear = BoolParse(psychology["Fear"]);
-                newUnit.Terror = BoolParse(psychology["Terror"]);
-                newUnit.Frenzy = BoolParse(psychology["Frenzy"]);
-                newUnit.Unbreakable = BoolParse(psychology["Unbreakable"]);
-                newUnit.ColdBlooded = BoolParse(psychology["ColdBlooded"]);
-            }
-
             XmlNode additionalParam = xmlUnit["AdditionalParam"];
 
             if (additionalParam != null)
             {
+                newUnit.ImmuneToPsychology = BoolParse(additionalParam["ImmuneToPsychology"]);
+                newUnit.Stubborn = BoolParse(additionalParam["Stubborn"]);
+                newUnit.Hate = BoolParse(additionalParam["Hate"]);
+                newUnit.Fear = BoolParse(additionalParam["Fear"]);
+                newUnit.Terror = BoolParse(additionalParam["Terror"]);
+                newUnit.Frenzy = BoolParse(additionalParam["Frenzy"]);
+                newUnit.Unbreakable = BoolParse(additionalParam["Unbreakable"]);
+                newUnit.ColdBlooded = BoolParse(additionalParam["ColdBlooded"]);
                 newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
                 newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
                 newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
                 newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
+
+                if (newUnit.Frenzy)
+                    xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(AddFrenzyAttack(xml));
             }
 
-            foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Ammunition/*"))
+            foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("SpecialRulesAndAmmunition/*"))
                 newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
