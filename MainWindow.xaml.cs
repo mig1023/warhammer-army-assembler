@@ -44,32 +44,30 @@ namespace WarhammerArmyAssembler
             FrameworkElement f = sender as FrameworkElement;
             int id = Interface.IntParse(f.Tag.ToString());
 
-            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
+            if (ArmyBook.Units.ContainsKey(id))
             {
-                if (ArmyBook.Units.ContainsKey(id))
-                {
-                    armyUnitName.Content = ArmyBook.Units[id].Name.ToUpper();
-                    armyUnitDescription.Text = ArmyBook.Units[id].Description;
+                armyUnitName.Content = ArmyBook.Units[id].Name.ToUpper();
+                armyUnitDescription.Text = ArmyBook.Units[id].Description;
 
-                }
-
-                if (ArmyBook.Artefact.ContainsKey(id))
-                {
-                    armyUnitName.Content = ArmyBook.Artefact[id].Name.ToUpper();
-                    armyUnitDescription.Text = ArmyBook.Artefact[id].Description;
-                }
-
-                armyUnitName.Foreground = Brushes.White;
-                armyUnitName.Background = ArmyBook.MainColor;
-                armyUnitName.FontWeight = FontWeights.Bold;
-
-                UpdateLayout();
-
-                armybookDetail.Height = armyUnitDescription.Margin.Top +
-                    (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) + 20;
-
-                Interface.Move(Interface.MovingType.ToLeft);
             }
+
+            if (ArmyBook.Artefact.ContainsKey(id))
+            {
+                armyUnitName.Content = ArmyBook.Artefact[id].Name.ToUpper();
+                armyUnitDescription.Text = ArmyBook.Artefact[id].Description;
+            }
+
+            armyUnitName.Foreground = Brushes.White;
+            armyUnitName.Background = ArmyBook.MainColor;
+            armyUnitName.FontWeight = FontWeights.Bold;
+
+            UpdateLayout();
+
+            armybookDetail.Height = armyUnitDescription.Margin.Top +
+                (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) + 20;
+
+            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
+                Interface.Move(Interface.MovingType.ToLeft);
 
             if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
                 return;
