@@ -217,13 +217,12 @@
 		</Artefact>
 	</Artefacts>
 	
-	
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Горбад Железный Коготь</Name>
 			<Points>310</Points>
-			<Description>Горбад Железный Коготь</Description>
+			<Description>Горбад Железный Коготь - орочий военочальник. Невероятно способный полководец, Горбад может вдохновить своих последователей на великие (и кровавые) деяния</Description>
 			<MinSize>1</MinSize>
 			<MountInit>Гнарла</MountInit>
 			<MainParam>
@@ -237,9 +236,7 @@
 				<Attacks>4</Attacks>
 				<Leadership>10</Leadership>
 			</MainParam>
-			<Psychology>
-			</Psychology>
-			<Ammunition>
+			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Морглор Крушитель</Name>
 					<HitFirst>true</HitFirst>
@@ -249,41 +246,58 @@
 					<Name>тяжёлые доспехи</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
-			</Ammunition>
-			<Options>
-				<Option>
-				    <Name>Кавалер.копьё</Name>
-				    <Type>Option</Type>
-				    <OnlyFor>Mount</OnlyFor>
-				    <Points>10</Points>
-				</Option>
-				<Option>
-				    <Name>Виверна</Name>
-				    <Type>Option</Type>
-				    <Points>20</Points>
-				    <Mount>true</Mount>
-				</Option>
-				<Option>
-				    <Name>Кабан</Name>
-				    <Type>Option</Type>
-				    <Points>15</Points>
-				    <Mount>true</Mount>
-				</Option>
-				<Option>
-				    <Name>Топор</Name>
-				    <Type>Option</Type>
-				    <OnlyFor>Infantry</OnlyFor>
-				    <Points>30</Points>
-				</Option>
-				<Option>
-				    <Name>Тяжёлый доспех</Name>
-				    <Type>Option</Type>
-				    <Points>50</Points>
-				    <AddToArmour>5</AddToArmour>
-				</Option>
-			</Options>
+				
+				<Special>
+					<SpecialRuleDescription>у босса есть план!</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>орки да бест!</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>толстокожий</SpecialRuleDescription>
+					<AddToArmour>5</AddToArmour>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Hero>
-	
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Азхаг Мясник</Name>
+			<Mage>2</Mage>
+			<Points>450</Points>
+			<Description>Азхаг Мясник - орочий военочальник, отличная возможность соединить грубую силу орочьего военачальника со способностью мага</Description>
+			<MinSize>1</MinSize>
+			<MountInit>Виверна</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>рубительный меч Слаггим</Name>
+					<AddToAttacks>1</AddToAttacks>
+					<SpecialRuleDescription>переброс промахов в первый раунд</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>тердый доспех Азгах</Name>
+					<AddToArmour>5</AddToArmour>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Crown>
+					<Name>корона Волшебства</Name>
+					<SpecialRuleDescription>маг 2 уровня</SpecialRuleDescription>
+				</Crown>
+				<Special>
+					<SpecialRuleDescription>тупость</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	
 	<Hero>
             <Type>Lord</Type>
@@ -304,13 +318,11 @@
                 <Attacks>4</Attacks>
                 <Leadership>9</Leadership>
             </MainParam>
-            <Psychology>
-            </Psychology>
             <AdditionalParam>
                 <MagicItems>100</MagicItems>
 		<MagicItemsType>Hero</MagicItemsType>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
@@ -318,7 +330,7 @@
                     <Name>лёгкая броня</Name>
 		    <AddToArmour>6</AddToArmour>
                 </Armour>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
 	    <Options>
 	        <Option>
 	            <Name>Кавалер.копьё</Name>
@@ -369,17 +381,15 @@
                 <Attacks>1</Attacks>
                 <Leadership>8</Leadership>
             </MainParam>
-            <Psychology>
-            </Psychology>
             <AdditionalParam>
                 <MagicItems>100</MagicItems>
 		<MagicItemsType>Mage</MagicItemsType>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
             <Options>
 	        <Option>
 	            <Name>сделать магом 4 уровня</Name>
@@ -405,20 +415,18 @@
                 <Attacks>3</Attacks>
                 <Leadership>8</Leadership>
             </MainParam>
-            <Psychology>
-            </Psychology>
             <AdditionalParam>
 	        <MagicItems>50</MagicItems>
 		<MagicItemsType>Hero</MagicItemsType>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
                 <HandWeapon>
                     <Name>лёгкая броня</Name>
                 </HandWeapon>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
 	    <Options>
 	        <Option>
 	            <Name>Копьё</Name>
@@ -450,17 +458,15 @@
                 <Attacks>1</Attacks>
                 <Leadership>7</Leadership>
             </MainParam>
-            <Psychology>
-            </Psychology>
             <AdditionalParam>
                 <MagicItems>50</MagicItems>
 		<MagicItemsType>Mage</MagicItemsType>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
             <Options>
 	        <Option>
 	            <Name>сделать магом 2 уровня</Name>
@@ -472,23 +478,39 @@
         </Hero>
     </Heroes>
 	<Mounts>
-	<Mount>
-            <Type>Mount</Type>
-            <Name>Виверна</Name>
-            <Points>0</Points>
-            <MinSize>1</MinSize>
-            <MainParam>
-                <Movement>4</Movement>
-                <WeaponSkill>5</WeaponSkill>
-                <BallisticSkill>0</BallisticSkill>
-                <Strength>6</Strength>
-                <Toughness>5</Toughness>
-                <Wounds>5</Wounds>
-                <Initiative>3</Initiative>
-                <Attacks>3</Attacks>
-                <Leadership>6</Leadership>
-            </MainParam>
-        </Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Виверна</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>чешуйчатая кожа</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>большая цель</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>летает</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	<Mount>
             <Type>Mount</Type>
             <Name>Кабан</Name>
@@ -541,11 +563,7 @@
                 <Attacks>1</Attacks>
                 <Leadership>7</Leadership>
             </MainParam>
-            <Psychology>
-            </Psychology>
-            <AdditionalParam>
-            </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
@@ -553,7 +571,7 @@
                     <Name>лёгкая броня</Name>
 		    <AddToArmour>6</AddToArmour>
                 </Armour>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
             <Options>
 	        <Option>
 	            <Name>бигансы</Name>
@@ -619,11 +637,9 @@
                 <Attacks>1</Attacks>
                 <Leadership>7</Leadership>
             </MainParam>
-            <Psychology>
-            </Psychology>
             <AdditionalParam>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
@@ -631,7 +647,7 @@
                     <Name>большое оружие</Name>
                     <AddToStrength>2</AddToStrength>
                 </HandWeapon>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
         </Unit>
         <Unit>
             <Type>Core</Type>
@@ -649,18 +665,16 @@
                 <Attacks>1</Attacks>
                 <Leadership>7</Leadership>
             </MainParam>
-            <Psychology>
-            </Psychology>
             <AdditionalParam>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
                 <RangedWeapon>
                     <Name>короткий лук</Name>
                 </RangedWeapon>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
         </Unit>
         <Unit>
             <Type>Core</Type>
@@ -678,16 +692,14 @@
                 <Attacks>1</Attacks>
                 <Leadership>7</Leadership>
             </MainParam>
-            <Psychology>
-                <Frenzy>true</Frenzy>
-            </Psychology>
             <AdditionalParam>
+		<Frenzy>true</Frenzy>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
         </Unit>
 	<Unit>
             <Type>Special</Type>
@@ -705,18 +717,16 @@
                 <Attacks>1</Attacks>
                 <Leadership>8</Leadership>
             </MainParam>
-            <Psychology>
-		<ImmuneToPsychology>true</ImmuneToPsychology>
-            </Psychology>
             <AdditionalParam>
                 <MagicItems>50</MagicItems>
 		<MagicItemsType>Unit</MagicItemsType>
+		<ImmuneToPsychology>true</ImmuneToPsychology>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
                     <Name>ручное оружие</Name>
                 </HandWeapon>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
         </Unit>
 	<Unit>
             <Type>Rare</Type>
@@ -734,17 +744,15 @@
                 <Attacks>3</Attacks>
                 <Leadership>4</Leadership>
             </MainParam>
-            <Psychology>
-	        <Fear>true</Fear>
-            </Psychology>
             <AdditionalParam>
+		<Fear>true</Fear>
 	        <Regeneration>true</Regeneration>
             </AdditionalParam>
-            <Ammunition>
+            <SpecialRulesAndAmmunition>
                 <HandWeapon>
-                    <Name>ручное оружие</Name>
+			<Name>ручное оружие</Name>
                 </HandWeapon>
-            </Ammunition>
+            </SpecialRulesAndAmmunition>
         </Unit>
     </Units>
 </ArmyBook>
