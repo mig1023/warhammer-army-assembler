@@ -72,6 +72,8 @@ namespace WarhammerArmyAssembler
         public Brush InterfaceColor { get; set; }
         public bool GroopBold { get; set; }
 
+        public bool OrdinaryArtefact { get; set; }
+
         private bool artefactAlreadyUsed = false;
         public bool ArtefactAlreadyUsed
         {
@@ -114,6 +116,7 @@ namespace WarhammerArmyAssembler
             newOption.SpecialRuleDescription = this.SpecialRuleDescription;
             newOption.Realised = this.Realised;
             newOption.Multiple = this.Multiple;
+            newOption.OrdinaryArtefact = this.OrdinaryArtefact;
             newOption.OnlyOneInArmy = this.OnlyOneInArmy;
             newOption.OnlyFor = this.OnlyFor;
 
