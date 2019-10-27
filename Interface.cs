@@ -206,7 +206,7 @@ namespace WarhammerArmyAssembler
                 topMargin += 10;
 
                 foreach (Option option in unit.Options)
-                    if (option.IsMagicItem() && (option.Points == 0))
+                    if (option.IsMagicItem() && (option.Points == 0) && !String.IsNullOrEmpty(option.Name))
                         topMargin += AddLabel(option.Name, main.unitName.Margin.Left, topMargin, 20);
 
                 topMargin += 25;
