@@ -288,14 +288,17 @@
 				<Attacks>4</Attacks>
 				<Leadership>9</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<Stupidity>true</Stupidity>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>рубительный меч Слаггим</Name>
+					<Name>Рубительный меч Слаггим</Name>
 					<AddToAttacks>1</AddToAttacks>
 					<SpecialRuleDescription>переброс промахов в первый раунд</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
-					<Name>тердый доспех Азгах</Name>
+					<Name>Тердый доспех Азгах</Name>
 					<AddToArmour>5</AddToArmour>
 					<AddToWard>5</AddToWard>
 				</Armour>
@@ -304,111 +307,346 @@
 					<SpecialRuleDescription>маг 2 уровня</SpecialRuleDescription>
 				</Crown>
 				<Special>
-					<SpecialRuleDescription>тупость</SpecialRuleDescription>
+					<SpecialRuleDescription>Ээээ...ребята, враг в ТОЙ стороне!</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Гримгор Железная шкура</Name>
+			<Points>375</Points>
+			<MinSize>1</MinSize>
+			<Description>Гримгор - Чёрный Орк-военачальник. Воистину это лучший боец, которого когда-либо производила раса зеленокожих; Гримгор - неудержимая смертоносная машина, способная превратить вражеский полк в кучу отбросов</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>7</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Hate>true</Hate>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Гитсинк</Name>
+					<AddToStrength>2</AddToStrength>
+					<SpecialRuleDescription>всегда бьёт первым</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Выкованный на крови доспех</Name>
+					<AddToArmour>1</AddToArmour>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Ви аре чемпионз!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Гром Брюхастый из Туманных гор</Name>
+			<Points>255</Points>
+			<MinSize>1</MinSize>
+			<Description>Гром является гоблином военачальником. Обладающий замечательной живучестью, Гром станет отличным предводителем, который поведёт орду Гоблинов к победе</Description>
+			<MountInit>Волчья колесница</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Regeneration>true</Regeneration>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Топор Грома</Name>
+					<AddToStrength>2</AddToStrength>
+					<KillingBlow>true</KillingBlow>
+					<SpecialRuleDescription>смертельный удар эльфам на 5+</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Удачное знамя</Name>
+					<AddToWard>5</AddToWard>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Скарсинк, воевода Восьми Пиков</Name>
+			<Points>205</Points>
+			<MinSize>1</MinSize>
+			<Description>Скарсинк - воевода Ночных Гоблинов. Скарсинк устрашает кпротивника в ближнем бою, а его подлые планы ещё в самом начале игры могут привести неприятиля в замешательство</Description>
+			<MountInit>Гоббла</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Hate>true</Hate>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Палка-тыкалка Скарсинка</Name>
+					<SpecialRuleDescription>Связанное заклятье, силы 5 на 24 дюйма</SpecialRuleDescription>
+				</HandWeapon>
+				<Special>
+					<KillingBlow>true</KillingBlow>
+					<SpecialRuleDescription>жуй, жуй - глотай</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>хитрый план</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>хитрые ловушки</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Орк-Воевода</Name>
+			<Points>115</Points>
+			<Description></Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>чоппа</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Дикий Орк</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<AddToAttacks>1</AddToAttacks>
+				</Option>
+				<Option>
+					<Name>Чёрный Орк</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+				</Option>
+				<Option>
+					<Name>двуручное оружие</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>парная чоппа</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>копьё</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>лёгкий доспех</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>тяжёлый доспех</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>щит</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Кабан</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Виверна</Name>
+					<Type>Option</Type>
+					<Points>200</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Орк-Великий шаман</Name>
+			<Mage>3</Mage>
+			<Points>180</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Mage</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>чоппа</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>сделать магом 4 уровня</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+				</Option>
+				<Option>
+					<Name>Дикий Орк</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<AddToAttacks>1</AddToAttacks>
+				</Option>
+				<Option>
+					<Name>Кабан</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Виверна</Name>
+					<Type>Option</Type>
+					<Points>200</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Гоблин-Воевода</Name>
+			<Points>65</Points>
+			<Description></Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Ночной Гоблин</Name>
+					<Type>Option</Type>
+					<Points>-10</Points>
+					<AddToInitiative>1</AddToInitiative>
+					<AddToLeadership>-1</AddToLeadership>
+				</Option>
+				<Option>
+					<Name>двуручное оружие</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>парное оружие</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>копьё</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>лёгкий доспех</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>щит</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Волк</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
 	
-	<Hero>
-            <Type>Lord</Type>
-            <Name>Орк Очень Большой Босс</Name>
-            <Points>115</Points>
-	    <Description>Описание описание описание описание описание|описание описание описание описание описание описание описание |описание |описание описание описание описание |описание описание описание описание описание |описание описание описание |описание описание |описание |описание |описание |описание |описание |описание |описание |описание|описание описание описание описание описание |описание</Description>
-            <MinSize>1</MinSize>
-	    <MountInit>Виверна</MountInit>
-	    <SlotsOfRare>2</SlotsOfRare>
-            <MainParam>
-                <Movement>4</Movement>
-                <WeaponSkill>6</WeaponSkill>
-                <BallisticSkill>3</BallisticSkill>
-                <Strength>5</Strength>
-                <Toughness>5</Toughness>
-                <Wounds>3</Wounds>
-                <Initiative>4</Initiative>
-                <Attacks>4</Attacks>
-                <Leadership>9</Leadership>
-            </MainParam>
-            <AdditionalParam>
-                <MagicItems>100</MagicItems>
-		<MagicItemsType>Hero</MagicItemsType>
-            </AdditionalParam>
-            <SpecialRulesAndAmmunition>
-                <HandWeapon>
-                    <Name>ручное оружие</Name>
-                </HandWeapon>
-                <Armour>
-                    <Name>лёгкая броня</Name>
-		    <AddToArmour>6</AddToArmour>
-                </Armour>
-            </SpecialRulesAndAmmunition>
-	    <Options>
-	        <Option>
-	            <Name>Кавалер.копьё</Name>
-		    <Type>Option</Type>
-		    <OnlyFor>Mount</OnlyFor>
-		    <Points>10</Points>
-	        </Option>
-		<Option>
-	            <Name>Виверна</Name>
-		    <Type>Option</Type>
-		    <Points>20</Points>
-		    <Mount>true</Mount>
-	        </Option>
-		<Option>
-	            <Name>Кабан</Name>
-		    <Type>Option</Type>
-		    <Points>15</Points>
-		    <Mount>true</Mount>
-	        </Option>
-		<Option>
-	            <Name>Топор</Name>
-		    <Type>Option</Type>
-		    <OnlyFor>Infantry</OnlyFor>
-		    <Points>30</Points>
-	        </Option>
-		<Option>
-	            <Name>Тяжёлый доспех</Name>
-		    <Type>Option</Type>
-		    <Points>50</Points>
-		    <AddToArmour>5</AddToArmour>
-	        </Option>
-	    </Options>
-        </Hero>
-        <Hero>
-            <Type>Lord</Type>
-            <Name>Орк Великий шаман</Name>
-            <Mage>3</Mage>
-            <Points>165</Points>
-            <MinSize>1</MinSize>
-            <MainParam>
-                <Movement>4</Movement>
-                <WeaponSkill>3</WeaponSkill>
-                <BallisticSkill>3</BallisticSkill>
-                <Strength>4</Strength>
-                <Toughness>5</Toughness>
-                <Wounds>3</Wounds>
-                <Initiative>2</Initiative>
-                <Attacks>1</Attacks>
-                <Leadership>8</Leadership>
-            </MainParam>
-            <AdditionalParam>
-                <MagicItems>100</MagicItems>
-		<MagicItemsType>Mage</MagicItemsType>
-            </AdditionalParam>
-            <SpecialRulesAndAmmunition>
-                <HandWeapon>
-                    <Name>ручное оружие</Name>
-                </HandWeapon>
-            </SpecialRulesAndAmmunition>
-            <Options>
-	        <Option>
-	            <Name>сделать магом 4 уровня</Name>
-		    <Type>Option</Type>
-		    <Points>35</Points>
-                    <AddToCast>1</AddToCast>
-	        </Option>
-	    </Options>
-        </Hero>
 	<Hero>
             <Type>Hero</Type>
             <Name>Орк Большой Босс</Name>
@@ -521,41 +759,92 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
-	<Mount>
-            <Type>Mount</Type>
-            <Name>Кабан</Name>
-            <Points>0</Points>
-            <MinSize>1</MinSize>
-            <MainParam>
-                <Movement>7</Movement>
-                <WeaponSkill>3</WeaponSkill>
-                <BallisticSkill>0</BallisticSkill>
-                <Strength>3</Strength>
-                <Toughness>4</Toughness>
-                <Wounds>1</Wounds>
-                <Initiative>3</Initiative>
-                <Attacks>1</Attacks>
-                <Leadership>3</Leadership>
-            </MainParam>
-        </Mount>
-	<Mount>
-            <Type>Mount</Type>
-            <Name>Гнарла</Name>
-            <Points>0</Points>
-            <MinSize>1</MinSize>
-            <MainParam>
-                <Movement>7</Movement>
-                <WeaponSkill>3</WeaponSkill>
-                <BallisticSkill>0</BallisticSkill>
-                <Strength>4</Strength>
-                <Toughness>4</Toughness>
-                <Wounds>1</Wounds>
-                <Initiative>3</Initiative>
-                <Attacks>1</Attacks>
-                <Leadership>3</Leadership>
-            </MainParam>
-        </Mount>
-    </Mounts>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Кабан</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Волк</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Гнарла</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Гоббла</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement></Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill></BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness></Toughness>
+				<Wounds></Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership></Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Волчья колесница</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership></Leadership>
+			</MainParam>
+		</Mount>
+	</Mounts>
     <Units>
         <Unit>
             <Type>Core</Type>
