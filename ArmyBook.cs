@@ -133,6 +133,7 @@ namespace WarhammerArmyAssembler
                 newUnit.Frenzy = BoolParse(additionalParam["Frenzy"]);
                 newUnit.Unbreakable = BoolParse(additionalParam["Unbreakable"]);
                 newUnit.ColdBlooded = BoolParse(additionalParam["ColdBlooded"]);
+                newUnit.Stupidity = BoolParse(additionalParam["Stupidity"]);
                 newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
                 newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);

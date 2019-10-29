@@ -67,6 +67,7 @@ namespace WarhammerArmyAssembler
         public bool Frenzy { get; set; }
         public bool Unbreakable { get; set; }
         public bool ColdBlooded { get; set; }
+        public bool Stupidity { get; set; }
 
         public bool HitFirst { get; set; }
         public bool Regeneration { get; set; }
@@ -146,6 +147,7 @@ namespace WarhammerArmyAssembler
             newUnit.Frenzy = this.Frenzy;
             newUnit.Unbreakable = this.Unbreakable;
             newUnit.ColdBlooded = this.ColdBlooded;
+            newUnit.Stupidity = this.Stupidity;
             newUnit.HitFirst = this.HitFirst;
             newUnit.Regeneration = this.Regeneration;
             newUnit.KillingBlow = this.KillingBlow;
