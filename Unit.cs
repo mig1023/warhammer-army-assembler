@@ -238,22 +238,39 @@ namespace WarhammerArmyAssembler
                 Option option = unit.Options[i];
                 if (option.ID == optionID)
                 {
+                    bool realise = false;
+
                     if (option.IsMagicItem())
                         unit.Options.Remove(option);
                     else
-                        option.Realised = !option.Realised;
+                    {
+                        if (option.Realised)
+                            option.Realised = false;
+                        else
+                        {
+                            if (Army.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
+                                realise = true;
+                            else
+                            {
+                                Interface.Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(Army.Units[unitID].Type)));
+                                return;
+                            }
+                        }
+                    }
 
-                    if (option.Mount && option.Realised)
+                    if (option.Mount && realise)
                     {
                         foreach (KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
                             if (mount.Value.Name == option.Name)
                                 Interface.ArmyGridDrop(mount.Key, points: option.Points, unit: unitID);
                     }
-                    else if (option.Mount && !option.Realised)
+                    else if (option.Mount && !realise)
                     {
                         Army.DeleteUnitByID(Army.Units[unitID].MountOn);
                         Army.Units[unitID].MountOn = 0;
                     }
+
+                    option.Realised = realise;
 
                     return;
                 }

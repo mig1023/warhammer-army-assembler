@@ -405,10 +405,10 @@ namespace WarhammerArmyAssembler
             else if (Army.Units[unit].MountOn > 0)
                 Error("Герой уже имеет скакуна");
             else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unit].Type, points))
-                Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(Army.Units[id].Type)));
+                Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(Army.Units[unit].Type)));
             else
             {
-                Army.AddMountByID(id, points, unit);
+                Army.AddMountByID(id, unit);
                 ReloadArmyData();
             }
         }
@@ -458,7 +458,11 @@ namespace WarhammerArmyAssembler
                 if (entry.Value.Type != Unit.UnitType.Mount)
                     categories[(int)entry.Value.Type].Items.Add(ReloadArmyUnit(entry.Key, entry.Value));
 
-                if ((entry.Value.MountOn > 0) && (Army.Units[entry.Value.MountOn].Wounds > 1))
+                if (
+                    (entry.Value.MountOn > 0)
+                    &&
+                    ((Army.Units[entry.Value.MountOn].Wounds > 1) || (Army.Units[entry.Value.MountOn].Wounds == 0))
+                    )
                     categories[(int)entry.Value.Type].Items.Add(
                         ReloadArmyUnit(entry.Value.MountOn, Army.Units[entry.Value.MountOn])
                     );
