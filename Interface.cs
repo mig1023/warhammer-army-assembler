@@ -257,7 +257,7 @@ namespace WarhammerArmyAssembler
         }
 
         private static double AddLabel(string caption, double left, double top, double height,
-            bool selected = false, int points = 0, bool bold = false)
+            bool selected = false, int points = 0, bool perModel = false, bool bold = false)
         {
             Label newOption = new Label();
             newOption.Content = caption;
@@ -282,7 +282,7 @@ namespace WarhammerArmyAssembler
             if (points > 0)
             {
                 Label optionPoints = new Label();
-                optionPoints.Content = points.ToString() + " pts";
+                optionPoints.Content = points.ToString() + " pts" + (perModel ? "/m" : String.Empty);
                 optionPoints.Margin = Thick(optionPoints, left + newOption.ActualWidth - 5, top);
                 optionPoints.Foreground = ArmyBook.MainColor;
                 main.unitDetail.Children.Add(optionPoints);
@@ -294,7 +294,7 @@ namespace WarhammerArmyAssembler
         private static double AddButton(string caption, double left, double top, double height,
             string id, Option option, double width, bool column = false, int mountAlreadyOn = 0)
         {
-            AddLabel(caption, left, top, height, (option.Realised ? true : false), option.Points);
+            AddLabel(caption, left, top, height, (option.Realised ? true : false), option.Points, option.PerModel);
 
             Button newButton = new Button();
 
