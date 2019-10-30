@@ -69,6 +69,9 @@
                                             <DataTrigger Binding="{Binding OrdinaryArtefact}" Value="True">
                                                 <Setter Property="Foreground" Value="Gray"/>
                                             </DataTrigger>
+                                            <DataTrigger Binding="{Binding PersonifiedHero}" Value="True">
+                                                <Setter Property="Foreground" Value="Gray"/>
+                                            </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </TextBlock.Style>

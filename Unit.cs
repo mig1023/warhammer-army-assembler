@@ -88,6 +88,8 @@ namespace WarhammerArmyAssembler
         public Brush InterfaceColor { get; set; }
         public bool GroopBold { get; set; }
 
+        public bool PersonifiedHero { get; set; }
+
         public List<Option> Options = new List<Option>();
 
         public ObservableCollection<Unit> Items { get; set; }
@@ -162,6 +164,7 @@ namespace WarhammerArmyAssembler
             newUnit.MagicItemsType = this.MagicItemsType;
 
             newUnit.SizableType = this.SizableType;
+            newUnit.PersonifiedHero = this.PersonifiedHero;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)

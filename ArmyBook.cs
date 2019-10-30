@@ -121,6 +121,8 @@ namespace WarhammerArmyAssembler
             newUnit.SlotsOfSpecial = IntParse(xmlUnit["SlotsOfSpecial"]);
             newUnit.SlotsOfRare = IntParse(xmlUnit["SlotsOfRare"]);
 
+            newUnit.PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]);
+
             XmlNode additionalParam = xmlUnit["AdditionalParam"];
 
             if (additionalParam != null)
