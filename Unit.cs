@@ -299,6 +299,9 @@ namespace WarhammerArmyAssembler
 
             foreach(Option option in Options)
             {
+                if (option.IsOption() && !option.Realised)
+                    continue;
+
                 PropertyInfo optionField = typeof(Option).GetProperty(name);
                 object fieldValue = optionField.GetValue(option);
 
@@ -353,9 +356,16 @@ namespace WarhammerArmyAssembler
                     rules.Add(specialRule.Value);
 
             foreach (Option option in Options)
-                if (option.SpecialRuleDescription.Length > 0)
-                    foreach(string specialRule in option.SpecialRuleDescription)
-                        rules.Add(specialRule);
+            {
+                if (option.SpecialRuleDescription.Length <= 0)
+                    continue;
+
+                if (option.IsOption() && !option.Realised)
+                    continue;
+
+                foreach (string specialRule in option.SpecialRuleDescription)
+                    rules.Add(specialRule);
+            }
 
             return rules;
         }
