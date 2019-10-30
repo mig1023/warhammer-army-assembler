@@ -270,7 +270,7 @@ namespace WarhammerArmyAssembler
                     else if (option.Mount && !realise)
                     {
                         Army.DeleteUnitByID(Army.Units[unitID].MountOn);
-                        Army.Units[unitID].MountOn = 0;
+                        unit.MountOn = 0;
                     }
 
                     option.Realised = realise;

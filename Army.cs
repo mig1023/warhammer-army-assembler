@@ -56,7 +56,7 @@ namespace WarhammerArmyAssembler
 
         public static void DeleteUnitByID(int id, bool onlyDirectlyHim = false)
         {
-            int removeUnitAlso = -1;
+            int? removeUnitAlso = null;
 
             if (!onlyDirectlyHim)
                 foreach (KeyValuePair<int, Unit> entry in Army.Units)
@@ -68,7 +68,7 @@ namespace WarhammerArmyAssembler
 
                         entry.Value.MountOn = 0;
 
-                        if (Army.Units[id].Points == 0)
+                        if (!String.IsNullOrEmpty(entry.Value.MountInit))
                             removeUnitAlso = entry.Key;
                     }
 
@@ -76,8 +76,8 @@ namespace WarhammerArmyAssembler
                 if (option.IsMagicItem())
                     Interface.SetArtefactAlreadyUsed(option.ID, false);
 
-            if (removeUnitAlso > 0)
-                Units.Remove(removeUnitAlso);
+            if (removeUnitAlso != null)
+                Units.Remove((int)removeUnitAlso);
 
             Units.Remove(id);
         }
@@ -97,7 +97,8 @@ namespace WarhammerArmyAssembler
             int size = 0;
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
-                size += entry.Value.Size;
+                if (!((entry.Value.Type == Unit.UnitType.Mount) && (entry.Value.Wounds <= 1)))
+                    size += entry.Value.Size;
 
             return size;
         }
