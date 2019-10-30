@@ -75,6 +75,11 @@ namespace WarhammerArmyAssembler
             return (ArmyBook.Units[id].Size * ArmyBook.Units[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
+        public static bool EnoughUnitPointsForAddOption(int points)
+        {
+            return (points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints()));
+        }
+
         public static bool EnoughPointsForAddMount(int points)
         {
             return points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());

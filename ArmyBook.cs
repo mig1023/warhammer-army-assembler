@@ -98,6 +98,7 @@ namespace WarhammerArmyAssembler
             newUnit.Mage = IntParse(xmlUnit["Mage"]);
             newUnit.MountOn = IntParse(xmlUnit["MountOn"]);
             newUnit.MountInit = StringParse(xmlUnit["MountInit"]);
+            newUnit.ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1);
 
             newUnit.Description = StringParse(xmlUnit["Description"]);
 
@@ -158,16 +159,16 @@ namespace WarhammerArmyAssembler
             return newUnit;
         }
 
-        private static int IntParse(XmlNode xmlNode)
+        private static int IntParse(XmlNode xmlNode, int? byDefault = null)
         {
             if (xmlNode == null)
-                return 0;
+                return byDefault ?? 0;
 
             int value = 0;
 
             bool success = int.TryParse(xmlNode.InnerText, out value);
 
-            return (success ? value : 0);
+            return (success ? value : (byDefault ?? 0));
         }
 
         private static int? IntNullableParse(XmlNode xmlNode)
@@ -321,6 +322,7 @@ namespace WarhammerArmyAssembler
             newWeapon.AddToWard = IntParse(xmlNode["AddToWard"]);
             newWeapon.AddToCast = IntParse(xmlNode["AddToCast"]);
             newWeapon.AddToDispell = IntParse(xmlNode["AddToDispell"]);
+            newWeapon.AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]);
 
             newWeapon.FullCommand = BoolParse(xmlNode["FullCommand"]);
 

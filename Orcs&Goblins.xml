@@ -1893,59 +1893,407 @@
 				</Option>
 			</Options>
 		</Unit>
-        
-	<Unit>
-            <Type>Special</Type>
-            <Name>Чёрные орки</Name>
-            <Points>12</Points>
-            <MinSize>10</MinSize>
-            <MainParam>
-                <Movement>4</Movement>
-                <WeaponSkill>4</WeaponSkill>
-                <BallisticSkill>3</BallisticSkill>
-                <Strength>4</Strength>
-                <Toughness>4</Toughness>
-                <Wounds>1</Wounds>
-                <Initiative>2</Initiative>
-                <Attacks>1</Attacks>
-                <Leadership>8</Leadership>
-            </MainParam>
-            <AdditionalParam>
-                <MagicItems>50</MagicItems>
-		<MagicItemsType>Unit</MagicItemsType>
-		<ImmuneToPsychology>true</ImmuneToPsychology>
-            </AdditionalParam>
-            <SpecialRulesAndAmmunition>
-                <HandWeapon>
-                    <Name>ручное оружие</Name>
-                </HandWeapon>
-            </SpecialRulesAndAmmunition>
-        </Unit>
-	<Unit>
-            <Type>Rare</Type>
-            <Name>Речные тролли</Name>
-            <Points>45</Points>
-            <MinSize>1</MinSize>
-            <MainParam>
-                <Movement>6</Movement>
-                <WeaponSkill>3</WeaponSkill>
-                <BallisticSkill>1</BallisticSkill>
-                <Strength>5</Strength>
-                <Toughness>4</Toughness>
-                <Wounds>3</Wounds>
-                <Initiative>1</Initiative>
-                <Attacks>3</Attacks>
-                <Leadership>4</Leadership>
-            </MainParam>
-            <AdditionalParam>
-		<Fear>true</Fear>
-	        <Regeneration>true</Regeneration>
-            </AdditionalParam>
-            <SpecialRulesAndAmmunition>
-                <HandWeapon>
-			<Name>ручное оружие</Name>
-                </HandWeapon>
-            </SpecialRulesAndAmmunition>
-        </Unit>
-    </Units>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Кабанья колесница</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill></BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>чоппы</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>копья</Name>
+				</HandWeapon>
+				<Special>
+					<AddToArmour>4</AddToArmour>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>третий орк</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Наездники на сквигах Ночных гоблинов</Name>
+			<Points>15</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>5</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>лёгкая пехота</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Ииихааа!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Стадо сквигов Ночных гоблинов</Name>
+			<Points>15</Points>
+			<MinSize>1</MinSize>
+			<ModelsInPack>5</ModelsInPack>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>стадо сквигов</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>дикие сквиги</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Ииихааа!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Волчья колесница гоблинов</Name>
+			<Points>60</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>5</ModelsInPack>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill></BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>копья</Name>
+				</HandWeapon>
+				<RangedWeapon>
+					<Name>короткий лук</Name>
+				</RangedWeapon>
+				<Special>
+					<AddToArmour>5</AddToArmour>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>четвёртый гоблин</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>третий волк</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>3</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Гоблинская камнебросалка</Name>
+			<Points>70</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>3</ModelsInPack>
+			<MainParam>
+				<Movement></Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>камнебросалка</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>громила-орк</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Гоблинская копьеметалка</Name>
+			<Points>35</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>3</ModelsInPack>
+			<MainParam>
+				<Movement></Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>копьеметалка</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>громила-орк</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Речные тролли</Name>
+			<Points>40</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stupidity>true</Stupidity>
+				<Fear>true</Fear>
+				<Regeneration>true</Regeneration>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>троллиная отрыжка</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>каменные тролли</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>5</AddToArmour>
+					<AddToStrength>1</AddToStrength>
+					<SpecialRuleDescription>сопротивление магии (2)</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>речные тролли</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<PerModel>true</PerModel>
+					<SpecialRuleDescription>-1 на попадание</SpecialRuleDescription>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Катапульта пикирующих гоблинов</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>3</ModelsInPack>
+			<MainParam>
+				<Movement></Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>катапульта пикирующих гоблинов</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Педальный вагон снотлингов</Name>
+			<Points>40</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Stubborn>true</Stubborn>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>колесница</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Крути педали!</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Хрясь!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Гигант</Name>
+			<Points>205</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks></Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<Stubborn>true</Stubborn>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>большая цель</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>движение</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>падение</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>специальные атаки гиганта</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+	</Units>
 </ArmyBook>

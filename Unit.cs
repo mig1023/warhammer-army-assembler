@@ -26,6 +26,7 @@ namespace WarhammerArmyAssembler
         public int Size { get; set; }
         public int MinSize { get; set; }
         public int MaxSize { get; set; }
+        public int ModelsInPack { get; set; }
 
         public int Points { get; set; }
 
@@ -123,6 +124,7 @@ namespace WarhammerArmyAssembler
             newUnit.Size = this.Size;
             newUnit.MinSize = this.MinSize;
             newUnit.MaxSize = this.MaxSize;
+            newUnit.ModelsInPack = this.ModelsInPack;
             newUnit.Points = this.Points;
             newUnit.MountOn = this.MountOn;
             newUnit.MountInit = this.MountInit;
@@ -251,13 +253,20 @@ namespace WarhammerArmyAssembler
                             option.Realised = false;
                         else
                         {
-                            if (Army.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
-                                realise = true;
-                            else
+                            int optionPoints = (option.PerModel ? option.Points * Army.Units[unitID].Size : option.Points);
+
+                            if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
                             {
                                 Interface.Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(Army.Units[unitID].Type)));
                                 return;
                             }
+                            else if (!Interface.EnoughUnitPointsForAddOption(optionPoints))
+                            {
+                                Interface.Error(String.Format("Количество очков недостаточно для добавления", Army.UnitTypeName(Army.Units[unitID].Type)));
+                                return;
+                            }
+                            else
+                                realise = true;
                         }
                     }
 

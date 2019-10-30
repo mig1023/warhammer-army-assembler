@@ -97,8 +97,16 @@ namespace WarhammerArmyAssembler
             int size = 0;
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            {
+                int modelsInPack = entry.Value.ModelsInPack;
+
+                foreach (Option option in entry.Value.Options)
+                    if (option.IsOption() && (option.AddToModelsInPack > 0) && option.Realised)
+                        modelsInPack += option.AddToModelsInPack;
+
                 if (!((entry.Value.Type == Unit.UnitType.Mount) && (entry.Value.Wounds <= 1)))
-                    size += entry.Value.Size;
+                    size += entry.Value.Size * modelsInPack;
+            }
 
             return size;
         }

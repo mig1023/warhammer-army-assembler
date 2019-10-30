@@ -61,6 +61,7 @@ namespace WarhammerArmyAssembler
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
 
+        public int AddToModelsInPack { get; set; }
         public bool FullCommand { get; set; }
 
         public string[] SpecialRuleDescription { get; set; }
@@ -149,6 +150,7 @@ namespace WarhammerArmyAssembler
             newOption.AddToCast = this.AddToCast;
             newOption.AddToDispell = this.AddToDispell;
 
+            newOption.AddToModelsInPack = this.AddToModelsInPack;
             newOption.FullCommand = this.FullCommand;
 
             newOption.Mount = this.Mount;
