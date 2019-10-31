@@ -190,11 +190,11 @@ namespace WarhammerArmyAssembler
             return dispell;
         }
 
-        public static int OptionAlreadyUsed(int id)
+        public static int OptionAlreadyUsed(string optionName)
         {
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
                 foreach (Option option in entry.Value.Options)
-                    if ((option.ID == id) && option.Realised)
+                    if ((option.Name == optionName) && option.Realised)
                         return entry.Key;
 
             return 0;

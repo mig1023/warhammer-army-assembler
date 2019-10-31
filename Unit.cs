@@ -423,14 +423,15 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
-        public bool IsAnotherOptionRealised(string optionName, bool defaultResult)
+        public bool IsAnotherOptionRealised(string[] optionNames, bool defaultResult)
         {
-            if (String.IsNullOrEmpty(optionName))
+            if (optionNames.Length <= 0)
                 return defaultResult;
 
-            foreach (Option option in Options)
-                if ((option.Name == optionName) && option.Realised)
-                    return true;
+            foreach (string optionName in optionNames)
+                foreach (Option option in Options)
+                    if ((option.Name == optionName) && option.Realised)
+                        return true;
 
             return false;
         }

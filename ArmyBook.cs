@@ -191,11 +191,14 @@ namespace WarhammerArmyAssembler
             return xmlNode.InnerText.Replace("|", "\n");
         }
 
-        private static string[] AllStringParse(XmlNode xmlNode)
+        private static string[] AllStringParse(XmlNode xmlNode, string nodeName)
         {
+            if (xmlNode == null)
+                return new string[] { };
+
             List<string> allString = new List<string>();
 
-            foreach (XmlNode xmlSpecialRule in xmlNode.SelectNodes("SpecialRuleDescription"))
+            foreach (XmlNode xmlSpecialRule in xmlNode.SelectNodes(nodeName))
                 allString.Add(xmlSpecialRule.InnerText);
 
             return allString.ToArray();
@@ -286,14 +289,14 @@ namespace WarhammerArmyAssembler
             newWeapon.Description = StringParse(xmlNode["Description"]);
             newWeapon.Type = OptionTypeParse(xmlNode["Type"]);
             newWeapon.OnlyFor = OnlyForParse(xmlNode["OnlyFor"]);
-            newWeapon.OnlyIfAnotherService = StringParse(xmlNode["OnlyIfAnotherService"]);
-            newWeapon.OnlyIfNotAnotherService = StringParse(xmlNode["OnlyIfNotAnotherService"]);
+            newWeapon.OnlyIfAnotherService = AllStringParse(xmlNode["OnlyIfAnotherService"], "OnlyIf");
+            newWeapon.OnlyIfNotAnotherService = AllStringParse(xmlNode["OnlyIfAnotherService"], "OnlyIfNot");
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
             newWeapon.OrdinaryArtefact = BoolParse(xmlNode["OrdinaryArtefact"]);
             newWeapon.OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]);
 
-            newWeapon.SpecialRuleDescription = AllStringParse(xmlNode);
+            newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
 
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);

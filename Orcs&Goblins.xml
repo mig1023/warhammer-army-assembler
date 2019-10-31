@@ -475,7 +475,9 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>6</Points>
-					<OnlyIfNotAnotherService>Чёрный Орк</OnlyIfNotAnotherService>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Чёрный Орк</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>парная чоппа</Name>
@@ -501,7 +503,9 @@
 					<Type>Option</Type>
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>Чёрный Орк</OnlyIfAnotherService>
+					<OnlyIfAnotherService>
+						<OnlyIf>Чёрный Орк</OnlyIf>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>щит</Name>
@@ -665,7 +669,9 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Mount>true</Mount>
-					<OnlyIfAnotherService>Ночной Гоблин</OnlyIfAnotherService>
+					<OnlyIfAnotherService>
+						<OnlyIf>Ночной Гоблин</OnlyIf>
+					</OnlyIfAnotherService>
 				</Option>
 			</Options>
 		</Hero>
@@ -764,11 +770,27 @@
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 				</Option>
 				<Option>
+					<Name>знаменосец армии</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>двуручное оружие</OnlyIfNot>
+						<OnlyIfNot>парная чоппа</OnlyIfNot>
+						<OnlyIfNot>копьё</OnlyIfNot>
+						<OnlyIfNot>щит</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
 					<Name>двуручное оружие</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>4</Points>
-					<OnlyIfNotAnotherService>Чёрный Орк</OnlyIfNotAnotherService>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Чёрный Орк</OnlyIfNot>
+						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>парная чоппа</Name>
@@ -776,12 +798,18 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>копьё</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>лёгкий доспех</Name>
@@ -794,13 +822,18 @@
 					<Type>Option</Type>
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>Чёрный Орк</OnlyIfAnotherService>
+					<OnlyIfAnotherService>
+						<OnlyIf>Чёрный Орк</OnlyIf>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>щит</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>5</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Кабан</Name>
@@ -899,10 +932,26 @@
 					<AddToLeadership>-1</AddToLeadership>
 				</Option>
 				<Option>
+					<Name>знаменосец армии</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>двуручное оружие</OnlyIfNot>
+						<OnlyIfNot>парное оружие</OnlyIfNot>
+						<OnlyIfNot>копьё</OnlyIfNot>
+						<OnlyIfNot>щит</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
 					<Name>двуручное оружие</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>парное оружие</Name>
@@ -910,12 +959,18 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>копьё</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>лёгкий доспех</Name>
@@ -928,6 +983,9 @@
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>5</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Волк</Name>
@@ -946,7 +1004,9 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Mount>true</Mount>
-					<OnlyIfAnotherService>Ночной Гоблин</OnlyIfAnotherService>
+					<OnlyIfAnotherService>
+						<OnlyIf>Ночной Гоблин</OnlyIf>
+					</OnlyIfAnotherService>
 				</Option>
 			</Options>
 		</Hero>

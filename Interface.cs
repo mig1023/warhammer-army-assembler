@@ -138,11 +138,8 @@ namespace WarhammerArmyAssembler
 
                 foreach (Option option in unit.Options)
                 {
-                    bool canBeUsed = (
-                        !option.OnlyOneInArmy ||
-                        (Army.OptionAlreadyUsed(option.ID) == 0) ||
-                        (Army.OptionAlreadyUsed(option.ID) == unitID)
-                    );
+                    int alredyUsedBy = (option.OnlyOneInArmy ? Army.OptionAlreadyUsed(option.Name) : 0);
+                    bool canBeUsed = (!option.OnlyOneInArmy || (alredyUsedBy == 0) || (alredyUsedBy == unitID));
 
                     if (option.IsOption() && !option.FullCommand && canBeUsed)
                     {

@@ -20,8 +20,8 @@ namespace WarhammerArmyAssembler
         public string IDView { get; set; }
         public OptionType Type { get; set; }
         public OnlyForType OnlyFor { get; set; }
-        public string OnlyIfAnotherService { get; set; }
-        public string OnlyIfNotAnotherService { get; set; }
+        public string[] OnlyIfAnotherService { get; set; }
+        public string[] OnlyIfNotAnotherService { get; set; }
 
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
