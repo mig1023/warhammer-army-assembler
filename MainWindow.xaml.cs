@@ -195,6 +195,9 @@ namespace WarhammerArmyAssembler
             mainGrid.Height = e.NewSize.Height;
             mainGrid.Width = e.NewSize.Width;
 
+            mainPlaceCanvas.Height = e.NewSize.Height;
+            mainPlaceCanvas.Width = e.NewSize.Width;
+
             unitDetailScroll.Height = e.NewSize.Height - 70;
             unitDetailScroll.Margin = new Thickness(e.NewSize.Width - unitDetailScroll.Width, 70, 0, 0);
             unitDetailScrollHead.Margin = Interface.Thick(unitDetailScroll, top: 0);
@@ -207,7 +210,15 @@ namespace WarhammerArmyAssembler
 
         private void closeDetail_Click(object sender, RoutedEventArgs e)
         {
+            if (mainPlaceCanvas.Margin.Top > 0)
+                Interface.Move(Interface.MovingType.ToMain, err: true);
+
             Interface.Move(Interface.MovingType.ToMain);
+        }
+
+        private void closeErrorDetail_Click(object sender, RoutedEventArgs e)
+        {
+            Interface.Move(Interface.MovingType.ToMain, err: true);
         }
 
         private void unitDelete_MouseDown(object sender, MouseButtonEventArgs e)

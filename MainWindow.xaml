@@ -6,149 +6,149 @@
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
         Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="992.809">
-    
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
-        
-        <Canvas  x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-            <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
-        </Canvas>
-        
-        <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
-            <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-                <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
-                <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
-            </Canvas>
-        </ScrollViewer>
-        
-        <Canvas  x:Name="unitDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-            <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
-        </Canvas>
-        
-        <ScrollViewer x:Name="unitDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto">
-            <Canvas x:Name="unitDetail" Width="320" Height="50" Background="White" VerticalAlignment="Top">
-                <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,5"/>
-                <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
-            </Canvas>
-        </ScrollViewer>
-        
+
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
-            <Button x:Name="closeErrorDetail" Content="Закрыть" Height="30" Width="154" Click="closeDetail_Click"/>
+            <Button x:Name="closeErrorDetail" Content="Закрыть" Height="30" Width="154" Click="closeErrorDetail_Click"/>
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
         
-        <Grid x:Name="mainGrid">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="Auto"></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="320"></ColumnDefinition>
-                <ColumnDefinition Width="auto"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+        <Canvas x:Name="mainPlaceCanvas">
 
-            <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <TreeView.Resources>
-                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White" />
-                </TreeView.Resources>
-                <TreeView.ItemTemplate>
-                    <HierarchicalDataTemplate ItemsSource="{Binding Items}">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock">
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding GroopBold}" Value="True">
-                                                <Setter Property="FontWeight" Value="Bold"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding ArtefactAlreadyUsed}" Value="True">
-                                                <Setter Property="TextBlock.TextDecorations" Value="Strikethrough"/>
-                                                <Setter Property="TextBlock.Foreground" Value="Gray"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding OrdinaryArtefact}" Value="True">
-                                                <Setter Property="Foreground" Value="Gray"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding PersonifiedHero}" Value="True">
-                                                <Setter Property="Foreground" Value="Gray"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
-                            <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="{Binding InterfaceColor}"/>
-                        </StackPanel>
-                    </HierarchicalDataTemplate>
-                </TreeView.ItemTemplate>
-            </TreeView>
+            <Canvas  x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
+                <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
+            </Canvas>
+            <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
+                <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
+                    <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
+                    <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
+                </Canvas>
+            </ScrollViewer>
 
-            <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <Canvas  x:Name="unitDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
+                <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
+            </Canvas>
+            <ScrollViewer x:Name="unitDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto">
+                <Canvas x:Name="unitDetail" Width="320" Height="50" Background="White" VerticalAlignment="Top">
+                    <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,5"/>
+                    <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
+                </Canvas>
+            </ScrollViewer>
 
-            <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" CanUserAddRows="False" GridLinesVisibility="None"
-                      AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
-                      LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False">
-                <DataGrid.Resources>
-                    <Style TargetType="DataGridColumnHeader">
-                        <Setter Property="FontSize" Value="12"/>
-                    </Style>
-                </DataGrid.Resources>
-                <DataGrid.Columns>
-                    <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding IDView}"/>
-                    <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="45">
-                        <DataGridTextColumn.CellStyle>
-                            <Style>
-                                <Setter Property="UIElement.IsEnabled" Value="{Binding SizableType}" />
-                            </Style>
-                        </DataGridTextColumn.CellStyle>
-                    </DataGridTextColumn>
-                    <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="S" Binding="{Binding StrengthView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="T" Binding="{Binding ToughnessView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="W" Binding="{Binding WoundsView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="I" Binding="{Binding InitiativeView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="A" Binding="{Binding AttacksView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="LD" Binding="{Binding LeadershipView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="35" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Очки" Binding="{Binding PointsView}" Width="60" IsReadOnly="True"/>
-                    <DataGridTextColumn Header="Особые правила" Binding="{Binding RulesView}" Width="0.5*" IsReadOnly="True">
-                        <DataGridTextColumn.ElementStyle>
-                            <Style TargetType="{x:Type TextBlock}">
-                                <Setter Property="TextWrapping" Value="Wrap"/>
-                                <Setter Property="FontSize" Value="10"/>
-                            </Style>
-                        </DataGridTextColumn.ElementStyle>
-                    </DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-
-            <GridSplitter Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-
-            <Grid Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
+            <Grid x:Name="mainGrid">
                 <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.7*"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="0.7*"></ColumnDefinition>
-                    <ColumnDefinition Width="0.6*"></ColumnDefinition>
-                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
-                    <ColumnDefinition Width="0.4*"></ColumnDefinition>
-                    <ColumnDefinition Width="70"></ColumnDefinition>
+                    <ColumnDefinition Width="320"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="Героев:" Height="30" Width="Auto" FontSize="12"/>
-                <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Отрядов:" Height="30" Width="Auto" FontSize="12"/>
-                <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Content="Очков:" Height="30" Width="Auto" FontSize="12"/>
-                <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Content="Моделей:" Height="30" Width="Auto" FontSize="12"/>
-                <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="Каст:" Height="30" Width="Auto" FontSize="12"/>
-                <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="Диспелл:" Height="30" Width="Auto" FontSize="12"/>
-                <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" Content="[ удалить ]" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
+                <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TreeView.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White" />
+                    </TreeView.Resources>
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding Items}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding GroopBold}" Value="True">
+                                                    <Setter Property="FontWeight" Value="Bold"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding ArtefactAlreadyUsed}" Value="True">
+                                                    <Setter Property="TextBlock.TextDecorations" Value="Strikethrough"/>
+                                                    <Setter Property="TextBlock.Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding OrdinaryArtefact}" Value="True">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding PersonifiedHero}" Value="True">
+                                                    <Setter Property="Foreground" Value="Gray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="{Binding InterfaceColor}"/>
+                            </StackPanel>
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+                </TreeView>
+
+                <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+                <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" CanUserAddRows="False" GridLinesVisibility="None"
+                          AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
+                          LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False">
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="FontSize" Value="12"/>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Visibility="Hidden" Header="ID" Binding="{Binding IDView}"/>
+                        <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="45">
+                            <DataGridTextColumn.CellStyle>
+                                <Style>
+                                    <Setter Property="UIElement.IsEnabled" Value="{Binding SizableType}" />
+                                </Style>
+                            </DataGridTextColumn.CellStyle>
+                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="S" Binding="{Binding StrengthView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="T" Binding="{Binding ToughnessView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="W" Binding="{Binding WoundsView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="I" Binding="{Binding InitiativeView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="A" Binding="{Binding AttacksView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="LD" Binding="{Binding LeadershipView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="35" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Очки" Binding="{Binding PointsView}" Width="60" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Особые правила" Binding="{Binding RulesView}" Width="0.5*" IsReadOnly="True">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Setter Property="TextWrapping" Value="Wrap"/>
+                                    <Setter Property="FontSize" Value="10"/>
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <GridSplitter Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+                <Grid Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.7*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.6*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="Героев:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Отрядов:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Content="Очков:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Content="Моделей:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="Каст:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="Диспелл:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" Content="[ удалить ]" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
+                </Grid>
             </Grid>
-        </Grid>
+        </Canvas>
     </Canvas>
 </Window>

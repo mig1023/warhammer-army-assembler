@@ -507,7 +507,7 @@ namespace WarhammerArmyAssembler
         {
             main.errorText.Content = text;
 
-            Move(MovingType.ToTop);
+            Move(MovingType.ToTop, err: true);
         }
 
         private static void HideAllDetails()
@@ -517,36 +517,40 @@ namespace WarhammerArmyAssembler
             main.armybookDetail.Visibility = Visibility.Hidden;
         }
 
-        public static void Move(MovingType moveTo)
+        public static void Move(MovingType moveTo, bool err = false)
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
+
+            if (!err)
+                HideAllDetails();
 
             if (moveTo == MovingType.ToLeft)
             {
                 newPosition = new Thickness(320, 0, 0, 0);
-                HideAllDetails();
                 main.armybookDetail.Visibility = Visibility.Visible;
             }
                 
             if (moveTo == MovingType.ToRight)
             {
                 newPosition = new Thickness(-320, 0, 0, 0);
-                HideAllDetails();
                 main.unitDetail.Visibility = Visibility.Visible;
             }
 
             if (moveTo == MovingType.ToTop)
             {
                 newPosition = new Thickness(0, 50, 0, 0);
-                HideAllDetails();
                 main.errorDetail.Visibility = Visibility.Visible;
             }
 
             ThicknessAnimation move = new ThicknessAnimation();
             move.Duration = TimeSpan.FromSeconds(0.2);
-            move.From = main.mainGrid.Margin;
+            move.From = (err ? main.mainPlaceCanvas.Margin : main.mainGrid.Margin);
             move.To = newPosition;
-            main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
+
+            if (err)
+                main.mainPlaceCanvas.BeginAnimation(FrameworkElement.MarginProperty, move);
+            else
+                main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
         }
 
         public static void SetArtefactAlreadyUsed(int id, bool value)
