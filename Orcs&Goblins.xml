@@ -525,6 +525,12 @@
 					<Points>200</Points>
 					<Mount>true</Mount>
 				</Option>
+				<Option>
+					<Name>Кабанья колесница</Name>
+					<Type>Option</Type>
+					<Points>80</Points>
+					<Mount>true</Mount>
+				</Option>
 			</Options>
 		</Hero>
 		<Hero>
@@ -577,6 +583,12 @@
 					<Name>Виверна</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Кабанья колесница</Name>
+					<Type>Option</Type>
+					<Points>80</Points>
 					<Mount>true</Mount>
 				</Option>
 			</Options>
@@ -673,6 +685,12 @@
 						<OnlyIf>Ночной Гоблин</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
+				<Option>
+					<Name>Волчья колесница</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
+					<Mount>true</Mount>
+				</Option>
 			</Options>
 		</Hero>
 		<Hero>
@@ -725,6 +743,12 @@
 					<Name>Волк</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Волчья колесница</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
 					<Mount>true</Mount>
 				</Option>
 			</Options>
@@ -839,6 +863,12 @@
 					<Name>Кабан</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Кабанья колесница</Name>
+					<Type>Option</Type>
+					<Points>80</Points>
 					<Mount>true</Mount>
 				</Option>
 			</Options>
@@ -1008,10 +1038,16 @@
 						<OnlyIf>Ночной Гоблин</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
+				<Option>
+					<Name>Волчья колесница</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
+					<Mount>true</Mount>
+				</Option>
 			</Options>
 		</Hero>
 		<Hero>
-			<Type>Lord</Type>
+			<Type>Hero</Type>
 			<Name>Гоблин-Шаман</Name>
 			<Mage>1</Mage>
 			<Points>55</Points>
@@ -1060,6 +1096,12 @@
 					<Name>Волк</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Волчья колесница</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
 					<Mount>true</Mount>
 				</Option>
 			</Options>
@@ -1226,6 +1268,7 @@
 			<Name>Волчья колесница</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
+			<ModelsInPack>5</ModelsInPack>
 			<MainParam>
 				<Movement>9</Movement>
 				<WeaponSkill>3</WeaponSkill>
@@ -1237,7 +1280,56 @@
 				<Attacks>1</Attacks>
 				<Leadership></Leadership>
 			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<RangedWeapon>
+					<Name>короткий лук</Name>
+				</RangedWeapon>
+				<Special>
+					<AddToArmour>5</AddToArmour>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Mount>
+		<Unit>
+			<Type>Mount</Type>
+			<Name>Кабанья колесница</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill></BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership></Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>чоппы</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>копья</Name>
+				</HandWeapon>
+				<Special>
+					<AddToArmour>4</AddToArmour>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Mounts>
 	<Units>
 		<Unit>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
-        Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="992.809">
+        Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="1000">
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
 
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
@@ -100,7 +100,7 @@
                                 </Style>
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" Width="*" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" Width="*" MinWidth="120" IsReadOnly="True"/>
                         <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillView}" Width="35" IsReadOnly="True"/>
@@ -113,7 +113,7 @@
                         <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="Очки" Binding="{Binding PointsView}" Width="60" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Особые правила" Binding="{Binding RulesView}" Width="0.5*" IsReadOnly="True">
+                        <DataGridTextColumn Header="Особые правила" Binding="{Binding RulesView}" Width="*" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="TextWrapping" Value="Wrap"/>

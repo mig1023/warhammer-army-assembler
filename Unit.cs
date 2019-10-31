@@ -175,7 +175,7 @@ namespace WarhammerArmyAssembler
             return newUnit;
         }
 
-        public string AddFromAnyOption(string name, bool reversParam = false)
+        public string AddFromAnyOption(string name, bool reversParam = false, bool mountParam = false)
         {
             PropertyInfo unitParam = typeof(Unit).GetProperty(name);
             object paramObject = unitParam.GetValue(this);
@@ -183,7 +183,12 @@ namespace WarhammerArmyAssembler
 
             string paramModView = String.Empty;
 
-            foreach (Option option in Options)
+            List<Option> allOption = new List<Option>(Options);
+
+            if (mountParam && (MountOn > 0))
+                allOption.AddRange(Army.Units[MountOn].Options);
+
+            foreach (Option option in allOption)
                 if (option.IsMagicItem() || (option.IsOption() && option.Realised))
                 {
                     PropertyInfo optionParam = typeof(Option).GetProperty(String.Format("AddTo{0}", name));
@@ -225,7 +230,7 @@ namespace WarhammerArmyAssembler
             unit.AttacksView = AddFromAnyOption("Attacks");
             unit.LeadershipView = AddFromAnyOption("Leadership");
 
-            unit.ArmourView = AddFromAnyOption("Armour", reversParam: true);
+            unit.ArmourView = AddFromAnyOption("Armour", reversParam: true, mountParam: true);
             unit.WardView = AddFromAnyOption("Ward", reversParam: true);
 
             return unit;
@@ -435,5 +440,6 @@ namespace WarhammerArmyAssembler
 
             return false;
         }
+
     }
 }
