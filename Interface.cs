@@ -150,7 +150,7 @@ namespace WarhammerArmyAssembler
 
                         topMargin += AddButton(option.Name, main.unitName.Margin.Left + (secondColumn ? 145 : 0), topMargin, 40,
                             String.Format("{0}|{1}", unitID, option.ID), option, width: 125, column: secondColumn,
-                            mountAlreadyOn: mountAlreadyOn);
+                            mountAlreadyOn: mountAlreadyOn, unit: unit);
 
                         buttonsNum += 1;
                     }
@@ -296,8 +296,8 @@ namespace WarhammerArmyAssembler
             return height;
         }
 
-        private static double AddButton(string caption, double left, double top, double height,
-            string id, Option option, double width, bool column = false, int mountAlreadyOn = 0)
+        private static double AddButton(string caption, double left, double top, double height, string id,
+            Option option, double width, bool column = false, int mountAlreadyOn = 0, Unit unit = null)
         {
             AddLabel(caption, left, top, height, (option.Realised ? true : false), option.Points, option.PerModel);
 
@@ -315,6 +315,16 @@ namespace WarhammerArmyAssembler
                 newButton.IsEnabled = false;
 
             if ((option.OnlyFor == Option.OnlyForType.Infantry) && (mountAlreadyOn > 0))
+                newButton.IsEnabled = false;
+
+            if (
+                    (unit != null)
+                    && (
+                        !unit.IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true)
+                        ||
+                        unit.IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false)
+                    )
+                )
                 newButton.IsEnabled = false;
 
             newButton.Margin = Thick(newButton, left + 2, top + 20);
