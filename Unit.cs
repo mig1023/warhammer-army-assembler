@@ -355,7 +355,7 @@ namespace WarhammerArmyAssembler
             Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
             {
                 ["ImmuneToPsychology"] = "иммунен к психологии",
-                ["Stubborn"] = "упорность",
+                ["Stubborn"] = "упорство",
                 ["Hate"] = "ненависть",
                 ["Fear"] = "страх",
                 ["Terror"] = "ужас",
