@@ -20,7 +20,7 @@
 			<Name>Меч Битвы</Name>
 			<Type>Weapon</Type>
 			<Points>15</Points>
-			<AddToAttacks>6</AddToAttacks>
+			<AddToAttacks>1</AddToAttacks>
 			<Description>+1 к Атакам</Description>
 			<OrdinaryArtefact>true</OrdinaryArtefact>
 		</Artefact>
@@ -224,6 +224,157 @@
 			<Points>5</Points>
 			<SpecialRuleDescription>бросок на атаки скакунов</SpecialRuleDescription>
 			<Description>Для того, чтобы атаковать носителя, скакуны всех типов, ездовые животные и звери, везущие колесницу должны выкинуть 6</Description>
+		</Artefact>
+
+		<Artefact>
+			<Name>Идол Горка</Name>
+			<Type>Arcane</Type>
+			<Points>50</Points>
+			<SpecialRuleDescription>+1 кубик на каст за подразделение в 24 дюймах</SpecialRuleDescription>
+			<SpecialRuleDescription>-1 кубик на диспелл за бегущее подразделение</SpecialRuleDescription>
+			<Description>+1 кубик на каст за каждое подразделение в 20+ моделей в 24 дюймах|-1 кубик на диспелл за бегущее подразделение в 20+ моделей в 24 дюймах </Description>
+		</Artefact>
+		<Artefact>
+			<Name>Посох хитрого воровства</Name>
+			<Type>Arcane</Type>
+			<Points>50</Points>
+			<SpecialRuleDescription>крадёт 1 кубик на каст у противника</SpecialRuleDescription>
+			<Description>в начале каждой фазы магии носитель может взять один кубик из пула противника и добавить в свой</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Посох Бадбуума</Name>
+			<Type>Arcane</Type>
+			<Points>40</Points>
+			<SpecialRuleDescription>+1 к броску на сотворение</SpecialRuleDescription>
+			<Description>+1 к броску на сотворение</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Краска "Вааагх!"</Name>
+			<Type>Arcane</Type>
+			<Points>10</Points>
+			<SpecialRuleDescription>+2 к броску на сотворение во время боя</SpecialRuleDescription>
+			<Description>+2 к броску на сотворение во время того как носитель находится в ближнем бою</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Магические мухоморы</Name>
+			<Type>Arcane</Type>
+			<Points>10</Points>
+			<SpecialRuleDescription>+D6 к броску на сотворение, одноразово</SpecialRuleDescription>
+			<Description>+D6 к броску на сотворение, одноразовый, если выпадает 1 то случается магическая ошибка</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Рог Ургока</Name>
+			<Type>Weapon</Type>
+			<Points>40</Points>
+			<SpecialRuleDescription>+1 к Лидерству своих отрядов</SpecialRuleDescription>
+			<SpecialRuleDescription>-1 к Лидерству отрядов противника</SpecialRuleDescription>
+			<Description>связанное залинание, Силы 3: по броску D6 все дружественные подразделения получают +1 к своему Лидерству, все отряды противника получают -1, если выпадает 1, то носитель получает попадание Силы 5 от которого не спасают доспехи</Description>
+		</Artefact>
+3		<Artefact>
+			<Name>Волынка рока</Name>
+			<Type>Weapon</Type>
+			<Points>35</Points>
+			<SpecialRuleDescription>один раз все всадники проходят тест на панику</SpecialRuleDescription>
+			<Description>один раз за игру все подразделения кавалерии противника, монстры и колесницы должны пройти тест на панику</Description>
+		</Artefact>
+3		<Artefact>
+			<Name>Кабан Железный загривок</Name>
+			<Type>Weapon</Type>
+			<Points>35</Points>
+			<SpecialRuleDescription>+D3 попаданий Силы 5 при нападении</SpecialRuleDescription>
+			<Description>при нападении кабан наносит D3 таранных попаданий с Силой 5 в дополнение к обычным атакам носителя</Description>
+		</Artefact>
+3		<Artefact>
+			<Name>Железная челюсть воеводы Имбада</Name>
+			<Type>Weapon</Type>
+			<Points>30</Points>
+			<KillingBlow>true</KillingBlow>
+			<Description>носитель может использовать правило смертельного удара</Description>
+		</Artefact>
+3		<Artefact>
+			<Name>Ботинки хвастливого орка</Name>
+			<Type>Weapon</Type>
+			<Points>30</Points>
+			<AddToAttacks>1</AddToAttacks>
+			<Description>+1 одна Атака</Description>
+		</Artefact>
+3		<Artefact>
+			<Name>Карта Маада</Name>
+			<Type>Weapon</Type>
+			<Points>25</Points>
+			<SpecialRuleDescription>по D6 выставляется как разведчик</SpecialRuleDescription>
+			<Description>перед расстановкой киньте D6: на 2-5 носитель выставляется как разведчик, на 1 - так же как и другие подразделения</Description>
+		</Artefact>
+3		<Artefact>
+			<Name>Серные шарики</Name>
+			<Type>Armour</Type>
+			<Points>25</Points>
+			<SpecialRuleDescription>D6 попаданий Силы 6 при гибели</SpecialRuleDescription>
+			<Description>если носитель погибает, то каждое подразделение к контакте с ним получает D6 попаданий Силы 6</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Симпотное колечко Нибблы</Name>
+			<Type>Armour</Type>
+			<Points>20</Points>
+			<SpecialRuleDescription>связанное заклинание "Удар в голову" Силы 3</SpecialRuleDescription>
+			<Description>связанное заклинание "Удар в голову" Силы 3, при каждом использовании надо кидать D6 и если выпадает 1, то носитель получает удар Силой 5 от которого не спасают доспехи</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Гриб Безумная шляпка</Name>
+			<Type>Weapon</Type>
+			<Points>20</Points>
+			<SpecialRuleDescription>переброс попаданий у фанатиков в перый ход</SpecialRuleDescription>
+			<Description>фанатики из подразделения с носителем могут перебросить попадания в перый ход после того как они выпрыгнули из подразделения</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Боевое варево Гриззли</Name>
+			<Type>Armour</Type>
+			<Points>15</Points>
+			<Hate>true</Hate>
+			<Frenzy>true</Frenzy>
+			<Description>перед началом битвы киньте кубик: на 1-2 носитель получает Тупость, на 3-4 - Ненависть ко всем, на 5-6 - Ненависть ко всем и Бешенство</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Знамя морочьего духа</Name>
+			<Type>Banner</Type>
+			<Points>50</Points>
+			<SpecialRuleDescription>+столько кубов на диспелл, сколько бонус за ряды</SpecialRuleDescription>
+			<Description>+столько кубов на диспелл, сколько бонус за ряды</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Огромное красное потёртое знамя</Name>
+			<Type>Banner</Type>
+			<Points>50</Points>
+			<SpecialRuleDescription>гоблины перебрасывают тесты на панику</SpecialRuleDescription>
+			<Description>все гоблины в 12 дюймах от носителя перебрасывают тест на панику</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Луна на палочке</Name>
+			<Type>Banner</Type>
+			<Points>50</Points>
+			<Stubborn>true</Stubborn>
+			<Description>все Ночные Гоблины в подразделении начинают использовать правило Упорство</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Знамя паука</Name>
+			<Type>Banner</Type>
+			<Points>50</Points>
+			<PoisonAttack>true</PoisonAttack>
+			<Description>все Гоблины в подразделении начинают использовать яд, как в ближнем бою, так и при стрельбе</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Знамя горочьего "Вааагха!"</Name>
+			<Type>Banner</Type>
+			<Points>25</Points>
+			<SpecialRuleDescription>D6 к дистанции нападения, одноразово</SpecialRuleDescription>
+			<Description>один раз подразделение может прибавить D6 к дистанции нападения</Description>
+		</Artefact>
+		<Artefact>
+			<Name>Знамя бойни</Name>
+			<Type>Banner</Type>
+			<Points>25</Points>
+			<SpecialRuleDescription>+1 к Атакам, одноразово</SpecialRuleDescription>
+			<Description>один раз подразделение может получить бонус в +1 к Атакам</Description>
 		</Artefact>
 	</Artefacts>
 	
