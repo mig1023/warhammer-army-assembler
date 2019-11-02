@@ -92,6 +92,7 @@
 		<Artefact>
 			<Name>Тесак "Ваагх!"</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Орк</OnlyForGroup>
 			<Points>100</Points>
 			<SpecialRuleDescription>все попадания автоматически наносят раны</SpecialRuleDescription>
 			<SpecialRuleDescription>без спас-бросков за броню</SpecialRuleDescription>
@@ -100,6 +101,7 @@
 		<Artefact>
 			<Name>Боевой топор Рагнаорка</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Орк</OnlyForGroup>
 			<Points>100</Points>
 			<SpecialRuleDescription>бонус к силе и атакам равный кол-ву бонусов за ряды подразденения</SpecialRuleDescription>
 			<Description>Носитель этого оружия считает бонус к Силе и Атакам равный Бонусу за ряды того подразделения к которому присоединился персонаж</Description>
@@ -107,6 +109,7 @@
 		<Artefact>
 			<Name>Кровавый топор Башши</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Орк</OnlyForGroup>
 			<Points>50</Points>
 			<AddToStrength>1</AddToStrength>
 			<Frenzy>true</Frenzy>
@@ -121,7 +124,7 @@
 		</Artefact>
 		<Artefact>
 			<Name>Череп Калота</Name>
-			<Type>Weapon</Type>
+			<Type>Arcane</Type>
 			<Points>40</Points>
 			<SpecialRuleDescription>смерть без каких-либо спас-бросков по тесту на Лидерство за каждое попадание</SpecialRuleDescription>
 			<Description>За каждое попадание  этим оружием противник должен пройти тест на Лидерство, если он провален, то противник умирает без каких либо спас-бросков, даже магических. Если тест пройден, то проводятся тесты на ранение как обычно. Только для Шаманов</Description>
@@ -145,6 +148,7 @@
 		<Artefact>
 			<Name>Клинок удара в спину</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>25</Points>
 			<PoisonAttack>true</PoisonAttack>
 			<SpecialRuleDescription>+1 к Силе за атаку во фланг</SpecialRuleDescription>
@@ -154,6 +158,7 @@
 		<Artefact>
 			<Name>Одноразовая бня Валлопы</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>15</Points>
 			<SpecialRuleDescription>Сила равна 10 один раз за игру</SpecialRuleDescription>
 			<Description>Один раз за игру оружие даст носителя Силу равную 10</Description>
@@ -170,6 +175,7 @@
 		<Artefact>
 			<Name>Хитрый штопор</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>10</Points>
 			<SpecialRuleDescription>-3 к спас-броску за доспехи</SpecialRuleDescription>
 			<Description>Раны, нанесённые этим оружие имеют модификатор к спас-браоску за доспехи в -3</Description>
@@ -177,6 +183,7 @@
 		<Artefact>
 			<Name>Кинжал удачи</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>5</Points>
 			<SpecialRuleDescription>+1 к Силе за каждый артефакт противника</SpecialRuleDescription>
 			<Description>+1 к Силе за каждый артефакт противника, которого атакует носитель</Description>
@@ -225,10 +232,10 @@
 			<SpecialRuleDescription>бросок на атаки скакунов</SpecialRuleDescription>
 			<Description>Для того, чтобы атаковать носителя, скакуны всех типов, ездовые животные и звери, везущие колесницу должны выкинуть 6</Description>
 		</Artefact>
-
 		<Artefact>
 			<Name>Идол Горка</Name>
 			<Type>Arcane</Type>
+			<OnlyForGroup>Орк</OnlyForGroup>
 			<Points>50</Points>
 			<SpecialRuleDescription>+1 кубик на каст за подразделение в 24 дюймах</SpecialRuleDescription>
 			<SpecialRuleDescription>-1 кубик на диспелл за бегущее подразделение</SpecialRuleDescription>
@@ -237,6 +244,7 @@
 		<Artefact>
 			<Name>Посох хитрого воровства</Name>
 			<Type>Arcane</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>50</Points>
 			<SpecialRuleDescription>крадёт 1 кубик на каст у противника</SpecialRuleDescription>
 			<Description>в начале каждой фазы магии носитель может взять один кубик из пула противника и добавить в свой</Description>
@@ -251,6 +259,7 @@
 		<Artefact>
 			<Name>Краска "Вааагх!"</Name>
 			<Type>Arcane</Type>
+			<OnlyForGroup>Орк</OnlyForGroup>
 			<Points>10</Points>
 			<SpecialRuleDescription>+2 к броску на сотворение во время боя</SpecialRuleDescription>
 			<Description>+2 к броску на сотворение во время того как носитель находится в ближнем бою</Description>
@@ -258,6 +267,7 @@
 		<Artefact>
 			<Name>Магические мухоморы</Name>
 			<Type>Arcane</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>10</Points>
 			<SpecialRuleDescription>+D6 к броску на сотворение, одноразово</SpecialRuleDescription>
 			<Description>+D6 к броску на сотворение, одноразовый, если выпадает 1 то случается магическая ошибка</Description>
@@ -273,6 +283,7 @@
 3		<Artefact>
 			<Name>Волынка рока</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>35</Points>
 			<SpecialRuleDescription>один раз все всадники проходят тест на панику</SpecialRuleDescription>
 			<Description>один раз за игру все подразделения кавалерии противника, монстры и колесницы должны пройти тест на панику</Description>
@@ -280,6 +291,7 @@
 3		<Artefact>
 			<Name>Кабан Железный загривок</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Орк</OnlyForGroup>
 			<Points>35</Points>
 			<SpecialRuleDescription>+D3 попаданий Силы 5 при нападении</SpecialRuleDescription>
 			<Description>при нападении кабан наносит D3 таранных попаданий с Силой 5 в дополнение к обычным атакам носителя</Description>
@@ -308,6 +320,7 @@
 3		<Artefact>
 			<Name>Серные шарики</Name>
 			<Type>Armour</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>25</Points>
 			<SpecialRuleDescription>D6 попаданий Силы 6 при гибели</SpecialRuleDescription>
 			<Description>если носитель погибает, то каждое подразделение к контакте с ним получает D6 попаданий Силы 6</Description>
@@ -322,6 +335,7 @@
 		<Artefact>
 			<Name>Гриб Безумная шляпка</Name>
 			<Type>Weapon</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>20</Points>
 			<SpecialRuleDescription>переброс попаданий у фанатиков в перый ход</SpecialRuleDescription>
 			<Description>фанатики из подразделения с носителем могут перебросить попадания в перый ход после того как они выпрыгнули из подразделения</Description>
@@ -337,6 +351,7 @@
 		<Artefact>
 			<Name>Знамя морочьего духа</Name>
 			<Type>Banner</Type>
+			<OnlyForGroup>Орк</OnlyForGroup>
 			<Points>50</Points>
 			<SpecialRuleDescription>+столько кубов на диспелл, сколько бонус за ряды</SpecialRuleDescription>
 			<Description>+столько кубов на диспелл, сколько бонус за ряды</Description>
@@ -344,6 +359,7 @@
 		<Artefact>
 			<Name>Огромное красное потёртое знамя</Name>
 			<Type>Banner</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>50</Points>
 			<SpecialRuleDescription>гоблины перебрасывают тесты на панику</SpecialRuleDescription>
 			<Description>все гоблины в 12 дюймах от носителя перебрасывают тест на панику</Description>
@@ -351,6 +367,7 @@
 		<Artefact>
 			<Name>Луна на палочке</Name>
 			<Type>Banner</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>50</Points>
 			<Stubborn>true</Stubborn>
 			<Description>все Ночные Гоблины в подразделении начинают использовать правило Упорство</Description>
@@ -358,6 +375,7 @@
 		<Artefact>
 			<Name>Знамя паука</Name>
 			<Type>Banner</Type>
+			<OnlyForGroup>Гоблин</OnlyForGroup>
 			<Points>50</Points>
 			<PoisonAttack>true</PoisonAttack>
 			<Description>все Гоблины в подразделении начинают использовать яд, как в ближнем бою, так и при стрельбе</Description>
@@ -382,6 +400,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Горбад Железный Коготь</Name>
+			<Group>Орк</Group>
 			<Points>310</Points>
 			<Description>Горбад Железный Коготь - орочий военочальник. Невероятно способный полководец, Горбад может вдохновить своих последователей на великие (и кровавые) деяния</Description>
 			<MinSize>1</MinSize>
@@ -424,6 +443,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Азхаг Мясник</Name>
+			<Group>Орк</Group>
 			<Mage>2</Mage>
 			<Points>450</Points>
 			<Description>Азхаг Мясник - орочий военочальник, отличная возможность соединить грубую силу орочьего военачальника со способностью мага</Description>
@@ -467,6 +487,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Гримгор Железная шкура</Name>
+			<Group>Орк</Group>
 			<Points>375</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero>true</PersonifiedHero>
@@ -505,6 +526,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Гром Брюхастый из Туманных гор</Name>
+			<Group>Гоблин</Group>
 			<Points>255</Points>
 			<MinSize>1</MinSize>
 			<Description>Гром является гоблином военачальником. Обладающий замечательной живучестью, Гром станет отличным предводителем, который поведёт орду Гоблинов к победе</Description>
@@ -541,6 +563,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Скарсинк, воевода Восьми Пиков</Name>
+			<Group>Гоблин</Group>
 			<Points>205</Points>
 			<MinSize>1</MinSize>
 			<Description>Скарсинк - воевода Ночных Гоблинов. Скарсинк устрашает кпротивника в ближнем бою, а его подлые планы ещё в самом начале игры могут привести неприятиля в замешательство</Description>
@@ -583,6 +606,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Орк-Воевода</Name>
+			<Group>Орк</Group>
 			<Points>115</Points>
 			<Description></Description>
 			<MinSize>1</MinSize>
@@ -687,6 +711,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Орк-Великий шаман</Name>
+			<Group>Орк</Group>
 			<Mage>3</Mage>
 			<Points>180</Points>
 			<MinSize>1</MinSize>
@@ -747,6 +772,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Гоблин-Воевода</Name>
+			<Group>Гоблин</Group>
 			<Points>65</Points>
 			<Description></Description>
 			<MinSize>1</MinSize>
@@ -847,6 +873,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Гоблин-Великий шаман</Name>
+			<Group>Гоблин</Group>
 			<Mage>3</Mage>
 			<Points>155</Points>
 			<MinSize>1</MinSize>
@@ -907,6 +934,7 @@
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Орк-Большой Босс</Name>
+			<Group>Орк</Group>
 			<Points>70</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1027,6 +1055,7 @@
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Орк-Шаман</Name>
+			<Group>Орк</Group>
 			<Mage>1</Mage>
 			<Points>60</Points>
 			<MinSize>1</MinSize>
@@ -1076,6 +1105,7 @@
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Гоблин-Большой Босс</Name>
+			<Group>Гоблин</Group>
 			<Points>35</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1200,6 +1230,7 @@
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Гоблин-Шаман</Name>
+			<Group>Гоблин</Group>
 			<Mage>1</Mage>
 			<Points>55</Points>
 			<MinSize>1</MinSize>
