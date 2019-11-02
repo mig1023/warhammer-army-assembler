@@ -150,7 +150,7 @@ namespace WarhammerArmyAssembler
 
             if (ArmyBook.Artefact.ContainsKey(id))
             {
-                bool usable = ArmyBook.Artefact[id].IsUsableByUnit(unit.MagicItemsType);
+                bool usable = ArmyBook.Artefact[id].IsUsableByUnit(unit.MagicItemsType, unit.Group);
                 e.Effects = ((unit.MagicItems > 0) && usable ? DragDropEffects.Copy : DragDropEffects.None);
             }
         }

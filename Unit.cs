@@ -17,6 +17,7 @@ namespace WarhammerArmyAssembler
         public enum MagicItemsTypes { Hero, Mage, Unit }
 
         public string Name { get; set; }
+        public string Group { get; set; }
         public int ID { get; set; }
         public string IDView { get; set; }
 
@@ -118,6 +119,7 @@ namespace WarhammerArmyAssembler
             Unit newUnit = new Unit();
 
             newUnit.Name = this.Name;
+            newUnit.Group = this.Group;
             newUnit.ID = this.ID;
             newUnit.IDView = this.IDView;
             newUnit.Type = this.Type;

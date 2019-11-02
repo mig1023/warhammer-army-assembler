@@ -22,10 +22,11 @@ namespace WarhammerArmyAssembler
         public OnlyForType OnlyFor { get; set; }
         public string[] OnlyIfAnotherService { get; set; }
         public string[] OnlyIfNotAnotherService { get; set; }
-
+        public bool OnlyOneInArmy { get; set; }
+        public string OnlyForGroup { get; set; }
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
-        public bool OnlyOneInArmy { get; set; }
+        
 
         public int Points { get; set; }
         public bool PerModel { get; set; }
@@ -124,6 +125,7 @@ namespace WarhammerArmyAssembler
             newOption.OnlyFor = this.OnlyFor;
             newOption.OnlyIfAnotherService = this.OnlyIfAnotherService;
             newOption.OnlyIfNotAnotherService = this.OnlyIfNotAnotherService;
+            newOption.OnlyForGroup = this.OnlyForGroup;
 
             newOption.HitFirst = this.HitFirst;
             newOption.KillingBlow = this.KillingBlow;
@@ -180,8 +182,11 @@ namespace WarhammerArmyAssembler
                 return false;
         }
 
-        public bool IsUsableByUnit(Unit.MagicItemsTypes unitType)
+        public bool IsUsableByUnit(Unit.MagicItemsTypes unitType, string unitGroup)
         {
+            if (!String.IsNullOrEmpty(OnlyForGroup) && !String.IsNullOrEmpty(unitGroup) && (OnlyForGroup != unitGroup))
+                return false;
+
             if ((unitType == Unit.MagicItemsTypes.Unit) && (Type != OptionType.Banner))
                 return false;
 

@@ -90,6 +90,7 @@ namespace WarhammerArmyAssembler
             newUnit.IDView = id.ToString();
 
             newUnit.Name = StringParse(xmlUnit["Name"]);
+            newUnit.Group = StringParse(xmlUnit["Group"]);
             newUnit.Type = UnitTypeParse(xmlUnit["Type"]);
             newUnit.Points = IntParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
@@ -291,10 +292,11 @@ namespace WarhammerArmyAssembler
             newWeapon.OnlyFor = OnlyForParse(xmlNode["OnlyFor"]);
             newWeapon.OnlyIfAnotherService = AllStringParse(xmlNode["OnlyIfAnotherService"], "OnlyIf");
             newWeapon.OnlyIfNotAnotherService = AllStringParse(xmlNode["OnlyIfAnotherService"], "OnlyIfNot");
+            newWeapon.OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]);
+            newWeapon.OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]);
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
             newWeapon.OrdinaryArtefact = BoolParse(xmlNode["OrdinaryArtefact"]);
-            newWeapon.OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]);
 
             newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
 

@@ -364,19 +364,19 @@ namespace WarhammerArmyAssembler
             {
                 Unit unit = container.DataContext as Unit;
 
-                if (!Interface.EnoughPointsForAddArtefact(id))
-                    Interface.Error("Количество очков недостаточно добавления предмета");
-                else if (!Interface.EnoughUnitPointsForAddArtefact(id, unit.ID))
-                    Interface.Error("Недостаточно очков магических предметов для добавления");
+                if (!EnoughPointsForAddArtefact(id))
+                    Error("Количество очков недостаточно добавления предмета");
+                else if (!EnoughUnitPointsForAddArtefact(id, unit.ID))
+                    Error("Недостаточно очков магических предметов для добавления");
                 else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unit.ID].Type, ArmyBook.Artefact[id].Points))
-                    Interface.Error("Для данного типа достигнут лимит затраты очков");
+                    Error("Для данного типа достигнут лимит затраты очков");
                 else
                 {
                     Army.Units[unit.ID].AddAmmunition(id);
-                    Interface.ReloadArmyData();
+                    ReloadArmyData();
 
                     if (!ArmyBook.Artefact[id].Multiple)
-                        Interface.SetArtefactAlreadyUsed(id, true);
+                        SetArtefactAlreadyUsed(id, true);
                 }
             }
         }
