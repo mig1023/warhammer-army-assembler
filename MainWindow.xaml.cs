@@ -224,7 +224,7 @@ namespace WarhammerArmyAssembler
         private void unitDelete_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                if (MessageBox.Show("Очистить армию?", String.Empty, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show("Очистить весь воинский лист?", String.Empty, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     Interface.AllUnitDelete();
         }
     }
