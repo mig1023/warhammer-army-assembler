@@ -12,7 +12,7 @@
             <Button x:Name="closeErrorDetail" Content="Закрыть" Height="30" Width="154" Click="closeErrorDetail_Click"/>
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
-        
+
         <Canvas x:Name="mainPlaceCanvas">
 
             <Canvas  x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
@@ -47,39 +47,58 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <TreeView x:Name="ArmyList" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <TreeView.Resources>
-                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White" />
-                    </TreeView.Resources>
-                    <TreeView.ItemTemplate>
-                        <HierarchicalDataTemplate ItemsSource="{Binding Items}">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown">
-                                    <TextBlock.Style>
-                                        <Style TargetType="TextBlock">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding GroopBold}" Value="True">
-                                                    <Setter Property="FontWeight" Value="Bold"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding ArtefactAlreadyUsed}" Value="True">
-                                                    <Setter Property="TextBlock.TextDecorations" Value="Strikethrough"/>
-                                                    <Setter Property="TextBlock.Foreground" Value="Gray"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding OrdinaryArtefact}" Value="True">
-                                                    <Setter Property="Foreground" Value="Gray"/>
-                                                </DataTrigger>
-                                                <DataTrigger Binding="{Binding PersonifiedHero}" Value="True">
-                                                    <Setter Property="Foreground" Value="Gray"/>
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </TextBlock.Style>
-                                </TextBlock>
-                                <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="{Binding InterfaceColor}"/>
-                            </StackPanel>
-                        </HierarchicalDataTemplate>
-                    </TreeView.ItemTemplate>
-                </TreeView>
+                <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="28"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Canvas Grid.Row="0" Grid.Column="0" Background="White">
+                        <Button x:Name="armyMenu" Content="Армия" Canvas.Left="2" Canvas.Top="2" Height="24" Width="102"/>
+                        <Button x:Name="exportMenu" Content="Экпорт" Canvas.Left="109" Canvas.Top="2" Height="24" Width="101"/>
+                        <Button x:Name="saveMenu" Content="Сохранить" Canvas.Left="215" Canvas.Top="2" Height="24" Width="101"/>
+                    </Canvas>
+
+                    <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+                    <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <TreeView.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White" />
+                        </TreeView.Resources>
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Items}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding GroopBold}" Value="True">
+                                                        <Setter Property="FontWeight" Value="Bold"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding ArtefactAlreadyUsed}" Value="True">
+                                                        <Setter Property="TextBlock.TextDecorations" Value="Strikethrough"/>
+                                                        <Setter Property="TextBlock.Foreground" Value="Gray"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding OrdinaryArtefact}" Value="True">
+                                                        <Setter Property="Foreground" Value="Gray"/>
+                                                    </DataTrigger>
+                                                    <DataTrigger Binding="{Binding PersonifiedHero}" Value="True">
+                                                        <Setter Property="Foreground" Value="Gray"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding PointsView}" MouseDown="UnitInArmyList_MouseDown" Foreground="{Binding InterfaceColor}"/>
+                                </StackPanel>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                    </TreeView>
+                </Grid>
 
                 <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
