@@ -23,6 +23,8 @@ namespace WarhammerArmyAssembler
         public static Brush AdditionalColor = null;
         public static Brush BackgroundColor = null;
 
+        public static Dictionary<string, string> AllArmyBooks = new Dictionary<string, string>();
+
         public static int GetNextIndex()
         {
             return MaxIDindex++;
@@ -263,6 +265,8 @@ namespace WarhammerArmyAssembler
 
         public static List<string> GetAllXmlArmyBooks()
         {
+            AllArmyBooks.Clear();
+
             List<string> allXmlFiles = FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
 
             List<string> allXmlArmyBooks = new List<string>();
@@ -274,6 +278,8 @@ namespace WarhammerArmyAssembler
 
                 XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
                 allXmlArmyBooks.Add(armyName.InnerText);
+
+                AllArmyBooks.Add(armyName.InnerText, xmlName);
             }
 
             return allXmlArmyBooks;

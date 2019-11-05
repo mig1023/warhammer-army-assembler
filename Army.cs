@@ -10,7 +10,7 @@ namespace WarhammerArmyAssembler
     {
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
 
-        private static int MaxPoints = 2000;
+        public static int MaxPoints = 2000;
 
         private static int MaxIDindex = 0;
 

@@ -28,6 +28,9 @@ namespace WarhammerArmyAssembler
 
             Interface.main = this;
 
+            foreach (string armybook in ArmyBook.GetAllXmlArmyBooks())
+                listArmybook.Items.Add(armybook);
+
             ArmyBook.LoadArmy("Orcs&Goblins.xml");
 
             Interface.LoadArmyList();
@@ -67,7 +70,7 @@ namespace WarhammerArmyAssembler
                 (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) + 20;
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                Interface.Move(Interface.MovingType.ToLeft);
+                Interface.Move(Interface.MovingType.ToLeft, armybookDetailScroll);
 
             if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
                 return;
@@ -176,7 +179,7 @@ namespace WarhammerArmyAssembler
             Interface.UpdateUnitDescription(unit.ID, unit);
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                Interface.Move(Interface.MovingType.ToRight);
+                Interface.Move(Interface.MovingType.ToRight, unitDetailScroll);
 
             Interface.DragSender = sender;
 
@@ -203,6 +206,7 @@ namespace WarhammerArmyAssembler
             unitDetailScrollHead.Margin = Interface.Thick(unitDetailScroll, top: 0);
 
             armybookDetailScroll.Height = e.NewSize.Height - 70;
+            menuArmybookScroll.Height = e.NewSize.Height - 70;
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
@@ -226,6 +230,25 @@ namespace WarhammerArmyAssembler
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
                 if (MessageBox.Show("Очистить весь воинский лист?", String.Empty, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     Interface.AllUnitDelete();
+        }
+
+        private void armyMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
+        }
+
+        private void buttonArmybook_Click(object sender, RoutedEventArgs e)
+        {
+            string selectedArmyBook = listArmybook.SelectedItem.ToString();
+
+            ArmyBook.LoadArmy(ArmyBook.AllArmyBooks[selectedArmyBook]);
+
+            Army.MaxPoints = Interface.IntParse(listArmybookPoints.Text);
+
+            Interface.LoadArmyList();
+            Interface.ReloadArmyData();
+
+            Interface.Move(Interface.MovingType.ToMain);
         }
     }
 }

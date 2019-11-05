@@ -25,6 +25,15 @@
                 </Canvas>
             </ScrollViewer>
 
+            <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="167" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
+                <Canvas x:Name="menuArmybookPlace" Width="320" Height="308" VerticalAlignment="Top" Background="White">
+                    <Label x:Name="labelArmybook" Content="Выберите армибук" Foreground="White" Background="Gray" Width="Auto" Margin="18,5"/>
+                    <ListBox x:Name="listArmybook" Height="156" Width="282" Canvas.Left="18" Canvas.Top="40"/>
+                    <TextBox x:Name="listArmybookPoints" Height="24" TextWrapping="Wrap" Text="2000" Width="282" Canvas.Left="18" Canvas.Top="211"/>
+                    <Button x:Name="buttonArmybook" Content="Выбрать" Height="28" Width="95" Canvas.Left="18" Canvas.Top="251" Click="buttonArmybook_Click"/>
+                </Canvas>
+            </ScrollViewer>
+
             <Canvas  x:Name="unitDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
                 <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
             </Canvas>
@@ -58,12 +67,12 @@
                     </Grid.ColumnDefinitions>
 
                     <Canvas Grid.Row="0" Grid.Column="0" Background="White">
-                        <Button x:Name="armyMenu" Content="Армия" Canvas.Left="2" Canvas.Top="2" Height="24" Width="102"/>
-                        <Button x:Name="exportMenu" Content="Экпорт" Canvas.Left="109" Canvas.Top="2" Height="24" Width="101"/>
-                        <Button x:Name="saveMenu" Content="Сохранить" Canvas.Left="215" Canvas.Top="2" Height="24" Width="101"/>
+                        <Button x:Name="armyMenu" Content="Армия" Canvas.Left="2" Canvas.Top="2" Height="24" Width="102" Click="armyMenu_Click"/>
+                        <Button x:Name="button2Menu" Content="Кнопка 2" Canvas.Left="109" Canvas.Top="2" Height="24" Width="101"/>
+                        <Button x:Name="button3Menu" Content="Кнопка 3" Canvas.Left="215" Canvas.Top="2" Height="24" Width="101"/>
                     </Canvas>
 
-                    <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                    <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
                     <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <TreeView.Resources>

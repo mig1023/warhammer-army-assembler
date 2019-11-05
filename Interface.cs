@@ -35,6 +35,10 @@ namespace WarhammerArmyAssembler
 
         public static void LoadArmyList()
         {
+            main.ArmyList.Items.Clear();
+
+            AllUnitDelete();
+
             List<Unit> categories = GetArmyCategories();
 
             foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)
@@ -519,12 +523,12 @@ namespace WarhammerArmyAssembler
 
         private static void HideAllDetails()
         {
-            main.errorDetail.Visibility = Visibility.Hidden;
-            main.unitDetail.Visibility = Visibility.Hidden;
-            main.armybookDetail.Visibility = Visibility.Hidden;
+            main.armybookDetailScroll.Visibility = Visibility.Hidden;
+            main.unitDetailScroll.Visibility = Visibility.Hidden;
+            main.menuArmybookScroll.Visibility = Visibility.Hidden;
         }
 
-        public static void Move(MovingType moveTo, bool err = false)
+        public static void Move(MovingType moveTo, ScrollViewer toOpen = null, bool err = false)
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
@@ -532,22 +536,16 @@ namespace WarhammerArmyAssembler
                 HideAllDetails();
 
             if (moveTo == MovingType.ToLeft)
-            {
                 newPosition = new Thickness(320, 0, 0, 0);
-                main.armybookDetail.Visibility = Visibility.Visible;
-            }
                 
             if (moveTo == MovingType.ToRight)
-            {
                 newPosition = new Thickness(-320, 0, 0, 0);
-                main.unitDetail.Visibility = Visibility.Visible;
-            }
 
             if (moveTo == MovingType.ToTop)
-            {
                 newPosition = new Thickness(0, 50, 0, 0);
-                main.errorDetail.Visibility = Visibility.Visible;
-            }
+
+            if (toOpen != null)
+                toOpen.Visibility = Visibility.Visible;
 
             ThicknessAnimation move = new ThicknessAnimation();
             move.Duration = TimeSpan.FromSeconds(0.2);
