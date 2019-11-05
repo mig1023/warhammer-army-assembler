@@ -39,6 +39,11 @@ namespace WarhammerArmyAssembler
 
             AllUnitDelete();
 
+            main.armyMainLabel.Content = Army.ArmyName;
+            main.armyMainLabel.Foreground = Brushes.White;
+            main.armyMainLabel.Background = ArmyBook.MainColor;
+            //main.armyMainLabelPlace.Background = ArmyBook.MainColor;
+
             List<Unit> categories = GetArmyCategories();
 
             foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)

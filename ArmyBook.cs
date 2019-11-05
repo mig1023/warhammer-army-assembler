@@ -37,6 +37,8 @@ namespace WarhammerArmyAssembler
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
+            Army.ArmyName = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName"));
+
             string mainColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
             MainColor = (SolidColorBrush)new BrushConverter().ConvertFromString(mainColor);
 

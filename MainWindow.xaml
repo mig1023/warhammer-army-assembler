@@ -66,10 +66,8 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Canvas Grid.Row="0" Grid.Column="0" Background="White">
-                        <Button x:Name="armyMenu" Content="Армия" Canvas.Left="2" Canvas.Top="2" Height="24" Width="102" Click="armyMenu_Click"/>
-                        <Button x:Name="button2Menu" Content="Кнопка 2" Canvas.Left="109" Canvas.Top="2" Height="24" Width="101"/>
-                        <Button x:Name="button3Menu" Content="Кнопка 3" Canvas.Left="215" Canvas.Top="2" Height="24" Width="101"/>
+                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Background="White">
+                        <Label x:Name="armyMainLabel" Content="" Foreground="White" Background="Gray" Width="10" Margin="18,0" MouseDown="armyMainLabel_MouseDown" />
                     </Canvas>
 
                     <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
