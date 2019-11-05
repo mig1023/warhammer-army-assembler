@@ -232,11 +232,6 @@ namespace WarhammerArmyAssembler
                     Interface.AllUnitDelete();
         }
 
-        private void armyMenu_Click(object sender, RoutedEventArgs e)
-        {
-            Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
-        }
-
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
             string selectedArmyBook = listArmybook.SelectedItem.ToString();
@@ -249,6 +244,11 @@ namespace WarhammerArmyAssembler
             Interface.ReloadArmyData();
 
             Interface.Move(Interface.MovingType.ToMain);
+        }
+
+        private void armyMainLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
         }
     }
 }
