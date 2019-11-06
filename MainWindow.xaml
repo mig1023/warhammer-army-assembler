@@ -67,7 +67,8 @@
                     </Grid.ColumnDefinitions>
 
                     <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Background="White">
-                        <Label x:Name="armyMainLabel" Content="" Foreground="White" Background="Gray" Width="10" Margin="18,0" MouseDown="armyMainLabel_MouseDown" />
+                        <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto" Margin="4,-3" MouseDown="armyMainLabel_MouseDown" />
+                        <Label x:Name="armyMainMenu" Content="" FontSize="20" FontFamily="Arial" Foreground="White" Background="Gray" Width="Auto" Margin="24,-2" MouseDown="armyMainLabel_MouseDown" />
                     </Canvas>
 
                     <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>

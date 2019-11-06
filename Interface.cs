@@ -42,7 +42,11 @@ namespace WarhammerArmyAssembler
             main.armyMainLabel.Content = Army.ArmyName;
             main.armyMainLabel.Foreground = Brushes.White;
             main.armyMainLabel.Background = ArmyBook.MainColor;
-            //main.armyMainLabelPlace.Background = ArmyBook.MainColor;
+            main.armyMainLabelPlace.Background = ArmyBook.MainColor;
+
+            main.armyMainMenu.Content = '\u2630';
+            main.armyMainMenu.Foreground = Brushes.White;
+            main.armyMainMenu.Background = ArmyBook.AdditionalColor;
 
             List<Unit> categories = GetArmyCategories();
 

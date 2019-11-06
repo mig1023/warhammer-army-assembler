@@ -28,6 +28,8 @@ namespace WarhammerArmyAssembler
 
             Interface.main = this;
 
+            armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
+
             foreach (string armybook in ArmyBook.GetAllXmlArmyBooks())
                 listArmybook.Items.Add(armybook);
 
@@ -35,6 +37,11 @@ namespace WarhammerArmyAssembler
 
             Interface.LoadArmyList();
             Interface.ReloadArmyData();
+        }
+
+        private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            armyMainMenu.Margin = Interface.Thick(armyMainMenu, left: (e.NewSize.Width - armyMainMenu.ActualWidth));
         }
 
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
