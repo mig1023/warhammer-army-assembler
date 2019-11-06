@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Imaging;
+using System.Xml;
 
 namespace WarhammerArmyAssembler
 {
@@ -18,6 +21,8 @@ namespace WarhammerArmyAssembler
         public static ObservableCollection<Unit> ArmyInInterface = new ObservableCollection<Unit>();
 
         public static object DragSender = null;
+
+        public static string CurrentSelectedArmy = null;
 
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop }
 
@@ -583,6 +588,24 @@ namespace WarhammerArmyAssembler
                         }
                     }
             }
+        }
+
+        private static void PreviewLoadCurrentSelectedArmy(string armyName)
+        {
+            XmlDocument xmlFile = new XmlDocument();
+            xmlFile.Load(armyName);
+
+            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
+            string path = Path.GetDirectoryName(armyName);
+            main.imageArmybook.Source = new BitmapImage(new Uri(path + "\\" + armyFile.InnerText));
+        }
+
+        public static void PreviewArmyList(bool next = false, bool prev = false)
+        {
+            string currentFile = ArmyBook.GetXmlArmyBooks(next, prev);
+
+            PreviewLoadCurrentSelectedArmy(currentFile);
+            CurrentSelectedArmy = currentFile;
         }
     }
 }

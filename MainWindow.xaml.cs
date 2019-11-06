@@ -30,13 +30,12 @@ namespace WarhammerArmyAssembler
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
-            foreach (string armybook in ArmyBook.GetAllXmlArmyBooks())
-                listArmybook.Items.Add(armybook);
-
             ArmyBook.LoadArmy("Orcs&Goblins.xml");
 
             Interface.LoadArmyList();
             Interface.ReloadArmyData();
+
+            Interface.PreviewArmyList();
         }
 
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -241,11 +240,12 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
-            string selectedArmyBook = listArmybook.SelectedItem.ToString();
+            //string selectedArmyBook = listArmybook.SelectedItem.ToString();
 
-            ArmyBook.LoadArmy(ArmyBook.AllArmyBooks[selectedArmyBook]);
+            //ArmyBook.LoadArmy(ArmyBook.AllArmyBooks[selectedArmyBook]);
 
             Army.MaxPoints = Interface.IntParse(listArmybookPoints.Text);
+            ArmyBook.LoadArmy(Interface.CurrentSelectedArmy);
 
             Interface.LoadArmyList();
             Interface.ReloadArmyData();
@@ -256,6 +256,16 @@ namespace WarhammerArmyAssembler
         private void armyMainLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
+        }
+
+        private void prev_Click(object sender, RoutedEventArgs e)
+        {
+            Interface.PreviewArmyList(prev: true);
+        }
+
+        private void next_Click(object sender, RoutedEventArgs e)
+        {
+            Interface.PreviewArmyList(next: true);
         }
     }
 }

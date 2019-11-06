@@ -25,12 +25,14 @@
                 </Canvas>
             </ScrollViewer>
 
-            <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="167" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
-                <Canvas x:Name="menuArmybookPlace" Width="320" Height="308" VerticalAlignment="Top" Background="White">
+            <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="599" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
+                <Canvas x:Name="menuArmybookPlace" Width="320" Height="599" VerticalAlignment="Top" Background="White">
                     <Label x:Name="labelArmybook" Content="Выберите армибук" Foreground="White" Background="Gray" Width="Auto" Margin="18,5"/>
-                    <ListBox x:Name="listArmybook" Height="156" Width="282" Canvas.Left="18" Canvas.Top="40"/>
-                    <TextBox x:Name="listArmybookPoints" Height="24" TextWrapping="Wrap" Text="2000" Width="282" Canvas.Left="18" Canvas.Top="211"/>
-                    <Button x:Name="buttonArmybook" Content="Выбрать" Height="28" Width="95" Canvas.Left="18" Canvas.Top="251" Click="buttonArmybook_Click"/>
+                    <Image x:Name="imageArmybook" Height="373" Width="282" Canvas.Left="18" Canvas.Top="40"/>
+                    <TextBox x:Name="listArmybookPoints" Height="24" TextWrapping="Wrap" Text="2000" Width="282" Canvas.Left="18" Canvas.Top="476"/>
+                    <Button x:Name="buttonArmybook" Content="Выбрать" Height="28" Width="95" Canvas.Left="18" Canvas.Top="516" Click="buttonArmybook_Click"/>
+                    <Button x:Name="prev" Content="prevButton" Height="35" Canvas.Left="18" Canvas.Top="427" Width="123" Click="prev_Click"/>
+                    <Button x:Name="next" Content="nextButton" Height="35" Canvas.Left="146" Canvas.Top="427" Width="123" Click="next_Click"/>
                 </Canvas>
             </ScrollViewer>
 

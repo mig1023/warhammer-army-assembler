@@ -23,8 +23,6 @@ namespace WarhammerArmyAssembler
         public static Brush AdditionalColor = null;
         public static Brush BackgroundColor = null;
 
-        public static Dictionary<string, string> AllArmyBooks = new Dictionary<string, string>();
-
         public static int GetNextIndex()
         {
             return MaxIDindex++;
@@ -265,28 +263,6 @@ namespace WarhammerArmyAssembler
             return (xmlNode.InnerText == "true" ? true : false);
         }
 
-        public static List<string> GetAllXmlArmyBooks()
-        {
-            AllArmyBooks.Clear();
-
-            List<string> allXmlFiles = FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
-
-            List<string> allXmlArmyBooks = new List<string>();
-
-            foreach (string xmlName in allXmlFiles)
-            {
-                XmlDocument xmlFile = new XmlDocument();
-                xmlFile.Load(xmlName);
-
-                XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
-                allXmlArmyBooks.Add(armyName.InnerText);
-
-                AllArmyBooks.Add(armyName.InnerText, xmlName);
-            }
-
-            return allXmlArmyBooks;
-        }
-
         public static Option LoadOption(int id, XmlNode xmlNode)
         {
             Option newWeapon = new Option();
@@ -344,6 +320,52 @@ namespace WarhammerArmyAssembler
             newWeapon.Mount = BoolParse(xmlNode["Mount"]);
 
             return newWeapon;
+        }
+
+        public static string GetXmlArmyBooks(bool next = false, bool prev = false)
+        {
+            List<string> allXmlFiles = FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
+
+            string newArmyList = Interface.CurrentSelectedArmy ?? allXmlFiles[0];
+
+            string firstFile = allXmlFiles[0];
+            string prevFile = String.Empty;
+            string lastFile = allXmlFiles[allXmlFiles.Count - 1];
+            bool nextName = false;
+
+            int indexName = 0;
+
+            foreach (string xmlName in allXmlFiles)
+            {
+                XmlDocument xmlFile = new XmlDocument();
+                xmlFile.Load(xmlName);
+
+                XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
+
+                if (nextName)
+                    return xmlName;
+
+                if ((newArmyList == xmlName) && prev && String.IsNullOrEmpty(prevFile))
+                    return lastFile;
+                else if ((newArmyList == xmlName) && prev)
+                    return prevFile;
+
+                if ((newArmyList == xmlName) && next && (indexName >= allXmlFiles.Count))
+                    return firstFile;
+                else if ((newArmyList == xmlName) && next)
+                    nextName = true;
+                else if (newArmyList == xmlName)
+                    return xmlName;
+
+                prevFile = xmlName;
+
+                indexName += 1;
+            }
+
+            if (nextName)
+                return firstFile;
+
+            return String.Empty;
         }
 
         public static List<string> FindAllXmlFiles(string programDirectory)
