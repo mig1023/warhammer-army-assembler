@@ -598,6 +598,12 @@ namespace WarhammerArmyAssembler
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
             string path = Path.GetDirectoryName(armyName);
             main.imageArmybook.Source = new BitmapImage(new Uri(path + "\\" + armyFile.InnerText));
+
+            XmlNode armyFullName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
+            main.listArmybookName.Content = armyFullName.InnerText;
+
+            string mainColor = xmlFile.SelectSingleNode("ArmyBook/Info/MainColor").InnerText;
+            main.listArmybookName.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString(mainColor);
         }
 
         public static void PreviewArmyList(bool next = false, bool prev = false)

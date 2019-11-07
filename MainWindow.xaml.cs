@@ -240,11 +240,7 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
-            //string selectedArmyBook = listArmybook.SelectedItem.ToString();
-
-            //ArmyBook.LoadArmy(ArmyBook.AllArmyBooks[selectedArmyBook]);
-
-            Army.MaxPoints = Interface.IntParse(listArmybookPoints.Text);
+            Army.MaxPoints = Interface.IntParse(listArmybookPoints.Content.ToString());
             ArmyBook.LoadArmy(Interface.CurrentSelectedArmy);
 
             Interface.LoadArmyList();
@@ -270,7 +266,11 @@ namespace WarhammerArmyAssembler
 
         private void ptsScale_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            listArmybookPoints.Text = ptsScale.Value.ToString();
+            if (ptsThScale == null || ptsHunScale == null)
+                return;
+
+            double pts = (ptsThScale.Value * 1000) + ptsHunScale.Value;
+            listArmybookPoints.Content = pts.ToString() + " pts";
         }
     }
 }
