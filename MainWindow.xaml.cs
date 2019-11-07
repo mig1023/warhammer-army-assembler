@@ -267,5 +267,10 @@ namespace WarhammerArmyAssembler
         {
             Interface.PreviewArmyList(next: true);
         }
+
+        private void ptsScale_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            listArmybookPoints.Text = ptsScale.Value.ToString();
+        }
     }
 }

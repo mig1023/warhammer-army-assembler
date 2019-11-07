@@ -34,6 +34,7 @@
                     <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="152" Width="20" Click="prev_Click"/>
                     <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="152" Width="20" Click="next_Click"/>
                     <Label x:Name="ptsLabel" Content="pts" FontSize="16" Canvas.Left="122" Canvas.Top="361"/>
+                    <Slider x:Name="ptsScale" Maximum="6000" Minimum="100" Value="2000" IsSnapToTickEnabled="True" TickFrequency="100" TickPlacement="BottomRight" Foreground="#FF3E3E42" Background="{x:Null}" Canvas.Left="20" Canvas.Top="411" Width="262" ValueChanged="ptsScale_ValueChanged" Height="26"/>
                 </Canvas>
             </ScrollViewer>
 
