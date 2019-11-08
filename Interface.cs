@@ -590,28 +590,28 @@ namespace WarhammerArmyAssembler
             }
         }
 
+        public static Brush BrushFromXml(XmlNode path)
+        {
+            return (SolidColorBrush)new BrushConverter().ConvertFromString(path.InnerText);
+        }
+
         private static void PreviewLoadCurrentSelectedArmy(string armyName)
         {
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
-            string path = Path.GetDirectoryName(armyName);
-            main.imageArmybook.Source = new BitmapImage(new Uri(path + "\\" + armyFile.InnerText));
+            main.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
 
-            XmlNode armyFullName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
-            main.listArmybookName.Content = armyFullName.InnerText;
+            main.listArmybookName.Content = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName").InnerText;
 
             main.UpdateLayout();
 
             double leftForPoints = main.listArmybookName.Margin.Left + main.listArmybookName.ActualWidth + 20;
             main.listArmybookPoints.Margin = Thick(main.listArmybookPoints, left: leftForPoints);
 
-            string addColor = xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor").InnerText;
-            main.listArmybookName.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString(addColor);
-
-            string mainColor = xmlFile.SelectSingleNode("ArmyBook/Info/MainColor").InnerText;
-            main.labelArmybook.Background = (SolidColorBrush)new BrushConverter().ConvertFromString(mainColor);
+            main.listArmybookName.Foreground = BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
+            main.labelArmybook.Background = BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
         }
 
         public static void PreviewArmyList(bool next = false, bool prev = false)

@@ -28,6 +28,17 @@ namespace WarhammerArmyAssembler
             return MaxIDindex++;
         }
 
+        private static void LoadUnitsFromXml(XmlDocument xmlFile, string path, ref Dictionary<int, Unit> dict)
+        {
+            XmlNodeList xmlNodes = xmlFile.SelectNodes(path);
+
+            foreach (XmlNode xmlUnit in xmlNodes)
+            {
+                int newID = GetNextIndex();
+                dict.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
+            }
+        }
+
         public static void LoadArmy(string xmlFileName)
         {
             Units.Clear();
@@ -37,34 +48,33 @@ namespace WarhammerArmyAssembler
 
             Army.ArmyName = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName"));
 
-            string mainColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
-            MainColor = (SolidColorBrush)new BrushConverter().ConvertFromString(mainColor);
-
-            string additionalColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
-            AdditionalColor = (SolidColorBrush)new BrushConverter().ConvertFromString(additionalColor);
-
-            string backgroundColor = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
-            BackgroundColor = (SolidColorBrush)new BrushConverter().ConvertFromString(backgroundColor);
+            MainColor = Interface.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+            AdditionalColor = Interface.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
+            BackgroundColor = Interface.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
 
             Interface.SetArmyGridAltColor(BackgroundColor);
 
-            foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
-            {
-                int newID = GetNextIndex();
-                Units.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
-            }
+            //foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
+            //{
+            //    int newID = GetNextIndex();
+            //    Units.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
+            //}
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Hero", ref Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Mount", ref Mounts);
 
-            foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Heroes/Hero"))
-            {
-                int newID = GetNextIndex();
-                Units.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
-            }
 
-            foreach (XmlNode xmlMount in xmlFile.SelectNodes("ArmyBook/Mounts/Mount"))
-            {
-                int newID = GetNextIndex();
-                Mounts.Add(newID, LoadUnit(newID, xmlMount, xmlFile));
-            }
+            //foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Heroes/Hero"))
+            //{
+            //    int newID = GetNextIndex();
+            //    Units.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
+            //}
+
+            //foreach (XmlNode xmlMount in xmlFile.SelectNodes("ArmyBook/Mounts/Mount"))
+            //{
+            //    int newID = GetNextIndex();
+            //    Mounts.Add(newID, LoadUnit(newID, xmlMount, xmlFile));
+            //}
 
             foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
             {
