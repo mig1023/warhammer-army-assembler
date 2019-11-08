@@ -34,8 +34,6 @@ namespace WarhammerArmyAssembler
 
             Interface.LoadArmyList();
             Interface.ReloadArmyData();
-
-            Interface.PreviewArmyList();
         }
 
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -251,6 +249,7 @@ namespace WarhammerArmyAssembler
 
         private void armyMainLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            Interface.PreviewArmyList();
             Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
         }
 
@@ -264,13 +263,9 @@ namespace WarhammerArmyAssembler
             Interface.PreviewArmyList(next: true);
         }
 
-        private void ptsScale_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void ptsThousandsOrHundreds_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (ptsThScale == null || ptsHunScale == null)
-                return;
-
-            double pts = (ptsThScale.Value * 1000) + ptsHunScale.Value;
-            listArmybookPoints.Content = pts.ToString() + " pts";
+            Interface.PreviewArmyPoints();
         }
     }
 }

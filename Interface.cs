@@ -602,8 +602,16 @@ namespace WarhammerArmyAssembler
             XmlNode armyFullName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
             main.listArmybookName.Content = armyFullName.InnerText;
 
+            main.UpdateLayout();
+
+            double leftForPoints = main.listArmybookName.Margin.Left + main.listArmybookName.ActualWidth + 20;
+            main.listArmybookPoints.Margin = Thick(main.listArmybookPoints, left: leftForPoints);
+
+            string addColor = xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor").InnerText;
+            main.listArmybookName.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString(addColor);
+
             string mainColor = xmlFile.SelectSingleNode("ArmyBook/Info/MainColor").InnerText;
-            main.listArmybookName.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString(mainColor);
+            main.labelArmybook.Background = (SolidColorBrush)new BrushConverter().ConvertFromString(mainColor);
         }
 
         public static void PreviewArmyList(bool next = false, bool prev = false)
@@ -612,6 +620,17 @@ namespace WarhammerArmyAssembler
 
             PreviewLoadCurrentSelectedArmy(currentFile);
             CurrentSelectedArmy = currentFile;
+
+            PreviewArmyPoints();
+        }
+
+        public static void PreviewArmyPoints()
+        {
+            if (main == null || main.ptsThousands == null || main.ptsHundreds == null)
+                return;
+
+            double pts = (main.ptsThousands.Value * 1000) + main.ptsHundreds.Value;
+            main.listArmybookPoints.Content = pts.ToString() + " pts";
         }
     }
 }
