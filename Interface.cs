@@ -607,7 +607,7 @@ namespace WarhammerArmyAssembler
 
             main.UpdateLayout();
 
-            double leftForPoints = main.listArmybookName.Margin.Left + main.listArmybookName.ActualWidth + 20;
+            double leftForPoints = main.listArmybookName.Margin.Left + main.listArmybookName.ActualWidth + 15;
             main.listArmybookPoints.Margin = Thick(main.listArmybookPoints, left: leftForPoints);
 
             main.listArmybookName.Foreground = BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));

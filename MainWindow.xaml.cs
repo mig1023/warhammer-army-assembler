@@ -30,7 +30,7 @@ namespace WarhammerArmyAssembler
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
-            ArmyBook.LoadArmy("Orcs&Goblins.xml");
+            ArmyBook.LoadArmy("OrcsGoblins.xml");
 
             Interface.LoadArmyList();
             Interface.ReloadArmyData();
