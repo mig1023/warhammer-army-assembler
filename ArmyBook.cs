@@ -54,27 +54,9 @@ namespace WarhammerArmyAssembler
 
             Interface.SetArmyGridAltColor(BackgroundColor);
 
-            //foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Units/Unit"))
-            //{
-            //    int newID = GetNextIndex();
-            //    Units.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
-            //}
             LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Hero", ref Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Mount", ref Mounts);
-
-
-            //foreach (XmlNode xmlUnit in xmlFile.SelectNodes("ArmyBook/Heroes/Hero"))
-            //{
-            //    int newID = GetNextIndex();
-            //    Units.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
-            //}
-
-            //foreach (XmlNode xmlMount in xmlFile.SelectNodes("ArmyBook/Mounts/Mount"))
-            //{
-            //    int newID = GetNextIndex();
-            //    Mounts.Add(newID, LoadUnit(newID, xmlMount, xmlFile));
-            //}
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref Mounts);
 
             foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
             {
