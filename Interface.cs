@@ -69,18 +69,29 @@ namespace WarhammerArmyAssembler
                 main.ArmyList.Items.Add(unitType);
             }
 
-            Option artefacts = new Option() { Name = "Артефакты" };
+            List<string> artefactsTypes = new List<string>();
 
             foreach (KeyValuePair<int, Option> entry in ArmyBook.Artefact)
-            {
-                Option artefact = entry.Value.Clone();
-                artefact.PointsView = String.Format(" {0} pts", artefact.Points);
-                artefact.InterfaceColor = ArmyBook.MainColor;
-                artefacts.Items.Add(artefact);
-            }
+                if (!artefactsTypes.Contains(entry.Value.ArtefactGroup))
+                    artefactsTypes.Add(entry.Value.ArtefactGroup);
 
-            artefacts.GroopBold = true;
-            main.ArmyList.Items.Add(artefacts);
+            foreach (string artefactType in artefactsTypes)
+            {
+                Option artefacts = new Option() { Name = artefactType };
+
+                foreach (KeyValuePair<int, Option> entry in ArmyBook.Artefact)
+                    if (entry.Value.ArtefactGroup == artefactType)
+                    {
+                        Option artefact = entry.Value.Clone();
+                        artefact.PointsView = String.Format(" {0} pts", artefact.Points);
+                        artefact.InterfaceColor = ArmyBook.MainColor;
+                        artefacts.Items.Add(artefact);
+                    }
+
+                artefacts.GroopBold = true;
+                artefacts.Artefacts = true;
+                main.ArmyList.Items.Add(artefacts);
+            }
         }
 
         public static void SetArmyGridAltColor(Brush color)

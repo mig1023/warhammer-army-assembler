@@ -9,389 +9,398 @@
 		<ArmyBookImage>Lizardmen.png</ArmyBookImage>
 	</Info>
 	<Artefacts>
-		<Artefact>
-			<Name>Меч Точности</Name>
-			<Type>Weapon</Type>
-			<Points>25</Points>
-			<SpecialRuleDescription>+1 на попадание в ближнем бою</SpecialRuleDescription>
-			<Description>+1 на попадание в ближнем бою</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Меч Битвы</Name>
-			<Type>Weapon</Type>
-			<Points>20</Points>
-			<AddToAttacks>1</AddToAttacks>
-			<Description>+1 к Атакам</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Меч Силы</Name>
-			<Type>Weapon</Type>
-			<Points>20</Points>
-			<AddToStrength>1</AddToStrength>
-			<Description>+1 к Силам</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Жалящий меч</Name>
-			<Type>Weapon</Type>
-			<Points>10</Points>
-			<SpecialRuleDescription>-1 на спас-бросок за доспех</SpecialRuleDescription>
-			<Description>-1 на спас-бросок за доспех</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Магический щит</Name>
-			<Type>Armour</Type>
-			<Points>15</Points>
-			<AddToArmour>5</AddToArmour>
-			<Description>5+ спас-бросок за доспех</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Защитный талисман</Name>
-			<Type>Armour</Type>
-			<Points>15</Points>
-			<AddToWard>6</AddToWard>
-			<Description>6+ магический спас-бросок</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Посох волшебства</Name>
-			<Type>Arcane</Type>
-			<Points>40</Points>
-			<SpecialRuleDescription>+1 к разрушению заклинаний</SpecialRuleDescription>
-			<Description>+1 к разрушению заклинаний</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Свиток разрушения заклинаний</Name>
-			<Type>Arcane</Type>
-			<Points>25</Points>
-			<Multiple>true</Multiple>
-			<Description>автоматически разрушает вражеское заклинание, одноразовый</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Камень Силы</Name>
-			<Type>Arcane</Type>
-			<Points>20</Points>
-			<Multiple>true</Multiple>
-			<Description>+2 кубика при сотворении заклинания, одноразовый</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		<Artefact>
-			<Name>Боевое знамя</Name>
-			<Type>Banner</Type>
-			<Points>25</Points>
-			<SpecialRuleDescription>+1 к результату боя</SpecialRuleDescription>
-			<Description>+1 к Результату боя</Description>
-			<OrdinaryArtefact>true</OrdinaryArtefact>
-		</Artefact>
-		
-		<Artefact>
-			<Name>Лезвие реальностей</Name>
-			<Type>Weapon</Type>
-			<Points>75</Points>
-			<SpecialRuleDescription>попадание - смерть по тесту на Лидерство</SpecialRuleDescription>
-			<Description>За каждое попадание, полученное этим оружием, цель должна пройти тест по немодифицированному Лидерству или мгновенно погибнуть. От этой атаки не защищают доспехи, особая защита или регенерация. Если тест пройден, то проводятся броски на пробитие как обычно</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Клинок почтенного Тзунки</Name>
-			<Type>Weapon</Type>
-			<Points>65</Points>
-			<AddToStrength>1</AddToStrength>
-			<SpecialRuleDescription>без спас-бросков за броню</SpecialRuleDescription>
-			<Description>Обладатель получает +1 к Силе, кроме того от этого оружия не защищают доспехи</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Скимитар Солнечного Величия</Name>
-			<Type>Weapon</Type>
-			<Points>50</Points>
-			<AddToAttacks>2</AddToAttacks>
-			<Description>Обладатель получает +2 Атаки</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Военное копьё стеганадона</Name>
-			<Type>Weapon</Type>
-			<OnlyForGroup>Скинк</OnlyForGroup>
-			<OnlyFor>Mount</OnlyFor>
-			<Points>50</Points>
-			<SpecialRuleDescription>2D6+1 таранных ударов стегадона</SpecialRuleDescription>
-			<SpecialRuleDescription>рыцарская пика</SpecialRuleDescription>
-			<Description>Стегадон или Дервний Стегадон, на котором едет носитель, наносит 2D6+1 таранных ударов вместо 1D6+1</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Посох утраченного солнца</Name>
-			<Type>Weapon</Type>
-			<Points>35</Points>
-			<SpecialRuleDescription>3 выстрела Силой 5</SpecialRuleDescription>
-			<Description>Подобен короткому луку, выпускает 3 выстрела Силой 5</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Клинок Пираньи</Name>
-			<Type>Weapon</Type>
-			<Points>35</Points>
-			<SpecialRuleDescription>наносит две раны вместо одной</SpecialRuleDescription>
-			<Description>Любая рана, нанесённая этим оружием после всех проверок наносит две Раны, а не одну</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Кинжал Сотека</Name>
-			<Type>Weapon</Type>
-			<OnlyForGroup>Скинк</OnlyForGroup>
-			<Points>25</Points>
-			<KillingBlow>true</KillingBlow>
-			<Fear>true</Fear>
-			<Description>Обладатель получает правило Смертельного удара и внушает страх Скайвенам</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Меч Шершня</Name>
-			<Type>Weapon</Type>
-			<Points>25</Points>
-			<HitFirst>true</HitFirst>
-			<Description>Обладатель всегда бьёт первым</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Пылающее лезвие Чотека</Name>
-			<Type>Weapon</Type>
-			<Points>20</Points>
-			<SpecialRuleDescription>огненные атаки</SpecialRuleDescription>
-			<SpecialRuleDescription>-2 на спас-бросок за доспех</SpecialRuleDescription>
-			<Description>Огненные атаки. Цели, поражённые Пылающим лезвием получают -2 к своему спас-броску за доспехи</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Шкура холодного</Name>
-			<Type>Armour</Type>
-			<OnlyFor>Infantry</OnlyFor>
-			<Points>50</Points>
-			<AddToArmour>5</AddToArmour>
-			<AddToToughness>1</AddToToughness>
-			<Fear>true</Fear>
-			<Stupidity>true</Stupidity>
-			<Description>Тяжёлые доспехи, дают бонус +1 к Стойкости, внушают Страх, но носитель становится подвержен правилу Тупости</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Сверкающий стегодоний шлем</Name>
-			<Type>Armour</Type>
-			<OnlyForGroup>Скинк</OnlyForGroup>
-			<Points>50</Points>
-			<AddToArmour>6</AddToArmour>
-			<AddToAddToLeadership>1</AddToAddToLeadership>
-			<Description>Шлем добавляет +1 к спас-броску за доспех, а также даёт носителю +1 к Лидерству</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Щит зеркального пруда</Name>
-			<Type>Armour</Type>
-			<Points>30</Points>
-			<AddToArmour>5</AddToArmour>
-			<SpecialRuleDescription>отражение заклинания на 2+</SpecialRuleDescription>
-			<Description>Любые магические стрелы, попавшие в носителя или отряд в котором он находится на 2+ отражаются обратно на выпустившего его или отряд; это отражённое заклятье уже не может быть рассеяно</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Калечащий щит</Name>
-			<Type>Armour</Type>
-			<Points>30</Points>
-			<AddToArmour>5</AddToArmour>
-			<AddToAttacks>1</AddToAttacks>
-			<Description>Носитель получает +1 Атаку, которая считается магической и проводится по базовой Силе обладателя</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Рог Кайгора</Name>
-			<Type>Arcane</Type>
-			<Points>100</Points>
-			<Fear>true</Fear>
-			<SpecialRuleDescription>кавалерия в 12 дюймах становится Упорной</SpecialRuleDescription>
-			<Description>Дружественная каваления в пределах 12 дюймов от носителя становится Упорной; обладатель внушает Страх вражеской кавалерии</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Рогач</Name>
-			<Type>Arcane</Type>
-			<Points>35</Points>
-			<SpecialRuleDescription>Рогач</SpecialRuleDescription>
-			<Description>Рогачи - это редкая разновидность Холодных. Они обладают Движением 8, Инициативой 3 и не подвержены Тупости</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Божественная таблица защиты</Name>
-			<Type>Arcane</Type>
-			<OnlyForGroup>Сланн</OnlyForGroup>
-			<Points>30</Points>
-			<AddToWard>2</AddToWard>
-			<Description>Щит даёт Особую защиту 2+ от всех дистанционных атак</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Военный барабан Ксахутека</Name>
-			<Type>Arcane</Type>
-			<Points>30</Points>
-			<SpecialRuleDescription>марш в 8 дюймах от врага</SpecialRuleDescription>
-			<SpecialRuleDescription>+1 к Лидерству при восстановлении порядка</SpecialRuleDescription>
-			<Description>Присутствие вражеских отрядов в 8 дюймах от носителя или отряда к которому он присоединён, не мешает носителю или отряду маршировать; также все дружественные подразделения в 12 дюймах имеют +1 к Лидерству при попытках собраться после Бегства</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Окровавленная статую ненависти</Name>
-			<Type>Arcane</Type>
-			<Points>25</Points>
-			<SpecialRuleDescription>раны за проваленную Стойкость, одноразово</SpecialRuleDescription>
-			<Description>Связанное заклятье, Силы 5; одноразовый; заклятье может быть призвано против любого вражеского персонажа; он должен пройти тест на Стойкость или получает рану без спас-бросков за доспехи; после получения раны персонаж должен снова и снова проходить тест на стойкость до тех пор пока не пройдёт тест или не погибнет</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Оберег воина-ягуара</Name>
-			<Type>Arcane</Type>
-			<OnlyFor>Infantry</OnlyFor>
-			<Points>25</Points>
-			<SpecialRuleDescription>заклятье Конь Теней</SpecialRuleDescription>
-			<Description>Связанное заклятье, Силы 5; оберег содержит заклятье Конь Теней из школы Теней; заклятье может быть наложено только на носителя оберега</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Плащ из перьев</Name>
-			<Type>Arcane</Type>
-			<OnlyFor>Infantry</OnlyFor>
-			<OnlyForGroup>Скинк</OnlyForGroup>
-			<Points>25</Points>
-			<SpecialRuleDescription>полёт</SpecialRuleDescription>
-			<Description>Обладатель умеет летать</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Амулет карнозавра</Name>
-			<Type>Arcane</Type>
-			<Points>20</Points>
-			<Frenzy>true</Frenzy>
-			<Description>Носитель получает правило Бешенства после первой нанесённой кому-либо раны; он не может потерять Бешенство даже если разгромлен в ближнем бою</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Заклятый оберег Тепока</Name>
-			<Type>Arcane</Type>
-			<Points>20</Points>
-			<SpecialRuleDescription>переброс вражеской магической ошибки</SpecialRuleDescription>
-			<Description>Одноразовый предмет; носитель может заставить вражеского волшебника перебросить результат броска по таблице магических ошибок; результат повторного броска остаётся</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Проклятая голова</Name>
-			<Type>Arcane</Type>
-			<Points>15</Points>
-			<SpecialRuleDescription>удвоение ран выбранному персонажу</SpecialRuleDescription>
-			<Description>Обозначьте перед началом битвы одного вражеского персонажа - все раны нанесённые ему носителем удваиваются</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Ртутная стрекоза</Name>
-			<Type>Arcane</Type>
-			<Points>10</Points>
-			<SpecialRuleDescription>+1 на бросок расстановки разведчиков</SpecialRuleDescription>
-			<Description>Если оба игрока имеют отряды разведчиков, то обладатель этого предмета имеет +1 на результат броска, определяющего порядок расстановки разведчиков</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Яд светлячковой лягушки</Name>
-			<Type>Arcane</Type>
-			<Points>10</Points>
-			<PoisonAttack>true</PoisonAttack>
-			<Description>Всё оружие носителя становится ядовитым; всё немагическое оружие считается магическим; всё уже ядовитое оружие может перебрасывать броски на попадание</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Чаша дланей Старейших</Name>
-			<Type>Arcane</Type>
-			<Points>45</Points>
-			<SpecialRuleDescription>перенос магической ошибки на противника</SpecialRuleDescription>
-			<Description>Одноразовый; на 2+ обладатель игнорирует выпавшую магическую ошибку, а если в пределах видимости есть вражеский маг, то именно он вынужден выполнить бросок по таблице магических ошибок; при этом результат броска 5-6 для вражеского мага игнорируется</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Куб Тьмы</Name>
-			<Type>Arcane</Type>
-			<Points>40</Points>
-			<SpecialRuleDescription>автоматическое рассеивание заклятья</SpecialRuleDescription>
-			<SpecialRuleDescription>на 4+ все оставшиеся в игре рассеиваются</SpecialRuleDescription>
-			<Description>Одноразовый; автоматически рассеивает вражеское заклятье; в дополнение к этому на 4+ рассеиваются и все оставшиеся в игре заклятья и фаза магии прекращается</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Жезл Шторма</Name>
-			<Type>Arcane</Type>
-			<Points>25</Points>
-			<SpecialRuleDescription>заклятье Гром Урнона, Сила 6</SpecialRuleDescription>
-			<Description>Одноразовый; связанное заклятье Гром Урнона школы Небес, Сила 6</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Диадема могущества</Name>
-			<Type>Arcane</Type>
-			<Points>25</Points>
-			<SpecialRuleDescription>до двух кубиков силы на рассеивание</SpecialRuleDescription>
-			<Description>Носитель может сохранить до двух неиспользованных кубиков силы и перенести из в пул кубиков на рассеивание в следующую фазу магии противника</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Таблица Тепока</Name>
-			<Type>Arcane</Type>
-			<Points>15</Points>
-			<SpecialRuleDescription>дополнительное заклятье</SpecialRuleDescription>
-			<Description>Носитель может получить на одно заклятье больше, чем позволяет его уровень</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Аура Квецля</Name>
-			<Type>Armour</Type>
-			<Points>40</Points>
-			<SpecialRuleDescription>-1 на попадание в ближнем бою</SpecialRuleDescription>
-			<Description>Все атаки на носителя в ближнем бою получают пенальти в -1 на попадание</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Ожирелье символов</Name>
-			<Type>Armour</Type>
-			<Points>30</Points>
-			<AddToWard>5</AddToWard>
-			<Description>Обладатель получает особую защиту 5+</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Амулет Итцля</Name>
-			<Type>Armour</Type>
-			<Points>30</Points>
-			<AddToWard>2</AddToWard>
-			<Description>Особая защита 2+ против первой раны</Description>
-		</Artefact>
-
-
-
-
-		<Artefact>
-			<Name>Тотем провидения</Name>
-			<Type>Banner</Type>
-			<Points>50</Points>
-			<Fear>true</Fear>
-			<Description>Отряд внушает Страх</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Таблица подчинения</Name>
-			<Type>Banner</Type>
-			<Points>50</Points>
-			<SpecialRuleDescription>Тупость врага на 18 дюймов</SpecialRuleDescription>
-			<Description>Каждый отряд противника в 18 дюймах и способный провести линию видимости до Таблицы должен подчиняться правилу Тупости</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Солнечный штандарт Чотека</Name>
-			<Type>Banner</Type>
-			<Points>40</Points>
-			<SpecialRuleDescription>-1 на попадание при стрельбе с &gt;12 дюймов</SpecialRuleDescription>
-			<SpecialRuleDescription>-2 на попадание при стрельбе с &lt;12 дюймов</SpecialRuleDescription>
-			<Description>Стрелковые атаки направленные на отряд получают пенальти -1 при стрельбы с дистанции в 12 дюймов и больше; и пенальти -2 при стрельбе на дистанцию меньше 12 дюймов</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Благословенный тотем Хуанчи</Name>
-			<Type>Banner</Type>
-			<Points>25</Points>
-			<SpecialRuleDescription>однократно +D6 на дистанцию атаки</SpecialRuleDescription>
-			<Description>Одноразовый; +D6 на дистанцию атаки</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Штандарт ягуара</Name>
-			<Type>Banner</Type>
-			<Points>25</Points>
-			<SpecialRuleDescription>отряд преследует на дистанцию +D6</SpecialRuleDescription>
-			<Description>Отряд преследует противника на дополнительные D6 дистанции</Description>
-		</Artefact>
-		<Artefact>
-			<Name>Знамя из скайвенских шкурок</Name>
-			<Type>Banner</Type>
-			<OnlyForGroup>Скинк</OnlyForGroup>
-			<Points>25</Points>
-			<Franzy>true</Franzy>
-			<Hate>true</Hate>
-			<Description>Отряд становится Бешеным. В дополнение он испытывается Ненависть к скайвенам</Description>
-		</Artefact>
+		<ArtefactsGroup Name = "Распространённые актефакты">
+			<Artefact>
+				<Name>Меч Точности</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>+1 на попадание в ближнем бою</SpecialRuleDescription>
+				<Description>+1 на попадание в ближнем бою</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Меч Битвы</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>+1 к Атакам</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Меч Силы</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<AddToStrength>1</AddToStrength>
+				<Description>+1 к Силам</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Жалящий меч</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>-1 на спас-бросок за доспех</SpecialRuleDescription>
+				<Description>-1 на спас-бросок за доспех</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Магический щит</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<AddToArmour>5</AddToArmour>
+				<Description>5+ спас-бросок за доспех</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Защитный талисман</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<AddToWard>6</AddToWard>
+				<Description>6+ магический спас-бросок</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Посох волшебства</Name>
+				<Type>Arcane</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>+1 к разрушению заклинаний</SpecialRuleDescription>
+				<Description>+1 к разрушению заклинаний</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Свиток разрушения заклинаний</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple>true</Multiple>
+				<Description>автоматически разрушает вражеское заклинание, одноразовый</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Камень Силы</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<Multiple>true</Multiple>
+				<Description>+2 кубика при сотворении заклинания, одноразовый</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+			<Artefact>
+				<Name>Боевое знамя</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>+1 к результату боя</SpecialRuleDescription>
+				<Description>+1 к Результату боя</Description>
+				<OrdinaryArtefact>true</OrdinaryArtefact>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Магическое оружие">	
+			<Artefact>
+				<Name>Лезвие реальностей</Name>
+				<Type>Weapon</Type>
+				<Points>75</Points>
+				<SpecialRuleDescription>попадание - смерть по тесту на Лидерство</SpecialRuleDescription>
+				<Description>За каждое попадание, полученное этим оружием, цель должна пройти тест по немодифицированному Лидерству или мгновенно погибнуть. От этой атаки не защищают доспехи, особая защита или регенерация. Если тест пройден, то проводятся броски на пробитие как обычно</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Клинок почтенного Тзунки</Name>
+				<Type>Weapon</Type>
+				<Points>65</Points>
+				<AddToStrength>1</AddToStrength>
+				<SpecialRuleDescription>без спас-бросков за броню</SpecialRuleDescription>
+				<Description>Обладатель получает +1 к Силе, кроме того от этого оружия не защищают доспехи</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Скимитар Солнечного Величия</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<AddToAttacks>2</AddToAttacks>
+				<Description>Обладатель получает +2 Атаки</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Военное копьё стеганадона</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Скинк</OnlyForGroup>
+				<OnlyFor>Mount</OnlyFor>
+				<Points>50</Points>
+				<SpecialRuleDescription>2D6+1 таранных ударов стегадона</SpecialRuleDescription>
+				<SpecialRuleDescription>рыцарская пика</SpecialRuleDescription>
+				<Description>Стегадон или Дервний Стегадон, на котором едет носитель, наносит 2D6+1 таранных ударов вместо 1D6+1</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Посох утраченного солнца</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>3 выстрела Силой 5</SpecialRuleDescription>
+				<Description>Подобен короткому луку, выпускает 3 выстрела Силой 5</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Клинок Пираньи</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>наносит две раны вместо одной</SpecialRuleDescription>
+				<Description>Любая рана, нанесённая этим оружием после всех проверок наносит две Раны, а не одну</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Кинжал Сотека</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Скинк</OnlyForGroup>
+				<Points>25</Points>
+				<KillingBlow>true</KillingBlow>
+				<Fear>true</Fear>
+				<Description>Обладатель получает правило Смертельного удара и внушает страх Скайвенам</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Меч Шершня</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<HitFirst>true</HitFirst>
+				<Description>Обладатель всегда бьёт первым</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Пылающее лезвие Чотека</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>огненные атаки</SpecialRuleDescription>
+				<SpecialRuleDescription>-2 на спас-бросок за доспех</SpecialRuleDescription>
+				<Description>Огненные атаки. Цели, поражённые Пылающим лезвием получают -2 к своему спас-броску за доспехи</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Магические доспехи">	
+			<Artefact>
+				<Name>Шкура холодного</Name>
+				<Type>Armour</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<Points>50</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToToughness>1</AddToToughness>
+				<Fear>true</Fear>
+				<Stupidity>true</Stupidity>
+				<Description>Тяжёлые доспехи, дают бонус +1 к Стойкости, внушают Страх, но носитель становится подвержен правилу Тупости</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Сверкающий стегодоний шлем</Name>
+				<Type>Armour</Type>
+				<OnlyForGroup>Скинк</OnlyForGroup>
+				<Points>50</Points>
+				<AddToArmour>6</AddToArmour>
+				<AddToAddToLeadership>1</AddToAddToLeadership>
+				<Description>Шлем добавляет +1 к спас-броску за доспех, а также даёт носителю +1 к Лидерству</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Щит зеркального пруда</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToArmour>5</AddToArmour>
+				<SpecialRuleDescription>отражение заклинания на 2+</SpecialRuleDescription>
+				<Description>Любые магические стрелы, попавшие в носителя или отряд в котором он находится на 2+ отражаются обратно на выпустившего его или отряд; это отражённое заклятье уже не может быть рассеяно</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Калечащий щит</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>Носитель получает +1 Атаку, которая считается магической и проводится по базовой Силе обладателя</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Колдовские предметы">	
+			<Artefact>
+				<Name>Рог Кайгора</Name>
+				<Type>Arcane</Type>
+				<Points>100</Points>
+				<Fear>true</Fear>
+				<SpecialRuleDescription>кавалерия в 12 дюймах становится Упорной</SpecialRuleDescription>
+				<Description>Дружественная каваления в пределах 12 дюймов от носителя становится Упорной; обладатель внушает Страх вражеской кавалерии</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Рогач</Name>
+				<Type>Arcane</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Рогач</SpecialRuleDescription>
+				<Description>Рогачи - это редкая разновидность Холодных. Они обладают Движением 8, Инициативой 3 и не подвержены Тупости</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Божественная таблица защиты</Name>
+				<Type>Arcane</Type>
+				<OnlyForGroup>Сланн</OnlyForGroup>
+				<Points>30</Points>
+				<AddToWard>2</AddToWard>
+				<Description>Щит даёт Особую защиту 2+ от всех дистанционных атак</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Военный барабан Ксахутека</Name>
+				<Type>Arcane</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>марш в 8 дюймах от врага</SpecialRuleDescription>
+				<SpecialRuleDescription>+1 к Лидерству при восстановлении порядка</SpecialRuleDescription>
+				<Description>Присутствие вражеских отрядов в 8 дюймах от носителя или отряда к которому он присоединён, не мешает носителю или отряду маршировать; также все дружественные подразделения в 12 дюймах имеют +1 к Лидерству при попытках собраться после Бегства</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Окровавленная статую ненависти</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>раны за проваленную Стойкость, одноразово</SpecialRuleDescription>
+				<Description>Связанное заклятье, Силы 5; одноразовый; заклятье может быть призвано против любого вражеского персонажа; он должен пройти тест на Стойкость или получает рану без спас-бросков за доспехи; после получения раны персонаж должен снова и снова проходить тест на стойкость до тех пор пока не пройдёт тест или не погибнет</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Оберег воина-ягуара</Name>
+				<Type>Arcane</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<Points>25</Points>
+				<SpecialRuleDescription>заклятье Конь Теней</SpecialRuleDescription>
+				<Description>Связанное заклятье, Силы 5; оберег содержит заклятье Конь Теней из школы Теней; заклятье может быть наложено только на носителя оберега</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Плащ из перьев</Name>
+				<Type>Arcane</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<OnlyForGroup>Скинк</OnlyForGroup>
+				<Points>25</Points>
+				<SpecialRuleDescription>полёт</SpecialRuleDescription>
+				<Description>Обладатель умеет летать</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Амулет карнозавра</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<Frenzy>true</Frenzy>
+				<Description>Носитель получает правило Бешенства после первой нанесённой кому-либо раны; он не может потерять Бешенство даже если разгромлен в ближнем бою</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Заклятый оберег Тепока</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>переброс вражеской магической ошибки</SpecialRuleDescription>
+				<Description>Одноразовый предмет; носитель может заставить вражеского волшебника перебросить результат броска по таблице магических ошибок; результат повторного броска остаётся</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Проклятая голова</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>удвоение ран выбранному персонажу</SpecialRuleDescription>
+				<Description>Обозначьте перед началом битвы одного вражеского персонажа - все раны нанесённые ему носителем удваиваются</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ртутная стрекоза</Name>
+				<Type>Arcane</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>+1 на бросок расстановки разведчиков</SpecialRuleDescription>
+				<Description>Если оба игрока имеют отряды разведчиков, то обладатель этого предмета имеет +1 на результат броска, определяющего порядок расстановки разведчиков</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Яд светлячковой лягушки</Name>
+				<Type>Arcane</Type>
+				<Points>10</Points>
+				<PoisonAttack>true</PoisonAttack>
+				<Description>Всё оружие носителя становится ядовитым; всё немагическое оружие считается магическим; всё уже ядовитое оружие может перебрасывать броски на попадание</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Колдовская аркана">	
+			<Artefact>
+				<Name>Чаша дланей Старейших</Name>
+				<Type>Arcane</Type>
+				<Points>45</Points>
+				<SpecialRuleDescription>перенос магической ошибки на противника</SpecialRuleDescription>
+				<Description>Одноразовый; на 2+ обладатель игнорирует выпавшую магическую ошибку, а если в пределах видимости есть вражеский маг, то именно он вынужден выполнить бросок по таблице магических ошибок; при этом результат броска 5-6 для вражеского мага игнорируется</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Куб Тьмы</Name>
+				<Type>Arcane</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>автоматическое рассеивание заклятья</SpecialRuleDescription>
+				<SpecialRuleDescription>на 4+ все оставшиеся в игре рассеиваются</SpecialRuleDescription>
+				<Description>Одноразовый; автоматически рассеивает вражеское заклятье; в дополнение к этому на 4+ рассеиваются и все оставшиеся в игре заклятья и фаза магии прекращается</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Жезл Шторма</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>заклятье Гром Урнона, Сила 6</SpecialRuleDescription>
+				<Description>Одноразовый; связанное заклятье Гром Урнона школы Небес, Сила 6</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Диадема могущества</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>до двух кубиков силы на рассеивание</SpecialRuleDescription>
+				<Description>Носитель может сохранить до двух неиспользованных кубиков силы и перенести из в пул кубиков на рассеивание в следующую фазу магии противника</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Таблица Тепока</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>дополнительное заклятье</SpecialRuleDescription>
+				<Description>Носитель может получить на одно заклятье больше, чем позволяет его уровень</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Талисманы">	
+			<Artefact>
+				<Name>Аура Квецля</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>-1 на попадание в ближнем бою</SpecialRuleDescription>
+				<Description>Все атаки на носителя в ближнем бою получают пенальти в -1 на попадание</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ожирелье символов</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToWard>5</AddToWard>
+				<Description>Обладатель получает особую защиту 5+</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Амулет Итцля</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToWard>2</AddToWard>
+				<Description>Особая защита 2+ против первой раны</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Магические знамёна">
+			<Artefact>
+				<Name>Тотем провидения</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<Fear>true</Fear>
+				<Description>Отряд внушает Страх</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Таблица подчинения</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Тупость врага на 18 дюймов</SpecialRuleDescription>
+				<Description>Каждый отряд противника в 18 дюймах и способный провести линию видимости до Таблицы должен подчиняться правилу Тупости</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Солнечный штандарт Чотека</Name>
+				<Type>Banner</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>-1 на попадание при стрельбе с &gt;12 дюймов</SpecialRuleDescription>
+				<SpecialRuleDescription>-2 на попадание при стрельбе с &lt;12 дюймов</SpecialRuleDescription>
+				<Description>Стрелковые атаки направленные на отряд получают пенальти -1 при стрельбы с дистанции в 12 дюймов и больше; и пенальти -2 при стрельбе на дистанцию меньше 12 дюймов</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Благословенный тотем Хуанчи</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>однократно +D6 на дистанцию атаки</SpecialRuleDescription>
+				<Description>Одноразовый; +D6 на дистанцию атаки</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Штандарт ягуара</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>отряд преследует на дистанцию +D6</SpecialRuleDescription>
+				<Description>Отряд преследует противника на дополнительные D6 дистанции</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Знамя из скайвенских шкурок</Name>
+				<Type>Banner</Type>
+				<OnlyForGroup>Скинк</OnlyForGroup>
+				<Points>25</Points>
+				<Franzy>true</Franzy>
+				<Hate>true</Hate>
+				<Description>Отряд становится Бешеным. В дополнение он испытывается Ненависть к скайвенам</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	
 	<Heroes>

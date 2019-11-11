@@ -75,8 +75,10 @@ namespace WarhammerArmyAssembler
 
         public Brush InterfaceColor { get; set; }
         public bool GroopBold { get; set; }
-
         public bool OrdinaryArtefact { get; set; }
+        public string ArtefactGroup { get; set; }
+        public bool Artefacts { get; set; }
+
 
         private bool artefactAlreadyUsed = false;
         public bool ArtefactAlreadyUsed

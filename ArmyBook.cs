@@ -59,11 +59,17 @@ namespace WarhammerArmyAssembler
             LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref Mounts);
 
-            foreach (XmlNode xmlArtefact in xmlFile.SelectNodes("ArmyBook/Artefacts/Artefact"))
+            foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Artefacts/ArtefactsGroup"))
             {
-                int newID = GetNextIndex();
-                Artefact.Add(newID, LoadOption(newID, xmlArtefact));
+                string groupName = xmlArtefactGroup.Attributes["Name"].Value;
+
+                foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("Artefact"))
+                {
+                    int newID = GetNextIndex();
+                    Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
+                }
             }
+                
                 
         }
 
@@ -256,7 +262,7 @@ namespace WarhammerArmyAssembler
             return (xmlNode.InnerText == "true" ? true : false);
         }
 
-        public static Option LoadOption(int id, XmlNode xmlNode)
+        public static Option LoadOption(int id, XmlNode xmlNode, string artefactGroup = null)
         {
             Option newWeapon = new Option();
 
@@ -311,6 +317,8 @@ namespace WarhammerArmyAssembler
             newWeapon.FullCommand = BoolParse(xmlNode["FullCommand"]);
 
             newWeapon.Mount = BoolParse(xmlNode["Mount"]);
+
+            newWeapon.ArtefactGroup = artefactGroup ?? String.Empty;
 
             return newWeapon;
         }

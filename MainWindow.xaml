@@ -102,8 +102,8 @@
                                                         <Setter Property="TextBlock.TextDecorations" Value="Strikethrough"/>
                                                         <Setter Property="TextBlock.Foreground" Value="Gray"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding OrdinaryArtefact}" Value="True">
-                                                        <Setter Property="Foreground" Value="Gray"/>
+                                                    <DataTrigger Binding="{Binding Artefacts}" Value="True">
+                                                        <Setter Property="TextBlock.Foreground" Value="Gray"/>
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding PersonifiedHero}" Value="True">
                                                         <Setter Property="Foreground" Value="Gray"/>
