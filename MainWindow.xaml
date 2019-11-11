@@ -69,7 +69,7 @@
 
                 <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="28"></RowDefinition>
+                        <RowDefinition Height="31"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
@@ -78,8 +78,8 @@
                     </Grid.ColumnDefinitions>
 
                     <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Background="White">
-                        <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto" Margin="4,-3" MouseDown="armyMainLabel_MouseDown" />
-                        <Label x:Name="armyMainMenu" Content="" FontSize="20" FontFamily="Arial" Foreground="White" Background="Gray" Width="Auto" Margin="24,-2" MouseDown="armyMainLabel_MouseDown" />
+                        <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto" Margin="4,0" MouseDown="armyMainLabel_MouseDown" />
+                        <Label x:Name="armyMainMenu" Content="" FontSize="20" FontFamily="Arial" Foreground="White" Background="Gray" Width="Auto" Margin="24,0" MouseDown="armyMainLabel_MouseDown" />
                     </Canvas>
 
                     <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
