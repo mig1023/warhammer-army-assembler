@@ -404,129 +404,101 @@
 	</Artefacts>
 	
 	<Heroes>
+
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Сланн Маг-Жрец</Name>
+			<Name>Владыка Кроак</Name>
 			<Group>Сланн</Group>
-			<Points>325</Points>
+			<Mage>4</Mage>
+			<Points>600</Points>
+			<Description>Владыка Кроак</Description>
 			<MinSize>1</MinSize>
-			<MountInit>Гнарла</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
 			<MainParam>
 				<Movement>4</Movement>
-				<WeaponSkill>7</WeaponSkill>
+				<WeaponSkill>1</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
+				<Strength>3</Strength>
 				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
+				<Wounds>6</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<Regeneration>true</Regeneration>
+				<ColdBlooded>true</ColdBlooded>
+				<Unbreakable>true</Unbreakable>
+				<Fear>true</Fear>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Горючий</SpecialRuleDescription>
+					<SpecialRuleDescription>Сила отряда 3</SpecialRuleDescription>
+					<SpecialRuleDescription>Спасение Итцы</SpecialRuleDescription>
+					<SpecialRuleDescription>Несломимая Храмовая Стража</SpecialRuleDescription>
+					<SpecialRuleDescription>Сопротивление магии(3)</SpecialRuleDescription>
+					<SpecialRuleDescription>Игнорирует магические ошибки</SpecialRuleDescription>
+					<SpecialRuleDescription>Дополнительный куб на сотворение</SpecialRuleDescription>
+				</Special>
 				<HandWeapon>
-					<Name>Морглор Крушитель</Name>
-					<HitFirst>true</HitFirst>
-					<SpecialRuleDescription>без спас-бросков за броню и особой защиты</SpecialRuleDescription>
+					<Name>Золотая посмертная маска</Name>
+					<SpecialRuleDescription>пенальти -1 на попадание любых атак</SpecialRuleDescription>
 				</HandWeapon>
-				<Armour>
-					<Name>тяжёлые доспехи</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				
-				<Special>
-					<SpecialRuleDescription>у босса есть план!</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>орки да бест!</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>толстокожий</SpecialRuleDescription>
-					<AddToArmour>5</AddToArmour>
-				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Азхаг Мясник</Name>
-			<Group>Орк</Group>
-			<Mage>2</Mage>
-			<Points>450</Points>
-			<Description>Азхаг Мясник - орочий военочальник, отличная возможность соединить грубую силу орочьего военачальника со способностью мага</Description>
+			<Name>Владыка Маздамунди</Name>
+			<Group>Сланн</Group>
+			<Points>620</Points>
 			<MinSize>1</MinSize>
-			<MountInit>Виверна</MountInit>
+			<MountInit>Жлак</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Владыка Маздамунди</Description>
 			<MainParam>
 				<Movement>4</Movement>
-				<WeaponSkill>7</WeaponSkill>
+				<WeaponSkill>2</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>5</Wounds>
 				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
+				<Attacks>2</Attacks>
 				<Leadership>9</Leadership>
+				<Armour>2</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Stupidity>true</Stupidity>
+				<Regeneration>true</Regeneration>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<Stubborn>true</Stubborn>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>Рубительный меч Слаггим</Name>
-					<AddToAttacks>1</AddToAttacks>
-					<SpecialRuleDescription>переброс промахов в первый раунд</SpecialRuleDescription>
-				</HandWeapon>
-				<Armour>
-					<Name>Тердый доспех Азгах</Name>
-					<AddToArmour>5</AddToArmour>
-					<AddToWard>5</AddToWard>
-				</Armour>
-				<Crown>
-					<Name>корона Волшебства</Name>
-					<SpecialRuleDescription>маг 2 уровня</SpecialRuleDescription>
-				</Crown>
 				<Special>
-					<SpecialRuleDescription>Ээээ...ребята, враг в ТОЙ стороне!</SpecialRuleDescription>
+					<SpecialRuleDescription>Горючий</SpecialRuleDescription>
+					<SpecialRuleDescription>Сила отряда 3</SpecialRuleDescription>
+					<SpecialRuleDescription>Разрушение городов</SpecialRuleDescription>
+					<SpecialRuleDescription>Знает оперделённую Школу целиком</SpecialRuleDescription>
+					<SpecialRuleDescription>Сопротивление магии(3)</SpecialRuleDescription>
+					<SpecialRuleDescription>Перебрасывает магические ошибки</SpecialRuleDescription>
+					<SpecialRuleDescription>Дополнительный куб на сотворение</SpecialRuleDescription>
 				</Special>
-			</SpecialRulesAndAmmunition>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Гримгор Железная шкура</Name>
-			<Group>Орк</Group>
-			<Points>375</Points>
-			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
-			<Description>Гримгор - Чёрный Орк-военачальник. Воистину это лучший боец, которого когда-либо производила раса зеленокожих; Гримгор - неудержимая смертоносная машина, способная превратить вражеский полк в кучу отбросов</Description>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>8</WeaponSkill>
-				<BallisticSkill>1</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>7</Attacks>
-				<Leadership>9</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<Hate>true</Hate>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Гитсинк</Name>
+					<Name>Палица Кобры</Name>
 					<AddToStrength>2</AddToStrength>
-					<SpecialRuleDescription>всегда бьёт первым</SpecialRuleDescription>
+					<HitFirst>true</HitFirst>
+					<PoisonAttack>true</PoisonAttack>
+					<SpecialRuleDescription>уничтожение магического оружия противника</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
-					<Name>Выкованный на крови доспех</Name>
-					<AddToArmour>1</AddToArmour>
-					<AddToWard>5</AddToWard>
+					<Name>Щит Древних</Name>
+					<AddToWard>4</AddToWard>
 				</Armour>
-				<Special>
-					<SpecialRuleDescription>Ви аре чемпионз!</SpecialRuleDescription>
-				</Special>
+				<Banner>
+					<Name>Солнечный штандарт Хексоатля</Name>
+					<SpecialRuleDescription>знамя армии</SpecialRuleDescription>
+				</Banner>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
