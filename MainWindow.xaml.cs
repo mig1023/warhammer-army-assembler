@@ -238,7 +238,7 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
-            Army.MaxPoints = Interface.IntParse(listArmybookPoints.Content.ToString().Split(null)[0]);
+            //Army.MaxPoints = Interface.IntParse(listArmybookPoints.Content.ToString().Split(null)[0]);
             ArmyBook.LoadArmy(Interface.CurrentSelectedArmy);
 
             Interface.LoadArmyList();

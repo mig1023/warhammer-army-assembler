@@ -614,16 +614,11 @@ namespace WarhammerArmyAssembler
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
             main.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
 
-            main.listArmybookName.Content = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName").InnerText;
-            main.listArmybookVer.Content = "ред." + xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText;
+            main.listArmybookVer.Content = "редакция " + xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText;
 
             main.UpdateLayout();
 
-            double leftForPoints = main.listArmybookName.Margin.Left + main.listArmybookName.ActualWidth + 15;
-            main.listArmybookVer.Margin = Thick(main.listArmybookPoints, left: leftForPoints);
-
-            main.listArmybookName.Foreground = BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
-            main.labelArmybook.Background = BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+            main.listArmybookVer.Background = BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
         }
 
         public static void PreviewArmyList(bool next = false, bool prev = false)
@@ -638,11 +633,11 @@ namespace WarhammerArmyAssembler
 
         public static void PreviewArmyPoints()
         {
-            if (main == null || main.ptsThousands == null || main.ptsHundreds == null)
-                return;
+            //if (main == null || main.ptsThousands == null || main.ptsHundreds == null)
+            //    return;
 
-            double pts = (main.ptsThousands.Value * 1000) + (990 - main.ptsHundreds.Value);
-            main.listArmybookPoints.Content = pts.ToString() + " pts";
+            //double pts = (main.ptsThousands.Value * 1000) + (990 - main.ptsHundreds.Value);
+            //main.listArmybookPoints.Content = pts.ToString() + " pts";
         }
     }
 }

@@ -27,21 +27,20 @@
 
             <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="599" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
                 <Canvas x:Name="menuArmybookPlace" Width="320" Height="599" VerticalAlignment="Top" Background="White">
-                    <Label x:Name="labelArmybook" Content="Выберите армибук" Foreground="White" Background="Gray" Width="Auto" Margin="18,5"/>
-                    <Image x:Name="imageArmybook" Height="318" Width="212" Canvas.Left="45" Canvas.Top="36"/>
-                    <Label x:Name="listArmybookName" Height="38" FontSize="20" Content="" Width="Auto" Canvas.Left="20" Canvas.Top="359"/>
-                    <Label x:Name="listArmybookVer" Height="38" FontSize="20" Content="" Width="Auto" Canvas.Top="359"/>
-                    <Label x:Name="listArmybookPoints" Height="56" FontSize="35" Content="" Width="Auto" Canvas.Top="381" Canvas.Left="20"/>
+                    <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="11"/>
+                    <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="303" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
                     <Button x:Name="buttonArmybook" Content="Выбрать" Height="34" Width="95" Canvas.Left="20" Canvas.Top="521" Click="buttonArmybook_Click"/>
-                    <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="152" Width="20" Click="prev_Click"/>
-                    <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="152" Width="20" Click="next_Click"/>
-                    <Slider x:Name="ptsThousands" Maximum="10" Minimum="0" Value="2" Foreground="Transparent" IsSnapToTickEnabled="True" TickFrequency="1" TickPlacement="BottomRight" Background="{x:Null}" Canvas.Left="20" Canvas.Top="451" Width="262" ValueChanged="ptsThousandsOrHundreds_ValueChanged" Height="26"/>
-                    <Slider x:Name="ptsHundreds" Maximum="990" Minimum="0" Value="999" Foreground="Transparent" IsSnapToTickEnabled="True" TickFrequency="10" TickPlacement="BottomRight" Background="{x:Null}" Canvas.Left="20" Canvas.Top="481" Width="262" ValueChanged="ptsThousandsOrHundreds_ValueChanged" Height="26" RenderTransformOrigin="0.5,0.5">
-                        <Slider.LayoutTransform>
-                            <RotateTransform Angle="-180"/>
-                        </Slider.LayoutTransform>
-                    </Slider>
-                    <Label x:Name="label" Content="||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||" Height="27" Canvas.Left="20" Canvas.Top="463" Width="262"/>
+                    <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="118" Width="20" Click="prev_Click"/>
+                    <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="118" Width="20" Click="next_Click"/>
+                    <Button x:Name="button200pts" Content="200 pts" Height="22" Canvas.Left="45" Canvas.Top="351" Width="68"/>
+                    <Button x:Name="button250pts" Content="250 pts" Height="22" Canvas.Left="118" Canvas.Top="351" Width="68"/>
+                    <Button x:Name="button400pts" Content="400 pts" Height="22" Canvas.Left="191" Canvas.Top="351" Width="68"/>
+                    <Button x:Name="button500pts" Content="500 pts" Height="22" Canvas.Left="45" Canvas.Top="378" Width="68"/>
+                    <Button x:Name="button1000pts" Content="1000 pts" Height="22" Canvas.Left="118" Canvas.Top="378" Width="68"/>
+                    <Button x:Name="button1250pts" Content="1250 pts" Height="22" Canvas.Left="191" Canvas.Top="378" Width="68"/>
+                    <Button x:Name="button1500pts" Content="1500 pts" Height="22" Canvas.Left="45" Canvas.Top="405" Width="68"/>
+                    <Button x:Name="button2000pts" Content="2000 pts" Height="22" Canvas.Left="118" Canvas.Top="405" Width="68"/>
+                    <Button x:Name="button2500pts" Content="2500 pts" Height="22" Canvas.Left="191" Canvas.Top="405" Width="68"/>
                 </Canvas>
             </ScrollViewer>
 
