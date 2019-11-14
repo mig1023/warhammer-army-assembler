@@ -627,17 +627,17 @@ namespace WarhammerArmyAssembler
 
             PreviewLoadCurrentSelectedArmy(currentFile);
             CurrentSelectedArmy = currentFile;
-
-            PreviewArmyPoints();
         }
 
-        public static void PreviewArmyPoints()
+        public static void LoadArmySize(int points)
         {
-            //if (main == null || main.ptsThousands == null || main.ptsHundreds == null)
-            //    return;
+            Army.MaxPoints = points;
+            ArmyBook.LoadArmy(CurrentSelectedArmy);
 
-            //double pts = (main.ptsThousands.Value * 1000) + (990 - main.ptsHundreds.Value);
-            //main.listArmybookPoints.Content = pts.ToString() + " pts";
+            LoadArmyList();
+            ReloadArmyData();
+
+            Move(Interface.MovingType.ToMain);
         }
     }
 }
