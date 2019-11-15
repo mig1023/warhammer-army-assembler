@@ -112,7 +112,7 @@
 				<Points>50</Points>
 				<SpecialRuleDescription>2D6+1 таранных ударов стегадона</SpecialRuleDescription>
 				<SpecialRuleDescription>рыцарская пика</SpecialRuleDescription>
-				<Description>Стегадон или Дервний Стегадон, на котором едет носитель, наносит 2D6+1 таранных ударов вместо 1D6+1</Description>
+				<Description>Стегадон или Древний Стегадон, на котором едет носитель, наносит 2D6+1 таранных ударов вместо 1D6+1</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Посох утраченного солнца</Name>
@@ -285,7 +285,7 @@
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Колдовская аркана">	
 			<Artefact>
-				<Name>Чаша дланей Старейших</Name>
+				<Name>Чаша дланей Древних</Name>
 				<Type>Arcane</Type>
 				<Points>45</Points>
 				<SpecialRuleDescription>перенос магической ошибки на противника</SpecialRuleDescription>
@@ -425,7 +425,6 @@
 					<SpecialRuleDescription>Сила отряда 3</SpecialRuleDescription>
 					<SpecialRuleDescription>Спасение Итцы</SpecialRuleDescription>
 					<SpecialRuleDescription>Несломимая Храмовая Стража</SpecialRuleDescription>
-					<SpecialRuleDescription>Сопротивление магии(3)</SpecialRuleDescription>
 					<SpecialRuleDescription>Игнорирует магические ошибки</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
@@ -1398,395 +1397,100 @@
 	<Units>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага орков</Name>
+			<Name>Саурусы</Name>
+			<Points>11</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>щит</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>копья</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>музыкант</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>знаменосец</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>чемпион</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>12</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Скинки</Name>
 			<Points>5</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппа</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>лёгкие доспехи</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>Здоровяки</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<PerModel>true</PerModel>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-				</Option>
-				<Option>
-					<Name>парные чоппы</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel>true</PerModel>
-					<AddToAttacks>1</AddToAttacks>
-				</Option>
-				<Option>
-					<Name>копья</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-				</Option>
-				<Option>
-					<Name>щиты</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>музыкант</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>10</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>15</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Ватага орков-лучников</Name>
-			<Points>6</Points>
-			<MinSize>10</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппа</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>лёгкие доспехи</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<RangedWeapon>
-					<Name>короткий лук</Name>
-				</RangedWeapon>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>музыкант</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>10</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>15</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Ватага диких орков</Name>
-			<Points>8</Points>
-			<MinSize>10</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппа</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>боевая раскраска</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>Здоровяки</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<PerModel>true</PerModel>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-				</Option>
-				<Option>
-					<Name>парные чоппы</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel>true</PerModel>
-					<AddToAttacks>1</AddToAttacks>
-				</Option>
-				<Option>
-					<Name>копья</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-				</Option>
-				<Option>
-					<Name>лук</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel>true</PerModel>
-				</Option>
-				<Option>
-					<Name>щиты</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>музыкант</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>10</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>15</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Ватага гоблинов</Name>
-			<Points>3</Points>
-			<MinSize>20</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
+				<Movement>6</Movement>
 				<WeaponSkill>2</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
 				<Strength>3</Strength>
-				<Toughness>3</Toughness>
+				<Toughness>2</Toughness>
 				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>лёгкие доспехи</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>копья</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-				</Option>
-				<Option>
-					<Name>луки</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-				</Option>
-				<Option>
-					<Name>щиты</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>музыкант</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>8</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>8</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Ватага гоблинов-наездников на волках</Name>
-			<Points>12</Points>
-			<MinSize>5</MinSize>
-			<MainParam>
-				<Movement>9</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>лёгкие доспехи</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>лёгкая кавалерия</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>копья</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-				</Option>
-				<Option>
-					<Name>короткие луки</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-				</Option>
-				<Option>
-					<Name>щиты</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>музыкант</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>12</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Ватага гоблинов-наездников на пауках</Name>
-			<Points>13</Points>
-			<MinSize>5</MinSize>
-			<MainParam>
-				<Movement>7</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
+				<Initiative>4</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
 				<PoisonAttack>true</PoisonAttack>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+				</Special>
 				<HandWeapon>
 					<Name>ручное оружие</Name>
 				</HandWeapon>
-				<HandWeapon>
-					<Name>копьё</Name>
-				</HandWeapon>
+				<RangeWeapon>
+					<Name>дротик</Name>
+				</RangeWeapon>
 				<Armour>
-					<Name>щиты</Name>
+					<Name>щит</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>лёгкая кавалерия</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>стенолазы</SpecialRuleDescription>
-				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>короткие луки</Name>
+					<Name>Кроксигор</Name>
 					<Type>Option</Type>
-					<Points>1</Points>
+					<Points>55</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
@@ -1799,723 +1503,497 @@
 					<Name>знаменосец</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
-					<Points>12</Points>
+					<Points>8</Points>
 				</Option>
-					<Option>
-					<Name>босс</Name>
+				<Option>
+					<Name>смелый скинк</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
-					<Points>12</Points>
+					<Points>8</Points>
 				</Option>
 			</Options>
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага Ночных гоблинов</Name>
-			<Points>3</Points>
-			<MinSize>20</MinSize>
+			<Name>Скинки-застрельщики</Name>
+			<Points>7</Points>
+			<MinSize>10</MinSize>
+			<MaxSize>20</MaxSize>
 			<MainParam>
-				<Movement>4</Movement>
+				<Movement>6</Movement>
 				<WeaponSkill>2</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
 				<Strength>3</Strength>
-				<Toughness>3</Toughness>
+				<Toughness>2</Toughness>
 				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>5</Leadership>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+					<SpecialRuleDescription>Лёгкая пехота</SpecialRuleDescription>
+				</Special>
 				<HandWeapon>
 					<Name>ручное оружие</Name>
 				</HandWeapon>
-				<Armour>
-					<Name>щиты</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>ловцы</SpecialRuleDescription>
-				</Special>
+				<RangeWeapon>
+					<Name>дротик</Name>
+				</RangeWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>копья</Name>
+					<Name>Дротики и щиты</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
+					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>сети</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-				</Option>
-				<Option>
-					<Name>первый фанатик</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-				</Option>
-				<Option>
-					<Name>второй фанатик</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-				</Option>
-				<Option>
-					<Name>третий фанатик</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-				</Option>
-				<Option>
-					<Name>музыкант</Name>
+					<Name>смелый скинк</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>8</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>8</Points>
+					<Points>6</Points>
 				</Option>
 			</Options>
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Снотлинги</Name>
-			<Points>20</Points>
-			<MinSize>2</MinSize>
-			<MaxSize>20</MaxSize>
+			<Name>Стая из джунглей</Name>
+			<Points>45</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>6</MaxSize>
 			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
 				<Strength>2</Strength>
 				<Toughness>2</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>4</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-				<Stubborn>true</Stubborn>
-			</AdditionalParam>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Ватага Черных орков</Name>
-			<Points>13</Points>
-			<MinSize>5</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Unit</MagicItemsType>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>вооружены до зубов</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>тяжёлые доспехи</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>щиты</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel>true</PerModel>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>музыкант</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>12</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Ватага орков на кабанах</Name>
-			<Points>22</Points>
-			<MinSize>5</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Unit</MagicItemsType>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппа</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>лёгкие доспехи</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>щиты</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<SpecialRuleDescription>толстокожие</SpecialRuleDescription>
-					<AddToArmour>5</AddToArmour>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>Здоровяки</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-					<PerModel>true</PerModel>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-				</Option>
-				<Option>
-					<Name>музыкант</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>12</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>17</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Ватага диких орков на кабанах</Name>
-			<Points>21</Points>
-			<MinSize>5</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Unit</MagicItemsType>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппа</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>толстокожие</SpecialRuleDescription>
-					<AddToArmour>5</AddToArmour>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>Здоровяки</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-					<PerModel>true</PerModel>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-				</Option>
-				<Option>
-					<Name>копья</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel>true</PerModel>
-				</Option>
-				<Option>
-					<Name>щиты</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel>true</PerModel>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>музыкант</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>знаменосец</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>12</Points>
-				</Option>
-					<Option>
-					<Name>босс</Name>
-					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
-					<Points>17</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Кабанья колесница</Name>
-			<Points>80</Points>
-			<MinSize>1</MinSize>
-			<MaxSize>1</MaxSize>
-			<ModelsInPack>4</ModelsInPack>
-			<MainParam>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппы</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>копья</Name>
-				</HandWeapon>
-				<Special>
-					<AddToArmour>4</AddToArmour>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>третий орк</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Наездники на сквигах Ночных гоблинов</Name>
-			<Points>15</Points>
-			<MinSize>5</MinSize>
-			<MaxSize>5</MaxSize>
-			<MainParam>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>5</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>лёгкая пехота</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>Ииихааа!</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Стадо сквигов Ночных гоблинов</Name>
-			<Points>15</Points>
-			<MinSize>1</MinSize>
-			<ModelsInPack>5</ModelsInPack>
-			<MainParam>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>5</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>стадо сквигов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>дикие сквиги</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>Ииихааа!</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Волчья колесница гоблинов</Name>
-			<Points>60</Points>
-			<MinSize>1</MinSize>
-			<MaxSize>1</MaxSize>
-			<ModelsInPack>5</ModelsInPack>
-			<MainParam>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>копья</Name>
-				</HandWeapon>
-				<RangedWeapon>
-					<Name>короткий лук</Name>
-				</RangedWeapon>
-				<Special>
-					<AddToArmour>5</AddToArmour>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>четвёртый гоблин</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>третий волк</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>3</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Гоблинская камнебросалка</Name>
-			<Points>70</Points>
-			<MinSize>1</MinSize>
-			<MaxSize>1</MaxSize>
-			<ModelsInPack>3</ModelsInPack>
-			<MainParam>
-				<Movement></Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>камнебросалка</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>громила-орк</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Гоблинская копьеметалка</Name>
-			<Points>35</Points>
-			<MinSize>1</MinSize>
-			<MaxSize>1</MaxSize>
-			<ModelsInPack>3</ModelsInPack>
-			<MainParam>
-				<Movement></Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>копьеметалка</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>громила-орк</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Речные тролли</Name>
-			<Points>40</Points>
-			<MinSize>1</MinSize>
-			<MainParam>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>1</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
+				<Wounds>5</Wounds>
 				<Initiative>1</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>4</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<Stupidity>true</Stupidity>
-				<Fear>true</Fear>
-				<Regeneration>true</Regeneration>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>троллиная отрыжка</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>каменные тролли</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<PerModel>true</PerModel>
-					<AddToArmour>5</AddToArmour>
-					<AddToStrength>1</AddToStrength>
-					<SpecialRuleDescription>сопротивление магии (2)</SpecialRuleDescription>
-				</Option>
-				<Option>
-					<Name>речные тролли</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<PerModel>true</PerModel>
-					<SpecialRuleDescription>-1 на попадание</SpecialRuleDescription>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Катапульта пикирующих гоблинов</Name>
-			<Points>80</Points>
-			<MinSize>1</MinSize>
-			<MaxSize>1</MaxSize>
-			<ModelsInPack>3</ModelsInPack>
-			<MainParam>
-				<Movement></Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>катапульта пикирующих гоблинов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Педальный вагон снотлингов</Name>
-			<Points>40</Points>
-			<MinSize>1</MinSize>
-			<MaxSize>1</MaxSize>
-			<MainParam>
-				<Movement>6</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>4</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-				<Stubborn>true</Stubborn>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>колесница</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>Крути педали!</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>Хрясь!</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Гигант</Name>
-			<Points>205</Points>
-			<MinSize>1</MinSize>
-			<MaxSize>1</MaxSize>
-			<MainParam>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks></Attacks>
+				<Attacks>5</Attacks>
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Stubborn>true</Stubborn>
+				<ColdBlooded>true</ColdBlooded>
+				<Unbreakable>true</Unbreakable>
+				<PoisonAttack>true</PoisonAttack>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+					<SpecialRuleDescription>Лёгкая пехота</SpecialRuleDescription>
+					<SpecialRuleDescription>Маленькие</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>зубы и яд!</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Скинки-хамелеоны</Name>
+			<Points>12</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>10</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+					<SpecialRuleDescription>Лёгкая пехота</SpecialRuleDescription>
+					<SpecialRuleDescription>Разведчики</SpecialRuleDescription>
+					<SpecialRuleDescription>-1 на попадание</SpecialRuleDescription>
+				</Special>
 				<HandWeapon>
 					<Name>ручное оружие</Name>
 				</HandWeapon>
+				<RangeWeapon>
+					<Name>духовая трубка</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>лазутчик</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>6</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Наездники на терродонах</Name>
+			<Points>30</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>большая цель</SpecialRuleDescription>
+					<SpecialRuleDescription>Терродон</SpecialRuleDescription>
+					<SpecialRuleDescription>Летающая кавалерия</SpecialRuleDescription>
+					<SpecialRuleDescription>Ударить-и-убежать</SpecialRuleDescription>
+					<SpecialRuleDescription>Уронить камни</SpecialRuleDescription>
+					<SpecialRuleDescription>Древесный хищник</SpecialRuleDescription>
 				</Special>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>дротик</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>смелый скинк</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Стража Храма</Name>
+			<Points>16</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Unit</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>движение</SpecialRuleDescription>
+					<SpecialRuleDescription>Священный долг</SpecialRuleDescription>
 				</Special>
+				<HandWeapon>
+					<Name>алебарда</Name>
+					<AddToStrength>1</AddToStrength>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>легкий доспех</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>щит</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>музыкант</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>знаменосец</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>14</Points>
+				</Option>
+				<Option>
+					<Name>почтенный</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>14</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Всадники на Холодных</Name>
+			<Points>35</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Unit</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+				<Stupidity>true</Stupidity>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>падение</SpecialRuleDescription>
+					<SpecialRuleDescription>Холодные</SpecialRuleDescription>
 				</Special>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>копьё</Name>
+				</Armour>
+				<Armour>
+					<Name>щит</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>музыкант</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>знаменосец</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>чемпион</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Кроксигоры</Name>
+			<Points>55</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<Fear>true</Fear>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>двуручное оружие</Name>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>древний</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Стегадон</Name>
+			<Points>235</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<Stubborn>true</Stubborn>
+				<PoisonAttack>true</PoisonAttack>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>специальные атаки гиганта</SpecialRuleDescription>
+					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
+					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+				</Special>
+				<RangeWeapon>
+					<Name>Гигантский лук</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Древний стегадон</Name>
+			<Points>257</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<Stubborn>true</Stubborn>
+				<PoisonAttack>true</PoisonAttack>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
+					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+				</Special>
+				<RangeWeapon>
+					<Name>Две гигантских духовых трубки</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Охотничьи своры саламандр</Name>
+			<Points>75</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>3</MaxSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Водоплавающие</SpecialRuleDescription>
+					<SpecialRuleDescription>Легкая пехота</SpecialRuleDescription>
+					<SpecialRuleDescription>Охотничья свора</SpecialRuleDescription>
+					<SpecialRuleDescription>Изрыгают пламя</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>доп.погонщик</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Охотничьи своры разордонов</Name>
+			<Points>75</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>3</MaxSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Водоплавающие</SpecialRuleDescription>
+					<SpecialRuleDescription>Легкая пехота</SpecialRuleDescription>
+					<SpecialRuleDescription>Охотничья свора</SpecialRuleDescription>
+					<SpecialRuleDescription>Стреляет шипами</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>доп.погонщик</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>5</Points>
+				</Option>
+			</Options>
 		</Unit>
 	</Units>
 </ArmyBook>
