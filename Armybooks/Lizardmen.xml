@@ -394,7 +394,6 @@
 	</Artefacts>
 	
 	<Heroes>
-
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Владыка Кроак</Name>
@@ -416,7 +415,6 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Regeneration>true</Regeneration>
 				<ColdBlooded>true</ColdBlooded>
 				<Unbreakable>true</Unbreakable>
 				<Fear>true</Fear>
@@ -429,7 +427,6 @@
 					<SpecialRuleDescription>Несломимая Храмовая Стража</SpecialRuleDescription>
 					<SpecialRuleDescription>Сопротивление магии(3)</SpecialRuleDescription>
 					<SpecialRuleDescription>Игнорирует магические ошибки</SpecialRuleDescription>
-					<SpecialRuleDescription>Дополнительный куб на сотворение</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
 					<Name>Золотая посмертная маска</Name>
@@ -441,6 +438,7 @@
 			<Type>Lord</Type>
 			<Name>Владыка Маздамунди</Name>
 			<Group>Сланн</Group>
+			<Mage>4</Mage>
 			<Points>620</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Жлак</MountInit>
@@ -459,8 +457,6 @@
 				<Armour>2</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Regeneration>true</Regeneration>
-				<Terror>true</Terror>
 				<ColdBlooded>true</ColdBlooded>
 				<Stubborn>true</Stubborn>
 			</AdditionalParam>
@@ -469,10 +465,7 @@
 					<SpecialRuleDescription>Горючий</SpecialRuleDescription>
 					<SpecialRuleDescription>Сила отряда 3</SpecialRuleDescription>
 					<SpecialRuleDescription>Разрушение городов</SpecialRuleDescription>
-					<SpecialRuleDescription>Знает оперделённую Школу целиком</SpecialRuleDescription>
-					<SpecialRuleDescription>Сопротивление магии(3)</SpecialRuleDescription>
 					<SpecialRuleDescription>Перебрасывает магические ошибки</SpecialRuleDescription>
-					<SpecialRuleDescription>Дополнительный куб на сотворение</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
 					<Name>Палица Кобры</Name>
@@ -493,91 +486,13 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Гром Брюхастый из Туманных гор</Name>
-			<Group>Гоблин</Group>
-			<Points>255</Points>
+			<Name>Крок-Гар Древний</Name>
+			<Group>Саурус</Group>
+			<Points>635</Points>
 			<MinSize>1</MinSize>
-			<Description>Гром является гоблином военачальником. Обладающий замечательной живучестью, Гром станет отличным предводителем, который поведёт орду Гоблинов к победе</Description>
-			<MountInit>Волчья колесница</MountInit>
+			<Description>Крок-Гар Древний</Description>
+			<MountInit>Гримлок</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<Regeneration>true</Regeneration>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>Топор Грома</Name>
-					<AddToStrength>2</AddToStrength>
-					<KillingBlow>true</KillingBlow>
-					<SpecialRuleDescription>смертельный удар эльфам на 5+</SpecialRuleDescription>
-				</HandWeapon>
-				<Armour>
-					<Name>Удачное знамя</Name>
-					<AddToWard>5</AddToWard>
-				</Armour>
-			</SpecialRulesAndAmmunition>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Скарсинк, воевода Восьми Пиков</Name>
-			<Group>Гоблин</Group>
-			<Points>205</Points>
-			<MinSize>1</MinSize>
-			<Description>Скарсинк - воевода Ночных Гоблинов. Скарсинк устрашает кпротивника в ближнем бою, а его подлые планы ещё в самом начале игры могут привести неприятиля в замешательство</Description>
-			<MountInit>Гоббла</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<Hate>true</Hate>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>Палка-тыкалка Скарсинка</Name>
-					<SpecialRuleDescription>Связанное заклятье, силы 5 на 24 дюйма</SpecialRuleDescription>
-				</HandWeapon>
-				<Special>
-					<KillingBlow>true</KillingBlow>
-					<SpecialRuleDescription>жуй, жуй - глотай</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>хитрый план</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>хитрые ловушки</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Орк-Воевода</Name>
-			<Group>Орк</Group>
-			<Points>115</Points>
-			<Description></Description>
-			<MinSize>1</MinSize>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>6</WeaponSkill>
@@ -586,656 +501,556 @@
 				<Toughness>5</Toughness>
 				<Wounds>3</Wounds>
 				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Попадание Силы 5 по тому кто нанёс рану</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Длань Богов</Name>
+					<SpecialRuleDescription>D6 ударов Силы 4 на 12 дюймов, заклятье Силы 5</SpecialRuleDescription>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Почитаемое копьё Тланксла</Name>
+					<AddToStrength>1</AddToStrength>
+					<SpecialRuleDescription>Нанесённая рана считается за две</SpecialRuleDescription>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Техенхауин</Name>
+			<Group>Скинк</Group>
+			<Mage>4</Mage>
+			<Points>250</Points>
+			<MinSize>1</MinSize>
+			<Description>Техенхауин</Description>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<Unbreakable>true</Unbreakable>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Древний стегадон</Name>
+					<Type>Option</Type>
+					<Points>290</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Маг Школы Зверя</SpecialRuleDescription>
+					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+					<SpecialRuleDescription>Иммунитет к яду</SpecialRuleDescription>
+					<SpecialRuleDescription>Сила отряда 3</SpecialRuleDescription>
+					<SpecialRuleDescription>D6 ядовитых атак Силы 2</SpecialRuleDescription>
+					<SpecialRuleDescription>Все Скинки армии ненавидят Скайвенов</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Лезвие змеиного языка</Name>
+					<AddToAttacks>1</AddToAttacks>
+					<PoisonAttack>true</PoisonAttack>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Таблицы Сотека</Name>
+					<AddToWard>5</AddToWard>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Сланн Маг-Жрец</Name>
+			<Group>Сланн</Group>
+			<Mage>4</Mage>
+			<Points>275</Points>
+			<MinSize>1</MinSize>
+			<Description>Сланн Маг-Жрец</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
 			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппа</Name>
-				</HandWeapon>
-			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Дикий Орк</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<AddToAttacks>1</AddToAttacks>
-					<Frenzy>true</Frenzy>
-					<SpecialRuleDescription>боевая раскраска</SpecialRuleDescription>
+					<Name>Изучение тайн</Name>
+					<Type>SlannOption</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>Знает выбранную Школу Магии целиком</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>Чёрный Орк</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<Name>Размышление</Name>
+					<Type>SlannOption</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>Дополнительный куб на сотворение</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>двуручное оружие</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<Points>6</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>Чёрный Орк</OnlyIfNot>
-					</OnlyIfAnotherService>
+					<Name>Исцеление</Name>
+					<Type>SlannOption</Type>
+					<Points>50</Points>
+					<Regeneration>true</Regeneration>
 				</Option>
 				<Option>
-					<Name>парная чоппа</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
+					<Name>Пытливость</Name>
+					<Type>SlannOption</Type>
+					<Points>50</Points>
+					<Terror>true</Terror>
 				</Option>
 				<Option>
-					<Name>копьё</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>3</Points>
+					<Name>Высш.состояние</Name>
+					<Type>SlannOption</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>Только магические атаки имеют эффект</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>лёгкий доспех</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
+					<Name>Раздумье</Name>
+					<Type>SlannOption</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>Вражеский маг теряет выкинутую шестёрку</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>тяжёлый доспех</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
-						<OnlyIf>Чёрный Орк</OnlyIf>
-					</OnlyIfAnotherService>
+					<Name>Присутствие</Name>
+					<Type>SlannOption</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>Сопротивление магии(3)</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>щит</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Кабан</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Виверна</Name>
-					<Type>Option</Type>
-					<Points>200</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Кабанья колесница</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount>true</Mount>
+					<Name>Душа Камня</Name>
+					<Type>SlannOption</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>Переброс по такблице магических ошибок</SpecialRuleDescription>
 				</Option>
 			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Сила отряда 3</SpecialRuleDescription>
+				</Special>
+				<Armour>
+					<Name>Щит Древних</Name>
+					<AddToWard>4</AddToWard>
+				</Armour>
+			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Орк-Великий шаман</Name>
-			<Group>Орк</Group>
-			<Mage>3</Mage>
-			<Points>180</Points>
+			<Name>Саурус-Патриарх</Name>
+			<Group>Саурус</Group>
+			<Points>145</Points>
 			<MinSize>1</MinSize>
+			<Description>Саурус-Патриарх</Description>
 			<MainParam>
 				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
 				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<MagicItems>100</MagicItems>
-				<MagicItemsType>Mage</MagicItemsType>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппа</Name>
-				</HandWeapon>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>маг 4 уровня</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-				</Option>
-				<Option>
-					<Name>Дикий Орк</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Frenzy>true</Frenzy>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Кабан</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Виверна</Name>
-					<Type>Option</Type>
-					<Points>200</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Кабанья колесница</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount>true</Mount>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Гоблин-Воевода</Name>
-			<Group>Гоблин</Group>
-			<Points>65</Points>
-			<Description></Description>
-			<MinSize>1</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
 				<Wounds>3</Wounds>
 				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
+				<Attacks>5</Attacks>
 				<Leadership>8</Leadership>
+				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
 			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Ночной Гоблин</Name>
+					<Name>копьё</Name>
 					<Type>Option</Type>
-					<Points>-10</Points>
-					<AddToInitiative>1</AddToInitiative>
-					<AddToLeadership>-1</AddToLeadership>
+					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>двуручное оружие</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<Points>6</Points>
+					<Points>12</Points>
 				</Option>
 				<Option>
-					<Name>парное оружие</Name>
+					<Name>алебарда</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>второе оружие</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>копьё</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>3</Points>
+					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>лёгкий доспех</Name>
 					<Type>Option</Type>
-					<Points>3</Points>
+					<Points>10</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>щит</Name>
 					<Type>Option</Type>
-					<Points>3</Points>
+					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>Волк</Name>
+					<Name>Холодный</Name>
 					<Type>Option</Type>
-					<Points>18</Points>
+					<Points>30</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Титанический паук</Name>
+					<Name>Карнозавр</Name>
 					<Type>Option</Type>
-					<Points>40</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Пещеный сквиг</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount>true</Mount>
-					<OnlyIfAnotherService>
-						<OnlyIf>Ночной Гоблин</OnlyIf>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>Волчья колесница</Name>
-					<Type>Option</Type>
-					<Points>60</Points>
+					<Points>210</Points>
 					<Mount>true</Mount>
 				</Option>
 			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Гоблин-Великий шаман</Name>
-			<Group>Гоблин</Group>
-			<Mage>3</Mage>
-			<Points>155</Points>
-			<MinSize>1</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<MagicItems>100</MagicItems>
-				<MagicItemsType>Mage</MagicItemsType>
-			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>ручное оружие</Name>
 				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-				</Special>
 			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>Ночной Гоблин</Name>
-					<Type>Option</Type>
-					<Points>-5</Points>
-					<AddToInitiative>1</AddToInitiative>
-					<AddToLeadership>-1</AddToLeadership>
-				</Option>
-				<Option>
-					<Name>маг 4 уровня</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-				</Option>
-				<Option>
-					<Name>Волк</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Волчья колесница</Name>
-					<Type>Option</Type>
-					<Points>60</Points>
-					<Mount>true</Mount>
-				</Option>
-			</Options>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Орк-Большой Босс</Name>
-			<Group>Орк</Group>
-			<Points>70</Points>
+			<Name>Чака Страж Вечности</Name>
+			<Group>Саурус</Group>
+			<Points>335</Points>
 			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Чака Страж Вечности</Description>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
 				<Toughness>5</Toughness>
 				<Wounds>2</Wounds>
 				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
+				<Attacks>4</Attacks>
 				<Leadership>8</Leadership>
+				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Связенный долг</SpecialRuleDescription>
+					<SpecialRuleDescription>Совершенный телохранитель</SpecialRuleDescription>
+					<SpecialRuleDescription>Перебрасывает броски на попадания в поединке</SpecialRuleDescription>
+					<SpecialRuleDescription>Храмовая стража становится Несломимой</SpecialRuleDescription>
+				</Special>
 				<HandWeapon>
-					<Name>чоппа</Name>
-				</HandWeapon>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>Дикий Орк</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<AddToAttacks>1</AddToAttacks>
-					<Frenzy>true</Frenzy>
-					<SpecialRuleDescription>боевая раскраска</SpecialRuleDescription>
-				</Option>
-				<Option>
-					<Name>Чёрный Орк</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-				</Option>
-				<Option>
-					<Name>знаменосец армии</Name>
-					<Type>Option</Type>
-					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-					<Points>25</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>двуручное оружие</OnlyIfNot>
-						<OnlyIfNot>парная чоппа</OnlyIfNot>
-						<OnlyIfNot>копьё</OnlyIfNot>
-						<OnlyIfNot>щит</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>двуручное оружие</Name>
-					<Type>Option</Type>
+					<Name>Палица из звёздного камня</Name>
 					<AddToStrength>2</AddToStrength>
-					<Points>4</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>Чёрный Орк</OnlyIfNot>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>парная чоппа</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>копьё</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>2</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>лёгкий доспех</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>тяжёлый доспех</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
-						<OnlyIf>Чёрный Орк</OnlyIf>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>щит</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>Кабан</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Кабанья колесница</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount>true</Mount>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Орк-Шаман</Name>
-			<Group>Орк</Group>
-			<Mage>1</Mage>
-			<Points>60</Points>
-			<MinSize>1</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Mage</MagicItemsType>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппа</Name>
+					<SpecialRuleDescription>Магическое оружие врага становится обычным</SpecialRuleDescription>
 				</HandWeapon>
+				<Armour>
+					<Name>Шлем Изначального Стража</Name>
+					<SpecialRuleDescription>Вражеские разведчики не ближе 20 дюймов</SpecialRuleDescription>
+					<SpecialRuleDescription>Скрытые модели обнаруживаются в 20 дюймах</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Ключ от Залы Вечности</Name>
+					<AddToWard>5</AddToWard>
+					<SpecialRuleDescription>Противник всегда бьёт последним</SpecialRuleDescription>
+				</Armour>
 			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>Дикий Орк</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<AddToAttacks>1</AddToAttacks>
-					<Frenzy>true</Frenzy>
-					<SpecialRuleDescription>боевая раскраска</SpecialRuleDescription>
-				</Option>
-				<Option>
-					<Name>маг 2 уровня</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-				</Option>
-				<Option>
-					<Name>Кабан</Name>
-					<Type>Option</Type>
-					<Points>16</Points>
-					<Mount>true</Mount>
-				</Option>
-			</Options>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Гоблин-Большой Босс</Name>
-			<Group>Гоблин</Group>
-			<Points>35</Points>
+			<Name>Гор Рок Великий белый ящер</Name>
+			<Group>Саурус</Group>
+			<Points>215</Points>
 			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Гор Рок Великий белый ящер</Description>
 			<MainParam>
 				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
 				<Wounds>2</Wounds>
 				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Hero</MagicItemsType>
+				<Stubborn>true</Stubborn>
+				<ColdBlooded>true</ColdBlooded>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>ручное оружие</Name>
-				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Броски на ранение должны быть переброшены</SpecialRuleDescription>
+					<SpecialRuleDescription>Иммунен к Смертельному удару</SpecialRuleDescription>
 				</Special>
-				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-			<Options>
-				<Option>
-					<Name>Ночной Гоблин</Name>
-					<Type>Option</Type>
-					<Points>-5</Points>
-					<AddToInitiative>1</AddToInitiative>
-					<AddToLeadership>-1</AddToLeadership>
-				</Option>
-				<Option>
-					<Name>знаменосец армии</Name>
-					<Type>Option</Type>
-					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-					<Points>25</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>двуручное оружие</OnlyIfNot>
-						<OnlyIfNot>парное оружие</OnlyIfNot>
-						<OnlyIfNot>копьё</OnlyIfNot>
-						<OnlyIfNot>щит</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>двуручное оружие</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<Points>4</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>парное оружие</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>копьё</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>2</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>лёгкий доспех</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>щит</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
+				<Armour>
+					<Name>Щит столетий</Name>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>Волк</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Титанический паук</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Пещеный сквиг</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount>true</Mount>
-					<OnlyIfAnotherService>
-						<OnlyIf>Ночной Гоблин</OnlyIf>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>Волчья колесница</Name>
-					<Type>Option</Type>
-					<Points>60</Points>
-					<Mount>true</Mount>
-				</Option>
-			</Options>
+					<SpecialRuleDescription>Противник теряет преимущества от нападения</SpecialRuleDescription>
+				</Armour>
+				<HandWeapon>
+					<Name>Палица Кламака</Name>
+					<AddToStrength>2</AddToStrength>
+					<SpecialRuleDescription>Перебрасывает проваленные броски на попадание</SpecialRuleDescription>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Гоблин-Шаман</Name>
-			<Group>Гоблин</Group>
-			<Mage>1</Mage>
-			<Points>55</Points>
+			<Name>Тетто'эко</Name>
+			<Group>Скинк</Group>
+			<Points>255</Points>
+			<Mage>2</Mage>
 			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Тетто'эко</Description>
 			<MainParam>
-				<Movement>4</Movement>
+				<Movement>6</Movement>
 				<WeaponSkill>2</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
 				<Wounds>2</Wounds>
-				<Initiative>2</Initiative>
+				<Initiative>4</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Mage</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
 			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Знает все заклятья Школы Небес</SpecialRuleDescription>
+					<SpecialRuleDescription>Предвестник космических явлений</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Звёздный посох</Name>
+					<SpecialRuleDescription>Переброс кубик заклятья Камета Кассандора</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Око Древних</Name>
+					<SpecialRuleDescription>D3 отрядов передвинуть перед первых ходом</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Паланкин созвездий</Name>
+					<AddToWard>5</AddToWard>
+					<SpecialRuleDescription>Присоединяется к Скинкам</SpecialRuleDescription>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Тиктак'то</Name>
+			<Group>Скинк</Group>
+			<Points>315</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Жвуп</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Тиктак'то</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Смертельный удар от камня</SpecialRuleDescription>
+					<SpecialRuleDescription>Присоединяется только к терредонам</SpecialRuleDescription>
+					<SpecialRuleDescription>Повелитель воздуха</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Клинок древних небес</Name>
+					<SpecialRuleDescription>Без спас-бросков за доспехи</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Небесная Маска</Name>
+					<SpecialRuleDescription>Пенальти -1 на попадание</SpecialRuleDescription>
+					<SpecialRuleDescription>Сопротивление магии(1)</SpecialRuleDescription>
+					<AddToWard>6</AddToWard>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Оксийотль Вернувшийся</Name>
+			<Group>Скинк</Group>
+			<Points>160</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Оксийотль Вернувшийся</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Ручное оружие</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Духовая трубка</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+					<SpecialRuleDescription>Разведчик</SpecialRuleDescription>
+					<SpecialRuleDescription>Пенальти -1 на попадание</SpecialRuleDescription>
+					<SpecialRuleDescription>Сверхъестественная меткость</SpecialRuleDescription>
+					<SpecialRuleDescription>Ядовитые атаки на 5+</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Саурус-Ветеран</Name>
+			<Group>Саурус</Group>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<Description>Саурус-Ветеран</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>копьё</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>двуручное оружие</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>алебарда</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>второе оружие</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>лёгкий доспех</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>щит</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Холодный</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>ручное оружие</Name>
 				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-				</Special>
 			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Скинк-Жрец</Name>
+			<Group>Скинк</Group>
+			<Points>65</Points>
+			<Mage>1</Mage>
+			<MinSize>1</MinSize>
+			<Description>Скинк-Ветеран</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
 			<Options>
-				<Option>
-					<Name>Ночной Гоблин</Name>
-					<Type>Option</Type>
-					<Points>-5</Points>
-					<AddToInitiative>1</AddToInitiative>
-					<AddToLeadership>-1</AddToLeadership>
-				</Option>
 				<Option>
 					<Name>маг 2 уровня</Name>
 					<Type>Option</Type>
@@ -1243,240 +1058,339 @@
 					<AddToCast>1</AddToCast>
 				</Option>
 				<Option>
-					<Name>Волк</Name>
+					<Name>Древний стегадон</Name>
 					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Волчья колесница</Name>
-					<Type>Option</Type>
-					<Points>60</Points>
+					<Points>290</Points>
 					<Mount>true</Mount>
 				</Option>
 			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+					<SpecialRuleDescription>Отрава джунглей</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Скинк-Вождь</Name>
+			<Group>Скинк</Group>
+			<Points>55</Points>
+			<MinSize>1</MinSize>
+			<Description>Скинк-Вождь</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>копьё</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>духовая трубка</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>дротик</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>второе оружие</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>лёгкий доспех</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>щит</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Стегадон</Name>
+					<Type>Option</Type>
+					<Points>235</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Древний стегадон</Name>
+					<Type>Option</Type>
+					<Points>235</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Террадон</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+					<SpecialRuleDescription>Отрава джунглей</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>ручное оружие</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Виверна</Name>
-			<Points>0</Points>
-			<MinSize>1</MinSize>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>6</Leadership>
-			</MainParam>
-			<AdditionalParam>
-				<Terror>true</Terror>
-				<PoisonAttack>true</PoisonAttack>
-			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<Armour>
-					<Name>чешуйчатая кожа</Name>
-					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Special>
-					<SpecialRuleDescription>большая цель</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>летает</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Кабан</Name>
+			<Name>Холодный</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
 				<Movement>7</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
+				<Strength>4</Strength>
 				<Toughness>4</Toughness>
 				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
+				<Initiative>2</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>3</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<Stupidity>true</Stupidity>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
 					<Name>толстокожие</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
-				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
-				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Волк</Name>
+			<Name>Террадон</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
-				<Movement>9</Movement>
+				<Movement>2</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
+				<Strength>4</Strength>
 				<Toughness>3</Toughness>
 				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
+				<Initiative>2</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>3</Leadership>
 			</MainParam>
-		</Mount>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Летающая кавалерия</SpecialRuleDescription>
+					<SpecialRuleDescription>Ударить-и-убежать</SpecialRuleDescription>
+					<SpecialRuleDescription>Уронить камни</SpecialRuleDescription>
+					<SpecialRuleDescription>Древесный хищник</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>		
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Титанический паук</Name>
+			<Name>Карнозавр</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
 				<Movement>7</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
+				<Strength>7</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
 			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Кровавое безумие</SpecialRuleDescription>
+					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Пещеный сквиг</Name>
+			<Name>Стегадон</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
 				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
+				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
 				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>3</Leadership>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>4</Armour>
 			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<Stubborn>true</Stubborn>
+				<PoisonAttack>true</PoisonAttack>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>нельзя присоединяться к отрядам</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>Ииихааа!</SpecialRuleDescription>
+					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
+					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Гнарла</Name>
+			<Name>Древний стегадон</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<Stubborn>true</Stubborn>
+				<PoisonAttack>true</PoisonAttack>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
+					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Жлак</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>2</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<Stubborn>true</Stubborn>
+				<PoisonAttack>true</PoisonAttack>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
+					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Гримлок</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
 				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>7</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Жвуп</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
 				<Strength>4</Strength>
-				<Toughness>4</Toughness>
+				<Toughness>3</Toughness>
 				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
+				<Initiative>2</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>3</Leadership>
 			</MainParam>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Гоббла</Name>
-			<Points>0</Points>
-			<MinSize>1</MinSize>
-			<MainParam>
-				<Movement></Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness></Toughness>
-				<Wounds></Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership></Leadership>
-			</MainParam>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Волчья колесница</Name>
-			<Points>0</Points>
-			<MinSize>1</MinSize>
-			<ModelsInPack>5</ModelsInPack>
-			<MainParam>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership></Leadership>
-			</MainParam>
 			<SpecialRulesAndAmmunition>
-				<RangedWeapon>
-					<Name>короткий лук</Name>
-				</RangedWeapon>
 				<Special>
-					<AddToArmour>5</AddToArmour>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Кабанья колесница</Name>
-			<Points>0</Points>
-			<MinSize>1</MinSize>
-			<ModelsInPack>4</ModelsInPack>
-			<MainParam>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership></Leadership>
-			</MainParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>чоппы</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>копья</Name>
-				</HandWeapon>
-				<Special>
-					<AddToArmour>4</AddToArmour>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
+					<SpecialRuleDescription>Летающая кавалерия</SpecialRuleDescription>
+					<SpecialRuleDescription>Ударить-и-убежать</SpecialRuleDescription>
+					<SpecialRuleDescription>Уронить камни со смертельным ударом</SpecialRuleDescription>
+					<SpecialRuleDescription>Древесный хищник</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
