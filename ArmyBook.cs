@@ -279,7 +279,6 @@ namespace WarhammerArmyAssembler
             newWeapon.OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]);
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
-            newWeapon.OrdinaryArtefact = BoolParse(xmlNode["OrdinaryArtefact"]);
 
             newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
 
