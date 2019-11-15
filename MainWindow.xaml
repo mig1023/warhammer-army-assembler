@@ -103,13 +103,13 @@
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding ArtefactAlreadyUsed}" Value="True">
                                                         <Setter Property="TextBlock.TextDecorations" Value="Strikethrough"/>
-                                                        <Setter Property="TextBlock.Foreground" Value="Gray"/>
+                                                        <Setter Property="TextBlock.Foreground" Value="LightGray"/>
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding Artefacts}" Value="True">
-                                                        <Setter Property="TextBlock.Foreground" Value="Gray"/>
+                                                        <Setter Property="TextBlock.Foreground" Value="LightGray"/>
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding PersonifiedHero}" Value="True">
-                                                        <Setter Property="Foreground" Value="Gray"/>
+                                                        <Setter Property="Foreground" Value="LightGray"/>
                                                     </DataTrigger>
                                                 </Style.Triggers>
                                             </Style>
