@@ -343,6 +343,9 @@ namespace WarhammerArmyAssembler
             if ((option.OnlyFor == Option.OnlyForType.Infantry) && (mountAlreadyOn > 0))
                 newButton.IsEnabled = false;
 
+            if (option.IsSlannOption() && !option.Realised && (unit != null) && unit.IsMaxSlannOption())
+                newButton.IsEnabled = false;
+
             if (
                     (unit != null)
                     && (

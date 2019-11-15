@@ -11,7 +11,7 @@ namespace WarhammerArmyAssembler
 {
     public class Option : INotifyPropertyChanged
     {
-        public enum OptionType { Weapon, Armour, Arcane, Banner, Option }
+        public enum OptionType { Weapon, Armour, Arcane, Banner, Option, SlannOption }
 
         public enum OnlyForType { All, Infantry, Mount }
 
@@ -176,7 +176,15 @@ namespace WarhammerArmyAssembler
 
         public bool IsOption()
         {
-            if (this.Type == OptionType.Option)
+            if (this.Type == OptionType.Option || this.Type == OptionType.SlannOption)
+                return true;
+            else
+                return false;
+        }
+
+        public bool IsSlannOption()
+        {
+            if (this.Type == OptionType.SlannOption)
                 return true;
             else
                 return false;

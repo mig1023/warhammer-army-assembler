@@ -108,8 +108,17 @@ namespace WarhammerArmyAssembler
             int points = Size * Points;
 
             foreach (Option option in Options)
-                if (!option.IsOption() || (option.IsOption() && option.Realised))
+                if (!option.IsOption() || (option.IsOption() && option.Realised && !option.IsSlannOption()))
                     points += option.Points * (option.PerModel ? Size : 1);
+
+            bool firstSlannOptionAlreadyIsFree = false;
+
+            foreach (Option option in Options)
+                if (option.IsSlannOption() && option.Realised)
+                    if (firstSlannOptionAlreadyIsFree)
+                        points += option.Points;
+                    else
+                        firstSlannOptionAlreadyIsFree = true;
 
             return points;
         }
@@ -443,5 +452,15 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
+        public bool IsMaxSlannOption()
+        {
+            int slannOption = 0;
+
+            foreach (Option option in Options)
+                if (option.IsSlannOption() && option.Realised)
+                    slannOption += 1;
+
+            return (slannOption >= 4 ? true : false);
+        }
     }
 }
