@@ -356,18 +356,18 @@ namespace WarhammerArmyAssembler
 
             Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
             {
-                ["ImmuneToPsychology"] = "иммунен к психологии",
-                ["Stubborn"] = "упорство",
-                ["Hate"] = "ненависть",
-                ["Fear"] = "страх",
-                ["Terror"] = "ужас",
-                ["Frenzy"] = "бешенство",
-                ["Unbreakable"] = "несломимость",
-                ["ColdBlooded"] = "хладнокровие",
-                ["HitFirst"] = "всегда бьёт первым",
-                ["Regeneration"] = "регенерация",
-                ["KillingBlow"] = "смертельный удар",
-                ["PoisonAttack"] = "ядовитые атаки",
+                ["ImmuneToPsychology"] = "Иммунен к психологии",
+                ["Stubborn"] = "Упорство",
+                ["Hate"] = "Ненависть",
+                ["Fear"] = "Страх",
+                ["Terror"] = "Ужас",
+                ["Frenzy"] = "Бешенство",
+                ["Unbreakable"] = "Несломимость",
+                ["ColdBlooded"] = "Хладнокровие",
+                ["HitFirst"] = "Всегда бьёт первым",
+                ["Regeneration"] = "Регенерация",
+                ["KillingBlow"] = "Смертельный удар",
+                ["PoisonAttack"] = "Ядовитые атаки",
             };
 
             foreach(KeyValuePair<string, string> specialRule in allSpecialRules)
