@@ -116,7 +116,7 @@ namespace WarhammerArmyAssembler
 
         public static bool EnoughPointsForAddArtefact(int id)
         {
-            return ArmyBook.Artefact[id].Points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints();
+            return ArmyBook.Artefact[id].Points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
         public static bool EnoughUnitPointsForAddArtefact(int artefactID, int unitID)
@@ -150,6 +150,9 @@ namespace WarhammerArmyAssembler
 
             foreach (FrameworkElement element in elementsForRemoving)
                 main.unitDetail.Children.Remove(element);
+
+            if (unit.Mage > 0)
+                topMargin += AddLabel(String.Format("маг {0} уровня", unit.Mage), main.unitName.Margin.Left, (topMargin - 5), 20) + 10;
 
             if (unit.ExistsOptions())
             {
