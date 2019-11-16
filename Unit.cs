@@ -123,6 +123,17 @@ namespace WarhammerArmyAssembler
             return points;
         }
 
+        public int GetUnitMage()
+        {
+            int mage = Mage;
+
+            foreach (Option option in Options)
+                if (!option.IsOption() || (option.IsOption() && option.Realised))
+                    mage += option.AddToMage;
+
+            return mage;
+        }
+
         public Unit Clone()
         {
             Unit newUnit = new Unit();

@@ -63,6 +63,7 @@ namespace WarhammerArmyAssembler
         public int AddToWard { get; set; }
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
+        public int AddToMage { get; set; }
 
         public int AddToModelsInPack { get; set; }
         public bool FullCommand { get; set; }
@@ -155,6 +156,7 @@ namespace WarhammerArmyAssembler
             newOption.AddToWard = this.AddToWard;
             newOption.AddToCast = this.AddToCast;
             newOption.AddToDispell = this.AddToDispell;
+            newOption.AddToMage = this.AddToMage;
 
             newOption.AddToModelsInPack = this.AddToModelsInPack;
             newOption.FullCommand = this.FullCommand;

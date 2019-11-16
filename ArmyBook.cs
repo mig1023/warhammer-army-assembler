@@ -311,6 +311,7 @@ namespace WarhammerArmyAssembler
             newWeapon.AddToWard = IntParse(xmlNode["AddToWard"]);
             newWeapon.AddToCast = IntParse(xmlNode["AddToCast"]);
             newWeapon.AddToDispell = IntParse(xmlNode["AddToDispell"]);
+            newWeapon.AddToMage = IntParse(xmlNode["AddToMage"]);
             newWeapon.AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]);
 
             newWeapon.FullCommand = BoolParse(xmlNode["FullCommand"]);

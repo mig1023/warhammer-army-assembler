@@ -152,7 +152,7 @@ namespace WarhammerArmyAssembler
                 main.unitDetail.Children.Remove(element);
 
             if (unit.Mage > 0)
-                topMargin += AddLabel(String.Format("маг {0} уровня", unit.Mage), main.unitName.Margin.Left, (topMargin - 5), 20) + 10;
+                topMargin += AddLabel(String.Format("маг {0} уровня", unit.GetUnitMage()), main.unitName.Margin.Left, (topMargin - 5), 20) + 10;
 
             if (unit.ExistsOptions())
             {
