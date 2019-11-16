@@ -106,7 +106,7 @@ namespace WarhammerArmyAssembler
 
         public static bool EnoughUnitPointsForAddOption(int points)
         {
-            return (points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints()));
+            return points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
         public static bool EnoughPointsForAddMount(int points)
@@ -116,7 +116,7 @@ namespace WarhammerArmyAssembler
 
         public static bool EnoughPointsForAddArtefact(int id)
         {
-            return (ArmyBook.Artefact[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
+            return ArmyBook.Artefact[id].Points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints();
         }
 
         public static bool EnoughUnitPointsForAddArtefact(int artefactID, int unitID)
