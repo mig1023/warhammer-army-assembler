@@ -157,7 +157,7 @@
                         <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="Очки" Binding="{Binding PointsView}" Width="60" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Особые правила" Binding="{Binding RulesView}" Width="*" IsReadOnly="True">
+                        <DataGridTextColumn Header="Особенности" Binding="{Binding RulesView}" Width="*" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="TextWrapping" Value="Wrap"/>

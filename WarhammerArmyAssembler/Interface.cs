@@ -248,7 +248,7 @@ namespace WarhammerArmyAssembler
 
             if (unit.GetSpecialRules().Count > 0)
             {
-                topMargin += AddLabel("СПЕЦИАЛЬНЫЕ ПРАВИЛА", main.unitName.Margin.Left, topMargin, 20, bold: true);
+                topMargin += AddLabel("ОСОБЕННОСТИ", main.unitName.Margin.Left, topMargin, 20, bold: true);
 
                 topMargin += 10;
 

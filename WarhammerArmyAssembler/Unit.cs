@@ -369,7 +369,11 @@ namespace WarhammerArmyAssembler
                     foreach (Option option in Options)
                         if (option.FullCommand && option.Realised)
                             rules.Add(option.Name);
-            } 
+            }
+
+            foreach (Option option in Options)
+                if (!option.FullCommand && option.Realised)
+                    rules.Add(option.Name);
 
             if (MountOn > 0)
                 rules.Add(Army.Units[MountOn].Name);
