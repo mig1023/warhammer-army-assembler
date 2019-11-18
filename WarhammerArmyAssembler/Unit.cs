@@ -197,7 +197,8 @@ namespace WarhammerArmyAssembler
             return newUnit;
         }
 
-        public string AddFromAnyOption(string name, bool reversParam = false, bool mountParam = false)
+        public string AddFromAnyOption(string name, bool reversParam = false,
+            bool mountParam = false, bool doNotCombine = false)
         {
             PropertyInfo unitParam = typeof(Unit).GetProperty(name);
             object paramObject = unitParam.GetValue(this);
@@ -222,7 +223,11 @@ namespace WarhammerArmyAssembler
                         if (paramValue == null)
                             paramValue = 7;
 
-                        paramValue -= (7 - optionValue);
+                        if (doNotCombine && (optionValue < paramValue))
+                                paramValue = optionValue;
+                        else
+                            paramValue -= (7 - optionValue);
+
                         paramModView = "+";
                     }
                     else if (optionValue > 0)
@@ -253,7 +258,7 @@ namespace WarhammerArmyAssembler
             unit.LeadershipView = AddFromAnyOption("Leadership");
 
             unit.ArmourView = AddFromAnyOption("Armour", reversParam: true, mountParam: true);
-            unit.WardView = AddFromAnyOption("Ward", reversParam: true);
+            unit.WardView = AddFromAnyOption("Ward", reversParam: true, doNotCombine: true);
 
             return unit;
         }
