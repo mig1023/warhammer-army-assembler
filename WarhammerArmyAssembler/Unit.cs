@@ -380,9 +380,6 @@ namespace WarhammerArmyAssembler
                 if (!option.FullCommand && option.Realised)
                     rules.Add(option.Name);
 
-            if (MountOn > 0)
-                rules.Add(Army.Units[MountOn].Name);
-
             Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
             {
                 ["ImmuneToPsychology"] = "Иммунен к психологии",
