@@ -42,6 +42,7 @@ namespace WarhammerArmyAssembler
         public static void LoadArmy(string xmlFileName)
         {
             Units.Clear();
+            Mounts.Clear();
             Artefact.Clear();
 
             XmlDocument xmlFile = new XmlDocument();
