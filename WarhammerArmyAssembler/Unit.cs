@@ -376,8 +376,11 @@ namespace WarhammerArmyAssembler
                             rules.Add(option.Name);
             }
 
+            if (MountOn > 0)
+                rules.Add(Army.Units[MountOn].Name);
+
             foreach (Option option in Options)
-                if (!option.FullCommand && option.Realised)
+                if (!option.FullCommand && option.Realised && !option.Mount)
                     rules.Add(option.Name);
 
             Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
