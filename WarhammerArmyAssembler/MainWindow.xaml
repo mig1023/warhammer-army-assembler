@@ -32,27 +32,27 @@
                     <Button x:Name="buttonArmybook" Content="очков" Height="34" Width="134" Canvas.Left="157" Canvas.Top="566" Click="buttonArmybook_Click"/>
                     <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="118" Width="20" Click="prev_Click"/>
                     <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="118" Width="20" Click="next_Click"/>
-                    <Button x:Name="button200pts" Content="200 очков" Height="34" Canvas.Left="20" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button500pts" Content="500 очков" Height="34" Canvas.Left="116" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button600pts" Content="600 очков" Height="34" Canvas.Left="213" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button750pts" Content="750 очков" Height="34" Canvas.Left="20" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1000pts" Content="1000 очков" Height="34" Canvas.Left="116" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1250pts" Content="1250 очков" Height="34" Canvas.Left="213" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1500pts" Content="1500 очков" Height="34" Canvas.Left="20" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1750pts" Content="1750 очков" Height="34" Canvas.Left="116" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1850pts" Content="1850 очков" Height="34" Canvas.Left="213" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button2000pts" Content="2000 очков" Height="34" Canvas.Left="20" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button2400pts" Content="2400 очков" Height="34" Canvas.Left="116" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button2500pts" Content="2500 очков" Height="34" Canvas.Left="213" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button2700pts" Content="2700 очков" Height="34" Canvas.Left="20" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button3000pts" Content="3000 очков" Height="34" Canvas.Left="116" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button3500pts" Content="3500 очков" Height="34" Canvas.Left="213" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button200pts" Content="200 points" Height="34" Canvas.Left="20" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button500pts" Content="500 points" Height="34" Canvas.Left="116" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button600pts" Content="600 points" Height="34" Canvas.Left="213" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button750pts" Content="750 points" Height="34" Canvas.Left="20" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button1000pts" Content="1000 points" Height="34" Canvas.Left="116" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button1250pts" Content="1250 points" Height="34" Canvas.Left="213" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button1500pts" Content="1500 points" Height="34" Canvas.Left="20" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button1750pts" Content="1750 points" Height="34" Canvas.Left="116" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button1850pts" Content="1850 points" Height="34" Canvas.Left="213" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button2000pts" Content="2000 points" Height="34" Canvas.Left="20" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button2400pts" Content="2400 points" Height="34" Canvas.Left="116" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button2500pts" Content="2500 points" Height="34" Canvas.Left="213" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button2700pts" Content="2700 points" Height="34" Canvas.Left="20" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button3000pts" Content="3000 points" Height="34" Canvas.Left="116" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
+                    <Button x:Name="button3500pts" Content="3500 points" Height="34" Canvas.Left="213" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
                     <TextBox x:Name="listArmybookPoints" Height="34" Canvas.Left="22" TextWrapping="Wrap" Text="4000" Canvas.Top="566" Width="130" FontSize="20"/>
                 </Canvas>
             </ScrollViewer>
 
             <Canvas  x:Name="unitDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-                <Button x:Name="closeUnitDetail" Content="Закрыть" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
+                <Button x:Name="closeUnitDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
             </Canvas>
             <ScrollViewer x:Name="unitDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto">
                 <Canvas x:Name="unitDetail" Width="320" Height="50" Background="White" VerticalAlignment="Top">
@@ -149,8 +149,8 @@
                                 </Style>
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="Отряд" Binding="{Binding Name}" Width="*" MinWidth="120" IsReadOnly="True"/>
-                        <DataGridTemplateColumn Header="Тест" Width="50" MinWidth="50">
+                        <DataGridTextColumn Header="Unit" Binding="{Binding Name}" Width="*" MinWidth="120" IsReadOnly="True"/>
+                        <DataGridTemplateColumn Header="Test" Width="50" MinWidth="50">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button Width="45" Height="17" Padding="-10,-10">test</Button>
@@ -168,8 +168,8 @@
                         <DataGridTextColumn Header="LD" Binding="{Binding LeadershipView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="AS" Binding="{Binding ArmourView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="Ward" Binding="{Binding WardView}" Width="35" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Очки" Binding="{Binding PointsView}" Width="60" IsReadOnly="True"/>
-                        <DataGridTextColumn Header="Особенности" Binding="{Binding RulesView}" Width="*" IsReadOnly="True">
+                        <DataGridTextColumn Header="Points" Binding="{Binding PointsView}" Width="60" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Special rules" Binding="{Binding RulesView}" Width="*" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="TextWrapping" Value="Wrap"/>
@@ -196,13 +196,13 @@
                         <ColumnDefinition Width="70"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="Героев:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Отрядов:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Content="Очков:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Content="Моделей:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="Каст:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="Диспелл:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" HorizontalContentAlignment="Center" Content="удалить" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
+                    <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="Heroes:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Units:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Content="Points:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Content="Models:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="Cast:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="Dispell:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" HorizontalContentAlignment="Center" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
                 </Grid>
             </Grid>
         </Canvas>

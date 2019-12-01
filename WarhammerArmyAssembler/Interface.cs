@@ -525,13 +525,13 @@ namespace WarhammerArmyAssembler
             }
 
             main.ArmyGrid.ItemsSource = ArmyInInterface;
-            main.armyHeroes.Content = String.Format("Героев: {0}/{1} из {2}/{3}",
+            main.armyHeroes.Content = String.Format("Heroes: {0}/{1} out of {2}/{3}",
                 Army.GetArmyUnitsNumber(Unit.UnitType.Lord),
                 Army.GetArmyUnitsNumber(Unit.UnitType.Hero),
                 Army.GetArmyMaxUnitsNumber(Unit.UnitType.Lord),
                 Army.GetArmyMaxUnitsNumber(Unit.UnitType.Hero)
             );
-            main.armyUnits.Content = String.Format("Отрядов: {0}/{1}/{2} из {3}+/{4}/{5}",
+            main.armyUnits.Content = String.Format("Units: {0}/{1}/{2} out of {3}+/{4}/{5}",
                 Army.GetArmyUnitsNumber(Unit.UnitType.Core),
                 Army.GetArmyUnitsNumber(Unit.UnitType.Special),
                 Army.GetArmyUnitsNumber(Unit.UnitType.Rare),
@@ -539,10 +539,10 @@ namespace WarhammerArmyAssembler
                 Army.GetArmyMaxUnitsNumber(Unit.UnitType.Special),
                 Army.GetArmyMaxUnitsNumber(Unit.UnitType.Rare)
             );
-            main.armyPoints.Content = String.Format("Очков: {0} из {1}", Army.GetArmyPoints(), Army.GetArmyMaxPoints());
-            main.armySize.Content = String.Format("Моделей: {0}", Army.GetArmySize());
-            main.armyCasting.Content = String.Format("Каст: {0}", Army.GetArmyCast());
-            main.armyDispell.Content = String.Format("Диспелл: {0}", Army.GetArmyDispell());
+            main.armyPoints.Content = String.Format("Points: {0} из {1}", Army.GetArmyPoints(), Army.GetArmyMaxPoints());
+            main.armySize.Content = String.Format("Models: {0}", Army.GetArmySize());
+            main.armyCasting.Content = String.Format("Cast: {0}", Army.GetArmyCast());
+            main.armyDispell.Content = String.Format("Dispell: {0}", Army.GetArmyDispell());
         }
 
         public static void Error(string text)
@@ -620,7 +620,7 @@ namespace WarhammerArmyAssembler
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
             main.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
 
-            main.listArmybookVer.Content = "редакция " + xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText;
+            main.listArmybookVer.Content = "edition " + xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText;
 
             main.UpdateLayout();
 
