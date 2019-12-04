@@ -183,7 +183,14 @@ namespace WarhammerArmyAssembler
             Interface.UpdateUnitDescription(unit.ID, unit);
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                Interface.Move(Interface.MovingType.ToRight, unitDetailScroll);
+            {
+                unitDetailScroll.Visibility = Visibility.Visible;
+                unitDetailScrollSlitter.Visibility = Visibility.Visible;
+                mainGrid.RowDefinitions[2].Height = new GridLength(250);
+
+                // Interface.Move(Interface.MovingType.ToRight, unitDetailScroll);
+            }
+
 
             Interface.DragSender = sender;
 
@@ -204,10 +211,6 @@ namespace WarhammerArmyAssembler
 
             mainPlaceCanvas.Height = e.NewSize.Height;
             mainPlaceCanvas.Width = e.NewSize.Width;
-
-            unitDetailScroll.Height = e.NewSize.Height - 70;
-            unitDetailScroll.Margin = new Thickness(e.NewSize.Width - unitDetailScroll.Width, 70, 0, 0);
-            unitDetailScrollHead.Margin = Interface.Thick(unitDetailScroll, top: 0);
 
             armybookDetailScroll.Height = e.NewSize.Height - 70;
             menuArmybookScroll.Height = e.NewSize.Height - 70;

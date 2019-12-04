@@ -51,19 +51,21 @@
                 </Canvas>
             </ScrollViewer>
 
-            <Canvas  x:Name="unitDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
+            <!--<Canvas  x:Name="unitDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
                 <Button x:Name="closeUnitDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
             </Canvas>
             <ScrollViewer x:Name="unitDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto">
-                <Canvas x:Name="unitDetail" Width="320" Height="50" Background="White" VerticalAlignment="Top">
+                <Canvas x:Name="unitDetailOld" Width="320" Height="50" Background="White" VerticalAlignment="Top">
                     <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,5"/>
                     <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
                 </Canvas>
-            </ScrollViewer>
+            </ScrollViewer>-->
 
             <Grid x:Name="mainGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
                 </Grid.RowDefinitions>
@@ -73,7 +75,7 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
+                <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="31"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -132,7 +134,7 @@
 
                 <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" CanUserAddRows="False" GridLinesVisibility="None"
+                <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="2" CanUserAddRows="False" GridLinesVisibility="None"
                           AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
                           LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False">
                     <DataGrid.Resources>
@@ -150,13 +152,6 @@
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>
                         <DataGridTextColumn Header="Unit" Binding="{Binding Name}" Width="*" MinWidth="120" IsReadOnly="True"/>
-                        <DataGridTemplateColumn Header="Test" Width="50" MinWidth="50">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Width="45" Height="17" Padding="-10,-10">test</Button>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
                         <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="35" IsReadOnly="True"/>
                         <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillView}" Width="35" IsReadOnly="True"/>
@@ -180,29 +175,39 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <GridSplitter Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <GridSplitter x:Name="unitDetailScrollSlitter" Grid.Row="1" Visibility="Hidden" Grid.Column="2" Height="5" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                <Grid Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
+                <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Background="White">
+                    <Canvas x:Name="unitDetail" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Background="White">
+                        <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,10"/>
+                        <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
+                    </Canvas>
+                </ScrollViewer>
+                
+                <GridSplitter Grid.Row="3" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+                <Grid Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.7*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="0.7*"></ColumnDefinition>
-                        <ColumnDefinition Width="0.6*"></ColumnDefinition>
-                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
-                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                        <ColumnDefinition Width="57*"></ColumnDefinition>
+                        <ColumnDefinition Width="16*"></ColumnDefinition>
+                        <ColumnDefinition Width="67*"/>
+                        <ColumnDefinition Width="57*"></ColumnDefinition>
+                        <ColumnDefinition Width="52*"></ColumnDefinition>
+                        <ColumnDefinition Width="35*"></ColumnDefinition>
+                        <ColumnDefinition Width="48*"></ColumnDefinition>
                         <ColumnDefinition Width="70"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
                     <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="Heroes:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Units:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="2" Content="Points:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armySize" Grid.Row="0" Grid.Column="3" Content="Models:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="Cast:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="Dispell:" Height="30" Width="Auto" FontSize="12"/>
-                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" HorizontalContentAlignment="Center" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
+                    <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="Units:" Height="30" Width="Auto" FontSize="12" Grid.ColumnSpan="2"/>
+                    <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="3" Content="Points:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armySize" Grid.Row="0" Grid.Column="4" Content="Models:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="5" Content="Cast:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="6" Content="Dispell:" Height="30" Width="Auto" FontSize="12"/>
+                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="7" HorizontalContentAlignment="Center" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
                 </Grid>
             </Grid>
         </Canvas>
