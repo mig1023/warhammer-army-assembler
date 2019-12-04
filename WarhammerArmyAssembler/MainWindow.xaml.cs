@@ -187,8 +187,6 @@ namespace WarhammerArmyAssembler
                 unitDetailScroll.Visibility = Visibility.Visible;
                 unitDetailScrollSlitter.Visibility = Visibility.Visible;
                 mainGrid.RowDefinitions[2].Height = new GridLength(250);
-
-                // Interface.Move(Interface.MovingType.ToRight, unitDetailScroll);
             }
 
 
