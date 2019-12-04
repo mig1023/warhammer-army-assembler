@@ -9,14 +9,14 @@
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
 
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
-            <Button x:Name="closeErrorDetail" Content="Закрыть" Height="30" Width="154" Click="closeErrorDetail_Click"/>
+            <Button x:Name="closeErrorDetail" Content="Close" Height="30" Width="154" Click="closeErrorDetail_Click"/>
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
 
         <Canvas x:Name="mainPlaceCanvas">
 
             <Canvas  x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-                <Button x:Name="closeArmybookDetail" Content="Закрыть" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
+                <Button x:Name="closeArmybookDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
             </Canvas>
             <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
                 <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
@@ -29,7 +29,7 @@
                 <Canvas x:Name="menuArmybookPlace" Width="320" Height="628" VerticalAlignment="Top" Background="White">
                     <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="11"/>
                     <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="303" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
-                    <Button x:Name="buttonArmybook" Content="очков" Height="34" Width="134" Canvas.Left="157" Canvas.Top="566" Click="buttonArmybook_Click"/>
+                    <Button x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="566" Click="buttonArmybook_Click"/>
                     <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="118" Width="20" Click="prev_Click"/>
                     <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="118" Width="20" Click="next_Click"/>
                     <Button x:Name="button200pts" Content="200 points" Height="34" Canvas.Left="20" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>

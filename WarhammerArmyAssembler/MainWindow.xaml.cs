@@ -127,13 +127,13 @@ namespace WarhammerArmyAssembler
             int pointsDiff = u.GetUnitPoints() - Army.Units[u.ID].GetUnitPoints();
 
             if (!Interface.EnoughPointsForEditUnit(u.ID, u.Size))
-                u.Size = ErrorAndReturnSizeBack("Количество очков недостаточно для изменения", u.ID);
+                u.Size = ErrorAndReturnSizeBack("Not enough points to change", u.ID);
             else if ((u.MaxSize != 0) && (u.Size > u.MaxSize))
-                u.Size = ErrorAndReturnSizeBack("Размер отряда превышает максимально допустимый", u.ID);
+                u.Size = ErrorAndReturnSizeBack("Unit size exceeds the maximum allowed", u.ID);
             else if (u.Size < u.MinSize)
-                u.Size = ErrorAndReturnSizeBack("Размер отряда меньше минимально допустимого", u.ID);
+                u.Size = ErrorAndReturnSizeBack("Unit size is less than the minimum allowed", u.ID);
             else if ((u.Size > Army.Units[u.ID].Size) && (!Army.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
-                u.Size = ErrorAndReturnSizeBack(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(u.Type)), u.ID);
+                u.Size = ErrorAndReturnSizeBack(String.Format("The {0} has reached a point cost limit", Army.UnitTypeName(u.Type)), u.ID);
             else
                 Army.Units[u.ID].Size = u.Size;
 
@@ -232,7 +232,7 @@ namespace WarhammerArmyAssembler
         private void unitDelete_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                if (MessageBox.Show("Очистить весь воинский лист?", String.Empty, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (MessageBox.Show("Clear entire army list? ", String.Empty, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     Interface.AllUnitDelete();
         }
 

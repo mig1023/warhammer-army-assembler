@@ -30,11 +30,11 @@ namespace WarhammerArmyAssembler
         {
             return new List<Unit>
             {
-                new Unit() { Name = "Лорды" },
-                new Unit() { Name = "Герои" },
-                new Unit() { Name = "Основные" },
-                new Unit() { Name = "Специальные" },
-                new Unit() { Name = "Редкие" },
+                new Unit() { Name = "Lords" },
+                new Unit() { Name = "Heroes" },
+                new Unit() { Name = "Core" },
+                new Unit() { Name = "Special" },
+                new Unit() { Name = "Rare" },
             };
         }
 
@@ -152,11 +152,11 @@ namespace WarhammerArmyAssembler
                 main.unitDetail.Children.Remove(element);
 
             if (unit.Mage > 0)
-                topMargin += AddLabel(String.Format("маг {0} уровня", unit.GetUnitMage()), main.unitName.Margin.Left, (topMargin - 5), 20) + 10;
+                topMargin += AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), main.unitName.Margin.Left, (topMargin - 5), 20) + 10;
 
             if (unit.ExistsOptions())
             {
-                topMargin += AddLabel("ОПЦИИ", main.unitName.Margin.Left, topMargin, 20, bold: true);
+                topMargin += AddLabel("OPTION", main.unitName.Margin.Left, topMargin, 20, bold: true);
 
                 topMargin += 10;
 
@@ -190,7 +190,7 @@ namespace WarhammerArmyAssembler
 
             if (unit.ExistsCommand())
             {
-                topMargin += AddLabel("КОМАНДА", main.unitName.Margin.Left, topMargin, 20, bold: true);
+                topMargin += AddLabel("COMMAND", main.unitName.Margin.Left, topMargin, 20, bold: true);
 
                 topMargin += 10;
 
@@ -221,7 +221,7 @@ namespace WarhammerArmyAssembler
 
             if (unit.ExistsMagicItems())
             {
-                topMargin += AddLabel("МАГИЧЕСКИЕ ПРЕДМЕТЫ", main.unitName.Margin.Left, topMargin, 20, bold: true);
+                topMargin += AddLabel("MAGIC ITAMS", main.unitName.Margin.Left, topMargin, 20, bold: true);
 
                 topMargin += 10;
 
@@ -235,7 +235,7 @@ namespace WarhammerArmyAssembler
 
             if (unit.ExistsOrdinaryItems())
             {
-                topMargin += AddLabel("ОБЫЧНЫЕ ПРЕДМЕТЫ", main.unitName.Margin.Left, topMargin, 20, bold: true);
+                topMargin += AddLabel("WEAPONS & ARMOUR", main.unitName.Margin.Left, topMargin, 20, bold: true);
 
                 topMargin += 10;
 
@@ -248,12 +248,12 @@ namespace WarhammerArmyAssembler
 
             if (unit.GetSpecialRules().Count > 0)
             {
-                topMargin += AddLabel("ОСОБЕННОСТИ", main.unitName.Margin.Left, topMargin, 20, bold: true);
+                topMargin += AddLabel("SPECIAL RULES", main.unitName.Margin.Left, topMargin, 20, bold: true);
 
                 topMargin += 10;
 
                 foreach (string rule in unit.GetSpecialRules())
-                    topMargin += AddLabel((rule == "FC" ? "полная команда" : rule), main.unitName.Margin.Left, topMargin, 20);
+                    topMargin += AddLabel((rule == "FC" ? "FULL COMMAND" : rule), main.unitName.Margin.Left, topMargin, 20);
 
                 topMargin += 25;
             }
@@ -333,9 +333,9 @@ namespace WarhammerArmyAssembler
             Button newButton = new Button();
 
             if (option.IsMagicItem())
-                newButton.Content = "отказаться";
+                newButton.Content = "drop";
             else
-                newButton.Content = (option.Realised ? "отменить" : "добавить");
+                newButton.Content = (option.Realised ? "drop" : "add");
 
             if (option.Mount && (mountAlreadyOn > 0) && (option.ID != mountAlreadyOn))
                 newButton.IsEnabled = false;
@@ -400,11 +400,11 @@ namespace WarhammerArmyAssembler
                 Unit unit = container.DataContext as Unit;
 
                 if (!EnoughPointsForAddArtefact(id))
-                    Error("Количество очков недостаточно добавления предмета");
+                    Error("Not enough points add an item");
                 else if (!EnoughUnitPointsForAddArtefact(id, unit.ID))
-                    Error("Недостаточно очков магических предметов для добавления");
+                    Error("Not enough magic item points to add an item");
                 else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unit.ID].Type, ArmyBook.Artefact[id].Points))
-                    Error("Для данного типа достигнут лимит затраты очков");
+                    Error("For this type, a point cost limit has been reached");
                 else
                 {
                     Army.Units[unit.ID].AddAmmunition(id);
@@ -426,18 +426,18 @@ namespace WarhammerArmyAssembler
 
             if ((!slotExists && !coreUnit) || lordInHeroSlot)
             {
-                string unitType = (ArmyBook.Units[id].IsHero() ? "героев" : "отрядов");
-                Error(String.Format("Количество {0} данного типа исчерпано", unitType));
+                string unitType = (ArmyBook.Units[id].IsHero() ? "heroes" : "units");
+                Error(String.Format("The number of {0} of this type has been exhausted.", unitType));
             }
             else if (!EnoughPointsForAddUnit(id))
             {
-                string unitType = (ArmyBook.Units[id].IsHero() ? "героя" : "отряда");
-                Error(String.Format("Недостаточно очков для добавления {0}", unitType));
+                string unitType = (ArmyBook.Units[id].IsHero() ? "hero" : "unit");
+                Error(String.Format("Not enough points to add a {0}", unitType));
             }
             else if (!Army.IsArmyUnitsPointsPercentOk(ArmyBook.Units[id].Type, ArmyBook.Units[id].Points))
-                Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(ArmyBook.Units[id].Type)));
+                Error(String.Format("The {0} has reached a point cost limit", Army.UnitTypeName(ArmyBook.Units[id].Type)));
             else if(!Army.IsArmyDublicationOk(ArmyBook.Units[id]))
-                Error(String.Format("Армия не может включать столько дублирующих {0}", Army.UnitTypeName(ArmyBook.Units[id].Type)));
+                Error(String.Format("Army can't include as many duplicates of {0}", Army.UnitTypeName(ArmyBook.Units[id].Type)));
             else
             {
                 Army.AddUnitByID(id);
@@ -448,11 +448,11 @@ namespace WarhammerArmyAssembler
         public static void ArmyGridDropMount(int id, int points, int unit)
         {
             if (!EnoughPointsForAddMount(points))
-                Error("Недостаточно очков для добавления скакуна");
+                Error("Not enough points to add a mount");
             else if (Army.Units[unit].MountOn > 0)
-                Error("Герой уже имеет скакуна");
+                Error("The hero already has a mount");
             else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unit].Type, points))
-                Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(Army.Units[unit].Type)));
+                Error(String.Format("The {0} has reached a point cost limit", Army.UnitTypeName(Army.Units[unit].Type)));
             else
             {
                 Army.AddMountByID(id, unit);

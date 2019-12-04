@@ -289,12 +289,12 @@ namespace WarhammerArmyAssembler
 
                             if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
                             {
-                                Interface.Error(String.Format("Для {0} достигнут лимит затраты очков", Army.UnitTypeName(Army.Units[unitID].Type)));
+                                Interface.Error(String.Format("The {0} has reached a point cost limit", Army.UnitTypeName(Army.Units[unitID].Type)));
                                 return;
                             }
                             else if (!Interface.EnoughUnitPointsForAddOption(optionPoints))
                             {
-                                Interface.Error(String.Format("Количество очков недостаточно для добавления", Army.UnitTypeName(Army.Units[unitID].Type)));
+                                Interface.Error(String.Format("Not enough points to add", Army.UnitTypeName(Army.Units[unitID].Type)));
                                 return;
                             }
                             else
@@ -385,18 +385,18 @@ namespace WarhammerArmyAssembler
 
             Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
             {
-                ["ImmuneToPsychology"] = "Иммунен к психологии",
-                ["Stubborn"] = "Упорство",
-                ["Hate"] = "Ненависть",
-                ["Fear"] = "Страх",
-                ["Terror"] = "Ужас",
-                ["Frenzy"] = "Бешенство",
-                ["Unbreakable"] = "Несломимость",
-                ["ColdBlooded"] = "Хладнокровие",
-                ["HitFirst"] = "Всегда бьёт первым",
-                ["Regeneration"] = "Регенерация",
-                ["KillingBlow"] = "Смертельный удар",
-                ["PoisonAttack"] = "Ядовитые атаки",
+                ["ImmuneToPsychology"] = "Immune to Psychologyи",
+                ["Stubborn"] = "Stubborn",
+                ["Hate"] = "Hate",
+                ["Fear"] = "Fear",
+                ["Terror"] = "Terror",
+                ["Frenzy"] = "Frenzy",
+                ["Unbreakable"] = "Unbreakable",
+                ["ColdBlooded"] = "ColdBlooded",
+                ["HitFirst"] = "Hit First",
+                ["Regeneration"] = "Regeneration",
+                ["KillingBlow"] = "Killing Blow",
+                ["PoisonAttack"] = "Poison Attack",
             };
 
             foreach(KeyValuePair<string, string> specialRule in allSpecialRules)

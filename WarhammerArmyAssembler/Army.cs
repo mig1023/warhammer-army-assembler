@@ -216,15 +216,15 @@ namespace WarhammerArmyAssembler
         public static string UnitTypeName(Unit.UnitType type)
         {
             if (type == Unit.UnitType.Lord)
-                return "лордов";
+                return "lords";
             else if (type == Unit.UnitType.Hero)
-                return "героев";
+                return "heroes";
             else if (type == Unit.UnitType.Core)
-                return "основных подразделений";
+                return "core units";
             else if (type == Unit.UnitType.Special)
-                return "специальных подразделений";
+                return "special units";
             else if (type == Unit.UnitType.Rare)
-                return "редких подразделений";
+                return "rare units";
 
             return String.Empty;
         }
