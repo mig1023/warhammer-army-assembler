@@ -188,6 +188,8 @@ namespace WarhammerArmyAssembler
             Interface.DragSender = sender;
 
             DragDrop.DoDragDrop(container, unit.ID.ToString(), DragDropEffects.Copy);
+
+            Interface.CurrentSelectedUnit = unit.ID;
         }
 
         private void unitDelete_Drop(object sender, DragEventArgs e)
@@ -264,6 +266,15 @@ namespace WarhammerArmyAssembler
         private void buttonPoints_Click(object sender, RoutedEventArgs e)
         {
             Interface.LoadArmySize(Interface.IntParse((sender as Button).Content.ToString().Split()[0]));
+        }
+
+        private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (Interface.CurrentSelectedUnit != null)
+            {
+                int currentSelectedUnit = Interface.CurrentSelectedUnit ?? 0;
+                Interface.UpdateUnitDescription(currentSelectedUnit, Army.Units[currentSelectedUnit]);
+            }
         }
     }
 }

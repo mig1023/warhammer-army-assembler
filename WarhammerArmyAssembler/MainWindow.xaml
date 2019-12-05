@@ -175,10 +175,9 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <!--Visibility="Hidden"-->
                 <GridSplitter x:Name="unitDetailScrollSlitter" Visibility="Hidden" Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-                <!--Visibility="Hidden"-->
-                <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Background="White">
+
+                <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Background="White" SizeChanged="unitDetailScroll_SizeChanged" >
                     <StackPanel Orientation="Horizontal">
                         <Canvas x:Name="unitDetailHead" Height="Auto" Width="20" Background="White" MouseDown="closeDetail_Click">
                             <Grid Width="{Binding ActualWidth, ElementName=unitDetailHead}" Height="{Binding ActualHeight, ElementName=unitDetailHead}">
