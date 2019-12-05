@@ -48,6 +48,7 @@ namespace WarhammerArmyAssembler
             main.armyMainLabel.Foreground = Brushes.White;
             main.armyMainLabel.Background = ArmyBook.MainColor;
             main.armyMainLabelPlace.Background = ArmyBook.MainColor;
+            main.unitDetailHead.Background = ArmyBook.MainColor;
 
             main.armyMainMenu.Content = '\u2630';
             main.armyMainMenu.Foreground = Brushes.White;
@@ -288,6 +289,8 @@ namespace WarhammerArmyAssembler
             double newTop = Interface.AddOptionsList(unitID, unit);
 
             main.unitDetail.Height = newTop + (main.unitDescription.ActualHeight > 0 ? main.unitDescription.ActualHeight : 20);
+
+            DetailResize(open: true);
         }
 
         private static double AddLabel(string caption, double left, double top, double height,
@@ -555,8 +558,17 @@ namespace WarhammerArmyAssembler
         private static void HideAllDetails()
         {
             main.armybookDetailScroll.Visibility = Visibility.Hidden;
-            main.unitDetailScroll.Visibility = Visibility.Hidden;
             main.menuArmybookScroll.Visibility = Visibility.Hidden;
+        }
+
+        public static void DetailResize(bool open)
+        {
+            Visibility visibility = (open ? Visibility.Visible : Visibility.Hidden);
+            GridLength height = new GridLength(open ? 250 : 0);
+
+            main.unitDetailScroll.Visibility = visibility;
+            main.unitDetailScrollSlitter.Visibility = visibility;
+            main.mainGrid.RowDefinitions[2].Height = height;
         }
 
         public static void Move(MovingType moveTo, ScrollViewer toOpen = null, bool err = false)

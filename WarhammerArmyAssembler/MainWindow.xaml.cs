@@ -183,12 +183,7 @@ namespace WarhammerArmyAssembler
             Interface.UpdateUnitDescription(unit.ID, unit);
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-            {
-                unitDetailScroll.Visibility = Visibility.Visible;
-                unitDetailScrollSlitter.Visibility = Visibility.Visible;
-                mainGrid.RowDefinitions[2].Height = new GridLength(250);
-            }
-
+                Interface.DetailResize(open: true);
 
             Interface.DragSender = sender;
 
@@ -217,12 +212,14 @@ namespace WarhammerArmyAssembler
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
         }
 
+        private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
+        {
+            Interface.Move(Interface.MovingType.ToMain);
+        }
+
         private void closeDetail_Click(object sender, RoutedEventArgs e)
         {
-            if (mainPlaceCanvas.Margin.Top > 0)
-                Interface.Move(Interface.MovingType.ToMain, err: true);
-
-            Interface.Move(Interface.MovingType.ToMain);
+            Interface.DetailResize(open: false);
         }
 
         private void closeErrorDetail_Click(object sender, RoutedEventArgs e)

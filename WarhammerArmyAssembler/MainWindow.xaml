@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
-        Title="Warhammer Army Assembler (WAAgh)" Height="356.42" Width="1000">
+        Title="Warhammer Army Assembler (WAAgh)" Height="600" Width="1000">
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
 
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
@@ -16,7 +16,7 @@
         <Canvas x:Name="mainPlaceCanvas">
 
             <Canvas  x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-                <Button x:Name="closeArmybookDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
+                <Button x:Name="closeArmybookDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeArmybookDetail_Click"/>
             </Canvas>
             <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
                 <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
@@ -51,16 +51,26 @@
                 </Canvas>
             </ScrollViewer>
 
+            <!--<Canvas  x:Name="unitDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
+                <Button x:Name="closeUnitDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
+            </Canvas>
+            <ScrollViewer x:Name="unitDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto">
+                <Canvas x:Name="unitDetailOld" Width="320" Height="50" Background="White" VerticalAlignment="Top">
+                    <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,5"/>
+                    <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
+                </Canvas>
+            </ScrollViewer>-->
+
             <Grid x:Name="mainGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <!--<RowDefinition Height="Auto"></RowDefinition>-->
                     <RowDefinition Height="30"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="320"></ColumnDefinition>
+                    <ColumnDefinition Width="250"></ColumnDefinition>
                     <ColumnDefinition Width="auto"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
@@ -165,16 +175,28 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <GridSplitter x:Name="unitDetailScrollSlitter" Grid.Row="1" Visibility="Hidden" Grid.Column="2" Height="5" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-
+                <!--Visibility="Hidden"-->
+                <GridSplitter x:Name="unitDetailScrollSlitter" Visibility="Hidden" Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <!--Visibility="Hidden"-->
                 <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Background="White">
-                    <Canvas x:Name="unitDetail" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Background="White">
-                        <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,10"/>
-                        <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
-                    </Canvas>
+                    <StackPanel Orientation="Horizontal">
+                        <Canvas x:Name="unitDetailHead" Height="Auto" Width="20" Background="White" MouseDown="closeDetail_Click">
+                            <Grid Width="{Binding ActualWidth, ElementName=unitDetailHead}" Height="{Binding ActualHeight, ElementName=unitDetailHead}">
+                                <Label Content="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-8,0" FontSize="14" Foreground="White">
+                                    <Label.LayoutTransform>
+                                        <RotateTransform Angle="-90"/>
+                                    </Label.LayoutTransform>
+                                </Label>
+                            </Grid>
+                        </Canvas>
+                        <Canvas x:Name="unitDetail" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Background="White">
+                            <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,10"/>
+                            <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
+                        </Canvas>
+                    </StackPanel>
                 </ScrollViewer>
                 
-                <GridSplitter Grid.Row="3" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <!--<GridSplitter Grid.Row="3" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>-->
 
                 <Grid Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
                     <Grid.RowDefinitions>
