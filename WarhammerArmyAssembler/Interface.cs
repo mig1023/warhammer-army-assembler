@@ -168,6 +168,7 @@ namespace WarhammerArmyAssembler
                 main.unitDetail.Children.Remove(element);
 
             int column = 0;
+            bool notFirstColumn = false;
 
             //if (unit.Mage > 0)
             //    topMargin += AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), column, topMargin, 25) + 10;
@@ -201,13 +202,16 @@ namespace WarhammerArmyAssembler
                         topMargin += 20;
                     }
                 }
+
+                notFirstColumn = true;
             }
 
             if (unit.ExistsCommand())
             {
-                topMargin += 10;
+                if (notFirstColumn)
+                    topMargin += 10;
 
-                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: true);
+                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: notFirstColumn);
 
                 topMargin += AddLabel("COMMAND", column, topMargin, 25, bold: true);
 
@@ -231,13 +235,16 @@ namespace WarhammerArmyAssembler
                         topMargin += 20;
                     }
                 }
+
+                notFirstColumn = true;
             }
 
             if (unit.ExistsMagicItems())
             {
-                topMargin += 10;
+                if (notFirstColumn)
+                    topMargin += 10;
 
-                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: true);
+                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: notFirstColumn);
 
                 topMargin += AddLabel("MAGIC ITAMS", column, topMargin, 25, bold: true);
 
@@ -254,13 +261,16 @@ namespace WarhammerArmyAssembler
 
                         topMargin += 20;
                     }
+
+                notFirstColumn = true;
             }
 
             if (unit.ExistsOrdinaryItems())
             {
-                topMargin += 10;
+                if (notFirstColumn)
+                    topMargin += 10;
 
-                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: true);
+                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: notFirstColumn);
 
                 topMargin += AddLabel("WEAPONS & ARMOUR", column, topMargin, 25, bold: true);
 
@@ -277,13 +287,16 @@ namespace WarhammerArmyAssembler
                     }
 
                 topMargin += 5;
+
+                notFirstColumn = true;
             }
 
             if (unit.GetSpecialRules().Count > 0)
             {
-                topMargin += 10;
+                if (notFirstColumn)
+                    topMargin += 10;
 
-                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: true);
+                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: notFirstColumn);
 
                 topMargin += AddLabel("SPECIAL RULES", column, topMargin, 25, bold: true);
 
@@ -297,6 +310,8 @@ namespace WarhammerArmyAssembler
 
                     topMargin += 5;
                 }
+
+                notFirstColumn = true;
             }
 
             return topMargin;
@@ -332,7 +347,7 @@ namespace WarhammerArmyAssembler
         private static double AddLabel(string caption, int column, double top, double height,
             bool selected = false, int points = 0, bool perModel = false, bool bold = false)
         {
-            double left = main.unitName.Margin.Left + (column * 145);
+            double left = main.unitName.Margin.Left + (column * 155);
 
             Label newOption = new Label();
             newOption.Content = caption;
@@ -371,7 +386,7 @@ namespace WarhammerArmyAssembler
         {
             AddLabel(caption, column, top, height, (option.Realised ? true : false), option.Points, option.PerModel);
 
-            double left = main.unitName.Margin.Left + (column * 145);
+            double left = main.unitName.Margin.Left + (column * 155);
 
             Button newButton = new Button();
 
@@ -405,7 +420,7 @@ namespace WarhammerArmyAssembler
             newButton.Margin = Thick(newButton, left + 2, top + 20);
             newButton.Tag = id;
             newButton.Click += AddOption_Click;
-            newButton.Width = 125;
+            newButton.Width = 135;
             main.unitDetail.Children.Add(newButton);
 
             return height;
