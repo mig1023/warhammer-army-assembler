@@ -517,6 +517,9 @@ namespace WarhammerArmyAssembler
 
         public static void UnitDeleteDrop(int id)
         {
+            if (CurrentSelectedUnit == id)
+                DetailResize(open: false);
+
             Army.DeleteUnitByID(id);
             ReloadArmyData();
         }

@@ -213,6 +213,16 @@ namespace WarhammerArmyAssembler
             return 0;
         }
 
+        public static bool UnitExistInArmy(int? nullableUnitID)
+        {
+            int unitID = nullableUnitID ?? -1;
+
+            if (!Units.ContainsKey(unitID))
+                return false;
+
+            return true;
+        }
+
         public static string UnitTypeName(Unit.UnitType type)
         {
             if (type == Unit.UnitType.Lord)

@@ -270,7 +270,7 @@ namespace WarhammerArmyAssembler
 
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (Interface.CurrentSelectedUnit != null)
+            if (Army.UnitExistInArmy(Interface.CurrentSelectedUnit))
             {
                 int currentSelectedUnit = Interface.CurrentSelectedUnit ?? 0;
                 Interface.UpdateUnitDescription(currentSelectedUnit, Army.Units[currentSelectedUnit]);
