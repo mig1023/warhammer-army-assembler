@@ -18,14 +18,14 @@
             <Canvas  x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
                 <Button x:Name="closeArmybookDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeArmybookDetail_Click"/>
             </Canvas>
-            <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
+            <ScrollViewer x:Name="armybookDetailScroll" Visibility="Hidden" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
                 <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
                     <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
                     <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
                 </Canvas>
             </ScrollViewer>
 
-            <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
+            <ScrollViewer x:Name="menuArmybookScroll" Visibility="Hidden" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
                 <Canvas x:Name="menuArmybookPlace" Width="320" Height="628" VerticalAlignment="Top" Background="White">
                     <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="11"/>
                     <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="303" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
@@ -188,7 +188,7 @@
                                 </Label>
                             </Grid>
                         </Canvas>
-                        <Canvas x:Name="unitDetail" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Background="White">
+                        <Canvas x:Name="unitDetail" VerticalAlignment="Stretch" Width="150" Background="White">
                             <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,15"/>
                             <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
                         </Canvas>

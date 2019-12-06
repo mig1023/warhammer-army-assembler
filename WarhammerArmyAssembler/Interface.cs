@@ -314,6 +314,13 @@ namespace WarhammerArmyAssembler
                 notFirstColumn = true;
             }
 
+            column += 1;
+
+            main.unitDetail.Width = (column * 155) + 40;
+
+            if (main.unitDetail.Width > main.unitDetailScroll.Width)
+                main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
+
             return topMargin;
         }
 
