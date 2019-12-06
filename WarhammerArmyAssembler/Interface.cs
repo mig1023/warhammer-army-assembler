@@ -481,6 +481,7 @@ namespace WarhammerArmyAssembler
                 {
                     Army.Units[unit.ID].AddAmmunition(id);
                     ReloadArmyData();
+                    UpdateUnitDescription(unit.ID, Army.Units[unit.ID]);
 
                     if (!ArmyBook.Artefact[id].Multiple)
                         SetArtefactAlreadyUsed(id, true);
