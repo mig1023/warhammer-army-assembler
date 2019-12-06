@@ -51,16 +51,6 @@
                 </Canvas>
             </ScrollViewer>
 
-            <!--<Canvas  x:Name="unitDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-                <Button x:Name="closeUnitDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeDetail_Click"/>
-            </Canvas>
-            <ScrollViewer x:Name="unitDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto">
-                <Canvas x:Name="unitDetailOld" Width="320" Height="50" Background="White" VerticalAlignment="Top">
-                    <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,5"/>
-                    <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
-                </Canvas>
-            </ScrollViewer>-->
-
             <Grid x:Name="mainGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -177,7 +167,9 @@
 
                 <GridSplitter x:Name="unitDetailScrollSlitter" Visibility="Hidden" Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Background="White" SizeChanged="unitDetailScroll_SizeChanged" >
+                <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                              VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Background="White" SizeChanged="unitDetailScroll_SizeChanged"
+                              Drop="ArmyGrid_Drop" AllowDrop="True" DragOver="ArmyGridRow_DragOver">
                     <StackPanel Orientation="Horizontal">
                         <Canvas x:Name="unitDetailHead" Height="Auto" Width="20" Background="White" MouseDown="closeDetail_Click">
                             <Grid Width="{Binding ActualWidth, ElementName=unitDetailHead}" Height="{Binding ActualHeight, ElementName=unitDetailHead}">

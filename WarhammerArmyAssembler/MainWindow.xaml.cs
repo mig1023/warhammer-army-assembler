@@ -95,7 +95,10 @@ namespace WarhammerArmyAssembler
 
             DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
 
-            Interface.ArmyGridDrop(id, container);
+            if (sender is ScrollViewer)
+                Interface.ArmyGridDropArtefact(id, Interface.CurrentSelectedUnit ?? 0);
+            else
+                Interface.ArmyGridDrop(id, container);
         }
 
         public static T FindVisualParent<T>(UIElement element) where T : UIElement
@@ -147,11 +150,20 @@ namespace WarhammerArmyAssembler
 
         private void ArmyGridRow_DragOver(object sender, DragEventArgs e)
         {
-            DataGridRow row = sender as DataGridRow;
-            Unit unit = row.DataContext as Unit;
+            Unit unit = null;
 
-            ArmyGrid.SelectedItem = row.Item;
-            ArmyGrid.ScrollIntoView(row.Item);
+            if (sender is ScrollViewer)
+            {
+                unit = Army.Units[Interface.CurrentSelectedUnit ?? 0];
+            }
+            else
+            {
+                DataGridRow row = sender as DataGridRow;
+                unit = row.DataContext as Unit;
+
+                ArmyGrid.SelectedItem = row.Item;
+                ArmyGrid.ScrollIntoView(row.Item);
+            }
 
             int id = Interface.IntParse((string)e.Data.GetData(DataFormats.Text));
 
@@ -160,6 +172,8 @@ namespace WarhammerArmyAssembler
                 bool usable = ArmyBook.Artefact[id].IsUsableByUnit(unit.MagicItemsType, unit.Group);
                 e.Effects = ((unit.MagicItems > 0) && usable ? DragDropEffects.Copy : DragDropEffects.None);
             }
+            else
+                e.Effects = DragDropEffects.None;
         }
 
         private void ArmyGrid_MouseDown(object sender, MouseButtonEventArgs e)

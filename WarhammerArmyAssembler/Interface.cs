@@ -467,25 +467,28 @@ namespace WarhammerArmyAssembler
 
         public static void ArmyGridDropArtefact(int id, DataGridRow container)
         {
-            if (container != null)
+            Unit unit = container.DataContext as Unit;
+
+            if (unit != null)
+                ArmyGridDropArtefact(id, unit.ID);
+        }
+
+        public static void ArmyGridDropArtefact(int id, int unitID)
+        {
+            if (!EnoughPointsForAddArtefact(id))
+                Error("Not enough points add an item");
+            else if (!EnoughUnitPointsForAddArtefact(id, unitID))
+                Error("Not enough magic item points to add an item");
+            else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, ArmyBook.Artefact[id].Points))
+                Error("For this type, a point cost limit has been reached");
+            else
             {
-                Unit unit = container.DataContext as Unit;
+                Army.Units[unitID].AddAmmunition(id);
+                ReloadArmyData();
+                UpdateUnitDescription(unitID, Army.Units[unitID]);
 
-                if (!EnoughPointsForAddArtefact(id))
-                    Error("Not enough points add an item");
-                else if (!EnoughUnitPointsForAddArtefact(id, unit.ID))
-                    Error("Not enough magic item points to add an item");
-                else if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unit.ID].Type, ArmyBook.Artefact[id].Points))
-                    Error("For this type, a point cost limit has been reached");
-                else
-                {
-                    Army.Units[unit.ID].AddAmmunition(id);
-                    ReloadArmyData();
-                    UpdateUnitDescription(unit.ID, Army.Units[unit.ID]);
-
-                    if (!ArmyBook.Artefact[id].Multiple)
-                        SetArtefactAlreadyUsed(id, true);
-                }
+                if (!ArmyBook.Artefact[id].Multiple)
+                    SetArtefactAlreadyUsed(id, true);
             }
         }
 
