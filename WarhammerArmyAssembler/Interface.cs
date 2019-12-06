@@ -161,7 +161,7 @@ namespace WarhammerArmyAssembler
             List<FrameworkElement> elementsForRemoving = new List<FrameworkElement>();
 
             foreach (FrameworkElement element in main.unitDetail.Children)
-                if (element.Name != "closeUnitDetail" && element.Name != "unitName" && element.Name != "unitDescription")
+                if (element.Name != "closeUnitDetail" && element.Name != "unitName")
                     elementsForRemoving.Add(element);
 
             foreach (FrameworkElement element in elementsForRemoving)
@@ -170,9 +170,12 @@ namespace WarhammerArmyAssembler
             int column = 0;
             bool notFirstColumn = false;
 
-            //if (unit.Mage > 0)
-            //    topMargin += AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), column, topMargin, 25) + 10;
-
+            if (unit.Mage > 0)
+            {
+                double left = main.unitName.Margin.Left + main.unitName.ActualWidth + 5;
+                AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), left, main.unitName.Margin.Top, 25);
+            }
+                
             if (unit.ExistsOptions())
             {
                 CheckColumn(topMargin, column, out topMargin, out column, header: true);
@@ -348,6 +351,8 @@ namespace WarhammerArmyAssembler
             main.unitName.Background = ArmyBook.MainColor;
             main.unitName.FontWeight = FontWeights.Bold;
 
+            main.UpdateLayout();
+
             AddOptionsList(unitID, unit);
         }
 
@@ -355,7 +360,12 @@ namespace WarhammerArmyAssembler
             bool selected = false, int points = 0, bool perModel = false, bool bold = false)
         {
             double left = main.unitName.Margin.Left + (column * 155);
+            return AddLabel(caption, left, top, height, selected, points, perModel, bold);
+        }
 
+        private static double AddLabel(string caption, double left, double top, double height,
+            bool selected = false, int points = 0, bool perModel = false, bool bold = false)
+        {
             Label newOption = new Label();
             newOption.Content = caption;
             newOption.Margin = Thick(newOption, left, top);
@@ -448,11 +458,11 @@ namespace WarhammerArmyAssembler
         public static void ArmyGridDrop(int id, DataGridRow container = null, int points = 0, int unit = 0)
         {
             if (ArmyBook.Artefact.ContainsKey(id))
-                Interface.ArmyGridDropArtefact(id, container);
+                ArmyGridDropArtefact(id, container);
             else if (ArmyBook.Mounts.ContainsKey(id))
-                Interface.ArmyGridDropMount(id, points, unit);
+                ArmyGridDropMount(id, points, unit);
             else
-                Interface.ArmyGridDropUnit(id);
+                ArmyGridDropUnit(id);
         }
 
         public static void ArmyGridDropArtefact(int id, DataGridRow container)

@@ -66,7 +66,7 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <!--<RowDefinition Height="Auto"></RowDefinition>-->
+                    <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -190,12 +190,11 @@
                         </Canvas>
                         <Canvas x:Name="unitDetail" VerticalAlignment="Stretch" Width="150" Background="White">
                             <Label x:Name="unitName" Content="" Width="Auto" FontSize="12" Margin="18,15"/>
-                            <TextBlock x:Name="unitDescription" Height="Auto" Width="200" TextWrapping="Wrap"/>
                         </Canvas>
                     </StackPanel>
                 </ScrollViewer>
-                
-                <!--<GridSplitter Grid.Row="3" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>-->
+
+                <GridSplitter Grid.Row="3" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
                 <Grid Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
                     <Grid.RowDefinitions>
