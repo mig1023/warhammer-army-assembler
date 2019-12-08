@@ -55,7 +55,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="0"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="30"></RowDefinition>
                 </Grid.RowDefinitions>
@@ -165,7 +165,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <GridSplitter x:Name="unitDetailScrollSlitter" Visibility="Hidden" Grid.Row="1" Grid.Column="2" Height="5" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <GridSplitter x:Name="unitDetailScrollSlitter" IsEnabled="False" Grid.Row="1" Grid.Column="2" Height="0" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
                 <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
                               VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Background="White" SizeChanged="unitDetailScroll_SizeChanged"

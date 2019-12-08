@@ -639,12 +639,22 @@ namespace WarhammerArmyAssembler
 
         public static void DetailResize(bool open)
         {
-            Visibility visibility = (open ? Visibility.Visible : Visibility.Hidden);
-            GridLength height = new GridLength(open ? 250 : 0);
-
-            main.unitDetailScroll.Visibility = visibility;
-            main.unitDetailScrollSlitter.Visibility = visibility;
-            main.mainGrid.RowDefinitions[2].Height = height;
+            if (open)
+            {
+                main.unitDetailScroll.Visibility = Visibility.Visible;
+                main.mainGrid.RowDefinitions[2].Height = new GridLength(250);
+                main.unitDetailScrollSlitter.IsEnabled = true;
+                main.mainGrid.RowDefinitions[1].Height = new GridLength(5);
+                main.unitDetailScrollSlitter.Height = 5;
+            }
+            else
+            {
+                main.unitDetailScroll.Visibility = Visibility.Hidden;
+                main.mainGrid.RowDefinitions[2].Height = new GridLength(0);
+                main.unitDetailScrollSlitter.IsEnabled = false;
+                main.mainGrid.RowDefinitions[1].Height = new GridLength(0);
+                main.unitDetailScrollSlitter.Height = 0;
+            }
         }
 
         public static void Move(MovingType moveTo, ScrollViewer toOpen = null, bool err = false)
