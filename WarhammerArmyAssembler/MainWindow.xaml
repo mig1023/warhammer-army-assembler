@@ -122,7 +122,7 @@
                     </TreeView>
                 </Grid>
 
-                <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
                 <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="2" CanUserAddRows="False" GridLinesVisibility="None"
                           AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
