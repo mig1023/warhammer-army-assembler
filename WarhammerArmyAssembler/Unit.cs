@@ -223,8 +223,11 @@ namespace WarhammerArmyAssembler
                         if (paramValue == null)
                             paramValue = 7;
 
-                        if (doNotCombine && (optionValue < paramValue))
+                        if (doNotCombine)
+                        {
+                            if (optionValue < paramValue)
                                 paramValue = optionValue;
+                        }
                         else
                             paramValue -= (7 - optionValue);
 
