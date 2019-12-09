@@ -741,7 +741,8 @@ namespace WarhammerArmyAssembler
             LoadArmyList();
             ReloadArmyData();
 
-            Move(Interface.MovingType.ToMain);
+            DetailResize(open: false);
+            Move(MovingType.ToMain);
         }
     }
 }
