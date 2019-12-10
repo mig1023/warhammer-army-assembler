@@ -149,8 +149,11 @@ namespace WarhammerArmyAssembler
             return margins;
         }
 
-        private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit, bool notFirstColumn)
+        private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit, ref bool notFirstColumn)
         {
+            if (notFirstColumn)
+                margins[1] += 10;
+
             margins = CheckColumn(margins, header: true, newColumn: notFirstColumn);
 
             margins[1] += AddLabel(head, margins, 25, bold: true);
@@ -172,6 +175,8 @@ namespace WarhammerArmyAssembler
 
                     margins[1] += 5;
                 }
+
+                notFirstColumn = true;
             }
             else
             {
@@ -212,17 +217,17 @@ namespace WarhammerArmyAssembler
 
                         margins[1] += 5;
                     }
+
+                    notFirstColumn = true;
                 }
             }
 
             return margins;
         }
 
-        public static double AddOptionsList(int unitID, Unit unit)
+        public static void AddOptionsList(int unitID, Unit unit)
         {
             double[] margins = new double[] { main.unitName.Margin.Left, main.unitName.Margin.Top + 35 };
-
-            double topMargin = main.unitName.Margin.Top + 35;
 
             List<FrameworkElement> elementsForRemoving = new List<FrameworkElement>();
 
@@ -233,7 +238,6 @@ namespace WarhammerArmyAssembler
             foreach (FrameworkElement element in elementsForRemoving)
                 main.unitDetail.Children.Remove(element);
 
-            int column = 0;
             bool notFirstColumn = false;
 
             if (unit.Mage > 0)
@@ -243,60 +247,24 @@ namespace WarhammerArmyAssembler
             }
                 
             if (unit.ExistsOptions())
-            {
-                margins = CreateColumn("OPTION", margins, unitID, unit, notFirstColumn);
-
-                notFirstColumn = true;
-            }
+                margins = CreateColumn("OPTION", margins, unitID, unit, ref notFirstColumn);
 
             if (unit.ExistsCommand())
-            {
-                if (notFirstColumn)
-                    topMargin += 10;
-
-                margins = CreateColumn("COMMAND", margins, unitID, unit, notFirstColumn);
-
-                notFirstColumn = true;
-            }
+                margins = CreateColumn("COMMAND", margins, unitID, unit, ref notFirstColumn);
 
             if (unit.ExistsMagicItems())
-            {
-                if (notFirstColumn)
-                    topMargin += 10;
-
-                margins = CreateColumn("MAGIC ITAMS", margins, unitID, unit, notFirstColumn);
-
-                notFirstColumn = true;
-            }
+                margins = CreateColumn("MAGIC ITAMS", margins, unitID, unit, ref notFirstColumn);
 
             if (unit.ExistsOrdinaryItems())
-            {
-                if (notFirstColumn)
-                    topMargin += 10;
-
-                margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, notFirstColumn);
-
-                notFirstColumn = true;
-            }
+                margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, ref notFirstColumn);
 
             if (unit.GetSpecialRules().Count > 0)
-            {
-                if (notFirstColumn)
-                    topMargin += 10;
+                margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, ref notFirstColumn);
 
-                margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, notFirstColumn);
-
-                notFirstColumn = true;
-            }
-
-            column += 1;
-
-            main.unitDetail.Width = (column * 155) + 40;
+            main.unitDetail.Width = margins[0] + 200;
 
             if (main.unitDetail.Width > main.unitDetailScroll.Width)
                 main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
-
-            return topMargin;
         }
 
         private static void AddOption_Click(object sender, RoutedEventArgs e)
