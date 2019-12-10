@@ -187,14 +187,8 @@ namespace WarhammerArmyAssembler
                 {
                     if (head == "OPTION" || head == "COMMAND" || head == "MAGIC ITAMS")
                     {
-                        if (head == "OPTION")
-                        {
-                            int alredyUsedBy = (option.OnlyOneInArmy ? Army.OptionAlreadyUsed(option.Name) : 0);
-                            bool canBeUsed = (!option.OnlyOneInArmy || (alredyUsedBy == 0) || (alredyUsedBy == unitID));
-
-                            if (!option.IsOption() || option.FullCommand && !canBeUsed)
-                                continue;
-                        }
+                        if (head == "OPTION" && (!option.IsOption() || option.FullCommand))
+                            continue;
 
                         if (head == "COMMAND" && !option.FullCommand)
                             continue;
@@ -204,8 +198,11 @@ namespace WarhammerArmyAssembler
 
                         margins = CheckColumn(margins, ref lastColumnMaxWidth);
 
+                        int alredyUsedBy = (option.OnlyOneInArmy ? Army.OptionAlreadyUsed(option.Name) : 0);
+                        bool canBeUsed = (!option.OnlyOneInArmy || (alredyUsedBy == 0) || (alredyUsedBy == unitID));
+
                         margins[1] += AddButton(option.Name, margins, 25, ref lastColumnMaxWidth, String.Format("{0}|{1}", unitID, option.ID),
-                            option, mountAlreadyOn: mountAlreadyOn, unit: unit);
+                            option, mountAlreadyOn: mountAlreadyOn, unit: unit, mustBeEnabled: canBeUsed);
 
                         margins[1] += 20;
                     }
@@ -247,8 +244,9 @@ namespace WarhammerArmyAssembler
 
             if (unit.Mage > 0)
             {
-                double left = main.unitName.Margin.Left + main.unitName.ActualWidth + 5;
-                AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), margins, 25, ref lastColumnMaxWidth);
+                AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()),
+                    new double[] { main.unitName.Margin.Left + main.unitName.ActualWidth + 5, main.unitName.Margin.Top },
+                    25, ref lastColumnMaxWidth);
             }
                 
             if (unit.ExistsOptions())
@@ -340,7 +338,7 @@ namespace WarhammerArmyAssembler
         }
 
         private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth, string id,
-            Option option, int mountAlreadyOn = 0, Unit unit = null)
+            Option option, int mountAlreadyOn = 0, Unit unit = null, bool mustBeEnabled = true)
         {
             AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
                 option.Points, option.PerModel);
@@ -362,6 +360,9 @@ namespace WarhammerArmyAssembler
                 newButton.IsEnabled = false;
 
             if (option.IsSlannOption() && !option.Realised && (unit != null) && unit.IsMaxSlannOption())
+                newButton.IsEnabled = false;
+
+            if (!mustBeEnabled)
                 newButton.IsEnabled = false;
 
             if (
