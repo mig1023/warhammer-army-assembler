@@ -135,28 +135,31 @@ namespace WarhammerArmyAssembler
             return (newPrice - currentPrice) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
-        private static double[] CheckColumn(double[] margins, bool header = false, bool newColumn = false)
+        private static double[] CheckColumn(double[] margins, ref double lastColumnMaxWidth,
+            bool header = false, bool newColumn = false)
         {
             double detailHeight = main.unitDetail.ActualHeight;
             detailHeight = (detailHeight > 0 ? detailHeight : 250);
 
             if (newColumn || (margins[1] + (header ? 90 : 60) > detailHeight))
             {
-                margins[0] += 155;
+                margins[0] += (lastColumnMaxWidth > 155 ? lastColumnMaxWidth + 10 : 155);
                 margins[1] = (header ? 50 : 40) + (newColumn ? 0 : 45);
+                lastColumnMaxWidth = 0;
             }
 
             return margins;
         }
 
-        private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit, ref bool notFirstColumn)
+        private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit,
+            ref bool notFirstColumn, ref double lastColumnMaxWidth)
         {
             if (notFirstColumn)
                 margins[1] += 10;
 
-            margins = CheckColumn(margins, header: true, newColumn: notFirstColumn);
+            margins = CheckColumn(margins, ref lastColumnMaxWidth, header: true, newColumn: notFirstColumn);
 
-            margins[1] += AddLabel(head, margins, 25, bold: true);
+            margins[1] += AddLabel(head, margins, 25, ref lastColumnMaxWidth, bold: true);
 
             margins[1] += 10;
 
@@ -169,9 +172,9 @@ namespace WarhammerArmyAssembler
             {
                 foreach (string rule in unit.GetSpecialRules())
                 {
-                    margins = CheckColumn(margins);
+                    margins = CheckColumn(margins, ref lastColumnMaxWidth);
 
-                    margins[1] += AddLabel((rule == "FC" ? "FULL COMMAND" : rule), margins, 15);
+                    margins[1] += AddLabel((rule == "FC" ? "FULL COMMAND" : rule), margins, 15, ref lastColumnMaxWidth);
 
                     margins[1] += 5;
                 }
@@ -199,9 +202,9 @@ namespace WarhammerArmyAssembler
                         if (head == "MAGIC ITAMS" && (!option.IsMagicItem() || (option.Points <= 0)))
                             continue;
 
-                        margins = CheckColumn(margins);
+                        margins = CheckColumn(margins, ref lastColumnMaxWidth);
 
-                        margins[1] += AddButton(option.Name, margins, 25, String.Format("{0}|{1}", unitID, option.ID),
+                        margins[1] += AddButton(option.Name, margins, 25, ref lastColumnMaxWidth, String.Format("{0}|{1}", unitID, option.ID),
                             option, mountAlreadyOn: mountAlreadyOn, unit: unit);
 
                         margins[1] += 20;
@@ -211,9 +214,9 @@ namespace WarhammerArmyAssembler
                         if (head == "WEAPONS & ARMOUR" && (!option.IsMagicItem() || (option.Points != 0) || String.IsNullOrEmpty(option.Name)))
                             continue;
 
-                        margins = CheckColumn(margins);
+                        margins = CheckColumn(margins, ref lastColumnMaxWidth);
 
-                        margins[1] += AddLabel(option.Name, margins, 15);
+                        margins[1] += AddLabel(option.Name, margins, 15, ref lastColumnMaxWidth);
 
                         margins[1] += 5;
                     }
@@ -240,28 +243,30 @@ namespace WarhammerArmyAssembler
 
             bool notFirstColumn = false;
 
+            double lastColumnMaxWidth = 0;
+
             if (unit.Mage > 0)
             {
                 double left = main.unitName.Margin.Left + main.unitName.ActualWidth + 5;
-                AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), margins, 25);
+                AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), margins, 25, ref lastColumnMaxWidth);
             }
                 
             if (unit.ExistsOptions())
-                margins = CreateColumn("OPTION", margins, unitID, unit, ref notFirstColumn);
+                margins = CreateColumn("OPTION", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsCommand())
-                margins = CreateColumn("COMMAND", margins, unitID, unit, ref notFirstColumn);
+                margins = CreateColumn("COMMAND", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsMagicItems())
-                margins = CreateColumn("MAGIC ITAMS", margins, unitID, unit, ref notFirstColumn);
+                margins = CreateColumn("MAGIC ITAMS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsOrdinaryItems())
-                margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, ref notFirstColumn);
+                margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.GetSpecialRules().Count > 0)
-                margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, ref notFirstColumn);
+                margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
-            main.unitDetail.Width = margins[0] + 200;
+            main.unitDetail.Width = margins[0] + lastColumnMaxWidth + 10;
 
             if (main.unitDetail.Width > main.unitDetailScroll.Width)
                 main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
@@ -296,7 +301,7 @@ namespace WarhammerArmyAssembler
             AddOptionsList(unitID, unit);
         }
 
-        private static double AddLabel(string caption, double[] margins, double height,
+        private static double AddLabel(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
             bool selected = false, int points = 0, bool perModel = false, bool bold = false)
         {
             Label newOption = new Label();
@@ -319,6 +324,9 @@ namespace WarhammerArmyAssembler
 
             main.UpdateLayout();
 
+            if (newOption.ActualWidth > lastColumnMaxWidth)
+                lastColumnMaxWidth = newOption.ActualWidth;
+
             if (points > 0)
             {
                 Label optionPoints = new Label();
@@ -331,10 +339,11 @@ namespace WarhammerArmyAssembler
             return height;
         }
 
-        private static double AddButton(string caption, double[] margins, double height, string id,
+        private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth, string id,
             Option option, int mountAlreadyOn = 0, Unit unit = null)
         {
-            AddLabel(caption, margins, height, (option.Realised ? true : false), option.Points, option.PerModel);
+            AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
+                option.Points, option.PerModel);
 
             Button newButton = new Button();
 
