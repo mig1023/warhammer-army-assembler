@@ -135,27 +135,93 @@ namespace WarhammerArmyAssembler
             return (newPrice - currentPrice) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
-        private static void CheckColumn(double currentTopMargin, int currentColumn,
-            out double topMargin, out int column, bool header = false, bool newColumn = false)
+        private static double[] CheckColumn(double[] margins, bool header = false, bool newColumn = false)
         {
-            double newTopMargin = currentTopMargin;
-            int newCurrentColumn = currentColumn;
-
             double detailHeight = main.unitDetail.ActualHeight;
             detailHeight = (detailHeight > 0 ? detailHeight : 250);
 
-            if (newColumn || (newTopMargin + (header ? 90 : 60) > detailHeight))
+            if (newColumn || (margins[1] + (header ? 90 : 60) > detailHeight))
             {
-                newCurrentColumn += 1;
-                newTopMargin = (header ? 50 : 40) + (newColumn ? 0 : 45);
+                margins[0] += 155;
+                margins[1] = (header ? 50 : 40) + (newColumn ? 0 : 45);
             }
 
-            topMargin = newTopMargin;
-            column = newCurrentColumn;
+            return margins;
+        }
+
+        private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit, bool notFirstColumn)
+        {
+            margins = CheckColumn(margins, header: true, newColumn: notFirstColumn);
+
+            margins[1] += AddLabel(head, margins, 25, bold: true);
+
+            margins[1] += 10;
+
+            int mountAlreadyOn = 0;
+
+            if (unit.MountOn > 0)
+                mountAlreadyOn = Army.GetMountOption(unit);
+
+            if (head == "SPECIAL RULES")
+            {
+                foreach (string rule in unit.GetSpecialRules())
+                {
+                    margins = CheckColumn(margins);
+
+                    margins[1] += AddLabel((rule == "FC" ? "FULL COMMAND" : rule), margins, 15);
+
+                    margins[1] += 5;
+                }
+            }
+            else
+            {
+                foreach (Option option in unit.Options)
+                {
+                    if (head == "OPTION" || head == "COMMAND" || head == "MAGIC ITAMS")
+                    {
+                        if (head == "OPTION")
+                        {
+                            int alredyUsedBy = (option.OnlyOneInArmy ? Army.OptionAlreadyUsed(option.Name) : 0);
+                            bool canBeUsed = (!option.OnlyOneInArmy || (alredyUsedBy == 0) || (alredyUsedBy == unitID));
+
+                            if (!option.IsOption() || option.FullCommand && !canBeUsed)
+                                continue;
+                        }
+
+                        if (head == "COMMAND" && !option.FullCommand)
+                            continue;
+
+                        if (head == "MAGIC ITAMS" && (!option.IsMagicItem() || (option.Points <= 0)))
+                            continue;
+
+                        margins = CheckColumn(margins);
+
+                        margins[1] += AddButton(option.Name, margins, 25, String.Format("{0}|{1}", unitID, option.ID),
+                            option, mountAlreadyOn: mountAlreadyOn, unit: unit);
+
+                        margins[1] += 20;
+                    }
+                    else
+                    {
+                        if (head == "WEAPONS & ARMOUR" && (!option.IsMagicItem() || (option.Points != 0) || String.IsNullOrEmpty(option.Name)))
+                            continue;
+
+                        margins = CheckColumn(margins);
+
+                        margins[1] += AddLabel(option.Name, margins, 15);
+
+                        margins[1] += 5;
+                    }
+                }
+            }
+
+            return margins;
         }
 
         public static double AddOptionsList(int unitID, Unit unit)
         {
+            double[] margins = new double[] { main.unitName.Margin.Left, main.unitName.Margin.Top + 35 };
+
             double topMargin = main.unitName.Margin.Top + 35;
 
             List<FrameworkElement> elementsForRemoving = new List<FrameworkElement>();
@@ -173,38 +239,12 @@ namespace WarhammerArmyAssembler
             if (unit.Mage > 0)
             {
                 double left = main.unitName.Margin.Left + main.unitName.ActualWidth + 5;
-                AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), left, main.unitName.Margin.Top, 25);
+                AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()), margins, 25);
             }
                 
             if (unit.ExistsOptions())
             {
-                CheckColumn(topMargin, column, out topMargin, out column, header: true);
-
-                topMargin += AddLabel("OPTION", column, topMargin, 25, bold: true);
-
-                topMargin += 10;
-
-                int mountAlreadyOn = 0;
-
-                if (unit.MountOn > 0)
-                    mountAlreadyOn = Army.GetMountOption(unit);
-
-                foreach (Option option in unit.Options)
-                {
-                    int alredyUsedBy = (option.OnlyOneInArmy ? Army.OptionAlreadyUsed(option.Name) : 0);
-                    bool canBeUsed = (!option.OnlyOneInArmy || (alredyUsedBy == 0) || (alredyUsedBy == unitID));
-
-                    if (option.IsOption() && !option.FullCommand && canBeUsed)
-                    {
-                        CheckColumn(topMargin, column, out topMargin, out column);
-
-                        topMargin += AddButton(option.Name, column, topMargin, 25,
-                            String.Format("{0}|{1}", unitID, option.ID), option, mountAlreadyOn: mountAlreadyOn,
-                            unit: unit);
-
-                        topMargin += 20;
-                    }
-                }
+                margins = CreateColumn("OPTION", margins, unitID, unit, notFirstColumn);
 
                 notFirstColumn = true;
             }
@@ -214,30 +254,7 @@ namespace WarhammerArmyAssembler
                 if (notFirstColumn)
                     topMargin += 10;
 
-                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: notFirstColumn);
-
-                topMargin += AddLabel("COMMAND", column, topMargin, 25, bold: true);
-
-                topMargin += 10;
-
-                int mountAlreadyOn = 0;
-
-                if (unit.MountOn > 0)
-                    mountAlreadyOn = Army.GetMountOption(unit);
-
-                foreach (Option option in unit.Options)
-                {
-                    if (option.FullCommand)
-                    {
-                        CheckColumn(topMargin, column, out topMargin, out column);
-
-                        topMargin += AddButton(option.Name, column, topMargin, 25,
-                            String.Format("{0}|{1}", unitID, option.ID),
-                            option, mountAlreadyOn: mountAlreadyOn);
-
-                        topMargin += 20;
-                    }
-                }
+                margins = CreateColumn("COMMAND", margins, unitID, unit, notFirstColumn);
 
                 notFirstColumn = true;
             }
@@ -247,23 +264,7 @@ namespace WarhammerArmyAssembler
                 if (notFirstColumn)
                     topMargin += 10;
 
-                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: notFirstColumn);
-
-                topMargin += AddLabel("MAGIC ITAMS", column, topMargin, 25, bold: true);
-
-                topMargin += 10;
-
-                foreach (Option option in unit.Options)
-                    if (option.IsMagicItem() && (option.Points > 0))
-                    {
-                        CheckColumn(topMargin, column, out topMargin, out column);
-
-                        topMargin += AddButton(option.Name, column, topMargin, 25,
-                            String.Format("{0}|{1}", unitID, option.ID),
-                            option);
-
-                        topMargin += 20;
-                    }
+                margins = CreateColumn("MAGIC ITAMS", margins, unitID, unit, notFirstColumn);
 
                 notFirstColumn = true;
             }
@@ -273,23 +274,7 @@ namespace WarhammerArmyAssembler
                 if (notFirstColumn)
                     topMargin += 10;
 
-                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: notFirstColumn);
-
-                topMargin += AddLabel("WEAPONS & ARMOUR", column, topMargin, 25, bold: true);
-
-                topMargin += 10;
-
-                foreach (Option option in unit.Options)
-                    if (option.IsMagicItem() && (option.Points == 0) && !String.IsNullOrEmpty(option.Name))
-                    {
-                        CheckColumn(topMargin, column, out topMargin, out column);
-
-                        topMargin += AddLabel(option.Name, column, topMargin, 15);
-
-                        topMargin += 5;
-                    }
-
-                topMargin += 5;
+                margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, notFirstColumn);
 
                 notFirstColumn = true;
             }
@@ -299,20 +284,7 @@ namespace WarhammerArmyAssembler
                 if (notFirstColumn)
                     topMargin += 10;
 
-                CheckColumn(topMargin, column, out topMargin, out column, header: true, newColumn: notFirstColumn);
-
-                topMargin += AddLabel("SPECIAL RULES", column, topMargin, 25, bold: true);
-
-                topMargin += 10;
-
-                foreach (string rule in unit.GetSpecialRules())
-                {
-                    CheckColumn(topMargin, column, out topMargin, out column);
-
-                    topMargin += AddLabel((rule == "FC" ? "FULL COMMAND" : rule), column, topMargin, 15);
-
-                    topMargin += 5;
-                }
+                margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, notFirstColumn);
 
                 notFirstColumn = true;
             }
@@ -356,19 +328,12 @@ namespace WarhammerArmyAssembler
             AddOptionsList(unitID, unit);
         }
 
-        private static double AddLabel(string caption, int column, double top, double height,
-            bool selected = false, int points = 0, bool perModel = false, bool bold = false)
-        {
-            double left = main.unitName.Margin.Left + (column * 155);
-            return AddLabel(caption, left, top, height, selected, points, perModel, bold);
-        }
-
-        private static double AddLabel(string caption, double left, double top, double height,
+        private static double AddLabel(string caption, double[] margins, double height,
             bool selected = false, int points = 0, bool perModel = false, bool bold = false)
         {
             Label newOption = new Label();
             newOption.Content = caption;
-            newOption.Margin = Thick(newOption, left, top);
+            newOption.Margin = Thick(newOption, margins[0], margins[1]);
 
             if (selected)
                 newOption.Foreground = ArmyBook.AdditionalColor;
@@ -390,7 +355,7 @@ namespace WarhammerArmyAssembler
             {
                 Label optionPoints = new Label();
                 optionPoints.Content = points.ToString() + " pts" + (perModel ? "/m" : String.Empty);
-                optionPoints.Margin = Thick(optionPoints, left + newOption.ActualWidth - 5, top);
+                optionPoints.Margin = Thick(optionPoints, margins[0] + newOption.ActualWidth - 5, margins[1]);
                 optionPoints.Foreground = ArmyBook.MainColor;
                 main.unitDetail.Children.Add(optionPoints);
             }
@@ -398,12 +363,10 @@ namespace WarhammerArmyAssembler
             return height;
         }
 
-        private static double AddButton(string caption, int column, double top, double height, string id,
+        private static double AddButton(string caption, double[] margins, double height, string id,
             Option option, int mountAlreadyOn = 0, Unit unit = null)
         {
-            AddLabel(caption, column, top, height, (option.Realised ? true : false), option.Points, option.PerModel);
-
-            double left = main.unitName.Margin.Left + (column * 155);
+            AddLabel(caption, margins, height, (option.Realised ? true : false), option.Points, option.PerModel);
 
             Button newButton = new Button();
 
@@ -434,7 +397,7 @@ namespace WarhammerArmyAssembler
                 )
                 newButton.IsEnabled = false;
 
-            newButton.Margin = Thick(newButton, left + 2, top + 20);
+            newButton.Margin = Thick(newButton, margins[0] + 2, margins[1] + 20);
             newButton.Tag = id;
             newButton.Click += AddOption_Click;
             newButton.Width = 135;
