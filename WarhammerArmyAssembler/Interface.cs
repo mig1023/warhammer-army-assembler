@@ -583,7 +583,8 @@ namespace WarhammerArmyAssembler
             if (open)
             {
                 main.unitDetailScroll.Visibility = Visibility.Visible;
-                main.mainGrid.RowDefinitions[2].Height = new GridLength(250);
+                main.mainGrid.RowDefinitions[2].Height = new GridLength(270);
+                main.mainGrid.RowDefinitions[2].MinHeight = 170;
                 main.unitDetailScrollSlitter.IsEnabled = true;
                 main.mainGrid.RowDefinitions[1].Height = new GridLength(5);
                 main.unitDetailScrollSlitter.Height = 5;
@@ -591,6 +592,7 @@ namespace WarhammerArmyAssembler
             else
             {
                 main.unitDetailScroll.Visibility = Visibility.Hidden;
+                main.mainGrid.RowDefinitions[2].MinHeight = 0;
                 main.mainGrid.RowDefinitions[2].Height = new GridLength(0);
                 main.unitDetailScrollSlitter.IsEnabled = false;
                 main.mainGrid.RowDefinitions[1].Height = new GridLength(0);
