@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArmyBook>
 	<Info>
-		<ArmyName>Лизардмены</ArmyName>
+		<ArmyName>Lizardmen</ArmyName>
 		<ArmyBookVersion>7</ArmyBookVersion>
 		<MainColor>#FFA9CEF3</MainColor>
 		<AdditionalColor>#FF1C74CB</AdditionalColor>
@@ -9,153 +9,153 @@
 		<ArmyBookImage>Lizardmen.png</ArmyBookImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Распространённые актефакты">
+		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
-				<Name>Меч Точности</Name>
+				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>+1 на попадание в ближнем бою</SpecialRuleDescription>
-				<Description>+1 на попадание в ближнем бою</Description>
+				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
+				<Description>+1 to Hit</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Меч Битвы</Name>
+				<Name>Sword of Battle</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
 				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 к Атакам</Description>
+				<Description>+1 Attack</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Меч Силы</Name>
+				<Name>Sword of Might</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
 				<AddToStrength>1</AddToStrength>
-				<Description>+1 к Силам</Description>
+				<Description>+1 Strenght</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Жалящий меч</Name>
+				<Name>Biting Blade</Name>
 				<Type>Weapon</Type>
 				<Points>10</Points>
-				<SpecialRuleDescription>-1 на спас-бросок за доспех</SpecialRuleDescription>
-				<Description>-1 на спас-бросок за доспех</Description>
+				<SpecialRuleDescription>-1 Armour save</SpecialRuleDescription>
+				<Description>-1 Armour save</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Магический щит</Name>
+				<Name>Enchanted shield</Name>
 				<Type>Armour</Type>
 				<Points>15</Points>
 				<AddToArmour>5</AddToArmour>
-				<Description>5+ спас-бросок за доспех</Description>
+				<Description>5+ Armour save</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Защитный талисман</Name>
+				<Name>Talisman of Protection</Name>
 				<Type>Armour</Type>
 				<Points>15</Points>
 				<AddToWard>6</AddToWard>
-				<Description>6+ магический спас-бросок</Description>
+				<Description>6+ ward save</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Посох волшебства</Name>
+				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>+1 к разрушению заклинаний</SpecialRuleDescription>
-				<Description>+1 к разрушению заклинаний</Description>
+				<SpecialRuleDescription>+1 to dispell</SpecialRuleDescription>
+				<Description>+1 to dispell</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Свиток разрушения заклинаний</Name>
+				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
 				<Multiple>true</Multiple>
-				<Description>автоматически разрушает вражеское заклинание, одноразовый</Description>
+				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Камень Силы</Name>
+				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
 				<Multiple>true</Multiple>
-				<Description>+2 кубика при сотворении заклинания, одноразовый</Description>
+				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Боевое знамя</Name>
+				<Name>War Banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>+1 к результату боя</SpecialRuleDescription>
-				<Description>+1 к Результату боя</Description>
+				<SpecialRuleDescription>+1 Combat Resolution</SpecialRuleDescription>
+				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Магическое оружие">	
+		<ArtefactsGroup Name = "Magic weapons">	
 			<Artefact>
-				<Name>Лезвие реальностей</Name>
+				<Name>Blade of Realities</Name>
 				<Type>Weapon</Type>
 				<Points>75</Points>
-				<SpecialRuleDescription>попадание - смерть по тесту на Лидерство</SpecialRuleDescription>
-				<Description>За каждое попадание, полученное этим оружием, цель должна пройти тест по немодифицированному Лидерству или мгновенно погибнуть. От этой атаки не защищают доспехи, особая защита или регенерация. Если тест пройден, то проводятся броски на пробитие как обычно</Description>
+				<SpecialRuleDescription>Die by Leadership after each hit</SpecialRuleDescription>
+				<Description>For each successful hit inflicted by this weapon, the victim must pass a Leadership test or be slain instantly. No armour, ward or regeneration saves are allowed against this special attack. If the tests are passed, roll to Wound and save as normal</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Клинок почтенного Тзунки</Name>
+				<Name>Blade of Revered Tzanuki</Name>
 				<Type>Weapon</Type>
 				<Points>65</Points>
 				<AddToStrength>1</AddToStrength>
-				<SpecialRuleDescription>без спас-бросков за броню</SpecialRuleDescription>
-				<Description>Обладатель получает +1 к Силе, кроме того от этого оружия не защищают доспехи</Description>
+				<SpecialRuleDescription>No armour save</SpecialRuleDescription>
+				<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Скимитар Солнечного Величия</Name>
+				<Name>Scimitar of the Sun Resplendent</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
 				<AddToAttacks>2</AddToAttacks>
-				<Description>Обладатель получает +2 Атаки</Description>
+				<Description>The wielder of this blade has +2 Attacks</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Военное копьё стеганадона</Name>
+				<Name>Steganadom War-spear</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Скинк</OnlyForGroup>
+				<OnlyForGroup>Skink</OnlyForGroup>
 				<OnlyFor>Mount</OnlyFor>
 				<Points>50</Points>
-				<SpecialRuleDescription>2D6+1 таранных ударов стегадона</SpecialRuleDescription>
-				<SpecialRuleDescription>рыцарская пика</SpecialRuleDescription>
-				<Description>Стегадон или Древний Стегадон, на котором едет носитель, наносит 2D6+1 таранных ударов вместо 1D6+1</Description>
+				<SpecialRuleDescription>2D6+1 impact hits</SpecialRuleDescription>
+				<SpecialRuleDescription>Lance</SpecialRuleDescription>
+				<Description>Lance. In addition, the bearer's mount inflicts 2D6+1 impact hits rather then the normal 1D6+1</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Посох утраченного солнца</Name>
+				<Name>Staff of the Lost Sun</Name>
 				<Type>Weapon</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>3 выстрела Силой 5</SpecialRuleDescription>
-				<Description>Подобен короткому луку, выпускает 3 выстрела Силой 5</Description>
+				<SpecialRuleDescription>3 shots, Strength of 5</SpecialRuleDescription>
+				<Description>The staff is treated as a short bow that has a Strenght of 5, and 3x Multiple Shots</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Клинок Пираньи</Name>
+				<Name>Piranha Blade</Name>
 				<Type>Weapon</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>наносит две раны вместо одной</SpecialRuleDescription>
-				<Description>Любая рана, нанесённая этим оружием после всех проверок наносит две Раны, а не одну</Description>
+				<SpecialRuleDescription>Two wounds</SpecialRuleDescription>
+				<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Кинжал Сотека</Name>
+				<Name>Dagger of Sotek</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Скинк</OnlyForGroup>
+				<OnlyForGroup>Skink</OnlyForGroup>
 				<Points>25</Points>
 				<KillingBlow>true</KillingBlow>
 				<Fear>true</Fear>
-				<Description>Обладатель получает правило Смертельного удара и внушает страх Скайвенам</Description>
+				<Description>Confers on the bearer the killing blow ability. In addition, the bearer causes Fear in Skaven</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Меч Шершня</Name>
+				<Name>Sword of the Hornet</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
 				<HitFirst>true</HitFirst>
-				<Description>Обладатель всегда бьёт первым</Description>
+				<Description>The bearer of this sword has the 'Always Strikes First' rule</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Пылающее лезвие Чотека</Name>
+				<Name>Burning Blade of Chotec</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>огненные атаки</SpecialRuleDescription>
-				<SpecialRuleDescription>-2 на спас-бросок за доспех</SpecialRuleDescription>
-				<Description>Огненные атаки. Цели, поражённые Пылающим лезвием получают -2 к своему спас-броску за доспехи</Description>
+				<SpecialRuleDescription>Flaming attacks</SpecialRuleDescription>
+				<SpecialRuleDescription>-2 penalty of armour</SpecialRuleDescription>
+				<Description>Flaming attacks. Targets struck by the Burning of Chotek suffer a -2 penalty to their armour save in addition to any modifiers from the user's Strength</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Магические доспехи">	
+		<ArtefactsGroup Name = "Magic armour">	
 			<Artefact>
-				<Name>Шкура холодного</Name>
+				<Name>Hide of the Cold Ones</Name>
 				<Type>Armour</Type>
 				<OnlyFor>Infantry</OnlyFor>
 				<Points>50</Points>
@@ -163,141 +163,141 @@
 				<AddToToughness>1</AddToToughness>
 				<Fear>true</Fear>
 				<Stupidity>true</Stupidity>
-				<Description>Тяжёлые доспехи, дают бонус +1 к Стойкости, внушают Страх, но носитель становится подвержен правилу Тупости</Description>
+				<Description>Heavy armour. The wearer causes Fear and has +1 Toughness, but becomes subject to Stupidity</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Сверкающий стегодоний шлем</Name>
+				<Name>Sacred Stegadon Helm</Name>
 				<Type>Armour</Type>
-				<OnlyForGroup>Скинк</OnlyForGroup>
+				<OnlyForGroup>Skink</OnlyForGroup>
 				<Points>50</Points>
 				<AddToArmour>6</AddToArmour>
 				<AddToAddToLeadership>1</AddToAddToLeadership>
-				<Description>Шлем добавляет +1 к спас-броску за доспех, а также даёт носителю +1 к Лидерству</Description>
+				<Description>Confers +1 to the model's armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Щит зеркального пруда</Name>
+				<Name>Shield of the Mirrored Pool</Name>
 				<Type>Armour</Type>
 				<Points>30</Points>
 				<AddToArmour>5</AddToArmour>
-				<SpecialRuleDescription>отражение заклинания на 2+</SpecialRuleDescription>
-				<Description>Любые магические стрелы, попавшие в носителя или отряд в котором он находится на 2+ отражаются обратно на выпустившего его или отряд; это отражённое заклятье уже не может быть рассеяно</Description>
+				<SpecialRuleDescription>Magic missile reflected on 2+</SpecialRuleDescription>
+				<Description>Shield. Any magic missile that strikes the bearer or any unit he is with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell or the unit the character is with. This in turn cannot be dispelled</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Калечащий щит</Name>
+				<Name>The Mainming Shield</Name>
 				<Type>Armour</Type>
 				<Points>30</Points>
 				<AddToArmour>5</AddToArmour>
 				<AddToAttacks>1</AddToAttacks>
-				<Description>Носитель получает +1 Атаку, которая считается магической и проводится по базовой Силе обладателя</Description>
+				<Description>Shield. The Mainming Shield confres +1 Attack to the bearer. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Колдовские предметы">	
+		<ArtefactsGroup Name = "Enchanted items">	
 			<Artefact>
-				<Name>Рог Кайгора</Name>
+				<Name>The Horn of Kygor</Name>
 				<Type>Arcane</Type>
 				<Points>100</Points>
 				<Fear>true</Fear>
-				<SpecialRuleDescription>кавалерия в 12 дюймах становится Упорной</SpecialRuleDescription>
-				<Description>Дружественная каваления в пределах 12 дюймов от носителя становится Упорной; обладатель внушает Страх вражеской кавалерии</Description>
+				<SpecialRuleDescription>Cavalry within 12" are Stubborn</SpecialRuleDescription>
+				<Description>Friendly cavalry within 12" are Stubborn. Enemy cavalry Fear the bearer</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Рогач</Name>
+				<Name>Horned One</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Рогач</SpecialRuleDescription>
-				<Description>Рогачи - это редкая разновидность Холодных. Они обладают Движением 8, Инициативой 3 и не подвержены Тупости</Description>
+				<SpecialRuleDescription>Horned One</SpecialRuleDescription>
+				<Description>Cold One. The Horned One has a Movement of 8, an Initiative of 3, and is not subject to Stupidity</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Божественная таблица защиты</Name>
+				<Name>Divine Plaque of Protection</Name>
 				<Type>Arcane</Type>
 				<OnlyForGroup>Сланн</OnlyForGroup>
 				<Points>30</Points>
 				<AddToWard>2</AddToWard>
-				<Description>Щит даёт Особую защиту 2+ от всех дистанционных атак</Description>
+				<Description>The Slann's Shield of the Old Ones ward save in increased from 4+ to 2+ against the ranged attacks</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Военный барабан Ксахутека</Name>
+				<Name>War Drum of Xahutec</Name>
 				<Type>Arcane</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>марш в 8 дюймах от врага</SpecialRuleDescription>
-				<SpecialRuleDescription>+1 к Лидерству при восстановлении порядка</SpecialRuleDescription>
-				<Description>Присутствие вражеских отрядов в 8 дюймах от носителя или отряда к которому он присоединён, не мешает носителю или отряду маршировать; также все дружественные подразделения в 12 дюймах имеют +1 к Лидерству при попытках собраться после Бегства</Description>
+				<SpecialRuleDescription>Marching within 8" of enemy</SpecialRuleDescription>
+				<SpecialRuleDescription>+1 Leadership to friendly unt attempting to rally</SpecialRuleDescription>
+				<Description>The presence of enemy units within 8" does not stop the bearer and any unit he is eith from marching. In addition any friendly unit attemptiong to rally within 12" of the War Drum gains an additional +a Leadership, up to a maximum of 10, so long as the bearer is not fleeing</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Окровавленная статую ненависти</Name>
+				<Name>Blood Statuette of Spite</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>раны за проваленную Стойкость, одноразово</SpecialRuleDescription>
-				<Description>Связанное заклятье, Силы 5; одноразовый; заклятье может быть призвано против любого вражеского персонажа; он должен пройти тест на Стойкость или получает рану без спас-бросков за доспехи; после получения раны персонаж должен снова и снова проходить тест на стойкость до тех пор пока не пройдёт тест или не погибнет</Description>
+				<SpecialRuleDescription>Wound by Toughtness test</SpecialRuleDescription>
+				<Description>Bounded Spell. Power Level 5. One use only. Once per game, the user may cast the spell bound within the statuette. The spell may be cast on any enemy character. That character must immediately take Toughness test. If this test is failed, then the model loses a Wound with no armour saves allowed. If the model takes a wound, it must immediately take another Toughness test, losing another wound if it fails again. This continues until either the model passes a Toughness test or is slain</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Оберег воина-ягуара</Name>
-				<Type>Arcane</Type>
-				<OnlyFor>Infantry</OnlyFor>
-				<Points>25</Points>
-				<SpecialRuleDescription>заклятье Конь Теней</SpecialRuleDescription>
-				<Description>Связанное заклятье, Силы 5; оберег содержит заклятье Конь Теней из школы Теней; заклятье может быть наложено только на носителя оберега</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Плащ из перьев</Name>
+				<Name>Charm of the Jaguar Warrior</Name>
 				<Type>Arcane</Type>
 				<OnlyFor>Infantry</OnlyFor>
-				<OnlyForGroup>Скинк</OnlyForGroup>
 				<Points>25</Points>
-				<SpecialRuleDescription>полёт</SpecialRuleDescription>
-				<Description>Обладатель умеет летать</Description>
+				<SpecialRuleDescription>Steed of Shadows spell</SpecialRuleDescription>
+				<Description>Bound Spell. Power Level 5. The Charm of th Jaguar Warrior contains the bound spell Steed of Shadows, as detailed in the Lore of Shadow in the Warhammer rulebook. The spell may only be cast on the bearer himself</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Амулет карнозавра</Name>
+				<Name>Cloak of Feathers</Name>
+				<Type>Arcane</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<OnlyForGroup>Skink</OnlyForGroup>
+				<Points>25</Points>
+				<SpecialRuleDescription>May fly</SpecialRuleDescription>
+				<Description>The wearer of the cloack may fly</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Carnosaur Pendant</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
 				<Frenzy>true</Frenzy>
-				<Description>Носитель получает правило Бешенства после первой нанесённой кому-либо раны; он не может потерять Бешенство даже если разгромлен в ближнем бою</Description>
+				<Description>Once the bearer has inficted a wound, he will become immediately subject to Frenzy. The bearer will never lose its Frenzy, even if it is beaten in combat. See the main rulebook for details of Frenzy</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Заклятый оберег Тепока</Name>
+				<Name>Curse-Charm of Tepok</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>переброс вражеской магической ошибки</SpecialRuleDescription>
-				<Description>Одноразовый предмет; носитель может заставить вражеского волшебника перебросить результат броска по таблице магических ошибок; результат повторного броска остаётся</Description>
+				<SpecialRuleDescription>Enemy mage re-rolls Miscast</SpecialRuleDescription>
+				<Description>Only one use. When the enemy rolls on the Miscast table, the bearer of the Curse-Charm of Tepok may force him to re-roll the result. This second result stands</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Проклятая голова</Name>
+				<Name>Bane Head</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>удвоение ран выбранному персонажу</SpecialRuleDescription>
-				<Description>Обозначьте перед началом битвы одного вражеского персонажа - все раны нанесённые ему носителем удваиваются</Description>
+				<SpecialRuleDescription>Unsaved wounds doubled for nominated target</SpecialRuleDescription>
+				<Description>Nominate an enemy character at the start of the battle. All unsaved wounds caused by the bearer on the nominated target are doubled</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Ртутная стрекоза</Name>
+				<Name>Dragonfly of Quicksilver</Name>
 				<Type>Arcane</Type>
 				<Points>10</Points>
-				<SpecialRuleDescription>+1 на бросок расстановки разведчиков</SpecialRuleDescription>
-				<Description>Если оба игрока имеют отряды разведчиков, то обладатель этого предмета имеет +1 на результат броска, определяющего порядок расстановки разведчиков</Description>
+				<SpecialRuleDescription>+1 to Scout deploys</SpecialRuleDescription>
+				<Description>If both players have models with the Scout ability, the Lizardmen player adds 1 to his dice roll when rolling to see eho deploys their Scouts first</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Яд светлячковой лягушки</Name>
+				<Name>Venom of the Firefly Frog</Name>
 				<Type>Arcane</Type>
 				<Points>10</Points>
 				<PoisonAttack>true</PoisonAttack>
-				<Description>Всё оружие носителя становится ядовитым; всё немагическое оружие считается магическим; всё уже ядовитое оружие может перебрасывать броски на попадание</Description>
+				<Description>All mundane weapons used by the bearer are coated with this venom. In addition to the weapons normal rules, all attackes made with them count as Poisoned Attacks and magical. Mundane weapons that already make Poisoned Attacks may re-roll the dice to hit</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Колдовская аркана">	
+		<ArtefactsGroup Name = "Arcane items">	
 			<Artefact>
-				<Name>Чаша дланей Древних</Name>
+				<Name>Cupped Hands of the Old Ones</Name>
 				<Type>Arcane</Type>
 				<Points>45</Points>
-				<SpecialRuleDescription>перенос магической ошибки на противника</SpecialRuleDescription>
-				<Description>Одноразовый; на 2+ обладатель игнорирует выпавшую магическую ошибку, а если в пределах видимости есть вражеский маг, то именно он вынужден выполнить бросок по таблице магических ошибок; при этом результат броска 5-6 для вражеского мага игнорируется</Description>
+				<SpecialRuleDescription>Miscast passes to the enemy</SpecialRuleDescription>
+				<Description>One use only/ If the bearer miscasts, roll a D6. On a roll of 1 the bearer suffers the results of the miscast as normal. On 2+ the miscast is ignored and if there is an enemy WIzard within line of sight he will suffer its effects, ignoring result 5-6</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Куб Тьмы</Name>
+				<Name>Cube of Darkness</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>автоматическое рассеивание заклятья</SpecialRuleDescription>
-				<SpecialRuleDescription>на 4+ все оставшиеся в игре рассеиваются</SpecialRuleDescription>
-				<Description>Одноразовый; автоматически рассеивает вражеское заклятье; в дополнение к этому на 4+ рассеиваются и все оставшиеся в игре заклятья и фаза магии прекращается</Description>
+				<SpecialRuleDescription>One spell dispell</SpecialRuleDescription>
+				<SpecialRuleDescription>On 4+ all Ramains in Play spells are dispelled</SpecialRuleDescription>
+				<Description>One use only. This is used as a Dispell Scroll. When used, roll a D6. On 4+ all Remains in Play spells are automatically dispelled and the Magic phase ends immediately</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Жезл Шторма</Name>
