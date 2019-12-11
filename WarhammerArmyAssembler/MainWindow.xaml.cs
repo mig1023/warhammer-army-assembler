@@ -247,7 +247,10 @@ namespace WarhammerArmyAssembler
         {
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
                 if (MessageBox.Show("Clear entire army list? ", String.Empty, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    Interface.DetailResize(open: false);
                     Interface.AllUnitDelete();
+                }
         }
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
