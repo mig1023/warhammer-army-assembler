@@ -461,17 +461,16 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Горючий</SpecialRuleDescription>
 					<SpecialRuleDescription>Unit Strength 3</SpecialRuleDescription>
-					<SpecialRuleDescription>Разрушение городов</SpecialRuleDescription>
-					<SpecialRuleDescription>Перебрасывает магические ошибки</SpecialRuleDescription>
+					<SpecialRuleDescription>Ruination of Cities</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll miscast</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
 					<Name>Cobra Mace of Mazadamundi</Name>
 					<AddToStrength>2</AddToStrength>
 					<HitFirst>true</HitFirst>
 					<PoisonAttack>true</PoisonAttack>
-					<SpecialRuleDescription>уничтожение магического оружия противника</SpecialRuleDescription>
+					<SpecialRuleDescription>Destruction of magic weapons</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
 					<Name>Shield of the Old Ones</Name>
@@ -485,12 +484,12 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Крок-Гар Древний</Name>
-			<Group>Саурус</Group>
+			<Name>Kroq-Gar Ancient</Name>
+			<Group>Saurus</Group>
 			<Points>635</Points>
 			<MinSize>1</MinSize>
-			<Description>Крок-Гар Древний</Description>
-			<MountInit>Гримлок</MountInit>
+			<Description>Kroq-Gar Ancient</Description>
+			<MountInit>Grymloq</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
 			<MainParam>
 				<Movement>4</Movement>
@@ -510,27 +509,27 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Попадание Силы 5 по тому кто нанёс рану</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength 5 hit for any wound inflicted</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
 					<Name>Длань Богов</Name>
-					<SpecialRuleDescription>D6 ударов Силы 4 на 12 дюймов, заклятье Силы 5</SpecialRuleDescription>
+					<SpecialRuleDescription>D6 Strength 4 hits within 12", bound spell Level 5</SpecialRuleDescription>
 				</HandWeapon>
 				<HandWeapon>
-					<Name>Почитаемое копьё Тланксла</Name>
+					<Name>Revered Spear of Tlanxla</Name>
 					<AddToStrength>1</AddToStrength>
-					<SpecialRuleDescription>Нанесённая рана считается за две</SpecialRuleDescription>
+					<SpecialRuleDescription>Any wound counts as two for Combat Result</SpecialRuleDescription>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Техенхауин</Name>
-			<Group>Скинк</Group>
+			<Name>Tehenhauin</Name>
+			<Group>Skink</Group>
 			<Mage>4</Mage>
 			<Points>250</Points>
 			<MinSize>1</MinSize>
-			<Description>Техенхауин</Description>
+			<Description>Tehenhauin</Description>
 			<PersonifiedHero>true</PersonifiedHero>
 			<MainParam>
 				<Movement>6</Movement>
@@ -550,7 +549,7 @@
 			</AdditionalParam>
 			<Options>
 				<Option>
-					<Name>Древний стегадон</Name>
+					<Name>Ancient steganadon</Name>
 					<Type>Option</Type>
 					<Points>290</Points>
 					<Mount>true</Mount>
@@ -558,32 +557,32 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Маг Школы Зверя</SpecialRuleDescription>
-					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
-					<SpecialRuleDescription>Иммунитет к яду</SpecialRuleDescription>
-					<SpecialRuleDescription>Сила отряда 3</SpecialRuleDescription>
-					<SpecialRuleDescription>D6 ядовитых атак Силы 2</SpecialRuleDescription>
-					<SpecialRuleDescription>Все Скинки армии ненавидят Скайвенов</SpecialRuleDescription>
+					<SpecialRuleDescription>Lore of Beast</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Immune to Poison</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit Strength 3</SpecialRuleDescription>
+					<SpecialRuleDescription>D6 poisoned Attack Strength 2</SpecialRuleDescription>
+					<SpecialRuleDescription>All Skinks in army Hate all Skaven units</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>Лезвие змеиного языка</Name>
+					<Name>Blade of the Serpent's Tongue</Name>
 					<AddToAttacks>1</AddToAttacks>
 					<PoisonAttack>true</PoisonAttack>
 				</HandWeapon>
 				<HandWeapon>
-					<Name>Таблицы Сотека</Name>
+					<Name>Plaque of Sotek</Name>
 					<AddToWard>5</AddToWard>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Сланн Маг-Жрец</Name>
-			<Group>Сланн</Group>
+			<Name>Slann Mage-Priest</Name>
+			<Group>Slann</Group>
 			<Mage>4</Mage>
 			<Points>275</Points>
 			<MinSize>1</MinSize>
-			<Description>Сланн Маг-Жрец</Description>
+			<Description>Slann Mage-Priest</Description>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>2</WeaponSkill>
@@ -602,71 +601,71 @@
 			</AdditionalParam>
 			<Options>
 				<Option>
-					<Name>Изучение тайн</Name>
+					<Name>Focus of Mystery</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
-					<SpecialRuleDescription>Знает выбранную Школу Магии целиком</SpecialRuleDescription>
+					<SpecialRuleDescription>Mage-Priest knows wvwry spell in lore</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>Размышление</Name>
+					<Name>The Focused Rumination</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
-					<SpecialRuleDescription>Дополнительный куб на сотворение</SpecialRuleDescription>
+					<SpecialRuleDescription>Free power dice</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>Исцеление</Name>
+					<Name>Transcendent Healing</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
 					<Regeneration>true</Regeneration>
 				</Option>
 				<Option>
-					<Name>Пытливость</Name>
+					<Name>The Harrowing Scrutiny</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
 					<Terror>true</Terror>
 				</Option>
 				<Option>
-					<Name>Высш.состояние</Name>
+					<Name>Higher State of Consciousness</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
-					<SpecialRuleDescription>Только магические атаки имеют эффект</SpecialRuleDescription>
+					<SpecialRuleDescription>Only magical attacks have any effect</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>Раздумье</Name>
+					<Name>The Becalming Cogitation</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
-					<SpecialRuleDescription>Вражеский маг теряет выкинутую шестёрку</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy Wizard discarded any roll 6 made</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>Присутствие</Name>
+					<Name>Unfathomable Presence</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
-					<SpecialRuleDescription>Сопротивление магии(3)</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>Душа Камня</Name>
+					<Name>Soul of Stone</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
-					<SpecialRuleDescription>Переброс по такблице магических ошибок</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll miscast</SpecialRuleDescription>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Сила отряда 3</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit Strength 3</SpecialRuleDescription>
 				</Special>
 				<Armour>
-					<Name>Щит Древних</Name>
+					<Name>Shield of the Old Ones</Name>
 					<AddToWard>4</AddToWard>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Саурус-Патриарх</Name>
-			<Group>Саурус</Group>
+			<Name>Saurus Oldblood</Name>
+			<Group>Saurus</Group>
 			<Points>145</Points>
 			<MinSize>1</MinSize>
-			<Description>Саурус-Патриарх</Description>
+			<Description>Saurus Oldblood</Description>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>6</WeaponSkill>
@@ -686,49 +685,49 @@
 			</AdditionalParam>
 			<Options>
 				<Option>
-					<Name>копьё</Name>
+					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
 				</Option>
 				<Option>
-					<Name>двуручное оружие</Name>
+					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>12</Points>
 				</Option>
 				<Option>
-					<Name>алебарда</Name>
+					<Name>Halberd</Name>
 					<Type>Option</Type>
 					<AddToStrength>1</AddToStrength>
 					<Points>8</Points>
 				</Option>
 				<Option>
-					<Name>второе оружие</Name>
+					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>8</Points>
 				</Option>
 				<Option>
-					<Name>лёгкий доспех</Name>
+					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>Холодный</Name>
+					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Карнозавр</Name>
+					<Name>Carnosaur</Name>
 					<Type>Option</Type>
 					<Points>210</Points>
 					<Mount>true</Mount>
@@ -736,18 +735,18 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Чака Страж Вечности</Name>
-			<Group>Саурус</Group>
+			<Name>Chakax Eternity Warden</Name>
+			<Group>Saurus</Group>
 			<Points>335</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero>true</PersonifiedHero>
-			<Description>Чака Страж Вечности</Description>
+			<Description>Chakax Eternity Warden</Description>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -765,36 +764,36 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Связенный долг</SpecialRuleDescription>
-					<SpecialRuleDescription>Совершенный телохранитель</SpecialRuleDescription>
-					<SpecialRuleDescription>Перебрасывает броски на попадания в поединке</SpecialRuleDescription>
-					<SpecialRuleDescription>Храмовая стража становится Несломимой</SpecialRuleDescription>
+					<SpecialRuleDescription>Sacred Duty</SpecialRuleDescription>
+					<SpecialRuleDescription>Ultimated Bodyguard</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll any failed hit rolls</SpecialRuleDescription>
+					<SpecialRuleDescription>Temple Guard and Unbreakable</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>Палица из звёздного камня</Name>
+					<Name>The Star-Stone Mace</Name>
 					<AddToStrength>2</AddToStrength>
-					<SpecialRuleDescription>Магическое оружие врага становится обычным</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy magic weapon count as mundane</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
-					<Name>Шлем Изначального Стража</Name>
-					<SpecialRuleDescription>Вражеские разведчики не ближе 20 дюймов</SpecialRuleDescription>
-					<SpecialRuleDescription>Скрытые модели обнаруживаются в 20 дюймах</SpecialRuleDescription>
+					<Name>The Helm of Prime Guardian</Name>
+					<SpecialRuleDescription>No Scout may set up within 20"</SpecialRuleDescription>
+					<SpecialRuleDescription>No hidden models within 20"</SpecialRuleDescription>
 				</Armour>
 				<Armour>
-					<Name>Ключ от Залы Вечности</Name>
+					<Name>Key to the Eternity Chamber</Name>
 					<AddToWard>5</AddToWard>
-					<SpecialRuleDescription>Противник всегда бьёт последним</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy strikes last</SpecialRuleDescription>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Гор Рок Великий белый ящер</Name>
+			<Name>Gor-Rok Great White Lizard</Name>
 			<Group>Саурус</Group>
 			<Points>215</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero>true</PersonifiedHero>
-			<Description>Гор Рок Великий белый ящер</Description>
+			<Description>Gor-Rok Great White Lizard</Description>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -813,30 +812,30 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Броски на ранение должны быть переброшены</SpecialRuleDescription>
-					<SpecialRuleDescription>Иммунен к Смертельному удару</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll succeful rolls to wound Gar-Rok</SpecialRuleDescription>
+					<SpecialRuleDescription>Immune to effects of Killing Blow</SpecialRuleDescription>
 				</Special>
 				<Armour>
-					<Name>Щит столетий</Name>
+					<Name>The Shield of Aeons</Name>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRuleDescription>Противник теряет преимущества от нападения</SpecialRuleDescription>
+					<SpecialRuleDescription>No benefits from charging Gar-Rok</SpecialRuleDescription>
 				</Armour>
 				<HandWeapon>
-					<Name>Палица Кламака</Name>
+					<Name>The Mace of Ulamak</Name>
 					<AddToStrength>2</AddToStrength>
-					<SpecialRuleDescription>Перебрасывает проваленные броски на попадание</SpecialRuleDescription>
+					<SpecialRuleDescription>In first round Gar-Rok re-roll any failed hit roll</SpecialRuleDescription>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Тетто'эко</Name>
-			<Group>Скинк</Group>
+			<Name>Tetto'eko</Name>
+			<Group>Skink</Group>
 			<Points>255</Points>
 			<Mage>2</Mage>
 			<MinSize>1</MinSize>
 			<PersonifiedHero>true</PersonifiedHero>
-			<Description>Тетто'эко</Description>
+			<Description>Tetto'eko</Description>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>2</WeaponSkill>
@@ -853,33 +852,33 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Знает все заклятья Школы Небес</SpecialRuleDescription>
-					<SpecialRuleDescription>Предвестник космических явлений</SpecialRuleDescription>
+					<SpecialRuleDescription>All spells from the Lore of Heavens</SpecialRuleDescription>
+					<SpecialRuleDescription>Herald of Cosmic Events</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>Звёздный посох</Name>
-					<SpecialRuleDescription>Переброс кубик заклятья Камета Кассандора</SpecialRuleDescription>
+					<Name>The Stellar Staff</Name>
+					<SpecialRuleDescription>Comet of Cassandra dice re-roll</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
-					<Name>Око Древних</Name>
-					<SpecialRuleDescription>D3 отрядов передвинуть перед первых ходом</SpecialRuleDescription>
+					<Name>Eye of the Old Ones</Name>
+					<SpecialRuleDescription>D3 units redeploy</SpecialRuleDescription>
 				</Armour>
 				<Armour>
-					<Name>Паланкин созвездий</Name>
+					<Name>The Palanquin of Constellations</Name>
 					<AddToWard>5</AddToWard>
-					<SpecialRuleDescription>Присоединяется к Скинкам</SpecialRuleDescription>
+					<SpecialRuleDescription>Place in sikinks second rank</SpecialRuleDescription>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Тиктак'то</Name>
-			<Group>Скинк</Group>
+			<Name>Taktak'to</Name>
+			<Group>Skink</Group>
 			<Points>315</Points>
 			<MinSize>1</MinSize>
-			<MountInit>Жвуп</MountInit>
+			<MountInit>Zwup</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
-			<Description>Тиктак'то</Description>
+			<Description>Taktak'to</Description>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>4</WeaponSkill>
@@ -896,30 +895,30 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Смертельный удар от камня</SpecialRuleDescription>
-					<SpecialRuleDescription>Присоединяется только к терредонам</SpecialRuleDescription>
-					<SpecialRuleDescription>Повелитель воздуха</SpecialRuleDescription>
+					<SpecialRuleDescription>Drop Rocks Killing Blow</SpecialRuleDescription>
+					<SpecialRuleDescription>May join units if Terradon Riders</SpecialRuleDescription>
+					<SpecialRuleDescription>Master of Skies</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>Клинок древних небес</Name>
-					<SpecialRuleDescription>Без спас-бросков за доспехи</SpecialRuleDescription>
+					<Name>Blade of Ancient Skies</Name>
+					<SpecialRuleDescription>No armour saves</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
-					<Name>Небесная Маска</Name>
-					<SpecialRuleDescription>Пенальти -1 на попадание</SpecialRuleDescription>
-					<SpecialRuleDescription>Сопротивление магии(1)</SpecialRuleDescription>
+					<Name>Mask of Heavens</Name>
+					<SpecialRuleDescription>-1 to hit</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
 					<AddToWard>6</AddToWard>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Оксийотль Вернувшийся</Name>
-			<Group>Скинк</Group>
+			<Name>Oxyotl Survivor</Name>
+			<Group>Skink</Group>
 			<Points>160</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero>true</PersonifiedHero>
-			<Description>Оксийотль Вернувшийся</Description>
+			<Description>Oxyotl Survivor</Description>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>4</WeaponSkill>
@@ -937,27 +936,27 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<RangeWeapon>
-					<Name>Духовая трубка</Name>
+					<Name>Blowpipe</Name>
 				</RangeWeapon>
 				<Special>
-					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
-					<SpecialRuleDescription>Разведчик</SpecialRuleDescription>
-					<SpecialRuleDescription>Пенальти -1 на попадание</SpecialRuleDescription>
-					<SpecialRuleDescription>Сверхъестественная меткость</SpecialRuleDescription>
-					<SpecialRuleDescription>Ядовитые атаки на 5+</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
+					<SpecialRuleDescription>Preternatural Aim</SpecialRuleDescription>
+					<SpecialRuleDescription>Poisoned Attack on 5+</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Саурус-Ветеран</Name>
-			<Group>Саурус</Group>
+			<Name>Saurus Scar-Veteran</Name>
+			<Group>Saurus</Group>
 			<Points>85</Points>
 			<MinSize>1</MinSize>
-			<Description>Саурус-Ветеран</Description>
+			<Description>Saurus Scar-Veteran</Description>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -977,43 +976,43 @@
 			</AdditionalParam>
 			<Options>
 				<Option>
-					<Name>копьё</Name>
+					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
 				</Option>
 				<Option>
-					<Name>двуручное оружие</Name>
+					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>алебарда</Name>
+					<Name>Helberd</Name>
 					<Type>Option</Type>
 					<AddToStrength>1</AddToStrength>
 					<Points>4</Points>
 				</Option>
 				<Option>
-					<Name>второе оружие</Name>
+					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 				</Option>
 				<Option>
-					<Name>лёгкий доспех</Name>
+					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>Холодный</Name>
+					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
 					<Mount>true</Mount>
@@ -1021,18 +1020,18 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Скинк-Жрец</Name>
-			<Group>Скинк</Group>
+			<Name>Skink Priest</Name>
+			<Group>Skink</Group>
 			<Points>65</Points>
 			<Mage>1</Mage>
 			<MinSize>1</MinSize>
-			<Description>Скинк-Ветеран</Description>
+			<Description>Skink Priest</Description>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>2</WeaponSkill>
@@ -1051,14 +1050,14 @@
 			</AdditionalParam>
 			<Options>
 				<Option>
-					<Name>маг 2 уровня</Name>
+					<Name>Wizard Level 2</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
 					<AddToMage>1</AddToMage>
 				</Option>
 				<Option>
-					<Name>Древний стегадон</Name>
+					<Name>Ancient steganadon</Name>
 					<Type>Option</Type>
 					<Points>290</Points>
 					<Mount>true</Mount>
@@ -1066,21 +1065,21 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
-					<SpecialRuleDescription>Отрава джунглей</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Channelling</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Скинк-Вождь</Name>
-			<Group>Скинк</Group>
+			<Name>Skink Chief</Name>
+			<Group>Skink</Group>
 			<Points>55</Points>
 			<MinSize>1</MinSize>
-			<Description>Скинк-Вождь</Description>
+			<Description>Skink Chief</Description>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>4</WeaponSkill>
@@ -1099,53 +1098,53 @@
 			</AdditionalParam>
 			<Options>
 				<Option>
-					<Name>копьё</Name>
+					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
 				</Option>
 				<Option>
-					<Name>духовая трубка</Name>
+					<Name>Blowpipe</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
 				</Option>
 				<Option>
-					<Name>дротик</Name>
+					<Name>Javelins</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
 				</Option>
 				<Option>
-					<Name>второе оружие</Name>
+					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 				</Option>
 				<Option>
-					<Name>лёгкий доспех</Name>
+					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>Стегадон</Name>
+					<Name>Steganadon</Name>
 					<Type>Option</Type>
 					<Points>235</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Древний стегадон</Name>
+					<Name>Anctient steganadon</Name>
 					<Type>Option</Type>
 					<Points>235</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Террадон</Name>
+					<Name>Terradon</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
 					<Mount>true</Mount>
@@ -1153,11 +1152,11 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
-					<SpecialRuleDescription>Отрава джунглей</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Channelling</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1165,7 +1164,7 @@
 	<Mounts>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Холодный</Name>
+			<Name>Cold One</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1185,14 +1184,14 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
-					<Name>толстокожие</Name>
+					<Name>Thick-skinned</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Террадон</Name>
+			<Name>Terradon</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1208,16 +1207,16 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Летающая кавалерия</SpecialRuleDescription>
-					<SpecialRuleDescription>Ударить-и-убежать</SpecialRuleDescription>
-					<SpecialRuleDescription>Уронить камни</SpecialRuleDescription>
-					<SpecialRuleDescription>Древесный хищник</SpecialRuleDescription>
+					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Hit and Run</SpecialRuleDescription>
+					<SpecialRuleDescription>Drop Rocks</SpecialRuleDescription>
+					<SpecialRuleDescription>Arboreal Predators</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>		
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Карнозавр</Name>
+			<Name>Carnosaur</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1238,14 +1237,14 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Кровавое безумие</SpecialRuleDescription>
-					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+					<SpecialRuleDescription>Blood-frenzy</SpecialRuleDescription>
+					<SpecialRuleDescription>Ultimate Predator</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Стегадон</Name>
+			<Name>Stegadon</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1269,16 +1268,15 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
-					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
-					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
-					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 Impact His</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit Strength 10</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Древний стегадон</Name>
+			<Name>Ancient stegadon</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1302,16 +1300,15 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
-					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
-					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
-					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 Impact His</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit Strength 10</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Жлак</Name>
+			<Name>Zlaaq</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1335,16 +1332,15 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
-					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
-					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
-					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 Impact His</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit Strength 10</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Гримлок</Name>
+			<Name>Grymloq</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1365,13 +1361,13 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
+					<SpecialRuleDescription>Ultimate Predator</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Жвуп</Name>
+			<Name>Zwup</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1387,10 +1383,10 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Летающая кавалерия</SpecialRuleDescription>
-					<SpecialRuleDescription>Ударить-и-убежать</SpecialRuleDescription>
-					<SpecialRuleDescription>Уронить камни со смертельным ударом</SpecialRuleDescription>
-					<SpecialRuleDescription>Древесный хищник</SpecialRuleDescription>
+					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Hit and Run</SpecialRuleDescription>
+					<SpecialRuleDescription>Drop Rocks</SpecialRuleDescription>
+					<SpecialRuleDescription>Arboreal Predators</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1398,7 +1394,7 @@
 	<Units>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Саурусы</Name>
+			<Name>Saurus Warrior</Name>
 			<Points>11</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
@@ -1418,34 +1414,34 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>копья</Name>
+					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard Bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
 				</Option>
 				<Option>
-					<Name>чемпион</Name>
+					<Name>Champion</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
@@ -1454,7 +1450,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Скинки</Name>
+			<Name>Skinks</Name>
 			<Points>5</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
@@ -1474,40 +1470,40 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<RangeWeapon>
-					<Name>дротик</Name>
+					<Name>Javelin</Name>
 				</RangeWeapon>
 				<Armour>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Кроксигор</Name>
+					<Name>Kroxigor</Name>
 					<Type>Option</Type>
 					<Points>55</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard Bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>8</Points>
 				</Option>
 				<Option>
-					<Name>смелый скинк</Name>
+					<Name>Brave</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>8</Points>
@@ -1516,7 +1512,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Скинки-застрельщики</Name>
+			<Name>Skink Skirmishers</Name>
 			<Points>7</Points>
 			<MinSize>10</MinSize>
 			<MaxSize>20</MaxSize>
@@ -1537,26 +1533,26 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
-					<SpecialRuleDescription>Лёгкая пехота</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<RangeWeapon>
-					<Name>дротик</Name>
+					<Name>Javelin</Name>
 				</RangeWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Дротики и щиты</Name>
+					<Name>Javelin and shield</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>смелый скинк</Name>
+					<Name>Brave</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
@@ -1565,7 +1561,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Стая из джунглей</Name>
+			<Name>Jungle swarm</Name>
 			<Points>45</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>6</MaxSize>
@@ -1587,18 +1583,18 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
-					<SpecialRuleDescription>Лёгкая пехота</SpecialRuleDescription>
-					<SpecialRuleDescription>Маленькие</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>Small</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>зубы и яд!</Name>
+					<Name>Teeth and venom!</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Скинки-хамелеоны</Name>
+			<Name>Chameleon Skinks</Name>
 			<Points>12</Points>
 			<MinSize>5</MinSize>
 			<MaxSize>10</MaxSize>
@@ -1619,21 +1615,21 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Водоплавающий</SpecialRuleDescription>
-					<SpecialRuleDescription>Лёгкая пехота</SpecialRuleDescription>
-					<SpecialRuleDescription>Разведчики</SpecialRuleDescription>
-					<SpecialRuleDescription>-1 на попадание</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<RangeWeapon>
-					<Name>духовая трубка</Name>
+					<Name>Blowpipe</Name>
 				</RangeWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>лазутчик</Name>
+					<Name>Stalker</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
@@ -1642,7 +1638,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Наездники на терродонах</Name>
+			<Name>Terradon Riders</Name>
 			<Points>30</Points>
 			<MinSize>3</MinSize>
 			<MainParam>
@@ -1662,22 +1658,22 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Терродон</SpecialRuleDescription>
-					<SpecialRuleDescription>Летающая кавалерия</SpecialRuleDescription>
-					<SpecialRuleDescription>Ударить-и-убежать</SpecialRuleDescription>
-					<SpecialRuleDescription>Уронить камни</SpecialRuleDescription>
-					<SpecialRuleDescription>Древесный хищник</SpecialRuleDescription>
+					<SpecialRuleDescription>Terradon</SpecialRuleDescription>
+					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Hit and Run</SpecialRuleDescription>
+					<SpecialRuleDescription>Drop Rocks</SpecialRuleDescription>
+					<SpecialRuleDescription>Arboreal Predators</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<RangeWeapon>
-					<Name>дротик</Name>
+					<Name>Javelin</Name>
 				</RangeWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>смелый скинк</Name>
+					<Name>Brave</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>10</Points>
@@ -1686,7 +1682,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Стража Храма</Name>
+			<Name>Temple Guard</Name>
 			<Points>16</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
@@ -1708,39 +1704,39 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Священный долг</SpecialRuleDescription>
+					<SpecialRuleDescription>Sacred Duty</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>алебарда</Name>
+					<Name>Helberd</Name>
 					<AddToStrength>1</AddToStrength>
 				</HandWeapon>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>легкий доспех</Name>
+					<Name>Light armour</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Armour>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musicain</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>7</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard Bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>14</Points>
 				</Option>
 				<Option>
-					<Name>почтенный</Name>
+					<Name>Revered Guardian</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>14</Points>
@@ -1749,7 +1745,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Всадники на Холодных</Name>
+			<Name>Cold One Cavalry</Name>
 			<Points>35</Points>
 			<MinSize>5</MinSize>
 			<MainParam>
@@ -1772,34 +1768,34 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Холодные</SpecialRuleDescription>
+					<SpecialRuleDescription>Cold One</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>копьё</Name>
+					<Name>Spear</Name>
 				</Armour>
 				<Armour>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musicain</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>10</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard Bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>20</Points>
 				</Option>
 				<Option>
-					<Name>чемпион</Name>
+					<Name>Champion</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>20</Points>
@@ -1808,7 +1804,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Кроксигоры</Name>
+			<Name>Kroxigor</Name>
 			<Points>55</Points>
 			<MinSize>3</MinSize>
 			<MainParam>
@@ -1829,13 +1825,13 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>двуручное оружие</Name>
+					<Name>Great weapon</Name>
 					<AddToStrength>2</AddToStrength>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>древний</Name>
+					<Name>Ancient</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>20</Points>
@@ -1844,7 +1840,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Стегадон</Name>
+			<Name>Stegadon</Name>
 			<Points>235</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -1869,19 +1865,18 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
-					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
-					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
-					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 Impact His</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit Strength 10</SpecialRuleDescription>
 				</Special>
 				<RangeWeapon>
-					<Name>Гигантский лук</Name>
+					<Name>Giant Bow</Name>
 				</RangeWeapon>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
 			<Type>Rare</Type>
-			<Name>Древний стегадон</Name>
+			<Name>Ancient stegadon</Name>
 			<Points>257</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -1906,19 +1901,18 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Большая цель</SpecialRuleDescription>
-					<SpecialRuleDescription>D6+1 таранных ударов</SpecialRuleDescription>
-					<SpecialRuleDescription>Нанесённая рана превращается в D3 ран</SpecialRuleDescription>
-					<SpecialRuleDescription>Сила отряда 10</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 Impact His</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit Strength 10</SpecialRuleDescription>
 				</Special>
 				<RangeWeapon>
-					<Name>Две гигантских духовых трубки</Name>
+					<Name>2 Giant Blowpipe</Name>
 				</RangeWeapon>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
 			<Type>Rare</Type>
-			<Name>Охотничьи своры саламандр</Name>
+			<Name>Salamander Hunting Pack</Name>
 			<Points>75</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>3</MaxSize>
@@ -1941,15 +1935,15 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Водоплавающие</SpecialRuleDescription>
-					<SpecialRuleDescription>Легкая пехота</SpecialRuleDescription>
-					<SpecialRuleDescription>Охотничья свора</SpecialRuleDescription>
-					<SpecialRuleDescription>Изрыгают пламя</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>Hunting Pack</SpecialRuleDescription>
+					<SpecialRuleDescription>Spout Flame</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>доп.погонщик</Name>
+					<Name>Handler</Name>
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>5</Points>
@@ -1958,7 +1952,7 @@
 		</Unit>
 		<Unit>
 			<Type>Rare</Type>
-			<Name>Охотничьи своры разордонов</Name>
+			<Name>Razordon Hunting Pack</Name>
 			<Points>75</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>3</MaxSize>
@@ -1981,15 +1975,15 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Водоплавающие</SpecialRuleDescription>
-					<SpecialRuleDescription>Легкая пехота</SpecialRuleDescription>
-					<SpecialRuleDescription>Охотничья свора</SpecialRuleDescription>
-					<SpecialRuleDescription>Стреляет шипами</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>Hunting Pack</SpecialRuleDescription>
+					<SpecialRuleDescription>Shoot Barbs</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>доп.погонщик</Name>
+					<Name>Handler</Name>
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>5</Points>
