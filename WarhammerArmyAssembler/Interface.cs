@@ -143,7 +143,7 @@ namespace WarhammerArmyAssembler
 
             if (newColumn || (margins[1] + (header ? 90 : 60) > detailHeight))
             {
-                margins[0] += (lastColumnMaxWidth > 155 ? lastColumnMaxWidth + 10 : 155);
+                margins[0] += (lastColumnMaxWidth > 175 ? lastColumnMaxWidth + 10 : 175);
                 margins[1] = (header ? 50 : 40) + (newColumn ? 0 : 45);
                 lastColumnMaxWidth = 0;
             }
@@ -378,7 +378,7 @@ namespace WarhammerArmyAssembler
             newButton.Margin = Thick(newButton, margins[0] + 2, margins[1] + 20);
             newButton.Tag = id;
             newButton.Click += AddOption_Click;
-            newButton.Width = 135;
+            newButton.Width = 155;
             main.unitDetail.Children.Add(newButton);
 
             return height;
@@ -488,6 +488,7 @@ namespace WarhammerArmyAssembler
 
         public static void AllUnitDelete()
         {
+            DetailResize(open: false);
             Army.DeleteAllUnits();
             ReloadArmyData();
         }
