@@ -2,7 +2,7 @@
 
 Warhammer Army Assembler (WAAgh) - is a quick and simple editor for Warhammer Fantasy Battle army lists
 
-![](https://s8.hostingkartinok.com/uploads/images/2019/11/6a63290110d10c4241b1b7bfb9d6bb5a.png)
+![](https://s8.hostingkartinok.com/uploads/images/2019/12/e7f1a29308f1360c48b9b2f03dd6d31e.png)
 
 ### Army lists:
 
