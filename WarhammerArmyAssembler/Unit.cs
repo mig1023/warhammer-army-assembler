@@ -491,9 +491,23 @@ namespace WarhammerArmyAssembler
             return 0;
         }
 
-        public bool IsOptionEnabled(Option option, int mountAlreadyOn, Option.OnlyForType mountTypeAlreadyFixed)
+        public void ThrowAwayIncompatibleOption()
         {
-            if (option.Mount && (mountAlreadyOn > 0) && (option.ID != mountAlreadyOn))
+            for(int i = 0; i < Options.Count; i++)
+            {
+                bool incompatible = !IsOptionEnabled(Options[i], GetMountOn(), GetMountTypeAlreadyFixed(), postCheck: true);
+
+                if (incompatible && (Options[i].Realised || Options[i].IsMagicItem()))
+                {
+                    Interface.SetArtefactAlreadyUsed(Options[i].ID, false);
+                    AddOption(Options[i].ID, this, this.ID);
+                }
+            }
+        }
+
+        public bool IsOptionEnabled(Option option, int mountAlreadyOn, Option.OnlyForType mountTypeAlreadyFixed, bool postCheck = false)
+        {
+            if (!postCheck && option.Mount && (mountAlreadyOn > 0) && (option.ID != mountAlreadyOn))
                 return false;
 
             if (option.Mount && (mountTypeAlreadyFixed == Option.OnlyForType.Infantry))

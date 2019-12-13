@@ -280,7 +280,8 @@ namespace WarhammerArmyAssembler
             int unitID = IntParse(id[0]);
 
             Army.Units[unitID].AddOption(optionID, Army.Units[unitID], unitID);
-            
+            Army.Units[unitID].ThrowAwayIncompatibleOption();
+
             ReloadArmyData();
             SetArtefactAlreadyUsed(IntParse(id[1]), false);
             UpdateUnitDescription(unitID, Army.Units[unitID]);
