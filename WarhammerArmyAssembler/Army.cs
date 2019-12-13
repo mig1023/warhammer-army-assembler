@@ -202,17 +202,6 @@ namespace WarhammerArmyAssembler
             return 0;
         }
 
-        public static int GetMountOption(Unit unit)
-        {
-            foreach (KeyValuePair<int, Unit> armyUnit in Army.Units)
-                if (armyUnit.Key == unit.MountOn)
-                    foreach (Option option in unit.Options)
-                        if (option.Name == armyUnit.Value.Name)
-                            return option.ID;
-
-            return 0;
-        }
-
         public static bool UnitExistInArmy(int? nullableUnitID)
         {
             int unitID = nullableUnitID ?? -1;

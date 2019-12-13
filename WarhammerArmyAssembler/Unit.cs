@@ -462,6 +462,70 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
+        public int GetMountOn()
+        {
+            if (MountOn > 0)
+                return MountOn;
+
+            foreach (Option option in Options)
+                if (option.Mount && ((option.IsOption() && option.Realised) || option.IsMagicItem()))
+                    return option.ID;
+
+            return 0;
+        }
+
+        public int GetMountOption()
+        {
+            Unit mount = null;
+            foreach (KeyValuePair<int, Unit> armyUnit in Army.Units)
+                if (armyUnit.Key == MountOn)
+                    mount = armyUnit.Value;
+
+            if (mount == null)
+                return 0;
+
+            foreach (Option option in Options)
+                if (option.Name == mount.Name)
+                    return option.ID;
+
+            return 0;
+        }
+
+        public bool IsOptionEnabled(Option option, int mountAlreadyOn, Option.OnlyForType mountTypeAlreadyFixed)
+        {
+            if (option.Mount && (mountAlreadyOn > 0) && (option.ID != mountAlreadyOn))
+                return false;
+
+            if (option.Mount && (mountTypeAlreadyFixed == Option.OnlyForType.Infantry))
+                return false;
+
+            if ((option.OnlyFor == Option.OnlyForType.Mount) && ((mountAlreadyOn == 0) || (mountTypeAlreadyFixed == Option.OnlyForType.Infantry)))
+                return false;
+
+            if ((option.OnlyFor == Option.OnlyForType.Infantry) && ((mountAlreadyOn > 0) || (mountTypeAlreadyFixed == Option.OnlyForType.Mount)))
+                return false;
+
+            if (option.IsSlannOption() && !option.Realised && IsMaxSlannOption())
+                return false;
+
+            return true;
+        }
+
+        public Option.OnlyForType GetMountTypeAlreadyFixed()
+        {
+            foreach (Option option in Options)
+                if ((option.IsOption() && option.Realised) || option.IsMagicItem())
+                {
+                    if (option.OnlyFor == Option.OnlyForType.Mount)
+                        return Option.OnlyForType.Mount;
+
+                    if (option.OnlyFor == Option.OnlyForType.Infantry)
+                        return Option.OnlyForType.Infantry;
+                }
+
+            return Option.OnlyForType.All;
+        }
+
         public bool IsAnotherOptionRealised(string[] optionNames, bool defaultResult)
         {
             if (optionNames.Length <= 0)

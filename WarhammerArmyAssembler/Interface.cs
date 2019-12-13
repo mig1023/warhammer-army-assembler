@@ -163,10 +163,9 @@ namespace WarhammerArmyAssembler
 
             margins[1] += 10;
 
-            int mountAlreadyOn = 0;
+            int mountAlreadyOn = (unit.MountOn > 0 ? unit.GetMountOption() : 0);
 
-            if (unit.MountOn > 0)
-                mountAlreadyOn = Army.GetMountOption(unit);
+            Option.OnlyForType mountTypeAlreadyFixed = unit.GetMountTypeAlreadyFixed();
 
             if (head == "SPECIAL RULES")
             {
@@ -202,7 +201,8 @@ namespace WarhammerArmyAssembler
                         bool canBeUsed = (!option.OnlyOneInArmy || (alredyUsedBy == 0) || (alredyUsedBy == unitID));
 
                         margins[1] += AddButton(option.Name, margins, 25, ref lastColumnMaxWidth, String.Format("{0}|{1}", unitID, option.ID),
-                            option, mountAlreadyOn: mountAlreadyOn, unit: unit, mustBeEnabled: canBeUsed);
+                            option, mountAlreadyOn: mountAlreadyOn, mountTypeAlreadyFixed: mountTypeAlreadyFixed, unit: unit,
+                            mustBeEnabled: canBeUsed);
 
                         margins[1] += 20;
                     }
@@ -338,7 +338,8 @@ namespace WarhammerArmyAssembler
         }
 
         private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth, string id,
-            Option option, int mountAlreadyOn = 0, Unit unit = null, bool mustBeEnabled = true)
+            Option option, int mountAlreadyOn = 0, Option.OnlyForType mountTypeAlreadyFixed = Option.OnlyForType.All, Unit unit = null,
+            bool mustBeEnabled = true)
         {
             AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
                 option.Points, option.PerModel);
@@ -350,17 +351,7 @@ namespace WarhammerArmyAssembler
             else
                 newButton.Content = (option.Realised ? "drop" : "add");
 
-            if (option.Mount && (mountAlreadyOn > 0) && (option.ID != mountAlreadyOn))
-                newButton.IsEnabled = false;
-
-            if ((option.OnlyFor == Option.OnlyForType.Mount) && (mountAlreadyOn == 0))
-                newButton.IsEnabled = false;
-
-            if ((option.OnlyFor == Option.OnlyForType.Infantry) && (mountAlreadyOn > 0))
-                newButton.IsEnabled = false;
-
-            if (option.IsSlannOption() && !option.Realised && (unit != null) && unit.IsMaxSlannOption())
-                newButton.IsEnabled = false;
+            newButton.IsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);
 
             if (!mustBeEnabled)
                 newButton.IsEnabled = false;
@@ -408,10 +399,11 @@ namespace WarhammerArmyAssembler
 
         public static void ArmyGridDropArtefact(int id, DataGridRow container)
         {
-            Unit unit = container.DataContext as Unit;
+            if (container == null)
+                return;
 
-            if (unit != null)
-                ArmyGridDropArtefact(id, unit.ID);
+            Unit unit = container.DataContext as Unit;
+            ArmyGridDropArtefact(id, unit.ID);
         }
 
         public static void ArmyGridDropArtefact(int id, int unitID)
