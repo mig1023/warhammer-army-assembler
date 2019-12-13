@@ -429,7 +429,7 @@ namespace WarhammerArmyAssembler
         public bool ExistsOptions()
         {
             foreach (Option option in Options)
-                if (option.IsOption())
+                if (option.IsOption() && !option.FullCommand)
                     return true;
 
             return false;
