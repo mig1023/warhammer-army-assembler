@@ -98,7 +98,12 @@ namespace WarhammerArmyAssembler
             if (sender is ScrollViewer)
                 Interface.ArmyGridDropArtefact(id, Interface.CurrentSelectedUnit ?? 0);
             else
+            {
                 Interface.ArmyGridDrop(id, container);
+                int newUnitID = Interface.CurrentSelectedUnit ?? 0;
+                Interface.UpdateUnitDescription(newUnitID, Army.Units[newUnitID]);
+            }
+                
         }
 
         public static T FindVisualParent<T>(UIElement element) where T : UIElement
@@ -108,9 +113,7 @@ namespace WarhammerArmyAssembler
             {
                 T correctlyTyped = parent as T;
                 if (correctlyTyped != null)
-                {
                     return correctlyTyped;
-                }
 
                 parent = VisualTreeHelper.GetParent(parent) as UIElement;
             }

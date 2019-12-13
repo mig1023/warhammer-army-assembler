@@ -21,7 +21,7 @@ namespace WarhammerArmyAssembler
             return MaxIDindex += 1;
         }
 
-        public static void AddUnitByID(int id)
+        public static int AddUnitByID(int id)
         {
             Unit unit = ArmyBook.Units[id].Clone();
 
@@ -39,6 +39,8 @@ namespace WarhammerArmyAssembler
                         Units.Add(newMountID, mount.Value.Clone());
                     }
             }
+
+            return newUnitID;
         }
 
         public static void AddMountByID(int id, int unit)

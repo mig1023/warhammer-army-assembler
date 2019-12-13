@@ -450,7 +450,7 @@ namespace WarhammerArmyAssembler
                 Error(String.Format("Army can't include as many duplicates of {0}", Army.UnitTypeName(ArmyBook.Units[id].Type)));
             else
             {
-                Army.AddUnitByID(id);
+                CurrentSelectedUnit = Army.AddUnitByID(id);
                 ReloadArmyData();
             }
         }
