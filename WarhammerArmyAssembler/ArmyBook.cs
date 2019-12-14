@@ -70,8 +70,6 @@ namespace WarhammerArmyAssembler
                     Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
                 }
             }
-                
-                
         }
 
         private static XmlNode AddFrenzyAttack(XmlDocument xml)

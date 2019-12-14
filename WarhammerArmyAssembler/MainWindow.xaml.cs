@@ -30,10 +30,14 @@ namespace WarhammerArmyAssembler
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
-            ArmyBook.LoadArmy("OrcsGoblins.xml");
+            List<string> allXmlFiles = ArmyBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
+            ArmyBook.LoadArmy(allXmlFiles[0]);
 
             Interface.LoadArmyList();
             Interface.ReloadArmyData();
+
+            Interface.PreviewArmyList();
+            Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
         }
 
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -228,11 +232,24 @@ namespace WarhammerArmyAssembler
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
+
+            startHelpInfo.Height = mainPlaceCanvas.Height;
+            startHelpInfo.Width = mainPlaceCanvas.Width - 320;
+            startHelpInfo.Margin = new Thickness(320, 0, 0, 0);
+            startHelpMainText.Width = startHelpInfo.Width - 100;
         }
 
         private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
         {
+            CloseStartHelp();
+
             Interface.Move(Interface.MovingType.ToMain);
+        }
+
+        private void CloseStartHelp()
+        {
+            if (startHelpInfo.Visibility == Visibility.Visible)
+                startHelpInfo.Visibility = Visibility.Hidden;
         }
 
         private void closeDetail_Click(object sender, RoutedEventArgs e)
@@ -257,6 +274,8 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
+            CloseStartHelp();
+
             Interface.LoadArmySize(Interface.IntParse(listArmybookPoints.Text));
             ArmyBook.LoadArmy(Interface.CurrentSelectedArmy);
 
@@ -284,6 +303,8 @@ namespace WarhammerArmyAssembler
 
         private void buttonPoints_Click(object sender, RoutedEventArgs e)
         {
+            CloseStartHelp();
+
             Interface.LoadArmySize(Interface.IntParse((sender as Button).Content.ToString().Split()[0]));
         }
 
