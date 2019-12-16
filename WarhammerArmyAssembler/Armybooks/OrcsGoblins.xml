@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArmyBook>
 	<Info>
-		<ArmyName>Орки и Гоблины</ArmyName>
+		<ArmyName>Orcs and Goblins</ArmyName>
 		<ArmyBookVersion>7</ArmyBookVersion>
 		<MainColor>#99CC99</MainColor>
 		<AdditionalColor>#009900</AdditionalColor>
@@ -9,95 +9,95 @@
 		<ArmyBookImage>OrcsGoblins.png</ArmyBookImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Распространённые актефакты">
+		<ArtefactsGroup Name = "Common magic itemsы">
 			<Artefact>
-				<Name>Меч Точности</Name>
+				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>+1 на попадание в ближнем бою</SpecialRuleDescription>
-				<Description>+1 на попадание в ближнем бою</Description>
+				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
+				<Description>+1 to Hit</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Меч Битвы</Name>
+				<Name>Sword of Battle</Name>
 				<Type>Weapon</Type>
 				<Points>15</Points>
 				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 к Атакам</Description>
+				<Description>+1 Attack</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Меч Силы</Name>
+				<Name>Sword of Might</Name>
 				<Type>Weapon</Type>
 				<Points>10</Points>
 				<AddToStrength>1</AddToStrength>
-				<Description>+1 к Силам</Description>
+				<Description>+1 Strength</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Жалящий меч</Name>
+				<Name>Biting Blade</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>-1 на спас-бросок за доспех</SpecialRuleDescription>
-				<Description>-1 на спас-бросок за доспех</Description>
+				<SpecialRuleDescription>-1 armour save</SpecialRuleDescription>
+				<Description>-1 armour save</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Магический щит</Name>
+				<Name>Enchanted shield</Name>
 				<Type>Armour</Type>
 				<Points>15</Points>
 				<AddToArmour>5</AddToArmour>
-				<Description>5+ спас-бросок за доспех</Description>
+				<Description>5+ armour save</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Защитный талисман</Name>
+				<Name>Talisman of Protection</Name>
 				<Type>Armour</Type>
 				<Points>15</Points>
 				<AddToWard>6</AddToWard>
-				<Description>6+ магический спас-бросок</Description>
+				<Description>6+ ward save</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Посох волшебства</Name>
+				<Name>Dispell Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple>true</Multiple>
+				<Description>automatically dispel an enemy spell, one use only</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Stone</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple>true</Multiple>
+				<Description>+2 dice to cast a spell</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>+1 к разрушению заклинаний</SpecialRuleDescription>
-				<Description>+1 к разрушению заклинаний</Description>
+				<SpecialRuleDescription>+1 to dispel</SpecialRuleDescription>
+				<Description>+1 to dispel</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Свиток разрушения заклинаний</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple>true</Multiple>
-				<Description>автоматически разрушает вражеское заклинание, одноразовый</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Камень Силы</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple>true</Multiple>
-				<Description>+2 кубика при сотворении заклинания, одноразовый</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Боевое знамя</Name>
+				<Name>War Banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>+1 к результату боя</SpecialRuleDescription>
-				<Description>+1 к Результату боя</Description>
+				<SpecialRuleDescription>+1 Combat Resolution</SpecialRuleDescription>
+				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Магическое оружие">
+		<ArtefactsGroup Name = "Magic weapons">
 			<Artefact>
-				<Name>Тесак "Ваагх!"</Name>
+				<Name>WAAAGH! Cleava</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Орк</OnlyForGroup>
+				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>100</Points>
-				<SpecialRuleDescription>все попадания автоматически наносят раны</SpecialRuleDescription>
-				<SpecialRuleDescription>без спас-бросков за броню</SpecialRuleDescription>
-				<Description>Все попадания этого оружия автоматически наносят раны, и от них неприменимы спас-броски за броню</Description>
+				<SpecialRuleDescription>All hits wound automaticalle</SpecialRuleDescription>
+				<SpecialRuleDescription>No armour saves</SpecialRuleDescription>
+				<Description>All hits from this weapons wound automatically and allow no armour saves</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Боевой топор Рагнаорка</Name>
+				<Name>Battleaxe of the Last WAAAGH!</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Орк</OnlyForGroup>
+				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>100</Points>
-				<SpecialRuleDescription>бонус к силе и атакам равный кол-ву бонусов за ряды подразденения</SpecialRuleDescription>
-				<Description>Носитель этого оружия считает бонус к Силе и Атакам равный Бонусу за ряды того подразделения к которому присоединился персонаж</Description>
+				<SpecialRuleDescription>Attacks and Strength bonus equal rank bonus</SpecialRuleDescription>
+				<Description>The wielder of this weapon receives a bonus equal to his unit's rank bonus to both his Attacks and Strength - calculate this when the wielder makes his attacks</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Кровавый топор Башши</Name>
@@ -1491,7 +1491,7 @@
 	<Units>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага орков</Name>
+			<Name>Orc Boyz</Name>
 			<Points>5</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
@@ -1507,16 +1507,16 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>лёгкие доспехи</Name>
+					<Name>Light armour</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Здоровяки</Name>
+					<Name>Big'Uns</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
 					<PerModel>true</PerModel>
@@ -1525,39 +1525,39 @@
 					<OnlyOneInArmy>true</OnlyOneInArmy>
 				</Option>
 				<Option>
-					<Name>парные чоппы</Name>
+					<Name>Additional choppa</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel>true</PerModel>
 					<AddToAttacks>1</AddToAttacks>
 				</Option>
 				<Option>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>5</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>10</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>15</Points>
@@ -1566,7 +1566,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага орков-лучников</Name>
+			<Name>Orc Arrer Boys</Name>
 			<Points>6</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
@@ -1582,31 +1582,31 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>лёгкие доспехи</Name>
+					<Name>Light armour</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<RangedWeapon>
-					<Name>короткий лук</Name>
+					<Name>Bows</Name>
 				</RangedWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>5</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>10</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>15</Points>
@@ -1615,7 +1615,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага диких орков</Name>
+			<Name>Savage Orc Boys</Name>
 			<Points>8</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
@@ -1634,15 +1634,15 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>боевая раскраска</SpecialRuleDescription>
+					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Здоровяки</Name>
+					<Name>Big'Uns</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
 					<PerModel>true</PerModel>
@@ -1651,45 +1651,45 @@
 					<OnlyOneInArmy>true</OnlyOneInArmy>
 				</Option>
 				<Option>
-					<Name>парные чоппы</Name>
+					<Name>Additional choppa</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel>true</PerModel>
 					<AddToAttacks>1</AddToAttacks>
 				</Option>
 				<Option>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>лук</Name>
+					<Name>Bows</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>5</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>10</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>15</Points>
@@ -1698,7 +1698,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага гоблинов</Name>
+			<Name>Goblins</Name>
 			<Points>3</Points>
 			<MinSize>20</MinSize>
 			<MainParam>
@@ -1714,50 +1714,50 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>лёгкие доспехи</Name>
+					<Name>Light armour</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>луки</Name>
+					<Name>Bows</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>4</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>8</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>8</Points>
@@ -1766,7 +1766,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага гоблинов-наездников на волках</Name>
+			<Name>Goblin Wolf Riders</Name>
 			<Points>12</Points>
 			<MinSize>5</MinSize>
 			<MainParam>
@@ -1782,51 +1782,51 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>лёгкие доспехи</Name>
+					<Name>Light armour</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-					<SpecialRuleDescription>лёгкая кавалерия</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>короткие луки</Name>
+					<Name>Short bows</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
@@ -1835,7 +1835,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага гоблинов-наездников на пауках</Name>
+			<Name>Forest Goblin Spider Riders</Name>
 			<Points>13</Points>
 			<MinSize>5</MinSize>
 			<MainParam>
@@ -1854,42 +1854,42 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<HandWeapon>
-					<Name>копьё</Name>
+					<Name>Spears</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-					<SpecialRuleDescription>лёгкая кавалерия</SpecialRuleDescription>
-					<SpecialRuleDescription>стенолазы</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Fast cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Wall-crawlers</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>короткие луки</Name>
+					<Name>Short bows</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
@@ -1898,7 +1898,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Ватага Ночных гоблинов</Name>
+			<Name>Night Goblins</Name>
 			<Points>3</Points>
 			<MinSize>20</MinSize>
 			<MainParam>
@@ -1914,59 +1914,59 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapons</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-					<SpecialRuleDescription>ловцы</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRuleDescription>Netters</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>сети</Name>
+					<Name>Nets</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
 				</Option>
 				<Option>
-					<Name>первый фанатик</Name>
+					<Name>First fanatic</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
 				</Option>
 				<Option>
-					<Name>второй фанатик</Name>
+					<Name>Second fanatic</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
 				</Option>
 				<Option>
-					<Name>третий фанатик</Name>
+					<Name>Third fanatic</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>4</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>8</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>8</Points>
@@ -1975,7 +1975,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Снотлинги</Name>
+			<Name>Snotlings</Name>
 			<Points>20</Points>
 			<MinSize>2</MinSize>
 			<MaxSize>20</MaxSize>
@@ -1997,7 +1997,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Ватага Черных орков</Name>
+			<Name>Black Orcs</Name>
 			<Points>13</Points>
 			<MinSize>5</MinSize>
 			<MainParam>
@@ -2017,35 +2017,35 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>вооружены до зубов</Name>
+					<Name>Armed to da Teef</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>тяжёлые доспехи</Name>
+					<Name>Heavy armour</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel>true</PerModel>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Back Orc Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>20</Points>
@@ -2054,7 +2054,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Ватага орков на кабанах</Name>
+			<Name>Orc Boar Boyz</Name>
 			<Points>22</Points>
 			<MinSize>5</MinSize>
 			<MainParam>
@@ -2074,27 +2074,30 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
 				</HandWeapon>
 				<Armour>
-					<Name>лёгкие доспехи</Name>
+					<Name>Light armour</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Armour>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>толстокожие</SpecialRuleDescription>
+					<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
 					<AddToArmour>5</AddToArmour>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
+					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Здоровяки</Name>
+					<Name>Big'Uns</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
 					<PerModel>true</PerModel>
@@ -2103,19 +2106,19 @@
 					<OnlyOneInArmy>true</OnlyOneInArmy>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musician</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>17</Points>
@@ -2124,7 +2127,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Ватага диких орков на кабанах</Name>
+			<Name>Savage Orc Boar Boys</Name>
 			<Points>21</Points>
 			<MinSize>5</MinSize>
 			<MainParam>
@@ -2145,19 +2148,19 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>толстокожие</SpecialRuleDescription>
+					<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
 					<AddToArmour>5</AddToArmour>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
+					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Здоровяки</Name>
+					<Name>Big'Uns</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
 					<PerModel>true</PerModel>
@@ -2166,32 +2169,32 @@
 					<OnlyOneInArmy>true</OnlyOneInArmy>
 				</Option>
 				<Option>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel>true</PerModel>
 				</Option>
 				<Option>
-					<Name>щиты</Name>
+					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel>true</PerModel>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>музыкант</Name>
+					<Name>Musicain</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>знаменосец</Name>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>12</Points>
 				</Option>
 					<Option>
-					<Name>босс</Name>
+					<Name>Boss</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>17</Points>
@@ -2200,7 +2203,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Кабанья колесница</Name>
+			<Name>Orc Boar Chariot</Name>
 			<Points>80</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -2218,24 +2221,24 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппы</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 				<HandWeapon>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 				</HandWeapon>
 				<Special>
 					<AddToArmour>4</AddToArmour>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
+					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
+					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>третий орк</Name>
+					<Name>Extra Orc</Name>
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>5</Points>
@@ -2244,7 +2247,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Наездники на сквигах Ночных гоблинов</Name>
+			<Name>Night Goblic Squig Hoppers</Name>
 			<Points>15</Points>
 			<MinSize>5</MinSize>
 			<MaxSize>5</MaxSize>
@@ -2264,25 +2267,25 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>лёгкая пехота</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>Ииихааа!</SpecialRuleDescription>
+					<SpecialRuleDescription>Boiiing!</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Стадо сквигов Ночных гоблинов</Name>
+			<Name>Night Goblin Squig Herd</Name>
 			<Points>15</Points>
 			<MinSize>1</MinSize>
 			<ModelsInPack>5</ModelsInPack>
@@ -2302,25 +2305,25 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>стадо сквигов</SpecialRuleDescription>
+					<SpecialRuleDescription>Squig</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>дикие сквиги</SpecialRuleDescription>
+					<SpecialRuleDescription>Squig Herds</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>Ииихааа!</SpecialRuleDescription>
+					<SpecialRuleDescription>Boiiing!</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Волчья колесница гоблинов</Name>
+			<Name>Goblin Wolf Chariot</Name>
 			<Points>60</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -2338,33 +2341,33 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<HandWeapon>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 				</HandWeapon>
 				<RangedWeapon>
-					<Name>короткий лук</Name>
+					<Name>Short bows</Name>
 				</RangedWeapon>
 				<Special>
 					<AddToArmour>5</AddToArmour>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
+					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>четвёртый гоблин</Name>
+					<Name>Extra Goblin</Name>
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>3</Points>
 				</Option>
 				<Option>
-					<Name>третий волк</Name>
+					<Name>Extra Wolf</Name>
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>3</Points>
@@ -2373,7 +2376,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Гоблинская камнебросалка</Name>
+			<Name>Goblin Rock Lobber</Name>
 			<Points>70</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -2391,18 +2394,18 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>камнебросалка</SpecialRuleDescription>
+					<SpecialRuleDescription>Rock Lobber</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>громила-орк</Name>
+					<Name>Orc Bully</Name>
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>5</Points>
@@ -2411,7 +2414,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Гоблинская копьеметалка</Name>
+			<Name>Goblin Spear Chukka</Name>
 			<Points>35</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -2429,18 +2432,18 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>копьеметалка</SpecialRuleDescription>
+					<SpecialRuleDescription>Spear Chukka</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>громила-орк</Name>
+					<Name>Orc Bully</Name>
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>5</Points>
@@ -2449,7 +2452,7 @@
 		</Unit>
 		<Unit>
 			<Type>Rare</Type>
-			<Name>Речные тролли</Name>
+			<Name>Trolls</Name>
 			<Points>40</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -2470,34 +2473,34 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>троллиная отрыжка</SpecialRuleDescription>
+					<SpecialRuleDescription>Troll Vomit</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>каменные тролли</Name>
+					<Name>Stone troll</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
 					<PerModel>true</PerModel>
 					<AddToArmour>5</AddToArmour>
 					<AddToStrength>1</AddToStrength>
-					<SpecialRuleDescription>сопротивление магии (2)</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>речные тролли</Name>
+					<Name>River troll</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
 					<PerModel>true</PerModel>
-					<SpecialRuleDescription>-1 на попадание</SpecialRuleDescription>
+					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
 				</Option>
 			</Options>
 		</Unit>
 		<Unit>
 			<Type>Rare</Type>
-			<Name>Катапульта пикирующих гоблинов</Name>
+			<Name>Goblin Doom Diver Catapult</Name>
 			<Points>80</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -2515,19 +2518,19 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>катапульта пикирующих гоблинов</SpecialRuleDescription>
+					<SpecialRuleDescription>Doom Diver Catapult</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
 			<Type>Rare</Type>
-			<Name>Педальный вагон снотлингов</Name>
+			<Name>Snotling Pump Wagon</Name>
 			<Points>40</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -2548,13 +2551,13 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>колесница</SpecialRuleDescription>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>Крути педали!</SpecialRuleDescription>
+					<SpecialRuleDescription>Crunch!</SpecialRuleDescription>
 				</Special>
 				<Special>
 					<SpecialRuleDescription>Хрясь!</SpecialRuleDescription>
@@ -2563,7 +2566,7 @@
 		</Unit>
 		<Unit>
 			<Type>Rare</Type>
-			<Name>Гигант</Name>
+			<Name>Giant</Name>
 			<Points>205</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
@@ -2584,19 +2587,19 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand wepon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>большая цель</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>движение</SpecialRuleDescription>
+					<SpecialRuleDescription>Longshanks</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>падение</SpecialRuleDescription>
+					<SpecialRuleDescription>Fall Over</SpecialRuleDescription>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>специальные атаки гиганта</SpecialRuleDescription>
+					<SpecialRuleDescription>Giant Special Attacks</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
