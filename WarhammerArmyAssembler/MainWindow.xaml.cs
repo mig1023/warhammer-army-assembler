@@ -35,8 +35,8 @@ namespace WarhammerArmyAssembler
 
             Interface.LoadArmyList();
             Interface.ReloadArmyData();
-
             Interface.PreviewArmyList();
+
             Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
         }
 
@@ -104,8 +104,10 @@ namespace WarhammerArmyAssembler
             else
             {
                 Interface.ArmyGridDrop(id, container);
-                int newUnitID = Interface.CurrentSelectedUnit ?? 0;
-                Interface.UpdateUnitDescription(newUnitID, Army.Units[newUnitID]);
+                int newUnitID = Interface.CurrentSelectedUnit ?? -1;
+
+                if (newUnitID >= 0)
+                    Interface.UpdateUnitDescription(newUnitID, Army.Units[newUnitID]);
             }
                 
         }
