@@ -519,6 +519,11 @@ namespace WarhammerArmyAssembler
             if ((option.OnlyFor == Option.OnlyForType.Infantry) && ((mountAlreadyOn > 0) || (mountTypeAlreadyFixed == Option.OnlyForType.Mount)))
                 return false;
 
+            if (!IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true) 
+                ||
+                IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false))
+                return false;
+
             if (option.IsSlannOption() && !option.Realised && IsMaxSlannOption())
                 return false;
 
