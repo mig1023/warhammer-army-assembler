@@ -403,12 +403,12 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Горбад Железный Коготь</Name>
+			<Name>Gorbad Ironclaw</Name>
 			<Group>Орк</Group>
 			<Points>310</Points>
-			<Description>Горбад Железный Коготь - орочий военочальник. Невероятно способный полководец, Горбад может вдохновить своих последователей на великие (и кровавые) деяния</Description>
+			<Description>Gorbad Ironclaw</Description>
 			<MinSize>1</MinSize>
-			<MountInit>Гнарла</MountInit>
+			<MountInit>Gnarla</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
 			<MainParam>
 				<Movement>4</Movement>
@@ -423,31 +423,31 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Морглор Крушитель</Name>
+					<Name>Morglor The Mangler</Name>
 					<HitFirst>true</HitFirst>
-					<SpecialRuleDescription>без спас-бросков за броню и особой защиты</SpecialRuleDescription>
+					<SpecialRuleDescription>No armour saves</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
-					<Name>тяжёлые доспехи</Name>
+					<Name>Heavy armour</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>у босса есть план!</SpecialRuleDescription>
-					<SpecialRuleDescription>орки да бест!</SpecialRuleDescription>
-					<SpecialRuleDescription>толстокожий</SpecialRuleDescription>
+					<SpecialRuleDescription>Da boss 'as a Plan!</SpecialRuleDescription>
+					<SpecialRuleDescription>Orcs are Da Best!</SpecialRuleDescription>
+					<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
 					<AddToArmour>5</AddToArmour>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Азхаг Мясник</Name>
+			<Name>Azhag The Slaughterer</Name>
 			<Group>Орк</Group>
 			<Mage>2</Mage>
 			<Points>450</Points>
-			<Description>Азхаг Мясник - орочий военочальник, отличная возможность соединить грубую силу орочьего военачальника со способностью мага</Description>
+			<Description>Azhag The Slaughterer</Description>
 			<MinSize>1</MinSize>
-			<MountInit>Виверна</MountInit>
+			<MountInit>Wyvern</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
 			<MainParam>
 				<Movement>4</Movement>
@@ -465,32 +465,29 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Рубительный меч Слаггим</Name>
+					<Name>Slagga's Slashas</Name>
 					<AddToAttacks>1</AddToAttacks>
-					<SpecialRuleDescription>переброс промахов в первый раунд</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll any missed to hit in the first round</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
-					<Name>Тердый доспех Азгах</Name>
+					<Name>Azhag's 'ard Amour</Name>
 					<AddToArmour>5</AddToArmour>
 					<AddToWard>5</AddToWard>
 				</Armour>
 				<Crown>
-					<Name>корона Волшебства</Name>
-					<SpecialRuleDescription>маг 2 уровня</SpecialRuleDescription>
+					<Name>The Crown of Sorcery</Name>
+					<SpecialRuleDescription>Wizard Level 2</SpecialRuleDescription>
 				</Crown>
-				<Special>
-					<SpecialRuleDescription>Ээээ...ребята, враг в ТОЙ стороне!</SpecialRuleDescription>
-				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Гримгор Железная шкура</Name>
+			<Name>Grimgor Ironhide</Name>
 			<Group>Орк</Group>
 			<Points>375</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero>true</PersonifiedHero>
-			<Description>Гримгор - Чёрный Орк-военачальник. Воистину это лучший боец, которого когда-либо производила раса зеленокожих; Гримгор - неудержимая смертоносная машина, способная превратить вражеский полк в кучу отбросов</Description>
+			<Description>Grimgor Ironhide</Description>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>8</WeaponSkill>
@@ -508,28 +505,28 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Гитсинк</Name>
+					<Name>Gitsnik</Name>
 					<AddToStrength>2</AddToStrength>
-					<SpecialRuleDescription>всегда бьёт первым</SpecialRuleDescription>
+					<HitFirst>true</HitFirst>
 				</HandWeapon>
 				<Armour>
-					<Name>Выкованный на крови доспех</Name>
+					<Name>Blood-forged Armour</Name>
 					<AddToArmour>1</AddToArmour>
 					<AddToWard>5</AddToWard>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Ви аре чемпионз!</SpecialRuleDescription>
+					<SpecialRuleDescription>Da Immortulz</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Гром Брюхастый из Туманных гор</Name>
+			<Name>Grom The Paunch</Name>
 			<Group>Гоблин</Group>
 			<Points>255</Points>
 			<MinSize>1</MinSize>
-			<Description>Гром является гоблином военачальником. Обладающий замечательной живучестью, Гром станет отличным предводителем, который поведёт орду Гоблинов к победе</Description>
-			<MountInit>Волчья колесница</MountInit>
+			<Description>Grom The Paunch of Misty Mountain</Description>
+			<MountInit>Goblin Wolf Chariot</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
 			<MainParam>
 				<Movement>4</Movement>
@@ -548,25 +545,25 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Топор Грома</Name>
+					<Name>The Axe of Grom</Name>
 					<AddToStrength>2</AddToStrength>
 					<KillingBlow>true</KillingBlow>
-					<SpecialRuleDescription>смертельный удар эльфам на 5+</SpecialRuleDescription>
+					<SpecialRuleDescription>Killing Blow on a 5+ against ane Elves</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
-					<Name>Удачное знамя</Name>
+					<Name>Lucky banner</Name>
 					<AddToWard>5</AddToWard>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Скарсинк, воевода Восьми Пиков</Name>
-			<Group>Гоблин</Group>
+			<Name>Skarsnik</Name>
+			<Group>Goblin</Group>
 			<Points>205</Points>
 			<MinSize>1</MinSize>
-			<Description>Скарсинк - воевода Ночных Гоблинов. Скарсинк устрашает кпротивника в ближнем бою, а его подлые планы ещё в самом начале игры могут привести неприятиля в замешательство</Description>
-			<MountInit>Гоббла</MountInit>
+			<Description>Skarsnik. Warlord of the Eight Peaks</Description>
+			<MountInit>Gobbla</MountInit>
 			<PersonifiedHero>true</PersonifiedHero>
 			<MainParam>
 				<Movement>4</Movement>
@@ -584,22 +581,27 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Палка-тыкалка Скарсинка</Name>
-					<SpecialRuleDescription>Связанное заклятье, силы 5 на 24 дюйма</SpecialRuleDescription>
+					<Name>Skarsnik's Prodder</Name>
+					<SpecialRuleDescription>Bound spell Strength 5, hit Strength 6 with a range of 24"</SpecialRuleDescription>
 				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
 				<Special>
 					<KillingBlow>true</KillingBlow>
-					<SpecialRuleDescription>жуй, жуй - глотай</SpecialRuleDescription>
-					<SpecialRuleDescription>хитрый план</SpecialRuleDescription>
-					<SpecialRuleDescription>хитрые ловушки</SpecialRuleDescription>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Down in One</SpecialRuleDescription>
+					<SpecialRuleDescription>Tricksy Traps</SpecialRuleDescription>
+					<SpecialRuleDescription>Sneaky Schemes</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Орк-Воевода</Name>
-			<Group>Орк</Group>
+			<Name>Orc Warboss</Name>
+			<Group>Orc</Group>
 			<Points>115</Points>
 			<Description></Description>
 			<MinSize>1</MinSize>
@@ -620,81 +622,81 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Дикий Орк</Name>
+					<Name>Savage Orc</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Frenzy>true</Frenzy>
-					<SpecialRuleDescription>боевая раскраска</SpecialRuleDescription>
+					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>Чёрный Орк</Name>
+					<Name>Black Orc</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 				</Option>
 				<Option>
-					<Name>двуручное оружие</Name>
+					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>6</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>Чёрный Орк</OnlyIfNot>
+						<OnlyIfNot>Black Orc</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>парная чоппа</Name>
+					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>копьё</Name>
+					<Name>Spear</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>3</Points>
 				</Option>
 				<Option>
-					<Name>лёгкий доспех</Name>
+					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
-					<Name>тяжёлый доспех</Name>
+					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
 					<OnlyIfAnotherService>
-						<OnlyIf>Чёрный Орк</OnlyIf>
+						<OnlyIf>Black Orc</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>Кабан</Name>
+					<Name>Boar</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Виверна</Name>
+					<Name>Wyvern</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Кабанья колесница</Name>
+					<Name>Orc Boar Chariot</Name>
 					<Type>Option</Type>
 					<Points>80</Points>
 					<Mount>true</Mount>
@@ -703,8 +705,8 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Орк-Великий шаман</Name>
-			<Group>Орк</Group>
+			<Name>Orc Great Shaman</Name>
+			<Group>Orc</Group>
 			<Mage>3</Mage>
 			<Points>180</Points>
 			<MinSize>1</MinSize>
@@ -725,38 +727,38 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>маг 4 уровня</Name>
+					<Name>Wizard Level 4</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
 					<AddToMage>1</AddToMage>
 				</Option>
 				<Option>
-					<Name>Дикий Орк</Name>
+					<Name>Savage Orc</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
 					<Frenzy>true</Frenzy>
 					<Points>5</Points>
 				</Option>
 				<Option>
-					<Name>Кабан</Name>
+					<Name>Boar</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Виверна</Name>
+					<Name>Wyvern</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Кабанья колесница</Name>
+					<Name>Orc Boar Chariot</Name>
 					<Type>Option</Type>
 					<Points>80</Points>
 					<Mount>true</Mount>
@@ -765,8 +767,8 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Гоблин-Воевода</Name>
-			<Group>Гоблин</Group>
+			<Name>Goblin Warboss</Name>
+			<Group>Goblin</Group>
 			<Points>65</Points>
 			<Description></Description>
 			<MinSize>1</MinSize>
@@ -787,66 +789,66 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Ночной Гоблин</Name>
+					<Name>Night Goblin</Name>
 					<Type>Option</Type>
 					<Points>-10</Points>
 					<AddToInitiative>1</AddToInitiative>
 					<AddToLeadership>-1</AddToLeadership>
 				</Option>
 				<Option>
-					<Name>двуручное оружие</Name>
+					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>парное оружие</Name>
+					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>6</Points>
 				</Option>
 				<Option>
-					<Name>копьё</Name>
+					<Name>Spear</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>3</Points>
 				</Option>
 				<Option>
-					<Name>лёгкий доспех</Name>
+					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
-					<Name>Волк</Name>
+					<Name>Wolf</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Титанический паук</Name>
+					<Name>Gigantic spider</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Пещеный сквиг</Name>
+					<Name>Great squig</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Mount>true</Mount>
@@ -855,7 +857,7 @@
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>Волчья колесница</Name>
+					<Name>Goblin Wolf Chariot</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
 					<Mount>true</Mount>
@@ -864,8 +866,8 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Гоблин-Великий шаман</Name>
-			<Group>Гоблин</Group>
+			<Name>Goblin Great Shaman</Name>
+			<Group>Goblin</Group>
 			<Mage>3</Mage>
 			<Points>155</Points>
 			<MinSize>1</MinSize>
@@ -886,36 +888,36 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Ночной Гоблин</Name>
+					<Name>Night Goblin</Name>
 					<Type>Option</Type>
 					<Points>-5</Points>
 					<AddToInitiative>1</AddToInitiative>
 					<AddToLeadership>-1</AddToLeadership>
 				</Option>
 				<Option>
-					<Name>маг 4 уровня</Name>
+					<Name>Wizard Level 4</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
 					<AddToMage>1</AddToMage>
 				</Option>
 				<Option>
-					<Name>Волк</Name>
+					<Name>Wolf</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Волчья колесница</Name>
+					<Name>Goblin Wolf Chariot</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
 					<Mount>true</Mount>
@@ -924,7 +926,7 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Орк-Большой Босс</Name>
+			<Name>Orc Big Boss</Name>
 			<Group>Орк</Group>
 			<Points>70</Points>
 			<MinSize>1</MinSize>
@@ -945,98 +947,98 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Дикий Орк</Name>
+					<Name>Savage Orc</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Frenzy>true</Frenzy>
-					<SpecialRuleDescription>боевая раскраска</SpecialRuleDescription>
+					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>Чёрный Орк</Name>
+					<Name>Black Orc</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 				</Option>
 				<Option>
-					<Name>знаменосец армии</Name>
+					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
 					<OnlyOneInArmy>true</OnlyOneInArmy>
 					<Points>25</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>двуручное оружие</OnlyIfNot>
-						<OnlyIfNot>парная чоппа</OnlyIfNot>
-						<OnlyIfNot>копьё</OnlyIfNot>
-						<OnlyIfNot>щит</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Shield</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>двуручное оружие</Name>
+					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>4</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>Чёрный Орк</OnlyIfNot>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+						<OnlyIfNot>Black Orc</OnlyIfNot>
+						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>парная чоппа</Name>
+					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>копьё</Name>
+					<Name>Spear</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>2</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>лёгкий доспех</Name>
+					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
-					<Name>тяжёлый доспех</Name>
+					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
 					<OnlyIfAnotherService>
-						<OnlyIf>Чёрный Орк</OnlyIf>
+						<OnlyIf>Black Orc</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>5</AddToArmour>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>Кабан</Name>
+					<Name>Boar</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Кабанья колесница</Name>
+					<Name>Orc Boar Chariot</Name>
 					<Type>Option</Type>
 					<Points>80</Points>
 					<Mount>true</Mount>
@@ -1045,8 +1047,8 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Орк-Шаман</Name>
-			<Group>Орк</Group>
+			<Name>Ocr Shaman</Name>
+			<Group>Orc</Group>
 			<Mage>1</Mage>
 			<Points>60</Points>
 			<MinSize>1</MinSize>
@@ -1067,27 +1069,27 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппа</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Дикий Орк</Name>
+					<Name>Savage Orc</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Frenzy>true</Frenzy>
-					<SpecialRuleDescription>боевая раскраска</SpecialRuleDescription>
+					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
 				</Option>
 				<Option>
-					<Name>маг 2 уровня</Name>
+					<Name>Wizard Level 2</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
 					<AddToMage>1</AddToMage>
 				</Option>
 				<Option>
-					<Name>Кабан</Name>
+					<Name>Boar</Name>
 					<Type>Option</Type>
 					<Points>16</Points>
 					<Mount>true</Mount>
@@ -1096,8 +1098,8 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Гоблин-Большой Босс</Name>
-			<Group>Гоблин</Group>
+			<Name>Goblin Big Boss</Name>
+			<Group>Goblin</Group>
 			<Points>35</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1117,100 +1119,100 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Ночной Гоблин</Name>
+					<Name>Night Goblin</Name>
 					<Type>Option</Type>
 					<Points>-5</Points>
 					<AddToInitiative>1</AddToInitiative>
 					<AddToLeadership>-1</AddToLeadership>
 				</Option>
 				<Option>
-					<Name>знаменосец армии</Name>
+					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
 					<OnlyOneInArmy>true</OnlyOneInArmy>
 					<Points>25</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>двуручное оружие</OnlyIfNot>
-						<OnlyIfNot>парное оружие</OnlyIfNot>
-						<OnlyIfNot>копьё</OnlyIfNot>
-						<OnlyIfNot>щит</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Shield</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>двуручное оружие</Name>
+					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>4</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>парное оружие</Name>
+					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>копьё</Name>
+					<Name>Spear</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>2</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>лёгкий доспех</Name>
+					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
-					<Name>щит</Name>
+					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>5</AddToArmour>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>знаменосец армии</OnlyIfNot>
+						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>Волк</Name>
+					<Name>Wolf</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Титанический паук</Name>
+					<Name>Gigantic spider</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Пещеный сквиг</Name>
+					<Name>Great squig</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Mount>true</Mount>
 					<OnlyIfAnotherService>
-						<OnlyIf>Ночной Гоблин</OnlyIf>
+						<OnlyIf>Night Goblin</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>Волчья колесница</Name>
+					<Name>Goblin Wolf chariot</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
 					<Mount>true</Mount>
@@ -1219,8 +1221,8 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Гоблин-Шаман</Name>
-			<Group>Гоблин</Group>
+			<Name>Goblin Shaman</Name>
+			<Group>Goblin</Group>
 			<Mage>1</Mage>
 			<Points>55</Points>
 			<MinSize>1</MinSize>
@@ -1241,36 +1243,36 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>ручное оружие</Name>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Ночной Гоблин</Name>
+					<Name>Night Goblin</Name>
 					<Type>Option</Type>
 					<Points>-5</Points>
 					<AddToInitiative>1</AddToInitiative>
 					<AddToLeadership>-1</AddToLeadership>
 				</Option>
 				<Option>
-					<Name>маг 2 уровня</Name>
+					<Name>Wizard Level 2</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
 					<AddToMage>1</AddToMage>
 				</Option>
 				<Option>
-					<Name>Волк</Name>
+					<Name>Wolf</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
 					<Mount>true</Mount>
 				</Option>
 				<Option>
-					<Name>Волчья колесница</Name>
+					<Name>Goblin Wolf chariot</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
 					<Mount>true</Mount>
@@ -1281,7 +1283,7 @@
 	<Mounts>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Виверна</Name>
+			<Name>Wyvern</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1301,18 +1303,18 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
-					<Name>чешуйчатая кожа</Name>
+					<Name>Scaly skin</Name>
 					<AddToArmour>4</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>большая цель</SpecialRuleDescription>
-					<SpecialRuleDescription>летает</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Кабан</Name>
+			<Name>Boar</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1327,18 +1329,18 @@
 				<Leadership>3</Leadership>
 			</MainParam>
 			<SpecialRulesAndAmmunition>
-				<Armour>
-					<Name>толстокожие</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
 				<Special>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
+					<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
+					<AddToArmour>5</AddToArmour>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Волк</Name>
+			<Name>Wolf</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1355,7 +1357,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Титанический паук</Name>
+			<Name>Giantic Spider</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1372,7 +1374,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Пещеный сквиг</Name>
+			<Name>Great squig</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1388,15 +1390,15 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>ненависть к гномам</SpecialRuleDescription>
-					<SpecialRuleDescription>нельзя присоединяться к отрядам</SpecialRuleDescription>
-					<SpecialRuleDescription>Ииихааа!</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRuleDescription>May not join unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Boiiing!</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Гнарла</Name>
+			<Name>Gnarla</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1413,7 +1415,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Гоббла</Name>
+			<Name>Gobbla</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1430,7 +1432,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Волчья колесница</Name>
+			<Name>Goblin Wolf Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<ModelsInPack>5</ModelsInPack>
@@ -1447,18 +1449,18 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<RangedWeapon>
-					<Name>короткий лук</Name>
+					<Name>Short bows</Name>
 				</RangedWeapon>
 				<Special>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
-					<SpecialRuleDescription>боязнь эльфов</SpecialRuleDescription>
+					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Кабанья колесница</Name>
+			<Name>Orc Boar Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<ModelsInPack>4</ModelsInPack>
@@ -1475,15 +1477,15 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>чоппы</Name>
+					<Name>Choppa</Name>
 				</HandWeapon>
 				<HandWeapon>
-					<Name>копья</Name>
+					<Name>Spears</Name>
 				</HandWeapon>
 				<Special>
 					<AddToArmour>4</AddToArmour>
-					<SpecialRuleDescription>атака клыками</SpecialRuleDescription>
-					<SpecialRuleDescription>косы на колёсах</SpecialRuleDescription>
+					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
+					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2228,11 +2230,7 @@
 				</HandWeapon>
 				<Special>
 					<AddToArmour>4</AddToArmour>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -2271,14 +2269,8 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Boiiing!</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -2309,14 +2301,8 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Squig</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Squig Herds</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Boiiing!</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -2351,11 +2337,7 @@
 				</RangedWeapon>
 				<Special>
 					<AddToArmour>5</AddToArmour>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -2398,8 +2380,6 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Rock Lobber</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -2436,8 +2416,6 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Spear Chukka</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -2522,8 +2500,6 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Doom Diver Catapult</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -2555,12 +2531,8 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
-				</Special>
-				<Special>
+					<SpecialRuleDescription>Pedal Faster</SpecialRuleDescription>
 					<SpecialRuleDescription>Crunch!</SpecialRuleDescription>
-				</Special>
-				<Special>
-					<SpecialRuleDescription>Хрясь!</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
@@ -2591,14 +2563,8 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Longshanks</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Fall Over</SpecialRuleDescription>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Giant Special Attacks</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
