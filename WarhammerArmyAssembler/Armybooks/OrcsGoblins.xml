@@ -9,7 +9,7 @@
 		<ArmyBookImage>OrcsGoblins.png</ArmyBookImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Common magic itemsы">
+		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -100,302 +100,303 @@
 				<Description>The wielder of this weapon receives a bonus equal to his unit's rank bonus to both his Attacks and Strength - calculate this when the wielder makes his attacks</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Кровавый топор Башши</Name>
+				<Name>Basha's Bloodaxe</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Орк</OnlyForGroup>
+				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>50</Points>
 				<AddToStrength>1</AddToStrength>
 				<Frenzy>true</Frenzy>
-				<Description>Это оружие даёт +1 к Силе, кроме того носитель подчиняется правилу Бешенства на +D6 атак, которое не теряется после поражения в раунде. Носитель не может присоединяться к отрядам</Description>
+				<Description>Grants +1 Strength in the first round of combat. The wielder of this weapon is subject to Frenzy (D6 extra attacks). The wielder can never lose his Frenzy</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Матерящийся меч</Name>
+				<Name>Shaga's Screamin' sword</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>+1 к силе и +1 к атакам за каждого персонажа рядом</SpecialRuleDescription>
-				<Description>Носитель этого оружия имеет +1 к Силе и +1 к Атакам за каждого персонажа в 12 дюймах от него</Description>
+				<SpecialRuleDescription>+1 Strength and +1 Attack for each enemy character within 12"</SpecialRuleDescription>
+				<Description>The wielder receives +1 Strength and +1 Attack for each enemy character within 12"</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Череп Калота</Name>
+				<Name>Skull wand of Kaloth</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>смерть без каких-либо спас-бросков по тесту на Лидерство за каждое попадание</SpecialRuleDescription>
-				<Description>За каждое попадание  этим оружием противник должен пройти тест на Лидерство, если он провален, то противник умирает без каких либо спас-бросков, даже магических. Если тест пройден, то проводятся тесты на ранение как обычно. Только для Шаманов</Description>
+				<SpecialRuleDescription>Die by Leadership after each hit</SpecialRuleDescription>
+				<Description>For each successful hit inflicted by this weapon, the victim must pass a Leadership test or be slain instantly. No armour, ward or regeneration saves are allowed against this special attack. If the tests are passed, roll to Wound and save as normal. Only for shamans</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Свинобой Порки</Name>
+				<Name>Porko's Pigstikka</Name>
 				<Type>Weapon</Type>
+				<OnlyFor>Mount</OnlyFor>
 				<Points>40</Points>
-				<SpecialRuleDescription>бонус к атакам равный бонусу за ряды атакуемого отряда</SpecialRuleDescription>
-				<Description>Копьё. Во время атаки владелец получает бонус к атакам, равный бонусу за ряды атакуемого подразделения (до максимума в +3)</Description>
+				<SpecialRuleDescription>Additional attack for each pointt of rank bonus</SpecialRuleDescription>
+				<Description>Spear. On the turn the wielder charges, he receives an additional attack for each point of rank bonus that the unit hi is attacking has (up to a maximum of +3)</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Живой топор Улага</Name>
+				<Name>Ulag's Akrit axe</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
 				<AddToStrength>1</AddToStrength>
-				<SpecialRuleDescription>бонус +1 к силе в первый раунд</SpecialRuleDescription>
-				<SpecialRuleDescription>перебрасывает броски на попадание</SpecialRuleDescription>
-				<Description>Владелец этого оружия получает бонус в +1 к Силе в первый раунд и может перебрасывать проваленные броски на попадание в ближнем бою</Description>
+				<SpecialRuleDescription>+1 Strength in the first round</SpecialRuleDescription>
+				<SpecialRuleDescription>Re-roll any missed to Hit</SpecialRuleDescription>
+				<Description>The wielder may re-roll any missed to hit rolls. It also grants +1 Strength in the first round of combat</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Клинок удара в спину</Name>
+				<Name>Backstabber's blade</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>25</Points>
 				<PoisonAttack>true</PoisonAttack>
-				<SpecialRuleDescription>+1 к Силе за атаку во фланг</SpecialRuleDescription>
-				<SpecialRuleDescription>+2 к Силе за атаку в тыл</SpecialRuleDescription>
-				<Description>Атаки этого оружия считаются ядовитыми. Носитель получает бонус +1 к Силе, если атакует подразделение противника во фланг и +2 к Силе, если атакует в тыл</Description>
+				<SpecialRuleDescription>+1 Strength flank attack bonus</SpecialRuleDescription>
+				<SpecialRuleDescription>+2 Strength rear attack bonus</SpecialRuleDescription>
+				<Description>Grants poisoned attacks. Grants the wielder +1 Strength if he is attacking the enemy in the flank and +2 Strength if he is attacking them in the rear</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Одноразовая бня Валлопы</Name>
+				<Name>Wollopa's One Hit Wunda</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>15</Points>
-				<SpecialRuleDescription>Сила равна 10 один раз за игру</SpecialRuleDescription>
-				<Description>Один раз за игру оружие даст носителя Силу равную 10</Description>
+				<SpecialRuleDescription>Strength 10 for one combat phase</SpecialRuleDescription>
+				<Description>Once per game, this weapon grants the wielder Strength 10 for duration of the combat phase. One use only</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Лучший топор Моргота</Name>
+				<Name>Mortog's best Basha</Name>
 				<Type>Weapon</Type>
 				<Points>15</Points>
 				<AddToWeaponSkill>1</AddToWeaponSkill>
 				<AddToStrength>1</AddToStrength>
 				<AddToInitiative>1</AddToInitiative>
-				<Description>Носитель имеет +1 к Владению оружием, Силе и Инициативе</Description>
+				<Description>The wielder of this blafe gains +1 Wepon Skill, +1 Strength and +1 Initiative</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Хитрый штопор</Name>
+				<Name>Sneaky Skewerer</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>10</Points>
-				<SpecialRuleDescription>-3 к спас-броску за доспехи</SpecialRuleDescription>
-				<Description>Раны, нанесённые этим оружие имеют модификатор к спас-браоску за доспехи в -3</Description>
+				<SpecialRuleDescription>-3 armour save modifier</SpecialRuleDescription>
+				<Description>Wounds caused by this weapon suffer an additional -3 armour save modifier</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Кинжал удачи</Name>
+				<Name>Lucky's Dirk</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>5</Points>
-				<SpecialRuleDescription>+1 к Силе за каждый артефакт противника</SpecialRuleDescription>
-				<Description>+1 к Силе за каждый артефакт противника, которого атакует носитель</Description>
+				<SpecialRuleDescription>+1 Strength for each enemy magic item</SpecialRuleDescription>
+				<Description>If the bearer strikes an enemy character carrying one or more magic item, his hits at +1 Strength for each magic item</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Магические доспехи">
+		<ArtefactsGroup Name = "Magic armour">
 			<Artefact>
-				<Name>Доспехи Горка</Name>
+				<Name>Armour of Gork</Name>
 				<Type>Armour</Type>
 				<Points>50</Points>
 				<AddToArmour>6</AddToArmour>
 				<AddToToughness>1</AddToToughness>
-				<Description>Лёгкие доспехи, дают бонус +1 к Стойкости</Description>
+				<Description>Light armour. The wearer has +1 Toughness</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Злобный щит</Name>
+				<Name>Spliteful shield</Name>
 				<Type>Armour</Type>
 				<Points>25</Points>
 				<AddToArmour>5</AddToArmour>
-				<SpecialRuleDescription>попадание с Силой 5 противнику за промах</SpecialRuleDescription>
-				<Description>Если в ближнем бою противник кинет 1 на попадание, то получит одно попадание с Силой 5 за каждый такой промах</Description>
+				<SpecialRuleDescription>Strength 5 hit for each 1 on a enemy roll to Hit</SpecialRuleDescription>
+				<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Талисманы">
+		<ArtefactsGroup Name = "Talismans">
 			<Artefact>
-				<Name>Идол Морка</Name>
+				<Name>Effigy of Mork</Name>
 				<Type>Armour</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>-1 на попадание</SpecialRuleDescription>
-				<Description>Все попадания по носителю этого предмета в ближнем бою имеют пенальти в -1 к попаданию</Description>
+				<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
+				<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Сплющенные шлем</Name>
+				<Name>Warboss Umm's Best Boss 'at</Name>
 				<Type>Armour</Type>
 				<Points>30</Points>
 				<AddToWard>5</AddToWard>
-				<Description>Носитель имеет магический спас-бросок на 5+</Description>
+				<Description>Grants the rearer a 5+ ward save</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Амулет защиты</Name>
+				<Name>Amulet of Protectyness</Name>
 				<Type>Armour</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>броня и особа защита противника</SpecialRuleDescription>
-				<Description>После того, как носитель получет рану, он имеет тот же спас-бросок за достехи и за особую защиту, что и модель, которая нанесла ему рану</Description>
+				<SpecialRuleDescription>Armour save and ward save as the enemy</SpecialRuleDescription>
+				<Description>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Ошейник Зорги</Name>
+				<Name>The Collar of Zorga</Name>
 				<Type>Armour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>бросок на атаки скакунов</SpecialRuleDescription>
-				<Description>Для того, чтобы атаковать носителя, скакуны всех типов, ездовые животные и звери, везущие колесницу должны выкинуть 6</Description>
+				<SpecialRuleDescription>Steeds and monsters require 6s to hit the bearer</SpecialRuleDescription>
+				<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6s to hit the bearer</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Магическая аркана">
+		<ArtefactsGroup Name = "Arcane items">
 			<Artefact>
-				<Name>Идол Горка</Name>
+				<Name>Idol of Mork</Name>
 				<Type>Arcane</Type>
-				<OnlyForGroup>Орк</OnlyForGroup>
+				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>+1 кубик на каст за подразделение в 24 дюймах</SpecialRuleDescription>
-				<SpecialRuleDescription>-1 кубик на диспелл за бегущее подразделение</SpecialRuleDescription>
-				<Description>+1 кубик на каст за каждое подразделение в 20+ моделей в 24 дюймах|-1 кубик на диспелл за бегущее подразделение в 20+ моделей в 24 дюймах </Description>
+				<SpecialRuleDescription>+1 Power dice for each Orc unit within 24"</SpecialRuleDescription>
+				<SpecialRuleDescription>-1 Power dice for each fleeing frendly unit within 24"</SpecialRuleDescription>
+				<Description>+1 Power dice for each Orc unit within 24"|-1 Power dice for each fleeing frendly unit within 24" </Description>
 			</Artefact>
 			<Artefact>
-				<Name>Посох хитрого воровства</Name>
+				<Name>Staff of Sneaky Stealin'</Name>
 				<Type>Arcane</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>крадёт 1 кубик на каст у противника</SpecialRuleDescription>
-				<Description>в начале каждой фазы магии носитель может взять один кубик из пула противника и добавить в свой</Description>
+				<SpecialRuleDescription>steals 1 Power dice from the enemy to dispel</SpecialRuleDescription>
+				<Description>At the start of each of your opponent's magic phases, you may take one dice from you opponent's power poll and add it to your dispel poll</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Посох Бадбуума</Name>
+				<Name>Staff of Baduumm</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>+1 к броску на сотворение</SpecialRuleDescription>
-				<Description>+1 к броску на сотворение</Description>
+				<SpecialRuleDescription>+1 to any casting attempts</SpecialRuleDescription>
+				<Description>Adds +1 to any casting attempts made by the bearer</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Краска "Вааагх!"</Name>
+				<Name>WAAAGH! paints</Name>
 				<Type>Arcane</Type>
-				<OnlyForGroup>Орк</OnlyForGroup>
+				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>10</Points>
-				<SpecialRuleDescription>+2 к броску на сотворение во время боя</SpecialRuleDescription>
-				<Description>+2 к броску на сотворение во время того как носитель находится в ближнем бою</Description>
+				<SpecialRuleDescription>+2 to any casting attemts in close combat</SpecialRuleDescription>
+				<Description>If the Shaman is in combat at the start of the Orcs and Goblins magic phase, he receives +2 to any casting attempts</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Магические мухоморы</Name>
+				<Name>Magic mushrooms</Name>
 				<Type>Arcane</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>10</Points>
-				<SpecialRuleDescription>+D6 к броску на сотворение, одноразово</SpecialRuleDescription>
-				<Description>+D6 к броску на сотворение, одноразовый, если выпадает 1 то случается магическая ошибка</Description>
+				<SpecialRuleDescription>+D6 to casting roll, one use only</SpecialRuleDescription>
+				<Description>+D6 to casting roll, one use only. If Mushroom dice is an 1 then the spell is miscast</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Заколдованные предметы">
+		<ArtefactsGroup Name = "Enchanted itams">
 			<Artefact>
-				<Name>Рог Ургока</Name>
+				<Name>The Horn of Urgok</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>+1 к Лидерству своих отрядов</SpecialRuleDescription>
-				<SpecialRuleDescription>-1 к Лидерству отрядов противника</SpecialRuleDescription>
-				<Description>связанное залинание, Силы 3: по броску D6 все дружественные подразделения получают +1 к своему Лидерству, все отряды противника получают -1, если выпадает 1, то носитель получает попадание Силы 5 от которого не спасают доспехи</Description>
+				<SpecialRuleDescription>+1 Leadership for all friendly units</SpecialRuleDescription>
+				<SpecialRuleDescription>-1 Leadership for all enemy units</SpecialRuleDescription>
+				<Description>Bound item, Power Level 5. +1 Leadership for all friendly units, -1 Leadership for all enemy units. Roll a D6 after each use. On the roll of a 1, the bearer suffer a Strength 5 hit with no armour save allowed</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Волынка рока</Name>
+				<Name>The Pipes of Doom</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>35</Points>
-				<SpecialRuleDescription>один раз все всадники проходят тест на панику</SpecialRuleDescription>
-				<Description>один раз за игру все подразделения кавалерии противника, монстры и колесницы должны пройти тест на панику</Description>
+				<SpecialRuleDescription>Panic test for enemy cavalry, one use only</SpecialRuleDescription>
+				<Description>The pipes can be played at the start of the shooting phase. Each enemy cavalry unit, monster (ridden or unridden) and chariot within 24" must take a Panic test</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Кабан Железный загривок</Name>
+				<Name>Ironback Boar</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Орк</OnlyForGroup>
+				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>35</Points>
-				<SpecialRuleDescription>+D3 попаданий Силы 5 при нападении</SpecialRuleDescription>
-				<Description>при нападении кабан наносит D3 таранных попаданий с Силой 5 в дополнение к обычным атакам носителя</Description>
+				<SpecialRuleDescription>+D3 Strength 5 impact hits</SpecialRuleDescription>
+				<Description>Boar. When charging, this steed does D3 Strength 5 impact hits in addition to its norman attack</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Железная челюсть воеводы Имбада</Name>
+				<Name>Warboss Imbad's iron gnashas</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
 				<KillingBlow>true</KillingBlow>
-				<Description>носитель может использовать правило смертельного удара</Description>
+				<Description>The character wearing the Gnashas gains the Killing Blow special ability in close combat. Chomp!</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Ботинки хвастливого орка</Name>
+				<Name>Bigged's Kickin' boots</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
 				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 одна Атака</Description>
+				<Description>Grants the wearer +1 Atack on his profile</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Карта Маада</Name>
+				<Name>Maad's map</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>по D6 выставляется как разведчик</SpecialRuleDescription>
-				<Description>перед расстановкой киньте D6: на 2-5 носитель выставляется как разведчик, на 1 - так же как и другие подразделения</Description>
+				<SpecialRuleDescription>Scout deploy by D6 roll</SpecialRuleDescription>
+				<Description>Before deploymnet begins roll a D6. On 2-6 the bearer of the map may be deployed as a scout. On a roll of a 1, he got lost and must be deployed as normal</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Серные шарики</Name>
+				<Name>Brimstone bauble</Name>
 				<Type>Armour</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>25</Points>
-				<SpecialRuleDescription>D6 попаданий Силы 6 при гибели</SpecialRuleDescription>
-				<Description>если носитель погибает, то каждое подразделение к контакте с ним получает D6 попаданий Силы 6</Description>
+				<SpecialRuleDescription>D6 Strength 6 hits when bearer is slain</SpecialRuleDescription>
+				<Description>When bearer is slain, all units (friend or foe) in base contact suffer D6 Strength 6 hits, distributed as for shooting</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Симпотное колечко Нибблы</Name>
+				<Name>Nibbla's Titty ring</Name>
 				<Type>Armour</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>связанное заклинание "Удар в голову" Силы 3</SpecialRuleDescription>
-				<Description>связанное заклинание "Удар в голову" Силы 3, при каждом использовании надо кидать D6 и если выпадает 1, то носитель получает удар Силой 5 от которого не спасают доспехи</Description>
+				<SpecialRuleDescription>Bound spell 'Eadbutt Power Level 3</SpecialRuleDescription>
+				<Description>Bound spell 'Eadbutt Power Level 3. Roll a D6 after each use. On the roll of a 1, the bearer suffers a Strength 5 hit with no armour saves allowed</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Гриб Безумная шляпка</Name>
+				<Name>Mad Cap mushrooms</Name>
 				<Type>Weapon</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>20</Points>
-				<SpecialRuleDescription>переброс попаданий у фанатиков в перый ход</SpecialRuleDescription>
-				<Description>фанатики из подразделения с носителем могут перебросить попадания в перый ход после того как они выпрыгнули из подразделения</Description>
+				<SpecialRuleDescription>Fanatics may re-roll the number of Hits caused</SpecialRuleDescription>
+				<Description>Fanatics may re-roll the number of Hits caused</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Боевое варево Гриззли</Name>
+				<Name>Guzzla's Battle Brew</Name>
 				<Type>Armour</Type>
 				<Points>15</Points>
 				<Hate>true</Hate>
 				<Frenzy>true</Frenzy>
-				<Description>перед началом битвы киньте кубик: на 1-2 носитель получает Тупость, на 3-4 - Ненависть ко всем, на 5-6 - Ненависть ко всем и Бешенство</Description>
+				<Description>The character with the brew is assumed to have 'bolstered' himself before battle - roll a dice and consult the following table to determine the effects upon the drinker:|1-2 - Subject to Stupidity for remainder of the game|3-4 - Hatred of all enemies for the remainder of the game|5-6 - Hatred of all enemies and Frenzy for the remainder of the game</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Магические знамёна">
+		<ArtefactsGroup Name = "Magic standards">
 			<Artefact>
-				<Name>Знамя морочьего духа</Name>
+				<Name>Mork's Spirit-Totem</Name>
 				<Type>Banner</Type>
-				<OnlyForGroup>Орк</OnlyForGroup>
+				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>+столько кубов на диспелл, сколько бонус за ряды</SpecialRuleDescription>
-				<Description>+столько кубов на диспелл, сколько бонус за ряды</Description>
+				<SpecialRuleDescription>Adds a number of dispel dice equal rank bonus</SpecialRuleDescription>
+				<Description>This magical banner adds a number of dispel dice to the pool equal to the unit's rank bonus</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Огромное красное потёртое знамя</Name>
+				<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
 				<Type>Banner</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>гоблины перебрасывают тесты на панику</SpecialRuleDescription>
-				<Description>все гоблины в 12 дюймах от носителя перебрасывают тест на панику</Description>
+				<SpecialRuleDescription>All Goblins within 12" may re-roll Panic test</SpecialRuleDescription>
+				<Description>All Goblins within 12" of the banner may re-roll failed Panic test</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Луна на палочке</Name>
+				<Name>Bad Moon on a stick</Name>
 				<Type>Banner</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
 				<Stubborn>true</Stubborn>
-				<Description>все Ночные Гоблины в подразделении начинают использовать правило Упорство</Description>
+				<Description>All Night Goblin in this unit are Stubborn</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Знамя паука</Name>
+				<Name>The Spider banner</Name>
 				<Type>Banner</Type>
-				<OnlyForGroup>Гоблин</OnlyForGroup>
+				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
 				<PoisonAttack>true</PoisonAttack>
-				<Description>все Гоблины в подразделении начинают использовать яд, как в ближнем бою, так и при стрельбе</Description>
+				<Description>All Goblin in the unit have poisoned attacks (shooting and combat)</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Знамя горочьего "Вааагха!"</Name>
+				<Name>Gork's WAAAGH! banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>D6 к дистанции нападения, одноразово</SpecialRuleDescription>
-				<Description>один раз подразделение может прибавить D6 к дистанции нападения</Description>
+				<SpecialRuleDescription>D6" to charge move, only one use</SpecialRuleDescription>
+				<Description>The unit adds D6" to its charge move. Declare charges first and then roll</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Знамя бойни</Name>
+				<Name>Nogg's banner of Buthery</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>+1 к Атакам, одноразово</SpecialRuleDescription>
-				<Description>один раз подразделение может получить бонус в +1 к Атакам</Description>
+				<SpecialRuleDescription>+1 Attack, only one use</SpecialRuleDescription>
+				<Description>All model in the unit have +1 Attack in the turn the banner is used. In the case of mounted models, only the rider gets the bonus, not the mount</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
@@ -404,7 +405,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Gorbad Ironclaw</Name>
-			<Group>Орк</Group>
+			<Group>Orc</Group>
 			<Points>310</Points>
 			<Description>Gorbad Ironclaw</Description>
 			<MinSize>1</MinSize>
@@ -442,8 +443,8 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Azhag The Slaughterer</Name>
-			<Group>Орк</Group>
-			<Mage>2</Mage>
+			<Group>Orc</Group>
+			<Wizard>2</Wizard>
 			<Points>450</Points>
 			<Description>Azhag The Slaughterer</Description>
 			<MinSize>1</MinSize>
@@ -483,7 +484,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Grimgor Ironhide</Name>
-			<Group>Орк</Group>
+			<Group>Orc</Group>
 			<Points>375</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero>true</PersonifiedHero>
@@ -522,7 +523,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Grom The Paunch</Name>
-			<Group>Гоблин</Group>
+			<Group>Goblin</Group>
 			<Points>255</Points>
 			<MinSize>1</MinSize>
 			<Description>Grom The Paunch of Misty Mountain</Description>
@@ -707,7 +708,7 @@
 			<Type>Lord</Type>
 			<Name>Orc Great Shaman</Name>
 			<Group>Orc</Group>
-			<Mage>3</Mage>
+			<Wizard>3</Wizard>
 			<Points>180</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -723,7 +724,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
-				<MagicItemsType>Mage</MagicItemsType>
+				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -736,7 +737,7 @@
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
-					<AddToMage>1</AddToMage>
+					<AddToWizard>1</AddToWizard>
 				</Option>
 				<Option>
 					<Name>Savage Orc</Name>
@@ -853,7 +854,7 @@
 					<Points>50</Points>
 					<Mount>true</Mount>
 					<OnlyIfAnotherService>
-						<OnlyIf>Ночной Гоблин</OnlyIf>
+						<OnlyIf>Night Goblin</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
@@ -868,7 +869,7 @@
 			<Type>Lord</Type>
 			<Name>Goblin Great Shaman</Name>
 			<Group>Goblin</Group>
-			<Mage>3</Mage>
+			<Wizard>3</Wizard>
 			<Points>155</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -884,7 +885,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
-				<MagicItemsType>Mage</MagicItemsType>
+				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -908,7 +909,7 @@
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
-					<AddToMage>1</AddToMage>
+					<AddToWizard>1</AddToWizard>
 				</Option>
 				<Option>
 					<Name>Wolf</Name>
@@ -927,7 +928,7 @@
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Orc Big Boss</Name>
-			<Group>Орк</Group>
+			<Group>Orc</Group>
 			<Points>70</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1049,7 +1050,7 @@
 			<Type>Hero</Type>
 			<Name>Ocr Shaman</Name>
 			<Group>Orc</Group>
-			<Mage>1</Mage>
+			<Wizard>1</Wizard>
 			<Points>60</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1065,7 +1066,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
-				<MagicItemsType>Mage</MagicItemsType>
+				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1086,7 +1087,7 @@
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
-					<AddToMage>1</AddToMage>
+					<AddToWizard>1</AddToWizard>
 				</Option>
 				<Option>
 					<Name>Boar</Name>
@@ -1223,7 +1224,7 @@
 			<Type>Hero</Type>
 			<Name>Goblin Shaman</Name>
 			<Group>Goblin</Group>
-			<Mage>1</Mage>
+			<Wizard>1</Wizard>
 			<Points>55</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1239,7 +1240,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
-				<MagicItemsType>Mage</MagicItemsType>
+				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1263,7 +1264,7 @@
 					<Type>Option</Type>
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
-					<AddToMage>1</AddToMage>
+					<AddToWizard>1</AddToWizard>
 				</Option>
 				<Option>
 					<Name>Wolf</Name>
