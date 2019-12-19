@@ -91,6 +91,7 @@ namespace WarhammerArmyAssembler
         public bool GroopBold { get; set; }
 
         public bool PersonifiedHero { get; set; }
+        public bool WeaponTeam { get; set; }
 
         public List<Option> Options = new List<Option>();
 
@@ -103,9 +104,9 @@ namespace WarhammerArmyAssembler
             this.Items = new ObservableCollection<Unit>();
         }
 
-        public int GetUnitPoints()
+        public double GetUnitPoints()
         {
-            int points = Size * Points;
+            double points = Size * Points;
 
             foreach (Option option in Options)
                 if (!option.IsOption() || (option.IsOption() && option.Realised && !option.IsSlannOption()))
@@ -189,6 +190,7 @@ namespace WarhammerArmyAssembler
 
             newUnit.SizableType = this.SizableType;
             newUnit.PersonifiedHero = this.PersonifiedHero;
+            newUnit.WeaponTeam = this.WeaponTeam;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)
@@ -288,7 +290,7 @@ namespace WarhammerArmyAssembler
                             option.Realised = false;
                         else
                         {
-                            int optionPoints = (option.PerModel ? option.Points * Army.Units[unitID].Size : option.Points);
+                            double optionPoints = (option.PerModel ? option.Points * Army.Units[unitID].Size : option.Points);
 
                             if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
                             {

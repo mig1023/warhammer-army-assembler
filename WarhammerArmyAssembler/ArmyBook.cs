@@ -124,6 +124,7 @@ namespace WarhammerArmyAssembler
             newUnit.SlotsOfRare = IntParse(xmlUnit["SlotsOfRare"]);
 
             newUnit.PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]);
+            newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
 
             XmlNode additionalParam = xmlUnit["AdditionalParam"];
 
@@ -182,6 +183,18 @@ namespace WarhammerArmyAssembler
             bool success = int.TryParse(xmlNode.InnerText, out value);
 
             return (success ? value : (int?)null);
+        }
+
+        private static double DoubleParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return 0;
+
+            double value = 0;
+
+            bool success = Double.TryParse(xmlNode.InnerText, out value);
+
+            return (success ? value : 0);
         }
 
         private static string StringParse(XmlNode xmlNode)
@@ -294,7 +307,7 @@ namespace WarhammerArmyAssembler
             newWeapon.Unbreakable = BoolParse(xmlNode["Unbreakable"]);
             newWeapon.ColdBlooded = BoolParse(xmlNode["ColdBlooded"]);
 
-            newWeapon.Points = IntParse(xmlNode["Points"]);
+            newWeapon.Points = DoubleParse(xmlNode["Points"]);
             newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);
 
             newWeapon.AddToMovement = IntParse(xmlNode["AddToMovement"]);

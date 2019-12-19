@@ -106,7 +106,7 @@ namespace WarhammerArmyAssembler
             return (ArmyBook.Units[id].Size * ArmyBook.Units[id].Points) <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
 
-        public static bool EnoughUnitPointsForAddOption(int points)
+        public static bool EnoughUnitPointsForAddOption(double points)
         {
             return points <= (Army.GetArmyMaxPoints() - Army.GetArmyPoints());
         }
@@ -118,7 +118,7 @@ namespace WarhammerArmyAssembler
 
         public static bool EnoughUnitPointsForAddArtefact(int artefactID, int unitID)
         {
-            int pointsAlreayUsed = 0;
+            double pointsAlreayUsed = 0;
 
             foreach (Option option in Army.Units[unitID].Options)
                 if (option.IsMagicItem())
@@ -301,7 +301,7 @@ namespace WarhammerArmyAssembler
         }
 
         private static double AddLabel(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
-            bool selected = false, int points = 0, bool perModel = false, bool bold = false)
+            bool selected = false, double points = 0, bool perModel = false, bool bold = false)
         {
             Label newOption = new Label();
             newOption.Content = caption;
@@ -394,7 +394,7 @@ namespace WarhammerArmyAssembler
             return new Thickness(newLeft, newTop, newRight, newBottom);
         }
 
-        public static void ArmyGridDrop(int id, DataGridRow container = null, int points = 0, int unit = 0)
+        public static void ArmyGridDrop(int id, DataGridRow container = null, double points = 0, int unit = 0)
         {
             if (ArmyBook.Artefact.ContainsKey(id))
                 ArmyGridDropArtefact(id, container);
@@ -461,7 +461,7 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static void ArmyGridDropMount(int id, int points, int unit)
+        public static void ArmyGridDropMount(int id, double points, int unit)
         {
             if (!EnoughUnitPointsForAddOption(points))
                 Error("Not enough points to add a mount");
@@ -528,7 +528,13 @@ namespace WarhammerArmyAssembler
                 if (
                     (entry.Value.MountOn > 0)
                     &&
-                    ((Army.Units[entry.Value.MountOn].Wounds > 1) || (Army.Units[entry.Value.MountOn].Wounds == 0))
+                        (
+                            (Army.Units[entry.Value.MountOn].Wounds > 1)
+                            ||
+                            (Army.Units[entry.Value.MountOn].Wounds == 0)
+                            ||
+                            (Army.Units[entry.Value.MountOn].WeaponTeam)
+                        )
                     )
                     categories[(int)entry.Value.Type].Items.Add(
                         ReloadArmyUnit(entry.Value.MountOn, Army.Units[entry.Value.MountOn])

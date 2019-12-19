@@ -86,9 +86,9 @@ namespace WarhammerArmyAssembler
             Units.Remove(id);
         }
 
-        public static int GetArmyPoints()
+        public static double GetArmyPoints()
         {
-            int points = 0;
+            double points = 0;
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
                 points += entry.Value.GetUnitPoints();
@@ -230,9 +230,9 @@ namespace WarhammerArmyAssembler
             return String.Empty;
         }
 
-        public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, int points)
+        public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points)
         {
-            Dictionary<Unit.UnitType, int> units = new Dictionary<Unit.UnitType, int>();
+            Dictionary<Unit.UnitType, double> units = new Dictionary<Unit.UnitType, double>();
 
             foreach (Unit.UnitType u in Enum.GetValues(typeof(Unit.UnitType)))
                 units.Add(u, 0);

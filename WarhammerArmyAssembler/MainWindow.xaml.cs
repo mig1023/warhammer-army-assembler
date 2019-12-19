@@ -136,7 +136,7 @@ namespace WarhammerArmyAssembler
         {
             Unit u = e.Row.Item as Unit;
 
-            int pointsDiff = u.GetUnitPoints() - Army.Units[u.ID].GetUnitPoints();
+            double pointsDiff = u.GetUnitPoints() - Army.Units[u.ID].GetUnitPoints();
 
             if (!Interface.EnoughPointsForEditUnit(u.ID, u.Size))
                 u.Size = ErrorAndReturnSizeBack("Not enough points to change", u.ID);
