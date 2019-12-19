@@ -96,7 +96,7 @@ namespace WarhammerArmyAssembler
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
             newUnit.MinSize = newUnit.Size;
             newUnit.MaxSize = IntParse(xmlUnit["MaxSize"]);
-            newUnit.Mage = IntParse(xmlUnit["Mage"]);
+            newUnit.Wizard = IntParse(xmlUnit["Wizard"]);
             newUnit.MountOn = IntParse(xmlUnit["MountOn"]);
             newUnit.MountInit = StringParse(xmlUnit["MountInit"]);
             newUnit.ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1);
@@ -310,7 +310,7 @@ namespace WarhammerArmyAssembler
             newWeapon.AddToWard = IntParse(xmlNode["AddToWard"]);
             newWeapon.AddToCast = IntParse(xmlNode["AddToCast"]);
             newWeapon.AddToDispell = IntParse(xmlNode["AddToDispell"]);
-            newWeapon.AddToMage = IntParse(xmlNode["AddToMage"]);
+            newWeapon.AddToWizard = IntParse(xmlNode["AddToWizard"]);
             newWeapon.AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]);
 
             newWeapon.FullCommand = BoolParse(xmlNode["FullCommand"]);

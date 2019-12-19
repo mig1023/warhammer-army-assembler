@@ -14,7 +14,7 @@ namespace WarhammerArmyAssembler
     {
         public enum UnitType { Lord, Hero, Core, Special, Rare, Mount }
 
-        public enum MagicItemsTypes { Hero, Mage, Unit }
+        public enum MagicItemsTypes { Hero, Wizard, Unit }
 
         public string Name { get; set; }
         public string Group { get; set; }
@@ -47,7 +47,7 @@ namespace WarhammerArmyAssembler
         public int? Armour { get; set; }
         public int? Ward { get; set; }
 
-        public int Mage { get; set; }
+        public int Wizard { get; set; }
 
         public string MovementView { get; set; }
         public string WeaponSkillView { get; set; }
@@ -123,15 +123,15 @@ namespace WarhammerArmyAssembler
             return points;
         }
 
-        public int GetUnitMage()
+        public int GetUnitWizard()
         {
-            int mage = Mage;
+            int wizard = Wizard;
 
             foreach (Option option in Options)
                 if (!option.IsOption() || (option.IsOption() && option.Realised))
-                    mage += option.AddToMage;
+                    wizard += option.AddToWizard;
 
-            return mage;
+            return wizard;
         }
 
         public Unit Clone()
@@ -163,7 +163,7 @@ namespace WarhammerArmyAssembler
             newUnit.Leadership = this.Leadership;
             newUnit.Armour = this.Armour;
             newUnit.Ward = this.Ward;
-            newUnit.Mage = this.Mage;
+            newUnit.Wizard = this.Wizard;
 
             newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
             newUnit.Stubborn = this.Stubborn;

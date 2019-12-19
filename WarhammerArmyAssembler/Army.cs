@@ -165,7 +165,7 @@ namespace WarhammerArmyAssembler
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
             {
-                cast += entry.Value.Mage;
+                cast += entry.Value.Wizard;
 
                 foreach (Option option in entry.Value.Options)
                     if (!option.IsOption() || (option.IsOption() && option.Realised))
@@ -181,9 +181,9 @@ namespace WarhammerArmyAssembler
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
             {
-                if (entry.Value.Mage > 2)
+                if (entry.Value.Wizard > 2)
                     dispell += 2;
-                else if (entry.Value.Mage > 0)
+                else if (entry.Value.Wizard > 0)
                     dispell += 1;
 
                 foreach (Option option in entry.Value.Options)

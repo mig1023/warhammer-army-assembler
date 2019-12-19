@@ -242,9 +242,9 @@ namespace WarhammerArmyAssembler
 
             double lastColumnMaxWidth = 0;
 
-            if (unit.Mage > 0)
+            if (unit.Wizard > 0)
             {
-                AddLabel(String.Format("Mage Level {0}", unit.GetUnitMage()),
+                AddLabel(String.Format("Wizard Level {0}", unit.GetUnitWizard()),
                     new double[] { main.unitName.Margin.Left + main.unitName.ActualWidth + 5, main.unitName.Margin.Top },
                     25, ref lastColumnMaxWidth);
             }

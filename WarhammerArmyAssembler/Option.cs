@@ -63,7 +63,7 @@ namespace WarhammerArmyAssembler
         public int AddToWard { get; set; }
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
-        public int AddToMage { get; set; }
+        public int AddToWizard { get; set; }
 
         public int AddToModelsInPack { get; set; }
         public bool FullCommand { get; set; }
@@ -156,7 +156,7 @@ namespace WarhammerArmyAssembler
             newOption.AddToWard = this.AddToWard;
             newOption.AddToCast = this.AddToCast;
             newOption.AddToDispell = this.AddToDispell;
-            newOption.AddToMage = this.AddToMage;
+            newOption.AddToWizard = this.AddToWizard;
 
             newOption.AddToModelsInPack = this.AddToModelsInPack;
             newOption.FullCommand = this.FullCommand;
@@ -200,7 +200,7 @@ namespace WarhammerArmyAssembler
             if ((unitType == Unit.MagicItemsTypes.Unit) && (Type != OptionType.Banner))
                 return false;
 
-            if ((unitType == Unit.MagicItemsTypes.Mage) && (Type == OptionType.Banner))
+            if ((unitType == Unit.MagicItemsTypes.Wizard) && (Type == OptionType.Banner))
                 return false;
 
             if ((unitType == Unit.MagicItemsTypes.Hero) && (Type == OptionType.Arcane))
