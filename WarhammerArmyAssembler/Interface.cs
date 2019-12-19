@@ -323,8 +323,7 @@ namespace WarhammerArmyAssembler
 
             main.UpdateLayout();
 
-            if (newOption.ActualWidth > lastColumnMaxWidth)
-                lastColumnMaxWidth = newOption.ActualWidth;
+            double actualWidth = newOption.ActualWidth;
 
             if (points > 0)
             {
@@ -333,7 +332,14 @@ namespace WarhammerArmyAssembler
                 optionPoints.Margin = Thick(optionPoints, margins[0] + newOption.ActualWidth - 5, margins[1]);
                 optionPoints.Foreground = ArmyBook.MainColor;
                 main.unitDetail.Children.Add(optionPoints);
+
+                main.UpdateLayout();
+
+                actualWidth += optionPoints.ActualWidth - 5;
             }
+
+            if (actualWidth > lastColumnMaxWidth)
+                lastColumnMaxWidth = actualWidth;
 
             return height;
         }
