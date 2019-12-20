@@ -206,6 +206,14 @@ namespace WarhammerArmyAssembler
             object paramObject = unitParam.GetValue(this);
             int? paramValue = (int?)paramObject;
 
+            if (paramValue > 10)
+            {
+                if (paramValue == 16)
+                    return "D6";
+                else
+                    return ((int)(paramValue / 6)).ToString() + "D6";
+            }
+
             string paramModView = String.Empty;
 
             List<Option> allOption = new List<Option>(Options);
