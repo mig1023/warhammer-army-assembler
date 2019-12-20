@@ -1,0 +1,1146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArmyBook>
+	<Info>
+		<ArmyName>Skaven</ArmyName>
+		<ArmyBookVersion>7</ArmyBookVersion>
+		<MainColor>#FFE8AB6D</MainColor>
+		<AdditionalColor>#FF83490E</AdditionalColor>
+		<BackgroundColor>#FFFDE4CA</BackgroundColor>
+		<ArmyBookImage>Skaven.png</ArmyBookImage>
+	</Info>
+	<Artefacts>
+		<ArtefactsGroup Name = "Common magic items">
+			<Artefact>
+				<Name>Sword of Striking</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
+				<Description>+1 to Hit</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Battle</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>+1 Attack</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Might</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<AddToStrength>1</AddToStrength>
+				<Description>+1 Strength</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Biting Blade</Name>
+				<Type>Weapon</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>-1 armour save</SpecialRuleDescription>
+				<Description>-1 armour save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Enchanted shield</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<AddToArmour>5</AddToArmour>
+				<Description>5+ armour save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of Protection</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<AddToWard>6</AddToWard>
+				<Description>6+ ward save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dispell Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple>true</Multiple>
+				<Description>automatically dispel an enemy spell, one use only</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Stone</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple>true</Multiple>
+				<Description>+2 dice to cast a spell</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Staff of Sorcery</Name>
+				<Type>Arcane</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>+1 to dispel</SpecialRuleDescription>
+				<Description>+1 to dispel</Description>
+			</Artefact>
+			<Artefact>
+				<Name>War Banner</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>+1 Combat Resolution</SpecialRuleDescription>
+				<Description>+1 Combat Resolution</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic weapons">
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic armour">
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Talismans">
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Arcane items">
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Enchanted itams">
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic standards">
+			
+		</ArtefactsGroup>
+	</Artefacts>
+	
+	<Heroes>
+		
+	</Heroes>
+	
+	<Mounts>
+		<Mount>
+			<Type>Mount</Type>
+			<WeaponTeam>true</WeaponTeam>
+			<Name>Poisoned Wind Mortar</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Attacked Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Poisoned Wind Mortar</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<WeaponTeam>true</WeaponTeam>
+			<Name>Warpfire Thrower</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Attacked Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Warpfire Thrower</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<WeaponTeam>true</WeaponTeam>
+			<Name>Ratling Gun</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Attacked Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Ratling Gun</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<WeaponTeam>true</WeaponTeam>
+			<Name>Doom-flayer</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Attacked Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Doom-flayer</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<WeaponTeam>true</WeaponTeam>
+			<Name>Warp-grinder</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Attacked Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Warp-grinder</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<WeaponTeam>true</WeaponTeam>
+			<Name>Poison Wind Mortar</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Attacked Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Poison Wind Mortar</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+	</Mounts>
+	<Units>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Clanrats</Name>
+			<Points>4</Points>
+			<MinSize>20</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>0,5</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>0,5</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Poisoned Wind Mortar</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>65</Points>
+				</Option>
+				<Option>
+					<Name>Warpfire Thrower</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>70</Points>
+				</Option>
+				<Option>
+					<Name>Ratling Gun</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>55</Points>
+				</Option>
+				<Option>
+					<Name>Doom-flayer</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>55</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Clawleader</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Stormvermin</Name>
+			<Points>7</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Halberd</Name>
+					<AddToStrength>1</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Unit</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+					<Option>
+					<Name>Fangleader</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Poisoned Wind Mortar</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>65</Points>
+				</Option>
+				<Option>
+					<Name>Warpfire Thrower</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>70</Points>
+				</Option>
+				<Option>
+					<Name>Ratling Gun</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>55</Points>
+				</Option>
+				<Option>
+					<Name>Doom-flayer</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>55</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Clawleader</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Skavenslave</Name>
+			<Points>2</Points>
+			<MinSize>20</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>2</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Expendable</SpecialRuleDescription>
+					<SpecialRuleDescription>Cornered Rats</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>0,5</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Slings</Name>
+					<Type>Option</Type>
+					<Points>0,5</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>0,5</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Pawleader</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Night Runner</Name>
+			<Points>7</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapon</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Throwing stars</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Slinking Advance</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Slings</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Mightleader</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Warp-grinder</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>60</Points>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Giant Rats</Name>
+			<Points>23</Points>
+			<MinSize>1</MinSize>
+			<ModelsInPack>6</ModelsInPack>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sharp teeth/claws</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapons</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Light armour</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Whip</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Rat pack (5 rats + 1 Packmaster)</SpecialRuleDescription>
+					<SpecialRuleDescription>Mixed Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Wave of Rats</SpecialRuleDescription>
+					<SpecialRuleDescription>Running with the Pack</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Rat Swarm</Name>
+			<Points>25</Points>
+			<MinSize>2</MinSize>
+			<MaxSize>10</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Unbreakable>true</Unbreakable>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Small</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Gutter Runner</Name>
+			<Points>12</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>15</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapon</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Throwing stars</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Slinking Advance</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
+					<SpecialRuleDescription>Sneaky Infiltrators</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Snare-net</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<AddToAttacks>-1</AddToAttacks>
+				</Option>
+				<Option>
+					<Name>Slings</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Poisoned Attacks</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<PoisonAttack>true</PoisonAttack>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Deathrunner</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Smoke Bombs</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Deathrunner</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Weeping Blade</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Deathrunner</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Warp-grinder</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>60</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Rat Ogres</Name>
+			<Points>40</Points>
+			<MinSize>2</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Fear>true</Fear>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Claws and savagery</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Beast Pack</SpecialRuleDescription>
+					<SpecialRuleDescription>Mixed Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Running with the Pack</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Master-bred Rat Ogre</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>15</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Plague Monks</Name>
+			<Points>7</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Unit</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapon</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Bringer-of-the-Word</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Plague Censer Bearers</Name>
+			<Points>16</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Hate>true</Hate>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Plague censer</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Plague Disciples</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Plague Chanter</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>13</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Warplock Jazzails</Name>
+			<Points>10</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>15</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Hate>true</Hate>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Jazzail</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Pavise</Name>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Sharpshooter</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Poisoned Wind Globadiers</Name>
+			<Points>20</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Hate>true</Hate>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Heavy armour</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Poisoned wind globes</Name>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Life is Cheap</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
+					<SpecialRuleDescription>Volley from the Back</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Bombardier</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Death Globe</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Bombardier</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Poison Wind Mortar</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>65</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Hell Pit Abomination</Name>
+			<Points>235</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Hate>true</Hate>
+				<Regeneration>true</Regeneration>
+				<Terror>true</Terror>
+				<Stubborn>true</Stubborn>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>3D6 Movement</SpecialRuleDescription>
+					<SpecialRuleDescription>D6 Impact Hits</SpecialRuleDescription>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Shambling Horror</SpecialRuleDescription>
+					<SpecialRuleDescription>Special Close Combat Attacks</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Warpstone spikes</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Doomwheel</Name>
+			<Points>150</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Terror>true</Terror>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>3D6 Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Grinding Down the Foe</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+1 Impact Hits</SpecialRuleDescription>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Rolling Doom</SpecialRuleDescription>
+					<SpecialRuleDescription>Zzzzap!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Warp Ligtning Cannon</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Ponderous War Machine</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Plagueclow Catapult</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>D6 Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Fume-addled Crew</SpecialRuleDescription>
+					<SpecialRuleDescription>Ponderous War Machine</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+	</Units>
+</ArmyBook>
