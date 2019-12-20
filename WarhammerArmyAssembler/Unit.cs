@@ -458,7 +458,7 @@ namespace WarhammerArmyAssembler
         public bool ExistsOrdinaryItems()
         {
             foreach (Option option in Options)
-                if (option.IsMagicItem() && (option.Points == 0))
+                if (option.IsMagicItem() && !String.IsNullOrEmpty(option.Name) && (option.Points == 0))
                     return true;
 
             return false;
