@@ -82,16 +82,12 @@ namespace WarhammerArmyAssembler
             int allHeroes = ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Lord) + ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Hero);
             bool lordInHeroSlot = (ArmyBook.Units[id].Type == Unit.UnitType.Hero) && (allHeroes >= ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
 
-            if ((!slotExists && !coreUnit) || lordInHeroSlot)
-            {
-                string unitType = (ArmyBook.Units[id].IsHero() ? "heroes" : "units");
-                Error(String.Format("The number of {0} of this type has been exhausted.", unitType));
-            }
+            if (ArmyBook.Units[id].PersonifiedHero && ArmyChecks.IsUnitExistInArmyByArmyBookID(id))
+                Error("Personalities cannot be repeated");
+            else if ((!slotExists && !coreUnit) || lordInHeroSlot)
+                Error(String.Format("The number of {0} of this type has been exhausted.", (ArmyBook.Units[id].IsHero() ? "heroes" : "units")));
             else if (!InterfaceChecks.EnoughPointsForAddUnit(id))
-            {
-                string unitType = (ArmyBook.Units[id].IsHero() ? "hero" : "unit");
-                Error(String.Format("Not enough points to add a {0}", unitType));
-            }
+                Error(String.Format("Not enough points to add a {0}", (ArmyBook.Units[id].IsHero() ? "hero" : "unit")));
             else if (!ArmyChecks.IsArmyUnitsPointsPercentOk(ArmyBook.Units[id].Type, ArmyBook.Units[id].Points))
                 Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Units[id].UnitTypeName()));
             else if(!ArmyChecks.IsArmyDublicationOk(ArmyBook.Units[id]))

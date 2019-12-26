@@ -18,6 +18,15 @@ namespace WarhammerArmyAssembler
             return true;
         }
 
+        public static bool IsUnitExistInArmyByArmyBookID(int UnitID)
+        {
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                if (entry.Value.ID == UnitID)
+                    return true;
+
+            return false;
+        }
+
         public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points)
         {
             Dictionary<Unit.UnitType, double> units = new Dictionary<Unit.UnitType, double>();
