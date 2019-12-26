@@ -102,10 +102,639 @@
 	</Artefacts>
 	
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Lord Skrolk</Name>
+			<Group>Pestilens</Group>
+			<Wizard>3</Wizard>
+			<Points>470</Points>
+			<Description>Lord Skrolk</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Terror>true</Terror>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Rod of Corruption</Name>
+					<SpecialRuleDescription>Die by Toughness test, no save of any kind</SpecialRuleDescription>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Plague Monks as Core units</SpecialRuleDescription>
+					<SpecialRuleDescription>The Liber Bubonicus</SpecialRuleDescription>
+					<SpecialRuleDescription>-1 to all Hit rolls for all models in base contact</SpecialRuleDescription>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Lord Thanquol</Name>
+			<Wizard>4</Wizard>
+			<Points>450</Points>
+			<Description>Lord Thanquol</Description>
+			<MinSize>1</MinSize>
+			<MountInit>Boneripper</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Terror>true</Terror>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Rod of Corruption</Name>
+					<SpecialRuleDescription>Die by Toughness test, no save of any kind</SpecialRuleDescription>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Staff of the Horned One</Name>
+					<SpecialRuleDescription>Additional spell</SpecialRuleDescription>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Blessing of the Horned Rat</SpecialRuleDescription>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Frendly model within 6" takes a wound instead</SpecialRuleDescription>
+				</Special>
+				<Armour>
+					<Name>Warp-amulet</Name>
+					<AddToArmour>On roll of 5+ regains a single Wound</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+					<SpecialRuleDescription>Warpstone Addiction</SpecialRuleDescription>
+					<SpecialRuleDescription>D6+2 Warpstone Tokens</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Ikit Claw</Name>
+			<Wizard>3</Wizard>
+			<Points>395</Points>
+			<Description>Ikit Claw</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Terror>true</Terror>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Storm Daemon</Name>
+					<SpecialRuleDescription>Ignore armour saves</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic missile with 24" range, Strength 5</SpecialRuleDescription>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Warpfire Thrower, one use only, re-roll the artillery dice</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Iron Frame</Name>
+					<AddToStrength>3</AddToStrength>
+					<AddToArmour>3</AddToArmour>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Throt the Unclean</Name>
+			<Points>225</Points>
+			<Description>Throt the Unclean</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<Regeneration>true</Regeneration>
+				<KillingBlow>true</KillingBlow>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Creature-killer</Name>
+					<KillingBlow>true</KillingBlow>
+					<SpecialRuleDescription>D3 wounds for large creatures</SpecialRuleDescription>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Whip of Domination</Name>
+					<AddToAttack>1</AddToAttack>
+					<SpecialRuleDescription>-2 enemy Leadership penalty after unsaved wound</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Two Rat Ogre units as Core choice</SpecialRuleDescription>
+					<SpecialRuleDescription>Master Controller</SpecialRuleDescription>
+					<SpecialRuleDescription>Ravening Hunger</SpecialRuleDescription>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Queek Headtaker</Name>
+			<Points>215</Points>
+			<Description>Queek Headtaker</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Hate>true</Hate>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Dwarf Gouger</Name>
+					<SpecialRuleDescription>No armour save</SpecialRuleDescription>
+					<SpecialRuleDescription>Always wounds Dwarfs on a roll of 2+</SpecialRuleDescription>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Additional blade</Name>
+					<AddToAttack>1</AddToAttack>
+				</HandWeapon>
+				<Armour>
+					<Name>Warp-shared Armour</Name>
+					<AddToArmour>3</AddToArmour>
+					<SpecialRuleDescription>Strength 5 hit against the enemy for each succeful armour save</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Must issue or accept challenge</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to Hit and to Wound in a challenge</SpecialRuleDescription>
+					<SpecialRuleDescription>Will not join unit that has Gray Seer or Screaming Bell</SpecialRuleDescription>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Vermin Lord</Name>
+			<Points>500</Points>
+			<Wizard>4</Wizard>
+			<Description>Vermin Lord</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Doom Glaive</Name>
+					<SpecialRuleDescription>Each unsaved wound multiplied to D3 wound</SpecialRuleDescription>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Rat Deamon</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Warlord</Name>
+			<Points>90</Points>
+			<Description>Warlord</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Rat Ogre Bonebreaker</Name>
+					<Type>Option</Type>
+					<Points>65</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>War-litter</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Great Pox Rat</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Gray Seer</Name>
+			<Wizard>4</Wizard>
+			<Points>240</Points>
+			<Description>Gray Seer</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+					<SpecialRuleDescription>D3 Warpstone Tokens</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Screaming Bell</Name>
+					<Type>Option</Type>
+					<Points>200</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Deathmaster Snikch</Name>
+			<Points>270</Points>
+			<Description>Deathmaster Snikch</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Weeping Blade</Name>
+					<SpecialRuleDescription>Armour Piercing</SpecialRuleDescription>
+					<SpecialRuleDescription>Each unsaved wound is multiplied to D3 wounds</SpecialRuleDescription>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Throwing stars</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>The Cloak of Shadows</Name>
+					<SpecialRuleDescription>Cannot be seen unless the attacking unit rolls 4+</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<SpecialRuleDescription>Hidden</SpecialRuleDescription>
+					<SpecialRuleDescription>Sneaky Infiltrator</SpecialRuleDescription>
+					<SpecialRuleDescription>Killer, not a Leader</SpecialRuleDescription>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Dodge</SpecialRuleDescription>
+					<AddToWard>4</AddToWard>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Tretch Craventail</Name>
+			<Points>145</Points>
+			<Description>Tretch Craventail</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapon</Name>
+					<AddToAttack>1</AddToAttack>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Tail blade</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Lucky Skullhelm</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Re-roll a dice once per game</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+					<SpecialRuleDescription>Tretch's Raiders</SpecialRuleDescription>
+					<SpecialRuleDescription>Stay Here, I'll Get Help!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	
 	<Mounts>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Screaming Bell</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>-1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>-1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>-1</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>D6 Impacts Hits</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRuleDescription>Pushed into Battle</SpecialRuleDescription>
+					<SpecialRuleDescription>Ringing the Bell</SpecialRuleDescription>
+				</Special>	
+				<Special>
+					<SpecialRuleDescription>Altar of the Horned Rat</SpecialRuleDescription>
+					<Unbreakable>true</Unbreakable>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Protection of the Horned Rat</SpecialRuleDescription>
+					<AddToWard>4</AddToWard>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Above the Masses</SpecialRuleDescription>
+					<AddToArmour>6</AddToArmour>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Rat Ogre Bonebreaker</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Trained Mount</SpecialRuleDescription>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>War-litter</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>-1</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>-1</Toughness>
+				<Wounds>-1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>-1</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Borne Litter</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Great Pox Rat</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>1</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>2</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Verminous Cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Boneripper</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<Unbreakable>true</Unbreakable>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Talons and teeth</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Warpfire Thrower</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Bodyguard of Thanquol</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<WeaponTeam>true</WeaponTeam>
