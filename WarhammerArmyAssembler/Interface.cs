@@ -529,9 +529,7 @@ namespace WarhammerArmyAssembler
                     (entry.Value.MountOn > 0)
                     &&
                         (
-                            (Army.Units[entry.Value.MountOn].Wounds > 1)
-                            ||
-                            (Army.Units[entry.Value.MountOn].Wounds == 0)
+                            (Army.Units[entry.Value.MountOn].Wounds != 1)
                             ||
                             (Army.Units[entry.Value.MountOn].WeaponTeam)
                         )

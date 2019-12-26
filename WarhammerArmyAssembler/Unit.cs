@@ -213,6 +213,8 @@ namespace WarhammerArmyAssembler
                 else
                     return ((int)(paramValue / 6)).ToString() + "D6";
             }
+            else if (paramValue < 0)
+                return "-";
 
             string paramModView = String.Empty;
 
