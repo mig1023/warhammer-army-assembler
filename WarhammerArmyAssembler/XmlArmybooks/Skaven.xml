@@ -551,10 +551,6 @@
 				<Attacks>3</Attacks>
 				<Leadership>6</Leadership>
 			</MainParam>
-			<AdditionalParam>
-				<MagicItems>100</MagicItems>
-				<MagicItemsType>Hero</MagicItemsType>
-			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Two hand weapon</Name>
@@ -576,6 +572,267 @@
 					<SpecialRuleDescription>Stay Here, I'll Get Help!</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Assassin</Name>
+			<Group>Eshin</Group>
+			<Points>120</Points>
+			<Description>Assassin</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<HitFirst>true</HitFirst>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapon</Name>
+					<AddToAttack>1</AddToAttack>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Throwing stars</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Sneaky Infiltrator</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+					<SpecialRuleDescription>Killer, not a Leader</SpecialRuleDescription>
+					<SpecialRuleDescription>Hidden</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+				</Special>
+				<Special>
+					<SpecialRuleDescription>Dodge</SpecialRuleDescription>
+					<AddToWard>4</AddToWard>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Warlock Engineer</Name>
+			<Group>Skryre</Group>
+			<Points>15</Points>
+			<Description>Warlock Engineer</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Level 1 Wizard</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<AddToWizard>1</AddToWizard>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Level 2 Wizard</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Level 2 Wizard</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<AddToCast>2</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<AddToWizard>2</AddToWizard>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Level 1 Wizard</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Warlock-Augmented Weapon</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+				</Option>
+				<Option>
+					<Name>Warplock Pistol</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Warpmusket</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Chieftain</Name>
+			<Points>45</Points>
+			<Description>Chieftain</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Plague Priest</Name>
+			<Group>Pestilens</Group>
+			<Wizard>1</Wizard>
+			<Points>100</Points>
+			<Description>Plague Priest</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Frenzy>true</Frenzy>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength in Numbers</SpecialRuleDescription>
+					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Level 2 Wizard</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Plague Censer</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>16</Points>
+				</Option>
+				<Option>
+					<Name>Flail</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<AddToAttack>1</AddToAttack>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great Pox Rat</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Plague Furnace</Name>
+					<Type>Option</Type>
+					<Points>150</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
 		</Hero>
 	</Heroes>
 	
@@ -619,6 +876,42 @@
 				<Special>
 					<SpecialRuleDescription>Above the Masses</SpecialRuleDescription>
 					<AddToArmour>6</AddToArmour>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Plague Furnace</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>-1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>-1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>-1</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Billowing Death</SpecialRuleDescription>
+					<SpecialRuleDescription>Fuming Close Combat</SpecialRuleDescription>
+					<SpecialRuleDescription>D6 Impact Hits</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRuleDescription>Pushed into Battle</SpecialRuleDescription>
+					<SpecialRuleDescription>Pestilent Blessing</SpecialRuleDescription>
+				</Special>	
+				<Special>
+					<SpecialRuleDescription>Icon of the Horned Rat</SpecialRuleDescription>
+					<Unbreakable>true</Unbreakable>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
