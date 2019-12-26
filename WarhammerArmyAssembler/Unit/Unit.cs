@@ -302,14 +302,14 @@ namespace WarhammerArmyAssembler
                         {
                             double optionPoints = (option.PerModel ? option.Points * Army.Units[unitID].Size : option.Points);
 
-                            if (!Army.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
+                            if (!ArmyChecks.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
                             {
-                                Interface.Error(String.Format("The {0} has reached a point cost limit", Army.UnitTypeName(Army.Units[unitID].Type)));
+                                Interface.Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Units[unitID].UnitTypeName()));
                                 return;
                             }
-                            else if (!Interface.EnoughUnitPointsForAddOption(optionPoints))
+                            else if (!InterfaceChecks.EnoughUnitPointsForAddOption(optionPoints))
                             {
-                                Interface.Error(String.Format("Not enough points to add", Army.UnitTypeName(Army.Units[unitID].Type)));
+                                Interface.Error(String.Format("Not enough points to add", ArmyBook.Units[unitID].UnitTypeName()));
                                 return;
                             }
                             else
@@ -325,7 +325,7 @@ namespace WarhammerArmyAssembler
                     }
                     else if (option.Mount && !realise)
                     {
-                        Army.DeleteUnitByID(Army.Units[unitID].MountOn);
+                        ArmyMod.DeleteUnitByID(Army.Units[unitID].MountOn);
                         unit.MountOn = 0;
                     }
 
@@ -347,6 +347,22 @@ namespace WarhammerArmyAssembler
                 rules = rules.Remove(rules.Length - 2);
 
             return rules;
+        }
+
+        public string UnitTypeName()
+        {
+            if (Type == Unit.UnitType.Lord)
+                return "lords";
+            else if (Type == Unit.UnitType.Hero)
+                return "heroes";
+            else if (Type == Unit.UnitType.Core)
+                return "core units";
+            else if (Type == Unit.UnitType.Special)
+                return "special units";
+            else if (Type == Unit.UnitType.Rare)
+                return "rare units";
+
+            return String.Empty;
         }
 
         public bool RuleFromAnyOption(string name)
@@ -511,7 +527,7 @@ namespace WarhammerArmyAssembler
 
                 if (incompatible && (Options[i].Realised || Options[i].IsMagicItem()))
                 {
-                    Interface.SetArtefactAlreadyUsed(Options[i].ID, false);
+                    InterfaceMod.SetArtefactAlreadyUsed(Options[i].ID, false);
                     AddOption(Options[i].ID, this, this.ID);
                 }
             }

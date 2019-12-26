@@ -55,11 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ArmyBook.cs" />
-    <Compile Include="Army.cs" />
-    <Compile Include="Interface.cs" />
-    <Compile Include="Option.cs" />
-    <Compile Include="Unit.cs" />
+    <Compile Include="ArmyBook\ArmyBookInInterface.cs" />
+    <Compile Include="ArmyBook\ArmyBookLoad.cs" />
+    <Compile Include="ArmyBook\ArmyBookOther.cs" />
+    <Compile Include="ArmyBook\ArmyBookParsers.cs" />
+    <Compile Include="ArmyBook\ArmyBook.cs" />
+    <Compile Include="Army\Army.cs" />
+    <Compile Include="Army\ArmyChecks.cs" />
+    <Compile Include="Army\ArmyMod.cs" />
+    <Compile Include="Army\ArmyParams.cs" />
+    <Compile Include="Interface\Interface.cs" />
+    <Compile Include="Interface\InterfaceChecks.cs" />
+    <Compile Include="Interface\InterfaceMod.cs" />
+    <Compile Include="Interface\InterfaceOther.cs" />
+    <Compile Include="Interface\InterfaceReload.cs" />
+    <Compile Include="Interface\InterfaceUnitDetails.cs" />
+    <Compile Include="Option\Option.cs" />
+    <Compile Include="Unit\Unit.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -98,9 +98,7 @@ namespace WarhammerArmyAssembler
 
         public void OnPropertyChanged(string propName)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-                handler(this, new PropertyChangedEventArgs(propName));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
 
         public Option()

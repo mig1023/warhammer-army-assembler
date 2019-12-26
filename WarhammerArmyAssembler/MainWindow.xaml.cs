@@ -30,11 +30,11 @@ namespace WarhammerArmyAssembler
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
-            List<string> allXmlFiles = ArmyBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
-            ArmyBook.LoadArmy(allXmlFiles[0]);
+            List<string> allXmlFiles = ArmyBookInInterface.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
+            ArmyBookLoad.LoadArmy(allXmlFiles[0]);
 
-            Interface.LoadArmyList();
-            Interface.ReloadArmyData();
+            InterfaceReload.LoadArmyList();
+            InterfaceReload.ReloadArmyData();
             Interface.PreviewArmyList();
 
             Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
@@ -53,7 +53,7 @@ namespace WarhammerArmyAssembler
                 return;
 
             FrameworkElement f = sender as FrameworkElement;
-            int id = Interface.IntParse(f.Tag.ToString());
+            int id = InterfaceOther.IntParse(f.Tag.ToString());
 
             if (ArmyBook.Units.ContainsKey(id))
             {
@@ -92,7 +92,7 @@ namespace WarhammerArmyAssembler
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
         {
-            int id = Interface.IntParse((string)e.Data.GetData(DataFormats.Text));
+            int id = InterfaceOther.IntParse((string)e.Data.GetData(DataFormats.Text));
 
             if ((Interface.DragSender as FrameworkElement).Name == "ArmyGrid")
                 return;
@@ -107,7 +107,7 @@ namespace WarhammerArmyAssembler
                 int newUnitID = Interface.CurrentSelectedUnit ?? -1;
 
                 if (newUnitID >= 0)
-                    Interface.UpdateUnitDescription(newUnitID, Army.Units[newUnitID]);
+                    InterfaceUnitDetails.UpdateUnitDescription(newUnitID, Army.Units[newUnitID]);
             }
                 
         }
@@ -138,18 +138,18 @@ namespace WarhammerArmyAssembler
 
             double pointsDiff = u.GetUnitPoints() - Army.Units[u.ID].GetUnitPoints();
 
-            if (!Interface.EnoughPointsForEditUnit(u.ID, u.Size))
+            if (!InterfaceChecks.EnoughPointsForEditUnit(u.ID, u.Size))
                 u.Size = ErrorAndReturnSizeBack("Not enough points to change", u.ID);
             else if ((u.MaxSize != 0) && (u.Size > u.MaxSize))
                 u.Size = ErrorAndReturnSizeBack("Unit size exceeds the maximum allowed", u.ID);
             else if (u.Size < u.MinSize)
                 u.Size = ErrorAndReturnSizeBack("Unit size is less than the minimum allowed", u.ID);
-            else if ((u.Size > Army.Units[u.ID].Size) && (!Army.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
-                u.Size = ErrorAndReturnSizeBack(String.Format("The {0} has reached a point cost limit", Army.UnitTypeName(u.Type)), u.ID);
+            else if ((u.Size > Army.Units[u.ID].Size) && (!ArmyChecks.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
+                u.Size = ErrorAndReturnSizeBack(String.Format("The {0} has reached a point cost limit", u.UnitTypeName()), u.ID);
             else
                 Army.Units[u.ID].Size = u.Size;
 
-            Interface.ReloadArmyData();
+            InterfaceReload.ReloadArmyData();
         }
 
         private void ArmyGrid_LoadingRow(object sender, DataGridRowEventArgs e)
@@ -172,7 +172,7 @@ namespace WarhammerArmyAssembler
                 ArmyGrid.ScrollIntoView(row.Item);
             }
 
-            int id = Interface.IntParse((string)e.Data.GetData(DataFormats.Text));
+            int id = InterfaceOther.IntParse((string)e.Data.GetData(DataFormats.Text));
 
             if (ArmyBook.Artefact.ContainsKey(id))
             {
@@ -202,7 +202,7 @@ namespace WarhammerArmyAssembler
 
             Unit unit = container.DataContext as Unit;
 
-            Interface.UpdateUnitDescription(unit.ID, unit);
+            InterfaceUnitDetails.UpdateUnitDescription(unit.ID, unit);
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
                 Interface.DetailResize(open: true);
@@ -216,7 +216,7 @@ namespace WarhammerArmyAssembler
 
         private void unitDelete_Drop(object sender, DragEventArgs e)
         {
-            int id = Interface.IntParse((string)e.Data.GetData(DataFormats.Text));
+            int id = InterfaceOther.IntParse((string)e.Data.GetData(DataFormats.Text));
 
             Interface.UnitDeleteDrop(id);
         }
@@ -278,11 +278,11 @@ namespace WarhammerArmyAssembler
         {
             CloseStartHelp();
 
-            Interface.LoadArmySize(Interface.IntParse(listArmybookPoints.Text));
-            ArmyBook.LoadArmy(Interface.CurrentSelectedArmy);
+            InterfaceReload.LoadArmySize(InterfaceOther.IntParse(listArmybookPoints.Text));
+            ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
-            Interface.LoadArmyList();
-            Interface.ReloadArmyData();
+            InterfaceReload.LoadArmyList();
+            InterfaceReload.ReloadArmyData();
 
             Interface.Move(Interface.MovingType.ToMain);
         }
@@ -307,15 +307,15 @@ namespace WarhammerArmyAssembler
         {
             CloseStartHelp();
 
-            Interface.LoadArmySize(Interface.IntParse((sender as Button).Content.ToString().Split()[0]));
+            InterfaceReload.LoadArmySize(InterfaceOther.IntParse((sender as Button).Content.ToString().Split()[0]));
         }
 
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (Army.UnitExistInArmy(Interface.CurrentSelectedUnit))
+            if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
             {
                 int currentSelectedUnit = Interface.CurrentSelectedUnit ?? 0;
-                Interface.UpdateUnitDescription(currentSelectedUnit, Army.Units[currentSelectedUnit]);
+                InterfaceUnitDetails.UpdateUnitDescription(currentSelectedUnit, Army.Units[currentSelectedUnit]);
             }
         }
     }

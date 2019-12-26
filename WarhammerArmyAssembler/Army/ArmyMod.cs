@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace WarhammerArmyAssembler
+{
+    class ArmyMod
+    {
+        public static int GetNextIndex()
+        {
+            return Army.MaxIDindex += 1;
+        }
+
+        public static int AddUnitByID(int id)
+        {
+            Unit unit = ArmyBook.Units[id].Clone();
+
+            int newUnitID = GetNextIndex();
+
+            Army.Units.Add(newUnitID, unit);
+
+            if (!String.IsNullOrEmpty(unit.MountInit))
+            {
+                foreach (KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
+                    if (mount.Value.Name == unit.MountInit)
+                    {
+                        int newMountID = GetNextIndex();
+                        Army.Units[newUnitID].MountOn = newMountID;
+                        Army.Units.Add(newMountID, mount.Value.Clone());
+                    }
+            }
+
+            return newUnitID;
+        }
+
+        public static void AddMountByID(int id, int unit)
+        {
+            Unit mount = ArmyBook.Mounts[id].Clone();
+
+            int newID = GetNextIndex();
+            Army.Units[unit].MountOn = newID;
+            Army.Units.Add(newID, mount);
+        }
+
+        public static void DeleteAllUnits()
+        {
+            for (int i = (Army.Units.Count - 1); i >= 0; i--)
+                DeleteUnitByID(Army.Units.ElementAt(i).Key, onlyDirectlyHim: true);
+        }
+
+        public static void DeleteUnitByID(int id, bool onlyDirectlyHim = false)
+        {
+            int? removeUnitAlso = null;
+
+            if (!onlyDirectlyHim)
+                foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                    if (entry.Value.MountOn == id)
+                    {
+                        foreach (Option option in entry.Value.Options)
+                            if (option.Name == Army.Units[id].Name)
+                                option.Realised = false;
+
+                        entry.Value.MountOn = 0;
+
+                        if (!String.IsNullOrEmpty(entry.Value.MountInit))
+                            removeUnitAlso = entry.Key;
+                    }
+
+            foreach (Option option in Army.Units[id].Options)
+                if (option.IsMagicItem())
+                    InterfaceMod.SetArtefactAlreadyUsed(option.ID, false);
+
+            if (removeUnitAlso != null)
+                Army.Units.Remove((int)removeUnitAlso);
+
+            Army.Units.Remove(id);
+        }
+    }
+}
