@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
@@ -146,7 +145,6 @@ namespace WarhammerArmyAssembler
 
         private static void AddOption_Click(object sender, RoutedEventArgs e)
         {
-            // string id_tag = (sender as ToggleButton).Tag.ToString();
             string id_tag = (sender as Label).Tag.ToString();
 
             string[] id = id_tag.Split('|');
@@ -220,7 +218,7 @@ namespace WarhammerArmyAssembler
         }
 
         private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
-            string id, Brush background, Brush foreground = null, double? partWidth = null)
+            string id, Brush background, double? partWidth = null, bool enabled = true)
         {
             Label newPart = new Label();
 
@@ -228,9 +226,11 @@ namespace WarhammerArmyAssembler
             newPart.HorizontalContentAlignment = HorizontalAlignment.Center;
             newPart.Margin = Interface.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
 
-            newPart.Foreground = foreground ?? background;
+            newPart.Foreground = Brushes.White;
             newPart.Background = background;
-            newPart.MouseDown += AddOption_Click;
+
+            if (enabled)
+                newPart.MouseDown += AddOption_Click;
 
             newPart.Width = partWidth ?? 77;
             newPart.Tag = id;
@@ -241,6 +241,13 @@ namespace WarhammerArmyAssembler
             return newPart.ActualWidth;
         }
 
+        private static void AddButtonAllParts(string captionFirst, string captionSecond, Brush backgroundFirst, 
+            Brush backgroundSecond, double[] margins, string id,  double? partWidth = null, bool enabled = true)
+        {
+            double actualWidth = AddButtonPart(captionFirst, margins, 0, id, backgroundFirst, enabled: enabled);
+            AddButtonPart(captionSecond, margins, actualWidth, id, backgroundSecond, enabled: enabled);
+        }
+
         private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth, string id,
             Option option, int mountAlreadyOn = 0, Option.OnlyForType mountTypeAlreadyFixed = Option.OnlyForType.All, Unit unit = null,
             bool mustBeEnabled = true)
@@ -248,60 +255,57 @@ namespace WarhammerArmyAssembler
             AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
                 option.Points, option.PerModel);
 
-
             if (option.IsMagicItem())
             {
-                AddButtonPart("drop", margins, 0, id, ArmyBook.MainColor, Brushes.White, 154);
+                AddButtonPart("drop", margins, 0, id, ArmyBook.MainColor, 154);
+                return height;
             }
+
+            bool optionIsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);
+
+            if (!mustBeEnabled)
+                optionIsEnabled = false;
+
+            if (
+                    (unit != null)
+                    && (
+                        !unit.IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true)
+                        ||
+                        unit.IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false)
+                    )
+                )
+                optionIsEnabled = false;
+
+            if (!optionIsEnabled)
+                AddButtonAllParts(
+                    captionFirst: String.Empty,
+                    captionSecond: "add",
+                    backgroundFirst: Brushes.WhiteSmoke,
+                    backgroundSecond: Brushes.Gainsboro,
+                    margins: margins,
+                    id: id,
+                    enabled: false
+                );
+
             else if (option.Realised)
-            {
-                double actualWidth = AddButtonPart("drop", margins, 0, id, ArmyBook.MainColor, Brushes.White);
-                AddButtonPart(String.Empty, margins, actualWidth, id, ArmyBook.BackgroundColor);
-            }
+                AddButtonAllParts(
+                    captionFirst: "drop",
+                    captionSecond: String.Empty,
+                    backgroundFirst: ArmyBook.MainColor,
+                    backgroundSecond: ArmyBook.BackgroundColor,
+                    margins: margins,
+                    id: id
+                );
+
             else
-            {
-                double actualWidth = AddButtonPart(String.Empty, margins, 0, id, Brushes.LightGray);
-                AddButtonPart("add", margins, actualWidth, id, Brushes.Silver, Brushes.White);
-            }
-
-            //ToggleButton newButton = new ToggleButton();
-
-            //if (option.IsMagicItem())
-            //    newButton.Content = "drop";
-            //else
-            //{
-            //    if (option.Realised)
-            //    {
-            //        newButton.Content = "drop";
-            //        newButton.IsChecked = true;
-            //    }
-            //    else
-            //    {
-            //        newButton.Content = "add";
-            //        newButton.IsChecked = false;
-            //    }
-            //}
-
-            //newButton.IsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);
-
-            //if (!mustBeEnabled)
-            //    newButton.IsEnabled = false;
-
-            //if (
-            //        (unit != null)
-            //        && (
-            //            !unit.IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true)
-            //            ||
-            //            unit.IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false)
-            //        )
-            //    )
-            //    newButton.IsEnabled = false;
-
-            //newButton.Margin = Interface.Thick(newButton, margins[0] + 2, margins[1] + 20);
-            //newButton.Tag = id;
-            //newButton.Click += AddOption_Click;
-            //newButton.Width = 155;
-            //Interface.main.unitDetail.Children.Add(newButton);
+                AddButtonAllParts(
+                    captionFirst: String.Empty,
+                    captionSecond: "add",
+                    backgroundFirst: Brushes.LightGray,
+                    backgroundSecond: Brushes.Silver,
+                    margins: margins,
+                    id: id
+                );
 
             return height;
         }
