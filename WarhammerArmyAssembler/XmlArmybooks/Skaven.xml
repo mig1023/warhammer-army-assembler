@@ -13,21 +13,21 @@
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
-				<Points>15</Points>
+				<Points>30</Points>
 				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
 				<Description>+1 to Hit</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sword of Battle</Name>
 				<Type>Weapon</Type>
-				<Points>15</Points>
+				<Points>25</Points>
 				<AddToAttacks>1</AddToAttacks>
 				<Description>+1 Attack</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sword of Might</Name>
 				<Type>Weapon</Type>
-				<Points>10</Points>
+				<Points>20</Points>
 				<AddToStrength>1</AddToStrength>
 				<Description>+1 Strength</Description>
 			</Artefact>
@@ -41,7 +41,7 @@
 			<Artefact>
 				<Name>Enchanted shield</Name>
 				<Type>Armour</Type>
-				<Points>15</Points>
+				<Points>10</Points>
 				<AddToArmour>5</AddToArmour>
 				<Description>5+ armour save</Description>
 			</Artefact>
@@ -62,14 +62,14 @@
 			<Artefact>
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
-				<Points>25</Points>
+				<Points>20</Points>
 				<Multiple>true</Multiple>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
-				<Points>30</Points>
+				<Points>35</Points>
 				<SpecialRuleDescription>+1 to dispel</SpecialRuleDescription>
 				<Description>+1 to dispel</Description>
 			</Artefact>
@@ -82,7 +82,57 @@
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic weapons">
-			
+			<Artefact>
+				<Name>The Fellblade</Name>
+				<Type>Weapon</Type>
+				<Points>100</Points>
+				<AddToStrength>10</AddToStrength>
+				<SpecialRuleDescription>Successful ward save must be re-rolled</SpecialRuleDescription>
+				<SpecialRuleDescription>Any unsaved wound are multiplied into D6 wounds</SpecialRuleDescription>
+				<SpecialRuleDescription>Wound with no armour save at the end of each turns on a 3+</SpecialRuleDescription>
+				<Description>This sword gives the bearer Stringth 10 and successful ward saves must be re-rolled. Any unsaved wounds caused by the Fellblade are multiplied into D6 wounds. Roll a D6 at the end of each of the wielder's turns; on a 3+ there is no effect. On a roll of 1-2 the wielder suffers 1 wound with no armour save allowed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Warpforged Blade</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>No armour save</SpecialRuleDescription>
+				<Description>Armour saves cannot be taken against his from a Warpforged Blade.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Warplock-augmented Weapon</Name>
+				<Type>Weapon</Type>
+				<Points>45</Points>
+				<AddToStrength>1</AddToStrength>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>A Warplock Weapon adds +1 Strength and + Attack to any model so equipped.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Blade of Corruption</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<AddToStrength>1</AddToStrength>
+				<SpecialRuleDescription>Any unsaved wound are multiplied into 2 wounds</SpecialRuleDescription>
+				<SpecialRuleDescription>Wielder suffers 2 wounds if roll 2 or more rolls of To Hit</SpecialRuleDescription>
+				<Description>The wielder of this sword is granted +1 Strength to all Attacks. Any unsaved wound inflicted is multiplied to 2 wounds. If the wielder makes a to Hit roll that has two or more rolls of 1, the wielder immediately suffers a wound that miltiplied to 2 wounds. Other Attacks are carried out as normal.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Weeping Blade</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Armour Piercing</SpecialRuleDescription>
+				<SpecialRuleDescription>Each unsaved wound is multiplied to D3 wounds</SpecialRuleDescription>
+				<Description>The Weeping Blade has the Armour Piercing special rule. Each unsaved wound is multiplied to D3 wounds.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dwarfbane</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<AddToStrength>1</AddToStrength>
+				<SpecialRuleDescription>Re-roll all failed to Wound rolls against Dwarfs</SpecialRuleDescription>
+				<SpecialRuleDescription>Armour Piercing against Dwarfs</SpecialRuleDescription>
+				<Description>The wielder of this sword is granted +1 Strength to all Attacks. Additionaly against Dwarfs, all hits are Armour Piercing and the user re-rolls all failed to Wound rolls.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic armour">
 			
