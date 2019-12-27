@@ -24,6 +24,8 @@ namespace WarhammerArmyAssembler
 
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop }
 
+        public static List<Label> PointsButtons = new List<Label>();
+
         public static Thickness Thick(object element, double? left = null, double? top = null, double? right = null, double? bottom = null)
         {
             FrameworkElement control = element as FrameworkElement;
@@ -201,7 +203,16 @@ namespace WarhammerArmyAssembler
 
             main.UpdateLayout();
 
-            main.listArmybookVer.Background = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+            Brush mainColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+
+            foreach (Label label in PointsButtons)
+            {
+                label.BorderBrush = mainColor;
+                label.Foreground = mainColor;
+            }
+
+            foreach (Label label in new List<Label>() { main.listArmybookVer, main.buttonArmybook, main.closeArmybookDetail })
+                label.Background = mainColor;
         }
 
         public static void PreviewArmyList(bool next = false, bool prev = false)
@@ -210,6 +221,50 @@ namespace WarhammerArmyAssembler
 
             PreviewLoadCurrentSelectedArmy(currentFile);
             CurrentSelectedArmy = currentFile;
+        }
+
+        public static void CreatePointsButtons()
+        {
+            int[] points = { 200, 500, 600, 750, 1000, 1250, 1500, 1750, 1850, 2000, 2400, 2500, 2700, 3000, 3500 };
+            double[] xButtons = { 20, 116, 213 };
+            double[] yButtons = { 367, 406, 445, 484, 523 };
+
+            int xIndex = 0;
+            int yIndex = 0;
+
+            PointsButtons.Clear();
+
+            foreach (int button in points)
+            {
+                Label newPointsBotton = new Label();
+
+                newPointsBotton.Name = String.Format("button{0}pts", button);
+                newPointsBotton.Content = String.Format("{0} points", button);
+
+                newPointsBotton.Margin = Thick(newPointsBotton, xButtons[xIndex], yButtons[yIndex]);
+
+                newPointsBotton.Height = 34;
+                newPointsBotton.Width = 78;
+                newPointsBotton.FontSize = 12;
+                newPointsBotton.Background = Brushes.White;
+                newPointsBotton.BorderThickness = new Thickness(1);
+
+                newPointsBotton.HorizontalContentAlignment = HorizontalAlignment.Center;
+                newPointsBotton.VerticalContentAlignment = VerticalAlignment.Center;
+
+                newPointsBotton.MouseDown += main.buttonPoints_Click;
+
+                main.menuArmybookPlace.Children.Add(newPointsBotton);
+                PointsButtons.Add(newPointsBotton);
+
+                xIndex += 1;
+
+                if (xIndex >= xButtons.Length)
+                {
+                    xIndex = 0;
+                    yIndex += 1;
+                }
+            }
         }
     }
 }

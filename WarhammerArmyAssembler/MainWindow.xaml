@@ -9,14 +9,14 @@
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
 
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
-            <Button x:Name="closeErrorDetail" Content="Close" Height="30" Width="154" Click="closeErrorDetail_Click"/>
+            <Label x:Name="closeErrorDetail" Content="Close" Height="30" Padding="0" Width="154" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Background="#FF930808" Margin="10,10" MouseDown="closeErrorDetail_Click"/>
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
 
         <Canvas x:Name="mainPlaceCanvas">
 
             <Canvas  x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-                <Button x:Name="closeArmybookDetail" Content="Close" Height="30" Width="280" Margin="20,20" Click="closeArmybookDetail_Click"/>
+                <Label x:Name="closeArmybookDetail" Content="Close" Height="30" Padding="0" Width="280" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Margin="20,20" MouseDown="closeArmybookDetail_Click"/>
             </Canvas>
             <ScrollViewer x:Name="armybookDetailScroll" Visibility="Hidden" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
                 <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
@@ -29,24 +29,9 @@
                 <Canvas x:Name="menuArmybookPlace" Width="320" Height="628" VerticalAlignment="Top" Background="White">
                     <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="11"/>
                     <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="303" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
-                    <Button x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="566" Click="buttonArmybook_Click"/>
+                    <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="566" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>
                     <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="118" Width="20" Click="prev_Click"/>
                     <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="118" Width="20" Click="next_Click"/>
-                    <Button x:Name="button200pts" Content="200 points" Height="34" Canvas.Left="20" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button500pts" Content="500 points" Height="34" Canvas.Left="116" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button600pts" Content="600 points" Height="34" Canvas.Left="213" Canvas.Top="367" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button750pts" Content="750 points" Height="34" Canvas.Left="20" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1000pts" Content="1000 points" Height="34" Canvas.Left="116" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1250pts" Content="1250 points" Height="34" Canvas.Left="213" Canvas.Top="406" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1500pts" Content="1500 points" Height="34" Canvas.Left="20" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1750pts" Content="1750 points" Height="34" Canvas.Left="116" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button1850pts" Content="1850 points" Height="34" Canvas.Left="213" Canvas.Top="445" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button2000pts" Content="2000 points" Height="34" Canvas.Left="20" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button2400pts" Content="2400 points" Height="34" Canvas.Left="116" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button2500pts" Content="2500 points" Height="34" Canvas.Left="213" Canvas.Top="484" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button2700pts" Content="2700 points" Height="34" Canvas.Left="20" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button3000pts" Content="3000 points" Height="34" Canvas.Left="116" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
-                    <Button x:Name="button3500pts" Content="3500 points" Height="34" Canvas.Left="213" Canvas.Top="523" Width="78" Click="buttonPoints_Click"/>
                     <TextBox x:Name="listArmybookPoints" Height="34" Canvas.Left="22" TextWrapping="Wrap" Text="4000" Canvas.Top="566" Width="130" FontSize="20"/>
                 </Canvas>
             </ScrollViewer>

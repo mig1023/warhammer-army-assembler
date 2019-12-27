@@ -1,20 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WarhammerArmyAssembler
 {
@@ -29,6 +19,8 @@ namespace WarhammerArmyAssembler
             Interface.main = this;
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
+
+            Interface.CreatePointsButtons();
 
             List<string> allXmlFiles = ArmyBookInInterface.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
             ArmyBookLoad.LoadArmy(allXmlFiles[0]);
@@ -243,6 +235,9 @@ namespace WarhammerArmyAssembler
 
         private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
         {
+            if (startHelpInfo.Visibility == Visibility.Visible)
+                Environment.Exit(0);
+
             CloseStartHelp();
 
             Interface.Move(Interface.MovingType.ToMain);
@@ -303,11 +298,11 @@ namespace WarhammerArmyAssembler
             Interface.PreviewArmyList(next: true);
         }
 
-        private void buttonPoints_Click(object sender, RoutedEventArgs e)
+        public void buttonPoints_Click(object sender, RoutedEventArgs e)
         {
             CloseStartHelp();
 
-            InterfaceReload.LoadArmySize(InterfaceOther.IntParse((sender as Button).Content.ToString().Split()[0]));
+            InterfaceReload.LoadArmySize(InterfaceOther.IntParse((sender as Label).Content.ToString().Split()[0]));
         }
 
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
