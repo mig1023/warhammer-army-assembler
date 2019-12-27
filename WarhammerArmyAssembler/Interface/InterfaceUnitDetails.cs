@@ -279,7 +279,7 @@ namespace WarhammerArmyAssembler
             if (!optionIsEnabled)
                 AddButtonAllParts(
                     captionFirst: String.Empty,
-                    captionSecond: "add",
+                    captionSecond: String.Empty,
                     backgroundFirst: Brushes.WhiteSmoke,
                     backgroundSecond: Brushes.Gainsboro,
                     margins: margins,
