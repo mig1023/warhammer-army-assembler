@@ -146,7 +146,8 @@ namespace WarhammerArmyAssembler
 
         private static void AddOption_Click(object sender, RoutedEventArgs e)
         {
-            string id_tag = (sender as ToggleButton).Tag.ToString();
+            // string id_tag = (sender as ToggleButton).Tag.ToString();
+            string id_tag = (sender as Label).Tag.ToString();
 
             string[] id = id_tag.Split('|');
 
@@ -218,6 +219,28 @@ namespace WarhammerArmyAssembler
             return height;
         }
 
+        private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
+            string id, Brush background, Brush foreground = null, double? partWidth = null)
+        {
+            Label newPart = new Label();
+
+            newPart.Content = caption;
+            newPart.HorizontalContentAlignment = HorizontalAlignment.Center;
+            newPart.Margin = Interface.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
+
+            newPart.Foreground = foreground ?? background;
+            newPart.Background = background;
+            newPart.MouseDown += AddOption_Click;
+
+            newPart.Width = partWidth ?? 77;
+            newPart.Tag = id;
+
+            Interface.main.unitDetail.Children.Add(newPart);
+            Interface.main.UpdateLayout();
+
+            return newPart.ActualWidth;
+        }
+
         private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth, string id,
             Option option, int mountAlreadyOn = 0, Option.OnlyForType mountTypeAlreadyFixed = Option.OnlyForType.All, Unit unit = null,
             bool mustBeEnabled = true)
@@ -225,44 +248,60 @@ namespace WarhammerArmyAssembler
             AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
                 option.Points, option.PerModel);
 
-            ToggleButton newButton = new ToggleButton();
 
             if (option.IsMagicItem())
-                newButton.Content = "drop";
+            {
+                AddButtonPart("drop", margins, 0, id, ArmyBook.MainColor, Brushes.White, 154);
+            }
+            else if (option.Realised)
+            {
+                double actualWidth = AddButtonPart("drop", margins, 0, id, ArmyBook.MainColor, Brushes.White);
+                AddButtonPart(String.Empty, margins, actualWidth, id, ArmyBook.BackgroundColor);
+            }
             else
             {
-                if (option.Realised)
-                {
-                    newButton.Content = "drop";
-                    newButton.IsChecked = true;
-                }
-                else
-                {
-                    newButton.Content = "add";
-                    newButton.IsChecked = false;
-                }
+                double actualWidth = AddButtonPart(String.Empty, margins, 0, id, Brushes.LightGray);
+                AddButtonPart("add", margins, actualWidth, id, Brushes.Silver, Brushes.White);
             }
 
-            newButton.IsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);
+            //ToggleButton newButton = new ToggleButton();
 
-            if (!mustBeEnabled)
-                newButton.IsEnabled = false;
+            //if (option.IsMagicItem())
+            //    newButton.Content = "drop";
+            //else
+            //{
+            //    if (option.Realised)
+            //    {
+            //        newButton.Content = "drop";
+            //        newButton.IsChecked = true;
+            //    }
+            //    else
+            //    {
+            //        newButton.Content = "add";
+            //        newButton.IsChecked = false;
+            //    }
+            //}
 
-            if (
-                    (unit != null)
-                    && (
-                        !unit.IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true)
-                        ||
-                        unit.IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false)
-                    )
-                )
-                newButton.IsEnabled = false;
+            //newButton.IsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);
 
-            newButton.Margin = Interface.Thick(newButton, margins[0] + 2, margins[1] + 20);
-            newButton.Tag = id;
-            newButton.Click += AddOption_Click;
-            newButton.Width = 155;
-            Interface.main.unitDetail.Children.Add(newButton);
+            //if (!mustBeEnabled)
+            //    newButton.IsEnabled = false;
+
+            //if (
+            //        (unit != null)
+            //        && (
+            //            !unit.IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true)
+            //            ||
+            //            unit.IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false)
+            //        )
+            //    )
+            //    newButton.IsEnabled = false;
+
+            //newButton.Margin = Interface.Thick(newButton, margins[0] + 2, margins[1] + 20);
+            //newButton.Tag = id;
+            //newButton.Click += AddOption_Click;
+            //newButton.Width = 155;
+            //Interface.main.unitDetail.Children.Add(newButton);
 
             return height;
         }
