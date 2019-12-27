@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
@@ -148,7 +146,7 @@ namespace WarhammerArmyAssembler
 
         private static void AddOption_Click(object sender, RoutedEventArgs e)
         {
-            string id_tag = (sender as Button).Tag.ToString();
+            string id_tag = (sender as ToggleButton).Tag.ToString();
 
             string[] id = id_tag.Split('|');
 
@@ -227,12 +225,23 @@ namespace WarhammerArmyAssembler
             AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
                 option.Points, option.PerModel);
 
-            Button newButton = new Button();
+            ToggleButton newButton = new ToggleButton();
 
             if (option.IsMagicItem())
                 newButton.Content = "drop";
             else
-                newButton.Content = (option.Realised ? "drop" : "add");
+            {
+                if (option.Realised)
+                {
+                    newButton.Content = "drop";
+                    newButton.IsChecked = true;
+                }
+                else
+                {
+                    newButton.Content = "add";
+                    newButton.IsChecked = false;
+                }
+            }
 
             newButton.IsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);
 
