@@ -81,7 +81,10 @@ namespace WarhammerArmyAssembler
                     }
                     else
                     {
-                        if (head == "WEAPONS & ARMOUR" && (!option.IsMagicItem() || (option.Points != 0) || String.IsNullOrEmpty(option.Name)))
+                        bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0) || String.IsNullOrEmpty(option.Name);
+                        bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount && option.SpecialRuleDescription.Length == 0;
+
+                        if (head == "WEAPONS & ARMOUR" && thisIsStandartEquipment && !thisIsSpecialRuleOrMount)
                             continue;
 
                         margins = CheckColumn(margins, ref lastColumnMaxWidth);
