@@ -46,7 +46,7 @@ namespace WarhammerArmyAssembler
                 {
                     margins = CheckColumn(margins, ref lastColumnMaxWidth);
 
-                    margins[1] += AddLabel((rule == "FC" ? "FULL COMMAND" : rule), margins, 15, ref lastColumnMaxWidth);
+                    margins[1] += AddLabel((rule == "FC" ? "Full command" : rule), margins, 15, ref lastColumnMaxWidth);
 
                     margins[1] += 5;
                 }
@@ -82,7 +82,8 @@ namespace WarhammerArmyAssembler
                     else
                     {
                         bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0) || String.IsNullOrEmpty(option.Name);
-                        bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount && option.SpecialRuleDescription.Length == 0;
+                        bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount &&
+                            !option.FullCommand && option.SpecialRuleDescription.Length == 0;
 
                         if (head == "WEAPONS & ARMOUR" && thisIsStandartEquipment && !thisIsSpecialRuleOrMount)
                             continue;
