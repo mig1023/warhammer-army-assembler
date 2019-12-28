@@ -242,8 +242,6 @@ namespace WarhammerArmyAssembler
                         }
                         else
                             paramValue -= (7 - optionValue);
-
-                        paramModView = "+";
                     }
                     else if (optionValue > 0)
                     {
@@ -254,6 +252,9 @@ namespace WarhammerArmyAssembler
                             paramValue = 10;
                     }
                 }
+
+            if (reversParam && (paramValue != null))
+                paramModView += '+';
 
             return paramValue.ToString() + paramModView;
         }
