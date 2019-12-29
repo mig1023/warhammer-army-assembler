@@ -211,6 +211,8 @@ namespace WarhammerArmyAssembler
                 label.Foreground = mainColor;
             }
 
+            main.listArmybookPoints.Foreground = mainColor;
+
             foreach (Label label in new List<Label>() { main.listArmybookVer, main.buttonArmybook, main.closeArmybookDetail })
                 label.Background = mainColor;
         }
