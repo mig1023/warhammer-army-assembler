@@ -133,9 +133,31 @@
 				<SpecialRuleDescription>Armour Piercing against Dwarfs</SpecialRuleDescription>
 				<Description>The wielder of this sword is granted +1 Strength to all Attacks. Additionaly against Dwarfs, all hits are Armour Piercing and the user re-rolls all failed to Wound rolls.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Blade of Nurgitch</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>Enemy lose 1 point of Toughness for each unsaved wound</SpecialRuleDescription>
+				<Description>Enemy lose 1 point of Toughness for each unsaved wound they suffer from this blade. Any model reduced to Toughness 0 is removed as a casualty.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic armour">
-			
+			<Artefact>
+				<Name>Warpstone Armour</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToArmour>4</AddToArmour>
+				<SpecialRuleDescription>Strength 4 hit against enemy for each successful armour save</SpecialRuleDescription>
+				<Description>Warpstone Armour gives its wearer a 4+ armour save. For each successful armour save made by the bearer in close combat, the armour immediately inflicts a Strength 4 hit against the model that struch the blow.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>World's Edge Armour</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToArmour>4</AddToArmour>
+				<SpecialRuleDescription>First wound by Strength 6+ is discounted, but armour is completely destroyed</SpecialRuleDescription>
+				<Description>The armour gives its wearer a 4+ armour save. The first time the wearer is wounded by Strength hight enouth to completly cancel his armour save for any reason, the wound is discounted, but\narmour is completely destroyed.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Talismans">
 			
