@@ -8,13 +8,16 @@ namespace WarhammerArmyAssembler
 {
     class InterfaceUnitDetails
     {
+        private static double GetDetailHeight()
+        {
+            double detailHeight = Interface.main.unitDetail.ActualHeight;
+            return (detailHeight > 0 ? detailHeight : 250);
+        }
+
         private static double[] CheckColumn(double[] margins, ref double lastColumnMaxWidth,
             bool header = false, bool newColumn = false)
         {
-            double detailHeight = Interface.main.unitDetail.ActualHeight;
-            detailHeight = (detailHeight > 0 ? detailHeight : 250);
-
-            if (newColumn || (margins[1] + (header ? 90 : 60) > detailHeight))
+            if (newColumn || (margins[1] + (header ? 90 : 60) > GetDetailHeight()))
             {
                 margins[0] += (lastColumnMaxWidth > 175 ? lastColumnMaxWidth + 10 : 175);
                 margins[1] = (header ? 50 : 40) + (newColumn ? 0 : 45);
@@ -22,6 +25,13 @@ namespace WarhammerArmyAssembler
             }
 
             return margins;
+        }
+
+        private static bool NotEnoughColumnForThis(string caption, double height, double[] margins)
+        {
+            string[] captionLines = WordSplit(caption);
+
+            return (margins[1] + 25 + (height * captionLines.Length) > GetDetailHeight() ? true : false);
         }
 
         private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit,
@@ -44,7 +54,10 @@ namespace WarhammerArmyAssembler
             {
                 foreach (string rule in unit.GetSpecialRules())
                 {
-                    margins = CheckColumn(margins, ref lastColumnMaxWidth);
+                    if (NotEnoughColumnForThis(rule, 15, margins))
+                        margins = CheckColumn(margins, ref lastColumnMaxWidth, newColumn: true);
+                    else
+                        margins = CheckColumn(margins, ref lastColumnMaxWidth);
 
                     margins[1] += AddLabel((rule == "FC" ? "Full command" : rule), margins, 15, ref lastColumnMaxWidth);
 
@@ -177,11 +190,50 @@ namespace WarhammerArmyAssembler
             AddOptionsList(unitID, unit);
         }
 
+        private static string[] WordSplit(string caption)
+        {
+            int partLength = 35;
+
+            if (caption.Length <= partLength)
+                return new string[] { caption };
+
+            string[] words = caption.Split(' ');
+
+            List<string> parts = new List<string>();
+
+            string part = string.Empty;
+
+            int partCounter = 0;
+
+            foreach (string word in words)
+            {
+                if ((part.Length + word.Length) < partLength)
+                    part += (String.IsNullOrEmpty(part) ? word : " " + word);
+                else
+                {
+                    parts.Add(part);
+                    part = word;
+                    partCounter += 1;
+                }
+            }
+
+            parts.Add(part);
+
+            return parts.ToArray();
+        }
+
         private static double AddLabel(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
             bool selected = false, double points = 0, bool perModel = false, bool bold = false)
         {
             Label newOption = new Label();
-            newOption.Content = caption;
+
+            string[] captionLines = WordSplit(caption);
+
+            newOption.Content = String.Empty;
+
+            foreach (string line in captionLines)
+                newOption.Content += (String.IsNullOrEmpty(newOption.Content.ToString()) ? String.Empty : Environment.NewLine + "   ") + line;
+
             newOption.Margin = Interface.Thick(newOption, margins[0], margins[1]);
 
             if (selected)
@@ -218,7 +270,7 @@ namespace WarhammerArmyAssembler
             if (actualWidth > lastColumnMaxWidth)
                 lastColumnMaxWidth = actualWidth;
 
-            return height;
+            return height * captionLines.Length;
         }
 
         private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
