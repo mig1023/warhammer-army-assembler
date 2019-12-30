@@ -15,9 +15,9 @@ namespace WarhammerArmyAssembler
         }
 
         private static double[] CheckColumn(double[] margins, ref double lastColumnMaxWidth,
-            bool header = false, bool newColumn = false)
+            bool header = false, bool newColumn = false, bool sizeCollapse = false)
         {
-            if (newColumn || (margins[1] + (header ? 90 : 60) > GetDetailHeight()))
+            if (newColumn || sizeCollapse || (margins[1] + (header ? 90 : 60) > GetDetailHeight()))
             {
                 margins[0] += (lastColumnMaxWidth > 175 ? lastColumnMaxWidth + 10 : 175);
                 margins[1] = (header ? 50 : 40) + (newColumn ? 0 : 45);
@@ -30,6 +30,9 @@ namespace WarhammerArmyAssembler
         private static bool NotEnoughColumnForThis(string caption, double height, double[] margins)
         {
             string[] captionLines = WordSplit(caption);
+
+            if (captionLines.Length < 2)
+                return false;
 
             return (margins[1] + 25 + (height * captionLines.Length) > GetDetailHeight() ? true : false);
         }
@@ -54,10 +57,7 @@ namespace WarhammerArmyAssembler
             {
                 foreach (string rule in unit.GetSpecialRules())
                 {
-                    if (NotEnoughColumnForThis(rule, 15, margins))
-                        margins = CheckColumn(margins, ref lastColumnMaxWidth, newColumn: true);
-                    else
-                        margins = CheckColumn(margins, ref lastColumnMaxWidth);
+                    margins = CheckColumn(margins, ref lastColumnMaxWidth, sizeCollapse: NotEnoughColumnForThis(rule, 15, margins));
 
                     margins[1] += AddLabel((rule == "FC" ? "Full command" : rule), margins, 15, ref lastColumnMaxWidth);
 
@@ -232,7 +232,7 @@ namespace WarhammerArmyAssembler
             newOption.Content = String.Empty;
 
             foreach (string line in captionLines)
-                newOption.Content += (String.IsNullOrEmpty(newOption.Content.ToString()) ? String.Empty : Environment.NewLine + "   ") + line;
+                newOption.Content += (String.IsNullOrEmpty(newOption.Content.ToString()) ? String.Empty : Environment.NewLine + "|  ") + line;
 
             newOption.Margin = Interface.Thick(newOption, margins[0], margins[1]);
 
@@ -270,7 +270,9 @@ namespace WarhammerArmyAssembler
             if (actualWidth > lastColumnMaxWidth)
                 lastColumnMaxWidth = actualWidth;
 
-            return height * captionLines.Length;
+            double bottomPadding = (captionLines.Length > 1 ? 5 : 0);
+
+            return (height * captionLines.Length) + bottomPadding;
         }
 
         private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
