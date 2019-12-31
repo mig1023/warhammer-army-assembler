@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace WarhammerArmyAssembler
 {
@@ -232,7 +233,7 @@ namespace WarhammerArmyAssembler
             newOption.Content = String.Empty;
 
             foreach (string line in captionLines)
-                newOption.Content += (String.IsNullOrEmpty(newOption.Content.ToString()) ? String.Empty : Environment.NewLine + "|  ") + line;
+                newOption.Content += (String.IsNullOrEmpty(newOption.Content.ToString()) ? String.Empty : Environment.NewLine + "   ") + line;
 
             newOption.Margin = Interface.Thick(newOption, margins[0], margins[1]);
 
@@ -265,6 +266,21 @@ namespace WarhammerArmyAssembler
                 Interface.main.UpdateLayout();
 
                 actualWidth += optionPoints.ActualWidth - 5;
+            }
+
+            if (captionLines.Length > 1)
+            {
+                Line longOptionLine = new Line();
+
+                longOptionLine.X1 = newOption.Margin.Left + 8;
+                longOptionLine.Y1 = newOption.Margin.Top + height + 8;
+                longOptionLine.X2 = longOptionLine.X1;
+                longOptionLine.Y2 = longOptionLine.Y1 + height * (captionLines.Length - 1);
+
+                longOptionLine.StrokeThickness = 2;
+                longOptionLine.Stroke = ArmyBook.MainColor;
+
+                Interface.main.unitDetail.Children.Add(longOptionLine);
             }
 
             if (actualWidth > lastColumnMaxWidth)
