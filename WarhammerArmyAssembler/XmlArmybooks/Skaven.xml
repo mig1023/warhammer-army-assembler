@@ -148,7 +148,7 @@
 				<Points>30</Points>
 				<AddToArmour>4</AddToArmour>
 				<SpecialRuleDescription>Strength 4 hit against enemy for each successful armour save</SpecialRuleDescription>
-				<Description>Warpstone Armour gives its wearer a 4+ armour save. For each successful armour save made by the bearer in close combat, the armour immediately inflicts a Strength 4 hit against the model that struch the blow.</Description>
+				<Description>Warpstone Armour gives its wearer a 4+ armour save. For each successful armour save made by the bearer in close combat, the armour immediately inflicts a Strength 4 hit against the model that struck the blow. Any casualties caused will count towards combat resolution. Warpstone Armour can be worn by Clan Skryre Warlock Engineers.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>World's Edge Armour</Name>
@@ -156,20 +156,251 @@
 				<Points>25</Points>
 				<AddToArmour>4</AddToArmour>
 				<SpecialRuleDescription>First wound by Strength 6+ is discounted, but armour is completely destroyed</SpecialRuleDescription>
-				<Description>The armour gives its wearer a 4+ armour save. The first time the wearer is wounded by Strength hight enouth to completly cancel his armour save for any reason, the wound is discounted, but\narmour is completely destroyed.</Description>
+				<Description>The armour gives its wearer a 4+ armour save. The first time the wearer is wounded by a Strength high enough to completely cancel his armour save, or is not permitted an armour save for any reason, the wound is discounted, but the armour is completely destroyed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Shield of Distraction</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Any models in base contact suffer -1 Attack</SpecialRuleDescription>
+				<Description>Any models in base contact wishing to strike the bearer of this shield suffer -1 Attack, to a minimum of 1.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Talismans">
-			
+			<Artefact>
+				<Name>Foul Pendant</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToWard>6</AddToWard>
+				<Description>This wicked token of the Horned Rat’s power confers a 5+ ward save upon the bearer.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Shadow Magnet Trinket</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Shooting attacks suffer a -1 To Hit penalty</SpecialRuleDescription>
+				<Description>Shooting attacks at the bearer of a Shadow Magnet Trinket and any unit he has joined suffer a -1 To Hit penalty in addition to any normal modifiers due to the cloying presence of unnatural darkness.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rival Hide Talisman</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>Enemy must re-roll all its successful To Hit dice rolls, one use only</SpecialRuleDescription>
+				<Description>One use only. A Skaven model wearing a Rival Hide Talisman can make a single enemy model in base contact re-roll all its successful To Hit dice rolls.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Arcane items">
-			
+			<Artefact>
+				<Name>Warpstorm Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Bound spell, Power Level 5. One use only. All flying units within 24" suffer D6 Strength 6 hits</SpecialRuleDescription>
+				<Description>Bound Spell (Power Level 5). One use only. When this scroll is read all flying units within 24" of the caster suffer D6 Strength 6 hits, distributed as per shooting.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Warp-Energy Condenser</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>Extra power dice by 5+ on a D6 during each friendly Magic phase</SpecialRuleDescription>
+				<Description>During each friendly Magic phase a Grey Seer or Warlock Engineer with a Warp-Energy Condenser can on a D6 roll of 5+, generate an extra power dice. Additionally, the device is particularly adept at aiding a sorcerer in casting Warp Lightning. While wearing a Warp-Energy Condenser a caster does not D6 but D6+2 hits when casting Warp Lightning. Rolls of 1, however, do not gain the +2 bonus.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Scrying Stone</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<AddToWard>3</AddToWard>
+				<SpecialRuleDescription>3+ ward save against the first wound, Stupidity if the wound is saved</SpecialRuleDescription>
+				<Description>One use only. The bearer of this mystical ball gains a 3+ ward save against the first wound suffered. If the wound is saved because of the ward save of the Scrying Ball, the bearer will be subject to Stupidity in the following friendly turn as he awaits further helpful instructions from the mysterious globe.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Warpstone Tokens</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>Warpstone Tokens</SpecialRuleDescription>
+				<Description>Multiple Grey Seers and Warlock Engineers may purchase as many Warpstone Tokens as are allowed within the limit of points they are able to spend on magic items. Warpstone Tokens do not count against the total Arcane items a model is allowed to bear.|A Grey Seer or Clan Skryre Warlock may choose to eat some warpstone to boost his powers. Before casting a spell announce which model is eating Warpstone Tokens. For each token consumed, a Wizard can add a single dice to his casting effort. These dice are added to the normal power dice, although this does allow users to roll more dice than is normally allowed by their level. A spell may be cast entirely with warpstone.|For any of the warpstone generated dice that rolls a one the Wizard suffers a wound with no armour saves allowed. The results of miscasts or irresistible force apply as normal. When using both normal power dice and Warpstone Token generated dice it is a good idea to roll separately or use dice of a different colour (green-tinged ones work best!).</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Enchanted itams">
-			
+			<Artefact>
+				<Name>Skavenbrew</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<AddToWard>3</AddToWard>
+				<SpecialRuleDescription>Skavenbrew</SpecialRuleDescription>
+				<Description>One use only. A character carrying Skavenbrew can force any unit of Clanrats or Stormvermin in base contact to guzzle the vile liquid. Champions are affected but no character models would be so unwise as to drink the potion.|Roll a D6 after the brew is consumed.|1 Gone Bad. The unit takes D6 Strength 3 automatic hits with no armour save. The Skavenbrew has no additional effect.|2-3 Inspired Hatred. The unit now has Hatred of all enemies.|4-5 Frenzied. The unit is now subject to Frenzy.|6 Rabid. The unit’s metabolism is driven hyperactive, ramping up to a feverish pitch. The unit is subject to Frenzy, but instead of adding +1 Attacks, add +2 Attacks. In each following friendly Compulsory Move the unit will take D6 automatic wounds as some of the ratmen collapse, hearts or brains bursting with fury.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Skalm</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>The bearer is instantly cured of any wounds. One use only.</SpecialRuleDescription>
+				<Description>One use only. At the beginning of any phase (friend or foe’s) announce you are using Skalm. The bearer is instantly cured of any wounds suffered so far. Skalm is of no use to models that are already dead. Skalm can only be used by the bearer, sharing such a precious thing is not something a Skaven would contemplate.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Pipes of Piebald</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Charging enemy unit must first pass a Leadership test or fail a charge</SpecialRuleDescription>
+				<Description>In order to charge the bearer or any unit he has joined, an enemy unit must first pass a Leadership test. If the Leadership test is failed, treat the unit as if they had failed a charge.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Portents of Verminous Doom</Name>
+				<Type>Armour</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>-1 penalty to enemy Leadership in base contact</SpecialRuleDescription>
+				<Description>Any enemy unit in base contact with the model bearing Portents of Verminous Doom suffers a -1 penalty to its Leadership for as long as they remain in contact.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Clan Eshin tools of war">
+			<Artefact>
+				<Name>Warpstone stars</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Eshin</OnlyForGroup>
+				<Points>50</Points>
+				<SpecialRuleDescription>3x Multiple Shots, Strength 5 and each unsaved wound multiplies into D3 wounds</SpecialRuleDescription>
+				<Description>Warpstone Stars are a thrown weapon with the 3x Multiple Shots rule. Warpstone Stars are Strength 5 and each unsaved wound multiplies into D3 wounds.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Infernal Bomb</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Eshin</OnlyForGroup>
+				<Points>30</Points>
+				<SpecialRuleDescription>Infernal Bomb</SpecialRuleDescription>
+				<Description>One use only. Except in a turn in which he charges, an Assassin can place an Infernal Bomb anywhere along his path during the Movement phase or, if in a unit, anywhere along the path the unit has travelled.|A model can place an Infernal Bomb and march. Announce your intentions to drop off an Infernal Bomb and mark the spot (a coin will do). The model and or unit that places the bomb must set the bomb and move away. Once placed, an Infernal Bomb cannot be moved.|The owning player can choose to explode an Infernal Bomb at any time except during the player turn in which it was placed. However, an Infernal Bomb that would explode with its template touching the model that placed the bomb or any member of his unit cannot be detonated. When triggered, an Infernal Bomb explodes on a D6 roll of 2+ . On a roll of 1, the Infernal Bomb is a dud and does not explode. Perhaps the Warlock Engineers have betrayed you? If it does explode, place the large round template centred on the counter. Any model at the template’s centre takes a single Strength 10 hit, causing D3 wounds. Any models touched by the template suffer a Strength 3 hit.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Smoke bombs</Name>
+				<Type>Armour</Type>
+				<OnlyForGroup>Eshin</OnlyForGroup>
+				<Points>10</Points>
+				<SpecialRuleDescription>All pursuing units in the combat must roll 1D6 less than normal</SpecialRuleDescription>
+				<Description>One use only. If a character equipped with Smoke-Bombs is forced to flee he can choose to smash the bombs underfoot to slow the victors as they pursue. Before any dice are rolled announce the Smoke Bombs are being detonated. All pursuing units in the combat must roll 1D6 less than normal.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Clan Skryre gear of war">
+			<Artefact>
+				<Name>Brass Orb</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Skryre</OnlyForGroup>
+				<Points>50</Points>
+				<SpecialRuleDescription>Brass Orb</SpecialRuleDescription>
+				<Description>One use only. In the Shooting phase the user can throw the orb. Place the small round template with its centre anywhere within 8" of the character. Scatter the template as you would for a stone thrower shot.|Models touched by the template must take an Initiative test or be destroyed, with no saves (of any kind) allowed. Remember that a 6 is always a failure. “Look Out Sir!” works as normal. If a misfire is rolled, centre the template on the model throwing the globe.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Doomrocket</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Skryre</OnlyForGroup>
+				<Points>30</Points>
+				<SpecialRuleDescription>Doomrocket</SpecialRuleDescription>
+				<Description>One use only. To fire the Doomrocket the owning player must nominate a direction and the number of dice he intends to roll for range. He can choose between 4 and 10 dice. The rocket will travel a number of inches equal to the total of the dice rolled and this determines where the large round template is placed. Any model touched by the template suffers a Strength 5 hit from the resulting explosion.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Death globe</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Skryre</OnlyForGroup>
+				<Points>25</Points>
+				<SpecialRuleDescription>Death Globe</SpecialRuleDescription>
+				<Description>One use only. A character equipped with such a weapon can throw it in any Shooting phase. The Death Globe is thrown just as the Brass Orb (see above). All models touched by the template suffer a wound on the result of 4+, with no armour save allowed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Warlock optics</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Skryre</OnlyForGroup>
+				<Points>20</Points>
+				<AddToBallisticSkill>1</AddToBallisticSkill>
+				<Description>A Warlock Engineer equipped with Warlock Optics adds +1 to his Ballistic Skill. Additionally, a model so equipped can see partially see through objects and so suffers no penalty for shooting at targets in cover.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Clan Pestilens befouled items">
+			<Artefact>
+				<Name>Warp Scroll</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Pestilens</OnlyForGroup>
+				<Points>35</Points>
+				<SpecialRuleDescription>Bound Spell, Power level 5, a range of 24", Strength 2 hit on every model in the unit, with no armour saves allowed, one use only</SpecialRuleDescription>
+				<Description>One use only. Bound Spell (Power level 5). The spell has a range of 24" and can be cast on any unit visible to the bearer. The spell inflicts one Strength 2 hit on every model in the unit, with no armour saves allowed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Plague banner</Name>
+				<Type>Banner</Type>
+				<OnlyForGroup>Pestilens</OnlyForGroup>
+				<Points>30</Points>
+				<SpecialRuleDescription>Plague Monk models in the unit may re-roll failed To Hit and To Wound rolls, one use only. </SpecialRuleDescription>
+				<Description>One use only. Once per game in any Close Combat phase the Plague Banner may be activated. For the remainder of the phase all Plague Monk models in the unit may re-roll failed To Hit rolls and failed To Wound rolls.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Clan Moulder beast-prods">
+			<Artefact>
+				<Name>Shock-Prod</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Moulder</OnlyForGroup>
+				<Points>25</Points>
+				<SpecialRuleDescription>Two hands weapon, ignores armour saves</SpecialRuleDescription>
+				<Description>This weapon requires two hands to wield and ignores armour saves.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Electro-whip</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Moulder</OnlyForGroup>
+				<Points>15</Points>
+				<SpecialRuleDescription>D3 Attacks instead of the normal 1</SpecialRuleDescription>
+				<Description>This weapon follows the rules for whips but confers D3 Attacks instead of the normal 1 when in base contact and from the rear ranks. Roll to determine the number of Attacks each combat.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic standards">
-			
+			<Artefact>
+				<Name>Sacred Banner of the Horned Rat</Name>
+				<Type>Banner</Type>
+				<Points>70</Points>
+				<SpecialRuleDescription>All enemy units within 12" of this banner suffer a -1 penalty to their Leadership</SpecialRuleDescription>
+				<SpecialRuleDescription>Enemy units in base contact re-roll any successful Leadership tests</SpecialRuleDescription>
+				<Description>All enemy units within 12" of this banner suffer a -1 penalty to their Leadership and the owning player can make enemy units in base contact with the bearer of this banner re-roll any successful Leadership tests.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Storm Banner</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>No flying movement is allowed</SpecialRuleDescription>
+				<SpecialRuleDescription>Missile fire is at -2 to hit</SpecialRuleDescription>
+				<Description>The banner can be activated at the beginning of any player’s turn. No flying movement is allowed across the entire battlefield and missile fire is at -2 to hit. All non-magical missile attacks that don’t use BS to hit their target need to roll a 4+ on a D6 before they can fire. Roll a D6 at the beginning of each following player turn - the effects of the banner will end on a D6 roll of 4+.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Grand Banner of Clan Superiority</Name>
+				<Type>Banner</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>D3 to its bearer’s combat resolution bonus if unit has more ranks than its opponents</SpecialRuleDescription>
+				<Description>In any combat in which a unit bearing a Grand Banner of Clan Superiority has more ranks than its opponents, the banner will add not 1 as per a normal banner, but instead a total of D3 to its bearer’s combat resolution. Roll at the end of each combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Shroud of Dripping Death</Name>
+				<Type>Banner</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>All enemy models in base contact take a single Strength 3 hits with no armour save at the start of each Close Combat phase</SpecialRuleDescription>
+				<SpecialRuleDescription>The persecutor will immediately suffer D6+2 Strength 3 hits with no armour saves</SpecialRuleDescription>
+				<Description>All enemy models in base contact take a single Strength 3 hits with no armour save at the start of each and every Close Combat phase. Additionally, should the unit bearing the Shroud of Dripping Death break from combat, any unit that dares to pursue it will immediately suffer D6+2 Strength 3 hits with no armour saves.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of the Under-Empire</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>All units in base contact suffer 2D6 Strength 2 automatic hits at the start of each Close Combat phase</SpecialRuleDescription>
+				<Description>All units in base contact with the unit bearing this banner suffer 2D6 Strength 2 automatic hits at the start of each and every Close Combat phase. All hits arc-distributed as per Shooting.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dwarf-hide Banner</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<Hate>true</Hate>
+				<Description>The unit carrying this banner gains Hatred of Dwarfs and likewise will be subject to all Dwarfs gaining Hatred against them.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Verminous Scurrying</Name>
+				<Type>Banner</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>Unit can march at triple-speed, but suffers 2D6 Strength 3 hits (no armour saves allowed)</SpecialRuleDescription>
+				<Description>Once per battle, at the start of any friendly turn except the first, the banner can be activated. If the unit carrying the banner can march, they can do so at triple-speed. Such a rapid expenditure of energy has a cost, as after marching the unit suffers 2D6 Strength 3 hits (no armour saves allowed), distributed as per shooting.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	
@@ -266,6 +497,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Ikit Claw</Name>
+			<Group>Skryre</Group>
 			<Wizard>3</Wizard>
 			<Points>395</Points>
 			<Description>Ikit Claw</Description>
@@ -311,6 +543,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Throt the Unclean</Name>
+			<Group>Moulder</Group>
 			<Points>225</Points>
 			<Description>Throt the Unclean</Description>
 			<MinSize>1</MinSize>
@@ -535,7 +768,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
-				<MagicItemsType>Hero</MagicItemsType>
+				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -560,6 +793,7 @@
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Deathmaster Snikch</Name>
+			<Group>Eshin</Group>
 			<Points>270</Points>
 			<Description>Deathmaster Snikch</Description>
 			<MinSize>1</MinSize>
@@ -711,7 +945,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
-				<MagicItemsType>Hero</MagicItemsType>
+				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1807,6 +2041,7 @@
 		<Unit>
 			<Type>Special</Type>
 			<Name>Plague Monks</Name>
+			<Group>Pestilens</Group>
 			<Points>7</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
