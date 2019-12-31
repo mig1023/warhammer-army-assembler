@@ -365,8 +365,8 @@ namespace WarhammerArmyAssembler
                 AddButtonAllParts(
                     captionFirst: "drop",
                     captionSecond: String.Empty,
-                    backgroundFirst: ArmyBook.MainColor,
-                    backgroundSecond: ArmyBook.BackgroundColor,
+                    backgroundFirst: ArmyBook.AdditionalColor,
+                    backgroundSecond: ArmyBook.MainColor,
                     margins: margins,
                     id: id
                 );
