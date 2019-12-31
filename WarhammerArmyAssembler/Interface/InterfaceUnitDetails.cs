@@ -38,6 +38,14 @@ namespace WarhammerArmyAssembler
             return (margins[1] + 25 + (height * captionLines.Length) > GetDetailHeight() ? true : false);
         }
 
+        private static string GetMagicPointsString(int unitID, string head)
+        {
+            if (head != "MAGIC ITEMS")
+                return String.Empty;
+
+            return String.Format("{0} / {1}", InterfaceChecks.UnitMagicPointsAlreadyUsed(unitID), Army.Units[unitID].MagicItems);
+        }
+
         private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit,
             ref bool notFirstColumn, ref double lastColumnMaxWidth)
         {
@@ -46,7 +54,7 @@ namespace WarhammerArmyAssembler
 
             margins = CheckColumn(margins, ref lastColumnMaxWidth, header: true, newColumn: notFirstColumn);
 
-            margins[1] += AddLabel(head, margins, 25, ref lastColumnMaxWidth, bold: true);
+            margins[1] += AddLabel(head, margins, 25, ref lastColumnMaxWidth, bold: true, addLine: GetMagicPointsString(unitID, head));
 
             margins[1] += 10;
 
@@ -71,7 +79,7 @@ namespace WarhammerArmyAssembler
             {
                 foreach (Option option in unit.Options)
                 {
-                    if (head == "OPTION" || head == "COMMAND" || head == "MAGIC ITAMS")
+                    if (head == "OPTION" || head == "COMMAND" || head == "MAGIC ITEMS")
                     {
                         if (head == "OPTION" && (!option.IsOption() || option.FullCommand))
                             continue;
@@ -79,7 +87,7 @@ namespace WarhammerArmyAssembler
                         if (head == "COMMAND" && !option.FullCommand)
                             continue;
 
-                        if (head == "MAGIC ITAMS" && (!option.IsMagicItem() || (option.Points <= 0)))
+                        if (head == "MAGIC ITEMS" && (!option.IsMagicItem() || (option.Points <= 0)))
                             continue;
 
                         margins = CheckColumn(margins, ref lastColumnMaxWidth);
@@ -147,7 +155,7 @@ namespace WarhammerArmyAssembler
                 margins = CreateColumn("COMMAND", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsMagicItems())
-                margins = CreateColumn("MAGIC ITAMS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+                margins = CreateColumn("MAGIC ITEMS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsOrdinaryItems())
                 margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
@@ -224,7 +232,7 @@ namespace WarhammerArmyAssembler
         }
 
         private static double AddLabel(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
-            bool selected = false, double points = 0, bool perModel = false, bool bold = false)
+            bool selected = false, double points = 0, bool perModel = false, bool bold = false, string addLine = "")
         {
             Label newOption = new Label();
 
@@ -255,11 +263,13 @@ namespace WarhammerArmyAssembler
 
             double actualWidth = newOption.ActualWidth;
 
-            if (points > 0)
+            if (points > 0 || !String.IsNullOrEmpty(addLine))
             {
+                double leftPadding = (points > 0 ? -5 : 5);
+
                 Label optionPoints = new Label();
-                optionPoints.Content = points.ToString() + " pts" + (perModel ? "/m" : String.Empty);
-                optionPoints.Margin = Interface.Thick(optionPoints, margins[0] + newOption.ActualWidth - 5, margins[1]);
+                optionPoints.Content = (points > 0 ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine);
+                optionPoints.Margin = Interface.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
                 optionPoints.Foreground = ArmyBook.MainColor;
                 Interface.main.unitDetail.Children.Add(optionPoints);
 
@@ -331,7 +341,7 @@ namespace WarhammerArmyAssembler
 
             if (option.IsMagicItem())
             {
-                AddButtonPart("drop", margins, 0, id, ArmyBook.MainColor, 154);
+                AddButtonPart("drop artefact", margins, 0, id, ArmyBook.MainColor, 154);
                 return height;
             }
 

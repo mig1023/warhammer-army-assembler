@@ -192,7 +192,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsUsableByUnit(Unit.MagicItemsTypes unitType, string unitGroup)
         {
-            if (!String.IsNullOrEmpty(OnlyForGroup) && !String.IsNullOrEmpty(unitGroup) && (OnlyForGroup != unitGroup))
+            if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unitGroup))
                 return false;
 
             if ((unitType == Unit.MagicItemsTypes.Unit) && (Type != OptionType.Banner))
