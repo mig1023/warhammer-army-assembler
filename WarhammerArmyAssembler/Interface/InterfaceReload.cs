@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
@@ -101,13 +102,13 @@ namespace WarhammerArmyAssembler
             }
 
             Interface.main.ArmyGrid.ItemsSource = Interface.ArmyInInterface;
-            Interface.main.armyHeroes.Content = String.Format("Heroes: {0}/{1} out of {2}/{3}",
+            Interface.main.armyHeroes.Content = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
                 ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Lord),
                 ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Hero),
                 ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Lord),
                 ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Hero)
             );
-            Interface.main.armyUnits.Content = String.Format("Units: {0}/{1}/{2} out of {3}+/{4}/{5}",
+            Interface.main.armyUnits.Content = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
                 ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Core),
                 ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Special),
                 ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Rare),
@@ -115,7 +116,7 @@ namespace WarhammerArmyAssembler
                 ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Special),
                 ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Rare)
             );
-            Interface.main.armyPoints.Content = String.Format("Points: {0} out of {1}", ArmyParams.GetArmyPoints(), ArmyParams.GetArmyMaxPoints());
+            Interface.main.armyPoints.Content = String.Format("Points: {0} [ {1} ]", ArmyParams.GetArmyPoints(), ArmyParams.GetArmyMaxPoints());
             Interface.main.armySize.Content = String.Format("Models: {0}", ArmyParams.GetArmySize());
             Interface.main.armyCasting.Content = String.Format("Cast: {0}", ArmyParams.GetArmyCast());
             Interface.main.armyDispell.Content = String.Format("Dispell: {0}", ArmyParams.GetArmyDispell());
