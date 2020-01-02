@@ -190,7 +190,26 @@
 
                     <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="" Height="30" Width="Auto" FontSize="12"/>
                     <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="" Height="30" Width="Auto" FontSize="12" Grid.ColumnSpan="2"/>
-                    <Label x:Name="armyPoints" Grid.Row="0" Grid.Column="3" Content="" Height="30" Width="Auto" FontSize="12"/>
+                    <Label Grid.Row="0" Grid.Column="3" Height="30" Width="Auto" FontSize="12" MouseDown="armyPoints_MouseDown">
+                        <TextBlock x:Name="armyPoints">
+                            <TextBlock.TextDecorations>
+                                <TextDecorationCollection>
+                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
+                                        <TextDecoration.Pen>
+                                            <Pen Thickness="1">
+                                                <Pen.Brush>
+                                                    <SolidColorBrush Color="Gray"/>
+                                                </Pen.Brush>
+                                                <Pen.DashStyle>
+                                                    <DashStyle Dashes="4,4"/>
+                                                </Pen.DashStyle>
+                                            </Pen>
+                                        </TextDecoration.Pen>
+                                    </TextDecoration>
+                                </TextDecorationCollection>
+                            </TextBlock.TextDecorations>
+                        </TextBlock>
+                    </Label>
                     <Label x:Name="armySize" Grid.Row="0" Grid.Column="4" Content="" Height="30" Width="Auto" FontSize="12"/>
                     <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="5" Content="" Height="30" Width="Auto" FontSize="12"/>
                     <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="6" Content="" Height="30" Width="Auto" FontSize="12"/>

@@ -23,5 +23,10 @@ namespace WarhammerArmyAssembler
         {
             return (SolidColorBrush)new BrushConverter().ConvertFromString(path.InnerText);
         }
+
+        public static int CalcPercent(double x, double y)
+        {
+            return (int)System.Math.Round((x * 100) / y);
+        }
     }
 }

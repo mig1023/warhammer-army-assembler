@@ -27,7 +27,7 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
-        public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points)
+        public static Dictionary<Unit.UnitType, double> UnitsPointsPercent()
         {
             Dictionary<Unit.UnitType, double> units = new Dictionary<Unit.UnitType, double>();
 
@@ -36,6 +36,25 @@ namespace WarhammerArmyAssembler
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
                 units[entry.Value.Type] += entry.Value.GetUnitPoints();
+
+            return units;
+        }
+
+        public static Dictionary<Unit.UnitType, double> UnitsMaxPointsPercent()
+        {
+            return new Dictionary<Unit.UnitType, double>
+            {
+                [Unit.UnitType.Lord] = 0.25,
+                [Unit.UnitType.Hero] = 0.25,
+                [Unit.UnitType.Core] = 0.25,
+                [Unit.UnitType.Special] = 0.50,
+                [Unit.UnitType.Rare] = 0.25,
+            };
+        }
+
+        public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points)
+        {
+            Dictionary<Unit.UnitType, double> units = UnitsPointsPercent();
 
             int twentyFivePercent = (int)(Army.MaxPoints * 0.25);
 

@@ -313,5 +313,25 @@ namespace WarhammerArmyAssembler
                 InterfaceUnitDetails.UpdateUnitDescription(currentSelectedUnit, Army.Units[currentSelectedUnit]);
             }
         }
+
+        private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Dictionary<Unit.UnitType, double> units = ArmyChecks.UnitsPointsPercent();
+            Dictionary<Unit.UnitType, double> unitPercents = ArmyChecks.UnitsMaxPointsPercent();
+
+            string pointsMsg = String.Empty;
+
+            foreach(KeyValuePair<Unit.UnitType, double> entry in unitPercents)
+                pointsMsg += String.Format("{0}:\t{1} {2} {3} ({4}% {2} {5}%)\n\n",
+                    entry.Key,
+                    units[entry.Key],
+                    (entry.Key == Unit.UnitType.Core ? ">=" : "<="),
+                    (int)(Army.MaxPoints * entry.Value),
+                    InterfaceOther.CalcPercent(units[entry.Key], Army.MaxPoints),
+                    entry.Value * 100
+                );
+
+            MessageBox.Show(pointsMsg);
+        }
     }
 }
