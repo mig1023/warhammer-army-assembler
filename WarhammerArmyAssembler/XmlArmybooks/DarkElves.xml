@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArmyBook>
+	<Info>
+		<ArmyName>Dark Elves</ArmyName>
+		<ArmyBookVersion>7</ArmyBookVersion>
+		<MainColor>#FFD45353</MainColor>
+		<AdditionalColor>#FF9B2929</AdditionalColor>
+		<BackgroundColor>#FFFFD0D0</BackgroundColor>
+		<ArmyBookImage>DarkElves.png</ArmyBookImage>
+	</Info>
+	<Artefacts>
+		<ArtefactsGroup Name = "Common magic items">
+			<Artefact>
+				<Name>Sword of Striking</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
+				<Description>+1 to Hit</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Battle</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>+1 Attack</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Might</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<AddToStrength>1</AddToStrength>
+				<Description>+1 Strenght</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Biting Blade</Name>
+				<Type>Weapon</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>-1 Armour save</SpecialRuleDescription>
+				<Description>-1 Armour save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Enchanted shield</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<AddToArmour>5</AddToArmour>
+				<Description>5+ Armour save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of Protection</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<AddToWard>6</AddToWard>
+				<Description>6+ ward save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Staff of Sorcery</Name>
+				<Type>Arcane</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>+1 to dispell</SpecialRuleDescription>
+				<Description>+1 to dispell</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dispell Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple>true</Multiple>
+				<Description>automatically dispel an enemy spell, one use only</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Stone</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<Multiple>true</Multiple>
+				<Description>+2 dice to cast a spell</Description>
+			</Artefact>
+			<Artefact>
+				<Name>War Banner</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>+1 Combat Resolution</SpecialRuleDescription>
+				<Description>+1 Combat Resolution</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic weapons">	
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Enchanted items">	
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Arcane items">	
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic banner">
+			
+		</ArtefactsGroup>
+	</Artefacts>
+	
+	<Heroes>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Saurus Oldblood</Name>
+			<Group>Saurus</Group>
+			<Points>145</Points>
+			<MinSize>1</MinSize>
+			<Description>Saurus Oldblood</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Carnosaur</Name>
+					<Type>Option</Type>
+					<Points>210</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+	</Heroes>
+	<Mounts>
+		
+	</Mounts>
+	<Units>
+		
+	</Units>
+</ArmyBook>
