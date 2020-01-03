@@ -322,12 +322,12 @@ namespace WarhammerArmyAssembler
             string pointsMsg = String.Empty;
 
             foreach(KeyValuePair<Unit.UnitType, double> entry in unitPercents)
-                pointsMsg += String.Format("{0}:\t{1} {2} {3} ({4}% {2} {5}%)\n\n",
+                pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t({3} {4} pts / {5}%)\n\n",
                     entry.Key,
                     units[entry.Key],
-                    (entry.Key == Unit.UnitType.Core ? ">=" : "<="),
-                    (int)(Army.MaxPoints * entry.Value),
                     InterfaceOther.CalcPercent(units[entry.Key], Army.MaxPoints),
+                    (entry.Key == Unit.UnitType.Core ? "min" : "max"),
+                    (int)(Army.MaxPoints * entry.Value),
                     entry.Value * 100
                 );
 
