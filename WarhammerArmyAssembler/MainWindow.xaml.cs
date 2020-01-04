@@ -23,7 +23,8 @@ namespace WarhammerArmyAssembler
             Interface.CreatePointsButtons();
 
             List<string> allXmlFiles = ArmyBookInInterface.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
-            ArmyBookLoad.LoadArmy(allXmlFiles[0]);
+            Interface.CurrentSelectedArmy = allXmlFiles[InterfaceOther.Rand.Next(allXmlFiles.Count)];
+            ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
             InterfaceReload.LoadArmyList();
             InterfaceReload.ReloadArmyData();

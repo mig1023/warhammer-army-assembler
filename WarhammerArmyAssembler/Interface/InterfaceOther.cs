@@ -10,6 +10,8 @@ namespace WarhammerArmyAssembler
 {
     class InterfaceOther
     {
+        public static Random Rand = new Random();
+
         public static int IntParse(string line)
         {
             int value = 0;
