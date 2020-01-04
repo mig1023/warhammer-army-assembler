@@ -215,14 +215,15 @@ namespace WarhammerArmyAssembler
 
             foreach (Label label in new List<Label>() { main.listArmybookVer, main.buttonArmybook, main.closeArmybookDetail })
                 label.Background = mainColor;
+
+            InterfaceReload.LoadArmySize(2000, onlyReload: true);
         }
 
         public static void PreviewArmyList(bool next = false, bool prev = false)
         {
             string currentFile = ArmyBookInInterface.GetXmlArmyBooks(next, prev);
-
-            PreviewLoadCurrentSelectedArmy(currentFile);
             CurrentSelectedArmy = currentFile;
+            PreviewLoadCurrentSelectedArmy(currentFile);
         }
 
         public static void CreatePointsButtons()

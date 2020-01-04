@@ -135,13 +135,16 @@ namespace WarhammerArmyAssembler
             return newUnit;
         }
 
-        public static void LoadArmySize(int points)
+        public static void LoadArmySize(int points, bool onlyReload = false)
         {
             Army.MaxPoints = points;
             ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
             LoadArmyList();
             ReloadArmyData();
+
+            if (onlyReload)
+                return;
 
             Interface.DetailResize(open: false);
             Interface.Move(Interface.MovingType.ToMain);
