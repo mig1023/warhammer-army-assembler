@@ -18,6 +18,17 @@ namespace WarhammerArmyAssembler
             return true;
         }
 
+        public static bool IsThisHeroGeneral(int unitLeadership)
+        {
+            int maxLeadership = 0;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                if ((entry.Value.IsHero()) && (entry.Value.Leadership > maxLeadership))
+                    maxLeadership = entry.Value.Leadership;
+
+            return (maxLeadership == unitLeadership ? true : false);
+        }
+
         public static bool IsUnitExistInArmyByArmyBookID(int UnitID)
         {
             foreach (KeyValuePair<int, Unit> entry in Army.Units)

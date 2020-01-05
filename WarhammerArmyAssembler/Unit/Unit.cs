@@ -392,6 +392,9 @@ namespace WarhammerArmyAssembler
         {
             List<string> rules = new List<string>();
 
+            if (IsArmyGeneral())
+                rules.Add("General");
+
             if (!IsHero())
             {
                 int fullCommand = 0;
@@ -596,6 +599,11 @@ namespace WarhammerArmyAssembler
                     slannOption += 1;
 
             return (slannOption >= 4 ? true : false);
+        }
+
+        public bool IsArmyGeneral()
+        {
+            return ArmyChecks.IsThisHeroGeneral(Leadership);
         }
     }
 }
