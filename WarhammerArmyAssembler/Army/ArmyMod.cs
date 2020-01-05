@@ -74,6 +74,35 @@ namespace WarhammerArmyAssembler
                 Army.Units.Remove((int)removeUnitAlso);
 
             Army.Units.Remove(id);
+
+            ChangeGeneralIfNeed();
+        }
+
+        public static void ChangeGeneralIfNeed()
+        {
+            int maxLeadership = 0;
+            int maxLeadershipOwner = -1;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            {
+                if (entry.Value.ArmyGeneral)
+                    entry.Value.ArmyGeneral = false;
+
+                int unitLeadership = entry.Value.Leadership;
+
+                foreach (Option option in entry.Value.Options)
+                    if ((option.IsMagicItem() || (option.IsOption() && option.Realised)) && (option.AddToLeadership > 0))
+                        unitLeadership += option.AddToLeadership;
+
+                if ((entry.Value.IsHero()) && (unitLeadership > maxLeadership))
+                {
+                    maxLeadership = unitLeadership;
+                    maxLeadershipOwner = entry.Key;
+                }
+            }
+
+            Army.Units[maxLeadershipOwner].ArmyGeneral = true;
+            InterfaceReload.ReloadArmyData();
         }
     }
 }

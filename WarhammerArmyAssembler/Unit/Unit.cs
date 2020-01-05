@@ -91,6 +91,7 @@ namespace WarhammerArmyAssembler
         public bool GroopBold { get; set; }
 
         public bool PersonifiedHero { get; set; }
+        public bool ArmyGeneral { get; set; }
         public bool WeaponTeam { get; set; }
 
         public List<Option> Options = new List<Option>();
@@ -190,6 +191,7 @@ namespace WarhammerArmyAssembler
 
             newUnit.SizableType = this.SizableType;
             newUnit.PersonifiedHero = this.PersonifiedHero;
+            newUnit.ArmyGeneral = this.ArmyGeneral;
             newUnit.WeaponTeam = this.WeaponTeam;
 
             List <Option> Option = new List<Option>();
@@ -392,7 +394,7 @@ namespace WarhammerArmyAssembler
         {
             List<string> rules = new List<string>();
 
-            if (IsArmyGeneral())
+            if (ArmyGeneral)
                 rules.Add("General");
 
             if (!IsHero())
@@ -599,11 +601,6 @@ namespace WarhammerArmyAssembler
                     slannOption += 1;
 
             return (slannOption >= 4 ? true : false);
-        }
-
-        public bool IsArmyGeneral()
-        {
-            return ArmyChecks.IsThisHeroGeneral(Leadership);
         }
     }
 }

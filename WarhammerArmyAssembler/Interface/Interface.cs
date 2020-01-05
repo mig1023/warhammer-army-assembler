@@ -46,6 +46,8 @@ namespace WarhammerArmyAssembler
                 ArmyGridDropMount(id, points, unit);
             else
                 ArmyGridDropUnit(id);
+
+            ArmyMod.ChangeGeneralIfNeed();
         }
 
         public static void ArmyGridDropArtefact(int id, DataGridRow container)
