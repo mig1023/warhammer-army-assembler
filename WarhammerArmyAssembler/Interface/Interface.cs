@@ -22,7 +22,7 @@ namespace WarhammerArmyAssembler
         public static string CurrentSelectedArmy = null;
         public static int? CurrentSelectedUnit = null;
 
-        public enum MovingType { ToMain, ToRight, ToLeft, ToTop }
+        public enum MovingType { ToMain, ToRight, ToLeft, ToTop, ToMainMenu }
 
         public static List<Label> PointsButtons = new List<Label>();
 
@@ -141,6 +141,11 @@ namespace WarhammerArmyAssembler
             Move(MovingType.ToTop, err: true);
         }
 
+        public static void MainMenu()
+        {
+            Move(MovingType.ToMainMenu);
+        }
+
         public static void DetailResize(bool open)
         {
             if (open)
@@ -177,7 +182,10 @@ namespace WarhammerArmyAssembler
                 newPosition = new Thickness(-320, 0, 0, 0);
 
             if (moveTo == MovingType.ToTop)
-                newPosition = new Thickness(0, 50, 0, 0);
+                newPosition = new Thickness(0, main.errorDetail.Height, 0, 0);
+
+            if (moveTo == MovingType.ToMainMenu)
+                newPosition = new Thickness(0, main.mainMenu.Height, 0, 0);
 
             if (toOpen != null)
                 toOpen.Visibility = Visibility.Visible;
