@@ -101,6 +101,9 @@ namespace WarhammerArmyAssembler
                 }
             }
 
+            if (maxLeadershipOwner < 0)
+                return;
+
             Army.Units[maxLeadershipOwner].ArmyGeneral = true;
             InterfaceReload.ReloadArmyData();
         }
