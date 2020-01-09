@@ -81,101 +81,358 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic weapons">	
-			
-		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Enchanted items">	
-			
+			<Artefact>
+				<Name>Deathmask</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<Terror>true</Terror>
+				<Description>The character causes terror</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Hydra's Teeth</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Five Hydra's Teeth</SpecialRuleDescription>
+				<Description>The model has five Hydra's Teeth. Each can be used once as a thrown weapon with a range of 12". Declare how many of its Hydra's Teeth the model is throwing before rolling to hit - there is no 'multiple shots' penalty for throwing more than one tooth at a time. For each hit. make D6 WS2 S3 close combat attacks against the target unit. Up to two attacks per turn can be allocated by the Dark Elves player against each character or Champion in the unit.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Crystal of Midnight</Name>
+				<Type>Arcana</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Enemy Wizard must pass a Leadership test on 3D6 otherwise they forget one randomly spell. One use only.</SpecialRuleDescription>
+				<Description>One use only. Nominate another Wizard anywhere on the table at the start of any Dark Elves turn. The Wizard must pass a Leadership test on 3D6 otherwise they forget one randomly determined spell for the rest of the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Black Dragon Egg</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<ToughnessTo>6</ToughnessTo>
+				<SpecialRuleDescription>Toughness 6 and the Noxious Breath attack for 1 turn. One use only.</SpecialRuleDescription>
+				<Description>One use only. The model may consume the Black Dragon Egg at the start of any player turn. For the remainder of that turn the model has Toughness 6 and the Noxious Breath attack.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Strength</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Strength +3 for 1 turn. One use only.</SpecialRuleDescription>
+				<Description>One use only. The model may drink this at the start of any close combat and it lasts until the start of the next player's turn. While it is in effect, the Potion of Strength grants +3 Strength.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Gem of Nightmares</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<Fear>true</Fear>
+				<Description>One use only. The Gem of Nightmares can be used at the start of any turn. Until the end of that turn, the model and any unit it has joined cause Fear.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Guiding Eye</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>The character and any unit he joins may re-roll missed shooting to hit rolls. One use only.</SpecialRuleDescription>
+				<Description>One use only. The character and any unit he joins may re-roll missed shooting to hit rolls.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic weapons">	
+			<Artefact>
+				<Name>Executioner's Axe</Name>
+				<Type>Weapon</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<Points>80</Points>
+				<AddToStrength>10</AddToStrength>
+				<SpecialRuleDescription>Causes D3 wounds</SpecialRuleDescription>
+				<Description>Requires two hands. Strikes last. In close combat, the wielder counts as having a Strength double that of their target's Toughness, up to a maximum of Strength 10. In addition, the Executioner's Axe causes D3 wounds.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Ruin</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>No armour saves</SpecialRuleDescription>
+				<Description>No armour saves may be taken against hits from the Sword of Ruin.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Web of Shadows</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Enemy automatically takes 2D6 Strength 3 hits. One use only</SpecialRuleDescription>
+				<Description>One use only. The character uses the Web of Shadows instead of making any normal attacks that round. When used, one model in base contact with the character automatically takes 2D6 Strength 3 hits. Wounds caused do not carry over on to other models. A model with the Web of Shadows may instead choose to use a mundane weapon in any round of combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Chillblade</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Wounds by Toughness test with no armour save</SpecialRuleDescription>
+				<Description>Enemy models suffering hits from the Chillblade must pass a Toughness test for every hit. If a test is failed the model suffers a wound with no armour save. Models suffering a wound (after ward saves, etc) may not make any close combat attacks that turn. No normal roll to wound is made for attacks with the Chillblade.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Heartseeker</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>The character may re-roll all failed rolls to hit and to wound in close combat</SpecialRuleDescription>
+				<Description>The character may re-roll all failed rolls to hit and to wound in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Hydra Blade</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>D3 additional attacks</SpecialRuleDescription>
+				<Description>A character wielding the Hydra Blade gains D3 additional attacks (roll just before making attacks).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Caledor's Bane</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<AddToStrength>3</AddToStrength>
+				<SpecialRuleDescription>Enemy may not use Scaly Skin saving</SpecialRuleDescription>
+				<Description>+3 Strength on the charge. Models may not use Scaly Skin saving throws against hits from Caledor's Bane.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dagger of Hotek</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<HitFirst>true</HitFirst>
+				<Description>The Dagger of Hotek is an additional hand weapon, (it can be used with a mundane hand weapon) and grants the bearer the Always Strikes First special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Lifetaker</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Crossbow with Range 30", Strength 4, multiple shot x3, hits on a roll of 2+</SpecialRuleDescription>
+				<Description>Crossbow with Range 30", Strength 4, multiple shot x3. Lifetaker always hits on a roll of 2+, regardless of any to hit modifiers, magic items, etc.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Crimson Death</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<StrengthTo>6</StrengthTo>
+				<Description>Requires two hands to use. A model wielding Crimson Death always strikes with Strength 6. No other modifiers or magic items can ever modify this.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Deathpiercer</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<KillingBlow>true</KillingBlow>
+				<Description>Lance. Killing blow.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Whip of Agony</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<StrengthTo>5</StrengthTo>
+				<Description>Beastmaster's scourge. A model wielding the Whip of Agony always strikes with Strength 5. No other modifiers or magic items can ever modify this.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Soulrender</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<AddToStrength>2</AddToStrength>
+				<SpecialRuleDescription>Armour piercing</SpecialRuleDescription>
+				<Description>Great weapon. Armour piercing.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic armour">	
+			<Artefact>
+				<Name>Armour of Living Death</Name>
+				<Type>Armour</Type>
+				<Points>60</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToToughness>1</AddToToughness>
+				<AddToWounds>1</AddToWounds>
+				<Stupidity>true</Stupidity>
+				<Description>Heavy armour. In addition, the model has +1 Toughness and +1 Wound. Roll a D6 before deploying any models. On a roll of a 1, the wearer succumbs to the Armour of Living Death and is subject to stupidity for the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Eternal Servitude</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<AddToArmour>5</AddToArmour>
+				<Regeneration>true</Regeneration>
+				<Description>Heavy armour. The wearer can Regenerate.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Cloak of Hag Graef</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Any ranged attack hits on the character have their Strength halved</SpecialRuleDescription>
+				<Description>Sea Dragon cloak. In addition, any ranged attack hits on the character (including shooting, magic missiles and other spells with a Strength value) have their Strength halved before rolling to wound (rounding up).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Darkness</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<ArmourTo>1</ArmourTo>
+				<Description>This armour gives a total save of 1+ that cannot be further increased in any way (with a shield, chariot, mount and so on).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Shield of Ghrond</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>All hits the character suffers will be resolved with -1 Strength</SpecialRuleDescription>
+				<Description>TThe Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Blood Armour</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<AddToArmour>5</AddToArmour>
+				<SpecialRuleDescription>For every inflicted wound in close combat, armour save is improved by one point</SpecialRuleDescription>
+				<Description>Heavy armour. For every unsaved wound the wearer inflicts in close combat, this save is improved by one point (to 4+ then 3+, etc) to a maximum total of 1 + (including any other bonuses for a shield. Sea Dragon cloak, and so on).</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Talismans">	
+			<Artefact>
+				<Name>Black Amulet</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<AddToWard>4</AddToWard>
+				<SpecialRuleDescription>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</SpecialRuleDescription>
+				<Description>The wearer has a 4+ ward save. If the wearer of the Black Amulet passes their ward save in close combat, then the attacking model suffers 1 wound instead (with no armour save allowed).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ring of Darkness</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>All attacks directed against the model are at half WS or half BS</SpecialRuleDescription>
+				<Description>All close combat attacks directed against the model are at half WS. Any shooting at the character or their unit is at half BS. Round fractions up.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Pendant of Khaeleth</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Ward save, based upon the Strength</SpecialRuleDescription>
+				<Description>This gives a ward save, based upon the Strength of the hit. Roll a D6 for every wound suffered by the wearer, on a roll equal to or under the attack's Strength, the hit is ignored. Rolls of 6 always fail.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Seal of Ghrond</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToDispell>1</AddToDispell>
+				<Description>Add 1 dice to the dispel dice pool.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Pearl of Infinite Bleakness</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Description>The character and his unit are Immune to Psychology.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ring of Hotek</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Any Wizard (friend or foe) within 12" suffer a Miscast on the roll of any double</SpecialRuleDescription>
+				<Description>Any Wizard (friend or foe) attempting to cast or target a spell within 12" of the wearer will suffer a Miscast on the roll of any double.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Null Talisman</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<Multiple>true</Multiple>
+				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<Description>The Null Talisman grants magic resistance (1). Models may carry multiple Null Talismans, just like scrolls, and their effects are cumulative. For example, two Talismans confer magic resistance (2).</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Arcane items">	
-			
+			<Artefact>
+				<Name>Black Staff</Name>
+				<Type>Arcane</Type>
+				<Points>55</Points>
+				<SpecialRuleDescription>Bound Spell, Power Level 4. Contains the Power of Darkness spell</SpecialRuleDescription>
+				<Description>Bound Spell, Power Level 4. Contains the Power of Darkness spell</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Focus Familiar</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>The wielder cast spells from a different position on the battlefield</SpecialRuleDescription>
+				<Description>The Focus Familiar allows the wielder to cast spells from a different position on the battlefield. Place a marker at the start of each Dark Elf Magic phase within 6" of the Sorceress and at least 1" away from enemies. She may use this position when determining range and line of sight for her spells, and whether she counts as in combat or not.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Darkstar Cloak</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<AddToCast>1</AddToCast>
+				<Description>The cloak gives the Sorceress +1 power dice in each Magic phase. Only she may use this extra dice.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sacrificial Dagger</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Sacrifice a model to get a casting dice</SpecialRuleDescription>
+				<Description>Once per spell-casting attempt, after the casting dice have been rolled, the Sorceress may sacrifice a model in a unit she has joined - the model is removed immediately. The Sorceress gains a power dice that must be rolled and added to the casting total (before dispel attempts). Note that it is possible for the unit to require a panic test if she sacrifices 25+% of the unit in a single Magic Phase!</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Tome of Furion</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>1 additional spell</SpecialRuleDescription>
+				<Description>The Tome of Furion grants its bearer 1 additional spell.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic banner">
-			
+			<Artefact>
+				<Name>Banner of Nagarythe</Name>
+				<Type>Banner</Type>
+				<Points>125</Points>
+				<Unbreakable>true</Unbreakable>
+				<Description>This standard gives an additional +1 to the combat resolution score of friendly units in combat within 12", and the unit containing the banner is Unbreakable</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Hydra Banner</Name>
+				<Type>Banner</Type>
+				<Points>75</Points>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>All models in the unit gain +1 Attack in the first round of any hand-to-hand combat (including mounts)</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dread Banner</Name>
+				<Type>Banner</Type>
+				<Points>40</Points>
+				<Fear>true</Fear>
+				<Description>The unit carrying this standard causes Fear</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Standard of Slaughter</Name>
+				<Type>Banner</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>+D3 to the unit's combat resolution</SpecialRuleDescription>
+				<Description>On any turn the unit with the Standard of Slaughter charges, the banner adds +D3 to the unit's combat resolution.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Standard of Hag Graef</Name>
+				<Type>Banner</Type>
+				<Points>35</Points>
+				<HitFirst>true</HitFirst>
+				<Description>All models in the unit containing the Standard of Hag Graef gain the Always Strikes First rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sea Serpent Standard</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<Frenzy>true</Frenzy>
+				<Description>Corsairs only. The unit is subject to the rules for Frenzy.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Murder</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Armour Piercing rule</SpecialRuleDescription>
+				<Description>A unit with the Banner of Murder gains the Armour Piercing rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Cold Blood</Name>
+				<Type>Banner</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>Unit takes any Leadership tests on 3D6 and discards the highest D6, one use only</SpecialRuleDescription>
+				<Description>One use only. Announce that the unit is using the banner at the start of any player turn. For the duration of that turn, the unit containing the banner takes any Leadership tests on 3D6 and the Dark Elves player discards the highest D6 roll before comparing the score to the unit's Leadership value.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	
 	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Saurus Oldblood</Name>
-			<Group>Saurus</Group>
-			<Points>145</Points>
-			<MinSize>1</MinSize>
-			<Description>Saurus Oldblood</Description>
-			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>4</Armour>
-			</MainParam>
-			<AdditionalParam>
-				<MagicItems>100</MagicItems>
-				<MagicItemsType>Hero</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
-			</AdditionalParam>
-			<Options>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Points>30</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Carnosaur</Name>
-					<Type>Option</Type>
-					<Points>210</Points>
-					<Mount>true</Mount>
-				</Option>
-			</Options>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</SpecialRulesAndAmmunition>
-		</Hero>
+		
 	</Heroes>
 	<Mounts>
 		
