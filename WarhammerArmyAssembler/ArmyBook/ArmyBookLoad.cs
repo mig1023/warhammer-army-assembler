@@ -188,6 +188,18 @@ namespace WarhammerArmyAssembler
             newWeapon.AddToWizard = IntParse(xmlNode["AddToWizard"]);
             newWeapon.AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]);
 
+            newWeapon.MovementTo = IntParse(xmlNode["MovementTo"]);
+            newWeapon.WeaponSkillTo = IntParse(xmlNode["WeaponSkillTo"]);
+            newWeapon.BallisticSkillTo = IntParse(xmlNode["BallisticSkillTo"]);
+            newWeapon.StrengthTo = IntParse(xmlNode["StrengthTo"]);
+            newWeapon.ToughnessTo = IntParse(xmlNode["ToughnessTo"]);
+            newWeapon.WoundsTo = IntParse(xmlNode["WoundsTo"]);
+            newWeapon.InitiativeTo = IntParse(xmlNode["InitiativeTo"]);
+            newWeapon.AttacksTo = IntParse(xmlNode["AttacksTo"]);
+            newWeapon.LeadershipTo = IntParse(xmlNode["LeadershipTo"]);
+            newWeapon.ArmourTo = IntParse(xmlNode["ArmourTo"]);
+            newWeapon.WizardTo = IntParse(xmlNode["WizardTo"]);
+
             newWeapon.FullCommand = BoolParse(xmlNode["FullCommand"]);
 
             newWeapon.Mount = BoolParse(xmlNode["Mount"]);

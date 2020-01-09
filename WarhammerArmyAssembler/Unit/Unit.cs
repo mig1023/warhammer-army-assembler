@@ -228,6 +228,23 @@ namespace WarhammerArmyAssembler
             foreach (Option option in allOption)
                 if (option.IsMagicItem() || (option.IsOption() && option.Realised))
                 {
+                    PropertyInfo optionToParam = typeof(Option).GetProperty(String.Format("{0}To", name));
+                    if (optionToParam != null)
+                    {
+                        object optionToObject = optionToParam.GetValue(option);
+                        int optionToValue = (int)optionToObject;
+
+                        if (optionToValue > 0)
+                        {
+                            if (reversParam)
+                                paramValue = (7 - optionToValue);
+                            else
+                                paramValue = optionToValue;
+
+                            return paramValue.ToString() + (reversParam ? "+" : "*");
+                        }
+                    }
+
                     PropertyInfo optionParam = typeof(Option).GetProperty(String.Format("AddTo{0}", name));
                     object optionObject = optionParam.GetValue(option);
                     int optionValue = (int)optionObject;

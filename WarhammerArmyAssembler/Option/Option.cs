@@ -65,6 +65,18 @@ namespace WarhammerArmyAssembler
         public int AddToDispell { get; set; }
         public int AddToWizard { get; set; }
 
+        public int MovementTo { get; set; }
+        public int WeaponSkillTo { get; set; }
+        public int BallisticSkillTo { get; set; }
+        public int StrengthTo { get; set; }
+        public int ToughnessTo { get; set; }
+        public int WoundsTo { get; set; }
+        public int InitiativeTo { get; set; }
+        public int AttacksTo { get; set; }
+        public int LeadershipTo { get; set; }
+        public int ArmourTo { get; set; }
+        public int WizardTo { get; set; }
+
         public int AddToModelsInPack { get; set; }
         public bool FullCommand { get; set; }
 
@@ -155,6 +167,18 @@ namespace WarhammerArmyAssembler
             newOption.AddToCast = this.AddToCast;
             newOption.AddToDispell = this.AddToDispell;
             newOption.AddToWizard = this.AddToWizard;
+
+            newOption.MovementTo = this.MovementTo;
+            newOption.WeaponSkillTo = this.WeaponSkillTo;
+            newOption.BallisticSkillTo = this.BallisticSkillTo;
+            newOption.StrengthTo = this.StrengthTo;
+            newOption.ToughnessTo = this.ToughnessTo;
+            newOption.WoundsTo = this.WoundsTo;
+            newOption.InitiativeTo = this.InitiativeTo;
+            newOption.AttacksTo = this.AttacksTo;
+            newOption.LeadershipTo = this.LeadershipTo;
+            newOption.ArmourTo = this.ArmourTo;
+            newOption.WizardTo = this.WizardTo;
 
             newOption.AddToModelsInPack = this.AddToModelsInPack;
             newOption.FullCommand = this.FullCommand;
