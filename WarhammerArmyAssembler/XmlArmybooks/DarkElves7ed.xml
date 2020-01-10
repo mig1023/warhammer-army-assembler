@@ -432,10 +432,341 @@
 	</Artefacts>
 	
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Malekith, the Witch King</Name>
+			<Points>600</Points>
+			<Wizard>4</Wizard>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Malekith, the Witch King</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Black Dragon</Name>
+					<Type>Option</Type>
+					<Points>320</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Cold One Chariot</Name>
+					<Type>Option</Type>
+					<Points>110</Points>
+					<Mount>true</Mount>
+					<AddToArmour>2</AddToArmour>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Any unit in Malekith's army that is within 12" of him automatically passes all panic tests</SpecialRuleDescription>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Destroyer</Name>
+					<SpecialRuleDescription>Destroying magic items or castng Level on a D6 roll of 4+ for each successful hit</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Armour of Midnight</Name>
+					<AddToArmour>5</AddToArmour>
+					<AddToWard>2</AddToWard>
+					<SpecialRuleDescription>2+ ward save against non-magical attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Malekith can never suffer more than one wound from a single attack</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Spellshield</Name>
+					<AddToArmour>6</AddToArmour>
+					<SpecialRuleDescription>Magic resistance (2)</SpecialRuleDescription>
+					<SpecialRuleDescription>If a spell cast at Malekith is dispelled by a dispel roll, the caster suffers a Strength 6 hit</SpecialRuleDescription>
+					<SpecialRuleDescription>For Bound Items, the Spellshield inflicts one Strength 6 hit</SpecialRuleDescription>
+				</Armour>
+				<Arcane>
+					<Name>Circlet of Iron</Name>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Morathi, the Hag Sorceress</Name>
+			<Points>455</Points>
+			<Wizard>4</Wizard>
+			<MinSize>1</MinSize>
+			<MountInit>Dark Pegasus Sulephet</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Morathi, the Hag Sorceress</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Heartrender</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<KillingBlow>true</KillingBlow>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>The Darksword</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>The Darksword</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<SpecialRuleDescription>Each wound inflicted on an enemy character or champion (after saves, etc) also deducts 1 from the model's S, A and T for the remainder of the game</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heartrender</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Druchii Sorcery</SpecialRuleDescription>
+				</Special>
+				<Arcane>
+					<Name>Thousand and One Dark Blessing</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Enchanting Beauty</Name>
+					<SpecialRuleDescription>Any model in base contact with Morathi at the start of the Close Combat phase must pass a Leadership test or is reduced to Weapon Skill 1 until the end of the phase</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>The First Sorceress</Name>
+					<SpecialRuleDescription>Knows all of the spells from the Lore of Dark Magic</SpecialRuleDescription>
+					<SpecialRuleDescription>In addition, Morathi adds +1 to all casting rolls</SpecialRuleDescription>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
-		
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Black Dragon</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Scaly skin</Name>
+					<AddToArmour>3</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Noxious breath</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Cold One</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<Stupidity>true</Stupidity>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Thick-skinned</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Dark Pegasus Sulephet</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 Strength when pegasus charges in combat</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Dark Pegasus</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 Strength when pegasus charges in combat</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Dark Steed</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Manticore</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<KillingBlow>true</KillingBlow>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Uncontrollable</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Cold One Chariot</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Stupidity>true</Stupidity>
+				<Fear>true</Fear>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Repeater Crossbows</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		
