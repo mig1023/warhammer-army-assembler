@@ -10,6 +10,7 @@ namespace WarhammerArmyAssembler
 {
     class InterfaceMod
     {
+        public delegate void ShowSomething();
 
         public static void SetArmyGridAltColor(Brush color)
         {
@@ -34,10 +35,43 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static void HideAllDetails()
+        public static void ShowError()
+        {
+            Interface.main.errorDetail.Visibility = Visibility.Visible;
+        }
+
+        public static void ShowMainMenu()
+        {
+            Interface.main.mainMenu.Visibility = Visibility.Visible;
+        }
+
+        public static void ShowArmybookMenu()
+        {
+            Interface.main.armybookDetailScrollHead.Visibility = Visibility.Visible;
+            Interface.main.menuArmybookScroll.Visibility = Visibility.Visible;
+        }
+
+        public static void ShowStartHelpInfo(object Sender, EventArgs e)
+        {
+            Interface.main.startHelpInfo.Visibility = Visibility.Visible;
+        }
+
+        public static void ShowArmyDetailMenu()
+        {
+            Interface.main.armybookDetailScrollHead.Visibility = Visibility.Visible;
+            Interface.main.armybookDetailScroll.Visibility = Visibility.Visible;
+        }
+
+        public static void HideAllAndShow(ShowSomething showSomething)
         {
             Interface.main.armybookDetailScroll.Visibility = Visibility.Hidden;
             Interface.main.menuArmybookScroll.Visibility = Visibility.Hidden;
+            Interface.main.armybookDetailScrollHead.Visibility = Visibility.Hidden;
+            Interface.main.startHelpInfo.Visibility = Visibility.Hidden;
+            Interface.main.mainMenu.Visibility = Visibility.Hidden;
+            Interface.main.errorDetail.Visibility = Visibility.Hidden;
+
+            showSomething?.Invoke();
         }
     }
 }

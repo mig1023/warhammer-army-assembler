@@ -143,7 +143,7 @@ namespace WarhammerArmyAssembler
 
         public static void MainMenu()
         {
-            Move(MovingType.ToMainMenu);
+            Move(MovingType.ToMainMenu, toShow: InterfaceMod.ShowMainMenu, menu: true);
         }
 
         public static void DetailResize(bool open)
@@ -168,15 +168,19 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static void Move(MovingType moveTo, ScrollViewer toOpen = null, bool err = false)
+        public static void Move(MovingType moveTo, InterfaceMod.ShowSomething toShow = null, EventHandler secondAnimation = null,
+            bool err = false, bool menu = false)
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
-            if (!err)
-                InterfaceMod.HideAllDetails();
+            if (err)
+                toShow = InterfaceMod.ShowError;
+
+            if (!(menu && (moveTo == MovingType.ToMain)))
+                InterfaceMod.HideAllAndShow(toShow);
 
             if (moveTo == MovingType.ToLeft)
-                newPosition = new Thickness(320, 0, 0, 0);
+                newPosition = new Thickness(main.armybookDetailScrollHead.Width, 0, 0, 0);
                 
             if (moveTo == MovingType.ToRight)
                 newPosition = new Thickness(-320, 0, 0, 0);
@@ -187,18 +191,24 @@ namespace WarhammerArmyAssembler
             if (moveTo == MovingType.ToMainMenu)
                 newPosition = new Thickness(0, main.mainMenu.Height, 0, 0);
 
-            if (toOpen != null)
-                toOpen.Visibility = Visibility.Visible;
-
             ThicknessAnimation move = new ThicknessAnimation();
             move.Duration = TimeSpan.FromSeconds(0.2);
-            move.From = (err ? main.mainPlaceCanvas.Margin : main.mainGrid.Margin);
+            move.From = (err || menu ? main.mainPlaceCanvas.Margin : main.mainGrid.Margin);
             move.To = newPosition;
 
-            if (err)
+            if (secondAnimation != null)
+                move.Completed += secondAnimation;
+
+            if (err || menu)
                 main.mainPlaceCanvas.BeginAnimation(FrameworkElement.MarginProperty, move);
             else
                 main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
+        }
+
+        public static void MoveToChangeArmybook(object Sender, EventArgs e)
+        {
+            PreviewArmyList();
+            Move(MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu, secondAnimation: new EventHandler(InterfaceMod.ShowStartHelpInfo));
         }
 
         private static void PreviewLoadCurrentSelectedArmy(string armyName)

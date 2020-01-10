@@ -28,9 +28,10 @@ namespace WarhammerArmyAssembler
 
             InterfaceReload.LoadArmyList();
             InterfaceReload.ReloadArmyData();
-            Interface.PreviewArmyList();
 
-            Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
+            Interface.MoveToChangeArmybook(null, null);
+            //Interface.PreviewArmyList();
+            //Interface.Move(Interface.MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu);
         }
 
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -71,7 +72,7 @@ namespace WarhammerArmyAssembler
                 (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) + 20;
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                Interface.Move(Interface.MovingType.ToLeft, armybookDetailScroll);
+                Interface.Move(Interface.MovingType.ToLeft, toShow: InterfaceMod.ShowArmyDetailMenu);
 
             if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
                 return;
@@ -228,6 +229,13 @@ namespace WarhammerArmyAssembler
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
 
+            mainMenu.Width = e.NewSize.Width;
+            closeMainMenu.Margin = new Thickness(
+                e.NewSize.Width - closeMainMenu.Width - 10,
+                mainMenu.Height - closeMainMenu.Height - 10,
+                0, 0
+            );
+
             startHelpInfo.Height = mainPlaceCanvas.Height;
             startHelpInfo.Width = mainPlaceCanvas.Width - 320;
             startHelpInfo.Margin = new Thickness(320, 0, 0, 0);
@@ -239,15 +247,7 @@ namespace WarhammerArmyAssembler
             if (startHelpInfo.Visibility == Visibility.Visible)
                 Environment.Exit(0);
 
-            CloseStartHelp();
-
             Interface.Move(Interface.MovingType.ToMain);
-        }
-
-        private void CloseStartHelp()
-        {
-            if (startHelpInfo.Visibility == Visibility.Visible)
-                startHelpInfo.Visibility = Visibility.Hidden;
         }
 
         private void closeDetail_Click(object sender, RoutedEventArgs e)
@@ -258,6 +258,11 @@ namespace WarhammerArmyAssembler
         private void closeErrorDetail_Click(object sender, RoutedEventArgs e)
         {
             Interface.Move(Interface.MovingType.ToMain, err: true);
+        }
+
+        private void closeMainMenu_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Interface.Move(Interface.MovingType.ToMain, menu: true);
         }
 
         private void unitDelete_MouseDown(object sender, MouseButtonEventArgs e)
@@ -272,8 +277,6 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
-            CloseStartHelp();
-
             InterfaceReload.LoadArmySize(InterfaceOther.IntParse(listArmybookPoints.Text));
             ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
@@ -285,8 +288,15 @@ namespace WarhammerArmyAssembler
 
         private void armyMainLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Interface.PreviewArmyList();
-            Interface.Move(Interface.MovingType.ToLeft, menuArmybookScroll);
+            Interface.MainMenu();
+        }
+
+        private void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Interface.Move(Interface.MovingType.ToMain, secondAnimation: new EventHandler(Interface.MoveToChangeArmybook), menu: true);
+            
+            //Interface.PreviewArmyList();
+            //Interface.Move(Interface.MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu);
         }
 
         private void prev_Click(object sender, RoutedEventArgs e)
@@ -301,8 +311,6 @@ namespace WarhammerArmyAssembler
 
         public void buttonPoints_Click(object sender, RoutedEventArgs e)
         {
-            CloseStartHelp();
-
             InterfaceReload.LoadArmySize(InterfaceOther.IntParse((sender as Label).Content.ToString().Split()[0]));
         }
 
