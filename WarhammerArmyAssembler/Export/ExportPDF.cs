@@ -9,12 +9,11 @@ namespace WarhammerArmyAssembler
 {
     class ExportPDF
     {
-        const int MARGIN_TOP = 15;
-        const int MARGIN_LEFT = 30;
-        const int LINE_HEIGHT = 13;
+        const int MARGIN_TOP = 30;
+        const int MARGIN_LEFT = 45;
 
-        static int[] COLUMN_WIDTH = { 0, 20, 250, 50, 60, 75 };
-        static int CURRENT_LINE = 0;
+        const int LINE_HEIGHT = 13;
+        static float CURRENT_Y = MARGIN_TOP;
 
         static Document document;
         static PdfContentByte cb;
@@ -29,20 +28,33 @@ namespace WarhammerArmyAssembler
             document.Open();
 
             cb = writer.DirectContent;
-
-            BaseFont bf = BaseFont.CreateFont("FONT.TTF", Encoding.GetEncoding(1251).BodyName, BaseFont.NOT_EMBEDDED);
-
             cb.SetColorFill(BaseColor.BLACK);
-            cb.SetFontAndSize(bf, 10);
 
-
-            AddText(String.Format("Armylist {0} {1}", Army.ArmyName, Army.MaxPoints));
-            AddText("=========================================");
-
+            AddText(String.Format("{0} // warhammer fantasy battles", Army.ArmyName), fontSize: 20, lineHeight: 18, leftColumn: true);
+            AddText(String.Format("{0} pts", Army.MaxPoints), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
-                AddText(String.Format("{0} {1}", entry.Value.Name, entry.Value.PointsView));
+            {
+                AddText(String.Format("{0}", entry.Value.Size), leftColumn: true, newLine: false);
+                AddText(String.Format("{0} ({1} pts)",  entry.Value.Name, entry.Value.GetUnitPoints()), lineHeight: 10);
+
+                string[] specialRules = InterfaceOther.WordSplit(entry.Value.GetSpecialRulesLine(), partLength: 210);
+                foreach(string specialRule in specialRules)
+                    AddText(specialRule, fontSize: 6, lineHeight: 8);
+
+                AddText(lineHeight: 16);
+            }
+
+            AddText(lineHeight: 20);
+
+            AddText(
+                String.Format(
+                    "Points: {0} / Models: {0} / Cast: {0} / Dispell: {0}",
+                    ArmyParams.GetArmyPoints(), ArmyParams.GetArmySize(), ArmyParams.GetArmyCast(), ArmyParams.GetArmyDispell()
+                ),
+                fontSize: 12, lineHeight: 18, leftColumn: true
+            );
 
             document.Close();
             fs.Close();
@@ -53,11 +65,6 @@ namespace WarhammerArmyAssembler
             return String.Empty;
         }
 
-        static public float CurrentY()
-        {
-            return MARGIN_TOP + CURRENT_LINE * LINE_HEIGHT;
-        }
-
         static public void AddLine(float x1, float y1, float x2, float y2)
         {
             cb.SetLineWidth(0.4);
@@ -66,34 +73,21 @@ namespace WarhammerArmyAssembler
             cb.Stroke();
         }
 
-        static public void AddText(string text = "", float x = 0, float y = 0, int aligment = 0,
-            bool noNewLine = false, bool withBox = false, int column = -1, bool header = false)
+        static public void AddText(string text = "", float? x = null, float? y = null, int aligment = 0,
+            float fontSize = 14, float lineHeight = 13, bool leftColumn = false, bool newLine = true)
         {
-            if (!noNewLine && column < 0) CURRENT_LINE += 1;
+            BaseFont bf = BaseFont.CreateFont("FONT.TTF", Encoding.GetEncoding(1251).BodyName, BaseFont.NOT_EMBEDDED);
+            cb.SetFontAndSize(bf, fontSize);
 
-            float yPos = (y == 0 ? CurrentY() : y);
-            float xPos = (x == 0 ? MARGIN_LEFT : x);
-
-            if (column == -1 && header) xPos -= 4;
-
-            if (column >= 0)
-            {
-                xPos += (header ? 15 : 10);
-
-                for (int a = 0; a <= column; a++)
-                    xPos += COLUMN_WIDTH[a];
-
-                if (header && column >= 0 && (column + 1 < COLUMN_WIDTH.Length))
-                    xPos += (COLUMN_WIDTH[column + 1] / 2) - 10;
-                else if (header && column + 1 == COLUMN_WIDTH.Length)
-                    xPos = (document.PageSize.Width - (COLUMN_WIDTH[column] / 2) - MARGIN_LEFT);
-            }
-
-            if (withBox) xPos += 10;
+            float yPos = y ?? MARGIN_TOP + CURRENT_Y;
+            float xPos = x ?? MARGIN_LEFT;
 
             cb.BeginText();
-            cb.ShowTextAligned(aligment, text, xPos, (document.PageSize.Height - yPos), 0);
+            cb.ShowTextAligned(aligment, text, xPos + (leftColumn ? 0 : 20), (document.PageSize.Height - yPos), 0);
             cb.EndText();
+
+            if (newLine)
+                CURRENT_Y += lineHeight;
         }
     }
 }

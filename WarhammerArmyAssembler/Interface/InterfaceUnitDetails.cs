@@ -30,7 +30,7 @@ namespace WarhammerArmyAssembler
 
         private static bool NotEnoughColumnForThis(string caption, double height, double[] margins)
         {
-            string[] captionLines = WordSplit(caption);
+            string[] captionLines = InterfaceOther.WordSplit(caption);
 
             if (captionLines.Length < 2)
                 return false;
@@ -199,44 +199,14 @@ namespace WarhammerArmyAssembler
             AddOptionsList(unitID, unit);
         }
 
-        private static string[] WordSplit(string caption)
-        {
-            int partLength = 35;
 
-            if (caption.Length <= partLength)
-                return new string[] { caption };
-
-            string[] words = caption.Split(' ');
-
-            List<string> parts = new List<string>();
-
-            string part = string.Empty;
-
-            int partCounter = 0;
-
-            foreach (string word in words)
-            {
-                if ((part.Length + word.Length) < partLength)
-                    part += (String.IsNullOrEmpty(part) ? word : " " + word);
-                else
-                {
-                    parts.Add(part);
-                    part = word;
-                    partCounter += 1;
-                }
-            }
-
-            parts.Add(part);
-
-            return parts.ToArray();
-        }
 
         private static double AddLabel(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
             bool selected = false, double points = 0, bool perModel = false, bool bold = false, string addLine = "")
         {
             Label newOption = new Label();
 
-            string[] captionLines = WordSplit(caption);
+            string[] captionLines = InterfaceOther.WordSplit(caption);
 
             newOption.Content = String.Empty;
 
