@@ -35,8 +35,28 @@
                     </TextBlock.TextDecorations>
                 </TextBlock>
             </Label>
+            <Label x:Name="saveArmyToPDF" Height="32" Canvas.Left="20" Canvas.Top="42" Width="155" FontSize="16" MouseDown="saveArmyToPDF_MouseDown">
+                <TextBlock x:Name="saveArmyToPDFText" Text="Export Army to PDF">
+                    <TextBlock.TextDecorations>
+                        <TextDecorationCollection>
+                            <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
+                                <TextDecoration.Pen>
+                                    <Pen Thickness="1">
+                                        <Pen.Brush>
+                                            <SolidColorBrush Color="Gray"/>
+                                        </Pen.Brush>
+                                        <Pen.DashStyle>
+                                            <DashStyle Dashes="4,4"/>
+                                        </Pen.DashStyle>
+                                    </Pen>
+                                </TextDecoration.Pen>
+                            </TextDecoration>
+                        </TextDecorationCollection>
+                    </TextBlock.TextDecorations>
+                </TextBlock>
+            </Label>
         </Canvas>
-        
+
         <Canvas x:Name="mainPlaceCanvas">
             <Canvas x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
                 <Label x:Name="closeArmybookDetail" Content="Close" Height="30" Padding="0" Width="280" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Margin="20,20" MouseDown="closeArmybookDetail_Click"/>

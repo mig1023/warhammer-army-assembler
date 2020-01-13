@@ -30,8 +30,6 @@ namespace WarhammerArmyAssembler
             InterfaceReload.ReloadArmyData();
 
             Interface.MoveToChangeArmybook(null, null);
-            //Interface.PreviewArmyList();
-            //Interface.Move(Interface.MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu);
         }
 
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -294,9 +292,6 @@ namespace WarhammerArmyAssembler
         private void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Interface.Move(Interface.MovingType.ToMain, secondAnimation: new EventHandler(Interface.MoveToChangeArmybook), menu: true);
-            
-            //Interface.PreviewArmyList();
-            //Interface.Move(Interface.MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu);
         }
 
         private void prev_Click(object sender, RoutedEventArgs e)
@@ -341,6 +336,11 @@ namespace WarhammerArmyAssembler
                 );
 
             MessageBox.Show(pointsMsg);
+        }
+
+        private void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ExportPDF.SaveArmyToPDF();
         }
     }
 }

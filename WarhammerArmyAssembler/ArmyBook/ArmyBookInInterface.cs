@@ -59,7 +59,7 @@ namespace WarhammerArmyAssembler
             try
             {
                 foreach (string file in Directory.GetFiles(programDirectory))
-                    if (file.EndsWith(".xml"))
+                    if (file.EndsWith(".xml") && !file.Contains("itextsharp.xml"))
                         files.Add(file);
 
                 foreach (string directory in Directory.GetDirectories(programDirectory))
