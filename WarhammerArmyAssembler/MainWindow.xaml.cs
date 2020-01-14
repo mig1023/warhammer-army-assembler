@@ -169,8 +169,8 @@ namespace WarhammerArmyAssembler
             if (ArmyBook.Artefact.ContainsKey(id))
             {
                 bool enabled = unit.IsOptionEnabled(ArmyBook.Artefact[id], unit.GetMountOn(), unit.GetMountTypeAlreadyFixed());
-                bool usable = ArmyBook.Artefact[id].IsUsableByUnit(unit.MagicItemsType, unit.Group);
-                e.Effects = ((unit.MagicItems > 0) && usable && enabled ? DragDropEffects.Copy : DragDropEffects.None);
+                bool usable = ArmyBook.Artefact[id].IsUsableByUnit(unit);
+                e.Effects = (usable && enabled ? DragDropEffects.Copy : DragDropEffects.None);
             }
             else
                 e.Effects = DragDropEffects.None;

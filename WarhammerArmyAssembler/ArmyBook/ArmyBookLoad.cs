@@ -200,6 +200,9 @@ namespace WarhammerArmyAssembler
             newWeapon.ArmourTo = IntParse(xmlNode["ArmourTo"]);
             newWeapon.WizardTo = IntParse(xmlNode["WizardTo"]);
 
+            newWeapon.MagicItems = IntParse(xmlNode["MagicItems"]);
+            newWeapon.MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]);
+
             newWeapon.FullCommand = BoolParse(xmlNode["FullCommand"]);
 
             newWeapon.Mount = BoolParse(xmlNode["Mount"]);

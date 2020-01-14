@@ -91,6 +91,9 @@ namespace WarhammerArmyAssembler
         public string ArtefactGroup { get; set; }
         public bool Artefacts { get; set; }
 
+        public int MagicItems { get; set; }
+        public Unit.MagicItemsTypes MagicItemsType { get; set; }
+
 
         private bool artefactAlreadyUsed = false;
         public bool ArtefactAlreadyUsed
@@ -183,6 +186,9 @@ namespace WarhammerArmyAssembler
             newOption.AddToModelsInPack = this.AddToModelsInPack;
             newOption.FullCommand = this.FullCommand;
 
+            newOption.MagicItems = this.MagicItems;
+            newOption.MagicItemsType = this.MagicItemsType;
+
             newOption.Mount = this.Mount;
 
             newOption.InterfaceColor = this.InterfaceColor;
@@ -214,21 +220,37 @@ namespace WarhammerArmyAssembler
                 return false;
         }
 
-        public bool IsUsableByUnit(Unit.MagicItemsTypes unitType, string unitGroup)
+        private bool TypeAndPointsSatisfy(Unit.MagicItemsTypes itemsType, int itemsPoints)
         {
-            if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unitGroup))
+            if (itemsPoints < Points)
                 return false;
 
-            if ((unitType == Unit.MagicItemsTypes.Unit) && (Type != OptionType.Banner))
+            if ((itemsType == Unit.MagicItemsTypes.Unit) && (Type != OptionType.Banner))
                 return false;
 
-            if ((unitType == Unit.MagicItemsTypes.Wizard) && (Type == OptionType.Banner))
+            if ((itemsType == Unit.MagicItemsTypes.Wizard) && (Type == OptionType.Banner))
                 return false;
 
-            if ((unitType == Unit.MagicItemsTypes.Hero) && (Type == OptionType.Arcane))
+            if ((itemsType == Unit.MagicItemsTypes.Hero) && (Type == OptionType.Arcane))
                 return false;
 
             return true;
+        }
+
+        public bool IsUsableByUnit(Unit unit)
+        {
+            if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.Group))
+                return false;
+
+            if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems))
+                return true;
+
+            foreach (Option option in unit.Options)
+                if ((option.IsOption() && option.Realised) || option.IsMagicItem())
+                    if (TypeAndPointsSatisfy(option.MagicItemsType, option.MagicItems))
+                        return true;
+
+            return false;
         }
     }
 }

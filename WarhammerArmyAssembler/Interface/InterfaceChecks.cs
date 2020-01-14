@@ -25,7 +25,16 @@ namespace WarhammerArmyAssembler
 
         public static bool EnoughUnitPointsForAddArtefact(int artefactID, int unitID)
         {
-            return ((ArmyBook.Artefact[artefactID].Points + UnitMagicPointsAlreadyUsed(unitID)) <= Army.Units[unitID].MagicItems);
+            int unitAllMagicPoints = Army.Units[unitID].MagicItems;
+
+            foreach (Option option in Army.Units[unitID].Options)
+                if ((option.IsOption() && option.Realised) || option.IsMagicItem())
+                    unitAllMagicPoints += option.MagicItems;
+
+            bool enoughUnitPoints = ((ArmyBook.Artefact[artefactID].Points + UnitMagicPointsAlreadyUsed(unitID)) <= unitAllMagicPoints);
+            bool enoughOptionsPoints = ArmyBook.Artefact[artefactID].IsUsableByUnit(Army.Units[unitID]);
+
+            return (enoughUnitPoints && enoughOptionsPoints);
         }
 
         public static double UnitMagicPointsAlreadyUsed(int unitID)
