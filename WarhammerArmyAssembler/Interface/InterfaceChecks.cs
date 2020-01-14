@@ -23,25 +23,30 @@ namespace WarhammerArmyAssembler
             return ArmyBook.Artefact[id].Points <= (ArmyParams.GetArmyMaxPoints() - ArmyParams.GetArmyPoints());
         }
 
-        public static bool EnoughUnitPointsForAddArtefact(int artefactID, int unitID)
+        public static bool EnoughUnitPointsForAddArtefact(int artefactID, Unit unit, bool addOption = true)
         {
-            int unitAllMagicPoints = Army.Units[unitID].MagicItems;
+            if (!ArmyBook.Artefact.ContainsKey(artefactID))
+                return true;
 
-            foreach (Option option in Army.Units[unitID].Options)
+            int unitAllMagicPoints = unit.MagicItems;
+
+            foreach (Option option in unit.Options)
                 if ((option.IsOption() && option.Realised) || option.IsMagicItem())
                     unitAllMagicPoints += option.MagicItems;
 
-            bool enoughUnitPoints = ((ArmyBook.Artefact[artefactID].Points + UnitMagicPointsAlreadyUsed(unitID)) <= unitAllMagicPoints);
-            bool enoughOptionsPoints = ArmyBook.Artefact[artefactID].IsUsableByUnit(Army.Units[unitID]);
+            double alreadyUsedPonts = (addOption ? UnitMagicPointsAlreadyUsed(unit) : 0);
+
+            bool enoughUnitPoints = ((ArmyBook.Artefact[artefactID].Points + alreadyUsedPonts) <= unitAllMagicPoints);
+            bool enoughOptionsPoints = ArmyBook.Artefact[artefactID].IsUsableByUnit(unit);
 
             return (enoughUnitPoints && enoughOptionsPoints);
         }
 
-        public static double UnitMagicPointsAlreadyUsed(int unitID)
+        public static double UnitMagicPointsAlreadyUsed(Unit unit)
         {
             double pointsAlreayUsed = 0;
 
-            foreach (Option option in Army.Units[unitID].Options)
+            foreach (Option option in unit.Options)
                 if (option.IsMagicItem())
                     pointsAlreayUsed += option.Points;
 

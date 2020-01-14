@@ -566,12 +566,19 @@ namespace WarhammerArmyAssembler
             {
                 bool incompatible = !IsOptionEnabled(Options[i], GetMountOn(), GetMountTypeAlreadyFixed(), postCheck: true);
 
-                if (incompatible && (Options[i].Realised || Options[i].IsMagicItem()))
+                bool notCompitableMore = IsNotCompitableMore(Options[i]);
+
+                if ((incompatible || notCompitableMore) && (Options[i].Realised || Options[i].IsMagicItem()))
                 {
                     InterfaceMod.SetArtefactAlreadyUsed(Options[i].ID, false);
                     AddOption(Options[i].ID, this, this.ID);
                 }
             }
+        }
+
+        public bool IsNotCompitableMore(Option option)
+        {
+            return !InterfaceChecks.EnoughUnitPointsForAddArtefact(option.ID, this, addOption: false);
         }
 
         public bool IsOptionEnabled(Option option, int mountAlreadyOn, Option.OnlyForType mountTypeAlreadyFixed, bool postCheck = false)

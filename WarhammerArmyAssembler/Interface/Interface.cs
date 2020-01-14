@@ -63,7 +63,7 @@ namespace WarhammerArmyAssembler
         {
             if (!InterfaceChecks.EnoughPointsForAddArtefact(id))
                 Error("Not enough points add an item");
-            else if (!InterfaceChecks.EnoughUnitPointsForAddArtefact(id, unitID))
+            else if (!InterfaceChecks.EnoughUnitPointsForAddArtefact(id, Army.Units[unitID]))
                 Error("Not enough magic item points to add an item");
             else if (!ArmyChecks.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, ArmyBook.Artefact[id].Points))
                 Error("For this type, a point cost limit has been reached");
