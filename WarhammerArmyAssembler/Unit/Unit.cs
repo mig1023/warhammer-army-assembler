@@ -235,14 +235,7 @@ namespace WarhammerArmyAssembler
                         int optionToValue = (int)optionToObject;
 
                         if (optionToValue > 0)
-                        {
-                            if (reversParam)
-                                paramValue = (7 - optionToValue);
-                            else
-                                paramValue = optionToValue;
-
-                            return paramValue.ToString() + (reversParam ? "+" : "*");
-                        }
+                            return optionToValue.ToString() + (reversParam ? "+" : "*");
                     }
 
                     PropertyInfo optionParam = typeof(Option).GetProperty(String.Format("AddTo{0}", name));
@@ -361,12 +354,32 @@ namespace WarhammerArmyAssembler
             string rules = String.Empty;
 
             foreach (string rule in GetSpecialRules())
-                rules += rule + "; ";
+                rules += String.Format("{0}; ", rule);
 
             if (!String.IsNullOrEmpty(rules))
                 rules = rules.Remove(rules.Length - 2);
 
             return rules;
+        }
+
+        public string GetEquipmentLine()
+        {
+            string equipment = String.Empty;
+
+            foreach (Option option in Options)
+            {
+                bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0) || String.IsNullOrEmpty(option.Name);
+                bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount &&
+                    !option.FullCommand && option.SpecialRuleDescription.Length == 0;
+
+                if (!thisIsStandartEquipment || thisIsSpecialRuleOrMount)
+                    equipment += String.Format("{0}; ", option.Name);
+            }
+
+            if (!String.IsNullOrEmpty(equipment))
+                equipment = equipment.Remove(equipment.Length - 2);
+
+            return equipment;
         }
 
         public string UnitTypeName()
@@ -475,6 +488,11 @@ namespace WarhammerArmyAssembler
         public bool IsHero()
         {
             return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero ? true : false);
+        }
+
+        public bool IsHeroOrHisMount()
+        {
+            return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount ? true : false);
         }
 
         public bool ExistsOptions()

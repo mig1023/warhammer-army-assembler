@@ -11,16 +11,16 @@ namespace WarhammerArmyAssembler
     {
         const int MARGIN_TOP = 30;
         const int MARGIN_LEFT = 45;
-
-        const int LINE_HEIGHT = 13;
-        static float CURRENT_Y = MARGIN_TOP;
-
+        
         static Document document;
         static PdfContentByte cb;
+
+        static float currentY;
 
         public static string SaveArmyToPDF()
         {
             string fileName = "test_filename.pdf";
+            currentY = MARGIN_TOP;
 
             document = new Document();
             FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
@@ -36,21 +36,21 @@ namespace WarhammerArmyAssembler
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
             {
-                AddText(String.Format("{0}", entry.Value.Size), leftColumn: true, newLine: false);
+                AddText(String.Format("{0}", UnitSizeIfNeed(entry.Value)), leftColumn: true, newLine: false);
                 AddText(String.Format("{0} ({1} pts)",  entry.Value.Name, entry.Value.GetUnitPoints()), lineHeight: 10);
 
-                string[] specialRules = InterfaceOther.WordSplit(entry.Value.GetSpecialRulesLine(), partLength: 210);
-                foreach(string specialRule in specialRules)
-                    AddText(specialRule, fontSize: 6, lineHeight: 8);
+                foreach (string param in new List<string> { entry.Value.GetEquipmentLine(), entry.Value.GetSpecialRulesLine() })
+                    foreach (string line in InterfaceOther.WordSplit(param, partLength: 210))
+                        AddText(line, fontSize: 6, lineHeight: 8);
 
                 AddText(lineHeight: 16);
             }
 
-            AddText(lineHeight: 20);
+            AddText(lineHeight: 8);
 
             AddText(
                 String.Format(
-                    "Points: {0} / Models: {0} / Cast: {0} / Dispell: {0}",
+                    "Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
                     ArmyParams.GetArmyPoints(), ArmyParams.GetArmySize(), ArmyParams.GetArmyCast(), ArmyParams.GetArmyDispell()
                 ),
                 fontSize: 12, lineHeight: 18, leftColumn: true
@@ -65,12 +65,9 @@ namespace WarhammerArmyAssembler
             return String.Empty;
         }
 
-        static public void AddLine(float x1, float y1, float x2, float y2)
+        static public string UnitSizeIfNeed(Unit unit)
         {
-            cb.SetLineWidth(0.4);
-            cb.MoveTo(x1, document.PageSize.Height - y1);
-            cb.LineTo(x2, document.PageSize.Height - y2);
-            cb.Stroke();
+            return (unit.IsHeroOrHisMount() ? String.Empty : unit.Size.ToString());
         }
 
         static public void AddText(string text = "", float? x = null, float? y = null, int aligment = 0,
@@ -79,7 +76,7 @@ namespace WarhammerArmyAssembler
             BaseFont bf = BaseFont.CreateFont("FONT.TTF", Encoding.GetEncoding(1251).BodyName, BaseFont.NOT_EMBEDDED);
             cb.SetFontAndSize(bf, fontSize);
 
-            float yPos = y ?? MARGIN_TOP + CURRENT_Y;
+            float yPos = y ?? MARGIN_TOP + currentY;
             float xPos = x ?? MARGIN_LEFT;
 
             cb.BeginText();
@@ -87,7 +84,15 @@ namespace WarhammerArmyAssembler
             cb.EndText();
 
             if (newLine)
-                CURRENT_Y += lineHeight;
+            {
+                currentY += lineHeight;
+
+                if ((document.PageSize.Height - currentY - (MARGIN_TOP * 2)) < 0)
+                {
+                    document.NewPage();
+                    currentY = MARGIN_TOP;
+                }
+            }
         }
     }
 }
