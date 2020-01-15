@@ -133,6 +133,104 @@
 				<Description>One use only. The character and any unit he joins may re-roll missed shooting to hit rolls.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Gifts of Khaine">	
+			<Artefact>
+				<Name>Venom Sword</Name>
+				<Type>Weapon</Type>
+				<Points>75</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<SpecialRuleDescription>Any model that takes a wound from the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or automatically lose all remaining wounds.</SpecialRuleDescription>
+				<Description>Any model that takes a wound from the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or automatically lose all remaining wounds.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rending Stars</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Assassin</OnlyForGroup>
+				<SpecialRuleDescription>Maximum Range: 12"; Strength: As user+1. Rules: Thrown weapon; multiple shot x3.</SpecialRuleDescription>
+				<Description>Maximum Range: 12"; Strength: As user+1.|Rules: Thrown weapon; multiple shot x3.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dance of Doom</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<AddToWard>5</AddToWard>
+				<Description>The model has a 5+ ward save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Touch of Death</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<KillingBlow>true</KillingBlow>
+				<Description>The model has killing blow</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Khaine</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<SpecialRuleDescription>The model has +D3 Attacks (rolled just before making the model's attacks)</SpecialRuleDescription>
+				<Description>The model has +D3 Attacks (rolled just before making the model's attacks)</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Witchbrew</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<SpecialRuleDescription>Witchbrew affects the Hag's unit for the entire battle. Enemy units cannot claim combat resolution bonuses for outnumbering, flank or rear attacks, or higher ground if they are only fighting a unit affected by Witchbrew</SpecialRuleDescription>
+				<Description>Witchbrew affects the Hag's unit for the entire battle. Enemy units cannot claim combat resolution bonuses for outnumbering, flank or rear attacks, or higher ground if they are only fighting a unit affected by Witchbrew</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Cloak of Twilight</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<OnlyForGroup>Assassin</OnlyForGroup>
+				<SpecialRuleDescription>Bound spell, power level 3. The Cloak of Twilight contains the Steed of Shadows spell from the Lore of Shadows</SpecialRuleDescription>
+				<Description>Bound spell, power level 3. The Cloak of Twilight contains the Steed of Shadows spell from the Lore of Shadows.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Hand of Khaine</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<SpecialRuleDescription>One model in base contact chosen by the Dark Elves player, or the model's opponent in a challenge, loses one Attack (to a minimum of 1)</SpecialRuleDescription>
+				<Description>One model in base contact chosen by the Dark Elves player, or the model's opponent in a challenge, loses one Attack (to a minimum of 1). Against mounted models, the Dark Elves player must choose either the mount or the rider. If the model has special types of attack (a Giant, for example) the Hand of Khaine has no effect. Models that are Immune to Psychology are unaffected by the Hand of Khaine.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Cry of War</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<SpecialRuleDescription>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by 1 (to a minimum of 1) for that Close Combat</SpecialRuleDescription>
+				<Description>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by 1 (to a minimum of 1) for that Close Combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Manbane</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<SpecialRuleDescription>A model counts Strength as one higher than their target's Toughness</SpecialRuleDescription>
+				<Description>A model with a weapon coated with Manbane always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6. This means that they almost always wound opponents on a roll of 3+. This modified Strength is used to calculate armour save modifiers.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Black Lotus</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<SpecialRuleDescription>The model may re-roll any dice that score a 1 when rolling to wound</SpecialRuleDescription>
+				<Description>The model may re-roll any dice that score a 1 when rolling to wound with a weapon coated With Black Lotus.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dark Venom</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<OnlyForGroup>Khainite</OnlyForGroup>
+				<SpecialRuleDescription>Wounds inflicted in the challenge that round are doubled for the purposes of combat resolution scores</SpecialRuleDescription>
+				<Description>If a model with Dark Venom slays an enemy in a challenge, all wounds inflicted by the model in the challenge that round are doubled for the purposes of combat resolution scores (up to the overkill maximum).</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic weapons">	
 			<Artefact>
 				<Name>Executioner's Axe</Name>
@@ -775,7 +873,7 @@
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
-				<Strength>5</Strength>
+				<Strength>3</Strength>
 				<Toughness>3</Toughness>
 				<Wounds>3</Wounds>
 				<Initiative>5</Initiative>
@@ -879,6 +977,331 @@
 					<AddToLeadership>1</AddToLeadership>
 					<SpecialRuleDescription>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6. On a 1-3 Tz'arkan's murderous rage drives Malus to attack his allies</SpecialRuleDescription>
 				</Demon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Shadowblade, Master of Assassins</Name>
+			<Points>300</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Shadowblade, Master of Assassins</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>10</WeaponSkill>
+				<BallisticSkill>10</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<PoisonAttack>true</PoisonAttack>
+				<HitFirst>true</HitFirst>
+				<NotALeader>true</NotALeader>
+				<KillingBlow>true</KillingBlow>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Khainite</SpecialRuleDescription>
+					<SpecialRuleDescription>Master of Assassins</SpecialRuleDescription>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<SpecialRuleDescription>A Killer not a Leader</SpecialRuleDescription>
+					<SpecialRuleDescription>Any model that takes a wound from the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or automatically lose all remaining wounds.</SpecialRuleDescription>
+					<SpecialRuleDescription>Maximum Range: 12"; Strength: As user+1. Rules: Thrown weapon; multiple shot x3.</SpecialRuleDescription>
+					<SpecialRuleDescription>One model in base contact chosen by the Dark Elves player, or the model's opponent in a challenge, loses one Attack (to a minimum of 1)</SpecialRuleDescription>
+					<SpecialRuleDescription>Wounds inflicted in the challenge that round are doubled for the purposes of combat resolution scores</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Lokhir Fellheart</Name>
+			<Points>250</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Lokhir Fellheart, Captain of the Tower of Blessed Dread</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Red Blades</Name>
+					<SpecialRuleDescription>A model wielding the Red Blades gains additional attacks in close combat equal to the number of ranks in the enemy unit he is attacking. In addition, he re-rolls failed rolls to Wound</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Sea Dragon cloak</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Helm of the Kraken</Name>
+					<Regeneration>true</Regeneration>
+					<Terror>true</Terror>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Merciless Slaver</SpecialRuleDescription>
+					<SpecialRuleDescription>Daring Leap</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Sorceress</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Sorceress</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>			
+				<Option>
+					<Name>Dark Steed</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Dark Pegasus</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Druchii Sorcery</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Master</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<Description>Master</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Beastmaster's scourge</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Repeater Crossbow</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Repeater handbow</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Pair of repeater handbow</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Sea Dragon Cloak</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>				
+				<Option>
+					<Name>Dark Steed</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Dark Pegasus</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Manticore</Name>
+					<Type>Option</Type>
+					<Points>200</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Cold One Chariot</Name>
+					<Type>Option</Type>
+					<Points>90</Points>
+					<Mount>true</Mount>
+					<AddToArmour>2</AddToArmour>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Death Hag</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<Description>Death Hag</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Frenzy>true</Frenzy>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Cauldron of Blood</Name>
+					<Type>Option</Type>
+					<Points>110</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Khainite</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
@@ -1099,6 +1522,94 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Cauldron of Blood</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<Frenzy>true</Frenzy>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Khainite</SpecialRuleDescription>
+					<SpecialRuleDescription>War Machine</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<SpecialRuleDescription>Blessings of Khaine</SpecialRuleDescription>
+					<SpecialRuleDescription>Altar of Khaine</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Assassin</Name>
+			<Group>Assassin</Group>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<Description>Assassin</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>9</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>75</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				
+				<PoisonAttack>true</PoisonAttack>
+				<HitFirst>true</HitFirst>
+				<NotALeader>true</NotALeader>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Repeater handbow</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Khainite</SpecialRuleDescription>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<SpecialRuleDescription>A Killer not a Leader</SpecialRuleDescription>
+					<SpecialRuleDescription>Hidden</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -1133,6 +1644,12 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
@@ -1192,6 +1709,12 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
@@ -1254,6 +1777,12 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
 				<Option>
 					<Name>Reaver</Name>
 					<Type>Option</Type>
@@ -1322,6 +1851,12 @@
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+				<Option>
 					<Name>Herald</Name>
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
@@ -1382,5 +1917,508 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Witch Elves</Name>
+			<Group>Khainite</Group>
+			<Points>10</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Khainite</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+				<Option>
+					<Name>Hag</Name>
+					<Type>Option</Type>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Shades</Name>
+			<Points>16</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Repeater crossbow</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+				<Option>
+					<Name>Bloodshadde</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>2</Points>
+					<PerModel>true</PerModel>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Har Ganeth Executioners</Name>
+			<Points>12</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<KillingBlow>true</KillingBlow>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Khainite</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+				<Option>
+					<Name>Draich-master</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Tullaris</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<FullCommand>true</FullCommand>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Tullaris</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Draich-master</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<PersonifiedCommander>true</PersonifiedCommander>
+					<FullCommand>true</FullCommand>
+					<Points>95</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Cold One Knights</Name>
+			<Points>27</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stupidity>true</Stupidity>
+				<Fear>true</Fear>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Lance</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shields</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<Special>
+						<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
+						<AddToArmour>5</AddToArmour>
+					</Special>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+				<Option>
+					<Name>Dread Knight</Name>
+					<Type>Option</Type>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+					<FullCommand>true</FullCommand>
+					<Points>16</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+					<FullCommand>true</FullCommand>
+					<Points>16</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Cold One Chariot</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Stupidity>true</Stupidity>
+				<Fear>true</Fear>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Repeater crossbow</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Black Guard of Naggarond</Name>
+			<Points>13</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>20</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Stubborn>true</Stubborn>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Halberd</Name>
+					<AddToStrength>1</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Warrior Elite</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+				<Option>
+					<Name>Tower Master</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Kouran</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+					<FullCommand>true</FullCommand>
+					<Points>14</Points>
+				</Option>
+				<Option>
+					<Name>Kouran</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Tower Master</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<PersonifiedCommander>true</PersonifiedCommander>
+					<FullCommand>true</FullCommand>
+					<Points>75</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+					<FullCommand>true</FullCommand>
+					<Points>14</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Reaper Bold Thrower</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>2</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>War Machine</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Wr Hydra</Name>
+			<Points>175</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>7</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<Regeneration>true</Regeneration>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Assasin</Name>
+					<Mount>true</Mount>
+					<Type>Option</Type>
+					<Points>90</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fiery Breath</SpecialRuleDescription>
+					<SpecialRuleDescription>Monster and Handlers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>v
 	</Units>
 </ArmyBook>
