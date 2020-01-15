@@ -120,6 +120,7 @@ namespace WarhammerArmyAssembler
                 newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
                 newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
+                newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
 
                 if (newUnit.Frenzy)
                     xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(ArmyBookOther.AddFrenzyAttack(xml));

@@ -93,6 +93,7 @@ namespace WarhammerArmyAssembler
         public bool PersonifiedHero { get; set; }
         public bool ArmyGeneral { get; set; }
         public bool WeaponTeam { get; set; }
+        public bool NotALeader { get; set; }
 
         public List<Option> Options = new List<Option>();
 
@@ -204,6 +205,7 @@ namespace WarhammerArmyAssembler
             newUnit.PersonifiedHero = this.PersonifiedHero;
             newUnit.ArmyGeneral = this.ArmyGeneral;
             newUnit.WeaponTeam = this.WeaponTeam;
+            newUnit.NotALeader = this.NotALeader;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)
@@ -482,7 +484,7 @@ namespace WarhammerArmyAssembler
                     if (option.FullCommand && option.Realised)
                         fullCommand += 1;
 
-                    if (option.PersonifiedCommander)
+                    if (option.PersonifiedCommander && option.Realised)
                         personifiedCommander = option.Name;
                 }
                     
