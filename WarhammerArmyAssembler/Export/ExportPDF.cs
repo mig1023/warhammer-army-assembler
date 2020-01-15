@@ -39,7 +39,7 @@ namespace WarhammerArmyAssembler
                 AddText(String.Format("{0}", UnitSizeIfNeed(entry.Value)), leftColumn: true, newLine: false);
                 AddText(String.Format("{0} ({1} pts)",  entry.Value.Name, entry.Value.GetUnitPoints()), lineHeight: 10);
 
-                foreach (string param in new List<string> { entry.Value.GetEquipmentLine(), entry.Value.GetSpecialRulesLine() })
+                foreach (string param in new List<string> { entry.Value.GetEquipmentLine(), entry.Value.GetSpecialRulesLine(), entry.Value.GetModifiedParamsLine() })
                     foreach (string line in InterfaceOther.WordSplit(param, partLength: 210))
                         AddText(line, fontSize: 6, lineHeight: 8);
 

@@ -393,6 +393,40 @@ namespace WarhammerArmyAssembler
             return equipment;
         }
 
+        private string GetModifiedParam(string shortName, string param)
+        {
+            if (!param.Contains("*") && !param.Contains("+"))
+                return String.Empty;
+
+            string cleanParam = param.Replace("*", String.Empty);
+
+            return String.Format("{0}={1}, ", shortName, cleanParam);
+        }
+
+        public string GetModifiedParamsLine()
+        {
+            Unit unit = GetOptionRules();
+
+            string paramLine = String.Empty;
+
+            paramLine += GetModifiedParam("M", unit.MovementView);
+            paramLine += GetModifiedParam("WS", unit.WeaponSkillView);
+            paramLine += GetModifiedParam("BS", unit.BallisticSkillView);
+            paramLine += GetModifiedParam("S", unit.StrengthView);
+            paramLine += GetModifiedParam("T", unit.ToughnessView);
+            paramLine += GetModifiedParam("W", unit.WoundsView);
+            paramLine += GetModifiedParam("I", unit.InitiativeView);
+            paramLine += GetModifiedParam("A", unit.AttacksView);
+            paramLine += GetModifiedParam("LD", unit.LeadershipView);
+            paramLine += GetModifiedParam("AS", unit.ArmourView);
+            paramLine += GetModifiedParam("Ward", unit.WardView);
+
+            if (!String.IsNullOrEmpty(paramLine))
+                paramLine = paramLine.Remove(paramLine.Length - 2);
+
+            return paramLine;
+        }
+
         public string UnitTypeName()
         {
             if (Type == Unit.UnitType.Lord)

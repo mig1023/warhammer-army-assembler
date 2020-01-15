@@ -124,9 +124,7 @@ namespace WarhammerArmyAssembler
 
         public static Unit ReloadArmyUnit(int id, Unit unit)
         {
-            Unit newUnit = unit.Clone();
-
-            newUnit = newUnit.GetOptionRules();
+            Unit newUnit = unit.Clone().GetOptionRules();
 
             newUnit.RulesView = newUnit.GetSpecialRulesLine();
             newUnit.PointsView = newUnit.GetUnitPoints().ToString();
