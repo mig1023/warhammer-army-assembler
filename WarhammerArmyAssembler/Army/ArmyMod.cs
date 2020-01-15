@@ -91,7 +91,7 @@ namespace WarhammerArmyAssembler
                 int unitLeadership = entry.Value.Leadership;
 
                 foreach (Option option in entry.Value.Options)
-                    if ((option.IsMagicItem() || (option.IsOption() && option.Realised)) && (option.AddToLeadership > 0))
+                    if (option.IsActual() && (option.AddToLeadership > 0))
                         unitLeadership += option.AddToLeadership;
 
                 if ((entry.Value.IsHero()) && (unitLeadership > maxLeadership))

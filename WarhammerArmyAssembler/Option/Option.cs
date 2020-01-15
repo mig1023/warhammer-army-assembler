@@ -237,6 +237,11 @@ namespace WarhammerArmyAssembler
             return true;
         }
 
+        public bool IsActual()
+        {
+            return (IsOption() && Realised) || IsMagicItem();
+        }
+
         public bool IsUsableByUnit(Unit unit)
         {
             if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.Group))
@@ -246,7 +251,7 @@ namespace WarhammerArmyAssembler
                 return true;
 
             foreach (Option option in unit.Options)
-                if ((option.IsOption() && option.Realised) || option.IsMagicItem())
+                if (option.IsActual())
                     if (TypeAndPointsSatisfy(option.MagicItemsType, option.MagicItems))
                         return true;
 

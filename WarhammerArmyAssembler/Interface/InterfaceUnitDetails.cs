@@ -43,7 +43,7 @@ namespace WarhammerArmyAssembler
             if (head != "MAGIC ITEMS")
                 return String.Empty;
 
-            return String.Format("{0} / {1}", InterfaceChecks.UnitMagicPointsAlreadyUsed(Army.Units[unitID]), Army.Units[unitID].MagicItems);
+            return String.Format("{0} / {1}", InterfaceChecks.UnitMagicPointsAlreadyUsed(Army.Units[unitID]), Army.Units[unitID].GetUnitMagicPoints());
         }
 
         private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit,

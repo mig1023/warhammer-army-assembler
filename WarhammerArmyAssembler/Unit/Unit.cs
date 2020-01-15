@@ -125,12 +125,23 @@ namespace WarhammerArmyAssembler
             return points;
         }
 
+        public int GetUnitMagicPoints()
+        {
+            int unitAllMagicPoints = MagicItems;
+
+            foreach (Option option in Options)
+                if (option.IsActual())
+                    unitAllMagicPoints += option.MagicItems;
+
+            return unitAllMagicPoints;
+        }
+
         public int GetUnitWizard()
         {
             int wizard = Wizard;
 
             foreach (Option option in Options)
-                if (!option.IsOption() || (option.IsOption() && option.Realised))
+                if (!option.IsOption() || option.IsActual())
                     wizard += option.AddToWizard;
 
             return wizard;
@@ -226,7 +237,7 @@ namespace WarhammerArmyAssembler
                 allOption.AddRange(Army.Units[MountOn].Options);
 
             foreach (Option option in allOption)
-                if (option.IsMagicItem() || (option.IsOption() && option.Realised))
+                if (option.IsActual())
                 {
                     PropertyInfo optionToParam = typeof(Option).GetProperty(String.Format("{0}To", name));
                     if (optionToParam != null)
@@ -537,7 +548,7 @@ namespace WarhammerArmyAssembler
                 return MountOn;
 
             foreach (Option option in Options)
-                if (option.Mount && ((option.IsOption() && option.Realised) || option.IsMagicItem()))
+                if (option.Mount && (option.IsActual()))
                     return option.ID;
 
             return 0;
@@ -568,7 +579,7 @@ namespace WarhammerArmyAssembler
 
                 bool notCompitableMore = IsNotCompitableMore(Options[i]);
 
-                if ((incompatible || notCompitableMore) && (Options[i].Realised || Options[i].IsMagicItem()))
+                if ((incompatible || notCompitableMore) && (Options[i].IsActual()))
                 {
                     InterfaceMod.SetArtefactAlreadyUsed(Options[i].ID, false);
                     AddOption(Options[i].ID, this, this.ID);
@@ -609,7 +620,7 @@ namespace WarhammerArmyAssembler
         public Option.OnlyForType GetMountTypeAlreadyFixed()
         {
             foreach (Option option in Options)
-                if ((option.IsOption() && option.Realised) || option.IsMagicItem())
+                if (option.IsActual())
                 {
                     if (option.OnlyFor == Option.OnlyForType.Mount)
                         return Option.OnlyForType.Mount;
