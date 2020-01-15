@@ -204,6 +204,7 @@ namespace WarhammerArmyAssembler
             newWeapon.MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]);
 
             newWeapon.FullCommand = BoolParse(xmlNode["FullCommand"]);
+            newWeapon.PersonifiedCommander = BoolParse(xmlNode["PersonifiedCommander"]);
 
             newWeapon.Mount = BoolParse(xmlNode["Mount"]);
 

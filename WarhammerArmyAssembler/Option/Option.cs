@@ -79,6 +79,7 @@ namespace WarhammerArmyAssembler
 
         public int AddToModelsInPack { get; set; }
         public bool FullCommand { get; set; }
+        public bool PersonifiedCommander { get; set; }
 
         public string[] SpecialRuleDescription { get; set; }
 
@@ -185,6 +186,7 @@ namespace WarhammerArmyAssembler
 
             newOption.AddToModelsInPack = this.AddToModelsInPack;
             newOption.FullCommand = this.FullCommand;
+            newOption.PersonifiedCommander = this.PersonifiedCommander;
 
             newOption.MagicItems = this.MagicItems;
             newOption.MagicItemsType = this.MagicItemsType;

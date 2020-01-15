@@ -475,13 +475,24 @@ namespace WarhammerArmyAssembler
             if (!IsHero())
             {
                 int fullCommand = 0;
+                string personifiedCommander = String.Empty;
 
                 foreach (Option option in Options)
+                {
                     if (option.FullCommand && option.Realised)
                         fullCommand += 1;
 
+                    if (option.PersonifiedCommander)
+                        personifiedCommander = option.Name;
+                }
+                    
                 if (fullCommand == 3)
+                {
                     rules.Add("FC");
+
+                    if (!String.IsNullOrEmpty(personifiedCommander))
+                        rules.Add(personifiedCommander);
+                }
                 else
                     foreach (Option option in Options)
                         if (option.FullCommand && option.Realised)
