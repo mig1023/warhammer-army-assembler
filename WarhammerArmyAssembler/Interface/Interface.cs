@@ -22,6 +22,8 @@ namespace WarhammerArmyAssembler
         public static string CurrentSelectedArmy = null;
         public static int? CurrentSelectedUnit = null;
 
+        public static bool startArmybookMenu = true;
+
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop, ToMainMenu }
 
         public static List<Label> PointsButtons = new List<Label>();

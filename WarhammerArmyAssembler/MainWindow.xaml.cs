@@ -242,7 +242,7 @@ namespace WarhammerArmyAssembler
 
         private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
         {
-            if (startHelpInfo.Visibility == Visibility.Visible)
+            if (Interface.startArmybookMenu)
                 Environment.Exit(0);
 
             Interface.Move(Interface.MovingType.ToMain);
@@ -275,6 +275,8 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
+            Interface.startArmybookMenu = false;
+
             InterfaceReload.LoadArmySize(InterfaceOther.IntParse(listArmybookPoints.Text));
             ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
@@ -306,6 +308,8 @@ namespace WarhammerArmyAssembler
 
         public void buttonPoints_Click(object sender, RoutedEventArgs e)
         {
+            Interface.startArmybookMenu = false;
+
             InterfaceReload.LoadArmySize(InterfaceOther.IntParse((sender as Label).Content.ToString().Split()[0]));
         }
 
