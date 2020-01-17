@@ -82,7 +82,149 @@
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic weapons">	
-			
+			<Artefact>
+				<Name>Blade of Leaping Gold</Name>
+				<Type>Weapon</Type>
+				<AddToAttacks>3</AddToAttacks>
+				<Points>60</Points>
+				<Description>The blade confers +3 Attacks on the character wielding it.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Bow of the Seafarer</Name>
+				<Type>Weapon</Type>
+				<Points>60</Points>
+				<SpecialRuleDescription>Resolve each hit like a single bolt from a Bolt Thrower</SpecialRuleDescription>
+				<Description>Resolve each hit like a single bolt from a Bolt Thrower.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Hoeth</Name>
+				<Type>Weapon</Type>
+				<Points>60</Points>
+				<SpecialRuleDescription>All hits wound automatically</SpecialRuleDescription>
+				<Description>All hits wound automatically.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Star Lance</Name>
+				<Type>Weapon</Type>
+				<OnlyFor>Mount</OnlyFor>
+				<Points>40</Points>
+				<SpecialRuleDescription>Lance. The bearer receives +3 Strength on the turn he charges</SpecialRuleDescription>
+				<Description>Lance. The bearer receives +3 Strength on the turn he charges.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Reaver bow</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Longbow with Strength 5, multiple shot x3</SpecialRuleDescription>
+				<Description>Treat the Reaver Bow as a normal longbow with the following exceptions: the bearer may shoot three times at the same target in each ot his Shooting phases and any hits are resolved at Strength 5.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The White Sword</Name>
+				<Type>Weapon</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<Points>40</Points>
+				<KillingBlow>true</KillingBlow>
+				<AddToStrength>2</AddToStrength>
+				<Description>Model on foot only, requires two hands. The bearer adds +2 to his Strength when using the White Sword. In addition it confers the Killing Blow special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Blade of Sea Gold</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>No armour saves</SpecialRuleDescription>
+				<Description>No armour saves may be taken against wounds caused by the Blade of Sea Gold.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Foe Bane</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>All hits on a target with 2 or more Wounds on its starting profile will always wound on a 2+</SpecialRuleDescription>
+				<Description>All hits on a target with 2 or more Wounds on its starting profile will always wound on a 2+.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic armour">
+			<Artefact>
+				<Name>Armour of Protection</Name>
+				<Type>Armour</Type>
+				<Points>45</Points>
+				<AddToArmour>6</AddToArmour>
+				<AddToWard>4</AddToWard>
+				<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. It also provides a 4+ Ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Golden Shield</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>All successful attempts to hit the bearer in close combat must be re-rolled</SpecialRuleDescription>
+				<Description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all successful attempts to hit the bearer in close combat must be re-rolled.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Stars</Name>
+				<Type>Armour</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<Points>30</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>After any unsaved wound model is instantly teleported 3D6" in a random direction</SpecialRuleDescription>
+				<Description>May only be worn by a model on foot. The Armour of Stars counts as light armour (armour save 6 + ) which can be combined with other equipment normally. If the wearer suffers an unsaved wound he is instantly teleported 3D6" in a random direction.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Heroes</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToArmour>5</AddToArmour>
+				<SpecialRuleDescription>Opponent must first pass a Leadership test before can attack</SpecialRuleDescription>
+				<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may not attack.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Temakador's Gauntlets</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToArmour>6</AddToArmour>
+				<AddToWard>5</AddToWard>
+				<Description>These gauntlets grant a 6+ armour save which can be combined with other equipment normally. They also give the bearer a 5+ Ward save against attacks of Strength 4 or greater.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Shadow Armour</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToArmour>5</AddToArmour>
+				<SpecialRuleDescription>Scout</SpecialRuleDescription>
+				<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Caledor</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<ArmourTo>2</ArmourTo>
+				<Description>Confers a 2+ armour save, that cannot be improved by any means. In addition, the Armour of Caledor follows the normal rules for Dragon armour.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Helm of Fortune</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>May re-roll failed armour saves</SpecialRuleDescription>
+				<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dragonscale Shield</Name>
+				<Type>Armour</Type>
+				<Points>20</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToWard>6</AddToWard>
+				<SpecialRuleDescription>May re-roll failed armour saves</SpecialRuleDescription>
+				<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Mask of the Merlord</Name>
+				<Type>Armour</Type>
+				<Points>10</Points>
+				<OnlyFor>Infantry</OnlyFor>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Can move over marsh, rivers, lakes or any other water features without penalty, and will benefit from soft cover while in such terrain</SpecialRuleDescription>
+				<Description>Model on foot only. This mask confers a 6+ armour save which can be combined with other equipment normally. In addition, the wearer can move over marsh, rivers, lakes or any other water features without penalty, and will benefit from soft cover while in such terrain.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Enchanted items">	
 			
