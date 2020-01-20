@@ -20,7 +20,8 @@ namespace WarhammerArmyAssembler
         public static object DragSender = null;
 
         public static string CurrentSelectedArmy = null;
-        public static int? CurrentSelectedUnit = null;
+
+        public static int CurrentSelectedUnit = -1;
 
         public static bool startArmybookMenu = true;
 

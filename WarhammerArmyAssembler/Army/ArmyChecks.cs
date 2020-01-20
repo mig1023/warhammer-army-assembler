@@ -8,10 +8,8 @@ namespace WarhammerArmyAssembler
 {
     class ArmyChecks
     {
-        public static bool IsUnitExistInArmy(int? nullableUnitID)
+        public static bool IsUnitExistInArmy(int unitID)
         {
-            int unitID = nullableUnitID ?? -1;
-
             if (!Army.Units.ContainsKey(unitID))
                 return false;
 

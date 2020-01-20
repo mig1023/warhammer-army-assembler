@@ -15,22 +15,25 @@ namespace WarhammerArmyAssembler
         {
             Unit unit = ArmyBook.Units[id].Clone();
 
-            int newUnitID = GetNextIndex();
+            unit.ArmyID = GetNextIndex();
 
-            Army.Units.Add(newUnitID, unit);
+            Army.Units.Add(unit.ArmyID, unit);
 
             if (!String.IsNullOrEmpty(unit.MountInit))
             {
                 foreach (KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
                     if (mount.Value.Name == unit.MountInit)
                     {
+                        Unit newMount = mount.Value.Clone();
+
                         int newMountID = GetNextIndex();
-                        Army.Units[newUnitID].MountOn = newMountID;
-                        Army.Units.Add(newMountID, mount.Value.Clone());
+                        Army.Units[unit.ArmyID].MountOn = newMountID;
+                        newMount.ArmyID = newMountID;
+                        Army.Units.Add(newMountID, newMount);
                     }
             }
 
-            return newUnitID;
+            return unit.ArmyID;
         }
 
         public static void AddMountByID(int id, int unit)

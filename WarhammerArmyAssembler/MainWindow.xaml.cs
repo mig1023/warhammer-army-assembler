@@ -92,14 +92,16 @@ namespace WarhammerArmyAssembler
             DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
 
             if (sender is ScrollViewer)
-                Interface.ArmyGridDropArtefact(id, Interface.CurrentSelectedUnit ?? 0);
+            {
+                if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
+                    Interface.ArmyGridDropArtefact(id, Interface.CurrentSelectedUnit);
+            }
             else
             {
                 Interface.ArmyGridDrop(id, container);
-                int newUnitID = Interface.CurrentSelectedUnit ?? -1;
 
-                if (newUnitID >= 0)
-                    InterfaceUnitDetails.UpdateUnitDescription(newUnitID, Army.Units[newUnitID]);
+                if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
+                    InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
             }
                 
         }
@@ -154,7 +156,10 @@ namespace WarhammerArmyAssembler
             Unit unit = null;
 
             if (sender is ScrollViewer)
-                unit = Army.Units[Interface.CurrentSelectedUnit ?? 0];
+            {
+                if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
+                    unit = Army.Units[Interface.CurrentSelectedUnit];
+            }
             else
             {
                 DataGridRow row = sender as DataGridRow;
@@ -203,7 +208,7 @@ namespace WarhammerArmyAssembler
 
             DragDrop.DoDragDrop(container, unit.ID.ToString(), DragDropEffects.Copy);
 
-            Interface.CurrentSelectedUnit = unit.ID;
+            Interface.CurrentSelectedUnit = unit.ArmyID;
         }
 
         private void unitDelete_Drop(object sender, DragEventArgs e)
@@ -316,10 +321,7 @@ namespace WarhammerArmyAssembler
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
-            {
-                int currentSelectedUnit = Interface.CurrentSelectedUnit ?? 0;
-                InterfaceUnitDetails.UpdateUnitDescription(currentSelectedUnit, Army.Units[currentSelectedUnit]);
-            }
+                InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
         }
 
         private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e)
@@ -327,7 +329,10 @@ namespace WarhammerArmyAssembler
             Dictionary<Unit.UnitType, double> units = ArmyChecks.UnitsPointsPercent();
             Dictionary<Unit.UnitType, double> unitPercents = ArmyChecks.UnitsMaxPointsPercent();
 
-            string pointsMsg = String.Empty;
+            double armyCurrentPoint = ArmyParams.GetArmyPoints();
+
+            string pointsMsg = String.Format("All points:\t\t{0}\nAlready used:\t{1}\nAvailable:\t\t{2}\n\n\n\n",
+                ArmyParams.GetArmyMaxPoints(), armyCurrentPoint, (ArmyParams.GetArmyMaxPoints() - armyCurrentPoint));
 
             foreach(KeyValuePair<Unit.UnitType, double> entry in unitPercents)
                 pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t({3} {4} pts / {5}%)\n\n",
