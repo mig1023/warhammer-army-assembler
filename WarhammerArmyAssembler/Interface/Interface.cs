@@ -192,17 +192,17 @@ namespace WarhammerArmyAssembler
                 newPosition = new Thickness(0, main.errorDetail.Height, 0, 0);
 
             if (moveTo == MovingType.ToMainMenu)
-                newPosition = new Thickness(0, main.mainMenu.Height, 0, 0);
+                newPosition = new Thickness(main.mainMenu.Width, 0, 0, 0);
 
             ThicknessAnimation move = new ThicknessAnimation();
             move.Duration = TimeSpan.FromSeconds(0.2);
-            move.From = (err || menu ? main.mainPlaceCanvas.Margin : main.mainGrid.Margin);
+            move.From = (err? main.mainPlaceCanvas.Margin : main.mainGrid.Margin);
             move.To = newPosition;
 
             if (secondAnimation != null)
                 move.Completed += secondAnimation;
 
-            if (err || menu)
+            if (err)
                 main.mainPlaceCanvas.BeginAnimation(FrameworkElement.MarginProperty, move);
             else
                 main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
