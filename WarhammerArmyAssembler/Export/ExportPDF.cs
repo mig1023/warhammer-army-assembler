@@ -34,17 +34,25 @@ namespace WarhammerArmyAssembler
             AddText(String.Format("{0} pts", Army.MaxPoints), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
-            {
-                AddText(String.Format("{0}", UnitSizeIfNeed(entry.Value)), leftColumn: true, newLine: false);
-                AddText(String.Format("{0} ({1} pts)",  entry.Value.Name, entry.Value.GetUnitPoints()), lineHeight: 10);
+            List<Unit> armyByCategories = ArmyParams.GetArmyUnitsByCategories();
 
-                foreach (string param in new List<string> { entry.Value.GetEquipmentLine(), entry.Value.GetSpecialRulesLine(), entry.Value.GetModifiedParamsLine() })
-                    foreach (string line in InterfaceOther.WordSplit(param, partLength: 210))
-                        AddText(line, fontSize: 6, lineHeight: 8);
+            foreach (Unit unitType in armyByCategories)
+                foreach (Unit unit in unitType.Items)
+                {
+                    AddText(String.Format("{0}", UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
+                    AddText(String.Format("{0} ({1} pts)", unit.Name, unit.GetUnitPoints()), lineHeight: 10);
 
-                AddText(lineHeight: 16);
-            }
+                    foreach (string param in new List<string> {
+                        unit.GetEquipmentLine(),
+                        unit.GetSpecialRulesLine(),
+                        unit.GetModifiedParamsLine()
+                    })
+                        foreach (string line in InterfaceOther.WordSplit(param, partLength: 210))
+                            if (!String.IsNullOrEmpty(line))
+                                AddText(line, fontSize: 6, lineHeight: 8);
+
+                    AddText(lineHeight: 16);
+                }
 
             AddText(lineHeight: 8);
 

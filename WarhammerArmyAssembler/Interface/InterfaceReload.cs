@@ -26,7 +26,7 @@ namespace WarhammerArmyAssembler
             Interface.main.armyMainMenu.Foreground = Brushes.White;
             Interface.main.armyMainMenu.Background = ArmyBook.AdditionalColor;
 
-            List<Unit> categories = GetArmyCategories();
+            List<Unit> categories = ArmyParams.GetArmyCategories();
 
             foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)
             {
@@ -71,35 +71,11 @@ namespace WarhammerArmyAssembler
         {
             Interface.ArmyInInterface.Clear();
 
-            List<Unit> categories = GetArmyCategories();
-
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
-            {
-                if (entry.Value.Type != Unit.UnitType.Mount)
-                    categories[(int)entry.Value.Type].Items.Add(ReloadArmyUnit(entry.Key, entry.Value));
-
-                if (
-                    (entry.Value.MountOn > 0)
-                    &&
-                        (
-                            (Army.Units[entry.Value.MountOn].Wounds != 1)
-                            ||
-                            (Army.Units[entry.Value.MountOn].WeaponTeam)
-                        )
-                    )
-                    categories[(int)entry.Value.Type].Items.Add(
-                        ReloadArmyUnit(entry.Value.MountOn, Army.Units[entry.Value.MountOn])
-                    );
-            }
+            List<Unit> categories = ArmyParams.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in categories)
-            {
-                if (unitType.Items.Count <= 0)
-                    continue;
-
                 foreach (Unit unit in unitType.Items)
                     Interface.ArmyInInterface.Add(unit);
-            }
 
             Interface.main.ArmyGrid.ItemsSource = Interface.ArmyInInterface;
             Interface.main.armyHeroes.Content = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
@@ -122,17 +98,6 @@ namespace WarhammerArmyAssembler
             Interface.main.armyDispell.Content = String.Format("Dispell: {0}", ArmyParams.GetArmyDispell());
         }
 
-        public static Unit ReloadArmyUnit(int id, Unit unit)
-        {
-            Unit newUnit = unit.Clone().GetOptionRules();
-
-            newUnit.RulesView = newUnit.GetSpecialRulesLine();
-            newUnit.PointsView = newUnit.GetUnitPoints().ToString();
-            newUnit.ID = id;
-
-            return newUnit;
-        }
-
         public static void LoadArmySize(int points, bool onlyReload = false)
         {
             Army.MaxPoints = points;
@@ -146,18 +111,6 @@ namespace WarhammerArmyAssembler
 
             Interface.DetailResize(open: false);
             Interface.Move(Interface.MovingType.ToMain);
-        }
-
-        private static List<Unit> GetArmyCategories()
-        {
-            return new List<Unit>
-            {
-                new Unit() { Name = "Lords" },
-                new Unit() { Name = "Heroes" },
-                new Unit() { Name = "Core" },
-                new Unit() { Name = "Special" },
-                new Unit() { Name = "Rare" },
-            };
         }
     }
 }

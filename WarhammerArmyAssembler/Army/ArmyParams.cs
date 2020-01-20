@@ -112,5 +112,54 @@ namespace WarhammerArmyAssembler
 
             return dispell;
         }
+
+        public static List<Unit> GetArmyUnitsByCategories()
+        {
+            List<Unit> categories = GetArmyCategories();
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            {
+                if (entry.Value.Type != Unit.UnitType.Mount)
+                    categories[(int)entry.Value.Type].Items.Add(ReloadArmyUnit(entry.Key, entry.Value));
+
+                if (
+                    (entry.Value.MountOn > 0)
+                    &&
+                        (
+                            (Army.Units[entry.Value.MountOn].Wounds != 1)
+                            ||
+                            (Army.Units[entry.Value.MountOn].WeaponTeam)
+                        )
+                    )
+                    categories[(int)entry.Value.Type].Items.Add(
+                        ReloadArmyUnit(entry.Value.MountOn, Army.Units[entry.Value.MountOn])
+                    );
+            }
+
+            return categories;
+        }
+
+        public static Unit ReloadArmyUnit(int id, Unit unit)
+        {
+            Unit newUnit = unit.Clone().GetOptionRules();
+
+            newUnit.RulesView = newUnit.GetSpecialRulesLine();
+            newUnit.PointsView = newUnit.GetUnitPoints().ToString();
+            newUnit.ID = id;
+
+            return newUnit;
+        }
+
+        public static List<Unit> GetArmyCategories()
+        {
+            return new List<Unit>
+            {
+                new Unit() { Name = "Lords" },
+                new Unit() { Name = "Heroes" },
+                new Unit() { Name = "Core" },
+                new Unit() { Name = "Special" },
+                new Unit() { Name = "Rare" },
+            };
+        }
     }
 }

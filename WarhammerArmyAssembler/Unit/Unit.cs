@@ -381,11 +381,11 @@ namespace WarhammerArmyAssembler
 
             foreach (Option option in Options)
             {
-                bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0) || String.IsNullOrEmpty(option.Name);
+                bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0);
                 bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount &&
                     !option.FullCommand && option.SpecialRuleDescription.Length == 0;
 
-                if (!thisIsStandartEquipment || thisIsSpecialRuleOrMount)
+                if (!String.IsNullOrEmpty(option.Name) && (!thisIsStandartEquipment || thisIsSpecialRuleOrMount))
                     equipment += String.Format("{0}; ", option.Name);
             }
 
