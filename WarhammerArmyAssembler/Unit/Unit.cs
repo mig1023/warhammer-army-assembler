@@ -330,12 +330,12 @@ namespace WarhammerArmyAssembler
 
                             if (!ArmyChecks.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
                             {
-                                Interface.Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Units[unitID].UnitTypeName()));
+                                Interface.Error(String.Format("The {0} has reached a point cost limit", Army.Units[unitID].UnitTypeName()));
                                 return;
                             }
                             else if (!InterfaceChecks.EnoughUnitPointsForAddOption(optionPoints))
                             {
-                                Interface.Error(String.Format("Not enough points to add", ArmyBook.Units[unitID].UnitTypeName()));
+                                Interface.Error(String.Format("Not enough points to add", Army.Units[unitID].UnitTypeName()));
                                 return;
                             }
                             else
