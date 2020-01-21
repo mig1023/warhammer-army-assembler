@@ -298,8 +298,12 @@ namespace WarhammerArmyAssembler
 
         private void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            //Interface.Move(Interface.MovingType.ToMain, secondAnimation: new EventHandler(Interface.MoveToChangeArmybook), menu: true);
-            Interface.Move(Interface.MovingType.ToMain, secondAnimation: new EventHandler(Interface.MoveToChangeArmybook), menu: true, decentralPosition: true);
+            Interface.Move(
+                Interface.MovingType.ToLeft,
+                toShow: InterfaceMod.ShowArmybookMenu,
+                secondAnimation: new EventHandler(Interface.MoveToChangeArmybook),
+                noHiding: true
+            );
         }
 
         private void prev_Click(object sender, RoutedEventArgs e)
