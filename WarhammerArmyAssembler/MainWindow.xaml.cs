@@ -227,11 +227,17 @@ namespace WarhammerArmyAssembler
             mainPlaceCanvas.Width = e.NewSize.Width;
 
             armybookDetailScroll.Height = e.NewSize.Height - 70;
-            menuArmybookScroll.Height = armybookDetailScroll.Height;
-            mainMenuScroll.Height = menuArmybookScroll.Height;
+            menuArmybookScroll.Height = e.NewSize.Height - 70;
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
+
+            mainMenu.Width = e.NewSize.Width;
+            closeMainMenu.Margin = new Thickness(
+                e.NewSize.Width - closeMainMenu.Width - 10,
+                mainMenu.Height - closeMainMenu.Height - 10,
+                0, 0
+            );
 
             startHelpInfo.Height = mainPlaceCanvas.Height;
             startHelpInfo.Width = mainPlaceCanvas.Width - 320;
@@ -292,7 +298,8 @@ namespace WarhammerArmyAssembler
 
         private void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Interface.Move(Interface.MovingType.ToMain, secondAnimation: new EventHandler(Interface.MoveToChangeArmybook), menu: true);
+            //Interface.Move(Interface.MovingType.ToMain, secondAnimation: new EventHandler(Interface.MoveToChangeArmybook), menu: true);
+            Interface.Move(Interface.MovingType.ToMain, secondAnimation: new EventHandler(Interface.MoveToChangeArmybook), menu: true, decentralPosition: true);
         }
 
         private void prev_Click(object sender, RoutedEventArgs e)

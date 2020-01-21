@@ -13,6 +13,50 @@
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
 
+        <Canvas x:Name="mainMenu" Background="#FFD6D6D6" Height="237" Width="764">
+            <Label x:Name="closeMainMenu" Content="Close" Height="30" Padding="0" Width="154" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Background="#FF535353" Margin="10,10" MouseDown="closeMainMenu_MouseDown"/>
+            <Label x:Name="toNewArmy" Height="32" Canvas.Left="20" Canvas.Top="10" Width="144" FontSize="16" MouseDown="toNewArmy_MouseDown">
+                <TextBlock x:Name="toNewAmyText" Text="Change Armybook">
+                    <TextBlock.TextDecorations>
+                        <TextDecorationCollection>
+                            <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
+                                <TextDecoration.Pen>
+                                    <Pen Thickness="1">
+                                        <Pen.Brush>
+                                            <SolidColorBrush Color="Gray"/>
+                                        </Pen.Brush>
+                                        <Pen.DashStyle>
+                                            <DashStyle Dashes="4,4"/>
+                                        </Pen.DashStyle>
+                                    </Pen>
+                                </TextDecoration.Pen>
+                            </TextDecoration>
+                        </TextDecorationCollection>
+                    </TextBlock.TextDecorations>
+                </TextBlock>
+            </Label>
+            <Label x:Name="saveArmyToPDF" Height="32" Canvas.Left="20" Canvas.Top="42" Width="155" FontSize="16" MouseDown="saveArmyToPDF_MouseDown">
+                <TextBlock x:Name="saveArmyToPDFText" Text="Export Army to PDF">
+                    <TextBlock.TextDecorations>
+                        <TextDecorationCollection>
+                            <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
+                                <TextDecoration.Pen>
+                                    <Pen Thickness="1">
+                                        <Pen.Brush>
+                                            <SolidColorBrush Color="Gray"/>
+                                        </Pen.Brush>
+                                        <Pen.DashStyle>
+                                            <DashStyle Dashes="4,4"/>
+                                        </Pen.DashStyle>
+                                    </Pen>
+                                </TextDecoration.Pen>
+                            </TextDecoration>
+                        </TextDecorationCollection>
+                    </TextBlock.TextDecorations>
+                </TextBlock>
+            </Label>
+        </Canvas>
+
         <Canvas x:Name="mainPlaceCanvas">
             <Canvas x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
                 <Label x:Name="closeArmybookDetail" Content="Close" Height="30" Padding="0" Width="280" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Margin="20,20" MouseDown="closeArmybookDetail_Click"/>
@@ -33,51 +77,6 @@
                     <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="118" Width="20" Click="prev_Click"/>
                     <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="118" Width="20" Click="next_Click"/>
                     <TextBox x:Name="listArmybookPoints" Height="34" Canvas.Left="22" TextWrapping="Wrap" Text="4000" Canvas.Top="566" Width="130" FontSize="20"/>
-                </Canvas>
-            </ScrollViewer>
-
-            <ScrollViewer x:Name="mainMenuScroll" Visibility="Hidden" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
-                <Canvas x:Name="mainMenu" Background="#FFD6D6D6" Height="628" Width="320">
-                    <Label x:Name="toNewArmy" Height="32" Canvas.Left="20" Canvas.Top="10" Width="144" FontSize="16" MouseDown="toNewArmy_MouseDown">
-                        <TextBlock x:Name="toNewAmyText" Text="Change Armybook">
-                            <TextBlock.TextDecorations>
-                                <TextDecorationCollection>
-                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
-                                        <TextDecoration.Pen>
-                                            <Pen Thickness="1">
-                                                <Pen.Brush>
-                                                    <SolidColorBrush Color="Gray"/>
-                                                </Pen.Brush>
-                                                <Pen.DashStyle>
-                                                    <DashStyle Dashes="4,4"/>
-                                                </Pen.DashStyle>
-                                            </Pen>
-                                        </TextDecoration.Pen>
-                                    </TextDecoration>
-                                </TextDecorationCollection>
-                            </TextBlock.TextDecorations>
-                        </TextBlock>
-                    </Label>
-                    <Label x:Name="saveArmyToPDF" Height="32" Canvas.Left="20" Canvas.Top="42" Width="155" FontSize="16" MouseDown="saveArmyToPDF_MouseDown">
-                        <TextBlock x:Name="saveArmyToPDFText" Text="Export Army to PDF">
-                            <TextBlock.TextDecorations>
-                                <TextDecorationCollection>
-                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
-                                        <TextDecoration.Pen>
-                                            <Pen Thickness="1">
-                                                <Pen.Brush>
-                                                    <SolidColorBrush Color="Gray"/>
-                                                </Pen.Brush>
-                                                <Pen.DashStyle>
-                                                    <DashStyle Dashes="4,4"/>
-                                                </Pen.DashStyle>
-                                            </Pen>
-                                        </TextDecoration.Pen>
-                                    </TextDecoration>
-                                </TextDecorationCollection>
-                            </TextBlock.TextDecorations>
-                        </TextBlock>
-                    </Label>
                 </Canvas>
             </ScrollViewer>
 

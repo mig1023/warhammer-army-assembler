@@ -172,9 +172,12 @@ namespace WarhammerArmyAssembler
         }
 
         public static void Move(MovingType moveTo, InterfaceMod.ShowSomething toShow = null, EventHandler secondAnimation = null,
-            bool err = false, bool menu = false)
+            bool err = false, bool menu = false, bool decentralPosition = false)
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
+
+            if (decentralPosition)
+                newPosition = new Thickness(main.armybookDetailScrollHead.Width, main.mainPlaceCanvas.Margin.Top, 0, 0);
 
             if (err)
                 toShow = InterfaceMod.ShowError;
@@ -192,17 +195,17 @@ namespace WarhammerArmyAssembler
                 newPosition = new Thickness(0, main.errorDetail.Height, 0, 0);
 
             if (moveTo == MovingType.ToMainMenu)
-                newPosition = new Thickness(main.mainMenu.Width, 0, 0, 0);
+                newPosition = new Thickness(0, main.mainMenu.Height, 0, 0);
 
             ThicknessAnimation move = new ThicknessAnimation();
             move.Duration = TimeSpan.FromSeconds(0.2);
-            move.From = (err? main.mainPlaceCanvas.Margin : main.mainGrid.Margin);
+            move.From = (err || menu ? main.mainPlaceCanvas.Margin : main.mainGrid.Margin);
             move.To = newPosition;
 
             if (secondAnimation != null)
                 move.Completed += secondAnimation;
 
-            if (err)
+            if (err || menu)
                 main.mainPlaceCanvas.BeginAnimation(FrameworkElement.MarginProperty, move);
             else
                 main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
@@ -211,7 +214,11 @@ namespace WarhammerArmyAssembler
         public static void MoveToChangeArmybook(object Sender, EventArgs e)
         {
             PreviewArmyList();
-            Move(MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu, secondAnimation: new EventHandler(InterfaceMod.ShowStartHelpInfo));
+
+            if (startArmybookMenu)
+                Move(MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu, secondAnimation: new EventHandler(InterfaceMod.ShowStartHelpInfo));
+            else
+                Move(MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu, menu: true);
         }
 
         private static void PreviewLoadCurrentSelectedArmy(string armyName)

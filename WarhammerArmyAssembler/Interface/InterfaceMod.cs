@@ -42,8 +42,7 @@ namespace WarhammerArmyAssembler
 
         public static void ShowMainMenu()
         {
-            Interface.main.armybookDetailScrollHead.Visibility = Visibility.Visible;
-            Interface.main.mainMenuScroll.Visibility = Visibility.Visible;
+            Interface.main.mainMenu.Visibility = Visibility.Visible;
         }
 
         public static void ShowArmybookMenu()
@@ -67,7 +66,6 @@ namespace WarhammerArmyAssembler
         {
             Interface.main.armybookDetailScroll.Visibility = Visibility.Hidden;
             Interface.main.menuArmybookScroll.Visibility = Visibility.Hidden;
-            Interface.main.mainMenuScroll.Visibility = Visibility.Hidden;
             Interface.main.armybookDetailScrollHead.Visibility = Visibility.Hidden;
             Interface.main.startHelpInfo.Visibility = Visibility.Hidden;
             Interface.main.mainMenu.Visibility = Visibility.Hidden;
