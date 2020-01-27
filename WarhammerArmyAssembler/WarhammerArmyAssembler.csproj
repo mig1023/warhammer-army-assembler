@@ -68,6 +68,9 @@
     <Compile Include="Army\ArmyChecks.cs" />
     <Compile Include="Army\ArmyMod.cs" />
     <Compile Include="Army\ArmyParams.cs" />
+    <Compile Include="ChangeArmybookWindow.xaml.cs">
+      <DependentUpon>ChangeArmybookWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Export\ExportPDF.cs" />
     <Compile Include="Interface\Interface.cs" />
     <Compile Include="Interface\InterfaceChecks.cs" />
@@ -77,6 +80,10 @@
     <Compile Include="Interface\InterfaceUnitDetails.cs" />
     <Compile Include="Option\Option.cs" />
     <Compile Include="Unit\Unit.cs" />
+    <Page Include="ChangeArmybookWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

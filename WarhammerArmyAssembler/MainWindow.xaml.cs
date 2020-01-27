@@ -10,13 +10,19 @@ namespace WarhammerArmyAssembler
 {
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
 
+            this.Hide();
+
             this.DataContext = this;
 
             Interface.main = this;
+
+            Interface.changeArmybook.Show();
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
@@ -355,6 +361,11 @@ namespace WarhammerArmyAssembler
         private void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
             ExportPDF.SaveArmyToPDF();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

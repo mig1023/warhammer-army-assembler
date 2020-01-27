@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -14,6 +15,8 @@ namespace WarhammerArmyAssembler
     class Interface
     {
         public static MainWindow main = null;
+
+        public static ChangeArmybookWindow changeArmybook = new ChangeArmybookWindow();
 
         public static ObservableCollection<Unit> ArmyInInterface = new ObservableCollection<Unit>();
 
@@ -226,11 +229,11 @@ namespace WarhammerArmyAssembler
             xmlFile.Load(armyName);
 
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
-            main.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
+            changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
 
-            main.listArmybookVer.Content = "edition " + xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText;
+            changeArmybook.listArmybookVer.Content = "edition " + xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText;
 
-            main.UpdateLayout();
+            changeArmybook.UpdateLayout();
 
             Brush mainColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
 
@@ -240,9 +243,9 @@ namespace WarhammerArmyAssembler
                 label.Foreground = mainColor;
             }
 
-            main.listArmybookPoints.Foreground = mainColor;
+            changeArmybook.listArmybookPoints.Foreground = mainColor;
 
-            foreach (Label label in new List<Label>() { main.listArmybookVer, main.buttonArmybook, main.closeArmybookDetail })
+            foreach (Label label in new List<Label>() { changeArmybook.listArmybookVer, changeArmybook.buttonArmybook })
                 label.Background = mainColor;
 
             InterfaceReload.LoadArmySize(2000, onlyReload: true);
@@ -286,7 +289,7 @@ namespace WarhammerArmyAssembler
 
                 newPointsBotton.MouseDown += main.buttonPoints_Click;
 
-                main.menuArmybookPlace.Children.Add(newPointsBotton);
+                changeArmybook.menuArmybookPlace.Children.Add(newPointsBotton);
                 PointsButtons.Add(newPointsBotton);
 
                 xIndex += 1;
