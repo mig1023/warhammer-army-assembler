@@ -97,11 +97,16 @@ namespace WarhammerArmyAssembler
                     if (option.IsActual() && (option.AddToLeadership > 0))
                         unitLeadership += option.AddToLeadership;
 
-                if (entry.Value.IsHero() && !entry.Value.NotALeader && (unitLeadership > maxLeadership))
+                bool newChallenger = !entry.Value.NotALeader && (unitLeadership > maxLeadership);
+
+                if (entry.Value.IsHero() && (newChallenger || entry.Value.MustBeGeneral))
                 {
                     maxLeadership = unitLeadership;
                     maxLeadershipOwner = entry.Key;
                 }
+
+                if (entry.Value.MustBeGeneral)
+                    break;
             }
 
             if (maxLeadershipOwner < 0)

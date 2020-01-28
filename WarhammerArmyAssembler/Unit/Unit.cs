@@ -20,6 +20,7 @@ namespace WarhammerArmyAssembler
         public string Group { get; set; }
         public int ID { get; set; }
         public string IDView { get; set; }
+        public int ArmyID { get; set; }
 
         public UnitType Type { get; set; }
         public bool SizableType { get; set; }
@@ -94,6 +95,7 @@ namespace WarhammerArmyAssembler
         public bool ArmyGeneral { get; set; }
         public bool WeaponTeam { get; set; }
         public bool NotALeader { get; set; }
+        public bool MustBeGeneral { get; set; }
 
         public List<Option> Options = new List<Option>();
 
@@ -156,6 +158,7 @@ namespace WarhammerArmyAssembler
             newUnit.Group = this.Group;
             newUnit.ID = this.ID;
             newUnit.IDView = this.IDView;
+            newUnit.ArmyID = this.ArmyID;
             newUnit.Type = this.Type;
             newUnit.Size = this.Size;
             newUnit.MinSize = this.MinSize;
@@ -206,6 +209,7 @@ namespace WarhammerArmyAssembler
             newUnit.ArmyGeneral = this.ArmyGeneral;
             newUnit.WeaponTeam = this.WeaponTeam;
             newUnit.NotALeader = this.NotALeader;
+            newUnit.MustBeGeneral = this.MustBeGeneral;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)
