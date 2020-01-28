@@ -22,20 +22,16 @@ namespace WarhammerArmyAssembler
 
             Interface.main = this;
 
+            Interface.CreatePointsButtons();
+
             Interface.changeArmybook.Show();
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
-            Interface.CreatePointsButtons();
-
             List<string> allXmlFiles = ArmyBookInInterface.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
             Interface.CurrentSelectedArmy = allXmlFiles[InterfaceOther.Rand.Next(allXmlFiles.Count)];
-            ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
-            InterfaceReload.LoadArmyList();
-            InterfaceReload.ReloadArmyData();
-
-            Interface.MoveToChangeArmybook(null, null);
+            Interface.PreviewArmyList();
         }
 
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -233,7 +229,7 @@ namespace WarhammerArmyAssembler
             mainPlaceCanvas.Width = e.NewSize.Width;
 
             armybookDetailScroll.Height = e.NewSize.Height - 70;
-            menuArmybookScroll.Height = e.NewSize.Height - 70;
+            //menuArmybookScroll.Height = e.NewSize.Height - 70;
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
@@ -244,18 +240,10 @@ namespace WarhammerArmyAssembler
                 mainMenu.Height - closeMainMenu.Height - 10,
                 0, 0
             );
-
-            startHelpInfo.Height = mainPlaceCanvas.Height;
-            startHelpInfo.Width = mainPlaceCanvas.Width - 320;
-            startHelpInfo.Margin = new Thickness(320, 0, 0, 0);
-            startHelpMainText.Width = startHelpInfo.Width - 100;
         }
 
         private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
         {
-            if (Interface.startArmybookMenu)
-                Environment.Exit(0);
-
             Interface.Move(Interface.MovingType.ToMain);
         }
 
@@ -286,9 +274,7 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
-            Interface.startArmybookMenu = false;
-
-            InterfaceReload.LoadArmySize(InterfaceOther.IntParse(listArmybookPoints.Text));
+            //InterfaceReload.LoadArmySize(InterfaceOther.IntParse(listArmybookPoints.Text));
             ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
             InterfaceReload.LoadArmyList();
@@ -304,12 +290,9 @@ namespace WarhammerArmyAssembler
 
         private void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Interface.Move(
-                Interface.MovingType.ToLeft,
-                toShow: InterfaceMod.ShowArmybookMenu,
-                secondAnimation: new EventHandler(Interface.MoveToChangeArmybook),
-                noHiding: true
-            );
+            this.Hide();
+
+            Interface.main.Show();
         }
 
         private void prev_Click(object sender, RoutedEventArgs e)
@@ -324,8 +307,6 @@ namespace WarhammerArmyAssembler
 
         public void buttonPoints_Click(object sender, RoutedEventArgs e)
         {
-            Interface.startArmybookMenu = false;
-
             InterfaceReload.LoadArmySize(InterfaceOther.IntParse((sender as Label).Content.ToString().Split()[0]));
         }
 

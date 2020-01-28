@@ -62,21 +62,10 @@
                 <Label x:Name="closeArmybookDetail" Content="Close" Height="30" Padding="0" Width="280" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Margin="20,20" MouseDown="closeArmybookDetail_Click"/>
             </Canvas>
 
-            <ScrollViewer x:Name="armybookDetailScroll" Visibility="Hidden" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
+            <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
                 <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
                     <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
                     <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
-                </Canvas>
-            </ScrollViewer>
-
-            <ScrollViewer x:Name="menuArmybookScroll" Visibility="Hidden" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
-                <Canvas x:Name="menuArmybookPlace" Width="320" Height="628" VerticalAlignment="Top" Background="White">
-                    <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="11"/>
-                    <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="303" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
-                    <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="566" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>
-                    <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="118" Width="20" Click="prev_Click"/>
-                    <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="118" Width="20" Click="next_Click"/>
-                    <TextBox x:Name="listArmybookPoints" Height="34" Canvas.Left="22" TextWrapping="Wrap" Text="4000" Canvas.Top="566" Width="130" FontSize="20"/>
                 </Canvas>
             </ScrollViewer>
 
@@ -260,14 +249,6 @@
                     <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="7" HorizontalContentAlignment="Center" Padding="0 7 0 0" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
                 </Grid>
             </Grid>
-        </Canvas>
-
-        <Canvas x:Name="startHelpInfo" Height="160" Width="327">
-            <Canvas.Background>
-                <SolidColorBrush Color="Black" Opacity="0.85"/>
-            </Canvas.Background>
-            <Label x:Name="startHelpHeadText" Content="Hi," Height="56" Padding="0" Width="59" FontSize="45" Foreground="White" Canvas.Left="50" Canvas.Top="30"/>
-            <TextBlock x:Name="startHelpMainText" Canvas.Left="50" TextWrapping="Wrap" Foreground="#FFB8B8B8" FontSize="22" Text="It's start page of WAAgh! Choose your army and its size! Be wise, crafty and may the force be with you!" Canvas.Top="90" Height="Auto" Width="787"/>
         </Canvas>
     </Canvas>
 </Window>

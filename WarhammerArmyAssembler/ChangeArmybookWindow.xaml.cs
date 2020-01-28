@@ -19,8 +19,6 @@ namespace WarhammerArmyAssembler
         public ChangeArmybookWindow()
         {
             InitializeComponent();
-
-
         }
 
         private void Window_Closed(object sender, EventArgs e)
@@ -33,12 +31,17 @@ namespace WarhammerArmyAssembler
             armybookCanvas.Height = e.NewSize.Height;
             armybookCanvas.Width = e.NewSize.Width;
 
-            menuArmybookScroll.Height = e.NewSize.Height - 70;
+            menuArmybookScroll.Height = e.NewSize.Height - 110;
 
             startHelpInfo.Height = armybookCanvas.Height;
             startHelpInfo.Width = armybookCanvas.Width - 320;
             startHelpInfo.Margin = new Thickness(320, 0, 0, 0);
             startHelpMainText.Width = startHelpInfo.Width - 100;
+        }
+
+        private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
 
         private void prev_Click(object sender, RoutedEventArgs e)
@@ -51,17 +54,23 @@ namespace WarhammerArmyAssembler
             Interface.PreviewArmyList(next: true);
         }
 
+        private void StartArmybook(int points)
+        {
+            InterfaceReload.LoadArmySize(points);
+
+            this.Hide();
+
+            Interface.main.Show();
+        }
+
+        public void buttonPoints_Click(object sender, RoutedEventArgs e)
+        {
+            StartArmybook(InterfaceOther.IntParse((sender as Label).Content.ToString().Split()[0]));
+        }
+
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
-            Interface.startArmybookMenu = false;
-
-            //InterfaceReload.LoadArmySize(InterfaceOther.IntParse(listArmybookPoints.Text));
-            //ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
-
-            //InterfaceReload.LoadArmyList();
-            //InterfaceReload.ReloadArmyData();
-
-            //Interface.Move(Interface.MovingType.ToMain);
+            StartArmybook(InterfaceOther.IntParse(listArmybookPoints.Text));
         }
     }
 }

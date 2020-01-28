@@ -26,8 +26,6 @@ namespace WarhammerArmyAssembler
 
         public static int CurrentSelectedUnit = -1;
 
-        public static bool startArmybookMenu = true;
-
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop, ToMainMenu }
 
         public static List<Label> PointsButtons = new List<Label>();
@@ -175,15 +173,11 @@ namespace WarhammerArmyAssembler
         }
 
         public static void Move(MovingType moveTo, InterfaceMod.ShowSomething toShow = null, EventHandler secondAnimation = null,
-            bool err = false, bool menu = false, bool noHiding = false)
+            bool err = false, bool menu = false)
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
-            if (err)
-                toShow = InterfaceMod.ShowError;
-
-            if (!noHiding)
-                InterfaceMod.HideAllAndShow(toShow);
+            Interface.main.mainMenu.Visibility = (menu ? Visibility.Visible : Visibility.Hidden);
 
             if (moveTo == MovingType.ToLeft)
                 newPosition = new Thickness(main.armybookDetailScrollHead.Width, 0, 0, 0);
@@ -217,10 +211,9 @@ namespace WarhammerArmyAssembler
         {
             PreviewArmyList();
 
-            if (startArmybookMenu)
-                Move(MovingType.ToLeft, toShow: InterfaceMod.ShowArmybookMenu, secondAnimation: new EventHandler(InterfaceMod.ShowStartHelpInfo));
-            else
-                Move(MovingType.ToMain, toShow: InterfaceMod.ShowArmybookMenu, menu: true);
+            Interface.main.Hide();
+
+            Interface.changeArmybook.Show();
         }
 
         private static void PreviewLoadCurrentSelectedArmy(string armyName)
@@ -245,7 +238,12 @@ namespace WarhammerArmyAssembler
 
             changeArmybook.listArmybookPoints.Foreground = mainColor;
 
-            foreach (Label label in new List<Label>() { changeArmybook.listArmybookVer, changeArmybook.buttonArmybook })
+            foreach (Label label in new List<Label>() {
+                changeArmybook.listArmybookVer,
+                changeArmybook.buttonArmybook,
+                changeArmybook.closeArmybook,
+                main.closeArmybookDetail
+            })
                 label.Background = mainColor;
 
             InterfaceReload.LoadArmySize(2000, onlyReload: true);
@@ -287,7 +285,7 @@ namespace WarhammerArmyAssembler
                 newPointsBotton.HorizontalContentAlignment = HorizontalAlignment.Center;
                 newPointsBotton.VerticalContentAlignment = VerticalAlignment.Center;
 
-                newPointsBotton.MouseDown += main.buttonPoints_Click;
+                newPointsBotton.MouseDown += changeArmybook.buttonPoints_Click;
 
                 changeArmybook.menuArmybookPlace.Children.Add(newPointsBotton);
                 PointsButtons.Add(newPointsBotton);
