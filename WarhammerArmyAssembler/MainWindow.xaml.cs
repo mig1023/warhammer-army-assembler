@@ -72,7 +72,7 @@ namespace WarhammerArmyAssembler
                 (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) + 20;
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                Interface.Move(Interface.MovingType.ToLeft, toShow: InterfaceMod.ShowArmyDetailMenu);
+                Interface.Move(Interface.MovingType.ToLeft, detail: true);
 
             if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
                 return;
@@ -229,7 +229,6 @@ namespace WarhammerArmyAssembler
             mainPlaceCanvas.Width = e.NewSize.Width;
 
             armybookDetailScroll.Height = e.NewSize.Height - 70;
-            //menuArmybookScroll.Height = e.NewSize.Height - 70;
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
@@ -274,7 +273,6 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
-            //InterfaceReload.LoadArmySize(InterfaceOther.IntParse(listArmybookPoints.Text));
             ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
             InterfaceReload.LoadArmyList();
@@ -291,8 +289,7 @@ namespace WarhammerArmyAssembler
         private void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.Hide();
-
-            Interface.main.Show();
+            Interface.changeArmybook.Show();
         }
 
         private void prev_Click(object sender, RoutedEventArgs e)
@@ -342,6 +339,8 @@ namespace WarhammerArmyAssembler
         private void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
             ExportPDF.SaveArmyToPDF();
+
+            Interface.Move(Interface.MovingType.ToMain, menu: true);
         }
 
         private void Window_Closed(object sender, EventArgs e)

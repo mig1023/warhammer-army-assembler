@@ -147,7 +147,7 @@ namespace WarhammerArmyAssembler
 
         public static void MainMenu()
         {
-            Move(MovingType.ToMainMenu, toShow: InterfaceMod.ShowMainMenu, menu: true);
+            Move(MovingType.ToMainMenu, menu: true);
         }
 
         public static void DetailResize(bool open)
@@ -172,12 +172,19 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static void Move(MovingType moveTo, InterfaceMod.ShowSomething toShow = null, EventHandler secondAnimation = null,
-            bool err = false, bool menu = false)
+        public static void Move(MovingType moveTo, EventHandler secondAnimation = null,
+            bool err = false, bool menu = false, bool detail = false)
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
-            Interface.main.mainMenu.Visibility = (menu ? Visibility.Visible : Visibility.Hidden);
+            if (menu)
+                InterfaceMod.View(canvasToShow: main.mainMenu);
+
+            if (err)
+                InterfaceMod.View(canvasToShow: main.errorDetail);
+
+            if (detail)
+                InterfaceMod.View(canvasToShow: main.unitDetail);
 
             if (moveTo == MovingType.ToLeft)
                 newPosition = new Thickness(main.armybookDetailScrollHead.Width, 0, 0, 0);
@@ -205,15 +212,6 @@ namespace WarhammerArmyAssembler
                 main.mainPlaceCanvas.BeginAnimation(FrameworkElement.MarginProperty, move);
             else
                 main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
-        }
-
-        public static void MoveToChangeArmybook(object Sender, EventArgs e)
-        {
-            PreviewArmyList();
-
-            Interface.main.Hide();
-
-            Interface.changeArmybook.Show();
         }
 
         private static void PreviewLoadCurrentSelectedArmy(string armyName)

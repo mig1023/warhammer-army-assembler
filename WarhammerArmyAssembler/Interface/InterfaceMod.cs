@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
@@ -35,37 +36,10 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static void ShowError()
+        public static void View(Canvas canvasToShow)
         {
-            Interface.main.errorDetail.Visibility = Visibility.Visible;
-        }
-
-        public static void ShowMainMenu()
-        {
-            Interface.main.mainMenu.Visibility = Visibility.Visible;
-        }
-
-        public static void ShowArmybookMenu()
-        {
-            Interface.main.armybookDetailScrollHead.Visibility = Visibility.Visible;
-            //Interface.main.menuArmybookScroll.Visibility = Visibility.Visible;
-        }
-
-        public static void ShowArmyDetailMenu()
-        {
-            Interface.main.armybookDetailScrollHead.Visibility = Visibility.Visible;
-            Interface.main.armybookDetailScroll.Visibility = Visibility.Visible;
-        }
-
-        public static void HideAllAndShow(ShowSomething showSomething)
-        {
-            //Interface.main.armybookDetailScroll.Visibility = Visibility.Hidden;
-            ////Interface.main.menuArmybookScroll.Visibility = Visibility.Hidden;
-            //Interface.main.armybookDetailScrollHead.Visibility = Visibility.Hidden;
-            Interface.main.mainMenu.Visibility = Visibility.Hidden;
-            //Interface.main.errorDetail.Visibility = Visibility.Hidden;
-
-            showSomething?.Invoke();
+            foreach (Canvas canvas in new List<Canvas> { Interface.main.mainMenu, Interface.main.errorDetail, Interface.main.unitDetail })
+                canvas.Visibility = (canvasToShow.Name == canvas.Name ? Visibility.Visible : Visibility.Hidden);
         }
     }
 }
