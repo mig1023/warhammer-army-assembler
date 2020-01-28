@@ -226,13 +226,116 @@
 				<Description>Model on foot only. This mask confers a 6+ armour save which can be combined with other equipment normally. In addition, the wearer can move over marsh, rivers, lakes or any other water features without penalty, and will benefit from soft cover while in such terrain.</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Enchanted items">	
-			
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Arcane items">	
-			
+		<ArtefactsGroup Name = "Talismans">	
+			<Artefact>
+				<Name>Vambraces of Defence</Name>
+				<Type>Armour</Type>
+				<Points>55</Points>
+				<AddToWard>4</AddToWard>
+				<SpecialRuleDescription>Re-roll failed armour saves</SpecialRuleDescription>
+				<Description>Gives the wearer a 4+ Ward save. In addition, the wearer may re-roll failed armour saves.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Golden Crown of Atrazar</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Discount the first unsaved wound, even if it is a killing blow</SpecialRuleDescription>
+				<Description>One use only. Discount the first unsaved wound, even if it is a killing blow.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Loremaster's Cloak</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>2+ Ward save against wounds caused by spells</SpecialRuleDescription>
+				<Description>Gives the wearer and the unit he is with a 2+ Ward save against wounds caused by spells. It has no effect against shooting or close combat attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of Saphery</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>The magical weapons of enemy models will have no special effects whilst they are in base contact</SpecialRuleDescription>
+				<Description>The magical weapons of enemy models will have no special effects whilst they are in base contact with the bearer of the talisman. Treat the magic weapon as a normal one of its type, eg, a magic sword would count as a hand weapon, magic spear would count as a spear, etc.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sacred Incense</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty</SpecialRuleDescription>
+				<Description>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Guardian Phoenix</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToWard>5</AddToWard>
+				<SpecialRuleDescription>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty</SpecialRuleDescription>
+				<Description>Gives the wearer a 5+ Ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Amulet of Fire</Name>
+				<Type>Armour</Type>
+				<Points>20</Points>
+				<AddToWard>5</AddToWard>
+				<SpecialRuleDescription>Magic Resistance (1)</SpecialRuleDescription>
+				<SpecialRuleDescription>Cannot be harmed by Flaming Attacks</SpecialRuleDescription>
+				<Description>Gives the wearer Magic Resistance (1). In addition, the wearer cannot be harmed by Flaming Attacks.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic banner">
+			<Artefact>
+				<Name>Battle Banner</Name>
+				<Type>Banner</Type>
+				<Points>80</Points>
+				<SpecialRuleDescription>+D6 to the combat resolution</SpecialRuleDescription>
+				<Description>The unit may add +D6 to the combat resolution of any close combat in which it is involved.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of the World Dragon</Name>
+				<Type>Banner</Type>
+				<Points>60</Points>
+				<SpecialRuleDescription>The unit is completely immune to all spell effects, whatever their source</SpecialRuleDescription>
+				<Description>The unit is completely immune to all spell effects, whatever their source. This includes friendly spells, bound items, and spells with areas of effect that were cast on nearby units, etc. Spells which are cast on another unit, such as the Flaming Sword of Rhuin, will work as normal, as will all magic weapons used to attack them.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Sorcery</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>+D3 Power dice to pile in each Magic phases</SpecialRuleDescription>
+				<Description>The banner adds +D3 Power dice to pile in each Magic phases.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Standard of Balance</Name>
+				<Type>Banner</Type>
+				<Points>45</Points>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Description>The unit carrying the Standard of Balance, and any enemy unit in base contact with it, is immune to psychology. In addition, they also lose hatred and frenzy abilities (in the same way as a unit that has alteady fought and lost a round of combat).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Arcane Protection</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
+				<Description>The unit gets Magic Resistance (2).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Lion Standard</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Immune to fear and terror</SpecialRuleDescription>
+				<Description>The unit is immune to fear and terror.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Ellyrion</Name>
+				<Type>Banner</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>The unit treats difficult ground as open ground for purposes of movement</SpecialRuleDescription>
+				<Description>The unit treats difficult ground as open ground for purposes of movement.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Enchanted items">	
+		
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Arcane items">	
 			
 		</ArtefactsGroup>
 	</Artefacts>
@@ -240,87 +343,112 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Saurus Oldblood</Name>
-			<Group>Saurus</Group>
-			<Points>145</Points>
+			<Name>Tyrion</Name>
+			<Points>400</Points>
 			<MinSize>1</MinSize>
-			<Description>Saurus Oldblood</Description>
+			<MountInit>Malhandir</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Tyrion</Description>
 			<MainParam>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>4</Armour>
+				<Movement>5</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<MagicItems>100</MagicItems>
-				<MagicItemsType>Hero</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
+				<HitFirst>true</HitFirst>
+				<MustBeGeneral>true</MustBeGeneral>
 			</AdditionalParam>
-			<Options>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Points>30</Points>
-					<Mount>true</Mount>
-				</Option>
-				<Option>
-					<Name>Carnosaur</Name>
-					<Type>Option</Type>
-					<Points>210</Points>
-					<Mount>true</Mount>
-				</Option>
-			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Hand weapon</Name>
+					<Name>Sunfang</Name>
+					<AddToStrength>3</AddToStrength>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Once per battle in the Shooting phase, Tyrion may release the power within Sunfang, unleashing a ticry blast of magical power. Tills is a breath attack with a Strength ot 4</SpecialRuleDescription>
 				</HandWeapon>
+				<Armour>
+					<Name>Dragon Armour of Aenarion</Name>
+					<ArmourTo>1</ArmourTo>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>2+ ward save against non-magical attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Malekith can never suffer more than one wound from a single attack</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Heart of Avelorn</Name>
+					<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
+					<Regeneration>true</Regeneration>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Teclis</Name>
+			<Points>475</Points>
+			<Wizard>4</Wizard>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Teclis</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Any spell cast by Teclis will be cast with Irresistible Force on any successful casting roll which includes a double, except a Miscast</SpecialRuleDescription>
+					<SpecialRuleDescription>Druchii Sorcery</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Sword of Teclis</Name>
+					<SpecialRuleDescription>All hits wound on a 2+. Armour saves may not be taken</SpecialRuleDescription>
+				</HandWeapon>
+				<Arcana>
+					<Name>The Moon Staff of Lileath</Name>
+					<SpecialRuleDescription>The Moon Staff gives Teclis D3 bonus power/dispel dice in each Magic phase</SpecialRuleDescription>
+				</Arcana>
+				<Arcana>
+					<Name>The War Crown</Name>
+					<SpecialRuleDescription>Teclis may ignore the effects of the first miscast he makes each turn</SpecialRuleDescription>
+				</Arcana>
+				<Arcana>
+					<Name>Scroll of Hoeth</Name>
+					<SpecialRuleDescription>One use only. Same as Dispel scroll. In addition, both Teclis and the caster roll a D6; if Teclis scores higher, the spell cannot be reused by caster</SpecialRuleDescription>
+				</Arcana>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
 	<Mounts>
-		
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Malhandir</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+		</Mount>
 	</Mounts>
 	<Units>
 		
