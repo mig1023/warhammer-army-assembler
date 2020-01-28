@@ -183,9 +183,6 @@ namespace WarhammerArmyAssembler
             if (err)
                 InterfaceMod.View(canvasToShow: main.errorDetail);
 
-            if (detail)
-                InterfaceMod.View(canvasToShow: main.unitDetail);
-
             if (moveTo == MovingType.ToLeft)
                 newPosition = new Thickness(main.armybookDetailScrollHead.Width, 0, 0, 0);
                 

@@ -58,11 +58,11 @@
         </Canvas>
 
         <Canvas x:Name="mainPlaceCanvas">
-            <Canvas x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
+            <Canvas x:Name="armybookDetailScrollHead" Width="320" Height="70" VerticalAlignment="Top" Background="White">
                 <Label x:Name="closeArmybookDetail" Content="Close" Height="30" Padding="0" Width="280" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Margin="20,20" MouseDown="closeArmybookDetail_Click"/>
             </Canvas>
 
-            <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70">
+            <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70" Background="White">
                 <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
                     <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
                     <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>

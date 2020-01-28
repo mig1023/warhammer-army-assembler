@@ -38,7 +38,7 @@ namespace WarhammerArmyAssembler
 
         public static void View(Canvas canvasToShow)
         {
-            foreach (Canvas canvas in new List<Canvas> { Interface.main.mainMenu, Interface.main.errorDetail, Interface.main.unitDetail })
+            foreach (Canvas canvas in new List<Canvas> { Interface.main.mainMenu, Interface.main.errorDetail })
                 canvas.Visibility = (canvasToShow.Name == canvas.Name ? Visibility.Visible : Visibility.Hidden);
         }
     }
