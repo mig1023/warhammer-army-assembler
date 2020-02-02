@@ -8,7 +8,8 @@
         Title="Warhammer Army Assembler (WAAgh)" Height="600" Width="1000" Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged">
     
     <Canvas x:Name="armybookCanvas">
-      
+
+        <Image x:Name="imageArmybookBack" Stretch="UniformToFill"/>
         <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
             <Canvas x:Name="menuArmybookPlace" Width="320" Height="628" VerticalAlignment="Top" Background="WHite">
                 <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="11"/>
@@ -21,7 +22,7 @@
         </ScrollViewer>
         <Canvas x:Name="startHelpInfo" Height="160" Width="327">
             <Canvas.Background>
-                <SolidColorBrush Color="Black" Opacity="0.85"/>
+                <SolidColorBrush Color="Black" Opacity="0.90"/>
             </Canvas.Background>
             <Label x:Name="startHelpHeadText" Content="Hi," Height="56" Padding="0" Width="59" FontSize="45" Foreground="White" Canvas.Left="50" Canvas.Top="30"/>
             <TextBlock x:Name="startHelpMainText" Canvas.Left="50" TextWrapping="Wrap" Foreground="#FFB8B8B8" FontSize="22" Text="It's start page of WAAgh! Choose your army and its size! Be wise, crafty and may the force be with you!" Canvas.Top="90" Height="Auto" Width="787"/>

@@ -37,6 +37,10 @@ namespace WarhammerArmyAssembler
             startHelpInfo.Width = armybookCanvas.Width - 320;
             startHelpInfo.Margin = new Thickness(320, 0, 0, 0);
             startHelpMainText.Width = startHelpInfo.Width - 100;
+
+            imageArmybookBack.Height = startHelpInfo.Height;
+            imageArmybookBack.Width = startHelpInfo.Width;
+            imageArmybookBack.Margin = startHelpInfo.Margin;
         }
 
         private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)

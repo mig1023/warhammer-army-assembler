@@ -218,6 +218,7 @@ namespace WarhammerArmyAssembler
 
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
             changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
+            changeArmybook.imageArmybookBack.Source = changeArmybook.imageArmybook.Source;
 
             changeArmybook.listArmybookVer.Content = "edition " + xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText;
 
