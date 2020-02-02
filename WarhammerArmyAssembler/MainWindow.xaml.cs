@@ -289,6 +289,9 @@ namespace WarhammerArmyAssembler
         private void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Interface.Move(Interface.MovingType.ToMain, menu: true);
+            Interface.AllUnitDelete();
+            Interface.DetailResize(open: false);
+
             this.Hide();
             Interface.changeArmybook.Show();
         }

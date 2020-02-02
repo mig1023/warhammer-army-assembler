@@ -47,27 +47,25 @@ namespace WarhammerArmyAssembler
 
         public static void DeleteAllUnits()
         {
-            for (int i = (Army.Units.Count - 1); i >= 0; i--)
-                DeleteUnitByID(Army.Units.ElementAt(i).Key, onlyDirectlyHim: true);
+            Army.Units.Clear();
         }
 
-        public static void DeleteUnitByID(int id, bool onlyDirectlyHim = false)
+        public static void DeleteUnitByID(int id)
         {
             int? removeUnitAlso = null;
 
-            if (!onlyDirectlyHim)
-                foreach (KeyValuePair<int, Unit> entry in Army.Units)
-                    if (entry.Value.MountOn == id)
-                    {
-                        foreach (Option option in entry.Value.Options)
-                            if (option.Name == Army.Units[id].Name)
-                                option.Realised = false;
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                if (entry.Value.MountOn == id)
+                {
+                    foreach (Option option in entry.Value.Options)
+                        if (option.Name == Army.Units[id].Name)
+                            option.Realised = false;
 
-                        entry.Value.MountOn = 0;
+                    entry.Value.MountOn = 0;
 
-                        if (!String.IsNullOrEmpty(entry.Value.MountInit))
-                            removeUnitAlso = entry.Key;
-                    }
+                    if (!String.IsNullOrEmpty(entry.Value.MountInit))
+                        removeUnitAlso = entry.Key;
+                }
 
             foreach (Option option in Army.Units[id].Options)
                 if (option.IsMagicItem())
