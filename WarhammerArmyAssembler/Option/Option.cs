@@ -198,6 +198,22 @@ namespace WarhammerArmyAssembler
             return newOption;
         }
 
+        public string SelfDescription()
+        {
+            string describe = "\n";
+
+            if (OnlyFor != OnlyForType.All)
+                describe += String.Format("\nOnly for models: {0}", OnlyFor);
+
+            if (!String.IsNullOrEmpty(OnlyForGroup))
+                describe += String.Format("\nOnly for: {0}", OnlyForGroup);
+
+            if (OnlyOneInArmy)
+                describe += "\nOnly one in army";
+
+            return describe;
+        }
+
         public bool IsMagicItem()
         {
             if (this.Type == OptionType.Weapon || this.Type == OptionType.Armour || this.Type == OptionType.Arcane || this.Type == OptionType.Banner)
