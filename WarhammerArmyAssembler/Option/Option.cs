@@ -200,7 +200,7 @@ namespace WarhammerArmyAssembler
 
         public string SelfDescription()
         {
-            string describe = "\n";
+            string describe = String.Empty;
 
             if (OnlyFor != OnlyForType.All)
                 describe += String.Format("\nOnly for models: {0}", OnlyFor);

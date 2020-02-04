@@ -58,8 +58,8 @@ namespace WarhammerArmyAssembler
             if (ArmyBook.Artefact.ContainsKey(id))
             {
                 armyUnitName.Content = ArmyBook.Artefact[id].Name.ToUpper();
-                armyUnitDescription.Text = ArmyBook.Artefact[id].Description + 
-                    ArmyBook.Artefact[id].SelfDescription();
+                armyUnitDescription.Text = ArmyBook.Artefact[id].Description; 
+                armyUnitSpecific.Text = ArmyBook.Artefact[id].SelfDescription();
             }
 
             armyUnitName.Foreground = Brushes.White;
@@ -69,7 +69,11 @@ namespace WarhammerArmyAssembler
             UpdateLayout();
 
             armybookDetail.Height = armyUnitDescription.Margin.Top +
-                (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) + 20;
+                (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) +
+                (armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20) + 20;
+
+            armyUnitSpecific.Margin = Interface.Thick(armybookDetail, left: 20, top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 40);
+            armyUnitSpecific.Foreground = ArmyBook.MainColor;
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
                 Interface.Move(Interface.MovingType.ToLeft, detail: true);
