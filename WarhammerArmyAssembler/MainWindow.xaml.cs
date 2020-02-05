@@ -53,6 +53,7 @@ namespace WarhammerArmyAssembler
             {
                 armyUnitName.Content = ArmyBook.Units[id].Name.ToUpper();
                 armyUnitDescription.Text = ArmyBook.Units[id].Description;
+                armyUnitSpecific.Text = ArmyBook.Units[id].SelfDescription();
             }
 
             if (ArmyBook.Artefact.ContainsKey(id))

@@ -433,6 +433,28 @@ namespace WarhammerArmyAssembler
             return paramLine;
         }
 
+
+        public string SelfDescription()
+        {
+            string describe = String.Format("\nUnit type: {0}", Type);
+
+            if (!IsHeroOrHisMount())
+                describe += ((MaxSize > 0) && (MinSize != MaxSize) ?
+                    String.Format("\nUnit size: {0} - {1}", MinSize, MaxSize)
+                    :
+                    String.Format("\nUnit size: {0}{1}", MinSize, (MinSize == MaxSize ? String.Empty : "+" ))
+                );
+
+            if (Wizard > 0)
+                describe += String.Format("\nWizard: {0}", Wizard);
+
+
+            if (!String.IsNullOrEmpty(Group))
+                describe += String.Format("\nGroup: {0}", Group);
+
+            return describe;
+        }
+
         public string UnitTypeName()
         {
             if (Type == Unit.UnitType.Lord)
