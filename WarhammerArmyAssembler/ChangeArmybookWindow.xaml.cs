@@ -76,5 +76,10 @@ namespace WarhammerArmyAssembler
         {
             StartArmybook(InterfaceOther.IntParse(listArmybookPoints.Text));
         }
+
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }
