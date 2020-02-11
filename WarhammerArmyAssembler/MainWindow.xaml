@@ -101,7 +101,7 @@
 
                     <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                    <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedItemChanged="ArmyList_SelectedItemChanged">
                         <TreeView.Resources>
                             <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White" />
                         </TreeView.Resources>

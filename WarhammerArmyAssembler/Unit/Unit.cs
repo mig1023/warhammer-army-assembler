@@ -433,10 +433,12 @@ namespace WarhammerArmyAssembler
             return paramLine;
         }
 
-
         public string SelfDescription()
         {
             string describe = String.Format("\nUnit type: {0}", Type);
+
+            if (PersonifiedHero)
+                describe += " (personified)";
 
             if (!IsHeroOrHisMount())
                 describe += ((MaxSize > 0) && (MinSize != MaxSize) ?

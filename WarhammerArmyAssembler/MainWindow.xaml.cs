@@ -39,6 +39,17 @@ namespace WarhammerArmyAssembler
             armyMainMenu.Margin = Interface.Thick(armyMainMenu, left: (e.NewSize.Width - armyMainMenu.ActualWidth));
         }
 
+        private void ArmyList_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            TreeView armyList = sender as TreeView;
+
+            if (armyList.SelectedItem is Unit)
+                ChangeArmyListDetail((armyList.SelectedItem as Unit).ID);
+
+            if (armyList.SelectedItem is Option)
+                ChangeArmyListDetail((armyList.SelectedItem as Option).ID);
+        }
+
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
         {
             TextBlock t = sender as TextBlock;
@@ -49,6 +60,23 @@ namespace WarhammerArmyAssembler
             FrameworkElement f = sender as FrameworkElement;
             int id = InterfaceOther.IntParse(f.Tag.ToString());
 
+            ChangeArmyListDetail(id);
+
+            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
+                Interface.Move(Interface.MovingType.ToLeft, detail: true);
+
+            if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
+                return;
+            else
+            {
+                Interface.DragSender = sender;
+
+                DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
+            }
+        }
+
+        private void ChangeArmyListDetail(int id)
+        {
             if (ArmyBook.Units.ContainsKey(id))
             {
                 armyUnitName.Content = ArmyBook.Units[id].Name.ToUpper();
@@ -59,7 +87,7 @@ namespace WarhammerArmyAssembler
             if (ArmyBook.Artefact.ContainsKey(id))
             {
                 armyUnitName.Content = ArmyBook.Artefact[id].Name.ToUpper();
-                armyUnitDescription.Text = ArmyBook.Artefact[id].Description; 
+                armyUnitDescription.Text = ArmyBook.Artefact[id].Description;
                 armyUnitSpecific.Text = ArmyBook.Artefact[id].SelfDescription();
             }
 
@@ -75,18 +103,6 @@ namespace WarhammerArmyAssembler
 
             armyUnitSpecific.Margin = Interface.Thick(armybookDetail, left: 20, top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 40);
             armyUnitSpecific.Foreground = ArmyBook.MainColor;
-
-            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                Interface.Move(Interface.MovingType.ToLeft, detail: true);
-
-            if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
-                return;
-            else
-            {
-                Interface.DragSender = sender;
-
-                DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
-            }
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
