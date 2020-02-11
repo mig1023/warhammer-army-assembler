@@ -44,10 +44,10 @@ namespace WarhammerArmyAssembler
             TreeView armyList = sender as TreeView;
 
             if (armyList.SelectedItem is Unit)
-                ChangeArmyListDetail((armyList.SelectedItem as Unit).ID);
+                ChangeArmyListDetail((armyList.SelectedItem as Unit).ID, (armyList.SelectedItem as Unit).GroopBold);
 
             if (armyList.SelectedItem is Option)
-                ChangeArmyListDetail((armyList.SelectedItem as Option).ID);
+                ChangeArmyListDetail((armyList.SelectedItem as Option).ID, (armyList.SelectedItem as Option).GroopBold);
         }
 
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
@@ -75,16 +75,21 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private void ChangeArmyListDetail(int id)
+        private void ChangeArmyListDetail(int id, bool group = false)
         {
-            if (ArmyBook.Units.ContainsKey(id))
+            if (group)
+            {
+                armyUnitName.Content = String.Empty;
+                armyUnitDescription.Text = String.Empty;
+                armyUnitSpecific.Text = String.Empty;
+            }
+            else if (ArmyBook.Units.ContainsKey(id))
             {
                 armyUnitName.Content = ArmyBook.Units[id].Name.ToUpper();
                 armyUnitDescription.Text = ArmyBook.Units[id].Description;
                 armyUnitSpecific.Text = ArmyBook.Units[id].SelfDescription();
             }
-
-            if (ArmyBook.Artefact.ContainsKey(id))
+            else if (ArmyBook.Artefact.ContainsKey(id))
             {
                 armyUnitName.Content = ArmyBook.Artefact[id].Name.ToUpper();
                 armyUnitDescription.Text = ArmyBook.Artefact[id].Description;
@@ -92,7 +97,7 @@ namespace WarhammerArmyAssembler
             }
 
             armyUnitName.Foreground = Brushes.White;
-            armyUnitName.Background = ArmyBook.MainColor;
+            armyUnitName.Background = ( group ? Brushes.White : ArmyBook.MainColor );
             armyUnitName.FontWeight = FontWeights.Bold;
 
             UpdateLayout();
@@ -126,7 +131,6 @@ namespace WarhammerArmyAssembler
                 if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
                     InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
             }
-                
         }
 
         public static T FindVisualParent<T>(UIElement element) where T : UIElement
