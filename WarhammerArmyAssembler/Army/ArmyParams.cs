@@ -87,7 +87,7 @@ namespace WarhammerArmyAssembler
                 cast += entry.Value.Wizard;
 
                 foreach (Option option in entry.Value.Options)
-                    if (!option.IsOption() || (option.IsOption() && option.Realised))
+                    if (option.IsActual())
                         cast += option.AddToCast;
             }
 
@@ -106,7 +106,7 @@ namespace WarhammerArmyAssembler
                     dispell += 1;
 
                 foreach (Option option in entry.Value.Options)
-                    if (!option.IsOption() || (option.IsOption() && option.Realised))
+                    if (option.IsActual())
                         dispell += option.AddToDispell;
             }
 
