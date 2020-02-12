@@ -11,7 +11,7 @@
     <Canvas x:Name="armybookCanvas">
 
         <Image x:Name="imageArmybookBack" Stretch="UniformToFill"/>
-        <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="70">
+        <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
             <Canvas x:Name="menuArmybookPlace" Width="320" Height="628" VerticalAlignment="Top" Background="WHite">
                 <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="11"/>
                 <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="303" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
@@ -28,8 +28,14 @@
             <Label x:Name="startHelpHeadText" Content="Hi," Height="56" Padding="0" Width="59" FontSize="45" Foreground="White" Canvas.Left="50" Canvas.Top="30"/>
             <TextBlock x:Name="startHelpMainText" Canvas.Left="50" TextWrapping="Wrap" Foreground="#FFB8B8B8" FontSize="22" Text="It's start page of WAAgh! Choose your army and its size! Be wise, crafty and may the force be with you!" Canvas.Top="90" Height="Auto" Width="787"/>
         </Canvas>
-        <Canvas x:Name="armybookDetailScrollHead" Width="320" Height="50" VerticalAlignment="Top" Background="White">
-            <Label x:Name="closeArmybook" Content="Close" Height="30" Padding="0" Width="280" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Margin="20,20" MouseDown="closeArmybookDetail_Click"/>
+        <Canvas x:Name="armybookDetailScrollHead" Width="25" Height="600" VerticalAlignment="Top" Background="White">
+            <Grid x:Name="gridCloseArmybook">
+                <Label x:Name="closeArmybook" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="White" MouseDown="closeArmybook_Click">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+            </Grid>
         </Canvas>
     </Canvas>
 </Window>

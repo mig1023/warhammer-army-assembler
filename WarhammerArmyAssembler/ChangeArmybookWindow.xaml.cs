@@ -31,21 +31,19 @@ namespace WarhammerArmyAssembler
             armybookCanvas.Height = e.NewSize.Height;
             armybookCanvas.Width = e.NewSize.Width;
 
-            menuArmybookScroll.Height = e.NewSize.Height - 83;
+            menuArmybookScroll.Height = e.NewSize.Height - 14;
+
+            gridCloseArmybook.Height = e.NewSize.Height - 10;
+            gridCloseArmybook.Width = 30;
 
             startHelpInfo.Height = armybookCanvas.Height;
-            startHelpInfo.Width = armybookCanvas.Width - 320;
-            startHelpInfo.Margin = new Thickness(320, 0, 0, 0);
+            startHelpInfo.Width = armybookCanvas.Width - 360;
+            startHelpInfo.Margin = new Thickness(360, 0, 0, 0);
             startHelpMainText.Width = startHelpInfo.Width - 100;
 
             imageArmybookBack.Height = startHelpInfo.Height;
             imageArmybookBack.Width = startHelpInfo.Width;
             imageArmybookBack.Margin = startHelpInfo.Margin;
-        }
-
-        private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
         }
 
         private void prev_Click(object sender, RoutedEventArgs e)
@@ -80,6 +78,11 @@ namespace WarhammerArmyAssembler
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void closeArmybook_Click(object sender, MouseButtonEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

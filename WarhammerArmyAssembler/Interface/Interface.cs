@@ -242,6 +242,8 @@ namespace WarhammerArmyAssembler
             })
                 label.Background = mainColor;
 
+            changeArmybook.gridCloseArmybook.Background = mainColor;
+
             InterfaceReload.LoadArmySize(2000, onlyReload: true);
         }
 
