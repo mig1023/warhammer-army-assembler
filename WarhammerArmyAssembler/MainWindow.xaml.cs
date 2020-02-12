@@ -348,12 +348,17 @@ namespace WarhammerArmyAssembler
             Dictionary<Unit.UnitType, double> unitPercents = ArmyChecks.UnitsMaxPointsPercent();
 
             double armyCurrentPoint = ArmyParams.GetArmyPoints();
+            double availablePoints = (ArmyParams.GetArmyMaxPoints() - armyCurrentPoint);
 
-            string pointsMsg = String.Format("All points:\t\t{0}\nAlready used:\t{1}\nAvailable:\t\t{2}\n\n\n\n",
-                ArmyParams.GetArmyMaxPoints(), armyCurrentPoint, (ArmyParams.GetArmyMaxPoints() - armyCurrentPoint));
+            string pointsMsg = String.Format(
+                "All points:\t\t{0} pts\n\nAlready used:\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%\n\n\n\n",
+                ArmyParams.GetArmyMaxPoints(),
+                armyCurrentPoint, InterfaceOther.CalcPercent(armyCurrentPoint, ArmyParams.GetArmyMaxPoints()),
+                availablePoints, InterfaceOther.CalcPercent(availablePoints, ArmyParams.GetArmyMaxPoints())
+            );
 
             foreach(KeyValuePair<Unit.UnitType, double> entry in unitPercents)
-                pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t({3} {4} pts / {5}%)\n\n",
+                pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t( {3} {4} pts / {5}% )\n\n",
                     entry.Key,
                     units[entry.Key],
                     InterfaceOther.CalcPercent(units[entry.Key], Army.MaxPoints),
