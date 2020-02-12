@@ -119,18 +119,16 @@ namespace WarhammerArmyAssembler
 
             DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
 
-            if (sender is ScrollViewer)
-            {
-                if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
-                    Interface.ArmyGridDropArtefact(id, Interface.CurrentSelectedUnit);
-            }
-            else
-            {
+            if (!(sender is ScrollViewer))
                 Interface.ArmyGridDrop(id, container);
 
-                if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
-                    InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
-            }
+            if (!ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
+                return;
+
+            if (sender is ScrollViewer)
+                Interface.ArmyGridDropArtefact(id, Interface.CurrentSelectedUnit);
+            else
+                InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
         }
 
         public static T FindVisualParent<T>(UIElement element) where T : UIElement

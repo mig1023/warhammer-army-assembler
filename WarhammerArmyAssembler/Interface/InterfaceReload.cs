@@ -17,14 +17,23 @@ namespace WarhammerArmyAssembler
             Interface.AllUnitDelete();
 
             Interface.main.armyMainLabel.Content = Army.ArmyName;
-            Interface.main.armyMainLabel.Foreground = Brushes.White;
-            Interface.main.armyMainLabel.Background = ArmyBook.MainColor;
             Interface.main.armyMainLabelPlace.Background = ArmyBook.MainColor;
             Interface.main.unitDetailHead.Background = ArmyBook.MainColor;
 
             Interface.main.armyMainMenu.Content = '\u2630';
             Interface.main.armyMainMenu.Foreground = Brushes.White;
             Interface.main.armyMainMenu.Background = ArmyBook.AdditionalColor;
+
+            foreach(Label label in new List<Label> {
+                Interface.main.armyMainLabel, Interface.main.toNewArmy, Interface.main.saveArmyToPDF
+            })
+            {
+                label.Foreground = Brushes.White;
+                label.Background = ArmyBook.MainColor;
+            }
+
+            Interface.main.saveArmyToPDF.Foreground = Brushes.White;
+            Interface.main.saveArmyToPDF.Background = ArmyBook.MainColor;
 
             List<Unit> categories = ArmyParams.GetArmyCategories();
 
