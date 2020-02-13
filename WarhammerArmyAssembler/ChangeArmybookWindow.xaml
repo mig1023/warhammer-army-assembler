@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
-        Title="Warhammer Army Assembler (WAAgh)" Height="600" Width="1000" WindowStyle="None"
+        Title="Warhammer Army Assembler (WAAgh)" Height="650" Width="1000" WindowStyle="None"
         Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged" MouseLeftButtonDown="Window_MouseLeftButtonDown">
-    
+
     <Canvas x:Name="armybookCanvas">
 
         <Image x:Name="imageArmybookBack" Stretch="UniformToFill"/>
         <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
             <Canvas x:Name="menuArmybookPlace" Width="320" Height="628" VerticalAlignment="Top" Background="WHite">
-                <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="11"/>
-                <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="303" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
-                <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="566" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>
-                <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="118" Width="20" Click="prev_Click"/>
-                <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="118" Width="20" Click="next_Click"/>
-                <TextBox x:Name="listArmybookPoints" Height="34" Canvas.Left="22" TextWrapping="Wrap" Text="4000" Canvas.Top="566" Width="130" FontSize="20"/>
+                <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="36"/>
+                <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="333" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
+                <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="580" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>
+                <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="143" Width="20" Click="prev_Click"/>
+                <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="143" Width="20" Click="next_Click"/>
+                <TextBox x:Name="listArmybookPoints" Height="34" Canvas.Left="22" TextWrapping="Wrap" Text="4000" Canvas.Top="580" Width="130" FontSize="20"/>
             </Canvas>
         </ScrollViewer>
         <Canvas x:Name="startHelpInfo" Height="160" Width="327">
@@ -29,7 +29,7 @@
             <TextBlock x:Name="startHelpMainText" Canvas.Left="50" TextWrapping="Wrap" Foreground="#FFB8B8B8" FontSize="22" Text="It's start page of WAAgh! Choose your army and its size! Be wise, crafty and may the force be with you!" Canvas.Top="90" Height="Auto" Width="787"/>
         </Canvas>
         <Canvas x:Name="armybookDetailScrollHead" Width="25" Height="600" VerticalAlignment="Top" Background="White">
-            <Grid x:Name="gridCloseArmybook">
+            <Grid x:Name="gridCloseArmybook" MouseDown="closeArmybook_Click">
                 <Label x:Name="closeArmybook" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Foreground="White" MouseDown="closeArmybook_Click">
                     <Label.LayoutTransform>
                         <RotateTransform Angle="-90"/>

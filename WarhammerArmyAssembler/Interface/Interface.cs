@@ -258,7 +258,7 @@ namespace WarhammerArmyAssembler
         {
             int[] points = { 200, 500, 600, 750, 1000, 1250, 1500, 1750, 1850, 2000, 2400, 2500, 2700, 3000, 3500 };
             double[] xButtons = { 20, 116, 213 };
-            double[] yButtons = { 367, 406, 445, 484, 523 };
+            double[] yButtons = { 377, 416, 455, 494, 533 };
 
             int xIndex = 0;
             int yIndex = 0;
