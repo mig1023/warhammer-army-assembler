@@ -213,7 +213,11 @@
                 </Grid>
             </Grid>
 
-            <TextBlock x:Name="startArmyHelpText" Opacity="0.50" Canvas.Left="0" TextWrapping="Wrap" Foreground="#FFB8B8B8" FontSize="22" Text="Drop here you first hero or unit to start your army" Canvas.Top="46" Height="Auto" Width="531"/>
+            <TextBlock x:Name="startArmyHelpText" Opacity="0.50" AllowDrop="True" Drop="ArmyGrid_Drop" Canvas.Left="0" TextWrapping="Wrap"  Canvas.Top="46" Height="Auto" Width="531" Foreground="#FFB8B8B8" FontSize="22">
+                ↖ Main menu<LineBreak/><LineBreak/>
+                ← Armybook<LineBreak/><LineBreak/>
+                Drop ↓ here you first hero or unit to start your army<LineBreak/>
+            </TextBlock>
         </Canvas>
     </Canvas>
 </Window>

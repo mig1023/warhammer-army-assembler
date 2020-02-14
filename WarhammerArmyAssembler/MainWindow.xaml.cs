@@ -71,6 +71,8 @@ namespace WarhammerArmyAssembler
 
                 DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
             }
+
+            HideStartArmyHelpText();
         }
 
         private void ChangeArmyListDetail(int id, bool group = false)
@@ -128,7 +130,13 @@ namespace WarhammerArmyAssembler
             else
                 InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
 
-            startArmyHelpText.Visibility = Visibility.Hidden;
+            HideStartArmyHelpText();
+        }
+
+        private void HideStartArmyHelpText()
+        {
+            if (startArmyHelpText.Visibility == Visibility.Visible)
+                startArmyHelpText.Visibility = Visibility.Hidden;
         }
 
         public static T FindVisualParent<T>(UIElement element) where T : UIElement
@@ -383,13 +391,13 @@ namespace WarhammerArmyAssembler
         private void ArmyList_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (startArmyHelpText.Visibility == Visibility.Visible)
-                startArmyHelpText.Margin = new Thickness(ArmyList.ActualWidth + 20, 0, 0, 0);
+                startArmyHelpText.Margin = new Thickness(ArmyList.ActualWidth + 35, 0, 0, 0);
         }
 
         private void ArmyGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (startArmyHelpText.Visibility == Visibility.Visible)
-                startArmyHelpText.Width = ArmyGrid.ActualWidth - 35;
+                startArmyHelpText.Width = ArmyGrid.ActualWidth - 45;
         }
     }
 }
