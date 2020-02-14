@@ -10,8 +10,6 @@ namespace WarhammerArmyAssembler
 {
     public partial class MainWindow : Window
     {
-        
-
         public MainWindow()
         {
             InitializeComponent();
@@ -129,6 +127,8 @@ namespace WarhammerArmyAssembler
                 Interface.ArmyGridDropArtefact(id, Interface.CurrentSelectedUnit);
             else
                 InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
+
+            startArmyHelpText.Visibility = Visibility.Hidden;
         }
 
         public static T FindVisualParent<T>(UIElement element) where T : UIElement
@@ -378,6 +378,18 @@ namespace WarhammerArmyAssembler
         private void Window_Closed(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void ArmyList_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (startArmyHelpText.Visibility == Visibility.Visible)
+                startArmyHelpText.Margin = new Thickness(ArmyList.ActualWidth + 20, 0, 0, 0);
+        }
+
+        private void ArmyGrid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (startArmyHelpText.Visibility == Visibility.Visible)
+                startArmyHelpText.Width = ArmyGrid.ActualWidth - 35;
         }
     }
 }

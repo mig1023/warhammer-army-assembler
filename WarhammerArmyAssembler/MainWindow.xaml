@@ -13,10 +13,10 @@
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
 
-        <Canvas x:Name="mainMenu" Background="#FFD6D6D6" Height="237" Width="764">
+        <Canvas x:Name="mainMenu" Background="#FFF0EEEE" Height="237" Width="764">
             <Label x:Name="closeMainMenu" Content="Close" Height="30" Padding="0" Width="154" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Background="#FF535353" Margin="10,10" MouseDown="closeMainMenu_MouseDown"/>
-            <Label x:Name="toNewArmy" Content="Change Armybook" Height="32" Canvas.Left="20" Canvas.Top="10" Width="144" FontSize="16" MouseDown="toNewArmy_MouseDown" FontWeight="Bold"/>
-            <Label x:Name="saveArmyToPDF" Content="Export Army to PDF" Height="32" Canvas.Left="20" Canvas.Top="52" Width="155" FontSize="16" MouseDown="saveArmyToPDF_MouseDown" FontWeight="Bold"/>
+            <Label x:Name="toNewArmy" Content="Change Armybook" Height="32" Canvas.Left="20" Canvas.Top="10" Width="155" FontSize="16" MouseDown="toNewArmy_MouseDown" FontWeight="Bold"/>
+            <Label x:Name="saveArmyToPDF" Content="Export Army to PDF" Height="32" Canvas.Left="20" Canvas.Top="52" Width="166" FontSize="16" MouseDown="saveArmyToPDF_MouseDown" FontWeight="Bold"/>
         </Canvas>
 
         <Canvas x:Name="mainPlaceCanvas">
@@ -63,7 +63,7 @@
 
                     <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                    <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedItemChanged="ArmyList_SelectedItemChanged">
+                    <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedItemChanged="ArmyList_SelectedItemChanged" SizeChanged="ArmyList_SizeChanged">
                         <TreeView.Resources>
                             <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White" />
                         </TreeView.Resources>
@@ -107,7 +107,7 @@
 
                 <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="2" CanUserAddRows="False" GridLinesVisibility="None"
                           AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
-                          LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False">
+                          LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False" SizeChanged="ArmyGrid_SizeChanged" >
                     <DataGrid.Resources>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="FontSize" Value="12"/>
@@ -212,6 +212,8 @@
                     <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="7" HorizontalContentAlignment="Center" Padding="0 7 0 0" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
                 </Grid>
             </Grid>
+
+            <TextBlock x:Name="startArmyHelpText" Opacity="0.50" Canvas.Left="0" TextWrapping="Wrap" Foreground="#FFB8B8B8" FontSize="22" Text="Drop here you first hero or unit to start your army" Canvas.Top="46" Height="Auto" Width="531"/>
         </Canvas>
     </Canvas>
 </Window>
