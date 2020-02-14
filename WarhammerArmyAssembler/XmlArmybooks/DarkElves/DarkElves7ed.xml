@@ -1252,6 +1252,13 @@
 					<Mount>true</Mount>
 					<AddToArmour>2</AddToArmour>
 				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1291,6 +1298,13 @@
 					<Type>Option</Type>
 					<Points>110</Points>
 					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -2212,6 +2226,7 @@
 			<Name>Cold One Chariot</Name>
 			<Points>100</Points>
 			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
 			<MainParam>
 				<Movement>7</Movement>
 				<WeaponSkill>5</WeaponSkill>

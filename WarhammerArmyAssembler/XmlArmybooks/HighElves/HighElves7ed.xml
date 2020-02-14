@@ -630,7 +630,6 @@
 					<Type>Option</Type>
 					<Points>10</Points>
 				</Option>
-				
 				<Option>
 					<Name>Elven Steed</Name>
 					<Type>Option</Type>
@@ -682,6 +681,408 @@
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Archmage</Name>
+			<Points>225</Points>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<Description>Archmage</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>			
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barded Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Sun Dragon</Name>
+					<Type>Option</Type>
+					<Points>250</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Moon Dragon</Name>
+					<Type>Option</Type>
+					<Points>300</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Tiranoc Chariot</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<Mount>true</Mount>
+					<AddToArmour>2</AddToArmour>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Caradryan</Name>
+			<Points>175</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Caradryan</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>The Phoenix Blade</Name>
+					<SpecialRuleDescription>Flaming attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>D3 wounds against enemy models with Unit Strength 2 or greater</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Arcana>
+					<Name>Mark of Asuryan</Name>
+					<SpecialRuleDescription>If Caradryan is killed in close combat, the model that killed Caradryan immediately suffers Do wounds, with no armour save allowed.</SpecialRuleDescription>
+				</Arcana>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Korhil</Name>
+			<Points>140</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Korhil</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stubborn>true</Stubborn>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Woodsman</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Chayal</Name>
+					<KillingBlow>true</KillingBlow>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Pelt of Charandis</Name>
+					<AddToArmour>6</AddToArmour>
+					<SpecialRuleDescription>3+ Armour save against shooting attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Immune to poison</SpecialRuleDescription>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Lion Chariot</Name>
+					<Type>Option</Type>
+					<Points>130</Points>
+					<Mount>true</Mount>
+					<AddToArmour>2</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Noble</Name>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<Description>Noble</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<OnlyIfNot>Dragon armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+						<OnlyIfNot>Dragon armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Dragon armour</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>5</AddToArmour>
+					<SpecialRuleDescription>Immune to all breath and all Flaming attacks</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Longbow</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barded Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Tiranoc Chariot</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<Mount>true</Mount>
+					<AddToArmour>2</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Mage</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Mage</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>			
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barded Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Tiranoc Chariot</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<Mount>true</Mount>
+					<AddToArmour>2</AddToArmour>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Dragon Mage of Caledor</Name>
+			<Points>350</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<MountInit>Sun Dragon</MountInit>
+			<Description>Dragon Mage of Caledor</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>			
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Reckless</SpecialRuleDescription>
+					<SpecialRuleDescription>Warrior Mage</SpecialRuleDescription>
+				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
@@ -913,6 +1314,76 @@
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 					<SpecialRuleDescription>Dragon Fire</SpecialRuleDescription>
 				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Special</Type>
+			<Name>Tiranoc Chariot</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Bow</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Name>Lion Chariot</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Bow</Name>
+				</RangeWeapon>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 	</Mounts>
@@ -1162,6 +1633,7 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
+				<Fear>true</Fear>
 				<HitFirst>true</HitFirst>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1201,6 +1673,376 @@
 					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Silver Helms</Name>
+			<Points>21</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Lance</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>High Helm</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>16</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>16</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Dragon Princes of Caledor</Name>
+			<Points>30</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Lance</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Dragon armour</Name>
+					<AddToArmour>5</AddToArmour>
+					<SpecialRuleDescription>Immune to all breath and all Flaming attacks</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Shields</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Drakemaster</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>20</Points>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>20</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Ellyrian Reavers</Name>
+			<Points>17</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Bow</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<PerModel>true</PerModel>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Swap spear for bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Swap spear for bow</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel>true</PerModel>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Harbinger</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>14</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Shadow Warriors</Name>
+			<Points>16</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
+					<SpecialRuleDescription>Negative Hatred</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Longbow</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Shadow-walker</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>12</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Tiranoc Chariot</Name>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Bow</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Lion Chariot of Chrace</Name>
+			<Points>140</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Bow</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Repeater Bolt Thrower</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst>true</HitFirst>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Volley</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Great Eagle</Name>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 	</Units>
 </ArmyBook>
