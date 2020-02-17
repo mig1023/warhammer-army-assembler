@@ -332,14 +332,183 @@
 				<Description>The unit treats difficult ground as open ground for purposes of movement.</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Enchanted items">	
-		
-		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Arcane items">	
-			
+			<Artefact>
+				<Name>Book of Hoeth</Name>
+				<Type>Arcane</Type>
+				<Points>100</Points>
+				<SpecialRuleDescription>The bearer can ends the Magic phase immediately, all Remains in Play spells are dispelled and power dice stored in magic items are lost. One use only.</SpecialRuleDescription>
+				<Description>One use only. The bearer may use the Vortex Shard at the start of any enemy Magic phase. The Magic phase ends immediately, all Remains in Play spells are dispelled and power dice stored in magic items are lost.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Vortex Shard</Name>
+				<Type>Arcane</Type>
+				<Points>75</Points>
+				<SpecialRuleDescription>Any spell cast by the mage with this book will be cast with Irresistible Force on any successful casting roll which includes any double, except a Miscast</SpecialRuleDescription>
+				<Description>Any spell cast by the mage with this book will be cast with Irresistible Force on any successful casting roll which includes any double, except a Miscast.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Annulian Crystal</Name>
+				<Type>Arcane</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile</SpecialRuleDescription>
+				<Description>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sigil of Asuryan</Name>
+				<Type>Arcane</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Automatically dispels one enemy spell. In addition, roll a D6. On a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle. One use only</SpecialRuleDescription>
+				<Description>Automatically dispels one enemy spell. In addition, roll a D6. On a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle. One use only.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Starwood Staff</Name>
+				<Type>Arcane</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>+1 to all casting attempts</SpecialRuleDescription>
+				<Description>The Starwood staff gives +1 to all casting attempts made by the Wizard carrying it.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Seerstaff of Saphery</Name>
+				<Type>Arcane</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>+1 to all casting attempts</SpecialRuleDescription>
+				<Description>The hearer may chixise his spells, instead of rolling for them at the start of the game.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Trickster's Pendant</Name>
+				<Type>Arcane</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Enemy Wizard suffers a Miscast he must roll twice on the Miscast table, the bearer of the Pendant chooses one of the two results</SpecialRuleDescription>
+				<Description>If an enemy Wizard suffers a Miscast he must roll twice on the Miscast table rather than once. The bearer of the Trickster's Pendant then chooses one of the two results. The chosen result is applied immediately. The other result is ignored and sloes not take effect.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Gem of Sunfire</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>For the duration of that Magic phase, the bearer gains +2 to all his attempts to cast spells from the Lore of Fire. One use only</SpecialRuleDescription>
+				<Description>One use only. At the start of any of his own Magic phases, the bearer may use the Gem of Sunfire. For the duration of that Magic phase, the bearer gains +2 to all his attempts to cast spells from the Lore of Fire for the rest of the Magic phase.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ring of Corin</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>Bound spell (Power level 3). One use only. Vaul's Unmaking spell</SpecialRuleDescription>
+				<Description>Bound spell (Power level 3). One use only. The Ring of Corin may cast its Bound spell in the Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Corin contains the Vaul's Unmaking spell.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Staff of Solidity</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>Mage immune to the effects of his first Miscast</SpecialRuleDescription>
+				<Description>This staff makes the Mage immune to the effects of his first Miscast. Note that a miscast spell still fails regardless of the actual dice score rolled.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Jewel of the Dusk</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<AddToCast>1</AddToCast>
+				<Description>The jewel gives the Mage +1 Power dice in each of his own Magic phases.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Silver Wand</Name>
+				<Type>Arcane</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>The wearer knows one more spell than is normal for his level</SpecialRuleDescription>
+				<Description>The wearer knows one more spell than is normal for his level.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Enchanted items">	
+			<Artefact>
+				<Name>Null Stone</Name>
+				<Type>Armour</Type>
+				<Points>100</Points>
+				<SpecialRuleDescription>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work</SpecialRuleDescription>
+				<Description>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work. Treat them as normal weapons, banners, etc, of the appropriate type. Note that this applies to all friendly wizards and magic items as well as enemy ones.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Healing Potion</Name>
+				<Type>Armour</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>The character or any character in base contact may immediately restores all wounds lost at the start of any phase in either player's turn. One use only</SpecialRuleDescription>
+				<Description>One use only. The character or any character in base contact may drink this at the start of any phase in either player's turn. It immediately restores all wounds lost by the character during the battle so far. Obviously, if the character is dead at the start of the phase then he can't drink the potion.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Radiant Gem of Hoeth</Name>
+				<Type>Armour</Type>
+				<Points>45</Points>
+				<WizardTo>1</WizardTo>
+				<AddToCast>1</AddToCast>
+				<AddToDispell>1</AddToDispell>
+				<Description>The wearer counts as a Level 1 High Elf Mage. This has no effect on characters who are already Wizards.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Pendant of Vengeance</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>All successful sinkings on the Anvil ot Doom must be re-rolled. In addition, subtract -1 from any results on the Failed Rune table</SpecialRuleDescription>
+				<Description>All successful sinkings on the Anvil ot Doom must be re-rolled. In addition, subtract -1 from any results on the Failed Rune table.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dragonhorn</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Once per battle all friendly High Elf models may re-roll any failed Rally and Psychology tests until the start of their next turn. One use only</SpecialRuleDescription>
+				<Description>One use only. Once per battle, at the start of any of his own turns, the bearer may sound the horn. All friendly High Elf models may re-roll any failed Rally and Psychology tests until the start of their next turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Folariath's Robe</Name>
+				<Type>Armour</Type>
+				<Points>45</Points>
+				<OnlyFor>Infantry</OnlyFor>
+				<SpecialRuleDescription>Can only be hit by magical attacks</SpecialRuleDescription>
+				<Description>Model on foot only. The wearer of this cloak can only be hit by magical attacks (for example, Magic weapons and attacks from Daemons or Ethereal creatures). In addition, the bearer may not strike blows in combat, or shoot with a ranged weapon.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ring of Fury</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Bound spell (Power level 3). Contains the Fury of Khaine spell</SpecialRuleDescription>
+				<Description>Bound spell (Power level 3). This ring may cast its Bound Spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Fury contains the Fury of Khaine spell.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Cloak of Beards</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Dwarfs both Hate and Fear the wearer of the Cloak</SpecialRuleDescription>
+				<SpecialRuleDescription>Eeach model in base contact with the wearer loses all the runes from one of their runic items</SpecialRuleDescription>
+				<Description>Dwarfs both Hate and Fear the wearer of the Cloak. In addition, for the duration of each Close Combat phase, each model in base contact with the wearer loses all the runes from one of their runic items (determined randomly). Treat the item as a normal one of its kind.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Skeinsliver</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>+1 to the roll to determine which player takes the first turn</SpecialRuleDescription>
+				<Description>The Skeinsliver allows the controlling player to add +1 to the roll to determine which player takes the first turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Amulet of Light</Name>
+				<Type>Armour</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>All attacks made by the bearer in close combat count as Magical</SpecialRuleDescription>
+				<Description>All attacks made by the bearer (and the unit he is with) in close combat count as Magical.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Gem of Courage</Name>
+				<Type>Armour</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>The hearer (and the unit he is with) may take any one Leadership based test on 3D6, choosing the lowest two. One use only</SpecialRuleDescription>
+				<Description>One use only. The hearer (and the unit he is with) may take any one Leadership based test on 3D6, choosing the lowest two.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of Loec</Name>
+				<Type>Armour</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>This item is used at the start of any Close Combat phase. The bearer may re-roll all rolls to hit and wound until the end of the phase. Any model wounded by his attacks this phase must re-roll any successful saves of any kind. At the end of the phase the bearer suffers one wound with no saves of any kind allowed. One use only</SpecialRuleDescription>
+				<Description>One use only. This item is used at the start of any Close Combat phase. The bearer may re-roll all rolls to hit and wound until the end of the phase. Any model wounded by his attacks this phase must re-roll any successful saves of any kind. At the end of the phase the bearer suffers one wound with no saves of any kind allowed.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
-	
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
@@ -416,18 +585,18 @@
 					<Name>Sword of Teclis</Name>
 					<SpecialRuleDescription>All hits wound on a 2+. Armour saves may not be taken</SpecialRuleDescription>
 				</HandWeapon>
-				<Arcana>
+				<Arcane>
 					<Name>The Moon Staff of Lileath</Name>
 					<SpecialRuleDescription>The Moon Staff gives Teclis D3 bonus power/dispel dice in each Magic phase</SpecialRuleDescription>
-				</Arcana>
-				<Arcana>
+				</Arcane>
+				<Arcane>
 					<Name>The War Crown</Name>
 					<SpecialRuleDescription>Teclis may ignore the effects of the first miscast he makes each turn</SpecialRuleDescription>
-				</Arcana>
-				<Arcana>
+				</Arcane>
+				<Arcane>
 					<Name>Scroll of Hoeth</Name>
 					<SpecialRuleDescription>One use only. Same as Dispel scroll. In addition, both Teclis and the caster roll a D6; if Teclis scores higher, the spell cannot be reused by caster</SpecialRuleDescription>
-				</Arcana>
+				</Arcane>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -480,12 +649,12 @@
 					<AddToArmour>6</AddToArmour>
 					<AddToWard>5</AddToWard>
 				</Armour>
-				<Arcana>
+				<Arcane>
 					<Name>Talisman of Hoeth</Name>
 					<AddToWizard>2</AddToWizard>
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
-				</Arcana>
+				</Arcane>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -525,15 +694,15 @@
 					<Name>Light armour</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
-				<Arcana>
+				<Arcane>
 					<Name>Shadow Crown</Name>
 					<SpecialRuleDescription>If Alith Anar breaks from close combat, any opponents pursuing him must halve the distance they roll for pursuing</SpecialRuleDescription>
-				</Arcana>
-				<Arcana>
+				</Arcane>
+				<Arcane>
 					<Name>Stone of Midnight</Name>
 					<AddToWard>4</AddToWard>
 					<SpecialRuleDescription>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</SpecialRuleDescription>
-				</Arcana>
+				</Arcane>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -796,10 +965,10 @@
 					<Name>Heavy armour</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
-				<Arcana>
+				<Arcane>
 					<Name>Mark of Asuryan</Name>
 					<SpecialRuleDescription>If Caradryan is killed in close combat, the model that killed Caradryan immediately suffers Do wounds, with no armour save allowed.</SpecialRuleDescription>
-				</Arcana>
+				</Arcane>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
