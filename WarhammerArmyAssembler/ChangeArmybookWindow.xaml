@@ -16,8 +16,11 @@
                 <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="45" Canvas.Top="36"/>
                 <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="333" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
                 <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="580" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>
-                <Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="143" Width="20" Click="prev_Click"/>
-                <Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="143" Width="20" Click="next_Click"/>
+                
+                <!--<Button x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="143" Width="20" Click="prev_Click"/>-->
+                <!--<Button x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="143" Width="20" Click="next_Click"/>-->
+                <Label x:Name="next" Content="&#9655;" Height="69" Canvas.Left="262" Canvas.Top="143" Width="22" Background="White" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" MouseDown="next_Click"/>
+                <Label x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="143" Width="22" Background="White" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" MouseDown="prev_Click"/>
                 <TextBox x:Name="listArmybookPoints" Height="34" Canvas.Left="22" TextWrapping="Wrap" Text="4000" Canvas.Top="580" Width="130" FontSize="20"/>
             </Canvas>
         </ScrollViewer>

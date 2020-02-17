@@ -232,6 +232,12 @@ namespace WarhammerArmyAssembler
                 label.Foreground = mainColor;
             }
 
+            foreach (Label label in new List<Label> { changeArmybook.next, changeArmybook.prev })
+            {
+                label.BorderBrush = mainColor;
+                label.Foreground = mainColor;
+            }
+
             changeArmybook.listArmybookPoints.Foreground = mainColor;
 
             foreach (Label label in new List<Label>() {
