@@ -397,7 +397,10 @@ namespace WarhammerArmyAssembler
         private void ArmyGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (startArmyHelpText.Visibility == Visibility.Visible)
+            {
                 startArmyHelpText.Width = ArmyGrid.ActualWidth - 45;
+                startArmyHelpText.Height = ArmyGrid.ActualHeight - 50;
+            }
         }
     }
 }
