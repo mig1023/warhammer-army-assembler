@@ -32,9 +32,6 @@ namespace WarhammerArmyAssembler
                 label.Background = ArmyBook.MainColor;
             }
 
-            Interface.main.saveArmyToPDF.Foreground = Brushes.White;
-            Interface.main.saveArmyToPDF.Background = ArmyBook.MainColor;
-
             List<Unit> categories = ArmyParams.GetArmyCategories();
 
             foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)
