@@ -5,6 +5,7 @@ using System.IO;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
@@ -29,6 +30,10 @@ namespace WarhammerArmyAssembler
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop, ToMainMenu }
 
         public static List<Label> PointsButtons = new List<Label>();
+
+        public static List<Label> MainMenuButtons = new List<Label>();
+
+        public static bool mainMenuIsOpen = false;
 
         public static Thickness Thick(object element, double? left = null, double? top = null, double? right = null, double? bottom = null)
         {
@@ -147,7 +152,54 @@ namespace WarhammerArmyAssembler
 
         public static void MainMenu()
         {
-            Move(MovingType.ToMainMenu, menu: true);
+            List<string> buttonName = new List<string> { "Change Armybook", "Export Army to PDF", "Close" };
+            List<MouseButtonEventHandler> buttonAction =
+                new List<MouseButtonEventHandler> { main.toNewArmy_MouseDown, main.saveArmyToPDF_MouseDown, main.closeMainMenu_MouseDown };
+
+            foreach (Label button in MainMenuButtons)
+                main.mainMenu.Children.Remove(button);
+
+            MainMenuButtons.Clear();
+
+            int buttonIndex = 0;
+            double buttonXPosition = 30;
+            double buttonYPosition = 10;
+
+            for (int a = 0; a < 10; a++)
+            {
+                buttonIndex = 0;
+
+                foreach (string name in buttonName)
+                {
+                    Label newButton = new Label();
+
+                    newButton.Content = name;
+                    newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
+                    newButton.Height = 30;
+                    newButton.Width = Double.NaN;
+                    newButton.MouseDown += buttonAction[buttonIndex];
+                    newButton.Foreground = Brushes.White;
+                    newButton.Background = ArmyBook.MainColor;
+                    newButton.FontSize = 16;
+                    newButton.FontWeight = FontWeights.Bold;
+
+                    main.mainMenu.Children.Add(newButton);
+
+                    main.UpdateLayout();
+
+                    buttonIndex += 1;
+
+                    buttonXPosition += newButton.ActualWidth + 10;
+
+                    if (buttonXPosition + 150 >= main.mainMenu.ActualWidth)
+                    {
+                        buttonXPosition = 30;
+                        buttonYPosition += newButton.Height + 10;
+                    }
+                }
+            }
+
+            Move(MovingType.ToMainMenu, menu: true, height: buttonYPosition + 40);
         }
 
         public static void DetailResize(bool open)
@@ -173,7 +225,7 @@ namespace WarhammerArmyAssembler
         }
 
         public static void Move(MovingType moveTo, EventHandler secondAnimation = null,
-            bool err = false, bool menu = false, bool detail = false)
+            bool err = false, bool menu = false, bool detail = false, double height = -1)
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
@@ -193,7 +245,7 @@ namespace WarhammerArmyAssembler
                 newPosition = new Thickness(0, main.errorDetail.Height, 0, 0);
 
             if (moveTo == MovingType.ToMainMenu)
-                newPosition = new Thickness(0, main.mainMenu.Height, 0, 0);
+                newPosition = new Thickness(0, height, 0, 0);
 
             bool mainCanvasMoving = (err || menu);
 
@@ -209,6 +261,11 @@ namespace WarhammerArmyAssembler
                 main.mainPlaceCanvas.BeginAnimation(FrameworkElement.MarginProperty, move);
             else
                 main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
+
+            if (menu && (moveTo == MovingType.ToMainMenu))
+                mainMenuIsOpen = true;
+            else if (menu)
+                mainMenuIsOpen = false;
         }
 
         private static void PreviewLoadCurrentSelectedArmy(string armyName)
@@ -268,6 +325,9 @@ namespace WarhammerArmyAssembler
 
             int xIndex = 0;
             int yIndex = 0;
+
+            foreach (Label button in PointsButtons)
+                changeArmybook.menuArmybookPlace.Children.Remove(button);
 
             PointsButtons.Clear();
 

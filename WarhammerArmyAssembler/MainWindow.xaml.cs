@@ -266,11 +266,9 @@ namespace WarhammerArmyAssembler
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
 
             mainMenu.Width = e.NewSize.Width;
-            closeMainMenu.Margin = new Thickness(
-                e.NewSize.Width - closeMainMenu.Width - 10,
-                mainMenu.Height - closeMainMenu.Height - 10,
-                0, 0
-            );
+
+            if (Interface.mainMenuIsOpen)
+                Interface.MainMenu();
         }
 
         private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
@@ -288,7 +286,7 @@ namespace WarhammerArmyAssembler
             Interface.Move(Interface.MovingType.ToMain, err: true);
         }
 
-        private void closeMainMenu_MouseDown(object sender, MouseButtonEventArgs e)
+        public void closeMainMenu_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Interface.Move(Interface.MovingType.ToMain, menu: true);
         }
@@ -318,7 +316,7 @@ namespace WarhammerArmyAssembler
             Interface.MainMenu();
         }
 
-        private void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
+        public void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Interface.Move(Interface.MovingType.ToMain, menu: true);
             Interface.AllUnitDelete();
@@ -377,7 +375,7 @@ namespace WarhammerArmyAssembler
             MessageBox.Show(pointsMsg);
         }
 
-        private void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
+        public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
             ExportPDF.SaveArmyToPDF();
 
