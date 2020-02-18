@@ -20,12 +20,14 @@
         </Canvas>
 
         <Canvas x:Name="mainPlaceCanvas">
-            <Canvas x:Name="armybookDetailScrollHead" Width="320" Height="70" VerticalAlignment="Top" Background="White">
-                <Label x:Name="closeArmybookDetail" Content="Close" Height="30" Padding="0" Width="280" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Margin="20,20" MouseDown="closeArmybookDetail_Click"/>
-            </Canvas>
+            <Label x:Name="closeArmybookDetail" Content="Close" Height="25" Padding="0" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" HorizontalContentAlignment="Center" Foreground="White" Margin="0,0" MouseDown="closeArmybookDetail_Click">
+                <Label.LayoutTransform>
+                    <RotateTransform Angle="-90"/>
+                </Label.LayoutTransform>
+            </Label>
 
-            <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="0,70" Background="White">
-                <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Background="White">
+            <ScrollViewer x:Name="armybookDetailScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
+                <Canvas x:Name="armybookDetail" Width="320" Height="50" VerticalAlignment="Top" Margin="0,20" Background="White">
                     <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
                     <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
                     <TextBlock x:Name="armyUnitSpecific" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,65"/>

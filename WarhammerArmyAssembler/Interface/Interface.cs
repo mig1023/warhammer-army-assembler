@@ -184,7 +184,7 @@ namespace WarhammerArmyAssembler
                 InterfaceMod.View(canvasToShow: main.errorDetail);
 
             if (moveTo == MovingType.ToLeft)
-                newPosition = new Thickness(main.armybookDetailScrollHead.Width, 0, 0, 0);
+                newPosition = new Thickness(main.armybookDetailScroll.Width, 0, 0, 0);
                 
             if (moveTo == MovingType.ToRight)
                 newPosition = new Thickness(-320, 0, 0, 0);

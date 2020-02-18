@@ -106,7 +106,7 @@ namespace WarhammerArmyAssembler
                 (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) +
                 (armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20) + 20;
 
-            armyUnitSpecific.Margin = Interface.Thick(armybookDetail, left: 20, top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 40);
+            armyUnitSpecific.Margin = Interface.Thick(armybookDetail, left: 20, top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 30);
             armyUnitSpecific.Foreground = ArmyBook.MainColor;
         }
 
@@ -259,7 +259,8 @@ namespace WarhammerArmyAssembler
             mainPlaceCanvas.Height = e.NewSize.Height;
             mainPlaceCanvas.Width = e.NewSize.Width;
 
-            armybookDetailScroll.Height = e.NewSize.Height - 70;
+            closeArmybookDetail.Width = e.NewSize.Height;
+            armybookDetailScroll.Height = e.NewSize.Height;
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
