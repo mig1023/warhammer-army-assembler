@@ -24,13 +24,8 @@ namespace WarhammerArmyAssembler
             Interface.main.armyMainMenu.Foreground = Brushes.White;
             Interface.main.armyMainMenu.Background = ArmyBook.AdditionalColor;
 
-            foreach(Label label in new List<Label> {
-                Interface.main.armyMainLabel, //Interface.main.toNewArmy, Interface.main.saveArmyToPDF
-            })
-            {
-                label.Foreground = Brushes.White;
-                label.Background = ArmyBook.MainColor;
-            }
+            Interface.main.armyMainLabel.Foreground = Brushes.White;
+            Interface.main.armyMainLabel.Background = ArmyBook.MainColor;
 
             List<Unit> categories = ArmyParams.GetArmyCategories();
 
