@@ -165,37 +165,38 @@ namespace WarhammerArmyAssembler
             double buttonXPosition = 30;
             double buttonYPosition = 10;
 
-            for (int a = 0; a < 10; a++)
+            buttonIndex = 0;
+
+            foreach (string name in buttonName)
             {
-                buttonIndex = 0;
+                Label newButton = new Label();
 
-                foreach (string name in buttonName)
+                newButton.Content = name;
+                newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
+                newButton.Height = 30;
+                newButton.Width = Double.NaN;
+                newButton.MouseDown += buttonAction[buttonIndex];
+                newButton.Foreground = Brushes.White;
+                newButton.Background = ArmyBook.MainColor;
+                newButton.FontSize = 16;
+                newButton.FontWeight = FontWeights.Bold;
+
+                main.mainMenu.Children.Add(newButton);
+                MainMenuButtons.Add(newButton);
+
+                main.UpdateLayout();
+
+                buttonIndex += 1;
+
+                buttonXPosition += newButton.ActualWidth + 10;
+
+                if (buttonXPosition >= main.mainMenu.ActualWidth)
                 {
-                    Label newButton = new Label();
+                    buttonXPosition = 30;
+                    buttonYPosition += newButton.Height + 10;
 
-                    newButton.Content = name;
                     newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
-                    newButton.Height = 30;
-                    newButton.Width = Double.NaN;
-                    newButton.MouseDown += buttonAction[buttonIndex];
-                    newButton.Foreground = Brushes.White;
-                    newButton.Background = ArmyBook.MainColor;
-                    newButton.FontSize = 16;
-                    newButton.FontWeight = FontWeights.Bold;
-
-                    main.mainMenu.Children.Add(newButton);
-
-                    main.UpdateLayout();
-
-                    buttonIndex += 1;
-
                     buttonXPosition += newButton.ActualWidth + 10;
-
-                    if (buttonXPosition + 150 >= main.mainMenu.ActualWidth)
-                    {
-                        buttonXPosition = 30;
-                        buttonYPosition += newButton.Height + 10;
-                    }
                 }
             }
 

@@ -13,11 +13,7 @@
             <Label x:Name="errorText" Content="" Height="30" Padding="0" Width="Auto" FontSize="20" Foreground="White" Margin="10,10"/>
         </Canvas>
 
-        <Canvas x:Name="mainMenu" Background="#FFF0EEEE" Height="237" Width="764">
-            <!--<Label x:Name="closeMainMenu" Content="Close" Height="30" Padding="0" Width="154" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Background="#FF535353" Margin="10,10" MouseDown="closeMainMenu_MouseDown"/>
-            <Label x:Name="toNewArmy" Content="Change Armybook" Height="32" Canvas.Left="20" Canvas.Top="10" Width="155" FontSize="16" MouseDown="toNewArmy_MouseDown" FontWeight="Bold"/>
-            <Label x:Name="saveArmyToPDF" Content="Export Army to PDF" Height="32" Canvas.Left="20" Canvas.Top="52" Width="166" FontSize="16" MouseDown="saveArmyToPDF_MouseDown" FontWeight="Bold"/>-->
-        </Canvas>
+        <Canvas x:Name="mainMenu" Background="#FFF0EEEE" Height="237" Width="764"/>
 
         <Canvas x:Name="mainPlaceCanvas">
             <Label x:Name="closeArmybookDetail" Content="Close" Height="25" Padding="0" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Margin="0,0" MouseDown="closeArmybookDetail_Click">
