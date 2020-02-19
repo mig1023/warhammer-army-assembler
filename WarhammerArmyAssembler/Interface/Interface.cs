@@ -162,7 +162,7 @@ namespace WarhammerArmyAssembler
             MainMenuButtons.Clear();
 
             int buttonIndex = 0;
-            double buttonXPosition = 30;
+            double buttonXPosition = 15;
             double buttonYPosition = 10;
 
             buttonIndex = 0;
@@ -190,9 +190,9 @@ namespace WarhammerArmyAssembler
 
                 buttonXPosition += newButton.ActualWidth + 10;
 
-                if (buttonXPosition >= main.mainMenu.ActualWidth)
+                if (buttonXPosition + 10 >= main.mainMenu.ActualWidth)
                 {
-                    buttonXPosition = 30;
+                    buttonXPosition = 15;
                     buttonYPosition += newButton.Height + 10;
 
                     newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
