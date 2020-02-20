@@ -177,7 +177,7 @@ namespace WarhammerArmyAssembler
                 newButton.Width = Double.NaN;
                 newButton.MouseDown += buttonAction[buttonIndex];
                 newButton.Foreground = Brushes.White;
-                newButton.Background = ArmyBook.MainColor;
+                newButton.Background = (name == "Close" ? Brushes.DarkGray : ArmyBook.MainColor);
                 newButton.FontSize = 16;
                 newButton.FontWeight = FontWeights.Bold;
 
