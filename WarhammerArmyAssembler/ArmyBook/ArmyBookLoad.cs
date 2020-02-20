@@ -93,11 +93,6 @@ namespace WarhammerArmyAssembler
             newUnit.Armour = IntNullableParse(mainParam["Armour"]);
             newUnit.Ward = IntNullableParse(mainParam["Ward"]);
 
-            newUnit.SlotsOfLords = IntParse(xmlUnit["SlotsOfLords"]);
-            newUnit.SlotsOfHero = IntParse(xmlUnit["SlotsOfHero"]);
-            newUnit.SlotsOfSpecial = IntParse(xmlUnit["SlotsOfSpecial"]);
-            newUnit.SlotsOfRare = IntParse(xmlUnit["SlotsOfRare"]);
-
             newUnit.PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]);
             newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
 
@@ -122,6 +117,11 @@ namespace WarhammerArmyAssembler
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
                 newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
                 newUnit.MustBeGeneral = BoolParse(additionalParam["MustBeGeneral"]);
+
+                newUnit.SlotsOfLords = IntParse(additionalParam["SlotsOfLords"]);
+                newUnit.SlotsOfHero = IntParse(additionalParam["SlotsOfHero"]);
+                newUnit.SlotsOfSpecial = IntParse(additionalParam["SlotsOfSpecial"]);
+                newUnit.SlotsOfRare = IntParse(additionalParam["SlotsOfRare"]);
 
                 if (newUnit.Frenzy)
                     xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(ArmyBookOther.AddFrenzyAttack(xml));
