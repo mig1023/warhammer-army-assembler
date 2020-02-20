@@ -17,9 +17,9 @@ namespace WarhammerArmyAssembler
 
         static float currentY;
 
-        public static string SaveArmyToPDF()
+        public static string SaveArmy()
         {
-            string fileName = ExportOther.GetFileName();
+            string fileName = ExportOther.GetFileName("pdf");
 
             currentY = MARGIN_TOP;
 
@@ -40,7 +40,7 @@ namespace WarhammerArmyAssembler
             foreach (Unit unitType in armyByCategories)
                 foreach (Unit unit in unitType.Items)
                 {
-                    AddText(String.Format("{0}", UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
+                    AddText(String.Format("{0}", ExportOther.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
                     AddText(String.Format("{0} ({1} pts)", unit.Name, unit.GetUnitPoints()), lineHeight: 10);
 
                     foreach (string param in new List<string> {
@@ -72,11 +72,6 @@ namespace WarhammerArmyAssembler
             System.Diagnostics.Process.Start(fileName);
 
             return String.Empty;
-        }
-
-        static public string UnitSizeIfNeed(Unit unit)
-        {
-            return (unit.IsHeroOrHisMount() ? String.Empty : unit.Size.ToString());
         }
 
         static public void AddText(string text = "", float? x = null, float? y = null, int aligment = 0,

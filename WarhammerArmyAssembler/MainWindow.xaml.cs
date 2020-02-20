@@ -377,7 +377,14 @@ namespace WarhammerArmyAssembler
 
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ExportPDF.SaveArmyToPDF();
+            ExportPDF.SaveArmy();
+
+            Interface.Move(Interface.MovingType.ToMain, menu: true);
+        }
+
+        public void saveArmyToTXT_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ExportTXT.SaveArmy();
 
             Interface.Move(Interface.MovingType.ToMain, menu: true);
         }

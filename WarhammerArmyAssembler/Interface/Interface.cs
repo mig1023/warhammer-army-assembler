@@ -152,9 +152,11 @@ namespace WarhammerArmyAssembler
 
         public static void MainMenu()
         {
-            List<string> buttonName = new List<string> { "Change Armybook", "Export Army to PDF", "Close" };
+            List<string> buttonName = new List<string> { "Change Armybook", "Export Army to PDF", "Export Army to TXT", "Close" };
             List<MouseButtonEventHandler> buttonAction =
-                new List<MouseButtonEventHandler> { main.toNewArmy_MouseDown, main.saveArmyToPDF_MouseDown, main.closeMainMenu_MouseDown };
+                new List<MouseButtonEventHandler> { main.toNewArmy_MouseDown, main.saveArmyToPDF_MouseDown,
+                    main.saveArmyToTXT_MouseDown, main.closeMainMenu_MouseDown
+                };
 
             foreach (Label button in MainMenuButtons)
                 main.mainMenu.Children.Remove(button);
