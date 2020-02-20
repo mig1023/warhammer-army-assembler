@@ -19,7 +19,8 @@ namespace WarhammerArmyAssembler
 
         public static string SaveArmyToPDF()
         {
-            string fileName = "test_filename.pdf";
+            string fileName = ExportOther.GetFileName();
+
             currentY = MARGIN_TOP;
 
             document = new Document();
