@@ -51,6 +51,18 @@ namespace WarhammerArmyAssembler
                 units[Unit.UnitType.Rare] += entry.Value.SlotsOfRare;
             }
 
+            if (ArmyBook.DemonicMortal)
+            {
+                Unit general = GetArmyGeneral();
+
+                if (general != null && (general.Group == "Demonic"))
+                {
+                    int tmpValue = units[Unit.UnitType.Special];
+                    units[Unit.UnitType.Special] = units[Unit.UnitType.Core];
+                    units[Unit.UnitType.Core] = tmpValue;
+                }
+            }
+
             return units[type];
         }
 
@@ -160,6 +172,15 @@ namespace WarhammerArmyAssembler
                 new Unit() { Name = "Special" },
                 new Unit() { Name = "Rare" },
             };
+        }
+
+        public static Unit GetArmyGeneral()
+        {
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                if (entry.Value.ArmyGeneral)
+                    return entry.Value;
+
+            return null;
         }
     }
 }

@@ -39,6 +39,8 @@ namespace WarhammerArmyAssembler
             ArmyBook.AdditionalColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
             ArmyBook.BackgroundColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
 
+            ArmyBook.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Info/DemonicMortal"));
+
             InterfaceMod.SetArmyGridAltColor(ArmyBook.BackgroundColor);
 
             LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref ArmyBook.Units);
