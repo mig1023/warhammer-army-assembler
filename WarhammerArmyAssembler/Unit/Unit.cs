@@ -12,7 +12,7 @@ namespace WarhammerArmyAssembler
 {
     public class Unit
     {
-        public enum UnitType { Lord, Hero, Core, Special, Rare, Mount }
+        public enum UnitType { Lord, Hero, Core, Special, Rare, Mount, ToCore, ToSpecial }
 
         public enum MagicItemsTypes { Hero, Wizard, Unit }
 

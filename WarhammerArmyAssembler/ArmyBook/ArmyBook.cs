@@ -16,5 +16,6 @@ namespace WarhammerArmyAssembler
         public static Brush BackgroundColor = null;
 
         public static bool DemonicMortal = false;
+        public static bool DemonicAlreadyReplaced = false;
     }
 }

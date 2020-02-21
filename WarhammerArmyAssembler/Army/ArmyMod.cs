@@ -111,7 +111,46 @@ namespace WarhammerArmyAssembler
                 return;
 
             Army.Units[maxLeadershipOwner].ArmyGeneral = true;
+
+            bool newGeneralIsDemon = (Army.Units[maxLeadershipOwner].Group == "Demonic");
+
+            if (ArmyBook.DemonicMortal && newGeneralIsDemon && !ArmyBook.DemonicAlreadyReplaced)
+                ChangeCoreSpecialUnits();
+            else if (ArmyBook.DemonicMortal && !newGeneralIsDemon && ArmyBook.DemonicAlreadyReplaced)
+                ChangeCoreSpecialUnits();
+
             InterfaceReload.ReloadArmyData();
+        }
+
+        private static Unit.UnitType ChangeUnitType(Unit.UnitType unitType)
+        {
+            if (unitType == Unit.UnitType.Core)
+                unitType = Unit.UnitType.ToSpecial;
+
+            else if (unitType == Unit.UnitType.Special)
+                unitType = Unit.UnitType.ToCore;
+
+            else if (unitType == Unit.UnitType.ToCore)
+                unitType = Unit.UnitType.Core;
+
+            else if (unitType == Unit.UnitType.ToSpecial)
+                unitType = Unit.UnitType.Special;
+
+            return unitType;
+        }
+
+        private static void ChangeCoreSpecialUnits()
+        {
+            ArmyBook.DemonicAlreadyReplaced = !ArmyBook.DemonicAlreadyReplaced;
+
+            foreach (int i in new List<int> { 1, 2 })
+            {
+                foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                    entry.Value.Type = ChangeUnitType(entry.Value.Type);
+
+                foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)
+                    entry.Value.Type = ChangeUnitType(entry.Value.Type);
+            }
         }
     }
 }
