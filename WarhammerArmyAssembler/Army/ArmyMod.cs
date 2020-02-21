@@ -122,6 +122,20 @@ namespace WarhammerArmyAssembler
             InterfaceReload.ReloadArmyData();
         }
 
+        public static string CategoryNameModification(string category)
+        {
+            if (!ArmyBook.DemonicMortal)
+                return category;
+
+            if (category == "Core")
+                return "Mortal";
+
+            if (category == "Special")
+                return "Demonic";
+
+            return category;
+        }
+
         private static Unit.UnitType ChangeUnitType(Unit.UnitType unitType)
         {
             if (unitType == Unit.UnitType.Core)

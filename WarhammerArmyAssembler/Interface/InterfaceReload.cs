@@ -39,6 +39,7 @@ namespace WarhammerArmyAssembler
 
             foreach (Unit unitType in categories)
             {
+                unitType.Name = ArmyMod.CategoryNameModification(unitType.Name);
                 unitType.GroopBold = true;
                 Interface.main.ArmyList.Items.Add(unitType);
             }
