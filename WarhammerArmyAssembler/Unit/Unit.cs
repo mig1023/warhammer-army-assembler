@@ -243,44 +243,46 @@ namespace WarhammerArmyAssembler
                 allOption.AddRange(Army.Units[MountOn].Options);
 
             foreach (Option option in allOption)
-                if (option.IsActual())
+            {
+                if (!option.IsActual())
+                    continue;
+
+                PropertyInfo optionToParam = typeof(Option).GetProperty(String.Format("{0}To", name));
+                if (optionToParam != null)
                 {
-                    PropertyInfo optionToParam = typeof(Option).GetProperty(String.Format("{0}To", name));
-                    if (optionToParam != null)
-                    {
-                        object optionToObject = optionToParam.GetValue(option);
-                        int optionToValue = (int)optionToObject;
+                    object optionToObject = optionToParam.GetValue(option);
+                    int optionToValue = (int)optionToObject;
 
-                        if (optionToValue > 0)
-                            return optionToValue.ToString() + (reversParam ? "+" : "*");
-                    }
-
-                    PropertyInfo optionParam = typeof(Option).GetProperty(String.Format("AddTo{0}", name));
-                    object optionObject = optionParam.GetValue(option);
-                    int optionValue = (int)optionObject;
-
-                    if (optionValue > 0 && reversParam)
-                    {
-                        if (paramValue == null)
-                            paramValue = 7;
-
-                        if (doNotCombine)
-                        {
-                            if (optionValue < paramValue)
-                                paramValue = optionValue;
-                        }
-                        else
-                            paramValue -= (7 - optionValue);
-                    }
-                    else if (optionValue > 0)
-                    {
-                        paramModView += '*';
-                        paramValue += optionValue;
-
-                        if (paramValue > 10)
-                            paramValue = 10;
-                    }
+                    if (optionToValue > 0)
+                        return optionToValue.ToString() + (reversParam ? "+" : "*");
                 }
+
+                PropertyInfo optionParam = typeof(Option).GetProperty(String.Format("AddTo{0}", name));
+                object optionObject = optionParam.GetValue(option);
+                int optionValue = (int)optionObject;
+
+                if (optionValue > 0 && reversParam)
+                {
+                    if (paramValue == null)
+                        paramValue = 7;
+
+                    if (doNotCombine)
+                    {
+                        if (optionValue < paramValue)
+                            paramValue = optionValue;
+                    }
+                    else
+                        paramValue -= (7 - optionValue);
+                }
+                else if (optionValue > 0)
+                {
+                    paramModView += '*';
+                    paramValue += optionValue;
+
+                    if (paramValue > 10)
+                        paramValue = 10;
+                }
+            }
 
             if (reversParam && (paramValue != null))
                 paramModView += '+';
