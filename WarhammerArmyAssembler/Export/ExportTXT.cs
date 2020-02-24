@@ -22,7 +22,9 @@ namespace WarhammerArmyAssembler
             foreach (Unit unitType in armyByCategories)
                 foreach (Unit unit in unitType.Items)
                 {
-                    Add(fileName, String.Format("{0}{1} ({2}) pts", ExportOther.UnitSizeIfNeed(unit), unit.Name, unit.GetUnitPoints()));
+                    Add(fileName, String.Format("{0}{1} ({2} pts): {3}",
+                        ExportOther.UnitSizeIfNeed(unit), unit.Name, unit.GetUnitPoints(), unit.GetEquipmentLine(fullVersion: true))
+                    );
                 }
 
             Add(fileName);

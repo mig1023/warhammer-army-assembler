@@ -381,17 +381,16 @@ namespace WarhammerArmyAssembler
             return rules;
         }
 
-        public string GetEquipmentLine()
+        public string GetEquipmentLine(bool fullVersion = false)
         {
             string equipment = String.Empty;
 
             foreach (Option option in Options)
             {
-                bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0);
-                bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount &&
-                    !option.FullCommand && option.SpecialRuleDescription.Length == 0;
+                bool thisIsRealised = (option.Realised || option.IsMagicItem()) && option.Points != 0;
+                bool thisIsNotMountOrFC = !(option.Mount || option.FullCommand) || fullVersion;
 
-                if (!String.IsNullOrEmpty(option.Name) && (!thisIsStandartEquipment || thisIsSpecialRuleOrMount))
+                if (!String.IsNullOrEmpty(option.Name) && thisIsRealised && thisIsNotMountOrFC)
                     equipment += String.Format("{0}; ", option.Name);
             }
 
