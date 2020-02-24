@@ -417,17 +417,23 @@ namespace WarhammerArmyAssembler
 
             string paramLine = String.Empty;
 
-            paramLine += GetModifiedParam("M", unit.MovementView);
-            paramLine += GetModifiedParam("WS", unit.WeaponSkillView);
-            paramLine += GetModifiedParam("BS", unit.BallisticSkillView);
-            paramLine += GetModifiedParam("S", unit.StrengthView);
-            paramLine += GetModifiedParam("T", unit.ToughnessView);
-            paramLine += GetModifiedParam("W", unit.WoundsView);
-            paramLine += GetModifiedParam("I", unit.InitiativeView);
-            paramLine += GetModifiedParam("A", unit.AttacksView);
-            paramLine += GetModifiedParam("LD", unit.LeadershipView);
-            paramLine += GetModifiedParam("AS", unit.ArmourView);
-            paramLine += GetModifiedParam("Ward", unit.WardView);
+            Dictionary<string, string> unitParams = new Dictionary<string, string>
+            {
+                ["M"] = unit.MovementView,
+                ["WS"] = unit.WeaponSkillView,
+                ["BS"] = unit.BallisticSkillView,
+                ["S"] = unit.StrengthView,
+                ["T"] = unit.ToughnessView,
+                ["W"] = unit.WoundsView,
+                ["I"] = unit.InitiativeView,
+                ["A"] = unit.AttacksView,
+                ["LD"] = unit.LeadershipView,
+                ["AS"] = unit.ArmourView,
+                ["Ward"] = unit.WardView
+            };
+
+            foreach(KeyValuePair<string, string> paramPair in unitParams)
+                paramLine += GetModifiedParam(paramPair.Key, paramPair.Value);
 
             if (!String.IsNullOrEmpty(paramLine))
                 paramLine = paramLine.Remove(paramLine.Length - 2);
