@@ -152,11 +152,16 @@ namespace WarhammerArmyAssembler
 
         public static void MainMenu()
         {
-            List<string> buttonName = new List<string> { "Change Armybook", "Export Army to PDF", "Export Army to TXT", "Close" };
-            List<MouseButtonEventHandler> buttonAction =
-                new List<MouseButtonEventHandler> { main.toNewArmy_MouseDown, main.saveArmyToPDF_MouseDown,
-                    main.saveArmyToTXT_MouseDown, main.closeMainMenu_MouseDown
-                };
+            List<string> buttonName = new List<string>
+            {
+                "Change Armybook", "Export Army to PDF", "Export Army to TXT", "Close"
+            };
+
+            List<MouseButtonEventHandler> buttonAction = new List<MouseButtonEventHandler>
+            {
+                main.toNewArmy_MouseDown, main.saveArmyToPDF_MouseDown,
+                main.saveArmyToTXT_MouseDown, main.closeMainMenu_MouseDown
+            };
 
             foreach (Label button in MainMenuButtons)
                 main.mainMenu.Children.Remove(button);
@@ -322,7 +327,11 @@ namespace WarhammerArmyAssembler
 
         public static void CreatePointsButtons()
         {
-            int[] points = { 200, 500, 600, 750, 1000, 1250, 1500, 1750, 1850, 2000, 2400, 2500, 2700, 3000, 3500 };
+            int[] points =
+            {
+                200, 500, 600, 750, 1000, 1250, 1500, 1750,
+                1850, 2000, 2400, 2500, 2700, 3000, 3500
+            };
             double[] xButtons = { 20, 116, 213 };
             double[] yButtons = { 377, 416, 455, 494, 533 };
 
