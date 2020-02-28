@@ -313,7 +313,10 @@ namespace WarhammerArmyAssembler
 
         private void armyMainLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Interface.MainMenu();
+            if (Interface.mainMenuIsOpen)
+                closeMainMenu_MouseDown(null, null);
+            else
+                Interface.MainMenu();
         }
 
         public void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
