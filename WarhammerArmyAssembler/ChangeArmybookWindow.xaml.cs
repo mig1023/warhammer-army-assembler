@@ -84,5 +84,13 @@ namespace WarhammerArmyAssembler
         {
             Environment.Exit(0);
         }
+
+        private void Window_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if (e.Delta > 0)
+                Interface.PreviewArmyList(prev: true);
+            else
+                Interface.PreviewArmyList(next: true);
+        }
     }
 }

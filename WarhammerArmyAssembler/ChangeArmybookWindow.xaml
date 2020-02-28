@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
         Title="Warhammer Army Assembler (WAAgh)" Height="650" Width="1000" WindowStyle="None"
-        Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+        Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" PreviewMouseWheel="Window_PreviewMouseWheel">
 
     <Canvas x:Name="armybookCanvas">
 
