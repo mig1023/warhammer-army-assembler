@@ -668,6 +668,9 @@
 					<Type>Option</Type>
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
@@ -676,6 +679,7 @@
 					<AddToArmour>5</AddToArmour>
 					<OnlyIfAnotherService>
 						<OnlyIf>Black Orc</OnlyIf>
+						<OnlyIfNot>Light armour</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
@@ -1013,6 +1017,9 @@
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
@@ -1021,6 +1028,7 @@
 					<AddToArmour>5</AddToArmour>
 					<OnlyIfAnotherService>
 						<OnlyIf>Black Orc</OnlyIf>
+						<OnlyIfNot>Light armour</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
