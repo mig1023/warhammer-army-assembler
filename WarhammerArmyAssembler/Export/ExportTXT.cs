@@ -22,6 +22,9 @@ namespace WarhammerArmyAssembler
             foreach (Unit unitType in armyByCategories)
                 foreach (Unit unit in unitType.Items)
                 {
+                    if (unit.Type == Unit.UnitType.Mount)
+                        continue;
+
                     string equipmentLine = unit.GetEquipmentLine(fullVersion: true);
 
                     Add(fileName, String.Format("{0}{1} ({2} pts){3}{4}",
