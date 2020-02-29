@@ -61,14 +61,25 @@ namespace WarhammerArmyAssembler
             ChangeArmyListDetail(id);
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                Interface.Move(Interface.MovingType.ToLeft, detail: true);
-
+            {
+                if (Interface.armybookDetailIsOpen)
+                {
+                    Interface.armybookDetailIsOpen = false;
+                    Interface.Move(Interface.MovingType.ToMain);
+                    return;
+                }
+                else
+                {
+                    Interface.armybookDetailIsOpen = true;
+                    Interface.Move(Interface.MovingType.ToLeft, detail: true);
+                }
+            }
+                
             if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
                 return;
             else
             {
                 Interface.DragSender = sender;
-
                 DragDrop.DoDragDrop(t, t.Tag, DragDropEffects.Copy);
             }
 
@@ -273,6 +284,7 @@ namespace WarhammerArmyAssembler
 
         private void closeArmybookDetail_Click(object sender, RoutedEventArgs e)
         {
+            Interface.armybookDetailIsOpen = false;
             Interface.Move(Interface.MovingType.ToMain);
         }
 

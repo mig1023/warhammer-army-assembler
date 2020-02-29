@@ -34,6 +34,7 @@ namespace WarhammerArmyAssembler
         public static List<Label> MainMenuButtons = new List<Label>();
 
         public static bool mainMenuIsOpen = false;
+        public static bool armybookDetailIsOpen = false;
 
         public static Thickness Thick(object element, double? left = null, double? top = null, double? right = null, double? bottom = null)
         {
