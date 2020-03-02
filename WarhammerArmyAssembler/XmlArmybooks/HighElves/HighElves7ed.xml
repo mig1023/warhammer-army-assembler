@@ -40,7 +40,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Enchanted shield</Name>
-				<Type>Armour</Type>
+				<Type>Shield</Type>
 				<Points>10</Points>
 				<AddToArmour>5</AddToArmour>
 				<Description>5+ Armour save</Description>
@@ -153,7 +153,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Golden Shield</Name>
-				<Type>Armour</Type>
+				<Type>Shield</Type>
 				<Points>35</Points>
 				<AddToArmour>6</AddToArmour>
 				<SpecialRuleDescription>All successful attempts to hit the bearer in close combat must be re-rolled</SpecialRuleDescription>
@@ -178,7 +178,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Temakador's Gauntlets</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
 				<AddToArmour>6</AddToArmour>
 				<AddToWard>5</AddToWard>
@@ -201,7 +201,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Helm of Fortune</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
 				<AddToArmour>6</AddToArmour>
 				<SpecialRuleDescription>May re-roll failed armour saves</SpecialRuleDescription>
@@ -209,7 +209,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Dragonscale Shield</Name>
-				<Type>Armour</Type>
+				<Type>Shield</Type>
 				<Points>20</Points>
 				<AddToArmour>5</AddToArmour>
 				<AddToWard>6</AddToWard>
@@ -218,7 +218,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Mask of the Merlord</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>10</Points>
 				<OnlyFor>Infantry</OnlyFor>
 				<AddToArmour>6</AddToArmour>
@@ -1404,9 +1404,9 @@
 				<Initiative>4</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>7</Leadership>
-				<SlotsOfHero>1</SlotsOfHero>
 			</MainParam>
 			<AdditionalParam>
+				<SlotsOfHero>1</SlotsOfHero>
 				<Terror>true</Terror>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1436,9 +1436,9 @@
 				<Initiative>3</Initiative>
 				<Attacks>5</Attacks>
 				<Leadership>8</Leadership>
-				<SlotsOfHero>1</SlotsOfHero>
 			</MainParam>
 			<AdditionalParam>
+				<SlotsOfHero>1</SlotsOfHero>
 				<Terror>true</Terror>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1468,9 +1468,9 @@
 				<Initiative>2</Initiative>
 				<Attacks>6</Attacks>
 				<Leadership>9</Leadership>
-				<SlotsOfHero>1</SlotsOfHero>
 			</MainParam>
 			<AdditionalParam>
+				<SlotsOfHero>1</SlotsOfHero>
 				<Terror>true</Terror>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>

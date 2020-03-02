@@ -40,7 +40,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Enchanted shield</Name>
-				<Type>Armour</Type>
+				<Type>Shield</Type>
 				<Points>15</Points>
 				<AddToArmour>5</AddToArmour>
 				<Description>5+ Armour save</Description>
@@ -349,7 +349,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Cloak of Hag Graef</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
 				<AddToArmour>6</AddToArmour>
 				<SpecialRuleDescription>Any ranged attack hits on the character have their Strength halved</SpecialRuleDescription>
@@ -364,7 +364,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Shield of Ghrond</Name>
-				<Type>Armour</Type>
+				<Type>Shield</Type>
 				<Points>25</Points>
 				<AddToArmour>6</AddToArmour>
 				<SpecialRuleDescription>All hits the character suffers will be resolved with -1 Strength</SpecialRuleDescription>
@@ -1298,8 +1298,7 @@
 					<Type>Option</Type>
 					<Points>110</Points>
 					<Mount>true</Mount>
-				</Option>
-				<Option>
+				</Option><Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
