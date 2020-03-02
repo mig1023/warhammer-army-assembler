@@ -223,6 +223,28 @@ namespace WarhammerArmyAssembler
             return line.IndexOf(subline, StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
+        private bool OptionTypeAlreadyUsed(Option option, ref bool alreadyArmour, ref bool alreadyShield)
+        {
+            if (alreadyArmour && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
+                return true;
+            else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
+                alreadyArmour = true;
+            else if (alreadyShield && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
+                return true;
+            else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
+                alreadyShield = true;
+            else if (alreadyArmour && (option.Type == Option.OptionType.Armour))
+                return true;
+            else if (option.Type == Option.OptionType.Armour)
+                alreadyArmour = true;
+            else if (alreadyShield && (option.Type == Option.OptionType.Shield))
+                return true;
+            else if (option.Type == Option.OptionType.Shield)
+                alreadyShield = true;
+
+            return false;
+        }
+
         public string AddFromAnyOption(string name, bool reversParam = false,
             bool mountParam = false, bool doNotCombine = false)
         {
@@ -255,22 +277,8 @@ namespace WarhammerArmyAssembler
                 if (!option.IsActual())
                     continue;
 
-                if (alreadyArmour && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
+                if (OptionTypeAlreadyUsed(option, ref alreadyArmour, ref alreadyShield))
                     continue;
-                else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
-                    alreadyArmour = true;
-                else if (alreadyShield && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
-                    continue;
-                else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
-                    alreadyShield = true;
-                else if (alreadyArmour && (option.Type == Option.OptionType.Armour))
-                    continue;
-                else if (option.Type == Option.OptionType.Armour)
-                    alreadyArmour = true;
-                else if (alreadyShield && (option.Type == Option.OptionType.Shield))
-                    continue;
-                else if (option.Type == Option.OptionType.Shield)
-                    alreadyShield = true;
 
                 PropertyInfo optionToParam = typeof(Option).GetProperty(String.Format("{0}To", name));
                 if (optionToParam != null)
