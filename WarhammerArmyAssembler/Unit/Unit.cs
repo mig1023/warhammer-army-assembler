@@ -218,6 +218,11 @@ namespace WarhammerArmyAssembler
             return newUnit;
         }
 
+        private bool ContainsCaseless(string line, string subline)
+        {
+            return line.IndexOf(subline, StringComparison.OrdinalIgnoreCase) >= 0;
+        }
+
         public string AddFromAnyOption(string name, bool reversParam = false,
             bool mountParam = false, bool doNotCombine = false)
         {
@@ -242,10 +247,30 @@ namespace WarhammerArmyAssembler
             if (mountParam && (MountOn > 0))
                 allOption.AddRange(Army.Units[MountOn].Options);
 
+            bool alreadyArmour = false;
+            bool alreadyShield = false;
+
             foreach (Option option in allOption)
             {
                 if (!option.IsActual())
                     continue;
+
+                if (alreadyArmour && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
+                    continue;
+                else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
+                    alreadyArmour = true;
+                else if (alreadyShield && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
+                    continue;
+                else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
+                    alreadyShield = true;
+                else if (alreadyArmour && (option.Type == Option.OptionType.Armour))
+                    continue;
+                else if (option.Type == Option.OptionType.Armour)
+                    alreadyArmour = true;
+                else if (alreadyShield && (option.Type == Option.OptionType.Shield))
+                    continue;
+                else if (option.Type == Option.OptionType.Shield)
+                    alreadyShield = true;
 
                 PropertyInfo optionToParam = typeof(Option).GetProperty(String.Format("{0}To", name));
                 if (optionToParam != null)

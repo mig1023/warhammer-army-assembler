@@ -11,7 +11,7 @@ namespace WarhammerArmyAssembler
 {
     public class Option : INotifyPropertyChanged
     {
-        public enum OptionType { Weapon, Armour, Arcane, Banner, Option, SlannOption }
+        public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption }
 
         public enum OnlyForType { All, Infantry, Mount }
 
@@ -216,7 +216,9 @@ namespace WarhammerArmyAssembler
 
         public bool IsMagicItem()
         {
-            if (this.Type == OptionType.Weapon || this.Type == OptionType.Armour || this.Type == OptionType.Arcane || this.Type == OptionType.Banner)
+            if (this.Type == OptionType.Weapon || this.Type == OptionType.Armour ||
+                this.Type == OptionType.AdditionalArmour || this.Type == OptionType.Shield ||
+                this.Type == OptionType.Arcane || this.Type == OptionType.Banner)
                 return true;
             else
                 return false;

@@ -7,6 +7,7 @@
 		<AdditionalColor>#FF0E0E0E</AdditionalColor>
 		<BackgroundColor>#FFD3D3D3</BackgroundColor>
 		<ArmyBookImage>HordesOfChaos6ed.png</ArmyBookImage>
+		<DemonicMortal>true</DemonicMortal>
 	</Info>
 	<Artefacts>
 		<ArtefactsGroup Name = "Common magic items">
@@ -40,7 +41,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Enchanted shield</Name>
-				<Type>Armour</Type>
+				<Type>Shield</Type>
 				<Points>10</Points>
 				<AddToArmour>5</AddToArmour>
 				<Description>5+ Armour save</Description>
@@ -83,6 +84,15 @@
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic weapons">	
 			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic armour">
+			<Artefact>
+				<Name>Armour of Tortured Souls</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<AddToArmour>4</AddToArmour>
+				<AddToToughness>1</AddToToughness>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Enchanted items">	
 			
@@ -197,7 +207,6 @@
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
-				
 				<Option>
 					<Name>Mark of Tzeentch</Name>
 					<Type>Option</Type>
@@ -244,13 +253,13 @@
 					</OnlyIfAnotherService>
 					<AddToWounds>1</AddToWounds>
 				</Option>
-				
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Armour>
+					<Type>Armour</Type>
 					<Name>Chaos armour</Name>
 					<AddToArmour>4</AddToArmour>
 				</Armour>
