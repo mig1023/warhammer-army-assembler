@@ -353,7 +353,7 @@ namespace WarhammerArmyAssembler
 
         public void AddAmmunition(int id)
         {
-            Options.Add(ArmyBook.Artefact[id].Clone());
+            Options.Insert(0, ArmyBook.Artefact[id].Clone());
         }
 
         public void AddOption(int optionID, Unit unit, int unitID)
