@@ -294,15 +294,23 @@ namespace WarhammerArmyAssembler
         {
             Unit unit = this.Clone();
 
-            unit.MovementView = AddFromAnyOption("Movement");
-            unit.WeaponSkillView = AddFromAnyOption("WeaponSkill");
-            unit.BallisticSkillView = AddFromAnyOption("BallisticSkill");
-            unit.StrengthView = AddFromAnyOption("Strength");
-            unit.ToughnessView = AddFromAnyOption("Toughness");
-            unit.WoundsView = AddFromAnyOption("Wounds");
-            unit.InitiativeView = AddFromAnyOption("Initiative");
-            unit.AttacksView = AddFromAnyOption("Attacks");
-            unit.LeadershipView = AddFromAnyOption("Leadership");
+            List<string> unitParam = new List<string> {
+                "Movement",
+                "WeaponSkill",
+                "BallisticSkill",
+                "Strength",
+                "Toughness",
+                "Wounds",
+                "Initiative",
+                "Attacks",
+                "Leadership"
+            };
+
+            foreach (string name in unitParam)
+            {
+                PropertyInfo param = typeof(Unit).GetProperty(String.Format("{0}View", name));
+                param.SetValue(unit, AddFromAnyOption(name));
+            }
 
             unit.ArmourView = AddFromAnyOption("Armour", reversParam: true, mountParam: true);
             unit.WardView = AddFromAnyOption("Ward", reversParam: true, doNotCombine: true);
