@@ -25,7 +25,7 @@ namespace WarhammerArmyAssembler
                     if (unit.Type == Unit.UnitType.Mount)
                         continue;
 
-                    string equipmentLine = unit.GetEquipmentLine(fullVersion: true);
+                    string equipmentLine = unit.GetEquipmentLine();
 
                     Add(fileName, String.Format("{0}{1} ({2} pts){3}{4}",
                         ExportOther.UnitSizeIfNeed(unit), unit.Name, unit.GetUnitPoints(), 

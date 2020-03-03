@@ -422,14 +422,14 @@ namespace WarhammerArmyAssembler
             return rules;
         }
 
-        public string GetEquipmentLine(bool fullVersion = false)
+        public string GetEquipmentLine()
         {
-            string equipment = String.Empty;
+            string equipment = GetFullCommandLine();
 
             foreach (Option option in Options)
             {
                 bool thisIsRealised = (option.Realised || option.IsMagicItem()) && option.Points != 0;
-                bool thisIsNotMountOrFC = !(option.Mount || option.FullCommand) || fullVersion;
+                bool thisIsNotMountOrFC = !(option.Mount || option.FullCommand);
 
                 if (!String.IsNullOrEmpty(option.Name) && thisIsRealised && thisIsNotMountOrFC)
                     equipment += String.Format("{0}; ", option.Name);
@@ -543,39 +543,48 @@ namespace WarhammerArmyAssembler
             return anyIsTrue;
         }
 
+        private string GetFullCommandLine()
+        {
+            List<string> rules = new List<string>();
+
+            int fullCommand = 0;
+            string personifiedCommander = String.Empty;
+
+            foreach (Option option in Options)
+            {
+                if (option.FullCommand && option.Realised)
+                    fullCommand += 1;
+
+                if (option.PersonifiedCommander && option.Realised)
+                    personifiedCommander = option.Name;
+            }
+
+            if (fullCommand == 3)
+            {
+                rules.Add("FC");
+
+                if (!String.IsNullOrEmpty(personifiedCommander))
+                    rules.Add(personifiedCommander);
+            }
+            else
+                foreach (Option option in Options)
+                    if (option.FullCommand && option.Realised)
+                        rules.Add(option.Name);
+
+            string rulesLine = String.Empty;
+
+            foreach (string rule in rules)
+                rulesLine += String.Format("{0}; ", rule);
+
+            return rulesLine;
+        }
+
         public List<string> GetSpecialRules()
         {
             List<string> rules = new List<string>();
 
             if (ArmyGeneral)
                 rules.Add("General");
-
-            if (!IsHero())
-            {
-                int fullCommand = 0;
-                string personifiedCommander = String.Empty;
-
-                foreach (Option option in Options)
-                {
-                    if (option.FullCommand && option.Realised)
-                        fullCommand += 1;
-
-                    if (option.PersonifiedCommander && option.Realised)
-                        personifiedCommander = option.Name;
-                }
-                    
-                if (fullCommand == 3)
-                {
-                    rules.Add("FC");
-
-                    if (!String.IsNullOrEmpty(personifiedCommander))
-                        rules.Add(personifiedCommander);
-                }
-                else
-                    foreach (Option option in Options)
-                        if (option.FullCommand && option.Realised)
-                            rules.Add(option.Name);
-            }
 
             if (MountOn > 0)
                 rules.Add(Army.Units[MountOn].Name);
