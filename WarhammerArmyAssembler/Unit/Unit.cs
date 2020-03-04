@@ -489,11 +489,13 @@ namespace WarhammerArmyAssembler
                 describe += " (personified)";
 
             if (!IsHeroOrHisMount())
-                describe += ((MaxSize > 0) && (MinSize != MaxSize) ?
-                    String.Format("\nUnit size: {0} - {1}", MinSize, MaxSize)
-                    :
-                    String.Format("\nUnit size: {0}{1}", MinSize, (MinSize == MaxSize ? String.Empty : "+" ))
-                );
+            {
+                string minAndMax = String.Format("\nUnit size: {0} - {1}", MinSize, MaxSize);
+                string plus = (MinSize == MaxSize ? String.Empty : "+");
+                string minOnly = String.Format("\nUnit size: {0}{1}", MinSize, plus);
+
+                describe += ((MaxSize > 0) && (MinSize != MaxSize) ? minAndMax : minOnly);
+            }
 
             if (Wizard > 0)
                 describe += String.Format("\nWizard: {0}", Wizard);
