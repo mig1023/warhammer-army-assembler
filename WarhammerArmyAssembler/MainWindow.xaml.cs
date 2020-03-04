@@ -238,9 +238,13 @@ namespace WarhammerArmyAssembler
                 clickedColumn = VisualTreeHelper.GetParent(clickedColumn);
 
             if (clickedColumn != null && clickedColumn is DataGridCell)
-                if ((clickedColumn as DataGridCell).Column.DisplayIndex == 1)
-                    return;
+            {
+                int clickedColumnNum = (clickedColumn as DataGridCell).Column.DisplayIndex;
 
+                if (clickedColumnNum == 1 || clickedColumnNum == 3)
+                    return;
+            }
+                
             Unit unit = container.DataContext as Unit;
 
             InterfaceUnitDetails.UpdateUnitDescription(unit.ID, unit);
@@ -422,6 +426,18 @@ namespace WarhammerArmyAssembler
                 startArmyHelpText.Width = ArmyGrid.ActualWidth - 45;
                 startArmyHelpText.Height = ArmyGrid.ActualHeight - 50;
             }
+        }
+
+        private void Test_Click(object sender, RoutedEventArgs e)
+        {
+            DataGridRow container = FindVisualParent<DataGridRow>(e.OriginalSource as UIElement);
+
+            if (container == null)
+                return;
+
+            Unit unit = container.DataContext as Unit;
+
+            MessageBox.Show(String.Format("test {0}", unit.Name));
         }
     }
 }
