@@ -30,6 +30,12 @@
                 </Canvas>
             </ScrollViewer>
 
+            <ScrollViewer x:Name="armyUnitTestScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
+                <Canvas x:Name="armyUnitTest" Width="320" Height="50" VerticalAlignment="Top" Margin="0,20" Background="White">
+                    <Label x:Name="armyTestUnit" Content="" Width="Auto" Margin="18,5"/>
+                </Canvas>
+            </ScrollViewer>
+
             <Grid x:Name="mainGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>

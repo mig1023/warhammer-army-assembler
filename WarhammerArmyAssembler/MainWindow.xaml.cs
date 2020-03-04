@@ -276,6 +276,9 @@ namespace WarhammerArmyAssembler
 
             closeArmybookDetail.Width = e.NewSize.Height;
             armybookDetailScroll.Height = e.NewSize.Height;
+            armyUnitTestScroll.Height = e.NewSize.Height;
+
+            armyUnitTestScroll.Width = e.NewSize.Width - 25;
 
             errorDetail.Width = e.NewSize.Width;
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
@@ -437,7 +440,9 @@ namespace WarhammerArmyAssembler
 
             Unit unit = container.DataContext as Unit;
 
-            MessageBox.Show(String.Format("test {0}", unit.Name));
+            armyTestUnit.Content = unit.Name;
+
+            Interface.Move(Interface.MovingType.ToRight);
         }
     }
 }

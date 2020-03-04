@@ -36,10 +36,30 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public static void View(Canvas canvasToShow)
+        public static void View(Canvas canvasToShow, bool left = false, bool right = false)
         {
-            foreach (Canvas canvas in new List<Canvas> { Interface.main.mainMenu, Interface.main.errorDetail })
-                canvas.Visibility = (canvasToShow.Name == canvas.Name ? Visibility.Visible : Visibility.Hidden);
+            string canvasName = (canvasToShow == null ? String.Empty : canvasToShow.Name);
+
+            List<Canvas> canvases = new List<Canvas>
+            {
+                Interface.main.mainMenu,
+                Interface.main.errorDetail,
+            };
+
+            foreach (Canvas canvas in canvases)
+                canvas.Visibility = (canvasName == canvas.Name ? Visibility.Visible : Visibility.Hidden);
+
+            if (left)
+            {
+                Interface.main.armybookDetail.Visibility = Visibility.Visible;
+                Interface.main.armyUnitTestScroll.Visibility = Visibility.Hidden;
+            }
+
+            if (right)
+            {
+                Interface.main.armybookDetail.Visibility = Visibility.Hidden;
+                Interface.main.armyUnitTestScroll.Visibility = Visibility.Visible;
+            }
         }
     }
 }
