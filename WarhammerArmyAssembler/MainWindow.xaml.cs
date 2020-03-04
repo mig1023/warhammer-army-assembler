@@ -269,21 +269,19 @@ namespace WarhammerArmyAssembler
         private void mainCanvas_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             mainGrid.Height = e.NewSize.Height;
-            mainGrid.Width = e.NewSize.Width;
-
             mainPlaceCanvas.Height = e.NewSize.Height;
-            mainPlaceCanvas.Width = e.NewSize.Width;
-
+            mainGrid.Width = e.NewSize.Width;
             closeArmybookDetail.Width = e.NewSize.Height;
-            armybookDetailScroll.Height = e.NewSize.Height;
-            armyUnitTestScroll.Height = e.NewSize.Height;
+
+            foreach (Control canvas in new List<Control> { armybookDetailScroll, armyUnitTestScroll })
+                canvas.Height = e.NewSize.Height;
 
             armyUnitTestScroll.Width = e.NewSize.Width - 25;
 
-            errorDetail.Width = e.NewSize.Width;
-            closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
+            foreach(Canvas canvas in new List<Canvas> { errorDetail, mainMenu, mainPlaceCanvas })
+                canvas.Width = e.NewSize.Width;
 
-            mainMenu.Width = e.NewSize.Width;
+            closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
 
             if (Interface.mainMenuIsOpen)
                 Interface.MainMenu();
