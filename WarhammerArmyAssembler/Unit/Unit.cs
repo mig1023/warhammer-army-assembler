@@ -100,6 +100,7 @@ namespace WarhammerArmyAssembler
         public List<Option> Options = new List<Option>();
 
         public ObservableCollection<Unit> Items { get; set; }
+        public SolidColorBrush ArmyColor { get; set; }
 
         public string RulesView { get; set; }
 
@@ -214,6 +215,8 @@ namespace WarhammerArmyAssembler
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)
                 newUnit.Options.Add(option.Clone());
+
+            newUnit.ArmyColor = this.ArmyColor;
 
             return newUnit;
         }

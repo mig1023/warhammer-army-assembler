@@ -130,25 +130,8 @@
                         <DataGridTemplateColumn Header="Test" Width="40">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Label Padding="0" MouseDown="Test_Click" Foreground="#FF8898FF">
-                                        <TextBlock Text="test">
-                                            <TextBlock.TextDecorations>
-                                                <TextDecorationCollection>
-                                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="1">
-                                                        <TextDecoration.Pen>
-                                                            <Pen Thickness="1">
-                                                                <Pen.Brush>
-                                                                    <SolidColorBrush Color="#FF8898FF"/>
-                                                                </Pen.Brush>
-                                                                <Pen.DashStyle>
-                                                                    <DashStyle Dashes="4,4"/>
-                                                                </Pen.DashStyle>
-                                                            </Pen>
-                                                        </TextDecoration.Pen>
-                                                    </TextDecoration>
-                                                </TextDecorationCollection>
-                                            </TextBlock.TextDecorations>
-                                        </TextBlock>
+                                    <Label Padding="0" MouseDown="Test_Click" Foreground="{Binding ArmyColor}">
+                                        <TextBlock Text="test" TextDecorations="Underline"/>
                                     </Label>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>

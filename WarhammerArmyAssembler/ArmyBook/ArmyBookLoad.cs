@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml;
 using static WarhammerArmyAssembler.Unit;
 using static WarhammerArmyAssembler.ArmyBookParsers;
+using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
 {
@@ -136,6 +137,8 @@ namespace WarhammerArmyAssembler
                 newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
             newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount));
+
+            newUnit.ArmyColor = (SolidColorBrush)ArmyBook.MainColor;
 
             return newUnit;
         }
