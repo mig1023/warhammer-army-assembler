@@ -35,6 +35,7 @@ namespace WarhammerArmyAssembler
 
         public static bool mainMenuIsOpen = false;
         public static bool armybookDetailIsOpen = false;
+        public static bool unitTestIsOpen = false;
 
         public static Thickness Thick(object element, double? left = null, double? top = null, double? right = null, double? bottom = null)
         {
@@ -261,6 +262,9 @@ namespace WarhammerArmyAssembler
 
             if (moveTo == MovingType.ToMainMenu)
                 newPosition = new Thickness(0, height, 0, 0);
+
+            if ((moveTo == MovingType.ToMain) && unitTestIsOpen)
+                InterfaceMod.UnitTestClose();
 
             bool mainCanvasMoving = (err || menu);
 

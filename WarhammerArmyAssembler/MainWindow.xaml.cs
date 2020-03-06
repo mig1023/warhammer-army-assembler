@@ -270,9 +270,11 @@ namespace WarhammerArmyAssembler
         {
             mainGrid.Height = e.NewSize.Height;
             mainPlaceCanvas.Height = e.NewSize.Height;
-            mainGrid.Width = e.NewSize.Width;
             closeArmybookDetail.Width = e.NewSize.Height;
 
+            if (!Interface.unitTestIsOpen)
+                mainGrid.Width = e.NewSize.Width;
+            
             foreach (Control canvas in new List<Control> { armybookDetailScroll, armyUnitTestScroll })
                 canvas.Height = e.NewSize.Height;
 

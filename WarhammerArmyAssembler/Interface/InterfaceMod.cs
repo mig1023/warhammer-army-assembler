@@ -36,6 +36,12 @@ namespace WarhammerArmyAssembler
             }
         }
 
+        public static void UnitTestClose()
+        {
+            Interface.unitTestIsOpen = false;
+            Interface.main.mainGrid.Width = Interface.main.ActualWidth;
+        }
+
         public static void View(Canvas canvasToShow, bool left = false, bool right = false)
         {
             string canvasName = (canvasToShow == null ? String.Empty : canvasToShow.Name);
@@ -57,6 +63,7 @@ namespace WarhammerArmyAssembler
 
             if (right)
             {
+                Interface.unitTestIsOpen = true;
                 Interface.main.armybookDetail.Visibility = Visibility.Hidden;
                 Interface.main.armyUnitTestScroll.Visibility = Visibility.Visible;
             }
