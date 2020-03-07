@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace WarhammerArmyAssembler
 {
@@ -17,18 +19,26 @@ namespace WarhammerArmyAssembler
 
             Interface.main.armyTestUnit.Content = unitForTest.Name;
 
-            Interface.main.TestSize.Content = unitForTest.Size;
-            Interface.main.TestM.Content = unitForTest.MovementView;
-            Interface.main.TestWS.Content = unitForTest.WeaponSkillView;
-            Interface.main.TestBS.Content = unitForTest.BallisticSkillView;
-            Interface.main.TestS.Content = unitForTest.StrengthView;
-            Interface.main.TestT.Content = unitForTest.ToughnessView;
-            Interface.main.TestW.Content = unitForTest.WoundsView;
-            Interface.main.TestI.Content = unitForTest.InitiativeView;
-            Interface.main.TestA.Content = unitForTest.AttacksView;
-            Interface.main.TestLD.Content = unitForTest.LeadershipView;
-            Interface.main.TestAS.Content = unitForTest.ArmourView;
-            Interface.main.TestWard.Content = unitForTest.WardView;
+            List<string> unitParam = new List<string> {
+                "Movement",
+                "WeaponSkill",
+                "BallisticSkill",
+                "Strength",
+                "Toughness",
+                "Wounds",
+                "Initiative",
+                "Attacks",
+                "Leadership",
+                "Armour",
+                "Ward"
+            };
+
+            foreach (string name in unitParam)
+            {
+                PropertyInfo param = typeof(Unit).GetProperty(String.Format("{0}View", name));
+                Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}Test", name));
+                testUnitElement.Content = param.GetValue(unitForTest);
+            }
         }
     }
 }
