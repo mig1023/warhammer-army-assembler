@@ -449,17 +449,22 @@ namespace WarhammerArmyAssembler
             unitGrid.Width = e.NewSize.Width - 120;
             specialRulesTest.Width = e.NewSize.Width - 120;
             enemyForTest.Width = e.NewSize.Width - 120;
+            enemyGrid.Width = e.NewSize.Width - 120;
 
             UpdateLayout();
 
-            enemyForTestText.Margin = Interface.Thick(enemyForTestText, top: specialRulesTest.Margin.Top + specialRulesTest.ActualHeight);
-            enemyForTest.Margin = Interface.Thick(enemyForTest, top: specialRulesTest.Margin.Top + specialRulesTest.ActualHeight);
+            double marginTop = specialRulesTest.Margin.Top + +specialRulesTest.ActualHeight;
+
+            enemyForTestText.Margin = Interface.Thick(enemyForTestText, top: marginTop);
+            enemyForTest.Margin = Interface.Thick(enemyForTest, top: marginTop);
+            enemyTestUnit.Margin = Interface.Thick(enemyTestUnit, top: marginTop);
+            enemyGridContainer.Margin = Interface.Thick(enemyGridContainer, top: marginTop);
         }
 
         private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            TextBlock select = (TextBlock)enemyForTest.SelectedItem;
-            MessageBox.Show("ENEMY: " + select.Text);
+            TextBlock enemy = enemyForTest.SelectedItem as TextBlock;
+            InterfaceTestUnit.TestEnemyPrepare(enemy.Text);
         }
     }
 }
