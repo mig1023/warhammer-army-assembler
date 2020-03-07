@@ -30,9 +30,9 @@
                 </Canvas>
             </ScrollViewer>
 
-            <ScrollViewer x:Name="armyUnitTestScroll" Width="821" Height="237" VerticalScrollBarVisibility="Auto" Background="White" Canvas.Left="25">
-                <Canvas x:Name="armyUnitTest" Width="604" Height="217" VerticalAlignment="Top" Background="White" SizeChanged="armyUnitTest_SizeChanged" >
-                    <Label x:Name="armyTestUnit" Content="xxx" Width="Auto" Canvas.Left="37" Canvas.Top="40" FontSize="22"/>
+            <ScrollViewer x:Name="armyUnitTestScroll" Width="821" Height="403" VerticalScrollBarVisibility="Auto" Background="White" Canvas.Left="25">
+                <Canvas x:Name="armyUnitTest" Width="604" Height="375" VerticalAlignment="Top" Background="White" SizeChanged="armyUnitTest_SizeChanged" >
+                    <Label x:Name="armyTestUnit" Width="Auto" Canvas.Left="37" Canvas.Top="40" FontSize="22"/>
                     <Border BorderBrush="Black" BorderThickness="1" Canvas.Left="37" Canvas.Top="91" >
                         <Grid x:Name="unitGrid" Height="66" Width="531" ShowGridLines="True">
                             <Grid.RowDefinitions>
@@ -128,6 +128,16 @@
                             </StackPanel>
                         </Grid>
                     </Border>
+                    <TextBlock x:Name="specialRulesTest" Text="XxxxXxxx" Canvas.Left="37" TextWrapping="Wrap"  Canvas.Top="173"/>
+                    <TextBlock x:Name="enemyForTestText" Text="Enemy for test:" Canvas.Left="37" FontSize="16" TextWrapping="Wrap" Canvas.Top="193"/>
+                    <ComboBox x:Name="enemyForTest" Height="29" Canvas.Left="37" Canvas.Top="216" Width="279" FontSize="16" SelectionChanged="enemyForTest_SelectionChanged">
+                        <TextBlock>Empire soldier</TextBlock>
+                        <TextBlock>Saurus warrior</TextBlock>
+                        <TextBlock>Chosen Knights of Chaos</TextBlock>
+                        <TextBlock>...</TextBlock>
+                        <TextBlock>Chaos Greater Daemon Bloodthister</TextBlock>
+                    </ComboBox>
+
                 </Canvas>
             </ScrollViewer>
 

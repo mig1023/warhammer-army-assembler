@@ -270,17 +270,18 @@ namespace WarhammerArmyAssembler
         {
             mainGrid.Height = e.NewSize.Height;
             mainPlaceCanvas.Height = e.NewSize.Height;
+
             closeArmybookDetail.Width = e.NewSize.Height;
 
             if (!Interface.unitTestIsOpen)
                 mainGrid.Width = e.NewSize.Width;
             
-            foreach (Control canvas in new List<Control> { armybookDetailScroll, armyUnitTestScroll })
-                canvas.Height = e.NewSize.Height;
+            foreach (ScrollViewer scroll in new List<ScrollViewer> { armybookDetailScroll, armyUnitTestScroll })
+                scroll.Height = e.NewSize.Height;
 
             armyUnitTestScroll.Width = e.NewSize.Width - 25;
 
-            foreach(Canvas canvas in new List<Canvas> { errorDetail, mainMenu, mainPlaceCanvas })
+            foreach (Canvas canvas in new List<Canvas> { errorDetail, mainMenu, mainPlaceCanvas, armyUnitTest })
                 canvas.Width = e.NewSize.Width;
 
             closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
@@ -438,11 +439,27 @@ namespace WarhammerArmyAssembler
             if (container == null)
                 return;
 
-            Unit unit = container.DataContext as Unit;
-
-            armyTestUnit.Content = unit.Name;
+            InterfaceTestUnit.TestCanvasPrepare(container.DataContext as Unit);
 
             Interface.Move(Interface.MovingType.ToRight);
+        }
+
+        private void armyUnitTest_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            unitGrid.Width = e.NewSize.Width - 120;
+            specialRulesTest.Width = e.NewSize.Width - 120;
+            enemyForTest.Width = e.NewSize.Width - 120;
+
+            UpdateLayout();
+
+            enemyForTestText.Margin = Interface.Thick(enemyForTestText, top: specialRulesTest.Margin.Top + specialRulesTest.ActualHeight);
+            enemyForTest.Margin = Interface.Thick(enemyForTest, top: specialRulesTest.Margin.Top + specialRulesTest.ActualHeight);
+        }
+
+        private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TextBlock select = (TextBlock)enemyForTest.SelectedItem;
+            MessageBox.Show("ENEMY: " + select.Text);
         }
     }
 }

@@ -39,6 +39,8 @@ namespace WarhammerArmyAssembler
                 Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}Test", name));
                 testUnitElement.Content = param.GetValue(unitForTest);
             }
+
+            Interface.main.specialRulesTest.Text = String.Format("Special: {0}", unitForTest.GetSpecialRulesLine());
         }
     }
 }
