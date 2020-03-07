@@ -30,9 +30,104 @@
                 </Canvas>
             </ScrollViewer>
 
-            <ScrollViewer x:Name="armyUnitTestScroll" Width="320" Height="50" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
-                <Canvas x:Name="armyUnitTest" Width="320" Height="50" VerticalAlignment="Top" Margin="0,20" Background="White">
-                    <Label x:Name="armyTestUnit" Content="" Width="Auto" Margin="18,5"/>
+            <ScrollViewer x:Name="armyUnitTestScroll" Width="821" Height="237" VerticalScrollBarVisibility="Auto" Background="White" Canvas.Left="25">
+                <Canvas x:Name="armyUnitTest" Width="604" Height="217" VerticalAlignment="Top" Background="White" SizeChanged="armyUnitTest_SizeChanged" >
+                    <Label x:Name="armyTestUnit" Content="xxx" Width="Auto" Canvas.Left="37" Canvas.Top="40" FontSize="22"/>
+                    <Border BorderBrush="Black" BorderThickness="1" Canvas.Left="37" Canvas.Top="91" >
+                        <Grid x:Name="unitGrid" Height="66" Width="531" ShowGridLines="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0">
+                                <Label Content="Size" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1">
+                                <Label Content="M" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2">
+                                <Label Content="WS" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="3">
+                                <Label Content="BS" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="4">
+                                <Label Content="S"  FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="5">
+                                <Label Content="T" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="6">
+                                <Label Content="W" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="7">
+                                <Label Content="I" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="8">
+                                <Label Content="A" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="9">
+                                <Label Content="LD" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="10">
+                                <Label Content="AS" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="11">
+                                <Label Content="Ward" FontSize="16"/>
+                            </StackPanel>
+
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0">
+                                <Label x:Name="TestSize" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">     
+                                <Label x:Name="TestM" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2">
+                                <Label x:Name="TestWS" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="3">
+                                <Label x:Name="TestBS" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="4">
+                                <Label x:Name="TestS" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="5">
+                                <Label x:Name="TestT" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="6">
+                                <Label x:Name="TestW" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="7">
+                                <Label x:Name="TestI" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="8">
+                                <Label x:Name="TestA" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="9">
+                                <Label x:Name="TestLD" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="10">
+                                <Label x:Name="TestAS" FontSize="16"/>
+                            </StackPanel>
+                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="11">
+                                <Label x:Name="TestWard" FontSize="16"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
                 </Canvas>
             </ScrollViewer>
 
@@ -127,7 +222,7 @@
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>
                         <DataGridTextColumn Header="Unit" Binding="{Binding Name}" Width="*" MinWidth="120" IsReadOnly="True"/>
-                        <DataGridTemplateColumn Header="Test" Width="40">
+                        <DataGridTemplateColumn Width="40">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Label Padding="0" MouseDown="Test_Click" Foreground="{Binding ArmyColor}">
