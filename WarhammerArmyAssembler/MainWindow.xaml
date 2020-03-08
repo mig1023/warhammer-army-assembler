@@ -30,8 +30,8 @@
                 </Canvas>
             </ScrollViewer>
 
-            <ScrollViewer x:Name="armyUnitTestScroll" Width="821" Height="403" VerticalScrollBarVisibility="Auto" Background="White" Canvas.Left="25">
-                <Canvas x:Name="armyUnitTest" Width="604" Height="375" VerticalAlignment="Top" Background="White" SizeChanged="armyUnitTest_SizeChanged" >
+            <ScrollViewer x:Name="armyUnitTestScroll" Width="821" Height="420" VerticalScrollBarVisibility="Auto" Background="White" Canvas.Left="25">
+                <Canvas x:Name="armyUnitTest" Width="604" Height="431" VerticalAlignment="Top" Background="White" SizeChanged="armyUnitTest_SizeChanged" >
                     <Label x:Name="armyTestUnit" Width="Auto" Canvas.Left="37" Canvas.Top="40" FontSize="22"/>
                     <Border BorderBrush="Black" BorderThickness="1" Canvas.Left="37" Canvas.Top="91" >
                         <Grid x:Name="unitGrid" Height="66" Width="531" ShowGridLines="True">
@@ -128,7 +128,7 @@
                             </StackPanel>
                         </Grid>
                     </Border>
-                    <TextBlock x:Name="specialRulesTest" Text="" Canvas.Left="37" TextWrapping="Wrap"  Canvas.Top="173"/>
+                    <TextBlock x:Name="specialRulesTest" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="173"/>
                     <TextBlock x:Name="enemyForTestText" Text="Enemy for test:" Canvas.Left="37" FontSize="16" TextWrapping="Wrap" Canvas.Top="193"/>
                     <ComboBox x:Name="enemyForTest" Height="29" Canvas.Left="37" Canvas.Top="216" Width="279" FontSize="16" SelectionChanged="enemyForTest_SelectionChanged">
                         <TextBlock>Empire soldier</TextBlock>
@@ -234,6 +234,7 @@
                             </StackPanel>
                         </Grid>
                     </Border>
+                    <TextBlock x:Name="specialRulesEnemyTest" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="388"/>
                 </Canvas>
             </ScrollViewer>
 

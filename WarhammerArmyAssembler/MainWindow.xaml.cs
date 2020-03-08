@@ -446,19 +446,19 @@ namespace WarhammerArmyAssembler
 
         private void armyUnitTest_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            unitGrid.Width = e.NewSize.Width - 120;
-            specialRulesTest.Width = e.NewSize.Width - 120;
-            enemyForTest.Width = e.NewSize.Width - 120;
-            enemyGrid.Width = e.NewSize.Width - 120;
+            foreach(FrameworkElement element in new List<FrameworkElement> {
+                unitGrid, specialRulesTest, enemyForTest, enemyGrid, specialRulesEnemyTest
+            })
+                element.Width = e.NewSize.Width - 120;
 
             UpdateLayout();
 
-            double marginTop = specialRulesTest.Margin.Top + +specialRulesTest.ActualHeight;
+            double marginTop = specialRulesTest.Margin.Top + specialRulesTest.ActualHeight + 10;
 
-            enemyForTestText.Margin = Interface.Thick(enemyForTestText, top: marginTop);
-            enemyForTest.Margin = Interface.Thick(enemyForTest, top: marginTop);
-            enemyTestUnit.Margin = Interface.Thick(enemyTestUnit, top: marginTop);
-            enemyGridContainer.Margin = Interface.Thick(enemyGridContainer, top: marginTop);
+            foreach (FrameworkElement element in new List<FrameworkElement> {
+                enemyForTestText, enemyForTest, enemyTestUnit, enemyGridContainer, specialRulesEnemyTest
+            })
+                element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
         }
 
         private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)

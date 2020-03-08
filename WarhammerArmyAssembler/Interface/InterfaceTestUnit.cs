@@ -36,20 +36,32 @@ namespace WarhammerArmyAssembler
             }
         }
 
+        private static void LoadSpecialRules(Unit unitForLoad, TextBlock target)
+        {
+            string specialRules = unitForLoad.GetSpecialRulesLine();
+
+            if (!String.IsNullOrEmpty(specialRules))
+                target.Text = String.Format("Special: {0}", specialRules);
+            else
+                target.Text = String.Empty;
+        }
+
         public static void TestCanvasPrepare(Unit unit)
         {
             Test.unit = unit.Clone().GetOptionRules();
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
             LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test");
-            Interface.main.specialRulesTest.Text = String.Format("Special: {0}", Test.unit.GetSpecialRulesLine());
+            LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest);
         }
 
         public static void TestEnemyPrepare(string enemyName)
         {
-            Interface.main.enemyTestUnit.Content = enemyName;
             Test.PrepareEnemy(enemyName);
+
+            Interface.main.enemyTestUnit.Content = enemyName;
             LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy");
+            LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
         }
     }
 }
