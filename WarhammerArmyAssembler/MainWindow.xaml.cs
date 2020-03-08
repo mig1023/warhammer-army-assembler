@@ -465,6 +465,7 @@ namespace WarhammerArmyAssembler
         {
             TextBlock enemy = enemyForTest.SelectedItem as TextBlock;
             InterfaceTestUnit.TestEnemyPrepare(enemy.Text);
+            InterfaceTestUnit.TestCanvasShow();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace WarhammerArmyAssembler
@@ -44,6 +45,16 @@ namespace WarhammerArmyAssembler
                 target.Text = String.Format("Special: {0}", specialRules);
             else
                 target.Text = String.Empty;
+        }
+
+        public static void TestCanvasShow()
+        {
+            foreach (FrameworkElement element in new List<FrameworkElement> {
+                Interface.main.enemyTestUnit,
+                Interface.main.enemyGridContainer,
+                Interface.main.specialRulesEnemyTest
+            })
+                element.Visibility = System.Windows.Visibility.Visible;
         }
 
         public static void TestCanvasPrepare(Unit unit)

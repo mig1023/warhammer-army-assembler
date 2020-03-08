@@ -138,8 +138,8 @@
                         <TextBlock>Skaven Tretch Craventail</TextBlock>
                         <TextBlock>Chaos Greater Daemon Bloodthister</TextBlock>
                     </ComboBox>
-                    <Label x:Name="enemyTestUnit" Width="Auto" Content="" Canvas.Left="37" Canvas.Top="256" FontSize="22"/>
-                    <Border x:Name="enemyGridContainer" BorderBrush="Black" BorderThickness="1" Canvas.Left="37" Canvas.Top="306">
+                    <Label x:Name="enemyTestUnit" Visibility="Hidden" Width="Auto" Content="" Canvas.Left="37" Canvas.Top="256" FontSize="22"/>
+                    <Border x:Name="enemyGridContainer" Visibility="Hidden" BorderBrush="Black" BorderThickness="1" Canvas.Left="37" Canvas.Top="306">
                         <Grid x:Name="enemyGrid" Height="66" Width="531" ShowGridLines="True">
                             <Grid.RowDefinitions>
                                 <RowDefinition></RowDefinition>
@@ -234,7 +234,7 @@
                             </StackPanel>
                         </Grid>
                     </Border>
-                    <TextBlock x:Name="specialRulesEnemyTest" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="388"/>
+                    <TextBlock x:Name="specialRulesEnemyTest" Visibility="Hidden" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="388"/>
                 </Canvas>
             </ScrollViewer>
 
