@@ -12,6 +12,7 @@ namespace WarhammerArmyAssembler
     class InterfaceTestUnit
     {
         private static List<string> unitParam = new List<string> {
+                "Size",
                 "Movement",
                 "WeaponSkill",
                 "BallisticSkill",
@@ -25,34 +26,30 @@ namespace WarhammerArmyAssembler
                 "Ward"
             };
 
+        private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix)
+        {
+            foreach (string name in unitParam)
+            {
+                PropertyInfo param = typeof(Unit).GetProperty(name == "Size" ? name : String.Format("{0}View", name));
+                Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
+                testUnitElement.Content = param.GetValue(unitForLoad);
+            }
+        }
+
         public static void TestCanvasPrepare(Unit unit)
         {
             Test.unit = unit.Clone().GetOptionRules();
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
-
-            foreach (string name in unitParam)
-            {
-                PropertyInfo param = typeof(Unit).GetProperty(String.Format("{0}View", name));
-                Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}Test", name));
-                testUnitElement.Content = param.GetValue(Test.unit);
-            }
-
+            LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test");
             Interface.main.specialRulesTest.Text = String.Format("Special: {0}", Test.unit.GetSpecialRulesLine());
         }
 
         public static void TestEnemyPrepare(string enemyName)
         {
             Interface.main.enemyTestUnit.Content = enemyName;
-
             Test.PrepareEnemy(enemyName);
-
-            foreach (string name in unitParam)
-            {
-                PropertyInfo param = typeof(Unit).GetProperty(String.Format("{0}View", name));
-                Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}Enemy", name));
-                testUnitElement.Content = param.GetValue(Test.enemy);
-            }
+            LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy");
         }
     }
 }
