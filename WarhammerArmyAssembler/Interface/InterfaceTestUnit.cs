@@ -52,7 +52,8 @@ namespace WarhammerArmyAssembler
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 Interface.main.enemyTestUnit,
                 Interface.main.enemyGridContainer,
-                Interface.main.specialRulesEnemyTest
+                Interface.main.specialRulesEnemyTest,
+                Interface.main.startTest
             })
                 element.Visibility = System.Windows.Visibility.Visible;
         }
@@ -64,6 +65,9 @@ namespace WarhammerArmyAssembler
             Interface.main.armyTestUnit.Content = Test.unit.Name;
             LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test");
             LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest);
+
+            Interface.main.startTest.Foreground = ArmyBook.MainColor;
+            Interface.main.startTest.BorderBrush = ArmyBook.MainColor;
         }
 
         public static void TestEnemyPrepare(string enemyName)
