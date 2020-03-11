@@ -235,7 +235,7 @@
                         </Grid>
                     </Border>
                     <TextBlock x:Name="specialRulesEnemyTest" Visibility="Hidden" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="388"/>
-                    <Label x:Name="startTest" Content="Test" Visibility="Hidden" Height="39" Canvas.Left="37" Canvas.Top="419" Width="54" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="next_Click"/>
+                    <Label x:Name="startTest" Content="Test" Visibility="Hidden" Height="39" Canvas.Left="37" Canvas.Top="419" Width="54" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                 </Canvas>
             </ScrollViewer>
 
@@ -330,17 +330,11 @@
                                 </Style>
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="Unit" Binding="{Binding Name}" Width="*" MinWidth="120" IsReadOnly="True">
-                            <DataGridTextColumn.ElementStyle>
-                                <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                                </Style>
-                            </DataGridTextColumn.ElementStyle>
-                        </DataGridTextColumn>
+                        <DataGridTextColumn Header="Unit" Binding="{Binding Name}" Width="*" MinWidth="120" IsReadOnly="True"/>
                         <DataGridTemplateColumn Width="40">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Label Padding="0" MouseDown="Test_Click" Foreground="{Binding ArmyColor}">
+                                    <Label Padding="0" MouseDown="Test_Click" HorizontalContentAlignment="Center" Foreground="{Binding ArmyColor}">
                                         <TextBlock Text="test" TextDecorations="Underline"/>
                                     </Label>
                                 </DataTemplate>
