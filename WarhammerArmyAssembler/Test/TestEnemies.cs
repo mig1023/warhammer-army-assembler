@@ -17,6 +17,11 @@ namespace WarhammerArmyAssembler
             return null;
         }
 
+        public static List<Unit> GetAllEnemies()
+        {
+            return new List<Unit>(Enemies);
+        }
+
         private static List<Unit> Enemies = new List<Unit>
         {
             new Unit

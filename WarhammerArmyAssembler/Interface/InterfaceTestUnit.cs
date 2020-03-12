@@ -53,7 +53,8 @@ namespace WarhammerArmyAssembler
                 Interface.main.enemyTestUnit,
                 Interface.main.enemyGridContainer,
                 Interface.main.specialRulesEnemyTest,
-                Interface.main.startTest
+                Interface.main.startFullTest,
+                Interface.main.startStatisticTest
             })
                 element.Visibility = System.Windows.Visibility.Visible;
         }
@@ -66,8 +67,14 @@ namespace WarhammerArmyAssembler
             LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test");
             LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest);
 
-            Interface.main.startTest.Foreground = ArmyBook.MainColor;
-            Interface.main.startTest.BorderBrush = ArmyBook.MainColor;
+            foreach (Label label in new List<Label> { Interface.main.startFullTest, Interface.main.startStatisticTest })
+            {
+                label.Foreground = ArmyBook.MainColor;
+                label.BorderBrush = ArmyBook.MainColor;
+            }
+
+            foreach(Unit enemy in TestEnemies.GetAllEnemies())
+                Interface.main.enemyForTest.Items.Add(enemy.Name);
         }
 
         public static void TestEnemyPrepare(string enemyName)

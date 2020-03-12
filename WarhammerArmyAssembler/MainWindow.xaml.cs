@@ -474,8 +474,7 @@ namespace WarhammerArmyAssembler
 
         private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            TextBlock enemy = enemyForTest.SelectedItem as TextBlock;
-            InterfaceTestUnit.TestEnemyPrepare(enemy.Text);
+            InterfaceTestUnit.TestEnemyPrepare((string)enemyForTest.SelectedItem);
             InterfaceTestUnit.TestCanvasShow();
         }
     }
