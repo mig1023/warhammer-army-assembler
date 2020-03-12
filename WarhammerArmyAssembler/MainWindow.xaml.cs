@@ -460,6 +460,16 @@ namespace WarhammerArmyAssembler
                 specialRulesEnemyTest, startFullTest, startStatisticTest
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
+
+            double unitTestHeight = (double)enemyForTest.GetValue(Canvas.TopProperty) + enemyForTest.ActualHeight + 50;
+
+            if (enemyGridContainer.Visibility == Visibility.Visible)
+            {
+                double startButtonPosition = (double)startFullTest.GetValue(Canvas.TopProperty);
+                unitTestHeight = startFullTest.Margin.Top + startFullTest.ActualHeight + startButtonPosition + 20;
+            }
+
+            armyUnitTest.Height = unitTestHeight;
         }
 
         private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)

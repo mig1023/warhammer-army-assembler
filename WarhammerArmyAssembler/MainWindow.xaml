@@ -30,8 +30,9 @@
                 </Canvas>
             </ScrollViewer>
 
-            <ScrollViewer x:Name="armyUnitTestScroll" Width="821" Height="420" VerticalScrollBarVisibility="Auto" Background="White" Canvas.Left="25">
-                <Canvas x:Name="armyUnitTest" Width="604" Height="431" VerticalAlignment="Top" Background="White" SizeChanged="armyUnitTest_SizeChanged" >
+            <ScrollViewer x:Name="armyUnitTestScroll" Width="821" Height="479" VerticalScrollBarVisibility="Auto" Background="White"
+                          Canvas.Left="25"  SizeChanged="armyUnitTest_SizeChanged" >
+                <Canvas x:Name="armyUnitTest" Width="604" Height="431" VerticalAlignment="Top" Background="White">
                     <Label x:Name="armyTestUnit" Width="Auto" Canvas.Left="37" Canvas.Top="40" FontSize="22"/>
                     <Border BorderBrush="Black" BorderThickness="1" Canvas.Left="37" Canvas.Top="91" >
                         <Grid x:Name="unitGrid" Height="66" Width="531" ShowGridLines="True">
