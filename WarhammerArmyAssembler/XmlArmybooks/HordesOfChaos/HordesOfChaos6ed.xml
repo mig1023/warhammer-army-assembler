@@ -87,8 +87,8 @@
 				<Name>Chaos Daemon Sword</Name>
 				<Type>Weapon</Type>
 				<Points>85</Points>
-				<SpecialRuleDescription>WS. S, I and A as the Greater Daemon of their patron god. With a Mark of Chaos only (except the Mark of Chaos Undivided)</SpecialRuleDescription>
-				<Description>A character with a Daemon Sword has the same WS. S, I and A as the Greater Daemon of their patron god (eg, a Champion of Khorne would have Weapon Skill 10, Strength 7, Initiative 10 and Attacks 7). However, every roll of a I to hit in close combat means that the attack is resolved against the character instead of the enemy. Furthermore, the character can never re-roll an unmodified 1 to hit in close combat, regardless of the source of the re-roll.</Description>
+				<SpecialRuleDescription>The wielder has WS, S, I and A as the Greater Daemon of their patron god. With a Mark of Chaos only (except the Mark of Chaos Undivided)</SpecialRuleDescription>
+				<Description>A character with a Daemon Sword has the same WS, S, I and A as the Greater Daemon of their patron god (eg, a Champion of Khorne would have Weapon Skill 10, Strength 7, Initiative 10 and Attacks 7). However, every roll of a I to hit in close combat means that the attack is resolved against the character instead of the enemy. Furthermore, the character can never re-roll an unmodified 1 to hit in close combat, regardless of the source of the re-roll.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sword of Change</Name>
@@ -101,18 +101,75 @@
 				<Name>Hellfire sword</Name>
 				<Type>Weapon</Type>
 				<Points>75</Points>
-				<SpecialRuleDescription>D6 wounds additional wounds with no armour saves</SpecialRuleDescription>
+				<SpecialRuleDescription>D6 additional wounds with no armour saves</SpecialRuleDescription>
 				<SpecialRuleDescription>flaming</SpecialRuleDescription>
 				<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack.</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Chaos Runesword sword</Name>
+				<Name>Chaos Runesword</Name>
 				<Type>Weapon</Type>
 				<Points>70</Points>
 				<AddToWeaponSkill>1</AddToWeaponSkill>
 				<AddToStrength>1</AddToStrength>
 				<AddToAttacks>1</AddToAttacks>
 				<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Whip of Pleasure</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<HitFirst>true</HitFirst>
+				<AddToAttacks>1</AddToAttacks>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<Description>The wielder gains + 1 Attack, but he cannot carry a shield or banner. In addition, the wielder always strikes first in close combat. If any of the wielder's opponents also always strike first, revert to normal Initiative.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Berserker sword</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Half the Unit Strength of all enemy models in base contact as additional Attacks</SpecialRuleDescription>
+				<Description>The wielder of the Berserker Sword may make additional attacks in every Close Combat phase. The number of additional attacks is equal to half the Unit Strength of all enemy models in base contact (rounding up). For example, a character in contact with two Ogres (combined Unit Strength of 6) would get 3 additional Attacks. If the bearer is involved in a challenge, only the Unit Strength of the opponent is counted.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rending sword</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Wounded model loses not one but D3 wounds</SpecialRuleDescription>
+				<Description>A model wounded by the Rending Sword (after saves, etc) loses not one but D3 wounds.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Blade of Blood</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>For each unsaved wound which the Blade of Blood causes, the wielder gains +1 Wound by Strength test</SpecialRuleDescription>
+				<Description>For each unsaved wound which the Blade of Blood causes, the wielder may take a Strength test. If the test is passed, the wielder gains +1 Wound. This may not increase his Wounds value above double its normal number of Wounds. If the test is tailed, the wielder loses one Wound.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Filth Mace</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<Terror>true</Terror>
+				<PoisonAttack>true</PoisonAttack>
+				<Description>All attacks with the Filth Mace count as poisoned attacks In addition, if the bearer of the mace kills an enemy character in close combat, he will cause terror for the rest of the game.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Soul Cleaver</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Any wounded model must pass a Toughness test or suffer an additional wound (with no saves allowed)</SpecialRuleDescription>
+				<Description>Any model wounded by the Soul Cleaver (after saves, etc) must pass a Toughness test or suffer an additional wound (with no saves allowed).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Axe of Kborn</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<KillingBlow>true</KillingBlow>
+				<Description>Confers on the bearer the Killing Blow ability.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic armour">
@@ -182,6 +239,107 @@
 					<Name>Might of Khorne</Name>
 					<AddToStrength>1</AddToStrength>
 				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Keeper of Secrets</Name>
+			<Group>Demonic</Group>
+			<Points>625</Points>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<Description>Keeper of Secrets</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<SlotsOfHero>1</SlotsOfHero>
+				<SlotsOfRare>1</SlotsOfRare>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy unit in base contact reduces Ld by -1 to minimum Ld value of 2</SpecialRuleDescription>
+					<SpecialRuleDescription>Any model in base contact halve WS and Initiative (rounding up)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Lord of Change</Name>
+			<Group>Demonic</Group>
+			<Points>665</Points>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<Description>Lord of Change</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<SlotsOfHero>1</SlotsOfHero>
+				<SlotsOfRare>1</SlotsOfRare>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>May re-roll one dice per turn except one that has already been re-rolled</SpecialRuleDescription>
+					<SpecialRuleDescription>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows one more lore of Tzeentch spell than normally allowed</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Great Unclean One</Name>
+			<Group>Demonic</Group>
+			<Points>600</Points>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<Description>Great Unclean One</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>10</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<SlotsOfHero>1</SlotsOfHero>
+				<SlotsOfRare>1</SlotsOfRare>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Any unit in close combat wiih a Cloud of Flies suffers a -1 modifier on its rolls to hit</SpecialRuleDescription>
+					<SpecialRuleDescription>In Chaos player's Shooting phase if Daemon is not in combat it may unleash Stream of Corruption - Breath attack, Strength 3 with -2 armour saving throw modifier</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -283,6 +441,51 @@
 					</OnlyIfAnotherService>
 					<AddToWounds>1</AddToWounds>
 				</Option>
+				<Option>
+					<Name>Dragon of Chaos</Name>
+					<Type>Option</Type>
+					<Points>360</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Demonic mount</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Chaos Steed</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Disc of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<Mount>true</Mount>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Tzeentch</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Juggernaut of Khorne</Name>
+					<Type>Option</Type>
+					<Points>55</Points>
+					<Mount>true</Mount>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Khorne</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Steed of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<Mount>true</Mount>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Slaanesh</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -296,9 +499,315 @@
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Exalted Sorceserer of Chaos</Name>
+			<Group>Mortal</Group>
+			<Points>238</Points>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<Description>Exalted Sorceserer of Chaos</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology>true</ImmuneToPsychology>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWounds>1</AddToWounds>
+				</Option>
+				<Option>
+					<Name>Demonic mount</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Chaos Steed</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Steed of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<Mount>true</Mount>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Slaanesh</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Type>Armour</Type>
+					<Name>Chaos armour</Name>
+					<AddToArmour>4</AddToArmour>
+					<NativeArmour>true</NativeArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Daemon Prince</Name>
+			<Group>Demonic</Group>
+			<Points>300</Points>
+			<MinSize>1</MinSize>
+			<Description>Daemon Prince</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<SlotsOfHero>1</SlotsOfHero>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Sorcerer</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Mark of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>150</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWizard>4</AddToWizard>
+					<AddToCast>4</AddToCast>
+					<AddToDispell>2</AddToDispell>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology>true</ImmuneToPsychology>
+				</Option>
+				<Option>
+					<Name>Mark of Khorne</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Frenzy>true</Frenzy>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWounds>1</AddToWounds>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Daemonict</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Two Breath Weapon</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
-		
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Chaos Steed</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Dragon of Chaos</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<SlotsOfHero>1</SlotsOfHero>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Scaly skin</Name>
+					<AddToArmour>3</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Two Breath Weapon</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Demonic mount</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Steed of Slaanesh</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Juggernaut of Khorne</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Disc of Tzeentch</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
