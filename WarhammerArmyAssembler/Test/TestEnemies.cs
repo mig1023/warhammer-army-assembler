@@ -59,23 +59,6 @@ namespace WarhammerArmyAssembler
 
             new Unit
             {
-                Name = "Saurus warrior",
-                Size = 1,
-                Movement = 4,
-                WeaponSkill = 3,
-                BallisticSkill = 0,
-                Strength = 4,
-                Toughness = 4,
-                Wounds = 1,
-                Initiative = 1,
-                Attacks = 2,
-                Leadership = 8,
-                Armour = 4,
-                ColdBlooded = true
-            },
-
-            new Unit
-            {
                 Name = "Chosen Knights of Chaos",
                 Size = 1,
                 Movement = 4,

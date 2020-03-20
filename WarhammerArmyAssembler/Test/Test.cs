@@ -18,7 +18,7 @@ namespace WarhammerArmyAssembler
 
         public static string TestFull()
         {
-            return "test full";
+            return TestFight.Test(unit, enemy);
         }
 
         public static string TestStatistic()
