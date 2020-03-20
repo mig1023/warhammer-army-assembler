@@ -8,7 +8,7 @@ namespace WarhammerArmyAssembler
 {
     class TestFight
     {
-        private enum DiceType { M, WS, BS, S, T, W, I, A, LD, AS, WARD };
+        private enum DiceType { M, WS, BS, S, T, W, I, A, LD, AS, WARD, REGENERATION };
 
         static List<string> testConsole = new List<string>();
 
@@ -59,6 +59,49 @@ namespace WarhammerArmyAssembler
             {
                 unit.Wounds = 0;
                 Console(" --> fail");
+            }
+        }
+
+        // ref!
+
+        private static int Round(Unit unit, ref Unit enemy, int attackNumber, int round)
+        {
+            int roundWounds = 0;
+
+            if (unit.Frenzy)
+                attackNumber *= 2;
+
+            for (int i = 0; i < attackNumber; i++)
+            {
+                int wounded = Attack(unit, enemy, round);
+                roundWounds += wounded;
+                enemy.Wounds -= wounded;
+            }
+
+            Console("\n");
+
+            if (enemy.Regeneration && (roundWounds > 0))
+            {
+                Console("\n");
+
+                for (int i = 0; i < roundWounds; i++)
+                {
+                    if (i > 1)
+                        Console("\n");
+
+                    Console("{0} --> regeneration ", enemy.Name);
+
+                    if (RollDice(DiceType.REGENERATION, enemy, DiceHigher(4)))
+                    {
+                        Console(" --> success");
+                        enemy.Wounds += 1;
+                        roundWounds -= 1;
+                    }
+                    else
+                        Console(" --> fail");
+                }
+
+                Console("\n");
             }
         }
 
@@ -141,7 +184,7 @@ namespace WarhammerArmyAssembler
             return true;
         }
 
-        private static bool Attack(Unit unit, Unit enemy, int round)
+        private static int Attack(Unit unit, Unit enemy, int round)
         {
             attackIsPoisoned = false;
             attackWithKillingBlow = false;
@@ -159,14 +202,14 @@ namespace WarhammerArmyAssembler
                         Console(" --> {0} WOUND", enemy.Name);
 
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
-                            enemy.Wounds = 0;
+                            return enemy.Wounds;
 
-                        return true;
+                        return 1;
                     }
                 }
                 Console(" --> fail");
             }
-            return false;
+            return 0;
         }
 
         private static bool PoisonedAttack(Unit unit)
