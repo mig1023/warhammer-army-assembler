@@ -719,7 +719,7 @@ namespace WarhammerArmyAssembler
                 if ((incompatible || notCompitableMore) && (Options[i].IsActual()))
                 {
                     InterfaceMod.SetArtefactAlreadyUsed(Options[i].ID, false);
-                    AddOption(Options[i].ID, this, this.ID);
+                    AddOption(Options[i].ID, this, this.ArmyID);
                 }
             }
         }
