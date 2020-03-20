@@ -444,20 +444,15 @@ namespace WarhammerArmyAssembler
             Interface.Move(Interface.MovingType.ToRight);
         }
 
-        private void armyUnitTest_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void armyUnitTest_Resize()
         {
-            foreach(FrameworkElement element in new List<FrameworkElement> {
-                unitGrid, specialRulesTest, enemyForTest, enemyGrid, specialRulesEnemyTest
-            })
-                element.Width = e.NewSize.Width - 120;
-
             UpdateLayout();
 
             double marginTop = specialRulesTest.Margin.Top + specialRulesTest.ActualHeight + 10;
 
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 enemyForTestText, enemyForTest, enemyTestUnit, enemyGridContainer,
-                specialRulesEnemyTest, startFullTest, startStatisticTest
+                specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 
@@ -469,13 +464,45 @@ namespace WarhammerArmyAssembler
                 unitTestHeight = startFullTest.Margin.Top + startFullTest.ActualHeight + startButtonPosition + 20;
             }
 
+            if (unitTestHeight + 140 < armyUnitTestScroll.ActualHeight)
+                testConsole.Height = armyUnitTestScroll.ActualHeight - unitTestHeight - 20;
+            else
+            {
+                unitTestHeight += 140;
+                testConsole.Height = 120;
+            }
+
             armyUnitTest.Height = unitTestHeight;
+        }
+
+        private void armyUnitTest_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            foreach(FrameworkElement element in new List<FrameworkElement> {
+                unitGrid, specialRulesTest, enemyForTest, enemyGrid, specialRulesEnemyTest, testConsole
+            })
+                element.Width = e.NewSize.Width - 120;
+
+            armyUnitTest_Resize();
         }
 
         private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             InterfaceTestUnit.TestEnemyPrepare((string)enemyForTest.SelectedItem);
             InterfaceTestUnit.TestCanvasShow();
+        }
+
+        private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            armyUnitTest_Resize();
+            testConsole.Text = Test.TestFull();
+            testConsole.Visibility = Visibility.Visible;
+        }
+
+        private void startStatisticTest_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            armyUnitTest_Resize();
+            testConsole.Text = Test.TestStatistic();
+            testConsole.Visibility = Visibility.Visible;
         }
     }
 }

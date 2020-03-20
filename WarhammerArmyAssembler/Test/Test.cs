@@ -15,5 +15,15 @@ namespace WarhammerArmyAssembler
         {
             Test.enemy = TestEnemies.GetByName(enemyName).Clone().GetOptionRules();
         }
+
+        public static string TestFull()
+        {
+            return "test full";
+        }
+
+        public static string TestStatistic()
+        {
+            return "test statistic";
+        }
     }
 }
