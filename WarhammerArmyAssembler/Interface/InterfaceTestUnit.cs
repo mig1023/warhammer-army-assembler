@@ -61,7 +61,7 @@ namespace WarhammerArmyAssembler
 
         public static void TestCanvasPrepare(Unit unit)
         {
-            Test.unit = unit.Clone().GetOptionRules();
+            Test.PrepareUnit(unit);
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
             LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test");

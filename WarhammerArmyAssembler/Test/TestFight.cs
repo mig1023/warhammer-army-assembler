@@ -29,11 +29,9 @@ namespace WarhammerArmyAssembler
             int roundWoundsUnit = 0;
             int roundWoundsEnemy = 0;
             int round = 0;
-            int deathInRoundUnit = 0;
-            int deathInRoundEnemy = 0;
 
-            CheckTerror(unit, enemy);
-            CheckTerror(enemy, unit);
+            CheckTerror(ref unit, enemy);
+            CheckTerror(ref enemy, unit);
 
             while((unit.Wounds > 0) && (enemy.Wounds > 0))
             {
@@ -77,7 +75,8 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            Console("End: {0} win\n", (enemy.Wounds <= 0 ? unit.Name : enemy.Name));
+            Console("\nEnd: {0} win\n", (unit.Wounds > 0 ? unit.Name : enemy.Name));
+            Console("\nDEBUG: {0} {1} <-> {2} {3}\n", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
 
             return String.Join(String.Empty, testConsole.ToArray());
         }
@@ -129,7 +128,7 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static void CheckTerror(Unit unit, Unit enemy)
+        private static void CheckTerror(ref Unit unit, Unit enemy)
         {
             if (!unit.Terror || enemy.Terror)
                 return;
@@ -137,15 +136,13 @@ namespace WarhammerArmyAssembler
             Console("{0} try to resist of terror by {1} ", enemy.Name, unit.Name);
 
             if (RollDice(DiceType.LD, enemy, DiceHigher(enemy.Leadership), 2))
-                Console(" --> passed");
+                Console(" --> passed\n");
             else
             {
                 unit.Wounds = 0;
-                Console(" --> fail");
+                Console(" --> fail\n");
             }
         }
-
-        // ref!
 
         private static int Round(Unit unit, ref Unit enemy, int attackNumber, int round)
         {
@@ -236,12 +233,12 @@ namespace WarhammerArmyAssembler
 
         private static int BreakTest(Unit unit, Unit enemy, int woundInRound)
         {
-            Console("\n{0} break test --> ");
+            Console("\n{0} break test --> ", unit.Name);
 
             int temoraryLeadership = unit.Leadership;
 
             if (unit.Stubborn)
-                Console("stubborn ");
+                Console("stubborn --> ");
             else
                 temoraryLeadership -= woundInRound;
 
@@ -249,7 +246,7 @@ namespace WarhammerArmyAssembler
                 temoraryLeadership = 0;
             
             if (unit.Unbreakable)
-                Console("unbreakable ");
+                Console("unbreakable");
             else if ((enemy.Terror || enemy.Fear) && !(unit.ImmuneToPsychology || unit.Terror || unit.Fear))
             {
                 Console("autobreak by {0} fear", enemy.Name);
@@ -284,12 +281,16 @@ namespace WarhammerArmyAssembler
 
                     if ((PoisonedAttack(unit) || Wound(unit, enemy)) && (KillingAttack(unit) || NotAS(unit, enemy)) && (NotWard(enemy)))
                     {
-                        Console(" --> {0} WOUND", enemy.Name);
-
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
+                        {
+                            Console(" --> {0} SLAIN", enemy.Name);
                             return enemy.Wounds;
-
-                        return 1;
+                        }
+                        else
+                        {
+                            Console(" --> {0} {1}", enemy.Name, (enemy.Wounds <= 0 ? "SLAIN" : "WOUND"));
+                            return 1;
+                        }
                     }
                 }
                 Console(" --> fail");
@@ -349,7 +350,10 @@ namespace WarhammerArmyAssembler
             else if ((unit.Strength + 2) == enemy.Toughness)
                 chance = "6+";
             else if ((unit.Strength + 2) < enemy.Toughness)
+            {
+                Console("(impossible)");
                 return false;
+            }
 
             return RollDice(DiceType.S, enemy, chance);
         }

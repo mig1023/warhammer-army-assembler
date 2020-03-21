@@ -11,6 +11,11 @@ namespace WarhammerArmyAssembler
         public static Unit unit;
         public static Unit enemy;
 
+        public static void PrepareUnit(Unit unit)
+        {
+            Test.unit = unit.Clone().GetOptionRules();
+        }
+
         public static void PrepareEnemy(string enemyName)
         {
             Test.enemy = TestEnemies.GetByName(enemyName).Clone().GetOptionRules();
@@ -18,7 +23,7 @@ namespace WarhammerArmyAssembler
 
         public static string TestFull()
         {
-            return TestFight.Test(unit, enemy);
+            return TestFight.Test(unit.Clone(), enemy.Clone());
         }
 
         public static string TestStatistic()
