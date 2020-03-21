@@ -33,7 +33,7 @@ namespace WarhammerArmyAssembler
             CheckTerror(ref unit, enemy);
             CheckTerror(ref enemy, unit);
 
-            while((unit.Wounds > 0) && (enemy.Wounds > 0))
+            while((unit.Wounds > 0) && (enemy.Wounds > 0) && (round < 100))
             {
                 round += 1;
                 Console("\nround: {0}\n", round);
@@ -75,8 +75,10 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            Console("\nEnd: {0} win\n", (unit.Wounds > 0 ? unit.Name : enemy.Name));
-            Console("\nDEBUG: {0} {1} <-> {2} {3}\n", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
+            if ((unit.Wounds <= 0) || (enemy.Wounds <= 0))
+                Console("\nEnd: {0} win\n", (unit.Wounds > 0 ? unit.Name : enemy.Name));
+            else
+                Console("\nEnd: {0} and {1} failed to kill each other\n", unit.Name, enemy.Name);
 
             return String.Join(String.Empty, testConsole.ToArray());
         }
@@ -130,12 +132,12 @@ namespace WarhammerArmyAssembler
 
         private static void CheckTerror(ref Unit unit, Unit enemy)
         {
-            if (!unit.Terror || enemy.Terror)
+            if (!enemy.Terror || unit.Terror)
                 return;
 
-            Console("{0} try to resist of terror by {1} ", enemy.Name, unit.Name);
+            Console("{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
 
-            if (RollDice(DiceType.LD, enemy, DiceHigher(enemy.Leadership), 2))
+            if (RollDice(DiceType.LD, unit, DiceHigher(enemy.Leadership), 2))
                 Console(" --> passed\n");
             else
             {
@@ -279,7 +281,7 @@ namespace WarhammerArmyAssembler
                 {
                     Console(" --> wound ");
 
-                    if ((PoisonedAttack(unit) || Wound(unit, enemy)) && (KillingAttack(unit) || NotAS(unit, enemy)) && (NotWard(enemy)))
+                    if ((PoisonedAttack(unit) || Wound(unit, enemy)) && (KillingAttack(unit, enemy) || NotAS(unit, enemy)) && (NotWard(enemy)))
                     {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
@@ -288,7 +290,7 @@ namespace WarhammerArmyAssembler
                         }
                         else
                         {
-                            Console(" --> {0} {1}", enemy.Name, (enemy.Wounds <= 0 ? "SLAIN" : "WOUND"));
+                            Console(" --> {0} {1}", enemy.Name, (enemy.Wounds <= 1 ? "SLAIN" : "WOUND"));
                             return 1;
                         }
                     }
@@ -310,7 +312,7 @@ namespace WarhammerArmyAssembler
                 return false;
         }
 
-        private static bool KillingAttack(Unit unit)
+        private static bool KillingAttack(Unit unit, Unit enemy)
         {
             if (unit.KillingBlow && !attackIsPoisoned && (lastDice == 6))
             {
@@ -319,7 +321,9 @@ namespace WarhammerArmyAssembler
                 return true;
             }
 
-            Console(" --> AS ");
+            if (enemy.Armour != null)
+                Console(" --> AS ");
+
             return false;
         }
 
@@ -415,13 +419,18 @@ namespace WarhammerArmyAssembler
 
         private static bool TestPassedByDice(int result, int condition, DiceType diceType)
         {
-            return (
-                ((result <= condition) && (diceType == DiceType.LD))
-                ||
-                ((result >= condition) && (diceType != DiceType.LD))
-                ||
-                ((result == 1) && (diceType != DiceType.LD))
-            );
+            bool reversCheck = (diceType == DiceType.AS) || (diceType == DiceType.WARD);
+
+            if (((result < condition) || (result == 1)) && reversCheck)
+                return true;
+
+            if ((result <= condition) && (diceType == DiceType.LD))
+                return true;
+
+            if ((result >= condition) && ((diceType != DiceType.LD) && !reversCheck))
+                return true;
+
+            return false;
         }
 
         private static int RollAllDice(DiceType diceType, Unit unit, int diceNum)
