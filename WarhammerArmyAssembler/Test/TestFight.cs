@@ -19,8 +19,32 @@ namespace WarhammerArmyAssembler
         static bool attackWithKillingBlow = false;
         static bool attackIsPoisoned = false;
         
+        public static string FullTest(Unit unit, Unit enemy)
+        {
+            Test(unit, enemy);
 
-        public static string Test(Unit unit, Unit enemy)
+            return String.Join(String.Empty, testConsole.ToArray());
+        }
+
+        public static string StatisticTest(Unit unit, Unit enemy)
+        {
+            int[] result = new int[3]; 
+
+            for (int i = 0; i < 1000; i++)
+            {
+                int tmp = Test(unit.Clone(), enemy.Clone());
+                result[tmp] += 1;
+            }
+
+            string resultLine = String.Format("{0} win: {1} / 1000\n{2} win: {3} / 1000", unit.Name, result[1], enemy.Name, result[2]);
+
+            if (result[0] > 0)
+                resultLine += String.Format("\nNobody win: {0} / 1000", result[0]);
+
+            return resultLine;
+        }
+
+        public static int Test(Unit unit, Unit enemy)
         {
             testConsole.Clear();
 
@@ -75,12 +99,21 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            if ((unit.Wounds <= 0) || (enemy.Wounds <= 0))
-                Console("\nEnd: {0} win\n", (unit.Wounds > 0 ? unit.Name : enemy.Name));
+            if (enemy.Wounds <= 0)
+            {
+                Console("\nEnd: {0} win\n", unit.Name);
+                return 1;
+            }
+            else if (unit.Wounds <= 0)
+            {
+                Console("\nEnd: {0} win\n", enemy.Name);
+                return 2;
+            }
             else
+            {
                 Console("\nEnd: {0} and {1} failed to kill each other\n", unit.Name, enemy.Name);
-
-            return String.Join(String.Empty, testConsole.ToArray());
+                return 0;
+            }
         }
 
         private static void Console(string line)
@@ -256,13 +289,13 @@ namespace WarhammerArmyAssembler
             }
             else
             {
-                if (RollDice(DiceType.LD, unit, DiceHigher(unit.Leadership), diceNum: 2))
+                if (RollDice(DiceType.LD, unit, DiceHigher(temoraryLeadership), diceNum: 2))
+                    Console(" --> passed\n");
+                else
                 {
-                    Console(" --> fail");
+                    Console(" --> fail\n");
                     return 0;
                 }
-                else
-                    Console(" --> passed");
             }
 
             return unit.Wounds;

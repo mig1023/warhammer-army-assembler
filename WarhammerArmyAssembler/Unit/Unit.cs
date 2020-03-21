@@ -339,24 +339,27 @@ namespace WarhammerArmyAssembler
                 "Wounds",
                 "Initiative",
                 "Attacks",
-                "Leadership"
+                "Leadership",
+                "Armour",
+                "Ward"
             };
 
             foreach (string name in unitParam)
             {
-                string newParamLine = AddFromAnyOption(name);
+                bool reverse = ((name == "Armour" || name == "Ward") ? true : false);
+                bool mount = (name == "Armour" ? true : false);
+                bool combine = (name == "Ward" ? true : false);
+
+                string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
                 typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
 
-                if (directModification)
+                if (directModification && !String.IsNullOrEmpty(newParamLine))
                 {
                     string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
                     typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
                 }
             }
-
-            unit.ArmourView = AddFromAnyOption("Armour", reversParam: true, mountParam: true);
-            unit.WardView = AddFromAnyOption("Ward", reversParam: true, doNotCombine: true);
 
             return unit;
         }

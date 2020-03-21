@@ -23,12 +23,12 @@ namespace WarhammerArmyAssembler
 
         public static string TestFull()
         {
-            return TestFight.Test(unit.Clone(), enemy.Clone());
+            return TestFight.FullTest(unit.Clone(), enemy.Clone());
         }
 
         public static string TestStatistic()
         {
-            return "test statistic";
+            return TestFight.StatisticTest(unit.Clone(), enemy.Clone());
         }
     }
 }
