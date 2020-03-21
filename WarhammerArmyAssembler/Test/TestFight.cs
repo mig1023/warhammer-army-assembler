@@ -18,6 +18,7 @@ namespace WarhammerArmyAssembler
 
         static bool attackWithKillingBlow = false;
         static bool attackIsPoisoned = false;
+        
 
         public static string Test(Unit unit, Unit enemy)
         {
@@ -25,8 +26,58 @@ namespace WarhammerArmyAssembler
 
             Console("{0}{1} vs {1}{2}\n", unit.Name, IsUnit(unit), enemy.Name, IsUnit(enemy));
 
+            int roundWoundsUnit = 0;
+            int roundWoundsEnemy = 0;
+            int round = 0;
+            int deathInRoundUnit = 0;
+            int deathInRoundEnemy = 0;
+
             CheckTerror(unit, enemy);
             CheckTerror(enemy, unit);
+
+            while((unit.Wounds > 0) && (enemy.Wounds > 0))
+            {
+                round += 1;
+                Console("\nround: {0}\n", round);
+                Console("{0}: {1}W, {2}: {3}W\n", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
+
+                int attacksUnit = unit.Attacks;
+                int attackEnemy = enemy.Attacks;
+
+                if (ThisIsUnit(unit))
+                    attacksUnit = PrintAttack(unit, attacksUnit, roundWoundsUnit);
+
+                if (ThisIsUnit(enemy))
+                    attackEnemy = PrintAttack(enemy, attackEnemy, roundWoundsEnemy);
+
+                if (CheckInitiative(unit, enemy, round))
+                {
+                    roundWoundsEnemy = Round(unit, ref enemy, attacksUnit, round);
+                    roundWoundsUnit = Round(enemy, ref unit, attackEnemy, round);
+                }
+                else
+                {
+                    roundWoundsUnit = Round(enemy, ref unit, attackEnemy, round);
+                    roundWoundsEnemy = Round(unit, ref enemy, attacksUnit, round);
+                }
+
+                if ((unit.Wounds > 0) && (enemy.Wounds > 0))
+                {
+                    if (roundWoundsUnit > roundWoundsEnemy)
+                    {
+                        unit.Wounds = BreakTest(unit, enemy, roundWoundsUnit);
+                        CheckLostFrenzy(ref unit);
+                    }
+
+                    if (roundWoundsUnit < roundWoundsEnemy)
+                    {
+                        enemy.Wounds = BreakTest(enemy, unit, roundWoundsEnemy);
+                        CheckLostFrenzy(ref enemy);
+                    }
+                }
+            }
+
+            Console("End: {0} win\n", (enemy.Wounds <= 0 ? unit.Name : enemy.Name));
 
             return String.Join(String.Empty, testConsole.ToArray());
         }
@@ -41,9 +92,41 @@ namespace WarhammerArmyAssembler
             Console(String.Format(line, p));
         }
 
+        private static bool ThisIsUnit(Unit unit)
+        {
+            return (String.IsNullOrEmpty(IsUnit(unit)) ? false : true);
+        }
+
         private static string IsUnit(Unit unit)
         {
-            return (unit.Type == Unit.UnitType.Core ? " (unit)" : String.Empty);
+            bool core = (unit.Type == Unit.UnitType.Core);
+            bool special = (unit.Type == Unit.UnitType.Special);
+            bool rare = (unit.Type == Unit.UnitType.Rare);
+
+            return (core || special || rare ? " (unit)" : String.Empty);
+        }
+
+        private static int PrintAttack(Unit unit, int attackNum, int deathInRound)
+        {
+            if (unit.Frenzy)
+                Console("{0} --> is frenzy");
+
+            if ((deathInRound > 0) && ThisIsUnit(unit))
+            {
+                attackNum -= deathInRound;
+                Console("-{0} attack {1}", deathInRound, unit.Name);
+            }
+
+            return attackNum;
+        }
+
+        private static void CheckLostFrenzy(ref Unit unit)
+        {
+            if (unit.Frenzy && (unit.Wounds > 0))
+            {
+                unit.Frenzy = false;
+                Console("\n{0} lost his frenzy", unit.Name);
+            }
         }
 
         private static void CheckTerror(Unit unit, Unit enemy)
@@ -103,6 +186,8 @@ namespace WarhammerArmyAssembler
 
                 Console("\n");
             }
+
+            return roundWounds;
         }
 
         private static bool CheckInitiative(Unit unit, Unit enemy, int round)
@@ -149,7 +234,7 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static bool BreakTest(Unit unit, Unit enemy, int woundInRound)
+        private static int BreakTest(Unit unit, Unit enemy, int woundInRound)
         {
             Console("\n{0} break test --> ");
 
@@ -168,20 +253,20 @@ namespace WarhammerArmyAssembler
             else if ((enemy.Terror || enemy.Fear) && !(unit.ImmuneToPsychology || unit.Terror || unit.Fear))
             {
                 Console("autobreak by {0} fear", enemy.Name);
-                return false;
+                return 0;
             }
             else
             {
                 if (RollDice(DiceType.LD, unit, DiceHigher(unit.Leadership), diceNum: 2))
                 {
                     Console(" --> fail");
-                    return false;
+                    return 0;
                 }
                 else
                     Console(" --> passed");
             }
 
-            return true;
+            return unit.Wounds;
         }
 
         private static int Attack(Unit unit, Unit enemy, int round)
