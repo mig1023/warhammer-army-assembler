@@ -326,7 +326,7 @@ namespace WarhammerArmyAssembler
             return paramValue.ToString() + paramModView;
         }
 
-        public Unit GetOptionRules()
+        public Unit GetOptionRules(bool directModification = false)
         {
             Unit unit = this.Clone();
 
@@ -344,8 +344,15 @@ namespace WarhammerArmyAssembler
 
             foreach (string name in unitParam)
             {
-                PropertyInfo param = typeof(Unit).GetProperty(String.Format("{0}View", name));
-                param.SetValue(unit, AddFromAnyOption(name));
+                string newParamLine = AddFromAnyOption(name);
+
+                typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
+
+                if (directModification)
+                {
+                    string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
+                    typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
+                }
             }
 
             unit.ArmourView = AddFromAnyOption("Armour", reversParam: true, mountParam: true);

@@ -13,12 +13,12 @@ namespace WarhammerArmyAssembler
 
         public static void PrepareUnit(Unit unit)
         {
-            Test.unit = unit.Clone().GetOptionRules();
+            Test.unit = unit.Clone().GetOptionRules(directModification: true);
         }
 
         public static void PrepareEnemy(string enemyName)
         {
-            Test.enemy = TestEnemies.GetByName(enemyName).Clone().GetOptionRules();
+            Test.enemy = TestEnemies.GetByName(enemyName).Clone().GetOptionRules(directModification: true);
         }
 
         public static string TestFull()
