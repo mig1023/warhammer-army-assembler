@@ -73,6 +73,8 @@ namespace WarhammerArmyAssembler
                 label.BorderBrush = ArmyBook.MainColor;
             }
 
+            Interface.main.enemyForTest.Items.Clear();
+
             foreach (Unit enemy in TestEnemies.GetAllEnemies())
                 Interface.main.enemyForTest.Items.Add(enemy.Name);
         }
