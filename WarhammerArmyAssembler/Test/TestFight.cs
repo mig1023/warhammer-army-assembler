@@ -195,7 +195,7 @@ namespace WarhammerArmyAssembler
 
             Console("\n");
 
-            if (enemy.Regeneration && (roundWounds > 0))
+            if (enemy.Regeneration && (roundWounds > 0) && !attackWithKillingBlow)
             {
                 Console("\n");
 
