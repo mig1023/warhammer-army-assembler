@@ -49,6 +49,9 @@ namespace WarhammerArmyAssembler
 
         public static void TestCanvasShow()
         {
+            if (String.IsNullOrEmpty(SelectedEnemy()))
+                return;
+
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 Interface.main.enemyTestUnit,
                 Interface.main.enemyGridContainer,
@@ -62,6 +65,13 @@ namespace WarhammerArmyAssembler
         public static void TestCanvasPrepare(Unit unit)
         {
             Test.PrepareUnit(unit);
+
+            Interface.main.enemyTestUnit.Visibility = Visibility.Hidden;
+            Interface.main.enemyGridContainer.Visibility = Visibility.Hidden;
+            Interface.main.specialRulesEnemyTest.Visibility = Visibility.Hidden;
+            Interface.main.startFullTest.Visibility = Visibility.Hidden;
+            Interface.main.startStatisticTest.Visibility = Visibility.Hidden;
+            Interface.main.testConsole.Visibility = Visibility.Hidden;
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
             LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test");
@@ -79,11 +89,19 @@ namespace WarhammerArmyAssembler
                 Interface.main.enemyForTest.Items.Add(enemy.Name);
         }
 
-        public static void TestEnemyPrepare(string enemyName)
+        private static string SelectedEnemy()
         {
-            Test.PrepareEnemy(enemyName);
+            return (string)Interface.main.enemyForTest.SelectedItem;
+        }
 
-            Interface.main.enemyTestUnit.Content = enemyName;
+        public static void TestEnemyPrepare()
+        {
+            if (String.IsNullOrEmpty(SelectedEnemy()))
+                return;
+
+            Test.PrepareEnemy(SelectedEnemy());
+
+            Interface.main.enemyTestUnit.Content = SelectedEnemy();
             LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy");
             LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
         }

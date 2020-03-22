@@ -487,7 +487,7 @@ namespace WarhammerArmyAssembler
 
         private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            InterfaceTestUnit.TestEnemyPrepare((string)enemyForTest.SelectedItem);
+            InterfaceTestUnit.TestEnemyPrepare();
             InterfaceTestUnit.TestCanvasShow();
         }
 
