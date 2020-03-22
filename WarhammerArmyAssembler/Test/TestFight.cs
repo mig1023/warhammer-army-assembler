@@ -215,8 +215,6 @@ namespace WarhammerArmyAssembler
                     else
                         Console(" --> fail");
                 }
-
-                Console("\n");
             }
 
             return roundWounds;
@@ -253,14 +251,14 @@ namespace WarhammerArmyAssembler
             {
                 Console("random initiative --> ");
 
-                if (RollDice(DiceType.I, null, DiceHigher(4)))
+                if (RollDice(DiceType.I, unit, DiceHigher(4)))
                 {
-                    Console("{0}\n", unit.Name);
+                    Console(" {0}\n", unit.Name);
                     return true;
                 }
                 else
                 {
-                    Console("{0}\n", enemy.Name);
+                    Console(" {0}\n", enemy.Name);
                     return false;
                 }
             }
