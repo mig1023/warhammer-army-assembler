@@ -14,6 +14,8 @@ namespace WarhammerArmyAssembler
 {
     class InterfaceTestUnit
     {
+        private static bool showLinesToConsole = true;
+
         private static List<string> unitParam = new List<string> {
                 "Size",
                 "Movement",
@@ -118,9 +120,17 @@ namespace WarhammerArmyAssembler
 
         public static void LineToConsole(string line, Brush color = null, bool bold = false)
         {
+            if (!showLinesToConsole)
+                return;
+
             TextRange tr = new TextRange(Interface.main.testConsole.Document.ContentEnd, Interface.main.testConsole.Document.ContentEnd);
             tr.Text = line;
             tr.ApplyPropertyValue(TextElement.ForegroundProperty, color ?? Brushes.Black);
+        }
+
+        public static void PreventConsoleOutput(bool prevent = true)
+        {
+            showLinesToConsole = !prevent;
         }
     }
 }

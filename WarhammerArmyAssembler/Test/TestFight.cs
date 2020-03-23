@@ -25,12 +25,8 @@ namespace WarhammerArmyAssembler
         static Brush goodText = Brushes.Green;
         static Brush badText = Brushes.Red;
 
-        static bool showLinesToConsole = false;
-
         public static void FullTest(Unit unit, Unit enemy)
         {
-            showLinesToConsole = true;
-
             Test(unit, enemy);
         }
 
@@ -38,7 +34,7 @@ namespace WarhammerArmyAssembler
         {
             int[] result = new int[3];
 
-            showLinesToConsole = false;
+            InterfaceTestUnit.PreventConsoleOutput(prevent: true);
 
             for (int i = 0; i < 1000; i++)
             {
@@ -46,7 +42,7 @@ namespace WarhammerArmyAssembler
                 result[tmp] += 1;
             }
 
-            showLinesToConsole = true;
+            InterfaceTestUnit.PreventConsoleOutput(prevent: false);
 
             Console(text, "{0} win: {1} / 1000\n{2} win: {3} / 1000", unit.Name, result[1], enemy.Name, result[2]);
 
@@ -130,8 +126,7 @@ namespace WarhammerArmyAssembler
 
         private static void Console(Brush color, string line)
         {
-            if (showLinesToConsole)
-                InterfaceTestUnit.LineToConsole(line, color);
+            InterfaceTestUnit.LineToConsole(line, color);
         }
 
         private static void Console(Brush color, string line, params object[] p)
