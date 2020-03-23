@@ -178,7 +178,7 @@ namespace WarhammerArmyAssembler
 
             Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
 
-            if (RollDice(DiceType.LD, unit, DiceHigher(enemy.Leadership), 2))
+            if (RollDice(DiceType.LD, unit, DiceHigher(unit.Leadership), 2))
                 Console(goodText, " --> passed");
             else
             {
