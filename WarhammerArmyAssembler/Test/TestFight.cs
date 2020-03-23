@@ -447,11 +447,21 @@ namespace WarhammerArmyAssembler
             {
                 result = RollAllDice(diceType, unit, diceNum);
                 Console(supplText, ", {0}", result);
+
+                testPassed = TestPassedByDice(result, condition, diceType);
+            }
+            else if ((diceType == DiceType.AS) && (condition > 6) && (condition < 10) && (result == 6))
+            {
+                int supplCondition = condition - 3;
+                result = RollAllDice(diceType, unit, 1);
+                Console(supplText, " --> {0}+, {1}", supplCondition, result);
+
+                testPassed = TestPassedByDice(result, supplCondition, diceType);
             }
 
             Console(supplText, ")");
 
-            return TestPassedByDice(result, condition, diceType);
+            return testPassed;
         }
 
         private static bool TestPassedByDice(int result, int condition, DiceType diceType)
