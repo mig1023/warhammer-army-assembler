@@ -21,14 +21,14 @@ namespace WarhammerArmyAssembler
             Test.enemy = TestEnemies.GetByName(enemyName).Clone().GetOptionRules(directModification: true);
         }
 
-        public static string TestFull()
+        public static void TestFull()
         {
-            return TestFight.FullTest(unit.Clone(), enemy.Clone());
+            TestFight.FullTest(unit.Clone(), enemy.Clone());
         }
 
-        public static string TestStatistic()
+        public static void TestStatistic()
         {
-            return TestFight.StatisticTest(unit.Clone(), enemy.Clone());
+            TestFight.StatisticTest(unit.Clone(), enemy.Clone());
         }
     }
 }

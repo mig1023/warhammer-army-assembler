@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
 {
@@ -18,17 +19,26 @@ namespace WarhammerArmyAssembler
 
         static bool attackWithKillingBlow = false;
         static bool attackIsPoisoned = false;
-        
-        public static string FullTest(Unit unit, Unit enemy)
-        {
-            Test(unit, enemy);
 
-            return String.Join(String.Empty, testConsole.ToArray());
+        static Brush text = Brushes.Black;
+        static Brush supplText = Brushes.Gray;
+        static Brush goodText = Brushes.Green;
+        static Brush badText = Brushes.Red;
+
+        static bool showLinesToConsole = false;
+
+        public static void FullTest(Unit unit, Unit enemy)
+        {
+            showLinesToConsole = true;
+
+            Test(unit, enemy);
         }
 
-        public static string StatisticTest(Unit unit, Unit enemy)
+        public static void StatisticTest(Unit unit, Unit enemy)
         {
-            int[] result = new int[3]; 
+            int[] result = new int[3];
+
+            showLinesToConsole = false;
 
             for (int i = 0; i < 1000; i++)
             {
@@ -36,19 +46,19 @@ namespace WarhammerArmyAssembler
                 result[tmp] += 1;
             }
 
-            string resultLine = String.Format("{0} win: {1} / 1000\n{2} win: {3} / 1000", unit.Name, result[1], enemy.Name, result[2]);
+            showLinesToConsole = true;
+
+            Console(text, "{0} win: {1} / 1000\n{2} win: {3} / 1000", unit.Name, result[1], enemy.Name, result[2]);
 
             if (result[0] > 0)
-                resultLine += String.Format("\nNobody win: {0} / 1000", result[0]);
-
-            return resultLine;
+                Console(text, "\nNobody win: {0} / 1000", result[0]);
         }
 
         public static int Test(Unit unit, Unit enemy)
         {
             testConsole.Clear();
 
-            Console("{0}{1} vs {1}{2}", unit.Name, IsUnit(unit), enemy.Name, IsUnit(enemy));
+            Console(text, "{0}{1} vs {1}{2}", unit.Name, IsUnit(unit), enemy.Name, IsUnit(enemy));
 
             int roundWoundsUnit = 0;
             int roundWoundsEnemy = 0;
@@ -60,8 +70,8 @@ namespace WarhammerArmyAssembler
             while((unit.Wounds > 0) && (enemy.Wounds > 0) && (round < 100))
             {
                 round += 1;
-                Console("\n\nround: {0}", round);
-                Console("\n{0}: {1}W, {2}: {3}W", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
+                Console(supplText, "\n\nround: {0}", round);
+                Console(supplText, "\n{0}: {1}W, {2}: {3}W", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
 
                 int attacksUnit = unit.Attacks;
                 int attackEnemy = enemy.Attacks;
@@ -99,33 +109,34 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            Console("\n\nEnd: ");
+            Console(text, "\n\nEnd: ");
 
             if (enemy.Wounds <= 0)
             {
-                Console("{0} win\n", unit.Name);
+                Console(text, "{0} win\n", unit.Name);
                 return 1;
             }
             else if (unit.Wounds <= 0)
             {
-                Console("{0} win\n", enemy.Name);
+                Console(text, "{0} win\n", enemy.Name);
                 return 2;
             }
             else
             {
-                Console("{0} and {1} failed to kill each other\n", unit.Name, enemy.Name);
+                Console(text, "{0} and {1} failed to kill each other\n", unit.Name, enemy.Name);
                 return 0;
             }
         }
 
-        private static void Console(string line)
+        private static void Console(Brush color, string line)
         {
-            testConsole.Add(line);
+            if (showLinesToConsole)
+                InterfaceTestUnit.LineToConsole(line, color);
         }
 
-        private static void Console(string line, params object[] p)
+        private static void Console(Brush color, string line, params object[] p)
         {
-            Console(String.Format(line, p));
+            Console(color, String.Format(line, p));
         }
 
         private static bool ThisIsUnit(Unit unit)
@@ -145,12 +156,12 @@ namespace WarhammerArmyAssembler
         private static int PrintAttack(Unit unit, int attackNum, int deathInRound)
         {
             if (unit.Frenzy)
-                Console("\n{0} --> is frenzy");
+                Console(supplText, "\n{0} --> is frenzy");
 
             if ((deathInRound > 0) && ThisIsUnit(unit))
             {
                 attackNum -= deathInRound;
-                Console("\n-{0} attack {1}", deathInRound, unit.Name);
+                Console(supplText, "\n-{0} attack {1}", deathInRound, unit.Name);
             }
 
             return attackNum;
@@ -161,7 +172,7 @@ namespace WarhammerArmyAssembler
             if (unit.Frenzy && (unit.Wounds > 0))
             {
                 unit.Frenzy = false;
-                Console("\n{0} lost his frenzy", unit.Name);
+                Console(supplText, "\n{0} lost his frenzy", unit.Name);
             }
         }
 
@@ -170,14 +181,14 @@ namespace WarhammerArmyAssembler
             if (!enemy.Terror || unit.Terror)
                 return;
 
-            Console("\n{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
+            Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
 
             if (RollDice(DiceType.LD, unit, DiceHigher(enemy.Leadership), 2))
-                Console(" --> passed");
+                Console(goodText, " --> passed");
             else
             {
                 unit.Wounds = 0;
-                Console(" --> fail");
+                Console(badText, " --> fail");
             }
         }
 
@@ -189,7 +200,7 @@ namespace WarhammerArmyAssembler
                 attackNumber *= 2;
 
             if ((unit.Wounds > 0) && (enemy.Wounds > 0))
-                Console("\n");
+                Console(text, "\n");
 
             for (int i = 0; i < attackNumber; i++)
             {
@@ -200,18 +211,20 @@ namespace WarhammerArmyAssembler
 
             if (enemy.Regeneration && (roundWounds > 0) && !attackWithKillingBlow)
             {
+                Console(text, "\n");
+
                 for (int i = 0; i < roundWounds; i++)
                 {
-                    Console("\n\n{0} --> regeneration ", enemy.Name);
+                    Console(text, "\n{0} --> regeneration ", enemy.Name);
 
                     if (RollDice(DiceType.REGENERATION, enemy, DiceHigher(4)))
                     {
-                        Console(" --> success");
+                        Console(goodText, " --> success");
                         enemy.Wounds += 1;
                         roundWounds -= 1;
                     }
                     else
-                        Console(" --> fail");
+                        Console(badText, " --> fail");
                 }
             }
 
@@ -222,41 +235,41 @@ namespace WarhammerArmyAssembler
         {
             if ((round == 1) && !unit.HitFirst && !enemy.HitFirst)
             {
-                Console("\nfirst round rule");
+                Console(supplText, "\nfirst round rule");
                 return true;
             }
             else if (unit.HitFirst && !enemy.HitFirst)
             {
-                Console("\n{0} all time first", unit.Name);
+                Console(supplText, "\n{0} all time first", unit.Name);
                 return true;
             }
             else if (!unit.HitFirst && enemy.HitFirst)
             {
-                Console("\n{0} all time first", enemy.Name);
+                Console(supplText, "\n{0} all time first", enemy.Name);
                 return false;
             }
             else if (unit.Initiative > enemy.Initiative)
             {
-                Console("\n{0} has initiative", unit.Name);
+                Console(supplText, "\n{0} has initiative", unit.Name);
                 return true;
             }
             else if (unit.Initiative < enemy.Initiative)
             {
-                Console("\n{0} has initiative", enemy.Name);
+                Console(supplText, "\n{0} has initiative", enemy.Name);
                 return true;
             }
             else
             {
-                Console("\nrandom initiative --> ");
+                Console(supplText, "\nrandom initiative --> ");
 
                 if (RollDice(DiceType.I, unit, DiceHigher(4)))
                 {
-                    Console(" {0}", unit.Name);
+                    Console(supplText, " {0}", unit.Name);
                     return true;
                 }
                 else
                 {
-                    Console(" {0}", enemy.Name);
+                    Console(supplText, " {0}", enemy.Name);
                     return false;
                 }
             }
@@ -264,12 +277,12 @@ namespace WarhammerArmyAssembler
 
         private static int BreakTest(Unit unit, Unit enemy, int woundInRound)
         {
-            Console("\n\n{0} break test --> ", unit.Name);
+            Console(text, "\n\n{0} break test --> ", unit.Name);
 
             int temoraryLeadership = unit.Leadership;
 
             if (unit.Stubborn)
-                Console("stubborn --> ");
+                Console(text, "stubborn --> ");
             else
                 temoraryLeadership -= woundInRound;
 
@@ -277,19 +290,19 @@ namespace WarhammerArmyAssembler
                 temoraryLeadership = 0;
             
             if (unit.Unbreakable)
-                Console("unbreakable");
+                Console(text, "unbreakable");
             else if ((enemy.Terror || enemy.Fear) && !(unit.ImmuneToPsychology || unit.Terror || unit.Fear))
             {
-                Console("autobreak by {0} fear", enemy.Name);
+                Console(badText, "autobreak by {0} fear", enemy.Name);
                 return 0;
             }
             else
             {
                 if (RollDice(DiceType.LD, unit, DiceHigher(temoraryLeadership), diceNum: 2))
-                    Console(" --> passed");
+                    Console(goodText, " --> passed");
                 else
                 {
-                    Console(" --> fail");
+                    Console(badText, " --> fail");
                     return 0;
                 }
             }
@@ -304,27 +317,27 @@ namespace WarhammerArmyAssembler
 
             if ((unit.Wounds > 0) && (enemy.Wounds > 0))
             {
-                Console("\n{0} --> hit ", unit.Name);
+                Console(text, "\n{0} --> hit ", unit.Name);
 
                 if (Hit(unit, enemy, round))
                 {
-                    Console(" --> wound ");
+                    Console(text, " --> wound ");
 
                     if ((PoisonedAttack(unit) || Wound(unit, enemy)) && (KillingAttack(unit, enemy) || NotAS(unit, enemy)) && (NotWard(enemy)))
                     {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
-                            Console(" --> {0} SLAIN", enemy.Name);
+                            Console(badText, " --> {0} SLAIN", enemy.Name);
                             return enemy.Wounds;
                         }
                         else
                         {
-                            Console(" --> {0} {1}", enemy.Name, (enemy.Wounds <= 1 ? "SLAIN" : "WOUND"));
+                            Console(badText, " --> {0} {1}", enemy.Name, (enemy.Wounds <= 1 ? "SLAIN" : "WOUND"));
                             return 1;
                         }
                     }
                 }
-                Console(" --> fail");
+                Console(goodText, " --> fail");
             }
             return 0;
         }
@@ -334,7 +347,7 @@ namespace WarhammerArmyAssembler
             if (unit.PoisonAttack && (lastDice == 6))
             {
                 attackIsPoisoned = true;
-                Console("(poison)");
+                Console(text, "(poison)");
                 return true;
             }
             else
@@ -346,12 +359,12 @@ namespace WarhammerArmyAssembler
             if (unit.KillingBlow && !attackIsPoisoned && (lastDice == 6))
             {
                 attackWithKillingBlow = true;
-                Console(" --> killing blow");
+                Console(text, " --> killing blow");
                 return true;
             }
 
             if (enemy.Armour != null)
-                Console(" --> AS ");
+                Console(text, " --> AS ");
 
             return false;
         }
@@ -384,7 +397,7 @@ namespace WarhammerArmyAssembler
                 chance = "6+";
             else if ((unit.Strength + 2) < enemy.Toughness)
             {
-                Console("(impossible)");
+                Console(text, "(impossible)");
                 return false;
             }
 
@@ -411,7 +424,7 @@ namespace WarhammerArmyAssembler
             if (enemy.Ward == null)
                 return true;
 
-            Console(" --> ward ");
+            Console(text, " --> ward ");
 
             return RollDice(DiceType.WARD, enemy, DiceHigher(enemy.Ward));
         }
@@ -423,7 +436,7 @@ namespace WarhammerArmyAssembler
 
         private static bool RollDice(DiceType diceType, Unit unit, string conditionLine, int diceNum = 1, int round = 2)
         {
-            Console("({0}, ", conditionLine);
+            Console(supplText, "({0}, ", conditionLine);
 
             string conditionForParse = conditionLine.Replace("+", String.Empty);
 
@@ -433,15 +446,15 @@ namespace WarhammerArmyAssembler
 
             bool testPassed = TestPassedByDice(result, condition, diceType);
 
-            Console("{0}", result);
+            Console(supplText, "{0}", result);
 
             if (!testPassed && unit.Hate && (diceType == DiceType.WS))      // +reroll
             {
                 result = RollAllDice(diceType, unit, diceNum);
-                Console(", {0}", result);
+                Console(supplText, ", {0}", result);
             }
 
-            Console(")");
+            Console(supplText, ")");
 
             return TestPassedByDice(result, condition, diceType);
         }
@@ -469,7 +482,7 @@ namespace WarhammerArmyAssembler
 
             if ((diceType == DiceType.LD) && unit.ColdBlooded)
             {
-                Console("cold-blooded, ");
+                Console(supplText, "cold-blooded, ");
                 diceNum += 1;
             }
 

@@ -231,7 +231,7 @@
                     <TextBlock x:Name="specialRulesEnemyTest" Visibility="Hidden" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="388"/>
                     <Label x:Name="startFullTest" Content="Full test" Visibility="Hidden" Height="39" Canvas.Left="37" Canvas.Top="419" Width="54" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startFullTest_MouseDown"/>
                     <Label x:Name="startStatisticTest" Content="Statistic test" Visibility="Hidden" Height="39" Canvas.Left="107" Canvas.Top="419" Width="74" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startStatisticTest_MouseDown"/>
-                    <TextBox x:Name="testConsole" BorderBrush="Black" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Visibility="Hidden" BorderThickness="1" Padding="15" Height="59" Canvas.Left="37" TextWrapping="Wrap" Text="" Canvas.Top="478" Width="330"/>
+                    <RichTextBox x:Name="testConsole" Block.LineHeight="4" BorderBrush="Black" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Visibility="Hidden" BorderThickness="1" Padding="15" Height="59" Canvas.Left="37" Canvas.Top="478" Width="330"/>
                 </Canvas>
             </ScrollViewer>
 

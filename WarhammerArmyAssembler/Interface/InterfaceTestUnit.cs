@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
 {
@@ -66,12 +68,15 @@ namespace WarhammerArmyAssembler
         {
             Test.PrepareUnit(unit);
 
-            Interface.main.enemyTestUnit.Visibility = Visibility.Hidden;
-            Interface.main.enemyGridContainer.Visibility = Visibility.Hidden;
-            Interface.main.specialRulesEnemyTest.Visibility = Visibility.Hidden;
-            Interface.main.startFullTest.Visibility = Visibility.Hidden;
-            Interface.main.startStatisticTest.Visibility = Visibility.Hidden;
-            Interface.main.testConsole.Visibility = Visibility.Hidden;
+            foreach (FrameworkElement f in new List<FrameworkElement> {
+                Interface.main.enemyTestUnit,
+                Interface.main.enemyGridContainer,
+                Interface.main.specialRulesEnemyTest,
+                Interface.main.startFullTest,
+                Interface.main.startStatisticTest,
+                Interface.main.testConsole
+            })
+                f.Visibility = Visibility.Hidden;
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
             LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test");
@@ -104,6 +109,18 @@ namespace WarhammerArmyAssembler
             Interface.main.enemyTestUnit.Content = SelectedEnemy();
             LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy");
             LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
+        }
+
+        public static void CleanConsole()
+        {
+            Interface.main.testConsole.Document.Blocks.Clear();
+        }
+
+        public static void LineToConsole(string line, Brush color = null, bool bold = false)
+        {
+            TextRange tr = new TextRange(Interface.main.testConsole.Document.ContentEnd, Interface.main.testConsole.Document.ContentEnd);
+            tr.Text = line;
+            tr.ApplyPropertyValue(TextElement.ForegroundProperty, color ?? Brushes.Black);
         }
     }
 }

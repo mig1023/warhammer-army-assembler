@@ -494,14 +494,16 @@ namespace WarhammerArmyAssembler
         private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e)
         {
             armyUnitTest_Resize();
-            testConsole.Text = Test.TestFull();
+            InterfaceTestUnit.CleanConsole();
+            Test.TestFull();
             testConsole.Visibility = Visibility.Visible;
         }
 
         private void startStatisticTest_MouseDown(object sender, MouseButtonEventArgs e)
         {
             armyUnitTest_Resize();
-            testConsole.Text = Test.TestStatistic();
+            InterfaceTestUnit.CleanConsole();
+            Test.TestStatistic();
             testConsole.Visibility = Visibility.Visible;
         }
     }
