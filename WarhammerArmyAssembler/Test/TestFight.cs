@@ -178,7 +178,7 @@ namespace WarhammerArmyAssembler
 
             Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
 
-            if (RollDice(DiceType.LD, unit, DiceHigher(unit.Leadership), 2))
+            if (RollDice(DiceType.LD, unit, unit.Leadership, 2))
                 Console(goodText, " --> passed");
             else
             {
@@ -212,7 +212,7 @@ namespace WarhammerArmyAssembler
                 {
                     Console(text, "\n{0} --> regeneration ", enemy.Name);
 
-                    if (RollDice(DiceType.REGENERATION, enemy, DiceHigher(4)))
+                    if (RollDice(DiceType.REGENERATION, enemy, 4))
                     {
                         Console(goodText, " --> success");
                         enemy.Wounds += 1;
@@ -257,7 +257,7 @@ namespace WarhammerArmyAssembler
             {
                 Console(supplText, "\nrandom initiative --> ");
 
-                if (RollDice(DiceType.I, unit, DiceHigher(4)))
+                if (RollDice(DiceType.I, unit, 4))
                 {
                     Console(supplText, " {0}", unit.Name);
                     return true;
@@ -293,7 +293,7 @@ namespace WarhammerArmyAssembler
             }
             else
             {
-                if (RollDice(DiceType.LD, unit, DiceHigher(temoraryLeadership), diceNum: 2))
+                if (RollDice(DiceType.LD, unit, temoraryLeadership, diceNum: 2))
                     Console(goodText, " --> passed");
                 else
                 {
@@ -368,28 +368,28 @@ namespace WarhammerArmyAssembler
         {
             // autohit
 
-            string chance = "4+";
+            int chance = 4;
 
             if (unit.WeaponSkill > enemy.WeaponSkill)
-                chance = "3+";
+                chance = 3;
             else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)
-                chance = "5+";
+                chance = 5;
 
             return RollDice(DiceType.WS, enemy, chance, round: round);
         }
 
         private static bool Wound(Unit unit, Unit enemy)
         {
-            string chance = "4+";
+            int chance = 4;
 
             if (unit.Strength == (enemy.Toughness + 1))
-                chance = "3+";
+                chance = 3;
             else if (unit.Strength > (enemy.Toughness + 1))
-                chance = "2+";
+                chance = 2;
             else if ((unit.Strength + 1) == enemy.Toughness)
-                chance = "5+";
+                chance = 5;
             else if ((unit.Strength + 2) == enemy.Toughness)
-                chance = "6+";
+                chance = 6;
             else if ((unit.Strength + 2) < enemy.Toughness)
             {
                 Console(text, "(impossible)");
@@ -411,7 +411,7 @@ namespace WarhammerArmyAssembler
 
             chance += enemy.Armour ?? 0;
 
-            return RollDice(DiceType.AS, enemy, DiceHigher(chance));
+            return RollDice(DiceType.AS, enemy, chance);
         }
 
         private static bool NotWard(Unit enemy)
@@ -421,21 +421,17 @@ namespace WarhammerArmyAssembler
 
             Console(text, " --> ward ");
 
-            return RollDice(DiceType.WARD, enemy, DiceHigher(enemy.Ward));
+            return RollDice(DiceType.WARD, enemy, enemy.Ward);
         }
 
-        private static string DiceHigher(int? param)
+        private static bool RollDice(DiceType diceType, Unit unit, int? conditionParam, int diceNum = 1, int round = 2)
         {
-            return String.Format("{0}+", param);
-        }
+            if (conditionParam == null)
+                return false;
 
-        private static bool RollDice(DiceType diceType, Unit unit, string conditionLine, int diceNum = 1, int round = 2)
-        {
-            Console(supplText, "({0}, ", conditionLine);
+            int condition = conditionParam ?? 0;
 
-            string conditionForParse = conditionLine.Replace("+", String.Empty);
-
-            int condition = int.Parse(conditionForParse);
+            Console(supplText, "({0}{1}, ", condition, (diceType == DiceType.LD ? " LD" : "+"));
 
             int result = RollAllDice(diceType, unit, diceNum);
 
