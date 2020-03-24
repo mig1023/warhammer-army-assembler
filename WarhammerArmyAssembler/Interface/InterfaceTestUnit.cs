@@ -92,8 +92,8 @@ namespace WarhammerArmyAssembler
 
             Interface.main.enemyForTest.Items.Clear();
 
-            foreach (Unit enemy in TestEnemies.GetAllEnemies())
-                Interface.main.enemyForTest.Items.Add(enemy.Name);
+            foreach (Enemy enemy in Enemy.GetAllEnemies())
+                Interface.main.enemyForTest.Items.Add(enemy.TestListName);
         }
 
         private static string SelectedEnemy()
@@ -108,7 +108,7 @@ namespace WarhammerArmyAssembler
 
             Test.PrepareEnemy(SelectedEnemy());
 
-            Interface.main.enemyTestUnit.Content = SelectedEnemy();
+            Interface.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
             LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy");
             LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
         }

@@ -6,27 +6,30 @@ using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler
 {
-    class TestEnemies
+    class Enemy : Unit
     {
-        public static Unit GetByName(string enemyName)
+        public string TestListName { get; set; }
+
+        public static Enemy GetByName(string enemyName)
         {
-            foreach (Unit enemy in Enemies)
-                if (enemy.Name == enemyName)
+            foreach (Enemy enemy in AllEnemies)
+                if (enemy.TestListName == enemyName)
                     return enemy;
 
             return null;
         }
 
-        public static List<Unit> GetAllEnemies()
+        public static List<Enemy> GetAllEnemies()
         {
-            return new List<Unit>(Enemies);
+            return new List<Enemy>(AllEnemies);
         }
 
-        private static List<Unit> Enemies = new List<Unit>
+        private static List<Enemy> AllEnemies = new List<Enemy>
         {
-            new Unit
+            new Enemy
             {
                 Name = "Empire soldier",
+                TestListName = "Empire soldier <-- soldier, Empire",
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 3,
@@ -40,9 +43,10 @@ namespace WarhammerArmyAssembler
                 Armour = 6
             },
 
-            new Unit
+            new Enemy
             {
                 Name = "Saurus warrior",
+                TestListName = "Saurus warrior <-- soldier, Lizardmen",
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 3,
@@ -57,9 +61,10 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = true
             },
 
-            new Unit
+            new Enemy
             {
                 Name = "Chosen Knights of Chaos",
+                TestListName = "Chosen Knights <-- mount soldier, Chaos",
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 6,
@@ -73,9 +78,10 @@ namespace WarhammerArmyAssembler
                 Armour = 2
             },
 
-            new Unit
+            new Enemy
             {
                 Name = "Troll",
+                TestListName = "Troll <-- monster, Orcs&Goblin",
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 3,
@@ -91,9 +97,10 @@ namespace WarhammerArmyAssembler
                 Stupidity = true
             },
 
-            new Unit
+            new Enemy
             {
-                Name = "Skaven Tretch Craventail",
+                Name = "Tretch Craventail",
+                TestListName = "Tretch Craventail <-- hero, Skaven",
                 Size = 1,
                 Movement = 5,
                 WeaponSkill = 5,
@@ -111,9 +118,10 @@ namespace WarhammerArmyAssembler
                 Stupidity = true
             },
 
-            new Unit
+            new Enemy
             {
-                Name = "Chaos Greater Daemon Bloodthister",
+                Name = "Bloodthister",
+                TestListName = "Greater Daemon Bloodthister <-- lord, Chaos",
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 10,
