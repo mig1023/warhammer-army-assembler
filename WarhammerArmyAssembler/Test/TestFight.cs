@@ -59,7 +59,7 @@ namespace WarhammerArmyAssembler
         {
             testConsole.Clear();
 
-            Console(text, "{0}{1} vs {1}{2}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
+            Console(text, "{0}{1} vs {2}{3}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
 
             int roundWoundsUnit = 0;
             int roundWoundsEnemy = 0;
@@ -74,14 +74,8 @@ namespace WarhammerArmyAssembler
                 Console(supplText, "\n\nround: {0}", round);
                 Console(supplText, "\n{0}: {1}W, {2}: {3}W", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
 
-                int attacksUnit = unit.Attacks;
-                int attackEnemy = enemy.Attacks;
-
-                if (unit.IsUnit())
-                    attacksUnit = PrintAttack(unit, attacksUnit, roundWoundsUnit);
-
-                if (unit.IsUnit())
-                    attackEnemy = PrintAttack(enemy, attackEnemy, roundWoundsEnemy);
+                int attacksUnit = PrintAttack(unit, unit.Attacks, roundWoundsUnit);
+                int attackEnemy = PrintAttack(enemy, enemy.Attacks, roundWoundsEnemy);
 
                 if (CheckInitiative(unit, enemy, round))
                 {
@@ -144,11 +138,14 @@ namespace WarhammerArmyAssembler
             if (unit.Frenzy)
                 Console(supplText, "\n{0} --> is frenzy");
 
-            if ((deathInRound > 0) && unit.IsUnit())
+            if (unit.IsUnit() && (deathInRound > 0))
             {
                 attackNum -= deathInRound;
                 Console(supplText, "\n-{0} attack {1}", deathInRound, unit.Name);
             }
+
+            if (unit.IsUnit() && ((unit.Wounds * unit.OriginalAttacks) < attackNum))
+                attackNum = unit.Wounds * unit.OriginalAttacks;
 
             return attackNum;
         }
@@ -318,7 +315,7 @@ namespace WarhammerArmyAssembler
                         }
                         else
                         {
-                            Console(badText, " --> {0} {1}", enemy.Name, (enemy.Wounds <= 1 ? "SLAIN" : "WOUND"));
+                            Console(badText, " --> {0} {1}", enemy.Name, ((enemy.Wounds <= 1) && !enemy.IsUnit() ? "SLAIN" : "WOUND"));
                             return 1;
                         }
                     }

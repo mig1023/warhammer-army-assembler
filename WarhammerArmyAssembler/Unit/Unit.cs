@@ -62,6 +62,9 @@ namespace WarhammerArmyAssembler
         public string ArmourView { get; set; }
         public string WardView { get; set; }
 
+        public int OriginalWounds { get; set; }
+        public int OriginalAttacks { get; set; }
+
         public bool ImmuneToPsychology { get; set; }
         public bool Stubborn { get; set; }
         public bool Hate { get; set; }
@@ -197,6 +200,9 @@ namespace WarhammerArmyAssembler
                 newUnit.ArmourView = this.ArmourView;
                 newUnit.WardView = this.WardView;
             }
+
+            newUnit.OriginalWounds = this.OriginalWounds;
+            newUnit.OriginalAttacks = this.OriginalAttacks;
 
             newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
             newUnit.Stubborn = this.Stubborn;
@@ -379,6 +385,9 @@ namespace WarhammerArmyAssembler
         public Unit GetUnitMultiplier()
         {
             Unit unit = this.Clone(full: true);
+
+            unit.OriginalAttacks = unit.Attacks;
+            unit.OriginalWounds = unit.Wounds;
 
             Dictionary<int, int> ratio = new Dictionary<int, int>
             {

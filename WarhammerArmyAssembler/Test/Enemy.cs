@@ -9,8 +9,8 @@ namespace WarhammerArmyAssembler
     class Enemy : Unit
     {
         public string TestListName { get; set; }
-        public int UnitWounds { get; set; }
-        public int UnitAttacks { get; set; }
+        public int OriginalWounds { get; set; }
+        public int OriginalAttacks { get; set; }
 
         public static Enemy GetByName(string enemyName)
         {
@@ -120,8 +120,8 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Sword Masters of Hoeth",
-                TestListName = "10 Sword Master <-- unit, High Elves",
-                Size = 10,
+                TestListName = "16 Sword Master <-- unit, High Elves",
+                Size = 16,
                 Movement = 5,
                 WeaponSkill = 6,
                 BallisticSkill = 4,
@@ -133,7 +133,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 8,
                 Armour = 5,
                 HitFirst = true,
-                Type = UnitType.Core
+                Type = UnitType.Rare
             },
 
             new Enemy
