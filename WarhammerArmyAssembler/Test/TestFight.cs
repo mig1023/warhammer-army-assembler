@@ -50,11 +50,16 @@ namespace WarhammerArmyAssembler
                 Console(text, "\nNobody win: {0} / 1000", result[0]);
         }
 
+        public static string ThisIsUnit(Unit unit)
+        {
+            return (unit.IsUnit() ? " (unit)" : String.Empty);
+        }
+
         public static int Test(Unit unit, Unit enemy)
         {
             testConsole.Clear();
 
-            Console(text, "{0}{1} vs {1}{2}", unit.Name, IsUnit(unit), enemy.Name, IsUnit(enemy));
+            Console(text, "{0}{1} vs {1}{2}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
 
             int roundWoundsUnit = 0;
             int roundWoundsEnemy = 0;
@@ -72,10 +77,10 @@ namespace WarhammerArmyAssembler
                 int attacksUnit = unit.Attacks;
                 int attackEnemy = enemy.Attacks;
 
-                if (ThisIsUnit(unit))
+                if (unit.IsUnit())
                     attacksUnit = PrintAttack(unit, attacksUnit, roundWoundsUnit);
 
-                if (ThisIsUnit(enemy))
+                if (unit.IsUnit())
                     attackEnemy = PrintAttack(enemy, attackEnemy, roundWoundsEnemy);
 
                 if (CheckInitiative(unit, enemy, round))
@@ -134,26 +139,12 @@ namespace WarhammerArmyAssembler
             Console(color, String.Format(line, p));
         }
 
-        private static bool ThisIsUnit(Unit unit)
-        {
-            return (String.IsNullOrEmpty(IsUnit(unit)) ? false : true);
-        }
-
-        private static string IsUnit(Unit unit)
-        {
-            bool core = (unit.Type == Unit.UnitType.Core);
-            bool special = (unit.Type == Unit.UnitType.Special);
-            bool rare = (unit.Type == Unit.UnitType.Rare);
-
-            return (core || special || rare ? " (unit)" : String.Empty);
-        }
-
         private static int PrintAttack(Unit unit, int attackNum, int deathInRound)
         {
             if (unit.Frenzy)
                 Console(supplText, "\n{0} --> is frenzy");
 
-            if ((deathInRound > 0) && ThisIsUnit(unit))
+            if ((deathInRound > 0) && unit.IsUnit())
             {
                 attackNum -= deathInRound;
                 Console(supplText, "\n-{0} attack {1}", deathInRound, unit.Name);

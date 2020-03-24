@@ -151,7 +151,7 @@ namespace WarhammerArmyAssembler
             return wizard;
         }
 
-        public Unit Clone()
+        public Unit Clone(bool full = false)
         {
             Unit newUnit = new Unit();
 
@@ -182,6 +182,21 @@ namespace WarhammerArmyAssembler
             newUnit.Armour = this.Armour;
             newUnit.Ward = this.Ward;
             newUnit.Wizard = this.Wizard;
+
+            if (full)
+            {
+                newUnit.MovementView = this.MovementView;
+                newUnit.WeaponSkillView = this.WeaponSkillView;
+                newUnit.BallisticSkillView = this.BallisticSkillView;
+                newUnit.StrengthView = this.StrengthView;
+                newUnit.ToughnessView = this.ToughnessView;
+                newUnit.WoundsView = this.WoundsView;
+                newUnit.InitiativeView = this.InitiativeView;
+                newUnit.AttacksView = this.AttacksView;
+                newUnit.LeadershipView = this.LeadershipView;
+                newUnit.ArmourView = this.ArmourView;
+                newUnit.WardView = this.WardView;
+            }
 
             newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
             newUnit.Stubborn = this.Stubborn;
@@ -255,13 +270,10 @@ namespace WarhammerArmyAssembler
             object paramObject = unitParam.GetValue(this);
             int? paramValue = (int?)paramObject;
 
-            if (paramValue > 10)
-            {
-                if (paramValue == 16)
-                    return "D6";
-                else
-                    return ((int)(paramValue / 6)).ToString() + "D6";
-            }
+            if (paramValue == 16)
+                return "D6";
+            else if ((paramValue > 10) && ((paramValue % 6)== 0))
+                return ((int)(paramValue / 6)).ToString() + "D6";
             else if (paramValue < 0)
                 return "-";
 
@@ -360,6 +372,28 @@ namespace WarhammerArmyAssembler
                     typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
                 }
             }
+
+            return unit;
+        }
+
+        public Unit GetUnitMultiplier()
+        {
+            Unit unit = this.Clone(full: true);
+
+            Dictionary<int, int> ratio = new Dictionary<int, int>
+            {
+                [4] = 3, [7] = 4, [10] = 5, [24] = 6, [28] = 7, [32] = 8,
+            };
+
+            int frontSize = unit.Size;
+
+            foreach(KeyValuePair<int, int> r in ratio)
+                if (unit.Size >= r.Key)
+                    frontSize = r.Value;
+
+            unit.Attacks *= frontSize;
+
+            unit.Wounds *= unit.Size;
 
             return unit;
         }
@@ -651,6 +685,15 @@ namespace WarhammerArmyAssembler
         public bool IsHeroOrHisMount()
         {
             return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount ? true : false);
+        }
+
+        public bool IsUnit()
+        {
+            bool core = (this.Type == Unit.UnitType.Core);
+            bool special = (this.Type == Unit.UnitType.Special);
+            bool rare = (this.Type == Unit.UnitType.Rare);
+
+            return (core || special || rare ? true : false);
         }
 
         public bool ExistsOptions()

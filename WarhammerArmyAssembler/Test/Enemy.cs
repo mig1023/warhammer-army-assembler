@@ -9,6 +9,8 @@ namespace WarhammerArmyAssembler
     class Enemy : Unit
     {
         public string TestListName { get; set; }
+        public int UnitWounds { get; set; }
+        public int UnitAttacks { get; set; }
 
         public static Enemy GetByName(string enemyName)
         {
@@ -76,6 +78,24 @@ namespace WarhammerArmyAssembler
                 Attacks = 2,
                 Leadership = 8,
                 Armour = 2
+            },
+
+            new Enemy
+            {
+                Name = "Empire swordmens",
+                TestListName = "20 Empire swordmens <-- unit, Empire",
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 1,
+                Leadership = 7,
+                Armour = 6,
+                Type = UnitType.Core
             },
 
             new Enemy
