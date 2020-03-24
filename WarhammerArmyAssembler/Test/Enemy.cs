@@ -82,24 +82,6 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Empire swordmens",
-                TestListName = "20 Empire swordmens <-- unit, Empire",
-                Size = 20,
-                Movement = 4,
-                WeaponSkill = 3,
-                BallisticSkill = 3,
-                Strength = 3,
-                Toughness = 3,
-                Wounds = 1,
-                Initiative = 3,
-                Attacks = 1,
-                Leadership = 7,
-                Armour = 6,
-                Type = UnitType.Core
-            },
-
-            new Enemy
-            {
                 Name = "Troll",
                 TestListName = "Troll <-- monster, Orcs&Goblin",
                 Size = 1,
@@ -119,6 +101,43 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Empire swordmens",
+                TestListName = "20 Empire swordmens <-- unit, Empire",
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 1,
+                Leadership = 7,
+                Armour = 6,
+                Type = UnitType.Core
+            },
+
+            new Enemy
+            {
+                Name = "Sword Masters of Hoeth",
+                TestListName = "10 Sword Master <-- unit, High Elves",
+                Size = 10,
+                Movement = 5,
+                WeaponSkill = 6,
+                BallisticSkill = 4,
+                Strength = 5,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 5,
+                Attacks = 2,
+                Leadership = 8,
+                Armour = 5,
+                HitFirst = true,
+                Type = UnitType.Core
+            },
+
+            new Enemy
+            {
                 Name = "Tretch Craventail",
                 TestListName = "Tretch Craventail <-- hero, Skaven",
                 Size = 1,
@@ -133,9 +152,24 @@ namespace WarhammerArmyAssembler
                 Leadership = 6,
                 Armour = 5,
                 Ward = 4,
-                Fear = true,
-                Regeneration = true,
-                Stupidity = true
+            },
+
+            new Enemy
+            {
+                Name = "Star Dragon",
+                TestListName = "Star Dragon <-- monster, High Elves",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 7,
+                BallisticSkill = 0,
+                Strength = 7,
+                Toughness = 6,
+                Wounds = 7,
+                Initiative = 2,
+                Attacks = 6,
+                Leadership = 9,
+                Armour = 3,
+                Terror = true,
             },
 
             new Enemy
