@@ -90,15 +90,20 @@ namespace WarhammerArmyAssembler
                 label.BorderBrush = ArmyBook.MainColor;
             }
 
-            Interface.main.enemyForTest.Items.Clear();
+            Interface.main.enemyGroup.Items.Clear();
 
-            foreach (Enemy enemy in Enemy.GetAllEnemies())
-                Interface.main.enemyForTest.Items.Add(enemy.TestListName);
+            foreach (string enemy in Enemy.GetEnemiesGroups())
+                Interface.main.enemyGroup.Items.Add(enemy);
         }
 
         private static string SelectedEnemy()
         {
             return (string)Interface.main.enemyForTest.SelectedItem;
+        }
+
+        private static string SelectedGroup()
+        {
+            return (string)Interface.main.enemyGroup.SelectedItem;
         }
 
         public static void TestEnemyPrepare()
@@ -111,6 +116,17 @@ namespace WarhammerArmyAssembler
             Interface.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
             LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy");
             LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
+        }
+
+        public static void LoadEnemyGroups()
+        {
+            if (String.IsNullOrEmpty(SelectedGroup()))
+                return;
+
+            Interface.main.enemyForTest.Items.Clear();
+
+            foreach (Enemy enemy in Enemy.GetEnemiesByGroup(SelectedGroup()))
+                Interface.main.enemyForTest.Items.Add(enemy.TestListName);
         }
 
         public static void CleanConsole()

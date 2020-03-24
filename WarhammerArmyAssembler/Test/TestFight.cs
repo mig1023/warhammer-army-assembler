@@ -108,17 +108,17 @@ namespace WarhammerArmyAssembler
 
             if (enemy.Wounds <= 0)
             {
-                Console(text, "{0} win\n", unit.Name);
+                Console(text, "{0} win", unit.Name);
                 return 1;
             }
             else if (unit.Wounds <= 0)
             {
-                Console(text, "{0} win\n", enemy.Name);
+                Console(text, "{0} win", enemy.Name);
                 return 2;
             }
             else
             {
-                Console(text, "{0} and {1} failed to kill each other\n", unit.Name, enemy.Name);
+                Console(text, "{0} and {1} failed to kill each other", unit.Name, enemy.Name);
                 return 0;
             }
         }

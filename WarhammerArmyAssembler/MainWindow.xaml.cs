@@ -452,7 +452,8 @@ namespace WarhammerArmyAssembler
 
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 enemyForTestText, enemyForTest, enemyTestUnit, enemyGridContainer,
-                specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole
+                specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole,
+                enemyGroupText, enemyGroup,
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 
@@ -478,7 +479,7 @@ namespace WarhammerArmyAssembler
         private void armyUnitTest_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             foreach(FrameworkElement element in new List<FrameworkElement> {
-                unitGrid, specialRulesTest, enemyForTest, enemyGrid, specialRulesEnemyTest, testConsole
+                unitGrid, specialRulesTest, enemyForTest, enemyGrid, specialRulesEnemyTest, testConsole, enemyGroup
             })
                 element.Width = e.NewSize.Width - 120;
 
@@ -489,6 +490,11 @@ namespace WarhammerArmyAssembler
         {
             InterfaceTestUnit.TestEnemyPrepare();
             InterfaceTestUnit.TestCanvasShow();
+        }
+
+        private void enemyGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            InterfaceTestUnit.LoadEnemyGroups();
         }
 
         private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e)

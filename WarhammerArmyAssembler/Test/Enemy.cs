@@ -9,24 +9,46 @@ namespace WarhammerArmyAssembler
     class Enemy : Unit
     {
         public string TestListName { get; set; }
-        public int OriginalWounds { get; set; }
-        public int OriginalAttacks { get; set; }
 
         public static Enemy GetByName(string enemyName)
         {
-            foreach (Enemy enemy in AllEnemies)
-                if (enemy.TestListName == enemyName)
-                    return enemy;
+            foreach (List<Enemy> enemyList in new List<List<Enemy>>
+            {
+                EnemiesSoldiers, EnemiesMonsters, EnemiesUnits, EnemiesHeroes
+            })
+                foreach (Enemy enemy in enemyList)
+                    if (enemy.TestListName == enemyName)
+                        return enemy;
 
             return null;
         }
 
-        public static List<Enemy> GetAllEnemies()
+        public static List<string> GetEnemiesGroups()
         {
-            return new List<Enemy>(AllEnemies);
+            return new List<string>
+            {
+                "Single soldiers",
+                "Monsters",
+                "Units",
+                "Lords and heroes",
+            };
         }
 
-        private static List<Enemy> AllEnemies = new List<Enemy>
+        public static List<Enemy> GetEnemiesByGroup(string groupName)
+        {
+            if (groupName == "Single soldiers")
+                return new List<Enemy>(EnemiesSoldiers);
+            else if (groupName == "Monsters")
+                return new List<Enemy>(EnemiesMonsters);
+            else if (groupName == "Units")
+                return new List<Enemy>(EnemiesUnits);
+            else if (groupName == "Lords and heroes")
+                return new List<Enemy>(EnemiesHeroes);
+            else
+                return new List<Enemy> { };
+        }
+
+        private static List<Enemy> EnemiesSoldiers = new List<Enemy>
         {
             new Enemy
             {
@@ -79,7 +101,10 @@ namespace WarhammerArmyAssembler
                 Leadership = 8,
                 Armour = 2
             },
+        };
 
+        private static List<Enemy> EnemiesMonsters = new List<Enemy>
+        {
             new Enemy
             {
                 Name = "Troll",
@@ -101,6 +126,27 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Star Dragon",
+                TestListName = "Star Dragon <-- monster, High Elves",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 7,
+                BallisticSkill = 0,
+                Strength = 7,
+                Toughness = 6,
+                Wounds = 7,
+                Initiative = 2,
+                Attacks = 6,
+                Leadership = 9,
+                Armour = 3,
+                Terror = true,
+            },
+        };
+
+        private static List<Enemy> EnemiesUnits = new List<Enemy>
+        {
+            new Enemy
+            {
                 Name = "Empire swordmens",
                 TestListName = "20 Empire swordmens <-- unit, Empire",
                 Size = 20,
@@ -119,8 +165,28 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Bloodletters",
+                TestListName = "20 Bloodletters <-- unit, Chaos",
+                Type = UnitType.Core,
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 4,
+                Attacks = 1,
+                Leadership = 8,
+                Armour = 6,
+                Frenzy = true
+            },
+
+            new Enemy
+            {
                 Name = "Sword Masters of Hoeth",
                 TestListName = "16 Sword Master <-- unit, High Elves",
+                Type = UnitType.Rare,
                 Size = 16,
                 Movement = 5,
                 WeaponSkill = 6,
@@ -132,10 +198,13 @@ namespace WarhammerArmyAssembler
                 Attacks = 2,
                 Leadership = 8,
                 Armour = 5,
-                HitFirst = true,
-                Type = UnitType.Rare
+                HitFirst = true
             },
 
+        };
+
+        private static List<Enemy> EnemiesHeroes = new List<Enemy>
+        {
             new Enemy
             {
                 Name = "Tretch Craventail",
@@ -152,24 +221,6 @@ namespace WarhammerArmyAssembler
                 Leadership = 6,
                 Armour = 5,
                 Ward = 4,
-            },
-
-            new Enemy
-            {
-                Name = "Star Dragon",
-                TestListName = "Star Dragon <-- monster, High Elves",
-                Size = 1,
-                Movement = 6,
-                WeaponSkill = 7,
-                BallisticSkill = 0,
-                Strength = 7,
-                Toughness = 6,
-                Wounds = 7,
-                Initiative = 2,
-                Attacks = 6,
-                Leadership = 9,
-                Armour = 3,
-                Terror = true,
             },
 
             new Enemy
