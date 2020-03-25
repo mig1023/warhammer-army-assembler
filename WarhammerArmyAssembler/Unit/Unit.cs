@@ -465,9 +465,9 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public string GetSpecialRulesLine()
+        public string GetSpecialRulesLine(bool withCommandData = false)
         {
-            string rules = String.Empty;
+            string rules = (withCommandData ? GetFullCommandLine() : String.Empty);
 
             foreach (string rule in GetSpecialRules())
                 rules += String.Format("{0}; ", rule);

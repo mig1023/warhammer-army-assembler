@@ -143,7 +143,7 @@ namespace WarhammerArmyAssembler
         {
             Unit newUnit = unit.Clone().GetOptionRules();
 
-            newUnit.RulesView = newUnit.GetSpecialRulesLine();
+            newUnit.RulesView = newUnit.GetSpecialRulesLine(withCommandData: true);
             newUnit.PointsView = newUnit.GetUnitPoints().ToString();
             newUnit.ID = id;
 
