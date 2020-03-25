@@ -23,6 +23,7 @@ namespace WarhammerArmyAssembler
         public string[] OnlyIfAnotherService { get; set; }
         public string[] OnlyIfNotAnotherService { get; set; }
         public bool OnlyOneInArmy { get; set; }
+        public bool OnlyOneForSuchUnits { get; set; }
         public string OnlyForGroup { get; set; }
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
@@ -137,6 +138,7 @@ namespace WarhammerArmyAssembler
             newOption.Realised = this.Realised;
             newOption.Multiple = this.Multiple;
             newOption.OnlyOneInArmy = this.OnlyOneInArmy;
+            newOption.OnlyOneForSuchUnits = this.OnlyOneForSuchUnits;
             newOption.OnlyFor = this.OnlyFor;
             newOption.OnlyIfAnotherService = this.OnlyIfAnotherService;
             newOption.OnlyIfNotAnotherService = this.OnlyIfNotAnotherService;
@@ -210,6 +212,9 @@ namespace WarhammerArmyAssembler
 
             if (OnlyOneInArmy)
                 describe += "\nOnly one in army";
+
+            if (OnlyOneForSuchUnits)
+                describe += "\nOnly one for each type units";
 
             return describe;
         }

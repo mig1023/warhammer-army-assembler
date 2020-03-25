@@ -92,8 +92,10 @@ namespace WarhammerArmyAssembler
 
                         margins = CheckColumn(margins, ref lastColumnMaxWidth);
 
-                        int alredyUsedBy = (option.OnlyOneInArmy ? ArmyChecks.IsOptionAlreadyUsed(option.Name) : 0);
-                        bool canBeUsed = (!option.OnlyOneInArmy || (alredyUsedBy == 0) || (alredyUsedBy == unitID));
+                        bool canBeUsed = true;
+
+                        if (option.OnlyOneInArmy || option.OnlyOneForSuchUnits)
+                            canBeUsed = (ArmyChecks.IsOptionAlreadyUsed(option.Name, unitID, unit.Name, option.OnlyOneForSuchUnits) == 0);
 
                         margins[1] += AddButton(option.Name, margins, 25, ref lastColumnMaxWidth, String.Format("{0}|{1}", unitID, option.ID),
                             option, mountAlreadyOn: mountAlreadyOn, mountTypeAlreadyFixed: mountTypeAlreadyFixed, unit: unit,

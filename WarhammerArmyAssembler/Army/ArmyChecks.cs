@@ -83,12 +83,13 @@ namespace WarhammerArmyAssembler
             return (limitForArmy < 0 ? true : (alreadyInArmy < limitForArmy));
         }
 
-        public static int IsOptionAlreadyUsed(string optionName)
+        public static int IsOptionAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
         {
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
-                foreach (Option option in entry.Value.Options)
-                    if ((option.Name == optionName) && option.Realised)
-                        return entry.Key;
+                if ((entry.Key != requestFromUnit) && (!byUnitType || (entry.Value.Name == unitName)))
+                    foreach (Option option in entry.Value.Options)
+                        if ((option.Name == optionName) && option.Realised)
+                            return entry.Key;
 
             return 0;
         }
