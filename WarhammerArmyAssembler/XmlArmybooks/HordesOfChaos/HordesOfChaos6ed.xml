@@ -15,6 +15,7 @@
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
 				<Description>+1 to Hit</Description>
 			</Artefact>
@@ -22,6 +23,7 @@
 				<Name>Sword of Battle</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<AddToAttacks>1</AddToAttacks>
 				<Description>+1 Attack</Description>
 			</Artefact>
@@ -29,6 +31,7 @@
 				<Name>Sword of Might</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<AddToStrength>1</AddToStrength>
 				<Description>+1 Strenght</Description>
 			</Artefact>
@@ -36,6 +39,7 @@
 				<Name>Biting Blade</Name>
 				<Type>Weapon</Type>
 				<Points>10</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>-1 Armour save</SpecialRuleDescription>
 				<Description>-1 Armour save</Description>
 			</Artefact>
@@ -43,6 +47,7 @@
 				<Name>Enchanted shield</Name>
 				<Type>Shield</Type>
 				<Points>10</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<AddToArmour>5</AddToArmour>
 				<Description>5+ Armour save</Description>
 			</Artefact>
@@ -50,6 +55,7 @@
 				<Name>Talisman of Protection</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<AddToWard>6</AddToWard>
 				<Description>6+ ward save</Description>
 			</Artefact>
@@ -57,6 +63,7 @@
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<Multiple>true</Multiple>
 				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
@@ -64,6 +71,7 @@
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<Multiple>true</Multiple>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
@@ -71,6 +79,7 @@
 				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>+1 to dispell</SpecialRuleDescription>
 				<Description>+1 to dispell</Description>
 			</Artefact>
@@ -78,6 +87,7 @@
 				<Name>War Banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>+1 Combat Resolution</SpecialRuleDescription>
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
@@ -87,6 +97,7 @@
 				<Name>Chaos Daemon Sword</Name>
 				<Type>Weapon</Type>
 				<Points>85</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>The wielder has WS, S, I and A as the Greater Daemon of their patron god. With a Mark of Chaos only (except the Mark of Chaos Undivided)</SpecialRuleDescription>
 				<Description>A character with a Daemon Sword has the same WS, S, I and A as the Greater Daemon of their patron god (eg, a Champion of Khorne would have Weapon Skill 10, Strength 7, Initiative 10 and Attacks 7). However, every roll of a I to hit in close combat means that the attack is resolved against the character instead of the enemy. Furthermore, the character can never re-roll an unmodified 1 to hit in close combat, regardless of the source of the re-roll.</Description>
 			</Artefact>
@@ -94,6 +105,7 @@
 				<Name>Sword of Change</Name>
 				<Type>Weapon</Type>
 				<Points>75</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a 4+ the model is turned into a Chaos Spawn (with only D3 Wounds) controlled by the Chaos player</SpecialRuleDescription>
 				<Description>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a roll of 1, 2 or 3 nothing happens. On a roll of 4 or more, the model is turned into a Chaos Spawn controlled by the Chaos player! Replace the model with a Chaos Spawn model. If you do not have a spare Chaos Spawn model the model is slain, but the sword has no additional effect. If the enemy is in a unit, dien the Spawn model is placed in contact with the unit on one of its free sides (bearer's choice) and will fight as normal in subsequent combat rounds. The Chaos Spawn starts with only D3 Wounds.</Description>
 			</Artefact>
@@ -101,6 +113,7 @@
 				<Name>Hellfire sword</Name>
 				<Type>Weapon</Type>
 				<Points>75</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>D6 additional wounds with no armour saves</SpecialRuleDescription>
 				<SpecialRuleDescription>flaming</SpecialRuleDescription>
 				<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack.</Description>
@@ -109,6 +122,7 @@
 				<Name>Chaos Runesword</Name>
 				<Type>Weapon</Type>
 				<Points>70</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<AddToWeaponSkill>1</AddToWeaponSkill>
 				<AddToStrength>1</AddToStrength>
 				<AddToAttacks>1</AddToAttacks>
@@ -120,6 +134,7 @@
 				<Points>50</Points>
 				<HitFirst>true</HitFirst>
 				<AddToAttacks>1</AddToAttacks>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Slaanesh</OnlyIf>
 				</OnlyIfAnotherService>
@@ -129,6 +144,7 @@
 				<Name>Berserker sword</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>Half the Unit Strength of all enemy models in base contact as additional Attacks</SpecialRuleDescription>
 				<Description>The wielder of the Berserker Sword may make additional attacks in every Close Combat phase. The number of additional attacks is equal to half the Unit Strength of all enemy models in base contact (rounding up). For example, a character in contact with two Ogres (combined Unit Strength of 6) would get 3 additional Attacks. If the bearer is involved in a challenge, only the Unit Strength of the opponent is counted.</Description>
 			</Artefact>
@@ -136,6 +152,7 @@
 				<Name>Rending sword</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>Wounded model loses not one but D3 wounds</SpecialRuleDescription>
 				<Description>A model wounded by the Rending Sword (after saves, etc) loses not one but D3 wounds.</Description>
 			</Artefact>
@@ -143,6 +160,7 @@
 				<Name>Blade of Blood</Name>
 				<Type>Weapon</Type>
 				<Points>35</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>For each unsaved wound which the Blade of Blood causes, the wielder gains +1 Wound by Strength test</SpecialRuleDescription>
 				<Description>For each unsaved wound which the Blade of Blood causes, the wielder may take a Strength test. If the test is passed, the wielder gains +1 Wound. This may not increase his Wounds value above double its normal number of Wounds. If the test is tailed, the wielder loses one Wound.</Description>
 			</Artefact>
@@ -150,6 +168,7 @@
 				<Name>Filth Mace</Name>
 				<Type>Weapon</Type>
 				<Points>35</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<Terror>true</Terror>
 				<PoisonAttack>true</PoisonAttack>
 				<Description>All attacks with the Filth Mace count as poisoned attacks In addition, if the bearer of the mace kills an enemy character in close combat, he will cause terror for the rest of the game.</Description>
@@ -158,6 +177,7 @@
 				<Name>Soul Cleaver</Name>
 				<Type>Weapon</Type>
 				<Points>35</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<SpecialRuleDescription>Any wounded model must pass a Toughness test or suffer an additional wound (with no saves allowed)</SpecialRuleDescription>
 				<Description>Any model wounded by the Soul Cleaver (after saves, etc) must pass a Toughness test or suffer an additional wound (with no saves allowed).</Description>
 			</Artefact>
@@ -168,6 +188,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Khorne</OnlyIf>
 				</OnlyIfAnotherService>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 				<KillingBlow>true</KillingBlow>
 				<Description>Confers on the bearer the Killing Blow ability.</Description>
 			</Artefact>
@@ -179,6 +200,7 @@
 				<Points>40</Points>
 				<AddToArmour>4</AddToArmour>
 				<AddToToughness>1</AddToToughness>
+				<OnlyForGroup>Mortal</OnlyForGroup>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Enchanted items">	
@@ -190,8 +212,30 @@
 		<ArtefactsGroup Name = "Magic banner">
 			
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Demonic Gifts">
+			<Artefact>
+				<Name>Blade of The Ether</Name>
+				<Type>Weapon</Type>
+				<Points>45</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<SpecialRuleDescription>Daemon ignore armour saves in close combat</SpecialRuleDescription>
+				<Description>Daemon ignore armour saves in close combat</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Khorne Gifts">
+			<Artefact>
+				<Name>Axe of Khorne</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<KillingBlow>true</KillingBlow>
+				<Description>Daemon with an Axe gains the Killing Blow ability</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
-	
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
@@ -604,6 +648,8 @@
 			<AdditionalParam>
 				<Terror>true</Terror>
 				<SlotsOfHero>1</SlotsOfHero>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
 			</AdditionalParam>
 			<Options>
 				<Option>
@@ -1317,6 +1363,9 @@
 				<Special>
 					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
 				</Special>
+				<Mark>
+					<Name>Mark of Khorne</Name>
+				</Mark>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
@@ -1365,6 +1414,9 @@
 					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
 					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
 				</Special>
+				<Mark>
+					<Name>Mark of Khorne</Name>
+				</Mark>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
@@ -1389,6 +1441,9 @@
 					<SpecialRuleDescription>-1 modifier on roll to hit</SpecialRuleDescription>
 					<SpecialRuleDescription>Breath attack Strength 3 with a -2 armour modifier</SpecialRuleDescription>
 				</Special>
+				<Mark>
+					<Name>Mark of Nurgle</Name>
+				</Mark>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
@@ -1414,6 +1469,9 @@
 					<SpecialRuleDescription>Swarn</SpecialRuleDescription>
 					<SpecialRuleDescription>-1 modifier on roll to hit</SpecialRuleDescription>
 				</Special>
+				<Mark>
+					<Name>Mark of Nurgle</Name>
+				</Mark>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
@@ -1437,6 +1495,9 @@
 				<Special>
 					<SpecialRuleDescription>-1 Leadership modifier</SpecialRuleDescription>
 				</Special>
+				<Mark>
+					<Name>Mark of Slaanesh</Name>
+				</Mark>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
@@ -1460,6 +1521,9 @@
 				<Special>
 					<SpecialRuleDescription>Spellcasters</SpecialRuleDescription>
 				</Special>
+				<Mark>
+					<Name>Mark of Tzeentch</Name>
+				</Mark>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
@@ -1485,6 +1549,9 @@
 					<SpecialRuleDescription>Flying Unit</SpecialRuleDescription>
 					<SpecialRuleDescription>Slashing Attack</SpecialRuleDescription>
 				</Special>
+				<Mark>
+					<Name>Mark of Tzeentch</Name>
+				</Mark>
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
