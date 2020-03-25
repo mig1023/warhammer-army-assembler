@@ -84,6 +84,7 @@ namespace WarhammerArmyAssembler
         public int SlotsOfHero { get; set; }
         public int SlotsOfSpecial { get; set; }
         public int SlotsOfRare { get; set; }
+        public bool NoSlotsOfCore { get; set; }
 
         public int MagicItems { get; set; }
         public MagicItemsTypes MagicItemsType { get; set; }
@@ -222,6 +223,7 @@ namespace WarhammerArmyAssembler
             newUnit.SlotsOfHero = this.SlotsOfHero;
             newUnit.SlotsOfSpecial = this.SlotsOfSpecial;
             newUnit.SlotsOfRare = this.SlotsOfRare;
+            newUnit.NoSlotsOfCore = this.NoSlotsOfCore;
 
             newUnit.MagicItems = this.MagicItems;
             newUnit.MagicItemsType = this.MagicItemsType;

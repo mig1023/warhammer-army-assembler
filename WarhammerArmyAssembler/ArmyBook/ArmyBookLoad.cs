@@ -125,6 +125,7 @@ namespace WarhammerArmyAssembler
                 newUnit.SlotsOfHero = IntParse(additionalParam["SlotsOfHero"]);
                 newUnit.SlotsOfSpecial = IntParse(additionalParam["SlotsOfSpecial"]);
                 newUnit.SlotsOfRare = IntParse(additionalParam["SlotsOfRare"]);
+                newUnit.NoSlotsOfCore = BoolParse(additionalParam["NoSlotsOfCore"]);
 
                 if (newUnit.Frenzy)
                     xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(ArmyBookOther.AddFrenzyAttack(xml));

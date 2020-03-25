@@ -43,7 +43,8 @@ namespace WarhammerArmyAssembler
 
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
             {
-                units[entry.Value.Type] += 1;
+                if ((entry.Value.Type != Unit.UnitType.Core) || !entry.Value.NoSlotsOfCore)
+                    units[entry.Value.Type] += 1;
 
                 units[Unit.UnitType.Lord] += entry.Value.SlotsOfLords;
                 units[Unit.UnitType.Hero] += entry.Value.SlotsOfHero;
