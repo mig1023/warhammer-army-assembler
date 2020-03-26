@@ -17,7 +17,6 @@ namespace WarhammerArmyAssembler
         private static bool showLinesToConsole = true;
 
         private static List<string> unitParam = new List<string> {
-                "Size",
                 "Movement",
                 "WeaponSkill",
                 "BallisticSkill",
@@ -37,17 +36,7 @@ namespace WarhammerArmyAssembler
             {
                 PropertyInfo param = typeof(Unit).GetProperty(name);
                 object paramObject = param.GetValue(unitForLoad);
-                string paramValue = String.Empty;
-
-                if (paramObject is UnitParam)
-                    paramValue = (paramObject as UnitParam).View;
-                else
-                {
-                    PropertyInfo paramTmp = typeof(Unit).GetProperty(name == "Size" ? name : String.Format("{0}View", name));
-                    object paramObjectTmp = paramTmp.GetValue(unitForLoad);
-                    paramValue = paramObjectTmp.ToString();
-                }
-                    
+                string paramValue = (paramObject as UnitParam).View;
 
                 Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
                 testUnitElement.Content = paramValue;
