@@ -444,16 +444,16 @@ namespace WarhammerArmyAssembler
             Interface.Move(Interface.MovingType.ToRight);
         }
 
-        private void armyUnitTest_Resize()
+        public void armyUnitTest_Resize()
         {
             UpdateLayout();
 
-            double marginTop = specialRulesTest.Margin.Top + specialRulesTest.ActualHeight + 10;
+            double marginTop = (unitGrid.ActualHeight - 66);
 
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 enemyForTestText, enemyForTest, enemyTestUnit, enemyGridContainer,
                 specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole,
-                enemyGroupText, enemyGroup,
+                enemyGroupText, enemyGroup, specialRulesTest
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 

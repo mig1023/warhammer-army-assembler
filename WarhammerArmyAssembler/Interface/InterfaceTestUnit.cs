@@ -16,6 +16,8 @@ namespace WarhammerArmyAssembler
     {
         private static bool showLinesToConsole = true;
 
+        private static List<FrameworkElement> mountRow = new List<FrameworkElement>();
+
         private static List<string> unitParam = new List<string> {
                 "Size",
                 "Movement",
@@ -33,12 +35,65 @@ namespace WarhammerArmyAssembler
 
         private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix)
         {
+            if (unitForLoad.MountOn > 0)
+            {
+                if (Interface.main.unitGrid.RowDefinitions.Count < 3)
+                    Interface.main.unitGrid.RowDefinitions.Add(new RowDefinition());
+
+                Interface.main.unitGrid.Height = 99;
+            }
+            else
+            {
+                if (Interface.main.unitGrid.RowDefinitions.Count > 2)
+                {
+                    Interface.main.unitGrid.RowDefinitions.RemoveAt(2);
+
+                    foreach(FrameworkElement f in mountRow)
+                    {
+                        Panel p = (f as Panel);
+                        p.Children.Clear();
+                        Interface.main.unitGrid.Children.Remove(p);
+                    }
+
+                    mountRow.Clear();
+                }
+                Interface.main.unitGrid.Height = 66;
+            }
+
+            int mountIndex = 0;
+
             foreach (string name in unitParam)
             {
                 PropertyInfo param = typeof(Unit).GetProperty(name == "Size" ? name : String.Format("{0}View", name));
                 Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
                 testUnitElement.Content = param.GetValue(unitForLoad);
+
+                if (unitForLoad.MountOn > 0)
+                {
+                    PropertyInfo mountParam = typeof(Unit).GetProperty(name);
+                    Unit mount = Army.Units[unitForLoad.MountOn];
+                    var s = mountParam.GetValue(mount) ?? String.Empty;
+                    AddMountUnitParam(s.ToString(), mountIndex++);
+                }
             }
+
+            Interface.main.armyUnitTest_Resize();
+        }
+
+        private static void AddMountUnitParam(string param, int gridIndex)
+        {
+            StackPanel panel = new StackPanel();
+            panel.HorizontalAlignment = HorizontalAlignment.Center;
+            Interface.main.unitGrid.Children.Add(panel);
+            Grid.SetRow(panel, 2);
+            Grid.SetColumn(panel, gridIndex);
+
+            mountRow.Add(panel);
+
+            Label label = new Label();
+            label.FontSize = 16;
+            label.Content = param;
+            panel.Children.Add(label);
         }
 
         private static void LoadSpecialRules(Unit unitForLoad, TextBlock target)
