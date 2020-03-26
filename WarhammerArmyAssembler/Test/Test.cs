@@ -9,11 +9,15 @@ namespace WarhammerArmyAssembler
     class Test
     {
         public static Unit unit;
+        public static Unit mount;
         public static Unit enemy;
 
         public static void PrepareUnit(Unit unit)
         {
             Test.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+
+            if (unit.MountOn > 0)
+                Test.mount = Army.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
         }
 
         public static void PrepareEnemy(string enemyName)
@@ -23,12 +27,12 @@ namespace WarhammerArmyAssembler
 
         public static void TestFull()
         {
-            TestFight.FullTest(unit.Clone(), enemy.Clone());
+            TestFight.FullTest(unit.Clone(), mount.Clone(), enemy.Clone());
         }
 
         public static void TestStatistic()
         {
-            TestFight.StatisticTest(unit.Clone(), enemy.Clone());
+            TestFight.StatisticTest(unit.Clone(), mount.Clone(), enemy.Clone());
         }
     }
 }

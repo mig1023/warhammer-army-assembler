@@ -25,12 +25,12 @@ namespace WarhammerArmyAssembler
         static Brush goodText = Brushes.Green;
         static Brush badText = Brushes.Red;
 
-        public static void FullTest(Unit unit, Unit enemy)
+        public static void FullTest(Unit unit, Unit mount, Unit enemy)
         {
-            Test(unit, enemy);
+            Test(unit, mount, enemy);
         }
 
-        public static void StatisticTest(Unit unit, Unit enemy)
+        public static void StatisticTest(Unit unit, Unit mount, Unit enemy)
         {
             int[] result = new int[3];
 
@@ -38,7 +38,7 @@ namespace WarhammerArmyAssembler
 
             for (int i = 0; i < 1000; i++)
             {
-                int tmp = Test(unit.Clone(), enemy.Clone());
+                int tmp = Test(unit.Clone(), mount.Clone(), enemy.Clone());
                 result[tmp] += 1;
             }
 
@@ -55,7 +55,7 @@ namespace WarhammerArmyAssembler
             return (unit.IsUnit() ? " (unit)" : String.Empty);
         }
 
-        public static int Test(Unit unit, Unit enemy)
+        public static int Test(Unit unit, Unit mount, Unit enemy)
         {
             testConsole.Clear();
 
@@ -80,6 +80,7 @@ namespace WarhammerArmyAssembler
                 if (CheckInitiative(unit, enemy, round))
                 {
                     roundWoundsEnemy = Round(unit, ref enemy, attacksUnit, round);
+                    roundWoundsEnemy += Round(mount, ref enemy, attacksUnit, round);
                     roundWoundsUnit = Round(enemy, ref unit, attackEnemy, round);
                 }
                 else

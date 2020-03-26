@@ -33,16 +33,16 @@ namespace WarhammerArmyAssembler
                 "Ward"
             };
 
-        private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix)
+        private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix, bool withMount = false)
         {
-            if (unitForLoad.MountOn > 0)
+            if (withMount && (unitForLoad.MountOn > 0))
             {
                 if (Interface.main.unitGrid.RowDefinitions.Count < 3)
                     Interface.main.unitGrid.RowDefinitions.Add(new RowDefinition());
 
                 Interface.main.unitGrid.Height = 99;
             }
-            else
+            else if (withMount)
             {
                 if (Interface.main.unitGrid.RowDefinitions.Count > 2)
                 {
@@ -68,7 +68,7 @@ namespace WarhammerArmyAssembler
                 Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
                 testUnitElement.Content = param.GetValue(unitForLoad);
 
-                if (unitForLoad.MountOn > 0)
+                if (withMount && (unitForLoad.MountOn > 0))
                 {
                     PropertyInfo mountParam = typeof(Unit).GetProperty(name);
                     Unit mount = Army.Units[unitForLoad.MountOn];
@@ -136,7 +136,7 @@ namespace WarhammerArmyAssembler
                 f.Visibility = Visibility.Hidden;
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
-            LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test");
+            LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test", withMount: true);
             LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest);
 
             foreach (Label label in new List<Label> { Interface.main.startFullTest, Interface.main.startStatisticTest })
