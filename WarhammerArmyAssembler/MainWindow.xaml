@@ -338,63 +338,63 @@
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
-                        <DataGridTextColumn Header="M" Binding="{Binding Movement.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="M" Binding="{Binding MovementView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkill.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="WS" Binding="{Binding WeaponSkillView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkill.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="BS" Binding="{Binding BallisticSkillView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="S" Binding="{Binding Strength.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="S" Binding="{Binding StrengthView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="T" Binding="{Binding Toughness.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="T" Binding="{Binding ToughnessView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="W" Binding="{Binding Wounds.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="W" Binding="{Binding WoundsView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="I" Binding="{Binding Initiative.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="I" Binding="{Binding InitiativeView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="A" Binding="{Binding Attacks.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="A" Binding="{Binding AttacksView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="LD" Binding="{Binding Leadership.View}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="LD" Binding="{Binding LeadershipView}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>

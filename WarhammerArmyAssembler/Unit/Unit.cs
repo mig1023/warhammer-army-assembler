@@ -36,29 +36,29 @@ namespace WarhammerArmyAssembler
 
         public string Description { get; set; }
 
-        public UnitParam Movement { get; set; } 
-        public UnitParam WeaponSkill { get; set; }
-        public UnitParam BallisticSkill { get; set; }
-        public UnitParam Strength { get; set; }
-        public UnitParam Toughness { get; set; }
-        public UnitParam Wounds { get; set; }
-        public UnitParam Initiative { get; set; }
-        public UnitParam Attacks { get; set; }
-        public UnitParam Leadership { get; set; }
+        public int Movement { get; set; }
+        public int WeaponSkill { get; set; }
+        public int BallisticSkill { get; set; }
+        public int Strength { get; set; }
+        public int Toughness { get; set; }
+        public int Wounds { get; set; }
+        public int Initiative { get; set; }
+        public int Attacks { get; set; }
+        public int Leadership { get; set; }
         public int? Armour { get; set; }
         public int? Ward { get; set; }
 
         public int Wizard { get; set; }
 
-        //public string MovementView { get; set; }
-        //public string WeaponSkillView { get; set; }
-        //public string BallisticSkillView { get; set; }
-        //public string StrengthView { get; set; }
-        //public string ToughnessView { get; set; }
-        //public string WoundsView { get; set; }
-        //public string InitiativeView { get; set; }
-        //public string AttacksView { get; set; }
-        //public string LeadershipView { get; set; }
+        public string MovementView { get; set; }
+        public string WeaponSkillView { get; set; }
+        public string BallisticSkillView { get; set; }
+        public string StrengthView { get; set; }
+        public string ToughnessView { get; set; }
+        public string WoundsView { get; set; }
+        public string InitiativeView { get; set; }
+        public string AttacksView { get; set; }
+        public string LeadershipView { get; set; }
         public string ArmourView { get; set; }
         public string WardView { get; set; }
 
@@ -183,25 +183,24 @@ namespace WarhammerArmyAssembler
             newUnit.Initiative = this.Initiative;
             newUnit.Attacks = this.Attacks;
             newUnit.Leadership = this.Leadership;
-
             newUnit.Armour = this.Armour;
             newUnit.Ward = this.Ward;
             newUnit.Wizard = this.Wizard;
 
-            //if (full)
-            //{
-            //    newUnit.MovementView = this.MovementView;
-            //    newUnit.WeaponSkillView = this.WeaponSkillView;
-            //    newUnit.BallisticSkillView = this.BallisticSkillView;
-            //    newUnit.StrengthView = this.StrengthView;
-            //    newUnit.ToughnessView = this.ToughnessView;
-            //    newUnit.WoundsView = this.WoundsView;
-            //    newUnit.InitiativeView = this.InitiativeView;
-            //    newUnit.AttacksView = this.AttacksView;
-            //    newUnit.LeadershipView = this.LeadershipView;
-            //    newUnit.ArmourView = this.ArmourView;
-            //    newUnit.WardView = this.WardView;
-            //}
+            if (full)
+            {
+                newUnit.MovementView = this.MovementView;
+                newUnit.WeaponSkillView = this.WeaponSkillView;
+                newUnit.BallisticSkillView = this.BallisticSkillView;
+                newUnit.StrengthView = this.StrengthView;
+                newUnit.ToughnessView = this.ToughnessView;
+                newUnit.WoundsView = this.WoundsView;
+                newUnit.InitiativeView = this.InitiativeView;
+                newUnit.AttacksView = this.AttacksView;
+                newUnit.LeadershipView = this.LeadershipView;
+                newUnit.ArmourView = this.ArmourView;
+                newUnit.WardView = this.WardView;
+            }
 
             newUnit.OriginalWounds = this.OriginalWounds;
             newUnit.OriginalAttacks = this.OriginalAttacks;
@@ -277,31 +276,14 @@ namespace WarhammerArmyAssembler
         {
             PropertyInfo unitParam = typeof(Unit).GetProperty(name);
             object paramObject = unitParam.GetValue(this);
+            int? paramValue = (int?)paramObject;
 
-            int? paramValue = 0;
-
-            if (paramObject is UnitParam)
-            {
-                UnitParam param = paramObject as UnitParam;
-
-                if (param.Empty)
-                    return "-";
-                else if (param.Random > 0)
-                    return param.Random.ToString() + "D6";
-                else
-                    paramValue = param.Value;
-            }
-            else
-            {
-                paramValue = (int?)paramObject;
-
-                if (paramValue == 16)
-                    return "D6";
-                else if ((paramValue > 10) && ((paramValue % 6) == 0))
-                    return ((int)(paramValue / 6)).ToString() + "D6";
-                else if (paramValue < 0)
-                    return "-";
-            }
+            if (paramValue == 16)
+                return "D6";
+            else if ((paramValue > 10) && ((paramValue % 6)== 0))
+                return ((int)(paramValue / 6)).ToString() + "D6";
+            else if (paramValue < 0)
+                return "-";
 
             string paramModView = String.Empty;
 
@@ -378,6 +360,7 @@ namespace WarhammerArmyAssembler
                 "Initiative",
                 "Attacks",
                 "Leadership",
+                "Armour",
                 "Ward"
             };
 
@@ -389,26 +372,13 @@ namespace WarhammerArmyAssembler
 
                 string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
-                PropertyInfo param = typeof(Unit).GetProperty(name);
-                object paramObject = param.GetValue(this);
+                typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
 
                 if (directModification && !String.IsNullOrEmpty(newParamLine))
                 {
                     string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
-
-                    if (paramObject is UnitParam)
-                    {
-                        UnitParam paramForChange = (paramObject as UnitParam);
-                        paramForChange = UnitParam.SetValue(int.Parse(cleanParamLine));
-                    }
-                    else
-                        typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
+                    typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
                 }
-
-                if (paramObject is UnitParam)
-                    (paramObject as UnitParam).SetView(newParamLine);
-                else
-                    typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
             }
 
             return unit;
@@ -418,8 +388,8 @@ namespace WarhammerArmyAssembler
         {
             Unit unit = this.Clone(full: true);
 
-            unit.OriginalAttacks = unit.Attacks.Value;
-            unit.OriginalWounds = unit.Wounds.Value;
+            unit.OriginalAttacks = unit.Attacks;
+            unit.OriginalWounds = unit.Wounds;
 
             Dictionary<int, int> ratio = new Dictionary<int, int>
             {
@@ -432,9 +402,9 @@ namespace WarhammerArmyAssembler
                 if (unit.Size >= r.Key)
                     frontSize = r.Value;
 
-            unit.Attacks.Value *= frontSize;
+            unit.Attacks *= frontSize;
 
-            unit.Wounds.Value *= unit.Size;
+            unit.Wounds *= unit.Size;
 
             return unit;
         }
@@ -547,15 +517,15 @@ namespace WarhammerArmyAssembler
 
             Dictionary<string, string> unitParams = new Dictionary<string, string>
             {
-                ["M"] = unit.Movement.View,
-                ["WS"] = unit.WeaponSkill.View,
-                ["BS"] = unit.BallisticSkill.View,
-                ["S"] = unit.Strength.View,
-                ["T"] = unit.Toughness.View,
-                ["W"] = unit.Wounds.View,
-                ["I"] = unit.Initiative.View,
-                ["A"] = unit.Attacks.View,
-                ["LD"] = unit.Leadership.View,
+                ["M"] = unit.MovementView,
+                ["WS"] = unit.WeaponSkillView,
+                ["BS"] = unit.BallisticSkillView,
+                ["S"] = unit.StrengthView,
+                ["T"] = unit.ToughnessView,
+                ["W"] = unit.WoundsView,
+                ["I"] = unit.InitiativeView,
+                ["A"] = unit.AttacksView,
+                ["LD"] = unit.LeadershipView,
                 ["AS"] = unit.ArmourView,
                 ["Ward"] = unit.WardView
             };

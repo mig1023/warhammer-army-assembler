@@ -68,14 +68,14 @@ namespace WarhammerArmyAssembler
             CheckTerror(ref unit, enemy);
             CheckTerror(ref enemy, unit);
 
-            while((unit.Wounds.Value > 0) && (enemy.Wounds.Value > 0) && (round < 100))
+            while((unit.Wounds > 0) && (enemy.Wounds > 0) && (round < 100))
             {
                 round += 1;
                 Console(supplText, "\n\nround: {0}", round);
                 Console(supplText, "\n{0}: {1}W, {2}: {3}W", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
 
-                int attacksUnit = PrintAttack(unit, unit.Attacks.Value, roundWoundsUnit);
-                int attackEnemy = PrintAttack(enemy, enemy.Attacks.Value, roundWoundsEnemy);
+                int attacksUnit = PrintAttack(unit, unit.Attacks, roundWoundsUnit);
+                int attackEnemy = PrintAttack(enemy, enemy.Attacks, roundWoundsEnemy);
 
                 if (CheckInitiative(unit, enemy, round))
                 {
@@ -88,17 +88,17 @@ namespace WarhammerArmyAssembler
                     roundWoundsEnemy = Round(unit, ref enemy, attacksUnit, round);
                 }
 
-                if ((unit.Wounds.Value > 0) && (enemy.Wounds.Value > 0))
+                if ((unit.Wounds > 0) && (enemy.Wounds > 0))
                 {
                     if (roundWoundsUnit > roundWoundsEnemy)
                     {
-                        unit.Wounds.Value = BreakTest(unit, enemy, roundWoundsUnit);
+                        unit.Wounds = BreakTest(unit, enemy, roundWoundsUnit);
                         CheckLostFrenzy(ref unit);
                     }
 
                     if (roundWoundsUnit < roundWoundsEnemy)
                     {
-                        enemy.Wounds.Value = BreakTest(enemy, unit, roundWoundsEnemy);
+                        enemy.Wounds = BreakTest(enemy, unit, roundWoundsEnemy);
                         CheckLostFrenzy(ref enemy);
                     }
                 }
@@ -106,12 +106,12 @@ namespace WarhammerArmyAssembler
 
             Console(text, "\n\nEnd: ");
 
-            if (enemy.Wounds.Value <= 0)
+            if (enemy.Wounds <= 0)
             {
                 Console(text, "{0} win", unit.Name);
                 return 1;
             }
-            else if (unit.Wounds.Value <= 0)
+            else if (unit.Wounds <= 0)
             {
                 Console(text, "{0} win", enemy.Name);
                 return 2;
@@ -144,15 +144,15 @@ namespace WarhammerArmyAssembler
                 Console(supplText, "\n-{0} attack {1}", deathInRound, unit.Name);
             }
 
-            if (unit.IsUnit() && ((unit.Wounds.Value * unit.OriginalAttacks) < attackNum))
-                attackNum = unit.Wounds.Value * unit.OriginalAttacks;
+            if (unit.IsUnit() && ((unit.Wounds * unit.OriginalAttacks) < attackNum))
+                attackNum = unit.Wounds * unit.OriginalAttacks;
 
             return attackNum;
         }
 
         private static void CheckLostFrenzy(ref Unit unit)
         {
-            if (unit.Frenzy && (unit.Wounds.Value > 0))
+            if (unit.Frenzy && (unit.Wounds > 0))
             {
                 unit.Frenzy = false;
                 Console(supplText, "\n{0} lost his frenzy", unit.Name);
@@ -166,11 +166,11 @@ namespace WarhammerArmyAssembler
 
             Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
 
-            if (RollDice(DiceType.LD, unit, unit.Leadership.Value, 2))
+            if (RollDice(DiceType.LD, unit, unit.Leadership, 2))
                 Console(goodText, " --> passed");
             else
             {
-                unit.Wounds.Value = 0;
+                unit.Wounds = 0;
                 Console(badText, " --> fail");
             }
         }
@@ -182,14 +182,14 @@ namespace WarhammerArmyAssembler
             if (unit.Frenzy)
                 attackNumber *= 2;
 
-            if ((unit.Wounds.Value > 0) && (enemy.Wounds.Value > 0))
+            if ((unit.Wounds > 0) && (enemy.Wounds > 0))
                 Console(text, "\n");
 
             for (int i = 0; i < attackNumber; i++)
             {
                 int wounded = Attack(unit, enemy, round);
                 roundWounds += wounded;
-                enemy.Wounds.Value -= wounded;
+                enemy.Wounds -= wounded;
             }
 
             if (enemy.Regeneration && (roundWounds > 0) && !attackWithKillingBlow)
@@ -203,7 +203,7 @@ namespace WarhammerArmyAssembler
                     if (RollDice(DiceType.REGENERATION, enemy, 4))
                     {
                         Console(goodText, " --> success");
-                        enemy.Wounds.Value += 1;
+                        enemy.Wounds += 1;
                         roundWounds -= 1;
                     }
                     else
@@ -231,12 +231,12 @@ namespace WarhammerArmyAssembler
                 Console(supplText, "\n{0} all time first", enemy.Name);
                 return false;
             }
-            else if (unit.Initiative.Value > enemy.Initiative.Value)
+            else if (unit.Initiative > enemy.Initiative)
             {
                 Console(supplText, "\n{0} has initiative", unit.Name);
                 return true;
             }
-            else if (unit.Initiative.Value < enemy.Initiative.Value)
+            else if (unit.Initiative < enemy.Initiative)
             {
                 Console(supplText, "\n{0} has initiative", enemy.Name);
                 return true;
@@ -262,7 +262,7 @@ namespace WarhammerArmyAssembler
         {
             Console(text, "\n\n{0} break test --> ", unit.Name);
 
-            int temoraryLeadership = unit.Leadership.Value;
+            int temoraryLeadership = unit.Leadership;
 
             if (unit.Stubborn)
                 Console(text, "stubborn --> ");
@@ -290,7 +290,7 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            return unit.Wounds.Value;
+            return unit.Wounds;
         }
 
         private static int Attack(Unit unit, Unit enemy, int round)
@@ -298,7 +298,7 @@ namespace WarhammerArmyAssembler
             attackIsPoisoned = false;
             attackWithKillingBlow = false;
 
-            if ((unit.Wounds.Value > 0) && (enemy.Wounds.Value > 0))
+            if ((unit.Wounds > 0) && (enemy.Wounds > 0))
             {
                 Console(text, "\n{0} --> hit ", unit.Name);
 
@@ -311,11 +311,11 @@ namespace WarhammerArmyAssembler
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
                             Console(badText, " --> {0} SLAIN", enemy.Name);
-                            return enemy.Wounds.Value;
+                            return enemy.Wounds;
                         }
                         else
                         {
-                            Console(badText, " --> {0} {1}", enemy.Name, ((enemy.Wounds.Value <= 1) && !enemy.IsUnit() ? "SLAIN" : "WOUND"));
+                            Console(badText, " --> {0} {1}", enemy.Name, ((enemy.Wounds <= 1) && !enemy.IsUnit() ? "SLAIN" : "WOUND"));
                             return 1;
                         }
                     }
@@ -358,9 +358,9 @@ namespace WarhammerArmyAssembler
 
             int chance = 4;
 
-            if (unit.WeaponSkill.Value > enemy.WeaponSkill.Value)
+            if (unit.WeaponSkill > enemy.WeaponSkill)
                 chance = 3;
-            else if ((unit.WeaponSkill.Value * 2) < enemy.WeaponSkill.Value)
+            else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)
                 chance = 5;
 
             return RollDice(DiceType.WS, enemy, chance, round: round);
@@ -370,15 +370,15 @@ namespace WarhammerArmyAssembler
         {
             int chance = 4;
 
-            if (unit.Strength.Value == (enemy.Toughness.Value + 1))
+            if (unit.Strength == (enemy.Toughness + 1))
                 chance = 3;
-            else if (unit.Strength.Value > (enemy.Toughness.Value + 1))
+            else if (unit.Strength > (enemy.Toughness + 1))
                 chance = 2;
-            else if ((unit.Strength.Value + 1) == enemy.Toughness.Value)
+            else if ((unit.Strength + 1) == enemy.Toughness)
                 chance = 5;
-            else if ((unit.Strength.Value + 2) == enemy.Toughness.Value)
+            else if ((unit.Strength + 2) == enemy.Toughness)
                 chance = 6;
-            else if ((unit.Strength.Value + 2) < enemy.Toughness.Value)
+            else if ((unit.Strength + 2) < enemy.Toughness)
             {
                 Console(text, "(impossible)");
                 return false;
@@ -392,7 +392,7 @@ namespace WarhammerArmyAssembler
             if (enemy.Armour == null)
                 return true;
 
-            int chance = unit.Strength.Value - 3;
+            int chance = unit.Strength - 3;
 
             if (chance < 0)
                 chance = 0;
