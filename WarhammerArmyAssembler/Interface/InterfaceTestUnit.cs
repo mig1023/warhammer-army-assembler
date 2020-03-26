@@ -71,9 +71,8 @@ namespace WarhammerArmyAssembler
                 if (withMount && (unitForLoad.MountOn > 0))
                 {
                     PropertyInfo mountParam = typeof(Unit).GetProperty(name);
-                    Unit mount = Army.Units[unitForLoad.MountOn];
-                    var s = mountParam.GetValue(mount) ?? String.Empty;
-                    AddMountUnitParam(s.ToString(), mountIndex++);
+                    var value = mountParam.GetValue(Army.Units[unitForLoad.MountOn]) ?? String.Empty;
+                    AddMountUnitParam(value.ToString(), mountIndex++);
                 }
             }
 
