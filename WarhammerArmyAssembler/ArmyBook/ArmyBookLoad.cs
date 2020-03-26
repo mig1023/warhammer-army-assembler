@@ -83,7 +83,7 @@ namespace WarhammerArmyAssembler
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
-            newUnit.Movement = IntParse(mainParam["Movement"]);
+            newUnit.Movement = UnitParamParse(mainParam["Movement"]);
             newUnit.WeaponSkill = IntParse(mainParam["WeaponSkill"]);
             newUnit.BallisticSkill = IntParse(mainParam["BallisticSkill"]);
             newUnit.Strength = IntParse(mainParam["Strength"]);

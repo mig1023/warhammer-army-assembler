@@ -35,9 +35,22 @@ namespace WarhammerArmyAssembler
         {
             foreach (string name in unitParam)
             {
-                PropertyInfo param = typeof(Unit).GetProperty(name == "Size" ? name : String.Format("{0}View", name));
+                PropertyInfo param = typeof(Unit).GetProperty(name);
+                object paramObject = param.GetValue(unitForLoad);
+                string paramValue = String.Empty;
+
+                if (paramObject is UnitParam)
+                    paramValue = (paramObject as UnitParam).View;
+                else
+                {
+                    PropertyInfo paramTmp = typeof(Unit).GetProperty(name == "Size" ? name : String.Format("{0}View", name));
+                    object paramObjectTmp = paramTmp.GetValue(unitForLoad);
+                    paramValue = paramObjectTmp.ToString();
+                }
+                    
+
                 Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
-                testUnitElement.Content = param.GetValue(unitForLoad);
+                testUnitElement.Content = paramValue;
             }
         }
 

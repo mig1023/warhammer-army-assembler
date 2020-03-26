@@ -11,16 +11,21 @@ namespace WarhammerArmyAssembler
 {
     class ArmyBookParsers
     {
+        private static int IntParseFromLine(string line, int? byDefault = null)
+        {
+            int value = 0;
+
+            bool success = int.TryParse(line, out value);
+
+            return (success ? value : (byDefault ?? 0));
+        }
+
         public static int IntParse(XmlNode xmlNode, int? byDefault = null)
         {
             if (xmlNode == null)
                 return byDefault ?? 0;
 
-            int value = 0;
-
-            bool success = int.TryParse(xmlNode.InnerText, out value);
-
-            return (success ? value : (byDefault ?? 0));
+            return IntParseFromLine(xmlNode.InnerText, byDefault);
         }
 
         public static int? IntNullableParse(XmlNode xmlNode)
@@ -122,6 +127,22 @@ namespace WarhammerArmyAssembler
                 return false;
 
             return (xmlNode.InnerText == "true" ? true : false);
+        }
+
+        public static UnitParam UnitParamParse(XmlNode xmlNode, int? byDefault = null)
+        {
+            if (xmlNode == null)
+                return UnitParam.SetValue(byDefault ?? 0);
+
+            if (xmlNode.InnerText == "-")
+                return UnitParam.SetValue(0, empty: true);
+            else if (xmlNode.InnerText.Contains("D"))
+            {
+                string numLine = xmlNode.InnerText.Substring(0, xmlNode.InnerText.IndexOf("D"));
+                return UnitParam.SetValue(IntParseFromLine(numLine, byDefault), random: true);
+            }
+            else
+                return UnitParam.SetValue(IntParse(xmlNode, byDefault));
         }
     }
 }

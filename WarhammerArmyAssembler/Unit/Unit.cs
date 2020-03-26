@@ -36,7 +36,8 @@ namespace WarhammerArmyAssembler
 
         public string Description { get; set; }
 
-        public int Movement { get; set; }
+        //public int Movement { get; set; }
+        public UnitParam Movement { get; set; } 
         public int WeaponSkill { get; set; }
         public int BallisticSkill { get; set; }
         public int Strength { get; set; }
@@ -50,7 +51,7 @@ namespace WarhammerArmyAssembler
 
         public int Wizard { get; set; }
 
-        public string MovementView { get; set; }
+        //public string MovementView { get; set; }
         public string WeaponSkillView { get; set; }
         public string BallisticSkillView { get; set; }
         public string StrengthView { get; set; }
@@ -174,7 +175,7 @@ namespace WarhammerArmyAssembler
             newUnit.MountInit = this.MountInit;
             newUnit.Description = this.Description;
 
-            newUnit.Movement = this.Movement;
+            newUnit.Movement = this.Movement.Clone();
             newUnit.WeaponSkill = this.WeaponSkill;
             newUnit.BallisticSkill = this.BallisticSkill;
             newUnit.Strength = this.Strength;
@@ -189,7 +190,7 @@ namespace WarhammerArmyAssembler
 
             if (full)
             {
-                newUnit.MovementView = this.MovementView;
+                //newUnit.MovementView = this.MovementView;
                 newUnit.WeaponSkillView = this.WeaponSkillView;
                 newUnit.BallisticSkillView = this.BallisticSkillView;
                 newUnit.StrengthView = this.StrengthView;
@@ -276,14 +277,31 @@ namespace WarhammerArmyAssembler
         {
             PropertyInfo unitParam = typeof(Unit).GetProperty(name);
             object paramObject = unitParam.GetValue(this);
-            int? paramValue = (int?)paramObject;
 
-            if (paramValue == 16)
-                return "D6";
-            else if ((paramValue > 10) && ((paramValue % 6)== 0))
-                return ((int)(paramValue / 6)).ToString() + "D6";
-            else if (paramValue < 0)
-                return "-";
+            int? paramValue = 0;
+
+            if (paramObject is UnitParam)
+            {
+                UnitParam param = paramObject as UnitParam;
+
+                if (param.Empty)
+                    return "-";
+                else if (param.Random > 0)
+                    return param.Random.ToString() + "D6";
+                else
+                    paramValue = param.Value;
+            }
+            else
+            {
+                paramValue = (int?)paramObject;
+
+                if (paramValue == 16)
+                    return "D6";
+                else if ((paramValue > 10) && ((paramValue % 6) == 0))
+                    return ((int)(paramValue / 6)).ToString() + "D6";
+                else if (paramValue < 0)
+                    return "-";
+            }
 
             string paramModView = String.Empty;
 
@@ -372,13 +390,26 @@ namespace WarhammerArmyAssembler
 
                 string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
-                typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
+                PropertyInfo param = typeof(Unit).GetProperty(name);
+                object paramObject = param.GetValue(this);
 
                 if (directModification && !String.IsNullOrEmpty(newParamLine))
                 {
                     string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
-                    typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
+
+                    if (paramObject is UnitParam)
+                    {
+                        UnitParam paramForChange = (paramObject as UnitParam);
+                        paramForChange = UnitParam.SetValue(int.Parse(cleanParamLine));
+                    }
+                    else
+                        typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
                 }
+
+                if (paramObject is UnitParam)
+                    (paramObject as UnitParam).SetView(newParamLine);
+                else
+                    typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
             }
 
             return unit;
@@ -517,7 +548,7 @@ namespace WarhammerArmyAssembler
 
             Dictionary<string, string> unitParams = new Dictionary<string, string>
             {
-                ["M"] = unit.MovementView,
+                ["M"] = unit.Movement.View,
                 ["WS"] = unit.WeaponSkillView,
                 ["BS"] = unit.BallisticSkillView,
                 ["S"] = unit.StrengthView,
