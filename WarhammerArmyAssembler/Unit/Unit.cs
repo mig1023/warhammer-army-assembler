@@ -174,7 +174,7 @@ namespace WarhammerArmyAssembler
             newUnit.MountInit = this.MountInit;
             newUnit.Description = this.Description;
 
-            newUnit.Movement = this.Movement.Clone();
+            newUnit.Movement = this.Movement;
             newUnit.WeaponSkill = this.WeaponSkill;
             newUnit.BallisticSkill = this.BallisticSkill;
             newUnit.Strength = this.Strength;
@@ -183,6 +183,7 @@ namespace WarhammerArmyAssembler
             newUnit.Initiative = this.Initiative;
             newUnit.Attacks = this.Attacks;
             newUnit.Leadership = this.Leadership;
+
             newUnit.Armour = this.Armour;
             newUnit.Ward = this.Ward;
             newUnit.Wizard = this.Wizard;
