@@ -145,6 +145,7 @@ namespace WarhammerArmyAssembler
             }
 
             Interface.main.enemyGroup.Items.Clear();
+            Interface.main.enemyForTest.Items.Clear();
 
             foreach (string enemy in Enemy.GetEnemiesGroups())
                 Interface.main.enemyGroup.Items.Add(enemy);
