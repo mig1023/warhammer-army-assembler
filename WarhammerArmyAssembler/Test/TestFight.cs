@@ -55,10 +55,18 @@ namespace WarhammerArmyAssembler
             Unit mount = (originalMount == null ? null : originalMount.Clone());
             Unit enemy = originalEnemy.Clone();
 
+            Dictionary<int, Unit> opponents = new Dictionary<int, Unit>() { [unit.ID] = enemy, [enemy.ID] = unit };
+
+            if (mount != null)
+                opponents.Add(mount.ID, enemy);
+
             Console(text, "{0}{1} vs {2}{3}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
 
-            int roundWoundsUnit = 0;
-            int roundWoundsEnemy = 0;
+            Dictionary<int, int> roundWounds = new Dictionary<int, int>();
+
+            foreach (int unitID in opponents.Keys.ToArray())
+                roundWounds[unitID] = 0;
+
             int round = 0;
 
             CheckTerror(ref unit, enemy);
@@ -70,41 +78,31 @@ namespace WarhammerArmyAssembler
                 Console(supplText, "\n\nround: {0}", round);
                 Console(supplText, "\n{0}: {1}W, {2}: {3}W", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
 
-                int attacksUnit = PrintAttack(unit, unit.Attacks, roundWoundsUnit);
-                int attackEnemy = PrintAttack(enemy, enemy.Attacks, roundWoundsEnemy);
+                List<Unit> allParticipants = new List<Unit> { unit, enemy };
 
-                if (CheckInitiative(unit, enemy, round))
+                if (mount != null)
+                    allParticipants.Add(mount);
+
+                allParticipants.Sort((a, b) => a.CompareTo(b));
+
+                Dictionary<int, int> attacksRound = new Dictionary<int, int>();
+
+                foreach(Unit u in allParticipants)
+                    attacksRound[u.ID] = PrintAttack(u, u.Attacks, roundWounds[u.ID]);
+
+                foreach (Unit u in allParticipants)
                 {
-                    roundWoundsEnemy = Round(unit, ref enemy, attacksUnit, round);
-
-                    if (mount != null)
-                        roundWoundsEnemy += Round(mount, ref enemy, attacksUnit, round);
-
-                    roundWoundsUnit = Round(enemy, ref unit, attackEnemy, round);
+                    Unit opponent = opponents[u.ID];
+                    roundWounds[u.ID] = Round(u, ref opponent, attacksRound[u.ID], round);
                 }
-                else
-                {
-                    roundWoundsUnit = Round(enemy, ref unit, attackEnemy, round);
-                    roundWoundsEnemy = Round(unit, ref enemy, attacksUnit, round);
-
-                    if (mount != null)
-                        roundWoundsEnemy += Round(mount, ref enemy, attacksUnit, round);
-                }
-
-                if ((unit.Wounds > 0) && (enemy.Wounds > 0))
-                {
-                    if (roundWoundsUnit > roundWoundsEnemy)
+                    
+                foreach (Unit u in allParticipants)
+                    if ((u.Wounds > 0) && (roundWounds[u.ID] < opponents[u.ID].Wounds))
                     {
-                        unit.Wounds = BreakTest(unit, enemy, roundWoundsUnit);
-                        CheckLostFrenzy(ref unit);
+                        u.Wounds = BreakTest(u, opponents[u.ID], roundWounds[u.ID]);
+                        Unit unitForCrazyCheck = opponents[u.ID];
+                        CheckLostFrenzy(ref unitForCrazyCheck);
                     }
-
-                    if (roundWoundsUnit < roundWoundsEnemy)
-                    {
-                        enemy.Wounds = BreakTest(enemy, unit, roundWoundsEnemy);
-                        CheckLostFrenzy(ref enemy);
-                    }
-                }
             }
 
             Console(text, "\n\nEnd: ");
@@ -217,7 +215,7 @@ namespace WarhammerArmyAssembler
             return roundWounds;
         }
 
-        private static bool CheckInitiative(Unit unit, Unit enemy, int round)
+        public static bool CheckInitiative(Unit unit, Unit enemy, int round)
         {
             if ((round == 1) && !unit.HitFirst && !enemy.HitFirst)
             {

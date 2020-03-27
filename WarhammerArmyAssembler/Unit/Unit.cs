@@ -10,7 +10,7 @@ using System.Xml;
 
 namespace WarhammerArmyAssembler
 {
-    public class Unit
+    public class Unit : IComparable<Unit>
     {
         public enum UnitType { Lord, Hero, Core, Special, Rare, Mount, ToCore, ToSpecial }
 
@@ -111,6 +111,11 @@ namespace WarhammerArmyAssembler
         public Unit()
         {
             this.Items = new ObservableCollection<Unit>();
+        }
+
+        public int CompareTo(Unit anotherUnit)
+        {
+            return (TestFight.CheckInitiative(this, anotherUnit, 2) ? -1 : 1);
         }
 
         public double GetUnitPoints()
