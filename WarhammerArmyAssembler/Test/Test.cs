@@ -27,12 +27,12 @@ namespace WarhammerArmyAssembler
 
         public static void TestFull()
         {
-            TestFight.FullTest(unit.Clone(), mount.Clone(), enemy.Clone());
+            TestFight.FullTest(unit, mount, enemy);
         }
 
         public static void TestStatistic()
         {
-            TestFight.StatisticTest(unit.Clone(), mount.Clone(), enemy.Clone());
+            TestFight.StatisticTest(unit, mount, enemy);
         }
     }
 }

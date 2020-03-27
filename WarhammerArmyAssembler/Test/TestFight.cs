@@ -25,11 +25,6 @@ namespace WarhammerArmyAssembler
         static Brush goodText = Brushes.Green;
         static Brush badText = Brushes.Red;
 
-        public static void FullTest(Unit unit, Unit mount, Unit enemy)
-        {
-            Test(unit, mount, enemy);
-        }
-
         public static void StatisticTest(Unit unit, Unit mount, Unit enemy)
         {
             int[] result = new int[3];
@@ -37,10 +32,7 @@ namespace WarhammerArmyAssembler
             InterfaceTestUnit.PreventConsoleOutput(prevent: true);
 
             for (int i = 0; i < 1000; i++)
-            {
-                int tmp = Test(unit.Clone(), mount.Clone(), enemy.Clone());
-                result[tmp] += 1;
-            }
+                result[FullTest(unit, mount, enemy)] += 1;
 
             InterfaceTestUnit.PreventConsoleOutput(prevent: false);
 
@@ -55,9 +47,13 @@ namespace WarhammerArmyAssembler
             return (unit.IsUnit() ? " (unit)" : String.Empty);
         }
 
-        public static int Test(Unit unit, Unit mount, Unit enemy)
+        public static int FullTest(Unit originalUnit, Unit originalMount, Unit originalEnemy)
         {
             testConsole.Clear();
+
+            Unit unit = originalUnit.Clone();
+            Unit mount = (originalMount == null ? null : originalMount.Clone());
+            Unit enemy = originalEnemy.Clone();
 
             Console(text, "{0}{1} vs {2}{3}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
 
@@ -80,13 +76,19 @@ namespace WarhammerArmyAssembler
                 if (CheckInitiative(unit, enemy, round))
                 {
                     roundWoundsEnemy = Round(unit, ref enemy, attacksUnit, round);
-                    roundWoundsEnemy += Round(mount, ref enemy, attacksUnit, round);
+
+                    if (mount != null)
+                        roundWoundsEnemy += Round(mount, ref enemy, attacksUnit, round);
+
                     roundWoundsUnit = Round(enemy, ref unit, attackEnemy, round);
                 }
                 else
                 {
                     roundWoundsUnit = Round(enemy, ref unit, attackEnemy, round);
                     roundWoundsEnemy = Round(unit, ref enemy, attacksUnit, round);
+
+                    if (mount != null)
+                        roundWoundsEnemy += Round(mount, ref enemy, attacksUnit, round);
                 }
 
                 if ((unit.Wounds > 0) && (enemy.Wounds > 0))
