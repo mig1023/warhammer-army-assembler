@@ -101,16 +101,36 @@ namespace WarhammerArmyAssembler
                     Unit opponent = SelectOpponent(opponents, participants, u);
                     roundWounds[u.ID] = Round(u, ref opponent, attacksRound[u.ID], round);
                 }
-                    
-                foreach (Unit u in allParticipants)
-                    if ((u.Wounds > 0) && (roundWounds[u.ID] < opponents[u.ID].Wounds))
-                    {
-                        if (u.TestType != Unit.TestTypeTypes.Mount)
-                            u.Wounds = BreakTest(u, opponents[u.ID], roundWounds[u.ID]);
 
-                        Unit unitForCrazyCheck = opponents[u.ID];
-                        CheckLostFrenzy(ref unitForCrazyCheck);
-                    }
+                int unitRoundWounds = roundWounds[unit.ID] + (mount != null ? roundWounds[mount.ID] : 0);
+
+                if ((enemy.Wounds > 0) && (roundWounds[enemy.ID] > unitRoundWounds))
+                {
+                    enemy.Wounds = BreakTest(enemy, unit, mount, roundWounds[enemy.ID]);
+                    CheckLostFrenzy(ref enemy);
+                }
+
+                if ((unit.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
+                {
+                    unit.Wounds = BreakTest(unit, enemy, null, roundWounds[unit.ID]);
+                    CheckLostFrenzy(ref unit);
+                }
+
+                if ((mount.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
+                {
+                    mount.Wounds = BreakTest(mount, enemy, null, roundWounds[mount.ID]);
+                    CheckLostFrenzy(ref mount);
+                }
+
+                    //foreach (Unit u in allParticipants)
+                    //if ((u.Wounds > 0) && (roundWounds[u.ID] < roundWounds[opponents[u.ID]]))
+                    //{
+                    //    if (u.TestType != Unit.TestTypeTypes.Mount)
+                    //        u.Wounds = BreakTest(u, opponents[u.ID], roundWounds[u.ID]);
+
+                    //    Unit unitForCrazyCheck = opponents[u.ID];
+                    //    CheckLostFrenzy(ref unitForCrazyCheck);
+                    //}
             }
 
             Console(text, "\n\nEnd: ");
@@ -269,7 +289,7 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static int BreakTest(Unit unit, Unit enemy, int woundInRound)
+        private static int BreakTest(Unit unit, Unit enemy, Unit mount, int woundInRound)
         {
             Console(text, "\n\n{0} break test --> ", unit.Name);
 
@@ -282,12 +302,20 @@ namespace WarhammerArmyAssembler
 
             if (temoraryLeadership < 0)
                 temoraryLeadership = 0;
-            
+
+            bool enemyFearOrTerror = (enemy.Terror || enemy.Fear);
+            bool enemyMountFearOrTerror = (mount != null ? mount.Terror || mount.Fear : false);
+
             if (unit.Unbreakable)
                 Console(text, "unbreakable");
-            else if ((enemy.Terror || enemy.Fear) && !(unit.ImmuneToPsychology || unit.Terror || unit.Fear))
+            else if ((enemyFearOrTerror) && !(unit.ImmuneToPsychology || unit.Terror || unit.Fear))
             {
                 Console(badText, "autobreak by {0} fear", enemy.Name);
+                return 0;
+            }
+            else if (enemyMountFearOrTerror && !(unit.ImmuneToPsychology || unit.Terror || unit.Fear))
+            {
+                Console(badText, "autobreak by {0} fear", mount.Name);
                 return 0;
             }
             else
