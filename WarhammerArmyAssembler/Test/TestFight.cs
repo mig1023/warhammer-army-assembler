@@ -53,12 +53,17 @@ namespace WarhammerArmyAssembler
 
             Unit unit = originalUnit.Clone().SetTestType(Unit.TestTypeTypes.Unit);
             Unit mount = (originalMount == null ? null : originalMount.Clone().SetTestType(Unit.TestTypeTypes.Mount));
-            Unit enemy = originalEnemy.Clone().SetTestType(Unit.TestTypeTypes.Mount);
+            Unit enemy = originalEnemy.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
 
+            Dictionary<int, Unit> participants = new Dictionary<int, Unit>() {[unit.ID] = unit, [enemy.ID] = enemy };
             Dictionary<int, Unit> opponents = new Dictionary<int, Unit>() { [unit.ID] = enemy, [enemy.ID] = unit };
 
             if (mount != null)
+            {
+                participants.Add(mount.ID, mount);
                 opponents.Add(mount.ID, enemy);
+            }
+                
 
             Console(text, "{0}{1} vs {2}{3}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
 
@@ -92,7 +97,7 @@ namespace WarhammerArmyAssembler
 
                 foreach (Unit u in allParticipants)
                 {
-                    Unit opponent = opponents[u.ID];
+                    Unit opponent = SelectOpponent(opponents, participants, u);
                     roundWounds[u.ID] = Round(u, ref opponent, attacksRound[u.ID], round);
                 }
                     
@@ -124,6 +129,32 @@ namespace WarhammerArmyAssembler
                 Console(text, "{0} and {1} failed to kill each other", unit.Name, enemy.Name);
                 return 0;
             }
+        }
+
+        private static Unit SelectOpponent(Dictionary<int, Unit> opponents, Dictionary<int, Unit> participants, Unit unit)
+        {
+            if (unit.TestType == Unit.TestTypeTypes.Unit || unit.TestType == Unit.TestTypeTypes.Mount)
+                return opponents[unit.ID];
+            else
+            {
+                List<int> allUnits = opponents.Keys.ToList();
+                int randomOpponent;
+
+                do
+                    randomOpponent = allUnits[rand.Next(allUnits.Count)];
+                while (opponents[randomOpponent].ID == unit.ID || participants[randomOpponent].Wounds <= 0);
+
+                return opponents[randomOpponent];
+            }
+        }
+
+        private static int FindOpponentByTestType(Dictionary<int, Unit> opponents, Unit.TestTypeTypes type)
+        {
+            foreach (KeyValuePair<int, Unit> opponent in opponents)
+                if (opponent.Value.TestType == type)
+                    return opponent.Key;
+
+            return -1;
         }
 
         private static void Console(Brush color, string line)
