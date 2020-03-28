@@ -89,6 +89,7 @@ namespace WarhammerArmyAssembler
                     allParticipants.Add(mount);
 
                 allParticipants.Sort((a, b) => a.CompareTo(b));
+                ShowRoundOrder(allParticipants);
 
                 Dictionary<int, int> attacksRound = new Dictionary<int, int>();
 
@@ -239,47 +240,32 @@ namespace WarhammerArmyAssembler
             return roundWounds;
         }
 
+        private static void ShowRoundOrder(List<Unit> allParticipants)
+        {
+            Console(supplText, "\nround fight order");
+
+            foreach (Unit u in allParticipants)
+                Console(supplText, " --> {0}", u.Name);
+        }
+
         public static bool CheckInitiative(Unit unit, Unit enemy, int round)
         {
             if ((round == 1) && !unit.HitFirst && !enemy.HitFirst)
-            {
-                Console(supplText, "\nfirst round rule");
                 return true;
-            }
             else if (unit.HitFirst && !enemy.HitFirst)
-            {
-                Console(supplText, "\n{0} all time first", unit.Name);
                 return true;
-            }
             else if (!unit.HitFirst && enemy.HitFirst)
-            {
-                Console(supplText, "\n{0} all time first", enemy.Name);
                 return false;
-            }
             else if (unit.Initiative > enemy.Initiative)
-            {
-                Console(supplText, "\n{0} has initiative", unit.Name);
                 return true;
-            }
             else if (unit.Initiative < enemy.Initiative)
-            {
-                Console(supplText, "\n{0} has initiative", enemy.Name);
                 return true;
-            }
             else
             {
-                Console(supplText, "\nrandom initiative --> ");
-
                 if (RollDice(DiceType.I, unit, 4))
-                {
-                    Console(supplText, " {0}", unit.Name);
                     return true;
-                }
                 else
-                {
-                    Console(supplText, " {0}", enemy.Name);
                     return false;
-                }
             }
         }
 
