@@ -13,8 +13,8 @@ namespace WarhammerArmyAssembler
     public class Unit : IComparable<Unit>
     {
         public enum UnitType { Lord, Hero, Core, Special, Rare, Mount, ToCore, ToSpecial }
-
         public enum MagicItemsTypes { Hero, Wizard, Unit }
+        public enum TestTypeTypes { Unit, Mount, Enemy }
 
         public string Name { get; set; }
         public string Group { get; set; }
@@ -102,6 +102,8 @@ namespace WarhammerArmyAssembler
         public bool MustBeGeneral { get; set; }
 
         public List<Option> Options = new List<Option>();
+
+        public TestTypeTypes TestType { get; set; }
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
@@ -239,6 +241,8 @@ namespace WarhammerArmyAssembler
             newUnit.WeaponTeam = this.WeaponTeam;
             newUnit.NotALeader = this.NotALeader;
             newUnit.MustBeGeneral = this.MustBeGeneral;
+
+            newUnit.TestType = this.TestType;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)
@@ -861,5 +865,12 @@ namespace WarhammerArmyAssembler
 
             return (slannOption >= 4 ? true : false);
         }
+
+        public Unit SetTestType(TestTypeTypes testType)
+        {
+            TestType = testType;
+
+            return this;
+        } 
     }
 }

@@ -51,9 +51,9 @@ namespace WarhammerArmyAssembler
         {
             testConsole.Clear();
 
-            Unit unit = originalUnit.Clone();
-            Unit mount = (originalMount == null ? null : originalMount.Clone());
-            Unit enemy = originalEnemy.Clone();
+            Unit unit = originalUnit.Clone().SetTestType(Unit.TestTypeTypes.Unit);
+            Unit mount = (originalMount == null ? null : originalMount.Clone().SetTestType(Unit.TestTypeTypes.Mount));
+            Unit enemy = originalEnemy.Clone().SetTestType(Unit.TestTypeTypes.Mount);
 
             Dictionary<int, Unit> opponents = new Dictionary<int, Unit>() { [unit.ID] = enemy, [enemy.ID] = unit };
 
@@ -72,7 +72,7 @@ namespace WarhammerArmyAssembler
             CheckTerror(ref unit, enemy);
             CheckTerror(ref enemy, unit);
 
-            while((unit.Wounds > 0) && (enemy.Wounds > 0) && (round < 100))
+            while((unit.Wounds + (mount == null ? 0 : mount.Wounds) > 0) && (enemy.Wounds > 0) && (round < 100))
             {
                 round += 1;
                 Console(supplText, "\n\nround: {0}", round);
@@ -99,7 +99,9 @@ namespace WarhammerArmyAssembler
                 foreach (Unit u in allParticipants)
                     if ((u.Wounds > 0) && (roundWounds[u.ID] < opponents[u.ID].Wounds))
                     {
-                        u.Wounds = BreakTest(u, opponents[u.ID], roundWounds[u.ID]);
+                        if (u.TestType != Unit.TestTypeTypes.Mount)
+                            u.Wounds = BreakTest(u, opponents[u.ID], roundWounds[u.ID]);
+
                         Unit unitForCrazyCheck = opponents[u.ID];
                         CheckLostFrenzy(ref unitForCrazyCheck);
                     }
@@ -112,7 +114,7 @@ namespace WarhammerArmyAssembler
                 Console(text, "{0} win", unit.Name);
                 return 1;
             }
-            else if (unit.Wounds <= 0)
+            else if (unit.Wounds + (mount == null ? 0 : mount.Wounds) <= 0)
             {
                 Console(text, "{0} win", enemy.Name);
                 return 2;
