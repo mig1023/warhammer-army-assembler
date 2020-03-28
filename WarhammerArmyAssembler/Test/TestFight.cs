@@ -16,6 +16,7 @@ namespace WarhammerArmyAssembler
         static Random rand = new Random();
 
         static int lastDice = 0;
+        static int round = 0;
 
         static bool attackWithKillingBlow = false;
         static bool attackIsPoisoned = false;
@@ -51,6 +52,8 @@ namespace WarhammerArmyAssembler
         {
             testConsole.Clear();
 
+            round = 0;
+
             Unit unit = originalUnit.Clone().SetTestType(Unit.TestTypeTypes.Unit);
             Unit mount = (originalMount == null ? null : originalMount.Clone().SetTestType(Unit.TestTypeTypes.Mount));
             Unit enemy = originalEnemy.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
@@ -63,7 +66,6 @@ namespace WarhammerArmyAssembler
                 participants.Add(mount.ID, mount);
                 opponents.Add(mount.ID, enemy);
             }
-                
 
             Console(text, "{0}{1} vs {2}{3}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
 
@@ -71,8 +73,6 @@ namespace WarhammerArmyAssembler
 
             foreach (int unitID in opponents.Keys.ToArray())
                 roundWounds[unitID] = 0;
-
-            int round = 0;
 
             CheckTerror(ref unit, enemy);
             CheckTerror(ref enemy, unit);
@@ -121,16 +121,6 @@ namespace WarhammerArmyAssembler
                     mount.Wounds = BreakTest(mount, enemy, null, roundWounds[mount.ID]);
                     CheckLostFrenzy(ref mount);
                 }
-
-                    //foreach (Unit u in allParticipants)
-                    //if ((u.Wounds > 0) && (roundWounds[u.ID] < roundWounds[opponents[u.ID]]))
-                    //{
-                    //    if (u.TestType != Unit.TestTypeTypes.Mount)
-                    //        u.Wounds = BreakTest(u, opponents[u.ID], roundWounds[u.ID]);
-
-                    //    Unit unitForCrazyCheck = opponents[u.ID];
-                    //    CheckLostFrenzy(ref unitForCrazyCheck);
-                    //}
             }
 
             Console(text, "\n\nEnd: ");
@@ -268,9 +258,9 @@ namespace WarhammerArmyAssembler
                 Console(supplText, " --> {0}", u.Name);
         }
 
-        public static bool CheckInitiative(Unit unit, Unit enemy, int round)
+        public static bool CheckInitiative(Unit unit, Unit enemy)
         {
-            if ((round == 1) && !unit.HitFirst && !enemy.HitFirst)
+            if ((round == 1) && (unit.TestType != Unit.TestTypeTypes.Enemy) && (!enemy.HitFirst))
                 return true;
             else if (unit.HitFirst && !enemy.HitFirst)
                 return true;
