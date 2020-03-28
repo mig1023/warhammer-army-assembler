@@ -137,24 +137,15 @@ namespace WarhammerArmyAssembler
                 return opponents[unit.ID];
             else
             {
-                List<int> allUnits = opponents.Keys.ToList();
+                List<int> allUnits = participants.Keys.ToList();
                 int randomOpponent;
 
                 do
                     randomOpponent = allUnits[rand.Next(allUnits.Count)];
-                while (opponents[randomOpponent].ID == unit.ID || participants[randomOpponent].Wounds <= 0);
+                while (participants[randomOpponent].ID == unit.ID || participants[randomOpponent].Wounds <= 0);
 
-                return opponents[randomOpponent];
+                return participants[randomOpponent];
             }
-        }
-
-        private static int FindOpponentByTestType(Dictionary<int, Unit> opponents, Unit.TestTypeTypes type)
-        {
-            foreach (KeyValuePair<int, Unit> opponent in opponents)
-                if (opponent.Value.TestType == type)
-                    return opponent.Key;
-
-            return -1;
         }
 
         private static void Console(Brush color, string line)
