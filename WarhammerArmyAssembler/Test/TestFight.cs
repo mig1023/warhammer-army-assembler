@@ -48,6 +48,12 @@ namespace WarhammerArmyAssembler
             return (unit.IsUnit() ? " (unit)" : String.Empty);
         }
 
+        private static void InitRoundWounds(Dictionary<int, Unit> opponents, ref Dictionary<int, int> roundWounds)
+        {
+            foreach (int unitID in opponents.Keys.ToArray())
+                roundWounds[unitID] = 0;
+        }
+
         public static int FullTest(Unit originalUnit, Unit originalMount, Unit originalEnemy)
         {
             testConsole.Clear();
@@ -70,9 +76,7 @@ namespace WarhammerArmyAssembler
             Console(text, "{0}{1} vs {2}{3}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
 
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
-
-            foreach (int unitID in opponents.Keys.ToArray())
-                roundWounds[unitID] = 0;
+            InitRoundWounds(opponents, ref roundWounds);
 
             CheckTerror(ref unit, enemy);
             CheckTerror(ref enemy, unit);
@@ -80,8 +84,11 @@ namespace WarhammerArmyAssembler
             while((unit.Wounds + (mount == null ? 0 : mount.Wounds) > 0) && (enemy.Wounds > 0) && (round < 100))
             {
                 round += 1;
+
+                string mountLine = (mount != null ? String.Format(" + {0}: {1}W", mount.Name, mount.Wounds) : String.Empty);
+
                 Console(supplText, "\n\nround: {0}", round);
-                Console(supplText, "\n{0}: {1}W, {2}: {3}W", unit.Name, unit.Wounds, enemy.Name, enemy.Wounds);
+                Console(supplText, "\n{0}: {1}W{2}, {3}: {4}W", unit.Name, unit.Wounds, mountLine, enemy.Name, enemy.Wounds);
 
                 List<Unit> allParticipants = new List<Unit> { unit, enemy };
 
@@ -96,10 +103,12 @@ namespace WarhammerArmyAssembler
                 foreach(Unit u in allParticipants)
                     attacksRound[u.ID] = PrintAttack(u, u.Attacks, roundWounds[u.ID]);
 
+                InitRoundWounds(opponents, ref roundWounds);
+
                 foreach (Unit u in allParticipants)
                 {
                     Unit opponent = SelectOpponent(opponents, participants, u);
-                    roundWounds[u.ID] = Round(u, ref opponent, attacksRound[u.ID], round);
+                    roundWounds[opponent.ID] += Round(u, ref opponent, attacksRound[u.ID], round);
                 }
 
                 int unitRoundWounds = roundWounds[unit.ID] + (mount != null ? roundWounds[mount.ID] : 0);
