@@ -116,6 +116,7 @@ namespace WarhammerArmyAssembler
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
                 newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
                 newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
+                newUnit.MultiWounds = StringParse(additionalParam["MultiWounds"]);
                 newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
                 newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
@@ -162,12 +163,13 @@ namespace WarhammerArmyAssembler
             newWeapon.OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]);
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
-
             newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
 
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
+            newWeapon.MultiWounds = StringParse(xmlNode["MultiWounds"]);
+
             newWeapon.Regeneration = BoolParse(xmlNode["Regeneration"]);
             newWeapon.ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]);
             newWeapon.Stubborn = BoolParse(xmlNode["Stubborn"]);

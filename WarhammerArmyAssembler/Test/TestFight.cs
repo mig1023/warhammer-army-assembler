@@ -347,13 +347,30 @@ namespace WarhammerArmyAssembler
                         else
                         {
                             Console(badText, " --> {0} {1}", enemy.Name, ((enemy.Wounds <= 1) && !enemy.IsUnit() ? "SLAIN" : "WOUND"));
-                            return 1;
+                            return WoundsNumbers(unit, enemy);
                         }
                     }
                 }
                 Console(goodText, " --> fail");
             }
             return 0;
+        }
+
+        private static int WoundsNumbers(Unit unit, Unit enemy)
+        {
+            if (String.IsNullOrEmpty(unit.MultiWounds))
+                return 1;
+
+            int multiwounds = 0;
+
+            if (unit.MultiWounds.Contains("D"))
+                multiwounds = rand.Next(int.Parse(unit.MultiWounds.Replace("D", String.Empty))) + 1;
+            else
+                multiwounds = int.Parse(unit.MultiWounds);
+
+            Console(text, " --> {0} multiple wounds", multiwounds);
+
+            return multiwounds;
         }
 
         private static bool PoisonedAttack(Unit unit)

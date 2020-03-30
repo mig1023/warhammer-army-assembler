@@ -79,6 +79,7 @@ namespace WarhammerArmyAssembler
         public bool Regeneration { get; set; }
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
+        public string MultiWounds { get; set; } 
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -117,7 +118,7 @@ namespace WarhammerArmyAssembler
 
         public int CompareTo(Unit anotherUnit)
         {
-            return (TestFight.CheckInitiative(this, anotherUnit, 2) ? -1 : 1);
+            return (TestFight.CheckInitiative(this, anotherUnit) ? -1 : 1);
         }
 
         public double GetUnitPoints()
@@ -225,6 +226,7 @@ namespace WarhammerArmyAssembler
             newUnit.Regeneration = this.Regeneration;
             newUnit.KillingBlow = this.KillingBlow;
             newUnit.PoisonAttack = this.PoisonAttack;
+            newUnit.MultiWounds = this.MultiWounds;
 
             newUnit.SlotsOfLords = this.SlotsOfLords;
             newUnit.SlotsOfHero = this.SlotsOfHero;
@@ -590,24 +592,44 @@ namespace WarhammerArmyAssembler
             return String.Empty;
         }
 
-        public bool RuleFromAnyOption(string name)
+        private bool GetUnitValueTrueOrFalse(object unitValue, out string additionalParam)
         {
+            additionalParam = String.Empty;
+
+            if (unitValue is bool)
+                return ((bool)unitValue ? true : false);
+            else if (unitValue is string)
+            {
+                additionalParam = (string)unitValue;
+                return (String.IsNullOrEmpty((string)unitValue) ? false : true);
+            }
+            else
+                return false;
+        }
+
+        public bool RuleFromAnyOption(string name, out string additionalParam)
+        {
+            string lineParamValue = String.Empty;
+
             PropertyInfo unitField = typeof(Unit).GetProperty(name);
-            object unitValue = unitField.GetValue(this);
+            bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out lineParamValue);
 
-            bool anyIsTrue = (bool)unitValue ? true : false;
-
-            foreach(Option option in Options)
+            foreach (Option option in Options)
             {
                 if (option.IsOption() && !option.Realised)
                     continue;
 
-                PropertyInfo optionField = typeof(Option).GetProperty(name);
-                object fieldValue = optionField.GetValue(option);
+                string lineOptionValue = String.Empty;
 
-                bool isValueTrue = (bool)fieldValue;
-                anyIsTrue = isValueTrue ? true : anyIsTrue;
+                PropertyInfo optionField = typeof(Option).GetProperty(name);
+                bool fromParamValue = GetUnitValueTrueOrFalse(optionField.GetValue(option), out lineOptionValue);
+                anyIsTrue = (fromParamValue ? true : anyIsTrue);
+
+                if (fromParamValue && String.IsNullOrEmpty(lineParamValue))
+                    lineParamValue = lineOptionValue;
             }
+
+            additionalParam = lineParamValue;
 
             return anyIsTrue;
         }
@@ -652,6 +674,8 @@ namespace WarhammerArmyAssembler
         {
             List<string> rules = new List<string>();
 
+            string tmp = this.Name;
+
             if (ArmyGeneral)
                 rules.Add("General");
 
@@ -676,11 +700,14 @@ namespace WarhammerArmyAssembler
                 ["Regeneration"] = "Regeneration",
                 ["KillingBlow"] = "Killing Blow",
                 ["PoisonAttack"] = "Poison Attack",
+                ["MultiWounds"] = "Multiple wounds ([X])",
             };
 
-            foreach(KeyValuePair<string, string> specialRule in allSpecialRules)
-                if (RuleFromAnyOption(specialRule.Key))
-                    rules.Add(specialRule.Value);
+            string additionalParam = String.Empty;
+
+            foreach(KeyValuePair<string, string> specialRule in allSpecialRules) 
+                if (RuleFromAnyOption(specialRule.Key, out additionalParam))
+                    rules.Add(specialRule.Value.Replace("[X]", additionalParam));
 
             foreach (Option option in Options)
             {
