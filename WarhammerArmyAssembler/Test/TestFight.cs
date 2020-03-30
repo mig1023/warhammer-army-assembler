@@ -114,22 +114,13 @@ namespace WarhammerArmyAssembler
                 int unitRoundWounds = roundWounds[unit.ID] + (mount != null ? roundWounds[mount.ID] : 0);
 
                 if ((enemy.Wounds > 0) && (roundWounds[enemy.ID] > unitRoundWounds))
-                {
                     enemy.Wounds = BreakTest(enemy, unit, mount, roundWounds[enemy.ID]);
-                    CheckLostFrenzy(ref enemy);
-                }
 
                 if ((unit.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
-                {
                     unit.Wounds = BreakTest(unit, enemy, null, roundWounds[unit.ID]);
-                    CheckLostFrenzy(ref unit);
-                }
 
                 if ((mount.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
-                {
                     mount.Wounds = BreakTest(mount, enemy, null, roundWounds[mount.ID]);
-                    CheckLostFrenzy(ref mount);
-                }
             }
 
             Console(text, "\n\nEnd: ");
@@ -181,7 +172,7 @@ namespace WarhammerArmyAssembler
         private static int PrintAttack(Unit unit, int attackNum, int deathInRound)
         {
             if (unit.Frenzy)
-                Console(supplText, "\n{0} --> is frenzy");
+                Console(supplText, "\n{0} --> is frenzy", unit.Name);
 
             if (unit.IsUnit() && (deathInRound > 0))
             {
@@ -327,6 +318,8 @@ namespace WarhammerArmyAssembler
                     return 0;
                 }
             }
+
+            CheckLostFrenzy(ref unit);
 
             return unit.Wounds;
         }
