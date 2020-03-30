@@ -450,10 +450,14 @@ namespace WarhammerArmyAssembler
 
             double marginTop = (unitGrid.ActualHeight - 66);
 
+            specialRulesTest.Margin = Interface.Thick(specialRulesTest, top: marginTop);
+
+            marginTop += specialRulesTest.ActualHeight;
+
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 enemyForTestText, enemyForTest, enemyTestUnit, enemyGridContainer,
                 specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole,
-                enemyGroupText, enemyGroup, specialRulesTest
+                enemyGroupText, enemyGroup
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 

@@ -19,6 +19,7 @@ namespace WarhammerArmyAssembler
         private static List<FrameworkElement> mountRow = new List<FrameworkElement>();
 
         private static List<string> unitParam = new List<string> {
+                "Name",
                 "Size",
                 "Movement",
                 "WeaponSkill",
@@ -64,7 +65,7 @@ namespace WarhammerArmyAssembler
 
             foreach (string name in unitParam)
             {
-                PropertyInfo param = typeof(Unit).GetProperty(name == "Size" ? name : String.Format("{0}View", name));
+                PropertyInfo param = typeof(Unit).GetProperty(name == "Size" || name == "Name" ? name : String.Format("{0}View", name));
                 Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
                 testUnitElement.Content = param.GetValue(unitForLoad);
 
@@ -149,6 +150,8 @@ namespace WarhammerArmyAssembler
 
             foreach (string enemy in Enemy.GetEnemiesGroups())
                 Interface.main.enemyGroup.Items.Add(enemy);
+
+            Interface.main.armyUnitTest_Resize();
         }
 
         private static string SelectedEnemy()
@@ -171,6 +174,8 @@ namespace WarhammerArmyAssembler
             Interface.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
             LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy");
             LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
+
+            Interface.main.armyUnitTest_Resize();
         }
 
         public static void LoadEnemyGroups()
