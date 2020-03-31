@@ -119,7 +119,7 @@ namespace WarhammerArmyAssembler
                 if ((unit.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
                     unit.Wounds = BreakTest(unit, enemy, null, roundWounds[unit.ID]);
 
-                if ((mount.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
+                if ((mount != null)  && (mount.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
                     mount.Wounds = BreakTest(mount, enemy, null, roundWounds[mount.ID]);
             }
 
@@ -293,8 +293,8 @@ namespace WarhammerArmyAssembler
             if (temoraryLeadership < 0)
                 temoraryLeadership = 0;
 
-            bool enemyFearOrTerror = (enemy.Terror || enemy.Fear);
-            bool enemyMountFearOrTerror = (mount != null ? mount.Terror || mount.Fear : false);
+            bool enemyFearOrTerror = ((enemy.Wounds > 0) && (enemy.Terror || enemy.Fear));
+            bool enemyMountFearOrTerror = ((mount != null) && (mount.Wounds > 0) ? (mount.Terror || mount.Fear) : false);
 
             if (unit.Unbreakable)
                 Console(text, "unbreakable");

@@ -18,6 +18,8 @@ namespace WarhammerArmyAssembler
 
             if (unit.MountOn > 0)
                 Test.mount = Army.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+            else
+                Test.mount = null;
         }
 
         public static void PrepareEnemy(string enemyName)
