@@ -87,9 +87,9 @@
 				<Type>Weapon</Type>
 				<Points>100</Points>
 				<StrengthTo>10</StrengthTo>
+				<MultiWounds>D6</MultiWounds>
 				<SpecialRuleDescription>Successful ward save must be re-rolled</SpecialRuleDescription>
-				<SpecialRuleDescription>Any unsaved wound are multiplied into D6 wounds</SpecialRuleDescription>
-				<SpecialRuleDescription>Wound with no armour save at the end of each turns on a 3+</SpecialRuleDescription>
+				<SpecialRuleDescription>Wound wielder with no armour save at the end of each turns on a 3+</SpecialRuleDescription>
 				<Description>This sword gives the bearer Stringth 10 and successful ward saves must be re-rolled. Any unsaved wounds caused by the Fellblade are multiplied into D6 wounds. Roll a D6 at the end of each of the wielder's turns; on a 3+ there is no effect. On a roll of 1-2 the wielder suffers 1 wound with no armour save allowed.</Description>
 			</Artefact>
 			<Artefact>
@@ -112,7 +112,7 @@
 				<Type>Weapon</Type>
 				<Points>35</Points>
 				<AddToStrength>1</AddToStrength>
-				<SpecialRuleDescription>Any unsaved wound are multiplied into 2 wounds</SpecialRuleDescription>
+				<MultiWounds>2</MultiWounds>
 				<SpecialRuleDescription>Wielder suffers 2 wounds if roll 2 or more rolls of To Hit</SpecialRuleDescription>
 				<Description>The wielder of this sword is granted +1 Strength to all Attacks. Any unsaved wound inflicted is multiplied to 2 wounds. If the wielder makes a to Hit roll that has two or more rolls of 1, the wielder immediately suffers a wound that miltiplied to 2 wounds. Other Attacks are carried out as normal.</Description>
 			</Artefact>
@@ -121,7 +121,7 @@
 				<Type>Weapon</Type>
 				<Points>30</Points>
 				<SpecialRuleDescription>Armour Piercing</SpecialRuleDescription>
-				<SpecialRuleDescription>Each unsaved wound is multiplied to D3 wounds</SpecialRuleDescription>
+				<MultiWounds>D3</MultiWounds>
 				<Description>The Weeping Blade has the Armour Piercing special rule. Each unsaved wound is multiplied to D3 wounds.</Description>
 			</Artefact>
 			<Artefact>

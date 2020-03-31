@@ -125,7 +125,7 @@
 				<Name>Piranha Blade</Name>
 				<Type>Weapon</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Two wounds</SpecialRuleDescription>
+				<MultiWounds>2</MultiWounds>
 				<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
 			</Artefact>
 			<Artefact>
@@ -517,7 +517,7 @@
 				<HandWeapon>
 					<Name>Revered Spear of Tlanxla</Name>
 					<AddToStrength>1</AddToStrength>
-					<SpecialRuleDescription>Any wound counts as two for Combat Result</SpecialRuleDescription>
+					<MultiWounds>2</MultiWounds>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1251,6 +1251,7 @@
 			<AdditionalParam>
 				<Terror>true</Terror>
 				<ColdBlooded>true</ColdBlooded>
+				<MultiWounds>D3</MultiWounds>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1375,6 +1376,7 @@
 			<AdditionalParam>
 				<Terror>true</Terror>
 				<ColdBlooded>true</ColdBlooded>
+				<MultiWounds>D3</MultiWounds>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
