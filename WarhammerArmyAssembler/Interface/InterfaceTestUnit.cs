@@ -36,6 +36,20 @@ namespace WarhammerArmyAssembler
 
         private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix, bool withMount = false)
         {
+            if (Interface.main.unitGrid.RowDefinitions.Count > 2)
+            {
+                Interface.main.unitGrid.RowDefinitions.RemoveAt(2);
+
+                foreach (FrameworkElement f in mountRow)
+                {
+                    Panel p = (f as Panel);
+                    p.Children.Clear();
+                    Interface.main.unitGrid.Children.Remove(p);
+                }
+
+                mountRow.Clear();
+            }
+
             if (withMount && (unitForLoad.MountOn > 0))
             {
                 if (Interface.main.unitGrid.RowDefinitions.Count < 3)
@@ -44,22 +58,7 @@ namespace WarhammerArmyAssembler
                 Interface.main.unitGrid.Height = 99;
             }
             else if (withMount)
-            {
-                if (Interface.main.unitGrid.RowDefinitions.Count > 2)
-                {
-                    Interface.main.unitGrid.RowDefinitions.RemoveAt(2);
-
-                    foreach(FrameworkElement f in mountRow)
-                    {
-                        Panel p = (f as Panel);
-                        p.Children.Clear();
-                        Interface.main.unitGrid.Children.Remove(p);
-                    }
-
-                    mountRow.Clear();
-                }
                 Interface.main.unitGrid.Height = 66;
-            }
 
             int mountIndex = 0;
 
