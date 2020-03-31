@@ -16,6 +16,28 @@ namespace WarhammerArmyAssembler
         public enum MagicItemsTypes { Hero, Wizard, Unit }
         public enum TestTypeTypes { Unit, Mount, Enemy }
 
+        private static List<string> UnitParam = new List<string> {
+            "Movement", "WeaponSkill", "BallisticSkill", "Strength", "Toughness",
+            "Wounds", "Initiative", "Attacks", "Leadership", "Armour", "Ward"
+        };
+
+        private static Dictionary<string, string> AllSpecialRules = new Dictionary<string, string>()
+        {
+            ["ImmuneToPsychology"] = "Immune to Psychology",
+            ["Stubborn"] = "Stubborn",
+            ["Hate"] = "Hate",
+            ["Fear"] = "Fear",
+            ["Terror"] = "Terror",
+            ["Frenzy"] = "Frenzy",
+            ["Unbreakable"] = "Unbreakable",
+            ["ColdBlooded"] = "ColdBlooded",
+            ["HitFirst"] = "Hit First",
+            ["Regeneration"] = "Regeneration",
+            ["KillingBlow"] = "Killing Blow",
+            ["PoisonAttack"] = "Poison Attack",
+            ["MultiWounds"] = "Multiple wounds ([X])",
+        };
+
         public string Name { get; set; }
         public string Group { get; set; }
         public int ID { get; set; }
@@ -357,25 +379,26 @@ namespace WarhammerArmyAssembler
             return paramValue.ToString() + paramModView;
         }
 
+        private void SetUnitParamByOption(Unit unit, string paramName)
+        {
+            string stringValue = String.Empty;
+
+            bool value = RuleFromAnyOption(paramName, out stringValue);
+
+            if (!value)
+                return;
+
+            if (!String.IsNullOrEmpty(stringValue))
+                typeof(Unit).GetProperty(paramName).SetValue(unit, stringValue);
+            else
+                typeof(Unit).GetProperty(paramName).SetValue(unit, value);
+        }
+
         public Unit GetOptionRules(bool directModification = false)
         {
             Unit unit = this.Clone();
 
-            List<string> unitParam = new List<string> {
-                "Movement",
-                "WeaponSkill",
-                "BallisticSkill",
-                "Strength",
-                "Toughness",
-                "Wounds",
-                "Initiative",
-                "Attacks",
-                "Leadership",
-                "Armour",
-                "Ward"
-            };
-
-            foreach (string name in unitParam)
+            foreach (string name in UnitParam)
             {
                 bool reverse = ((name == "Armour" || name == "Ward") ? true : false);
                 bool mount = (name == "Armour" ? true : false);
@@ -391,6 +414,10 @@ namespace WarhammerArmyAssembler
                     typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
                 }
             }
+
+            if (directModification)
+                foreach (KeyValuePair<string, string> specialRule in AllSpecialRules)
+                    SetUnitParamByOption(unit, specialRule.Key);
 
             return unit;
         }
@@ -686,26 +713,9 @@ namespace WarhammerArmyAssembler
                 if (option.Realised && option.SpecialRuleDescription.Length > 0)
                     rules.Add(option.Name);
 
-            Dictionary<string, string> allSpecialRules = new Dictionary<string, string>()
-            {
-                ["ImmuneToPsychology"] = "Immune to Psychology",
-                ["Stubborn"] = "Stubborn",
-                ["Hate"] = "Hate",
-                ["Fear"] = "Fear",
-                ["Terror"] = "Terror",
-                ["Frenzy"] = "Frenzy",
-                ["Unbreakable"] = "Unbreakable",
-                ["ColdBlooded"] = "ColdBlooded",
-                ["HitFirst"] = "Hit First",
-                ["Regeneration"] = "Regeneration",
-                ["KillingBlow"] = "Killing Blow",
-                ["PoisonAttack"] = "Poison Attack",
-                ["MultiWounds"] = "Multiple wounds ([X])",
-            };
-
             string additionalParam = String.Empty;
 
-            foreach(KeyValuePair<string, string> specialRule in allSpecialRules) 
+            foreach(KeyValuePair<string, string> specialRule in AllSpecialRules) 
                 if (RuleFromAnyOption(specialRule.Key, out additionalParam))
                     rules.Add(specialRule.Value.Replace("[X]", additionalParam));
 
