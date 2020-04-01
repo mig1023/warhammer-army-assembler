@@ -387,7 +387,7 @@ namespace WarhammerArmyAssembler
 
         private static bool KillingAttack(Unit unit, Unit enemy)
         {
-            if (unit.KillingBlow && !attackIsPoisoned && (lastDice == 6))
+            if (unit.KillingBlow && !attackIsPoisoned && (lastDice == 6) && (enemy.UnitStrength <= 1))
             {
                 attackWithKillingBlow = true;
                 Console(text, " --> killing blow");

@@ -97,6 +97,8 @@ namespace WarhammerArmyAssembler
         public bool ColdBlooded { get; set; }
         public bool Stupidity { get; set; }
 
+        public int UnitStrength { get; set; }
+
         public bool HitFirst { get; set; }
         public bool Regeneration { get; set; }
         public bool KillingBlow { get; set; }
@@ -234,6 +236,8 @@ namespace WarhammerArmyAssembler
 
             newUnit.OriginalWounds = this.OriginalWounds;
             newUnit.OriginalAttacks = this.OriginalAttacks;
+
+            newUnit.UnitStrength = this.UnitStrength;
 
             newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
             newUnit.Stubborn = this.Stubborn;

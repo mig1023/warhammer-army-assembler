@@ -103,6 +103,8 @@ namespace WarhammerArmyAssembler
 
             if (additionalParam != null)
             {
+                newUnit.UnitStrength = IntParse(additionalParam["UnitStrength"], byDefault: 1);
+
                 newUnit.ImmuneToPsychology = BoolParse(additionalParam["ImmuneToPsychology"]);
                 newUnit.Stubborn = BoolParse(additionalParam["Stubborn"]);
                 newUnit.Hate = BoolParse(additionalParam["Hate"]);
@@ -131,6 +133,9 @@ namespace WarhammerArmyAssembler
                 if (newUnit.Frenzy)
                     xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(ArmyBookOther.AddFrenzyAttack(xml));
             }
+
+            if (newUnit.UnitStrength == 0)
+                newUnit.UnitStrength = 1;
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("SpecialRulesAndAmmunition/*"))
                 newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
