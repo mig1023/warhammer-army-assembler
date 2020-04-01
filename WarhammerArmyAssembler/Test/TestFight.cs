@@ -78,10 +78,13 @@ namespace WarhammerArmyAssembler
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
             InitRoundWounds(opponents, ref roundWounds);
 
-            CheckTerror(ref unit, enemy);
-            CheckTerror(ref enemy, unit);
+            CheckTerror(ref unit, mount, enemy);
+            CheckTerror(ref enemy, null, unit);
 
-            while((unit.Wounds + (mount == null ? 0 : mount.Wounds) > 0) && (enemy.Wounds > 0) && (round < 100))
+            if (mount != null)
+                CheckTerror(ref mount, null, enemy);
+
+            while ((unit.Wounds + (mount == null ? 0 : mount.Wounds) > 0) && (enemy.Wounds > 0) && (round < 100))
             {
                 round += 1;
 
@@ -114,13 +117,13 @@ namespace WarhammerArmyAssembler
                 int unitRoundWounds = roundWounds[unit.ID] + (mount != null ? roundWounds[mount.ID] : 0);
 
                 if ((enemy.Wounds > 0) && (roundWounds[enemy.ID] > unitRoundWounds))
-                    enemy.Wounds = BreakTest(enemy, unit, mount, roundWounds[enemy.ID]);
+                    enemy.Wounds = BreakTest(enemy, null, unit, mount, roundWounds[enemy.ID]);
 
                 if ((unit.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
-                    unit.Wounds = BreakTest(unit, enemy, null, roundWounds[unit.ID]);
+                    unit.Wounds = BreakTest(unit, mount, enemy, null, roundWounds[unit.ID]);
 
                 if ((mount != null)  && (mount.Wounds > 0) && (unitRoundWounds > roundWounds[enemy.ID]))
-                    mount.Wounds = BreakTest(mount, enemy, null, roundWounds[mount.ID]);
+                    mount.Wounds = BreakTest(mount, null, enemy, null, roundWounds[mount.ID]);
             }
 
             Console(text, "\n\nEnd: ");
@@ -195,9 +198,11 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static void CheckTerror(ref Unit unit, Unit enemy)
+        private static void CheckTerror(ref Unit unit, Unit mountUnit, Unit enemy)
         {
-            if (!enemy.Terror || unit.Terror)
+            bool mountTerrorOrFear = (mountUnit != null ? (mountUnit.Terror || mountUnit.Fear) : false);
+
+            if (!enemy.Terror || unit.Terror || unit.Fear || mountTerrorOrFear)
                 return;
 
             Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
@@ -279,7 +284,7 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static int BreakTest(Unit unit, Unit enemy, Unit mount, int woundInRound)
+        private static int BreakTest(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount, int woundInRound)
         {
             Console(text, "\n\n{0} break test --> ", unit.Name);
 
@@ -294,18 +299,16 @@ namespace WarhammerArmyAssembler
                 temoraryLeadership = 0;
 
             bool enemyFearOrTerror = ((enemy.Wounds > 0) && (enemy.Terror || enemy.Fear));
-            bool enemyMountFearOrTerror = ((mount != null) && (mount.Wounds > 0) ? (mount.Terror || mount.Fear) : false);
+            bool enemyMountFearOrTerror = ((enemyMount != null) && (enemyMount.Wounds > 0) ? (enemyMount.Terror || enemyMount.Fear) : false);
+
+            bool unitFearOrTerror = ((unit.Wounds > 0) && (unit.Terror || unit.Fear));
+            bool unitMountFearOrTerror = ((unitMount != null) && (unitMount.Wounds > 0) ? (unitMount.Terror || unitMount.Fear) : false);
 
             if (unit.Unbreakable)
                 Console(text, "unbreakable");
-            else if ((enemyFearOrTerror) && !(unit.ImmuneToPsychology || unit.Terror || unit.Fear))
+            else if ((enemyFearOrTerror || enemyMountFearOrTerror) && !(unit.ImmuneToPsychology || unitFearOrTerror || unitMountFearOrTerror))
             {
-                Console(badText, "autobreak by {0} fear", enemy.Name);
-                return 0;
-            }
-            else if (enemyMountFearOrTerror && !(unit.ImmuneToPsychology || unit.Terror || unit.Fear))
-            {
-                Console(badText, "autobreak by {0} fear", mount.Name);
+                Console(badText, "autobreak by {0} fear", (enemyFearOrTerror ? enemy.Name : enemyMount.Name));
                 return 0;
             }
             else
