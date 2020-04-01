@@ -304,9 +304,19 @@ namespace WarhammerArmyAssembler
             bool unitFearOrTerror = ((unit.Wounds > 0) && (unit.Terror || unit.Fear));
             bool unitMountFearOrTerror = ((unitMount != null) && (unitMount.Wounds > 0) ? (unitMount.Terror || unitMount.Fear) : false);
 
+            bool thereAreMoreOfThem = (
+                (unit.UnitStrength * unit.Size) + (unitMount != null ? (unitMount.UnitStrength * unitMount.Size) : 0) <
+                (enemy.UnitStrength * enemy.Size) + (enemyMount != null ? (enemyMount.UnitStrength * enemyMount.Size) : 0)
+            );
+
             if (unit.Unbreakable)
                 Console(text, "unbreakable");
-            else if ((enemyFearOrTerror || enemyMountFearOrTerror) && !(unit.ImmuneToPsychology || unitFearOrTerror || unitMountFearOrTerror))
+            else if (
+                thereAreMoreOfThem
+                &&
+                (enemyFearOrTerror || enemyMountFearOrTerror)
+                &&
+                !(unit.ImmuneToPsychology || unitFearOrTerror || unitMountFearOrTerror))
             {
                 Console(badText, "autobreak by {0} fear", (enemyFearOrTerror ? enemy.Name : enemyMount.Name));
                 return 0;
