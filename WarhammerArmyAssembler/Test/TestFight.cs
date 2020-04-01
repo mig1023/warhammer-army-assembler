@@ -310,7 +310,7 @@ namespace WarhammerArmyAssembler
             }
             else
             {
-                if (RollDice(DiceType.LD, unit, temoraryLeadership, diceNum: 2))
+                if (RollDice(DiceType.LD, unit, temoraryLeadership, diceNum: 2, breakTest: true))
                     Console(goodText, " --> passed");
                 else
                 {
@@ -460,7 +460,8 @@ namespace WarhammerArmyAssembler
             return RollDice(DiceType.WARD, enemy, enemy.Ward);
         }
 
-        private static bool RollDice(DiceType diceType, Unit unit, int? conditionParam, int diceNum = 1, int round = 2)
+        private static bool RollDice(DiceType diceType, Unit unit, int? conditionParam,
+            int diceNum = 1, int round = 2, bool breakTest = false)
         {
             if (conditionParam == null)
                 return false;
@@ -471,7 +472,7 @@ namespace WarhammerArmyAssembler
 
             int result = RollAllDice(diceType, unit, diceNum);
 
-            bool testPassed = TestPassedByDice(result, condition, diceType);
+            bool testPassed = TestPassedByDice(result, condition, diceType, breakTest);
 
             Console(supplText, "{0}", result);
 
@@ -480,7 +481,7 @@ namespace WarhammerArmyAssembler
                 result = RollAllDice(diceType, unit, diceNum);
                 Console(supplText, ", {0}", result);
 
-                testPassed = TestPassedByDice(result, condition, diceType);
+                testPassed = TestPassedByDice(result, condition, diceType, breakTest);
             }
             else if ((diceType == DiceType.AS) && (condition > 6) && (condition < 10) && (result == 6))
             {
@@ -488,7 +489,7 @@ namespace WarhammerArmyAssembler
                 result = RollAllDice(diceType, unit, 1);
                 Console(supplText, " --> {0}+, {1}", supplCondition, result);
 
-                testPassed = TestPassedByDice(result, supplCondition, diceType);
+                testPassed = TestPassedByDice(result, supplCondition, diceType, breakTest);
             }
 
             Console(supplText, ")");
@@ -496,9 +497,15 @@ namespace WarhammerArmyAssembler
             return testPassed;
         }
 
-        private static bool TestPassedByDice(int result, int condition, DiceType diceType)
+        private static bool TestPassedByDice(int result, int condition, DiceType diceType, bool breakTest = false)
         {
             bool reversCheck = (diceType == DiceType.AS) || (diceType == DiceType.WARD);
+
+            if (breakTest && (result == 2))
+            {
+                Console(supplText, "insane courage! --> ");
+                return true;
+            }
 
             if (((result < condition) || (result == 1)) && reversCheck)
                 return true;
