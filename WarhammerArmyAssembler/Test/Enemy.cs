@@ -121,7 +121,8 @@ namespace WarhammerArmyAssembler
                 Leadership = 4,
                 Fear = true,
                 Regeneration = true,
-                Stupidity = true
+                Stupidity = true,
+                UnitStrength = 3,
             },
 
             new Enemy
@@ -140,6 +141,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 9,
                 Armour = 3,
                 Terror = true,
+                UnitStrength = 7,
             },
         };
 
@@ -240,7 +242,8 @@ namespace WarhammerArmyAssembler
                 Armour = 4,
                 Ward = 5,
                 Terror = true,
-                KillingBlow = true
+                KillingBlow = true,
+                UnitStrength = 7,
             },
         };
     }
