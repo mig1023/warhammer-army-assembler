@@ -36,7 +36,7 @@ namespace WarhammerArmyAssembler
 
         private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix, bool withMount = false)
         {
-            if (Interface.main.unitGrid.RowDefinitions.Count > 2)
+            if (withMount && (Interface.main.unitGrid.RowDefinitions.Count > 2))
             {
                 Interface.main.unitGrid.RowDefinitions.RemoveAt(2);
 
