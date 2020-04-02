@@ -118,6 +118,10 @@ namespace WarhammerArmyAssembler
                 Console(supplText, "\n{0}: {1}W{2}, {3}: {4}W{5}", unit.Name, unit.Wounds, unitMountLine, enemy.Name, enemy.Wounds, enemyMountLine);
 
                 participants.Sort((a, b) => a.CompareTo(b));
+
+                if (round == 1)
+                    participants.Sort((a, b) => a.CompareTo(b));
+
                 ShowRoundOrder(participants);
 
                 Dictionary<int, int> attacksRound = new Dictionary<int, int>();
@@ -286,7 +290,12 @@ namespace WarhammerArmyAssembler
 
         public static bool CheckInitiative(Unit unit, Unit enemy)
         {
-            if ((round == 1) && (unit.TestType != Unit.TestTypeTypes.Enemy) && (!enemy.HitFirst))
+            Unit.TestTypeTypes unitType = Unit.TestTypeTypes.Unit;
+            Unit.TestTypeTypes enemyType = Unit.TestTypeTypes.Enemy;
+
+            if ((round == 1) && (unit.TestType == unitType) && (enemy.TestType == enemyType) && (!enemy.HitFirst))
+                return true;
+            else if ((round == 1) && (unit.TestType == enemyType) && (enemy.TestType == unitType) && (!unit.HitFirst))
                 return true;
             else if (unit.HitFirst && !enemy.HitFirst)
                 return true;
