@@ -9,32 +9,38 @@ namespace WarhammerArmyAssembler
     class Test
     {
         public static Unit unit;
-        public static Unit mount;
+        public static Unit unitMount;
         public static Unit enemy;
+        public static Unit enemyMount;
 
         public static void PrepareUnit(Unit unit)
         {
             Test.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
             if (unit.MountOn > 0)
-                Test.mount = Army.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+                Test.unitMount = Army.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
             else
-                Test.mount = null;
+                Test.unitMount = null;
         }
 
         public static void PrepareEnemy(string enemyName)
         {
             Test.enemy = Enemy.GetByName(enemyName).Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+
+            if (enemy.EnemyMount != null)
+                Test.enemyMount = enemy.EnemyMount.Clone();
+            else
+                Test.enemyMount = null;
         }
 
         public static void TestFull()
         {
-            TestFight.FullTest(unit, mount, enemy);
+            TestFight.FullTest(unit, unitMount, enemy, enemyMount);
         }
 
         public static void TestStatistic()
         {
-            TestFight.StatisticTest(unit, mount, enemy);
+            TestFight.StatisticTest(unit, unitMount, enemy, enemyMount);
         }
     }
 }

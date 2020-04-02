@@ -14,7 +14,7 @@ namespace WarhammerArmyAssembler
     {
         public enum UnitType { Lord, Hero, Core, Special, Rare, Mount, ToCore, ToSpecial }
         public enum MagicItemsTypes { Hero, Wizard, Unit }
-        public enum TestTypeTypes { Unit, Mount, Enemy }
+        public enum TestTypeTypes { Unit, Enemy }
 
         private static List<string> UnitParam = new List<string> {
             "Movement", "WeaponSkill", "BallisticSkill", "Strength", "Toughness",
@@ -129,6 +129,7 @@ namespace WarhammerArmyAssembler
         public List<Option> Options = new List<Option>();
 
         public TestTypeTypes TestType { get; set; }
+        public Unit EnemyMount { get; set; }
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
@@ -271,6 +272,7 @@ namespace WarhammerArmyAssembler
             newUnit.MustBeGeneral = this.MustBeGeneral;
 
             newUnit.TestType = this.TestType;
+            newUnit.EnemyMount = this.EnemyMount;
 
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)

@@ -227,6 +227,7 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                ID = 999999,
                 Name = "Bloodthister",
                 TestListName = "Greater Daemon Bloodthister <-- lord, Chaos",
                 Size = 1,
@@ -244,6 +245,23 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 KillingBlow = true,
                 UnitStrength = 7,
+
+                EnemyMount = new Enemy
+                {
+                    ID = 999998,
+                    Name = "TestSpeed",
+                    Size = 1,
+                    Movement = 10,
+                    WeaponSkill = 4,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 4,
+                    Wounds = 3,
+                    Initiative = 3,
+                    Attacks = 2,
+                    Leadership = 10,
+                    Armour = 4,
+                }
             },
         };
     }
