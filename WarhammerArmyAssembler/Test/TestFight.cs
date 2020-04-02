@@ -54,6 +54,19 @@ namespace WarhammerArmyAssembler
                 roundWounds[unit.ID] = 0;
         }
 
+        private static bool BothOpponentsAreAlive(List<Unit> opponents)
+        {
+            Dictionary<Unit.TestTypeTypes, int> opponentsWounds = new Dictionary<Unit.TestTypeTypes, int>();
+
+            foreach (Unit unit in opponents)
+                if (opponentsWounds.ContainsKey(unit.TestType))
+                    opponentsWounds[unit.TestType] += unit.Wounds;
+                else
+                    opponentsWounds.Add(unit.TestType, unit.Wounds);
+
+            return (opponentsWounds[Unit.TestTypeTypes.Unit] > 0) && (opponentsWounds[Unit.TestTypeTypes.Enemy] > 0);
+        }
+
         public static int FullTest(Unit originalUnit, Unit originalUnitMount, Unit originalEnemy, Unit originalEnemyMount)
         {
             testConsole.Clear();
@@ -94,7 +107,7 @@ namespace WarhammerArmyAssembler
             if (enemyMount != null)
                 CheckTerror(ref enemyMount, enemy, enemy);
 
-            while ((unit.Wounds + (unitMount == null ? 0 : unitMount.Wounds) > 0) && (enemy.Wounds + (enemyMount == null ? 0 : enemyMount.Wounds) > 0) && (round < 100))
+            while (BothOpponentsAreAlive(participants) && (round < 100))
             {
                 round += 1;
 
@@ -115,10 +128,11 @@ namespace WarhammerArmyAssembler
                 InitRoundWounds(participants, ref roundWounds);
 
                 foreach (Unit u in participants)
-                {
-                    Unit opponent = SelectOpponent(participants, u);
-                    roundWounds[opponent.ID] += Round(u, ref opponent, attacksRound[u.ID], round);
-                }
+                    if (BothOpponentsAreAlive(participants))
+                    {
+                        Unit opponent = SelectOpponent(participants, u);
+                        roundWounds[opponent.ID] += Round(u, ref opponent, attacksRound[u.ID], round);
+                    }
 
                 int unitRoundWounds = roundWounds[unit.ID] + (unitMount != null ? roundWounds[unitMount.ID] : 0);
                 int enemyRoundWounds = roundWounds[enemy.ID] + (enemyMount != null ? roundWounds[enemyMount.ID] : 0);
@@ -255,6 +269,9 @@ namespace WarhammerArmyAssembler
                         Console(badText, " --> fail");
                 }
             }
+
+            if (enemy.Wounds < 0)
+                enemy.Wounds = 0;
 
             return roundWounds;
         }
