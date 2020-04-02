@@ -381,7 +381,7 @@ namespace WarhammerArmyAssembler
             else
                 multiwounds = int.Parse(unit.MultiWounds);
 
-            Console(text, " --> {0} multiple wounds", multiwounds);
+            Console(text, " <-- {0} multiple wounds", multiwounds);
 
             return multiwounds;
         }
