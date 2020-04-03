@@ -8,6 +8,8 @@ namespace WarhammerArmyAssembler
 {
     class Enemy : Unit
     {
+        public static int MaxIDindex = -10;
+
         public string TestListName { get; set; }
 
         public static Enemy GetByName(string enemyName)
@@ -18,9 +20,18 @@ namespace WarhammerArmyAssembler
             })
                 foreach (Enemy enemy in enemyList)
                     if (enemy.TestListName == enemyName)
-                        return enemy;
+                        return enemy.SetID();
 
             return null;
+        }
+
+        private Enemy SetID()
+        {
+            MaxIDindex -= 1;
+
+            this.ID = MaxIDindex;
+
+            return this;
         }
 
         public static List<string> GetEnemiesGroups()
@@ -227,7 +238,6 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                ID = 999999,
                 Name = "Bloodthister",
                 TestListName = "Greater Daemon Bloodthister <-- lord, Chaos",
                 Size = 1,
@@ -248,7 +258,6 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
-                    ID = 999998,
                     Name = "TestSpeed",
                     Size = 1,
                     Movement = 10,
