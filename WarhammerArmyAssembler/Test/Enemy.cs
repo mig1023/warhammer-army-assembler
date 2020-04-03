@@ -16,7 +16,8 @@ namespace WarhammerArmyAssembler
         {
             foreach (List<Enemy> enemyList in new List<List<Enemy>>
             {
-                EnemiesSoldiers, EnemiesMonsters, EnemiesUnits, EnemiesHeroes
+                EnemiesSoldiers, EnemiesMonsters, EnemiesHeroes,
+                EnemiesCoreUnits, EnemiesSpecialUnits, EnemiesRareUnits,
             })
                 foreach (Enemy enemy in enemyList)
                     if (enemy.TestListName == enemyName)
@@ -39,8 +40,10 @@ namespace WarhammerArmyAssembler
             return new List<string>
             {
                 "Single soldiers",
+                "Core Units",
+                "Special Units",
+                "Rare Units",
                 "Monsters",
-                "Units",
                 "Lords and heroes",
             };
         }
@@ -49,10 +52,14 @@ namespace WarhammerArmyAssembler
         {
             if (groupName == "Single soldiers")
                 return new List<Enemy>(EnemiesSoldiers);
+            else if (groupName == "Core Units")
+                return new List<Enemy>(EnemiesCoreUnits);
+            else if (groupName == "Special Units")
+                return new List<Enemy>(EnemiesSpecialUnits);
+            else if (groupName == "Rare Units")
+                return new List<Enemy>(EnemiesRareUnits);
             else if (groupName == "Monsters")
                 return new List<Enemy>(EnemiesMonsters);
-            else if (groupName == "Units")
-                return new List<Enemy>(EnemiesUnits);
             else if (groupName == "Lords and heroes")
                 return new List<Enemy>(EnemiesHeroes);
             else
@@ -156,12 +163,13 @@ namespace WarhammerArmyAssembler
             },
         };
 
-        private static List<Enemy> EnemiesUnits = new List<Enemy>
+        private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
         {
             new Enemy
             {
                 Name = "Empire swordmens",
                 TestListName = "20 Empire swordmens <-- unit, Empire",
+                Type = UnitType.Core,
                 Size = 20,
                 Movement = 4,
                 WeaponSkill = 3,
@@ -173,7 +181,6 @@ namespace WarhammerArmyAssembler
                 Attacks = 1,
                 Leadership = 7,
                 Armour = 6,
-                Type = UnitType.Core
             },
 
             new Enemy
@@ -197,9 +204,50 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Longbeards",
+                TestListName = "20 Longbeards <-- unit, Dwarfs",
+                Type = UnitType.Core,
+                Size = 20,
+                Movement = 3,
+                WeaponSkill = 5,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 1,
+                Leadership = 9,
+                Armour = 4,
+                ImmuneToPsychology = true
+            },
+        };
+
+        private static List<Enemy> EnemiesSpecialUnits = new List<Enemy>
+        {
+            new Enemy
+            {
+                Name = "Grave Guard",
+                TestListName = "16 Grave Guard <-- unit, Vampire Counts",
+                Type = UnitType.Special,
+                Size = 16,
+                Movement = 4,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 2,
+                Leadership = 8,
+                Armour = 4,
+                KillingBlow = true
+            },
+
+            new Enemy
+            {
                 Name = "Sword Masters of Hoeth",
                 TestListName = "16 Sword Master <-- unit, High Elves",
-                Type = UnitType.Rare,
+                Type = UnitType.Special,
                 Size = 16,
                 Movement = 5,
                 WeaponSkill = 6,
@@ -213,7 +261,48 @@ namespace WarhammerArmyAssembler
                 Armour = 5,
                 HitFirst = true
             },
+        };
 
+        private static List<Enemy> EnemiesRareUnits = new List<Enemy>
+        {
+            new Enemy
+            {
+                Name = "White Lions",
+                TestListName = "16 White Lions <-- unit, High Elves",
+                Type = UnitType.Rare,
+                Size = 16,
+                Movement = 5,
+                WeaponSkill = 5,
+                BallisticSkill = 4,
+                Strength = 6,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 5,
+                Attacks = 1,
+                Leadership = 8,
+                Armour = 6,
+                HitFirst = true
+            },
+
+            new Enemy
+            {
+                Name = "Black Guard",
+                TestListName = "16 Black Guard <-- unit, Dark Elves",
+                Type = UnitType.Rare,
+                Size = 16,
+                Movement = 5,
+                WeaponSkill = 5,
+                BallisticSkill = 4,
+                Strength = 4,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 6,
+                Attacks = 1,
+                Leadership = 9,
+                Armour = 5,
+                Hate = true,
+                Stubborn = true,
+            },
         };
 
         private static List<Enemy> EnemiesHeroes = new List<Enemy>
