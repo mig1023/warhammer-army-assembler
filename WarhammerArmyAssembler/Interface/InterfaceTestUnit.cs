@@ -19,46 +19,35 @@ namespace WarhammerArmyAssembler
         private static List<FrameworkElement> mountRow = new List<FrameworkElement>();
 
         private static List<string> unitParam = new List<string> {
-                "Name",
-                "Size",
-                "Movement",
-                "WeaponSkill",
-                "BallisticSkill",
-                "Strength",
-                "Toughness",
-                "Wounds",
-                "Initiative",
-                "Attacks",
-                "Leadership",
-                "Armour",
-                "Ward"
+                "Name", "Size", "Movement", "WeaponSkill", "BallisticSkill", "Strength",
+                "Toughness", "Wounds", "Initiative", "Attacks", "Leadership", "Armour", "Ward"
             };
 
-        private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix, bool withMount = false)
+        private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix, Grid unitGrid)
         {
-            if (withMount && (Interface.main.unitGrid.RowDefinitions.Count > 2))
+            if (unitGrid.RowDefinitions.Count > 2)
             {
-                Interface.main.unitGrid.RowDefinitions.RemoveAt(2);
+                unitGrid.RowDefinitions.RemoveAt(2);
 
                 foreach (FrameworkElement f in mountRow)
                 {
                     Panel p = (f as Panel);
                     p.Children.Clear();
-                    Interface.main.unitGrid.Children.Remove(p);
+                    unitGrid.Children.Remove(p);
                 }
 
                 mountRow.Clear();
             }
 
-            if (withMount && (unitForLoad.MountOn > 0))
+            if ((unitForLoad.MountOn > 0) || (unitForLoad.EnemyMount != null))
             {
-                if (Interface.main.unitGrid.RowDefinitions.Count < 3)
-                    Interface.main.unitGrid.RowDefinitions.Add(new RowDefinition());
+                if (unitGrid.RowDefinitions.Count < 3)
+                    unitGrid.RowDefinitions.Add(new RowDefinition());
 
-                Interface.main.unitGrid.Height = 99;
+                unitGrid.Height = 99;
             }
-            else if (withMount)
-                Interface.main.unitGrid.Height = 66;
+            else
+                unitGrid.Height = 66;
 
             int mountIndex = 0;
 
@@ -68,22 +57,25 @@ namespace WarhammerArmyAssembler
                 Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
                 testUnitElement.Content = param.GetValue(unitForLoad);
 
-                if (withMount && (unitForLoad.MountOn > 0))
+                if ((unitForLoad.MountOn > 0) || (unitForLoad.EnemyMount != null))
                 {
                     PropertyInfo mountParam = typeof(Unit).GetProperty(name);
-                    var value = mountParam.GetValue(Army.Units[unitForLoad.MountOn]) ?? String.Empty;
-                    AddMountUnitParam(value.ToString(), mountIndex++);
+                    Unit mount = unitForLoad.EnemyMount ?? Army.Units[unitForLoad.MountOn];
+                    var value = mountParam.GetValue(mount) ?? String.Empty;
+                    AddMountUnitParam(value.ToString(), mountIndex, unitGrid);
+
+                    mountIndex += 1;
                 }
             }
 
             Interface.main.armyUnitTest_Resize();
         }
 
-        private static void AddMountUnitParam(string param, int gridIndex)
+        private static void AddMountUnitParam(string param, int gridIndex, Grid unitGrid)
         {
             StackPanel panel = new StackPanel();
             panel.HorizontalAlignment = HorizontalAlignment.Center;
-            Interface.main.unitGrid.Children.Add(panel);
+            unitGrid.Children.Add(panel);
             Grid.SetRow(panel, 2);
             Grid.SetColumn(panel, gridIndex);
 
@@ -118,13 +110,15 @@ namespace WarhammerArmyAssembler
                 Interface.main.startStatisticTest
             })
                 element.Visibility = System.Windows.Visibility.Visible;
+
+
         }
 
         public static void TestCanvasPrepare(Unit unit)
         {
             Test.PrepareUnit(unit);
 
-            foreach (FrameworkElement f in new List<FrameworkElement> {
+            foreach (FrameworkElement element in new List<FrameworkElement> {
                 Interface.main.enemyTestUnit,
                 Interface.main.enemyGridContainer,
                 Interface.main.specialRulesEnemyTest,
@@ -132,10 +126,10 @@ namespace WarhammerArmyAssembler
                 Interface.main.startStatisticTest,
                 Interface.main.testConsole
             })
-                f.Visibility = Visibility.Hidden;
+                element.Visibility = Visibility.Hidden;
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
-            LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test", withMount: true);
+            LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test", unitGrid: Interface.main.unitGrid);
             LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest);
 
             foreach (Label label in new List<Label> { Interface.main.startFullTest, Interface.main.startStatisticTest })
@@ -171,7 +165,7 @@ namespace WarhammerArmyAssembler
             Test.PrepareEnemy(SelectedEnemy());
 
             Interface.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
-            LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy");
+            LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy", unitGrid: Interface.main.enemyGrid);
             LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
 
             Interface.main.armyUnitTest_Resize();
