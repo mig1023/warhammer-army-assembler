@@ -201,5 +201,10 @@ namespace WarhammerArmyAssembler
         {
             showLinesToConsole = !prevent;
         }
+
+        public static bool PreventConsoleOutputStatus()
+        {
+            return showLinesToConsole;
+        }
     }
 }

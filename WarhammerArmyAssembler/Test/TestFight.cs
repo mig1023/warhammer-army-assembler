@@ -307,7 +307,7 @@ namespace WarhammerArmyAssembler
                 return false;
             else
             {
-                if (RollDice(DiceType.I, unit, 4))
+                if (RollDice(DiceType.I, unit, 4, hiddenDice: true))
                     return true;
                 else
                     return false;
@@ -504,10 +504,15 @@ namespace WarhammerArmyAssembler
         }
 
         private static bool RollDice(DiceType diceType, Unit unit, int? conditionParam,
-            int diceNum = 1, int round = 2, bool breakTest = false)
+            int diceNum = 1, int round = 2, bool breakTest = false, bool hiddenDice = false)
         {
             if (conditionParam == null)
                 return false;
+
+            bool restoreConsoleOutput = (hiddenDice && !InterfaceTestUnit.PreventConsoleOutputStatus());
+
+            if (hiddenDice)
+                InterfaceTestUnit.PreventConsoleOutput(prevent: true);
 
             int condition = conditionParam ?? 0;
 
@@ -536,6 +541,9 @@ namespace WarhammerArmyAssembler
             }
 
             Console(supplText, ")");
+
+            if (restoreConsoleOutput)
+                InterfaceTestUnit.PreventConsoleOutput(prevent: false);
 
             return testPassed;
         }
