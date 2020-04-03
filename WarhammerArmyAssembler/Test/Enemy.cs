@@ -71,7 +71,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Empire soldier",
-                TestListName = "Empire soldier <-- soldier, Empire",
+                TestListName = "Empire soldier (Empire)",
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 3,
@@ -88,7 +88,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Saurus warrior",
-                TestListName = "Saurus warrior <-- soldier, Lizardmen",
+                TestListName = "Saurus warrior (Lizardmen)",
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 3,
@@ -106,7 +106,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Chosen Knights of Chaos",
-                TestListName = "Chosen Knights <-- mount soldier, Chaos",
+                TestListName = "Chosen Knights (Chaos)",
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 6,
@@ -126,7 +126,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Troll",
-                TestListName = "Troll <-- monster, Orcs&Goblin",
+                TestListName = "Troll (Orcs&Goblin)",
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 3,
@@ -146,7 +146,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Star Dragon",
-                TestListName = "Star Dragon <-- monster, High Elves",
+                TestListName = "Star Dragon (High Elves)",
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 7,
@@ -167,8 +167,25 @@ namespace WarhammerArmyAssembler
         {
             new Enemy
             {
+                Name = "Clanrat Slaves",
+                TestListName = "20 Clanrat Slaves (Skaven)",
+                Type = UnitType.Core,
+                Size = 20,
+                Movement = 5,
+                WeaponSkill = 2,
+                BallisticSkill = 2,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 4,
+                Attacks = 1,
+                Leadership = 2,
+            },
+
+            new Enemy
+            {
                 Name = "Empire swordmens",
-                TestListName = "20 Empire swordmens <-- unit, Empire",
+                TestListName = "20 Empire swordmens (Empire)",
                 Type = UnitType.Core,
                 Size = 20,
                 Movement = 4,
@@ -186,7 +203,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Bloodletters",
-                TestListName = "20 Bloodletters <-- unit, Chaos",
+                TestListName = "20 Bloodletters (Chaos)",
                 Type = UnitType.Core,
                 Size = 20,
                 Movement = 4,
@@ -205,7 +222,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Longbeards",
-                TestListName = "20 Longbeards <-- unit, Dwarfs",
+                TestListName = "20 Longbeards (Dwarfs)",
                 Type = UnitType.Core,
                 Size = 20,
                 Movement = 3,
@@ -227,7 +244,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Grave Guard",
-                TestListName = "16 Grave Guard <-- unit, Vampire Counts",
+                TestListName = "16 Grave Guard (Vampire Counts)",
                 Type = UnitType.Special,
                 Size = 16,
                 Movement = 4,
@@ -246,7 +263,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Sword Masters of Hoeth",
-                TestListName = "16 Sword Master <-- unit, High Elves",
+                TestListName = "16 Sword Master (High Elves)",
                 Type = UnitType.Special,
                 Size = 16,
                 Movement = 5,
@@ -268,7 +285,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "White Lions",
-                TestListName = "16 White Lions <-- unit, High Elves",
+                TestListName = "16 White Lions (High Elves)",
                 Type = UnitType.Rare,
                 Size = 16,
                 Movement = 5,
@@ -287,7 +304,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Black Guard",
-                TestListName = "16 Black Guard <-- unit, Dark Elves",
+                TestListName = "16 Black Guard (Dark Elves)",
                 Type = UnitType.Rare,
                 Size = 16,
                 Movement = 5,
@@ -310,7 +327,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Tretch Craventail",
-                TestListName = "Tretch Craventail <-- hero, Skaven",
+                TestListName = "Tretch Craventail (Skaven)",
                 Size = 1,
                 Movement = 5,
                 WeaponSkill = 5,
@@ -328,7 +345,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Zacharias The Everliving",
-                TestListName = "Zacharias The Everliving <-- lord, Vampire Counts",
+                TestListName = "Zacharias The Everliving (Vampire Counts)",
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 6,
@@ -362,7 +379,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Bloodthister",
-                TestListName = "Greater Daemon Bloodthister <-- lord, Chaos",
+                TestListName = "Greater Daemon Bloodthister (Chaos)",
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 10,
