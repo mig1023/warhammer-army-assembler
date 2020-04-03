@@ -238,6 +238,40 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Zacharias The Everliving",
+                TestListName = "Zacharias The Everliving <-- lord, Vampire Counts",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 6,
+                BallisticSkill = 6,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 4,
+                Initiative = 8,
+                Attacks = 5,
+                Leadership = 10,
+                Ward = 4,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Zombie Dragon",
+                    Size = 1,
+                    Movement = 6,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 6,
+                    Toughness = 6,
+                    Wounds = 6,
+                    Initiative = 1,
+                    Attacks = 4,
+                    Leadership = 4,
+                    Armour = 5,
+                    Terror = true,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Bloodthister",
                 TestListName = "Greater Daemon Bloodthister <-- lord, Chaos",
                 Size = 1,
@@ -255,22 +289,6 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 KillingBlow = true,
                 UnitStrength = 7,
-
-                EnemyMount = new Enemy
-                {
-                    Name = "TestSpeed",
-                    Size = 1,
-                    Movement = 10,
-                    WeaponSkill = 4,
-                    BallisticSkill = 0,
-                    Strength = 4,
-                    Toughness = 4,
-                    Wounds = 3,
-                    Initiative = 3,
-                    Attacks = 2,
-                    Leadership = 10,
-                    Armour = 4,
-                }
             },
         };
     }
