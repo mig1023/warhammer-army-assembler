@@ -456,8 +456,14 @@ namespace WarhammerArmyAssembler
 
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 enemyForTestText, enemyForTest, enemyTestUnit, enemyGridContainer,
-                specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole,
                 enemyGroupText, enemyGroup
+            })
+                element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
+
+            marginTop += (enemyGrid.ActualHeight - 66);
+
+            foreach (FrameworkElement element in new List<FrameworkElement> {
+                specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole,
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 
