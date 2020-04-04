@@ -109,15 +109,15 @@ namespace WarhammerArmyAssembler
                 TestListName = "Chosen Knights (Chaos)",
                 Size = 1,
                 Movement = 4,
-                WeaponSkill = 6,
+                WeaponSkill = 5,
                 BallisticSkill = 3,
-                Strength = 4,
+                Strength = 5,
                 Toughness = 4,
                 Wounds = 1,
                 Initiative = 5,
                 Attacks = 2,
                 Leadership = 8,
-                Armour = 2
+                Armour = 1
             },
         };
 
@@ -141,6 +141,65 @@ namespace WarhammerArmyAssembler
                 Regeneration = true,
                 Stupidity = true,
                 UnitStrength = 3,
+            },
+
+            new Enemy
+            {
+                Name = "Ancient Kroxigor",
+                TestListName = "Ancient Kroxigor (Lizardmen)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 3,
+                BallisticSkill = 1,
+                Strength = 7,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 1,
+                Attacks = 4,
+                Leadership = 7,
+                Fear = true,
+                ColdBlooded = true,
+                UnitStrength = 3,
+            },
+
+            new Enemy
+            {
+                Name = "Stegadon",
+                TestListName = "Stegadon (Lizardmen)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 3,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 6,
+                Wounds = 5,
+                Initiative = 2,
+                Attacks = 4,
+                Leadership = 5,
+                Armour = 4,
+                UnitStrength = 8,
+                ColdBlooded = true,
+                Terror = true,
+                Stubborn = true,
+                ImmuneToPsychology = true,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Skink Crew",
+                    Size = 5,
+                    Movement = 6,
+                    WeaponSkill = 2,
+                    BallisticSkill = 3,
+                    Strength = 3,
+                    Toughness = 2,
+                    Wounds = 1,
+                    Initiative = 4,
+                    Attacks = 1,
+                    Leadership = 5,
+                    Armour = 4,
+                    ColdBlooded = true,
+                    PoisonAttack = true,
+                }
             },
 
             new Enemy
@@ -184,6 +243,24 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Men-at-arms",
+                TestListName = "20 Men-at-arms (Bretonnia)",
+                Type = UnitType.Core,
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 2,
+                BallisticSkill = 2,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 1,
+                Leadership = 5,
+                Armour = 5
+            },
+
+            new Enemy
+            {
                 Name = "Empire swordmens",
                 TestListName = "20 Empire swordmens (Empire)",
                 Type = UnitType.Core,
@@ -221,6 +298,39 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Knights of the Realms",
+                TestListName = "8 Knights of the Realms (Bretonnia)",
+                Size = 8,
+                Movement = 4,
+                WeaponSkill = 4,
+                BallisticSkill = 3,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 1,
+                Leadership = 8,
+                Armour = 2,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Warhorse",
+                    Size = 8,
+                    Movement = 8,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 3,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 1,
+                    Leadership = 5,
+                    Armour = 5,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Longbeards",
                 TestListName = "20 Longbeards (Dwarfs)",
                 Type = UnitType.Core,
@@ -236,6 +346,57 @@ namespace WarhammerArmyAssembler
                 Leadership = 9,
                 Armour = 4,
                 ImmuneToPsychology = true
+            },
+
+            new Enemy
+            {
+                Name = "Temple Guard",
+                TestListName = "20 Temple Guard (Lizardmen)",
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 4,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 2,
+                Leadership = 8,
+                Armour = 4,
+                ColdBlooded = true
+            },
+
+            new Enemy
+            {
+                Name = "Chosen Knights of Chaos",
+                TestListName = "8 Chosen Knights (Chaos)",
+                Size = 8,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 3,
+                Strength = 5,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 5,
+                Attacks = 2,
+                Leadership = 8,
+                Armour = 1,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Chaos Steed",
+                    Size = 8,
+                    Movement = 8,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 1,
+                    Leadership = 5,
+                    Armour = 5,
+                }
             },
         };
 
@@ -278,6 +439,25 @@ namespace WarhammerArmyAssembler
                 Armour = 5,
                 HitFirst = true
             },
+
+            new Enemy
+            {
+                Name = "Hammerers",
+                TestListName = "16 Hammerers (Dwarfs)",
+                Type = UnitType.Special,
+                Size = 16,
+                Movement = 3,
+                WeaponSkill = 5,
+                BallisticSkill = 3,
+                Strength = 6,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 1,
+                Leadership = 9,
+                Armour = 5,
+                Stubborn = true,
+            },
         };
 
         private static List<Enemy> EnemiesRareUnits = new List<Enemy>
@@ -319,6 +499,58 @@ namespace WarhammerArmyAssembler
                 Armour = 5,
                 Hate = true,
                 Stubborn = true,
+            },
+
+            new Enemy
+            {
+                Name = "Troll Slayers",
+                TestListName = "16 Troll Slayers (Dwarfs)",
+                Type = UnitType.Special,
+                Size = 16,
+                Movement = 3,
+                WeaponSkill = 4,
+                BallisticSkill = 3,
+                Strength = 5,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 1,
+                Leadership = 10,
+                Unbreakable = true,
+            },
+
+            new Enemy
+            {
+                Name = "Grail Knights",
+                TestListName = "12 Grail Knights (Bretonnia)",
+                Size = 12,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 5,
+                Attacks = 2,
+                Leadership = 8,
+                Armour = 2,
+                Ward = 5,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Warhorse",
+                    Size = 12,
+                    Movement = 8,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 3,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 1,
+                    Leadership = 5,
+                    Armour = 5,
+                }
             },
         };
 
