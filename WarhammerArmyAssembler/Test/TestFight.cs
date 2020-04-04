@@ -509,7 +509,7 @@ namespace WarhammerArmyAssembler
             if (conditionParam == null)
                 return false;
 
-            bool restoreConsoleOutput = (hiddenDice && !InterfaceTestUnit.PreventConsoleOutputStatus());
+            bool restoreConsoleOutput = (hiddenDice && InterfaceTestUnit.PreventConsoleOutputStatus());
 
             if (hiddenDice)
                 InterfaceTestUnit.PreventConsoleOutput(prevent: true);
