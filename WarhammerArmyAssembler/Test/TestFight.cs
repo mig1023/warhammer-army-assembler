@@ -301,6 +301,10 @@ namespace WarhammerArmyAssembler
                 return true;
             else if (!unit.HitFirst && enemy.HitFirst)
                 return false;
+            else if (unit.HitLast && !enemy.HitLast)
+                return false;
+            else if (!unit.HitLast && enemy.HitLast)
+                return true;
             else if (unit.Initiative > enemy.Initiative)
                 return true;
             else if (unit.Initiative < enemy.Initiative)

@@ -32,6 +32,7 @@ namespace WarhammerArmyAssembler
             ["Unbreakable"] = "Unbreakable",
             ["ColdBlooded"] = "ColdBlooded",
             ["HitFirst"] = "Hit First",
+            ["HitLast"] = "Hit Last",
             ["Regeneration"] = "Regeneration",
             ["KillingBlow"] = "Killing Blow",
             ["PoisonAttack"] = "Poison Attack",
@@ -100,6 +101,7 @@ namespace WarhammerArmyAssembler
         public int UnitStrength { get; set; }
 
         public bool HitFirst { get; set; }
+        public bool HitLast { get; set; }
         public bool Regeneration { get; set; }
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
@@ -250,6 +252,7 @@ namespace WarhammerArmyAssembler
             newUnit.ColdBlooded = this.ColdBlooded;
             newUnit.Stupidity = this.Stupidity;
             newUnit.HitFirst = this.HitFirst;
+            newUnit.HitLast = this.HitLast;
             newUnit.Regeneration = this.Regeneration;
             newUnit.KillingBlow = this.KillingBlow;
             newUnit.PoisonAttack = this.PoisonAttack;

@@ -115,6 +115,7 @@ namespace WarhammerArmyAssembler
                 newUnit.ColdBlooded = BoolParse(additionalParam["ColdBlooded"]);
                 newUnit.Stupidity = BoolParse(additionalParam["Stupidity"]);
                 newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
+                newUnit.HitLast = BoolParse(additionalParam["HitLast"]);
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
                 newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
                 newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
@@ -171,6 +172,7 @@ namespace WarhammerArmyAssembler
             newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
 
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
+            newWeapon.HitLast = BoolParse(xmlNode["HitLast"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
             newWeapon.MultiWounds = StringParse(xmlNode["MultiWounds"]);

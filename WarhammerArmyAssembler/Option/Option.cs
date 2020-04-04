@@ -37,6 +37,7 @@ namespace WarhammerArmyAssembler
         public string Description { get; set; }
 
         public bool HitFirst { get; set; }
+        public bool HitLast { get; set; }
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
         public string MultiWounds { get; set; }
@@ -146,6 +147,7 @@ namespace WarhammerArmyAssembler
             newOption.OnlyForGroup = this.OnlyForGroup;
 
             newOption.HitFirst = this.HitFirst;
+            newOption.HitLast = this.HitLast;
             newOption.KillingBlow = this.KillingBlow;
             newOption.PoisonAttack = this.PoisonAttack;
             newOption.MultiWounds = this.MultiWounds;
