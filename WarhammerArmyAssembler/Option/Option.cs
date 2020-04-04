@@ -41,6 +41,7 @@ namespace WarhammerArmyAssembler
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
         public string MultiWounds { get; set; }
+        public bool NoArmour { get; set; }
         public bool Regeneration { get; set; }
         public bool ImmuneToPsychology { get; set; }
         public bool Stubborn { get; set; }
@@ -151,6 +152,7 @@ namespace WarhammerArmyAssembler
             newOption.KillingBlow = this.KillingBlow;
             newOption.PoisonAttack = this.PoisonAttack;
             newOption.MultiWounds = this.MultiWounds;
+            newOption.NoArmour = this.NoArmour;
             newOption.Regeneration = this.Regeneration;
             newOption.ImmuneToPsychology = this.ImmuneToPsychology;
             newOption.Stubborn = this.Stubborn;

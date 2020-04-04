@@ -37,6 +37,7 @@ namespace WarhammerArmyAssembler
             ["KillingBlow"] = "Killing Blow",
             ["PoisonAttack"] = "Poison Attack",
             ["MultiWounds"] = "Multiple wounds ([X])",
+            ["NoArmour"] = "No Armour",
         };
 
         public string Name { get; set; }
@@ -105,7 +106,8 @@ namespace WarhammerArmyAssembler
         public bool Regeneration { get; set; }
         public bool KillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
-        public string MultiWounds { get; set; } 
+        public string MultiWounds { get; set; }
+        public bool NoArmour { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -257,6 +259,7 @@ namespace WarhammerArmyAssembler
             newUnit.KillingBlow = this.KillingBlow;
             newUnit.PoisonAttack = this.PoisonAttack;
             newUnit.MultiWounds = this.MultiWounds;
+            newUnit.NoArmour = this.NoArmour;
 
             newUnit.SlotsOfLords = this.SlotsOfLords;
             newUnit.SlotsOfHero = this.SlotsOfHero;

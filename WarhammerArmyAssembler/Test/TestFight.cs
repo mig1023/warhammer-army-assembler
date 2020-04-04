@@ -441,7 +441,7 @@ namespace WarhammerArmyAssembler
                 return true;
             }
 
-            if (enemy.Armour != null)
+            if ((enemy.Armour != null) && !unit.NoArmour)
                 Console(text, " --> AS ");
 
             return false;
@@ -484,7 +484,7 @@ namespace WarhammerArmyAssembler
 
         private static bool NotAS(Unit unit, Unit enemy)
         {
-            if (enemy.Armour == null)
+            if ((enemy.Armour == null) || unit.NoArmour)
                 return true;
 
             int chance = unit.Strength - 3;
