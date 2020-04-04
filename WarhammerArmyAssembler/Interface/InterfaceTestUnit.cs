@@ -23,7 +23,7 @@ namespace WarhammerArmyAssembler
                 "Toughness", "Wounds", "Initiative", "Attacks", "Leadership", "Armour", "Ward"
             };
 
-        private static void LoadUnitParamInInterface(Unit unitForLoad, string elemetnsPostfix, Grid unitGrid)
+        private static void LoadUnitParamInInterface(Unit unitForLoad, Unit mountForLoad, string elemetnsPostfix, Grid unitGrid)
         {
             if (unitGrid.RowDefinitions.Count > 2)
             {
@@ -53,15 +53,16 @@ namespace WarhammerArmyAssembler
 
             foreach (string name in unitParam)
             {
-                PropertyInfo param = typeof(Unit).GetProperty(name == "Size" || name == "Name" ? name : String.Format("{0}View", name));
+                string paramName = (name == "Size" || name == "Name" ? name : String.Format("{0}View", name));
+
+                PropertyInfo param = typeof(Unit).GetProperty(paramName);
                 Label testUnitElement = (Label)Interface.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
                 testUnitElement.Content = param.GetValue(unitForLoad);
 
-                if ((unitForLoad.MountOn > 0) || (unitForLoad.EnemyMount != null))
+                if (mountForLoad != null)
                 {
-                    PropertyInfo mountParam = typeof(Unit).GetProperty(name);
-                    Unit mount = unitForLoad.EnemyMount ?? Army.Units[unitForLoad.MountOn];
-                    var value = mountParam.GetValue(mount) ?? String.Empty;
+                    PropertyInfo mountParam = typeof(Unit).GetProperty(paramName);
+                    var value = mountParam.GetValue(mountForLoad) ?? String.Empty;
                     AddMountUnitParam(value.ToString(), mountIndex, unitGrid);
 
                     mountIndex += 1;
@@ -129,7 +130,7 @@ namespace WarhammerArmyAssembler
                 element.Visibility = Visibility.Hidden;
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
-            LoadUnitParamInInterface(unitForLoad: Test.unit, elemetnsPostfix: "Test", unitGrid: Interface.main.unitGrid);
+            LoadUnitParamInInterface(unitForLoad: Test.unit, mountForLoad: Test.unitMount, elemetnsPostfix: "Test", unitGrid: Interface.main.unitGrid);
             LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest);
 
             foreach (Label label in new List<Label> { Interface.main.startFullTest, Interface.main.startStatisticTest })
@@ -165,7 +166,7 @@ namespace WarhammerArmyAssembler
             Test.PrepareEnemy(SelectedEnemy());
 
             Interface.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
-            LoadUnitParamInInterface(unitForLoad: Test.enemy, elemetnsPostfix: "Enemy", unitGrid: Interface.main.enemyGrid);
+            LoadUnitParamInInterface(unitForLoad: Test.enemy, mountForLoad: Test.enemyMount, elemetnsPostfix: "Enemy", unitGrid: Interface.main.enemyGrid);
             LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
 
             Interface.main.armyUnitTest_Resize();
