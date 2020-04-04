@@ -145,7 +145,7 @@ namespace WarhammerArmyAssembler
                     enemy.Wounds = BreakTest(enemy, enemyMount, unit, unitMount, roundWounds[enemy.ID]);
 
                 if ((enemyMount != null) && (enemyMount.Wounds > 0) && (enemyRoundWounds > unitRoundWounds))
-                    unitMount.Wounds = BreakTest(enemyMount, enemy, unit, unitMount, roundWounds[unitMount.ID]);
+                    enemyMount.Wounds = BreakTest(enemyMount, enemy, unit, unitMount, roundWounds[enemyMount.ID]);
 
                 if ((unit.Wounds > 0) && (unitRoundWounds > enemyRoundWounds))
                     unit.Wounds = BreakTest(unit, unitMount, enemy, enemyMount, roundWounds[unit.ID]);
