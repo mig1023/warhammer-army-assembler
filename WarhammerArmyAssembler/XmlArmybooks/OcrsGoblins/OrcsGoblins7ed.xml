@@ -35,7 +35,7 @@
 				<Name>Biting Blade</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>-1 armour save</SpecialRuleDescription>
+				<ArmourPiercing>1</ArmourPiercing>
 				<Description>-1 armour save</Description>
 			</Artefact>
 			<Artefact>
@@ -88,7 +88,7 @@
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>100</Points>
 				<SpecialRuleDescription>All hits wound automaticalle</SpecialRuleDescription>
-				<SpecialRuleDescription>No armour saves</SpecialRuleDescription>
+				<NoArmour>true</NoArmour>
 				<Description>All hits from this weapons wound automatically and allow no armour saves</Description>
 			</Artefact>
 			<Artefact>
@@ -426,7 +426,7 @@
 				<HandWeapon>
 					<Name>Morglor The Mangler</Name>
 					<HitFirst>true</HitFirst>
-					<SpecialRuleDescription>No armour saves</SpecialRuleDescription>
+					<NoArmour>true</NoArmour>
 				</HandWeapon>
 				<Armour>
 					<Name>Heavy armour</Name>

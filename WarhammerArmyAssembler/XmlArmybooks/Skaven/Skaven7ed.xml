@@ -35,7 +35,7 @@
 				<Name>Biting Blade</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>-1 armour save</SpecialRuleDescription>
+				<ArmourPiercing>1</ArmourPiercing>
 				<Description>-1 armour save</Description>
 			</Artefact>
 			<Artefact>
@@ -96,7 +96,7 @@
 				<Name>Warpforged Blade</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>No armour save</SpecialRuleDescription>
+				<NoArmour>true</NoArmour>
 				<Description>Armour saves cannot be taken against his from a Warpforged Blade.</Description>
 			</Artefact>
 			<Artefact>
@@ -612,7 +612,7 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Dwarf Gouger</Name>
-					<SpecialRuleDescription>No armour save</SpecialRuleDescription>
+					<NoArmour>true</NoArmour>
 					<SpecialRuleDescription>Always wounds Dwarfs on a roll of 2+</SpecialRuleDescription>
 				</HandWeapon>
 				<HandWeapon>

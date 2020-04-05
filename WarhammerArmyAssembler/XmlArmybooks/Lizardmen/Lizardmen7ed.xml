@@ -35,7 +35,7 @@
 				<Name>Biting Blade</Name>
 				<Type>Weapon</Type>
 				<Points>10</Points>
-				<SpecialRuleDescription>-1 Armour save</SpecialRuleDescription>
+				<ArmourPiercing>1</ArmourPiercing>
 				<Description>-1 Armour save</Description>
 			</Artefact>
 			<Artefact>
@@ -94,7 +94,7 @@
 				<Type>Weapon</Type>
 				<Points>65</Points>
 				<AddToStrength>1</AddToStrength>
-				<SpecialRuleDescription>No armour save</SpecialRuleDescription>
+				<NoArmour>true</NoArmour>
 				<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
 			</Artefact>
 			<Artefact>
@@ -911,7 +911,7 @@
 				</Special>
 				<HandWeapon>
 					<Name>Blade of Ancient Skies</Name>
-					<SpecialRuleDescription>No armour saves</SpecialRuleDescription>
+					<NoArmour>true</NoArmour>
 				</HandWeapon>
 				<Armour>
 					<Name>Mask of Heavens</Name>
