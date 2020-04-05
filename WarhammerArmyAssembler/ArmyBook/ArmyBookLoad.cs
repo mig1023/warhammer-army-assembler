@@ -121,6 +121,7 @@ namespace WarhammerArmyAssembler
                 newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
                 newUnit.MultiWounds = StringParse(additionalParam["MultiWounds"]);
                 newUnit.NoArmour = BoolParse(additionalParam["NoArmour"]);
+                newUnit.ArmourPiercing = IntParse(additionalParam["ArmourPiercing"]);
                 newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
                 newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
@@ -178,6 +179,7 @@ namespace WarhammerArmyAssembler
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
             newWeapon.MultiWounds = StringParse(xmlNode["MultiWounds"]);
             newWeapon.NoArmour = BoolParse(xmlNode["NoArmour"]);
+            newWeapon.ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]);
 
             newWeapon.Regeneration = BoolParse(xmlNode["Regeneration"]);
             newWeapon.ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]);

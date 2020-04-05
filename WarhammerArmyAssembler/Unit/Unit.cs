@@ -38,6 +38,7 @@ namespace WarhammerArmyAssembler
             ["PoisonAttack"] = "Poison Attack",
             ["MultiWounds"] = "Multiple wounds ([X])",
             ["NoArmour"] = "No Armour",
+            ["ArmourPiercing"] = "Armour piercing ([X])",
         };
 
         public string Name { get; set; }
@@ -108,6 +109,7 @@ namespace WarhammerArmyAssembler
         public bool PoisonAttack { get; set; }
         public string MultiWounds { get; set; }
         public bool NoArmour { get; set; }
+        public int ArmourPiercing { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -260,6 +262,7 @@ namespace WarhammerArmyAssembler
             newUnit.PoisonAttack = this.PoisonAttack;
             newUnit.MultiWounds = this.MultiWounds;
             newUnit.NoArmour = this.NoArmour;
+            newUnit.ArmourPiercing = this.ArmourPiercing;
 
             newUnit.SlotsOfLords = this.SlotsOfLords;
             newUnit.SlotsOfHero = this.SlotsOfHero;
@@ -394,13 +397,16 @@ namespace WarhammerArmyAssembler
         private void SetUnitParamByOption(Unit unit, string paramName)
         {
             string stringValue = String.Empty;
+            int intValue = 0;
 
-            bool value = RuleFromAnyOption(paramName, out stringValue);
+            bool value = RuleFromAnyOption(paramName, out stringValue, out intValue);
 
             if (!value)
                 return;
 
-            if (!String.IsNullOrEmpty(stringValue))
+            if (intValue > 0)
+                typeof(Unit).GetProperty(paramName).SetValue(unit, intValue);
+            else if (!String.IsNullOrEmpty(stringValue))
                 typeof(Unit).GetProperty(paramName).SetValue(unit, stringValue);
             else
                 typeof(Unit).GetProperty(paramName).SetValue(unit, value);
@@ -631,27 +637,34 @@ namespace WarhammerArmyAssembler
             return String.Empty;
         }
 
-        private bool GetUnitValueTrueOrFalse(object unitValue, out string additionalParam)
+        private bool GetUnitValueTrueOrFalse(object unitValue, out string additionalParam, out int intValue)
         {
             additionalParam = String.Empty;
+            intValue = 0;
 
             if (unitValue is bool)
                 return ((bool)unitValue ? true : false);
             else if (unitValue is string)
             {
-                additionalParam = (string)unitValue;
-                return (String.IsNullOrEmpty((string)unitValue) ? false : true);
+                additionalParam = unitValue.ToString();
+                return (String.IsNullOrEmpty(additionalParam) ? false : true);
+            }
+            else if (unitValue is int)
+            {
+                intValue = (int)unitValue;
+                return (intValue > 0 ? true : false);
             }
             else
                 return false;
         }
 
-        public bool RuleFromAnyOption(string name, out string additionalParam)
+        public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue)
         {
             string lineParamValue = String.Empty;
+            int intParamValue = 0;
 
             PropertyInfo unitField = typeof(Unit).GetProperty(name);
-            bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out lineParamValue);
+            bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out lineParamValue, out intParamValue);
 
             foreach (Option option in Options)
             {
@@ -659,16 +672,21 @@ namespace WarhammerArmyAssembler
                     continue;
 
                 string lineOptionValue = String.Empty;
+                int intOptionValue = 0;
 
                 PropertyInfo optionField = typeof(Option).GetProperty(name);
-                bool fromParamValue = GetUnitValueTrueOrFalse(optionField.GetValue(option), out lineOptionValue);
+                bool fromParamValue = GetUnitValueTrueOrFalse(optionField.GetValue(option), out lineOptionValue, out intOptionValue);
                 anyIsTrue = (fromParamValue ? true : anyIsTrue);
 
                 if (fromParamValue && String.IsNullOrEmpty(lineParamValue))
                     lineParamValue = lineOptionValue;
+
+                if (fromParamValue && (intOptionValue > 0))
+                    intParamValue = intOptionValue;
             }
 
             additionalParam = lineParamValue;
+            intValue = intParamValue;
 
             return anyIsTrue;
         }
@@ -726,10 +744,11 @@ namespace WarhammerArmyAssembler
                     rules.Add(option.Name);
 
             string additionalParam = String.Empty;
+            int intParam = -1;
 
-            foreach(KeyValuePair<string, string> specialRule in AllSpecialRules) 
-                if (RuleFromAnyOption(specialRule.Key, out additionalParam))
-                    rules.Add(specialRule.Value.Replace("[X]", additionalParam));
+            foreach (KeyValuePair<string, string> specialRule in AllSpecialRules) 
+                if (RuleFromAnyOption(specialRule.Key, out additionalParam, out intParam))
+                    rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
 
             foreach (Option option in Options)
             {

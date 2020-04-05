@@ -487,7 +487,7 @@ namespace WarhammerArmyAssembler
             if ((enemy.Armour == null) || unit.NoArmour)
                 return true;
 
-            int chance = unit.Strength - 3;
+            int chance = (unit.Strength + unit.ArmourPiercing) - 3;
 
             if (chance < 0)
                 chance = 0;
