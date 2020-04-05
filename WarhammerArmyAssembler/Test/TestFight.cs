@@ -229,7 +229,7 @@ namespace WarhammerArmyAssembler
 
             Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
 
-            if (RollDice(DiceType.LD, unit, unit.Leadership, 2))
+            if (RollDice(unit, DiceType.LD, enemy, unit.Leadership, 2))
                 Console(goodText, " --> passed");
             else
             {
@@ -263,7 +263,7 @@ namespace WarhammerArmyAssembler
                 {
                     Console(text, "\n{0} --> regeneration ", enemy.Name);
 
-                    if (RollDice(DiceType.REGENERATION, enemy, 4))
+                    if (RollDice(unit, DiceType.REGENERATION, enemy, 4))
                     {
                         Console(goodText, " --> success");
                         enemy.Wounds += 1;
@@ -311,7 +311,7 @@ namespace WarhammerArmyAssembler
                 return false;
             else
             {
-                if (RollDice(DiceType.I, unit, 4, hiddenDice: true))
+                if (RollDice(unit, DiceType.I, enemy, 4, hiddenDice: true))
                     return true;
                 else
                     return false;
@@ -357,7 +357,7 @@ namespace WarhammerArmyAssembler
             }
             else
             {
-                if (RollDice(DiceType.LD, unit, temoraryLeadership, diceNum: 2, breakTest: true))
+                if (RollDice(unit, DiceType.LD, enemy, temoraryLeadership, diceNum: 2, breakTest: true))
                     Console(goodText, " --> passed");
                 else
                 {
@@ -384,7 +384,7 @@ namespace WarhammerArmyAssembler
                 {
                     Console(text, " --> wound ");
 
-                    if ((PoisonedAttack(unit) || Wound(unit, enemy)) && (KillingAttack(unit, enemy) || NotAS(unit, enemy)) && (NotWard(enemy)))
+                    if ((PoisonedAttack(unit) || Wound(unit, enemy)) && (KillingAttack(unit, enemy) || NotAS(unit, enemy)) && (NotWard(unit, enemy)))
                     {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
@@ -458,7 +458,7 @@ namespace WarhammerArmyAssembler
             else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)
                 chance = 5;
 
-            return RollDice(DiceType.WS, enemy, chance, round: round);
+            return RollDice(unit, DiceType.WS, enemy, chance, round: round);
         }
 
         private static bool Wound(Unit unit, Unit enemy)
@@ -479,7 +479,7 @@ namespace WarhammerArmyAssembler
                 return false;
             }
 
-            return RollDice(DiceType.S, enemy, chance);
+            return RollDice(unit, DiceType.S, enemy, chance);
         }
 
         private static bool NotAS(Unit unit, Unit enemy)
@@ -494,20 +494,58 @@ namespace WarhammerArmyAssembler
 
             chance += enemy.Armour ?? 0;
 
-            return RollDice(DiceType.AS, enemy, chance);
+            return RollDice(unit, DiceType.AS, enemy, chance);
         }
 
-        private static bool NotWard(Unit enemy)
+        private static bool NotWard(Unit unit, Unit enemy)
         {
             if (enemy.Ward == null)
                 return true;
 
             Console(text, " --> ward ");
 
-            return RollDice(DiceType.WARD, enemy, enemy.Ward);
+            return RollDice(unit, DiceType.WARD, enemy, enemy.Ward);
         }
 
-        private static bool RollDice(DiceType diceType, Unit unit, int? conditionParam,
+        private static bool CheckReroll(Dictionary<string, DiceType> unitRerolls, Unit unit, DiceType diceType)
+        {
+            foreach (KeyValuePair<string, DiceType> reroll in unitRerolls)
+                if ((unit.Reroll == reroll.Key) && (reroll.Value == diceType))
+                    return true;
+
+            return false;
+        }
+
+        private static bool CanBeRerolled(DiceType diceType, Unit unit, Unit enemy)
+        {
+            Dictionary<string, DiceType> unitRerolls = new Dictionary<string, DiceType>
+            {
+                ["Hit"] = DiceType.WS,
+                ["Shoot"] = DiceType.BS,
+                ["Wound"] = DiceType.S,
+                ["Initiative"] = DiceType.I,
+                ["Leadership"] = DiceType.LD,
+            };
+
+            Dictionary<string, DiceType> enemyRerolls = new Dictionary<string, DiceType>
+            {
+                ["Armour"] = DiceType.AS,
+                ["Ward"] = DiceType.WARD,
+            };
+
+            if (unit.Reroll == "All")
+                return true;
+
+            if (CheckReroll(unitRerolls, unit, diceType))
+                return true;
+
+            if (CheckReroll(enemyRerolls, enemy, diceType))
+                return true;
+
+            return false;
+        }
+
+        private static bool RollDice(Unit unit, DiceType diceType, Unit enemy, int? conditionParam,
             int diceNum = 1, int round = 2, bool breakTest = false, bool hiddenDice = false)
         {
             if (conditionParam == null)
@@ -522,26 +560,28 @@ namespace WarhammerArmyAssembler
 
             Console(supplText, "({0}{1}, ", condition, (diceType == DiceType.LD ? " LD" : "+"));
 
-            int result = RollAllDice(diceType, unit, diceNum);
+            int result = RollAllDice(diceType, enemy, diceNum);
 
             bool testPassed = TestPassedByDice(result, condition, diceType, breakTest);
 
             Console(supplText, "{0}", result);
 
-            if (!testPassed && unit.Hate && (diceType == DiceType.WS))      // +reroll
-            {
-                result = RollAllDice(diceType, unit, diceNum);
-                Console(supplText, ", {0}", result);
+            bool hateHitReroll = unit.Hate && (diceType == DiceType.WS);
 
-                testPassed = TestPassedByDice(result, condition, diceType, breakTest);
-            }
-            else if ((diceType == DiceType.AS) && (condition > 6) && (condition < 10) && (result == 6))
+            if ((diceType == DiceType.AS) && (condition > 6) && (condition < 10) && (result == 6))
             {
                 int supplCondition = condition - 3;
-                result = RollAllDice(diceType, unit, 1);
+                result = RollAllDice(diceType, enemy, 1);
                 Console(supplText, " --> {0}+, {1}", supplCondition, result);
 
                 testPassed = TestPassedByDice(result, supplCondition, diceType, breakTest);
+            }
+            else if (!testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy)))
+            {
+                result = RollAllDice(diceType, enemy, diceNum);
+                Console(supplText, ", reroll --> {0}", result);
+
+                testPassed = TestPassedByDice(result, condition, diceType, breakTest);
             }
 
             Console(supplText, ")");

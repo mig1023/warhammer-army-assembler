@@ -39,6 +39,7 @@ namespace WarhammerArmyAssembler
             ["MultiWounds"] = "Multiple wounds ([X])",
             ["NoArmour"] = "No Armour",
             ["ArmourPiercing"] = "Armour piercing ([X])",
+            ["Reroll"] = "Reroll ([X])",
         };
 
         public string Name { get; set; }
@@ -110,6 +111,7 @@ namespace WarhammerArmyAssembler
         public string MultiWounds { get; set; }
         public bool NoArmour { get; set; }
         public int ArmourPiercing { get; set; }
+        public string Reroll { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -263,6 +265,7 @@ namespace WarhammerArmyAssembler
             newUnit.MultiWounds = this.MultiWounds;
             newUnit.NoArmour = this.NoArmour;
             newUnit.ArmourPiercing = this.ArmourPiercing;
+            newUnit.Reroll = this.Reroll;
 
             newUnit.SlotsOfLords = this.SlotsOfLords;
             newUnit.SlotsOfHero = this.SlotsOfHero;

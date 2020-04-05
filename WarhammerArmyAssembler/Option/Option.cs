@@ -43,6 +43,7 @@ namespace WarhammerArmyAssembler
         public string MultiWounds { get; set; }
         public bool NoArmour { get; set; }
         public int ArmourPiercing { get; set; }
+        public string Reroll { get; set; }
         public bool Regeneration { get; set; }
         public bool ImmuneToPsychology { get; set; }
         public bool Stubborn { get; set; }
@@ -164,6 +165,7 @@ namespace WarhammerArmyAssembler
             newOption.Frenzy = this.Frenzy;
             newOption.Unbreakable = this.Unbreakable;
             newOption.ColdBlooded = this.ColdBlooded;
+            newOption.Reroll = this.Reroll;
 
             newOption.BigWeapon = this.BigWeapon;
 

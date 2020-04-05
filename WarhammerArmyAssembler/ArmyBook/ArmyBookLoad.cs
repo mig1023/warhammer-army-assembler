@@ -126,6 +126,7 @@ namespace WarhammerArmyAssembler
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
                 newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
                 newUnit.MustBeGeneral = BoolParse(additionalParam["MustBeGeneral"]);
+                newUnit.Reroll = StringParse(additionalParam["Reroll"]);
 
                 newUnit.SlotsOfLords = IntParse(additionalParam["SlotsOfLords"]);
                 newUnit.SlotsOfHero = IntParse(additionalParam["SlotsOfHero"]);
@@ -190,6 +191,7 @@ namespace WarhammerArmyAssembler
             newWeapon.Frenzy = BoolParse(xmlNode["Frenzy"]);
             newWeapon.Unbreakable = BoolParse(xmlNode["Unbreakable"]);
             newWeapon.ColdBlooded = BoolParse(xmlNode["ColdBlooded"]);
+            newWeapon.Reroll = StringParse(xmlNode["Reroll"]);
 
             newWeapon.Points = DoubleParse(xmlNode["Points"]);
             newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);
