@@ -516,21 +516,34 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
+        private static bool MustBeRerolled(DiceType diceType, Unit unit, Unit enemy)
+        {
+            Dictionary<string, DiceType> unitRerolls = new Dictionary<string, DiceType>
+            {
+                ["OpponentToHit"] = DiceType.WS,
+                ["OpponentToWound"] = DiceType.S,
+            };
+
+            if (CheckReroll(unitRerolls, enemy, diceType))
+                return true;
+
+            return false;
+        }
+
         private static bool CanBeRerolled(DiceType diceType, Unit unit, Unit enemy)
         {
             Dictionary<string, DiceType> unitRerolls = new Dictionary<string, DiceType>
             {
-                ["Hit"] = DiceType.WS,
-                ["Shoot"] = DiceType.BS,
-                ["Wound"] = DiceType.S,
-                ["Initiative"] = DiceType.I,
-                ["Leadership"] = DiceType.LD,
+                ["ToHit"] = DiceType.WS,
+                ["ToShoot"] = DiceType.BS,
+                ["ToWound"] = DiceType.S,
+                ["ToLeadership"] = DiceType.LD,
             };
 
             Dictionary<string, DiceType> enemyRerolls = new Dictionary<string, DiceType>
             {
-                ["Armour"] = DiceType.AS,
-                ["Ward"] = DiceType.WARD,
+                ["ToArmour"] = DiceType.AS,
+                ["ToWard"] = DiceType.WARD,
             };
 
             if (unit.Reroll == "All")
@@ -576,11 +589,13 @@ namespace WarhammerArmyAssembler
 
                 testPassed = TestPassedByDice(result, supplCondition, diceType, breakTest);
             }
-            else if (!testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy)))
-            {
+            else if (
+                (!testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy)))
+                ||
+                (testPassed && MustBeRerolled(diceType, unit, enemy))
+            ) {
                 result = RollAllDice(diceType, enemy, diceNum);
                 Console(supplText, ", reroll --> {0}", result);
-
                 testPassed = TestPassedByDice(result, condition, diceType, breakTest);
             }
 

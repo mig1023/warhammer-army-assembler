@@ -410,7 +410,16 @@ namespace WarhammerArmyAssembler
             if (intValue > 0)
                 typeof(Unit).GetProperty(paramName).SetValue(unit, intValue);
             else if (!String.IsNullOrEmpty(stringValue))
-                typeof(Unit).GetProperty(paramName).SetValue(unit, stringValue);
+            {
+                if (paramName == "Reroll")
+                {
+                    string allReroll = typeof(Unit).GetProperty(paramName).GetValue(unit).ToString();
+                    allReroll = (String.IsNullOrEmpty(allReroll) ? stringValue : String.Format("{0};{1}", allReroll, stringValue));
+                    typeof(Unit).GetProperty(paramName).SetValue(unit, allReroll);
+                }
+                else
+                    typeof(Unit).GetProperty(paramName).SetValue(unit, stringValue);
+            }
             else
                 typeof(Unit).GetProperty(paramName).SetValue(unit, value);
         }
