@@ -509,9 +509,15 @@ namespace WarhammerArmyAssembler
 
         private static bool CheckReroll(Dictionary<string, DiceType> unitRerolls, Unit unit, DiceType diceType)
         {
-            foreach (KeyValuePair<string, DiceType> reroll in unitRerolls)
-                if ((unit.Reroll == reroll.Key) && (reroll.Value == diceType))
-                    return true;
+            if (String.IsNullOrEmpty(unit.Reroll))
+                return false;
+
+            string[] allReroll = unit.Reroll.Split(';');
+
+            foreach(string unitReroll in allReroll)
+                foreach (KeyValuePair<string, DiceType> reroll in unitRerolls)
+                    if ((unitReroll.Trim() == reroll.Key) && (reroll.Value == diceType))
+                        return true;
 
             return false;
         }

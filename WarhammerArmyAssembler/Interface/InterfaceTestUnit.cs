@@ -88,9 +88,9 @@ namespace WarhammerArmyAssembler
             panel.Children.Add(label);
         }
 
-        private static void LoadSpecialRules(Unit unitForLoad, TextBlock target)
+        private static void LoadSpecialRules(Unit unitForLoad, TextBlock target, bool onlyUnitRules = false)
         {
-            string specialRules = unitForLoad.GetSpecialRulesLine();
+            string specialRules = unitForLoad.GetSpecialRulesLine(onlyUnitParam: onlyUnitRules);
 
             if (!String.IsNullOrEmpty(specialRules))
                 target.Text = String.Format("Special: {0}", specialRules);
@@ -131,7 +131,7 @@ namespace WarhammerArmyAssembler
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
             LoadUnitParamInInterface(unitForLoad: Test.unit, mountForLoad: Test.unitMount, elemetnsPostfix: "Test", unitGrid: Interface.main.unitGrid);
-            LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest);
+            LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest, onlyUnitRules: true);
 
             foreach (Label label in new List<Label> { Interface.main.startFullTest, Interface.main.startStatisticTest })
             {
@@ -167,7 +167,7 @@ namespace WarhammerArmyAssembler
 
             Interface.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
             LoadUnitParamInInterface(unitForLoad: Test.enemy, mountForLoad: Test.enemyMount, elemetnsPostfix: "Enemy", unitGrid: Interface.main.enemyGrid);
-            LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest);
+            LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.main.specialRulesEnemyTest, onlyUnitRules: true);
 
             Interface.main.armyUnitTest_Resize();
         }

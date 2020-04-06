@@ -410,16 +410,7 @@ namespace WarhammerArmyAssembler
             if (intValue > 0)
                 typeof(Unit).GetProperty(paramName).SetValue(unit, intValue);
             else if (!String.IsNullOrEmpty(stringValue))
-            {
-                if (paramName == "Reroll")
-                {
-                    string allReroll = typeof(Unit).GetProperty(paramName).GetValue(unit).ToString();
-                    allReroll = (String.IsNullOrEmpty(allReroll) ? stringValue : String.Format("{0};{1}", allReroll, stringValue));
-                    typeof(Unit).GetProperty(paramName).SetValue(unit, allReroll);
-                }
-                else
-                    typeof(Unit).GetProperty(paramName).SetValue(unit, stringValue);
-            }
+                typeof(Unit).GetProperty(paramName).SetValue(unit, stringValue);
             else
                 typeof(Unit).GetProperty(paramName).SetValue(unit, value);
         }
@@ -535,11 +526,11 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public string GetSpecialRulesLine(bool withCommandData = false)
+        public string GetSpecialRulesLine(bool withCommandData = false, bool onlyUnitParam = false)
         {
             string rules = (withCommandData ? GetFullCommandLine() : String.Empty);
 
-            foreach (string rule in GetSpecialRules())
+            foreach (string rule in GetSpecialRules(onlyUnitParam))
                 rules += String.Format("{0}; ", rule);
 
             if (!String.IsNullOrEmpty(rules))
@@ -670,7 +661,7 @@ namespace WarhammerArmyAssembler
                 return false;
         }
 
-        public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue)
+        public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue, bool onlyUnitParam = false)
         {
             string lineParamValue = String.Empty;
             int intParamValue = 0;
@@ -678,24 +669,27 @@ namespace WarhammerArmyAssembler
             PropertyInfo unitField = typeof(Unit).GetProperty(name);
             bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out lineParamValue, out intParamValue);
 
-            foreach (Option option in Options)
-            {
-                if (option.IsOption() && !option.Realised)
-                    continue;
+            if (!onlyUnitParam)
+                foreach (Option option in Options)
+                {
+                    if (option.IsOption() && !option.Realised)
+                        continue;
 
-                string lineOptionValue = String.Empty;
-                int intOptionValue = 0;
+                    string lineOptionValue = String.Empty;
+                    int intOptionValue = 0;
 
-                PropertyInfo optionField = typeof(Option).GetProperty(name);
-                bool fromParamValue = GetUnitValueTrueOrFalse(optionField.GetValue(option), out lineOptionValue, out intOptionValue);
-                anyIsTrue = (fromParamValue ? true : anyIsTrue);
+                    PropertyInfo optionField = typeof(Option).GetProperty(name);
+                    bool fromParamValue = GetUnitValueTrueOrFalse(optionField.GetValue(option), out lineOptionValue, out intOptionValue);
+                    anyIsTrue = (fromParamValue ? true : anyIsTrue);
 
-                if (fromParamValue && String.IsNullOrEmpty(lineParamValue))
-                    lineParamValue = lineOptionValue;
+                    if ((name == "Reroll") && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
+                        lineParamValue += String.Format("{0}{1}", (String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; "), lineOptionValue);
+                    else if (fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
+                        lineParamValue = lineOptionValue;
 
-                if (fromParamValue && (intOptionValue > 0))
-                    intParamValue = intOptionValue;
-            }
+                    if (fromParamValue && (intOptionValue > 0))
+                        intParamValue = intOptionValue;
+                }
 
             additionalParam = lineParamValue;
             intValue = intParamValue;
@@ -739,7 +733,7 @@ namespace WarhammerArmyAssembler
             return rulesLine;
         }
 
-        public List<string> GetSpecialRules()
+        public List<string> GetSpecialRules(bool onlyUnitParam = false)
         {
             List<string> rules = new List<string>();
 
@@ -759,7 +753,7 @@ namespace WarhammerArmyAssembler
             int intParam = -1;
 
             foreach (KeyValuePair<string, string> specialRule in AllSpecialRules) 
-                if (RuleFromAnyOption(specialRule.Key, out additionalParam, out intParam))
+                if (RuleFromAnyOption(specialRule.Key, out additionalParam, out intParam, onlyUnitParam))
                     rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
 
             foreach (Option option in Options)
