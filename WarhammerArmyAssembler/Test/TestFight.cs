@@ -528,6 +528,7 @@ namespace WarhammerArmyAssembler
             {
                 ["OpponentToHit"] = DiceType.WS,
                 ["OpponentToWound"] = DiceType.S,
+                ["OpponentToWard"] = DiceType.WARD,
             };
 
             if (CheckReroll(unitRerolls, enemy, diceType))
