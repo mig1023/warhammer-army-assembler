@@ -289,7 +289,7 @@
 				<Type>Arcane</Type>
 				<Points>45</Points>
 				<SpecialRuleDescription>Miscast passes to the enemy</SpecialRuleDescription>
-				<Description>One use only/ If the bearer miscasts, roll a D6. On a roll of 1 the bearer suffers the results of the miscast as normal. On 2+ the miscast is ignored and if there is an enemy WIzard within line of sight he will suffer its effects, ignoring result 5-6</Description>
+				<Description>One use only. If the bearer miscasts, roll a D6. On a roll of 1 the bearer suffers the results of the miscast as normal. On 2+ the miscast is ignored and if there is an enemy WIzard within line of sight he will suffer its effects, ignoring result 5-6</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Cube of Darkness</Name>
@@ -776,7 +776,7 @@
 				<Special>
 					<SpecialRuleDescription>Sacred Duty</SpecialRuleDescription>
 					<SpecialRuleDescription>Ultimated Bodyguard</SpecialRuleDescription>
-					<SpecialRuleDescription>Re-roll any failed hit rolls</SpecialRuleDescription>
+					<Reroll>ToHit</Reroll>
 					<SpecialRuleDescription>Temple Guard and Unbreakable</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
@@ -815,6 +815,7 @@
 				<Attacks>4</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>4</Armour>
+				<UnitStrength>2</UnitStrength>
 			</MainParam>
 			<AdditionalParam>
 				<Stubborn>true</Stubborn>
@@ -822,7 +823,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Re-roll succeful rolls to wound Gar-Rok</SpecialRuleDescription>
+					<Reroll>OpponentToWound</Reroll>
 					<SpecialRuleDescription>Immune to effects of Killing Blow</SpecialRuleDescription>
 				</Special>
 				<Armour>
@@ -833,7 +834,7 @@
 				<HandWeapon>
 					<Name>The Mace of Ulamak</Name>
 					<AddToStrength>2</AddToStrength>
-					<SpecialRuleDescription>In first round Gar-Rok re-roll any failed hit roll</SpecialRuleDescription>
+					<Reroll>ToHit</Reroll>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
