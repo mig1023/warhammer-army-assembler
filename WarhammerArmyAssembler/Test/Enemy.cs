@@ -610,6 +610,42 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Malekith, Witch King of Naggaroth",
+                TestListName = "Malekith, Witch King (Dark Elves)",
+                Size = 1,
+                Movement = 8,
+                WeaponSkill = 5,
+                BallisticSkill = 4,
+                Strength = 6,
+                Toughness = 3,
+                Wounds = 3,
+                Initiative = 8,
+                Attacks = 4,
+                Leadership = 10,
+                NoArmour = true,
+                Armour = 4,
+                Ward = 2,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Seraphon",
+                    Size = 1,
+                    Movement = 6,
+                    WeaponSkill = 6,
+                    BallisticSkill = 0,
+                    Strength = 6,
+                    Toughness = 6,
+                    Wounds = 6,
+                    Initiative = 4,
+                    Attacks = 5,
+                    Leadership = 8,
+                    Armour = 3,
+                    Terror = true,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Bloodthister",
                 TestListName = "Greater Daemon Bloodthister (Chaos)",
                 Size = 1,
