@@ -666,6 +666,27 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Grimgor Ironhide",
+                TestListName = "Grimgor Ironhide (Orcs&Goblin)",
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 8,
+                BallisticSkill = 1,
+                Strength = 7,
+                Toughness = 5,
+                Wounds = 3,
+                Initiative = 5,
+                Attacks = 7,
+                Leadership = 9,
+                Armour = 1,
+                Ward = 5,
+                Hate = true,
+                HitFirst = true,
+                ImmuneToPsychology = true,
+            },
+
+            new Enemy
+            {
                 Name = "Bloodthister",
                 TestListName = "Greater Daemon Bloodthister (Chaos)",
                 Size = 1,
