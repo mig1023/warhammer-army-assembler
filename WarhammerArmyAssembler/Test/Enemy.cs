@@ -576,6 +576,26 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Deathmaster Snikch",
+                TestListName = "Deathmaster Snikch (Skaven)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 8,
+                BallisticSkill = 6,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 2,
+                Initiative = 10,
+                Attacks = 6,
+                Leadership = 8,
+                Ward = 4,
+                HitFirst = true,
+                ArmourPiercing = 2,
+                MultiWounds = "D3",
+            },
+
+            new Enemy
+            {
                 Name = "Zacharias The Everliving",
                 TestListName = "Zacharias The Everliving (Vampire Counts)",
                 Size = 1,
