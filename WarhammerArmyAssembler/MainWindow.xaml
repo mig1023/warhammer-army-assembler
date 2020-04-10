@@ -507,7 +507,26 @@
                             </TextBlock.TextDecorations>
                         </TextBlock>
                     </Label>
-                    <Label x:Name="armySize" Grid.Row="0" Grid.Column="4" Content="" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12"/>
+                    <Label Grid.Row="0" Grid.Column="4" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12" MouseDown="Label_MouseDown">
+                        <TextBlock x:Name="armySize">
+                            <TextBlock.TextDecorations>
+                                <TextDecorationCollection>
+                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
+                                        <TextDecoration.Pen>
+                                            <Pen Thickness="1">
+                                                <Pen.Brush>
+                                                    <SolidColorBrush Color="Gray"/>
+                                                </Pen.Brush>
+                                                <Pen.DashStyle>
+                                                    <DashStyle Dashes="4,4"/>
+                                                </Pen.DashStyle>
+                                            </Pen>
+                                        </TextDecoration.Pen>
+                                    </TextDecoration>
+                                </TextDecorationCollection>
+                            </TextBlock.TextDecorations>
+                        </TextBlock>
+                    </Label>
                     <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="5" Content="" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12"/>
                     <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="6" Content="" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12"/>
                     <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="7" HorizontalContentAlignment="Center" Padding="0 7 0 0" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>

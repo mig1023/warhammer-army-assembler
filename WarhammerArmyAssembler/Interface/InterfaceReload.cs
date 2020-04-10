@@ -95,7 +95,7 @@ namespace WarhammerArmyAssembler
                 ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Rare)
             );
             Interface.main.armyPoints.Text = String.Format("Points: {0} [ {1} ]", ArmyParams.GetArmyPoints(), ArmyParams.GetArmyMaxPoints());
-            Interface.main.armySize.Content = String.Format("Models: {0}", ArmyParams.GetArmySize());
+            Interface.main.armySize.Text = String.Format("Models: {0}", ArmyParams.GetArmySize());
             Interface.main.armyCasting.Content = String.Format("Cast: {0}", ArmyParams.GetArmyCast());
             Interface.main.armyDispell.Content = String.Format("Dispell: {0}", ArmyParams.GetArmyDispell());
         }

@@ -5,6 +5,8 @@ namespace WarhammerArmyAssembler
 {
     class ArmyParams
     {
+        public enum BasesTypes { normal, large, cavalry };
+
         public static double GetArmyPoints()
         {
             double points = 0;
@@ -170,6 +172,28 @@ namespace WarhammerArmyAssembler
                     return entry.Value;
 
             return null;
+        }
+
+        public static int GetUnitsNumberByBase(BasesTypes type)
+        {
+            int number = 0;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            {
+                bool largeBase = entry.Value.UnitStrength > 1;
+                bool cavalryBase = entry.Value.MountOn > 1 || !String.IsNullOrEmpty(entry.Value.MountInit);
+
+                if (
+                    ((type == BasesTypes.large) && largeBase)
+                    ||
+                    ((type == BasesTypes.cavalry) && cavalryBase)
+                    ||
+                    ((type == BasesTypes.normal) && !largeBase && !cavalryBase)
+                )
+                    number += entry.Value.Size;
+            }
+
+            return number;
         }
     }
 }

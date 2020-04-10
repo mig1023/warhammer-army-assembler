@@ -398,6 +398,19 @@ namespace WarhammerArmyAssembler
             MessageBox.Show(pointsMsg);
         }
 
+
+        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            string baseMsg = String.Format(
+                "Normal base: {0}\nCavalry base: {1}\nLarge base: {2}",
+                ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.normal),
+                ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.cavalry),
+                ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.large)
+            );
+
+            MessageBox.Show(baseMsg);
+        }
+
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
             ExportPDF.SaveArmy();
