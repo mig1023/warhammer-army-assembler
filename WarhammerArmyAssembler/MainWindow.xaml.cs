@@ -399,7 +399,7 @@ namespace WarhammerArmyAssembler
         }
 
 
-        private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+        private void armyModels_MouseDown(object sender, MouseButtonEventArgs e)
         {
             string baseMsg = String.Format(
                 "Normal base: {0}\nCavalry base: {1}\nLarge base: {2}",
