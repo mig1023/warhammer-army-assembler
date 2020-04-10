@@ -27,7 +27,9 @@
                 <SolidColorBrush Color="Black" Opacity="0.90"/>
             </Canvas.Background>
             <Label x:Name="startHelpHeadText" Content="Hi," Height="56" Padding="0" Width="59" FontSize="45" Foreground="White" Canvas.Left="50" Canvas.Top="30"/>
-            <TextBlock x:Name="startHelpMainText" Canvas.Left="50" TextWrapping="Wrap" Foreground="#FFB8B8B8" FontSize="22" Text="It's start page of WAAgh! Choose your army and its size! Be wise, crafty and may the force be with you!" Canvas.Top="90" Height="Auto" Width="787"/>
+            <TextBlock x:Name="startHelpMainText" Canvas.Left="50" TextWrapping="Wrap" Foreground="#FFB8B8B8" FontSize="22" Canvas.Top="90" Height="Auto" Width="787">
+                It's start page of WAAgh!<LineBreak/>Choose your army and its size!<LineBreak/>Be wise, crafty and may the force be with you!
+            </TextBlock>
         </Canvas>
         <Canvas x:Name="armybookDetailScrollHead" Width="25" Height="600" VerticalAlignment="Top" Background="White">
             <Grid x:Name="gridCloseArmybook" MouseDown="closeArmybook_Click">
