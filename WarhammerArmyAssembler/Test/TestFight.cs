@@ -126,10 +126,16 @@ namespace WarhammerArmyAssembler
 
                 Dictionary<int, int> attacksRound = new Dictionary<int, int>();
 
-                foreach(Unit u in participants)
+                foreach (Unit u in participants)
                     attacksRound[u.ID] = PrintAttack(u, u.Attacks, roundWounds[u.ID]);
 
                 InitRoundWounds(participants, ref roundWounds);
+
+                if ((round == 1) && !String.IsNullOrEmpty(unit.ImpactHit))
+                {
+                    Unit opponent = SelectOpponent(participants, unit);
+                    roundWounds[opponent.ID] += Round(unit, ref opponent, ImpactHitNumer(unit), round, impactHit: true);
+                }
 
                 foreach (Unit u in participants)
                     if (BothOpponentsAreAlive(participants))
@@ -238,7 +244,7 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static int Round(Unit unit, ref Unit enemy, int attackNumber, int round)
+        private static int Round(Unit unit, ref Unit enemy, int attackNumber, int round, bool impactHit = false)
         {
             int roundWounds = 0;
 
@@ -250,7 +256,7 @@ namespace WarhammerArmyAssembler
 
             for (int i = 0; i < attackNumber; i++)
             {
-                int wounded = Attack(unit, enemy, round);
+                int wounded = Attack(unit, enemy, round, impactHit);
                 roundWounds += wounded;
                 enemy.Wounds -= wounded;
             }
@@ -371,21 +377,26 @@ namespace WarhammerArmyAssembler
             return unit.Wounds;
         }
 
-        private static int Attack(Unit unit, Unit enemy, int round)
+        private static int Attack(Unit unit, Unit enemy, int round, bool impactHit = false)
         {
             attackIsPoisoned = false;
             attackWithKillingBlow = false;
 
             if ((unit.Wounds > 0) && (enemy.Wounds > 0))
             {
-                Console(text, "\n{0} --> hit ", unit.Name);
+                Console(text, "\n{0} --> hit{1} ", unit.Name, (impactHit ? " (impact)" : String.Empty));
 
-                if (Hit(unit, enemy, round))
+                if (impactHit || Hit(unit, enemy, round))
                 {
                     Console(text, " --> wound ");
 
-                    if ((PoisonedAttack(unit) || Wound(unit, enemy)) && (KillingAttack(unit, enemy) || NotAS(unit, enemy)) && (NotWard(unit, enemy)))
-                    {
+                    if (
+                        (PoisonedAttack(unit, impactHit) || Wound(unit, enemy))
+                        &&
+                        (KillingAttack(unit, enemy) || NotAS(unit, enemy))
+                        &&
+                        (NotWard(unit, enemy))
+                    ) {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
                             Console(badText, " --> {0} SLAIN", enemy.Name);
@@ -394,7 +405,7 @@ namespace WarhammerArmyAssembler
                         else
                         {
                             Console(badText, " --> {0} {1}", enemy.Name, ((enemy.Wounds <= 1) && !enemy.IsUnit() ? "SLAIN" : "WOUND"));
-                            return WoundsNumbers(unit, enemy);
+                            return WoundsNumbers(unit);
                         }
                     }
                 }
@@ -403,26 +414,38 @@ namespace WarhammerArmyAssembler
             return 0;
         }
 
-        private static int WoundsNumbers(Unit unit, Unit enemy)
+        private static int RandomParamParse(string param)
+        {
+            int randomParam = 0;
+
+            if (param.Contains("D"))
+                randomParam = rand.Next(int.Parse(param.Replace("D", String.Empty))) + 1;
+            else
+                randomParam = int.Parse(param);
+
+            return randomParam;
+        }
+
+        private static int ImpactHitNumer(Unit unit)
+        {
+            return RandomParamParse(unit.ImpactHit) + 1;
+        }
+
+        private static int WoundsNumbers(Unit unit)
         {
             if (String.IsNullOrEmpty(unit.MultiWounds))
                 return 1;
 
-            int multiwounds = 0;
-
-            if (unit.MultiWounds.Contains("D"))
-                multiwounds = rand.Next(int.Parse(unit.MultiWounds.Replace("D", String.Empty))) + 1;
-            else
-                multiwounds = int.Parse(unit.MultiWounds);
+            int multiwounds = RandomParamParse(unit.MultiWounds);
 
             Console(text, " <-- {0} multiple wounds", multiwounds);
 
             return multiwounds;
         }
 
-        private static bool PoisonedAttack(Unit unit)
+        private static bool PoisonedAttack(Unit unit, bool impactHit = false)
         {
-            if (unit.PoisonAttack && (lastDice == 6))
+            if (!impactHit && unit.PoisonAttack && (lastDice == 6))
             {
                 attackIsPoisoned = true;
                 Console(text, "(poison)");

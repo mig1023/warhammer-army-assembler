@@ -112,6 +112,7 @@ namespace WarhammerArmyAssembler
         public bool NoArmour { get; set; }
         public int ArmourPiercing { get; set; }
         public string Reroll { get; set; }
+        public string ImpactHit { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -266,6 +267,7 @@ namespace WarhammerArmyAssembler
             newUnit.NoArmour = this.NoArmour;
             newUnit.ArmourPiercing = this.ArmourPiercing;
             newUnit.Reroll = this.Reroll;
+            newUnit.ImpactHit = this.ImpactHit;
 
             newUnit.SlotsOfLords = this.SlotsOfLords;
             newUnit.SlotsOfHero = this.SlotsOfHero;
