@@ -8,17 +8,17 @@ namespace WarhammerArmyAssembler
 {
     class Test
     {
-        public static Unit unit;
-        public static Unit unitMount;
-        public static Unit enemy;
-        public static Unit enemyMount;
+        public static Unit unit = null;
+        public static Unit unitMount = null;
+        public static Unit enemy = null;
+        public static Unit enemyMount = null;
 
         public static void PrepareUnit(Unit unit)
         {
             Test.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
             if (unit.MountOn > 0)
-                Test.unitMount = Army.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+                Test.unitMount = Army.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier(unit.Size);
             else
                 Test.unitMount = null;
         }

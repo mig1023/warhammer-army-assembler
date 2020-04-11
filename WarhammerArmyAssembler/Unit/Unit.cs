@@ -443,9 +443,11 @@ namespace WarhammerArmyAssembler
             return unit;
         }
 
-        public Unit GetUnitMultiplier()
+        public Unit GetUnitMultiplier(int? baseSize = null)
         {
             Unit unit = this.Clone(full: true);
+
+            unit.Size = baseSize ?? unit.Size;
 
             unit.OriginalAttacks = unit.Attacks;
             unit.OriginalWounds = unit.Wounds;
