@@ -131,10 +131,11 @@ namespace WarhammerArmyAssembler
 
                 InitRoundWounds(participants, ref roundWounds);
 
-                if ((round == 1) && !String.IsNullOrEmpty(unit.ImpactHit))
+                if ((round == 1) && (!String.IsNullOrEmpty(unit.ImpactHit) || !String.IsNullOrEmpty(unitMount.ImpactHit)))
                 {
-                    Unit opponent = SelectOpponent(participants, unit);
-                    roundWounds[opponent.ID] += Round(unit, ref opponent, ImpactHitNumer(unit), round, impactHit: true);
+                    Unit impactUnit = (!String.IsNullOrEmpty(unit.ImpactHit) ? unit : unitMount);
+                    Unit opponent = SelectOpponent(participants, impactUnit);
+                    roundWounds[opponent.ID] += Round(impactUnit, ref opponent, ImpactHitNumer(impactUnit), round, impactHit: true);
                 }
 
                 foreach (Unit u in participants)
