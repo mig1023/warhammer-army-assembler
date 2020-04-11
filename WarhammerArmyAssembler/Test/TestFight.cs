@@ -596,6 +596,8 @@ namespace WarhammerArmyAssembler
 
             bool restoreConsoleOutput = (hiddenDice && InterfaceTestUnit.PreventConsoleOutputStatus());
 
+            Unit unitTestPassed = (diceType == DiceType.LD ? unit : enemy);
+
             if (hiddenDice)
                 InterfaceTestUnit.PreventConsoleOutput(prevent: true);
 
@@ -603,7 +605,7 @@ namespace WarhammerArmyAssembler
 
             Console(supplText, "({0}{1}, ", condition, (diceType == DiceType.LD ? " LD" : "+"));
 
-            int result = RollAllDice(diceType, enemy, diceNum);
+            int result = RollAllDice(diceType, unitTestPassed, diceNum);
 
             bool testPassed = TestPassedByDice(result, condition, diceType, breakTest);
 
@@ -614,7 +616,7 @@ namespace WarhammerArmyAssembler
             if ((diceType == DiceType.AS) && (condition > 6) && (condition < 10) && (result == 6))
             {
                 int supplCondition = condition - 3;
-                result = RollAllDice(diceType, enemy, 1);
+                result = RollAllDice(diceType, unitTestPassed, 1);
                 Console(supplText, " --> {0}+, {1}", supplCondition, result);
 
                 testPassed = TestPassedByDice(result, supplCondition, diceType, breakTest);
@@ -624,7 +626,7 @@ namespace WarhammerArmyAssembler
                 ||
                 (testPassed && MustBeRerolled(diceType, unit, enemy))
             ) {
-                result = RollAllDice(diceType, enemy, diceNum);
+                result = RollAllDice(diceType, unitTestPassed, diceNum);
                 Console(supplText, ", reroll --> {0}", result);
                 testPassed = TestPassedByDice(result, condition, diceType, breakTest);
             }
