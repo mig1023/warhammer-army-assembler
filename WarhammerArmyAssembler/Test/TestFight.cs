@@ -98,14 +98,14 @@ namespace WarhammerArmyAssembler
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
             InitRoundWounds(participants, ref roundWounds);
 
-            CheckTerror(ref unit, unitMount, enemy);
-            CheckTerror(ref enemy, enemyMount, unit);
+            CheckTerror(ref unit, unitMount, enemy, enemyMount);
+            CheckTerror(ref enemy, enemyMount, unit, unitMount);
 
             if (unitMount != null)
-                CheckTerror(ref unitMount, unit, enemy);
+                CheckTerror(ref unitMount, unit, enemy, enemyMount);
 
             if (enemyMount != null)
-                CheckTerror(ref enemyMount, enemy, enemy);
+                CheckTerror(ref enemyMount, enemy, unit, unitMount);
 
             while (BothOpponentsAreAlive(participants) && (round < 100))
             {
@@ -231,14 +231,17 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static void CheckTerror(ref Unit unit, Unit friend, Unit enemy)
+        private static void CheckTerror(ref Unit unit, Unit friend, Unit enemy, Unit enemyFriend)
         {
             bool friendTerrorOrFear = (friend != null ? (friend.Terror || friend.Fear) : false);
+            bool enemyFriendTerrorOrFear = (enemyFriend != null ? (enemyFriend.Terror || enemyFriend.Fear) : false);
 
-            if (!enemy.Terror || unit.Terror || unit.Fear || friendTerrorOrFear)
+            if ((!enemy.Terror && !enemyFriendTerrorOrFear) || unit.Terror || unit.Fear || friendTerrorOrFear)
                 return;
 
-            Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, enemy.Name);
+            string terrorSource = (((enemyFriend != null) && enemy.Terror) ? enemyFriend.Name : enemy.Name);
+
+            Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, terrorSource);
 
             if (RollDice(unit, DiceType.LD, enemy, unit.Leadership, 2))
                 Console(goodText, " --> passed");
