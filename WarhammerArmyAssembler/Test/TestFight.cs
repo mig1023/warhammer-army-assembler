@@ -133,9 +133,13 @@ namespace WarhammerArmyAssembler
 
                 if ((round == 1) && (!String.IsNullOrEmpty(unit.ImpactHit) || !String.IsNullOrEmpty(unitMount.ImpactHit)))
                 {
-                    Unit impactUnit = (!String.IsNullOrEmpty(unit.ImpactHit) ? unit : unitMount);
+                    Unit impactUnit = (!String.IsNullOrEmpty(unitMount.ImpactHit) ? unitMount : unit);
                     Unit opponent = SelectOpponent(participants, impactUnit);
-                    roundWounds[opponent.ID] += Round(impactUnit, ref opponent, ImpactHitNumer(impactUnit), round, impactHit: true);
+
+                    string impactOutLine = String.Empty;
+                    int attacks = ImpactHitNumer(unit, unitMount, out impactOutLine);
+
+                    roundWounds[opponent.ID] += Round(impactUnit, ref opponent, attacks, round, impactHit: true, impactLine: impactOutLine);
                 }
 
                 foreach (Unit u in participants)
@@ -245,7 +249,8 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static int Round(Unit unit, ref Unit enemy, int attackNumber, int round, bool impactHit = false)
+        private static int Round(Unit unit, ref Unit enemy, int attackNumber, int round,
+            bool impactHit = false, string impactLine = "")
         {
             int roundWounds = 0;
 
@@ -257,7 +262,7 @@ namespace WarhammerArmyAssembler
 
             for (int i = 0; i < attackNumber; i++)
             {
-                int wounded = Attack(unit, enemy, round, impactHit);
+                int wounded = Attack(unit, enemy, round, impactHit, impactLine);
                 roundWounds += wounded;
                 enemy.Wounds -= wounded;
             }
@@ -378,14 +383,21 @@ namespace WarhammerArmyAssembler
             return unit.Wounds;
         }
 
-        private static int Attack(Unit unit, Unit enemy, int round, bool impactHit = false)
+        private static int Attack(Unit unit, Unit enemy, int round, bool impactHit = false, string impactLine = "")
         {
             attackIsPoisoned = false;
             attackWithKillingBlow = false;
 
             if ((unit.Wounds > 0) && (enemy.Wounds > 0))
             {
-                Console(text, "\n{0} --> hit{1} ", unit.Name, (impactHit ? " (impact)" : String.Empty));
+                if (!impactHit)
+                    Console(text, "\n{0} --> hit ", unit.Name);
+                else
+                {
+                    Console(text, "\n{0} --> hit (", unit.Name);
+                    Console(supplText, "{0} impact hit", impactLine);
+                    Console(text, ")");
+                }
 
                 if (impactHit || Hit(unit, enemy, round))
                 {
@@ -415,6 +427,30 @@ namespace WarhammerArmyAssembler
             return 0;
         }
 
+        private static void RandomParamValues(string param,
+            out int diceNumber, out int diceSize, out int addSomething)
+        {
+            string[] randParams = param.Split('D');
+
+            bool diceNumberParse = int.TryParse(randParams[0], out diceNumber);
+
+            if (!diceNumberParse)
+                diceNumber = 1;
+
+            if (randParams[1].Contains('+'))
+            {
+                string[] randNumber = randParams[1].Split('+');
+
+                bool diceSizeParse = int.TryParse(randNumber[0], out diceSize);
+                bool addNumber = int.TryParse(randNumber[1], out addSomething);
+            }
+            else
+            {
+                bool diceSizeParse = int.TryParse(randParams[1], out diceSize);
+                addSomething = 0;
+            }
+        }
+
         private static int RandomParamParse(string param)
         {
             int randomParam = 0;
@@ -425,25 +461,7 @@ namespace WarhammerArmyAssembler
             {
                 int diceNumber, diceSize, addSomething;
 
-                string[] randParams = param.Split('D');
-
-                bool diceNumberParse = int.TryParse(randParams[0], out diceNumber);
-
-                if (!diceNumberParse)
-                    diceNumber = 1;
-
-                if (randParams[1].Contains('+'))
-                {
-                    string[] randNumber = randParams[1].Split('+');
-
-                    bool diceSizeParse = int.TryParse(randNumber[0], out diceSize);
-                    bool addNumber = int.TryParse(randNumber[1], out addSomething);
-                }
-                else
-                {
-                    bool diceSizeParse = int.TryParse(randParams[1], out diceSize);
-                    addSomething = 0;
-                }
+                RandomParamValues(param, out diceNumber, out diceSize, out addSomething);
 
                 for (int i = 0; i < diceNumber; i++)
                     randomParam += rand.Next(diceSize) + 1 + addSomething;
@@ -452,9 +470,37 @@ namespace WarhammerArmyAssembler
             return randomParam;
         }
 
-        private static int ImpactHitNumer(Unit unit)
+        private static int ImpactHitNumer(Unit unit, Unit unitMount, out string impactOutLine)
         {
-            return RandomParamParse(unit.ImpactHit);
+            string impactHit = String.Empty;
+
+            if (String.IsNullOrEmpty(unitMount.ImpactHit))
+                impactHit = unit.ImpactHit;
+            else if (String.IsNullOrEmpty(unit.ImpactHit))
+                impactHit = unitMount.ImpactHit;
+            else
+            {
+                int currentImpact = 0, currentAdd = 0;
+
+                foreach(Unit u in new List<Unit> { unit, unitMount })
+                {
+                    int diceNumber, diceSize, addSomething;
+
+                    RandomParamValues(u.ImpactHit, out diceNumber, out diceSize, out addSomething);
+
+                    int diceMax = diceNumber * diceSize;
+
+                    if ((diceMax > currentImpact) || ((diceMax == currentImpact) && (addSomething > currentAdd)))
+                    {
+                        currentImpact = diceMax;
+                        currentAdd = addSomething;
+                        impactHit = u.ImpactHit;
+                    }
+                }
+            }
+
+            impactOutLine = impactHit;
+            return RandomParamParse(impactHit);
         }
 
         private static int WoundsNumbers(Unit unit)
