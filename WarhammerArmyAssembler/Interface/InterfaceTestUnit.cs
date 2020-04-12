@@ -16,7 +16,7 @@ namespace WarhammerArmyAssembler
     {
         private static bool showLinesToConsole = true;
 
-        private static List<FrameworkElement> mountRow = new List<FrameworkElement>();
+        private static Dictionary<string, List<FrameworkElement>> mountRow = new Dictionary<string, List<FrameworkElement>>();
 
         private static List<string> unitParam = new List<string> {
                 "Name", "Size", "Movement", "WeaponSkill", "BallisticSkill", "Strength",
@@ -29,7 +29,7 @@ namespace WarhammerArmyAssembler
             {
                 unitGrid.RowDefinitions.RemoveAt(2);
 
-                foreach (FrameworkElement f in mountRow)
+                foreach (FrameworkElement f in mountRow[unitGrid.Name])
                 {
                     Panel p = (f as Panel);
                     p.Children.Clear();
@@ -80,7 +80,10 @@ namespace WarhammerArmyAssembler
             Grid.SetRow(panel, 2);
             Grid.SetColumn(panel, gridIndex);
 
-            mountRow.Add(panel);
+            if (!mountRow.ContainsKey(unitGrid.Name))
+                mountRow.Add(unitGrid.Name, new List<FrameworkElement>());
+
+            mountRow[unitGrid.Name].Add(panel);
 
             Label label = new Label();
             label.FontSize = 16;
