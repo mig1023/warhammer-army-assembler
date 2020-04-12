@@ -131,9 +131,9 @@ namespace WarhammerArmyAssembler
 
                 InitRoundWounds(participants, ref roundWounds);
 
-                if ((round == 1) && (!String.IsNullOrEmpty(unit.ImpactHit) || !String.IsNullOrEmpty(unitMount.ImpactHit)))
+                if ((round == 1) && (!String.IsNullOrEmpty(unit.ImpactHit) || (unitMount != null && !String.IsNullOrEmpty(unitMount.ImpactHit))))
                 {
-                    Unit impactUnit = (!String.IsNullOrEmpty(unitMount.ImpactHit) ? unitMount : unit);
+                    Unit impactUnit = (unitMount != null && !String.IsNullOrEmpty(unitMount.ImpactHit) ? unitMount : unit);
                     Unit opponent = SelectOpponent(participants, impactUnit);
 
                     string impactOutLine = String.Empty;
@@ -474,7 +474,7 @@ namespace WarhammerArmyAssembler
         {
             string impactHit = String.Empty;
 
-            if (String.IsNullOrEmpty(unitMount.ImpactHit))
+            if ((unitMount == null) || String.IsNullOrEmpty(unitMount.ImpactHit))
                 impactHit = unit.ImpactHit;
             else if (String.IsNullOrEmpty(unit.ImpactHit))
                 impactHit = unitMount.ImpactHit;
