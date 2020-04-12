@@ -419,17 +419,42 @@ namespace WarhammerArmyAssembler
         {
             int randomParam = 0;
 
-            if (param.Contains("D"))
-                randomParam = rand.Next(int.Parse(param.Replace("D", String.Empty))) + 1;
-            else
+            if (!param.Contains("D"))
                 randomParam = int.Parse(param);
+            else
+            {
+                int diceNumber, diceSize, addSomething;
+
+                string[] randParams = param.Split('D');
+
+                bool diceNumberParse = int.TryParse(randParams[0], out diceNumber);
+
+                if (!diceNumberParse)
+                    diceNumber = 1;
+
+                if (randParams[1].Contains('+'))
+                {
+                    string[] randNumber = randParams[1].Split('+');
+
+                    bool diceSizeParse = int.TryParse(randNumber[0], out diceSize);
+                    bool addNumber = int.TryParse(randNumber[1], out addSomething);
+                }
+                else
+                {
+                    bool diceSizeParse = int.TryParse(randParams[1], out diceSize);
+                    addSomething = 0;
+                }
+
+                for (int i = 0; i < diceNumber; i++)
+                    randomParam += rand.Next(diceSize) + 1 + addSomething;
+            }
 
             return randomParam;
         }
 
         private static int ImpactHitNumer(Unit unit)
         {
-            return RandomParamParse(unit.ImpactHit) + 1;
+            return RandomParamParse(unit.ImpactHit);
         }
 
         private static int WoundsNumbers(Unit unit)

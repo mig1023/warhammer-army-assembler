@@ -193,6 +193,7 @@ namespace WarhammerArmyAssembler
             newWeapon.Unbreakable = BoolParse(xmlNode["Unbreakable"]);
             newWeapon.ColdBlooded = BoolParse(xmlNode["ColdBlooded"]);
             newWeapon.Reroll = StringParse(xmlNode["Reroll"]);
+            newWeapon.ImpactHit = StringParse(xmlNode["ImpactHit"]);
 
             newWeapon.Points = DoubleParse(xmlNode["Points"]);
             newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);

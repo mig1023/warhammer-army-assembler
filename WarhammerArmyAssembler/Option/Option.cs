@@ -53,6 +53,7 @@ namespace WarhammerArmyAssembler
         public bool Frenzy { get; set; }
         public bool Unbreakable { get; set; }
         public bool ColdBlooded { get; set; }
+        public string ImpactHit { get; set; }
 
         public bool BigWeapon { get; set; }
 
@@ -166,6 +167,7 @@ namespace WarhammerArmyAssembler
             newOption.Unbreakable = this.Unbreakable;
             newOption.ColdBlooded = this.ColdBlooded;
             newOption.Reroll = this.Reroll;
+            newOption.ImpactHit = this.ImpactHit;
 
             newOption.BigWeapon = this.BigWeapon;
 

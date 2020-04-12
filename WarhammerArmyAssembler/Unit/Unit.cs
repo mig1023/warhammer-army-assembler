@@ -40,6 +40,7 @@ namespace WarhammerArmyAssembler
             ["NoArmour"] = "No Armour",
             ["ArmourPiercing"] = "Armour piercing ([X])",
             ["Reroll"] = "Reroll ([X])",
+            ["ImpactHit"] = "Impact Hit ([X])",
         };
 
         public string Name { get; set; }
