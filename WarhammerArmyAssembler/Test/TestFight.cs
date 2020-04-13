@@ -37,10 +37,10 @@ namespace WarhammerArmyAssembler
 
             InterfaceTestUnit.PreventConsoleOutput(prevent: false);
 
-            Console(text, "{0} win: {1} / 1000\n{2} win: {3} / 1000", unit.Name, result[1], enemy.Name, result[2]);
+            Console(text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
 
             if (result[0] > 0)
-                Console(text, "\nNobody win: {0} / 1000", result[0]);
+                Console(text, "\nNobody win: {0:f1}%", (double)result[0] / 10);
         }
 
         public static string ThisIsUnit(Unit unit)
