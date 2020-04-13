@@ -58,13 +58,13 @@ namespace WarhammerArmyAssembler
         {
             Dictionary<Unit.TestTypeTypes, int> opponentsWounds = new Dictionary<Unit.TestTypeTypes, int>();
 
-            foreach (Unit unit in opponents)
-                if (opponentsWounds.ContainsKey(unit.TestType))
-                    opponentsWounds[unit.TestType] += unit.Wounds;
+            foreach (Unit u in opponents)
+                if (opponentsWounds.ContainsKey(u.TestType))
+                    opponentsWounds[u.TestType] += (u.IsNotSimpleMount() ? u.Wounds : 0);
                 else
-                    opponentsWounds.Add(unit.TestType, unit.Wounds);
+                    opponentsWounds.Add(u.TestType, (u.IsNotSimpleMount() ? u.Wounds : 0));
 
-            return (opponentsWounds[Unit.TestTypeTypes.Unit] > 0) && (opponentsWounds[Unit.TestTypeTypes.Enemy] > 0);
+            return ((opponentsWounds[Unit.TestTypeTypes.Unit] > 0) && (opponentsWounds[Unit.TestTypeTypes.Enemy] > 0));
         }
 
         public static int FullTest(Unit originalUnit, Unit originalUnitMount, Unit originalEnemy, Unit originalEnemyMount)
@@ -101,18 +101,22 @@ namespace WarhammerArmyAssembler
             CheckTerror(ref unit, unitMount, enemy, enemyMount);
             CheckTerror(ref enemy, enemyMount, unit, unitMount);
 
-            if (unitMount != null)
+            if ((unitMount != null) && unitMount.IsNotSimpleMount())
                 CheckTerror(ref unitMount, unit, enemy, enemyMount);
 
-            if (enemyMount != null)
+            if ((enemyMount != null) && enemyMount.IsNotSimpleMount())
                 CheckTerror(ref enemyMount, enemy, unit, unitMount);
 
             while (BothOpponentsAreAlive(participants) && (round < 100))
             {
                 round += 1;
 
-                string unitMountLine = (unitMount != null ? String.Format(" + {0}: {1}W", unitMount.Name, unitMount.Wounds) : String.Empty);
-                string enemyMountLine = (enemyMount != null ? String.Format(" + {0}: {1}W", enemyMount.Name, enemyMount.Wounds) : String.Empty);
+                string unitMountLine = (unitMount != null && unitMount.IsNotSimpleMount() ?
+                    String.Format(" + {0}: {1}W", unitMount.Name, unitMount.Wounds) : String.Empty
+                );
+                string enemyMountLine = (enemyMount != null && enemyMount.IsNotSimpleMount() ?
+                    String.Format(" + {0}: {1}W", enemyMount.Name, enemyMount.Wounds) : String.Empty
+                );
 
                 Console(supplText, "\n\nround: {0}", round);
                 Console(supplText, "\n{0}: {1}W{2}, {3}: {4}W{5}", unit.Name, unit.Wounds, unitMountLine, enemy.Name, enemy.Wounds, enemyMountLine);
@@ -155,13 +159,13 @@ namespace WarhammerArmyAssembler
                 if ((enemy.Wounds > 0) && (enemyRoundWounds > unitRoundWounds))
                     enemy.Wounds = BreakTest(enemy, enemyMount, unit, unitMount, roundWounds[enemy.ID]);
 
-                if ((enemyMount != null) && (enemyMount.Wounds > 0) && (enemyRoundWounds > unitRoundWounds))
+                if ((enemyMount != null) && enemyMount.IsNotSimpleMount() && (enemyMount.Wounds > 0) && (enemyRoundWounds > unitRoundWounds))
                     enemyMount.Wounds = BreakTest(enemyMount, enemy, unit, unitMount, roundWounds[enemyMount.ID]);
 
                 if ((unit.Wounds > 0) && (unitRoundWounds > enemyRoundWounds))
                     unit.Wounds = BreakTest(unit, unitMount, enemy, enemyMount, roundWounds[unit.ID]);
 
-                if ((unitMount != null) && (unitMount.Wounds > 0) && (unitRoundWounds > enemyRoundWounds))
+                if ((unitMount != null) && unitMount.IsNotSimpleMount()  && (unitMount.Wounds > 0) && (unitRoundWounds > enemyRoundWounds))
                     unitMount.Wounds = BreakTest(unitMount, unit, enemy, enemyMount, roundWounds[unitMount.ID]);
             }
 
@@ -187,10 +191,19 @@ namespace WarhammerArmyAssembler
         private static Unit SelectOpponent(List<Unit> participants, Unit unit)
         {
             Unit randomOpponent = null;
+            bool canBeOpponent = false;
 
             do
+            {
                 randomOpponent = participants[rand.Next(participants.Count)];
-            while (randomOpponent.TestType == unit.TestType || randomOpponent.Wounds <= 0);
+
+                if ((randomOpponent.TestType != unit.TestType) && (randomOpponent.Wounds > 0))
+                    canBeOpponent = true;
+
+                if ((randomOpponent.Type == Unit.UnitType.Mount) && (randomOpponent.OriginalWounds == 1))
+                    canBeOpponent = false;
+            }
+            while (!canBeOpponent);
 
             return randomOpponent;
         }
@@ -547,8 +560,6 @@ namespace WarhammerArmyAssembler
 
         private static bool Hit(Unit unit, Unit enemy, int round)
         {
-            // autohit
-
             int chance = 4;
 
             if (unit.WeaponSkill > enemy.WeaponSkill)

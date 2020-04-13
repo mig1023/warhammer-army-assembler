@@ -950,6 +950,11 @@ namespace WarhammerArmyAssembler
             TestType = testType;
 
             return this;
-        } 
+        }
+
+        public bool IsNotSimpleMount()
+        {
+            return (this.Type != Unit.UnitType.Mount) || (this.OriginalWounds != 1);
+        }
     }
 }
