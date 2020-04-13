@@ -192,9 +192,9 @@ namespace WarhammerArmyAssembler
                     BallisticSkill = 3,
                     Strength = 3,
                     Toughness = 2,
-                    Wounds = 1,
+                    Wounds = 4,
                     Initiative = 4,
-                    Attacks = 1,
+                    Attacks = 4,
                     Leadership = 5,
                     Armour = 4,
                     ColdBlooded = true,
@@ -314,6 +314,7 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
+                    Type = UnitType.Mount,
                     Name = "Warhorse",
                     Size = 8,
                     Movement = 8,
@@ -384,6 +385,7 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
+                    Type = UnitType.Mount,
                     Name = "Chaos Steed",
                     Size = 8,
                     Movement = 8,
@@ -538,6 +540,7 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
+                    Type = UnitType.Mount,
                     Name = "Warhorse",
                     Size = 12,
                     Movement = 8,

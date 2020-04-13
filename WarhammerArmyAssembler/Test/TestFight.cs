@@ -171,12 +171,12 @@ namespace WarhammerArmyAssembler
 
             Console(text, "\n\nEnd: ");
 
-            if (enemy.Wounds + (enemyMount == null ? 0 : enemyMount.Wounds) <= 0)
+            if (enemy.Wounds + (enemyMount != null && enemyMount.IsNotSimpleMount() ? enemyMount.Wounds : 0) <= 0)
             {
                 Console(text, "{0} win", unit.Name);
                 return 1;
             }
-            else if (unit.Wounds + (unitMount == null ? 0 : unitMount.Wounds) <= 0)
+            else if (unit.Wounds + (unitMount != null && unitMount.IsNotSimpleMount() ? unitMount.Wounds : 0) <= 0)
             {
                 Console(text, "{0} win", enemy.Name);
                 return 2;
