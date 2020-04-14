@@ -135,6 +135,7 @@ namespace WarhammerArmyAssembler
         public bool WeaponTeam { get; set; }
         public bool NotALeader { get; set; }
         public bool MustBeGeneral { get; set; }
+        public bool Chariot { get; set; }
 
         public List<Option> Options = new List<Option>();
 
@@ -285,6 +286,7 @@ namespace WarhammerArmyAssembler
             newUnit.WeaponTeam = this.WeaponTeam;
             newUnit.NotALeader = this.NotALeader;
             newUnit.MustBeGeneral = this.MustBeGeneral;
+            newUnit.Chariot = this.Chariot;
 
             newUnit.TestType = this.TestType;
             newUnit.EnemyMount = this.EnemyMount;
@@ -449,6 +451,9 @@ namespace WarhammerArmyAssembler
         public Unit GetUnitMultiplier(int? baseSize = null)
         {
             Unit unit = this.Clone(full: true);
+
+            if (unit.Chariot)
+                unit.Size = 2;
 
             unit.Size = baseSize ?? unit.Size;
 

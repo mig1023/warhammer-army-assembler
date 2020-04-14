@@ -295,6 +295,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>35</Points>
+				<ImpactHit>D3</ImpactHit>
 				<SpecialRuleDescription>+D3 Strength 5 impact hits</SpecialRuleDescription>
 				<Description>Boar. When charging, this steed does D3 Strength 5 impact hits in addition to its norman attack</Description>
 			</Artefact>
@@ -1466,6 +1467,8 @@
 			<Name>Goblin Wolf Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
+			<Chariot>true</Chariot>
+			<MountInit>Wolf</MountInit>
 			<ModelsInPack>5</ModelsInPack>
 			<MainParam>
 				<Movement>9</Movement>
@@ -1494,6 +1497,8 @@
 			<Name>Orc Boar Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
+			<Chariot>true</Chariot>
+			<MountInit>Boar</MountInit>
 			<ModelsInPack>4</ModelsInPack>
 			<MainParam>
 				<Movement>7</Movement>
@@ -2247,6 +2252,8 @@
 			<Points>80</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
+			<Chariot>true</Chariot>
+			<MountInit>Boar</MountInit>
 			<ModelsInPack>4</ModelsInPack>
 			<MainParam>
 				<Movement>7</Movement>
@@ -2354,6 +2361,8 @@
 			<Points>60</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
+			<Chariot>true</Chariot>
+			<MountInit>Wolf</MountInit>
 			<ModelsInPack>5</ModelsInPack>
 			<MainParam>
 				<Movement>9</Movement>

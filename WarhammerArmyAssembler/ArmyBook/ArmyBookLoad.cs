@@ -98,6 +98,7 @@ namespace WarhammerArmyAssembler
 
             newUnit.PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]);
             newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
+            newUnit.Chariot = BoolParse(xmlUnit["Chariot"]);
 
             XmlNode additionalParam = xmlUnit["AdditionalParam"];
 
