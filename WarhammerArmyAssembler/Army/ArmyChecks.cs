@@ -93,5 +93,20 @@ namespace WarhammerArmyAssembler
 
             return 0;
         }
+
+        public static string ArmyProblems()
+        {
+            if (ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Core) < ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Core))
+                return "Not enough core unit in army";
+
+            return String.Empty;
+        } 
+
+        public static bool IsArmyValid()
+        {
+            string armyProblems = ArmyProblems();
+
+            return (String.IsNullOrEmpty(armyProblems) ? true : false);
+        }
     }
 }

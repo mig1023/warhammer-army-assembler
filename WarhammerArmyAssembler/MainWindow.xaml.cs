@@ -402,7 +402,7 @@ namespace WarhammerArmyAssembler
         private void armyModels_MouseDown(object sender, MouseButtonEventArgs e)
         {
             string baseMsg = String.Format(
-                "Normal base: {0}\nCavalry base: {1}\nLarge base: {2}",
+                "Normal base:\t{0}\n\nCavalry base:\t{1}\n\nLarge base:\t{2}",
                 ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.normal),
                 ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.cavalry),
                 ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.large)
@@ -413,14 +413,20 @@ namespace WarhammerArmyAssembler
 
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ExportPDF.SaveArmy();
+            if (ArmyChecks.IsArmyValid())
+                ExportPDF.SaveArmy();
+            else 
+                MessageBox.Show(ArmyChecks.ArmyProblems());
 
             Interface.Move(Interface.MovingType.ToMain, menu: true);
         }
 
         public void saveArmyToTXT_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            ExportTXT.SaveArmy();
+            if (ArmyChecks.IsArmyValid())
+                ExportTXT.SaveArmy();
+            else
+                MessageBox.Show(ArmyChecks.ArmyProblems());
 
             Interface.Move(Interface.MovingType.ToMain, menu: true);
         }
