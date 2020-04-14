@@ -240,6 +240,7 @@ namespace WarhammerArmyAssembler
             if (unit.Frenzy && (unit.Wounds > 0))
             {
                 unit.Frenzy = false;
+                unit.Attacks -= 1;
                 Console(supplText, "\n{0} lost his frenzy", unit.Name);
             }
         }
@@ -256,7 +257,13 @@ namespace WarhammerArmyAssembler
 
             Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, terrorSource);
 
-            if (RollDice(unit, DiceType.LD, enemy, unit.Leadership, 2))
+            if (unit.Unbreakable)
+                Console(goodText, " --> autopassed (unbreakable)");
+            else if (unit.ImmuneToPsychology)
+                Console(goodText, " --> autopassed (imunne to psychology)");
+            else if (unit.Frenzy)
+                Console(goodText, " --> autopassed (frenzy)");
+            else if (RollDice(unit, DiceType.LD, enemy, unit.Leadership, 2))
                 Console(goodText, " --> passed");
             else
             {
@@ -269,9 +276,6 @@ namespace WarhammerArmyAssembler
             bool impactHit = false, string impactLine = "")
         {
             int roundWounds = 0;
-
-            if (unit.Frenzy)
-                attackNumber *= 2;
 
             if ((unit.Wounds > 0) && (enemy.Wounds > 0))
                 Console(text, "\n");
