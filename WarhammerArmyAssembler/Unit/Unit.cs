@@ -201,35 +201,83 @@ namespace WarhammerArmyAssembler
 
         public Unit Clone(bool full = false)
         {
-            Unit newUnit = new Unit();
+            Unit newUnit = new Unit
+            {
+                Name = this.Name,
+                Group = this.Group,
+                ID = this.ID,
+                IDView = this.IDView,
+                ArmyID = this.ArmyID,
+                Type = this.Type,
+                Size = this.Size,
+                MinSize = this.MinSize,
+                MaxSize = this.MaxSize,
+                ModelsInPack = this.ModelsInPack,
+                Points = this.Points,
+                MountOn = this.MountOn,
+                MountInit = this.MountInit,
+                Description = this.Description,
 
-            newUnit.Name = this.Name;
-            newUnit.Group = this.Group;
-            newUnit.ID = this.ID;
-            newUnit.IDView = this.IDView;
-            newUnit.ArmyID = this.ArmyID;
-            newUnit.Type = this.Type;
-            newUnit.Size = this.Size;
-            newUnit.MinSize = this.MinSize;
-            newUnit.MaxSize = this.MaxSize;
-            newUnit.ModelsInPack = this.ModelsInPack;
-            newUnit.Points = this.Points;
-            newUnit.MountOn = this.MountOn;
-            newUnit.MountInit = this.MountInit;
-            newUnit.Description = this.Description;
+                Movement = this.Movement,
+                WeaponSkill = this.WeaponSkill,
+                BallisticSkill = this.BallisticSkill,
+                Strength = this.Strength,
+                Toughness = this.Toughness,
+                Wounds = this.Wounds,
+                Initiative = this.Initiative,
+                Attacks = this.Attacks,
+                Leadership = this.Leadership,
+                Armour = this.Armour,
+                Ward = this.Ward,
+                Wizard = this.Wizard,
 
-            newUnit.Movement = this.Movement;
-            newUnit.WeaponSkill = this.WeaponSkill;
-            newUnit.BallisticSkill = this.BallisticSkill;
-            newUnit.Strength = this.Strength;
-            newUnit.Toughness = this.Toughness;
-            newUnit.Wounds = this.Wounds;
-            newUnit.Initiative = this.Initiative;
-            newUnit.Attacks = this.Attacks;
-            newUnit.Leadership = this.Leadership;
-            newUnit.Armour = this.Armour;
-            newUnit.Ward = this.Ward;
-            newUnit.Wizard = this.Wizard;
+                OriginalWounds = this.OriginalWounds,
+                OriginalAttacks = this.OriginalAttacks,
+
+                UnitStrength = this.UnitStrength,
+
+                ImmuneToPsychology = this.ImmuneToPsychology,
+                Stubborn = this.Stubborn,
+                Hate = this.Hate,
+                Fear = this.Fear,
+                Terror = this.Terror,
+                Frenzy = this.Frenzy,
+                Unbreakable = this.Unbreakable,
+                ColdBlooded = this.ColdBlooded,
+                Stupidity = this.Stupidity,
+                HitFirst = this.HitFirst,
+                HitLast = this.HitLast,
+                Regeneration = this.Regeneration,
+                KillingBlow = this.KillingBlow,
+                PoisonAttack = this.PoisonAttack,
+                MultiWounds = this.MultiWounds,
+                NoArmour = this.NoArmour,
+                ArmourPiercing = this.ArmourPiercing,
+                Reroll = this.Reroll,
+                ImpactHit = this.ImpactHit,
+
+                SlotsOfLords = this.SlotsOfLords,
+                SlotsOfHero = this.SlotsOfHero,
+                SlotsOfSpecial = this.SlotsOfSpecial,
+                SlotsOfRare = this.SlotsOfRare,
+                NoSlotsOfCore = this.NoSlotsOfCore,
+
+                MagicItems = this.MagicItems,
+                MagicItemsType = this.MagicItemsType,
+
+                SizableType = this.SizableType,
+                PersonifiedHero = this.PersonifiedHero,
+                ArmyGeneral = this.ArmyGeneral,
+                WeaponTeam = this.WeaponTeam,
+                NotALeader = this.NotALeader,
+                MustBeGeneral = this.MustBeGeneral,
+                Chariot = this.Chariot,
+
+                TestType = this.TestType,
+                EnemyMount = this.EnemyMount,
+
+                ArmyColor = this.ArmyColor
+            };
 
             if (full)
             {
@@ -246,56 +294,9 @@ namespace WarhammerArmyAssembler
                 newUnit.WardView = this.WardView;
             }
 
-            newUnit.OriginalWounds = this.OriginalWounds;
-            newUnit.OriginalAttacks = this.OriginalAttacks;
-
-            newUnit.UnitStrength = this.UnitStrength;
-
-            newUnit.ImmuneToPsychology = this.ImmuneToPsychology;
-            newUnit.Stubborn = this.Stubborn;
-            newUnit.Hate = this.Hate;
-            newUnit.Fear = this.Fear;
-            newUnit.Terror = this.Terror;
-            newUnit.Frenzy = this.Frenzy;
-            newUnit.Unbreakable = this.Unbreakable;
-            newUnit.ColdBlooded = this.ColdBlooded;
-            newUnit.Stupidity = this.Stupidity;
-            newUnit.HitFirst = this.HitFirst;
-            newUnit.HitLast = this.HitLast;
-            newUnit.Regeneration = this.Regeneration;
-            newUnit.KillingBlow = this.KillingBlow;
-            newUnit.PoisonAttack = this.PoisonAttack;
-            newUnit.MultiWounds = this.MultiWounds;
-            newUnit.NoArmour = this.NoArmour;
-            newUnit.ArmourPiercing = this.ArmourPiercing;
-            newUnit.Reroll = this.Reroll;
-            newUnit.ImpactHit = this.ImpactHit;
-
-            newUnit.SlotsOfLords = this.SlotsOfLords;
-            newUnit.SlotsOfHero = this.SlotsOfHero;
-            newUnit.SlotsOfSpecial = this.SlotsOfSpecial;
-            newUnit.SlotsOfRare = this.SlotsOfRare;
-            newUnit.NoSlotsOfCore = this.NoSlotsOfCore;
-
-            newUnit.MagicItems = this.MagicItems;
-            newUnit.MagicItemsType = this.MagicItemsType;
-
-            newUnit.SizableType = this.SizableType;
-            newUnit.PersonifiedHero = this.PersonifiedHero;
-            newUnit.ArmyGeneral = this.ArmyGeneral;
-            newUnit.WeaponTeam = this.WeaponTeam;
-            newUnit.NotALeader = this.NotALeader;
-            newUnit.MustBeGeneral = this.MustBeGeneral;
-            newUnit.Chariot = this.Chariot;
-
-            newUnit.TestType = this.TestType;
-            newUnit.EnemyMount = this.EnemyMount;
-
             List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)
                 newUnit.Options.Add(option.Clone());
-
-            newUnit.ArmyColor = this.ArmyColor;
 
             return newUnit;
         }
@@ -404,10 +405,7 @@ namespace WarhammerArmyAssembler
 
         private void SetUnitParamByOption(Unit unit, string paramName)
         {
-            string stringValue = String.Empty;
-            int intValue = 0;
-
-            bool value = RuleFromAnyOption(paramName, out stringValue, out intValue);
+            bool value = RuleFromAnyOption(paramName, out string stringValue, out int intValue);
 
             if (!value)
                 return;
@@ -673,11 +671,8 @@ namespace WarhammerArmyAssembler
 
         public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue, bool onlyUnitParam = false)
         {
-            string lineParamValue = String.Empty;
-            int intParamValue = 0;
-
             PropertyInfo unitField = typeof(Unit).GetProperty(name);
-            bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out lineParamValue, out intParamValue);
+            bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out string lineParamValue, out int intParamValue);
 
             if (!onlyUnitParam)
                 foreach (Option option in Options)
@@ -685,11 +680,12 @@ namespace WarhammerArmyAssembler
                     if (option.IsOption() && !option.Realised)
                         continue;
 
-                    string lineOptionValue = String.Empty;
-                    int intOptionValue = 0;
-
                     PropertyInfo optionField = typeof(Option).GetProperty(name);
-                    bool fromParamValue = GetUnitValueTrueOrFalse(optionField.GetValue(option), out lineOptionValue, out intOptionValue);
+
+                    bool fromParamValue = GetUnitValueTrueOrFalse(
+                        optionField.GetValue(option), out string lineOptionValue, out int intOptionValue
+                    );
+
                     anyIsTrue = (fromParamValue ? true : anyIsTrue);
 
                     if ((name == "Reroll") && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
@@ -747,8 +743,6 @@ namespace WarhammerArmyAssembler
         {
             List<string> rules = new List<string>();
 
-            string tmp = this.Name;
-
             if (ArmyGeneral)
                 rules.Add("General");
 
@@ -759,11 +753,8 @@ namespace WarhammerArmyAssembler
                 if (option.Realised && option.SpecialRuleDescription.Length > 0)
                     rules.Add(option.Name);
 
-            string additionalParam = String.Empty;
-            int intParam = -1;
-
             foreach (KeyValuePair<string, string> specialRule in AllSpecialRules) 
-                if (RuleFromAnyOption(specialRule.Key, out additionalParam, out intParam, onlyUnitParam))
+                if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam))
                     rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
 
             foreach (Option option in Options)

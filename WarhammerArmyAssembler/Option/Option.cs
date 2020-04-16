@@ -131,83 +131,84 @@ namespace WarhammerArmyAssembler
 
         public Option Clone()
         {
-            Option newOption = new Option();
+            Option newOption = new Option
+            {
+                Name = this.Name,
+                ID = this.ID,
+                IDView = this.IDView,
+                Points = this.Points,
+                PerModel = this.PerModel,
+                Type = this.Type,
+                Description = this.Description,
+                SpecialRuleDescription = this.SpecialRuleDescription,
+                Realised = this.Realised,
+                Multiple = this.Multiple,
+                OnlyOneInArmy = this.OnlyOneInArmy,
+                OnlyOneForSuchUnits = this.OnlyOneForSuchUnits,
+                OnlyFor = this.OnlyFor,
+                OnlyIfAnotherService = this.OnlyIfAnotherService,
+                OnlyIfNotAnotherService = this.OnlyIfNotAnotherService,
+                OnlyForGroup = this.OnlyForGroup,
 
-            newOption.Name = this.Name;
-            newOption.ID = this.ID;
-            newOption.IDView = this.IDView;
-            newOption.Points = this.Points;
-            newOption.PerModel = this.PerModel;
-            newOption.Type = this.Type;
-            newOption.Description = this.Description;
-            newOption.SpecialRuleDescription = this.SpecialRuleDescription;
-            newOption.Realised = this.Realised;
-            newOption.Multiple = this.Multiple;
-            newOption.OnlyOneInArmy = this.OnlyOneInArmy;
-            newOption.OnlyOneForSuchUnits = this.OnlyOneForSuchUnits;
-            newOption.OnlyFor = this.OnlyFor;
-            newOption.OnlyIfAnotherService = this.OnlyIfAnotherService;
-            newOption.OnlyIfNotAnotherService = this.OnlyIfNotAnotherService;
-            newOption.OnlyForGroup = this.OnlyForGroup;
+                HitFirst = this.HitFirst,
+                HitLast = this.HitLast,
+                KillingBlow = this.KillingBlow,
+                PoisonAttack = this.PoisonAttack,
+                MultiWounds = this.MultiWounds,
+                NoArmour = this.NoArmour,
+                ArmourPiercing = this.ArmourPiercing,
+                Regeneration = this.Regeneration,
+                ImmuneToPsychology = this.ImmuneToPsychology,
+                Stubborn = this.Stubborn,
+                Hate = this.Hate,
+                Fear = this.Fear,
+                Terror = this.Terror,
+                Frenzy = this.Frenzy,
+                Unbreakable = this.Unbreakable,
+                ColdBlooded = this.ColdBlooded,
+                Reroll = this.Reroll,
+                ImpactHit = this.ImpactHit,
 
-            newOption.HitFirst = this.HitFirst;
-            newOption.HitLast = this.HitLast;
-            newOption.KillingBlow = this.KillingBlow;
-            newOption.PoisonAttack = this.PoisonAttack;
-            newOption.MultiWounds = this.MultiWounds;
-            newOption.NoArmour = this.NoArmour;
-            newOption.ArmourPiercing = this.ArmourPiercing;
-            newOption.Regeneration = this.Regeneration;
-            newOption.ImmuneToPsychology = this.ImmuneToPsychology;
-            newOption.Stubborn = this.Stubborn;
-            newOption.Hate = this.Hate;
-            newOption.Fear = this.Fear;
-            newOption.Terror = this.Terror;
-            newOption.Frenzy = this.Frenzy;
-            newOption.Unbreakable = this.Unbreakable;
-            newOption.ColdBlooded = this.ColdBlooded;
-            newOption.Reroll = this.Reroll;
-            newOption.ImpactHit = this.ImpactHit;
+                BigWeapon = this.BigWeapon,
 
-            newOption.BigWeapon = this.BigWeapon;
+                AddToMovement = this.AddToMovement,
+                AddToWeaponSkill = this.AddToWeaponSkill,
+                AddToBallisticSkill = this.AddToBallisticSkill,
+                AddToStrength = this.AddToStrength,
+                AddToToughness = this.AddToToughness,
+                AddToWounds = this.AddToWounds,
+                AddToInitiative = this.AddToInitiative,
+                AddToAttacks = this.AddToAttacks,
+                AddToLeadership = this.AddToLeadership,
+                AddToArmour = this.AddToArmour,
+                AddToWard = this.AddToWard,
+                AddToCast = this.AddToCast,
+                AddToDispell = this.AddToDispell,
+                AddToWizard = this.AddToWizard,
 
-            newOption.AddToMovement = this.AddToMovement;
-            newOption.AddToWeaponSkill = this.AddToWeaponSkill;
-            newOption.AddToBallisticSkill = this.AddToBallisticSkill;
-            newOption.AddToStrength = this.AddToStrength;
-            newOption.AddToToughness = this.AddToToughness;
-            newOption.AddToWounds = this.AddToWounds;
-            newOption.AddToInitiative = this.AddToInitiative;
-            newOption.AddToAttacks = this.AddToAttacks;
-            newOption.AddToLeadership = this.AddToLeadership;
-            newOption.AddToArmour = this.AddToArmour;
-            newOption.AddToWard = this.AddToWard;
-            newOption.AddToCast = this.AddToCast;
-            newOption.AddToDispell = this.AddToDispell;
-            newOption.AddToWizard = this.AddToWizard;
+                MovementTo = this.MovementTo,
+                WeaponSkillTo = this.WeaponSkillTo,
+                BallisticSkillTo = this.BallisticSkillTo,
+                StrengthTo = this.StrengthTo,
+                ToughnessTo = this.ToughnessTo,
+                WoundsTo = this.WoundsTo,
+                InitiativeTo = this.InitiativeTo,
+                AttacksTo = this.AttacksTo,
+                LeadershipTo = this.LeadershipTo,
+                ArmourTo = this.ArmourTo,
+                WizardTo = this.WizardTo,
 
-            newOption.MovementTo = this.MovementTo;
-            newOption.WeaponSkillTo = this.WeaponSkillTo;
-            newOption.BallisticSkillTo = this.BallisticSkillTo;
-            newOption.StrengthTo = this.StrengthTo;
-            newOption.ToughnessTo = this.ToughnessTo;
-            newOption.WoundsTo = this.WoundsTo;
-            newOption.InitiativeTo = this.InitiativeTo;
-            newOption.AttacksTo = this.AttacksTo;
-            newOption.LeadershipTo = this.LeadershipTo;
-            newOption.ArmourTo = this.ArmourTo;
-            newOption.WizardTo = this.WizardTo;
+                AddToModelsInPack = this.AddToModelsInPack,
+                FullCommand = this.FullCommand,
+                PersonifiedCommander = this.PersonifiedCommander,
 
-            newOption.AddToModelsInPack = this.AddToModelsInPack;
-            newOption.FullCommand = this.FullCommand;
-            newOption.PersonifiedCommander = this.PersonifiedCommander;
+                MagicItems = this.MagicItems,
+                MagicItemsType = this.MagicItemsType,
 
-            newOption.MagicItems = this.MagicItems;
-            newOption.MagicItemsType = this.MagicItemsType;
+                Mount = this.Mount,
 
-            newOption.Mount = this.Mount;
-
-            newOption.InterfaceColor = this.InterfaceColor;
+                InterfaceColor = this.InterfaceColor
+            };
 
             return newOption;
         }

@@ -16,9 +16,7 @@ namespace WarhammerArmyAssembler
             if (xmlNode == null)
                 return byDefault ?? 0;
 
-            int value = 0;
-
-            bool success = int.TryParse(xmlNode.InnerText, out value);
+            bool success = int.TryParse(xmlNode.InnerText, out int value);
 
             return (success ? value : (byDefault ?? 0));
         }
@@ -28,9 +26,7 @@ namespace WarhammerArmyAssembler
             if (xmlNode == null)
                 return null;
 
-            int value = 0;
-
-            bool success = int.TryParse(xmlNode.InnerText, out value);
+            bool success = int.TryParse(xmlNode.InnerText, out int value);
 
             return (success ? value : (int?)null);
         }
@@ -40,9 +36,7 @@ namespace WarhammerArmyAssembler
             if (xmlNode == null)
                 return 0;
 
-            double value = 0;
-
-            bool success = Double.TryParse(xmlNode.InnerText, out value);
+            bool success = Double.TryParse(xmlNode.InnerText, out double value);
 
             return (success ? value : 0);
         }
@@ -73,9 +67,7 @@ namespace WarhammerArmyAssembler
             if (xmlNode == null)
                 return UnitType.Core;
 
-            UnitType value;
-
-            bool success = Enum.TryParse(xmlNode.InnerText, out value);
+            bool success = Enum.TryParse(xmlNode.InnerText, out UnitType value);
 
             return (success ? value : UnitType.Core);
         }
@@ -85,9 +77,7 @@ namespace WarhammerArmyAssembler
             if (xmlNode == null)
                 return MagicItemsTypes.Hero;
 
-            MagicItemsTypes value;
-
-            bool success = Enum.TryParse(xmlNode.InnerText, out value);
+            bool success = Enum.TryParse(xmlNode.InnerText, out MagicItemsTypes value);
 
             return (success ? value : MagicItemsTypes.Hero);
         }
@@ -97,9 +87,7 @@ namespace WarhammerArmyAssembler
             if (xmlNode == null)
                 return 0;
 
-            OptionType value;
-
-            bool success = Enum.TryParse(xmlNode.InnerText, out value);
+            bool success = Enum.TryParse(xmlNode.InnerText, out OptionType value);
 
             return (success ? value : Option.OptionType.Option);
         }
@@ -109,9 +97,7 @@ namespace WarhammerArmyAssembler
             if (xmlNode == null)
                 return 0;
 
-            OnlyForType value;
-
-            bool success = Enum.TryParse(xmlNode.InnerText, out value);
+            bool success = Enum.TryParse(xmlNode.InnerText, out OnlyForType value);
 
             return (success ? value : Option.OnlyForType.All);
         }

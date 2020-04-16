@@ -239,8 +239,10 @@ namespace WarhammerArmyAssembler
             {
                 double leftPadding = (points > 0 ? -5 : 5);
 
-                Label optionPoints = new Label();
-                optionPoints.Content = (points > 0 ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine);
+                Label optionPoints = new Label
+                {
+                    Content = (points > 0 ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine)
+                };
                 optionPoints.Margin = Interface.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
                 optionPoints.Foreground = ArmyBook.MainColor;
                 Interface.main.unitDetail.Children.Add(optionPoints);
@@ -252,10 +254,11 @@ namespace WarhammerArmyAssembler
 
             if (captionLines.Length > 1)
             {
-                Line longOptionLine = new Line();
-
-                longOptionLine.X1 = newOption.Margin.Left + 8;
-                longOptionLine.Y1 = newOption.Margin.Top + height + 8;
+                Line longOptionLine = new Line
+                {
+                    X1 = newOption.Margin.Left + 8,
+                    Y1 = newOption.Margin.Top + height + 8
+                };
                 longOptionLine.X2 = longOptionLine.X1;
                 longOptionLine.Y2 = longOptionLine.Y1 + height * (captionLines.Length - 1);
 
@@ -276,20 +279,20 @@ namespace WarhammerArmyAssembler
         private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
             string id, Brush background, double? partWidth = null, bool enabled = true)
         {
-            Label newPart = new Label();
+            Label newPart = new Label
+            {
+                Tag = id,
+                Content = caption,
+                HorizontalContentAlignment = HorizontalAlignment.Center,
+                Foreground = Brushes.White,
+                Background = background,
+            };
 
-            newPart.Content = caption;
-            newPart.HorizontalContentAlignment = HorizontalAlignment.Center;
             newPart.Margin = Interface.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
-
-            newPart.Foreground = Brushes.White;
-            newPart.Background = background;
+            newPart.Width = partWidth ?? 77;
 
             if (enabled)
                 newPart.MouseDown += AddOption_Click;
-
-            newPart.Width = partWidth ?? 77;
-            newPart.Tag = id;
 
             Interface.main.unitDetail.Children.Add(newPart);
             Interface.main.UpdateLayout();

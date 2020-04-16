@@ -155,8 +155,7 @@ namespace WarhammerArmyAssembler
             UIElement parent = element;
             while (parent != null)
             {
-                T correctlyTyped = parent as T;
-                if (correctlyTyped != null)
+                if (parent is T correctlyTyped)
                     return correctlyTyped;
 
                 parent = VisualTreeHelper.GetParent(parent) as UIElement;

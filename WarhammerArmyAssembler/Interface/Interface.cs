@@ -178,9 +178,10 @@ namespace WarhammerArmyAssembler
 
             foreach (string name in buttonName)
             {
-                Label newButton = new Label();
-
-                newButton.Content = name;
+                Label newButton = new Label
+                {
+                    Content = name
+                };
                 newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
                 newButton.Height = 30;
                 newButton.Width = Double.NaN;
@@ -268,10 +269,12 @@ namespace WarhammerArmyAssembler
 
             bool mainCanvasMoving = (err || menu);
 
-            ThicknessAnimation move = new ThicknessAnimation();
-            move.Duration = TimeSpan.FromSeconds(0.2);
-            move.From = (mainCanvasMoving ? main.mainPlaceCanvas.Margin : main.mainGrid.Margin);
-            move.To = newPosition;
+            ThicknessAnimation move = new ThicknessAnimation
+            {
+                Duration = TimeSpan.FromSeconds(0.2),
+                From = (mainCanvasMoving ? main.mainPlaceCanvas.Margin : main.mainGrid.Margin),
+                To = newPosition
+            };
 
             if (secondAnimation != null)
                 move.Completed += secondAnimation;
@@ -356,10 +359,11 @@ namespace WarhammerArmyAssembler
 
             foreach (int button in points)
             {
-                Label newPointsBotton = new Label();
-
-                newPointsBotton.Name = String.Format("button{0}pts", button);
-                newPointsBotton.Content = String.Format("{0} points", button);
+                Label newPointsBotton = new Label
+                {
+                    Name = String.Format("button{0}pts", button),
+                    Content = String.Format("{0} points", button)
+                };
 
                 newPointsBotton.Margin = Thick(newPointsBotton, xButtons[xIndex], yButtons[yIndex]);
 

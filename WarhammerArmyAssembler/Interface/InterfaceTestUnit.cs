@@ -74,8 +74,10 @@ namespace WarhammerArmyAssembler
 
         private static void AddMountUnitParam(string param, int gridIndex, Grid unitGrid)
         {
-            StackPanel panel = new StackPanel();
-            panel.HorizontalAlignment = HorizontalAlignment.Center;
+            StackPanel panel = new StackPanel
+            {
+                HorizontalAlignment = HorizontalAlignment.Center
+            };
             unitGrid.Children.Add(panel);
             Grid.SetRow(panel, 2);
             Grid.SetColumn(panel, gridIndex);
@@ -85,9 +87,11 @@ namespace WarhammerArmyAssembler
 
             mountRow[unitGrid.Name].Add(panel);
 
-            Label label = new Label();
-            label.FontSize = 16;
-            label.Content = param;
+            Label label = new Label
+            {
+                FontSize = 16,
+                Content = param
+            };
             panel.Children.Add(label);
         }
 
@@ -191,13 +195,15 @@ namespace WarhammerArmyAssembler
             Interface.main.testConsole.Document.Blocks.Clear();
         }
 
-        public static void LineToConsole(string line, Brush color = null, bool bold = false)
+        public static void LineToConsole(string line, Brush color = null)
         {
             if (!showLinesToConsole)
                 return;
 
-            TextRange tr = new TextRange(Interface.main.testConsole.Document.ContentEnd, Interface.main.testConsole.Document.ContentEnd);
-            tr.Text = line;
+            TextRange tr = new TextRange(Interface.main.testConsole.Document.ContentEnd, Interface.main.testConsole.Document.ContentEnd)
+            {
+                Text = line
+            };
             tr.ApplyPropertyValue(TextElement.ForegroundProperty, color ?? Brushes.Black);
         }
 

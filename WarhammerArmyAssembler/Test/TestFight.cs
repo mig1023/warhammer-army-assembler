@@ -460,13 +460,12 @@ namespace WarhammerArmyAssembler
             if (randParams[1].Contains('+'))
             {
                 string[] randNumber = randParams[1].Split('+');
-
-                bool diceSizeParse = int.TryParse(randNumber[0], out diceSize);
-                bool addNumber = int.TryParse(randNumber[1], out addSomething);
+                _ = int.TryParse(randNumber[0], out diceSize);
+                _ = int.TryParse(randNumber[1], out addSomething);
             }
             else
             {
-                bool diceSizeParse = int.TryParse(randParams[1], out diceSize);
+                _ = int.TryParse(randParams[1], out diceSize);
                 addSomething = 0;
             }
         }
@@ -479,9 +478,7 @@ namespace WarhammerArmyAssembler
                 randomParam = int.Parse(param);
             else
             {
-                int diceNumber, diceSize, addSomething;
-
-                RandomParamValues(param, out diceNumber, out diceSize, out addSomething);
+                RandomParamValues(param, out int diceNumber, out int diceSize, out int addSomething);
 
                 for (int i = 0; i < diceNumber; i++)
                     randomParam += rand.Next(diceSize) + 1 + addSomething;
@@ -504,9 +501,7 @@ namespace WarhammerArmyAssembler
 
                 foreach(Unit u in new List<Unit> { unit, unitMount })
                 {
-                    int diceNumber, diceSize, addSomething;
-
-                    RandomParamValues(u.ImpactHit, out diceNumber, out diceSize, out addSomething);
+                    RandomParamValues(u.ImpactHit, out int diceNumber, out int diceSize, out int addSomething);
 
                     int diceMax = diceNumber * diceSize;
 

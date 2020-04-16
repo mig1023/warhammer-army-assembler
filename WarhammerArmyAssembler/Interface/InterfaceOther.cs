@@ -14,9 +14,7 @@ namespace WarhammerArmyAssembler
 
         public static int IntParse(string line)
         {
-            int value = 0;
-
-            bool success = Int32.TryParse(line, out value);
+            bool success = Int32.TryParse(line, out int value);
 
             return (success ? value : 0);
         }
