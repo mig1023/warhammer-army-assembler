@@ -33,7 +33,7 @@ namespace WarhammerArmyAssembler
 
             menuArmybookScroll.Height = e.NewSize.Height - 14;
 
-            gridCloseArmybook.Height = e.NewSize.Height - 10;
+            gridCloseArmybook.Height = e.NewSize.Height;
             gridCloseArmybook.Width = 30;
 
             startHelpInfo.Height = armybookCanvas.Height;
@@ -65,14 +65,24 @@ namespace WarhammerArmyAssembler
             Interface.main.Show();
         }
 
+        private void StartArmybookOption(string armySize)
+        {
+            bool successParse = int.TryParse(armySize, out int size);
+
+            if (successParse)
+                StartArmybook(size);
+            else
+                MessageBox.Show("Wrong army points!");
+        }
+
         public void buttonPoints_Click(object sender, RoutedEventArgs e)
         {
-            StartArmybook(InterfaceOther.IntParse((sender as Label).Content.ToString().Split()[0]));
+            StartArmybookOption((sender as Label).Content.ToString().Split()[0]);
         }
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e)
         {
-            StartArmybook(InterfaceOther.IntParse(listArmybookPoints.Text));
+            StartArmybookOption(listArmybookPoints.Text);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -91,6 +101,6 @@ namespace WarhammerArmyAssembler
                 Interface.PreviewArmyList(prev: true);
             else
                 Interface.PreviewArmyList(next: true);
-        }
+        }   
     }
 }
