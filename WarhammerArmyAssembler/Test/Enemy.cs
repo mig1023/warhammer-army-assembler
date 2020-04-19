@@ -39,7 +39,7 @@ namespace WarhammerArmyAssembler
         {
             return new List<string>
             {
-                "Single soldiers",
+                "Single soldier",
                 "Core Units",
                 "Special Units",
                 "Rare Units",
@@ -50,7 +50,7 @@ namespace WarhammerArmyAssembler
 
         public static List<Enemy> GetEnemiesByGroup(string groupName)
         {
-            if (groupName == "Single soldiers")
+            if (groupName == "Single soldier")
                 return new List<Enemy>(EnemiesSoldiers);
             else if (groupName == "Core Units")
                 return new List<Enemy>(EnemiesCoreUnits);
