@@ -323,7 +323,8 @@ namespace WarhammerArmyAssembler
                 changeArmybook.listArmybookVer,
                 changeArmybook.buttonArmybook,
                 changeArmybook.closeArmybook,
-                main.closeArmybookDetail
+                main.closeArmybookDetail,
+                main.closeMainWindow
             })
                 label.Background = mainColor;
 

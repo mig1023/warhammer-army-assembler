@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
-        Title="Warhammer Army Assembler (WAAgh)" Height="600" Width="1000" WindowState="Maximized" Closed="Window_Closed">
+        WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
+        Title="Warhammer Army Assembler (WAAgh)" Height="600" Width="1000" Closed="Window_Closed">
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
 
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
@@ -260,12 +261,19 @@
                     <RowDefinition Height="30"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25"></ColumnDefinition>
                     <ColumnDefinition Width="250"></ColumnDefinition>
                     <ColumnDefinition Width="auto"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
+                <Label x:Name="closeMainWindow" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Content="Close, Minimize, Maximize, Replace" Height="25" Padding="0" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Margin="0,0" MouseDown="closeArmybookDetail_Click">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+
+                <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="31"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -275,14 +283,14 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Background="White">
+                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="1" Background="White">
                         <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto" Margin="4,0" />
                         <Label x:Name="armyMainMenu" Content="" FontSize="20" FontFamily="Arial" Foreground="White" Background="Gray" Width="Auto" Margin="24,0" MouseDown="armyMainLabel_MouseDown" />
                     </Canvas>
 
                     <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                    <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedItemChanged="ArmyList_SelectedItemChanged" SizeChanged="ArmyList_SizeChanged">
+                    <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedItemChanged="ArmyList_SelectedItemChanged" SizeChanged="ArmyList_SizeChanged">
                         <TreeView.Resources>
                             <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="White" />
                         </TreeView.Resources>
@@ -322,9 +330,9 @@
                     </TreeView>
                 </Grid>
 
-                <GridSplitter Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <GridSplitter Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Width="5" ResizeDirection="Columns" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="2" CanUserAddRows="False" GridLinesVisibility="None"
+                <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" CanUserAddRows="False" GridLinesVisibility="None"
                           AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
                           LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False" SizeChanged="ArmyGrid_SizeChanged" >
                     <DataGrid.Resources>
@@ -447,9 +455,9 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <GridSplitter x:Name="unitDetailScrollSlitter" IsEnabled="False" Grid.Row="1" Grid.Column="2" Height="0" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <GridSplitter x:Name="unitDetailScrollSlitter" IsEnabled="False" Grid.Row="1" Grid.Column="3" Height="0" ResizeDirection="Rows" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="2" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                <ScrollViewer x:Name="unitDetailScroll" Visibility="Hidden" Grid.Row="2" Grid.Column="3" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"
                               VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Auto" Background="White" SizeChanged="unitDetailScroll_SizeChanged"
                               Drop="ArmyGrid_Drop" AllowDrop="True" DragOver="ArmyGridRow_DragOver">
                     <StackPanel Orientation="Horizontal">
@@ -468,9 +476,9 @@
                     </StackPanel>
                 </ScrollViewer>
 
-                <GridSplitter Grid.Row="3" Grid.Column="2" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                <GridSplitter Grid.Row="3" Grid.Column="3" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
-                <Grid Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
+                <Grid Grid.Row="4" Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"></RowDefinition>
                     </Grid.RowDefinitions>
