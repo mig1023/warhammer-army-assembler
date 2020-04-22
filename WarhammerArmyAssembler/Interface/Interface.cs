@@ -324,10 +324,10 @@ namespace WarhammerArmyAssembler
                 changeArmybook.buttonArmybook,
                 changeArmybook.closeArmybook,
                 main.closeArmybookDetail,
-                main.closeMainWindow
             })
                 label.Background = mainColor;
 
+            main.mainWindowHeader.Background = mainColor;
             changeArmybook.gridCloseArmybook.Background = mainColor;
 
             InterfaceReload.LoadArmySize(2000, onlyReload: true);

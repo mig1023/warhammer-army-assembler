@@ -540,5 +540,25 @@ namespace WarhammerArmyAssembler
             Test.TestStatistic();
             testConsole.Visibility = Visibility.Visible;
         }
+
+        private void dragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+
+        private void closeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void maximizeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = (this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized);
+        }
+
+        private void minimizeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }

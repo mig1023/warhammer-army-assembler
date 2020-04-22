@@ -267,11 +267,12 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Label x:Name="closeMainWindow" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Content="Close, Minimize, Maximize, Replace" Height="25" Padding="0" Width="600" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" HorizontalContentAlignment="Center" Foreground="White" Margin="0,0" MouseDown="closeArmybookDetail_Click">
-                    <Label.LayoutTransform>
-                        <RotateTransform Angle="-90"/>
-                    </Label.LayoutTransform>
-                </Label>
+                <DockPanel x:Name="mainWindowHeader" HorizontalAlignment="Center" Width="Auto" Height="Auto" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
+                    <Label x:Name="closeWindow" DockPanel.Dock="Top" Height="25" Width="25" HorizontalContentAlignment="Center" Foreground="White" FontSize="14" Content="✕" MouseLeftButtonDown="closeWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="maximizeWindow" DockPanel.Dock="Top" Height="25" Width="25" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="12" Content="▭" MouseLeftButtonDown="maximizeWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="minimizeWindow" DockPanel.Dock="Top" Height="25" Width="25" VerticalContentAlignment="Bottom"  Foreground="White" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="10" Content="—" MouseLeftButtonDown="minimizeWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="dragWindow" DockPanel.Dock="Top" Height="Auto" Width="25" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"/>
+                </DockPanel>
 
                 <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5">
                     <Grid.RowDefinitions>
