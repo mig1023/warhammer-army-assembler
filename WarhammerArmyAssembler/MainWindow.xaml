@@ -267,11 +267,24 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <DockPanel x:Name="mainWindowHeader" HorizontalAlignment="Center" Width="Auto" Height="Auto" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
-                    <Label x:Name="closeWindow" DockPanel.Dock="Top" Height="Auto" Width="25" HorizontalContentAlignment="Center" Foreground="White" FontSize="14" Content="✕" MouseLeftButtonDown="closeWindow_MouseLeftButtonDown"/>
-                    <Label x:Name="maximizeWindow" DockPanel.Dock="Top" Height="Auto" Width="25" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="12" Content="▭" MouseLeftButtonDown="maximizeWindow_MouseLeftButtonDown"/>
-                    <Label x:Name="minimizeWindow" DockPanel.Dock="Top" Height="Auto" Width="25" VerticalContentAlignment="Bottom"  Foreground="White" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="10" Content="—" MouseLeftButtonDown="minimizeWindow_MouseLeftButtonDown"/>
-                    <Label x:Name="dragWindow" DockPanel.Dock="Top" Height="Auto" Width="25" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"/>
+                <DockPanel x:Name="mainWindowHeader" HorizontalAlignment="Center" Width="35" Height="Auto" Margin="0" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
+                    <Label x:Name="dragWindowTop" DockPanel.Dock="Top" Height="35" Width="Auto" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="closeWindow" DockPanel.Dock="Top" Height="Auto" Width="Auto" VerticalContentAlignment="Center" Foreground="White" Margin="0,0" Padding="0" FontSize="14" Content="  Close" MouseLeftButtonDown="closeWindow_MouseLeftButtonDown">
+                        <Label.LayoutTransform>
+                            <RotateTransform Angle="-90"/>
+                        </Label.LayoutTransform>
+                    </Label>
+                    <Label x:Name="maximizeWindow" DockPanel.Dock="Top" Height="Auto" Width="Auto" VerticalContentAlignment="Center" Foreground="White" Margin="0,0" Padding="0" FontSize="14" Content="  Max  |" MouseLeftButtonDown="maximizeWindow_MouseLeftButtonDown">
+                        <Label.LayoutTransform>
+                            <RotateTransform Angle="-90"/>
+                        </Label.LayoutTransform>
+                    </Label>
+                    <Label x:Name="minimizeWindow" DockPanel.Dock="Top" Height="Auto" Width="Auto" VerticalContentAlignment="Center" Foreground="White" Margin="0,0" Padding="0" FontSize="14" Content="Min  |" MouseLeftButtonDown="minimizeWindow_MouseLeftButtonDown">
+                        <Label.LayoutTransform>
+                            <RotateTransform Angle="-90"/>
+                        </Label.LayoutTransform>
+                    </Label>
+                    <Label x:Name="dragWindowBottom" DockPanel.Dock="Top" Height="Auto" Width="Auto" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"/>
                 </DockPanel>
 
                 <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5">
