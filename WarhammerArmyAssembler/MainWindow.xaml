@@ -268,9 +268,9 @@
                 </Grid.ColumnDefinitions>
 
                 <DockPanel x:Name="mainWindowHeader" HorizontalAlignment="Center" Width="Auto" Height="Auto" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
-                    <Label x:Name="closeWindow" DockPanel.Dock="Top" Height="25" Width="25" HorizontalContentAlignment="Center" Foreground="White" FontSize="14" Content="✕" MouseLeftButtonDown="closeWindow_MouseLeftButtonDown"/>
-                    <Label x:Name="maximizeWindow" DockPanel.Dock="Top" Height="25" Width="25" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="12" Content="▭" MouseLeftButtonDown="maximizeWindow_MouseLeftButtonDown"/>
-                    <Label x:Name="minimizeWindow" DockPanel.Dock="Top" Height="25" Width="25" VerticalContentAlignment="Bottom"  Foreground="White" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="10" Content="—" MouseLeftButtonDown="minimizeWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="closeWindow" DockPanel.Dock="Top" Height="Auto" Width="25" HorizontalContentAlignment="Center" Foreground="White" FontSize="14" Content="✕" MouseLeftButtonDown="closeWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="maximizeWindow" DockPanel.Dock="Top" Height="Auto" Width="25" HorizontalContentAlignment="Center" Foreground="White" FontWeight="Bold" FontSize="12" Content="▭" MouseLeftButtonDown="maximizeWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="minimizeWindow" DockPanel.Dock="Top" Height="Auto" Width="25" VerticalContentAlignment="Bottom"  Foreground="White" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="10" Content="—" MouseLeftButtonDown="minimizeWindow_MouseLeftButtonDown"/>
                     <Label x:Name="dragWindow" DockPanel.Dock="Top" Height="Auto" Width="25" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"/>
                 </DockPanel>
 
@@ -285,7 +285,7 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White">
+                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown">
                         <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto"/>
                         <Label x:Name="armyMainMenu" Content="" FontSize="20" FontFamily="Arial" Foreground="White" Background="Gray" Width="Auto" Margin="24,0" MouseDown="armyMainLabel_MouseDown" />
                     </Canvas>
