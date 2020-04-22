@@ -438,7 +438,7 @@ namespace WarhammerArmyAssembler
         private void ArmyList_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (startArmyHelpText.Visibility == Visibility.Visible)
-                startArmyHelpText.Margin = new Thickness(ArmyList.ActualWidth + 35, 0, 0, 0);
+                startArmyHelpText.Margin = new Thickness(ArmyList.ActualWidth + 60, 0, 0, 0);
         }
 
         private void ArmyGrid_SizeChanged(object sender, SizeChangedEventArgs e)

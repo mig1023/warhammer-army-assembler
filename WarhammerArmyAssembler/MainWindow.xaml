@@ -280,15 +280,18 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="1" Background="White">
-                        <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto" Margin="4,0" />
+                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White">
+                        <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto"/>
                         <Label x:Name="armyMainMenu" Content="" FontSize="20" FontFamily="Arial" Foreground="White" Background="Gray" Width="Auto" Margin="24,0" MouseDown="armyMainLabel_MouseDown" />
                     </Canvas>
 
-                    <GridSplitter Grid.Row="1" Grid.Column="0" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                    <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="5" ResizeDirection="Rows" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+                    <GridSplitter Grid.Row="2" Grid.Column="0" Width="5" ResizeDirection="Columns" IsEnabled="False" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
                     <TreeView x:Name="ArmyList" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectedItemChanged="ArmyList_SelectedItemChanged" SizeChanged="ArmyList_SizeChanged">
                         <TreeView.Resources>
