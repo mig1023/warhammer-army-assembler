@@ -278,12 +278,12 @@ namespace WarhammerArmyAssembler
             foreach (ScrollViewer scroll in new List<ScrollViewer> { armybookDetailScroll, armyUnitTestScroll })
                 scroll.Height = e.NewSize.Height;
 
-            armyUnitTestScroll.Width = e.NewSize.Width - 25;
+            armyUnitTestScroll.Width = Interface.ZeroFuse(e.NewSize.Width - 25);
 
             foreach (Canvas canvas in new List<Canvas> { errorDetail, mainMenu, mainPlaceCanvas, armyUnitTest })
                 canvas.Width = e.NewSize.Width;
 
-            closeErrorDetail.Margin = new Thickness(e.NewSize.Width - closeErrorDetail.Width - 10, 10, 0, 0);
+            closeErrorDetail.Margin = new Thickness(Interface.ZeroFuse(e.NewSize.Width - closeErrorDetail.Width - 10), 10, 0, 0);
 
             if (Interface.mainMenuIsOpen)
                 Interface.MainMenu();
@@ -445,8 +445,8 @@ namespace WarhammerArmyAssembler
         {
             if (startArmyHelpText.Visibility == Visibility.Visible)
             {
-                startArmyHelpText.Width = ArmyGrid.ActualWidth - 45;
-                startArmyHelpText.Height = ArmyGrid.ActualHeight - 50;
+                startArmyHelpText.Width = Interface.ZeroFuse(ArmyGrid.ActualWidth - 45);
+                startArmyHelpText.Height = Interface.ZeroFuse(ArmyGrid.ActualHeight - 50);
             }
         }
 
@@ -466,7 +466,7 @@ namespace WarhammerArmyAssembler
         {
             UpdateLayout();
 
-            double marginTop = (unitGrid.ActualHeight - 66);
+            double marginTop = Interface.ZeroFuse(unitGrid.ActualHeight - 66);
 
             specialRulesTest.Margin = Interface.Thick(specialRulesTest, top: marginTop);
 
@@ -478,7 +478,7 @@ namespace WarhammerArmyAssembler
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 
-            marginTop += (enemyGrid.ActualHeight - 66);
+            marginTop += Interface.ZeroFuse(enemyGrid.ActualHeight - 66);
 
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole,
@@ -494,7 +494,7 @@ namespace WarhammerArmyAssembler
             }
 
             if (unitTestHeight + 140 < armyUnitTestScroll.ActualHeight)
-                testConsole.Height = armyUnitTestScroll.ActualHeight - unitTestHeight - 20;
+                testConsole.Height = Interface.ZeroFuse(armyUnitTestScroll.ActualHeight - unitTestHeight - 20);
             else
             {
                 unitTestHeight += 140;
@@ -509,7 +509,7 @@ namespace WarhammerArmyAssembler
             foreach(FrameworkElement element in new List<FrameworkElement> {
                 unitGrid, specialRulesTest, enemyForTest, enemyGrid, specialRulesEnemyTest, testConsole, enemyGroup
             })
-                element.Width = e.NewSize.Width - 120;
+                element.Width = Interface.ZeroFuse(e.NewSize.Width - 120);
 
             armyUnitTest_Resize();
         }

@@ -391,5 +391,10 @@ namespace WarhammerArmyAssembler
                 }
             }
         }
+
+        public static double ZeroFuse(double currentParam)
+        {
+            return (currentParam < 0 ? 0 : currentParam);
+        }
     }
 }
