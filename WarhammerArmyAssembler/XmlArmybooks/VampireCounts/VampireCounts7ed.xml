@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArmyBook>
+	<Info>
+		<ArmyName>Vampire Counts</ArmyName>
+		<ArmyBookVersion>7</ArmyBookVersion>
+		<MainColor>#FF3E3E3E</MainColor>
+		<AdditionalColor>#FF000000</AdditionalColor>
+		<BackgroundColor>#FFA2A2A2</BackgroundColor>
+		<ArmyBookImage>VampireCounts7ed.png</ArmyBookImage>
+	</Info>
+	<Artefacts>
+		<ArtefactsGroup Name = "Common magic items">
+			<Artefact>
+				<Name>Sword of Striking</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
+				<Description>+1 to Hit</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Battle</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>+1 Attack</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Might</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<AddToStrength>1</AddToStrength>
+				<Description>+1 Strength</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Biting Blade</Name>
+				<Type>Weapon</Type>
+				<Points>5</Points>
+				<ArmourPiercing>1</ArmourPiercing>
+				<Description>-1 armour save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Enchanted shield</Name>
+				<Type>Shield</Type>
+				<Points>10</Points>
+				<AddToArmour>5</AddToArmour>
+				<Description>5+ armour save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of Protection</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>15</Points>
+				<AddToWard>6</AddToWard>
+				<Description>6+ ward save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dispell Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple>true</Multiple>
+				<Description>automatically dispel an enemy spell, one use only</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Stone</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<Multiple>true</Multiple>
+				<Description>+2 dice to cast a spell</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Staff of Sorcery</Name>
+				<Type>Arcane</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>+1 to dispel</SpecialRuleDescription>
+				<Description>+1 to dispel</Description>
+			</Artefact>
+			<Artefact>
+				<Name>War Banner</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>+1 Combat Resolution</SpecialRuleDescription>
+				<Description>+1 Combat Resolution</Description>
+			</Artefact>
+		</ArtefactsGroup>
+	</Artefacts>
+	
+	<Heroes>
+	</Heroes>
+	
+	<Mounts>
+	</Mounts>
+	
+	<Units>
+	</Units>
+</ArmyBook>
