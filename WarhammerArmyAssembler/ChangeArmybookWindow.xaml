@@ -8,7 +8,7 @@
         Title="Warhammer Army Assembler (WAAgh)" Height="650" Width="1000" 
         WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
         Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown" PreviewMouseWheel="Window_PreviewMouseWheel">
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" PreviewMouseWheel="Window_PreviewMouseWheel" PreviewKeyDown="Window_PreviewKeyDown">
 
     <Canvas x:Name="armybookCanvas">
 

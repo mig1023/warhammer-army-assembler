@@ -101,6 +101,14 @@ namespace WarhammerArmyAssembler
                 Interface.PreviewArmyList(prev: true);
             else
                 Interface.PreviewArmyList(next: true);
-        }   
+        }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left)
+                Interface.PreviewArmyList(prev: true);
+            else if (e.Key == Key.Right)
+                Interface.PreviewArmyList(next: true);
+        }
     }
 }
