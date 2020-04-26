@@ -311,15 +311,16 @@ namespace WarhammerArmyAssembler
                 label.Foreground = mainColor;
             }
 
-            foreach (Label label in new List<Label> { changeArmybook.next, changeArmybook.prev })
-            {
+            foreach (Control label in new List<Control> {
+                changeArmybook.next,
+                changeArmybook.prev,
+                changeArmybook.listArmybookPoints
+            }) {
                 label.BorderBrush = mainColor;
                 label.Foreground = mainColor;
             }
 
-            changeArmybook.listArmybookPoints.Foreground = mainColor;
-
-            foreach (Label label in new List<Label>() {
+            foreach (Control label in new List<Control>() {
                 changeArmybook.listArmybookVer,
                 changeArmybook.buttonArmybook,
                 changeArmybook.closeArmybook,
