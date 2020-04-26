@@ -284,7 +284,11 @@
                             <RotateTransform Angle="-90"/>
                         </Label.LayoutTransform>
                     </Label>
-                    <Label x:Name="dragWindowBottom" DockPanel.Dock="Top" Height="Auto" Width="Auto" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="dragWindowBottom" DockPanel.Dock="Top" Foreground="White" VerticalContentAlignment="Center" Height="Auto" Width="Auto" Margin="0,20" Padding="0" FontSize="14" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown" Content="Warhammer Army Assembler (WAAgh)">
+                        <Label.LayoutTransform>
+                            <RotateTransform Angle="-90"/>
+                        </Label.LayoutTransform>
+                    </Label>
                 </DockPanel>
 
                 <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5">
