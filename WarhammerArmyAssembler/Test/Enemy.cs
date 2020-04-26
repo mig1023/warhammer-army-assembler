@@ -204,6 +204,25 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Treeman",
+                TestListName = "Treeman (Wood Elves)",
+                Size = 1,
+                Movement = 5,
+                WeaponSkill = 5,
+                BallisticSkill = 0,
+                Strength = 6,
+                Toughness = 6,
+                Wounds = 6,
+                Initiative = 2,
+                Attacks = 5,
+                Leadership = 8,
+                Armour = 3,
+                Terror = true,
+                UnitStrength = 6,
+            },
+
+            new Enemy
+            {
                 Name = "Star Dragon",
                 TestListName = "Star Dragon (High Elves)",
                 Size = 1,
