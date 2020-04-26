@@ -546,7 +546,7 @@ namespace WarhammerArmyAssembler
             this.DragMove();
         }
 
-        private void closeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        public void closeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.Close();
         }

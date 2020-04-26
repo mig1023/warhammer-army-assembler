@@ -156,13 +156,20 @@ namespace WarhammerArmyAssembler
         {
             List<string> buttonName = new List<string>
             {
-                "Change Armybook", "Export Army to PDF", "Export Army to TXT", "Close"
+                "Change Armybook",
+                "Export Army to PDF",
+                "Export Army to TXT",
+                "Exit",
+                "Close"
             };
 
             List<MouseButtonEventHandler> buttonAction = new List<MouseButtonEventHandler>
             {
-                main.toNewArmy_MouseDown, main.saveArmyToPDF_MouseDown,
-                main.saveArmyToTXT_MouseDown, main.closeMainMenu_MouseDown
+                main.toNewArmy_MouseDown,
+                main.saveArmyToPDF_MouseDown,
+                main.saveArmyToTXT_MouseDown,
+                main.closeWindow_MouseLeftButtonDown,
+                main.closeMainMenu_MouseDown,
             };
 
             foreach (Label button in MainMenuButtons)

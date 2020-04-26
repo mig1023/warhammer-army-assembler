@@ -269,7 +269,7 @@
 
                 <DockPanel x:Name="mainWindowHeader" HorizontalAlignment="Center" Width="35" Height="Auto" Margin="0" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
                     <Label x:Name="dragWindowTop" DockPanel.Dock="Top" Height="35" Width="Auto" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"/>
-                    <Label x:Name="closeWindow" DockPanel.Dock="Top" Height="Auto" Width="Auto" VerticalContentAlignment="Center" Foreground="White" Margin="0,0" Padding="0" FontSize="14" Content="  Close" MouseLeftButtonDown="closeWindow_MouseLeftButtonDown">
+                    <Label x:Name="closeWindow" DockPanel.Dock="Top" Height="Auto" Width="Auto" VerticalContentAlignment="Center" Foreground="White" Margin="0,0" Padding="0" FontSize="14" Content="  Exit" MouseLeftButtonDown="closeWindow_MouseLeftButtonDown">
                         <Label.LayoutTransform>
                             <RotateTransform Angle="-90"/>
                         </Label.LayoutTransform>
