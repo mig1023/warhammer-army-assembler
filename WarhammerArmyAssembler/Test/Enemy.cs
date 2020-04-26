@@ -326,7 +326,6 @@ namespace WarhammerArmyAssembler
                     Initiative = 3,
                     Attacks = 1,
                     Leadership = 5,
-                    Armour = 5,
                 }
             },
 
@@ -397,7 +396,6 @@ namespace WarhammerArmyAssembler
                     Initiative = 3,
                     Attacks = 1,
                     Leadership = 5,
-                    Armour = 5,
                 }
             },
         };
@@ -572,7 +570,42 @@ namespace WarhammerArmyAssembler
                     Initiative = 3,
                     Attacks = 1,
                     Leadership = 5,
-                    Armour = 5,
+                }
+            },
+
+            new Enemy
+            {
+                Name = "Black Knights",
+                TestListName = "12 Black Knights (Vampire Counts)",
+                Size = 12,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 3,
+                Strength = 5,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 4,
+                Attacks = 2,
+                Leadership = 7,
+                Armour = 2,
+                Ward = 5,
+                Unbreakable = true,
+                Frenzy = true,
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Nightmare",
+                    Size = 12,
+                    Movement = 8,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 4,
+                    Wounds = 1,
+                    Initiative = 2,
+                    Attacks = 1,
+                    Leadership = 3,
                 }
             },
         };
