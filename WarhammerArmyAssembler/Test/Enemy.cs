@@ -298,6 +298,23 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Dryads",
+                TestListName = "Dryads (Wood elves)",
+                Size = 20,
+                Movement = 5,
+                WeaponSkill = 4,
+                BallisticSkill = 0,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 6,
+                Attacks = 2,
+                Leadership = 8,
+                Fear = true,
+            },
+
+            new Enemy
+            {
                 Name = "Bloodletters",
                 TestListName = "20 Bloodletters (Chaos)",
                 Type = UnitType.Core,
