@@ -16,7 +16,7 @@ namespace WarhammerArmyAssembler
         {
             foreach (List<Enemy> enemyList in new List<List<Enemy>>
             {
-                EnemiesSoldiers, EnemiesMonsters, EnemiesHeroes,
+                EnemiesMonsters, EnemiesHeroes, EnemiesLords,
                 EnemiesCoreUnits, EnemiesSpecialUnits, EnemiesRareUnits,
             })
                 foreach (Enemy enemy in enemyList)
@@ -39,20 +39,18 @@ namespace WarhammerArmyAssembler
         {
             return new List<string>
             {
-                "Single soldier",
+                "Lords",
+                "Heroes",
                 "Core Units",
                 "Special Units",
                 "Rare Units",
                 "Monsters",
-                "Lords and heroes",
             };
         }
 
         public static List<Enemy> GetEnemiesByGroup(string groupName)
         {
-            if (groupName == "Single soldier")
-                return new List<Enemy>(EnemiesSoldiers);
-            else if (groupName == "Core Units")
+            if (groupName == "Core Units")
                 return new List<Enemy>(EnemiesCoreUnits);
             else if (groupName == "Special Units")
                 return new List<Enemy>(EnemiesSpecialUnits);
@@ -60,66 +58,13 @@ namespace WarhammerArmyAssembler
                 return new List<Enemy>(EnemiesRareUnits);
             else if (groupName == "Monsters")
                 return new List<Enemy>(EnemiesMonsters);
-            else if (groupName == "Lords and heroes")
+            else if (groupName == "Heroes")
                 return new List<Enemy>(EnemiesHeroes);
+            else if (groupName == "Lords")
+                return new List<Enemy>(EnemiesLords);
             else
                 return new List<Enemy> { };
         }
-
-        private static List<Enemy> EnemiesSoldiers = new List<Enemy>
-        {
-            new Enemy
-            {
-                Name = "Empire soldier",
-                TestListName = "Empire soldier (Empire)",
-                Size = 1,
-                Movement = 4,
-                WeaponSkill = 3,
-                BallisticSkill = 3,
-                Strength = 3,
-                Toughness = 3,
-                Wounds = 1,
-                Initiative = 3,
-                Attacks = 1,
-                Leadership = 7,
-                Armour = 6
-            },
-
-            new Enemy
-            {
-                Name = "Saurus warrior",
-                TestListName = "Saurus warrior (Lizardmen)",
-                Size = 1,
-                Movement = 4,
-                WeaponSkill = 3,
-                BallisticSkill = 0,
-                Strength = 4,
-                Toughness = 4,
-                Wounds = 1,
-                Initiative = 1,
-                Attacks = 2,
-                Leadership = 8,
-                Armour = 4,
-                ColdBlooded = true
-            },
-
-            new Enemy
-            {
-                Name = "Chosen Knights of Chaos",
-                TestListName = "Chosen Knights (Chaos)",
-                Size = 1,
-                Movement = 4,
-                WeaponSkill = 5,
-                BallisticSkill = 3,
-                Strength = 5,
-                Toughness = 4,
-                Wounds = 1,
-                Initiative = 5,
-                Attacks = 2,
-                Leadership = 8,
-                Armour = 1
-            },
-        };
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
@@ -687,7 +632,10 @@ namespace WarhammerArmyAssembler
                 ArmourPiercing = 2,
                 MultiWounds = "D3",
             },
+        };
 
+        private static List<Enemy> EnemiesLords = new List<Enemy>
+        {
             new Enemy
             {
                 Name = "Zacharias The Everliving",
