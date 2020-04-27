@@ -41,6 +41,8 @@ namespace WarhammerArmyAssembler
             ["ArmourPiercing"] = "Armour piercing ([X])",
             ["Reroll"] = "Reroll ([X])",
             ["ImpactHit"] = "Impact Hit ([X])",
+            ["Stupidity"] = "Stupidity",
+            ["Undead"] = "Undead",
         };
 
         public string Name { get; set; }
@@ -101,6 +103,7 @@ namespace WarhammerArmyAssembler
         public bool Unbreakable { get; set; }
         public bool ColdBlooded { get; set; }
         public bool Stupidity { get; set; }
+        public bool Undead { get; set; }
 
         public int UnitStrength { get; set; }
 
@@ -245,6 +248,7 @@ namespace WarhammerArmyAssembler
                 Unbreakable = this.Unbreakable,
                 ColdBlooded = this.ColdBlooded,
                 Stupidity = this.Stupidity,
+                Undead = this.Undead,
                 HitFirst = this.HitFirst,
                 HitLast = this.HitLast,
                 Regeneration = this.Regeneration,
@@ -951,6 +955,11 @@ namespace WarhammerArmyAssembler
         public bool IsNotSimpleMount()
         {
             return (this.Type != Unit.UnitType.Mount) || (this.OriginalWounds != 1);
+        }
+
+        public bool IsFearOrTerror()
+        {
+            return (this.Terror || this.Fear || this.Undead);
         }
     }
 }

@@ -454,7 +454,8 @@ namespace WarhammerArmyAssembler
                 Attacks = 2,
                 Leadership = 8,
                 Armour = 4,
-                KillingBlow = true
+                KillingBlow = true,
+                Undead = true,
             },
 
             new Enemy
@@ -627,6 +628,7 @@ namespace WarhammerArmyAssembler
                 Ward = 5,
                 Unbreakable = true,
                 Frenzy = true,
+                Undead = true,
 
                 EnemyMount = new Enemy
                 {
@@ -701,6 +703,7 @@ namespace WarhammerArmyAssembler
                 Attacks = 5,
                 Leadership = 10,
                 Ward = 4,
+                Undead = true,
 
                 EnemyMount = new Enemy
                 {
@@ -717,6 +720,7 @@ namespace WarhammerArmyAssembler
                     Leadership = 4,
                     Armour = 5,
                     Terror = true,
+                    Undead = true,
                 }
             },
 

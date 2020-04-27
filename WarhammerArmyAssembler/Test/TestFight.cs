@@ -157,16 +157,16 @@ namespace WarhammerArmyAssembler
                 int enemyRoundWounds = roundWounds[enemy.ID] + (enemyMount != null ? roundWounds[enemyMount.ID] : 0);
 
                 if ((enemy.Wounds > 0) && (enemyRoundWounds > unitRoundWounds))
-                    enemy.Wounds = BreakTest(enemy, enemyMount, unit, unitMount, roundWounds[enemy.ID]);
+                    enemy.Wounds = BreakTest(enemy, enemyMount, unit, unitMount, ref roundWounds);
 
                 if ((enemyMount != null) && enemyMount.IsNotSimpleMount() && (enemyMount.Wounds > 0) && (enemyRoundWounds > unitRoundWounds))
-                    enemyMount.Wounds = BreakTest(enemyMount, enemy, unit, unitMount, roundWounds[enemyMount.ID]);
+                    enemyMount.Wounds = BreakTest(enemyMount, enemy, unit, unitMount, ref roundWounds);
 
                 if ((unit.Wounds > 0) && (unitRoundWounds > enemyRoundWounds))
-                    unit.Wounds = BreakTest(unit, unitMount, enemy, enemyMount, roundWounds[unit.ID]);
+                    unit.Wounds = BreakTest(unit, unitMount, enemy, enemyMount, ref roundWounds);
 
                 if ((unitMount != null) && unitMount.IsNotSimpleMount()  && (unitMount.Wounds > 0) && (unitRoundWounds > enemyRoundWounds))
-                    unitMount.Wounds = BreakTest(unitMount, unit, enemy, enemyMount, roundWounds[unitMount.ID]);
+                    unitMount.Wounds = BreakTest(unitMount, unit, enemy, enemyMount, ref roundWounds);
             }
 
             Console(text, "\n\nEnd: ");
@@ -259,7 +259,7 @@ namespace WarhammerArmyAssembler
 
             if (unit.Unbreakable)
                 Console(goodText, " --> autopassed (unbreakable)");
-            else if (unit.ImmuneToPsychology)
+            else if (unit.ImmuneToPsychology || unit.Undead)
                 Console(goodText, " --> autopassed (imunne to psychology)");
             else if (unit.Frenzy)
                 Console(goodText, " --> autopassed (frenzy)");
@@ -350,7 +350,8 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static int BreakTest(Unit unit, Unit unitFriend, Unit enemy, Unit enemyFriend, int woundInRound)
+        private static int BreakTest(Unit unit, Unit unitFriend, Unit enemy, Unit enemyFriend,
+            ref Dictionary<int, int> woundInRound)
         {
             Console(text, "\n\n{0} break test --> ", unit.Name);
 
@@ -359,16 +360,16 @@ namespace WarhammerArmyAssembler
             if (unit.Stubborn)
                 Console(text, "stubborn --> ");
             else
-                temoraryLeadership -= woundInRound;
+                temoraryLeadership -= woundInRound[unit.ID];
 
             if (temoraryLeadership < 0)
                 temoraryLeadership = 0;
 
-            bool enemyFearOrTerror = ((enemy.Wounds > 0) && (enemy.Terror || enemy.Fear));
-            bool enemyMountFearOrTerror = ((enemyFriend != null) && (enemyFriend.Wounds > 0) ? (enemyFriend.Terror || enemyFriend.Fear) : false);
+            bool enemyFearOrTerror = ((enemy.Wounds > 0) && enemy.IsFearOrTerror());
+            bool enemyMountFearOrTerror = ((enemyFriend != null) && (enemyFriend.Wounds > 0) ? enemyFriend.IsFearOrTerror() : false);
 
-            bool unitFearOrTerror = ((unit.Wounds > 0) && (unit.Terror || unit.Fear));
-            bool unitMountFearOrTerror = ((unitFriend != null) && (unitFriend.Wounds > 0) ? (unitFriend.Terror || unitFriend.Fear) : false);
+            bool unitFearOrTerror = ((unit.Wounds > 0) && unit.IsFearOrTerror());
+            bool unitMountFearOrTerror = ((unitFriend != null) && (unitFriend.Wounds > 0) ? unitFriend.IsFearOrTerror() : false);
 
             bool thereAreMoreOfThem = (
                 (unit.UnitStrength * unit.Size) + (unitFriend != null ? (unitFriend.UnitStrength * unitFriend.Size) : 0) <
@@ -382,19 +383,35 @@ namespace WarhammerArmyAssembler
                 &&
                 (enemyFearOrTerror || enemyMountFearOrTerror)
                 &&
-                !(unit.ImmuneToPsychology || unitFearOrTerror || unitMountFearOrTerror))
+                !(unit.ImmuneToPsychology || unit.Undead || unitFearOrTerror || unitMountFearOrTerror))
             {
                 Console(badText, "autobreak by {0} fear", (enemyFearOrTerror ? enemy.Name : enemyFriend.Name));
                 return 0;
             }
             else
             {
-                if (RollDice(unit, DiceType.LD, enemy, temoraryLeadership, diceNum: 2, breakTest: true))
+                if (RollDice(unit, DiceType.LD, enemy, temoraryLeadership, out int dice, diceNum: 2, breakTest: true))
                     Console(goodText, " --> passed");
                 else
                 {
                     Console(badText, " --> fail");
-                    return 0;
+
+                    if (unit.Undead)
+                    {
+                        int additionalWounds = (dice - temoraryLeadership);
+
+                        Console(badText, " --> {0} additional wounds", additionalWounds);
+
+                        if (unit.Wounds < additionalWounds)
+                            additionalWounds = unit.Wounds;
+
+                        woundInRound[unit.ID] += additionalWounds;
+                        unit.Wounds -= additionalWounds;
+
+                        return unit.Wounds;
+                    }
+                    else
+                        return 0;
                 }
             }
 
@@ -676,6 +693,14 @@ namespace WarhammerArmyAssembler
         private static bool RollDice(Unit unit, DiceType diceType, Unit enemy, int? conditionParam,
             int diceNum = 1, int round = 2, bool breakTest = false, bool hiddenDice = false)
         {
+            return RollDice(unit, diceType, enemy, conditionParam, out int _, diceNum, round, breakTest, hiddenDice);
+        }
+
+        private static bool RollDice(Unit unit, DiceType diceType, Unit enemy, int? conditionParam, out int dice,
+            int diceNum = 1, int round = 2, bool breakTest = false, bool hiddenDice = false)
+        {
+            dice = 0;
+
             if (conditionParam == null)
                 return false;
 
@@ -715,6 +740,8 @@ namespace WarhammerArmyAssembler
                 Console(supplText, ", reroll --> {0}", result);
                 testPassed = TestPassedByDice(result, condition, diceType, breakTest);
             }
+
+            dice = result;
 
             Console(supplText, ")");
 
