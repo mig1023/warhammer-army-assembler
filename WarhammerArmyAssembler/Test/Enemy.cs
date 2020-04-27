@@ -235,8 +235,26 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Orc boys",
+                TestListName = "20 Orc Boys (Orcs&Goblin)",
+                Type = UnitType.Core,
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 3,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 1,
+                Leadership = 7,
+                Armour = 5,
+            },
+
+            new Enemy
+            {
                 Name = "Dryads",
-                TestListName = "Dryads (Wood elves)",
+                TestListName = "20 Dryads (Wood elves)",
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -252,21 +270,73 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Bloodletters",
-                TestListName = "20 Bloodletters (Chaos)",
-                Type = UnitType.Core,
+                Name = "Lothern Sea Guard",
+                TestListName = "20 Back Ark Corsairs (Dark elves)",
                 Size = 20,
-                Movement = 4,
-                WeaponSkill = 5,
-                BallisticSkill = 0,
-                Strength = 5,
+                Movement = 5,
+                WeaponSkill = 4,
+                BallisticSkill = 4,
+                Strength = 3,
                 Toughness = 3,
                 Wounds = 1,
-                Initiative = 4,
+                Initiative = 5,
                 Attacks = 1,
                 Leadership = 8,
                 Armour = 6,
-                Frenzy = true
+                HitFirst = true,
+            },
+
+            new Enemy
+            {
+                Name = "Back Ark Corsairs",
+                TestListName = "20 Back Ark Corsairs (Dark elves)",
+                Size = 20,
+                Movement = 5,
+                WeaponSkill = 4,
+                BallisticSkill = 4,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 5,
+                Attacks = 2,
+                Leadership = 8,
+                Armour = 5,
+                Hate = true,
+            },
+
+            new Enemy
+            {
+                Name = "Dryads",
+                TestListName = "20 Dryads (Wood elves)",
+                Size = 20,
+                Movement = 5,
+                WeaponSkill = 4,
+                BallisticSkill = 0,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 6,
+                Attacks = 2,
+                Leadership = 8,
+                Fear = true,
+            },
+
+            new Enemy
+            {
+                Name = "Bestigor",
+                TestListName = "20 Bestigor (Beasts of Chaos)",
+                Size = 20,
+                Movement = 5,
+                WeaponSkill = 4,
+                BallisticSkill = 3,
+                Strength = 6,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 1,
+                Leadership = 7,
+                Armour = 5,
+                HitLast = true,
             },
 
             new Enemy
@@ -413,6 +483,25 @@ namespace WarhammerArmyAssembler
                 Armour = 5,
                 HitLast = true,
                 Stubborn = true
+            },
+
+            new Enemy
+            {
+                Name = "Bloodletters",
+                TestListName = "20 Bloodletters (Chaos)",
+                Type = UnitType.Core,
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 4,
+                Attacks = 1,
+                Leadership = 8,
+                Armour = 6,
+                Frenzy = true
             },
 
             new Enemy
