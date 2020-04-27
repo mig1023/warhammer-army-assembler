@@ -99,6 +99,27 @@ namespace WarhammerArmyAssembler
                 UnitStrength = 3,
             },
 
+
+            new Enemy
+            {
+                Name = "Dragon Ogre Shaggoth",
+                TestListName = "Dragon Ogre Shaggoth (Beasts of Chaos)",
+                Size = 1,
+                Movement = 7,
+                WeaponSkill = 6,
+                BallisticSkill = 3,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 6,
+                Initiative = 4,
+                Attacks = 5,
+                Leadership = 9,
+                Armour = 4,
+                Terror = true,
+                ImmuneToPsychology = true,
+                UnitStrength = 6,
+            },
+
             new Enemy
             {
                 Name = "Stegadon",
@@ -254,7 +275,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Dryads",
-                TestListName = "20 Dryads (Wood elves)",
+                TestListName = "20 Dryads (Wood Elves)",
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -271,7 +292,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Lothern Sea Guard",
-                TestListName = "20 Back Ark Corsairs (Dark elves)",
+                TestListName = "20 Back Ark Corsairs (Dark Elves)",
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -289,7 +310,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Back Ark Corsairs",
-                TestListName = "20 Back Ark Corsairs (Dark elves)",
+                TestListName = "20 Back Ark Corsairs (Dark Elves)",
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -307,7 +328,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Dryads",
-                TestListName = "20 Dryads (Wood elves)",
+                TestListName = "20 Dryads (Wood Elves)",
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -445,6 +466,62 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesSpecialUnits = new List<Enemy>
         {
+            new Enemy
+            {
+                Name = "Tree Kin",
+                TestListName = "5 Tree Kin (Wood Elves)",
+                Type = UnitType.Special,
+                Size = 5,
+                Movement = 5,
+                WeaponSkill = 4,
+                BallisticSkill = 4,
+                Strength = 4,
+                Toughness = 5,
+                Wounds = 3,
+                Initiative = 3,
+                Attacks = 3,
+                Leadership = 8,
+                Armour = 4,
+                Fear = true,
+            },
+
+            new Enemy
+            {
+                Name = "Chaos Ogres",
+                TestListName = "5 Chaos Ogres (Beasts of Chaos)",
+                Size = 5,
+                Movement = 6,
+                WeaponSkill = 3,
+                BallisticSkill = 2,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 2,
+                Attacks = 3,
+                Leadership = 7,
+                Armour = 6,
+                Fear = true,
+            },
+
+             new Enemy
+            {
+                Name = "Plague Monks",
+                TestListName = "20 Plague Monks (Skaven)",
+                Type = UnitType.Special,
+                Size = 20,
+                Movement = 5,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 3,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 2,
+                Leadership = 5,
+                Frenzy = true,
+                Undead = true,
+            },
+
             new Enemy
             {
                 Name = "Grave Guard",
