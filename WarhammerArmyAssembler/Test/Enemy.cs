@@ -12,6 +12,19 @@ namespace WarhammerArmyAssembler
 
         public string TestListName { get; set; }
 
+        private static Dictionary<string, List<Enemy>> GetEnemiesDictionary()
+        {
+            return  new Dictionary<string, List<Enemy>>
+            {
+                ["Lords"] = new List<Enemy>(EnemiesLords),
+                ["Heroes"] = new List<Enemy>(EnemiesHeroes),
+                ["Core Units"] = new List<Enemy>(EnemiesCoreUnits),
+                ["Special Units"] = new List<Enemy>(EnemiesSpecialUnits),
+                ["Rare Units"] = new List<Enemy>(EnemiesRareUnits),
+                ["Monsters"] = new List<Enemy>(EnemiesMonsters),
+            };
+        }
+
         public static Enemy GetByName(string enemyName)
         {
             foreach (List<Enemy> enemyList in new List<List<Enemy>>
@@ -37,33 +50,12 @@ namespace WarhammerArmyAssembler
 
         public static List<string> GetEnemiesGroups()
         {
-            return new List<string>
-            {
-                "Lords",
-                "Heroes",
-                "Core Units",
-                "Special Units",
-                "Rare Units",
-                "Monsters",
-            };
+            return GetEnemiesDictionary().Keys.ToList<string>();
         }
 
         public static List<Enemy> GetEnemiesByGroup(string groupName)
         {
-            if (groupName == "Core Units")
-                return new List<Enemy>(EnemiesCoreUnits);
-            else if (groupName == "Special Units")
-                return new List<Enemy>(EnemiesSpecialUnits);
-            else if (groupName == "Rare Units")
-                return new List<Enemy>(EnemiesRareUnits);
-            else if (groupName == "Monsters")
-                return new List<Enemy>(EnemiesMonsters);
-            else if (groupName == "Heroes")
-                return new List<Enemy>(EnemiesHeroes);
-            else if (groupName == "Lords")
-                return new List<Enemy>(EnemiesLords);
-            else
-                return new List<Enemy> { };
+            return GetEnemiesDictionary()[groupName];
         }
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
