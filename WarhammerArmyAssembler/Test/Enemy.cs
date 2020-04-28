@@ -789,6 +789,43 @@ namespace WarhammerArmyAssembler
                 ArmourPiercing = 2,
                 MultiWounds = "D3",
             },
+
+            new Enemy
+            {
+                Name = "Malus Darkblade (Tz'arkan)",
+                TestListName = "Malus Darkblade in Tz'arkan state (Dark Elves)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 7,
+                BallisticSkill = 5,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 2,
+                Initiative = 9,
+                Attacks = 3,
+                Leadership = 10,
+                Armour = 3,
+                Reroll = "ToWound",
+                NoArmour = true,
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Spite",
+                    Size = 1,
+                    Movement = 7,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 4,
+                    Wounds = 1,
+                    Initiative = 2,
+                    Attacks = 2,
+                    Leadership = 4,
+                    Armour = 5,
+                    Fear = true,
+                }
+            },
         };
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
