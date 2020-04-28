@@ -99,7 +99,6 @@ namespace WarhammerArmyAssembler
                 UnitStrength = 3,
             },
 
-
             new Enemy
             {
                 Name = "Dragon Ogre Shaggoth",
@@ -292,7 +291,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Lothern Sea Guard",
-                TestListName = "20 Back Ark Corsairs (Dark Elves)",
+                TestListName = "20 Lothern Sea Guard (High Elves)",
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
