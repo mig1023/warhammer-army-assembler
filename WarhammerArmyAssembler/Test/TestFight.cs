@@ -314,10 +314,10 @@ namespace WarhammerArmyAssembler
 
         private static void ShowRoundOrder(List<Unit> allParticipants)
         {
-            Console(supplText, "\nround fight order");
+            Console(supplText, "\nround fight order:");
 
             foreach (Unit u in allParticipants)
-                Console(supplText, " --> {0}", u.Name);
+                Console(supplText, "{0} {1}", (u == allParticipants[0] ? String.Empty : " -->"), u.Name);
         }
 
         public static bool CheckInitiative(Unit unit, Unit enemy)
