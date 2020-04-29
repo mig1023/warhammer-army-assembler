@@ -215,6 +215,7 @@ namespace WarhammerArmyAssembler
                 Initiative = 4,
                 Attacks = 1,
                 Leadership = 2,
+                StrengthInNumbers = true,
             },
 
             new Enemy
@@ -515,10 +516,10 @@ namespace WarhammerArmyAssembler
                 Toughness = 4,
                 Wounds = 1,
                 Initiative = 3,
-                Attacks = 2,
+                Attacks = 3,
                 Leadership = 5,
                 Frenzy = true,
-                Undead = true,
+                StrengthInNumbers = true,
             },
 
             new Enemy
@@ -574,7 +575,7 @@ namespace WarhammerArmyAssembler
                 Toughness = 3,
                 Wounds = 1,
                 Initiative = 4,
-                Attacks = 1,
+                Attacks = 2,
                 Leadership = 8,
                 Armour = 6,
                 Frenzy = true
@@ -714,8 +715,8 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Black Knights",
-                TestListName = "12 Black Knights (Vampire Counts)",
+                Name = "Blood Knights",
+                TestListName = "6 Blood Knights (Vampire Counts)",
                 Size = 12,
                 Movement = 4,
                 WeaponSkill = 5,
@@ -728,7 +729,6 @@ namespace WarhammerArmyAssembler
                 Leadership = 7,
                 Armour = 2,
                 Ward = 5,
-                Unbreakable = true,
                 Frenzy = true,
                 Undead = true,
 
@@ -736,7 +736,7 @@ namespace WarhammerArmyAssembler
                 {
                     Type = UnitType.Mount,
                     Name = "Nightmare",
-                    Size = 12,
+                    Size = 6,
                     Movement = 8,
                     WeaponSkill = 3,
                     BallisticSkill = 0,
