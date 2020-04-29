@@ -43,6 +43,7 @@ namespace WarhammerArmyAssembler
             ["ImpactHit"] = "Impact Hit ([X])",
             ["Stupidity"] = "Stupidity",
             ["Undead"] = "Undead",
+            ["StrengthInNumbers"] = "Strength in numbers!",
         };
 
         public string Name { get; set; }
@@ -104,6 +105,7 @@ namespace WarhammerArmyAssembler
         public bool ColdBlooded { get; set; }
         public bool Stupidity { get; set; }
         public bool Undead { get; set; }
+        public bool StrengthInNumbers { get; set; }
 
         public int UnitStrength { get; set; }
 
@@ -249,6 +251,7 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = this.ColdBlooded,
                 Stupidity = this.Stupidity,
                 Undead = this.Undead,
+                StrengthInNumbers = this.StrengthInNumbers,
                 HitFirst = this.HitFirst,
                 HitLast = this.HitLast,
                 Regeneration = this.Regeneration,
@@ -464,7 +467,7 @@ namespace WarhammerArmyAssembler
 
             Dictionary<int, int> ratio = new Dictionary<int, int>
             {
-                [4] = 3, [7] = 4, [10] = 5, [24] = 6, [28] = 7, [32] = 8,
+                [5] = 3, [7] = 4, [9] = 5, [24] = 6, [28] = 7, [32] = 8,
             };
 
             int frontSize = unit.Size;
@@ -478,6 +481,22 @@ namespace WarhammerArmyAssembler
             unit.Wounds *= unit.Size;
 
             return unit;
+        }
+
+        public int GetRank()
+        {
+            int rank = 1;
+
+            Dictionary<int, int> ratio = new Dictionary<int, int>
+            {
+                [6] = 2, [13] = 3, [18] = 4,
+            };
+
+            foreach (KeyValuePair<int, int> r in ratio)
+                if (this.Size >= r.Key)
+                    rank = r.Value;
+
+            return rank;
         }
 
         public void AddAmmunition(int id)

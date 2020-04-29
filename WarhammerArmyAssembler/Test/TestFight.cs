@@ -696,6 +696,21 @@ namespace WarhammerArmyAssembler
             return RollDice(unit, diceType, enemy, conditionParam, out int _, diceNum, round, breakTest, hiddenDice);
         }
 
+        private static int GetRankBonus(Unit unit)
+        {
+            if (!unit.StrengthInNumbers)
+                return 0;
+            else
+            {
+                int rankBonus = unit.GetRank() - 1;
+
+                if (rankBonus < 0)
+                    rankBonus = 0;
+
+                return rankBonus;
+            }
+        }
+
         private static bool RollDice(Unit unit, DiceType diceType, Unit enemy, int? conditionParam, out int dice,
             int diceNum = 1, int round = 2, bool breakTest = false, bool hiddenDice = false)
         {
@@ -713,7 +728,24 @@ namespace WarhammerArmyAssembler
 
             int condition = conditionParam ?? 0;
 
-            Console(supplText, "({0}{1}, ", condition, (diceType == DiceType.LD ? " LD" : "+"));
+            if (diceType == DiceType.LD)
+            {
+                int rankBonus = GetRankBonus(unit);
+
+                if (rankBonus <= 0)
+                    Console(supplText, "({0} LD, ", condition);
+                else
+                {
+                    condition += rankBonus;
+
+                    if (condition > 10)
+                        condition = 10;
+
+                    Console(supplText, "({0} LD with rank bonus, ", condition);
+                }
+            }
+            else
+                Console(supplText, "({0}+, ", condition);
 
             int result = RollAllDice(diceType, unitTestPassed, diceNum);
 

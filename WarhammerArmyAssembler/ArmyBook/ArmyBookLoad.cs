@@ -116,6 +116,7 @@ namespace WarhammerArmyAssembler
                 newUnit.ColdBlooded = BoolParse(additionalParam["ColdBlooded"]);
                 newUnit.Stupidity = BoolParse(additionalParam["Stupidity"]);
                 newUnit.Undead = BoolParse(additionalParam["Undead"]);
+                newUnit.StrengthInNumbers = BoolParse(additionalParam["StrengthInNumbers"]);
                 newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
                 newUnit.HitLast = BoolParse(additionalParam["HitLast"]);
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
@@ -197,6 +198,7 @@ namespace WarhammerArmyAssembler
             newWeapon.Reroll = StringParse(xmlNode["Reroll"]);
             newWeapon.Stupidity = BoolParse(xmlNode["Stupidity"]);
             newWeapon.Undead = BoolParse(xmlNode["Undead"]);
+            newWeapon.StrengthInNumbers = BoolParse(xmlNode["StrengthInNumbers"]);
             newWeapon.ImpactHit = StringParse(xmlNode["ImpactHit"]);
 
             newWeapon.Points = DoubleParse(xmlNode["Points"]);

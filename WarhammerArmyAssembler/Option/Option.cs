@@ -55,6 +55,7 @@ namespace WarhammerArmyAssembler
         public bool ColdBlooded { get; set; }
         public bool Stupidity { get; set; }
         public bool Undead { get; set; }
+        public bool StrengthInNumbers { get; set; }
         public string ImpactHit { get; set; }
 
         public bool BigWeapon { get; set; }
@@ -171,6 +172,7 @@ namespace WarhammerArmyAssembler
                 Reroll = this.Reroll,
                 Stupidity = this.Stupidity,
                 Undead = this.Undead,
+                StrengthInNumbers = this.StrengthInNumbers,
                 ImpactHit = this.ImpactHit,
 
                 BigWeapon = this.BigWeapon,
