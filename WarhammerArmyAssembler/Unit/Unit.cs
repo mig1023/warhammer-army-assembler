@@ -487,6 +487,9 @@ namespace WarhammerArmyAssembler
         {
             int rank = 1;
 
+            if (!this.IsUnit())
+                return rank;
+
             Dictionary<int, int> ratio = new Dictionary<int, int>
             {
                 [6] = 2, [13] = 3, [18] = 4,
