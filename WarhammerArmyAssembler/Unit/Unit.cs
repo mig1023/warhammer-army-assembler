@@ -493,7 +493,7 @@ namespace WarhammerArmyAssembler
             };
 
             foreach (KeyValuePair<int, int> r in ratio)
-                if (this.Size >= r.Key)
+                if (this.Wounds >= r.Key)
                     rank = r.Value;
 
             return rank;
