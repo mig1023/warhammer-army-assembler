@@ -101,6 +101,23 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Hippogryph",
+                TestListName = "Hippogryph (Brettonia)",
+                Size = 1,
+                Movement = 8,
+                WeaponSkill = 4,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 4,
+                Initiative = 4,
+                Attacks = 4,
+                Leadership = 8,
+                Terror = true,
+            },
+
+            new Enemy
+            {
                 Name = "Dragon Ogre Shaggoth",
                 TestListName = "Dragon Ogre Shaggoth (Beasts of Chaos)",
                 Size = 1,
@@ -221,7 +238,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Men-at-arms",
-                TestListName = "20 Men-at-arms (Bretonnia)",
+                TestListName = "20 Men-at-arms (Brettonia)",
                 Type = UnitType.Core,
                 Size = 20,
                 Movement = 4,
@@ -363,7 +380,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Knights of the Realms",
-                TestListName = "8 Knights of the Realms (Bretonnia)",
+                TestListName = "8 Knights of the Realms (Brettonia)",
                 Size = 8,
                 Movement = 4,
                 WeaponSkill = 4,
@@ -682,7 +699,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Grail Knights",
-                TestListName = "12 Grail Knights (Bretonnia)",
+                TestListName = "12 Grail Knights (Brettonia)",
                 Size = 12,
                 Movement = 4,
                 WeaponSkill = 5,
