@@ -822,22 +822,20 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Deathmaster Snikch",
-                TestListName = "Deathmaster Snikch (Skaven)",
+                Name = "Drycha",
+                TestListName = "Drycha (Wood Elves)",
                 Size = 1,
-                Movement = 6,
-                WeaponSkill = 8,
-                BallisticSkill = 6,
-                Strength = 4,
+                Movement = 5,
+                WeaponSkill = 7,
+                BallisticSkill = 4,
+                Strength = 5,
                 Toughness = 4,
-                Wounds = 2,
-                Initiative = 10,
-                Attacks = 6,
+                Wounds = 3,
+                Initiative = 8,
+                Attacks = 5,
                 Leadership = 8,
-                Ward = 4,
-                HitFirst = true,
-                ArmourPiercing = 2,
-                MultiWounds = "D3",
+                Terror = true,
+                Reroll = "ToHit",
             },
 
             new Enemy
@@ -875,6 +873,26 @@ namespace WarhammerArmyAssembler
                     Armour = 5,
                     Fear = true,
                 }
+            },
+
+            new Enemy
+            {
+                Name = "Deathmaster Snikch",
+                TestListName = "Deathmaster Snikch (Skaven)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 8,
+                BallisticSkill = 6,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 2,
+                Initiative = 10,
+                Attacks = 6,
+                Leadership = 8,
+                Ward = 4,
+                HitFirst = true,
+                ArmourPiercing = 2,
+                MultiWounds = "D3",
             },
         };
 
