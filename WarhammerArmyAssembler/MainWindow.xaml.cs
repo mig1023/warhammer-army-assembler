@@ -553,7 +553,20 @@ namespace WarhammerArmyAssembler
 
         private void maximizeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.WindowState = (this.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized);
+            string newButtonCaption = null;
+
+            if (WindowState == WindowState.Maximized)
+            {
+                WindowState = WindowState.Normal;
+                newButtonCaption = "Max";
+            }
+            else
+            {
+                WindowState = WindowState.Maximized;
+                newButtonCaption = "Normal";
+            }
+
+            maximizeWindow.Content = String.Format("  {0}  |", newButtonCaption);
         }
 
         private void minimizeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
