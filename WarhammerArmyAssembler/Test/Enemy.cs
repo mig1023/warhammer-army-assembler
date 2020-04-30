@@ -118,6 +118,39 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "War Hydra",
+                TestListName = "War Hydra (Dark Elves)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 4,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 6,
+                Initiative = 2,
+                Attacks = 5,
+                Leadership = 6,
+                Armour = 4,
+                Terror = true,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Apparentice",
+                    Size = 2,
+                    Movement = 5,
+                    WeaponSkill = 4,
+                    BallisticSkill = 4,
+                    Strength = 3,
+                    Toughness = 3,
+                    Wounds = 2,
+                    Initiative = 3,
+                    Attacks = 2,
+                    Leadership = 8,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Dragon Ogre Shaggoth",
                 TestListName = "Dragon Ogre Shaggoth (Beasts of Chaos)",
                 Size = 1,
