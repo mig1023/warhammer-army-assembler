@@ -822,6 +822,25 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Josef Bugman",
+                TestListName = "Josef Bugman Master Brewer(Dwarfs)",
+                Size = 1,
+                Movement = 3,
+                WeaponSkill = 6,
+                BallisticSkill = 5,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 2,
+                Initiative = 4,
+                Attacks = 4,
+                Leadership = 10,
+                Armour = 3,
+                Ward = 4,
+                ImmuneToPsychology = true,
+            },
+
+            new Enemy
+            {
                 Name = "Drycha",
                 TestListName = "Drycha (Wood Elves)",
                 Size = 1,
