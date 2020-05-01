@@ -26,7 +26,8 @@ namespace WarhammerArmyAssembler
         static Brush goodText = Brushes.Green;
         static Brush badText = Brushes.Red;
 
-        public static void StatisticTest(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount)
+        public static void StatisticTest(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount,
+            bool royalNotation = false)
         {
             int[] result = new int[3];
 
@@ -37,30 +38,22 @@ namespace WarhammerArmyAssembler
 
             InterfaceTestUnit.PreventConsoleOutput(prevent: false);
 
-            Console(text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
+            if (royalNotation)
+                Console(text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n\n", enemy.Name, (double)result[1] / 10, (double)result[2] / 10);
+            else
+            {
+                Console(text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
 
-            if (result[0] > 0)
-                Console(text, "\nNobody win: {0:f1}%", (double)result[0] / 10);
+                if (result[0] > 0)
+                    Console(text, "\nNobody win: {0:f1}%", (double)result[0] / 10);
+            }
         }
 
         public static void BattleRoyaleTest(Unit unit, Unit unitMount)
         {
             foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
                 foreach (Enemy enemy in Enemy.GetEnemiesByGroup(enemyGroupName))
-                {
-                    int[] result = new int[3];
-
-                    InterfaceTestUnit.PreventConsoleOutput(prevent: true);
-
-                    for (int i = 0; i < 1000; i++)
-                        result[FullTest(unit, unitMount, enemy, enemy.EnemyMount)] += 1;
-
-                    InterfaceTestUnit.PreventConsoleOutput(prevent: false);
-
-                    Console(text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
-
-                    Console(supplText, "\n--------------------------\n");
-                }
+                    StatisticTest(unit, unitMount, enemy, enemy.EnemyMount, royalNotation: true);
         }
 
         public static string ThisIsUnit(Unit unit)
