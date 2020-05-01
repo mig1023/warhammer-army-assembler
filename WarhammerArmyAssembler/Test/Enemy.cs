@@ -880,6 +880,28 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Konrad",
+                TestListName = "Konrad Von Carstein (Vampire Counts)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 7,
+                BallisticSkill = 4,
+                Strength = 5,
+                Toughness = 4,
+                Wounds = 2,
+                Initiative = 6,
+                Attacks = 4,
+                Leadership = 6,
+                Armour = 5,
+                Fear = true,
+                HitFirst = true,
+                Reroll = "ToHit",
+                MultiWounds = "2",
+                Undead = true,
+            },
+
+            new Enemy
+            {
                 Name = "Malus Darkblade (Tz'arkan)",
                 TestListName = "Malus Darkblade in Tz'arkan state (Dark Elves)",
                 Size = 1,
