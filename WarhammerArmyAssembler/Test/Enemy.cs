@@ -972,6 +972,46 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Kroq-Gar Ancient",
+                TestListName = "Kroq-Gar Ancient (Lizardmen)",
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 6,
+                BallisticSkill = 3,
+                Strength = 6,
+                Toughness = 5,
+                Wounds = 3,
+                Initiative = 4,
+                Attacks = 5,
+                Leadership = 8,
+                ColdBlooded = true,
+                Armour = 3,
+                Ward = 5,
+                MultiWounds = "2",
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Grymloq",
+                    Size = 1,
+                    Movement = 7,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 7,
+                    Toughness = 5,
+                    Wounds = 5,
+                    Initiative = 2,
+                    Attacks = 5,
+                    Leadership = 5,
+                    Armour = 4,
+                    Terror = true,
+                    ColdBlooded = true,
+                    MultiWounds = "D3",
+                    UnitStrength = 5,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Grimgor Ironhide",
                 TestListName = "Grimgor Ironhide (Orcs&Goblin)",
                 Size = 1,
