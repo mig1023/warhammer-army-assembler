@@ -247,7 +247,8 @@
                     </Border>
                     <TextBlock x:Name="specialRulesEnemyTest" Visibility="Hidden" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="448"/>
                     <Label x:Name="startFullTest" Content="Full test" Visibility="Hidden" Height="39" Canvas.Left="37" Canvas.Top="479" Width="54" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startFullTest_MouseDown"/>
-                    <Label x:Name="startStatisticTest" Content="Statistic test" Visibility="Hidden" Height="39" Canvas.Left="107" Canvas.Top="479" Width="74" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startStatisticTest_MouseDown"/>
+                    <Label x:Name="startStatisticTest" Content="Statistic test" Visibility="Visible" Height="39" Canvas.Left="107" Canvas.Top="479" Width="78" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startStatisticTest_MouseDown"/>
+                    <Label x:Name="startBattleRoyale" Content="Battle Royale" Visibility="Visible" Height="39" Canvas.Left="200" Canvas.Top="479" Width="88" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startBattleRoyale_MouseDown"/>
                     <RichTextBox x:Name="testConsole" Block.LineHeight="4" BorderBrush="Black" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Visibility="Hidden" BorderThickness="1" Padding="15" Height="59" Canvas.Left="37" Canvas.Top="538" Width="330"/>
                 </Canvas>
             </ScrollViewer>

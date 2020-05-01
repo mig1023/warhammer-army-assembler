@@ -481,7 +481,7 @@ namespace WarhammerArmyAssembler
             marginTop += Interface.ZeroFuse(enemyGrid.ActualHeight - 66);
 
             foreach (FrameworkElement element in new List<FrameworkElement> {
-                specialRulesEnemyTest, startFullTest, startStatisticTest, testConsole,
+                specialRulesEnemyTest, startFullTest, startStatisticTest, startBattleRoyale, testConsole,
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 
@@ -538,6 +538,14 @@ namespace WarhammerArmyAssembler
             armyUnitTest_Resize();
             InterfaceTestUnit.CleanConsole();
             Test.TestStatistic();
+            testConsole.Visibility = Visibility.Visible;
+        }
+
+        private void startBattleRoyale_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            armyUnitTest_Resize();
+            InterfaceTestUnit.CleanConsole();
+            Test.TestBattleRoyal();
             testConsole.Visibility = Visibility.Visible;
         }
 

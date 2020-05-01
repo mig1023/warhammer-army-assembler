@@ -42,5 +42,10 @@ namespace WarhammerArmyAssembler
         {
             TestFight.StatisticTest(unit, unitMount, enemy, enemyMount);
         }
+
+        public static void TestBattleRoyal()
+        {
+            TestFight.BattleRoyaleTest(unit, unitMount);
+        }
     }
 }

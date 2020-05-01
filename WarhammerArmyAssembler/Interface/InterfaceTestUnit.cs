@@ -115,7 +115,8 @@ namespace WarhammerArmyAssembler
                 Interface.main.enemyGridContainer,
                 Interface.main.specialRulesEnemyTest,
                 Interface.main.startFullTest,
-                Interface.main.startStatisticTest
+                Interface.main.startStatisticTest,
+                Interface.main.startBattleRoyale,
             })
                 element.Visibility = System.Windows.Visibility.Visible;
 
@@ -132,6 +133,7 @@ namespace WarhammerArmyAssembler
                 Interface.main.specialRulesEnemyTest,
                 Interface.main.startFullTest,
                 Interface.main.startStatisticTest,
+                Interface.main.startBattleRoyale,
                 Interface.main.testConsole
             })
                 element.Visibility = Visibility.Hidden;
@@ -140,8 +142,11 @@ namespace WarhammerArmyAssembler
             LoadUnitParamInInterface(unitForLoad: Test.unit, mountForLoad: Test.unitMount, elemetnsPostfix: "Test", unitGrid: Interface.main.unitGrid);
             LoadSpecialRules(unitForLoad: Test.unit, target: Interface.main.specialRulesTest, onlyUnitRules: true);
 
-            foreach (Label label in new List<Label> { Interface.main.startFullTest, Interface.main.startStatisticTest })
-            {
+            foreach (Label label in new List<Label> {
+                Interface.main.startFullTest,
+                Interface.main.startStatisticTest,
+                Interface.main.startBattleRoyale,
+            }) {
                 label.Foreground = ArmyBook.MainColor;
                 label.BorderBrush = ArmyBook.MainColor;
             }
