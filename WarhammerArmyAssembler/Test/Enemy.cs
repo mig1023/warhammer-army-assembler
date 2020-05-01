@@ -823,7 +823,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Josef Bugman",
-                TestListName = "Josef Bugman Master Brewer(Dwarfs)",
+                TestListName = "Josef Bugman Master Brewer (Dwarfs)",
                 Size = 1,
                 Movement = 3,
                 WeaponSkill = 6,
@@ -855,6 +855,27 @@ namespace WarhammerArmyAssembler
                 Leadership = 8,
                 Terror = true,
                 Reroll = "ToHit",
+            },
+
+            new Enemy
+            {
+                Name = "Caradryan",
+                TestListName = "Caradryan, Capitain ot The Phoenix Guard (High Elves)",
+                Size = 1,
+                Movement = 5,
+                WeaponSkill = 6,
+                BallisticSkill = 6,
+                Strength = 4,
+                Toughness = 3,
+                Wounds = 2,
+                Initiative = 7,
+                Attacks = 3,
+                Leadership = 9,
+                Armour = 5,
+                Ward = 4,
+                Fear = true,
+                HitFirst = true,
+                MultiWounds = "D3",
             },
 
             new Enemy
