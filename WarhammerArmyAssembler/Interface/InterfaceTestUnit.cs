@@ -29,14 +29,17 @@ namespace WarhammerArmyAssembler
             {
                 unitGrid.RowDefinitions.RemoveAt(2);
 
-                foreach (FrameworkElement f in mountRow[unitGrid.Name])
+                if (mountRow.ContainsKey(unitGrid.Name))
                 {
-                    Panel p = (f as Panel);
-                    p.Children.Clear();
-                    unitGrid.Children.Remove(p);
-                }
+                    foreach (FrameworkElement f in mountRow[unitGrid.Name])
+                    {
+                        Panel p = (f as Panel);
+                        p.Children.Clear();
+                        unitGrid.Children.Remove(p);
+                    }
 
-                mountRow.Clear();
+                    mountRow[unitGrid.Name].Clear();
+                }
             }
 
             if ((unitForLoad.MountOn > 0) || (unitForLoad.EnemyMount != null))
