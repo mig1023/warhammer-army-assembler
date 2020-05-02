@@ -72,6 +72,14 @@ namespace WarhammerArmyAssembler
             Interface.main.armyUnitTest_Resize();
         }
 
+        public static void startTest(Test.TestTypes testType)
+        {
+            Interface.main.armyUnitTest_Resize();
+            CleanConsole();
+            Test.TestByName(testType);
+            Interface.main.testConsole.Visibility = Visibility.Visible;
+        }
+
         private static void AddMountUnitParam(string param, int gridIndex, Grid unitGrid)
         {
             StackPanel panel = new StackPanel
