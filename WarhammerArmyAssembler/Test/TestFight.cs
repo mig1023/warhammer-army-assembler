@@ -37,6 +37,7 @@ namespace WarhammerArmyAssembler
             bool royalNotation = false)
         {
             int[] result = new int[3];
+            string currentText = InterfaceTestUnit.GetFullConsoleText();
 
             InterfaceTestUnit.PreventConsoleOutput(prevent: true);
 
@@ -46,10 +47,7 @@ namespace WarhammerArmyAssembler
             InterfaceTestUnit.PreventConsoleOutput(prevent: false);
 
             if (royalNotation)
-            {
                 Console(text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n", enemy.Name, (double)result[1] / 10, (double)result[2] / 10);                
-                
-            }
             else
             {
                 Console(text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
@@ -57,6 +55,9 @@ namespace WarhammerArmyAssembler
                 if (result[0] > 0)
                     Console(text, "\nNobody win: {0:f1}%", (double)result[0] / 10);
             }
+
+            if (currentText == String.Empty)
+                Console(text, "\n");
 
             WinDefeatScale(result[1], result[2]);
         }
@@ -78,7 +79,7 @@ namespace WarhammerArmyAssembler
             Console(text, "\n\n");
         }
 
-        public static string ThisIsUnit(Unit unit)
+        private static string ThisIsUnit(Unit unit)
         {
             return (unit.IsUnit() ? " (unit)" : String.Empty);
         }

@@ -80,6 +80,16 @@ namespace WarhammerArmyAssembler
             Interface.main.testConsole.Visibility = Visibility.Visible;
         }
 
+        public static string GetFullConsoleText()
+        {
+            TextRange text = new TextRange(
+                Interface.main.testConsole.Document.ContentStart,
+                Interface.main.testConsole.Document.ContentEnd
+            );
+
+            return text.Text;
+        }
+
         private static void AddMountUnitParam(string param, int gridIndex, Grid unitGrid)
         {
             StackPanel panel = new StackPanel
