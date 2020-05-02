@@ -137,11 +137,14 @@ namespace WarhammerArmyAssembler
                 Interface.main.specialRulesEnemyTest,
                 Interface.main.startFullTest,
                 Interface.main.startStatisticTest,
-                Interface.main.startBattleRoyale,
             })
                 element.Visibility = System.Windows.Visibility.Visible;
 
-
+            Interface.main.startBattleRoyale.Margin = Interface.Thick(
+                Interface.main.startBattleRoyale,
+                top: Interface.main.startStatisticTest.Margin.Top + 154,
+                left: Interface.main.startBattleRoyale.Margin.Left + 163
+            ); 
         }
 
         public static void TestCanvasPrepare(Unit unit)
@@ -154,10 +157,11 @@ namespace WarhammerArmyAssembler
                 Interface.main.specialRulesEnemyTest,
                 Interface.main.startFullTest,
                 Interface.main.startStatisticTest,
-                Interface.main.startBattleRoyale,
                 Interface.main.testConsole
             })
                 element.Visibility = Visibility.Hidden;
+
+            Interface.main.startBattleRoyale.Visibility = Visibility.Visible;
 
             Interface.main.armyTestUnit.Content = Test.unit.Name;
             LoadUnitParamInInterface(unitForLoad: Test.unit, mountForLoad: Test.unitMount, elemetnsPostfix: "Test", unitGrid: Interface.main.unitGrid);

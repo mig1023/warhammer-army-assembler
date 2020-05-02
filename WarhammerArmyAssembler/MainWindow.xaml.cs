@@ -485,6 +485,13 @@ namespace WarhammerArmyAssembler
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 
+            if (enemyGridContainer.Visibility == Visibility.Visible)
+                startBattleRoyale.Margin = Interface.Thick(
+                    enemyForTestText,
+                    top: marginTop + 154,
+                    left: startBattleRoyale.Margin.Left + 163
+                );
+
             double unitTestHeight = (double)enemyForTest.GetValue(Canvas.TopProperty) + enemyForTest.ActualHeight + 50;
 
             if (enemyGridContainer.Visibility == Visibility.Visible)
