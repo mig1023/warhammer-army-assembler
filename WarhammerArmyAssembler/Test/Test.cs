@@ -8,6 +8,8 @@ namespace WarhammerArmyAssembler
 {
     class Test
     {
+        public enum TestTypes { fullTest, statisticTest, battleRoyale }; 
+
         public static Unit unit = null;
         public static Unit unitMount = null;
         public static Unit enemy = null;
@@ -33,19 +35,14 @@ namespace WarhammerArmyAssembler
                 Test.enemyMount = null;
         }
 
-        public static void TestFull()
+        public static void TestByName(TestTypes testType)
         {
-            TestFight.FullTest(unit, unitMount, enemy, enemyMount);
-        }
-
-        public static void TestStatistic()
-        {
-            TestFight.StatisticTest(unit, unitMount, enemy, enemyMount);
-        }
-
-        public static void TestBattleRoyal()
-        {
-            TestFight.BattleRoyaleTest(unit, unitMount);
+            if (testType == TestTypes.battleRoyale)
+                TestFight.BattleRoyaleTest(unit, unitMount);
+            else if (testType == TestTypes.statisticTest)
+                TestFight.StatisticTest(unit, unitMount, enemy, enemyMount);
+            else
+                TestFight.FullTest(unit, unitMount, enemy, enemyMount);
         }
     }
 }

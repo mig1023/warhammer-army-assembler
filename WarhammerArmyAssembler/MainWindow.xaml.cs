@@ -525,28 +525,27 @@ namespace WarhammerArmyAssembler
             InterfaceTestUnit.LoadEnemyGroups();
         }
 
-        private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e)
+        private void startTest(Test.TestTypes testType)
         {
             armyUnitTest_Resize();
             InterfaceTestUnit.CleanConsole();
-            Test.TestFull();
+            Test.TestByName(testType);
             testConsole.Visibility = Visibility.Visible;
+        }
+
+        private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            startTest(Test.TestTypes.fullTest);
         }
 
         private void startStatisticTest_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            armyUnitTest_Resize();
-            InterfaceTestUnit.CleanConsole();
-            Test.TestStatistic();
-            testConsole.Visibility = Visibility.Visible;
+            startTest(Test.TestTypes.statisticTest);
         }
 
         private void startBattleRoyale_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            armyUnitTest_Resize();
-            InterfaceTestUnit.CleanConsole();
-            Test.TestBattleRoyal();
-            testConsole.Visibility = Visibility.Visible;
+            startTest(Test.TestTypes.battleRoyale);
         }
 
         private void dragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
