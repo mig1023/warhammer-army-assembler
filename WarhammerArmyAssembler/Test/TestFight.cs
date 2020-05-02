@@ -26,6 +26,13 @@ namespace WarhammerArmyAssembler
         static Brush goodText = Brushes.Green;
         static Brush badText = Brushes.Red;
 
+        public static void BattleRoyaleTest(Unit unit, Unit unitMount)
+        {
+            foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
+                foreach (Enemy enemy in Enemy.GetEnemiesByGroup(enemyGroupName))
+                    StatisticTest(unit, unitMount, enemy, enemy.EnemyMount, royalNotation: true);
+        }
+
         public static void StatisticTest(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount,
             bool royalNotation = false)
         {
@@ -39,7 +46,10 @@ namespace WarhammerArmyAssembler
             InterfaceTestUnit.PreventConsoleOutput(prevent: false);
 
             if (royalNotation)
-                Console(text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n\n", enemy.Name, (double)result[1] / 10, (double)result[2] / 10);
+            {
+                Console(text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n", enemy.Name, (double)result[1] / 10, (double)result[2] / 10);                
+                
+            }
             else
             {
                 Console(text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
@@ -47,13 +57,25 @@ namespace WarhammerArmyAssembler
                 if (result[0] > 0)
                     Console(text, "\nNobody win: {0:f1}%", (double)result[0] / 10);
             }
+
+            WinDefeatScale(result[1], result[2]);
         }
 
-        public static void BattleRoyaleTest(Unit unit, Unit unitMount)
+        private static void WinDefeatScale(double win, double defeat)
         {
-            foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
-                foreach (Enemy enemy in Enemy.GetEnemiesByGroup(enemyGroupName))
-                    StatisticTest(unit, unitMount, enemy, enemy.EnemyMount, royalNotation: true);
+            Brush scaleColor = goodText;
+
+            foreach(double param in new List<double> { win, defeat })
+            {
+                int scale = (int)param / 10;
+
+                for (int i = 0; i < scale; i++)
+                    Console(scaleColor, "|");
+
+                scaleColor = badText;
+            }
+
+            Console(text, "\n\n");
         }
 
         public static string ThisIsUnit(Unit unit)
