@@ -324,6 +324,24 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Skeleton Warriors",
+                TestListName = "20 Skeleton Warriors (Tomb Kings)",
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 2,
+                BallisticSkill = 2,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 1,
+                Leadership = 5,
+                Armour = 5,
+                Undead = true,
+            },
+
+            new Enemy
+            {
                 Name = "Dryads",
                 TestListName = "20 Dryads (Wood Elves)",
                 Size = 20,
