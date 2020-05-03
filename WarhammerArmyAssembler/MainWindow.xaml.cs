@@ -485,27 +485,32 @@ namespace WarhammerArmyAssembler
             })
                 element.Margin = Interface.Thick(enemyForTestText, top: marginTop);
 
-            if (enemyGridContainer.Visibility == Visibility.Visible)
-                startBattleRoyale.Margin = Interface.Thick(
-                    enemyForTestText,
-                    top: marginTop + 154,
-                    left: startBattleRoyale.Margin.Left + 163
-                );
-
             double unitTestHeight = (double)enemyForTest.GetValue(Canvas.TopProperty) + enemyForTest.ActualHeight + 50;
+            double royalConsoleSize = 0;
 
             if (enemyGridContainer.Visibility == Visibility.Visible)
             {
                 double startButtonPosition = (double)startFullTest.GetValue(Canvas.TopProperty);
                 unitTestHeight = startFullTest.Margin.Top + startFullTest.ActualHeight + startButtonPosition + 20;
-            }
 
+                startBattleRoyale.Margin = Interface.Thick(
+                    enemyForTestText,
+                    top: marginTop + 154,
+                    left: startBattleRoyale.Margin.Left + 163
+                );
+            }
+            else
+            {
+                testConsole.Margin = Interface.Thick(enemyForTestText, top: marginTop - 155);
+                royalConsoleSize = -70;
+            }
+            
             if (unitTestHeight + 140 < armyUnitTestScroll.ActualHeight)
-                testConsole.Height = Interface.ZeroFuse(armyUnitTestScroll.ActualHeight - unitTestHeight - 20);
+                testConsole.Height = Interface.ZeroFuse(armyUnitTestScroll.ActualHeight - unitTestHeight - 20) + royalConsoleSize;
             else
             {
                 unitTestHeight += 140;
-                testConsole.Height = 120;
+                testConsole.Height = 120 + royalConsoleSize;
             }
 
             armyUnitTest.Height = unitTestHeight;
@@ -525,6 +530,8 @@ namespace WarhammerArmyAssembler
         {
             InterfaceTestUnit.TestEnemyPrepare();
             InterfaceTestUnit.TestCanvasShow();
+
+            armyUnitTest_Resize();
         }
 
         private void enemyGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
