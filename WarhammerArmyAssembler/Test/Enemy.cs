@@ -249,6 +249,27 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Necrosphinx",
+                TestListName = "Necrosphinx (Tomb Kings)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 4,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 8,
+                Wounds = 5,
+                Initiative = 1,
+                Attacks = 5,
+                Leadership = 8,
+                Armour = 3,
+                Terror = true,
+                UnitStrength = 5,
+                KillingBlow = true,
+                Undead = true,
+            },
+
+            new Enemy
+            {
                 Name = "Star Dragon",
                 TestListName = "Star Dragon (High Elves)",
                 Size = 1,
