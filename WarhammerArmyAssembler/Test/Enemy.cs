@@ -674,6 +674,24 @@ namespace WarhammerArmyAssembler
         {
             new Enemy
             {
+                Name = "Waywathers",
+                TestListName = "16 Waywathers (Wood Elves)",
+                Type = UnitType.Rare,
+                Size = 16,
+                Movement = 5,
+                WeaponSkill = 4,
+                BallisticSkill = 5,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 5,
+                Attacks = 2,
+                Leadership = 8,
+                HitFirst = true
+            },
+
+            new Enemy
+            {
                 Name = "White Lions",
                 TestListName = "16 White Lions (High Elves)",
                 Type = UnitType.Rare,
