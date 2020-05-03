@@ -101,6 +101,25 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Tomb Scorpion",
+                TestListName = "Tomb Scorpion (Tomb Kings)",
+                Size = 1,
+                Movement = 7,
+                WeaponSkill = 4,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 3,
+                Initiative = 3,
+                Attacks = 4,
+                Leadership = 8,
+                Undead = true,
+                KillingBlow = true,
+                PoisonAttack = true,
+            },
+
+            new Enemy
+            {
                 Name = "Hippogryph",
                 TestListName = "Hippogryph (Brettonia)",
                 Size = 1,
