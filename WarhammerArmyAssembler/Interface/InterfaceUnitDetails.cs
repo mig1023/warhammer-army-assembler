@@ -165,7 +165,7 @@ namespace WarhammerArmyAssembler
             if (unit.GetSpecialRules().Count > 0)
                 margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
-            Interface.main.unitDetail.Width = margins[0] + lastColumnMaxWidth + 10;
+            Interface.main.unitDetail.Width = margins[0] + lastColumnMaxWidth + 25;
 
             if (Interface.main.unitDetail.Width > Interface.main.unitDetailScroll.Width)
                 Interface.main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
@@ -200,8 +200,6 @@ namespace WarhammerArmyAssembler
 
             AddOptionsList(unitID, unit);
         }
-
-
 
         private static double AddLabel(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
             bool selected = false, double points = 0, bool perModel = false, bool bold = false, string addLine = "")
