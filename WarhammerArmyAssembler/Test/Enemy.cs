@@ -862,7 +862,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Blood Knights",
                 TestListName = "6 Blood Knights (Vampire Counts)",
-                Size = 12,
+                Size = 6,
                 Movement = 4,
                 WeaponSkill = 5,
                 BallisticSkill = 3,
@@ -891,6 +891,40 @@ namespace WarhammerArmyAssembler
                     Initiative = 2,
                     Attacks = 1,
                     Leadership = 3,
+                }
+            },
+
+            new Enemy
+            {
+                Name = "Skullcrushers of Khorne",
+                TestListName = "6 Skullcrushers of Khorne (Chaos)",
+                Size = 6,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 5,
+                Attacks = 2,
+                Leadership = 8,
+                Armour = 1,
+                Fear = true,
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Juggernaut",
+                    Size = 6,
+                    Movement = 7,
+                    WeaponSkill = 5,
+                    BallisticSkill = 0,
+                    Strength = 5,
+                    Toughness = 4,
+                    Wounds = 3,
+                    Initiative = 2,
+                    Attacks = 3,
+                    Leadership = 7,
                 }
             },
         };
