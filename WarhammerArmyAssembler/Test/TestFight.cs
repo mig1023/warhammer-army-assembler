@@ -29,8 +29,25 @@ namespace WarhammerArmyAssembler
         public static void BattleRoyaleTest(Unit unit, Unit unitMount)
         {
             foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
+            {
+                string currentText = InterfaceTestUnit.GetFullConsoleText();
+
+                Console(supplText, "{0}\n\n", enemyGroupName.ToUpper());
+
+                if (currentText == String.Empty)
+                    Console(text, "\n");
+
                 foreach (Enemy enemy in Enemy.GetEnemiesByGroup(enemyGroupName))
-                    StatisticTest(unit, unitMount, enemy, enemy.EnemyMount, royalNotation: true);
+                {
+                    Unit currentEnemy = enemy.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+                    Unit currentMount = null;
+
+                    if (currentEnemy.EnemyMount != null)
+                        currentMount = enemy.EnemyMount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+
+                    StatisticTest(unit, unitMount, currentEnemy, currentMount, royalNotation: true);
+                }
+            }
         }
 
         public static void StatisticTest(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount,
