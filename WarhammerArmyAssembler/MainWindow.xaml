@@ -269,7 +269,7 @@
                 </Grid.ColumnDefinitions>
 
                 <DockPanel x:Name="mainWindowHeader" HorizontalAlignment="Center" Width="35" Height="Auto" Margin="0" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
-                    <Label x:Name="dragWindowTop" DockPanel.Dock="Top" Height="35" Width="Auto" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"/>
+                    <Label x:Name="dragWindowTop" DockPanel.Dock="Top" Height="35" Width="Auto" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"  PreviewMouseDown="dragWindowBottom_MouseDown"/>
                     <Label x:Name="closeWindow" DockPanel.Dock="Top" Height="Auto" Width="Auto" VerticalContentAlignment="Center" Foreground="White" Margin="0,0" Padding="0" FontSize="14" Content="  Exit" MouseLeftButtonDown="closeWindow_MouseLeftButtonDown">
                         <Label.LayoutTransform>
                             <RotateTransform Angle="-90"/>
@@ -285,7 +285,7 @@
                             <RotateTransform Angle="-90"/>
                         </Label.LayoutTransform>
                     </Label>
-                    <Label x:Name="dragWindowBottom" DockPanel.Dock="Top" Foreground="White" VerticalContentAlignment="Center" Height="Auto" Width="Auto" Margin="0,20" Padding="0" FontSize="14" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown" Content="Warhammer Army Assembler (WAAgh)">
+                    <Label x:Name="dragWindowBottom" DockPanel.Dock="Top" Foreground="White" VerticalContentAlignment="Center" Height="Auto" Width="Auto" Margin="0,20" Padding="0" FontSize="14" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown" Content="Warhammer Army Assembler (WAAgh)" PreviewMouseDown="dragWindowBottom_MouseDown">
                         <Label.LayoutTransform>
                             <RotateTransform Angle="-90"/>
                         </Label.LayoutTransform>
@@ -303,7 +303,7 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown">
+                    <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"  PreviewMouseDown="dragWindowBottom_MouseDown">
                         <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto"/>
                         <Label x:Name="armyMainMenu" Content="" FontSize="20" FontFamily="Arial" Foreground="White" Background="Gray" Width="Auto" Margin="24,0" MouseDown="armyMainLabel_MouseDown" />
                     </Canvas>
