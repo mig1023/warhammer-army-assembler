@@ -561,9 +561,6 @@ namespace WarhammerArmyAssembler
 
         private void dragWindowBottom_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if ((sender is Label) && ((sender as Label).Name == "armyMainMenu"))
-                return;
-
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
                 maximizeWindow_MouseLeftButtonDown(null, null);
         }
