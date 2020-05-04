@@ -732,6 +732,25 @@ namespace WarhammerArmyAssembler
         {
             new Enemy
             {
+                Name = "Flagellant Warband",
+                TestListName = "24 Flagellant Warband (The Empire)",
+                Type = UnitType.Rare,
+                Size = 24,
+                Movement = 4,
+                WeaponSkill = 2,
+                BallisticSkill = 2,
+                Strength = 3,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 1,
+                Leadership = 10,
+                Unbreakable = true,
+                Frenzy = true,
+            },
+
+            new Enemy
+            {
                 Name = "Waywathers",
                 TestListName = "16 Waywathers (Wood Elves)",
                 Type = UnitType.Rare,
