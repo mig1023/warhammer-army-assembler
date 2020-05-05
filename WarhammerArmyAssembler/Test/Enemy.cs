@@ -264,7 +264,7 @@ namespace WarhammerArmyAssembler
                 Armour = 3,
                 Terror = true,
                 UnitStrength = 5,
-                KillingBlow = true,
+                HeroicKillingBlow = true,
                 Undead = true,
             },
 

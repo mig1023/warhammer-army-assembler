@@ -35,6 +35,7 @@ namespace WarhammerArmyAssembler
             ["HitLast"] = "Hit Last",
             ["Regeneration"] = "Regeneration",
             ["KillingBlow"] = "Killing Blow",
+            ["HeroicKillingBlow"] = "Heroic Killing Blow",
             ["PoisonAttack"] = "Poison Attack",
             ["MultiWounds"] = "Multiple wounds ([X])",
             ["NoArmour"] = "No Armour",
@@ -113,6 +114,7 @@ namespace WarhammerArmyAssembler
         public bool HitLast { get; set; }
         public bool Regeneration { get; set; }
         public bool KillingBlow { get; set; }
+        public bool HeroicKillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
         public string MultiWounds { get; set; }
         public bool NoArmour { get; set; }
@@ -151,6 +153,8 @@ namespace WarhammerArmyAssembler
         public SolidColorBrush ArmyColor { get; set; }
 
         public string RulesView { get; set; }
+
+        public bool EmptyUnit { get; set; }
 
         public Unit()
         {
@@ -208,6 +212,8 @@ namespace WarhammerArmyAssembler
         {
             Unit newUnit = new Unit
             {
+                EmptyUnit = false,
+
                 Name = this.Name,
                 Group = this.Group,
                 ID = this.ID,
@@ -256,6 +262,7 @@ namespace WarhammerArmyAssembler
                 HitLast = this.HitLast,
                 Regeneration = this.Regeneration,
                 KillingBlow = this.KillingBlow,
+                HeroicKillingBlow = this.HeroicKillingBlow,
                 PoisonAttack = this.PoisonAttack,
                 MultiWounds = this.MultiWounds,
                 NoArmour = this.NoArmour,

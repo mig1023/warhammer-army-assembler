@@ -614,10 +614,12 @@ namespace WarhammerArmyAssembler
 
         private static bool KillingAttack(Unit unit, Unit enemy)
         {
-            if (unit.KillingBlow && !attackIsPoisoned && (lastDice == 6) && (enemy.UnitStrength <= 1))
+            bool killingBlow = unit.HeroicKillingBlow || (unit.KillingBlow && (enemy.UnitStrength <= 1));
+
+            if (killingBlow && !attackIsPoisoned && (lastDice == 6))
             {
                 attackWithKillingBlow = true;
-                Console(text, " --> killing blow");
+                Console(text, " --> {0}killing blow", (unit.HeroicKillingBlow ? "heroic " : String.Empty));
                 return true;
             }
 

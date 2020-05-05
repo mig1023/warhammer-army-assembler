@@ -39,6 +39,7 @@ namespace WarhammerArmyAssembler
         public bool HitFirst { get; set; }
         public bool HitLast { get; set; }
         public bool KillingBlow { get; set; }
+        public bool HeroicKillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
         public string MultiWounds { get; set; }
         public bool NoArmour { get; set; }
@@ -156,6 +157,7 @@ namespace WarhammerArmyAssembler
                 HitFirst = this.HitFirst,
                 HitLast = this.HitLast,
                 KillingBlow = this.KillingBlow,
+                HeroicKillingBlow = this.HeroicKillingBlow,
                 PoisonAttack = this.PoisonAttack,
                 MultiWounds = this.MultiWounds,
                 NoArmour = this.NoArmour,
