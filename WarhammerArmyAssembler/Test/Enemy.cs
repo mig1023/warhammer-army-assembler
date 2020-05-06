@@ -1091,6 +1091,43 @@ namespace WarhammerArmyAssembler
         {
             new Enemy
             {
+                Name = "Kurt Helborg",
+                TestListName = "Kurt Helborg (The Empire)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 7,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 6,
+                Attacks = 4,
+                Leadership = 9,
+                Armour = 2,
+                Stubborn = true,
+                ImmuneToPsychology = true,
+                AutoWound = true,
+                NoArmour = true,
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Warhorse",
+                    Size = 8,
+                    Movement = 8,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 3,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 1,
+                    Leadership = 5,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Zacharias The Everliving",
                 TestListName = "Zacharias The Everliving (Vampire Counts)",
                 Size = 1,
