@@ -634,7 +634,10 @@ namespace WarhammerArmyAssembler
             int chance = 4;
 
             if (unit.AutoHit)
+            {
+                Console(text, "(autohit)");
                 return true;
+            }
             else if (unit.WeaponSkill > enemy.WeaponSkill)
                 chance = 3;
             else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)
@@ -647,6 +650,11 @@ namespace WarhammerArmyAssembler
         {
             int chance = 4;
 
+            if (unit.AutoWound)
+            {
+                Console(text, "(autowound)");
+                return true;
+            }
             if (unit.Strength == (enemy.Toughness + 1))
                 chance = 3;
             else if (unit.Strength > (enemy.Toughness + 1))

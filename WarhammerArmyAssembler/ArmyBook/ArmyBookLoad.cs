@@ -118,6 +118,7 @@ namespace WarhammerArmyAssembler
                 newUnit.Undead = BoolParse(additionalParam["Undead"]);
                 newUnit.StrengthInNumbers = BoolParse(additionalParam["StrengthInNumbers"]);
                 newUnit.AutoHit = BoolParse(additionalParam["AutoHit"]);
+                newUnit.AutoWound = BoolParse(additionalParam["AutoWound"]);
                 newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
                 newUnit.HitLast = BoolParse(additionalParam["HitLast"]);
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);

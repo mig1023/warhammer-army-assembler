@@ -32,6 +32,7 @@ namespace WarhammerArmyAssembler
             ["Unbreakable"] = "Unbreakable",
             ["ColdBlooded"] = "ColdBlooded",
             ["AutoHit"] = "Hit automatically",
+            ["AutoWound"] = "Wound automatically",
             ["HitFirst"] = "Hit First",
             ["HitLast"] = "Hit Last",
             ["Regeneration"] = "Regeneration",
@@ -112,6 +113,7 @@ namespace WarhammerArmyAssembler
         public int UnitStrength { get; set; }
 
         public bool AutoHit { get; set; }
+        public bool AutoWound { get; set; }
         public bool HitFirst { get; set; }
         public bool HitLast { get; set; }
         public bool Regeneration { get; set; }
@@ -261,6 +263,7 @@ namespace WarhammerArmyAssembler
                 Undead = this.Undead,
                 StrengthInNumbers = this.StrengthInNumbers,
                 AutoHit = this.AutoHit,
+                AutoWound = this.AutoWound,
                 HitFirst = this.HitFirst,
                 HitLast = this.HitLast,
                 Regeneration = this.Regeneration,
