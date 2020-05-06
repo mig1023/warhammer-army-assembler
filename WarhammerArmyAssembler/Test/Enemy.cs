@@ -63,7 +63,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Troll",
-                TestListName = "Troll (Orcs&Goblin)",
+                TestListName = "Troll (Orcs&Goblins)",
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 3,
@@ -347,7 +347,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Orc boys",
-                TestListName = "20 Orc Boys (Orcs&Goblin)",
+                TestListName = "20 Orc Boys (Orcs&Goblins)",
                 Type = UnitType.Core,
                 Size = 20,
                 Movement = 4,
@@ -668,6 +668,25 @@ namespace WarhammerArmyAssembler
                 Armour = 5,
                 HitLast = true,
                 Stubborn = true
+            },
+
+            new Enemy
+            {
+                Name = "Black Orcs",
+                TestListName = "16 Black Orcs (Orcs&Goblins)",
+                Type = UnitType.Special,
+                Size = 16,
+                Movement = 4,
+                WeaponSkill = 4,
+                BallisticSkill = 3,
+                Strength = 5,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 1,
+                Leadership = 8,
+                Armour = 5,
+                HitLast = true
             },
 
             new Enemy
@@ -1276,7 +1295,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Grimgor Ironhide",
-                TestListName = "Grimgor Ironhide (Orcs&Goblin)",
+                TestListName = "Grimgor Ironhide (Orcs&Goblins)",
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 8,
