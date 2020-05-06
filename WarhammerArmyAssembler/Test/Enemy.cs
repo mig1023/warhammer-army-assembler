@@ -951,6 +951,41 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Ludwig Schwarzhelm",
+                TestListName = "Ludwig Schwarzhelm (The Empire)",
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 6,
+                BallisticSkill = 5,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 2,
+                Initiative = 5,
+                Attacks = 3,
+                Leadership = 8,
+                Armour = 2,
+                KillingBlow = true,
+                Reroll = "ToWound",
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Warhorse",
+                    Size = 8,
+                    Movement = 8,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 3,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 1,
+                    Leadership = 5,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Josef Bugman",
                 TestListName = "Josef Bugman Master Brewer (Dwarfs)",
                 Size = 1,
