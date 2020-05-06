@@ -689,6 +689,41 @@ namespace WarhammerArmyAssembler
                 HitLast = true
             },
 
+
+            new Enemy
+            {
+                Name = "Orc Boar Boys",
+                TestListName = "8 Orc Boar Boys (Orcs&Goblins)",
+                Type = UnitType.Special,
+                Size = 8,
+                Movement = 4,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 3,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 1,
+                Leadership = 7,
+                Armour = 3,
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Boar",
+                    Size = 8,
+                    Movement = 7,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 3,
+                    Toughness = 4,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 1,
+                    Leadership = 3,
+                }
+            },
+
             new Enemy
             {
                 Name = "Bloodletters",
