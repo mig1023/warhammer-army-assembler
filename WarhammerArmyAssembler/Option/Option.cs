@@ -36,6 +36,7 @@ namespace WarhammerArmyAssembler
 
         public string Description { get; set; }
 
+        public bool AutoHit { get; set; }
         public bool HitFirst { get; set; }
         public bool HitLast { get; set; }
         public bool KillingBlow { get; set; }
@@ -153,7 +154,7 @@ namespace WarhammerArmyAssembler
                 OnlyIfAnotherService = this.OnlyIfAnotherService,
                 OnlyIfNotAnotherService = this.OnlyIfNotAnotherService,
                 OnlyForGroup = this.OnlyForGroup,
-
+                AutoHit = this.AutoHit,
                 HitFirst = this.HitFirst,
                 HitLast = this.HitLast,
                 KillingBlow = this.KillingBlow,

@@ -633,7 +633,9 @@ namespace WarhammerArmyAssembler
         {
             int chance = 4;
 
-            if (unit.WeaponSkill > enemy.WeaponSkill)
+            if (unit.AutoHit)
+                return true;
+            else if (unit.WeaponSkill > enemy.WeaponSkill)
                 chance = 3;
             else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)
                 chance = 5;
