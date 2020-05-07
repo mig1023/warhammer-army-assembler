@@ -121,7 +121,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Hippogryph",
-                TestListName = "Hippogryph (Brettonia)",
+                TestListName = "Hippogryph (Bretonnia)",
                 Size = 1,
                 Movement = 8,
                 WeaponSkill = 4,
@@ -311,7 +311,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Men-at-arms",
-                TestListName = "20 Men-at-arms (Brettonia)",
+                TestListName = "20 Men-at-arms (Bretonnia)",
                 Type = UnitType.Core,
                 Size = 20,
                 Movement = 4,
@@ -471,7 +471,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Knights of the Realms",
-                TestListName = "8 Knights of the Realms (Brettonia)",
+                TestListName = "8 Knights of the Realms (Bretonnia)",
                 Size = 8,
                 Movement = 4,
                 WeaponSkill = 4,
@@ -881,7 +881,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Grail Knights",
-                TestListName = "12 Grail Knights (Brettonia)",
+                TestListName = "12 Grail Knights (Bretonnia)",
                 Size = 12,
                 Movement = 4,
                 WeaponSkill = 5,
@@ -1212,6 +1212,42 @@ namespace WarhammerArmyAssembler
                     Initiative = 3,
                     Attacks = 1,
                     Leadership = 5,
+                }
+            },
+
+            new Enemy
+            {
+                Name = "Green Knight",
+                TestListName = "Green Knight (Bretonnia)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 7,
+                BallisticSkill = 3,
+                Strength = 6,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 6,
+                Attacks = 4,
+                Leadership = 9,
+                Ward = 5,
+                ImmuneToPsychology = true,
+                Terror = true,
+                Undead = true,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Shadow Steed",
+                    Size = 1,
+                    Movement = 8,
+                    WeaponSkill = 4,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 4,
+                    Attacks = 1,
+                    Leadership = 5,
+                    Armour = 5,
                 }
             },
 
