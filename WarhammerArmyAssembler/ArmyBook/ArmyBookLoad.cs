@@ -35,8 +35,7 @@ namespace WarhammerArmyAssembler
             xmlFile.Load(xmlFileName);
 
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/SymbolImage");
-            if (armyFile != null)
-                Interface.LoadArmyImage(armyFile.InnerText, xmlFileName);
+            Interface.LoadArmyImage(armyFile, xmlFileName);
 
             Army.ArmyName = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName"));
 
