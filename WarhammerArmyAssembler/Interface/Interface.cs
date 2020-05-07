@@ -297,6 +297,11 @@ namespace WarhammerArmyAssembler
                 mainMenuIsOpen = false;
         }
 
+        public static void LoadArmyImage(string imageName, string armyName)
+        {
+            main.armySymbol.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + imageName));
+        }
+
         private static void PreviewLoadCurrentSelectedArmy(string armyName)
         {
             XmlDocument xmlFile = new XmlDocument();

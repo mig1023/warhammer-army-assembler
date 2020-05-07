@@ -34,6 +34,10 @@ namespace WarhammerArmyAssembler
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
+            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/SymbolImage");
+            if (armyFile != null)
+                Interface.LoadArmyImage(armyFile.InnerText, xmlFileName);
+
             Army.ArmyName = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName"));
 
             ArmyBook.MainColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
