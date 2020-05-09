@@ -39,6 +39,7 @@ namespace WarhammerArmyAssembler
         public static void UnitTestClose()
         {
             Interface.unitTestIsOpen = false;
+            Interface.main.UpdateLayout();
             Interface.main.mainGrid.Width = Interface.main.ActualWidth;
         }
 
