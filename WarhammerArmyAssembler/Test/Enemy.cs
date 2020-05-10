@@ -137,6 +137,23 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Griffon",
+                TestListName = "Hippogryph (Bretonnia)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 5,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 4,
+                Initiative = 5,
+                Attacks = 4,
+                Leadership = 7,
+                Terror = true,
+            },
+
+            new Enemy
+            {
                 Name = "Manticore",
                 TestListName = "Manticore (Chaos)",
                 Size = 1,
