@@ -1178,42 +1178,6 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
         {
-            new Enemy
-            {
-                Name = "Kurt Helborg",
-                TestListName = "Kurt Helborg (The Empire)",
-                Size = 1,
-                Movement = 6,
-                WeaponSkill = 7,
-                BallisticSkill = 3,
-                Strength = 4,
-                Toughness = 4,
-                Wounds = 3,
-                Initiative = 6,
-                Attacks = 4,
-                Leadership = 9,
-                Armour = 2,
-                Stubborn = true,
-                ImmuneToPsychology = true,
-                AutoWound = true,
-                NoArmour = true,
-
-                EnemyMount = new Enemy
-                {
-                    Type = UnitType.Mount,
-                    Name = "Warhorse",
-                    Size = 8,
-                    Movement = 8,
-                    WeaponSkill = 3,
-                    BallisticSkill = 0,
-                    Strength = 3,
-                    Toughness = 3,
-                    Wounds = 1,
-                    Initiative = 3,
-                    Attacks = 1,
-                    Leadership = 5,
-                }
-            },
 
             new Enemy
             {
@@ -1253,6 +1217,43 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Kurt Helborg",
+                TestListName = "Kurt Helborg (The Empire)",
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 7,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 6,
+                Attacks = 4,
+                Leadership = 9,
+                Armour = 2,
+                Stubborn = true,
+                ImmuneToPsychology = true,
+                AutoWound = true,
+                NoArmour = true,
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Warhorse",
+                    Size = 8,
+                    Movement = 8,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 3,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 1,
+                    Leadership = 5,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Zacharias The Everliving",
                 TestListName = "Zacharias The Everliving (Vampire Counts)",
                 Size = 1,
@@ -1285,6 +1286,26 @@ namespace WarhammerArmyAssembler
                     Terror = true,
                     Undead = true,
                 }
+            },
+
+            new Enemy
+            {
+                Name = "Vermin Lord",
+                TestListName = "Vermin Lord (Skaven)",
+                Size = 1,
+                Movement = 8,
+                WeaponSkill = 8,
+                BallisticSkill = 4,
+                Strength = 6,
+                Toughness = 5,
+                Wounds = 5,
+                Initiative = 10,
+                Attacks = 5,
+                Leadership = 8,
+                Ward = 5,
+                ImmuneToPsychology = true,
+                Terror = true,
+                MultiWounds = "D3",
             },
 
             new Enemy
