@@ -305,6 +305,14 @@ namespace WarhammerArmyAssembler
                 main.armySymbol.Source = null;
         }
 
+        public static bool ConfirmedDataCleaning()
+        {
+            if (Army.Units.Count <= 0)
+                return true;
+
+            return MessageBox.Show("All army data will be lost.\nContinue?", String.Empty, MessageBoxButton.OKCancel) == MessageBoxResult.OK;
+        }
+
         private static void PreviewLoadCurrentSelectedArmy(string armyName)
         {
             XmlDocument xmlFile = new XmlDocument();

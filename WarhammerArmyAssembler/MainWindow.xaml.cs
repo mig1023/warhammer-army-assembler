@@ -313,7 +313,7 @@ namespace WarhammerArmyAssembler
         private void unitDelete_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
-                if (MessageBox.Show("Clear entire army list? ", String.Empty, MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                if (Interface.ConfirmedDataCleaning())
                 {
                     Interface.DetailResize(open: false);
                     Interface.AllUnitDelete();
@@ -340,6 +340,9 @@ namespace WarhammerArmyAssembler
 
         public void toNewArmy_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            if (!Interface.ConfirmedDataCleaning())
+                return;
+
             Interface.Move(Interface.MovingType.ToMain, menu: true);
             Interface.AllUnitDelete();
             Interface.DetailResize(open: false);
@@ -428,6 +431,12 @@ namespace WarhammerArmyAssembler
                 MessageBox.Show(ArmyChecks.ArmyProblems());
 
             Interface.Move(Interface.MovingType.ToMain, menu: true);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!Interface.ConfirmedDataCleaning())
+                e.Cancel = true;
         }
 
         private void Window_Closed(object sender, EventArgs e)

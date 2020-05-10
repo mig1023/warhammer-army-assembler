@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
         WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
-        Title="Warhammer Army Assembler (WAAgh)" Height="600" Width="1000" Closed="Window_Closed">
+        Title="Warhammer Army Assembler (WAAgh)" Height="600" Width="1000" Closed="Window_Closed" Closing="Window_Closing">
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
 
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
