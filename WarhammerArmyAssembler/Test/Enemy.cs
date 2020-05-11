@@ -668,6 +668,7 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
+
             new Enemy
             {
                 Name = "Greatswords",
@@ -706,7 +707,6 @@ namespace WarhammerArmyAssembler
                 Armour = 5,
                 HitLast = true
             },
-
 
             new Enemy
             {
@@ -759,6 +759,42 @@ namespace WarhammerArmyAssembler
                 Leadership = 9,
                 Armour = 2,
                 Hate = true,
+                Fear = true,
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Cold One",
+                    Size = 8,
+                    Movement = 7,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 4,
+                    Wounds = 1,
+                    Initiative = 2,
+                    Attacks = 1,
+                    Leadership = 3,
+                }
+            },
+
+
+            new Enemy
+            {
+                Name = "Cold One Cavalry",
+                TestListName = "8 Cold One Cavalry (Lizardmen)",
+                Size = 8,
+                Movement = 4,
+                WeaponSkill = 4,
+                BallisticSkill = 0,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 2,
+                Attacks = 2,
+                Leadership = 8,
+                Armour = 2,
+                ColdBlooded = true,
                 Fear = true,
 
                 EnemyMount = new Enemy
