@@ -417,23 +417,6 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Dryads",
-                TestListName = "20 Dryads (Wood Elves)",
-                Size = 20,
-                Movement = 5,
-                WeaponSkill = 4,
-                BallisticSkill = 0,
-                Strength = 4,
-                Toughness = 4,
-                Wounds = 1,
-                Initiative = 6,
-                Attacks = 2,
-                Leadership = 8,
-                Fear = true,
-            },
-
-            new Enemy
-            {
                 Name = "Lothern Sea Guard",
                 TestListName = "20 Lothern Sea Guard (High Elves)",
                 Size = 20,
@@ -754,6 +737,42 @@ namespace WarhammerArmyAssembler
                     Toughness = 4,
                     Wounds = 1,
                     Initiative = 3,
+                    Attacks = 1,
+                    Leadership = 3,
+                }
+            },
+
+            new Enemy
+            {
+                Name = "Cold One Knights",
+                TestListName = "8 Cold One Knights (Dark Elves)",
+                Type = UnitType.Special,
+                Size = 8,
+                Movement = 5,
+                WeaponSkill = 5,
+                BallisticSkill = 4,
+                Strength = 4,
+                Toughness = 3,
+                Wounds = 1,
+                Initiative = 6,
+                Attacks = 1,
+                Leadership = 9,
+                Armour = 2,
+                Hate = true,
+                Fear = true,
+
+                EnemyMount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Cold One",
+                    Size = 8,
+                    Movement = 7,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 4,
+                    Wounds = 1,
+                    Initiative = 2,
                     Attacks = 1,
                     Leadership = 3,
                 }
