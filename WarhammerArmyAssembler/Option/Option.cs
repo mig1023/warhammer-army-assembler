@@ -60,6 +60,7 @@ namespace WarhammerArmyAssembler
         public bool Undead { get; set; }
         public bool StrengthInNumbers { get; set; }
         public string ImpactHit { get; set; }
+        public bool Lance { get; set; }
 
         public bool BigWeapon { get; set; }
 
@@ -179,6 +180,7 @@ namespace WarhammerArmyAssembler
                 Undead = this.Undead,
                 StrengthInNumbers = this.StrengthInNumbers,
                 ImpactHit = this.ImpactHit,
+                Lance = this.Lance,
 
                 BigWeapon = this.BigWeapon,
 

@@ -494,7 +494,7 @@ namespace WarhammerArmyAssembler
                     Console(text, " --> wound ");
 
                     if (
-                        (PoisonedAttack(unit, impactHit) || Wound(unit, enemy))
+                        (PoisonedAttack(unit, impactHit) || Wound(unit, enemy, round))
                         &&
                         (KillingAttack(unit, enemy) || NotAS(unit, enemy))
                         &&
@@ -646,24 +646,33 @@ namespace WarhammerArmyAssembler
             return RollDice(unit, DiceType.WS, enemy, chance, round: round);
         }
 
-        private static bool Wound(Unit unit, Unit enemy)
+        private static bool Wound(Unit unit, Unit enemy, int round)
         {
             int chance = 4;
+            int strength = unit.Strength;
+
+            if (unit.Lance && (round == 1))
+            {
+                strength += 2;
+
+                if (strength > 10)
+                    strength = 10;
+            }
 
             if (unit.AutoWound)
             {
                 Console(text, "(autowound)");
                 return true;
             }
-            if (unit.Strength == (enemy.Toughness + 1))
+            if (strength == (enemy.Toughness + 1))
                 chance = 3;
-            else if (unit.Strength > (enemy.Toughness + 1))
+            else if (strength > (enemy.Toughness + 1))
                 chance = 2;
-            else if ((unit.Strength + 1) == enemy.Toughness)
+            else if ((strength + 1) == enemy.Toughness)
                 chance = 5;
-            else if ((unit.Strength + 2) == enemy.Toughness)
+            else if ((strength + 2) == enemy.Toughness)
                 chance = 6;
-            else if ((unit.Strength + 2) < enemy.Toughness)
+            else if ((strength + 2) < enemy.Toughness)
             {
                 Console(text, "(impossible)");
                 return false;

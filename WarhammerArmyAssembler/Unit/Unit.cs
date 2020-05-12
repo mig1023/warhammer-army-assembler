@@ -47,6 +47,7 @@ namespace WarhammerArmyAssembler
             ["Stupidity"] = "Stupidity",
             ["Undead"] = "Undead",
             ["StrengthInNumbers"] = "Strength in numbers!",
+            ["Lance"] = "Lance",
         };
 
         public string Name { get; set; }
@@ -125,6 +126,7 @@ namespace WarhammerArmyAssembler
         public int ArmourPiercing { get; set; }
         public string Reroll { get; set; }
         public string ImpactHit { get; set; }
+        public bool Lance { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -275,6 +277,7 @@ namespace WarhammerArmyAssembler
                 ArmourPiercing = this.ArmourPiercing,
                 Reroll = this.Reroll,
                 ImpactHit = this.ImpactHit,
+                Lance = this.Lance,
 
                 SlotsOfLords = this.SlotsOfLords,
                 SlotsOfHero = this.SlotsOfHero,
