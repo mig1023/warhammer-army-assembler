@@ -501,6 +501,7 @@ namespace WarhammerArmyAssembler
                 Attacks = 1,
                 Leadership = 8,
                 Armour = 2,
+                Lance = true,
 
                 EnemyMount = new Enemy
                 {
@@ -760,6 +761,7 @@ namespace WarhammerArmyAssembler
                 Armour = 2,
                 Hate = true,
                 Fear = true,
+                Lance = true,
 
                 EnemyMount = new Enemy
                 {
@@ -891,6 +893,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 10,
                 Unbreakable = true,
                 Frenzy = true,
+                Flail = true,
             },
 
             new Enemy
@@ -984,6 +987,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 8,
                 Armour = 2,
                 Ward = 5,
+                Lance = true,
 
                 EnemyMount = new Enemy
                 {
@@ -1020,6 +1024,7 @@ namespace WarhammerArmyAssembler
                 Ward = 5,
                 Frenzy = true,
                 Undead = true,
+                Lance = true,
 
                 EnemyMount = new Enemy
                 {
