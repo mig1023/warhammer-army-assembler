@@ -137,6 +137,7 @@ namespace WarhammerArmyAssembler
                 newUnit.Reroll = StringParse(additionalParam["Reroll"]);
                 newUnit.ImpactHit = StringParse(additionalParam["ImpactHit"]);
                 newUnit.Lance = BoolParse(additionalParam["Lance"]);
+                newUnit.Flail = BoolParse(additionalParam["Flail"]);
 
                 newUnit.SlotsOfLords = IntParse(additionalParam["SlotsOfLords"]);
                 newUnit.SlotsOfHero = IntParse(additionalParam["SlotsOfHero"]);
@@ -208,6 +209,7 @@ namespace WarhammerArmyAssembler
             newWeapon.StrengthInNumbers = BoolParse(xmlNode["StrengthInNumbers"]);
             newWeapon.ImpactHit = StringParse(xmlNode["ImpactHit"]);
             newWeapon.Lance = BoolParse(xmlNode["Lance"]);
+            newWeapon.Flail = BoolParse(xmlNode["Flail"]);
 
             newWeapon.Points = DoubleParse(xmlNode["Points"]);
             newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);

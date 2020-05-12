@@ -48,6 +48,7 @@ namespace WarhammerArmyAssembler
             ["Undead"] = "Undead",
             ["StrengthInNumbers"] = "Strength in numbers!",
             ["Lance"] = "Lance",
+            ["Flail"] = "Flail",
         };
 
         public string Name { get; set; }
@@ -127,6 +128,7 @@ namespace WarhammerArmyAssembler
         public string Reroll { get; set; }
         public string ImpactHit { get; set; }
         public bool Lance { get; set; }
+        public bool Flail { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -278,6 +280,7 @@ namespace WarhammerArmyAssembler
                 Reroll = this.Reroll,
                 ImpactHit = this.ImpactHit,
                 Lance = this.Lance,
+                Flail = this.Flail,
 
                 SlotsOfLords = this.SlotsOfLords,
                 SlotsOfHero = this.SlotsOfHero,

@@ -651,9 +651,9 @@ namespace WarhammerArmyAssembler
             int chance = 4;
             int strength = unit.Strength;
 
-            if (unit.Lance && (round == 1))
+            if ((unit.Lance || unit.Flail) && (round == 1))
             {
-                strength += 2;
+                strength += (unit.Lance ? 2 : 1);
 
                 if (strength > 10)
                     strength = 10;
