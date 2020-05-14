@@ -96,11 +96,6 @@ namespace WarhammerArmyAssembler
             Console(text, "\n\n");
         }
 
-        private static string ThisIsUnit(Unit unit)
-        {
-            return (unit.IsUnit() ? " (unit)" : String.Empty);
-        }
-
         private static void InitRoundWounds(List<Unit> opponents, ref Dictionary<int, int> roundWounds)
         {
             foreach (Unit unit in opponents)
@@ -134,6 +129,9 @@ namespace WarhammerArmyAssembler
 
             List<Unit> participants = new List<Unit>() { unit, enemy };
 
+            if (unit.Name == enemy.Name)
+                enemy.Name += " (enemy)";
+
             if (originalUnitMount != null)
             {
                 unitMount = originalUnitMount.Clone().SetTestType(Unit.TestTypeTypes.Unit);
@@ -144,9 +142,12 @@ namespace WarhammerArmyAssembler
             {
                 enemyMount = originalEnemyMount.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
                 participants.Add(enemyMount);
+
+                if ((unitMount != null) && (unitMount.Name == enemyMount.Name))
+                    enemyMount.Name += " (enemy)";
             }
 
-            Console(text, "{0}{1} vs {2}{3}", unit.Name, ThisIsUnit(unit), enemy.Name, ThisIsUnit(enemy));
+            Console(text, "{0} vs {1}", unit.Name,  enemy.Name);
 
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
             InitRoundWounds(participants, ref roundWounds);
