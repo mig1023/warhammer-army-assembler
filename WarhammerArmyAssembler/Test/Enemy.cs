@@ -64,6 +64,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Troll",
                 TestListName = "Troll (Orcs&Goblins)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 3,
@@ -84,6 +85,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Ancient Kroxigor",
                 TestListName = "Ancient Kroxigor (Lizardmen)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 3,
@@ -103,6 +105,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Tomb Scorpion",
                 TestListName = "Tomb Scorpion (Tomb Kings)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 7,
                 WeaponSkill = 4,
@@ -122,6 +125,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Hippogryph",
                 TestListName = "Hippogryph (Bretonnia)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 8,
                 WeaponSkill = 4,
@@ -139,6 +143,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Griffon",
                 TestListName = "Hippogryph (Bretonnia)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 5,
@@ -156,6 +161,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Manticore",
                 TestListName = "Manticore (Chaos)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 5,
@@ -174,6 +180,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "War Hydra",
                 TestListName = "War Hydra (Dark Elves)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 4,
@@ -190,6 +197,7 @@ namespace WarhammerArmyAssembler
                 EnemyMount = new Enemy
                 {
                     Name = "Apparentice",
+                    Type = UnitType.Mount,
                     Size = 2,
                     Movement = 5,
                     WeaponSkill = 4,
@@ -207,6 +215,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Dragon Ogre Shaggoth",
                 TestListName = "Dragon Ogre Shaggoth (Beasts of Chaos)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 7,
                 WeaponSkill = 6,
@@ -227,6 +236,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Stegadon",
                 TestListName = "Stegadon (Lizardmen)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 3,
@@ -247,6 +257,7 @@ namespace WarhammerArmyAssembler
                 EnemyMount = new Enemy
                 {
                     Name = "Skink Crew",
+                    Type = UnitType.Mount,
                     Size = 5,
                     Movement = 6,
                     WeaponSkill = 2,
@@ -267,6 +278,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Treeman",
                 TestListName = "Treeman (Wood Elves)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 5,
                 WeaponSkill = 5,
@@ -286,6 +298,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Necrosphinx",
                 TestListName = "Necrosphinx (Tomb Kings)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 4,
@@ -307,6 +320,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Star Dragon",
                 TestListName = "Star Dragon (High Elves)",
+                Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 7,
@@ -401,6 +415,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Skeleton Warriors",
                 TestListName = "20 Skeleton Warriors (Tomb Kings)",
+                Type = UnitType.Core,
                 Size = 20,
                 Movement = 4,
                 WeaponSkill = 2,
@@ -419,6 +434,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Lothern Sea Guard",
                 TestListName = "20 Lothern Sea Guard (High Elves)",
+                Type = UnitType.Core,
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -437,6 +453,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Back Ark Corsairs",
                 TestListName = "20 Back Ark Corsairs (Dark Elves)",
+                Type = UnitType.Core,
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -455,6 +472,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Dryads",
                 TestListName = "20 Dryads (Wood Elves)",
+                Type = UnitType.Core,
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -472,6 +490,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Bestigor",
                 TestListName = "20 Bestigor (Beasts of Chaos)",
+                Type = UnitType.Core,
                 Size = 20,
                 Movement = 5,
                 WeaponSkill = 4,
@@ -490,6 +509,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Knights of the Realms",
                 TestListName = "8 Knights of the Realms (Bretonnia)",
+                Type = UnitType.Core,
                 Size = 8,
                 Movement = 4,
                 WeaponSkill = 4,
@@ -505,8 +525,8 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
-                    Type = UnitType.Mount,
                     Name = "Warhorse",
+                    Type = UnitType.Mount,
                     Size = 8,
                     Movement = 8,
                     WeaponSkill = 3,
@@ -543,6 +563,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Temple Guard",
                 TestListName = "20 Temple Guard (Lizardmen)",
+                Type = UnitType.Core,
                 Size = 20,
                 Movement = 4,
                 WeaponSkill = 4,
@@ -561,6 +582,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Chosen Knights of Chaos",
                 TestListName = "8 Chosen Knights (Chaos)",
+                Type = UnitType.Core,
                 Size = 8,
                 Movement = 4,
                 WeaponSkill = 5,
@@ -575,8 +597,8 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
-                    Type = UnitType.Mount,
                     Name = "Chaos Steed",
+                    Type = UnitType.Mount,
                     Size = 8,
                     Movement = 8,
                     WeaponSkill = 3,
@@ -616,6 +638,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Chaos Ogres",
                 TestListName = "5 Chaos Ogres (Beasts of Chaos)",
+                Type = UnitType.Special,
                 Size = 5,
                 Movement = 6,
                 WeaponSkill = 3,
@@ -728,8 +751,8 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
-                    Type = UnitType.Mount,
                     Name = "Boar",
+                    Type = UnitType.Mount,
                     Size = 8,
                     Movement = 7,
                     WeaponSkill = 3,
@@ -765,8 +788,8 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
-                    Type = UnitType.Mount,
                     Name = "Cold One",
+                    Type = UnitType.Mount,
                     Size = 8,
                     Movement = 7,
                     WeaponSkill = 3,
@@ -785,6 +808,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Cold One Cavalry",
                 TestListName = "8 Cold One Cavalry (Lizardmen)",
+                Type = UnitType.Special,
                 Size = 8,
                 Movement = 4,
                 WeaponSkill = 4,
@@ -801,8 +825,8 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
-                    Type = UnitType.Mount,
                     Name = "Cold One",
+                    Type = UnitType.Mount,
                     Size = 8,
                     Movement = 7,
                     WeaponSkill = 3,
@@ -820,7 +844,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Bloodletters",
                 TestListName = "20 Bloodletters (Chaos)",
-                Type = UnitType.Core,
+                Type = UnitType.Special,
                 Size = 20,
                 Movement = 4,
                 WeaponSkill = 5,
@@ -957,7 +981,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Troll Slayers",
                 TestListName = "16 Troll Slayers (Dwarfs)",
-                Type = UnitType.Special,
+                Type = UnitType.Rare,
                 Size = 16,
                 Movement = 3,
                 WeaponSkill = 4,
@@ -975,6 +999,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Grail Knights",
                 TestListName = "12 Grail Knights (Bretonnia)",
+                Type = UnitType.Rare,
                 Size = 12,
                 Movement = 4,
                 WeaponSkill = 5,
@@ -1010,6 +1035,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Blood Knights",
                 TestListName = "6 Blood Knights (Vampire Counts)",
+                Type = UnitType.Rare,
                 Size = 6,
                 Movement = 4,
                 WeaponSkill = 5,
@@ -1047,6 +1073,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Skullcrushers of Khorne",
                 TestListName = "6 Skullcrushers of Khorne (Chaos)",
+                Type = UnitType.Rare,
                 Size = 6,
                 Movement = 4,
                 WeaponSkill = 5,
@@ -1084,6 +1111,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Tretch Craventail",
                 TestListName = "Tretch Craventail (Skaven)",
+                Type = UnitType.Hero,
                 Size = 1,
                 Movement = 5,
                 WeaponSkill = 5,
@@ -1102,6 +1130,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Ludwig Schwarzhelm",
                 TestListName = "Ludwig Schwarzhelm (The Empire)",
+                Type = UnitType.Hero,
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 6,
@@ -1137,6 +1166,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Josef Bugman",
                 TestListName = "Josef Bugman Master Brewer (Dwarfs)",
+                Type = UnitType.Hero,
                 Size = 1,
                 Movement = 3,
                 WeaponSkill = 6,
@@ -1156,6 +1186,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Drycha",
                 TestListName = "Drycha (Wood Elves)",
+                Type = UnitType.Hero,
                 Size = 1,
                 Movement = 5,
                 WeaponSkill = 7,
@@ -1174,6 +1205,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Caradryan",
                 TestListName = "Caradryan, Capitain ot The Phoenix Guard (High Elves)",
+                Type = UnitType.Hero,
                 Size = 1,
                 Movement = 5,
                 WeaponSkill = 6,
@@ -1195,6 +1227,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Konrad",
                 TestListName = "Konrad Von Carstein (Vampire Counts)",
+                Type = UnitType.Hero,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 7,
@@ -1217,6 +1250,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Malus Darkblade (Tz'arkan)",
                 TestListName = "Malus Darkblade in Tz'arkan state (Dark Elves)",
+                Type = UnitType.Hero,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 7,
@@ -1233,8 +1267,8 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
-                    Type = UnitType.Mount,
                     Name = "Spite",
+                    Type = UnitType.Mount,
                     Size = 1,
                     Movement = 7,
                     WeaponSkill = 3,
@@ -1254,6 +1288,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Deathmaster Snikch",
                 TestListName = "Deathmaster Snikch (Skaven)",
+                Type = UnitType.Hero,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 8,
@@ -1273,11 +1308,11 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
         {
-
             new Enemy
             {
                 Name = "Green Knight",
                 TestListName = "Green Knight (Bretonnia)",
+                Type = UnitType.Lord,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 7,
@@ -1296,6 +1331,7 @@ namespace WarhammerArmyAssembler
                 EnemyMount = new Enemy
                 {
                     Name = "Shadow Steed",
+                    Type = UnitType.Mount,
                     Size = 1,
                     Movement = 8,
                     WeaponSkill = 4,
@@ -1314,6 +1350,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Kurt Helborg",
                 TestListName = "Kurt Helborg (The Empire)",
+                Type = UnitType.Lord,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 7,
@@ -1332,8 +1369,8 @@ namespace WarhammerArmyAssembler
 
                 EnemyMount = new Enemy
                 {
-                    Type = UnitType.Mount,
                     Name = "Warhorse",
+                    Type = UnitType.Mount,
                     Size = 8,
                     Movement = 8,
                     WeaponSkill = 3,
@@ -1351,6 +1388,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Zacharias The Everliving",
                 TestListName = "Zacharias The Everliving (Vampire Counts)",
+                Type = UnitType.Lord,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 6,
@@ -1367,6 +1405,7 @@ namespace WarhammerArmyAssembler
                 EnemyMount = new Enemy
                 {
                     Name = "Zombie Dragon",
+                    Type = UnitType.Mount,
                     Size = 1,
                     Movement = 6,
                     WeaponSkill = 3,
@@ -1387,6 +1426,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Vermin Lord",
                 TestListName = "Vermin Lord (Skaven)",
+                Type = UnitType.Lord,
                 Size = 1,
                 Movement = 8,
                 WeaponSkill = 8,
@@ -1407,6 +1447,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Malekith, Witch King of Naggaroth",
                 TestListName = "Malekith, Witch King (Dark Elves)",
+                Type = UnitType.Lord,
                 Size = 1,
                 Movement = 8,
                 WeaponSkill = 5,
@@ -1424,6 +1465,7 @@ namespace WarhammerArmyAssembler
                 EnemyMount = new Enemy
                 {
                     Name = "Seraphon",
+                    Type = UnitType.Mount,
                     Size = 1,
                     Movement = 6,
                     WeaponSkill = 6,
@@ -1443,6 +1485,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Kroq-Gar Ancient",
                 TestListName = "Kroq-Gar Ancient (Lizardmen)",
+                Type = UnitType.Lord,
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 6,
@@ -1461,6 +1504,7 @@ namespace WarhammerArmyAssembler
                 EnemyMount = new Enemy
                 {
                     Name = "Grymloq",
+                    Type = UnitType.Mount,
                     Size = 1,
                     Movement = 7,
                     WeaponSkill = 3,
@@ -1483,6 +1527,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Grimgor Ironhide",
                 TestListName = "Grimgor Ironhide (Orcs&Goblins)",
+                Type = UnitType.Lord,
                 Size = 1,
                 Movement = 4,
                 WeaponSkill = 8,
@@ -1504,6 +1549,7 @@ namespace WarhammerArmyAssembler
             {
                 Name = "Bloodthister",
                 TestListName = "Greater Daemon Bloodthister (Chaos)",
+                Type = UnitType.Lord,
                 Size = 1,
                 Movement = 6,
                 WeaponSkill = 10,
