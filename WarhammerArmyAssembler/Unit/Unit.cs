@@ -993,6 +993,11 @@ namespace WarhammerArmyAssembler
             return this;
         }
 
+        public bool IsSimpleMount()
+        {
+            return (this.Type == Unit.UnitType.Mount) && (this.OriginalWounds == 1);
+        }
+
         public bool IsNotSimpleMount()
         {
             return (this.Type != Unit.UnitType.Mount) || (this.OriginalWounds != 1);

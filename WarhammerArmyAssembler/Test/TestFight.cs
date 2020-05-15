@@ -185,7 +185,7 @@ namespace WarhammerArmyAssembler
                 Dictionary<int, int> attacksRound = new Dictionary<int, int>();
 
                 foreach (Unit u in participants)
-                    attacksRound[u.ID] = PrintAttack(u, u.Attacks, roundWounds[u.ID]);
+                    attacksRound[u.ID] = PrintAttack(u, u.Attacks, roundWounds, unit, enemy, unitMount);
 
                 InitRoundWounds(participants, ref roundWounds);
 
@@ -272,12 +272,23 @@ namespace WarhammerArmyAssembler
             Console(color, String.Format(line, p));
         }
 
-        private static int PrintAttack(Unit unit, int attackNum, int deathInRound)
+        private static int PrintAttack(Unit unit, int attackNum, Dictionary<int, int> death,
+            Unit tUnit, Unit tEnemy, Unit tMount)
         {
             if (unit.Frenzy)
                 Console(supplText, "\n{0} --> is frenzy", unit.Name);
 
-            if (unit.IsUnit() && (deathInRound > 0))
+            int deathInRound = death[unit.ID];
+
+            if (unit.IsSimpleMount())
+            {
+                if (unit.ID == tMount.ID)
+                    deathInRound = death[tUnit.ID];
+                else
+                    deathInRound = death[tEnemy.ID];
+            }
+
+            if ((!unit.IsHero()) && (deathInRound > 0))
             {
                 attackNum -= deathInRound;
                 Console(supplText, "\n-{0} attack {1}", deathInRound, unit.Name);
