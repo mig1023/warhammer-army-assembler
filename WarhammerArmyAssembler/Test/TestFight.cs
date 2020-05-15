@@ -313,9 +313,9 @@ namespace WarhammerArmyAssembler
         private static void CheckTerror(ref Unit unit, Unit friend, Unit enemy, Unit enemyFriend)
         {
             bool friendTerrorOrFear = (friend != null ? (friend.Terror || friend.Fear) : false);
-            bool enemyFriendTerrorOrFear = (enemyFriend != null ? (enemyFriend.Terror || enemyFriend.Fear) : false);
+            bool enemyFriendTerror = (enemyFriend != null ? enemyFriend.Terror : false);
 
-            if ((!enemy.Terror && !enemyFriendTerrorOrFear) || unit.Terror || unit.Fear || friendTerrorOrFear)
+            if ((!enemy.Terror && !enemyFriendTerror) || unit.Terror || friendTerrorOrFear)
                 return;
 
             string terrorSource = (((enemyFriend != null) && enemy.Terror) ? enemyFriend.Name : enemy.Name);
