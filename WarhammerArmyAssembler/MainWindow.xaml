@@ -307,6 +307,7 @@
 
                     <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"  PreviewMouseDown="dragWindowBottom_MouseDown">
                         <Label x:Name="armyMainLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto"/>
+                        <Label x:Name="armyVersionLabel" Content="" FontSize="17" Foreground="White" Background="Gray" Width="Auto"/>
                         <Label x:Name="armyMainMenu" Content="" FontSize="20" FontFamily="Arial" Foreground="White" Background="Gray" Width="Auto" Margin="24,0" MouseDown="armyMainLabel_MouseDown" />
                     </Canvas>
 

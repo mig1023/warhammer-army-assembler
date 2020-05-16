@@ -35,6 +35,7 @@ namespace WarhammerArmyAssembler
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             armyMainMenu.Margin = Interface.Thick(armyMainMenu, left: (e.NewSize.Width - armyMainMenu.ActualWidth));
+            armyVersionLabel.Margin = Interface.Thick(armyVersionLabel, left: armyMainLabel.Margin.Left + armyMainLabel.ActualWidth);
         }
 
         private void ArmyList_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)

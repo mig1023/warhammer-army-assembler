@@ -11,6 +11,7 @@ namespace WarhammerArmyAssembler
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
 
         public static string ArmyName { get; set; }
+        public static int ArmyVersion { get; set; }
 
         public static int MaxPoints = 2000;
         public static int MaxIDindex = 0;
