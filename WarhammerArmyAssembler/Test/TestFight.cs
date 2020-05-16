@@ -281,7 +281,7 @@ namespace WarhammerArmyAssembler
             int deathInRound = death[unit.ID];
 
             if (unit.IsSimpleMount())
-                deathInRound = (unit.ID == tMount.ID ? death[tUnit.ID] : death[tEnemy.ID]);
+                deathInRound = ((tMount != null) && (unit.ID == tMount.ID) ? death[tUnit.ID] : death[tEnemy.ID]);
 
             if ((!unit.IsHero()) && (deathInRound > 0))
             {
