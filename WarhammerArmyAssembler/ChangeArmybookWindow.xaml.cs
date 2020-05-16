@@ -60,6 +60,8 @@ namespace WarhammerArmyAssembler
         {
             InterfaceReload.LoadArmySize(points);
 
+            Interface.main.armyVersionLabel_PositionCorrect();
+
             this.Hide();
 
             Interface.main.Show();
