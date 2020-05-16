@@ -1424,6 +1424,45 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Karl Franz",
+                TestListName = "The Emperor Karl Franz (The Empire)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 6,
+                BallisticSkill = 5,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 6,
+                Attacks = 4,
+                Leadership = 10,
+                Armour = 4,
+                Ward = 4,
+                AutoWound = true,
+                NoArmour = true,
+                MultiWounds = "D3",
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Deathclaw",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Movement = 6,
+                    WeaponSkill = 6,
+                    BallisticSkill = 0,
+                    Strength = 5,
+                    Toughness = 5,
+                    Wounds = 4,
+                    Initiative = 5,
+                    Attacks = 4,
+                    Leadership = 8,
+                    Terror = true,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Vermin Lord",
                 TestListName = "Vermin Lord (Skaven)",
                 Type = UnitType.Lord,
