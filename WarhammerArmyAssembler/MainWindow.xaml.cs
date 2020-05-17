@@ -592,11 +592,13 @@ namespace WarhammerArmyAssembler
             if (WindowState == WindowState.Maximized)
             {
                 WindowState = WindowState.Normal;
+                BorderThickness = new Thickness(0);
                 newButtonCaption = "Max";
             }
             else
             {
                 WindowState = WindowState.Maximized;
+                BorderThickness = new Thickness(5);
                 newButtonCaption = "Normal";
             }
 
