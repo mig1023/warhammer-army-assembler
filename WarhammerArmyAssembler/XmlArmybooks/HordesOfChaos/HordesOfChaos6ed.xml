@@ -185,7 +185,7 @@
 				<Description>Any model wounded by the Soul Cleaver (after saves, etc) must pass a Toughness test or suffer an additional wound (with no saves allowed).</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Axe of Kborn</Name>
+				<Name>Axe of Khorn</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
 				<OnlyIfAnotherService>
@@ -198,11 +198,58 @@
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic armour">
 			<Artefact>
+				<Name>Spelleater Shield</Name>
+				<Type>Shield</Type>
+				<Points>75</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				<SpecialRuleDescription>Roll a D6 each time a spell is dispelled. On a roll of 4+ the spell is destroyed and the enemy Wizard may not cast it for the rest of the battle.</SpecialRuleDescription>
+				<Description>The Spelleater Shield is treated like a normal shield. In addition, it grants Magic Resistance (2) to the character and any unit he is with. Roll a D6 each time a spell is cast at the bearer of the Spelleater Shield and is dispelled. On a roll of 4 or more, the spell is destroyed and the enemy Wizard mav not cast it for the rest of the battle.</Description>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+			</Artefact>
+			<Artefact>
+				<Name>Chaos Runeshield</Name>
+				<Type>Shield</Type>
+				<Points>50</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Runeshiel negates the power of any magic weapons carried by models in base contac.</SpecialRuleDescription>
+				<Description>The Chaos Runeshield is treated like a normal shield. It also negates the power of any magic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type.</Description>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+			</Artefact>
+			<Artefact>
 				<Name>Armour of Tortured Souls</Name>
 				<Type>Armour</Type>
 				<Points>40</Points>
 				<AddToArmour>4</AddToArmour>
 				<AddToToughness>1</AddToToughness>
+				<Description>The Armour of Tortured Souls is a suit of Chaos armour. The wearer counts as having +1 Toughness against mundane attacks (not against spells, magic items, etc).</Description>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Damnation</Name>
+				<Type>Armour</Type>
+				<Points>30</Points>
+				<AddToArmour>4</AddToArmour>
+				<Reroll>ToHit</Reroll>
+				<Description>The Armour of Damnation is a suit of Chaos armour. In addition, any model attacking the wearer in close combat must re-roll successful rolls to hit.</Description>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+			</Artefact>
+			<Artefact>
+				<Name>Bone Shield</Name>
+				<Type>Shield</Type>
+				<Points>30</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Strength 4 hit for each successful armour save</SpecialRuleDescription>
+				<Description>The Bane Shield is treated like a normal shield. In addition, for each successful armour save in close combat, the shield inflicts a Strength 4 hit on the model that struck the blow.</Description>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+			</Artefact>
+			<Artefact>
+				<Name>Crimson Armour of Dargan</Name>
+				<Type>Armour</Type>
+				<Points>20</Points>
+				<AddToArmour>4</AddToArmour>
+				<SpecialRuleDescription>Strength 4 hit for each successful armour save</SpecialRuleDescription>
+				<Description>The Crimson Armour is a suit of Chaos armour. In addition, any model wishing to attack the wearer in close combat must first pass a Leadership test or they may not attack that combat round.</Description>
 				<OnlyForGroup>Mortal</OnlyForGroup>
 			</Artefact>
 		</ArtefactsGroup>
