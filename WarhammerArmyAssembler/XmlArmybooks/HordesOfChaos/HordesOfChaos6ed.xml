@@ -305,12 +305,56 @@
 				<Description>The model has Magic Resistance (2).</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Arcane items">	
+			<Artefact>
+				<Name>Staff of Change</Name>
+				<Type>Arcane</Type>
+				<Points>65</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>The bearer can re-roll any number of the dice rolled to cast or dispel</SpecialRuleDescription>
+				<Description>The bearer can re-roll any number of the dice rolled to cast or dispel a spell The second result(s) stand. This can effectively negate the effects of a Miscast and cause an Irresistible Force (and the equivalent results when dispelling). If the bearer casts a spell with Irresistible Force using the staff's re-roll ability, the staff will exhaust its power and cease working for the rest of the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Skull of Katam</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>The bearer adds +1 to all Casting rolls</SpecialRuleDescription>
+				<Description>The bearer adds +1 to all Casting rolls.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Familiar</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<AddToCast>1</AddToCast>
+				<AddToDispell>1</AddToDispell>
+				<Description>The Familiar adds one dice to both the Power dice and Dispel dice pool of the bearer's side.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Warrior Familiar</Name>
+				<Type>Arcane</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>Strength 5 hit on a single model in base contact</SpecialRuleDescription>
+				<Description>At the beginning of the Close Combat phase, before blows are struck, the Familiar inflicts one Strength 5 hit on a single model chosen by the Sorcerer from amongst those in base contact. Wounds inflicted do count towards combat resolution.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Spell Familiar</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>One more spell</SpecialRuleDescription>
+				<Description>The Familiar's owner knows one more spell than is normal for his level. This does not increase his Magic Level.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Enchanted items">	
 			
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Arcane items">	
-			
-		</ArtefactsGroup>
+
 		<ArtefactsGroup Name = "Magic banner">
 			
 		</ArtefactsGroup>
