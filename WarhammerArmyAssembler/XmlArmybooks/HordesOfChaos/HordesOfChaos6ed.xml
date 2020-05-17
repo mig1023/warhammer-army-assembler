@@ -253,6 +253,58 @@
 				<OnlyForGroup>Mortal</OnlyForGroup>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Talismans">	
+			<Artefact>
+				<Name>The Beguiling Gem</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>75</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>Enemy models in base contact must pass a Leadership test or may not make any attacks that round and any attacks made against this models will hit automatically</SpecialRuleDescription>
+				<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take a Leadership test at the start of every Close Combat phase. Any model which fails is transfixed and may not make any attacks that round, and any attacks made against it by the bearer will hit automatically.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Amulet of Chaos</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>45</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>Enemy models must pass a Strength test or lose one wound</SpecialRuleDescription>
+				<Description>At the start of every Chaos Magic phase, any enemy models in contact with the wearer must pass a Strength test or lose one wound, with no armour saves allowed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>GoldenEye of Tzeentch</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>Ward save of 3+ against all normal and magical missiles</SpecialRuleDescription>
+				<Description>The model and his mount have a Ward save of 3+ against all normal and magical missiles.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Gaze of the Gods</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<AddToWard>3</AddToWard>
+				<SpecialRuleDescription>If the model is fleeing at the start of a Chaos Magic phase he is turned into a Chaos Spawn</SpecialRuleDescription>
+				<Description>The model gains a 4+ Ward save. If the model is fleeing at the start of a Chaos Magic phase, for any reason, the wrath of the Chaos gods is immediately visited upon him and he is turned into a Chaos Spawn, with the same number of wounds remaining as the character had. If you do not have a Spawn model to replace the character then he simply counts as slain. For Victory points purposes, the character is not counted as slain or below half Wounds unless the Spawn he has turned into is slain or is below half Wounds.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Collar of Khorne</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
+				<Description>The model has Magic Resistance (2).</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Enchanted items">	
 			
 		</ArtefactsGroup>
