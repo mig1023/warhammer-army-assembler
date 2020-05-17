@@ -142,7 +142,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Griffon",
-                TestListName = "Hippogryph (Bretonnia)",
+                TestListName = "Griffon (The Empire)",
                 Type = UnitType.Rare,
                 Size = 1,
                 Movement = 6,
