@@ -1164,6 +1164,28 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Gor-Rok",
+                TestListName = "Josef Bugman Master Brewer (Lizardmen)",
+                Type = UnitType.Hero,
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 2,
+                Initiative = 3,
+                Attacks = 4,
+                Leadership = 8,
+                ColdBlooded = true,
+                Armour = 3,
+                Stubborn = true,
+                UnitStrength = 2,
+                Reroll = "ToHit",
+            },
+
+            new Enemy
+            {
                 Name = "Josef Bugman",
                 TestListName = "Josef Bugman Master Brewer (Dwarfs)",
                 Type = UnitType.Hero,
