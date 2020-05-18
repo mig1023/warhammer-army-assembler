@@ -1500,6 +1500,44 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Torgrim Grudgebearer",
+                TestListName = "Torgrim Grudgebearer (Dwarfs)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 3,
+                WeaponSkill = 7,
+                BallisticSkill = 6,
+                Strength = 4,
+                Toughness = 5,
+                Wounds = 7,
+                Initiative = 4,
+                Attacks = 4,
+                Leadership = 10,
+                Armour = 2,
+                Ward = 4,
+                HitFirst = true,
+                ImmuneToPsychology = true,
+                Stubborn = true,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Thronebearers",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Movement = 3,
+                    WeaponSkill = 5,
+                    BallisticSkill = 3,
+                    Strength = 4,
+                    Toughness = 0,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 4,
+                    Leadership = 0,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Orion",
                 TestListName = "Orion, The King in the Wood (Wood Elves)",
                 Type = UnitType.Lord,
