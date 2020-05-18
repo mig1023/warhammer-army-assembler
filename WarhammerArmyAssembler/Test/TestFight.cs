@@ -207,6 +207,10 @@ namespace WarhammerArmyAssembler
                         roundWounds[opponent.ID] += Round(u, ref opponent, attacksRound[u.ID], round);
                     }
 
+                foreach (Unit u in participants)
+                    if (u.Regeneration && (roundWounds[u.ID] > 0) && !u.WoundedWithKillingBlow)
+                        roundWounds[u.ID] = Regeneration(u, roundWounds[u.ID]);
+
                 int unitRoundWounds = roundWounds[unit.ID] + (unitMount != null ? roundWounds[unitMount.ID] : 0);
                 int enemyRoundWounds = roundWounds[enemy.ID] + (enemyMount != null ? roundWounds[enemyMount.ID] : 0);
 
@@ -347,27 +351,29 @@ namespace WarhammerArmyAssembler
                 enemy.Wounds -= wounded;
             }
 
-            if (enemy.Regeneration && (roundWounds > 0) && !attackWithKillingBlow)
-            {
-                Console(text, "\n");
-
-                for (int i = 0; i < roundWounds; i++)
-                {
-                    Console(text, "\n{0} --> regeneration ", enemy.Name);
-
-                    if (RollDice(unit, DiceType.REGENERATION, enemy, 4))
-                    {
-                        Console(goodText, " --> success");
-                        enemy.Wounds += 1;
-                        roundWounds -= 1;
-                    }
-                    else
-                        Console(badText, " --> fail");
-                }
-            }
-
             if (enemy.Wounds < 0)
                 enemy.Wounds = 0;
+
+            return roundWounds;
+        }
+
+        private static int Regeneration(Unit unit, int roundWounds)
+        {
+            Console(text, "\n");
+
+            for (int i = 0; i < roundWounds; i++)
+            {
+                Console(text, "\n{0} --> regeneration ", unit.Name);
+
+                if (RollDice(unit, DiceType.REGENERATION, unit, 4))
+                {
+                    Console(goodText, " --> success");
+                    unit.Wounds += 1;
+                    roundWounds -= 1;
+                }
+                else
+                    Console(badText, " --> fail");
+            }
 
             return roundWounds;
         }
@@ -510,6 +516,7 @@ namespace WarhammerArmyAssembler
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
                             Console(badText, " --> {0} SLAIN", enemy.Name);
+                            enemy.WoundedWithKillingBlow = true;
                             return enemy.Wounds;
                         }
                         else
