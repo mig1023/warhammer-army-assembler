@@ -1463,6 +1463,43 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Tyrion",
+                TestListName = "Tyrion (High Elves)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 5,
+                WeaponSkill = 9,
+                BallisticSkill = 7,
+                Strength = 7,
+                Toughness = 3,
+                Wounds = 4,
+                Initiative = 10,
+                Attacks = 4,
+                Leadership = 10,
+                HitFirst = true,
+                Armour = 1,
+                Ward = 4,
+                Regeneration = true,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Malhandir",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Movement = 10,
+                    WeaponSkill = 4,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 5,
+                    Attacks = 2,
+                    Leadership = 7,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Vermin Lord",
                 TestListName = "Vermin Lord (Skaven)",
                 Type = UnitType.Lord,
@@ -1481,6 +1518,7 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 MultiWounds = "D3",
             },
+
 
             new Enemy
             {
