@@ -1165,7 +1165,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Gor-Rok",
-                TestListName = "Josef Bugman Master Brewer (Lizardmen)",
+                TestListName = "Gor-Rok, The Great White Lizard (Lizardmen)",
                 Type = UnitType.Hero,
                 Size = 1,
                 Movement = 4,
@@ -1325,6 +1325,29 @@ namespace WarhammerArmyAssembler
                 HitFirst = true,
                 ArmourPiercing = 2,
                 MultiWounds = "D3",
+            },
+
+            new Enemy
+            {
+                Name = "Chakax",
+                TestListName = "Chakax, The Eternity Warden (Lizardmen)",
+                Type = UnitType.Hero,
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 0,
+                Strength = 7,
+                Toughness = 5,
+                Wounds = 2,
+                Initiative = 3,
+                Attacks = 4,
+                Leadership = 8,
+                ColdBlooded = true,
+                Armour = 4,
+                Ward = 5,
+                Unbreakable = true,
+                HitFirst = true,
+                Reroll = "ToHit",
             },
         };
 
