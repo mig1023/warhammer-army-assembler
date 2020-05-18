@@ -1500,6 +1500,46 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Orion",
+                TestListName = "Orion, The King in the Wood (Wood Elves)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 9,
+                WeaponSkill = 8,
+                BallisticSkill = 8,
+                Strength = 6,
+                Toughness = 5,
+                Wounds = 5,
+                Initiative = 9,
+                Attacks = 5,
+                Leadership = 10,
+                HitFirst = true,
+                Frenzy = true,
+                Terror = true,
+                Unbreakable = true,
+                Ward = 5,
+
+                EnemyMount = new Enemy
+                {
+                    Name = "Hound of Orion",
+                    Type = UnitType.Hero,
+                    Size = 2,
+                    Movement = 9,
+                    WeaponSkill = 4,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 4,
+                    Wounds = 1,
+                    Initiative = 4,
+                    Attacks = 1,
+                    Leadership = 6,
+                    Frenzy = true,
+                    Unbreakable = true,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Vermin Lord",
                 TestListName = "Vermin Lord (Skaven)",
                 Type = UnitType.Lord,
