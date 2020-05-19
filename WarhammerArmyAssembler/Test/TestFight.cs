@@ -522,7 +522,7 @@ namespace WarhammerArmyAssembler
                         else
                         {
                             Console(badText, " --> {0} {1}", enemy.Name, "WOUND");
-                            return WoundsNumbers(unit);
+                            return WoundsNumbers(unit, enemy);
                         }
                     }
                 }
@@ -602,7 +602,7 @@ namespace WarhammerArmyAssembler
             return RandomParamParse(impactHit);
         }
 
-        private static int WoundsNumbers(Unit unit)
+        private static int WoundsNumbers(Unit unit, Unit enemy)
         {
             if (String.IsNullOrEmpty(unit.MultiWounds))
                 return 1;
@@ -610,6 +610,13 @@ namespace WarhammerArmyAssembler
             int multiwounds = RandomParamParse(unit.MultiWounds);
 
             Console(text, " <-- {0} multiple wounds", multiwounds);
+
+            if (enemy.Wounds < multiwounds)
+            {
+                multiwounds = enemy.Wounds;
+                Console(supplText, ", only {0} can be inflicted", multiwounds);
+            }
+                
 
             return multiwounds;
         }
