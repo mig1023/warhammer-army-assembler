@@ -521,7 +521,7 @@ namespace WarhammerArmyAssembler
                         }
                         else
                         {
-                            Console(badText, " --> {0} {1}", enemy.Name, ((enemy.Wounds <= 1) && !enemy.IsUnit() ? "SLAIN" : "WOUND"));
+                            Console(badText, " --> {0} {1}", enemy.Name, "WOUND");
                             return WoundsNumbers(unit);
                         }
                     }
