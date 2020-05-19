@@ -671,7 +671,7 @@ namespace WarhammerArmyAssembler
 
             if ((unit.Lance || unit.Flail) && (round == 1))
             {
-                strength += (unit.Lance ? 2 : 1);
+                strength += 2;
 
                 if (strength > 10)
                     strength = 10;
