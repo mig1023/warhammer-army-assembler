@@ -674,6 +674,26 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Tomb Guard",
+                TestListName = "16 Tomb Guard (Tomb Kings)",
+                Type = UnitType.Special,
+                Size = 16,
+                Movement = 4,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 1,
+                Leadership = 8,
+                Armour = 5,
+                KillingBlow = true,
+                Undead = true,
+            },
+
+            new Enemy
+            {
                 Name = "Grave Guard",
                 TestListName = "16 Grave Guard (Vampire Counts)",
                 Type = UnitType.Special,
@@ -691,7 +711,6 @@ namespace WarhammerArmyAssembler
                 KillingBlow = true,
                 Undead = true,
             },
-
 
             new Enemy
             {
