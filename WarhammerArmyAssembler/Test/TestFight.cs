@@ -361,7 +361,9 @@ namespace WarhammerArmyAssembler
         {
             Console(text, "\n");
 
-            for (int i = 0; i < roundWounds; i++)
+            int woundsToRegenarate = roundWounds;
+
+            for (int i = 0; i < woundsToRegenarate; i++)
             {
                 Console(text, "\n{0} --> regeneration ", unit.Name);
 
