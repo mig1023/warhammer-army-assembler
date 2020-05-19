@@ -165,10 +165,10 @@ namespace WarhammerArmyAssembler
             {
                 round += 1;
 
-                string unitMountLine = (unitMount != null && unitMount.IsNotSimpleMount() ?
+                string unitMountLine = (unitMount != null && unitMount.IsNotSimpleMount() && (unitMount.Wounds > 0) ?
                     String.Format(" + {0}: {1}W", unitMount.Name, unitMount.Wounds) : String.Empty
                 );
-                string enemyMountLine = (enemyMount != null && enemyMount.IsNotSimpleMount() ?
+                string enemyMountLine = (enemyMount != null && enemyMount.IsNotSimpleMount() && (enemyMount.Wounds > 0) ?
                     String.Format(" + {0}: {1}W", enemyMount.Name, enemyMount.Wounds) : String.Empty
                 );
 
@@ -287,7 +287,7 @@ namespace WarhammerArmyAssembler
             if (unit.IsSimpleMount())
                 deathInRound = ((tMount != null) && (unit.ID == tMount.ID) ? death[tUnit.ID] : death[tEnemy.ID]);
 
-            if ((!unit.IsHero()) && (deathInRound > 0))
+            if ((!unit.IsHero()) && (unit.Wounds > 0) && (deathInRound > 0))
             {
                 attackNum -= deathInRound;
                 Console(supplText, "\n-{0} attack {1}", deathInRound, unit.Name);
