@@ -209,7 +209,7 @@ namespace WarhammerArmyAssembler
 
                 foreach (Unit u in participants)
                     if (u.Regeneration && (roundWounds[u.ID] > 0) && !u.WoundedWithKillingBlow)
-                        roundWounds[u.ID] = Regeneration(u, roundWounds[u.ID]);
+                        Regeneration(u, roundWounds[u.ID]);
 
                 int unitRoundWounds = roundWounds[unit.ID] + (unitMount != null ? roundWounds[unitMount.ID] : 0);
                 int enemyRoundWounds = roundWounds[enemy.ID] + (enemyMount != null ? roundWounds[enemyMount.ID] : 0);
@@ -357,13 +357,11 @@ namespace WarhammerArmyAssembler
             return roundWounds;
         }
 
-        private static int Regeneration(Unit unit, int roundWounds)
+        private static void Regeneration(Unit unit, int roundWounds)
         {
             Console(text, "\n");
 
-            int woundsToRegenarate = roundWounds;
-
-            for (int i = 0; i < woundsToRegenarate; i++)
+            for (int i = 0; i < roundWounds; i++)
             {
                 Console(text, "\n{0} --> regeneration ", unit.Name);
 
@@ -371,13 +369,10 @@ namespace WarhammerArmyAssembler
                 {
                     Console(goodText, " --> success");
                     unit.Wounds += 1;
-                    roundWounds -= 1;
                 }
                 else
                     Console(badText, " --> fail");
             }
-
-            return roundWounds;
         }
 
         private static void ShowRoundOrder(List<Unit> allParticipants)
