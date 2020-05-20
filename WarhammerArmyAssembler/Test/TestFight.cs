@@ -211,20 +211,17 @@ namespace WarhammerArmyAssembler
                     if (u.Regeneration && (roundWounds[u.ID] > 0) && !u.WoundedWithKillingBlow)
                         Regeneration(u, roundWounds[u.ID]);
 
-                int unitRoundWounds = roundWounds[unit.ID] + (unitMount != null ? roundWounds[unitMount.ID] : 0);
-                int enemyRoundWounds = roundWounds[enemy.ID] + (enemyMount != null ? roundWounds[enemyMount.ID] : 0);
+                Dictionary<Unit, List<Unit>> BreakTestOrder = new Dictionary<Unit, List<Unit>>
+                {
+                    [enemy] = new List<Unit> { enemy, enemyMount, unit, unitMount },
+                    [enemyMount] = new List<Unit> { enemyMount, enemy, unit, unitMount },
+                    [unit] = new List<Unit> { unit, unitMount, enemy, enemyMount },
+                    [unitMount] = new List<Unit> { unitMount, unit, enemy, enemyMount },
+                };
 
-                if ((enemy.Wounds > 0) && (enemyRoundWounds > unitRoundWounds))
-                    enemy.Wounds = BreakTest(enemy, enemyMount, unit, unitMount, ref roundWounds);
-
-                if ((enemyMount != null) && enemyMount.IsNotSimpleMount() && (enemyMount.Wounds > 0) && (enemyRoundWounds > unitRoundWounds))
-                    enemyMount.Wounds = BreakTest(enemyMount, enemy, unit, unitMount, ref roundWounds);
-
-                if ((unit.Wounds > 0) && (unitRoundWounds > enemyRoundWounds))
-                    unit.Wounds = BreakTest(unit, unitMount, enemy, enemyMount, ref roundWounds);
-
-                if ((unitMount != null) && unitMount.IsNotSimpleMount()  && (unitMount.Wounds > 0) && (unitRoundWounds > enemyRoundWounds))
-                    unitMount.Wounds = BreakTest(unitMount, unit, enemy, enemyMount, ref roundWounds);
+                foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
+                    if (RoundLostBy(u.Value[0], u.Value[1], u.Value[2], u.Value[3], roundWounds))
+                        u.Key.Wounds = BreakTest(u.Value[0], u.Value[1], u.Value[2], u.Value[3], ref roundWounds);
             }
 
             Console(text, "\n\nEnd: ");
@@ -244,6 +241,17 @@ namespace WarhammerArmyAssembler
                 Console(text, "{0} and {1} failed to kill each other", unit.Name, enemy.Name);
                 return 0;
             }
+        }
+
+        private static bool RoundLostBy(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount, Dictionary<int, int> roundWounds)
+        {
+            if ((unit == null) || (unit.Wounds <= 0) || unit.IsSimpleMount())
+                return false;
+
+            int unitRoundWounds = roundWounds[unit.ID] + (unitMount != null ? roundWounds[unitMount.ID] : 0);
+            int enemyRoundWounds = roundWounds[enemy.ID] + (enemyMount != null ? roundWounds[enemyMount.ID] : 0);
+
+            return unitRoundWounds > enemyRoundWounds;
         }
 
         private static Unit SelectOpponent(List<Unit> participants, Unit unit)
