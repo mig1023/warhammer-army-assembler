@@ -214,14 +214,16 @@ namespace WarhammerArmyAssembler
                 Dictionary<Unit, List<Unit>> BreakTestOrder = new Dictionary<Unit, List<Unit>>
                 {
                     [enemy] = new List<Unit> { enemy, enemyMount, unit, unitMount },
-                    [enemyMount] = new List<Unit> { enemyMount, enemy, unit, unitMount },
                     [unit] = new List<Unit> { unit, unitMount, enemy, enemyMount },
-                    [unitMount] = new List<Unit> { unitMount, unit, enemy, enemyMount },
                 };
 
                 foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
+                {
+                    roundWounds[u.Key.ID] += RoundBonus(u.Value[2], u.Value[3], u.Value[0], u.Value[1]);
+
                     if (RoundLostBy(u.Value[0], u.Value[1], u.Value[2], u.Value[3], roundWounds))
                         u.Key.Wounds = BreakTest(u.Value[0], u.Value[1], u.Value[2], u.Value[3], ref roundWounds);
+                }
             }
 
             Console(text, "\n\nEnd: ");
@@ -252,6 +254,20 @@ namespace WarhammerArmyAssembler
             int enemyRoundWounds = roundWounds[enemy.ID] + (enemyMount != null ? roundWounds[enemyMount.ID] : 0);
 
             return unitRoundWounds > enemyRoundWounds;
+        }
+
+        private static int RoundBonus(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount)
+        {
+            int unitFullSize = (unit.Size * unit.OriginalWounds) + (unitMount != null ? unitMount.Size * unitMount.OriginalWounds : 0);
+            int enemyFullSize = (enemy.Size * enemy.OriginalWounds) + (enemyMount != null ? enemyMount.Size * enemyMount.OriginalWounds : 0);
+
+            if (unitFullSize > enemyFullSize)
+            {
+                Console(supplText, "\n\n{0} have +1 battle result bonus by outnumber", unit.Name);
+                return 1;
+            }
+            else
+                return 0;
         }
 
         private static Unit SelectOpponent(List<Unit> participants, Unit unit)
