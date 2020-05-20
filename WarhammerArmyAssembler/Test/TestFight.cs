@@ -220,6 +220,12 @@ namespace WarhammerArmyAssembler
                     if (u.Regeneration && (roundWounds[u.ID] > 0) && !u.WoundedWithKillingBlow)
                         Regeneration(u, roundWounds[u.ID]);
 
+                foreach (Unit u in participants)
+                    if (u.Wounds <= roundWounds[u.ID])
+                    {
+                        Console(badText, "\n\n{0} is SLAIN", u.Name);
+                    }
+
                 Console(text, "\n");
 
                 if (BothOpponentsAreAlive(participants))
