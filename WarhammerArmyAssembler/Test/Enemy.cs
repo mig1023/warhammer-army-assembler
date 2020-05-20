@@ -194,7 +194,7 @@ namespace WarhammerArmyAssembler
                 Armour = 4,
                 Terror = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Apparentice",
                     Type = UnitType.Mount,
@@ -254,7 +254,7 @@ namespace WarhammerArmyAssembler
                 Stubborn = true,
                 ImmuneToPsychology = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Skink Crew",
                     Type = UnitType.Mount,
@@ -523,7 +523,7 @@ namespace WarhammerArmyAssembler
                 Armour = 2,
                 Lance = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Warhorse",
                     Type = UnitType.Mount,
@@ -595,7 +595,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 8,
                 Armour = 1,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Chaos Steed",
                     Type = UnitType.Mount,
@@ -768,7 +768,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 7,
                 Armour = 3,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Boar",
                     Type = UnitType.Mount,
@@ -805,7 +805,7 @@ namespace WarhammerArmyAssembler
                 Fear = true,
                 Lance = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Cold One",
                     Type = UnitType.Mount,
@@ -842,7 +842,7 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = true,
                 Fear = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Cold One",
                     Type = UnitType.Mount,
@@ -1033,7 +1033,7 @@ namespace WarhammerArmyAssembler
                 Ward = 5,
                 Lance = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Type = UnitType.Mount,
                     Name = "Warhorse",
@@ -1071,7 +1071,7 @@ namespace WarhammerArmyAssembler
                 Undead = true,
                 Lance = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Type = UnitType.Mount,
                     Name = "Nightmare",
@@ -1106,7 +1106,7 @@ namespace WarhammerArmyAssembler
                 Armour = 1,
                 Fear = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Type = UnitType.Mount,
                     Name = "Juggernaut",
@@ -1164,7 +1164,7 @@ namespace WarhammerArmyAssembler
                 KillingBlow = true,
                 Reroll = "ToWound",
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Type = UnitType.Mount,
                     Name = "Warhorse",
@@ -1306,7 +1306,7 @@ namespace WarhammerArmyAssembler
                 Reroll = "ToWound",
                 NoArmour = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Spite",
                     Type = UnitType.Mount,
@@ -1392,7 +1392,7 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 Undead = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Shadow Steed",
                     Type = UnitType.Mount,
@@ -1431,7 +1431,7 @@ namespace WarhammerArmyAssembler
                 AutoWound = true,
                 NoArmour = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Warhorse",
                     Type = UnitType.Mount,
@@ -1466,7 +1466,7 @@ namespace WarhammerArmyAssembler
                 Ward = 4,
                 Undead = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Zombie Dragon",
                     Type = UnitType.Mount,
@@ -1507,7 +1507,7 @@ namespace WarhammerArmyAssembler
                 NoArmour = true,
                 MultiWounds = "D3",
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Deathclaw",
                     Type = UnitType.Mount,
@@ -1545,7 +1545,7 @@ namespace WarhammerArmyAssembler
                 Ward = 4,
                 Regeneration = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Malhandir",
                     Type = UnitType.Mount,
@@ -1583,7 +1583,7 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
                 Stubborn = true,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Thronebearers",
                     Type = UnitType.Mount,
@@ -1621,7 +1621,7 @@ namespace WarhammerArmyAssembler
                 Unbreakable = true,
                 Ward = 5,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Hound of Orion",
                     Type = UnitType.Hero,
@@ -1681,7 +1681,7 @@ namespace WarhammerArmyAssembler
                 Armour = 4,
                 Ward = 2,
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Seraphon",
                     Type = UnitType.Mount,
@@ -1720,7 +1720,7 @@ namespace WarhammerArmyAssembler
                 Ward = 5,
                 MultiWounds = "2",
 
-                EnemyMount = new Enemy
+                Mount = new Enemy
                 {
                     Name = "Grymloq",
                     Type = UnitType.Mount,

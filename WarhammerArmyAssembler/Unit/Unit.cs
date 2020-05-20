@@ -155,7 +155,8 @@ namespace WarhammerArmyAssembler
         public List<Option> Options = new List<Option>();
 
         public TestTypeTypes TestType { get; set; }
-        public Unit EnemyMount { get; set; }
+        public Unit Mount { get; set; }
+        public bool WoundedWithKillingBlow { get; set; }
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
@@ -300,10 +301,13 @@ namespace WarhammerArmyAssembler
                 Chariot = this.Chariot,
 
                 TestType = this.TestType,
-                EnemyMount = this.EnemyMount,
+                WoundedWithKillingBlow = false,
 
                 ArmyColor = this.ArmyColor
             };
+
+            if (this.Mount != null)
+                newUnit.Mount = this.Mount.Clone();
 
             if (full)
             {

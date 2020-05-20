@@ -42,8 +42,8 @@ namespace WarhammerArmyAssembler
                     Unit currentEnemy = enemy.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
                     Unit currentMount = null;
 
-                    if (currentEnemy.EnemyMount != null)
-                        currentMount = enemy.EnemyMount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+                    if (currentEnemy.Mount != null)
+                        currentMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
                     StatisticTest(unit, unitMount, currentEnemy, currentMount, royalNotation: true);
                 }
@@ -136,6 +136,7 @@ namespace WarhammerArmyAssembler
             {
                 unitMount = originalUnitMount.Clone().SetTestType(Unit.TestTypeTypes.Unit);
                 participants.Add(unitMount);
+                unit.Mount = unitMount;
             }
 
             if (originalEnemyMount != null)
@@ -217,16 +218,35 @@ namespace WarhammerArmyAssembler
                     [unit] = new List<Unit> { unit, unitMount, enemy, enemyMount },
                 };
 
-                foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
-                {
-                    roundWounds[u.Key.ID] += RoundBonus(u.Value[2], u.Value[3], u.Value[0], u.Value[1]);
+                Console(text, "\n");
 
-                    if (RoundLostBy(u.Value[0], u.Value[1], u.Value[2], u.Value[3], roundWounds))
-                        u.Key.Wounds = BreakTest(u.Value[0], u.Value[1], u.Value[2], u.Value[3], ref roundWounds);
-                }
+                if (BothOpponentsAreAlive(participants))
+                    foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
+                    {
+                        roundWounds[u.Key.ID] += RoundBonus(u.Value[2], u.Value[3], u.Value[0], u.Value[1]);
+
+                        if (RoundLostBy(u.Value[0], u.Value[1], u.Value[2], u.Value[3], roundWounds))
+                            if (BreakTestFail(u.Value[0], u.Value[1], u.Value[2], u.Value[3], ref roundWounds))
+                            {
+                                //u.Key.Wounds = 0;
+
+                                u.Key.Wounds = 0;
+
+                                if (u.Key.Mount != null)
+                                    u.Key.Mount.Wounds = 0;
+
+
+                                // можно доббавлять ссылку в MountOn!!!
+
+                                //if ((u.Key.ID == unit.ID) && (unitMount != null))
+                                //    unitMount.Wounds = 0;
+                                //else if ((u.Key.ID == enemy.ID) && (enemyMount != null))
+                                //    enemyMount.Wounds = 0;
+                            }
+                    }
             }
 
-            Console(text, "\n\nEnd: ");
+            Console(text, "\nEnd: ");
 
             if (enemy.Wounds + (enemyMount != null && enemyMount.IsNotSimpleMount() ? enemyMount.Wounds : 0) <= 0)
             {
@@ -263,7 +283,7 @@ namespace WarhammerArmyAssembler
 
             if (unitFullSize > enemyFullSize)
             {
-                Console(supplText, "\n\n{0} have +1 battle result bonus by outnumber", unit.Name);
+                Console(supplText, "\n{0} have +1 battle result bonus by outnumber", unit.Name);
                 return 1;
             }
             else
@@ -311,7 +331,7 @@ namespace WarhammerArmyAssembler
             if (unit.IsSimpleMount())
                 deathInRound = ((tMount != null) && (unit.ID == tMount.ID) ? death[tUnit.ID] : death[tEnemy.ID]);
 
-            if ((!unit.IsHero()) && (unit.Wounds > 0) && (deathInRound > 0))
+            if ((!unit.IsHeroOrHisMount()) && (unit.Wounds > 0) && (deathInRound > 0))
             {
                 attackNum -= deathInRound;
                 Console(supplText, "\n-{0} attack {1}", deathInRound, unit.Name);
@@ -437,17 +457,17 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static int BreakTest(Unit unit, Unit unitFriend, Unit enemy, Unit enemyFriend,
+        private static bool BreakTestFail(Unit unit, Unit unitFriend, Unit enemy, Unit enemyFriend,
             ref Dictionary<int, int> woundInRound)
         {
-            Console(text, "\n\n{0} break test --> ", unit.Name);
+            Console(text, "\n{0} break test --> ", unit.Name);
 
             int temoraryLeadership = unit.Leadership;
 
             if (unit.Stubborn)
                 Console(text, "stubborn --> ");
             else
-                temoraryLeadership -= woundInRound[unit.ID];
+                temoraryLeadership -= woundInRound[unit.ID] + (unitFriend != null ? woundInRound[unitFriend.ID] : 0);
 
             if (temoraryLeadership < 0)
                 temoraryLeadership = 0;
@@ -473,7 +493,7 @@ namespace WarhammerArmyAssembler
                 !(unit.ImmuneToPsychology || unit.Undead || unitFearOrTerror || unitMountFearOrTerror))
             {
                 Console(badText, "autobreak by {0} fear", (enemyFearOrTerror ? enemy.Name : enemyFriend.Name));
-                return 0;
+                return true;
             }
             else
             {
@@ -495,16 +515,16 @@ namespace WarhammerArmyAssembler
                         woundInRound[unit.ID] += additionalWounds;
                         unit.Wounds -= additionalWounds;
 
-                        return unit.Wounds;
+                        return false;
                     }
                     else
-                        return 0;
+                        return true;
                 }
             }
 
             CheckLostFrenzy(ref unit);
 
-            return unit.Wounds;
+            return false;
         }
 
         private static int Attack(Unit unit, Unit enemy, int round, bool impactHit = false, string impactLine = "")

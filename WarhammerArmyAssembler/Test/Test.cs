@@ -29,8 +29,8 @@ namespace WarhammerArmyAssembler
         {
             Test.enemy = Enemy.GetByName(enemyName).Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
-            if (enemy.EnemyMount != null)
-                Test.enemyMount = enemy.EnemyMount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+            if (enemy.Mount != null)
+                Test.enemyMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
             else
                 Test.enemyMount = null;
         }

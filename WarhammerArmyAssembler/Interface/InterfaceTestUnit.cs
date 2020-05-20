@@ -42,7 +42,7 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            if ((unitForLoad.MountOn > 0) || (unitForLoad.EnemyMount != null))
+            if ((unitForLoad.MountOn > 0) || (unitForLoad.Mount != null))
             {
                 if (unitGrid.RowDefinitions.Count < 3)
                     unitGrid.RowDefinitions.Add(new RowDefinition());
