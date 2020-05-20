@@ -129,6 +129,12 @@ namespace WarhammerArmyAssembler
 
             List<Unit> participants = new List<Unit>() { unit, enemy };
 
+            Dictionary<Unit, List<Unit>> BreakTestOrder = new Dictionary<Unit, List<Unit>>
+            {
+                [enemy] = new List<Unit> { enemy, enemyMount, unit, unitMount },
+                [unit] = new List<Unit> { unit, unitMount, enemy, enemyMount },
+            };
+
             if (unit.Name == enemy.Name)
                 enemy.Name += " (enemy)";
 
@@ -137,12 +143,14 @@ namespace WarhammerArmyAssembler
                 unitMount = originalUnitMount.Clone().SetTestType(Unit.TestTypeTypes.Unit);
                 participants.Add(unitMount);
                 unit.Mount = unitMount;
+                BreakTestOrder[unitMount] = new List<Unit> { unitMount, unit, enemy, enemyMount };
             }
 
             if (originalEnemyMount != null)
             {
                 enemyMount = originalEnemyMount.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
                 participants.Add(enemyMount);
+                BreakTestOrder[enemyMount] = new List<Unit> { enemyMount, enemy, unit, unitMount };
 
                 if ((unitMount != null) && (unitMount.Name == enemyMount.Name))
                     enemyMount.Name += " (enemy)";
@@ -212,12 +220,6 @@ namespace WarhammerArmyAssembler
                     if (u.Regeneration && (roundWounds[u.ID] > 0) && !u.WoundedWithKillingBlow)
                         Regeneration(u, roundWounds[u.ID]);
 
-                Dictionary<Unit, List<Unit>> BreakTestOrder = new Dictionary<Unit, List<Unit>>
-                {
-                    [enemy] = new List<Unit> { enemy, enemyMount, unit, unitMount },
-                    [unit] = new List<Unit> { unit, unitMount, enemy, enemyMount },
-                };
-
                 Console(text, "\n");
 
                 if (BothOpponentsAreAlive(participants))
@@ -225,23 +227,18 @@ namespace WarhammerArmyAssembler
                     {
                         roundWounds[u.Key.ID] += RoundBonus(u.Value[2], u.Value[3], u.Value[0], u.Value[1]);
 
+                        if (((u.Key == unit.Mount) && (unit.Wounds > 0)) || ((u.Key == enemy.Mount) && (enemy.Wounds > 0)))
+                            continue;
+
                         if (RoundLostBy(u.Value[0], u.Value[1], u.Value[2], u.Value[3], roundWounds))
                             if (BreakTestFail(u.Value[0], u.Value[1], u.Value[2], u.Value[3], ref roundWounds))
                             {
-                                //u.Key.Wounds = 0;
-
                                 u.Key.Wounds = 0;
 
                                 if (u.Key.Mount != null)
                                     u.Key.Mount.Wounds = 0;
 
-
-                                // можно доббавлять ссылку в MountOn!!!
-
-                                //if ((u.Key.ID == unit.ID) && (unitMount != null))
-                                //    unitMount.Wounds = 0;
-                                //else if ((u.Key.ID == enemy.ID) && (enemyMount != null))
-                                //    enemyMount.Wounds = 0;
+                                Console(text, "\n");
                             }
                     }
             }
