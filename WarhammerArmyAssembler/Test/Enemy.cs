@@ -1234,7 +1234,7 @@ namespace WarhammerArmyAssembler
                 Armour = 3,
                 Stubborn = true,
                 UnitStrength = 2,
-                Reroll = "ToHit",
+                Reroll = "ToHit;OpponentToWound",
             },
 
             new Enemy
