@@ -214,7 +214,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Dragon Ogre Shaggoth",
-                TestListName = "Dragon Ogre Shaggoth (Beasts of Chaos)",
+                TestListName = "Dragon Ogre Shaggoth (Beastmen)",
                 Type = UnitType.Rare,
                 Size = 1,
                 Movement = 7,
@@ -489,7 +489,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Bestigor",
-                TestListName = "20 Bestigor (Beasts of Chaos)",
+                TestListName = "20 Bestigor (Beastmen)",
                 Type = UnitType.Core,
                 Size = 20,
                 Movement = 5,
@@ -637,7 +637,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Chaos Ogres",
-                TestListName = "5 Chaos Ogres (Beasts of Chaos)",
+                TestListName = "5 Chaos Ogres (Beastmen)",
                 Type = UnitType.Special,
                 Size = 5,
                 Movement = 6,
@@ -1147,6 +1147,40 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Moonclaw",
+                TestListName = "Moonclaw, Son of Murrslieb (Beastmen)",
+                Type = UnitType.Hero,
+                Size = 1,
+                Movement = 5,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 2,
+                Initiative = 3,
+                Attacks = 3,
+                Leadership = 7,
+                Ward = 5,
+
+                Mount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Umbralok",
+                    Size = 1,
+                    Movement = 7,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 4,
+                    Wounds = 1,
+                    Initiative = 2,
+                    Attacks = 3,
+                    Leadership = 6,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Ludwig Schwarzhelm",
                 TestListName = "Ludwig Schwarzhelm (The Empire)",
                 Type = UnitType.Hero,
@@ -1168,7 +1202,7 @@ namespace WarhammerArmyAssembler
                 {
                     Type = UnitType.Mount,
                     Name = "Warhorse",
-                    Size = 8,
+                    Size = 1,
                     Movement = 8,
                     WeaponSkill = 3,
                     BallisticSkill = 0,
