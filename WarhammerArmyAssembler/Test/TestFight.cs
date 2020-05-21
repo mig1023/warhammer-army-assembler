@@ -211,26 +211,29 @@ namespace WarhammerArmyAssembler
                     if (BothOpponentsAreAlive(participants))
                     {
                         Unit opponent = SelectOpponent(participants, u);
+                        int woundsAtStartOfRound = opponent.Wounds;
+
                         roundWounds[opponent.ID] += Round(u, ref opponent, attacksRound[u.ID], round);
+
+                        if (opponent.Regeneration && (woundsAtStartOfRound > opponent.Wounds) && !opponent.WoundedWithKillingBlow)
+                            Regeneration(opponent, (woundsAtStartOfRound - opponent.Wounds));
+
+                        if (opponent.Wounds <= 0)
+                            Console(badText, "\n\n{0} SLAIN", opponent.Name);
                     }
-
-                foreach (Unit u in participants)
-                    if (u.Regeneration && (roundWounds[u.ID] > 0) && !u.WoundedWithKillingBlow)
-                        Regeneration(u, roundWounds[u.ID]);
-
-                foreach (Unit u in participants)
-                    if (u.Wounds <= 0)
-                        Console(badText, "\n\n{0} SLAIN", u.Name);
 
                 Console(text, "\n");
 
                 if (BothOpponentsAreAlive(participants))
                     foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
                     {
-                        roundWounds[u.Key.ID] += RoundBonus(u.Value[2], u.Value[3], u.Value[0], u.Value[1]);
+                        if (u.Key.Wounds <= 0)
+                            continue;
 
                         if (((u.Key == unit.Mount) && (unit.Wounds > 0)) || ((u.Key == enemy.Mount) && (enemy.Wounds > 0)))
                             continue;
+
+                        roundWounds[u.Key.ID] += RoundBonus(u.Value[2], u.Value[3], u.Value[0], u.Value[1]);
 
                         if (RoundLostBy(u.Value[0], u.Value[1], u.Value[2], u.Value[3], roundWounds))
                             if (BreakTestFail(u.Value[0], u.Value[1], u.Value[2], u.Value[3], ref roundWounds))
