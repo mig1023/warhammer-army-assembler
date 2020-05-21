@@ -221,10 +221,8 @@ namespace WarhammerArmyAssembler
                         Regeneration(u, roundWounds[u.ID]);
 
                 foreach (Unit u in participants)
-                    if (u.Wounds <= roundWounds[u.ID])
-                    {
-                        Console(badText, "\n\n{0} is SLAIN", u.Name);
-                    }
+                    if (u.Wounds <= 0)
+                        Console(badText, "\n\n{0} SLAIN", u.Name);
 
                 Console(text, "\n");
 
