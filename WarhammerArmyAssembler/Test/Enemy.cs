@@ -213,7 +213,7 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Dragon Ogre Shaggoth",
+                Name = "Dragon Ogre",
                 TestListName = "Dragon Ogre Shaggoth (Beastmen)",
                 Type = UnitType.Rare,
                 Size = 1,
@@ -880,8 +880,8 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Sword Masters of Hoeth",
-                TestListName = "16 Sword Master (High Elves)",
+                Name = "Sword Masters",
+                TestListName = "16 Sword Masters of Hoeth (High Elves)",
                 Type = UnitType.Special,
                 Size = 16,
                 Movement = 5,
@@ -921,7 +921,7 @@ namespace WarhammerArmyAssembler
         {
             new Enemy
             {
-                Name = "Flagellant Warband",
+                Name = "Flagellants",
                 TestListName = "24 Flagellant Warband (The Empire)",
                 Type = UnitType.Rare,
                 Size = 24,
@@ -1090,7 +1090,7 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Skullcrushers of Khorne",
+                Name = "Skullcrushers",
                 TestListName = "6 Skullcrushers of Khorne (Chaos)",
                 Type = UnitType.Rare,
                 Size = 6,
@@ -1502,7 +1502,7 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Zacharias The Everliving",
+                Name = "Zacharias",
                 TestListName = "Zacharias The Everliving (Vampire Counts)",
                 Type = UnitType.Lord,
                 Size = 1,
@@ -1716,8 +1716,8 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Malekith, Witch King of Naggaroth",
-                TestListName = "Malekith, Witch King (Dark Elves)",
+                Name = "Malekith",
+                TestListName = "Malekith, Witch King of Naggaroth (Dark Elves)",
                 Type = UnitType.Lord,
                 Size = 1,
                 Movement = 8,
@@ -1754,7 +1754,7 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Kroq-Gar Ancient",
+                Name = "Kroq-Gar",
                 TestListName = "Kroq-Gar Ancient (Lizardmen)",
                 Type = UnitType.Lord,
                 Size = 1,
