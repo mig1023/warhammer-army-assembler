@@ -174,15 +174,13 @@ namespace WarhammerArmyAssembler
             {
                 round += 1;
 
-                string unitMountLine = (unitMount != null && unitMount.IsNotSimpleMount() && (unitMount.Wounds > 0) ?
-                    String.Format(" + {0}: {1}W", unitMount.Name, unitMount.Wounds) : String.Empty
-                );
-                string enemyMountLine = (enemyMount != null && enemyMount.IsNotSimpleMount() && (enemyMount.Wounds > 0) ?
-                    String.Format(" + {0}: {1}W", enemyMount.Name, enemyMount.Wounds) : String.Empty
-                );
+                Console(supplText, "\n\nround: {0}\n", round);
 
-                Console(supplText, "\n\nround: {0}", round);
-                Console(supplText, "\n{0}: {1}W{2}, {3}: {4}W{5}", unit.Name, unit.Wounds, unitMountLine, enemy.Name, enemy.Wounds, enemyMountLine);
+                foreach (Unit u in new List<Unit> { unit, enemy })
+                {
+                    string uMount = (u.Mount != null ? String.Format(" + {0}: {1}W", u.Mount.Name, u.Mount.Wounds) : String.Empty);
+                    Console(supplText, "{0}: {1}W{2}{3}", u.Name, u.Wounds, uMount, (u == unit ? ", " : String.Empty));
+                }
 
                 participants.Sort((a, b) => a.CompareTo(b));
 
