@@ -636,6 +636,41 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Pegasus Knights",
+                TestListName = "8 Pegasus Knights (Bretonnia)",
+                Type = UnitType.Special,
+                Size = 8,
+                Movement = 4,
+                WeaponSkill = 4,
+                BallisticSkill = 3,
+                Strength = 3,
+                Toughness = 4,
+                Wounds = 2,
+                Initiative = 4,
+                Attacks = 1,
+                Leadership = 8,
+                Armour = 3,
+                Lance = true,
+
+                Mount = new Enemy
+                {
+                    Name = "Boar",
+                    Type = UnitType.Mount,
+                    Size = 8,
+                    Movement = 8,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 4,
+                    Toughness = 4,
+                    Wounds = 1,
+                    Initiative = 4,
+                    Attacks = 2,
+                    Leadership = 7,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Chaos Ogres",
                 TestListName = "5 Chaos Ogres (Beastmen)",
                 Type = UnitType.Special,
