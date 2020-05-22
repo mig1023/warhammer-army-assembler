@@ -64,10 +64,10 @@ namespace WarhammerArmyAssembler
             InterfaceTestUnit.PreventConsoleOutput(prevent: false);
 
             if (royalNotation)
-                Console(text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n", enemy.Name, (double)result[1] / 10, (double)result[2] / 10);                
+                Console(text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n", enemy.TestListName, (double)result[1] / 10, (double)result[2] / 10);                
             else
             {
-                Console(text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
+                Console(text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.TestListName, (double)result[2] / 10);
 
                 if (result[0] > 0)
                     Console(text, "\nNobody win: {0:f1}%", (double)result[0] / 10);

@@ -157,6 +157,7 @@ namespace WarhammerArmyAssembler
         public TestTypeTypes TestType { get; set; }
         public Unit Mount { get; set; }
         public bool WoundedWithKillingBlow { get; set; }
+        public string TestListName { get; set; }
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
@@ -302,6 +303,7 @@ namespace WarhammerArmyAssembler
 
                 TestType = this.TestType,
                 WoundedWithKillingBlow = false,
+                TestListName = this.TestListName,
 
                 ArmyColor = this.ArmyColor
             };

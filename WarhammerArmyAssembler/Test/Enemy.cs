@@ -10,8 +10,6 @@ namespace WarhammerArmyAssembler
     {
         public static int MaxIDindex = -10;
 
-        public string TestListName { get; set; }
-
         private static Dictionary<string, List<Enemy>> GetEnemiesDictionary()
         {
             return  new Dictionary<string, List<Enemy>>
