@@ -150,6 +150,7 @@ namespace WarhammerArmyAssembler
             {
                 enemyMount = originalEnemyMount.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
                 participants.Add(enemyMount);
+                enemy.Mount = enemyMount;
                 BreakTestOrder[enemyMount] = new List<Unit> { enemyMount, enemy, unit, unitMount };
 
                 if ((unitMount != null) && (unitMount.Name == enemyMount.Name))
@@ -178,7 +179,8 @@ namespace WarhammerArmyAssembler
 
                 foreach (Unit u in new List<Unit> { unit, enemy })
                 {
-                    string uMount = (u.Mount != null ? String.Format(" + {0}: {1}W", u.Mount.Name, u.Mount.Wounds) : String.Empty);
+                    bool monstrousMount = (u.Mount != null) && u.Mount.IsNotSimpleMount();
+                    string uMount = (monstrousMount ? String.Format(" + {0}: {1}W", u.Mount.Name, u.Mount.Wounds) : String.Empty);
                     Console(supplText, "{0}: {1}W{2}{3}", u.Name, u.Wounds, uMount, (u == unit ? ", " : String.Empty));
                 }
 

@@ -1580,7 +1580,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Tyrion",
-                TestListName = "Tyrion (High Elves)",
+                TestListName = "Tyrion, The Defender of Ulthuan (High Elves)",
                 Type = UnitType.Lord,
                 Size = 1,
                 Movement = 5,
