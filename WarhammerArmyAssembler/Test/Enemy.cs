@@ -1499,6 +1499,26 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Khalida",
+                TestListName = "High Queen Khalida, Beloved of Asaph (Beastmen)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 6,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 5,
+                Wounds = 3,
+                Initiative = 9,
+                Attacks = 5,
+                Leadership = 10,
+                HitFirst = true,
+                Undead = true,
+                PoisonAttack = true,
+            },
+
+            new Enemy
+            {
                 Name = "Kurt Helborg",
                 TestListName = "Kurt Helborg (The Empire)",
                 Type = UnitType.Lord,
