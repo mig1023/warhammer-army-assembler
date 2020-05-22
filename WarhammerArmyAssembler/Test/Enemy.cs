@@ -1182,6 +1182,28 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "The Herald Nekaph",
+                TestListName = "The Herald Nekaph (Tomb Kings)",
+                Type = UnitType.Hero,
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 5,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 2,
+                Initiative = 3,
+                Attacks = 3,
+                Leadership = 8,
+                Ward = 5,
+                KillingBlow = true,
+                Undead = true,
+                Flail = true,
+                MultiWounds = "2",
+            },
+
+            new Enemy
+            {
                 Name = "Moonclaw",
                 TestListName = "Moonclaw, Son of Murrslieb (Beastmen)",
                 Type = UnitType.Hero,
@@ -1500,7 +1522,7 @@ namespace WarhammerArmyAssembler
             new Enemy
             {
                 Name = "Khalida",
-                TestListName = "High Queen Khalida, Beloved of Asaph (Beastmen)",
+                TestListName = "High Queen Khalida, Beloved of Asaph (Tomb Kings)",
                 Type = UnitType.Lord,
                 Size = 1,
                 Movement = 6,
