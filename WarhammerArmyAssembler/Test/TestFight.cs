@@ -124,21 +124,18 @@ namespace WarhammerArmyAssembler
             Unit unit = originalUnit.Clone().SetTestType(Unit.TestTypeTypes.Unit);
             Unit enemy = originalEnemy.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
 
-            Unit enemyMount = null;
-            Unit unitMount = null;
-
             List<Unit> participants = new List<Unit>() { unit, enemy };
 
             if (originalUnitMount != null)
-                unitMount = originalUnitMount.Clone().SetTestType(Unit.TestTypeTypes.Unit);
+                unit.Mount = originalUnitMount.Clone().SetTestType(Unit.TestTypeTypes.Unit);
 
             if (originalEnemyMount != null)
-                enemyMount = originalEnemyMount.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
+                enemy.Mount = originalEnemyMount.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
 
             Dictionary<Unit, List<Unit>> BreakTestOrder = new Dictionary<Unit, List<Unit>>
             {
-                [enemy] = new List<Unit> { enemy, enemyMount, unit, unitMount },
-                [unit] = new List<Unit> { unit, unitMount, enemy, enemyMount },
+                [enemy] = new List<Unit> { enemy, enemy.Mount, unit, unit.Mount },
+                [unit] = new List<Unit> { unit, unit.Mount, enemy, enemy.Mount },
             };
 
             if (unit.Name == enemy.Name)
@@ -146,19 +143,19 @@ namespace WarhammerArmyAssembler
 
             if (originalUnitMount != null)
             {
-                participants.Add(unitMount);
-                unit.Mount = unitMount;
-                BreakTestOrder[unitMount] = new List<Unit> { unitMount, unit, enemy, enemyMount };
+                participants.Add(unit.Mount);
+                unit.Mount = unit.Mount;
+                BreakTestOrder[unit.Mount] = new List<Unit> { unit.Mount, unit, enemy, enemy.Mount };
             }
 
             if (originalEnemyMount != null)
             {
-                participants.Add(enemyMount);
-                enemy.Mount = enemyMount;
-                BreakTestOrder[enemyMount] = new List<Unit> { enemyMount, enemy, unit, unitMount };
+                participants.Add(enemy.Mount);
+                enemy.Mount = enemy.Mount;
+                BreakTestOrder[enemy.Mount] = new List<Unit> { enemy.Mount, enemy, unit, unit.Mount };
 
-                if ((unitMount != null) && (unitMount.Name == enemyMount.Name))
-                    enemyMount.Name += " (enemy)";
+                if ((unit.Mount != null) && (unit.Mount.Name == enemy.Mount.Name))
+                    enemy.Mount.Name += " (enemy)";
             }
 
             Console(text, "{0} vs {1}", unit.Name,  enemy.Name);
@@ -192,17 +189,17 @@ namespace WarhammerArmyAssembler
                 Dictionary<int, int> attacksRound = new Dictionary<int, int>();
 
                 foreach (Unit u in participants)
-                    attacksRound[u.ID] = PrintAttack(u, u.Attacks, roundWounds, unit, enemy, unitMount);
+                    attacksRound[u.ID] = PrintAttack(u, u.Attacks, roundWounds, unit, enemy, unit.Mount);
 
                 InitRoundWounds(participants, ref roundWounds);
 
-                if ((round == 1) && (!String.IsNullOrEmpty(unit.ImpactHit) || (unitMount != null && !String.IsNullOrEmpty(unitMount.ImpactHit))))
+                if ((round == 1) && (!String.IsNullOrEmpty(unit.ImpactHit) || (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit))))
                 {
-                    Unit impactUnit = (unitMount != null && !String.IsNullOrEmpty(unitMount.ImpactHit) ? unitMount : unit);
+                    Unit impactUnit = (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit) ? unit.Mount : unit);
                     Unit opponent = SelectOpponent(participants, impactUnit);
 
                     string impactOutLine = String.Empty;
-                    int attacks = ImpactHitNumer(unit, unitMount, out impactOutLine);
+                    int attacks = ImpactHitNumer(unit, unit.Mount, out impactOutLine);
 
                     roundWounds[opponent.ID] += Round(impactUnit, ref opponent, attacks, round, impactHit: true, impactLine: impactOutLine);
                 }
@@ -250,12 +247,12 @@ namespace WarhammerArmyAssembler
 
             Console(text, "\nEnd: ");
 
-            if (enemy.Wounds + (enemyMount != null && enemyMount.IsNotSimpleMount() ? enemyMount.Wounds : 0) <= 0)
+            if (enemy.Wounds + (enemy.Mount != null && enemy.Mount.IsNotSimpleMount() ? enemy.Mount.Wounds : 0) <= 0)
             {
                 Console(text, "{0} win", unit.Name);
                 return 1;
             }
-            else if (unit.Wounds + (unitMount != null && unitMount.IsNotSimpleMount() ? unitMount.Wounds : 0) <= 0)
+            else if (unit.Wounds + (unit.Mount != null && unit.Mount.IsNotSimpleMount() ? unit.Mount.Wounds : 0) <= 0)
             {
                 Console(text, "{0} win", enemy.Name);
                 return 2;
@@ -366,7 +363,7 @@ namespace WarhammerArmyAssembler
             if ((!enemy.Terror && !enemyFriendTerror) || unit.Terror || friendTerrorOrFear)
                 return unit;
 
-            string terrorSource = (((enemyFriend != null) && enemy.Terror) ? enemyFriend.Name : enemy.Name);
+            string terrorSource = (((enemyFriend != null) && !enemy.Terror) ? enemyFriend.Name : enemy.Name);
 
             Console(text, "\n{0} try to resist of terror by {1} ", unit.Name, terrorSource);
 
