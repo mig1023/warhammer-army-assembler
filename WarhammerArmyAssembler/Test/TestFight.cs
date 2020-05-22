@@ -129,6 +129,12 @@ namespace WarhammerArmyAssembler
 
             List<Unit> participants = new List<Unit>() { unit, enemy };
 
+            if (originalUnitMount != null)
+                unitMount = originalUnitMount.Clone().SetTestType(Unit.TestTypeTypes.Unit);
+
+            if (originalEnemyMount != null)
+                enemyMount = originalEnemyMount.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
+
             Dictionary<Unit, List<Unit>> BreakTestOrder = new Dictionary<Unit, List<Unit>>
             {
                 [enemy] = new List<Unit> { enemy, enemyMount, unit, unitMount },
@@ -140,7 +146,6 @@ namespace WarhammerArmyAssembler
 
             if (originalUnitMount != null)
             {
-                unitMount = originalUnitMount.Clone().SetTestType(Unit.TestTypeTypes.Unit);
                 participants.Add(unitMount);
                 unit.Mount = unitMount;
                 BreakTestOrder[unitMount] = new List<Unit> { unitMount, unit, enemy, enemyMount };
@@ -148,7 +153,6 @@ namespace WarhammerArmyAssembler
 
             if (originalEnemyMount != null)
             {
-                enemyMount = originalEnemyMount.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
                 participants.Add(enemyMount);
                 enemy.Mount = enemyMount;
                 BreakTestOrder[enemyMount] = new List<Unit> { enemyMount, enemy, unit, unitMount };
@@ -162,14 +166,8 @@ namespace WarhammerArmyAssembler
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
             InitRoundWounds(participants, ref roundWounds);
 
-            CheckTerror(ref unit, unitMount, enemy, enemyMount);
-            CheckTerror(ref enemy, enemyMount, unit, unitMount);
-
-            if ((unitMount != null) && unitMount.IsNotSimpleMount())
-                CheckTerror(ref unitMount, unit, enemy, enemyMount);
-
-            if ((enemyMount != null) && enemyMount.IsNotSimpleMount())
-                CheckTerror(ref enemyMount, enemy, unit, unitMount);
+            foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
+                u.Value[0] = CheckTerror(u.Value[0], u.Value[1], u.Value[2], u.Value[3]);
 
             while (BothOpponentsAreAlive(participants) && (round < 100))
             {
@@ -357,13 +355,16 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static void CheckTerror(ref Unit unit, Unit friend, Unit enemy, Unit enemyFriend)
+        private static Unit CheckTerror(Unit unit, Unit friend, Unit enemy, Unit enemyFriend)
         {
             bool friendTerrorOrFear = (friend != null ? (friend.Terror || friend.Fear) : false);
             bool enemyFriendTerror = (enemyFriend != null ? enemyFriend.Terror : false);
 
+            if (unit.IsSimpleMount())
+                return unit;
+
             if ((!enemy.Terror && !enemyFriendTerror) || unit.Terror || friendTerrorOrFear)
-                return;
+                return unit;
 
             string terrorSource = (((enemyFriend != null) && enemy.Terror) ? enemyFriend.Name : enemy.Name);
 
@@ -382,6 +383,8 @@ namespace WarhammerArmyAssembler
                 unit.Wounds = 0;
                 Console(badText, " --> fail");
             }
+
+            return unit;
         }
 
         private static int Round(Unit unit, ref Unit enemy, int attackNumber, int round,
