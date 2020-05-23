@@ -520,6 +520,17 @@
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Khorne Gifts">
 			<Artefact>
+				<Name>Collar of Khorne</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
+				<Description>The model has Magic Resistance (2).</Description>
+			</Artefact>
+			<Artefact>
 				<Name>Axe of Khorne</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
@@ -530,10 +541,65 @@
 				<KillingBlow>true</KillingBlow>
 				<Description>Daemon with an Axe gains the Killing Blow ability</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Armour of Khorne</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<ArmourTo>4</ArmourTo>
+				<Description>The Daemon has an armour save of 4+ in addition to its Daemonic aura.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Khorne</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToStrength>1</AddToStrength>
+				<Description>The Daemon has +1 Strength on its profile.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Tzeentch Gifts">
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Nurgle Gifts">
+			<Artefact>
+				<Name>Cloud of Flies</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>-1 modifier on its rolls to hit</SpecialRuleDescription>
+				<Description>Any unit in close combat with one or more models with a Cloud of Flies suffers a -1 modifier on its rolls to hit.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Stream of Corruption</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Breath attack with Strength 3, with a -2 armour saving</SpecialRuleDescription>
+				<Description>The Daemon spews forth a noxious stream of disease and filth. In any of the Chaos player's Shooting phases that the Daemon is not in combat, it may unleash its Stream of Corruption. This is a breath attack. The attack is resolved at Strength 3, with a -2 armour saving throw modifier.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Stream of Corruption</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<PoisonAttack>true</PoisonAttack>
+				<Description>The Daemon's attacks count as poisoned attacks. This gift cannot be combined with a Blade of the Ether gift.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Slaanesh Gifts">
 		</ArtefactsGroup>
