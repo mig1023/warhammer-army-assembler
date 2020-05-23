@@ -112,7 +112,7 @@ namespace WarhammerArmyAssembler
 
             Army.Units[maxLeadershipOwner].ArmyGeneral = true;
 
-            bool newGeneralIsDemon = (Army.Units[maxLeadershipOwner].Group == "Demonic");
+            bool newGeneralIsDemon = (Army.Units[maxLeadershipOwner].GetGroup() == "Demonic");
 
             if (ArmyBook.DemonicMortal && newGeneralIsDemon && !ArmyBook.DemonicAlreadyReplaced)
                 ChangeCoreSpecialUnits();

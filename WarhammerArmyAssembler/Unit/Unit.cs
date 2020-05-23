@@ -52,7 +52,7 @@ namespace WarhammerArmyAssembler
         };
 
         public string Name { get; set; }
-        public string Group { get; set; }
+        string Group { get; set; }
         public int ID { get; set; }
         public string IDView { get; set; }
         public int ArmyID { get; set; }
@@ -194,6 +194,22 @@ namespace WarhammerArmyAssembler
                         firstSlannOptionAlreadyIsFree = true;
 
             return points;
+        }
+
+        public string GetGroup()
+        {
+            string group = this.Group;
+
+            foreach (Option option in Options)
+                if ((!option.IsOption() || (option.IsOption() && option.Realised)) && !String.IsNullOrEmpty(option.Group))
+                    group = option.Group;
+
+            return group;
+        }
+
+        public void SetGroup(string newGroup)
+        {
+            this.Group = newGroup;
         }
 
         public int GetUnitMagicPoints()

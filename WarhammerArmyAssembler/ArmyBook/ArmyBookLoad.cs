@@ -71,8 +71,9 @@ namespace WarhammerArmyAssembler
             newUnit.ID = id;
             newUnit.IDView = id.ToString();
 
+            newUnit.SetGroup(StringParse(xmlUnit["Group"]));
+
             newUnit.Name = StringParse(xmlUnit["Name"]);
-            newUnit.Group = StringParse(xmlUnit["Group"]);
             newUnit.Type = UnitTypeParse(xmlUnit["Type"]);
             newUnit.Points = IntParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
@@ -186,6 +187,7 @@ namespace WarhammerArmyAssembler
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
             newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
 
+            newWeapon.Group = StringParse(xmlNode["Group"]);
             newWeapon.AutoHit = BoolParse(xmlNode["AutoHit"]);
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.HitLast = BoolParse(xmlNode["HitLast"]);

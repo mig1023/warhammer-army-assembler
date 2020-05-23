@@ -36,6 +36,7 @@ namespace WarhammerArmyAssembler
 
         public string Description { get; set; }
 
+        public string Group { get; set; }
         public bool AutoHit { get; set; }
         public bool AutoWound { get; set; }
         public bool HitFirst { get; set; }
@@ -157,6 +158,7 @@ namespace WarhammerArmyAssembler
                 OnlyIfAnotherService = this.OnlyIfAnotherService,
                 OnlyIfNotAnotherService = this.OnlyIfNotAnotherService,
                 OnlyForGroup = this.OnlyForGroup,
+                Group = this.Group,
                 AutoHit = this.AutoHit,
                 AutoWound = this.AutoWound,
                 HitFirst = this.HitFirst,
@@ -297,7 +299,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsUsableByUnit(Unit unit)
         {
-            if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.Group))
+            if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.GetGroup()))
                 return false;
 
             if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems))
