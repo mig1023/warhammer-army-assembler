@@ -352,11 +352,153 @@
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Enchanted items">	
-			
+			<Artefact>
+				<Name>Rod of Corruption</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>75</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Bound spell. Power Level 4. One use only. D6 Strength 2 hits at the start of the Magic phase, 2D6 Strength 2 next Magic phase, etc</SpecialRuleDescription>
+				<Description>Bound spell. Power Level 4. One use only. Target any enemy unit on the tabletop. This unit becomes infected with Nurgle's Rot and suffers D6 Strength 2 hits, distributed as shooting hits amongst the models in the unit. At the start of the caster's next Magic phase, the unit takes 2D6 Strength 2 hits. At the start of the caster's Magic phase after that it takes 3D6 Strength 2 hits, and so on. Once cast, Nurgle's Rot cannot be stopped.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Bindings of Slaanesh</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Enemy cannot refuse challenge</SpecialRuleDescription>
+				<Description>Whenever the bearer issues a challenge, the enemy cannot refuse it and the Chaos player may choose who will accept the challenge. The model forced to accept the challenge may be anywhere within the enemy unit, and even characters that would normally be in a position that would disallow them from accepting challenges (by not being in the fighting rank, for instance) may be forced into accepting the challenge. In the first round an enemy is ensnared, the bearer always strike last, regardless of any other factor, magic item or spell.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Book of Secrets</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>40</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToWizard>1</AddToWizard>
+				<AddToCast>1</AddToCast>
+				<AddToDispell>1</AddToDispell>
+				<Description>The bearer is a Level I Sorcerer and knows a random spell from the Lore of Fire, Shadow or Death (Chaos player's choice). If the bearer miscasts, roll twice on the Miscast table and apply both results.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Chalice of Chaos</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>35</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<Group>Daemonic</Group>
+				<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+				<Description>The bearer becomes daemonic and follows all of the rules outlined in the Bestiary section. If the bearer is the army's General, he must lead a daemonic army. Remember, a daemonic character cannot join non-daemonic units. At the start of the battle he must take a Toughness test (remember that rolls of 6 always fail). If the test is failed, the bearer reduces his Wounds and Toughness by -1.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Death's Head</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>One use only. D6 hits with D3 wounds with no armour by Toughness test for a range of 12"</SpecialRuleDescription>
+				<Description>One use only. The model may throw the Death's Head in the Shooting phase. It is treated as a thrown weapon with a range of 12". If the Death's Head hits, the enemy unit takes D6 hits, and affected models must pass a Toughness test or lose D3 wounds, with no armour saves allowed. Units taking any casualties from a Death's Head must take a Panic test.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sceptre of Domination</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Bound spell Delectable Torture. Power Level 6. One use only.</SpecialRuleDescription>
+				<Description>Bound spell. Power Level 6. One use only. The Sceptre of Domination contains the bound Slaanesh spell Delectable Torture.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Helm of Many Eyes</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<HitFirst>true</HitFirst>
+				<Description>The wearer always strikes first in close combat, even if charged or armed with a weapon that normally strikes last. If any of the wearer's opponents also strike first, revert to normal Initiative. The character is also subject to stupidity (even if immune to psychology) due to the random and conflicting images that confront him.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Mirror of Knowledge</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>20</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Opponent must reveal everything that is not apparent about the unit</SpecialRuleDescription>
+				<Description>The bearer can pick any enemy unit on the battlefield at the beginning of each of his Magic phases. The opponent must reveal everything that is not apparent about the unit (magic items and their bearers, hidden Assassins and Fanatics, etc).</Description>
+			</Artefact>
 		</ArtefactsGroup>
-
 		<ArtefactsGroup Name = "Magic banner">
-			
+			<Artefact>
+				<Name>Banner of the Gods</Name>
+				<Type>Banner</Type>
+				<Points>125</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>All non-daemonic friendly units within 6" of the banner become stubborn</SpecialRuleDescription>
+				<Description>All non-daemonic friendly units within 6" of the banner become stubborn (even if normally immune to psychology).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Rage</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Model and unit may re-roll failed Break tests and will not lose their frenzy</SpecialRuleDescription>
+				<Description>The model and any unit he is with may re-roll failed Break tests and will not lose their frenzy if beaten in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Plague Banner</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Any enemy model in contact at the start of the Chaos Magic phase must pass a Toughness test or suffer a wound Armour saves are not allowed</SpecialRuleDescription>
+				<Description>Any enemy model in contact with the banner bearer at the start of the Chaos Magic phase must pass a Toughness test or suffer a wound Armour saves are not allowed. This banner has no effect on models with the Mark of Nurgle or Clan Pestilens Skaven</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Blasted Standard</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>The banner contains the bound Tzeentch spell Yellow Fire of Transformation</SpecialRuleDescription>
+				<Description>The banner contains the bound Tzeentch spell Yellow Fire of Transformation.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Wrath</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<SpecialRuleDescription>Bound spell. Power Level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits</SpecialRuleDescription>
+				<Description>Bound spell. Power Level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rapturous Standard</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Mortal</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk</SpecialRuleDescription>
+				<Description>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Demonic Gifts">
 			<Artefact>
@@ -366,6 +508,14 @@
 				<OnlyForGroup>Demonic</OnlyForGroup>
 				<SpecialRuleDescription>Daemon ignore armour saves in close combat</SpecialRuleDescription>
 				<Description>Daemon ignore armour saves in close combat</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Master of Mortals</Name>
+				<Type>Weapon</Type>
+				<Points>5</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<Group>Mortal</Group>
+				<Description>If the Daemon is the army General, Mortal units count as Core choices and Daemonic units count as Special.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Khorne Gifts">
@@ -380,6 +530,12 @@
 				<KillingBlow>true</KillingBlow>
 				<Description>Daemon with an Axe gains the Killing Blow ability</Description>
 			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Tzeentch Gifts">
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Nurgle Gifts">
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Slaanesh Gifts">
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
