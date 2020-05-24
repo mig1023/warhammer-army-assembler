@@ -88,6 +88,40 @@
 	</Heroes>
 	
 	<Mounts>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Skeletal Steed</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Nightmare</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+		</Mount>
 	</Mounts>
 	
 	<Units>
@@ -414,6 +448,136 @@
 					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Black Knight</Name>
+			<Points>24</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Skeletal Steed</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Wight Blade</Name>
+					<KillingBlow>true</KillingBlow>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Lance</Name>
+					<Lance>true</Lance>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Insubstantial Steed</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Skeletal Steed barding</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<Points>4</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Hell Knight</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>16</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>16</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Fell Bats</Name>
+			<Points>20</Points>
+			<MinSize>3</MinSize>
+			<MaxSize>10</MaxSize>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Teeth and claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Flying Unit</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Spitit Host</Name>
+			<Points>65</Points>
+			<MinSize>3</MinSize>
+			<MaxSize>10</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Ethereal Blade</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Ethereal</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 	</Units>
 </ArmyBook>
