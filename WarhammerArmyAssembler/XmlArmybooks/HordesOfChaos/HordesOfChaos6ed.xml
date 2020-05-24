@@ -502,12 +502,52 @@
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Demonic Gifts">
 			<Artefact>
+				<Name>Chaos Disruption</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<SpecialRuleDescription>Any shooting at the Daemon or the unit it is with suffers an additional -1 to hit penalty</SpecialRuleDescription>
+				<Description>Any shooting at the Daemon or the unit it is with suffers an additional -1 to hit penalty.</Description>
+			</Artefact>
+			<Artefact>
 				<Name>Blade of The Ether</Name>
 				<Type>Weapon</Type>
 				<Points>45</Points>
 				<OnlyForGroup>Demonic</OnlyForGroup>
-				<SpecialRuleDescription>Daemon ignore armour saves in close combat</SpecialRuleDescription>
+				<NoArmour>Daemon ignore armour saves in close combat</NoArmour>
 				<Description>Daemon ignore armour saves in close combat</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Radiance of Dark Glory</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<SpecialRuleDescription>The Daemon and any other Daemon unit within 6" suffers one less wound when defeated in combat</SpecialRuleDescription>
+				<Description>The Daemon and any other Daemon unit within 6" suffers one less wound when defeated in combat. For example, if the Daemon fails its Instability test by 2, flien it would only lose one wound.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Soul Hunger</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<SpecialRuleDescription>The Daemon may re-roll missed close combat attacks in the first round of any combat</SpecialRuleDescription>
+				<Description>The Daemon may re-roll missed close combat attacks in the first round of any combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Spell Breaker</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<SpecialRuleDescription>Once per battle, the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force</SpecialRuleDescription>
+				<Description>Once per battle, the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Diabolic Splendour</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<SpecialRuleDescription>Daemonic Aura becomes a normal Ward save and so can be used against magical attacks</SpecialRuleDescription>
+				<Description>Daemonic Aura becomes a normal Ward save and so can be used against magical attacks. This is also conferred to any Daemon unit which he joins.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master of Mortals</Name>
@@ -543,7 +583,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Armour of Khorne</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Demonic</OnlyForGroup>
 				<OnlyIfAnotherService>
@@ -565,11 +605,55 @@
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Tzeentch Gifts">
+			<Artefact>
+				<Name>Tzeentch's Will</Name>
+				<Type>Weapon</Type>
+				<Points>75</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>The Daemon may re-roll a single D6 once per turn</SpecialRuleDescription>
+				<Description>The Daemon may re-roll a single D6 once per turn. The re-roll endtles the player to take a single D6 (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. Any D6 can be re-rolled and can potentially cause Irresistible-Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Spell Destroyer</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</SpecialRuleDescription>
+				<Description>Once per battle the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force. In addition, roll a D6. On a roll of 4+, the enemy Wizard loses knowledge of that spell and may not cast it for the rest of the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Master of Sorcery</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>The Daemon has great magical knowledge and knows one more spell from the Lore of Tzeentch than it is normally allowed</SpecialRuleDescription>
+				<Description>The Daemon has great magical knowledge and knows one more spell from the Lore of Tzeentch than it is normally allowed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Vortex</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Daemon may give up Wounds to generate D3 Power dice</SpecialRuleDescription>
+				<Description>At any point during the Chaos Magic phase, the Daemon may give up Wounds to generate Power dice (with no saves of any kind allowed, no Ward saves, no regeneration, etc). For each Wound sacrificed, the Daemon generates an extra D3 Power dice, that turn which only it may use.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Nurgle Gifts">
 			<Artefact>
 				<Name>Cloud of Flies</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>40</Points>
 				<OnlyForGroup>Demonic</OnlyForGroup>
 				<OnlyIfAnotherService>
@@ -602,9 +686,131 @@
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Slaanesh Gifts">
+			<Artefact>
+				<Name>Aura of Slaanesh</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Enemy unit in base contact reduces Ld by -1 to minimum Ld value of 2</SpecialRuleDescription>
+				<Description>Any enemy unit in base contact with one or more models with the Aura of Slaanesh reduces its Leadership by -1, to a minimum Leadership value of 2.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Soporific Musk</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Any model in base contact halve WS and Initiative (rounding up)</SpecialRuleDescription>
+				<Description>Any models in base contact with one or more Daemons with Soporific Musk halve their WS and 1 (rounding up).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Gaze of Acquiescence</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>20</Points>
+				<OnlyForGroup>Demonic</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>At the beginning of the Close Combat phase, select one model in base contact, the target must pass a Ld test or may not make any attacks in that phase</SpecialRuleDescription>
+				<Description>At the beginning of the Close Combat phase, select one model in base contact with the Daemon. The target must pass a Leadership test or may not make any attacks in that Close Combat phase. Models immune to psychology cannot be affected.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Archaon, Lord of the End Times</Name>
+			<Group>Mortal</Group>
+			<Points>855</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Dorghar</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Wizard>2</Wizard>
+			<Description>Archaon, Lord of the End Times</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<SlotsOfHero>1</SlotsOfHero>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRuleDescription>Archaon's army must include at least one unit of Knights of Chaos, and they must be upgraded to Chosen status</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>The Slayer of Kings</Name>
+					<NoArmour>true</NoArmour>
+					<AddToAttacks>5</AddToAttacks>
+				</HandWeapon>
+				<Armour>
+					<Name>The Armour of Morkar</Name>
+					<ArmourTo>1</ArmourTo>
+				</Armour>
+				<Armour>
+					<Name>The Crown of Domination</Name>
+					<Terror>true</Terror>
+				</Armour>
+				<Armour>
+					<Name>The Eye of Sheerian</Name>
+					<AddToWard>3</AddToWard>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Galrauch, First of the Chaos Dragons</Name>
+			<Group>Demonic</Group>
+			<Points>696</Points>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Galrauch, First of the Chaos Dragons</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<SlotsOfHero>1</SlotsOfHero>
+				<SlotsOfRare>1</SlotsOfRare>
+				<UnitStrength>6</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Breath Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Spirit of Galrauch</SpecialRuleDescription>
+					<SpecialRuleDescription>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</SpecialRuleDescription>
+					<SpecialRuleDescription>May re-roll a single D6 once per turn</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows one more spell from the Lore of Tzeentch than it is normally allowed</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Bloodthirster</Name>
@@ -1536,6 +1742,23 @@
 		</Hero>
 	</Heroes>
 	<Mounts>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Dorghar</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Chaos Steed</Name>
