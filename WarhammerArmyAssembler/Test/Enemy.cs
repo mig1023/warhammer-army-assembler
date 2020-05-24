@@ -101,28 +101,6 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
-                Name = "Varghulf",
-                TestListName = "Varghulf (Vampire)",
-                Type = UnitType.Rare,
-                Size = 1,
-                Movement = 8,
-                WeaponSkill = 5,
-                BallisticSkill = 0,
-                Strength = 5,
-                Toughness = 5,
-                Wounds = 4,
-                Initiative = 2,
-                Attacks = 5,
-                Leadership = 4,
-                Terror = true,
-                Undead = true,
-                Regeneration = true,
-                Hate = true,
-                UnitStrength = 5,
-            },
-
-            new Enemy
-            {
                 Name = "Tomb Scorpion",
                 TestListName = "Tomb Scorpion (Tomb Kings)",
                 Type = UnitType.Rare,
@@ -194,6 +172,28 @@ namespace WarhammerArmyAssembler
                 Leadership = 5,
                 Terror = true,
                 KillingBlow = true
+            },
+
+            new Enemy
+            {
+                Name = "Varghulf",
+                TestListName = "Varghulf (Vampire)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Movement = 8,
+                WeaponSkill = 5,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 4,
+                Initiative = 2,
+                Attacks = 5,
+                Leadership = 4,
+                Terror = true,
+                Undead = true,
+                Regeneration = true,
+                Hate = true,
+                UnitStrength = 5,
             },
 
             new Enemy
@@ -1888,6 +1888,46 @@ namespace WarhammerArmyAssembler
                     ColdBlooded = true,
                     MultiWounds = "D3",
                     UnitStrength = 5,
+                }
+            },
+
+            new Enemy
+            {
+                Name = "Archaon",
+                TestListName = "Archaon, Lord of the End Times (Chaos)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 9,
+                BallisticSkill = 5,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 4,
+                Initiative = 7,
+                Attacks = 10,
+                Leadership = 10,
+                Armour = 1,
+                Ward = 3,
+                ImmuneToPsychology = true,
+                NoArmour = true,
+                Terror = true,
+
+                Mount = new Enemy
+                {
+                    Name = "Dorghar",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Movement = 8,
+                    WeaponSkill = 4,
+                    BallisticSkill = 0,
+                    Strength = 5,
+                    Toughness = 5,
+                    Wounds = 3,
+                    Initiative = 3,
+                    Attacks = 3,
+                    Leadership = 9,
+                    Armour = 4,
+                    UnitStrength = 3,
                 }
             },
 
