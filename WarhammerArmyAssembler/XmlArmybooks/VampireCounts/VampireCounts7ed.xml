@@ -91,5 +91,329 @@
 	</Mounts>
 	
 	<Units>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Zombie Horde</Name>
+			<Points>4</Points>
+			<MinSize>20</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>1</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>2</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Shambling Horde</SpecialRuleDescription>
+					<SpecialRuleDescription>The Newly Dead</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Skeleton Warriors</Name>
+			<Points>8</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Champion</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Crypt Ghouls</Name>
+			<Points>8</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<PoisonAttack>true</PoisonAttack>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Filth-encrusted claws</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Crypt Chast</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>8</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Dire Wolves</Name>
+			<Points>8</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>20</MaxSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<NoSlotsOfCore>true</NoSlotsOfCore>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Slavering jaws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Doom Wolf</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Bat Swarm</Name>
+			<Points>35</Points>
+			<MinSize>3</MinSize>
+			<MaxSize>20</MaxSize>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<NoSlotsOfCore>true</NoSlotsOfCore>
+				<UnitStrength>3</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Teeth and claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Flying Unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Flying move is restricted to a maximum of 10"</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Corpse Cart</Name>
+			<Points>75</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>2D6</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<NoSlotsOfCore>true</NoSlotsOfCore>
+				<Regeneration>true</Regeneration>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Grasping hands</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Bound spell with power level 5, all friendly Undead unit within 6" have the Always Strike First until next Magic phase</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Balefire</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Unholy Lodestone</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>For each Corpse Cart with Balefire within 24" enemy wizard suffer a -1 modifier th casting</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Unholy Lodestone</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Balefire</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>If friendly unit within 6" is target by Invocation of Nehek, the unit gain an additional wound</SpecialRuleDescription>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Grave Guard</Name>
+			<Points>12</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Wight Blade</Name>
+					<KillingBlow>true</KillingBlow>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast>true</HitLast>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Seneschal</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>12</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
