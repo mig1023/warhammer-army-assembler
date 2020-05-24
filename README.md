@@ -13,6 +13,6 @@ Warhammer Army Assembler (WAAgh) - is a quick and simple editor for Warhammer Fa
 | Scaven | 7th Edition | |
 | High Elves | 7th Edition | |
 | Dark Elves | 7th Edition | |
-| Hordes of Chaos | 6th Edition | in progress |
+| Hordes of Chaos | 6th Edition | |
 | The Emipre | 7th Edition | in progress |
 | Vampire Counts | 7th Edition | in progress |
