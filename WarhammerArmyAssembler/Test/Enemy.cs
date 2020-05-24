@@ -101,6 +101,28 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Varghulf",
+                TestListName = "Varghulf (Vampire)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Movement = 8,
+                WeaponSkill = 5,
+                BallisticSkill = 0,
+                Strength = 5,
+                Toughness = 5,
+                Wounds = 4,
+                Initiative = 2,
+                Attacks = 5,
+                Leadership = 4,
+                Terror = true,
+                Undead = true,
+                Regeneration = true,
+                Hate = true,
+                UnitStrength = 5,
+            },
+
+            new Enemy
+            {
                 Name = "Tomb Scorpion",
                 TestListName = "Tomb Scorpion (Tomb Kings)",
                 Type = UnitType.Rare,
