@@ -280,9 +280,11 @@ namespace WarhammerArmyAssembler
             int unitFullSize = (unit.Size * unit.OriginalWounds) + (unitMount != null ? unitMount.Size * unitMount.OriginalWounds : 0);
             int enemyFullSize = (enemy.Size * enemy.OriginalWounds) + (enemyMount != null ? enemyMount.Size * enemyMount.OriginalWounds : 0);
 
+            string unitSide = (((unitMount != null) && (unit.Wounds <= 0)) ? unitMount.Name : unit.Name);
+
             if (unitFullSize > enemyFullSize)
             {
-                Console(supplText, "\n{0} have +1 battle result bonus by outnumber", unit.Name);
+                Console(supplText, "\n{0} have +1 battle result bonus by outnumber", unitSide);
                 return 1;
             }
             else
