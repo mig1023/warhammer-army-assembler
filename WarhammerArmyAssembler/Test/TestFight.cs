@@ -248,6 +248,9 @@ namespace WarhammerArmyAssembler
                             }
 
                             draw = false;
+
+                            if ((u.Key == unit) || (u.Key == enemy))
+                                break;
                         }
                     }
 
