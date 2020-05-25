@@ -83,10 +83,172 @@
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
-	
 	<Heroes>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Vlad von Carstein</Name>
+			<Points>490</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Wizard>3</Wizard>
+			<Description>Vlad von Carstein</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<Undead>true</Undead>
+				<Reroll>ToWound</Reroll>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Blood Drinker</Name>
+					<SpecialRuleDescription>Each Wound restores one wound on Vlad or his unit</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Carstein Ring</Name>
+					<SpecialRuleDescription>Returns to life on a roll of 2+</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Enemy within 6" are at -1 Ld</SpecialRuleDescription>
+					<SpecialRuleDescription>Grants a +1 combat resolution bonus</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Count Mannfred</Name>
+			<Points>475</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Wizard>4</Wizard>
+			<Description>Count Mannfred</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<Reroll>ToWound</Reroll>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword of Unholy Power</Name>
+					<SpecialRuleDescription>For each unsaved Wound gains an extra dice in the Magic phase</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Armour of Templehof</Name>
+					<AddToWounds>2</AddToWounds>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Vampiric Powers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<AddToArmour>2</AddToArmour>
+					<Points>20</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Hellsteed</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Abyssal Terror</Name>
+					<Type>Option</Type>
+					<Points>135</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Vampire Lord</Name>
+			<Points>205</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<Wizard>2</Wizard>
+			<Description>Vampire Lord</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 3</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Hellsteed</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Abyssal Terror</Name>
+					<Type>Option</Type>
+					<Points>135</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Zombie Dragon</Name>
+					<Type>Option</Type>
+					<Points>275</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
-	
 	<Mounts>
 		<Mount>
 			<Type>Mount</Type>
@@ -107,6 +269,28 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
+			<Name>Hellsteed</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
 			<Name>Nightmare</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -122,8 +306,58 @@
 				<Leadership>3</Leadership>
 			</MainParam>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Abyssal Terror</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<Terror>true</Terror>
+			</AdditionalParam>
+			<Special>
+				<SpecialRuleDescription>Large target</SpecialRuleDescription>
+			</Special>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Zombie Dragon</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<Terror>true</Terror>
+			</AdditionalParam>
+			<Special>
+				<SpecialRuleDescription>Large target</SpecialRuleDescription>
+				<SpecialRuleDescription>Pestilential Breath</SpecialRuleDescription>
+				<SpecialRuleDescription>Cloud of Flies</SpecialRuleDescription>
+			</Special>
+		</Mount>
 	</Mounts>
-	
 	<Units>
 		<Unit>
 			<Type>Core</Type>
