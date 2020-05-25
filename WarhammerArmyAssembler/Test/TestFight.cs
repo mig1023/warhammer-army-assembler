@@ -222,6 +222,9 @@ namespace WarhammerArmyAssembler
                 Console(text, "\n");
 
                 if (BothOpponentsAreAlive(participants))
+                {
+                    bool draw = true;
+
                     foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
                     {
                         if (u.Key.Wounds <= 0)
@@ -233,6 +236,7 @@ namespace WarhammerArmyAssembler
                         roundWounds[u.Key.ID] += RoundBonus(u.Value[2], u.Value[3], u.Value[0], u.Value[1]);
 
                         if (RoundLostBy(u.Value[0], u.Value[1], u.Value[2], u.Value[3], roundWounds))
+                        {
                             if (BreakTestFail(u.Value[0], u.Value[1], u.Value[2], u.Value[3], ref roundWounds))
                             {
                                 u.Key.Wounds = 0;
@@ -242,7 +246,14 @@ namespace WarhammerArmyAssembler
 
                                 Console(text, "\n");
                             }
+
+                            draw = false;
+                        }
                     }
+
+                    if (draw)
+                        Console(goodText, "\nThe round ended in a draw");
+                }
             }
 
             Console(text, "\nEnd: ");
