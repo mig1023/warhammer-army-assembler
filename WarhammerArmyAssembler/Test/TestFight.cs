@@ -233,11 +233,11 @@ namespace WarhammerArmyAssembler
                         if (((u.Key == unit.Mount) && (unit.Wounds > 0)) || ((u.Key == enemy.Mount) && (enemy.Wounds > 0)))
                             continue;
 
-                        roundWounds[u.Key.ID] += RoundBonus(u.Value[2], u.Value[3], u.Value[0], u.Value[1]);
+                        roundWounds[u.Key.ID] += RoundBonus(u.Value);
 
-                        if (RoundLostBy(u.Value[0], u.Value[1], u.Value[2], u.Value[3], roundWounds))
+                        if (RoundLostBy(u.Value, roundWounds))
                         {
-                            if (BreakTestFail(u.Value[0], u.Value[1], u.Value[2], u.Value[3], ref roundWounds))
+                            if (BreakTestFail(u.Value, ref roundWounds))
                             {
                                 u.Key.Wounds = 0;
 
@@ -278,8 +278,14 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static bool RoundLostBy(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount, Dictionary<int, int> roundWounds)
+        private static bool RoundLostBy(List<Unit> units, Dictionary<int, int> roundWounds)
         {
+            Unit unit = units[0];
+            Unit unitMount = units[1];
+
+            Unit enemy = units[2];
+            Unit enemyMount = units[3];
+
             if ((unit == null) || (unit.Wounds <= 0) || unit.IsSimpleMount())
                 return false;
 
@@ -289,8 +295,14 @@ namespace WarhammerArmyAssembler
             return unitRoundWounds > enemyRoundWounds;
         }
 
-        private static int RoundBonus(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount)
+        private static int RoundBonus(List<Unit> units)
         {
+            Unit unit = units[2];
+            Unit unitMount = units[3];
+
+            Unit enemy = units[1];
+            Unit enemyMount = units[2];
+
             int unitFullSize = (unit.Size * unit.OriginalWounds) + (unitMount != null ? unitMount.Size * unitMount.OriginalWounds : 0);
             int enemyFullSize = (enemy.Size * enemy.OriginalWounds) + (enemyMount != null ? enemyMount.Size * enemyMount.OriginalWounds : 0);
 
@@ -477,9 +489,14 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        private static bool BreakTestFail(Unit unit, Unit unitFriend, Unit enemy, Unit enemyFriend,
-            ref Dictionary<int, int> woundInRound)
+        private static bool BreakTestFail(List<Unit> units, ref Dictionary<int, int> woundInRound)
         {
+            Unit unit = units[0];
+            Unit unitFriend = units[1];
+
+            Unit enemy = units[2];
+            Unit enemyFriend = units[3];
+
             Console(text, "\n{0} break test --> ", unit.Name);
 
             int temoraryLeadership = unit.Leadership;
