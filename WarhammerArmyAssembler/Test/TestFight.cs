@@ -427,8 +427,7 @@ namespace WarhammerArmyAssembler
                 enemy.Wounds -= wounded;
             }
 
-            if (enemy.Wounds < 0)
-                enemy.Wounds = 0;
+            enemy.Wounds = Unit.ParamNormalization(enemy.Wounds, onlyZeroCheck: true);
 
             return roundWounds;
         }
@@ -509,10 +508,7 @@ namespace WarhammerArmyAssembler
                 temoraryLeadership += woundInRound[enemy.ID] + (enemyFriend != null ? woundInRound[enemyFriend.ID] : 0);
             }
 
-            if (temoraryLeadership < 0)
-                temoraryLeadership = 0;
-            else if (temoraryLeadership > 10)
-                temoraryLeadership = 10;
+            temoraryLeadership = Unit.ParamNormalization(temoraryLeadership);
 
             bool enemyFearOrTerror = ((enemy.Wounds > 0) && enemy.IsFearOrTerror());
             bool enemyMountFearOrTerror = ((enemyFriend != null) && (enemyFriend.Wounds > 0) ? enemyFriend.IsFearOrTerror() : false);
@@ -758,9 +754,7 @@ namespace WarhammerArmyAssembler
             if ((unit.Lance || unit.Flail) && (round == 1))
             {
                 strength += 2;
-
-                if (strength > 10)
-                    strength = 10;
+                strength = Unit.ParamNormalization(strength);
             }
 
             if (unit.AutoWound)
@@ -790,10 +784,7 @@ namespace WarhammerArmyAssembler
             if ((enemy.Armour == null) || unit.NoArmour)
                 return true;
 
-            int chance = (unit.Strength + unit.ArmourPiercing) - 3;
-
-            if (chance < 0)
-                chance = 0;
+            int chance = Unit.ParamNormalization((unit.Strength + unit.ArmourPiercing) - 3, onlyZeroCheck: true);
 
             chance += enemy.Armour ?? 0;
 
@@ -879,14 +870,7 @@ namespace WarhammerArmyAssembler
             if (!unit.StrengthInNumbers)
                 return 0;
             else
-            {
-                int rankBonus = unit.GetRank() - 1;
-
-                if (rankBonus < 0)
-                    rankBonus = 0;
-
-                return rankBonus;
-            }
+                return Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true);
         }
 
         private static bool RollDice(Unit unit, DiceType diceType, Unit enemy, int? conditionParam, out int dice,
@@ -915,9 +899,7 @@ namespace WarhammerArmyAssembler
                 else
                 {
                     condition += rankBonus;
-
-                    if (condition > 10)
-                        condition = 10;
+                    condition = Unit.ParamNormalization(condition);
 
                     Console(supplText, "({0} LD with rank bonus, ", condition);
                 }

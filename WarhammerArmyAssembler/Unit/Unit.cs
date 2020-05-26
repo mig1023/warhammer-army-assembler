@@ -439,9 +439,7 @@ namespace WarhammerArmyAssembler
                 {
                     paramModView += '*';
                     paramValue += optionValue;
-
-                    if (paramValue > 10)
-                        paramValue = 10;
+                    paramValue = ParamNormalization(paramValue ?? 0);
                 }
             }
 
@@ -713,6 +711,16 @@ namespace WarhammerArmyAssembler
                 return "rare units";
 
             return String.Empty;
+        }
+
+        public static int ParamNormalization(int param, bool onlyZeroCheck = false)
+        {
+            if (param < 0)
+                param = 0;
+            else if ((param > 10) && !onlyZeroCheck)
+                param = 10;
+
+            return param;
         }
 
         private bool GetUnitValueTrueOrFalse(object unitValue, out string additionalParam, out int intValue)
