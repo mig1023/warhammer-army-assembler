@@ -248,6 +248,293 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Mannfred the Acolyte</Name>
+			<Points>185</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Wizard>2</Wizard>
+			<Description>Mannfred the Acolyte</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword of Unholy Power</Name>
+					<SpecialRuleDescription>For each unsaved Wound gains an extra dice in the Magic phase</SpecialRuleDescription>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Grants a +1 combat resolution bonus</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<AddToArmour>2</AddToArmour>
+					<Points>20</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Abyssal Terror</Name>
+					<Type>Option</Type>
+					<Points>135</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Konrad von Carstein</Name>
+			<Points>145</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Konrad von Carstein</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<Hate>true</Hate>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword of Waldenhof</Name>
+					<MultiWounds>2</MultiWounds>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Gets +1 attack for each wound inflicted</SpecialRuleDescription>
+					<SpecialRuleDescription>One Bar Short of a Belfry</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Isabella von Carstein</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<Wizard>1</Wizard>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Isabella von Carstein</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>				
+				<Armour>
+					<Name>Blood Chalice of Bathori</Name>
+					<SpecialRuleDescription>At the start of each friendly Magic phase may regains a single wound lost earlier in the battle</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>May re-rolls to wound agains one enemy unless it pass a Ld test at -3</SpecialRuleDescription>
+					<SpecialRuleDescription>Beloved of Vlad</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Necromancer</Name>
+			<Points>55</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Necromancer</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>				
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<AddToArmour>2</AddToArmour>
+					<Points>15</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Vampire</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<Wizard>1</Wizard>
+			<Description>Vampire</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Hellsteed</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Wight King</Name>
+			<Points>75</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Wight King</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead>true</Undead>
+				<KillingBlow>true</KillingBlow>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast>true</HitLast>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<Points>12</Points>
+					<Lance>true</Lance>
+				</Option>
+				<Option>
+					<Name>Skeletal Steed</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barding for Skeletal Steed</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Skeletal Steed</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
