@@ -504,10 +504,15 @@ namespace WarhammerArmyAssembler
             if (unit.Stubborn)
                 Console(text, "stubborn --> ");
             else
+            {
                 temoraryLeadership -= woundInRound[unit.ID] + (unitFriend != null ? woundInRound[unitFriend.ID] : 0);
+                temoraryLeadership += woundInRound[enemy.ID] + (enemyFriend != null ? woundInRound[enemyFriend.ID] : 0);
+            }
 
             if (temoraryLeadership < 0)
                 temoraryLeadership = 0;
+            else if (temoraryLeadership > 10)
+                temoraryLeadership = 10;
 
             bool enemyFearOrTerror = ((enemy.Wounds > 0) && enemy.IsFearOrTerror());
             bool enemyMountFearOrTerror = ((enemyFriend != null) && (enemyFriend.Wounds > 0) ? enemyFriend.IsFearOrTerror() : false);
