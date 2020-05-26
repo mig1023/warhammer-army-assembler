@@ -300,8 +300,8 @@ namespace WarhammerArmyAssembler
             Unit unit = units[2];
             Unit unitMount = units[3];
 
-            Unit enemy = units[1];
-            Unit enemyMount = units[2];
+            Unit enemy = units[0];
+            Unit enemyMount = units[1];
 
             int unitFullSize = (unit.Size * unit.OriginalWounds) + (unitMount != null ? unitMount.Size * unitMount.OriginalWounds : 0);
             int enemyFullSize = (enemy.Size * enemy.OriginalWounds) + (enemyMount != null ? enemyMount.Size * enemyMount.OriginalWounds : 0);
