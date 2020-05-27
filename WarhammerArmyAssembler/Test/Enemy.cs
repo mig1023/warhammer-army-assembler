@@ -81,6 +81,25 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Gyrobomber",
+                TestListName = "Gyrobomber (Dwarfs)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Movement = 1,
+                WeaponSkill = 4,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 5,
+                Wounds = 3,
+                Initiative = 2,
+                Attacks = 2,
+                Leadership = 9,
+                Armour = 4,
+                UnitStrength = 3,
+            },
+
+            new Enemy
+            {
                 Name = "Ancient Kroxigor",
                 TestListName = "Ancient Kroxigor (Lizardmen)",
                 Type = UnitType.Rare,
