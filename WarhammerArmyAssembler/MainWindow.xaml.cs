@@ -609,5 +609,11 @@ namespace WarhammerArmyAssembler
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void ArmyGrid_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if (Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl))
+                ArmyGrid.FontSize += (e.Delta > 0 ? 1 : -1);
+        }
     }
 }

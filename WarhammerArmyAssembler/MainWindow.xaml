@@ -359,7 +359,8 @@
 
                 <DataGrid x:Name="ArmyGrid" Grid.Row="0" Grid.Column="3" CanUserAddRows="False" GridLinesVisibility="None"
                           AllowDrop="True" AutoGenerateColumns="False" Drop="ArmyGrid_Drop" RowEditEnding="ArmyGrid_RowEditEnding"
-                          LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False" SizeChanged="ArmyGrid_SizeChanged" >
+                          LoadingRow="ArmyGrid_LoadingRow" PreviewMouseDown="ArmyGrid_MouseDown" CanUserSortColumns="False"
+                          SizeChanged="ArmyGrid_SizeChanged" PreviewMouseWheel="ArmyGrid_PreviewMouseWheel" >
                     <DataGrid.Resources>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="FontSize" Value="12"/>
