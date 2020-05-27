@@ -1262,6 +1262,40 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Gitilla",
+                TestListName = "Gitilla da Hunter (Orcs&Goblins)",
+                Type = UnitType.Hero,
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 4,
+                BallisticSkill = 4,
+                Strength = 4,
+                Toughness = 4,
+                Wounds = 2,
+                Initiative = 4,
+                Attacks = 3,
+                Leadership = 7,
+                Armour = 3,
+
+                Mount = new Enemy
+                {
+                    Type = UnitType.Mount,
+                    Name = "Ulda the Great Wolf",
+                    Size = 1,
+                    Movement = 9,
+                    WeaponSkill = 3,
+                    BallisticSkill = 0,
+                    Strength = 3,
+                    Toughness = 3,
+                    Wounds = 1,
+                    Initiative = 3,
+                    Attacks = 2,
+                    Leadership = 3,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Moonclaw",
                 TestListName = "Moonclaw, Son of Murrslieb (Beastmen)",
                 Type = UnitType.Hero,
