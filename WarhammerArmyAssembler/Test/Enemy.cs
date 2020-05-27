@@ -490,6 +490,25 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Crypt Ghouls",
+                TestListName = "20 Crypt Ghouls (Vampire Counts)",
+                Type = UnitType.Core,
+                Size = 20,
+                Movement = 4,
+                WeaponSkill = 3,
+                BallisticSkill = 0,
+                Strength = 3,
+                Toughness = 4,
+                Wounds = 1,
+                Initiative = 3,
+                Attacks = 2,
+                Leadership = 5,
+                Undead = true,
+                PoisonAttack = true,
+            },
+
+            new Enemy
+            {
                 Name = "Back Ark Corsairs",
                 TestListName = "20 Back Ark Corsairs (Dark Elves)",
                 Type = UnitType.Core,
