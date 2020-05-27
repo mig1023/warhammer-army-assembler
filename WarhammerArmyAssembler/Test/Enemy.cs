@@ -1438,6 +1438,26 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Throgg",
+                TestListName = "Throgg, King of Trolls (Chaos)",
+                Type = UnitType.Hero,
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 5,
+                BallisticSkill = 2,
+                Strength = 6,
+                Toughness = 5,
+                Wounds = 4,
+                Initiative = 2,
+                Attacks = 5,
+                Leadership = 8,
+                Fear = true,
+                Regeneration = true,
+                UnitStrength = 4,
+            },
+
+            new Enemy
+            {
                 Name = "Malus Darkblade (Tz'arkan)",
                 TestListName = "Malus Darkblade in Tz'arkan state (Dark Elves)",
                 Type = UnitType.Hero,
