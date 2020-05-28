@@ -374,6 +374,28 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 UnitStrength = 7,
             },
+
+            new Enemy
+            {
+                Name = "Steam Tank",
+                TestListName = "Steam Tank (Empire)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Movement = 0,
+                WeaponSkill = 0,
+                BallisticSkill = 4,
+                Strength = 6,
+                Toughness = 6,
+                Wounds = 10,
+                Initiative = 0,
+                Attacks = 0,
+                Leadership = 10,
+                Armour = 1,
+                Unbreakable = true,
+                Terror = true,
+                UnitStrength = 10,
+                SteamTank = true,
+            },
         };
 
         private static List<Enemy> EnemiesCoreUnits = new List<Enemy>

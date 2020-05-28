@@ -193,23 +193,29 @@ namespace WarhammerArmyAssembler
 
                 InitRoundWounds(participants, ref roundWounds);
 
-                bool impactHit = (round == 1) &&
-                    (!String.IsNullOrEmpty(unit.ImpactHit) || (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit)));
-
-                if (impactHit || unit.SteamTank)
-                {
-                    Unit impactUnit = (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit) ? unit.Mount : unit);
-                    Unit opponent = SelectOpponent(participants, impactUnit);
-
-                    string impactOutLine = String.Empty;
-                    int attacks = ImpactHitNumer(ref unit, unit.Mount, out impactOutLine);
-
-                    roundWounds[opponent.ID] += Round(impactUnit, ref opponent, attacks, round, impactHit: true, impactLine: impactOutLine);
-                }
-
                 foreach (Unit u in participants)
                     if (BothOpponentsAreAlive(participants))
                     {
+                        bool impactHit = (round == 1) &&
+                            (!String.IsNullOrEmpty(u.ImpactHit) || (u.Mount != null && !String.IsNullOrEmpty(u.Mount.ImpactHit)));
+
+                        if (impactHit || u.SteamTank)
+                        {
+                            Unit impactUnit = (u.Mount != null && !String.IsNullOrEmpty(u.Mount.ImpactHit) ? u.Mount : u);
+                            Unit impactOpponent = SelectOpponent(participants, impactUnit);
+
+                            string impactOutLine = String.Empty;
+
+                            int attacks = ImpactHitNumer(u, u.Mount, out impactOutLine, out bool steamFail);
+
+                            if (steamFail)
+                                u.Wounds -= 1;
+
+                            roundWounds[impactOpponent.ID] += Round(
+                                impactUnit, ref impactOpponent, attacks, round, impactHit: true, impactLine: impactOutLine
+                            );
+                        }
+
                         if (u.Attacks <= 0)
                             continue;
 
@@ -656,9 +662,10 @@ namespace WarhammerArmyAssembler
             return randomParam;
         }
 
-        private static int ImpactHitNumer(ref Unit unit, Unit unitMount, out string impactOutLine)
+        private static int ImpactHitNumer(Unit unit, Unit unitMount, out string impactOutLine, out bool steamFail)
         {
             string impactHit = String.Empty;
+            steamFail = false;
 
             if (unit.SteamTank)
             {
@@ -669,8 +676,10 @@ namespace WarhammerArmyAssembler
                 if (steamPoint > unit.Wounds)
                 {
                     Console(badText, "--> boiler fail, {0} WOUND", unit.Name);
-                    unit.Wounds -= 1;
+
                     impactOutLine = String.Empty;
+                    steamFail = true;
+
                     return 0;
                 }
 
@@ -678,6 +687,7 @@ namespace WarhammerArmyAssembler
 
                 Console(supplText, "--> {2} impact hits", unit.Name, steamPoint, steamImpactHit);
                 impactOutLine = steamImpactHit.ToString();
+
                 return steamImpactHit;
             }
             else if ((unitMount == null) || String.IsNullOrEmpty(unitMount.ImpactHit))
