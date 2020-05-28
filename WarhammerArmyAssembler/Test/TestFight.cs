@@ -193,28 +193,19 @@ namespace WarhammerArmyAssembler
 
                 InitRoundWounds(participants, ref roundWounds);
 
+                if (!unit.SteamTank)
+                    ImpactHit(unit, participants, ref roundWounds, out _);
+
                 foreach (Unit u in participants)
                     if (BothOpponentsAreAlive(participants))
                     {
-                        bool impactHit = (round == 1) &&
-                            (!String.IsNullOrEmpty(u.ImpactHit) || (u.Mount != null && !String.IsNullOrEmpty(u.Mount.ImpactHit)));
+                        bool steamFail = false;
 
-                        if (impactHit || u.SteamTank)
-                        {
-                            Unit impactUnit = (u.Mount != null && !String.IsNullOrEmpty(u.Mount.ImpactHit) ? u.Mount : u);
-                            Unit impactOpponent = SelectOpponent(participants, impactUnit);
+                        if (u.SteamTank)
+                            ImpactHit(u, participants, ref roundWounds, out steamFail);
 
-                            string impactOutLine = String.Empty;
-
-                            int attacks = ImpactHitNumer(u, u.Mount, out impactOutLine, out bool steamFail);
-
-                            if (steamFail)
-                                u.Wounds -= 1;
-
-                            roundWounds[impactOpponent.ID] += Round(
-                                impactUnit, ref impactOpponent, attacks, round, impactHit: true, impactLine: impactOutLine
-                            );
-                        }
+                        if (steamFail)
+                            unit.Wounds -= 1;
 
                         if (u.Attacks <= 0)
                             continue;
@@ -287,6 +278,29 @@ namespace WarhammerArmyAssembler
             {
                 Console(text, "{0} and {1} failed to kill each other", unit.Name, enemy.Name);
                 return 0;
+            }
+        }
+
+        private static void ImpactHit(Unit unit, List<Unit> participants,
+            ref Dictionary<int, int> roundWounds, out bool steamFail)
+        {
+            steamFail = false;
+
+            bool impactHit = (round == 1) &&
+                (!String.IsNullOrEmpty(unit.ImpactHit) || (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit)));
+
+            if (impactHit || unit.SteamTank)
+            {
+                Unit impactUnit = (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit) ? unit.Mount : unit);
+                Unit impactOpponent = SelectOpponent(participants, impactUnit);
+
+                string impactOutLine = String.Empty;
+
+                int attacks = ImpactHitNumer(unit, unit.Mount, out impactOutLine, out steamFail);
+
+                roundWounds[impactOpponent.ID] += Round(
+                    impactUnit, ref impactOpponent, attacks, round, impactHit: true, impactLine: impactOutLine
+                );
             }
         }
 
