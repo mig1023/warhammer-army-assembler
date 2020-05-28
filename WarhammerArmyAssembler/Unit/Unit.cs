@@ -44,6 +44,7 @@ namespace WarhammerArmyAssembler
             ["ArmourPiercing"] = "Armour piercing ([X])",
             ["Reroll"] = "Reroll ([X])",
             ["ImpactHit"] = "Impact Hit ([X])",
+            ["SteamTank"] = "Steam Tank",
             ["Stupidity"] = "Stupidity",
             ["Undead"] = "Undead",
             ["StrengthInNumbers"] = "Strength in numbers!",
@@ -127,6 +128,7 @@ namespace WarhammerArmyAssembler
         public int ArmourPiercing { get; set; }
         public string Reroll { get; set; }
         public string ImpactHit { get; set; }
+        public bool SteamTank { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
 
@@ -297,6 +299,7 @@ namespace WarhammerArmyAssembler
                 ArmourPiercing = this.ArmourPiercing,
                 Reroll = this.Reroll,
                 ImpactHit = this.ImpactHit,
+                SteamTank = this.SteamTank,
                 Lance = this.Lance,
                 Flail = this.Flail,
 
@@ -854,6 +857,9 @@ namespace WarhammerArmyAssembler
 
         public bool IsHeroOrHisMount()
         {
+            if (UnitStrength > 1)
+                return true;
+
             return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount ? true : false);
         }
 
