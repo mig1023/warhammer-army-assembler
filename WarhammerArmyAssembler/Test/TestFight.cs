@@ -203,6 +203,8 @@ namespace WarhammerArmyAssembler
 
                         if (u.SteamTank)
                             ImpactHit(u, participants, ref roundWounds, out steamFail);
+                        else if (u.HellPitAbomination)
+                            HellPitAbomination(u, participants, ref roundWounds);
 
                         if (steamFail)
                             unit.Wounds -= 1;
@@ -279,6 +281,33 @@ namespace WarhammerArmyAssembler
                 Console(text, "{0} and {1} failed to kill each other", unit.Name, enemy.Name);
                 return 0;
             }
+        }
+
+        private static void HellPitAbomination(Unit unit, List<Unit> participants,
+            ref Dictionary<int, int> roundWounds)
+        {
+            Unit impactOpponent = SelectOpponent(participants, unit);
+
+            int attackType = rand.Next(5) + 1;
+            int attacks = 0;
+
+            if (attackType < 3)
+            {
+                Console(supplText, "{0} feed", unit.Name);
+                attacks = 1;
+            }
+            else if ((attackType > 2) && (attackType < 5))
+            {
+                Console(supplText, "{0} flailing fists", unit.Name);
+                attacks = rand.Next(18) + 1;
+            }
+            else
+            {
+                Console(supplText, "{0} avalanche of flesh", unit.Name);
+                attacks = rand.Next(12) + 1;
+            }
+
+            roundWounds[impactOpponent.ID] += Round(unit, ref impactOpponent, attacks, round);
         }
 
         private static void ImpactHit(Unit unit, List<Unit> participants,
