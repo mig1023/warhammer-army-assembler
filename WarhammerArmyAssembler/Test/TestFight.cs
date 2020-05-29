@@ -293,18 +293,20 @@ namespace WarhammerArmyAssembler
 
             if (attackType < 3)
             {
-                Console(supplText, "{0} feed", unit.Name);
                 attacks = 1;
+                unit.MultiWounds = "D3";
+                Console(supplText, "\n\n{0} feed: 1 attack with D3 multiwound", unit.Name);
             }
             else if ((attackType > 2) && (attackType < 5))
             {
-                Console(supplText, "{0} flailing fists", unit.Name);
                 attacks = rand.Next(18) + 1;
+                Console(supplText, "\n\n{0} flailing fists: 3D6 attacks", unit.Name);
             }
             else
             {
-                Console(supplText, "{0} avalanche of flesh", unit.Name);
                 attacks = rand.Next(12) + 1;
+                unit.AutoHit = true;
+                Console(supplText, "\n\n{0} avalanche of flesh: 2D6 attack with autohit", unit.Name);
             }
 
             roundWounds[impactOpponent.ID] += Round(unit, ref impactOpponent, attacks, round);
