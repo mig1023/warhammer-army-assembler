@@ -162,6 +162,44 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Kurt Helborg</Name>
+			<Points>325</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Warhorse</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Kurt Helborg</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stubborn>true</Stubborn>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Runefang</Name>
+					<NoArmour>true</NoArmour>
+					<AutoWound>true</AutoWound>
+				</HandWeapon>
+				<Armour>
+					<Name>Full plate armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>The Emperor's Chosen</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
