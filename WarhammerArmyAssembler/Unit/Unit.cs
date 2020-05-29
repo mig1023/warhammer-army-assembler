@@ -129,6 +129,7 @@ namespace WarhammerArmyAssembler
         public string Reroll { get; set; }
         public string ImpactHit { get; set; }
         public bool SteamTank { get; set; }
+        public bool HellPitAbomination { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
 
@@ -300,6 +301,7 @@ namespace WarhammerArmyAssembler
                 Reroll = this.Reroll,
                 ImpactHit = this.ImpactHit,
                 SteamTank = this.SteamTank,
+                HellPitAbomination = this.HellPitAbomination,
                 Lance = this.Lance,
                 Flail = this.Flail,
 
@@ -484,7 +486,11 @@ namespace WarhammerArmyAssembler
                 if (directModification && !String.IsNullOrEmpty(newParamLine))
                 {
                     string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
-                    typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
+
+                    if (cleanParamLine.Contains("D"))
+                        typeof(Unit).GetProperty(name).SetValue(unit, 0);
+                    else
+                        typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
                 }
             }
 
