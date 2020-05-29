@@ -83,10 +83,86 @@
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
-	
 	<Heroes>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>The Emperor Karl Franz</Name>
+			<Points>350</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>The Emperor Karl Franz</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<Undead>true</Undead>
+				<Reroll>ToWound</Reroll>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Runefang</Name>
+					<NoArmour>true</NoArmour>
+					<AutoWound>true</AutoWound>
+				</HandWeapon>
+				<Armour>
+					<Name>Full plate armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>The Silver Seal</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>+1 Combat Resolution</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Leader of Men</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Ghal Maraz</Name>
+					<Type>Option</Type>
+					<AutoWound>true</AutoWound>
+					<MultiWounds>D3</MultiWounds>
+					<Points>30</Points>
+				</Option>
+				<Option>
+					<Name>Deathclaw</Name>
+					<Type>Option</Type>
+					<Points>225</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>The Imperial Dragon</Name>
+					<Type>Option</Type>
+					<Points>320</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Imperial Pegasus</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>21</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
-	
 	<Mounts>
 		<Mount>
 			<Type>Mount</Type>
