@@ -180,6 +180,7 @@
 				<Initiative>6</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>9</Leadership>
+				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
 				<Stubborn>true</Stubborn>
@@ -197,6 +198,49 @@
 				</Armour>
 				<Special>
 					<SpecialRuleDescription>The Emperor's Chosen</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Grand Theogonist Volkmar</Name>
+			<Points>360</Points>
+			<MinSize>1</MinSize>
+			<MountInit>The War Altar</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Grand Theogonist Volkmar</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+				<Unbreakable>true</Unbreakable>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Staff of Command</Name>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>The Jade Griffon</Name>
+					<Regeneration>true</Regeneration>
+				</Armour>
+				<Armour>
+					<Name>The Horn of Sigismound</Name>
+					<Terror>true</Terror>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Grand Theogonist</SpecialRuleDescription>
+					<SpecialRuleDescription>Aura of Righteouness</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -330,11 +374,13 @@
 			</MainParam>
 			<AdditionalParam>
 				<UnitStrength>5</UnitStrength>
+				<Unbreakable>true</Unbreakable>
 			</AdditionalParam>
 			<Special>
 				<SpecialRuleDescription>Golden Griffon</SpecialRuleDescription>
 				<SpecialRuleDescription>The Power of Sigmar</SpecialRuleDescription>
 				<SpecialRuleDescription>Large target</SpecialRuleDescription>
+				<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
 			</Special>
 		</Mount>
 	</Mounts>
