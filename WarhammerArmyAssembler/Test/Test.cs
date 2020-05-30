@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
 {
@@ -14,6 +15,15 @@ namespace WarhammerArmyAssembler
         public static Unit unitMount = null;
         public static Unit enemy = null;
         public static Unit enemyMount = null;
+
+        public static List<string> testConsole = new List<string>();
+
+        public static Brush text = Brushes.Black;
+        public static Brush supplText = Brushes.Gray;
+        public static Brush goodText = Brushes.Green;
+        public static Brush badText = Brushes.Red;
+
+        public static Random rand = new Random();
 
         public static void PrepareUnit(Unit unit)
         {
@@ -43,6 +53,16 @@ namespace WarhammerArmyAssembler
                 TestFight.StatisticTest(unit, unitMount, enemy, enemyMount);
             else
                 TestFight.FullTest(unit, unitMount, enemy, enemyMount);
+        }
+
+        public static void Console(Brush color, string line)
+        {
+            InterfaceTestUnit.LineToConsole(line, color);
+        }
+
+        public static void Console(Brush color, string line, params object[] p)
+        {
+            Console(color, String.Format(line, p));
         }
     }
 }
