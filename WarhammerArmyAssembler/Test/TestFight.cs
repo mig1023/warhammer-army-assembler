@@ -9,7 +9,7 @@ namespace WarhammerArmyAssembler
 {
     class TestFight
     {
-        private enum DiceType { M, WS, BS, S, T, W, I, A, LD, AS, WARD, REGENERATION };
+        private enum DiceType { M, WS, BS, S, T, W, I, A, LD, AS, WARD, REGENERATION, OTHER };
 
         static List<string> testConsole = new List<string>();
 
@@ -288,7 +288,7 @@ namespace WarhammerArmyAssembler
         {
             Unit impactOpponent = SelectOpponent(participants, unit);
 
-            int attackType = rand.Next(5) + 1;
+            int attackType = RollAllDice(DiceType.OTHER, unit, diceNum: 1, hiddenDice: true);
             int attacks = 0;
 
             if (attackType < 3)
@@ -299,12 +299,12 @@ namespace WarhammerArmyAssembler
             }
             else if ((attackType > 2) && (attackType < 5))
             {
-                attacks = rand.Next(18) + 1;
+                attacks = RollAllDice(DiceType.OTHER, unit, diceNum: 3, hiddenDice: true);
                 Console(supplText, "\n\n{0} flailing fists: 3D6 attacks", unit.Name);
             }
             else
             {
-                attacks = rand.Next(12) + 1;
+                attacks = RollAllDice(DiceType.OTHER, unit, diceNum: 2, hiddenDice: true);
                 unit.AutoHit = true;
                 Console(supplText, "\n\n{0} avalanche of flesh: 2D6 attack with autohit", unit.Name);
             }
@@ -1046,14 +1046,16 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
-        private static int RollAllDice(DiceType diceType, Unit unit, int diceNum)
+        private static int RollAllDice(DiceType diceType, Unit unit, int diceNum, bool hiddenDice = false)
         {
             int maxRoll = 0;
             int result = 0;
 
             if ((diceType == DiceType.LD) && unit.ColdBlooded)
             {
-                Console(supplText, "cold-blooded, ");
+                if (!hiddenDice)
+                    Console(supplText, "cold-blooded, ");
+
                 diceNum += 1;
             }
 
