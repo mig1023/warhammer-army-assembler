@@ -546,6 +546,64 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Wizard Lord</Name>
+			<Points>175</Points>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<Description>Wizard Lord</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>	
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barding for Warhorse</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Imperial Pegasus</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
