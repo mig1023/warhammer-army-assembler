@@ -75,6 +75,8 @@ namespace WarhammerArmyAssembler
                 {
                     margins = CheckColumn(margins, ref lastColumnMaxWidth);
                     margins[1] += AddLabel("empty yet", margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
+
+                    notFirstColumn = true;
                 }
                 else
                     foreach (Option option in unit.Options)
