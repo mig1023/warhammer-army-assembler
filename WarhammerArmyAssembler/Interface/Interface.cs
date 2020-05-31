@@ -337,7 +337,8 @@ namespace WarhammerArmyAssembler
             foreach (Control label in new List<Control> {
                 changeArmybook.next,
                 changeArmybook.prev,
-                changeArmybook.listArmybookPoints
+                changeArmybook.listArmybookPoints,
+                changeArmybook.armyAdditionalName
             }) {
                 label.BorderBrush = mainColor;
                 label.Foreground = mainColor;
@@ -353,8 +354,6 @@ namespace WarhammerArmyAssembler
 
             main.mainWindowHeader.Background = mainColor;
             changeArmybook.gridCloseArmybook.Background = mainColor;
-
-            InterfaceReload.LoadArmySize(2000, onlyReload: true);
         }
 
         public static void PreviewArmyList(bool next = false, bool prev = false)

@@ -103,16 +103,13 @@ namespace WarhammerArmyAssembler
             Interface.main.armyDispell.Content = String.Format("Dispell: {0}", ArmyParams.GetArmyDispell());
         }
 
-        public static void LoadArmySize(int points, bool onlyReload = false)
+        public static void LoadArmySize(int points)
         {
             Army.MaxPoints = points;
             ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
             LoadArmyList();
             ReloadArmyData();
-
-            if (onlyReload)
-                return;
 
             Interface.DetailResize(open: false);
             Interface.Move(Interface.MovingType.ToMain);
