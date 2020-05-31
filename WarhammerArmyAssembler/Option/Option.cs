@@ -277,9 +277,9 @@ namespace WarhammerArmyAssembler
                 return false;
         }
 
-        private bool TypeAndPointsSatisfy(Unit.MagicItemsTypes itemsType, int itemsPoints)
+        private bool TypeAndPointsSatisfy(Unit.MagicItemsTypes itemsType, int itemsPoints, int itemsCout)
         {
-            if (itemsPoints < Points)
+            if ((itemsPoints < Points) && (itemsCout <= 0))
                 return false;
 
             if ((itemsType == Unit.MagicItemsTypes.Unit) && (Type != OptionType.Banner))
@@ -304,12 +304,12 @@ namespace WarhammerArmyAssembler
             if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.GetGroup()))
                 return false;
 
-            if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems))
+            if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems, unit.MagicItemCount))
                 return true;
 
             foreach (Option option in unit.Options)
                 if (option.IsActual())
-                    if (TypeAndPointsSatisfy(option.MagicItemsType, option.MagicItems))
+                    if (TypeAndPointsSatisfy(option.MagicItemsType, option.MagicItems, unit.MagicItemCount))
                         return true;
 
             return false;

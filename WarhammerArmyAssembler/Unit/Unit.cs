@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
-using System.Xml;
 
 namespace WarhammerArmyAssembler
 {
@@ -140,6 +136,7 @@ namespace WarhammerArmyAssembler
         public bool NoSlotsOfCore { get; set; }
 
         public int MagicItems { get; set; }
+        public int MagicItemCount { get; set; }
         public MagicItemsTypes MagicItemsType { get; set; }
 
         public int MountOn { get; set; }
@@ -219,11 +216,27 @@ namespace WarhammerArmyAssembler
         {
             int unitAllMagicPoints = MagicItems;
 
+            if (MagicItemCount > 0)
+                return MagicItemCount;
+
             foreach (Option option in Options)
                 if (option.IsActual())
                     unitAllMagicPoints += option.MagicItems;
 
             return unitAllMagicPoints;
+        }
+
+        public double MagicPointsAlreadyUsed()
+        {
+            double alreayUsed = 0;
+
+            foreach (Option option in Options)
+                if (option.IsMagicItem() && (MagicItemCount <= 0))
+                    alreayUsed += option.Points;
+                else if (option.IsMagicItem() && (MagicItemCount > 0) && (option.Points > 0))
+                    alreayUsed += 1;
+
+            return alreayUsed;
         }
 
         public int GetUnitWizard()
@@ -312,6 +325,7 @@ namespace WarhammerArmyAssembler
                 NoSlotsOfCore = this.NoSlotsOfCore,
 
                 MagicItems = this.MagicItems,
+                MagicItemCount = this.MagicItemCount,
                 MagicItemsType = this.MagicItemsType,
 
                 SizableType = this.SizableType,

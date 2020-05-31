@@ -133,12 +133,14 @@ namespace WarhammerArmyAssembler
                 newUnit.NoArmour = BoolParse(additionalParam["NoArmour"]);
                 newUnit.ArmourPiercing = IntParse(additionalParam["ArmourPiercing"]);
                 newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
+                newUnit.MagicItemCount = IntParse(additionalParam["MagicItemCount"]);
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
                 newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
                 newUnit.MustBeGeneral = BoolParse(additionalParam["MustBeGeneral"]);
                 newUnit.Reroll = StringParse(additionalParam["Reroll"]);
                 newUnit.ImpactHit = StringParse(additionalParam["ImpactHit"]);
                 newUnit.SteamTank = BoolParse(additionalParam["SteamTank"]);
+                newUnit.HellPitAbomination = BoolParse(additionalParam["HellPitAbomination"]);
                 newUnit.Lance = BoolParse(additionalParam["Lance"]);
                 newUnit.Flail = BoolParse(additionalParam["Flail"]);
 
