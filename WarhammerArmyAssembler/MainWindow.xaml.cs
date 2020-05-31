@@ -326,16 +326,6 @@ namespace WarhammerArmyAssembler
                 }
         }
 
-        private void buttonArmybook_Click(object sender, RoutedEventArgs e)
-        {
-            ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
-
-            InterfaceReload.LoadArmyList();
-            InterfaceReload.ReloadArmyData();
-
-            Interface.Move(Interface.MovingType.ToMain);
-        }
-
         private void armyMainLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (Interface.mainMenuIsOpen)
@@ -355,21 +345,6 @@ namespace WarhammerArmyAssembler
 
             this.Hide();
             Interface.changeArmybook.Show();
-        }
-
-        private void prev_Click(object sender, RoutedEventArgs e)
-        {
-            Interface.PreviewArmyList(prev: true);
-        }
-
-        private void next_Click(object sender, RoutedEventArgs e)
-        {
-            Interface.PreviewArmyList(next: true);
-        }
-
-        public void buttonPoints_Click(object sender, RoutedEventArgs e)
-        {
-            InterfaceReload.LoadArmySize(InterfaceOther.IntParse((sender as Label).Content.ToString().Split()[0]));
         }
 
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
