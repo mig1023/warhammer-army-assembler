@@ -31,7 +31,7 @@ namespace WarhammerArmyAssembler
             cb = writer.DirectContent;
             cb.SetColorFill(BaseColor.BLACK);
 
-            AddText(String.Format("{0} // warhammer fantasy battles", Army.ArmyName), fontSize: 20, lineHeight: 18, leftColumn: true);
+            AddText(String.Format("{0} // {1}", Army.ArmyName, ExportOther.GetArmyName()), fontSize: 20, lineHeight: 18, leftColumn: true);
             AddText(String.Format("{0} pts", Army.MaxPoints), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 

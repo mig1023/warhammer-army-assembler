@@ -58,7 +58,7 @@ namespace WarhammerArmyAssembler
 
         private void StartArmybook(int points)
         {
-            InterfaceReload.LoadArmySize(points);
+            InterfaceReload.LoadArmySize(points, armyAdditionalName.Text);
 
             Interface.main.armyVersionLabel_PositionCorrect();
 
@@ -111,6 +111,12 @@ namespace WarhammerArmyAssembler
                 Interface.PreviewArmyList(prev: true);
             else if (e.Key == Key.Right)
                 Interface.PreviewArmyList(next: true);
+        }
+
+        private void showArmyAdditionalName_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            showArmyAdditionalName.Visibility = Visibility.Hidden;
+            armyAdditionalName.Visibility = Visibility.Visible;
         }
     }
 }

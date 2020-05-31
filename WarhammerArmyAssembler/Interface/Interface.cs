@@ -354,6 +354,7 @@ namespace WarhammerArmyAssembler
 
             main.mainWindowHeader.Background = mainColor;
             changeArmybook.gridCloseArmybook.Background = mainColor;
+            changeArmybook.showArmyAdditionalName.Foreground = mainColor;
         }
 
         public static void PreviewArmyList(bool next = false, bool prev = false)

@@ -5,22 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
-        Title="Warhammer Army Assembler (WAAgh)" Height="650" Width="1000" 
+        Title="Warhammer Army Assembler (WAAgh)" Height="675" Width="1000" 
         WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
         Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" PreviewMouseWheel="Window_PreviewMouseWheel" PreviewKeyDown="Window_PreviewKeyDown">
 
-    <Canvas x:Name="armybookCanvas">
+    <Canvas x:Name="armybookCanvas" Margin="0,0,0,0">
 
         <Image x:Name="imageArmybookBack" Stretch="UniformToFill"/>
-        <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="628" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
-            <Canvas x:Name="menuArmybookPlace" Width="320" Height="628" VerticalAlignment="Top" Background="WHite">
+        <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="660" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
+            <Canvas x:Name="menuArmybookPlace" Width="320" Height="660" VerticalAlignment="Top" Background="WHite">
                 <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="47" Canvas.Top="36"/>
                 <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="333" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
                 <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="580" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>
                 <Label x:Name="next" Content="&#9655;" Height="69" Canvas.Left="263" Canvas.Top="143" Width="22" Background="White" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" MouseDown="next_Click"/>
                 <Label x:Name="prev" Content="&#9665;" Height="69" Canvas.Left="20" Canvas.Top="143" Width="22" Background="White" BorderThickness="1" BorderBrush="Black" VerticalContentAlignment="Center" MouseDown="prev_Click"/>
                 <TextBox x:Name="listArmybookPoints" Height="34" Padding="5,2,0,0" Canvas.Left="22" TextWrapping="Wrap" Text="4000" Canvas.Top="580" Width="130" FontSize="20"/>
+                <Label x:Name="showArmyAdditionalName" Content="+ add army name if you wish" Canvas.Left="17" Canvas.Top="617" Width="288" MouseDown="showArmyAdditionalName_MouseDown"/>
+                <TextBox x:Name="armyAdditionalName" Height="28" Visibility="Hidden" Padding="5,2,0,0" Canvas.Left="22" TextWrapping="Wrap" Text="" Canvas.Top="625" Width="269" FontSize="16"/>
             </Canvas>
         </ScrollViewer>
         <Canvas x:Name="startHelpInfo" Height="160" Width="327">

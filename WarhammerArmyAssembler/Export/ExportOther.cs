@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler
 {
@@ -25,9 +21,15 @@ namespace WarhammerArmyAssembler
             return fileName;
         }
 
+        public static string GetArmyName()
+        {
+            return (String.IsNullOrWhiteSpace(Army.ArmyAdditionalName) ? "warhammer fantasy battles" : Army.ArmyAdditionalName);
+        }
+
         private static string NewFileName(int newIndex, string fileType, out string newFileName)
         {
             string name = ARMYLIST_DIR + '\\' + Army.ArmyName.Replace(" ", "_") + '_' + Army.MaxPoints.ToString();
+            name += (String.IsNullOrWhiteSpace(Army.ArmyAdditionalName) ? String.Empty : '_' + Army.ArmyAdditionalName.Replace(" ", "_"));
             newFileName = name + (newIndex > 0 ? '_' + newIndex.ToString() : String.Empty) + '.' + fileType;
 
             return newFileName;

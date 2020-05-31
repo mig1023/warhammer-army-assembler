@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler
 {
@@ -13,7 +10,7 @@ namespace WarhammerArmyAssembler
         {
             string fileName = ExportOther.GetFileName("txt");
 
-            Add(fileName, String.Format("{0} // warhammer fantasy battles", Army.ArmyName));
+            Add(fileName, String.Format("{0} // {1}", Army.ArmyName, ExportOther.GetArmyName()));
             Add(fileName, String.Format("{0} pts", Army.MaxPoints));
             Add(fileName);
 
