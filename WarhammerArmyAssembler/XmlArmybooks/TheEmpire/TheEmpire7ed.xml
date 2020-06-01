@@ -473,14 +473,14 @@
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
+				<Hate>true</Hate>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Warhammer</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Blessing of Sigmar</SpecialRuleDescription>
-					<SpecialRuleDescription>Righteous Fury</SpecialRuleDescription>
+					<AddToDispell>2</AddToDispell>
 					<SpecialRuleDescription>Prayers of Sigmar</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -603,6 +603,93 @@
 					<Mount>true</Mount>
 				</Option>
 			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Ludwig Schwarzhelm</Name>
+			<Points>220</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Warhorse</MountInit>
+			<Description>Ludwig Schwarzhelm</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<KillingBlow>true</KillingBlow>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword of Justice</Name>
+					<Reroll>ToWound</Reroll>
+				</HandWeapon>
+				<Armour>
+					<Name>Full plate armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Standart>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Bunner</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+				</Standart>
+				<Special>
+					<SpecialRuleDescription>Bodyguard</SpecialRuleDescription>
+					<SpecialRuleDescription>The Emperor's Standart</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Luthor Huss</Name>
+			<Points>180</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Warhorse</MountInit>
+			<Description>Luthor Huss</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two-handed warhammer</Name>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Standart>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Bunner</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+				</Standart>
+				<Special>
+					<SpecialRuleDescription>Bodyguard</SpecialRuleDescription>
+					<SpecialRuleDescription>The Emperor's Standart</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
 	<Mounts>
