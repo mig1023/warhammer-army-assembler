@@ -107,6 +107,11 @@ namespace WarhammerArmyAssembler
         {
             Army.MaxPoints = points;
             Army.ArmyAdditionalName = armyName;
+
+            string windowsHeaderWithName = "Warhammer Army Assembler (WAAgh)";
+            Interface.main.dragWindowBottom.Content = windowsHeaderWithName +
+                (String.IsNullOrWhiteSpace(armyName) ? String.Empty : String.Format(" // {0}", armyName));
+
             ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
 
             LoadArmyList();
