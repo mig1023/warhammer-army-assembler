@@ -1677,6 +1677,42 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Louen Leoncoeur",
+                TestListName = "Louen Leoncoeur, The Lionhearted (Bretonnia)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 6,
+                BallisticSkill = 6,
+                Strength = 5,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 6,
+                Attacks = 4,
+                Leadership = 10,
+                Armour = 3,
+                Lance = true,
+
+                Mount = new Enemy
+                {
+                    Name = "Hippogriff",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Movement = 8,
+                    WeaponSkill = 5,
+                    BallisticSkill = 0,
+                    Strength = 6,
+                    Toughness = 5,
+                    Wounds = 5,
+                    Initiative = 6,
+                    Attacks = 3,
+                    Leadership = 8,
+                    Armour = 5,
+                }
+            },
+
+            new Enemy
+            {
                 Name = "Khalida",
                 TestListName = "High Queen Khalida, Beloved of Asaph (Tomb Kings)",
                 Type = UnitType.Lord,
