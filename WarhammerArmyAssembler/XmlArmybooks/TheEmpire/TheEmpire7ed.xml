@@ -303,7 +303,6 @@
 				<Initiative>5</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
@@ -457,7 +456,6 @@
 			<Name>Arch Lector of Sigmar</Name>
 			<Points>125</Points>
 			<MinSize>1</MinSize>
-			<MountInit>The War Altar</MountInit>
 			<Description>Arch Lector of Sigmar</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -495,7 +493,6 @@
 				<Option>
 					<Name>Second warhammer</Name>
 					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>6</Points>
 				</Option>
@@ -610,6 +607,7 @@
 			<Points>220</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Warhorse</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
 			<Description>Ludwig Schwarzhelm</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -637,7 +635,6 @@
 				</Armour>
 				<Standart>
 					<Name>Battle Standard Bearer</Name>
-					<Type>Bunner</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
 					<OnlyOneInArmy>true</OnlyOneInArmy>
 				</Standart>
@@ -653,6 +650,7 @@
 			<Points>180</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Warhorse</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
 			<Description>Luthor Huss</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -669,6 +667,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<Fear>true</Fear>
+				<Hate>true</Hate>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -679,17 +678,374 @@
 					<Name>Heavy armour</Name>
 					<AddToArmour>5</AddToArmour>
 				</Armour>
-				<Standart>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Bunner</Type>
-					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-				</Standart>
 				<Special>
-					<SpecialRuleDescription>Bodyguard</SpecialRuleDescription>
-					<SpecialRuleDescription>The Emperor's Standart</SpecialRuleDescription>
+					<AddToDispell>1</AddToDispell>
+					<SpecialRuleDescription>Prayers of Sigmar</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Captain of the Empire</Name>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<Description>Captain of the Empire</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast>true</HitLast>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<Points>4</Points>
+					<Lance>true</Lance>
+				</Option>
+				<Option>
+					<Name>Pistol</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Longbow</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Handgun</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<OnlyIfNot>Full plate armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+						<OnlyIfNot>Full plate armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Full plate armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>8</Points>
+					<AddToArmour>4</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barding for Warhorse</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Imperial Pegasus</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Griffon</Name>
+					<Type>Option</Type>
+					<Points>200</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Warrior Priest</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<Description>Warrior Priest</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Hate>true</Hate>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Warhammer</Name>
+				</HandWeapon>
+				<Special>
+					<AddToDispell>1</AddToDispell>
+					<SpecialRuleDescription>Prayers of Sigmar</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Two-handed warhammer</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast>true</HitLast>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Second warhammer</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barding for Warhorse</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Battle Lord</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Battle Lord</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barding for Warhorse</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Master Engineer</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<Description>Master Engineer</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Master of Ballistics</SpecialRuleDescription>
+					<SpecialRuleDescription>Extra Crewman</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>	
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Barding for Warhorse</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Mechanical Steed</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<Mount>true</Mount>
+					<AddToArmour>5</AddToArmour>
+					<SpecialRuleDescription>Impact Hit (D3)</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Repeater pistol</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Hochland long rifle</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Grenade launching blunderbuss</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Repeater handgun</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Pigeon bombs</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+				</Option>
+			</Options>
 		</Hero>
 	</Heroes>
 	<Mounts>
@@ -709,6 +1065,26 @@
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
 			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Mechanical Steed</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>1</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>0</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D3</ImpactHit>
+			</AdditionalParam>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
