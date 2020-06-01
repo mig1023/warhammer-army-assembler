@@ -362,7 +362,7 @@ namespace WarhammerArmyAssembler
             double availablePoints = (ArmyParams.GetArmyMaxPoints() - armyCurrentPoint);
 
             string pointsMsg = String.Format(
-                "All points:\t\t{0} pts\n\nAlready used:\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%\n\n\n\n",
+                "All points:\t\t{0} pts\n\nAlready used:\t\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%\n\n\n\n",
                 ArmyParams.GetArmyMaxPoints(),
                 armyCurrentPoint, InterfaceOther.CalcPercent(armyCurrentPoint, ArmyParams.GetArmyMaxPoints()),
                 availablePoints, InterfaceOther.CalcPercent(availablePoints, ArmyParams.GetArmyMaxPoints())
