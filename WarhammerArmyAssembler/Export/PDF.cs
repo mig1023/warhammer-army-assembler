@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Export
 {
-    class ExportPDF
+    class PDF
     {
         const int MARGIN_TOP = 30;
         const int MARGIN_LEFT = 45;
@@ -19,7 +19,7 @@ namespace WarhammerArmyAssembler
 
         public static string SaveArmy()
         {
-            string fileName = ExportOther.GetFileName("pdf");
+            string fileName = Export.Other.GetFileName("pdf");
 
             currentY = MARGIN_TOP;
 
@@ -31,7 +31,7 @@ namespace WarhammerArmyAssembler
             cb = writer.DirectContent;
             cb.SetColorFill(BaseColor.BLACK);
 
-            AddText(String.Format("{0} // {1}", Army.Data.Name, ExportOther.GetArmyName()), fontSize: 20, lineHeight: 18, leftColumn: true);
+            AddText(String.Format("{0} // {1}", Army.Data.Name, Export.Other.GetArmyName()), fontSize: 20, lineHeight: 18, leftColumn: true);
             AddText(String.Format("{0} pts", Army.Data.MaxPoints), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 
@@ -40,7 +40,7 @@ namespace WarhammerArmyAssembler
             foreach (Unit unitType in armyByCategories)
                 foreach (Unit unit in unitType.Items)
                 {
-                    AddText(String.Format("{0}", ExportOther.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
+                    AddText(String.Format("{0}", Export.Other.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
                     AddText(String.Format("{0} ({1} pts)", unit.Name, unit.GetUnitPoints()), lineHeight: 10);
 
                     foreach (string param in new List<string> {

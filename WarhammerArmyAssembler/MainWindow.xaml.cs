@@ -397,7 +397,7 @@ namespace WarhammerArmyAssembler
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (Army.Checks.IsArmyValid())
-                ExportPDF.SaveArmy();
+                Export.PDF.SaveArmy();
             else 
                 MessageBox.Show(Army.Checks.ArmyProblems());
 
@@ -407,7 +407,7 @@ namespace WarhammerArmyAssembler
         public void saveArmyToTXT_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (Army.Checks.IsArmyValid())
-                ExportTXT.SaveArmy();
+                Export.Text.SaveArmy();
             else
                 MessageBox.Show(Army.Checks.ArmyProblems());
 

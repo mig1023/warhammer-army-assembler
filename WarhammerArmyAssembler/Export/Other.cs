@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Export
 {
-    class ExportOther
+    class Other
     {
         static string ARMYLIST_DIR = "armylists";
 

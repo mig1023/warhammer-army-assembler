@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Export
 {
-    class ExportTXT
+    class Text
     {
         public static string SaveArmy()
         {
-            string fileName = ExportOther.GetFileName("txt");
+            string fileName = Export.Other.GetFileName("txt");
 
-            Add(fileName, String.Format("{0} // {1}", Army.Data.Name, ExportOther.GetArmyName()));
+            Add(fileName, String.Format("{0} // {1}", Army.Data.Name, Export.Other.GetArmyName()));
             Add(fileName, String.Format("{0} pts", Army.Data.MaxPoints));
             Add(fileName);
 
@@ -25,7 +25,7 @@ namespace WarhammerArmyAssembler
                     string equipmentLine = unit.GetEquipmentLine();
 
                     Add(fileName, String.Format("{0}{1} ({2} pts){3}{4}",
-                        ExportOther.UnitSizeIfNeed(unit), unit.Name, unit.GetUnitPoints(), 
+                        Export.Other.UnitSizeIfNeed(unit), unit.Name, unit.GetUnitPoints(), 
                         (String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": "),
                         equipmentLine)
                     );
