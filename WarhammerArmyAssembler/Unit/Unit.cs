@@ -566,7 +566,7 @@ namespace WarhammerArmyAssembler
 
         public void AddAmmunition(int id)
         {
-            Options.Insert(0, ArmyBook.Artefact[id].Clone());
+            Options.Insert(0, ArmyBook.Data.Artefact[id].Clone());
         }
 
         public void AddOption(int optionID, Unit unit, int unitID)
@@ -605,7 +605,7 @@ namespace WarhammerArmyAssembler
 
                     if (option.Mount && realise)
                     {
-                        foreach (KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
+                        foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts)
                             if (mount.Value.Name == option.Name)
                                 Interface.ArmyGridDrop(mount.Key, points: option.Points, unit: unitID);
                     }

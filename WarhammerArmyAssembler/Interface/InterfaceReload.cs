@@ -19,24 +19,24 @@ namespace WarhammerArmyAssembler
             Interface.main.armyMainLabel.Content = Army.Data.Name;
             Interface.main.armyVersionLabel.Content = String.Format("{0}ed", Army.Data.ArmyVersion); 
 
-            Interface.main.armyMainLabelPlace.Background = ArmyBook.MainColor;
-            Interface.main.armyVersionLabel.Background = ArmyBook.MainColor;
-            Interface.main.unitDetailHead.Background = ArmyBook.MainColor;
+            Interface.main.armyMainLabelPlace.Background = ArmyBook.Data.MainColor;
+            Interface.main.armyVersionLabel.Background = ArmyBook.Data.MainColor;
+            Interface.main.unitDetailHead.Background = ArmyBook.Data.MainColor;
 
             Interface.main.armyMainMenu.Content = '\u2630';
             Interface.main.armyMainMenu.Foreground = Brushes.White;
-            Interface.main.armyMainMenu.Background = ArmyBook.AdditionalColor;
+            Interface.main.armyMainMenu.Background = ArmyBook.Data.AdditionalColor;
 
             Interface.main.armyMainLabel.Foreground = Brushes.White;
-            Interface.main.armyMainLabel.Background = ArmyBook.MainColor;
+            Interface.main.armyMainLabel.Background = ArmyBook.Data.MainColor;
 
             List<Unit> categories = Army.Params.GetArmyCategories();
 
-            foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)
+            foreach (KeyValuePair<int, Unit> entry in ArmyBook.Data.Units)
             {
                 Unit unit = entry.Value.Clone();
                 unit.PointsView = String.Format(" {0} pts", unit.Points);
-                unit.InterfaceColor = ArmyBook.MainColor;
+                unit.InterfaceColor = ArmyBook.Data.MainColor;
                 categories[(int)unit.Type].Items.Add(unit);
             }
 
@@ -49,7 +49,7 @@ namespace WarhammerArmyAssembler
 
             List<string> artefactsTypes = new List<string>();
 
-            foreach (KeyValuePair<int, Option> entry in ArmyBook.Artefact)
+            foreach (KeyValuePair<int, Option> entry in ArmyBook.Data.Artefact)
                 if (!artefactsTypes.Contains(entry.Value.ArtefactGroup))
                     artefactsTypes.Add(entry.Value.ArtefactGroup);
 
@@ -57,12 +57,12 @@ namespace WarhammerArmyAssembler
             {
                 Option artefacts = new Option() { Name = artefactType };
 
-                foreach (KeyValuePair<int, Option> entry in ArmyBook.Artefact)
+                foreach (KeyValuePair<int, Option> entry in ArmyBook.Data.Artefact)
                     if (entry.Value.ArtefactGroup == artefactType)
                     {
                         Option artefact = entry.Value.Clone();
                         artefact.PointsView = String.Format(" {0} pts", artefact.Points);
-                        artefact.InterfaceColor = ArmyBook.MainColor;
+                        artefact.InterfaceColor = ArmyBook.Data.MainColor;
                         artefacts.Items.Add(artefact);
                     }
 
@@ -112,7 +112,7 @@ namespace WarhammerArmyAssembler
             Interface.main.dragWindowBottom.Content = windowsHeaderWithName +
                 (String.IsNullOrWhiteSpace(armyName) ? String.Empty : String.Format(" // {0}", armyName));
 
-            ArmyBookLoad.LoadArmy(Interface.CurrentSelectedArmy);
+            ArmyBook.Load.LoadArmy(Interface.CurrentSelectedArmy);
 
             LoadArmyList();
             ReloadArmyData();

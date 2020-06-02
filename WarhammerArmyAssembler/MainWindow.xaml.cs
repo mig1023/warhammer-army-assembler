@@ -26,7 +26,7 @@ namespace WarhammerArmyAssembler
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
-            List<string> allXmlFiles = ArmyBookInInterface.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
+            List<string> allXmlFiles = ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
             Interface.CurrentSelectedArmy = allXmlFiles[InterfaceOther.Rand.Next(allXmlFiles.Count)];
 
             Interface.PreviewArmyList();
@@ -81,7 +81,7 @@ namespace WarhammerArmyAssembler
                 }
             }
                 
-            if (ArmyBook.Artefact.ContainsKey(id) && ArmyBook.Artefact[id].ArtefactAlreadyUsed)
+            if (ArmyBook.Data.Artefact.ContainsKey(id) && ArmyBook.Data.Artefact[id].ArtefactAlreadyUsed)
                 return;
             else
             {
@@ -100,21 +100,21 @@ namespace WarhammerArmyAssembler
                 armyUnitDescription.Text = String.Empty;
                 armyUnitSpecific.Text = String.Empty;
             }
-            else if (ArmyBook.Units.ContainsKey(id))
+            else if (ArmyBook.Data.Units.ContainsKey(id))
             {
-                armyUnitName.Content = ArmyBook.Units[id].Name.ToUpper();
-                armyUnitDescription.Text = ArmyBook.Units[id].Description;
-                armyUnitSpecific.Text = ArmyBook.Units[id].SelfDescription();
+                armyUnitName.Content = ArmyBook.Data.Units[id].Name.ToUpper();
+                armyUnitDescription.Text = ArmyBook.Data.Units[id].Description;
+                armyUnitSpecific.Text = ArmyBook.Data.Units[id].SelfDescription();
             }
-            else if (ArmyBook.Artefact.ContainsKey(id))
+            else if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
-                armyUnitName.Content = ArmyBook.Artefact[id].Name.ToUpper();
-                armyUnitDescription.Text = ArmyBook.Artefact[id].Description;
-                armyUnitSpecific.Text = ArmyBook.Artefact[id].SelfDescription();
+                armyUnitName.Content = ArmyBook.Data.Artefact[id].Name.ToUpper();
+                armyUnitDescription.Text = ArmyBook.Data.Artefact[id].Description;
+                armyUnitSpecific.Text = ArmyBook.Data.Artefact[id].SelfDescription();
             }
 
             armyUnitName.Foreground = Brushes.White;
-            armyUnitName.Background = ( group ? Brushes.White : ArmyBook.MainColor );
+            armyUnitName.Background = ( group ? Brushes.White : ArmyBook.Data.MainColor );
             armyUnitName.FontWeight = FontWeights.Bold;
 
             UpdateLayout();
@@ -124,7 +124,7 @@ namespace WarhammerArmyAssembler
                 (armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20) + 20;
 
             armyUnitSpecific.Margin = Interface.Thick(armybookDetail, left: 20, top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 30);
-            armyUnitSpecific.Foreground = ArmyBook.MainColor;
+            armyUnitSpecific.Foreground = ArmyBook.Data.MainColor;
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
@@ -220,10 +220,10 @@ namespace WarhammerArmyAssembler
 
             int id = InterfaceOther.IntParse((string)e.Data.GetData(DataFormats.Text));
 
-            if (ArmyBook.Artefact.ContainsKey(id))
+            if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
-                bool enabled = unit.IsOptionEnabled(ArmyBook.Artefact[id], unit.GetMountOn(), unit.GetMountTypeAlreadyFixed());
-                bool usable = ArmyBook.Artefact[id].IsUsableByUnit(unit);
+                bool enabled = unit.IsOptionEnabled(ArmyBook.Data.Artefact[id], unit.GetMountOn(), unit.GetMountTypeAlreadyFixed());
+                bool usable = ArmyBook.Data.Artefact[id].IsUsableByUnit(unit);
                 e.Effects = (usable && enabled ? DragDropEffects.Copy : DragDropEffects.None);
             }
             else

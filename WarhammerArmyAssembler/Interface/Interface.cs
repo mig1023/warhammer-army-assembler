@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -51,9 +50,9 @@ namespace WarhammerArmyAssembler
 
         public static void ArmyGridDrop(int id, DataGridRow container = null, double points = 0, int unit = 0)
         {
-            if (ArmyBook.Artefact.ContainsKey(id))
+            if (ArmyBook.Data.Artefact.ContainsKey(id))
                 ArmyGridDropArtefact(id, container);
-            else if (ArmyBook.Mounts.ContainsKey(id))
+            else if (ArmyBook.Data.Mounts.ContainsKey(id))
                 ArmyGridDropMount(id, points, unit);
             else
                 ArmyGridDropUnit(id);
@@ -76,7 +75,7 @@ namespace WarhammerArmyAssembler
                 Error("Not enough points add an item");
             else if (!InterfaceChecks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID]))
                 Error(String.Format("Not enough magic item {0} to add an item", (Army.Data.Units[unitID].MagicItemCount > 0 ? "slots" : "points")));
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, ArmyBook.Artefact[id].Points))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, ArmyBook.Data.Artefact[id].Points))
                 Error("For this type, a point cost limit has been reached");
             else
             {
@@ -84,29 +83,29 @@ namespace WarhammerArmyAssembler
                 InterfaceReload.ReloadArmyData();
                 InterfaceUnitDetails.UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
 
-                if (!ArmyBook.Artefact[id].Multiple)
+                if (!ArmyBook.Data.Artefact[id].Multiple)
                     InterfaceMod.SetArtefactAlreadyUsed(id, true);
             }
         }
 
         public static void ArmyGridDropUnit(int id)
         {
-            bool slotExists = (Army.Params.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.Params.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
-            bool coreUnit = (ArmyBook.Units[id].Type == Unit.UnitType.Core);
+            bool slotExists = (Army.Params.GetArmyUnitsNumber(ArmyBook.Data.Units[id].Type) < Army.Params.GetArmyMaxUnitsNumber(ArmyBook.Data.Units[id].Type));
+            bool coreUnit = (ArmyBook.Data.Units[id].Type == Unit.UnitType.Core);
 
             int allHeroes = Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord) + Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero);
-            bool lordInHeroSlot = (ArmyBook.Units[id].Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
+            bool lordInHeroSlot = (ArmyBook.Data.Units[id].Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
 
-            if (ArmyBook.Units[id].PersonifiedHero && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
+            if (ArmyBook.Data.Units[id].PersonifiedHero && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
                 Error("Personalities cannot be repeated");
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)
-                Error(String.Format("The number of {0} of this type has been exhausted.", (ArmyBook.Units[id].IsHero() ? "heroes" : "units")));
+                Error(String.Format("The number of {0} of this type has been exhausted.", (ArmyBook.Data.Units[id].IsHero() ? "heroes" : "units")));
             else if (!InterfaceChecks.EnoughPointsForAddUnit(id))
-                Error(String.Format("Not enough points to add a {0}", (ArmyBook.Units[id].IsHero() ? "hero" : "unit")));
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(ArmyBook.Units[id].Type, ArmyBook.Units[id].Points))
-                Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Units[id].UnitTypeName()));
-            else if(!Army.Checks.IsArmyDublicationOk(ArmyBook.Units[id]))
-                Error(String.Format("Army can't include as many duplicates of {0}", ArmyBook.Units[id].UnitTypeName()));
+                Error(String.Format("Not enough points to add a {0}", (ArmyBook.Data.Units[id].IsHero() ? "hero" : "unit")));
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(ArmyBook.Data.Units[id].Type, ArmyBook.Data.Units[id].Points))
+                Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Data.Units[id].UnitTypeName()));
+            else if(!Army.Checks.IsArmyDublicationOk(ArmyBook.Data.Units[id]))
+                Error(String.Format("Army can't include as many duplicates of {0}", ArmyBook.Data.Units[id].UnitTypeName()));
             else
             {
                 CurrentSelectedUnit = Army.Mod.AddUnitByID(id);
@@ -121,7 +120,7 @@ namespace WarhammerArmyAssembler
             else if (Army.Data.Units[unit].MountOn > 0)
                 Error("The hero already has a mount");
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unit].Type, points))
-                Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Units[id].UnitTypeName()));
+                Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Data.Units[id].UnitTypeName()));
             else
             {
                 Army.Mod.AddMountByID(id, unit);
@@ -194,7 +193,7 @@ namespace WarhammerArmyAssembler
                 newButton.Width = Double.NaN;
                 newButton.MouseDown += buttonAction[buttonIndex];
                 newButton.Foreground = Brushes.White;
-                newButton.Background = (name == "Close" ? Brushes.DarkGray : ArmyBook.MainColor);
+                newButton.Background = (name == "Close" ? Brushes.DarkGray : ArmyBook.Data.MainColor);
                 newButton.FontSize = 16;
                 newButton.FontWeight = FontWeights.Bold;
 
@@ -359,7 +358,7 @@ namespace WarhammerArmyAssembler
 
         public static void PreviewArmyList(bool next = false, bool prev = false)
         {
-            string currentFile = ArmyBookInInterface.GetXmlArmyBooks(next, prev);
+            string currentFile = ArmyBook.XmlBook.GetXmlArmyBooks(next, prev);
             CurrentSelectedArmy = currentFile;
             PreviewLoadCurrentSelectedArmy(currentFile);
         }

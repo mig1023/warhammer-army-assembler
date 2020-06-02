@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Xml;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.ArmyBook
 {
-    class ArmyBookOther
+    class Other
     {
         public static XmlNode AddFrenzyAttack(XmlDocument xml)
         {

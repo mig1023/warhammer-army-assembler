@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Media;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.ArmyBook
 {
-    public class ArmyBook
+    public class Data
     {
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
         public static Dictionary<int, Unit> Mounts = new Dictionary<int, Unit>();

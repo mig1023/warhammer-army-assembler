@@ -30,7 +30,7 @@ namespace WarhammerArmyAssembler
                         if (artefact.ID == id)
                         {
                             artefact.ArtefactAlreadyUsed = value;
-                            ArmyBook.Artefact[artefact.ID].ArtefactAlreadyUsed = value;
+                            ArmyBook.Data.Artefact[artefact.ID].ArtefactAlreadyUsed = value;
                         }
                     }
             }

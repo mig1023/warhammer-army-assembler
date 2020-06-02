@@ -13,7 +13,7 @@ namespace WarhammerArmyAssembler.Army
 
         public static int AddUnitByID(int id)
         {
-            Unit unit = ArmyBook.Units[id].Clone();
+            Unit unit = ArmyBook.Data.Units[id].Clone();
 
             unit.ArmyID = GetNextIndex();
 
@@ -21,7 +21,7 @@ namespace WarhammerArmyAssembler.Army
 
             if (!String.IsNullOrEmpty(unit.MountInit))
             {
-                foreach (KeyValuePair<int, Unit> mount in ArmyBook.Mounts)
+                foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts)
                     if (mount.Value.Name == unit.MountInit)
                     {
                         Unit newMount = mount.Value.Clone();
@@ -38,7 +38,7 @@ namespace WarhammerArmyAssembler.Army
 
         public static void AddMountByID(int id, int unit)
         {
-            Unit mount = ArmyBook.Mounts[id].Clone();
+            Unit mount = ArmyBook.Data.Mounts[id].Clone();
 
             int newID = GetNextIndex();
             Army.Data.Units[unit].MountOn = newID;
@@ -114,9 +114,9 @@ namespace WarhammerArmyAssembler.Army
 
             bool newGeneralIsDemon = (Army.Data.Units[maxLeadershipOwner].GetGroup() == "Demonic");
 
-            if (ArmyBook.DemonicMortal && newGeneralIsDemon && !ArmyBook.DemonicAlreadyReplaced)
+            if (ArmyBook.Data.DemonicMortal && newGeneralIsDemon && !ArmyBook.Data.DemonicAlreadyReplaced)
                 ChangeCoreSpecialUnits();
-            else if (ArmyBook.DemonicMortal && !newGeneralIsDemon && ArmyBook.DemonicAlreadyReplaced)
+            else if (ArmyBook.Data.DemonicMortal && !newGeneralIsDemon && ArmyBook.Data.DemonicAlreadyReplaced)
                 ChangeCoreSpecialUnits();
 
             InterfaceReload.ReloadArmyData();
@@ -124,7 +124,7 @@ namespace WarhammerArmyAssembler.Army
 
         public static string CategoryNameModification(string category)
         {
-            if (!ArmyBook.DemonicMortal)
+            if (!ArmyBook.Data.DemonicMortal)
                 return category;
 
             if (category == "Core")
@@ -155,14 +155,14 @@ namespace WarhammerArmyAssembler.Army
 
         private static void ChangeCoreSpecialUnits()
         {
-            ArmyBook.DemonicAlreadyReplaced = !ArmyBook.DemonicAlreadyReplaced;
+            ArmyBook.Data.DemonicAlreadyReplaced = !ArmyBook.Data.DemonicAlreadyReplaced;
 
             foreach (int i in new List<int> { 1, 2 })
             {
                 foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                     entry.Value.Type = ChangeUnitType(entry.Value.Type);
 
-                foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)
+                foreach (KeyValuePair<int, Unit> entry in ArmyBook.Data.Units)
                     entry.Value.Type = ChangeUnitType(entry.Value.Type);
             }
         }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.ArmyBook
 {
-    class ArmyBookInInterface
+    class XmlBook
     {
         public static string GetXmlArmyBooks(bool next = false, bool prev = false)
         {

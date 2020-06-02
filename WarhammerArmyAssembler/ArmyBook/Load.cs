@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Xml;
 using static WarhammerArmyAssembler.Unit;
-using static WarhammerArmyAssembler.ArmyBookParsers;
+using static WarhammerArmyAssembler.ArmyBook.Parsers;
 using System.Windows.Media;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.ArmyBook
 {
-    class ArmyBookLoad
+    class Load
     {
         public static int GetNextIndex()
         {
-            return ArmyBook.MaxIDindex++;
+            return ArmyBook.Data.MaxIDindex++;
         }
 
         private static void LoadUnitsFromXml(XmlDocument xmlFile, string path, ref Dictionary<int, Unit> dict)
@@ -27,9 +27,9 @@ namespace WarhammerArmyAssembler
 
         public static void LoadArmy(string xmlFileName)
         {
-            ArmyBook.Units.Clear();
-            ArmyBook.Mounts.Clear();
-            ArmyBook.Artefact.Clear();
+            ArmyBook.Data.Units.Clear();
+            ArmyBook.Data.Mounts.Clear();
+            ArmyBook.Data.Artefact.Clear();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
@@ -40,17 +40,17 @@ namespace WarhammerArmyAssembler
             Army.Data.Name = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName"));
             Army.Data.ArmyVersion = IntParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion"));
 
-            ArmyBook.MainColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
-            ArmyBook.AdditionalColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
-            ArmyBook.BackgroundColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
+            ArmyBook.Data.MainColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+            ArmyBook.Data.AdditionalColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
+            ArmyBook.Data.BackgroundColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
 
-            ArmyBook.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Info/DemonicMortal"));
+            ArmyBook.Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Info/DemonicMortal"));
 
-            InterfaceMod.SetArmyGridAltColor(ArmyBook.BackgroundColor);
+            InterfaceMod.SetArmyGridAltColor(ArmyBook.Data.BackgroundColor);
 
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref ArmyBook.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref ArmyBook.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref ArmyBook.Mounts);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref ArmyBook.Data.Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref ArmyBook.Data.Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref ArmyBook.Data.Mounts);
 
             foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Artefacts/ArtefactsGroup"))
             {
@@ -59,7 +59,7 @@ namespace WarhammerArmyAssembler
                 foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("Artefact"))
                 {
                     int newID = GetNextIndex();
-                    ArmyBook.Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
+                    ArmyBook.Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
                 }
             }
         }
@@ -151,7 +151,7 @@ namespace WarhammerArmyAssembler
                 newUnit.NoSlotsOfCore = BoolParse(additionalParam["NoSlotsOfCore"]);
 
                 if (newUnit.Frenzy)
-                    xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(ArmyBookOther.AddFrenzyAttack(xml));
+                    xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(ArmyBook.Other.AddFrenzyAttack(xml));
             }
 
             if (newUnit.UnitStrength == 0)
@@ -165,7 +165,7 @@ namespace WarhammerArmyAssembler
 
             newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount));
 
-            newUnit.ArmyColor = (SolidColorBrush)ArmyBook.MainColor;
+            newUnit.ArmyColor = (SolidColorBrush)ArmyBook.Data.MainColor;
 
             return newUnit;
         }

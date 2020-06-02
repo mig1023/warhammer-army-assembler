@@ -172,8 +172,8 @@ namespace WarhammerArmyAssembler
                 Interface.main.startStatisticTest,
                 Interface.main.startBattleRoyale,
             }) {
-                label.Foreground = ArmyBook.MainColor;
-                label.BorderBrush = ArmyBook.MainColor;
+                label.Foreground = ArmyBook.Data.MainColor;
+                label.BorderBrush = ArmyBook.Data.MainColor;
             }
 
             Interface.main.enemyGroup.Items.Clear();

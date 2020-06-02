@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using static WarhammerArmyAssembler.Option;
 using static WarhammerArmyAssembler.Unit;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.ArmyBook
 {
-    class ArmyBookParsers
+    class Parsers
     {
         public static int IntParse(XmlNode xmlNode, int? byDefault = null)
         {

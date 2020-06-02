@@ -196,7 +196,7 @@ namespace WarhammerArmyAssembler
             Interface.main.unitName.Content = unit.Name.ToUpper();
 
             Interface.main.unitName.Foreground = Brushes.White;
-            Interface.main.unitName.Background = ArmyBook.MainColor;
+            Interface.main.unitName.Background = ArmyBook.Data.MainColor;
             Interface.main.unitName.FontWeight = FontWeights.Bold;
 
             Interface.main.UpdateLayout();
@@ -220,7 +220,7 @@ namespace WarhammerArmyAssembler
             newOption.Margin = Interface.Thick(newOption, margins[0], margins[1]);
 
             if (selected)
-                newOption.Foreground = ArmyBook.AdditionalColor;
+                newOption.Foreground = ArmyBook.Data.AdditionalColor;
 
             if (selected || bold)
                 newOption.FontWeight = FontWeights.Bold;
@@ -228,7 +228,7 @@ namespace WarhammerArmyAssembler
             if (bold)
             {
                 newOption.Foreground = Brushes.White;
-                newOption.Background = ArmyBook.MainColor;
+                newOption.Background = ArmyBook.Data.MainColor;
             }
 
             Interface.main.unitDetail.Children.Add(newOption);
@@ -246,7 +246,7 @@ namespace WarhammerArmyAssembler
                     Content = (points > 0 ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine)
                 };
                 optionPoints.Margin = Interface.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
-                optionPoints.Foreground = ArmyBook.MainColor;
+                optionPoints.Foreground = ArmyBook.Data.MainColor;
                 Interface.main.unitDetail.Children.Add(optionPoints);
 
                 Interface.main.UpdateLayout();
@@ -265,7 +265,7 @@ namespace WarhammerArmyAssembler
                 longOptionLine.Y2 = longOptionLine.Y1 + height * (captionLines.Length - 1);
 
                 longOptionLine.StrokeThickness = 2;
-                longOptionLine.Stroke = ArmyBook.MainColor;
+                longOptionLine.Stroke = ArmyBook.Data.MainColor;
 
                 Interface.main.unitDetail.Children.Add(longOptionLine);
             }
@@ -318,7 +318,7 @@ namespace WarhammerArmyAssembler
 
             if (option.IsMagicItem())
             {
-                AddButtonPart("drop artefact", margins, 0, id, ArmyBook.MainColor, 154);
+                AddButtonPart("drop artefact", margins, 0, id, ArmyBook.Data.MainColor, 154);
                 return height;
             }
 
@@ -352,8 +352,8 @@ namespace WarhammerArmyAssembler
                 AddButtonAllParts(
                     captionFirst: "drop",
                     captionSecond: String.Empty,
-                    backgroundFirst: ArmyBook.AdditionalColor,
-                    backgroundSecond: ArmyBook.MainColor,
+                    backgroundFirst: ArmyBook.Data.AdditionalColor,
+                    backgroundSecond: ArmyBook.Data.MainColor,
                     margins: margins,
                     id: id
                 );
