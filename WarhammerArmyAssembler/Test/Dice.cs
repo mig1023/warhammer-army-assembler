@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Test
 {
     class Dice
     {
@@ -106,23 +106,23 @@ namespace WarhammerArmyAssembler
                 int rankBonus = GetRankBonus(unit);
 
                 if (rankBonus <= 0)
-                    Test.Console(Test.supplText, "({0} LD, ", condition);
+                    Test.Data.Console(Test.Data.supplText, "({0} LD, ", condition);
                 else
                 {
                     condition += rankBonus;
                     condition = Unit.ParamNormalization(condition);
 
-                    Test.Console(Test.supplText, "({0} LD with rank bonus, ", condition);
+                    Test.Data.Console(Test.Data.supplText, "({0} LD with rank bonus, ", condition);
                 }
             }
             else
-                Test.Console(Test.supplText, "({0}+, ", condition);
+                Test.Data.Console(Test.Data.supplText, "({0}+, ", condition);
 
             int result = RollAll(diceType, unitTestPassed, diceNum);
 
             bool testPassed = TestPassedByDice(result, condition, diceType, breakTest);
 
-            Test.Console(Test.supplText, "{0}", result);
+            Test.Data.Console(Test.Data.supplText, "{0}", result);
 
             bool hateHitReroll = unit.Hate && (diceType == Types.WS);
 
@@ -130,7 +130,7 @@ namespace WarhammerArmyAssembler
             {
                 int supplCondition = condition - 3;
                 result = RollAll(diceType, unitTestPassed, 1);
-                Test.Console(Test.supplText, " --> {0}+, {1}", supplCondition, result);
+                Test.Data.Console(Test.Data.supplText, " --> {0}+, {1}", supplCondition, result);
 
                 testPassed = TestPassedByDice(result, supplCondition, diceType, breakTest);
             }
@@ -141,13 +141,13 @@ namespace WarhammerArmyAssembler
             )
             {
                 result = RollAll(diceType, unitTestPassed, diceNum);
-                Test.Console(Test.supplText, ", reroll --> {0}", result);
+                Test.Data.Console(Test.Data.supplText, ", reroll --> {0}", result);
                 testPassed = TestPassedByDice(result, condition, diceType, breakTest);
             }
 
             dice = result;
 
-            Test.Console(Test.supplText, ")");
+            Test.Data.Console(Test.Data.supplText, ")");
 
             if (restoreConsoleOutput)
                 Interface.TestUnit.PreventConsoleOutput(prevent: false);
@@ -161,7 +161,7 @@ namespace WarhammerArmyAssembler
 
             if (breakTest && (result == 2))
             {
-                Test.Console(Test.supplText, "insane courage! --> ");
+                Test.Data.Console(Test.Data.supplText, "insane courage! --> ");
                 return true;
             }
 
@@ -185,14 +185,14 @@ namespace WarhammerArmyAssembler
             if ((diceType == Types.LD) && unit.ColdBlooded)
             {
                 if (!hiddenDice)
-                    Test.Console(Test.supplText, "cold-blooded, ");
+                    Test.Data.Console(Test.Data.supplText, "cold-blooded, ");
 
                 diceNum += 1;
             }
 
             for (int i = 0; i < diceNum; i++)
             {
-                int roll = Test.rand.Next(6) + 1;
+                int roll = Test.Data.rand.Next(6) + 1;
                 result += roll;
 
                 if (roll > maxRoll)

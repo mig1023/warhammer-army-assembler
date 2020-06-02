@@ -531,17 +531,17 @@ namespace WarhammerArmyAssembler
 
         private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Interface.TestUnit.startTest(Test.TestTypes.fullTest);
+            Interface.TestUnit.startTest(Test.Data.TestTypes.fullTest);
         }
 
         private void startStatisticTest_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Interface.TestUnit.startTest(Test.TestTypes.statisticTest);
+            Interface.TestUnit.startTest(Test.Data.TestTypes.statisticTest);
         }
 
         private void startBattleRoyale_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Interface.TestUnit.startTest(Test.TestTypes.battleRoyale);
+            Interface.TestUnit.startTest(Test.Data.TestTypes.battleRoyale);
         }
 
         private void dragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

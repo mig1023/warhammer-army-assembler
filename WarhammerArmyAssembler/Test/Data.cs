@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Test
 {
-    class Test
+    class Data
     {
         public enum TestTypes { fullTest, statisticTest, battleRoyale }; 
 
@@ -27,32 +25,32 @@ namespace WarhammerArmyAssembler
 
         public static void PrepareUnit(Unit unit)
         {
-            Test.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+            Test.Data.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
             if (unit.MountOn > 0)
-                Test.unitMount = Army.Data.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier(Test.unit.Size);
+                Test.Data.unitMount = Army.Data.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier(Test.Data.unit.Size);
             else
-                Test.unitMount = null;
+                Test.Data.unitMount = null;
         }
 
         public static void PrepareEnemy(string enemyName)
         {
-            Test.enemy = Enemy.GetByName(enemyName).Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+            Test.Data.enemy = Enemy.GetByName(enemyName).Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
             if (enemy.Mount != null)
-                Test.enemyMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+                Test.Data.enemyMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
             else
-                Test.enemyMount = null;
+                Test.Data.enemyMount = null;
         }
 
         public static void TestByName(TestTypes testType)
         {
             if (testType == TestTypes.battleRoyale)
-                TestFight.BattleRoyaleTest(unit, unitMount);
+                Test.Fight.BattleRoyaleTest(unit, unitMount);
             else if (testType == TestTypes.statisticTest)
-                TestFight.StatisticTest(unit, unitMount, enemy, enemyMount);
+                Test.Fight.StatisticTest(unit, unitMount, enemy, enemyMount);
             else
-                TestFight.FullTest(unit, unitMount, enemy, enemyMount);
+                Test.Fight.FullTest(unit, unitMount, enemy, enemyMount);
         }
 
         public static void Console(Brush color, string line)

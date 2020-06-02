@@ -173,7 +173,7 @@ namespace WarhammerArmyAssembler
 
         public int CompareTo(Unit anotherUnit)
         {
-            return (TestFight.CheckInitiative(this, anotherUnit) ? -1 : 1);
+            return (Test.Fight.CheckInitiative(this, anotherUnit) ? -1 : 1);
         }
 
         public double GetUnitPoints()

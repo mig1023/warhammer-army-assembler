@@ -71,11 +71,11 @@ namespace WarhammerArmyAssembler.Interface
             Interface.Changes.main.armyUnitTest_Resize();
         }
 
-        public static void startTest(Test.TestTypes testType)
+        public static void startTest(Test.Data.TestTypes testType)
         {
             Interface.Changes.main.armyUnitTest_Resize();
             CleanConsole();
-            Test.TestByName(testType);
+            Test.Data.TestByName(testType);
             Interface.Changes.main.testConsole.Visibility = Visibility.Visible;
         }
 
@@ -145,7 +145,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void TestCanvasPrepare(Unit unit)
         {
-            Test.PrepareUnit(unit);
+            Test.Data.PrepareUnit(unit);
 
             foreach (FrameworkElement element in new List<FrameworkElement> {
                 Interface.Changes.main.enemyTestUnit,
@@ -159,9 +159,9 @@ namespace WarhammerArmyAssembler.Interface
 
             Interface.Changes.main.startBattleRoyale.Visibility = Visibility.Visible;
 
-            Interface.Changes.main.armyTestUnit.Content = Test.unit.Name;
-            LoadUnitParamInInterface(unitForLoad: Test.unit, mountForLoad: Test.unitMount, elemetnsPostfix: "Test", unitGrid: Interface.Changes.main.unitGrid);
-            LoadSpecialRules(unitForLoad: Test.unit, target: Interface.Changes.main.specialRulesTest, onlyUnitRules: true);
+            Interface.Changes.main.armyTestUnit.Content = Test.Data.unit.Name;
+            LoadUnitParamInInterface(unitForLoad: Test.Data.unit, mountForLoad: Test.Data.unitMount, elemetnsPostfix: "Test", unitGrid: Interface.Changes.main.unitGrid);
+            LoadSpecialRules(unitForLoad: Test.Data.unit, target: Interface.Changes.main.specialRulesTest, onlyUnitRules: true);
 
             foreach (Label label in new List<Label> {
                 Interface.Changes.main.startFullTest,
@@ -196,11 +196,11 @@ namespace WarhammerArmyAssembler.Interface
             if (String.IsNullOrEmpty(SelectedEnemy()))
                 return;
 
-            Test.PrepareEnemy(SelectedEnemy());
+            Test.Data.PrepareEnemy(SelectedEnemy());
 
             Interface.Changes.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
-            LoadUnitParamInInterface(unitForLoad: Test.enemy, mountForLoad: Test.enemyMount, elemetnsPostfix: "Enemy", unitGrid: Interface.Changes.main.enemyGrid);
-            LoadSpecialRules(unitForLoad: Test.enemy, target: Interface.Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
+            LoadUnitParamInInterface(unitForLoad: Test.Data.enemy, mountForLoad: Test.Data.enemyMount, elemetnsPostfix: "Enemy", unitGrid: Interface.Changes.main.enemyGrid);
+            LoadSpecialRules(unitForLoad: Test.Data.enemy, target: Interface.Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
 
             Interface.Changes.main.armyUnitTest_Resize();
         }
