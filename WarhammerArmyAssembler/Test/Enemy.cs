@@ -1675,41 +1675,6 @@ namespace WarhammerArmyAssembler
                 Armour = 2,
             },
 
-            new Enemy
-            {
-                Name = "Louen Leoncoeur",
-                TestListName = "Louen Leoncoeur, The Lionhearted (Bretonnia)",
-                Type = UnitType.Lord,
-                Size = 1,
-                Movement = 4,
-                WeaponSkill = 6,
-                BallisticSkill = 6,
-                Strength = 5,
-                Toughness = 4,
-                Wounds = 3,
-                Initiative = 6,
-                Attacks = 4,
-                Leadership = 10,
-                Armour = 3,
-                Lance = true,
-
-                Mount = new Enemy
-                {
-                    Name = "Hippogriff",
-                    Type = UnitType.Mount,
-                    Size = 1,
-                    Movement = 8,
-                    WeaponSkill = 5,
-                    BallisticSkill = 0,
-                    Strength = 6,
-                    Toughness = 5,
-                    Wounds = 5,
-                    Initiative = 6,
-                    Attacks = 3,
-                    Leadership = 8,
-                    Armour = 5,
-                }
-            },
 
             new Enemy
             {
@@ -1729,6 +1694,47 @@ namespace WarhammerArmyAssembler
                 HitFirst = true,
                 Undead = true,
                 PoisonAttack = true,
+            },
+
+            new Enemy
+            {
+                Name = "Louen Leoncoeur",
+                TestListName = "Louen Leoncoeur, The Lionhearted (Bretonnia)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 4,
+                WeaponSkill = 7,
+                BallisticSkill = 5,
+                Strength = 5,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 7,
+                Attacks = 5,
+                Leadership = 9,
+                Armour = 3,
+                Ward = 5,
+                Lance = true,
+                ImmuneToPsychology = true,
+                Regeneration = true,
+                Reroll = "ToHit;ToWound",
+
+                Mount = new Enemy
+                {
+                    Name = "Beaquis",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Movement = 8,
+                    WeaponSkill = 5,
+                    BallisticSkill = 0,
+                    Strength = 5,
+                    Toughness = 5,
+                    Wounds = 4,
+                    Initiative = 6,
+                    Attacks = 4,
+                    Leadership = 9,
+                    Armour = 5,
+                    Terror = true,
+                }
             },
 
             new Enemy
