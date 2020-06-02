@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Xml;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Interface
 {
-    class InterfaceOther
+    class Other
     {
         public static Random Rand = new Random();
 

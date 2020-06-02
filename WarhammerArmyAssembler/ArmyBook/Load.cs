@@ -35,18 +35,18 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlFile.Load(xmlFileName);
 
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/SymbolImage");
-            Interface.LoadArmyImage(armyFile, xmlFileName);
+            Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName"));
             Army.Data.ArmyVersion = IntParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion"));
 
-            ArmyBook.Data.MainColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
-            ArmyBook.Data.AdditionalColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
-            ArmyBook.Data.BackgroundColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
+            ArmyBook.Data.MainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+            ArmyBook.Data.AdditionalColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
+            ArmyBook.Data.BackgroundColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
 
             ArmyBook.Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Info/DemonicMortal"));
 
-            InterfaceMod.SetArmyGridAltColor(ArmyBook.Data.BackgroundColor);
+            Interface.Mod.SetArmyGridAltColor(ArmyBook.Data.BackgroundColor);
 
             LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref ArmyBook.Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref ArmyBook.Data.Units);

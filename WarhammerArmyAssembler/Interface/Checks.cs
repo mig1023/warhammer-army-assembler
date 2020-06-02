@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Interface
 {
-    class InterfaceChecks
+    class Checks
     {
         public static bool EnoughPointsForAddUnit(int id)
         {

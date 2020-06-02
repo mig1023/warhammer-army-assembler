@@ -11,7 +11,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             List<string> allXmlFiles = FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
 
-            string newArmyList = Interface.CurrentSelectedArmy ?? allXmlFiles[0];
+            string newArmyList = Interface.Changes.CurrentSelectedArmy ?? allXmlFiles[0];
 
             string firstFile = allXmlFiles[0];
             string prevFile = String.Empty;

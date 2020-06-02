@@ -69,7 +69,7 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (Option option in Army.Data.Units[id].Options)
                 if (option.IsMagicItem())
-                    InterfaceMod.SetArtefactAlreadyUsed(option.ID, false);
+                    Interface.Mod.SetArtefactAlreadyUsed(option.ID, false);
 
             if (removeUnitAlso != null)
                 Army.Data.Units.Remove((int)removeUnitAlso);
@@ -119,7 +119,7 @@ namespace WarhammerArmyAssembler.Army
             else if (ArmyBook.Data.DemonicMortal && !newGeneralIsDemon && ArmyBook.Data.DemonicAlreadyReplaced)
                 ChangeCoreSpecialUnits();
 
-            InterfaceReload.ReloadArmyData();
+            Interface.Reload.ReloadArmyData();
         }
 
         public static string CategoryNameModification(string category)

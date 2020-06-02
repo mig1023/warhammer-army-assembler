@@ -20,7 +20,7 @@ namespace WarhammerArmyAssembler
         {
             foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
             {
-                string currentText = InterfaceTestUnit.GetFullConsoleText();
+                string currentText = Interface.TestUnit.GetFullConsoleText();
 
                 Test.Console(Test.supplText, "{0}\n\n", enemyGroupName.ToUpper());
 
@@ -44,14 +44,14 @@ namespace WarhammerArmyAssembler
             bool royalNotation = false)
         {
             int[] result = new int[3];
-            string currentText = InterfaceTestUnit.GetFullConsoleText();
+            string currentText = Interface.TestUnit.GetFullConsoleText();
 
-            InterfaceTestUnit.PreventConsoleOutput(prevent: true);
+            Interface.TestUnit.PreventConsoleOutput(prevent: true);
 
             for (int i = 0; i < 1000; i++)
                 result[FullTest(unit, unitMount, enemy, enemyMount)] += 1;
 
-            InterfaceTestUnit.PreventConsoleOutput(prevent: false);
+            Interface.TestUnit.PreventConsoleOutput(prevent: false);
 
             if (royalNotation)
                 Test.Console(Test.text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n", enemy.TestListName, (double)result[1] / 10, (double)result[2] / 10);                

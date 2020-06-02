@@ -30,7 +30,7 @@ namespace WarhammerArmyAssembler
             Test.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
             if (unit.MountOn > 0)
-                Test.unitMount = Army.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier(Test.unit.Size);
+                Test.unitMount = Army.Data.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier(Test.unit.Size);
             else
                 Test.unitMount = null;
         }
@@ -57,7 +57,7 @@ namespace WarhammerArmyAssembler
 
         public static void Console(Brush color, string line)
         {
-            InterfaceTestUnit.LineToConsole(line, color);
+            Interface.TestUnit.LineToConsole(line, color);
         }
 
         public static void Console(Brush color, string line, params object[] p)

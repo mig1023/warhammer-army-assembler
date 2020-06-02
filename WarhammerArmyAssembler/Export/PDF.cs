@@ -48,7 +48,7 @@ namespace WarhammerArmyAssembler.Export
                         unit.GetSpecialRulesLine(),
                         unit.GetModifiedParamsLine()
                     })
-                        foreach (string line in InterfaceOther.WordSplit(param, partLength: 210))
+                        foreach (string line in Interface.Other.WordSplit(param, partLength: 210))
                             if (!String.IsNullOrEmpty(line))
                                 AddText(line, fontSize: 6, lineHeight: 8);
 

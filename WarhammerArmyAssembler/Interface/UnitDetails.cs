@@ -5,13 +5,13 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Interface
 {
-    class InterfaceUnitDetails
+    class UnitDetails
     {
         private static double GetDetailHeight()
         {
-            double detailHeight = Interface.main.unitDetail.ActualHeight;
+            double detailHeight = Interface.Changes.main.unitDetail.ActualHeight;
             return (detailHeight > 0 ? detailHeight : 250);
         }
 
@@ -30,7 +30,7 @@ namespace WarhammerArmyAssembler
 
         private static bool NotEnoughColumnForThis(string caption, double height, double[] margins)
         {
-            string[] captionLines = InterfaceOther.WordSplit(caption);
+            string[] captionLines = Interface.Other.WordSplit(caption);
 
             if (captionLines.Length < 2)
                 return false;
@@ -127,16 +127,16 @@ namespace WarhammerArmyAssembler
 
         public static void AddOptionsList(int unitID, Unit unit)
         {
-            double[] margins = new double[] { Interface.main.unitName.Margin.Left, Interface.main.unitName.Margin.Top + 35 };
+            double[] margins = new double[] { Interface.Changes.main.unitName.Margin.Left, Interface.Changes.main.unitName.Margin.Top + 35 };
 
             List<FrameworkElement> elementsForRemoving = new List<FrameworkElement>();
 
-            foreach (FrameworkElement element in Interface.main.unitDetail.Children)
+            foreach (FrameworkElement element in Interface.Changes.main.unitDetail.Children)
                 if (element.Name != "closeUnitDetail" && element.Name != "unitName")
                     elementsForRemoving.Add(element);
 
             foreach (FrameworkElement element in elementsForRemoving)
-                Interface.main.unitDetail.Children.Remove(element);
+                Interface.Changes.main.unitDetail.Children.Remove(element);
 
             bool notFirstColumn = false;
 
@@ -146,8 +146,8 @@ namespace WarhammerArmyAssembler
                 AddLabel(
                     caption: String.Format("Wizard Level {0}", unit.GetUnitWizard()),
                     margins: new double[] {
-                        Interface.main.unitName.Margin.Left + Interface.main.unitName.ActualWidth + 5,
-                        Interface.main.unitName.Margin.Top
+                        Interface.Changes.main.unitName.Margin.Left + Interface.Changes.main.unitName.ActualWidth + 5,
+                        Interface.Changes.main.unitName.Margin.Top
                     },
                     height: 25,
                     lastColumnMaxWidth: ref lastColumnMaxWidth
@@ -168,10 +168,10 @@ namespace WarhammerArmyAssembler
             if (unit.GetSpecialRules().Count > 0)
                 margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
-            Interface.main.unitDetail.Width = margins[0] + lastColumnMaxWidth + 25;
+            Interface.Changes.main.unitDetail.Width = margins[0] + lastColumnMaxWidth + 25;
 
-            if (Interface.main.unitDetail.Width > Interface.main.unitDetailScroll.Width)
-                Interface.main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
+            if (Interface.Changes.main.unitDetail.Width > Interface.Changes.main.unitDetailScroll.Width)
+                Interface.Changes.main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
         }
 
         private static void AddOption_Click(object sender, RoutedEventArgs e)
@@ -180,26 +180,26 @@ namespace WarhammerArmyAssembler
 
             string[] id = id_tag.Split('|');
 
-            int optionID = InterfaceOther.IntParse(id[1]);
-            int unitID = InterfaceOther.IntParse(id[0]);
+            int optionID = Interface.Other.IntParse(id[1]);
+            int unitID = Interface.Other.IntParse(id[0]);
 
             Army.Data.Units[unitID].AddOption(optionID, Army.Data.Units[unitID], unitID);
             Army.Data.Units[unitID].ThrowAwayIncompatibleOption();
 
-            InterfaceReload.ReloadArmyData();
-            InterfaceMod.SetArtefactAlreadyUsed(InterfaceOther.IntParse(id[1]), false);
+            Interface.Reload.ReloadArmyData();
+            Interface.Mod.SetArtefactAlreadyUsed(Interface.Other.IntParse(id[1]), false);
             UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
         }
 
         public static void UpdateUnitDescription(int unitID, Unit unit)
         {
-            Interface.main.unitName.Content = unit.Name.ToUpper();
+            Interface.Changes.main.unitName.Content = unit.Name.ToUpper();
 
-            Interface.main.unitName.Foreground = Brushes.White;
-            Interface.main.unitName.Background = ArmyBook.Data.MainColor;
-            Interface.main.unitName.FontWeight = FontWeights.Bold;
+            Interface.Changes.main.unitName.Foreground = Brushes.White;
+            Interface.Changes.main.unitName.Background = ArmyBook.Data.MainColor;
+            Interface.Changes.main.unitName.FontWeight = FontWeights.Bold;
 
-            Interface.main.UpdateLayout();
+            Interface.Changes.main.UpdateLayout();
 
             AddOptionsList(unitID, unit);
         }
@@ -210,14 +210,14 @@ namespace WarhammerArmyAssembler
         {
             Label newOption = new Label();
 
-            string[] captionLines = InterfaceOther.WordSplit(caption);
+            string[] captionLines = Interface.Other.WordSplit(caption);
 
             newOption.Content = String.Empty;
 
             foreach (string line in captionLines)
                 newOption.Content += (String.IsNullOrEmpty(newOption.Content.ToString()) ? String.Empty : Environment.NewLine + "   ") + line;
 
-            newOption.Margin = Interface.Thick(newOption, margins[0], margins[1]);
+            newOption.Margin = Interface.Changes.Thick(newOption, margins[0], margins[1]);
 
             if (selected)
                 newOption.Foreground = ArmyBook.Data.AdditionalColor;
@@ -231,9 +231,9 @@ namespace WarhammerArmyAssembler
                 newOption.Background = ArmyBook.Data.MainColor;
             }
 
-            Interface.main.unitDetail.Children.Add(newOption);
+            Interface.Changes.main.unitDetail.Children.Add(newOption);
 
-            Interface.main.UpdateLayout();
+            Interface.Changes.main.UpdateLayout();
 
             double actualWidth = newOption.ActualWidth;
 
@@ -245,11 +245,11 @@ namespace WarhammerArmyAssembler
                 {
                     Content = (points > 0 ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine)
                 };
-                optionPoints.Margin = Interface.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
+                optionPoints.Margin = Interface.Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
                 optionPoints.Foreground = ArmyBook.Data.MainColor;
-                Interface.main.unitDetail.Children.Add(optionPoints);
+                Interface.Changes.main.unitDetail.Children.Add(optionPoints);
 
-                Interface.main.UpdateLayout();
+                Interface.Changes.main.UpdateLayout();
 
                 actualWidth += optionPoints.ActualWidth - 5;
             }
@@ -267,7 +267,7 @@ namespace WarhammerArmyAssembler
                 longOptionLine.StrokeThickness = 2;
                 longOptionLine.Stroke = ArmyBook.Data.MainColor;
 
-                Interface.main.unitDetail.Children.Add(longOptionLine);
+                Interface.Changes.main.unitDetail.Children.Add(longOptionLine);
             }
 
             if (actualWidth > lastColumnMaxWidth)
@@ -290,14 +290,14 @@ namespace WarhammerArmyAssembler
                 Background = background,
             };
 
-            newPart.Margin = Interface.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
+            newPart.Margin = Interface.Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
             newPart.Width = partWidth ?? 77;
 
             if (enabled)
                 newPart.MouseDown += AddOption_Click;
 
-            Interface.main.unitDetail.Children.Add(newPart);
-            Interface.main.UpdateLayout();
+            Interface.Changes.main.unitDetail.Children.Add(newPart);
+            Interface.Changes.main.UpdateLayout();
 
             return newPart.ActualWidth;
         }

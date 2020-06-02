@@ -10,9 +10,9 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Xml;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Interface
 {
-    class Interface
+    class Changes
     {
         public static MainWindow main = null;
 
@@ -71,20 +71,20 @@ namespace WarhammerArmyAssembler
 
         public static void ArmyGridDropArtefact(int id, int unitID)
         {
-            if (!InterfaceChecks.EnoughPointsForAddArtefact(id))
+            if (!Interface.Checks.EnoughPointsForAddArtefact(id))
                 Error("Not enough points add an item");
-            else if (!InterfaceChecks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID]))
+            else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID]))
                 Error(String.Format("Not enough magic item {0} to add an item", (Army.Data.Units[unitID].MagicItemCount > 0 ? "slots" : "points")));
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, ArmyBook.Data.Artefact[id].Points))
                 Error("For this type, a point cost limit has been reached");
             else
             {
                 Army.Data.Units[unitID].AddAmmunition(id);
-                InterfaceReload.ReloadArmyData();
-                InterfaceUnitDetails.UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
+                Interface.Reload.ReloadArmyData();
+                Interface.UnitDetails.UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
 
                 if (!ArmyBook.Data.Artefact[id].Multiple)
-                    InterfaceMod.SetArtefactAlreadyUsed(id, true);
+                    Interface.Mod.SetArtefactAlreadyUsed(id, true);
             }
         }
 
@@ -100,7 +100,7 @@ namespace WarhammerArmyAssembler
                 Error("Personalities cannot be repeated");
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)
                 Error(String.Format("The number of {0} of this type has been exhausted.", (ArmyBook.Data.Units[id].IsHero() ? "heroes" : "units")));
-            else if (!InterfaceChecks.EnoughPointsForAddUnit(id))
+            else if (!Interface.Checks.EnoughPointsForAddUnit(id))
                 Error(String.Format("Not enough points to add a {0}", (ArmyBook.Data.Units[id].IsHero() ? "hero" : "unit")));
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(ArmyBook.Data.Units[id].Type, ArmyBook.Data.Units[id].Points))
                 Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Data.Units[id].UnitTypeName()));
@@ -109,13 +109,13 @@ namespace WarhammerArmyAssembler
             else
             {
                 CurrentSelectedUnit = Army.Mod.AddUnitByID(id);
-                InterfaceReload.ReloadArmyData();
+                Interface.Reload.ReloadArmyData();
             }
         }
 
         public static void ArmyGridDropMount(int id, double points, int unit)
         {
-            if (!InterfaceChecks.EnoughUnitPointsForAddOption(points))
+            if (!Interface.Checks.EnoughUnitPointsForAddOption(points))
                 Error("Not enough points to add a mount");
             else if (Army.Data.Units[unit].MountOn > 0)
                 Error("The hero already has a mount");
@@ -124,7 +124,7 @@ namespace WarhammerArmyAssembler
             else
             {
                 Army.Mod.AddMountByID(id, unit);
-                InterfaceReload.ReloadArmyData();
+                Interface.Reload.ReloadArmyData();
             }
         }
 
@@ -134,14 +134,14 @@ namespace WarhammerArmyAssembler
                 DetailResize(open: false);
 
             Army.Mod.DeleteUnitByID(id);
-            InterfaceReload.ReloadArmyData();
+            Interface.Reload.ReloadArmyData();
         }
 
         public static void AllUnitDelete()
         {
             DetailResize(open: false);
             Army.Mod.DeleteAllUnits();
-            InterfaceReload.ReloadArmyData();
+            Interface.Reload.ReloadArmyData();
         }
 
         public static void Error(string text)
@@ -247,20 +247,20 @@ namespace WarhammerArmyAssembler
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
             if (menu)
-                InterfaceMod.View(canvasToShow: main.mainMenu);
+                Interface.Mod.View(canvasToShow: main.mainMenu);
 
             if (err)
-                InterfaceMod.View(canvasToShow: main.errorDetail);
+                Interface.Mod.View(canvasToShow: main.errorDetail);
 
             if (moveTo == MovingType.ToLeft)
             {
-                InterfaceMod.View(canvasToShow: null, left: true);
+                Interface.Mod.View(canvasToShow: null, left: true);
                 newPosition = new Thickness(main.armybookDetailScroll.Width, 0, 0, 0);
             }
                 
             if (moveTo == MovingType.ToRight)
             {
-                InterfaceMod.View(canvasToShow: null, right: true);
+                Interface.Mod.View(canvasToShow: null, right: true);
                 newPosition = new Thickness((main.ActualWidth * -1), 0, 0, 0);
             }
 
@@ -271,7 +271,7 @@ namespace WarhammerArmyAssembler
                 newPosition = new Thickness(0, height, 0, 0);
 
             if ((moveTo == MovingType.ToMain) && unitTestIsOpen)
-                InterfaceMod.UnitTestClose();
+                Interface.Mod.UnitTestClose();
 
             bool mainCanvasMoving = (err || menu);
 
@@ -325,7 +325,7 @@ namespace WarhammerArmyAssembler
 
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = InterfaceOther.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+            Brush mainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
 
             foreach (Label label in PointsButtons)
             {

@@ -48,23 +48,23 @@ namespace WarhammerArmyAssembler
 
         private void prev_Click(object sender, RoutedEventArgs e)
         {
-            Interface.PreviewArmyList(prev: true);
+            Interface.Changes.PreviewArmyList(prev: true);
         }
 
         private void next_Click(object sender, RoutedEventArgs e)
         {
-            Interface.PreviewArmyList(next: true);
+            Interface.Changes.PreviewArmyList(next: true);
         }
 
         private void StartArmybook(int points)
         {
-            InterfaceReload.LoadArmySize(points, armyAdditionalName.Text);
+            Interface.Reload.LoadArmySize(points, armyAdditionalName.Text);
 
-            Interface.main.armyVersionLabel_PositionCorrect();
+            Interface.Changes.main.armyVersionLabel_PositionCorrect();
 
             this.Hide();
 
-            Interface.main.Show();
+            Interface.Changes.main.Show();
         }
 
         private void StartArmybookOption(string armySize)
@@ -100,17 +100,17 @@ namespace WarhammerArmyAssembler
         private void Window_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             if (e.Delta > 0)
-                Interface.PreviewArmyList(prev: true);
+                Interface.Changes.PreviewArmyList(prev: true);
             else
-                Interface.PreviewArmyList(next: true);
+                Interface.Changes.PreviewArmyList(next: true);
         }
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Left)
-                Interface.PreviewArmyList(prev: true);
+                Interface.Changes.PreviewArmyList(prev: true);
             else if (e.Key == Key.Right)
-                Interface.PreviewArmyList(next: true);
+                Interface.Changes.PreviewArmyList(next: true);
         }
 
         private void showArmyAdditionalName_MouseDown(object sender, MouseButtonEventArgs e)

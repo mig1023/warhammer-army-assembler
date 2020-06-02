@@ -590,12 +590,12 @@ namespace WarhammerArmyAssembler
 
                             if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, option.Points))
                             {
-                                Interface.Error(String.Format("The {0} has reached a point cost limit", Army.Data.Units[unitID].UnitTypeName()));
+                                Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", Army.Data.Units[unitID].UnitTypeName()));
                                 return;
                             }
-                            else if (!InterfaceChecks.EnoughUnitPointsForAddOption(optionPoints))
+                            else if (!Interface.Checks.EnoughUnitPointsForAddOption(optionPoints))
                             {
-                                Interface.Error(String.Format("Not enough points to add", Army.Data.Units[unitID].UnitTypeName()));
+                                Interface.Changes.Error(String.Format("Not enough points to add", Army.Data.Units[unitID].UnitTypeName()));
                                 return;
                             }
                             else
@@ -607,7 +607,7 @@ namespace WarhammerArmyAssembler
                     {
                         foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts)
                             if (mount.Value.Name == option.Name)
-                                Interface.ArmyGridDrop(mount.Key, points: option.Points, unit: unitID);
+                                Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: unitID);
                     }
                     else if (option.Mount && !realise)
                     {
@@ -967,7 +967,7 @@ namespace WarhammerArmyAssembler
 
                 if ((incompatible || notCompitableMore) && (Options[i].IsActual()))
                 {
-                    InterfaceMod.SetArtefactAlreadyUsed(Options[i].ID, false);
+                    Interface.Mod.SetArtefactAlreadyUsed(Options[i].ID, false);
                     AddOption(Options[i].ID, this, this.ArmyID);
                 }
             }
@@ -975,7 +975,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsNotCompitableMore(Option option)
         {
-            return !InterfaceChecks.EnoughUnitPointsForAddArtefact(option.ID, this, addOption: false);
+            return !Interface.Checks.EnoughUnitPointsForAddArtefact(option.ID, this, addOption: false);
         }
 
         public bool IsOptionEnabled(Option option, int mountAlreadyOn, Option.OnlyForType mountTypeAlreadyFixed, bool postCheck = false)
