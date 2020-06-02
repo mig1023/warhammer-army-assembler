@@ -88,7 +88,7 @@ namespace WarhammerArmyAssembler
             foreach (KeyValuePair<int, Unit> entry in Army.Units)
                 if ((entry.Key != requestFromUnit) && (!byUnitType || (entry.Value.Name == unitName)))
                     foreach (Option option in entry.Value.Options)
-                        if ((option.Name == optionName) && option.Realised)
+                        if ((option.Name == optionName) && (option.Realised || option.IsMagicItem()))
                             return entry.Key;
 
             return 0;
