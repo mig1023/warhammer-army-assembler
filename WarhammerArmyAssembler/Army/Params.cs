@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Army
 {
-    class ArmyParams
+    class Params
     {
         public enum BasesTypes { normal, large, cavalry };
 
@@ -11,7 +11,7 @@ namespace WarhammerArmyAssembler
         {
             double points = 0;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                 points += entry.Value.GetUnitPoints();
 
             return points;
@@ -21,7 +21,7 @@ namespace WarhammerArmyAssembler
         {
             int size = 0;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
                 int modelsInPack = entry.Value.ModelsInPack;
 
@@ -43,7 +43,7 @@ namespace WarhammerArmyAssembler
             foreach (Unit.UnitType u in Enum.GetValues(typeof(Unit.UnitType)))
                 units.Add(u, 0);
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
                 if ((entry.Value.Type != Unit.UnitType.Core) || !entry.Value.NoSlotsOfCore)
                     units[entry.Value.Type] += 1;
@@ -59,7 +59,7 @@ namespace WarhammerArmyAssembler
 
         public static int GetArmyMaxPoints()
         {
-            return Army.MaxPoints;
+            return Army.Data.MaxPoints;
         }
 
         public static int GetArmyMaxUnitsNumber(Unit.UnitType type)
@@ -67,15 +67,15 @@ namespace WarhammerArmyAssembler
             switch (type)
             {
                 case Unit.UnitType.Lord:
-                    return (Army.MaxPoints < 2000 ? 0 : 1 + ((Army.MaxPoints - 2000) / 1000));
+                    return (Army.Data.MaxPoints < 2000 ? 0 : 1 + ((Army.Data.MaxPoints - 2000) / 1000));
                 case Unit.UnitType.Hero:
-                    return (Army.MaxPoints < 2000 ? 3 : (Army.MaxPoints / 1000) * 2);
+                    return (Army.Data.MaxPoints < 2000 ? 3 : (Army.Data.MaxPoints / 1000) * 2);
                 case Unit.UnitType.Core:
-                    return (Army.MaxPoints < 2000 ? 2 : 1 + (Army.MaxPoints / 1000));
+                    return (Army.Data.MaxPoints < 2000 ? 2 : 1 + (Army.Data.MaxPoints / 1000));
                 case Unit.UnitType.Special:
-                    return (Army.MaxPoints < 2000 ? 3 : 2 + (Army.MaxPoints / 1000));
+                    return (Army.Data.MaxPoints < 2000 ? 3 : 2 + (Army.Data.MaxPoints / 1000));
                 case Unit.UnitType.Rare:
-                    return (Army.MaxPoints < 2000 ? 1 : (Army.MaxPoints / 1000));
+                    return (Army.Data.MaxPoints < 2000 ? 1 : (Army.Data.MaxPoints / 1000));
                 default:
                     return 0;
             }
@@ -85,7 +85,7 @@ namespace WarhammerArmyAssembler
         {
             int cast = 2;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
                 cast += entry.Value.Wizard;
 
@@ -101,7 +101,7 @@ namespace WarhammerArmyAssembler
         {
             int dispell = 2;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
                 if (entry.Value.Wizard > 2)
                     dispell += 2;
@@ -120,7 +120,7 @@ namespace WarhammerArmyAssembler
         {
             List<Unit> categories = GetArmyCategories();
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
                 if (entry.Value.Type != Unit.UnitType.Mount)
                     categories[(int)entry.Value.Type].Items.Add(ReloadArmyUnit(entry.Key, entry.Value));
@@ -129,13 +129,13 @@ namespace WarhammerArmyAssembler
                     (entry.Value.MountOn > 0)
                     &&
                         (
-                            (Army.Units[entry.Value.MountOn].Wounds != 1)
+                            (Army.Data.Units[entry.Value.MountOn].Wounds != 1)
                             ||
-                            (Army.Units[entry.Value.MountOn].WeaponTeam)
+                            (Army.Data.Units[entry.Value.MountOn].WeaponTeam)
                         )
                     )
                     categories[(int)entry.Value.Type].Items.Add(
-                        ReloadArmyUnit(entry.Value.MountOn, Army.Units[entry.Value.MountOn])
+                        ReloadArmyUnit(entry.Value.MountOn, Army.Data.Units[entry.Value.MountOn])
                     );
             }
 
@@ -167,7 +167,7 @@ namespace WarhammerArmyAssembler
 
         public static Unit GetArmyGeneral()
         {
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                 if (entry.Value.ArmyGeneral)
                     return entry.Value;
 
@@ -178,7 +178,7 @@ namespace WarhammerArmyAssembler
         {
             int number = 0;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
                 bool largeBase = entry.Value.UnitStrength > 1;
                 bool cavalryBase = entry.Value.MountOn > 1 || !String.IsNullOrEmpty(entry.Value.MountInit);

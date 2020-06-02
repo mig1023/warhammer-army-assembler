@@ -139,13 +139,13 @@ namespace WarhammerArmyAssembler
             if (!(sender is ScrollViewer))
                 Interface.ArmyGridDrop(id, container);
 
-            if (!ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
+            if (!Army.Checks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
                 return;
 
             if (sender is ScrollViewer)
                 Interface.ArmyGridDropArtefact(id, Interface.CurrentSelectedUnit);
             else
-                InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
+                InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Data.Units[Interface.CurrentSelectedUnit]);
 
             HideStartArmyHelpText();
         }
@@ -172,14 +172,14 @@ namespace WarhammerArmyAssembler
         private int ErrorAndReturnSizeBack(string error, int id)
         {
             Interface.Error(error);
-            return Army.Units[id].Size;
+            return Army.Data.Units[id].Size;
         }
 
         private void ArmyGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
             Unit u = e.Row.Item as Unit;
 
-            double pointsDiff = u.GetUnitPoints() - Army.Units[u.ID].GetUnitPoints();
+            double pointsDiff = u.GetUnitPoints() - Army.Data.Units[u.ID].GetUnitPoints();
 
             if (!InterfaceChecks.EnoughPointsForEditUnit(u.ID, u.Size))
                 u.Size = ErrorAndReturnSizeBack("Not enough points to change", u.ID);
@@ -187,10 +187,10 @@ namespace WarhammerArmyAssembler
                 u.Size = ErrorAndReturnSizeBack("Unit size exceeds the maximum allowed", u.ID);
             else if (u.Size < u.MinSize)
                 u.Size = ErrorAndReturnSizeBack("Unit size is less than the minimum allowed", u.ID);
-            else if ((u.Size > Army.Units[u.ID].Size) && (!ArmyChecks.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
+            else if ((u.Size > Army.Data.Units[u.ID].Size) && (!Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
                 u.Size = ErrorAndReturnSizeBack(String.Format("The {0} has reached a point cost limit", u.UnitTypeName()), u.ID);
             else
-                Army.Units[u.ID].Size = u.Size;
+                Army.Data.Units[u.ID].Size = u.Size;
 
             InterfaceReload.ReloadArmyData();
         }
@@ -206,8 +206,8 @@ namespace WarhammerArmyAssembler
 
             if (sender is ScrollViewer)
             {
-                if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
-                    unit = Army.Units[Interface.CurrentSelectedUnit];
+                if (Army.Checks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
+                    unit = Army.Data.Units[Interface.CurrentSelectedUnit];
             }
             else
             {
@@ -349,32 +349,32 @@ namespace WarhammerArmyAssembler
 
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (ArmyChecks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
-                InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Units[Interface.CurrentSelectedUnit]);
+            if (Army.Checks.IsUnitExistInArmy(Interface.CurrentSelectedUnit))
+                InterfaceUnitDetails.UpdateUnitDescription(Interface.CurrentSelectedUnit, Army.Data.Units[Interface.CurrentSelectedUnit]);
         }
 
         private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Dictionary<Unit.UnitType, double> units = ArmyChecks.UnitsPointsPercent();
-            Dictionary<Unit.UnitType, double> unitPercents = ArmyChecks.UnitsMaxPointsPercent();
+            Dictionary<Unit.UnitType, double> units = Army.Checks.UnitsPointsPercent();
+            Dictionary<Unit.UnitType, double> unitPercents = Army.Checks.UnitsMaxPointsPercent();
 
-            double armyCurrentPoint = ArmyParams.GetArmyPoints();
-            double availablePoints = (ArmyParams.GetArmyMaxPoints() - armyCurrentPoint);
+            double armyCurrentPoint = Army.Params.GetArmyPoints();
+            double availablePoints = (Army.Params.GetArmyMaxPoints() - armyCurrentPoint);
 
             string pointsMsg = String.Format(
                 "All points:\t\t{0} pts\n\nAlready used:\t\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%\n\n\n\n",
-                ArmyParams.GetArmyMaxPoints(),
-                armyCurrentPoint, InterfaceOther.CalcPercent(armyCurrentPoint, ArmyParams.GetArmyMaxPoints()),
-                availablePoints, InterfaceOther.CalcPercent(availablePoints, ArmyParams.GetArmyMaxPoints())
+                Army.Params.GetArmyMaxPoints(),
+                armyCurrentPoint, InterfaceOther.CalcPercent(armyCurrentPoint, Army.Params.GetArmyMaxPoints()),
+                availablePoints, InterfaceOther.CalcPercent(availablePoints, Army.Params.GetArmyMaxPoints())
             );
 
             foreach(KeyValuePair<Unit.UnitType, double> entry in unitPercents)
                 pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t( {3} {4} pts / {5}% )\n\n",
                     entry.Key,
                     units[entry.Key],
-                    InterfaceOther.CalcPercent(units[entry.Key], Army.MaxPoints),
+                    InterfaceOther.CalcPercent(units[entry.Key], Army.Data.MaxPoints),
                     (entry.Key == Unit.UnitType.Core ? "min" : "max"),
-                    (int)(Army.MaxPoints * entry.Value),
+                    (int)(Army.Data.MaxPoints * entry.Value),
                     entry.Value * 100
                 );
 
@@ -386,9 +386,9 @@ namespace WarhammerArmyAssembler
         {
             string baseMsg = String.Format(
                 "Normal base:\t{0}\n\nCavalry base:\t{1}\n\nLarge base:\t{2}",
-                ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.normal),
-                ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.cavalry),
-                ArmyParams.GetUnitsNumberByBase(ArmyParams.BasesTypes.large)
+                Army.Params.GetUnitsNumberByBase(Army.Params.BasesTypes.normal),
+                Army.Params.GetUnitsNumberByBase(Army.Params.BasesTypes.cavalry),
+                Army.Params.GetUnitsNumberByBase(Army.Params.BasesTypes.large)
             );
 
             MessageBox.Show(baseMsg);
@@ -396,20 +396,20 @@ namespace WarhammerArmyAssembler
 
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (ArmyChecks.IsArmyValid())
+            if (Army.Checks.IsArmyValid())
                 ExportPDF.SaveArmy();
             else 
-                MessageBox.Show(ArmyChecks.ArmyProblems());
+                MessageBox.Show(Army.Checks.ArmyProblems());
 
             Interface.Move(Interface.MovingType.ToMain, menu: true);
         }
 
         public void saveArmyToTXT_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (ArmyChecks.IsArmyValid())
+            if (Army.Checks.IsArmyValid())
                 ExportTXT.SaveArmy();
             else
-                MessageBox.Show(ArmyChecks.ArmyProblems());
+                MessageBox.Show(Army.Checks.ArmyProblems());
 
             Interface.Move(Interface.MovingType.ToMain, menu: true);
         }

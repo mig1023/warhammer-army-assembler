@@ -16,8 +16,8 @@ namespace WarhammerArmyAssembler
 
             Interface.AllUnitDelete();
 
-            Interface.main.armyMainLabel.Content = Army.ArmyName;
-            Interface.main.armyVersionLabel.Content = String.Format("{0}ed", Army.ArmyVersion); 
+            Interface.main.armyMainLabel.Content = Army.Data.Name;
+            Interface.main.armyVersionLabel.Content = String.Format("{0}ed", Army.Data.ArmyVersion); 
 
             Interface.main.armyMainLabelPlace.Background = ArmyBook.MainColor;
             Interface.main.armyVersionLabel.Background = ArmyBook.MainColor;
@@ -30,7 +30,7 @@ namespace WarhammerArmyAssembler
             Interface.main.armyMainLabel.Foreground = Brushes.White;
             Interface.main.armyMainLabel.Background = ArmyBook.MainColor;
 
-            List<Unit> categories = ArmyParams.GetArmyCategories();
+            List<Unit> categories = Army.Params.GetArmyCategories();
 
             foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)
             {
@@ -42,7 +42,7 @@ namespace WarhammerArmyAssembler
 
             foreach (Unit unitType in categories)
             {
-                unitType.Name = ArmyMod.CategoryNameModification(unitType.Name);
+                unitType.Name = Army.Mod.CategoryNameModification(unitType.Name);
                 unitType.GroopBold = true;
                 Interface.main.ArmyList.Items.Add(unitType);
             }
@@ -76,7 +76,7 @@ namespace WarhammerArmyAssembler
         {
             Interface.ArmyInInterface.Clear();
 
-            List<Unit> categories = ArmyParams.GetArmyUnitsByCategories();
+            List<Unit> categories = Army.Params.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in categories)
                 foreach (Unit unit in unitType.Items)
@@ -84,29 +84,29 @@ namespace WarhammerArmyAssembler
 
             Interface.main.ArmyGrid.ItemsSource = Interface.ArmyInInterface;
             Interface.main.armyHeroes.Content = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
-                ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Lord),
-                ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Hero),
-                ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Lord),
-                ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Hero)
+                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord),
+                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero),
+                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Lord),
+                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero)
             );
             Interface.main.armyUnits.Content = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
-                ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Core),
-                ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Special),
-                ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Rare),
-                ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Core),
-                ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Special),
-                ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Rare)
+                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core),
+                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Special),
+                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Rare),
+                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core),
+                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Special),
+                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Rare)
             );
-            Interface.main.armyPoints.Text = String.Format("Points: {0} [ {1} ]", ArmyParams.GetArmyPoints(), ArmyParams.GetArmyMaxPoints());
-            Interface.main.armySize.Text = String.Format("Models: {0}", ArmyParams.GetArmySize());
-            Interface.main.armyCasting.Content = String.Format("Cast: {0}", ArmyParams.GetArmyCast());
-            Interface.main.armyDispell.Content = String.Format("Dispell: {0}", ArmyParams.GetArmyDispell());
+            Interface.main.armyPoints.Text = String.Format("Points: {0} [ {1} ]", Army.Params.GetArmyPoints(), Army.Params.GetArmyMaxPoints());
+            Interface.main.armySize.Text = String.Format("Models: {0}", Army.Params.GetArmySize());
+            Interface.main.armyCasting.Content = String.Format("Cast: {0}", Army.Params.GetArmyCast());
+            Interface.main.armyDispell.Content = String.Format("Dispell: {0}", Army.Params.GetArmyDispell());
         }
 
         public static void LoadArmySize(int points, string armyName)
         {
-            Army.MaxPoints = points;
-            Army.ArmyAdditionalName = armyName;
+            Army.Data.MaxPoints = points;
+            Army.Data.AdditionalName = armyName;
 
             string windowsHeaderWithName = "Warhammer Army Assembler (WAAgh)";
             Interface.main.dragWindowBottom.Content = windowsHeaderWithName +

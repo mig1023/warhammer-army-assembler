@@ -23,13 +23,13 @@ namespace WarhammerArmyAssembler
 
         public static string GetArmyName()
         {
-            return (String.IsNullOrWhiteSpace(Army.ArmyAdditionalName) ? "warhammer fantasy battles" : Army.ArmyAdditionalName);
+            return (String.IsNullOrWhiteSpace(Army.Data.AdditionalName) ? "warhammer fantasy battles" : Army.Data.AdditionalName);
         }
 
         private static string NewFileName(int newIndex, string fileType, out string newFileName)
         {
-            string name = ARMYLIST_DIR + '\\' + Army.ArmyName.Replace(" ", "_") + '_' + Army.MaxPoints.ToString();
-            name += (String.IsNullOrWhiteSpace(Army.ArmyAdditionalName) ? String.Empty : '_' + Army.ArmyAdditionalName.Replace(" ", "_"));
+            string name = ARMYLIST_DIR + '\\' + Army.Data.Name.Replace(" ", "_") + '_' + Army.Data.MaxPoints.ToString();
+            name += (String.IsNullOrWhiteSpace(Army.Data.AdditionalName) ? String.Empty : '_' + Army.Data.AdditionalName.Replace(" ", "_"));
             newFileName = name + (newIndex > 0 ? '_' + newIndex.ToString() : String.Empty) + '.' + fileType;
 
             return newFileName;

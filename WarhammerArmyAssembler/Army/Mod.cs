@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Army
 {
-    class ArmyMod
+    class Mod
     {
         public static int GetNextIndex()
         {
-            return Army.MaxIDindex += 1;
+            return Army.Data.MaxIDindex += 1;
         }
 
         public static int AddUnitByID(int id)
@@ -17,7 +17,7 @@ namespace WarhammerArmyAssembler
 
             unit.ArmyID = GetNextIndex();
 
-            Army.Units.Add(unit.ArmyID, unit);
+            Army.Data.Units.Add(unit.ArmyID, unit);
 
             if (!String.IsNullOrEmpty(unit.MountInit))
             {
@@ -27,9 +27,9 @@ namespace WarhammerArmyAssembler
                         Unit newMount = mount.Value.Clone();
 
                         int newMountID = GetNextIndex();
-                        Army.Units[unit.ArmyID].MountOn = newMountID;
+                        Army.Data.Units[unit.ArmyID].MountOn = newMountID;
                         newMount.ArmyID = newMountID;
-                        Army.Units.Add(newMountID, newMount);
+                        Army.Data.Units.Add(newMountID, newMount);
                     }
             }
 
@@ -41,24 +41,24 @@ namespace WarhammerArmyAssembler
             Unit mount = ArmyBook.Mounts[id].Clone();
 
             int newID = GetNextIndex();
-            Army.Units[unit].MountOn = newID;
-            Army.Units.Add(newID, mount);
+            Army.Data.Units[unit].MountOn = newID;
+            Army.Data.Units.Add(newID, mount);
         }
 
         public static void DeleteAllUnits()
         {
-            Army.Units.Clear();
+            Army.Data.Units.Clear();
         }
 
         public static void DeleteUnitByID(int id)
         {
             int? removeUnitAlso = null;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                 if (entry.Value.MountOn == id)
                 {
                     foreach (Option option in entry.Value.Options)
-                        if (option.Name == Army.Units[id].Name)
+                        if (option.Name == Army.Data.Units[id].Name)
                             option.Realised = false;
 
                     entry.Value.MountOn = 0;
@@ -67,14 +67,14 @@ namespace WarhammerArmyAssembler
                         removeUnitAlso = entry.Key;
                 }
 
-            foreach (Option option in Army.Units[id].Options)
+            foreach (Option option in Army.Data.Units[id].Options)
                 if (option.IsMagicItem())
                     InterfaceMod.SetArtefactAlreadyUsed(option.ID, false);
 
             if (removeUnitAlso != null)
-                Army.Units.Remove((int)removeUnitAlso);
+                Army.Data.Units.Remove((int)removeUnitAlso);
 
-            Army.Units.Remove(id);
+            Army.Data.Units.Remove(id);
 
             ChangeGeneralIfNeed();
         }
@@ -84,7 +84,7 @@ namespace WarhammerArmyAssembler
             int maxLeadership = 0;
             int maxLeadershipOwner = -1;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
                 if (entry.Value.ArmyGeneral)
                     entry.Value.ArmyGeneral = false;
@@ -110,9 +110,9 @@ namespace WarhammerArmyAssembler
             if (maxLeadershipOwner < 0)
                 return;
 
-            Army.Units[maxLeadershipOwner].ArmyGeneral = true;
+            Army.Data.Units[maxLeadershipOwner].ArmyGeneral = true;
 
-            bool newGeneralIsDemon = (Army.Units[maxLeadershipOwner].GetGroup() == "Demonic");
+            bool newGeneralIsDemon = (Army.Data.Units[maxLeadershipOwner].GetGroup() == "Demonic");
 
             if (ArmyBook.DemonicMortal && newGeneralIsDemon && !ArmyBook.DemonicAlreadyReplaced)
                 ChangeCoreSpecialUnits();
@@ -159,7 +159,7 @@ namespace WarhammerArmyAssembler
 
             foreach (int i in new List<int> { 1, 2 })
             {
-                foreach (KeyValuePair<int, Unit> entry in Army.Units)
+                foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                     entry.Value.Type = ChangeUnitType(entry.Value.Type);
 
                 foreach (KeyValuePair<int, Unit> entry in ArmyBook.Units)

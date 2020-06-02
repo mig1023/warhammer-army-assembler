@@ -414,7 +414,7 @@ namespace WarhammerArmyAssembler
             List<Option> allOption = new List<Option>(Options);
 
             if (mountParam && (MountOn > 0))
-                allOption.AddRange(Army.Units[MountOn].Options);
+                allOption.AddRange(Army.Data.Units[MountOn].Options);
 
             bool alreadyArmour = false;
             bool alreadyShield = false;
@@ -586,16 +586,16 @@ namespace WarhammerArmyAssembler
                             option.Realised = false;
                         else
                         {
-                            double optionPoints = (option.PerModel ? option.Points * Army.Units[unitID].Size : option.Points);
+                            double optionPoints = (option.PerModel ? option.Points * Army.Data.Units[unitID].Size : option.Points);
 
-                            if (!ArmyChecks.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, option.Points))
+                            if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, option.Points))
                             {
-                                Interface.Error(String.Format("The {0} has reached a point cost limit", Army.Units[unitID].UnitTypeName()));
+                                Interface.Error(String.Format("The {0} has reached a point cost limit", Army.Data.Units[unitID].UnitTypeName()));
                                 return;
                             }
                             else if (!InterfaceChecks.EnoughUnitPointsForAddOption(optionPoints))
                             {
-                                Interface.Error(String.Format("Not enough points to add", Army.Units[unitID].UnitTypeName()));
+                                Interface.Error(String.Format("Not enough points to add", Army.Data.Units[unitID].UnitTypeName()));
                                 return;
                             }
                             else
@@ -611,7 +611,7 @@ namespace WarhammerArmyAssembler
                     }
                     else if (option.Mount && !realise)
                     {
-                        ArmyMod.DeleteUnitByID(Army.Units[unitID].MountOn);
+                        Army.Mod.DeleteUnitByID(Army.Data.Units[unitID].MountOn);
                         unit.MountOn = 0;
                     }
 
@@ -845,7 +845,7 @@ namespace WarhammerArmyAssembler
                 rules.Add("General");
 
             if (MountOn > 0)
-                rules.Add(Army.Units[MountOn].Name);
+                rules.Add(Army.Data.Units[MountOn].Name);
 
             foreach (Option option in Options)
                 if (option.Realised && option.SpecialRuleDescription.Length > 0)
@@ -943,7 +943,7 @@ namespace WarhammerArmyAssembler
         public int GetMountOption()
         {
             Unit mount = null;
-            foreach (KeyValuePair<int, Unit> armyUnit in Army.Units)
+            foreach (KeyValuePair<int, Unit> armyUnit in Army.Data.Units)
                 if (armyUnit.Key == MountOn)
                     mount = armyUnit.Value;
 

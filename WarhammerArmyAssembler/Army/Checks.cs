@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Army
 {
-    class ArmyChecks
+    class Checks
     {
         public static bool IsUnitExistInArmy(int unitID)
         {
-            if (!Army.Units.ContainsKey(unitID))
+            if (!Army.Data.Units.ContainsKey(unitID))
                 return false;
 
             return true;
@@ -18,7 +18,7 @@ namespace WarhammerArmyAssembler
 
         public static bool IsUnitExistInArmyByArmyBookID(int UnitID)
         {
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                 if (entry.Value.ID == UnitID)
                     return true;
 
@@ -32,7 +32,7 @@ namespace WarhammerArmyAssembler
             foreach (Unit.UnitType u in Enum.GetValues(typeof(Unit.UnitType)))
                 units.Add(u, 0);
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                 units[entry.Value.Type] += entry.Value.GetUnitPoints();
 
             return units;
@@ -54,7 +54,7 @@ namespace WarhammerArmyAssembler
         {
             Dictionary<Unit.UnitType, double> units = UnitsPointsPercent();
 
-            int twentyFivePercent = (int)(Army.MaxPoints * 0.25);
+            int twentyFivePercent = (int)(Army.Data.MaxPoints * 0.25);
 
             if (type == Unit.UnitType.Lord || type == Unit.UnitType.Hero || type == Unit.UnitType.Rare)
                 return (units[type] + points > twentyFivePercent ? false : true);
@@ -69,23 +69,23 @@ namespace WarhammerArmyAssembler
         {
             int alreadyInArmy = 0;
 
-            foreach (KeyValuePair<int, Unit> armyUnit in Army.Units)
+            foreach (KeyValuePair<int, Unit> armyUnit in Army.Data.Units)
                 if (armyUnit.Value.ID == unit.ID)
                     alreadyInArmy += 1;
 
             int limitForArmy = -1;
 
             if (unit.Type == Unit.UnitType.Special)
-                limitForArmy = (Army.MaxPoints >= 3000 ? 6 : 3);
+                limitForArmy = (Army.Data.MaxPoints >= 3000 ? 6 : 3);
             else if (unit.Type == Unit.UnitType.Rare)
-                limitForArmy = (Army.MaxPoints >= 3000 ? 4 : 2);
+                limitForArmy = (Army.Data.MaxPoints >= 3000 ? 4 : 2);
 
             return (limitForArmy < 0 ? true : (alreadyInArmy < limitForArmy));
         }
 
         public static int IsOptionAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
         {
-            foreach (KeyValuePair<int, Unit> entry in Army.Units)
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                 if ((entry.Key != requestFromUnit) && (!byUnitType || (entry.Value.Name == unitName)))
                     foreach (Option option in entry.Value.Options)
                         if ((option.Name == optionName) && (option.Realised || option.IsMagicItem()))
@@ -96,7 +96,7 @@ namespace WarhammerArmyAssembler
 
         public static string ArmyProblems()
         {
-            if (ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Core) < ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Core))
+            if (Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core))
                 return "Not enough core unit in army";
 
             return String.Empty;

@@ -31,11 +31,11 @@ namespace WarhammerArmyAssembler
             cb = writer.DirectContent;
             cb.SetColorFill(BaseColor.BLACK);
 
-            AddText(String.Format("{0} // {1}", Army.ArmyName, ExportOther.GetArmyName()), fontSize: 20, lineHeight: 18, leftColumn: true);
-            AddText(String.Format("{0} pts", Army.MaxPoints), fontSize: 12, lineHeight: 22, leftColumn: true);
+            AddText(String.Format("{0} // {1}", Army.Data.Name, ExportOther.GetArmyName()), fontSize: 20, lineHeight: 18, leftColumn: true);
+            AddText(String.Format("{0} pts", Army.Data.MaxPoints), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 
-            List<Unit> armyByCategories = ArmyParams.GetArmyUnitsByCategories();
+            List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in armyByCategories)
                 foreach (Unit unit in unitType.Items)
@@ -60,7 +60,7 @@ namespace WarhammerArmyAssembler
             AddText(
                 String.Format(
                     "Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
-                    ArmyParams.GetArmyPoints(), ArmyParams.GetArmySize(), ArmyParams.GetArmyCast(), ArmyParams.GetArmyDispell()
+                    Army.Params.GetArmyPoints(), Army.Params.GetArmySize(), Army.Params.GetArmyCast(), Army.Params.GetArmyDispell()
                 ),
                 fontSize: 12, lineHeight: 18, leftColumn: true
             );

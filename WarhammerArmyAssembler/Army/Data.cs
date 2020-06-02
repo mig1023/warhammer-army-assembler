@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WarhammerArmyAssembler
+namespace WarhammerArmyAssembler.Army
 {
-    class Army
+    class Data
     {
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
 
-        public static string ArmyName { get; set; }
-        public static string ArmyAdditionalName { get; set; }
+        public static string Name { get; set; }
+        public static string AdditionalName { get; set; }
         public static int ArmyVersion { get; set; }
 
         public static int MaxPoints = 2000;

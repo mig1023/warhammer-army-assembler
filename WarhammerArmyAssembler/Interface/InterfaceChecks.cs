@@ -10,17 +10,17 @@ namespace WarhammerArmyAssembler
     {
         public static bool EnoughPointsForAddUnit(int id)
         {
-            return (ArmyBook.Units[id].Size * ArmyBook.Units[id].Points) <= (ArmyParams.GetArmyMaxPoints() - ArmyParams.GetArmyPoints());
+            return (ArmyBook.Units[id].Size * ArmyBook.Units[id].Points) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
         }
 
         public static bool EnoughUnitPointsForAddOption(double points)
         {
-            return points <= (ArmyParams.GetArmyMaxPoints() - ArmyParams.GetArmyPoints());
+            return points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
         }
 
         public static bool EnoughPointsForAddArtefact(int id)
         {
-            return ArmyBook.Artefact[id].Points <= (ArmyParams.GetArmyMaxPoints() - ArmyParams.GetArmyPoints());
+            return ArmyBook.Artefact[id].Points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
         }
 
         public static bool EnoughUnitPointsForAddArtefact(int artefactID, Unit unit, bool addOption = true)
@@ -42,10 +42,10 @@ namespace WarhammerArmyAssembler
 
         public static bool EnoughPointsForEditUnit(int id, int newSize)
         {
-            int newPrice = (newSize * Army.Units[id].Points);
-            int currentPrice = (Army.Units[id].Size * Army.Units[id].Points);
+            int newPrice = (newSize * Army.Data.Units[id].Points);
+            int currentPrice = (Army.Data.Units[id].Size * Army.Data.Units[id].Points);
 
-            return (newPrice - currentPrice) <= (ArmyParams.GetArmyMaxPoints() - ArmyParams.GetArmyPoints());
+            return (newPrice - currentPrice) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
         }
     }
 }

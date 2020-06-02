@@ -58,7 +58,7 @@ namespace WarhammerArmyAssembler
             else
                 ArmyGridDropUnit(id);
 
-            ArmyMod.ChangeGeneralIfNeed();
+            Army.Mod.ChangeGeneralIfNeed();
         }
 
         public static void ArmyGridDropArtefact(int id, DataGridRow container)
@@ -74,15 +74,15 @@ namespace WarhammerArmyAssembler
         {
             if (!InterfaceChecks.EnoughPointsForAddArtefact(id))
                 Error("Not enough points add an item");
-            else if (!InterfaceChecks.EnoughUnitPointsForAddArtefact(id, Army.Units[unitID]))
-                Error(String.Format("Not enough magic item {0} to add an item", (Army.Units[unitID].MagicItemCount > 0 ? "slots" : "points")));
-            else if (!ArmyChecks.IsArmyUnitsPointsPercentOk(Army.Units[unitID].Type, ArmyBook.Artefact[id].Points))
+            else if (!InterfaceChecks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID]))
+                Error(String.Format("Not enough magic item {0} to add an item", (Army.Data.Units[unitID].MagicItemCount > 0 ? "slots" : "points")));
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, ArmyBook.Artefact[id].Points))
                 Error("For this type, a point cost limit has been reached");
             else
             {
-                Army.Units[unitID].AddAmmunition(id);
+                Army.Data.Units[unitID].AddAmmunition(id);
                 InterfaceReload.ReloadArmyData();
-                InterfaceUnitDetails.UpdateUnitDescription(unitID, Army.Units[unitID]);
+                InterfaceUnitDetails.UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
 
                 if (!ArmyBook.Artefact[id].Multiple)
                     InterfaceMod.SetArtefactAlreadyUsed(id, true);
@@ -91,25 +91,25 @@ namespace WarhammerArmyAssembler
 
         public static void ArmyGridDropUnit(int id)
         {
-            bool slotExists = (ArmyParams.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < ArmyParams.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
+            bool slotExists = (Army.Params.GetArmyUnitsNumber(ArmyBook.Units[id].Type) < Army.Params.GetArmyMaxUnitsNumber(ArmyBook.Units[id].Type));
             bool coreUnit = (ArmyBook.Units[id].Type == Unit.UnitType.Core);
 
-            int allHeroes = ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Lord) + ArmyParams.GetArmyUnitsNumber(Unit.UnitType.Hero);
-            bool lordInHeroSlot = (ArmyBook.Units[id].Type == Unit.UnitType.Hero) && (allHeroes >= ArmyParams.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
+            int allHeroes = Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord) + Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero);
+            bool lordInHeroSlot = (ArmyBook.Units[id].Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
 
-            if (ArmyBook.Units[id].PersonifiedHero && ArmyChecks.IsUnitExistInArmyByArmyBookID(id))
+            if (ArmyBook.Units[id].PersonifiedHero && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
                 Error("Personalities cannot be repeated");
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)
                 Error(String.Format("The number of {0} of this type has been exhausted.", (ArmyBook.Units[id].IsHero() ? "heroes" : "units")));
             else if (!InterfaceChecks.EnoughPointsForAddUnit(id))
                 Error(String.Format("Not enough points to add a {0}", (ArmyBook.Units[id].IsHero() ? "hero" : "unit")));
-            else if (!ArmyChecks.IsArmyUnitsPointsPercentOk(ArmyBook.Units[id].Type, ArmyBook.Units[id].Points))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(ArmyBook.Units[id].Type, ArmyBook.Units[id].Points))
                 Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Units[id].UnitTypeName()));
-            else if(!ArmyChecks.IsArmyDublicationOk(ArmyBook.Units[id]))
+            else if(!Army.Checks.IsArmyDublicationOk(ArmyBook.Units[id]))
                 Error(String.Format("Army can't include as many duplicates of {0}", ArmyBook.Units[id].UnitTypeName()));
             else
             {
-                CurrentSelectedUnit = ArmyMod.AddUnitByID(id);
+                CurrentSelectedUnit = Army.Mod.AddUnitByID(id);
                 InterfaceReload.ReloadArmyData();
             }
         }
@@ -118,13 +118,13 @@ namespace WarhammerArmyAssembler
         {
             if (!InterfaceChecks.EnoughUnitPointsForAddOption(points))
                 Error("Not enough points to add a mount");
-            else if (Army.Units[unit].MountOn > 0)
+            else if (Army.Data.Units[unit].MountOn > 0)
                 Error("The hero already has a mount");
-            else if (!ArmyChecks.IsArmyUnitsPointsPercentOk(Army.Units[unit].Type, points))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unit].Type, points))
                 Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Units[id].UnitTypeName()));
             else
             {
-                ArmyMod.AddMountByID(id, unit);
+                Army.Mod.AddMountByID(id, unit);
                 InterfaceReload.ReloadArmyData();
             }
         }
@@ -134,14 +134,14 @@ namespace WarhammerArmyAssembler
             if (CurrentSelectedUnit == id)
                 DetailResize(open: false);
 
-            ArmyMod.DeleteUnitByID(id);
+            Army.Mod.DeleteUnitByID(id);
             InterfaceReload.ReloadArmyData();
         }
 
         public static void AllUnitDelete()
         {
             DetailResize(open: false);
-            ArmyMod.DeleteAllUnits();
+            Army.Mod.DeleteAllUnits();
             InterfaceReload.ReloadArmyData();
         }
 
@@ -307,7 +307,7 @@ namespace WarhammerArmyAssembler
 
         public static bool ConfirmedDataCleaning()
         {
-            if (Army.Units.Count <= 0)
+            if (Army.Data.Units.Count <= 0)
                 return true;
 
             return MessageBox.Show("All army data will be lost.\nContinue?", String.Empty, MessageBoxButton.OKCancel) == MessageBoxResult.OK;

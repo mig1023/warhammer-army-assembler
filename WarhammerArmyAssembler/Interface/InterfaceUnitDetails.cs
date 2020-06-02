@@ -43,7 +43,7 @@ namespace WarhammerArmyAssembler
             if (head != "MAGIC ITEMS")
                 return String.Empty;
 
-            return String.Format("{0} / {1}", Army.Units[unitID].MagicPointsAlreadyUsed(), Army.Units[unitID].GetUnitMagicPoints());
+            return String.Format("{0} / {1}", Army.Data.Units[unitID].MagicPointsAlreadyUsed(), Army.Data.Units[unitID].GetUnitMagicPoints());
         }
 
         private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit,
@@ -97,7 +97,7 @@ namespace WarhammerArmyAssembler
                             bool canBeUsed = true;
 
                             if (option.OnlyOneInArmy || option.OnlyOneForSuchUnits)
-                                canBeUsed = (ArmyChecks.IsOptionAlreadyUsed(option.Name, unitID, unit.Name, option.OnlyOneForSuchUnits) == 0);
+                                canBeUsed = (Army.Checks.IsOptionAlreadyUsed(option.Name, unitID, unit.Name, option.OnlyOneForSuchUnits) == 0);
 
                             margins[1] += AddButton(option.Name, margins, 25, ref lastColumnMaxWidth, String.Format("{0}|{1}", unitID, option.ID),
                                 option, mountAlreadyOn: mountAlreadyOn, mountTypeAlreadyFixed: mountTypeAlreadyFixed, unit: unit,
@@ -159,7 +159,7 @@ namespace WarhammerArmyAssembler
             if (unit.ExistsCommand())
                 margins = CreateColumn("COMMAND", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
-            if (unit.ExistsMagicItems() || (Army.Units[unitID].GetUnitMagicPoints() > 0))
+            if (unit.ExistsMagicItems() || (Army.Data.Units[unitID].GetUnitMagicPoints() > 0))
                 margins = CreateColumn("MAGIC ITEMS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsOrdinaryItems())
@@ -183,12 +183,12 @@ namespace WarhammerArmyAssembler
             int optionID = InterfaceOther.IntParse(id[1]);
             int unitID = InterfaceOther.IntParse(id[0]);
 
-            Army.Units[unitID].AddOption(optionID, Army.Units[unitID], unitID);
-            Army.Units[unitID].ThrowAwayIncompatibleOption();
+            Army.Data.Units[unitID].AddOption(optionID, Army.Data.Units[unitID], unitID);
+            Army.Data.Units[unitID].ThrowAwayIncompatibleOption();
 
             InterfaceReload.ReloadArmyData();
             InterfaceMod.SetArtefactAlreadyUsed(InterfaceOther.IntParse(id[1]), false);
-            UpdateUnitDescription(unitID, Army.Units[unitID]);
+            UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
         }
 
         public static void UpdateUnitDescription(int unitID, Unit unit)

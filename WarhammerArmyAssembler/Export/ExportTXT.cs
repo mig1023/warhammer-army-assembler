@@ -10,11 +10,11 @@ namespace WarhammerArmyAssembler
         {
             string fileName = ExportOther.GetFileName("txt");
 
-            Add(fileName, String.Format("{0} // {1}", Army.ArmyName, ExportOther.GetArmyName()));
-            Add(fileName, String.Format("{0} pts", Army.MaxPoints));
+            Add(fileName, String.Format("{0} // {1}", Army.Data.Name, ExportOther.GetArmyName()));
+            Add(fileName, String.Format("{0} pts", Army.Data.MaxPoints));
             Add(fileName);
 
-            List<Unit> armyByCategories = ArmyParams.GetArmyUnitsByCategories();
+            List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in armyByCategories)
                 foreach (Unit unit in unitType.Items)
@@ -36,7 +36,7 @@ namespace WarhammerArmyAssembler
             Add(fileName,
                 String.Format(
                     "Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
-                    ArmyParams.GetArmyPoints(), ArmyParams.GetArmySize(), ArmyParams.GetArmyCast(), ArmyParams.GetArmyDispell()
+                    Army.Params.GetArmyPoints(), Army.Params.GetArmySize(), Army.Params.GetArmyCast(), Army.Params.GetArmyDispell()
                 )
             );
 
