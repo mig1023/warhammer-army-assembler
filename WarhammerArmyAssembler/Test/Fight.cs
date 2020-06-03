@@ -161,11 +161,7 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.Console(Test.Data.supplText, "\n\nround: {0}\n", round);
 
                 foreach (Unit u in new List<Unit> { unit, enemy })
-                {
-                    bool monstrousMount = (u.Mount != null) && u.Mount.IsNotSimpleMount();
-                    string uMount = (monstrousMount ? String.Format(" + {0}: {1}W", u.Mount.Name, u.Mount.Wounds) : String.Empty);
-                    Test.Data.Console(Test.Data.supplText, "{0}: {1}W{2}{3}", u.Name, u.Wounds, uMount, (u == unit ? ", " : String.Empty));
-                }
+                    UnitRoundShow(u, u == unit);
 
                 participants.Sort((a, b) => a.CompareTo(b));
 
@@ -189,6 +185,9 @@ namespace WarhammerArmyAssembler.Test
                     {
                         Unit actor = UnitFromParticipants(participants, u);
                         Unit opponent = SelectOpponent(participants, u);
+
+                        if ((participants.Count > 2) && (actor.Wounds > 0))
+                            Test.Data.Console(Test.Data.supplText, "\n\n{0} chose {1} as his opponent", actor.Name, opponent.Name);
 
                         int woundsAtStartOfRound = opponent.Wounds;
 
@@ -915,6 +914,15 @@ namespace WarhammerArmyAssembler.Test
                         unit.Wounds = 0;
                         break;
                 }
+        }
+
+        private static void UnitRoundShow(Unit unit, bool firstLine)
+        {
+            string uLine = (unit.Wounds > 0 ? String.Format("{0}: {1}W", unit.Name, unit.Wounds) : String.Empty);
+            bool monstrousMount = (unit.Mount != null) && (unit.Mount.Wounds > 0) && unit.Mount.IsNotSimpleMount();
+            string uMount = (monstrousMount ? String.Format("{0}: {1}W", unit.Mount.Name, unit.Mount.Wounds) : String.Empty);
+            string bothLine = (!String.IsNullOrEmpty(uLine) && !String.IsNullOrEmpty(uMount) ? " + " : String.Empty);
+            Test.Data.Console(Test.Data.supplText, "{0}{1}{2}{3}", uLine, bothLine, uMount, (firstLine ? ", " : String.Empty));
         }
     }
 }
