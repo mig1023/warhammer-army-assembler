@@ -46,6 +46,7 @@ namespace WarhammerArmyAssembler
             ["StrengthInNumbers"] = "Strength in numbers!",
             ["Lance"] = "Lance",
             ["Flail"] = "Flail",
+            ["PassRoundByTest"] = "Opponent must pass a [X] test or may not attack"
         };
 
         public string Name { get; set; }
@@ -129,6 +130,9 @@ namespace WarhammerArmyAssembler
         public bool Lance { get; set; }
         public bool Flail { get; set; }
 
+        public string PassRoundByTest { get; set; }
+        public string PassRoundByTestOnce { get; set; }
+
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
         public int SlotsOfSpecial { get; set; }
@@ -157,14 +161,13 @@ namespace WarhammerArmyAssembler
         public TestTypeTypes TestType { get; set; }
         public Unit Mount { get; set; }
         public bool WoundedWithKillingBlow { get; set; }
+        public bool PassThisRound { get; set; }
         public string TestListName { get; set; }
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
 
         public string RulesView { get; set; }
-
-        public bool EmptyUnit { get; set; }
 
         public Unit()
         {
@@ -254,8 +257,6 @@ namespace WarhammerArmyAssembler
         {
             Unit newUnit = new Unit
             {
-                EmptyUnit = false,
-
                 Name = this.Name,
                 Group = this.Group,
                 ID = this.ID,
@@ -318,6 +319,9 @@ namespace WarhammerArmyAssembler
                 Lance = this.Lance,
                 Flail = this.Flail,
 
+                PassRoundByTest = this.PassRoundByTest,
+                PassRoundByTestOnce = this.PassRoundByTestOnce,
+
                 SlotsOfLords = this.SlotsOfLords,
                 SlotsOfHero = this.SlotsOfHero,
                 SlotsOfSpecial = this.SlotsOfSpecial,
@@ -338,6 +342,7 @@ namespace WarhammerArmyAssembler
 
                 TestType = this.TestType,
                 WoundedWithKillingBlow = false,
+                PassThisRound = false,
                 TestListName = this.TestListName,
 
                 ArmyColor = this.ArmyColor

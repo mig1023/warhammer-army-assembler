@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
@@ -64,8 +60,10 @@ namespace WarhammerArmyAssembler
         public bool SteamTank { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
-
         public bool BigWeapon { get; set; }
+
+        public string PassRoundByTest { get; set; }
+        public string PassRoundByTestOnce { get; set; }
 
         public int AddToMovement { get; set; }
         public int AddToWeaponSkill { get; set; }
@@ -189,6 +187,9 @@ namespace WarhammerArmyAssembler
                 Lance = this.Lance,
                 Flail = this.Flail,
                 BigWeapon = this.BigWeapon,
+
+                PassRoundByTest = this.PassRoundByTest,
+                PassRoundByTestOnce = this.PassRoundByTestOnce,
 
                 AddToMovement = this.AddToMovement,
                 AddToWeaponSkill = this.AddToWeaponSkill,

@@ -144,6 +144,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.Lance = BoolParse(additionalParam["Lance"]);
                 newUnit.Flail = BoolParse(additionalParam["Flail"]);
 
+                newUnit.PassRoundByTest = StringParse(additionalParam["PassRoundByTest"]);
+                newUnit.PassRoundByTestOnce = StringParse(additionalParam["PassRoundByTestOnce"]);
+
                 newUnit.SlotsOfLords = IntParse(additionalParam["SlotsOfLords"]);
                 newUnit.SlotsOfHero = IntParse(additionalParam["SlotsOfHero"]);
                 newUnit.SlotsOfSpecial = IntParse(additionalParam["SlotsOfSpecial"]);
@@ -217,6 +220,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.SteamTank = BoolParse(xmlNode["SteamTank"]);
             newWeapon.Lance = BoolParse(xmlNode["Lance"]);
             newWeapon.Flail = BoolParse(xmlNode["Flail"]);
+
+            newWeapon.PassRoundByTest = StringParse(xmlNode["PassRoundByTest"]);
+            newWeapon.PassRoundByTestOnce = StringParse(xmlNode["PassRoundByTestOnce"]);
 
             newWeapon.Points = DoubleParse(xmlNode["Points"]);
             newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);

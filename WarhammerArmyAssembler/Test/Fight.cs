@@ -7,7 +7,7 @@ namespace WarhammerArmyAssembler.Test
 {
     class Fight
     {
-        private enum DiceType { M, WS, BS, S, T, W, I, A, LD, AS, WARD, REGENERATION, OTHER };
+        private enum ParamTestType { Pass, Wound, Death };
         
         static int round = 0;
 
@@ -187,19 +187,26 @@ namespace WarhammerArmyAssembler.Test
                 foreach (Unit u in participants)
                     if (BothOpponentsAreAlive(participants))
                     {
+                        Unit actor = UnitFromParticipants(participants, u);
+                        Unit opponent = SelectOpponent(participants, u);
+
+                        int woundsAtStartOfRound = opponent.Wounds;
+
+                        TestsAtTheStartOfRound(ref actor, opponent, round);
+
                         if (u.SteamTank)
-                        {
-                            Unit SteamTankUnit = UnitFromParticipants(participants, u);
-                            ImpactHit(ref SteamTankUnit, participants, ref roundWounds);
-                        }
+                            ImpactHit(ref actor, participants, ref roundWounds);
                         else if (u.HellPitAbomination)
                             HellPitAbomination(u, participants, ref roundWounds);
 
                         if (u.Attacks <= 0)
                             continue;
 
-                        Unit opponent = SelectOpponent(participants, u);
-                        int woundsAtStartOfRound = opponent.Wounds;
+                        if (u.PassThisRound)
+                        {
+                            u.PassThisRound = false;
+                            continue;
+                        }
 
                         roundWounds[opponent.ID] += Round(u, ref opponent, attacksRound[u.ID], round);
 
@@ -865,6 +872,41 @@ namespace WarhammerArmyAssembler.Test
                     return u;
 
             return null;
+        }
+
+        private static void TestsAtTheStartOfRound(ref Unit unit, Unit opponent, int round)
+        {
+            if (!String.IsNullOrEmpty(opponent.PassRoundByTest))
+                ParamTest(ref unit, opponent.PassRoundByTest, opponent, ParamTestType.Pass);
+            else if (!String.IsNullOrEmpty(opponent.PassRoundByTestOnce) && (round == 1))
+                ParamTest(ref unit, opponent.PassRoundByTestOnce, opponent, ParamTestType.Pass);
+        }
+
+        private static void ParamTest(ref Unit unit, string param, Unit opponent, ParamTestType test)
+        {
+            Test.Data.Console(Test.Data.text, "\n\n{0} must pass {1} test ", unit.Name, param);
+
+            int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
+            int diceNum = ((param == "Leadership") ? 2 : 1);
+
+            if (Test.Dice.Roll(unit, param, opponent, paramValue, diceNum, paramTest: true))
+                Test.Data.Console(Test.Data.goodText, " --> passed");
+            else
+                switch(test)
+                {
+                    case ParamTestType.Pass:
+                        Test.Data.Console(Test.Data.badText, " --> pass this round");
+                        unit.PassThisRound = true;
+                        break;
+                    case ParamTestType.Wound:
+                        Test.Data.Console(Test.Data.badText, " --> WOUND");
+                        unit.Wounds -= 1;
+                        break;
+                    case ParamTestType.Death:
+                        Test.Data.Console(Test.Data.badText, " --> SLAIN");
+                        unit.Wounds = 0;
+                        break;
+                }
         }
     }
 }
