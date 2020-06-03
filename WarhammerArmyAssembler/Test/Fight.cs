@@ -182,20 +182,18 @@ namespace WarhammerArmyAssembler.Test
                 InitRoundWounds(participants, ref roundWounds);
 
                 if (!unit.SteamTank)
-                    ImpactHit(unit, participants, ref roundWounds, out _);
+                    ImpactHit(ref unit, participants, ref roundWounds);
 
                 foreach (Unit u in participants)
                     if (BothOpponentsAreAlive(participants))
                     {
-                        bool steamFail = false;
-
                         if (u.SteamTank)
-                            ImpactHit(u, participants, ref roundWounds, out steamFail);
+                        {
+                            Unit SteamTankUnit = UnitFromParticipants(participants, u);
+                            ImpactHit(ref SteamTankUnit, participants, ref roundWounds);
+                        }
                         else if (u.HellPitAbomination)
                             HellPitAbomination(u, participants, ref roundWounds);
-
-                        if (steamFail)
-                            unit.Wounds -= 1;
 
                         if (u.Attacks <= 0)
                             continue;
@@ -300,11 +298,8 @@ namespace WarhammerArmyAssembler.Test
             roundWounds[impactOpponent.ID] += Round(unit, ref impactOpponent, attacks, round);
         }
 
-        private static void ImpactHit(Unit unit, List<Unit> participants,
-            ref Dictionary<int, int> roundWounds, out bool steamFail)
+        private static void ImpactHit(ref Unit unit, List<Unit> participants, ref Dictionary<int, int> roundWounds)
         {
-            steamFail = false;
-
             bool impactHit = (round == 1) &&
                 (!String.IsNullOrEmpty(unit.ImpactHit) || (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit)));
 
@@ -315,7 +310,10 @@ namespace WarhammerArmyAssembler.Test
 
                 string impactOutLine = String.Empty;
 
-                int attacks = ImpactHitNumer(unit, unit.Mount, out impactOutLine, out steamFail);
+                int attacks = ImpactHitNumer(unit, unit.Mount, out impactOutLine, out bool steamFail);
+
+                if (steamFail)
+                    unit.Wounds -= 1;
 
                 roundWounds[impactOpponent.ID] += Round(
                     impactUnit, ref impactOpponent, attacks, round, impactHit: true, impactLine: impactOutLine
@@ -860,6 +858,13 @@ namespace WarhammerArmyAssembler.Test
             return Dice.Roll(unit, Dice.Types.WARD, enemy, enemy.Ward);
         }
 
-  
+        private static Unit UnitFromParticipants(List<Unit> participants, Unit unit)
+        {
+            foreach (Unit u in participants)
+                if (u.ID == unit.ID)
+                    return u;
+
+            return null;
+        }
     }
 }
