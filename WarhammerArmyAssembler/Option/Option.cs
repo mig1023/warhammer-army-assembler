@@ -68,6 +68,7 @@ namespace WarhammerArmyAssembler
         public string WoundByTestOnce { get; set; }
         public string DeathByTest { get; set; }
         public string DeathByTestOnce { get; set; }
+        public string DeathByTestAfterHit { get; set; }
 
         public int AddToMovement { get; set; }
         public int AddToWeaponSkill { get; set; }
@@ -198,6 +199,7 @@ namespace WarhammerArmyAssembler
                 WoundByTestOnce = this.WoundByTestOnce,
                 DeathByTest = this.DeathByTest,
                 DeathByTestOnce = this.DeathByTestOnce,
+                DeathByTestAfterHit = this.DeathByTestAfterHit,
 
                 AddToMovement = this.AddToMovement,
                 AddToWeaponSkill = this.AddToWeaponSkill,

@@ -150,6 +150,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.WoundByTestOnce = StringParse(additionalParam["WoundByTestOnce"]);
                 newUnit.DeathByTest = StringParse(additionalParam["DeathByTest"]);
                 newUnit.DeathByTestOnce = StringParse(additionalParam["DeathByTestOnce"]);
+                newUnit.DeathByTestAfterHit = StringParse(additionalParam["DeathByTestAfterHit"]);
 
                 newUnit.SlotsOfLords = IntParse(additionalParam["SlotsOfLords"]);
                 newUnit.SlotsOfHero = IntParse(additionalParam["SlotsOfHero"]);
@@ -231,6 +232,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.WoundByTestOnce = StringParse(xmlNode["WoundByTestOnce"]);
             newWeapon.DeathByTest = StringParse(xmlNode["DeathByTest"]);
             newWeapon.DeathByTestOnce = StringParse(xmlNode["DeathByTestOnce"]);
+            newWeapon.DeathByTestAfterHit = StringParse(xmlNode["DeathByTestAfterHit"]);
 
             newWeapon.Points = DoubleParse(xmlNode["Points"]);
             newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);

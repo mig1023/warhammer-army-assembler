@@ -52,6 +52,7 @@ namespace WarhammerArmyAssembler
             ["WoundByTestOnce"] = "Opponent must once pass a [X] test or be wounded",
             ["DeathByTest"] = "Opponent must pass a [X] test or be slain",
             ["DeathByTestOnce"] = "Opponent must once pass a [X] test or be slain",
+            ["DeathByTestAfterHit"] = "After each hit opponent must pass a [X] test or be slain",
         };
 
         public string Name { get; set; }
@@ -141,6 +142,7 @@ namespace WarhammerArmyAssembler
         public string WoundByTestOnce { get; set; }
         public string DeathByTest { get; set; }
         public string DeathByTestOnce { get; set; }
+        public string DeathByTestAfterHit { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -334,6 +336,7 @@ namespace WarhammerArmyAssembler
                 WoundByTestOnce = this.WoundByTestOnce,
                 DeathByTest = this.DeathByTest,
                 DeathByTestOnce = this.DeathByTestOnce,
+                DeathByTestAfterHit = this.DeathByTestAfterHit,
 
                 SlotsOfLords = this.SlotsOfLords,
                 SlotsOfHero = this.SlotsOfHero,

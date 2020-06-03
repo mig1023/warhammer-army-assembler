@@ -178,7 +178,7 @@ namespace WarhammerArmyAssembler.Test
                 InitRoundWounds(participants, ref roundWounds);
 
                 if (!unit.SteamTank)
-                    ImpactHit(ref unit, participants, ref roundWounds);
+                    ImpactHit(unit, participants, ref roundWounds);
 
                 foreach (Unit u in participants)
                     if (BothOpponentsAreAlive(participants))
@@ -193,21 +193,21 @@ namespace WarhammerArmyAssembler.Test
 
                         TestsAtTheStartOfRound(ref actor, opponent, round);
 
-                        if (u.SteamTank)
-                            ImpactHit(ref actor, participants, ref roundWounds);
+                        if (actor.SteamTank)
+                            ImpactHit(actor, participants, ref roundWounds);
                         else if (u.HellPitAbomination)
-                            HellPitAbomination(u, participants, ref roundWounds);
+                            HellPitAbomination(actor, participants, ref roundWounds);
 
-                        if (u.Attacks <= 0)
+                        if (actor.Attacks <= 0)
                             continue;
 
-                        if (u.PassThisRound)
+                        if (actor.PassThisRound)
                         {
-                            u.PassThisRound = false;
+                            actor.PassThisRound = false;
                             continue;
                         }
 
-                        roundWounds[opponent.ID] += Round(u, ref opponent, attacksRound[u.ID], round);
+                        roundWounds[opponent.ID] += Round(actor, ref opponent, attacksRound[actor.ID], round);
 
                         if (opponent.Regeneration && (woundsAtStartOfRound > opponent.Wounds) && !opponent.WoundedWithKillingBlow)
                             Regeneration(opponent, (woundsAtStartOfRound - opponent.Wounds));
@@ -304,7 +304,7 @@ namespace WarhammerArmyAssembler.Test
             roundWounds[impactOpponent.ID] += Round(unit, ref impactOpponent, attacks, round);
         }
 
-        private static void ImpactHit(ref Unit unit, List<Unit> participants, ref Dictionary<int, int> roundWounds)
+        private static void ImpactHit(Unit unit, List<Unit> participants, ref Dictionary<int, int> roundWounds)
         {
             bool impactHit = (round == 1) &&
                 (!String.IsNullOrEmpty(unit.ImpactHit) || (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit)));
@@ -461,7 +461,7 @@ namespace WarhammerArmyAssembler.Test
 
             for (int i = 0; i < attackNumber; i++)
             {
-                int wounded = Attack(unit, enemy, round, impactHit, impactLine);
+                int wounded = Attack(unit, ref enemy, round, impactHit, impactLine);
                 roundWounds += wounded;
                 enemy.Wounds -= wounded;
             }
@@ -604,10 +604,12 @@ namespace WarhammerArmyAssembler.Test
             return false;
         }
 
-        private static int Attack(Unit unit, Unit enemy, int round, bool impactHit = false, string impactLine = "")
+        private static int Attack(Unit unit, ref Unit enemy, int round, bool impactHit = false, string impactLine = "")
         {
             attackIsPoisoned = false;
             attackWithKillingBlow = false;
+
+            int woundsAtStart = enemy.Wounds;
 
             if ((unit.Wounds > 0) && (enemy.Wounds > 0))
             {
@@ -615,13 +617,18 @@ namespace WarhammerArmyAssembler.Test
                     Test.Data.Console(Test.Data.text, "\n{0} --> hit ", unit.Name);
                 else
                 {
-                    Test.Data.Console(Test.Data.text, "\n{0} --> hit (", unit.Name);
+                    Test.Data.Console(Test.Data.text, "\n{0} --> hit ( ", unit.Name);
                     Test.Data.Console(Test.Data.supplText, "{0} impact hit", impactLine);
-                    Test.Data.Console(Test.Data.text, ")");
+                    Test.Data.Console(Test.Data.text, " )");
                 }
 
                 if (impactHit || Hit(unit, enemy, round))
                 {
+                    TestsInRound(ref enemy, unit);
+
+                    if (enemy.Wounds <= 0)
+                        return woundsAtStart;
+
                     Test.Data.Console(Test.Data.text, " --> wound ");
 
                     if (
@@ -873,25 +880,33 @@ namespace WarhammerArmyAssembler.Test
             return null;
         }
 
+        private static void TestsInRound(ref Unit unit, Unit opponent)
+        {
+            if (!String.IsNullOrEmpty(opponent.DeathByTestAfterHit))
+                ParamTest(ref unit, opponent.DeathByTestAfterHit, opponent, ParamTestType.Death, inRound: true);
+        }
+
         private static void TestsAtTheStartOfRound(ref Unit unit, Unit opponent, int round)
         {
             if (!String.IsNullOrEmpty(opponent.PassRoundByTest))
                 ParamTest(ref unit, opponent.PassRoundByTest, opponent, ParamTestType.Pass);
             else if (!String.IsNullOrEmpty(opponent.PassRoundByTestOnce) && (round == 1))
                 ParamTest(ref unit, opponent.PassRoundByTestOnce, opponent, ParamTestType.Pass);
-            else if (!String.IsNullOrEmpty(opponent.WoundByTest))
+            
+            if (!String.IsNullOrEmpty(opponent.WoundByTest))
                 ParamTest(ref unit, opponent.WoundByTest, opponent, ParamTestType.Wound);
             else if (!String.IsNullOrEmpty(opponent.WoundByTestOnce) && (round == 1))
                 ParamTest(ref unit, opponent.WoundByTestOnce, opponent, ParamTestType.Wound);
-            else if (!String.IsNullOrEmpty(opponent.DeathByTest))
+            
+            if (!String.IsNullOrEmpty(opponent.DeathByTest))
                 ParamTest(ref unit, opponent.DeathByTest, opponent, ParamTestType.Death);
             else if (!String.IsNullOrEmpty(opponent.DeathByTestOnce) && (round == 1))
                 ParamTest(ref unit, opponent.DeathByTestOnce, opponent, ParamTestType.Death);
         }
 
-        private static void ParamTest(ref Unit unit, string param, Unit opponent, ParamTestType test)
+        private static void ParamTest(ref Unit unit, string param, Unit opponent, ParamTestType test, bool inRound = false)
         {
-            Test.Data.Console(Test.Data.text, "\n\n{0} must pass {1} test ", unit.Name, param);
+            Test.Data.Console(Test.Data.text, (inRound ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
 
             int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
             int diceNum = ((param == "Leadership") ? 2 : 1);
