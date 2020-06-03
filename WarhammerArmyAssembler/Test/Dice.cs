@@ -176,7 +176,7 @@ namespace WarhammerArmyAssembler.Test
         public static bool TestPassedByDice(int result, int condition, Types diceType,
             bool breakTest = false, bool paramTest = false)
         {
-            bool reversCheck = (diceType == Types.AS) || (diceType == Types.WARD) || paramTest;
+            bool reversCheck = (diceType == Types.AS) || (diceType == Types.WARD);
 
             if (breakTest && (result == 2))
             {
@@ -184,13 +184,19 @@ namespace WarhammerArmyAssembler.Test
                 return true;
             }
 
+            if ((result == 6) && paramTest)
+                return false;
+
+            if (((result <= condition) || (result == 1)) && paramTest)
+                return true;
+
             if (((result < condition) || (result == 1)) && reversCheck)
                 return true;
 
             if ((result <= condition) && (diceType == Types.LD))
                 return true;
 
-            if ((result >= condition) && ((diceType != Types.LD) && !reversCheck))
+            if ((result >= condition) && ((diceType != Types.LD) && !reversCheck && !paramTest))
                 return true;
 
             return false;
