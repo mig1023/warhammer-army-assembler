@@ -880,6 +880,14 @@ namespace WarhammerArmyAssembler.Test
                 ParamTest(ref unit, opponent.PassRoundByTest, opponent, ParamTestType.Pass);
             else if (!String.IsNullOrEmpty(opponent.PassRoundByTestOnce) && (round == 1))
                 ParamTest(ref unit, opponent.PassRoundByTestOnce, opponent, ParamTestType.Pass);
+            else if (!String.IsNullOrEmpty(opponent.WoundByTest))
+                ParamTest(ref unit, opponent.WoundByTest, opponent, ParamTestType.Wound);
+            else if (!String.IsNullOrEmpty(opponent.WoundByTestOnce) && (round == 1))
+                ParamTest(ref unit, opponent.WoundByTestOnce, opponent, ParamTestType.Wound);
+            else if (!String.IsNullOrEmpty(opponent.DeathByTest))
+                ParamTest(ref unit, opponent.DeathByTest, opponent, ParamTestType.Death);
+            else if (!String.IsNullOrEmpty(opponent.DeathByTestOnce) && (round == 1))
+                ParamTest(ref unit, opponent.DeathByTestOnce, opponent, ParamTestType.Death);
         }
 
         private static void ParamTest(ref Unit unit, string param, Unit opponent, ParamTestType test)

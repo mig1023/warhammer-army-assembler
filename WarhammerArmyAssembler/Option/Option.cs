@@ -64,6 +64,10 @@ namespace WarhammerArmyAssembler
 
         public string PassRoundByTest { get; set; }
         public string PassRoundByTestOnce { get; set; }
+        public string WoundByTest { get; set; }
+        public string WoundByTestOnce { get; set; }
+        public string DeathByTest { get; set; }
+        public string DeathByTestOnce { get; set; }
 
         public int AddToMovement { get; set; }
         public int AddToWeaponSkill { get; set; }
@@ -190,6 +194,10 @@ namespace WarhammerArmyAssembler
 
                 PassRoundByTest = this.PassRoundByTest,
                 PassRoundByTestOnce = this.PassRoundByTestOnce,
+                WoundByTest = this.WoundByTest,
+                WoundByTestOnce = this.WoundByTestOnce,
+                DeathByTest = this.DeathByTest,
+                DeathByTestOnce = this.DeathByTestOnce,
 
                 AddToMovement = this.AddToMovement,
                 AddToWeaponSkill = this.AddToWeaponSkill,

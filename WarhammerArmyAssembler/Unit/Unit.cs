@@ -46,7 +46,12 @@ namespace WarhammerArmyAssembler
             ["StrengthInNumbers"] = "Strength in numbers!",
             ["Lance"] = "Lance",
             ["Flail"] = "Flail",
-            ["PassRoundByTest"] = "Opponent must pass a [X] test or may not attack"
+            ["PassRoundByTest"] = "Opponent must pass a [X] test or may not attack",
+            ["PassRoundByTestOnce"] = "Opponent must once pass a [X] test or may not attack",
+            ["WoundByTest"] = "Opponent must pass a [X] test or be wounded",
+            ["WoundByTestOnce"] = "Opponent must once pass a [X] test or be wounded",
+            ["DeathByTest"] = "Opponent must pass a [X] test or be slain",
+            ["DeathByTestOnce"] = "Opponent must once pass a [X] test or be slain",
         };
 
         public string Name { get; set; }
@@ -132,6 +137,10 @@ namespace WarhammerArmyAssembler
 
         public string PassRoundByTest { get; set; }
         public string PassRoundByTestOnce { get; set; }
+        public string WoundByTest { get; set; }
+        public string WoundByTestOnce { get; set; }
+        public string DeathByTest { get; set; }
+        public string DeathByTestOnce { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -321,6 +330,10 @@ namespace WarhammerArmyAssembler
 
                 PassRoundByTest = this.PassRoundByTest,
                 PassRoundByTestOnce = this.PassRoundByTestOnce,
+                WoundByTest = this.WoundByTest,
+                WoundByTestOnce = this.WoundByTestOnce,
+                DeathByTest = this.DeathByTest,
+                DeathByTestOnce = this.DeathByTestOnce,
 
                 SlotsOfLords = this.SlotsOfLords,
                 SlotsOfHero = this.SlotsOfHero,
