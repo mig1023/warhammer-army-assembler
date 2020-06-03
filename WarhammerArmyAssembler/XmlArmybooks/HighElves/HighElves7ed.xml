@@ -175,7 +175,7 @@
 				<Type>Armour</Type>
 				<Points>30</Points>
 				<AddToArmour>5</AddToArmour>
-				<SpecialRuleDescription>Opponent must first pass a Leadership test before can attack</SpecialRuleDescription>
+				<PassRoundByTestOnce>Leadership</PassRoundByTestOnce>
 				<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may not attack.</Description>
 			</Artefact>
 			<Artefact>
@@ -731,6 +731,7 @@
 				<Option>
 					<Name>Lance</Name>
 					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
 					<Points>6</Points>
 					<Lance>true</Lance>
 				</Option>
@@ -1054,6 +1055,7 @@
 				<Option>
 					<Name>Lance</Name>
 					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
 					<Points>4</Points>
 					<Lance>true</Lance>
 				</Option>
