@@ -16,8 +16,11 @@ namespace WarhammerArmyAssembler.Test
         public RepeatType Repeat { get; set; } 
 
 
-        public static Param[] Clone(Param[] allParams)
+        public static List<Param> Clone(List<Param> allParams)
         {
+            if (allParams == null)
+                return new List<Param> { };
+
             List<Param> newParams = new List<Param>();
 
             foreach(Param param in allParams)
@@ -32,7 +35,7 @@ namespace WarhammerArmyAssembler.Test
                 newParams.Add(newParamTest);
             }
 
-            return newParams.ToArray();
+            return newParams;
         } 
     }
 }

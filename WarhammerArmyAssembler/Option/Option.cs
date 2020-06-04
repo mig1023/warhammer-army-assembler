@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Media;
@@ -70,7 +71,7 @@ namespace WarhammerArmyAssembler
         //public string DeathByTestOnce { get; set; }
         //public string DeathByTestAfterHit { get; set; }
 
-        public Test.Param[] ParamTests { get; set; }
+        public List<Test.Param> ParamTests { get; set; }
 
         public int AddToMovement { get; set; }
         public int AddToWeaponSkill { get; set; }

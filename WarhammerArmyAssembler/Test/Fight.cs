@@ -189,7 +189,7 @@ namespace WarhammerArmyAssembler.Test
 
                         int woundsAtStartOfRound = opponent.Wounds;
 
-                        TestsAtTheStartOfRound(ref actor, opponent, round);
+                        Tests(ref actor, opponent, round, context: Param.RepeatType.Round);
 
                         if (actor.SteamTank)
                             ImpactHit(actor, participants, ref roundWounds);
@@ -622,7 +622,7 @@ namespace WarhammerArmyAssembler.Test
 
                 if (impactHit || Hit(unit, enemy, round))
                 {
-                    TestsInRound(ref enemy, unit);
+                    Tests(ref enemy, unit, round, context: Param.RepeatType.Hit);
 
                     if (enemy.Wounds <= 0)
                         return woundsAtStart;
@@ -878,29 +878,34 @@ namespace WarhammerArmyAssembler.Test
             return null;
         }
 
-        private static void TestsInRound(ref Unit unit, Unit opponent)
+        private static void Tests(ref Unit unit, Unit opponent, int round, Param.RepeatType context)
         {
-            if (!String.IsNullOrEmpty(opponent.DeathByTestAfterHit))
-                ParamTest(ref unit, opponent.DeathByTestAfterHit, opponent, Test.Param.TestType.Death, inRound: true);
+            //if (!String.IsNullOrEmpty(opponent.DeathByTestAfterHit))
+            //    ParamTest(ref unit, opponent.DeathByTestAfterHit, opponent, Test.Param.TestType.Death, inRound: true);
+
+            foreach (Param param in opponent.ParamTests)
+                if ((param.Repeat == context) || ((param.Repeat == Param.RepeatType.Once) && (round == 1)))
+                    ParamTest(ref unit, param.Type, opponent, param.Bet);
+
         }
 
-        private static void TestsAtTheStartOfRound(ref Unit unit, Unit opponent, int round)
-        {
-            if (!String.IsNullOrEmpty(opponent.PassRoundByTest))
-                ParamTest(ref unit, opponent.PassRoundByTest, opponent, Test.Param.TestType.Pass);
-            else if (!String.IsNullOrEmpty(opponent.PassRoundByTestOnce) && (round == 1))
-                ParamTest(ref unit, opponent.PassRoundByTestOnce, opponent, Test.Param.TestType.Pass);
+        //private static void TestsAtTheStartOfRound(ref Unit unit, Unit opponent, int round)
+        //{
+        //    if (!String.IsNullOrEmpty(opponent.PassRoundByTest))
+        //        ParamTest(ref unit, opponent.PassRoundByTest, opponent, Test.Param.TestType.Pass);
+        //    else if (!String.IsNullOrEmpty(opponent.PassRoundByTestOnce) && (round == 1))
+        //        ParamTest(ref unit, opponent.PassRoundByTestOnce, opponent, Test.Param.TestType.Pass);
             
-            if (!String.IsNullOrEmpty(opponent.WoundByTest))
-                ParamTest(ref unit, opponent.WoundByTest, opponent, Test.Param.TestType.Wound);
-            else if (!String.IsNullOrEmpty(opponent.WoundByTestOnce) && (round == 1))
-                ParamTest(ref unit, opponent.WoundByTestOnce, opponent, Test.Param.TestType.Wound);
+        //    if (!String.IsNullOrEmpty(opponent.WoundByTest))
+        //        ParamTest(ref unit, opponent.WoundByTest, opponent, Test.Param.TestType.Wound);
+        //    else if (!String.IsNullOrEmpty(opponent.WoundByTestOnce) && (round == 1))
+        //        ParamTest(ref unit, opponent.WoundByTestOnce, opponent, Test.Param.TestType.Wound);
             
-            if (!String.IsNullOrEmpty(opponent.DeathByTest))
-                ParamTest(ref unit, opponent.DeathByTest, opponent, Test.Param.TestType.Death);
-            else if (!String.IsNullOrEmpty(opponent.DeathByTestOnce) && (round == 1))
-                ParamTest(ref unit, opponent.DeathByTestOnce, opponent, Test.Param.TestType.Death);
-        }
+        //    if (!String.IsNullOrEmpty(opponent.DeathByTest))
+        //        ParamTest(ref unit, opponent.DeathByTest, opponent, Test.Param.TestType.Death);
+        //    else if (!String.IsNullOrEmpty(opponent.DeathByTestOnce) && (round == 1))
+        //        ParamTest(ref unit, opponent.DeathByTestOnce, opponent, Test.Param.TestType.Death);
+        //}
 
         private static void ParamTest(ref Unit unit, string param, Unit opponent, Test.Param.TestType test, bool inRound = false)
         {

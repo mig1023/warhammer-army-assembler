@@ -137,7 +137,7 @@ namespace WarhammerArmyAssembler
         //public string DeathByTestOnce { get; set; }
         //public string DeathByTestAfterHit { get; set; }
 
-        public Test.Param[] ParamTests { get; set; }
+        public List<Test.Param> ParamTests { get; set; }
 
         public int SlotsOfLords { get; set; }
         public int SlotsOfHero { get; set; }
@@ -413,7 +413,15 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
-        public string AddFromAnyOption(string name, bool reversParam = false,
+        private static void GetParamTestsFromOptions(ref Unit unit)
+        {
+            foreach (Option option in unit.Options)
+                if (option.ParamTests.Count > 0)
+                    foreach (Test.Param param in option.ParamTests)
+                        unit.ParamTests.Add(param);
+        }
+
+        private string AddFromAnyOption(string name, bool reversParam = false,
             bool mountParam = false, bool doNotCombine = false)
         {
             PropertyInfo unitParam = typeof(Unit).GetProperty(name);
@@ -527,8 +535,12 @@ namespace WarhammerArmyAssembler
             }
 
             if (directModification)
+            {
                 foreach (KeyValuePair<string, string> specialRule in AllSpecialRules)
                     SetUnitParamByOption(unit, specialRule.Key);
+
+                GetParamTestsFromOptions(ref unit);
+            }
 
             return unit;
         }
@@ -872,6 +884,9 @@ namespace WarhammerArmyAssembler
             foreach (KeyValuePair<string, string> specialRule in AllSpecialRules) 
                 if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam))
                     rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
+
+            foreach (Test.Param param in ParamTests)
+                rules.Add(String.Format("Opponent must past {0} test or {1}", param.Type, param.Bet.ToString()));
 
             foreach (Option option in Options)
             {

@@ -47,7 +47,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             return xmlNode.InnerText.Replace("|", "\n");
         }
 
-        public static Param[] ParamParse(XmlNode xmlNode)
+        public static List<Param> ParamParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return null;
@@ -58,19 +58,19 @@ namespace WarhammerArmyAssembler.ArmyBook
             {
                 Param newParamTest = new Param
                 {
-                    Type = xmlNode.InnerText,
+                    Type = xmlParamTest.InnerText,
                 };
 
-                bool success = Enum.TryParse(xmlNode.Attributes["Bet"].ToString(), out Param.TestType bet);
+                bool success = Enum.TryParse(xmlParamTest.Attributes["Bet"].Value, out Param.TestType bet);
                 newParamTest.Bet = (success ? bet : Param.TestType.Wound);
 
-                success = Enum.TryParse(xmlNode.Attributes["Repeat"].ToString(), out Param.RepeatType repeat);
+                success = Enum.TryParse(xmlParamTest.Attributes["Bet"].Value, out Param.RepeatType repeat);
                 newParamTest.Repeat = (success ? repeat : Param.RepeatType.Round);
 
                 allParamTests.Add(newParamTest);
             }
 
-            return allParamTests.ToArray();
+            return allParamTests;
         }
 
         public static string[] AllStringParse(XmlNode xmlNode, string nodeName)
