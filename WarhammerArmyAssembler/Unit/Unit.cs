@@ -129,14 +129,6 @@ namespace WarhammerArmyAssembler
         public bool Lance { get; set; }
         public bool Flail { get; set; }
 
-        //public string PassRoundByTest { get; set; }
-        //public string PassRoundByTestOnce { get; set; }
-        //public string WoundByTest { get; set; }
-        //public string WoundByTestOnce { get; set; }
-        //public string DeathByTest { get; set; }
-        //public string DeathByTestOnce { get; set; }
-        //public string DeathByTestAfterHit { get; set; }
-
         public List<Test.Param> ParamTests { get; set; }
 
         public int SlotsOfLords { get; set; }
@@ -325,14 +317,6 @@ namespace WarhammerArmyAssembler
                 Lance = this.Lance,
                 Flail = this.Flail,
 
-                //PassRoundByTest = this.PassRoundByTest,
-                //PassRoundByTestOnce = this.PassRoundByTestOnce,
-                //WoundByTest = this.WoundByTest,
-                //WoundByTestOnce = this.WoundByTestOnce,
-                //DeathByTest = this.DeathByTest,
-                //DeathByTestOnce = this.DeathByTestOnce,
-                //DeathByTestAfterHit = this.DeathByTestAfterHit,
-
                 ParamTests = Test.Param.Clone(this.ParamTests),
 
                 SlotsOfLords = this.SlotsOfLords,
@@ -379,7 +363,6 @@ namespace WarhammerArmyAssembler
                 newUnit.WardView = this.WardView;
             }
 
-            List <Option> Option = new List<Option>();
             foreach (Option option in this.Options)
                 newUnit.Options.Add(option.Clone());
 

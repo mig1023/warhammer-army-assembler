@@ -36,6 +36,40 @@ namespace WarhammerArmyAssembler.Test
             }
 
             return newParams;
-        } 
+        }
+
+        public static void Tests(ref Unit unit, Unit opponent, int round, Param.RepeatType context)
+        {
+            foreach (Param param in opponent.ParamTests)
+                if ((param.Repeat == context) || ((param.Repeat == Param.RepeatType.Once) && (round == 1)))
+                    ParamTest(ref unit, param.Type, opponent, param.Bet);
+        }
+
+        private static void ParamTest(ref Unit unit, string param, Unit opponent, Test.Param.TestType test, bool inRound = false)
+        {
+            Test.Data.Console(Test.Data.text, (inRound ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
+
+            int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
+            int diceNum = ((param == "Leadership") ? 2 : 1);
+
+            if (Test.Dice.Roll(unit, param, opponent, paramValue, diceNum, paramTest: true))
+                Test.Data.Console(Test.Data.goodText, " --> passed");
+            else
+                switch (test)
+                {
+                    case Test.Param.TestType.Pass:
+                        Test.Data.Console(Test.Data.badText, " --> pass this round");
+                        unit.PassThisRound = true;
+                        break;
+                    case Test.Param.TestType.Wound:
+                        Test.Data.Console(Test.Data.badText, " --> WOUND");
+                        unit.Wounds -= 1;
+                        break;
+                    case Test.Param.TestType.Death:
+                        Test.Data.Console(Test.Data.badText, " --> SLAIN");
+                        unit.Wounds = 0;
+                        break;
+                }
+        }
     }
 }

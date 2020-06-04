@@ -189,7 +189,7 @@ namespace WarhammerArmyAssembler.Test
 
                         int woundsAtStartOfRound = opponent.Wounds;
 
-                        Tests(ref actor, opponent, round, context: Param.RepeatType.Round);
+                        Param.Tests(ref actor, opponent, round, context: Param.RepeatType.Round);
 
                         if (actor.SteamTank)
                             ImpactHit(actor, participants, ref roundWounds);
@@ -622,7 +622,7 @@ namespace WarhammerArmyAssembler.Test
 
                 if (impactHit || Hit(unit, enemy, round))
                 {
-                    Tests(ref enemy, unit, round, context: Param.RepeatType.Hit);
+                    Param.Tests(ref enemy, unit, round, context: Param.RepeatType.Hit);
 
                     if (enemy.Wounds <= 0)
                         return woundsAtStart;
@@ -878,61 +878,6 @@ namespace WarhammerArmyAssembler.Test
             return null;
         }
 
-        private static void Tests(ref Unit unit, Unit opponent, int round, Param.RepeatType context)
-        {
-            //if (!String.IsNullOrEmpty(opponent.DeathByTestAfterHit))
-            //    ParamTest(ref unit, opponent.DeathByTestAfterHit, opponent, Test.Param.TestType.Death, inRound: true);
-
-            foreach (Param param in opponent.ParamTests)
-                if ((param.Repeat == context) || ((param.Repeat == Param.RepeatType.Once) && (round == 1)))
-                    ParamTest(ref unit, param.Type, opponent, param.Bet);
-
-        }
-
-        //private static void TestsAtTheStartOfRound(ref Unit unit, Unit opponent, int round)
-        //{
-        //    if (!String.IsNullOrEmpty(opponent.PassRoundByTest))
-        //        ParamTest(ref unit, opponent.PassRoundByTest, opponent, Test.Param.TestType.Pass);
-        //    else if (!String.IsNullOrEmpty(opponent.PassRoundByTestOnce) && (round == 1))
-        //        ParamTest(ref unit, opponent.PassRoundByTestOnce, opponent, Test.Param.TestType.Pass);
-            
-        //    if (!String.IsNullOrEmpty(opponent.WoundByTest))
-        //        ParamTest(ref unit, opponent.WoundByTest, opponent, Test.Param.TestType.Wound);
-        //    else if (!String.IsNullOrEmpty(opponent.WoundByTestOnce) && (round == 1))
-        //        ParamTest(ref unit, opponent.WoundByTestOnce, opponent, Test.Param.TestType.Wound);
-            
-        //    if (!String.IsNullOrEmpty(opponent.DeathByTest))
-        //        ParamTest(ref unit, opponent.DeathByTest, opponent, Test.Param.TestType.Death);
-        //    else if (!String.IsNullOrEmpty(opponent.DeathByTestOnce) && (round == 1))
-        //        ParamTest(ref unit, opponent.DeathByTestOnce, opponent, Test.Param.TestType.Death);
-        //}
-
-        private static void ParamTest(ref Unit unit, string param, Unit opponent, Test.Param.TestType test, bool inRound = false)
-        {
-            Test.Data.Console(Test.Data.text, (inRound ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
-
-            int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
-            int diceNum = ((param == "Leadership") ? 2 : 1);
-
-            if (Test.Dice.Roll(unit, param, opponent, paramValue, diceNum, paramTest: true))
-                Test.Data.Console(Test.Data.goodText, " --> passed");
-            else
-                switch(test)
-                {
-                    case Test.Param.TestType.Pass:
-                        Test.Data.Console(Test.Data.badText, " --> pass this round");
-                        unit.PassThisRound = true;
-                        break;
-                    case Test.Param.TestType.Wound:
-                        Test.Data.Console(Test.Data.badText, " --> WOUND");
-                        unit.Wounds -= 1;
-                        break;
-                    case Test.Param.TestType.Death:
-                        Test.Data.Console(Test.Data.badText, " --> SLAIN");
-                        unit.Wounds = 0;
-                        break;
-                }
-        }
 
         private static void UnitRoundShow(Unit unit, bool firstLine)
         {

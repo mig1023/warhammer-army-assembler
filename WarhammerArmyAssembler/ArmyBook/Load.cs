@@ -144,14 +144,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.Lance = BoolParse(additionalParam["Lance"]);
                 newUnit.Flail = BoolParse(additionalParam["Flail"]);
 
-                //newUnit.PassRoundByTest = StringParse(additionalParam["PassRoundByTest"]);
-                //newUnit.PassRoundByTestOnce = StringParse(additionalParam["PassRoundByTestOnce"]);
-                //newUnit.WoundByTest = StringParse(additionalParam["WoundByTest"]);
-                //newUnit.WoundByTestOnce = StringParse(additionalParam["WoundByTestOnce"]);
-                //newUnit.DeathByTest = StringParse(additionalParam["DeathByTest"]);
-                //newUnit.DeathByTestOnce = StringParse(additionalParam["DeathByTestOnce"]);
-                //newUnit.DeathByTestAfterHit = StringParse(additionalParam["DeathByTestAfterHit"]);
-
                 newUnit.ParamTests = ParamParse(additionalParam);
 
                 newUnit.SlotsOfLords = IntParse(additionalParam["SlotsOfLords"]);
@@ -227,14 +219,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.SteamTank = BoolParse(xmlNode["SteamTank"]);
             newWeapon.Lance = BoolParse(xmlNode["Lance"]);
             newWeapon.Flail = BoolParse(xmlNode["Flail"]);
-
-            //newWeapon.PassRoundByTest = StringParse(xmlNode["PassRoundByTest"]);
-            //newWeapon.PassRoundByTestOnce = StringParse(xmlNode["PassRoundByTestOnce"]);
-            //newWeapon.WoundByTest = StringParse(xmlNode["WoundByTest"]);
-            //newWeapon.WoundByTestOnce = StringParse(xmlNode["WoundByTestOnce"]);
-            //newWeapon.DeathByTest = StringParse(xmlNode["DeathByTest"]);
-            //newWeapon.DeathByTestOnce = StringParse(xmlNode["DeathByTestOnce"]);
-            //newWeapon.DeathByTestAfterHit = StringParse(xmlNode["DeathByTestAfterHit"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 
