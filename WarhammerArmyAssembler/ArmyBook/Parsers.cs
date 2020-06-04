@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml;
+using WarhammerArmyAssembler.Test;
 using static WarhammerArmyAssembler.Option;
 using static WarhammerArmyAssembler.Unit;
 
@@ -44,6 +45,32 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return String.Empty;
 
             return xmlNode.InnerText.Replace("|", "\n");
+        }
+
+        public static Param[] ParamParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            List<Param> allParamTests = new List<Param>();
+
+            foreach (XmlNode xmlParamTest in xmlNode.SelectNodes("Test"))
+            {
+                Param newParamTest = new Param
+                {
+                    Type = xmlNode.InnerText,
+                };
+
+                bool success = Enum.TryParse(xmlNode.Attributes["Bet"].ToString(), out Param.TestType bet);
+                newParamTest.Bet = (success ? bet : Param.TestType.Wound);
+
+                success = Enum.TryParse(xmlNode.Attributes["Repeat"].ToString(), out Param.RepeatType repeat);
+                newParamTest.Repeat = (success ? repeat : Param.RepeatType.Round);
+
+                allParamTests.Add(newParamTest);
+            }
+
+            return allParamTests.ToArray();
         }
 
         public static string[] AllStringParse(XmlNode xmlNode, string nodeName)

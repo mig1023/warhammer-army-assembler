@@ -7,8 +7,6 @@ namespace WarhammerArmyAssembler.Test
 {
     class Fight
     {
-        private enum ParamTestType { Pass, Wound, Death };
-        
         static int round = 0;
 
         static bool attackWithKillingBlow = false;
@@ -883,28 +881,28 @@ namespace WarhammerArmyAssembler.Test
         private static void TestsInRound(ref Unit unit, Unit opponent)
         {
             if (!String.IsNullOrEmpty(opponent.DeathByTestAfterHit))
-                ParamTest(ref unit, opponent.DeathByTestAfterHit, opponent, ParamTestType.Death, inRound: true);
+                ParamTest(ref unit, opponent.DeathByTestAfterHit, opponent, Test.Param.TestType.Death, inRound: true);
         }
 
         private static void TestsAtTheStartOfRound(ref Unit unit, Unit opponent, int round)
         {
             if (!String.IsNullOrEmpty(opponent.PassRoundByTest))
-                ParamTest(ref unit, opponent.PassRoundByTest, opponent, ParamTestType.Pass);
+                ParamTest(ref unit, opponent.PassRoundByTest, opponent, Test.Param.TestType.Pass);
             else if (!String.IsNullOrEmpty(opponent.PassRoundByTestOnce) && (round == 1))
-                ParamTest(ref unit, opponent.PassRoundByTestOnce, opponent, ParamTestType.Pass);
+                ParamTest(ref unit, opponent.PassRoundByTestOnce, opponent, Test.Param.TestType.Pass);
             
             if (!String.IsNullOrEmpty(opponent.WoundByTest))
-                ParamTest(ref unit, opponent.WoundByTest, opponent, ParamTestType.Wound);
+                ParamTest(ref unit, opponent.WoundByTest, opponent, Test.Param.TestType.Wound);
             else if (!String.IsNullOrEmpty(opponent.WoundByTestOnce) && (round == 1))
-                ParamTest(ref unit, opponent.WoundByTestOnce, opponent, ParamTestType.Wound);
+                ParamTest(ref unit, opponent.WoundByTestOnce, opponent, Test.Param.TestType.Wound);
             
             if (!String.IsNullOrEmpty(opponent.DeathByTest))
-                ParamTest(ref unit, opponent.DeathByTest, opponent, ParamTestType.Death);
+                ParamTest(ref unit, opponent.DeathByTest, opponent, Test.Param.TestType.Death);
             else if (!String.IsNullOrEmpty(opponent.DeathByTestOnce) && (round == 1))
-                ParamTest(ref unit, opponent.DeathByTestOnce, opponent, ParamTestType.Death);
+                ParamTest(ref unit, opponent.DeathByTestOnce, opponent, Test.Param.TestType.Death);
         }
 
-        private static void ParamTest(ref Unit unit, string param, Unit opponent, ParamTestType test, bool inRound = false)
+        private static void ParamTest(ref Unit unit, string param, Unit opponent, Test.Param.TestType test, bool inRound = false)
         {
             Test.Data.Console(Test.Data.text, (inRound ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
 
@@ -916,15 +914,15 @@ namespace WarhammerArmyAssembler.Test
             else
                 switch(test)
                 {
-                    case ParamTestType.Pass:
+                    case Test.Param.TestType.Pass:
                         Test.Data.Console(Test.Data.badText, " --> pass this round");
                         unit.PassThisRound = true;
                         break;
-                    case ParamTestType.Wound:
+                    case Test.Param.TestType.Wound:
                         Test.Data.Console(Test.Data.badText, " --> WOUND");
                         unit.Wounds -= 1;
                         break;
-                    case ParamTestType.Death:
+                    case Test.Param.TestType.Death:
                         Test.Data.Console(Test.Data.badText, " --> SLAIN");
                         unit.Wounds = 0;
                         break;

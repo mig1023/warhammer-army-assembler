@@ -62,13 +62,15 @@ namespace WarhammerArmyAssembler
         public bool Flail { get; set; }
         public bool BigWeapon { get; set; }
 
-        public string PassRoundByTest { get; set; }
-        public string PassRoundByTestOnce { get; set; }
-        public string WoundByTest { get; set; }
-        public string WoundByTestOnce { get; set; }
-        public string DeathByTest { get; set; }
-        public string DeathByTestOnce { get; set; }
-        public string DeathByTestAfterHit { get; set; }
+        //public string PassRoundByTest { get; set; }
+        //public string PassRoundByTestOnce { get; set; }
+        //public string WoundByTest { get; set; }
+        //public string WoundByTestOnce { get; set; }
+        //public string DeathByTest { get; set; }
+        //public string DeathByTestOnce { get; set; }
+        //public string DeathByTestAfterHit { get; set; }
+
+        public Test.Param[] ParamTests { get; set; }
 
         public int AddToMovement { get; set; }
         public int AddToWeaponSkill { get; set; }
@@ -193,13 +195,15 @@ namespace WarhammerArmyAssembler
                 Flail = this.Flail,
                 BigWeapon = this.BigWeapon,
 
-                PassRoundByTest = this.PassRoundByTest,
-                PassRoundByTestOnce = this.PassRoundByTestOnce,
-                WoundByTest = this.WoundByTest,
-                WoundByTestOnce = this.WoundByTestOnce,
-                DeathByTest = this.DeathByTest,
-                DeathByTestOnce = this.DeathByTestOnce,
-                DeathByTestAfterHit = this.DeathByTestAfterHit,
+                //PassRoundByTest = this.PassRoundByTest,
+                //PassRoundByTestOnce = this.PassRoundByTestOnce,
+                //WoundByTest = this.WoundByTest,
+                //WoundByTestOnce = this.WoundByTestOnce,
+                //DeathByTest = this.DeathByTest,
+                //DeathByTestOnce = this.DeathByTestOnce,
+                //DeathByTestAfterHit = this.DeathByTestAfterHit,
+
+                ParamTests = Test.Param.Clone(this.ParamTests),
 
                 AddToMovement = this.AddToMovement,
                 AddToWeaponSkill = this.AddToWeaponSkill,
