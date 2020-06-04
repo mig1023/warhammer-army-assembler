@@ -64,7 +64,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 bool success = Enum.TryParse(xmlParamTest.Attributes["Bet"].Value, out Param.TestType bet);
                 newParamTest.Bet = (success ? bet : Param.TestType.Wound);
 
-                success = Enum.TryParse(xmlParamTest.Attributes["Bet"].Value, out Param.RepeatType repeat);
+                success = Enum.TryParse(xmlParamTest.Attributes["Repeat"].Value, out Param.RepeatType repeat);
                 newParamTest.Repeat = (success ? repeat : Param.RepeatType.Round);
 
                 allParamTests.Add(newParamTest);

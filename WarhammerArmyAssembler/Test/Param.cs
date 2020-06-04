@@ -42,12 +42,12 @@ namespace WarhammerArmyAssembler.Test
         {
             foreach (Param param in opponent.ParamTests)
                 if ((param.Repeat == context) || ((param.Repeat == Param.RepeatType.Once) && (round == 1)))
-                    ParamTest(ref unit, param.Type, opponent, param.Bet);
+                    ParamTest(ref unit, param.Type, opponent, param.Bet, context);
         }
 
-        private static void ParamTest(ref Unit unit, string param, Unit opponent, Test.Param.TestType test, bool inRound = false)
+        private static void ParamTest(ref Unit unit, string param, Unit opponent, Test.Param.TestType test, Param.RepeatType context)
         {
-            Test.Data.Console(Test.Data.text, (inRound ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
+            Test.Data.Console(Test.Data.text, (context == RepeatType.Hit ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
 
             int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
             int diceNum = ((param == "Leadership") ? 2 : 1);
