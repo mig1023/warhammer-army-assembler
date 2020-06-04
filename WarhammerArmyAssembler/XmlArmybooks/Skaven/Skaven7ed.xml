@@ -242,7 +242,7 @@
 				<Name>Pipes of Piebald</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Charging enemy unit must first pass a Leadership test or fail a charge</SpecialRuleDescription>
+				<Test Bet="Pass" Repeat="Once">Leadership</Test>
 				<Description>In order to charge the bearer or any unit he has joined, an enemy unit must first pass a Leadership test. If the Leadership test is failed, treat the unit as if they had failed a charge.</Description>
 			</Artefact>
 			<Artefact>
@@ -285,7 +285,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Skryre</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>Brass Orb</SpecialRuleDescription>
+				<Test Bet="Death" Repeat="Once">Initiative</Test>
 				<Description>One use only. In the Shooting phase the user can throw the orb. Place the small round template with its centre anywhere within 8" of the character. Scatter the template as you would for a stone thrower shot.|Models touched by the template must take an Initiative test or be destroyed, with no saves (of any kind) allowed. Remember that a 6 is always a failure. “Look Out Sir!” works as normal. If a misfire is rolled, centre the template on the model throwing the globe.</Description>
 			</Artefact>
 			<Artefact>
@@ -434,7 +434,7 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Rod of Corruption</Name>
-					<SpecialRuleDescription>Die by Toughness test, no save of any kind</SpecialRuleDescription>
+					<Test Bet="Death" Repeat="Round">Toughness</Test>
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Plague Monks as Core units</SpecialRuleDescription>
@@ -470,10 +470,6 @@
 				<StrengthInNumbers>true</StrengthInNumbers>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>Rod of Corruption</Name>
-					<SpecialRuleDescription>Die by Toughness test, no save of any kind</SpecialRuleDescription>
-				</HandWeapon>
 				<HandWeapon>
 					<Name>Staff of the Horned One</Name>
 					<SpecialRuleDescription>Additional spell</SpecialRuleDescription>

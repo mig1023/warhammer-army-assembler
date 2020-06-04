@@ -40,8 +40,10 @@ namespace WarhammerArmyAssembler.Test
 
         public static void Tests(ref Unit unit, Unit opponent, int round, Param.RepeatType context)
         {
+            bool onceUseContext = (context == RepeatType.Round) && (round == 1);
+
             foreach (Param param in opponent.ParamTests)
-                if ((param.Repeat == context) || ((param.Repeat == Param.RepeatType.Once) && (round == 1)))
+                if ((param.Repeat == context) || ((param.Repeat == Param.RepeatType.Once) && onceUseContext))
                     ParamTest(ref unit, param.Type, opponent, param.Bet, context);
         }
 
