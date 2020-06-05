@@ -868,8 +868,11 @@ namespace WarhammerArmyAssembler
                 if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam))
                     rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
 
-            foreach (Test.Param param in ParamTests)
-                rules.Add(String.Format("Opponent must past {0} test or {1}", param.Type, param.Bet.ToString()));
+            Test.Param.Describe(ParamTests, ref rules);
+
+            if (!onlyUnitParam)
+                foreach (Option option in Options)
+                    Test.Param.Describe(option.ParamTests, ref rules);
 
             foreach (Option option in Options)
             {

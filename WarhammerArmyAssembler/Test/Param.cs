@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler.Test
 {
@@ -87,6 +84,35 @@ namespace WarhammerArmyAssembler.Test
                         unit.Wounds = 0;
                         break;
                 }
+        }
+
+        public static void Describe(List<Param> param, ref List<string> rules)
+        {
+            foreach (Param p in param)
+            {
+                Dictionary<ContextType, string> contextType = new Dictionary<ContextType, string>
+                {
+                    [ContextType.Round] = "At the beginning of each round",
+                    [ContextType.Hit] = "hit",
+                    [ContextType.Wound] = "wound",
+                    [ContextType.ArmourSave] = "successful armour save",
+                    [ContextType.WardSave] = "successful ward save",
+                };
+
+                Dictionary<TestType, string> betType = new Dictionary<TestType, string>
+                {
+                    [TestType.Wound] = "get a wound",
+                    [TestType.Death] = "will be slain",
+                    [TestType.Pass] = "skip a round without attack",
+                };
+
+                string head = String.Format("After {0} ", (p.Repeat == RepeatType.Once ? "first" : "each"));
+
+                if (p.Context == ContextType.Round)
+                    head = String.Empty;
+
+                rules.Add(String.Format("{0}{1} opponent must pass {2} test or {3}", head, contextType[p.Context], p.Type, betType[p.Bet]));
+            }
         }
     }
 }
