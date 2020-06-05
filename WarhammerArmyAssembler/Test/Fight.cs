@@ -645,7 +645,13 @@ namespace WarhammerArmyAssembler.Test
                         else
                         {
                             Test.Data.Console(Test.Data.badText, " --> {0} {1}", enemy.Name, "WOUND");
-                            return WoundsNumbers(unit, enemy);
+
+                            Param.Tests(ref enemy, unit, round, context: Param.RepeatType.Wound);
+
+                            if (enemy.Wounds > 0)
+                                return WoundsNumbers(unit, enemy);
+                            else
+                                return woundsAtStart;
                         }
                     }
                 }

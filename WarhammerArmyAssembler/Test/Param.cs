@@ -9,7 +9,7 @@ namespace WarhammerArmyAssembler.Test
     public class Param
     {
         public enum TestType { Pass, Wound, Death };
-        public enum RepeatType { Round, Once, Hit };
+        public enum RepeatType { Round, Once, Hit, Wound };
 
         public string Type { get; set; }
         public TestType Bet { get; set; }
@@ -49,7 +49,9 @@ namespace WarhammerArmyAssembler.Test
 
         private static void ParamTest(ref Unit unit, string param, Unit opponent, Test.Param.TestType test, Param.RepeatType context)
         {
-            Test.Data.Console(Test.Data.text, (context == RepeatType.Hit ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
+            bool roundFormat = ((context == RepeatType.Hit) || (context == RepeatType.Wound));
+
+            Test.Data.Console(Test.Data.text, (roundFormat ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
 
             int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
             int diceNum = ((param == "Leadership") ? 2 : 1);
