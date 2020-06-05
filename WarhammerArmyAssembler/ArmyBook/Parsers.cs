@@ -64,8 +64,19 @@ namespace WarhammerArmyAssembler.ArmyBook
                 bool success = Enum.TryParse(xmlParamTest.Attributes["Bet"].Value, out Param.TestType bet);
                 newParamTest.Bet = (success ? bet : Param.TestType.Wound);
 
-                success = Enum.TryParse(xmlParamTest.Attributes["Repeat"].Value, out Param.RepeatType repeat);
-                newParamTest.Repeat = (success ? repeat : Param.RepeatType.Round);
+                success = Enum.TryParse(xmlParamTest.Attributes["Context"].Value, out Param.ContextType context);
+                newParamTest.Context = (success ? context : Param.ContextType.Round);
+
+                XmlNode xmlRepeat = xmlParamTest.Attributes["Repeat"];
+                if (xmlRepeat != null)
+                {
+                    success = Enum.TryParse(xmlRepeat.Value, out Param.RepeatType repeat);
+                    newParamTest.Repeat = (success ? repeat : Param.RepeatType.Normal);
+                }
+                else
+                    newParamTest.Repeat = Param.RepeatType.Normal;
+
+                newParamTest.UsedAlready = false;
 
                 allParamTests.Add(newParamTest);
             }

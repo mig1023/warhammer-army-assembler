@@ -9,11 +9,15 @@ namespace WarhammerArmyAssembler.Test
     public class Param
     {
         public enum TestType { Pass, Wound, Death };
-        public enum RepeatType { Round, Once, Hit, Wound };
+        public enum ContextType { Round, Hit, Wound, ArmourSave, WardSave };
+        public enum RepeatType { Normal, Once };
 
         public string Type { get; set; }
         public TestType Bet { get; set; }
-        public RepeatType Repeat { get; set; } 
+        public ContextType Context { get; set; }
+        public RepeatType Repeat { get; set; }
+
+        public bool UsedAlready { get; set; }
 
 
         public static List<Param> Clone(List<Param> allParams)
@@ -29,7 +33,9 @@ namespace WarhammerArmyAssembler.Test
                 {
                     Type = param.Type,
                     Bet = param.Bet,
+                    Context = param.Context,
                     Repeat = param.Repeat,
+                    UsedAlready = false,
                 };
 
                 newParams.Add(newParamTest);
@@ -38,18 +44,25 @@ namespace WarhammerArmyAssembler.Test
             return newParams;
         }
 
-        public static void Tests(ref Unit unit, Unit opponent, int round, Param.RepeatType context)
+        public static void Tests(ref Unit unit, Unit opponent, ContextType context)
         {
-            bool onceUseContext = (context == RepeatType.Round) && (round == 1);
-
             foreach (Param param in opponent.ParamTests)
-                if ((param.Repeat == context) || ((param.Repeat == Param.RepeatType.Once) && onceUseContext))
+            {
+                bool canBeApplied = (param.Repeat == RepeatType.Normal) || ((param.Repeat == RepeatType.Once) && !param.UsedAlready);
+
+                if ((param.Context == context) && canBeApplied)
+                {
                     ParamTest(ref unit, param.Type, opponent, param.Bet, context);
+
+                    if (param.Repeat == RepeatType.Once)
+                        param.UsedAlready = true;
+                }
+            }
         }
 
-        private static void ParamTest(ref Unit unit, string param, Unit opponent, Test.Param.TestType test, Param.RepeatType context)
+        private static void ParamTest(ref Unit unit, string param, Unit opponent, TestType test, ContextType context)
         {
-            bool roundFormat = ((context == RepeatType.Hit) || (context == RepeatType.Wound));
+            bool roundFormat = ((context == ContextType.Hit) || (context == ContextType.Wound));
 
             Test.Data.Console(Test.Data.text, (roundFormat ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
 
@@ -61,15 +74,15 @@ namespace WarhammerArmyAssembler.Test
             else
                 switch (test)
                 {
-                    case Test.Param.TestType.Pass:
+                    case TestType.Pass:
                         Test.Data.Console(Test.Data.badText, " --> pass this round");
                         unit.PassThisRound = true;
                         break;
-                    case Test.Param.TestType.Wound:
+                    case TestType.Wound:
                         Test.Data.Console(Test.Data.badText, " --> WOUND");
                         unit.Wounds -= 1;
                         break;
-                    case Test.Param.TestType.Death:
+                    case TestType.Death:
                         Test.Data.Console(Test.Data.badText, " --> SLAIN");
                         unit.Wounds = 0;
                         break;

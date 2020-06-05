@@ -189,12 +189,12 @@ namespace WarhammerArmyAssembler.Test
 
                         int woundsAtStartOfRound = opponent.Wounds;
 
-                        Param.Tests(ref actor, opponent, round, context: Param.RepeatType.Round);
+                        Param.Tests(ref actor, opponent, context: Param.ContextType.Round);
 
                         if (actor.SteamTank)
                             ImpactHit(actor, participants, ref roundWounds);
                         else if (u.HellPitAbomination)
-                            HellPitAbomination(actor, participants, ref roundWounds);
+                            HellPitAbomination(ref actor, participants, ref roundWounds);
 
                         if (actor.Attacks <= 0)
                             continue;
@@ -205,7 +205,7 @@ namespace WarhammerArmyAssembler.Test
                             continue;
                         }
 
-                        roundWounds[opponent.ID] += Round(actor, ref opponent, attacksRound[actor.ID], round);
+                        roundWounds[opponent.ID] += Round(ref actor, ref opponent, attacksRound[actor.ID], round);
 
                         if (opponent.Regeneration && (woundsAtStartOfRound > opponent.Wounds) && !opponent.WoundedWithKillingBlow)
                             Regeneration(opponent, (woundsAtStartOfRound - opponent.Wounds));
@@ -273,13 +273,16 @@ namespace WarhammerArmyAssembler.Test
             }
         }
 
-        private static void HellPitAbomination(Unit unit, List<Unit> participants,
+        private static void HellPitAbomination(ref Unit unit, List<Unit> participants,
             ref Dictionary<int, int> roundWounds)
         {
             Unit impactOpponent = SelectOpponent(participants, unit);
 
             int attackType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
+
             int attacks = 0;
+            unit.MultiWounds = String.Empty;
+            unit.AutoHit = false;
 
             if (attackType < 3)
             {
@@ -299,7 +302,7 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.Console(Test.Data.supplText, "\n\n{0} avalanche of flesh: 2D6 attack with autohit", unit.Name);
             }
 
-            roundWounds[impactOpponent.ID] += Round(unit, ref impactOpponent, attacks, round);
+            roundWounds[impactOpponent.ID] += Round(ref unit, ref impactOpponent, attacks, round);
         }
 
         private static void ImpactHit(Unit unit, List<Unit> participants, ref Dictionary<int, int> roundWounds)
@@ -320,7 +323,7 @@ namespace WarhammerArmyAssembler.Test
                     unit.Wounds -= 1;
 
                 roundWounds[impactOpponent.ID] += Round(
-                    impactUnit, ref impactOpponent, attacks, round, impactHit: true, impactLine: impactOutLine
+                    ref impactUnit, ref impactOpponent, attacks, round, impactHit: true, impactLine: impactOutLine
                 );
             }
         }
@@ -449,7 +452,7 @@ namespace WarhammerArmyAssembler.Test
             return unit;
         }
 
-        private static int Round(Unit unit, ref Unit enemy, int attackNumber, int round,
+        private static int Round(ref Unit unit, ref Unit enemy, int attackNumber, int round,
             bool impactHit = false, string impactLine = "", bool afterSteamTankAttack = false)
         {
             int roundWounds = 0;
@@ -459,7 +462,7 @@ namespace WarhammerArmyAssembler.Test
 
             for (int i = 0; i < attackNumber; i++)
             {
-                int wounded = Attack(unit, ref enemy, round, impactHit, impactLine);
+                int wounded = Attack(ref unit, ref enemy, round, impactHit, impactLine);
                 roundWounds += wounded;
                 enemy.Wounds -= wounded;
             }
@@ -602,7 +605,7 @@ namespace WarhammerArmyAssembler.Test
             return false;
         }
 
-        private static int Attack(Unit unit, ref Unit enemy, int round, bool impactHit = false, string impactLine = "")
+        private static int Attack(ref Unit unit, ref Unit enemy, int round, bool impactHit = false, string impactLine = "")
         {
             attackIsPoisoned = false;
             attackWithKillingBlow = false;
@@ -622,7 +625,7 @@ namespace WarhammerArmyAssembler.Test
 
                 if (impactHit || Hit(unit, enemy, round))
                 {
-                    Param.Tests(ref enemy, unit, round, context: Param.RepeatType.Hit);
+                    Param.Tests(ref enemy, unit, context: Param.ContextType.Hit);
 
                     if (enemy.Wounds <= 0)
                         return woundsAtStart;
@@ -632,9 +635,9 @@ namespace WarhammerArmyAssembler.Test
                     if (
                         (PoisonedAttack(unit, impactHit) || Wound(unit, enemy, round))
                         &&
-                        (KillingAttack(unit, enemy) || NotAS(unit, enemy))
+                        (KillingAttack(unit, enemy) || NotAS(ref unit, enemy))
                         &&
-                        (NotWard(unit, enemy))
+                        (NotWard(ref unit, enemy))
                     ) {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
@@ -646,7 +649,7 @@ namespace WarhammerArmyAssembler.Test
                         {
                             Test.Data.Console(Test.Data.badText, " --> {0} {1}", enemy.Name, "WOUND");
 
-                            Param.Tests(ref enemy, unit, round, context: Param.RepeatType.Wound);
+                            Param.Tests(ref enemy, unit, context: Param.ContextType.Wound);
 
                             if (enemy.Wounds > 0)
                                 return WoundsNumbers(unit, enemy);
@@ -853,7 +856,7 @@ namespace WarhammerArmyAssembler.Test
             return Dice.Roll(unit, Dice.Types.S, enemy, chance);
         }
 
-        private static bool NotAS(Unit unit, Unit enemy)
+        private static bool NotAS(ref Unit unit, Unit enemy)
         {
             if ((enemy.Armour == null) || unit.NoArmour)
                 return true;
@@ -862,17 +865,27 @@ namespace WarhammerArmyAssembler.Test
 
             chance += enemy.Armour ?? 0;
 
-            return Dice.Roll(unit, Dice.Types.AS, enemy, chance);
+            bool armourFail = Dice.Roll(unit, Dice.Types.AS, enemy, chance);
+
+            if (!armourFail)
+                Param.Tests(ref unit, enemy, context: Param.ContextType.ArmourSave);
+
+            return armourFail;
         }
 
-        private static bool NotWard(Unit unit, Unit enemy)
+        private static bool NotWard(ref Unit unit, Unit enemy)
         {
             if (enemy.Ward == null)
                 return true;
 
             Test.Data.Console(Test.Data.text, " --> ward ");
 
-            return Dice.Roll(unit, Dice.Types.WARD, enemy, enemy.Ward);
+            bool wardFail = Dice.Roll(unit, Dice.Types.WARD, enemy, enemy.Ward);
+
+            if (!wardFail)
+                Param.Tests(ref unit, enemy, context: Param.ContextType.WardSave);
+
+            return wardFail;
         }
 
         private static Unit UnitFromParticipants(List<Unit> participants, Unit unit)
