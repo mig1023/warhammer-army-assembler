@@ -87,7 +87,7 @@
 				<Name>Blade of Realities</Name>
 				<Type>Weapon</Type>
 				<Points>75</Points>
-				<Test Bet="Death" Repeat="Hit">Leadership</Test>
+				<Test Bet="Death" Context="Hit">Leadership</Test>
 				<Description>For each successful hit inflicted by this weapon, the victim must pass a Leadership test or be slain instantly. No armour, ward or regeneration saves are allowed against this special attack. If the tests are passed, roll to Wound and save as normal</Description>
 			</Artefact>
 			<Artefact>
@@ -229,7 +229,7 @@
 				<Name>Blood Statuette of Spite</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<Test Bet="Wound" Repeat="Once">Toughness</Test>
+				<Test Bet="Wound" Context="Round" Repeat="Once">Toughness</Test>
 				<Description>Bounded Spell. Power Level 5. One use only. Once per game, the user may cast the spell bound within the statuette. The spell may be cast on any enemy character. That character must immediately take Toughness test. If this test is failed, then the model loses a Wound with no armour saves allowed. If the model takes a wound, it must immediately take another Toughness test, losing another wound if it fails again. This continues until either the model passes a Toughness test or is slain</Description>
 			</Artefact>
 			<Artefact>

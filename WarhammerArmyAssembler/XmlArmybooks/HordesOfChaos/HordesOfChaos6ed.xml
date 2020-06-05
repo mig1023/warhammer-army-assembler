@@ -181,7 +181,7 @@
 				<Type>Weapon</Type>
 				<Points>35</Points>
 				<OnlyForGroup>Mortal</OnlyForGroup>
-				<SpecialRuleDescription>Any wounded model must pass a Toughness test or suffer an additional wound (with no saves allowed)</SpecialRuleDescription>
+				<Test Bet="Wound" Context="Wound">Toughness</Test>
 				<Description>Any model wounded by the Soul Cleaver (after saves, etc) must pass a Toughness test or suffer an additional wound (with no saves allowed).</Description>
 			</Artefact>
 			<Artefact>
@@ -248,7 +248,7 @@
 				<Type>Armour</Type>
 				<Points>20</Points>
 				<AddToArmour>4</AddToArmour>
-				<SpecialRuleDescription>Strength 4 hit for each successful armour save</SpecialRuleDescription>
+				<Test Bet="Pass" Context="Round">Leadership</Test>
 				<Description>The Crimson Armour is a suit of Chaos armour. In addition, any model wishing to attack the wearer in close combat must first pass a Leadership test or they may not attack that combat round.</Description>
 				<OnlyForGroup>Mortal</OnlyForGroup>
 			</Artefact>
@@ -262,7 +262,7 @@
 					<OnlyIf>Mark of Slaanesh</OnlyIf>
 				</OnlyIfAnotherService>
 				<OnlyForGroup>Mortal</OnlyForGroup>
-				<SpecialRuleDescription>Enemy models in base contact must pass a Leadership test or may not make any attacks that round and any attacks made against this models will hit automatically</SpecialRuleDescription>
+				<Test Bet="Pass" Context="Round">Leadership</Test>
 				<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take a Leadership test at the start of every Close Combat phase. Any model which fails is transfixed and may not make any attacks that round, and any attacks made against it by the bearer will hit automatically.</Description>
 			</Artefact>
 			<Artefact>
@@ -270,7 +270,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>45</Points>
 				<OnlyForGroup>Mortal</OnlyForGroup>
-				<SpecialRuleDescription>Enemy models must pass a Strength test or lose one wound</SpecialRuleDescription>
+				<Test Bet="Wound" Context="Round">Strength</Test>
 				<Description>At the start of every Chaos Magic phase, any enemy models in contact with the wearer must pass a Strength test or lose one wound, with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
@@ -466,7 +466,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Nurgle</OnlyIf>
 				</OnlyIfAnotherService>
-				<SpecialRuleDescription>Any enemy model in contact at the start of the Chaos Magic phase must pass a Toughness test or suffer a wound Armour saves are not allowed</SpecialRuleDescription>
+				<Test Bet="Wound" Context="Round">Toughness</Test>
 				<Description>Any enemy model in contact with the banner bearer at the start of the Chaos Magic phase must pass a Toughness test or suffer a wound Armour saves are not allowed. This banner has no effect on models with the Mark of Nurgle or Clan Pestilens Skaven</Description>
 			</Artefact>
 			<Artefact>
@@ -716,7 +716,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Slaanesh</OnlyIf>
 				</OnlyIfAnotherService>
-				<SpecialRuleDescription>At the beginning of the Close Combat phase, select one model in base contact, the target must pass a Ld test or may not make any attacks in that phase</SpecialRuleDescription>
+				<Test Bet="Pass" Context="Round">Leadership</Test>
 				<Description>At the beginning of the Close Combat phase, select one model in base contact with the Daemon. The target must pass a Leadership test or may not make any attacks in that Close Combat phase. Models immune to psychology cannot be affected.</Description>
 			</Artefact>
 		</ArtefactsGroup>
