@@ -147,7 +147,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.ParamTests = ParamParse(additionalParam);
 
                 newUnit.SlotOf = SlotsParse(additionalParam);
-                newUnit.NoSlotOfCore = BoolParse(additionalParam["NoSlotOfCore"]);
+                newUnit.NoCoreSlot = BoolParse(additionalParam["NoCoreSlot"]);
 
                 if (newUnit.Frenzy)
                     xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(ArmyBook.Other.AddFrenzyAttack(xml));

@@ -132,7 +132,7 @@ namespace WarhammerArmyAssembler
         public List<Test.Param> ParamTests { get; set; }
 
         public List<string> SlotOf { get; set; }
-        public bool NoSlotOfCore { get; set; }
+        public bool NoCoreSlot { get; set; }
 
         public int MagicItems { get; set; }
         public int MagicItemCount { get; set; }
@@ -315,8 +315,8 @@ namespace WarhammerArmyAssembler
                 Flail = this.Flail,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
-                
-                NoSlotOfCore = this.NoSlotOfCore,
+
+                NoCoreSlot = this.NoCoreSlot,
 
                 MagicItems = this.MagicItems,
                 MagicItemCount = this.MagicItemCount,

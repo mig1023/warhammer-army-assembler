@@ -45,7 +45,7 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
-                if ((entry.Value.Type != Unit.UnitType.Core) || !entry.Value.NoSlotOfCore)
+                if ((entry.Value.Type != Unit.UnitType.Core) || !entry.Value.NoCoreSlot)
                     units[entry.Value.Type] += 1;
 
                 if (entry.Value.SlotOf != null)
