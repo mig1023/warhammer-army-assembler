@@ -1058,6 +1058,25 @@ namespace WarhammerArmyAssembler
         {
             new Enemy
             {
+                Name = "Snotling Pump Wagon",
+                TestListName = "Snotling Pump Wagon (Orcs&Goblins)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 2,
+                BallisticSkill = 0,
+                Strength = 2,
+                Toughness = 4,
+                Wounds = 3,
+                Initiative = 3,
+                Attacks = 5,
+                Leadership = 4,
+                Unbreakable = true,
+                Armour = 6,
+            },
+
+            new Enemy
+            {
                 Name = "Flagellants",
                 TestListName = "24 Flagellant Warband (The Empire)",
                 Type = UnitType.Rare,
