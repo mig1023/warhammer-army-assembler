@@ -45,13 +45,12 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
-                if ((entry.Value.Type != Unit.UnitType.Core) || !entry.Value.NoSlotsOfCore)
+                if ((entry.Value.Type != Unit.UnitType.Core) || !entry.Value.NoSlotOfCore)
                     units[entry.Value.Type] += 1;
 
-                units[Unit.UnitType.Lord] += entry.Value.SlotsOfLords;
-                units[Unit.UnitType.Hero] += entry.Value.SlotsOfHero;
-                units[Unit.UnitType.Special] += entry.Value.SlotsOfSpecial;
-                units[Unit.UnitType.Rare] += entry.Value.SlotsOfRare;
+                if (entry.Value.SlotOf != null)
+                    foreach (string slot in entry.Value.SlotOf)
+                        units[(Unit.UnitType)Enum.Parse(typeof(Unit.UnitType), slot)] += 1;
             }
 
             return units[type];

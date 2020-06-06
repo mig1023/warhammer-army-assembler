@@ -47,6 +47,19 @@ namespace WarhammerArmyAssembler.ArmyBook
             return xmlNode.InnerText.Replace("|", "\n");
         }
 
+        public static List<string> SlotsParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            List<string> allSlots = new List<string>();
+
+            foreach (XmlNode xmlSlot in xmlNode.SelectNodes("SlotOf"))
+                allSlots.Add(xmlSlot.InnerText);
+
+            return allSlots;
+        }
+
         public static List<Param> ParamParse(XmlNode xmlNode)
         {
             if (xmlNode == null)

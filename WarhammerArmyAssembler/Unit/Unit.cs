@@ -131,11 +131,8 @@ namespace WarhammerArmyAssembler
 
         public List<Test.Param> ParamTests { get; set; }
 
-        public int SlotsOfLords { get; set; }
-        public int SlotsOfHero { get; set; }
-        public int SlotsOfSpecial { get; set; }
-        public int SlotsOfRare { get; set; }
-        public bool NoSlotsOfCore { get; set; }
+        public List<string> SlotOf { get; set; }
+        public bool NoSlotOfCore { get; set; }
 
         public int MagicItems { get; set; }
         public int MagicItemCount { get; set; }
@@ -318,12 +315,8 @@ namespace WarhammerArmyAssembler
                 Flail = this.Flail,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
-
-                SlotsOfLords = this.SlotsOfLords,
-                SlotsOfHero = this.SlotsOfHero,
-                SlotsOfSpecial = this.SlotsOfSpecial,
-                SlotsOfRare = this.SlotsOfRare,
-                NoSlotsOfCore = this.NoSlotsOfCore,
+                
+                NoSlotOfCore = this.NoSlotOfCore,
 
                 MagicItems = this.MagicItems,
                 MagicItemCount = this.MagicItemCount,
@@ -344,6 +337,9 @@ namespace WarhammerArmyAssembler
 
                 ArmyColor = this.ArmyColor
             };
+
+            if (this.SlotOf != null)
+                newUnit.SlotOf = new List<string>(this.SlotOf);
 
             if (this.Mount != null)
                 newUnit.Mount = this.Mount.Clone();

@@ -146,11 +146,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
-                newUnit.SlotsOfLords = IntParse(additionalParam["SlotsOfLords"]);
-                newUnit.SlotsOfHero = IntParse(additionalParam["SlotsOfHero"]);
-                newUnit.SlotsOfSpecial = IntParse(additionalParam["SlotsOfSpecial"]);
-                newUnit.SlotsOfRare = IntParse(additionalParam["SlotsOfRare"]);
-                newUnit.NoSlotsOfCore = BoolParse(additionalParam["NoSlotsOfCore"]);
+                newUnit.SlotOf = SlotsParse(additionalParam);
+                newUnit.NoSlotOfCore = BoolParse(additionalParam["NoSlotOfCore"]);
 
                 if (newUnit.Frenzy)
                     xmlUnit.SelectSingleNode("SpecialRulesAndAmmunition").AppendChild(ArmyBook.Other.AddFrenzyAttack(xml));
