@@ -362,5 +362,62 @@
 		</Mount>
 	</Mounts>
 	<Units>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Saurus Warrior</Name>
+			<Points>11</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<PredatoryFighter>true</PredatoryFighter>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard Bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Spawn Leader</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
