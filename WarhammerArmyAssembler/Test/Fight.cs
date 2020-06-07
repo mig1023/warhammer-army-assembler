@@ -468,7 +468,7 @@ namespace WarhammerArmyAssembler.Test
 
                 if (additionalAttack)
                 {
-                    Test.Data.Console(Test.Data.supplText, "<-- {0} have additional attack by predatory fighter rule", unit.Name);
+                    Test.Data.Console(Test.Data.supplText, " <-- {0} have additional attack by predatory fighter rule", unit.Name);
                     attackNumber += 1;
                 }
             }
@@ -625,9 +625,8 @@ namespace WarhammerArmyAssembler.Test
                     Test.Data.Console(Test.Data.text, "\n{0} --> hit ", unit.Name);
                 else
                 {
-                    Test.Data.Console(Test.Data.text, "\n{0} --> hit ( ", unit.Name);
-                    Test.Data.Console(Test.Data.supplText, "{0} impact hit", impactLine);
-                    Test.Data.Console(Test.Data.text, " )");
+                    Test.Data.Console(Test.Data.text, "\n{0} --> hit", unit.Name);
+                    Test.Data.Console(Test.Data.supplText, " ({0} impact hit)", impactLine);
                 }
 
                 int diceForHit = 0;
@@ -862,7 +861,7 @@ namespace WarhammerArmyAssembler.Test
                 chance = 6;
             else if ((strength + 2) < enemy.Toughness)
             {
-                Test.Data.Console(Test.Data.text, "(impossible)");
+                Test.Data.Console(Test.Data.supplText, "(impossible)");
                 return false;
             }
 
