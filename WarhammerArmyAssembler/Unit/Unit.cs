@@ -46,6 +46,7 @@ namespace WarhammerArmyAssembler
             ["StrengthInNumbers"] = "Strength in numbers!",
             ["Lance"] = "Lance",
             ["Flail"] = "Flail",
+            ["PredatoryFighter"] = "Predatory Fighter",
         };
 
         public string Name { get; set; }
@@ -128,6 +129,7 @@ namespace WarhammerArmyAssembler
         public bool HellPitAbomination { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
+        public bool PredatoryFighter { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -313,6 +315,7 @@ namespace WarhammerArmyAssembler
                 HellPitAbomination = this.HellPitAbomination,
                 Lance = this.Lance,
                 Flail = this.Flail,
+                PredatoryFighter = this.PredatoryFighter,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 

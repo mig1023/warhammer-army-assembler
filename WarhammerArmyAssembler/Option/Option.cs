@@ -61,6 +61,7 @@ namespace WarhammerArmyAssembler
         public bool SteamTank { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
+        public bool PredatoryFighter { get; set; }
         public bool BigWeapon { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
@@ -183,6 +184,7 @@ namespace WarhammerArmyAssembler
                 StrengthInNumbers = this.StrengthInNumbers,
                 ImpactHit = this.ImpactHit,
                 SteamTank = this.SteamTank,
+                PredatoryFighter = this.PredatoryFighter,
 
                 Lance = this.Lance,
                 Flail = this.Flail,

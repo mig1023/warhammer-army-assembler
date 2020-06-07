@@ -143,6 +143,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.HellPitAbomination = BoolParse(additionalParam["HellPitAbomination"]);
                 newUnit.Lance = BoolParse(additionalParam["Lance"]);
                 newUnit.Flail = BoolParse(additionalParam["Flail"]);
+                newUnit.PredatoryFighter = BoolParse(additionalParam["PredatoryFighter"]);
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
@@ -216,6 +217,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.SteamTank = BoolParse(xmlNode["SteamTank"]);
             newWeapon.Lance = BoolParse(xmlNode["Lance"]);
             newWeapon.Flail = BoolParse(xmlNode["Flail"]);
+            newWeapon.PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 

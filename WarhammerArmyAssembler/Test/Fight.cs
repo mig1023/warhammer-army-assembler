@@ -462,9 +462,15 @@ namespace WarhammerArmyAssembler.Test
 
             for (int i = 0; i < attackNumber; i++)
             {
-                int wounded = Attack(ref unit, ref enemy, round, impactHit, impactLine);
+                int wounded = Attack(ref unit, ref enemy, round, out bool additionalAttack, impactHit, impactLine);
                 roundWounds += wounded;
                 enemy.Wounds -= wounded;
+
+                if (additionalAttack)
+                {
+                    Test.Data.Console(Test.Data.supplText, "<-- {0} have additional attack by predatory fighter rule", unit.Name);
+                    attackNumber += 1;
+                }
             }
 
             enemy.Wounds = Unit.ParamNormalization(enemy.Wounds, onlyZeroCheck: true);
@@ -605,10 +611,11 @@ namespace WarhammerArmyAssembler.Test
             return false;
         }
 
-        private static int Attack(ref Unit unit, ref Unit enemy, int round, bool impactHit = false, string impactLine = "")
+        private static int Attack(ref Unit unit, ref Unit enemy, int round, out bool additionalAttack, bool impactHit = false, string impactLine = "")
         {
             attackIsPoisoned = false;
             attackWithKillingBlow = false;
+            additionalAttack = false;
 
             int woundsAtStart = enemy.Wounds;
 
@@ -623,9 +630,14 @@ namespace WarhammerArmyAssembler.Test
                     Test.Data.Console(Test.Data.text, " )");
                 }
 
-                if (impactHit || Hit(unit, enemy, round))
+                int diceForHit = 0;
+
+                if (impactHit || Hit(unit, enemy, round, out diceForHit))
                 {
                     Param.Tests(ref enemy, unit, context: Param.ContextType.Hit);
+
+                    if (unit.PredatoryFighter && (diceForHit == 6))
+                        additionalAttack = true;
 
                     if (enemy.Wounds <= 0)
                         return woundsAtStart;
@@ -806,9 +818,10 @@ namespace WarhammerArmyAssembler.Test
             return false;
         }
 
-        private static bool Hit(Unit unit, Unit enemy, int round)
+        private static bool Hit(Unit unit, Unit enemy, int round, out int dice)
         {
             int chance = 4;
+            dice = 0;
 
             if (unit.AutoHit || enemy.SteamTank)
             {
@@ -820,7 +833,7 @@ namespace WarhammerArmyAssembler.Test
             else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)
                 chance = 5;
 
-            return Dice.Roll (unit, Dice.Types.WS, enemy, chance, round: round);
+            return Dice.Roll (unit, Dice.Types.WS, enemy, chance, dice: out dice, round: round);
         }
 
         private static bool Wound(Unit unit, Unit enemy, int round)
