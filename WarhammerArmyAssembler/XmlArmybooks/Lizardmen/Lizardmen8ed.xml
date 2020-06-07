@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArmyBook>
+	<Info>
+		<ArmyName>Lizardmen</ArmyName>
+		<ArmyBookVersion>8</ArmyBookVersion>
+		<MainColor>#FF30BBA9</MainColor>
+		<AdditionalColor>#FF0F7668</AdditionalColor>
+		<BackgroundColor>#FFB0ECE2</BackgroundColor>
+		<ArmyBookImage>Lizardmen8ed.png</ArmyBookImage>
+		<SymbolImage>Lizardmen.png</SymbolImage>
+	</Info>
+	<Artefacts>
+		<ArtefactsGroup Name = "Magic weapons">	
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic armour">	
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Enchanted items">	
+			
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Arcane items">	
+				
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Talismans">	
+			
+		</ArtefactsGroup>
+	</Artefacts>
+	
+	<Heroes>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Lord Mazadamundi</Name>
+			<Group>Slann</Group>
+			<Wizard>4</Wizard>
+			<Points>780</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Zlaaq</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Lord Mazadamundi, Lord of the Solar-City</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<Stubborn>true</Stubborn>
+				<UnitStrength>5</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>At the start of each friendly Magic phase, before dice are rolled to determine the strength of the Winds of Magic, you may pick two friendly Wizards with this special rule anywhere on the battlefield and they may exchange a single spell with each other. In subsequent turns, a different pairing of Wizards with this special rule may be chosen</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows all the spells from his chosen Lore of Magic</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-rolls its first failed dispel attempt in each Magic phase</SpecialRuleDescription>
+					<SpecialRuleDescription>Rolls two additional dice whenever he attempts to channel power or dispel dice</SpecialRuleDescription>
+					<SpecialRuleDescription>When rollint on the Miscast table, can choose to subtract one from the result or add one to the result</SpecialRuleDescription>
+					<SpecialRuleDescription>If this model is alive at the end of any friendly Magic phase, roll a number of D6 equal to the difference between the Slann Mage-Priest's starting number of Wounds and its current number of Wounds. For each roll of a 6, the Slann Mage-Priest immediately recovers a single Wound lost earlier in the battle.</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Cobra Mace of Mazadamundi</Name>
+					<HitFirst>true</HitFirst>
+					<PoisonAttack>true</PoisonAttack>
+					<SpecialRuleDescription>Destruction of magic weapons</SpecialRuleDescription>
+				</HandWeapon>
+				<Banner>
+					<Name>Sunburst Standard of Hexoatl</Name>
+					<SpecialRuleDescription>Battle Standard Bearer</SpecialRuleDescription>
+					<Type>Banner</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+				</Banner>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Lord Kroak, Deliverer of Itza</Name>
+			<Group>Slann</Group>
+			<Wizard>4</Wizard>
+			<Points>400</Points>
+			<Description>Lord Kroak</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>1</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>3</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<Unbreakable>true</Unbreakable>
+				<Fear>true</Fear>
+				<UnitStrength>6</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows only one spell - The Deliverance of Itza: a direct damage spell that targets all enemy units within 12". Each target suffers 2D6 Strength 4 hits. If a target has the Daemonic, Undead or Nehekharan Undead special rule, it suffers 3D6 hits instead</SpecialRuleDescription>
+					<SpecialRuleDescription>If Lord Kroak joins a unit of Temple Guard, all models in the combined unit gain the Unbreakable special rule</SpecialRuleDescription>
+					<SpecialRuleDescription>Lord Kroak can cast The Deliverance of Itza as many times per turn as he has sufficient power dice</SpecialRuleDescription>
+					<SpecialRuleDescription>Lord Kroak's Wizard level can never be reduced to less than 1</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Golden Death Mask</Name>
+					<SpecialRuleDescription>All shooting or close combat attacks against Lord Kroak, or any unit he joins, suffer a -1 penalty on To Hit rolls</SpecialRuleDescription>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Kroq-Gar</Name>
+			<Group>Saurus</Group>
+			<Points>520</Points>
+			<MinSize>1</MinSize>
+			<Description>Kroq-Gar, Last Defender of Xhotl</Description>
+			<MountInit>Grymloq</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>	
+				<Armour>4</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<PredatoryFighter>true</PredatoryFighter>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand of Gods</Name>
+					<SpecialRuleDescription>Bound spell (power level 3). Hand of Gods contains the spell Shem's Burning Gaze</SpecialRuleDescription>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Revered Spear of Tlanxla</Name>
+					<AddToStrength>1</AddToStrength>
+					<MultiWounds>2</MultiWounds>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+	</Heroes>
+	<Mounts>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Zlaaq</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<Stubborn>true</Stubborn>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<UnitStrength>5</UnitStrength>
+				<ImpactHit>D6+1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Grymloq</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>7</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<MultiWounds>D3</MultiWounds>
+				<UnitStrength>5</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>If Kroq-Gar is ever killed, Grymloq automatically passes his Monster Reaction test and immediately becomes subject to Frenzy. In addition, Grymloq never loses his Frenzy</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Swiftstride</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+	</Mounts>
+	<Units>
+	</Units>
+</ArmyBook>
