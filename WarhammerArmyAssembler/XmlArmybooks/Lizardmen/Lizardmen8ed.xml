@@ -419,5 +419,74 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Skink Cohort</Name>
+			<Points>5</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Lustrian javelin</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Kroxigor</Name>
+					<Type>Option</Type>
+					<Points>55</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Poisoned attacks</Name>
+					<PoisonAttack>true</PoisonAttack>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard Bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Skink Brave</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
