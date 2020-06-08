@@ -151,12 +151,26 @@ namespace WarhammerArmyAssembler.Interface
             Move(MovingType.ToTop, err: true);
         }
 
+        public static void CheckAndExportTo(bool toPDF = false, bool fullRules = false)
+        {
+            if (!Army.Checks.IsArmyValid())
+                MessageBox.Show(Army.Checks.ArmyProblems());
+            else
+                if (toPDF)
+                    Export.PDF.SaveArmy(fullRules);
+                else
+                    Export.Text.SaveArmy();
+
+            Move(MovingType.ToMain, menu: true);
+        }
+
         public static void MainMenu()
         {
             List<string> buttonName = new List<string>
             {
                 "Change Armybook",
                 "Export Army to PDF",
+                "Export Army to PDF (light)",
                 "Export Army to TXT",
                 "Exit",
                 "Close"
@@ -166,6 +180,7 @@ namespace WarhammerArmyAssembler.Interface
             {
                 main.toNewArmy_MouseDown,
                 main.saveArmyToPDF_MouseDown,
+                main.saveArmyToPDF_light_MouseDown,
                 main.saveArmyToTXT_MouseDown,
                 main.closeWindow_MouseLeftButtonDown,
                 main.closeMainMenu_MouseDown,

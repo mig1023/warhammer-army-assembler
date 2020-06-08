@@ -17,7 +17,7 @@ namespace WarhammerArmyAssembler.Export
 
         static float currentY;
 
-        public static string SaveArmy()
+        public static string SaveArmy(bool fullRules = false)
         {
             string fileName = Export.Other.GetFileName("pdf");
 
@@ -43,11 +43,15 @@ namespace WarhammerArmyAssembler.Export
                     AddText(String.Format("{0}", Export.Other.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
                     AddText(String.Format("{0}{1}", unit.Name, Export.Other.UnitPointsLine(unit)), lineHeight: 10);
 
-                    foreach (string param in new List<string> {
-                        unit.GetEquipmentLine(),
-                        unit.GetSpecialRulesLine(),
-                        unit.GetModifiedParamsLine()
-                    })
+                    List<string> linesForEachUnit = new List<string> { unit.GetEquipmentLine() };
+
+                    if (fullRules)
+                    {
+                        linesForEachUnit.Add(unit.GetSpecialRulesLine());
+                        linesForEachUnit.Add(unit.GetModifiedParamsLine());
+                    }
+
+                    foreach (string param in linesForEachUnit)
                         foreach (string line in Interface.Other.WordSplit(param, partLength: 210))
                             if (!String.IsNullOrEmpty(line))
                                 AddText(line, fontSize: 6, lineHeight: 8);

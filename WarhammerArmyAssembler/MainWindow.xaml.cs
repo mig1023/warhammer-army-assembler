@@ -394,22 +394,17 @@ namespace WarhammerArmyAssembler
 
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Army.Checks.IsArmyValid())
-                Export.PDF.SaveArmy();
-            else 
-                MessageBox.Show(Army.Checks.ArmyProblems());
+            Interface.Changes.CheckAndExportTo(toPDF: true, fullRules: true);
+        }
 
-            Interface.Changes.Move(Interface.Changes.MovingType.ToMain, menu: true);
+        public void saveArmyToPDF_light_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Interface.Changes.CheckAndExportTo(toPDF: true);
         }
 
         public void saveArmyToTXT_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Army.Checks.IsArmyValid())
-                Export.Text.SaveArmy();
-            else
-                MessageBox.Show(Army.Checks.ArmyProblems());
-
-            Interface.Changes.Move(Interface.Changes.MovingType.ToMain, menu: true);
+            Interface.Changes.CheckAndExportTo(toPDF: false);
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
