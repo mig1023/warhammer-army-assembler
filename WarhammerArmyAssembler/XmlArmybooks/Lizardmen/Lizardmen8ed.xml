@@ -338,6 +338,23 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
+			<Name>Skink Rider</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
 			<Name>Stegadon</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -955,7 +972,7 @@
 				<ImmuneToPsychology>true</ImmuneToPsychology>
 				<ImpactHit>D6+1</ImpactHit>
 				<Stubborn>true</Stubborn>
-				<UnitStrength>10</UnitStrength>
+				<UnitStrength>5</UnitStrength>
 				<Terror>true</Terror>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1064,6 +1081,184 @@
 					<Type>Option</Type>
 					<FullCommand>true</FullCommand>
 					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Ancient Stegadon</Name>
+			<Points>230</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MountInit>Skink Crew</MountInit>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<ImpactHit>D6+1</ImpactHit>
+				<Stubborn>true</Stubborn>
+				<UnitStrength>5</UnitStrength>
+				<Terror>true</Terror>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+				</Special>
+				<RangeWeapon>
+					<Name>Giant blowpapies</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Unstoppable Stampede</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Sharpened Horns</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Engine of the Gods</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Salamander Hunting Pack</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>4</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<Fear>true</Fear>
+				<UnitStrength>3</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>A unit consists of a number of monstrous beasts and infantry handlers. Although they are monstrous beasts and not monsters, they follow all the rules for Monsters and Handlers, as described in the Warhammer rulebook</SpecialRuleDescription>
+					<SpecialRuleDescription>Spout Flames Attacks</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional skink per pack</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<PerModel>true</PerModel>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Razordon Hunting Pack</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>4</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>A unit consists of a number of monstrous beasts and infantry handlers. Although they are monstrous beasts and not monsters, they follow all the rules for Monsters and Handlers, as described in the Warhammer rulebook</SpecialRuleDescription>
+					<SpecialRuleDescription>If charged, a Razordon Hunting Pack must Stand and Shoot if it is able to do so. However, when calculating the number of shots fired, each Razordon can re-roll the artillery dice</SpecialRuleDescription>
+					<SpecialRuleDescription>Shoot Barbs attacks</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional skink per pack</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>4</Points>
+					<PerModel>true</PerModel>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Troglodon</Name>
+			<Points>200</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MountInit>Skink Rider</MountInit>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<UnitStrength>5</UnitStrength>
+				<Terror>true</Terror>
+				<PoisonAttack>true</PoisonAttack>
+				<PredatoryFighter>true</PredatoryFighter>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRuleDescription>
+					<SpecialRuleDescription>Once per battle, at the start of any friendly Close Combat phase, a Troglodon can unleash its Primeval Roar. This affects the Troglodon, and all friendly units within 12". All models in these units that have the Predatory Fighter special rule gain an additional Attack on any successful To Hit roll of a 5 or 6 (instead of just a 6) until the end of the phase</SpecialRuleDescription>
+					<SpecialRuleDescription>Spit Venom shooting attack</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Divining Rod</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
 				</Option>
 			</Options>
 		</Unit>
