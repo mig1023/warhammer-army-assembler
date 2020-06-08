@@ -8,7 +8,7 @@ namespace WarhammerArmyAssembler
 {
     public class Option : INotifyPropertyChanged
     {
-        public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption }
+        public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption, Powers }
 
         public enum OnlyForType { All, Infantry, Mount }
 
@@ -263,20 +263,19 @@ namespace WarhammerArmyAssembler
                 return false;
         }
 
+        public bool IsPowers()
+        {
+            return (this.Type == OptionType.Powers);
+        }
+
         public bool IsOption()
         {
-            if (this.Type == OptionType.Option || this.Type == OptionType.SlannOption)
-                return true;
-            else
-                return false;
+            return (this.Type == OptionType.Option || this.Type == OptionType.SlannOption);
         }
 
         public bool IsSlannOption()
         {
-            if (this.Type == OptionType.SlannOption)
-                return true;
-            else
-                return false;
+            return (this.Type == OptionType.SlannOption);
         }
 
         private bool TypeAndPointsSatisfy(Unit.MagicItemsTypes itemsType, int itemsPoints, int itemsCout)
@@ -298,7 +297,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsActual()
         {
-            return (IsOption() && Realised) || IsMagicItem();
+            return (IsOption() && Realised) || IsMagicItem() || IsPowers();
         }
 
         public bool IsUsableByUnit(Unit unit)
