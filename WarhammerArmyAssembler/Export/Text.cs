@@ -10,8 +10,8 @@ namespace WarhammerArmyAssembler.Export
         {
             string fileName = Export.Other.GetFileName("txt");
 
-            Add(fileName, String.Format("{0} // {1}", Army.Data.Name, Export.Other.GetArmyName()));
-            Add(fileName, String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyVersion));
+            Add(fileName, Export.Other.AllArmyName());
+            Add(fileName, Export.Other.AllArmyPointsAndEdition());
             Add(fileName);
 
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
@@ -24,8 +24,8 @@ namespace WarhammerArmyAssembler.Export
 
                     string equipmentLine = unit.GetEquipmentLine();
 
-                    Add(fileName, String.Format("{0}{1} ({2} pts){3}{4}",
-                        Export.Other.UnitSizeIfNeed(unit), unit.Name, unit.GetUnitPoints(), 
+                    Add(fileName, String.Format("{0}{1}{2}{3}{4}",
+                        Export.Other.UnitSizeIfNeed(unit), unit.Name, Export.Other.UnitPointsLine(unit), 
                         (String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": "),
                         equipmentLine)
                     );

@@ -45,5 +45,20 @@ namespace WarhammerArmyAssembler.Export
         {
             return (unit.IsHeroOrHisMount() ? String.Empty : unit.Size.ToString() + ' ');
         }
+
+        static public string UnitPointsLine(Unit unit)
+        {
+            return (unit.GetUnitPoints() > 0 ? String.Format(" ({0} pts)", unit.GetUnitPoints()) : String.Empty);
+        }
+
+        static public string AllArmyName()
+        {
+            return String.Format("{0} // {1}", Army.Data.Name, GetArmyName());
+        }
+
+        static public string AllArmyPointsAndEdition()
+        {
+            return String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyVersion);
+        }
     }
 }

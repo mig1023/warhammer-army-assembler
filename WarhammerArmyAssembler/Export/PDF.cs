@@ -31,8 +31,8 @@ namespace WarhammerArmyAssembler.Export
             cb = writer.DirectContent;
             cb.SetColorFill(BaseColor.BLACK);
 
-            AddText(String.Format("{0} // {1}", Army.Data.Name, Export.Other.GetArmyName()), fontSize: 20, lineHeight: 18, leftColumn: true);
-            AddText(String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyVersion), fontSize: 12, lineHeight: 22, leftColumn: true);
+            AddText(Export.Other.AllArmyName(), fontSize: 20, lineHeight: 18, leftColumn: true);
+            AddText(Export.Other.AllArmyPointsAndEdition(), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
@@ -41,7 +41,7 @@ namespace WarhammerArmyAssembler.Export
                 foreach (Unit unit in unitType.Items)
                 {
                     AddText(String.Format("{0}", Export.Other.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
-                    AddText(String.Format("{0} ({1} pts)", unit.Name, unit.GetUnitPoints()), lineHeight: 10);
+                    AddText(String.Format("{0}{1}", unit.Name, Export.Other.UnitPointsLine(unit)), lineHeight: 10);
 
                     foreach (string param in new List<string> {
                         unit.GetEquipmentLine(),
