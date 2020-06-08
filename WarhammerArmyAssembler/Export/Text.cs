@@ -11,7 +11,7 @@ namespace WarhammerArmyAssembler.Export
             string fileName = Export.Other.GetFileName("txt");
 
             Add(fileName, String.Format("{0} // {1}", Army.Data.Name, Export.Other.GetArmyName()));
-            Add(fileName, String.Format("{0} pts", Army.Data.MaxPoints));
+            Add(fileName, String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyVersion));
             Add(fileName);
 
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();

@@ -32,7 +32,7 @@ namespace WarhammerArmyAssembler.Export
             cb.SetColorFill(BaseColor.BLACK);
 
             AddText(String.Format("{0} // {1}", Army.Data.Name, Export.Other.GetArmyName()), fontSize: 20, lineHeight: 18, leftColumn: true);
-            AddText(String.Format("{0} pts", Army.Data.MaxPoints), fontSize: 12, lineHeight: 22, leftColumn: true);
+            AddText(String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyVersion), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
