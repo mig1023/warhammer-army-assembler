@@ -226,8 +226,6 @@ namespace WarhammerArmyAssembler
                 bool usable = ArmyBook.Data.Artefact[id].IsUsableByUnit(unit);
                 e.Effects = (usable && enabled ? DragDropEffects.Copy : DragDropEffects.None);
             }
-            else
-                e.Effects = DragDropEffects.None;
         }
 
         private void ArmyGrid_MouseDown(object sender, MouseButtonEventArgs e)
