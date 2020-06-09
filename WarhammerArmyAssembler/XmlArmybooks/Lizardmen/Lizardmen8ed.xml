@@ -347,6 +347,95 @@
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Chakax</Name>
+			<Group>Saurus</Group>
+			<Points>270</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Chakax, The Eternity Warden</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+				<PredatoryFighter>true</PredatoryFighter>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Whilst Chakax is part of a combined unit that contains both a model with the Mage-Priest Palanquin special rule and Temple Guard, all models in the combined unit gain the Unbreakable special rule.</SpecialRuleDescription>
+					<SpecialRuleDescription>Chakax must always issue a challenge, and can never refuse one</SpecialRuleDescription>
+					<Reroll>ToHit</Reroll>
+				</Special>
+				<HandWeapon>
+					<Name>The Star-stone Mace</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitFirst>true</HitFirst>
+					<SpecialRuleDescription>At the start of every Close Combat phase, all enemy models in base contact with Chakax must reveal their magic items. If Chakax scores one or more hits against a model with any magic items, roll a D6; on a 5+ one randomly determined magic item is immediately destroyed and cannot be used further in this game</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Helm of Prime Guardian</Name>
+					<SpecialRuleDescription>Enemy units with the Scouts special rule may not use their special deployment to set up within 20" of Chakax</SpecialRuleDescription>
+					<SpecialRuleDescription>If an enemy unit within 20" of Chakax contains 'hidden' models, their presence must be announced as soon as they come within 20" of Chakax</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Key to the Eternity Chamber</Name>
+					<AddToWard>5</AddToWard>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Gor-Rok</Name>
+			<Group>Saurus</Group>
+			<Points>185</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Gor-Rok, The Great White Lizard</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Stubborn>true</Stubborn>
+				<ColdBlooded>true</ColdBlooded>
+				<PredatoryFighter>true</PredatoryFighter>
+				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<UnitStrength>2</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>If Gor-Rok suffers an unsaved Wound from an attack that has the Killing Blow, Heroic Killing Blow or Multiple Wounds special rule, roll a D6; on a 2+ he only suffers 1 Wound, regardless of how many Wounds would normally be caused. On the roll of a 1, he suffers the full number of Wounds</SpecialRuleDescription>
+				</Special>
+				<Armour>
+					<Name>The Shield of Aeons</Name>
+					<AddToArmour>5</AddToArmour>
+					<SpecialRuleDescription>Any enemy model that makes a successful charge against Gor-Rok and ends the Movement phase in base contact with him must immediately take a Dangerous Terrain test with a -1 penalty</SpecialRuleDescription>
+				</Armour>
+				<HandWeapon>
+					<Name>The Mace of Ulamak</Name>
+					<Reroll>ToHit</Reroll>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
