@@ -240,6 +240,11 @@ namespace WarhammerArmyAssembler
             return alreayUsed;
         }
 
+        public double GetUnitMagicPowersPoints()
+        {
+            return MagicPowers;
+        }
+
         public double MagicPowersPointsAlreadyUsed()
         {
             double alreayUsed = 0;
@@ -603,7 +608,7 @@ namespace WarhammerArmyAssembler
                 {
                     bool realise = false;
 
-                    if (option.IsMagicItem())
+                    if (option.IsMagicItem() || option.IsPowers())
                         unit.Options.Remove(option);
                     else
                     {
@@ -672,6 +677,10 @@ namespace WarhammerArmyAssembler
                 if (!String.IsNullOrEmpty(option.Name) && thisIsRealised && thisIsNotMountOrFC)
                     equipment += String.Format("{0}; ", option.Name);
             }
+
+            foreach (Option option in Options)
+                if (!String.IsNullOrEmpty(option.Name) && option.IsPowers())
+                    equipment += String.Format("{0}; ", option.Name);
 
             if (!String.IsNullOrEmpty(equipment))
                 equipment = equipment.Remove(equipment.Length - 2);
@@ -945,6 +954,15 @@ namespace WarhammerArmyAssembler
         {
             foreach (Option option in Options)
                 if (option.IsMagicItem() && (option.Points > 0))
+                    return true;
+
+            return false;
+        }
+
+        public bool ExistsMagicPowers()
+        {
+            foreach (Option option in Options)
+                if (option.Type == Option.OptionType.Powers)
                     return true;
 
             return false;

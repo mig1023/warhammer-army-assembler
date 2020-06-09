@@ -305,6 +305,9 @@ namespace WarhammerArmyAssembler
             if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.GetGroup()))
                 return false;
 
+            if (IsPowers() && (unit.MagicPowers <= 0))
+                return false;
+
             if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems, unit.MagicItemCount))
                 return true;
 

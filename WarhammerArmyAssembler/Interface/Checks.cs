@@ -39,7 +39,7 @@ namespace WarhammerArmyAssembler.Interface
             else
                 alreadyUsedPonts = unit.MagicPointsAlreadyUsed();
 
-            double magicPoints = (isPowers ? unit.MagicPowers : unit.GetUnitMagicPoints());
+            double magicPoints = (isPowers ? unit.GetUnitMagicPowersPoints() : unit.GetUnitMagicPoints());
 
             bool enoughUnitPoints = ((ArmyBook.Data.Artefact[artefactID].Points + alreadyUsedPonts) <= magicPoints);
 
