@@ -37,6 +37,7 @@ namespace WarhammerArmyAssembler
             ["PoisonAttack"] = "Poison Attack",
             ["MultiWounds"] = "Multiple wounds ([X])",
             ["NoArmour"] = "No Armour",
+            ["NoWard"] = "No Ward",
             ["ArmourPiercing"] = "Armour piercing ([X])",
             ["Reroll"] = "Reroll ([X])",
             ["ImpactHit"] = "Impact Hit ([X])",
@@ -122,6 +123,7 @@ namespace WarhammerArmyAssembler
         public bool PoisonAttack { get; set; }
         public string MultiWounds { get; set; }
         public bool NoArmour { get; set; }
+        public bool NoWard { get; set; }
         public int ArmourPiercing { get; set; }
         public string Reroll { get; set; }
         public string ImpactHit { get; set; }
@@ -325,6 +327,7 @@ namespace WarhammerArmyAssembler
                 PoisonAttack = this.PoisonAttack,
                 MultiWounds = this.MultiWounds,
                 NoArmour = this.NoArmour,
+                NoWard = this.NoWard,
                 ArmourPiercing = this.ArmourPiercing,
                 Reroll = this.Reroll,
                 ImpactHit = this.ImpactHit,

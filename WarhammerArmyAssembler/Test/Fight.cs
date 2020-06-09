@@ -887,7 +887,7 @@ namespace WarhammerArmyAssembler.Test
 
         private static bool NotWard(ref Unit unit, Unit enemy)
         {
-            if (enemy.Ward == null)
+            if ((enemy.Ward == null) || unit.NoWard)
                 return true;
 
             Test.Data.Console(Test.Data.text, " --> ward ");

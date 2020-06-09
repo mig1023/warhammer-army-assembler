@@ -131,6 +131,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
                 newUnit.MultiWounds = StringParse(additionalParam["MultiWounds"]);
                 newUnit.NoArmour = BoolParse(additionalParam["NoArmour"]);
+                newUnit.NoWard = BoolParse(additionalParam["NoWard"]);
                 newUnit.ArmourPiercing = IntParse(additionalParam["ArmourPiercing"]);
                 newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
                 newUnit.MagicItemCount = IntParse(additionalParam["MagicItemCount"]);
@@ -199,6 +200,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
             newWeapon.MultiWounds = StringParse(xmlNode["MultiWounds"]);
             newWeapon.NoArmour = BoolParse(xmlNode["NoArmour"]);
+            newWeapon.NoWard = BoolParse(xmlNode["NoWard"]);
             newWeapon.ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]);
 
             newWeapon.Regeneration = BoolParse(xmlNode["Regeneration"]);

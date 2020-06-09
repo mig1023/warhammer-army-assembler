@@ -43,6 +43,7 @@ namespace WarhammerArmyAssembler
         public bool PoisonAttack { get; set; }
         public string MultiWounds { get; set; }
         public bool NoArmour { get; set; }
+        public bool NoWard { get; set; }
         public int ArmourPiercing { get; set; }
         public string Reroll { get; set; }
         public bool Regeneration { get; set; }
@@ -168,6 +169,7 @@ namespace WarhammerArmyAssembler
                 PoisonAttack = this.PoisonAttack,
                 MultiWounds = this.MultiWounds,
                 NoArmour = this.NoArmour,
+                NoWard = this.NoWard,
                 ArmourPiercing = this.ArmourPiercing,
                 Regeneration = this.Regeneration,
                 ImmuneToPsychology = this.ImmuneToPsychology,
