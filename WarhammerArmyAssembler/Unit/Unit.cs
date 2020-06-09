@@ -806,6 +806,20 @@ namespace WarhammerArmyAssembler
             PropertyInfo unitField = typeof(Unit).GetProperty(name);
             bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out string lineParamValue, out int intParamValue);
 
+            Dictionary<string, string> rerollsLines = new Dictionary<string, string>
+            {
+                ["OpponentToHit"] = "opponent re-roll all succeful rolls to Hit",
+                ["OpponentToWound"] = "opponent re-roll all succeful rolls to Wound",
+                ["OpponentToWard"] = "opponent re-roll all succeful rolls to Ward",
+                ["ToHit"] = "all failed rolls To Hit",
+                ["ToShoot"] = "all failed rolls To Shoot",
+                ["ToWound"] = "all failed rolls To Wound",
+                ["ToLeadership"] = "all failed rolls To Leadership",
+                ["ToArmour"] = "all failed rolls To Armour Save",
+                ["ToWard"] = "all failed rolls To Ward",
+                ["All"] = "all failed rolls",
+            };
+
             if (!onlyUnitParam)
                 foreach (Option option in Options)
                 {
@@ -821,7 +835,10 @@ namespace WarhammerArmyAssembler
                     anyIsTrue = (fromParamValue ? true : anyIsTrue);
 
                     if ((name == "Reroll") && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
-                        lineParamValue += String.Format("{0}{1}", (String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; "), lineOptionValue);
+                    {
+                        string secondElement = (String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ");
+                        lineParamValue += String.Format("{0}{1}", secondElement, rerollsLines[lineOptionValue]);
+                    }
                     else if (fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
                         lineParamValue = lineOptionValue;
 
