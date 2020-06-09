@@ -168,7 +168,7 @@ namespace WarhammerArmyAssembler.Interface
             if (unit.ExistsMagicItems() || (Army.Data.Units[unitID].GetUnitMagicPoints() > 0))
                 margins = CreateColumn("MAGIC ITEMS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
-            if (unit.GetUnitMagicPoints() > 0)
+            if (unit.GetUnitMagicPowersPoints() > 0)
                 margins = CreateColumn("MAGIC POWERS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsOrdinaryItems())
