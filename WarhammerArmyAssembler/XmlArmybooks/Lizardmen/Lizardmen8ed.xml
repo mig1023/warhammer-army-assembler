@@ -10,20 +10,24 @@
 		<SymbolImage>Lizardmen.png</SymbolImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Magic weapons">	
-			
+		<ArtefactsGroup Name = "Disciplines of The Old Ones">	
+			<Artefact>
+				<Name>The Harrowing Scrutiny</Name>
+				<Type>Powers</Type>
+				<Points>30</Points>
+				<Terror>true</Terror>
+				<Description>The Slann Mage-Priest has the Terror special rule</Description>
+			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic armour">	
-			
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Enchanted items">	
-			
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Arcane items">	
-				
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Talismans">	
-			
+		<ArtefactsGroup Name = "Treasures of The Old Ones">	
+			<Artefact>
+				<Name>The Blade of Realities</Name>
+				<Type>Weapon</Type>
+				<Points>100</Points>
+				<NoArmour>true</NoArmour>
+				<SpecialRuleDescription>No armour or ward saves can be taken against Wounds caused by the Blade of Realities</SpecialRuleDescription>
+				<Description>No armour or ward saves can be taken against Wounds caused by the Blade of Realities</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	
@@ -194,22 +198,6 @@
 					<Points>280</Points>
 					<Mount>true</Mount>
 				</Option>
-				<Option>
-					<Name>Unstoppable Stampede</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-					<OnlyIfAnotherService>
-						<OnlyIf>Ancient stegadon</OnlyIf>
-					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>Sharpened Horns</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<OnlyIfAnotherService>
-						<OnlyIf>Ancient stegadon</OnlyIf>
-					</OnlyIfAnotherService>
-				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -229,6 +217,133 @@
 				<HandWeapon>
 					<Name>Plaque of Sotek</Name>
 					<AddToWard>5</AddToWard>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Slann Mage-Priest</Name>
+			<Group>Slann</Group>
+			<Wizard>4</Wizard>
+			<Points>300</Points>
+			<MinSize>1</MinSize>
+			<Description>Slann Mage-Priest</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicPowers>150</MagicPowers>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+				<UnitStrength>5</UnitStrength>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Can always re-roll failed Dangerous Terrain tests. Additionally, while they have the troop type Infantry, they are never considered to be 'models on foot' for the purposes of spells, magic items and special rules</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each friendly Magic phase, before dice are rolled to determine the strength of the Winds of Magic, you may pick two friendly Wizards with this special rule anywhere on the battlefield and they may exchange a single spell with each other</SpecialRuleDescription>
+				</Special>
+				<Armour>
+					<Name>Shield of the Old Ones</Name>
+					<AddToWard>4</AddToWard>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Saurus Oldblood</Name>
+			<Group>Saurus</Group>
+			<Points>140</Points>
+			<MinSize>1</MinSize>
+			<Description>Saurus Oldblood</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+				<PredatoryFighter>true</PredatoryFighter>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast>true</HitLast>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>9</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Carnosaur</Name>
+					<Type>Option</Type>
+					<Points>220</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -415,6 +530,18 @@
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Unstoppable Stampede</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Sharpened Horns</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+				</Option>
+			</Options>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
@@ -446,6 +573,47 @@
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Carnosaur</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>7</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror>true</Terror>
+				<ColdBlooded>true</ColdBlooded>
+				<MultiWounds>D3</MultiWounds>
+				<UnitStrength>5</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Bloodroar</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+				</Option>
+				<Option>
+					<Name>Loping Stride</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+				</Option>
+			</Options>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
