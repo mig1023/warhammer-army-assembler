@@ -194,5 +194,10 @@ namespace WarhammerArmyAssembler.Army
 
             return number;
         }
+
+        public static string MagicPowersName()
+        {
+            return (String.IsNullOrEmpty(Army.Data.MagicPowers) ? "MAGIC POWERS" : Army.Data.MagicPowers.ToUpper());
+        }
     }
 }

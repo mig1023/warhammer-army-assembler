@@ -43,7 +43,7 @@ namespace WarhammerArmyAssembler.Interface
             if (head == "MAGIC ITEMS")
                 return String.Format("{0} / {1}", Army.Data.Units[unitID].MagicPointsAlreadyUsed(), Army.Data.Units[unitID].GetUnitMagicPoints());
 
-            if (head == "MAGIC POWERS")
+            if (head == Army.Params.MagicPowersName())
                 return String.Format("{0} / {1}", Army.Data.Units[unitID].MagicPowersPointsAlreadyUsed(), Army.Data.Units[unitID].GetUnitMagicPowersPoints());
 
             return String.Empty;
@@ -74,7 +74,7 @@ namespace WarhammerArmyAssembler.Interface
             }
             else
             {
-                if ((!unit.ExistsMagicItems() && (head == "MAGIC ITEMS")) || (!unit.ExistsMagicPowers() && (head == "MAGIC POWERS")))
+                if ((!unit.ExistsMagicItems() && (head == "MAGIC ITEMS")) || (!unit.ExistsMagicPowers() && (head == Army.Params.MagicPowersName())))
                 {
                     margins = CheckColumn(margins, ref lastColumnMaxWidth);
                     margins[1] += AddLabel("empty yet", margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
@@ -84,7 +84,7 @@ namespace WarhammerArmyAssembler.Interface
                 else
                     foreach (Option option in unit.Options)
                     {
-                        if (head == "OPTION" || head == "COMMAND" || head == "MAGIC ITEMS" || head == "MAGIC POWERS")
+                        if (head == "OPTION" || head == "COMMAND" || head == "MAGIC ITEMS" || head == Army.Params.MagicPowersName())
                         {
                             if (head == "OPTION" && (!option.IsOption() || option.FullCommand))
                                 continue;
@@ -95,7 +95,7 @@ namespace WarhammerArmyAssembler.Interface
                             if (head == "MAGIC ITEMS" && (!option.IsMagicItem() || (option.Points <= 0)))
                                 continue;
 
-                            if (head == "MAGIC POWERS" && !option.IsPowers())
+                            if (head == Army.Params.MagicPowersName() && !option.IsPowers())
                                 continue;
 
                             margins = CheckColumn(margins, ref lastColumnMaxWidth);
@@ -169,7 +169,7 @@ namespace WarhammerArmyAssembler.Interface
                 margins = CreateColumn("MAGIC ITEMS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.GetUnitMagicPowersPoints() > 0)
-                margins = CreateColumn("MAGIC POWERS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+                margins = CreateColumn(Army.Params.MagicPowersName(), margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsOrdinaryItems())
                 margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
