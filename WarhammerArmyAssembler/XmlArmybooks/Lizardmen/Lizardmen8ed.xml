@@ -12,12 +12,76 @@
 	</Info>
 	<Artefacts>
 		<ArtefactsGroup Name = "Disciplines of The Old Ones">	
+
+			<Artefact>
+				<Name>Reservoir of Eldritch Energy</Name>
+				<Type>Powers</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>At the end of the opponent's Magic phase, the Slann Mage-Priest can store a single unused dispel dice remaining in your pool. At the beginning of your next Magic phase, roll a D6; on a 2 + you can add that dice to your power pool (this cannot take your power pool beyond the normal limit). On the roll of a 1, that bonus dice is lost. If the Slann is slain before his next Magic phase, the bonus dice is lost</SpecialRuleDescription>
+				<Description>At the end of the opponent's Magic phase, the Slann Mage-Priest can store a single unused dispel dice remaining in your pool. At the beginning of your next Magic phase, roll a D6; on a 2 + you can add that dice to your power pool (this cannot take your power pool beyond the normal limit). On the roll of a 1, that bonus dice is lost. If the Slann is slain before his next Magic phase, the bonus dice is lost.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Soul of Stone</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>When rolling on the Miscast table, the Slann Mage-Priest can choose to subtract one from the result (to a minimum of 2), or add one to the result (to a maximum of 12), instead of accepting the original result</SpecialRuleDescription>
+				<Description>When rolling on the Miscast table, the Slann Mage-Priest can choose to subtract one from the result (to a minimum of 2), or add one to the result (to a maximum of 12), instead of accepting the original result.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Becalming Cogitation</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>The Slann Mage-Priest re-rolls its first failed dispel attempt in each Magic phase</SpecialRuleDescription>
+				<Description>The Slann Mage-Priest re-rolls its first failed dispel attempt in each Magic phase.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Wandering Deliberations</Name>
+				<Type>Powers</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Instead of generating spells normally, the Slann Mage-Priest knows the signature spell for each of the eight lores of Battle Magic. This discipline cannot be combined with the Focus of Mystery discipline</SpecialRuleDescription>
+				<Description>Instead of generating spells normally, the Slann Mage-Priest knows the signature spell for each of the eight lores of Battle Magic. This discipline cannot be combined with the Focus of Mystery discipline.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Harmonic Convergence</Name>
+				<Type>Powers</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>The Slann Mage-Priest rolls two additional dice whenever he attempts to channel power or dispel dice</SpecialRuleDescription>
+				<Description>The Slann Mage-Priest rolls two additional dice whenever he attempts to channel power or dispel dice.</Description>
+			</Artefact>
 			<Artefact>
 				<Name>The Harrowing Scrutiny</Name>
 				<Type>Powers</Type>
 				<Points>30</Points>
 				<Terror>true</Terror>
-				<Description>The Slann Mage-Priest has the Terror special rule</Description>
+				<Description>The Slann Mage-Priest has the Terror special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Transcendent Healing</Name>
+				<Type>Powers</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>If this model is alive at the end of any friendly Magic phase, roll a number of D6 equal to the difference between the Slann Mage-Priest's starting number of Wounds and its current number of Wounds. For each roll of a 6, the Slann Mage-Priest immediately recovers a single Wound lost earlier in the battle</SpecialRuleDescription>
+				<Description>If this model is alive at the end of any friendly Magic phase, roll a number of D6 equal to the difference between the Slann Mage-Priest's starting number of Wounds and its current number of Wounds. For each roll of a 6, the Slann Mage-Priest immediately recovers a single Wound lost earlier in the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Unfathomable Presence</Name>
+				<Type>Powers</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Roll a D3 at the start of each enemy Magic phase; the Slann Mage-Priest has the Magic Resistance(x) special rule until the end of that phase, where x is the result of the D3</SpecialRuleDescription>
+				<Description>Roll a D3 at the start of each enemy Magic phase; the Slann Mage-Priest has the Magic Resistance(x) special rule until the end of that phase, where x is the result of the D3.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Focus of Mystery</Name>
+				<Type>Powers</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>The Slann Mage-Priest has the Loremaster (Lore of High Magic) special rule. This discipline cannot be combined with the Wandering Deliberations discipline</SpecialRuleDescription>
+				<Description>The Slann Mage-Priest has the Loremaster (Lore of High Magic) special rule. This discipline cannot be combined with the Wandering Deliberations discipline.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Higher State of Consciousness</Name>
+				<Type>Powers</Type>
+				<Points>60</Points>
+				<SpecialRuleDescription>The Slann Mage-Priest has the Ethereal and Unstable special rules, but cannot join units</SpecialRuleDescription>
+				<Description>The Slann Mage-Priest has the Ethereal and Unstable special rules, but cannot join units.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Treasures of The Old Ones">	
@@ -29,9 +93,80 @@
 				<NoWard>true</NoWard>
 				<Description>No armour or ward saves can be taken against Wounds caused by the Blade of Realities</Description>
 			</Artefact>
+			<Artefact>
+				<Name>The Piranha Blade</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<ArmourPiercing>true</ArmourPiercing>
+				<MultiWounds>D3</MultiWounds>
+				<Description>The wielder has the Multiple Wounds (D3) and Armour Piercing special rules</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sacred Stegadon Helm of Itza</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>40</Points>
+				<AddToArmour>6</AddToArmour>
+				<AddToToughness>1</AddToToughness>
+				<ImpactHit>D3</ImpactHit>
+				<Description>The wearer of the Sacred Stegadon Helm counts his armour save as being one point higher than normal. Furthermore, the Sacred Stegadon Helm grants the wearer +1 Toughness and the Impact Hits (D3) special rule</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Skavenpelt Banner</Name>
+				<Type>Banner</Type>
+				<Points>65</Points>
+				<Franzy>true</Franzy>
+				<Hate>true</Hate>
+				<Description>All models in a unit with the Skavenpelt Banner gain the Frenzy and Hatred (Skaven) special rules. However, all skaven models gain the Hatred special rule while attacking the bearer</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Jaguar Standard</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>All models in a unit with the Jaguar Standard have the Swiftstride special rule</SpecialRuleDescription>
+				<Description>All models in a unit with the Jaguar Standard have the Swiftstride special rule</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Cube of Darkness</Name>
+				<Type>Arcane</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>One use only. When an enemy spell has been cast, a Wizard with the Cube of Darkness can use it instead of attempting to dispel the spell using dispel dice. If he does so, roll a D6; on the roll of a 2+ the spell is automatically dispelled - otherwise the spell is resolved as normal. In either case, roll a separate D6 for every Remains in Play spell currendy in effect; on a 2+ that spell automatically ends</SpecialRuleDescription>
+				<Description>One use only. When an enemy spell has been cast, a Wizard with the Cube of Darkness can use it instead of attempting to dispel the spell using dispel dice. If he does so, roll a D6; on the roll of a 2+ the spell is automatically dispelled - otherwise the spell is resolved as normal. In either case, roll a separate D6 for every Remains in Play spell currendy in effect; on a 2+ that spell automatically ends</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Plaque of Dominion</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Bound spell (power level 3). The Plaque of Dominion contains a hex spell that targets all enemy Wizards within 18". The targets of this spell have the Stupidity special rule until the start of the caster's next Magic phase</SpecialRuleDescription>
+				<Description>Bound spell (power level 3). The Plaque of Dominion contains a hex spell that targets all enemy Wizards within 18". The targets of this spell have the Stupidity special rule until the start of the caster's next Magic phase.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Cloak of Feathers</Name>
+				<Type>Armour</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<OnlyForGroup>Skink</OnlyForGroup>
+				<Points>35</Points>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<Description>Skink character on foot only. The wearer of the Cloak of Feathers has the Fly special rule. In addition, the wearer has the Magic Resistance(1) special rule</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Horn of Kygor</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<Fear>true</Fear>
+				<SpecialRuleDescription>One use only. The bearer of the Horn of Kygor can sound it at the start of any of his Movement phases. If he does so, all friendly monsters, monster mounts, monstrous beasts, monstrous cavalry mounts, cavalry mounts, chariot beasts and war beasts within 12" of the bearer have the Frenzy special rule until the start of their next Movement phase</SpecialRuleDescription>
+				<Description>One use only. The bearer of the Horn of Kygor can sound it at the start of any of his Movement phases. If he does so, all friendly monsters, monster mounts, monstrous beasts, monstrous cavalry mounts, cavalry mounts, chariot beasts and war beasts within 12" of the bearer have the Frenzy special rule until the start of their next Movement phase. Note that the Horn of Kygor has no effect on riders, just their mounts</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Egg of Quango</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<Fear>true</Fear>
+				<SpecialRuleDescription>One use only. The Egg of Quango can be cracked open at the start of any Close Combat phase. Nominate one enemy unit in base contact with the bearer or his unit, roll a D6 and consult the table below to find out what happens</SpecialRuleDescription>
+				<Description>One use only. The Egg of Quango can be cracked open at the start of any Close Combat phase. Nominate one enemy unit in base contact with the bearer or his unit, roll a D6 and consult the table below to find out what happens. Any Wounds inflicted count towards combat results.||D6 - Result|1 - The egg opens and a withered Quango hatchling bites the enemy feebly before dying of old age. The enemy unit immediately suffers D6 Strength 3 hits.|2-3 - A Quango hatchling emerges to bite the enemy with vigour before succumbing to its extreme age. The enemy unit immediately suffers D6 Strength 4 hits.|4-6 - The heavens resound to thunderous peals as a Quango, bursts forth in full glory and casts its radiant hues upon the world. After smiting its foes, it flies off, taking no further part in the battle. The enemy unit immediately suffers 2D6 Strength 5 hits.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
-	
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
