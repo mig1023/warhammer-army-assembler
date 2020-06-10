@@ -302,7 +302,7 @@ namespace WarhammerArmyAssembler
             return (IsOption() && Realised) || IsMagicItem() || IsPowers();
         }
 
-        public bool IsUsableByUnit(Unit unit)
+        public bool IsUsableByUnit(Unit unit, bool addOption = true)
         {
             if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.GetGroup()))
                 return false;
@@ -313,7 +313,7 @@ namespace WarhammerArmyAssembler
                     return false;
 
                 foreach (Option option in unit.Options)
-                    if (option.Name == this.Name)
+                    if (addOption && (option.Name == this.Name))
                         return false;
             }
 
