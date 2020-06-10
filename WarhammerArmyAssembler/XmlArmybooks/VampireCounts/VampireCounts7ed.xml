@@ -8,8 +8,18 @@
 		<BackgroundColor>#FFA2A2A2</BackgroundColor>
 		<ArmyBookImage>VampireCounts7ed.png</ArmyBookImage>
 		<SymbolImage>VampireCounts.png</SymbolImage>
+		<MagicPowers>Vampiric Powers</MagicPowers>
 	</Info>
 	<Artefacts>
+		<ArtefactsGroup Name = "Vampire Powers">
+			<Artefact>
+				<Name>Supernatural Horror</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<Terror>true</Terror>
+				<Description>The Vampire causes Terror</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
@@ -209,6 +219,7 @@
 				<Undead>true</Undead>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
+				<MagicPowers>100</MagicPowers>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -436,6 +447,7 @@
 				<Undead>true</Undead>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
+				<MagicPowers>50</MagicPowers>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
