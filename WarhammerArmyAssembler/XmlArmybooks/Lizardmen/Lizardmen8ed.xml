@@ -8,6 +8,7 @@
 		<BackgroundColor>#FFB0ECE2</BackgroundColor>
 		<ArmyBookImage>Lizardmen8ed.png</ArmyBookImage>
 		<SymbolImage>Lizardmen.png</SymbolImage>
+		<MagicPowers>Disciplines</MagicPowers>
 	</Info>
 	<Artefacts>
 		<ArtefactsGroup Name = "Disciplines of The Old Ones">	
@@ -25,7 +26,7 @@
 				<Type>Weapon</Type>
 				<Points>100</Points>
 				<NoArmour>true</NoArmour>
-				<SpecialRuleDescription>No armour or ward saves can be taken against Wounds caused by the Blade of Realities</SpecialRuleDescription>
+				<NoWard>true</NoWard>
 				<Description>No armour or ward saves can be taken against Wounds caused by the Blade of Realities</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -436,6 +437,371 @@
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Tetto'eko</Name>
+			<Group>Skink</Group>
+			<Points>185</Points>
+			<Wizard>2</Wizard>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Tetto'eko, Astromancer of the Constellations</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Use Lore of Heavens</SpecialRuleDescription>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows all the spells from spells from the Lore of Heavens</SpecialRuleDescription>
+					<SpecialRuleDescription>Roll a D6 at the start of each friendly Magic phase. On a roll of 1, all friendly Wizards casting a spell must re-roll any of the power dice that roll a 6 this phase, but on a roll of 2-6, all friendly Wizards must re-roll power dice rolls of a 1 this phase</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>The Stellar Staff</Name>
+					<SpecialRuleDescription>If Tetto'eko successfully casts the spell Comet of Casandora (see Lore of Heavens), you may re-roll the dice at the start of each Magic phase to see if the comet arrives</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Monor Shield of the Old Ones</Name>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Armour>
+					<Name>Eye of the Old Ones</Name>
+					<SpecialRuleDescription>After deployment, but before Vanguard moves are made, if Tetto'eko is on the battlefield he can consult the Eye of the Old Ones. If he does so, D3 friendly units of your choice gain the Vanguard special rule</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>The Palanquin of Constellations</Name>
+					<SpecialRuleDescription>Can always re-roll failed Dangerous Terrain tests</SpecialRuleDescription>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Taktak'to</Name>
+			<Group>Skink</Group>
+			<Points>170</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Zwup</MountInit>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Taktak'to, Master of Skies</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>If your army contains Tiktaq'to, one unit of Terradon Riders can be upgraded to have the Ambushers special rule</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Blade of Ancient Skies</Name>
+					<NoArmour>true</NoArmour>
+					<SpecialRuleDescription>When fighting against a model with the Fly special rule, attacks made receive a +1 bonus To Hit</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Mask of Heavens</Name>
+					<SpecialRuleDescription>All Terradons in Tiktaq'to's unit use his Weapon Skill instead of their own</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy units suffer an additional -1 To Hit penalty when shooting Tiktaq'to and his unit</SpecialRuleDescription>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Oxyotl</Name>
+			<Group>Skink</Group>
+			<Points>120</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero>true</PersonifiedHero>
+			<Description>Oxyotl, He That Hunts Unseen</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>The Golden Blowpipe of P'Toohee</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<SpecialRuleDescription>Sniper</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy units shooting at a unit of Chameleon Skinks suffer an additional -1 To Hit. Missile weapons that do not roll To Hit are unaffected</SpecialRuleDescription>
+					<SpecialRuleDescription>If Oxyotl remained stationary in his preceding Movement phase, shots made from the Golden Blowpipe of P'Toohee in the Shooting phase wound automatically on any successful To Hit roll of a 5+ (no separate roll To Wound is necessary)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Skink Priest</Name>
+			<Group>Skink</Group>
+			<Points>65</Points>
+			<Wizard>1</Wizard>
+			<MinSize>1</MinSize>
+			<Description>Skink Priest</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Ancient stegadon</Name>
+					<Type>Option</Type>
+					<Points>280</Points>
+					<Mount>true</Mount>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRuleDescription>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Saurus Scar-Veteran</Name>
+			<Group>Saurus</Group>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<Description>Saurus Scar-Veteran</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+				<PredatoryFighter>true</PredatoryFighter>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Helberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast>true</HitLast>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Carnosaur</Name>
+					<Type>Option</Type>
+					<Points>220</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Skink Chief</Name>
+			<Group>Skink</Group>
+			<Points>40</Points>
+			<MinSize>1</MinSize>
+			<Description>Skink Chief</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Blowpipe</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Lustrian javelins</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Terradon</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Ripperdactyl</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Stegadon</Name>
+					<Type>Option</Type>
+					<Points>215</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Ancient stegadon</Name>
+					<Type>Option</Type>
+					<Points>230</Points>
+					<Mount>true</Mount>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -480,6 +846,36 @@
 				<Initiative>2</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>3</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear>true</Fear>
+				<ColdBlooded>true</ColdBlooded>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Once per game, during the Remaining Moves sub-phase, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as for shooting attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Forest Strider</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Zwup</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>3</Leadership>
+				<Armour>6</Armour>
 			</MainParam>
 			<AdditionalParam>
 				<Fear>true</Fear>
