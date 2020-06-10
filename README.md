@@ -6,13 +6,13 @@ Warhammer Army Assembler (WAAgh) - is a quick and simple editor for Warhammer Fa
 
 ### Army lists:
 
-| Armybook | Edition | Status |
-| ------------- | ------------- | ------------- |
-| Orcs & Goblins | 7th Edition | |
-| Lizardmen | 7th Edition | |
-| Scaven | 7th Edition | |
-| High Elves | 7th Edition | |
-| Dark Elves | 7th Edition | |
-| Hordes of Chaos | 6th Edition | |
-| The Emipre | 7th Edition | in progress |
-| Vampire Counts | 7th Edition | in progress |
+| Armybook | 6th Edition | 7th Edition | 8th Edition |
+| ------------- | ------------- | ------------- | ------------- |
+| Orcs & Goblins | | X | |
+| Lizardmen |  | X | X |
+| Scaven | | X | |
+| High Elves | | X | |
+| Dark Elves | | X | |
+| Hordes of Chaos | X |  | |
+| The Emipre | | in progress | |
+| Vampire Counts | | in progress | |
