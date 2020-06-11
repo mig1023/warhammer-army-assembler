@@ -34,6 +34,7 @@ namespace WarhammerArmyAssembler
 
         public void armyVersionLabel_PositionCorrect()
         {
+            UpdateLayout();
             armyVersionLabel.Margin = Interface.Changes.Thick(armyVersionLabel, left: armyMainLabel.Margin.Left + armyMainLabel.ActualWidth - 5);
         }
 
