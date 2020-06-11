@@ -542,12 +542,7 @@ namespace WarhammerArmyAssembler.Test
             else if (unit.Initiative < enemy.Initiative)
                 return false;
             else
-            {
-                if (Dice.Roll(unit, Dice.Types.I, enemy, 4, hiddenDice: true))
-                    return true;
-                else
-                    return false;
-            }
+                return Dice.Roll(unit, Dice.Types.I, enemy, 4, hiddenDice: true);
         }
 
         private static bool BreakTestFail(List<Unit> units, ref Dictionary<int, int> woundInRound)
