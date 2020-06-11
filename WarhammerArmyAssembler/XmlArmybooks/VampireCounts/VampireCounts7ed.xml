@@ -13,11 +13,69 @@
 	<Artefacts>
 		<ArtefactsGroup Name = "Vampire Powers">
 			<Artefact>
+				<Name>Spectral Form</Name>
+				<Type>Powers</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>The Vampire is Ethereal. However, it may not join non-Ethereal units, nor may it be mounted or take any magic items</SpecialRuleDescription>
+				<Description>The Vampire is Ethereal. However, it may not join non-Ethereal units, nor may it be mounted or take any magic items</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ghoulkin</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>If your army contains any Vampires with this power, your units of Crypt Ghouls (and accompanying characters) may make a march move before the game. This move is made after deployment, but before the dice roll for first turn.</SpecialRuleDescription>
+				<Description>If your army contains any Vampires with this power, your units of Crypt Ghouls (and accompanying characters) may make a march move before the game. This move is made after deployment, but before the dice roll for first turn</Description>
+			</Artefact>
+			<Artefact>
 				<Name>Supernatural Horror</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
 				<Terror>true</Terror>
 				<Description>The Vampire causes Terror</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Master of the Black Arts</Name>
+				<Type>Powers</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>The Vampire generates an additional 2 Power dice for itself in each of its own Magic phases</SpecialRuleDescription>
+				<Description>The Vampire generates an additional 2 Power dice for itself in each of its own Magic phases</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Forbidden Lore</Name>
+				<Type>Powers</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>In addition to Invocation of Nehek the Vampire knows all of the spells from either the Lore of the Vampires or any one of the Lores of Magic</SpecialRuleDescription>
+				<Description>In addition to Invocation of Nehek the Vampire knows all of the spells from either the Lore of the Vampires or any one of the Lores of Magic in the Warhammer rulebook (except Lore of Life!)</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dark Acolyte</Name>
+				<Type>Powers</Type>
+				<Points>30</Points>
+				<AddToCast>1</AddToCast>
+				<AddToWizard>1</AddToWizard>
+				<Description>This Vampire has an additional Magic level</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Flying Horror</Name>
+				<Type>Powers</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<Description>This Vampire has the Fly special rule</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Infinite Hatred</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<Reroll>ToHit</Reroll>
+				<Description>The Vampire Hates all enemies and may re-roll failed rolls to hit in every round of close combat</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Hunter in the Dark</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Scout</SpecialRuleDescription>
+				<OnlyFor>Infantry</OnlyFor>
+				<Description>If on foot, the Vampire has the Scout special rule</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
