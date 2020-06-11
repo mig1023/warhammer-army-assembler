@@ -391,7 +391,7 @@ namespace WarhammerArmyAssembler.Test
             Unit tUnit, Unit tEnemy, Unit tMount)
         {
             if (unit.Frenzy)
-                Test.Data.Console(Test.Data.supplText, "\n{0} --> is frenzy", unit.Name);
+                Test.Data.Console(Test.Data.supplText, "\n{0} --> is {1}frenzy", unit.Name, (unit.BloodFrenzy ? "blood " : String.Empty));
 
             int deathInRound = death[unit.ID];
 
@@ -412,12 +412,26 @@ namespace WarhammerArmyAssembler.Test
 
         private static void CheckLostFrenzy(ref Unit unit)
         {
-            if (unit.Frenzy && (unit.Wounds > 0))
+            if (unit.Frenzy && !unit.BloodFrenzy && (unit.Wounds > 0))
             {
                 unit.Frenzy = false;
                 unit.Attacks -= 1;
                 Test.Data.Console(Test.Data.supplText, "\n{0} lost his frenzy", unit.Name);
             }
+        }
+
+        private static bool BecameBloodFrenzy(ref Unit unit)
+        {
+            if (unit.BloodFrenzy && !unit.Frenzy)
+            {
+                unit.Frenzy = true;
+                unit.Attacks += 1;
+                Test.Data.Console(Test.Data.supplText, " <-- {0} become subject to blood frenzy", unit.Name);
+
+                return true;
+            }
+            else
+                return false;
         }
 
         private static Unit CheckTerror(Unit unit, Unit friend, Unit enemy, Unit enemyFriend)
@@ -471,6 +485,8 @@ namespace WarhammerArmyAssembler.Test
                     Test.Data.Console(Test.Data.supplText, " <-- {0} have additional attack by predatory fighter rule", unit.Name);
                     attackNumber += 1;
                 }
+                if ((wounded > 0) && BecameBloodFrenzy(ref unit))
+                    attackNumber += 1;
             }
 
             enemy.Wounds = Unit.ParamNormalization(enemy.Wounds, onlyZeroCheck: true);

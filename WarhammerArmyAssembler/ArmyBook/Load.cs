@@ -118,6 +118,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.Fear = BoolParse(additionalParam["Fear"]);
                 newUnit.Terror = BoolParse(additionalParam["Terror"]);
                 newUnit.Frenzy = BoolParse(additionalParam["Frenzy"]);
+                newUnit.BloodFrenzy = BoolParse(additionalParam["BloodFrenzy"]);
                 newUnit.Unbreakable = BoolParse(additionalParam["Unbreakable"]);
                 newUnit.ColdBlooded = BoolParse(additionalParam["ColdBlooded"]);
                 newUnit.Stupidity = BoolParse(additionalParam["Stupidity"]);
@@ -211,6 +212,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.Fear = BoolParse(xmlNode["Fear"]);
             newWeapon.Terror = BoolParse(xmlNode["Terror"]);
             newWeapon.Frenzy = BoolParse(xmlNode["Frenzy"]);
+            newWeapon.BloodFrenzy = BoolParse(xmlNode["BloodFrenzy"]);
             newWeapon.Unbreakable = BoolParse(xmlNode["Unbreakable"]);
             newWeapon.ColdBlooded = BoolParse(xmlNode["ColdBlooded"]);
             newWeapon.Reroll = StringParse(xmlNode["Reroll"]);

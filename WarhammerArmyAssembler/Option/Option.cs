@@ -53,6 +53,7 @@ namespace WarhammerArmyAssembler
         public bool Fear { get; set; }
         public bool Terror { get; set; }
         public bool Frenzy { get; set; }
+        public bool BloodFrenzy { get; set; }
         public bool Unbreakable { get; set; }
         public bool ColdBlooded { get; set; }
         public bool Stupidity { get; set; }
@@ -178,6 +179,7 @@ namespace WarhammerArmyAssembler
                 Fear = this.Fear,
                 Terror = this.Terror,
                 Frenzy = this.Frenzy,
+                BloodFrenzy = this.BloodFrenzy,
                 Unbreakable = this.Unbreakable,
                 ColdBlooded = this.ColdBlooded,
                 Reroll = this.Reroll,
