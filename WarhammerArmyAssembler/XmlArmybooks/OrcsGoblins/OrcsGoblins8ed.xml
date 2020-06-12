@@ -22,6 +22,239 @@
 		
 	</Mounts>
 	<Units>
-		
+		<Unit>
+			<Type>Core</Type>
+			<Name>Orc Boyz</Name>
+			<Points>6</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+					<Flail>true</Flail>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
+					<SpecialRuleDescription>Choppas</SpecialRuleDescription>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Big'Uns</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel>true</PerModel>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+				<Option>
+					<Name>Spears</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Additional hand weapons</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<AddToAttacks>1</AddToAttacks>
+				</Option>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Orc Boss</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Orc Arrer Boys</Name>
+			<Points>7</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<RangedWeapon>
+					<Name>Bows</Name>
+				</RangedWeapon>
+				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
+					<SpecialRuleDescription>Choppas</SpecialRuleDescription>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Arrer Boy Boss</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Savage Orcs</Name>
+			<Points>8</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy>true</Frenzy>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Warpaint</Name>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
+					<SpecialRuleDescription>Choppas</SpecialRuleDescription>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Big'Uns</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel>true</PerModel>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+				</Option>
+				<Option>
+					<Name>Big Stabbas</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<PerModel>true</PerModel>
+					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<ImpactHit>D3</ImpactHit>
+				</Option>
+				<Option>
+					<Name>Spears</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Bows</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+				</Option>
+				<Option>
+					<Name>Additional choppa</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<AddToAttacks>1</AddToAttacks>
+				</Option>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel>true</PerModel>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Savage Orc Boss</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand>true</FullCommand>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
