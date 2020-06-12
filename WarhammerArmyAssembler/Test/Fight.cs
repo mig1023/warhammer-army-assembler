@@ -347,6 +347,8 @@ namespace WarhammerArmyAssembler.Test
 
         private static int RoundBonus(List<Unit> units)
         {
+            int roundBouns = 0;
+
             Unit unit = units[2];
             Unit unitMount = units[3];
 
@@ -361,10 +363,16 @@ namespace WarhammerArmyAssembler.Test
             if (unitFullSize > enemyFullSize)
             {
                 Test.Data.Console(Test.Data.supplText, "\n{0} have +1 battle result bonus by outnumber", unitSide);
-                return 1;
+                roundBouns += 1;
             }
-            else
-                return 0;
+
+            if (unit.AddToCloseCombat > 0)
+            {
+                Test.Data.Console(Test.Data.supplText, "\n{0} have +{1} battle result bonus by special rules", unitSide, unit.AddToCloseCombat);
+                roundBouns += unit.AddToCloseCombat;
+            }
+
+            return roundBouns;
         }
 
         private static Unit SelectOpponent(List<Unit> participants, Unit unit)

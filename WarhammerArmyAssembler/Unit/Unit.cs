@@ -49,6 +49,7 @@ namespace WarhammerArmyAssembler
             ["Lance"] = "Lance",
             ["Flail"] = "Flail",
             ["PredatoryFighter"] = "Predatory Fighter",
+            ["AddToCloseCombat"] = "Add to Close Combat Result ([X])",
         };
 
         public string Name { get; set; }
@@ -112,6 +113,7 @@ namespace WarhammerArmyAssembler
         public bool Stupidity { get; set; }
         public bool Undead { get; set; }
         public bool StrengthInNumbers { get; set; }
+        public int AddToCloseCombat { get; set; }
 
         public int UnitStrength { get; set; }
 
@@ -339,6 +341,7 @@ namespace WarhammerArmyAssembler
                 Lance = this.Lance,
                 Flail = this.Flail,
                 PredatoryFighter = this.PredatoryFighter,
+                AddToCloseCombat = this.AddToCloseCombat,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 

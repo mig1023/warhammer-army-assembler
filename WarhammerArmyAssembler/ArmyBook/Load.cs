@@ -148,6 +148,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.Lance = BoolParse(additionalParam["Lance"]);
                 newUnit.Flail = BoolParse(additionalParam["Flail"]);
                 newUnit.PredatoryFighter = BoolParse(additionalParam["PredatoryFighter"]);
+                newUnit.AddToCloseCombat = IntParse(additionalParam["AddToCloseCombat"]);
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
@@ -224,6 +225,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.Lance = BoolParse(xmlNode["Lance"]);
             newWeapon.Flail = BoolParse(xmlNode["Flail"]);
             newWeapon.PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]);
+            newWeapon.AddToCloseCombat = IntParse(xmlNode["AddToCloseCombat"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 
