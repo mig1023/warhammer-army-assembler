@@ -82,7 +82,7 @@ namespace WarhammerArmyAssembler
         public int AddToCast { get; set; }
         public int AddToDispell { get; set; }
         public int AddToWizard { get; set; }
-        public int AddToCloseCombat { get; set; }
+        public string AddToCloseCombat { get; set; }
 
         public int MovementTo { get; set; }
         public int WeaponSkillTo { get; set; }

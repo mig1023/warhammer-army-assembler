@@ -366,10 +366,12 @@ namespace WarhammerArmyAssembler.Test
                 roundBouns += 1;
             }
 
-            if (unit.AddToCloseCombat > 0)
+            if (!String.IsNullOrEmpty(unit.AddToCloseCombat))
             {
-                Test.Data.Console(Test.Data.supplText, "\n{0} have +{1} battle result bonus by special rules", unitSide, unit.AddToCloseCombat);
-                roundBouns += unit.AddToCloseCombat;
+                int addBonus = RandomParamParse(unit.AddToCloseCombat);
+
+                Test.Data.Console(Test.Data.supplText, "\n{0} have +{1} battle result bonus by special rules", unitSide, addBonus);
+                roundBouns += addBonus;
             }
 
             return roundBouns;

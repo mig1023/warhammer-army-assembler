@@ -113,7 +113,7 @@ namespace WarhammerArmyAssembler
         public bool Stupidity { get; set; }
         public bool Undead { get; set; }
         public bool StrengthInNumbers { get; set; }
-        public int AddToCloseCombat { get; set; }
+        public string AddToCloseCombat { get; set; }
 
         public int UnitStrength { get; set; }
 
