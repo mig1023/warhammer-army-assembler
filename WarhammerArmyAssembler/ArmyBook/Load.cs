@@ -197,6 +197,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newWeapon.Group = StringParse(xmlNode["Group"]);
             newWeapon.AutoHit = BoolParse(xmlNode["AutoHit"]);
+            newWeapon.AutoWound = BoolParse(xmlNode["AutoWound"]);
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.HitLast = BoolParse(xmlNode["HitLast"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
