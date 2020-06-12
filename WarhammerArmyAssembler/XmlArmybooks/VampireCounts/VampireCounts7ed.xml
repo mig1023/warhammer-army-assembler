@@ -17,28 +17,28 @@
 				<Type>Powers</Type>
 				<Points>50</Points>
 				<SpecialRuleDescription>The Vampire is Ethereal. However, it may not join non-Ethereal units, nor may it be mounted or take any magic items</SpecialRuleDescription>
-				<Description>The Vampire is Ethereal. However, it may not join non-Ethereal units, nor may it be mounted or take any magic items</Description>
+				<Description>The Vampire is Ethereal. However, it may not join non-Ethereal units, nor may it be mounted or take any magic items.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Ghoulkin</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
 				<SpecialRuleDescription>If your army contains any Vampires with this power, your units of Crypt Ghouls (and accompanying characters) may make a march move before the game. This move is made after deployment, but before the dice roll for first turn.</SpecialRuleDescription>
-				<Description>If your army contains any Vampires with this power, your units of Crypt Ghouls (and accompanying characters) may make a march move before the game. This move is made after deployment, but before the dice roll for first turn</Description>
+				<Description>If your army contains any Vampires with this power, your units of Crypt Ghouls (and accompanying characters) may make a march move before the game. This move is made after deployment, but before the dice roll for first turn.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Supernatural Horror</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
 				<Terror>true</Terror>
-				<Description>The Vampire causes Terror</Description>
+				<Description>The Vampire causes Terror.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master of the Black Arts</Name>
 				<Type>Powers</Type>
 				<Points>50</Points>
 				<SpecialRuleDescription>The Vampire generates an additional 2 Power dice for itself in each of its own Magic phases</SpecialRuleDescription>
-				<Description>The Vampire generates an additional 2 Power dice for itself in each of its own Magic phases</Description>
+				<Description>The Vampire generates an additional 2 Power dice for itself in each of its own Magic phases.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Forbidden Lore</Name>
@@ -53,21 +53,21 @@
 				<Points>30</Points>
 				<AddToCast>1</AddToCast>
 				<AddToWizard>1</AddToWizard>
-				<Description>This Vampire has an additional Magic level</Description>
+				<Description>This Vampire has an additional Magic level.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Flying Horror</Name>
 				<Type>Powers</Type>
 				<Points>30</Points>
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
-				<Description>This Vampire has the Fly special rule</Description>
+				<Description>This Vampire has the Fly special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Infinite Hatred</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
 				<Reroll>ToHit</Reroll>
-				<Description>The Vampire Hates all enemies and may re-roll failed rolls to hit in every round of close combat</Description>
+				<Description>The Vampire Hates all enemies and may re-roll failed rolls to hit in every round of close combat.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Hunter in the Dark</Name>
@@ -75,7 +75,72 @@
 				<Points>25</Points>
 				<SpecialRuleDescription>Scout</SpecialRuleDescription>
 				<OnlyFor>Infantry</OnlyFor>
-				<Description>If on foot, the Vampire has the Scout special rule</Description>
+				<Description>If on foot, the Vampire has the Scout special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Red Fury</Name>
+				<Type>Powers</Type>
+				<Points>50</Points>
+				<PredatoryFighter>true</PredatoryFighter>
+				<Description>For each unsaved wound that the Vampire causes it gets to immediately make an additional attack. These additional attacks do not benefit from the Red Fury rule. The Red Fury ability cannot be combined with a great weapon.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Avatar of Death</Name>
+				<Type>Powers</Type>
+				<Points>20</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToStrength>2</AddToStrength>
+				<Description>The Vampire wears heavy armour and is armed with either a great weapon, hand weapon and shield or two hand weapons.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dread Knight</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<Lance>true</Lance>
+				<ArmourTo>2</ArmourTo>
+				<Description>The Vampire has a lance, heavy armour, a shield and rides a barded Nightmare.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Aura of Dark Majesty</Name>
+				<Type>Powers</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>All enemy units within 6" of one or more Vampires with Aura of Dark Majesty suffer a -1 penalty to their Leadership (cumulative with any other modifiers)</SpecialRuleDescription>
+				<Description>All enemy units within 6" of one or more Vampires with Aura of Dark Majesty suffer a -1 penalty to their Leadership (cumulative with any other modifiers).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Walking Death</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<AddToCloseCombat>1</AddToCloseCombat>
+				<Description>The presence of one or more Vampires with this power in a combat adds +1 to their side's combat resolution.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Beguile</Name>
+				<Type>Powers</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>At the beginning of the Close Combat phase, after challenges, select one model in contact with the Vampire. The Vampire may re-roll to Wound against the chosen model unless the target passes a Leadership test with a -3 modifier</SpecialRuleDescription>
+				<Description>At the beginning of the Close Combat phase, after challenges, select one model in contact with the Vampire. The Vampire may re-roll to Wound against the chosen model unless the target passes a Leadership test with a -3 modifier.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Lord of the Dead</Name>
+				<Type>Powers</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>The Vampire may use Invocation of Nehek to increase units of Skeleton Warriors beyond their starting size, and adds +1 to his casting roll when casting Invocation of Nehek on these units</SpecialRuleDescription>
+				<Description>The Vampire may use Invocation of Nehek to increase units of Skeleton Warriors beyond their starting size, and adds +1 to his casting roll when casting Invocation of Nehek on these units.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Summon Creatures of the Night</Name>
+				<Type>Powers</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>The Vampire may use Invocation of Nehek to increase units of Skeleton Warriors beyond their starting size, and adds +1 to his casting roll when casting Invocation of Nehek on these units</SpecialRuleDescription>
+				<Description>The Vampire may use Invocation of Nehek to increase units of Skeleton Warriors beyond their starting size, and adds +1 to his casting roll when casting Invocation of Nehek on these units.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Summon Ghouls</Name>
+				<Type>Powers</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>The Vampire may use Invocation of Nehek to increase units of Crypt Ghouls beyond their starting size and adds +1 to his casting roll when casting Invocation of Nehek on these units</SpecialRuleDescription>
+				<Description>The Vampire may use Invocation of Nehek to increase units of Crypt Ghouls beyond their starting size and adds +1 to his casting roll when casting Invocation of Nehek on these units.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
