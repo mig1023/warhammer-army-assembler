@@ -211,7 +211,7 @@
 				<Name>War Banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>+1 Combat Resolution</SpecialRuleDescription>
+				<AddToCloseCombat>1</AddToCloseCombat>
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -242,6 +242,7 @@
 				<Terror>true</Terror>
 				<Undead>true</Undead>
 				<Reroll>ToWound</Reroll>
+				<AddToCloseCombat>1</AddToCloseCombat>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -254,7 +255,6 @@
 				</Armour>
 				<Special>
 					<SpecialRuleDescription>Enemy within 6" are at -1 Ld</SpecialRuleDescription>
-					<SpecialRuleDescription>Grants a +1 combat resolution bonus</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -408,15 +408,13 @@
 				<Undead>true</Undead>
 				<MagicItemCount>1</MagicItemCount>
 				<MagicItemsType>Hero</MagicItemsType>
+				<AddToCloseCombat>1</AddToCloseCombat>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Sword of Unholy Power</Name>
 					<SpecialRuleDescription>For each unsaved Wound gains an extra dice in the Magic phase</SpecialRuleDescription>
 				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>Grants a +1 combat resolution bonus</SpecialRuleDescription>
-				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
