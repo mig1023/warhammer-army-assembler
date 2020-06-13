@@ -8,7 +8,7 @@
 		<BackgroundColor>#FFD3D3D3</BackgroundColor>
 		<ArmyBookImage>HordesOfChaos6ed.png</ArmyBookImage>
 		<SymbolImage>HordesOfChaos.png</SymbolImage>
-		<DemonicMortal>true</DemonicMortal>
+		<DemonicMortal/>
 	</Info>
 	<Artefacts>
 		<ArtefactsGroup Name = "Common magic items">
@@ -65,7 +65,7 @@
 				<Type>Arcane</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
@@ -73,7 +73,7 @@
 				<Type>Arcane</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
@@ -116,7 +116,7 @@
 				<Points>75</Points>
 				<OnlyForGroup>Mortal</OnlyForGroup>
 				<MultiWounds>D6</MultiWounds>
-				<NoArmour>true</NoArmour>
+				<NoArmour/>
 				<SpecialRuleDescription>flaming</SpecialRuleDescription>
 				<Description>Flaming attacks, D6 additional wounds with no armour saves</Description>
 			</Artefact>
@@ -134,7 +134,7 @@
 				<Name>Whip of Pleasure</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<AddToAttacks>1</AddToAttacks>
 				<OnlyForGroup>Mortal</OnlyForGroup>
 				<OnlyIfAnotherService>
@@ -172,8 +172,8 @@
 				<Type>Weapon</Type>
 				<Points>35</Points>
 				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Terror>true</Terror>
-				<PoisonAttack>true</PoisonAttack>
+				<Terror/>
+				<PoisonAttack/>
 				<Description>All attacks with the Filth Mace count as poisoned attacks In addition, if the bearer of the mace kills an enemy character in close combat, he will cause terror for the rest of the game.</Description>
 			</Artefact>
 			<Artefact>
@@ -192,7 +192,7 @@
 					<OnlyIf>Mark of Khorne</OnlyIf>
 				</OnlyIfAnotherService>
 				<OnlyForGroup>Mortal</OnlyForGroup>
-				<KillingBlow>true</KillingBlow>
+				<KillingBlow/>
 				<Description>Confers on the bearer the Killing Blow ability.</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -423,7 +423,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Mortal</OnlyForGroup>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<Description>The wearer always strikes first in close combat, even if charged or armed with a weapon that normally strikes last. If any of the wearer's opponents also strike first, revert to normal Initiative. The character is also subject to stupidity (even if immune to psychology) due to the random and conflicting images that confront him.</Description>
 			</Artefact>
 			<Artefact>
@@ -514,7 +514,7 @@
 				<Type>Weapon</Type>
 				<Points>45</Points>
 				<OnlyForGroup>Demonic</OnlyForGroup>
-				<NoArmour>true</NoArmour>
+				<NoArmour/>
 				<Description>Daemon ignore armour saves in close combat</Description>
 			</Artefact>
 			<Artefact>
@@ -578,7 +578,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Khorne</OnlyIf>
 				</OnlyIfAnotherService>
-				<KillingBlow>true</KillingBlow>
+				<KillingBlow/>
 				<Description>Daemon with an Axe gains the Killing Blow ability</Description>
 			</Artefact>
 			<Artefact>
@@ -681,7 +681,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Nurgle</OnlyIf>
 				</OnlyIfAnotherService>
-				<PoisonAttack>true</PoisonAttack>
+				<PoisonAttack/>
 				<Description>The Daemon's attacks count as poisoned attacks. This gift cannot be combined with a Blade of the Ether gift.</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -729,7 +729,7 @@
 			<Points>855</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Dorghar</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Wizard>2</Wizard>
 			<Description>Archaon, Lord of the End Times</Description>
 			<MainParam>
@@ -744,7 +744,7 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<ImmuneToPsychology/>
 				<SlotOf>Hero</SlotOf>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -754,7 +754,7 @@
 				</Special>
 				<HandWeapon>
 					<Name>The Slayer of Kings</Name>
-					<NoArmour>true</NoArmour>
+					<NoArmour/>
 					<AddToAttacks>5</AddToAttacks>
 				</HandWeapon>
 				<Armour>
@@ -763,7 +763,7 @@
 				</Armour>
 				<Armour>
 					<Name>The Crown of Domination</Name>
-					<Terror>true</Terror>
+					<Terror/>
 				</Armour>
 				<Armour>
 					<Name>The Eye of Sheerian</Name>
@@ -778,7 +778,7 @@
 			<Points>696</Points>
 			<MinSize>1</MinSize>
 			<Wizard>4</Wizard>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Galrauch, First of the Chaos Dragons</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -793,7 +793,7 @@
 				<Armour>3</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<SlotOf>Hero</SlotOf>
 				<SlotOf>Rare</SlotOf>
 				<UnitStrength>6</UnitStrength>
@@ -831,9 +831,9 @@
 				<Ward>5</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Frenzy>true</Frenzy>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Terror/>
+				<Frenzy/>
+				<ImmuneToPsychology/>
 				<SlotOf>Hero</SlotOf>
 				<SlotOf>Rare</SlotOf>
 				<UnitStrength>7</UnitStrength>
@@ -848,7 +848,7 @@
 				</Special>
 				<HandWeapon>
 					<Name>Axe of Khorne</Name>
-					<KillingBlow>true</KillingBlow>
+					<KillingBlow/>
 				</HandWeapon>
 				<Armour>
 					<Name>Armour of Khorne</Name>
@@ -880,7 +880,7 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<SlotOf>Hero</SlotOf>
 				<SlotOf>Rare</SlotOf>
 				<UnitStrength>6</UnitStrength>
@@ -914,7 +914,7 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<SlotOf>Hero</SlotOf>
 				<SlotOf>Rare</SlotOf>
 				<UnitStrength>6</UnitStrength>
@@ -950,7 +950,7 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<SlotOf>Hero</SlotOf>
 				<SlotOf>Rare</SlotOf>
 				<UnitStrength>10</UnitStrength>
@@ -991,7 +991,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -1004,7 +1004,7 @@
 					<Name>Flail</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<Flail>true</Flail>
+					<Flail/>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
@@ -1040,7 +1040,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
@@ -1051,7 +1051,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -1068,25 +1068,25 @@
 					<Name>Dragon of Chaos</Name>
 					<Type>Option</Type>
 					<Points>360</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Demonic mount</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Chaos Steed</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Disc of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>45</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Tzeentch</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1095,7 +1095,7 @@
 					<Name>Juggernaut of Khorne</Name>
 					<Type>Option</Type>
 					<Points>55</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Khorne</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1104,7 +1104,7 @@
 					<Name>Steed of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Slaanesh</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1118,7 +1118,7 @@
 					<Type>Armour</Type>
 					<Name>Chaos armour</Name>
 					<AddToArmour>4</AddToArmour>
-					<NativeArmour>true</NativeArmour>
+					<NativeArmour/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1160,7 +1160,7 @@
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -1175,19 +1175,19 @@
 					<Name>Demonic mount</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Chaos Steed</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Steed of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Slaanesh</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1202,7 +1202,7 @@
 					<Type>Armour</Type>
 					<Name>Chaos armour</Name>
 					<AddToArmour>4</AddToArmour>
-					<NativeArmour>true</NativeArmour>
+					<NativeArmour/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1225,7 +1225,7 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<SlotOf>Hero</SlotOf>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
@@ -1254,7 +1254,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
@@ -1265,7 +1265,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -1314,7 +1314,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1327,7 +1327,7 @@
 					<Name>Flail</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<Flail>true</Flail>
+					<Flail/>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
@@ -1363,7 +1363,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
@@ -1374,7 +1374,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -1391,19 +1391,19 @@
 					<Name>Demonic mount</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Chaos Steed</Name>
 					<Type>Option</Type>
 					<Points>16</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Disc of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>45</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Tzeentch</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1412,7 +1412,7 @@
 					<Name>Juggernaut of Khorne</Name>
 					<Type>Option</Type>
 					<Points>55</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Khorne</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1421,7 +1421,7 @@
 					<Name>Steed of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Slaanesh</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1435,7 +1435,7 @@
 					<Type>Armour</Type>
 					<Name>Chaos armour</Name>
 					<AddToArmour>4</AddToArmour>
-					<NativeArmour>true</NativeArmour>
+					<NativeArmour/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1458,7 +1458,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<SlotOf>Hero</SlotOf>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
@@ -1499,7 +1499,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
@@ -1510,7 +1510,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -1558,7 +1558,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1571,7 +1571,7 @@
 					<Name>Flail</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<Flail>true</Flail>
+					<Flail/>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
@@ -1607,7 +1607,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
@@ -1618,7 +1618,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -1635,13 +1635,13 @@
 					<Name>Chaos Steed</Name>
 					<Type>Option</Type>
 					<Points>16</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -1653,7 +1653,7 @@
 					<Type>Armour</Type>
 					<Name>Chaos armour</Name>
 					<AddToArmour>4</AddToArmour>
-					<NativeArmour>true</NativeArmour>
+					<NativeArmour/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1695,7 +1695,7 @@
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -1710,19 +1710,19 @@
 					<Name>Demonic mount</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Chaos Steed</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Steed of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Slaanesh</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1736,7 +1736,7 @@
 					<Type>Armour</Type>
 					<Name>Chaos armour</Name>
 					<AddToArmour>4</AddToArmour>
-					<NativeArmour>true</NativeArmour>
+					<NativeArmour/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1793,7 +1793,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<SlotOf>Hero</SlotOf>
 				<UnitStrength>6</UnitStrength>
 			</AdditionalParam>
@@ -1932,38 +1932,38 @@
 					<Name>Chosen</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyOneForSuchUnits>true</OnlyOneForSuchUnits>
+					<OnlyOneForSuchUnits/>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToStrength>1</AddToStrength>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToAttacks>1</AddToAttacks>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
@@ -1986,7 +1986,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
@@ -1997,7 +1997,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
 				<Option>
@@ -2009,24 +2009,24 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Fear>true</Fear>
+					<Fear/>
 				</Option>
 				<Option>
 					<Name>Champion</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -2060,47 +2060,47 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 				</Option>
 				<Option>
 					<Name>Flail</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
-					<Flail>true</Flail>
+					<PerModel/>
+					<Flail/>
 				</Option>
 				<Option>
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Chieftain</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -2134,50 +2134,50 @@
 					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Flail</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
-					<Flail>true</Flail>
+					<PerModel/>
+					<Flail/>
 				</Option>
 				<Option>
 					<Name>Throwing axes</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Throwing spears</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Chieftain</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 			</Options>
@@ -2219,10 +2219,10 @@
 					<Name>Chosen</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyOneForSuchUnits>true</OnlyOneForSuchUnits>
+					<OnlyOneForSuchUnits/>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2244,7 +2244,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
@@ -2255,7 +2255,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
 				<Option>
@@ -2267,24 +2267,24 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Fear>true</Fear>
+					<Fear/>
 				</Option>
 				<Option>
 					<Name>Champion</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -2298,7 +2298,7 @@
 			<Points>140</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Chaos Steed</MountInit>
 			<MainParam>
 				<Movement>8</Movement>
@@ -2338,7 +2338,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<ImmuneToPsychology>true</ImmuneToPsychology>
+					<ImmuneToPsychology/>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
@@ -2349,7 +2349,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
 				<Option>
@@ -2361,7 +2361,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Fear>true</Fear>
+					<Fear/>
 				</Option>
 			</Options>
 		</Unit>
@@ -2383,7 +2383,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<NoCoreSlot>true</NoCoreSlot>
+				<NoCoreSlot/>
 			</AdditionalParam>
 		</Unit>
 		<Unit>
@@ -2404,7 +2404,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
@@ -2422,19 +2422,19 @@
 				<Option>
 					<Name>Bloodhowler</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>14</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>7</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>14</Points>
 				</Option>
 			</Options>
@@ -2457,8 +2457,8 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<NoCoreSlot>true</NoCoreSlot>
+				<Frenzy/>
+				<NoCoreSlot/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>

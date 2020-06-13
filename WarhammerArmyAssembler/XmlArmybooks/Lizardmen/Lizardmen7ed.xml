@@ -64,14 +64,14 @@
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
@@ -95,7 +95,7 @@
 				<Type>Weapon</Type>
 				<Points>65</Points>
 				<AddToStrength>1</AddToStrength>
-				<NoArmour>true</NoArmour>
+				<NoArmour/>
 				<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
 			</Artefact>
 			<Artefact>
@@ -112,7 +112,7 @@
 				<OnlyFor>Mount</OnlyFor>
 				<Points>50</Points>
 				<ImpactHit>2D6+1</ImpactHit>
-				<Lance>true</Lance>
+				<Lance/>
 				<SpecialRuleDescription>Lance</SpecialRuleDescription>
 				<Description>Lance. In addition, the bearer's mount inflicts 2D6+1 impact hits rather then the normal 1D6+1</Description>
 			</Artefact>
@@ -135,15 +135,15 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Skink</OnlyForGroup>
 				<Points>25</Points>
-				<KillingBlow>true</KillingBlow>
-				<Fear>true</Fear>
+				<KillingBlow/>
+				<Fear/>
 				<Description>Confers on the bearer the killing blow ability. In addition, the bearer causes Fear in Skaven</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sword of the Hornet</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<Description>The bearer of this sword has the 'Always Strikes First' rule</Description>
 			</Artefact>
 			<Artefact>
@@ -163,8 +163,8 @@
 				<Points>50</Points>
 				<AddToArmour>5</AddToArmour>
 				<AddToToughness>1</AddToToughness>
-				<Fear>true</Fear>
-				<Stupidity>true</Stupidity>
+				<Fear/>
+				<Stupidity/>
 				<Description>Heavy armour. The wearer causes Fear and has +1 Toughness, but becomes subject to Stupidity</Description>
 			</Artefact>
 			<Artefact>
@@ -198,7 +198,7 @@
 				<Name>The Horn of Kygor</Name>
 				<Type>Arcane</Type>
 				<Points>100</Points>
-				<Fear>true</Fear>
+				<Fear/>
 				<SpecialRuleDescription>Cavalry within 12" are Stubborn</SpecialRuleDescription>
 				<Description>Friendly cavalry within 12" are Stubborn. Enemy cavalry Fear the bearer</Description>
 			</Artefact>
@@ -253,7 +253,7 @@
 				<Name>Carnosaur Pendant</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 				<Description>Once the bearer has inficted a wound, he will become immediately subject to Frenzy. The bearer will never lose its Frenzy, even if it is beaten in combat. See the main rulebook for details of Frenzy</Description>
 			</Artefact>
 			<Artefact>
@@ -281,7 +281,7 @@
 				<Name>Venom of the Firefly Frog</Name>
 				<Type>Arcane</Type>
 				<Points>10</Points>
-				<PoisonAttack>true</PoisonAttack>
+				<PoisonAttack/>
 				<Description>All mundane weapons used by the bearer are coated with this venom. In addition to the weapons normal rules, all attackes made with them count as Poisoned Attacks and magical. Mundane weapons that already make Poisoned Attacks may re-roll the dice to hit</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -351,7 +351,7 @@
 				<Name>Totem of Prophecy</Name>
 				<Type>Banner</Type>
 				<Points>50</Points>
-				<Fear>true</Fear>
+				<Fear/>
 				<Description>The unit causes Fear</Description>
 			</Artefact>
 			<Artefact>
@@ -388,8 +388,8 @@
 				<Type>Banner</Type>
 				<OnlyForGroup>Skink</OnlyForGroup>
 				<Points>25</Points>
-				<Franzy>true</Franzy>
-				<Hate>true</Hate>
+				<Franzy/>
+				<Hate/>
 				<Description>The unit is subject to Frenzy until defeat in combet. In addition the unit Hates all units in the Skaven army</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -404,7 +404,7 @@
 			<Points>600</Points>
 			<Description>Lord Kroak</Description>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>1</WeaponSkill>
@@ -417,9 +417,9 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<Unbreakable>true</Unbreakable>
-				<Fear>true</Fear>
+				<ColdBlooded/>
+				<Unbreakable/>
+				<Fear/>
 				<UnitStrength>3</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -444,7 +444,7 @@
 			<Points>620</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Zlaaq</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Lord Mazadamundi</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -459,8 +459,8 @@
 				<Armour>2</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<Stubborn>true</Stubborn>
+				<ColdBlooded/>
+				<Stubborn/>
 				<UnitStrength>3</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -472,8 +472,8 @@
 				<HandWeapon>
 					<Name>Cobra Mace of Mazadamundi</Name>
 					<AddToStrength>2</AddToStrength>
-					<HitFirst>true</HitFirst>
-					<PoisonAttack>true</PoisonAttack>
+					<HitFirst/>
+					<PoisonAttack/>
 					<SpecialRuleDescription>Destruction of magic weapons</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
@@ -494,7 +494,7 @@
 			<MinSize>1</MinSize>
 			<Description>Kroq-Gar Ancient</Description>
 			<MountInit>Grymloq</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>6</WeaponSkill>
@@ -509,7 +509,7 @@
 				<Ward>5</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -533,7 +533,7 @@
 			<Points>250</Points>
 			<MinSize>1</MinSize>
 			<Description>Tehenhauin</Description>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>4</WeaponSkill>
@@ -547,15 +547,15 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<Unbreakable>true</Unbreakable>
+				<ColdBlooded/>
+				<Unbreakable/>
 			</AdditionalParam>
 			<Options>
 				<Option>
 					<Name>Ancient stegadon</Name>
 					<Type>Option</Type>
 					<Points>290</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -570,7 +570,7 @@
 				<HandWeapon>
 					<Name>Blade of the Serpent's Tongue</Name>
 					<AddToAttacks>1</AddToAttacks>
-					<PoisonAttack>true</PoisonAttack>
+					<PoisonAttack/>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Plaque of Sotek</Name>
@@ -600,7 +600,7 @@
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 				<UnitStrength>3</UnitStrength>
 			</AdditionalParam>
 			<Options>
@@ -620,13 +620,13 @@
 					<Name>Transcendent Healing</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
-					<Regeneration>true</Regeneration>
+					<Regeneration/>
 				</Option>
 				<Option>
 					<Name>Harrowing Scrutiny</Name>
 					<Type>SlannOption</Type>
 					<Points>50</Points>
-					<Terror>true</Terror>
+					<Terror/>
 				</Option>
 				<Option>
 					<Name>Higher State</Name>
@@ -655,7 +655,7 @@
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -691,7 +691,7 @@
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<Options>
 				<Option>
@@ -703,7 +703,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>12</Points>
 				</Option>
 				<Option>
@@ -735,13 +735,13 @@
 					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Carnosaur</Name>
 					<Type>Option</Type>
 					<Points>210</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -756,7 +756,7 @@
 			<Group>Saurus</Group>
 			<Points>335</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Chakax Eternity Warden</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -771,7 +771,7 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -803,7 +803,7 @@
 			<Group>Saurus</Group>
 			<Points>215</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Gor-Rok Great White Lizard</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -818,8 +818,8 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Stubborn>true</Stubborn>
-				<ColdBlooded>true</ColdBlooded>
+				<Stubborn/>
+				<ColdBlooded/>
 				<UnitStrength>2</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -846,7 +846,7 @@
 			<Points>255</Points>
 			<Wizard>2</Wizard>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Tetto'eko</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -860,7 +860,7 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -889,7 +889,7 @@
 			<Points>315</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Zwup</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Taktak'to</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -903,7 +903,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -913,7 +913,7 @@
 				</Special>
 				<HandWeapon>
 					<Name>Blade of Ancient Skies</Name>
-					<NoArmour>true</NoArmour>
+					<NoArmour/>
 				</HandWeapon>
 				<Armour>
 					<Name>Mask of Heavens</Name>
@@ -929,7 +929,7 @@
 			<Group>Skink</Group>
 			<Points>160</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Oxyotl Survivor</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -943,8 +943,8 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<PoisonAttack>true</PoisonAttack>
+				<ColdBlooded/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -984,13 +984,13 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<Options>
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 				<Option>
@@ -1002,7 +1002,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -1034,7 +1034,7 @@
 					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -1065,7 +1065,7 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<Options>
 				<Option>
@@ -1079,7 +1079,7 @@
 					<Name>Ancient stegadon</Name>
 					<Type>Option</Type>
 					<Points>290</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -1113,13 +1113,13 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<Options>
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 				<Option>
@@ -1160,19 +1160,19 @@
 					<Name>Stegadon</Name>
 					<Type>Option</Type>
 					<Points>235</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Ancient stegadon</Name>
 					<Type>Option</Type>
 					<Points>235</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Terradon</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -1204,8 +1204,8 @@
 				<Leadership>3</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<Stupidity>true</Stupidity>
+				<Fear/>
+				<Stupidity/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
@@ -1257,11 +1257,11 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<ColdBlooded>true</ColdBlooded>
+				<Terror/>
+				<ColdBlooded/>
 				<MultiWounds>D3</MultiWounds>
 				<UnitStrength>5</UnitStrength>
-				<BloodFrenzy>true</BloodFrenzy>
+				<BloodFrenzy/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1288,11 +1288,11 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<ColdBlooded>true</ColdBlooded>
-				<Stubborn>true</Stubborn>
-				<PoisonAttack>true</PoisonAttack>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Terror/>
+				<ColdBlooded/>
+				<Stubborn/>
+				<PoisonAttack/>
+				<ImmuneToPsychology/>
 				<UnitStrength>10</UnitStrength>
 				<ImpactHit>D6+1</ImpactHit>
 			</AdditionalParam>
@@ -1321,11 +1321,11 @@
 				<Armour>3</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<ColdBlooded>true</ColdBlooded>
-				<Stubborn>true</Stubborn>
-				<PoisonAttack>true</PoisonAttack>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Terror/>
+				<ColdBlooded/>
+				<Stubborn/>
+				<PoisonAttack/>
+				<ImmuneToPsychology/>
 				<UnitStrength>10</UnitStrength>
 				<ImpactHit>D6+1</ImpactHit>
 			</AdditionalParam>
@@ -1354,11 +1354,11 @@
 				<Armour>2</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<ColdBlooded>true</ColdBlooded>
-				<Stubborn>true</Stubborn>
-				<PoisonAttack>true</PoisonAttack>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Terror/>
+				<ColdBlooded/>
+				<Stubborn/>
+				<PoisonAttack/>
+				<ImmuneToPsychology/>
 				<UnitStrength>10</UnitStrength>
 				<ImpactHit>D6+1</ImpactHit>
 			</AdditionalParam>
@@ -1387,11 +1387,11 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<ColdBlooded>true</ColdBlooded>
+				<Terror/>
+				<ColdBlooded/>
 				<MultiWounds>D3</MultiWounds>
 				<UnitStrength>5</UnitStrength>
-				<BloodFrenzy>true</BloodFrenzy>
+				<BloodFrenzy/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1444,7 +1444,7 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1460,24 +1460,24 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard Bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 				<Option>
 					<Name>Champion</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 			</Options>
@@ -1499,8 +1499,8 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<PoisonAttack>true</PoisonAttack>
+				<ColdBlooded/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1522,24 +1522,24 @@
 					<Name>Kroxigor</Name>
 					<Type>Option</Type>
 					<Points>55</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard Bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Brave</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1562,8 +1562,8 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<PoisonAttack>true</PoisonAttack>
+				<ColdBlooded/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1582,13 +1582,13 @@
 					<Name>Javelin and shield</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Brave</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 			</Options>
@@ -1611,9 +1611,9 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<Unbreakable>true</Unbreakable>
-				<PoisonAttack>true</PoisonAttack>
+				<ColdBlooded/>
+				<Unbreakable/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1644,8 +1644,8 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<PoisonAttack>true</PoisonAttack>
+				<ColdBlooded/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1665,7 +1665,7 @@
 				<Option>
 					<Name>Stalker</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 			</Options>
@@ -1688,8 +1688,8 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<PoisonAttack>true</PoisonAttack>
+				<ColdBlooded/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1710,7 +1710,7 @@
 				<Option>
 					<Name>Brave</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -1735,7 +1735,7 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Unit</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1761,19 +1761,19 @@
 				<Option>
 					<Name>Musicain</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>7</Points>
 				</Option>
 				<Option>
 					<Name>Standard Bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>14</Points>
 				</Option>
 				<Option>
 					<Name>Revered Guardian</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>14</Points>
 				</Option>
 			</Options>
@@ -1799,8 +1799,8 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Unit</MagicItemsType>
-				<ColdBlooded>true</ColdBlooded>
-				<Stupidity>true</Stupidity>
+				<ColdBlooded/>
+				<Stupidity/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1821,19 +1821,19 @@
 				<Option>
 					<Name>Musicain</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Standard Bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 				</Option>
 				<Option>
 					<Name>Champion</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 				</Option>
 			</Options>
@@ -1856,22 +1856,22 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<ColdBlooded>true</ColdBlooded>
-				<Fear>true</Fear>
+				<ColdBlooded/>
+				<Fear/>
 				<UnitStrength>3</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Great weapon</Name>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
 					<Name>Ancient</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 				</Option>
 			</Options>
@@ -1895,11 +1895,11 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<ColdBlooded>true</ColdBlooded>
-				<Stubborn>true</Stubborn>
-				<PoisonAttack>true</PoisonAttack>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Terror/>
+				<ColdBlooded/>
+				<Stubborn/>
+				<PoisonAttack/>
+				<ImmuneToPsychology/>
 				<UnitStrength>10</UnitStrength>
 				<ImpactHit>D6+1</ImpactHit>
 			</AdditionalParam>
@@ -1932,11 +1932,11 @@
 				<Armour>3</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<ColdBlooded>true</ColdBlooded>
-				<Stubborn>true</Stubborn>
-				<PoisonAttack>true</PoisonAttack>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Terror/>
+				<ColdBlooded/>
+				<Stubborn/>
+				<PoisonAttack/>
+				<ImmuneToPsychology/>
 				<UnitStrength>10</UnitStrength>
 				<ImpactHit>D6+1</ImpactHit>
 			</AdditionalParam>
@@ -1970,8 +1970,8 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<ColdBlooded>true</ColdBlooded>
+				<Fear/>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1987,7 +1987,7 @@
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>5</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 			</Options>
 		</Unit>
@@ -2011,8 +2011,8 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<ColdBlooded>true</ColdBlooded>
+				<Fear/>
+				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -2028,7 +2028,7 @@
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
 					<Points>5</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 			</Options>
 		</Unit>
