@@ -152,10 +152,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static bool BoolParse(XmlNode xmlNode)
         {
-            if (xmlNode == null)
-                return false;
-
-            return (xmlNode.InnerText == "true" ? true : false);
+            return (xmlNode == null ? false : true);
         }
     }
 }
