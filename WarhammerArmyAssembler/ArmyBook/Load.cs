@@ -126,6 +126,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.StrengthInNumbers = BoolParse(additionalParam["StrengthInNumbers"]);
                 newUnit.AutoHit = BoolParse(additionalParam["AutoHit"]);
                 newUnit.AutoWound = BoolParse(additionalParam["AutoWound"]);
+                newUnit.AutoDeath = BoolParse(additionalParam["AutoDeath"]);
                 newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
                 newUnit.HitLast = BoolParse(additionalParam["HitLast"]);
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
@@ -198,6 +199,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.Group = StringParse(xmlNode["Group"]);
             newWeapon.AutoHit = BoolParse(xmlNode["AutoHit"]);
             newWeapon.AutoWound = BoolParse(xmlNode["AutoWound"]);
+            newWeapon.AutoDeath = BoolParse(xmlNode["AutoDeath"]);
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.HitLast = BoolParse(xmlNode["HitLast"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);

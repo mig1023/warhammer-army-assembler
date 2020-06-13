@@ -792,6 +792,12 @@ namespace WarhammerArmyAssembler.Test
 
         private static int WoundsNumbers(Unit unit, Unit enemy)
         {
+            if (unit.AutoDeath)
+            {
+                Test.Data.Console(Test.Data.text, " <-- LOSE ALL WOUNDS");
+                return enemy.Wounds;
+            }
+
             if (String.IsNullOrEmpty(unit.MultiWounds))
                 return 1;
 

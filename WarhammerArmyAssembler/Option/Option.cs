@@ -36,6 +36,7 @@ namespace WarhammerArmyAssembler
         public string Group { get; set; }
         public bool AutoHit { get; set; }
         public bool AutoWound { get; set; }
+        public bool AutoDeath { get; set; }
         public bool HitFirst { get; set; }
         public bool HitLast { get; set; }
         public bool KillingBlow { get; set; }
@@ -164,6 +165,7 @@ namespace WarhammerArmyAssembler
                 Group = this.Group,
                 AutoHit = this.AutoHit,
                 AutoWound = this.AutoWound,
+                AutoDeath = this.AutoDeath,
                 HitFirst = this.HitFirst,
                 HitLast = this.HitLast,
                 KillingBlow = this.KillingBlow,
