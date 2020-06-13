@@ -57,14 +57,14 @@
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
@@ -89,7 +89,7 @@
 			<Name>The Emperor Karl Franz</Name>
 			<Points>350</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>The Emperor Karl Franz</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -104,16 +104,16 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Undead>true</Undead>
+				<Terror/>
+				<Undead/>
 				<Reroll>ToWound</Reroll>
 				<AddToCloseCombat>1</AddToCloseCombat>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Runefang</Name>
-					<NoArmour>true</NoArmour>
-					<AutoWound>true</AutoWound>
+					<NoArmour/>
+					<AutoWound/>
 				</HandWeapon>
 				<Armour>
 					<Name>Full plate armour</Name>
@@ -132,7 +132,7 @@
 				<Option>
 					<Name>Ghal Maraz</Name>
 					<Type>Option</Type>
-					<AutoWound>true</AutoWound>
+					<AutoWound/>
 					<MultiWounds>D3</MultiWounds>
 					<Points>30</Points>
 				</Option>
@@ -140,25 +140,25 @@
 					<Name>Deathclaw</Name>
 					<Type>Option</Type>
 					<Points>225</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>The Imperial Dragon</Name>
 					<Type>Option</Type>
 					<Points>320</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Imperial Pegasus</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
 					<Points>21</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -168,7 +168,7 @@
 			<Points>325</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Warhorse</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Kurt Helborg</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -183,14 +183,14 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Stubborn>true</Stubborn>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Stubborn/>
+				<ImmuneToPsychology/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Runefang</Name>
-					<NoArmour>true</NoArmour>
-					<AutoWound>true</AutoWound>
+					<NoArmour/>
+					<AutoWound/>
 				</HandWeapon>
 				<Armour>
 					<Name>Full plate armour</Name>
@@ -207,7 +207,7 @@
 			<Points>360</Points>
 			<MinSize>1</MinSize>
 			<MountInit>The War Altar</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Grand Theogonist Volkmar</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -222,8 +222,8 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<Unbreakable>true</Unbreakable>
+				<Frenzy/>
+				<Unbreakable/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -232,11 +232,11 @@
 				</HandWeapon>
 				<Armour>
 					<Name>The Jade Griffon</Name>
-					<Regeneration>true</Regeneration>
+					<Regeneration/>
 				</Armour>
 				<Armour>
 					<Name>The Horn of Sigismound</Name>
-					<Terror>true</Terror>
+					<Terror/>
 				</Armour>
 				<Special>
 					<SpecialRuleDescription>Grand Theogonist</SpecialRuleDescription>
@@ -251,7 +251,7 @@
 			<MinSize>1</MinSize>
 			<Wizard>4</Wizard>
 			<MountInit>Imperial Pegasus</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Balthasar Gelt</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -321,7 +321,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -336,7 +336,7 @@
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>6</Points>
-					<Lance>true</Lance>
+					<Lance/>
 				</Option>
 				<Option>
 					<Name>Pistol</Name>
@@ -393,19 +393,19 @@
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Imperial Pegasus</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Griffon</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -431,7 +431,7 @@
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<ImmuneToPsychology/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -439,7 +439,7 @@
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Lance</Name>
-					<Lance>true</Lance>
+					<Lance/>
 				</HandWeapon>
 				<Armour>
 					<Name>Full plate armour</Name>
@@ -471,7 +471,7 @@
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<Hate>true</Hate>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -487,7 +487,7 @@
 					<Name>Two-handed warhammer</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -524,7 +524,7 @@
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding for Warhorse</Name>
@@ -539,7 +539,7 @@
 					<Name>The War Altar</Name>
 					<Type>Option</Type>
 					<Points>100</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -582,7 +582,7 @@
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding for Warhorse</Name>
@@ -597,7 +597,7 @@
 					<Name>Imperial Pegasus</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -607,7 +607,7 @@
 			<Points>220</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Warhorse</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Ludwig Schwarzhelm</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -622,7 +622,7 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<KillingBlow>true</KillingBlow>
+				<KillingBlow/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -637,7 +637,7 @@
 					<Name>Battle Standard Bearer</Name>
 					<Type>Banner</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 				</Standart>
 				<Special>
 					<SpecialRuleDescription>Bodyguard</SpecialRuleDescription>
@@ -651,7 +651,7 @@
 			<Points>180</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Warhorse</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Luthor Huss</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -667,8 +667,8 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<Hate>true</Hate>
+				<Fear/>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -716,7 +716,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -737,7 +737,7 @@
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>4</Points>
-					<Lance>true</Lance>
+					<Lance/>
 				</Option>
 				<Option>
 					<Name>Pistol</Name>
@@ -794,7 +794,7 @@
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding for Warhorse</Name>
@@ -809,19 +809,19 @@
 					<Name>Imperial Pegasus</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Griffon</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -844,7 +844,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Hate>true</Hate>
+				<Hate/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
 			</AdditionalParam>
@@ -862,7 +862,7 @@
 					<Name>Two-handed warhammer</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -899,7 +899,7 @@
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding for Warhorse</Name>
@@ -950,7 +950,7 @@
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding for Warhorse</Name>
@@ -1002,7 +1002,7 @@
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding for Warhorse</Name>
@@ -1017,7 +1017,7 @@
 					<Name>Mechanical Steed</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>5</AddToArmour>
 					<SpecialRuleDescription>Impact Hit (D3)</SpecialRuleDescription>
 				</Option>
@@ -1104,7 +1104,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 			</AdditionalParam>
 			<Special>
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
@@ -1128,7 +1128,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 			</AdditionalParam>
 			<Special>
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
@@ -1153,7 +1153,7 @@
 				<Armour>3</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 			</AdditionalParam>
 			<Special>
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
@@ -1198,7 +1198,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<UnitStrength>5</UnitStrength>
-				<Unbreakable>true</Unbreakable>
+				<Unbreakable/>
 			</AdditionalParam>
 			<Special>
 				<SpecialRuleDescription>Golden Griffon</SpecialRuleDescription>
@@ -1246,25 +1246,25 @@
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Sergeant</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1305,25 +1305,25 @@
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Sergeant</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1364,19 +1364,19 @@
 				<Option>
 					<Name>Duellist</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -1405,7 +1405,7 @@
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Lance</Name>
-					<Lance>true</Lance>
+					<Lance/>
 				</HandWeapon>
 				<Armour>
 					<Name>Full plate armour</Name>
@@ -1421,25 +1421,25 @@
 					<Name>Knights of the Inner Circle</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToStrength>1</AddToStrength>
 				</Option>
 				<Option>
 					<Name>Preceptor</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -1477,19 +1477,19 @@
 				<Option>
 					<Name>Marksman</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
@@ -1555,19 +1555,19 @@
 				<Option>
 					<Name>Marksman</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -1606,14 +1606,14 @@
 					<Name>Hunters</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 				</Option>
 				<Option>
 					<Name>Marksman</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 			</Options>
@@ -1646,19 +1646,19 @@
 				<Option>
 					<Name>Sergeant</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1680,13 +1680,13 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Stubborn>true</Stubborn>
+				<Stubborn/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Great weapon</Name>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1703,19 +1703,19 @@
 				<Option>
 					<Name>Count's Champion</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 			</Options>
@@ -1753,13 +1753,13 @@
 				<Option>
 					<Name>Outrider</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>7</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -1809,19 +1809,19 @@
 				<Option>
 					<Name>Outrider Champion</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Barding for Warhorse</Name>
 					<Type>Option</Type>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 					<SpecialRuleDescription>No longer Fast Cavalry</SpecialRuleDescription>
 					<Points>2</Points>
@@ -1922,13 +1922,13 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Unbreakable>true</Unbreakable>
-				<Frenzy>true</Frenzy>
+				<Unbreakable/>
+				<Frenzy/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Flail</Name>
-					<Flail>true</Flail>
+					<Flail/>
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Crazed!</SpecialRuleDescription>
@@ -1939,7 +1939,7 @@
 				<Option>
 					<Name>Prophet of Doom</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -2009,10 +2009,10 @@
 				<Armour>1</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Unbreakable>true</Unbreakable>
-				<Terror>true</Terror>
+				<Unbreakable/>
+				<Terror/>
 				<UnitStrength>10</UnitStrength>
-				<SteamTank>true</SteamTank>
+				<SteamTank/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<RangWeapon>
