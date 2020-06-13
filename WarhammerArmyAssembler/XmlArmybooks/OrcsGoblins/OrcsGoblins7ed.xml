@@ -57,14 +57,14 @@
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
@@ -88,8 +88,8 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>100</Points>
-				<AutoWound>true</AutoWound>
-				<NoArmour>true</NoArmour>
+				<AutoWound/>
+				<NoArmour/>
 				<Description>All hits from this weapons wound automatically and allow no armour saves</Description>
 			</Artefact>
 			<Artefact>
@@ -105,8 +105,8 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>50</Points>
-				<AddToStrength>1</AddToStrength>
-				<Frenzy>true</Frenzy>
+				<Flail>1</Flail>
+				<Frenzy/>
 				<Description>Grants +1 Strength in the first round of combat. The wielder of this weapon is subject to Frenzy (D6 extra attacks). The wielder can never lose his Frenzy</Description>
 			</Artefact>
 			<Artefact>
@@ -137,7 +137,7 @@
 				<Points>25</Points>
 				<AddToStrength>1</AddToStrength>
 				<Reroll>ToHit</Reroll>
-				<Flail>true</Flail>
+				<Flail/>
 				<Description>The wielder may re-roll any missed to hit rolls. It also grants +1 Strength in the first round of combat</Description>
 			</Artefact>
 			<Artefact>
@@ -145,7 +145,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>25</Points>
-				<PoisonAttack>true</PoisonAttack>
+				<PoisonAttack/>
 				<SpecialRuleDescription>+1 Strength flank attack bonus</SpecialRuleDescription>
 				<SpecialRuleDescription>+2 Strength rear attack bonus</SpecialRuleDescription>
 				<Description>Grants poisoned attacks. Grants the wielder +1 Strength if he is attacking the enemy in the flank and +2 Strength if he is attacking them in the rear</Description>
@@ -304,7 +304,7 @@
 				<Name>Warboss Imbad's iron gnashas</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<KillingBlow>true</KillingBlow>
+				<KillingBlow/>
 				<Description>The character wearing the Gnashas gains the Killing Blow special ability in close combat. Chomp!</Description>
 			</Artefact>
 			<Artefact>
@@ -348,8 +348,8 @@
 				<Name>Guzzla's Battle Brew</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
-				<Hate>true</Hate>
-				<Frenzy>true</Frenzy>
+				<Hate/>
+				<Frenzy/>
 				<Description>The character with the brew is assumed to have 'bolstered' himself before battle - roll a dice and consult the following table to determine the effects upon the drinker:|1-2 - Subject to Stupidity for remainder of the game|3-4 - Hatred of all enemies for the remainder of the game|5-6 - Hatred of all enemies and Frenzy for the remainder of the game</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -375,7 +375,7 @@
 				<Type>Banner</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
-				<Stubborn>true</Stubborn>
+				<Stubborn/>
 				<Description>All Night Goblin in this unit are Stubborn</Description>
 			</Artefact>
 			<Artefact>
@@ -383,7 +383,7 @@
 				<Type>Banner</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
-				<PoisonAttack>true</PoisonAttack>
+				<PoisonAttack/>
 				<Description>All Goblin in the unit have poisoned attacks (shooting and combat)</Description>
 			</Artefact>
 			<Artefact>
@@ -412,7 +412,7 @@
 			<Description>Gorbad Ironclaw</Description>
 			<MinSize>1</MinSize>
 			<MountInit>Gnarla</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>7</WeaponSkill>
@@ -427,8 +427,8 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Morglor The Mangler</Name>
-					<HitFirst>true</HitFirst>
-					<NoArmour>true</NoArmour>
+					<HitFirst/>
+					<NoArmour/>
 				</HandWeapon>
 				<Armour>
 					<Name>Heavy armour</Name>
@@ -451,7 +451,7 @@
 			<Description>Azhag The Slaughterer</Description>
 			<MinSize>1</MinSize>
 			<MountInit>Wyvern</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>7</WeaponSkill>
@@ -464,7 +464,7 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Stupidity>true</Stupidity>
+				<Stupidity/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -489,7 +489,7 @@
 			<Group>Orc</Group>
 			<Points>375</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Grimgor Ironhide</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -503,14 +503,14 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Hate>true</Hate>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Hate/>
+				<ImmuneToPsychology/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Gitsnik</Name>
 					<AddToStrength>2</AddToStrength>
-					<HitFirst>true</HitFirst>
+					<HitFirst/>
 				</HandWeapon>
 				<Armour>
 					<Name>Blood-forged Armour</Name>
@@ -530,7 +530,7 @@
 			<MinSize>1</MinSize>
 			<Description>Grom The Paunch of Misty Mountain</Description>
 			<MountInit>Goblin Wolf Chariot</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -543,14 +543,14 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Regeneration>true</Regeneration>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Regeneration/>
+				<ImmuneToPsychology/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>The Axe of Grom</Name>
 					<AddToStrength>2</AddToStrength>
-					<KillingBlow>true</KillingBlow>
+					<KillingBlow/>
 					<SpecialRuleDescription>Killing Blow on a 5+ against ane Elves</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
@@ -567,7 +567,7 @@
 			<MinSize>1</MinSize>
 			<Description>Skarsnik. Warlord of the Eight Peaks</Description>
 			<MountInit>Gobbla</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -580,7 +580,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Hate>true</Hate>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -592,7 +592,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<KillingBlow>true</KillingBlow>
+					<KillingBlow/>
 					<SpecialRuleDescription>Down in One</SpecialRuleDescription>
 					<SpecialRuleDescription>Tricksy Traps</SpecialRuleDescription>
 					<SpecialRuleDescription>Sneaky Schemes</SpecialRuleDescription>
@@ -634,7 +634,7 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
 				</Option>
 				<Option>
@@ -647,7 +647,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>6</Points>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Black Orc</OnlyIfNot>
@@ -695,19 +695,19 @@
 					<Name>Boar</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Wyvern</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Orc Boar Chariot</Name>
 					<Type>Option</Type>
 					<Points>80</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -750,26 +750,26 @@
 					<Name>Savage Orc</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Boar</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Wyvern</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Orc Boar Chariot</Name>
 					<Type>Option</Type>
 					<Points>80</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -816,7 +816,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -848,19 +848,19 @@
 					<Name>Wolf</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Gigantic spider</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Great squig</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Night Goblin</OnlyIf>
 					</OnlyIfAnotherService>
@@ -869,7 +869,7 @@
 					<Name>Goblin Wolf Chariot</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -923,13 +923,13 @@
 					<Name>Wolf</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Goblin Wolf Chariot</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -965,7 +965,7 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
 				</Option>
 				<Option>
@@ -978,7 +978,7 @@
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
@@ -991,7 +991,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>4</Points>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Black Orc</OnlyIfNot>
@@ -1049,13 +1049,13 @@
 					<Name>Boar</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Orc Boar Chariot</Name>
 					<Type>Option</Type>
 					<Points>80</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -1092,7 +1092,7 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
-					<Frenzy>true</Frenzy>
+					<Frenzy/>
 					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
 				</Option>
 				<Option>
@@ -1106,7 +1106,7 @@
 					<Name>Boar</Name>
 					<Type>Option</Type>
 					<Points>16</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -1152,7 +1152,7 @@
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
@@ -1165,7 +1165,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>4</Points>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
@@ -1209,19 +1209,19 @@
 					<Name>Wolf</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Gigantic spider</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Great squig</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Night Goblin</OnlyIf>
 					</OnlyIfAnotherService>
@@ -1230,7 +1230,7 @@
 					<Name>Goblin Wolf chariot</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -1284,13 +1284,13 @@
 					<Name>Wolf</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Goblin Wolf chariot</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -1313,8 +1313,8 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<PoisonAttack>true</PoisonAttack>
+				<Terror/>
+				<PoisonAttack/>
 				<UnitStrength>5</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1468,7 +1468,7 @@
 			<Name>Goblin Wolf Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Wolf</MountInit>
 			<ModelsInPack>5</ModelsInPack>
 			<MainParam>
@@ -1498,7 +1498,7 @@
 			<Name>Orc Boar Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Boar</MountInit>
 			<ModelsInPack>4</ModelsInPack>
 			<MainParam>
@@ -1561,47 +1561,47 @@
 					<Name>Big'Uns</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 				</Option>
 				<Option>
 					<Name>Additional choppa</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToAttacks>1</AddToAttacks>
 				</Option>
 				<Option>
 					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 					<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>15</Points>
 				</Option>
 			</Options>
@@ -1638,19 +1638,19 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 					<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>15</Points>
 				</Option>
 			</Options>
@@ -1672,7 +1672,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1687,53 +1687,53 @@
 					<Name>Big'Uns</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 				</Option>
 				<Option>
 					<Name>Additional choppa</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToAttacks>1</AddToAttacks>
 				</Option>
 				<Option>
 					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Bows</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 					<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>15</Points>
 				</Option>
 			</Options>
@@ -1771,37 +1771,37 @@
 					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Bows</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1841,37 +1841,37 @@
 					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Short bows</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 					<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 			</Options>
@@ -1894,7 +1894,7 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<PoisonAttack>true</PoisonAttack>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1918,24 +1918,24 @@
 					<Name>Short bows</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 					<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 			</Options>
@@ -1975,7 +1975,7 @@
 					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Nets</Name>
@@ -2000,19 +2000,19 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 					<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -2035,8 +2035,8 @@
 				<Leadership>4</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-				<Stubborn>true</Stubborn>
+				<ImmuneToPsychology/>
+				<Stubborn/>
 			</AdditionalParam>
 		</Unit>
 		<Unit>
@@ -2073,25 +2073,25 @@
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 					<Option>
 					<Name>Back Orc Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 				</Option>
 			</Options>
@@ -2145,27 +2145,27 @@
 					<Name>Big'Uns</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 					<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>17</Points>
 				</Option>
 			</Options>
@@ -2188,7 +2188,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Unit</MagicItemsType>
 			</AdditionalParam>
@@ -2209,40 +2209,40 @@
 					<Name>Big'Uns</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 				</Option>
 				<Option>
 					<Name>Spears</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Musicain</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 					<Option>
 					<Name>Boss</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>17</Points>
 				</Option>
 			</Options>
@@ -2253,7 +2253,7 @@
 			<Points>80</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Boar</MountInit>
 			<ModelsInPack>4</ModelsInPack>
 			<MainParam>
@@ -2310,7 +2310,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<ImmuneToPsychology/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -2342,7 +2342,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<ImmuneToPsychology/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -2362,7 +2362,7 @@
 			<Points>60</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Wolf</MountInit>
 			<ModelsInPack>5</ModelsInPack>
 			<MainParam>
@@ -2499,9 +2499,9 @@
 				<Leadership>4</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Stupidity>true</Stupidity>
-				<Fear>true</Fear>
-				<Regeneration>true</Regeneration>
+				<Stupidity/>
+				<Fear/>
+				<Regeneration/>
 				<UnitStrength>3</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -2517,7 +2517,7 @@
 					<Name>Stone troll</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>5</AddToArmour>
 					<AddToStrength>1</AddToStrength>
 					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
@@ -2526,7 +2526,7 @@
 					<Name>River troll</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
 				</Option>
 			</Options>
@@ -2577,8 +2577,8 @@
 				<Leadership>4</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-				<Stubborn>true</Stubborn>
+				<ImmuneToPsychology/>
+				<Stubborn/>
 				<UnitStrength>3</UnitStrength>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
@@ -2611,8 +2611,8 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Stubborn>true</Stubborn>
+				<Terror/>
+				<Stubborn/>
 				<UnitStrength>6</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>

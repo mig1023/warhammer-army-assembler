@@ -57,14 +57,14 @@
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
@@ -97,7 +97,7 @@
 				<Name>Warpforged Blade</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
-				<NoArmour>true</NoArmour>
+				<NoArmour/>
 				<Description>Armour saves cannot be taken against his from a Warpforged Blade.</Description>
 			</Artefact>
 			<Artefact>
@@ -392,7 +392,7 @@
 				<Name>Dwarf-hide Banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<Hate>true</Hate>
+				<Hate/>
 				<Description>The unit carrying this banner gains Hatred of Dwarfs and likewise will be subject to all Dwarfs gaining Hatred against them.</Description>
 			</Artefact>
 			<Artefact>
@@ -414,7 +414,7 @@
 			<Points>470</Points>
 			<Description>Lord Skrolk</Description>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>6</WeaponSkill>
@@ -427,9 +427,9 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<Terror>true</Terror>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<Frenzy/>
+				<Terror/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -452,7 +452,7 @@
 			<Description>Lord Thanquol</Description>
 			<MinSize>1</MinSize>
 			<MountInit>Boneripper</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>3</WeaponSkill>
@@ -465,9 +465,9 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<Terror>true</Terror>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<Frenzy/>
+				<Terror/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -499,7 +499,7 @@
 			<Points>395</Points>
 			<Description>Ikit Claw</Description>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -512,9 +512,9 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<Terror>true</Terror>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<Frenzy/>
+				<Terror/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -544,7 +544,7 @@
 			<Points>225</Points>
 			<Description>Throt the Unclean</Description>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>6</WeaponSkill>
@@ -557,15 +557,15 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<Regeneration>true</Regeneration>
-				<KillingBlow>true</KillingBlow>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<Fear/>
+				<Regeneration/>
+				<KillingBlow/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Creature-killer</Name>
-					<KillingBlow>true</KillingBlow>
+					<KillingBlow/>
 					<SpecialRuleDescription>D3 wounds for large creatures</SpecialRuleDescription>
 				</HandWeapon>
 				<HandWeapon>
@@ -591,7 +591,7 @@
 			<Points>215</Points>
 			<Description>Queek Headtaker</Description>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>7</WeaponSkill>
@@ -604,13 +604,13 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Hate>true</Hate>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<Hate/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Dwarf Gouger</Name>
-					<NoArmour>true</NoArmour>
+					<NoArmour/>
 					<SpecialRuleDescription>Always wounds Dwarfs on a roll of 2+</SpecialRuleDescription>
 				</HandWeapon>
 				<HandWeapon>
@@ -650,8 +650,8 @@
 				<Ward>5</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<Terror/>
+				<ImmuneToPsychology/>
 				<UnitStrength>5</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -687,7 +687,7 @@
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -707,7 +707,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -732,19 +732,19 @@
 					<Name>Rat Ogre Bonebreaker</Name>
 					<Type>Option</Type>
 					<Points>65</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>War-litter</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Great Pox Rat</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -769,7 +769,7 @@
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -786,7 +786,7 @@
 					<Name>Screaming Bell</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -797,7 +797,7 @@
 			<Points>270</Points>
 			<Description>Deathmaster Snikch</Description>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>8</WeaponSkill>
@@ -810,7 +810,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -846,7 +846,7 @@
 			<Points>145</Points>
 			<Description>Tretch Craventail</Description>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -859,8 +859,8 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<HitFirst/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -904,8 +904,8 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<HitFirst>true</HitFirst>
-				<PoisonAttack>true</PoisonAttack>
+				<HitFirst/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -950,7 +950,7 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1021,7 +1021,7 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1041,7 +1041,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1066,7 +1066,7 @@
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -1093,8 +1093,8 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<Frenzy>true</Frenzy>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<Frenzy/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1122,7 +1122,7 @@
 				<Option>
 					<Name>Flail</Name>
 					<Type>Option</Type>
-					<Flail>true</Flail>
+					<Flail/>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1135,13 +1135,13 @@
 					<Name>Great Pox Rat</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Plague Furnace</Name>
 					<Type>Option</Type>
 					<Points>150</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -1166,7 +1166,7 @@
 				<Leadership>-1</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
+				<Fear/>
 				<UnitStrength>6</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1179,7 +1179,7 @@
 				</Special>	
 				<Special>
 					<SpecialRuleDescription>Altar of the Horned Rat</SpecialRuleDescription>
-					<Unbreakable>true</Unbreakable>
+					<Unbreakable/>
 				</Special>
 				<Special>
 					<SpecialRuleDescription>Protection of the Horned Rat</SpecialRuleDescription>
@@ -1209,7 +1209,7 @@
 				<Leadership>-1</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 				<UnitStrength>6</UnitStrength>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
@@ -1225,7 +1225,7 @@
 				</Special>	
 				<Special>
 					<SpecialRuleDescription>Icon of the Horned Rat</SpecialRuleDescription>
-					<Unbreakable>true</Unbreakable>
+					<Unbreakable/>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1247,9 +1247,9 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
+				<Fear/>
 				<UnitStrength>4</UnitStrength>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1300,8 +1300,8 @@
 				<Leadership>2</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<PoisonAttack>true</PoisonAttack>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<PoisonAttack/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1328,8 +1328,8 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<Unbreakable>true</Unbreakable>
+				<Fear/>
+				<Unbreakable/>
 				<UnitStrength>3</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1346,7 +1346,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<WeaponTeam>true</WeaponTeam>
+			<WeaponTeam/>
 			<Name>Poisoned Wind Mortar</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -1363,7 +1363,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1382,7 +1382,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<WeaponTeam>true</WeaponTeam>
+			<WeaponTeam/>
 			<Name>Warpfire Thrower</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -1399,7 +1399,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1418,7 +1418,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<WeaponTeam>true</WeaponTeam>
+			<WeaponTeam/>
 			<Name>Ratling Gun</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -1435,7 +1435,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1454,7 +1454,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<WeaponTeam>true</WeaponTeam>
+			<WeaponTeam/>
 			<Name>Doom-flayer</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -1471,7 +1471,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1490,7 +1490,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<WeaponTeam>true</WeaponTeam>
+			<WeaponTeam/>
 			<Name>Warp-grinder</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -1507,7 +1507,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1526,7 +1526,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<WeaponTeam>true</WeaponTeam>
+			<WeaponTeam/>
 			<Name>Poison Wind Mortar</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -1543,7 +1543,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1579,7 +1579,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1598,55 +1598,55 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>0,5</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>0,5</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Poisoned Wind Mortar</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>65</Points>
 				</Option>
 				<Option>
 					<Name>Warpfire Thrower</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>70</Points>
 				</Option>
 				<Option>
 					<Name>Ratling Gun</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>55</Points>
 				</Option>
 				<Option>
 					<Name>Doom-flayer</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>55</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Clawleader</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1668,7 +1668,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1695,67 +1695,67 @@
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 					<Option>
 					<Name>Fangleader</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>15</Points>
 				</Option>
 				<Option>
 					<Name>Poisoned Wind Mortar</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>65</Points>
 				</Option>
 				<Option>
 					<Name>Warpfire Thrower</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>70</Points>
 				</Option>
 				<Option>
 					<Name>Ratling Gun</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>55</Points>
 				</Option>
 				<Option>
 					<Name>Doom-flayer</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>55</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Clawleader</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1777,7 +1777,7 @@
 				<Leadership>2</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1794,31 +1794,31 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>0,5</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Slings</Name>
 					<Type>Option</Type>
 					<Points>0,5</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>0,5</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Pawleader</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1840,7 +1840,7 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1860,20 +1860,20 @@
 					<Name>Slings</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Mightleader</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Warp-grinder</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>60</Points>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 				</Option>
 			</Options>
 		</Unit>
@@ -1895,7 +1895,7 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1937,7 +1937,7 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Unbreakable>true</Unbreakable>
+				<Unbreakable/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1963,7 +1963,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1991,19 +1991,19 @@
 					<Name>Slings</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Poisoned Attacks</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
-					<PoisonAttack>true</PoisonAttack>
-					<PerModel>true</PerModel>
+					<PoisonAttack/>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Deathrunner</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 				<Option>
@@ -2024,7 +2024,7 @@
 				</Option>
 				<Option>
 					<Name>Warp-grinder</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>60</Points>
 				</Option>
@@ -2047,10 +2047,10 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<Fear>true</Fear>
+				<Frenzy/>
+				<Fear/>
 				<UnitStrength>3</UnitStrength>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -2068,7 +2068,7 @@
 				<Option>
 					<Name>Master-bred Rat Ogre</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>15</Points>
 				</Option>
 			</Options>
@@ -2091,10 +2091,10 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Unit</MagicItemsType>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -2109,19 +2109,19 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Bringer-of-the-Word</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -2143,9 +2143,9 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<Hate>true</Hate>
-				<StrengthInNumbers>true</StrengthInNumbers>
+				<Frenzy/>
+				<Hate/>
+				<StrengthInNumbers/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -2161,7 +2161,7 @@
 				<Option>
 					<Name>Plague Chanter</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>13</Points>
 				</Option>
 			</Options>
@@ -2184,8 +2184,8 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<Hate>true</Hate>
+				<Frenzy/>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -2205,7 +2205,7 @@
 				<Option>
 					<Name>Sharpshooter</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -2227,8 +2227,8 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<Hate>true</Hate>
+				<Frenzy/>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -2251,7 +2251,7 @@
 				<Option>
 					<Name>Bombardier</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
@@ -2264,7 +2264,7 @@
 				</Option>
 				<Option>
 					<Name>Poison Wind Mortar</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>65</Points>
 				</Option>
@@ -2288,12 +2288,12 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Regeneration>true</Regeneration>
-				<Terror>true</Terror>
-				<Stubborn>true</Stubborn>
+				<Regeneration/>
+				<Terror/>
+				<Stubborn/>
 				<UnitStrength>6</UnitStrength>
 				<ImpactHit>D6</ImpactHit>
-				<HellPitAbomination>true</HellPitAbomination>
+				<HellPitAbomination/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -2330,8 +2330,8 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-				<Terror>true</Terror>
+				<ImmuneToPsychology/>
+				<Terror/>
 				<UnitStrength>5</UnitStrength>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
