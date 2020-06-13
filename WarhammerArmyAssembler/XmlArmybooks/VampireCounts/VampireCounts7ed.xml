@@ -147,21 +147,21 @@
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
-				<Points>30</Points>
+				<Points>15</Points>
 				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
 				<Description>+1 to Hit</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sword of Battle</Name>
 				<Type>Weapon</Type>
-				<Points>25</Points>
+				<Points>15</Points>
 				<AddToAttacks>1</AddToAttacks>
 				<Description>+1 Attack</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sword of Might</Name>
 				<Type>Weapon</Type>
-				<Points>20</Points>
+				<Points>15</Points>
 				<AddToStrength>1</AddToStrength>
 				<Description>+1 Strength</Description>
 			</Artefact>
@@ -175,7 +175,7 @@
 			<Artefact>
 				<Name>Enchanted shield</Name>
 				<Type>Shield</Type>
-				<Points>10</Points>
+				<Points>15</Points>
 				<AddToArmour>5</AddToArmour>
 				<Description>5+ armour save</Description>
 			</Artefact>
@@ -187,11 +187,18 @@
 				<Description>6+ ward save</Description>
 			</Artefact>
 			<Artefact>
+				<Name>Staff of Sorcery</Name>
+				<Type>Arcane</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>+1 to dispel</SpecialRuleDescription>
+				<Description>+1 to dispel</Description>
+			</Artefact>
+			<Artefact>
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
 				<Multiple>true</Multiple>
-				<Description>automatically dispel an enemy spell, one use only</Description>
+				<Description>Automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
@@ -201,13 +208,6 @@
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>35</Points>
-				<SpecialRuleDescription>+1 to dispel</SpecialRuleDescription>
-				<Description>+1 to dispel</Description>
-			</Artefact>
-			<Artefact>
 				<Name>War Banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
@@ -215,6 +215,70 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic weapons">
+			<Artefact>
+				<Name>Frostblade</Name>
+				<Type>Weapon</Type>
+				<Points>100</Points>
+				<AutoDeath>true</AutoDeath>
+				<Description>If a model suffers one or more Wounds from the Frostblade (after saves, etc) they are slain outright and lose all remaining Wounds</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dreadlance</Name>
+				<Type>Weapon</Type>
+				<Points>60</Points>
+				<Lance>true</Lance>
+				<AutoHit>true</AutoHit>
+				<Description>Lance. Attacks with the Dreadlance hit automatically.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Black Axe of Krell</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Wight King</OnlyForGroup>
+				<AddToStrength>2</AddToStrength>
+				<MultiWounds>D3</MultiWounds>
+				<Test Bet="Wound" Context="Wound">Toughness</Test>
+				<Description>Great weapon. The Black Axe does D3 Wounds. Any model wounded by die Black Axe but not slain must pass a Toughness test at the start of each of its subsequent turns or suffer an additional Wound.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Blood Drinker</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<OnlyForGroup>Vampire</OnlyForGroup>
+				<SpecialRuleDescription>For each unsaved wound inflicted by the Blood Drinker, the wielder (or unit he is with) immediately regains a single Wound suffered earlier in the battle, as if Invocation of Nehek had been cast on them</SpecialRuleDescription>
+				<Description>For each unsaved wound inflicted by the Blood Drinker, the wielder (or unit he is with) immediately regains a single Wound suffered earlier in the battle, as if Invocation of Nehek had been cast on them.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Skabscrath</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<Terror>true</Terror>
+				<Description>The bearer causes Terror.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Kings</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<KillingBlow>true</KillingBlow>
+				<Description>This weapon has the Killing Blow special rule. If given to a Wight King it scores a Killing Blow on a 5+.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Tomb Blade</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>If the bearer is in a unit of Skeleton Warriors, for each model he slays in close combat an extra model is added to the unit following the rules given in the Invocation of Nehek spell. Newly created models arc equipped the same as the rest of the unit</SpecialRuleDescription>
+				<Description>If the bearer is in a unit of Skeleton Warriors, for each model he slays in close combat an extra model is added to the unit following the rules given in the Invocation of Nehek spell. Newly created models arc equipped the same as the rest of the unit.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Balefire Spike</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<Lance>true</Lance>
+				<SpecialRuleDescription>Flaming attacks</SpecialRuleDescription>
+				<Description>Lanee. Attacks with the Balefire Spike are flaming.</Description>
+			</Artefact>
+		</ArtefactsGroup>	
 	</Artefacts>
 	<Heroes>
 		<Hero>
@@ -603,6 +667,7 @@
 			<Points>75</Points>
 			<MinSize>1</MinSize>
 			<Wizard>1</Wizard>
+			<Group>Wight King</Group>
 			<Description>Wight King</Description>
 			<MainParam>
 				<Movement>4</Movement>
