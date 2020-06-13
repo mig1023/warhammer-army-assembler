@@ -30,7 +30,7 @@
 				<Name>Supernatural Horror</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
-				<Terror>true</Terror>
+				<Terror/>
 				<Description>The Vampire causes Terror.</Description>
 			</Artefact>
 			<Artefact>
@@ -81,7 +81,7 @@
 				<Name>Red Fury</Name>
 				<Type>Powers</Type>
 				<Points>50</Points>
-				<PredatoryFighter>true</PredatoryFighter>
+				<PredatoryFighter/>
 				<Description>For each unsaved wound that the Vampire causes it gets to immediately make an additional attack. These additional attacks do not benefit from the Red Fury rule. The Red Fury ability cannot be combined with a great weapon.</Description>
 			</Artefact>
 			<Artefact>
@@ -96,7 +96,7 @@
 				<Name>Dread Knight</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
-				<Lance>true</Lance>
+				<Lance/>
 				<ArmourTo>2</ArmourTo>
 				<Description>The Vampire has a lance, heavy armour, a shield and rides a barded Nightmare.</Description>
 			</Artefact>
@@ -197,14 +197,14 @@
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>Automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
@@ -220,15 +220,15 @@
 				<Name>Frostblade</Name>
 				<Type>Weapon</Type>
 				<Points>100</Points>
-				<AutoDeath>true</AutoDeath>
+				<AutoDeath/>
 				<Description>If a model suffers one or more Wounds from the Frostblade (after saves, etc) they are slain outright and lose all remaining Wounds</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Dreadlance</Name>
 				<Type>Weapon</Type>
 				<Points>60</Points>
-				<Lance>true</Lance>
-				<AutoHit>true</AutoHit>
+				<Lance/>
+				<AutoHit/>
 				<Description>Lance. Attacks with the Dreadlance hit automatically.</Description>
 			</Artefact>
 			<Artefact>
@@ -253,14 +253,14 @@
 				<Name>Skabscrath</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<Terror>true</Terror>
+				<Terror/>
 				<Description>The bearer causes Terror.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sword of Kings</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<KillingBlow>true</KillingBlow>
+				<KillingBlow/>
 				<Description>This weapon has the Killing Blow special rule. If given to a Wight King it scores a Killing Blow on a 5+.</Description>
 			</Artefact>
 			<Artefact>
@@ -274,7 +274,7 @@
 				<Name>The Balefire Spike</Name>
 				<Type>Weapon</Type>
 				<Points>10</Points>
-				<Lance>true</Lance>
+				<Lance/>
 				<SpecialRuleDescription>Flaming attacks</SpecialRuleDescription>
 				<Description>Lanee. Attacks with the Balefire Spike are flaming.</Description>
 			</Artefact>
@@ -287,7 +287,7 @@
 			<Points>490</Points>
 			<MinSize>1</MinSize>
 			<Group>Vampire</Group>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Wizard>3</Wizard>
 			<Description>Vlad von Carstein</Description>
 			<MainParam>
@@ -303,8 +303,8 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Undead>true</Undead>
+				<Terror/>
+				<Undead/>
 				<Reroll>ToWound</Reroll>
 				<AddToCloseCombat>1</AddToCloseCombat>
 			</AdditionalParam>
@@ -328,7 +328,7 @@
 			<Points>475</Points>
 			<MinSize>1</MinSize>
 			<Group>Vampire</Group>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Wizard>4</Wizard>
 			<Description>Count Mannfred</Description>
 			<MainParam>
@@ -343,7 +343,7 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 				<Reroll>ToWound</Reroll>
 				<MagicItemCount>2</MagicItemCount>
 				<MagicItemsType>Hero</MagicItemsType>
@@ -367,19 +367,19 @@
 					<Type>Option</Type>
 					<AddToArmour>2</AddToArmour>
 					<Points>20</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Hellsteed</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Abyssal Terror</Name>
 					<Type>Option</Type>
 					<Points>135</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -403,7 +403,7 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
 				<MagicPowers>100</MagicPowers>
@@ -426,25 +426,25 @@
 					<Name>Nightmare</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Hellsteed</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Abyssal Terror</Name>
 					<Type>Option</Type>
 					<Points>135</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Zombie Dragon</Name>
 					<Type>Option</Type>
 					<Points>275</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -454,7 +454,7 @@
 			<Points>185</Points>
 			<MinSize>1</MinSize>
 			<Group>Vampire</Group>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Wizard>2</Wizard>
 			<Description>Mannfred the Acolyte</Description>
 			<MainParam>
@@ -469,7 +469,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 				<MagicItemCount>1</MagicItemCount>
 				<MagicItemsType>Hero</MagicItemsType>
 				<AddToCloseCombat>1</AddToCloseCombat>
@@ -486,13 +486,13 @@
 					<Type>Option</Type>
 					<AddToArmour>2</AddToArmour>
 					<Points>20</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Abyssal Terror</Name>
 					<Type>Option</Type>
 					<Points>135</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -502,7 +502,7 @@
 			<Points>145</Points>
 			<MinSize>1</MinSize>
 			<Group>Vampire</Group>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Konrad von Carstein</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -516,8 +516,8 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<Hate>true</Hate>
+				<Undead/>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -541,7 +541,7 @@
 			<MinSize>1</MinSize>
 			<Group>Vampire</Group>
 			<Wizard>1</Wizard>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Isabella von Carstein</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -555,7 +555,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -590,7 +590,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
 			</AdditionalParam>
@@ -605,7 +605,7 @@
 					<Type>Option</Type>
 					<AddToArmour>2</AddToArmour>
 					<Points>15</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 		</Hero>
@@ -629,7 +629,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
 				<MagicPowers>50</MagicPowers>
@@ -644,19 +644,19 @@
 					<Name>Nightmare</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Hellsteed</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -681,8 +681,8 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<KillingBlow>true</KillingBlow>
+				<Undead/>
+				<KillingBlow/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
 			</AdditionalParam>
@@ -704,7 +704,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>10</Points>
 				</Option>
 				<Option>
@@ -719,13 +719,13 @@
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>12</Points>
-					<Lance>true</Lance>
+					<Lance/>
 				</Option>
 				<Option>
 					<Name>Skeletal Steed</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding for Skeletal Steed</Name>
@@ -812,8 +812,8 @@
 				<Leadership>4</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<Terror>true</Terror>
+				<Undead/>
+				<Terror/>
 			</AdditionalParam>
 			<Special>
 				<SpecialRuleDescription>Large target</SpecialRuleDescription>
@@ -837,8 +837,8 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<Terror>true</Terror>
+				<Undead/>
+				<Terror/>
 			</AdditionalParam>
 			<Special>
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
@@ -866,7 +866,7 @@
 				<Leadership>2</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -881,13 +881,13 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -909,7 +909,7 @@
 				<Leadership>3</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -929,24 +929,24 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Champion</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -970,8 +970,8 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<PoisonAttack>true</PoisonAttack>
+				<Undead/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -982,7 +982,7 @@
 				<Option>
 					<Name>Crypt Chast</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 			</Options>
@@ -1005,8 +1005,8 @@
 				<Leadership>3</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<NoSlotsOfCore>true</NoSlotsOfCore>
+				<Undead/>
+				<NoSlotsOfCore/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1020,7 +1020,7 @@
 				<Option>
 					<Name>Doom Wolf</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -1043,8 +1043,8 @@
 				<Leadership>3</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<NoSlotsOfCore>true</NoSlotsOfCore>
+				<Undead/>
+				<NoSlotsOfCore/>
 				<UnitStrength>3</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1076,9 +1076,9 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<NoSlotsOfCore>true</NoSlotsOfCore>
-				<Regeneration>true</Regeneration>
+				<Undead/>
+				<NoSlotsOfCore/>
+				<Regeneration/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1126,12 +1126,12 @@
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Wight Blade</Name>
-					<KillingBlow>true</KillingBlow>
+					<KillingBlow/>
 				</HandWeapon>
 				<Armour>
 					<Name>Heavy armour</Name>
@@ -1147,26 +1147,26 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Seneschal</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -1192,16 +1192,16 @@
 				<Armour>6</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Wight Blade</Name>
-					<KillingBlow>true</KillingBlow>
+					<KillingBlow/>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Lance</Name>
-					<Lance>true</Lance>
+					<Lance/>
 				</HandWeapon>
 				<Armour>
 					<Name>Heavy armour</Name>
@@ -1221,24 +1221,24 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Points>4</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Hell Knight</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -1263,7 +1263,7 @@
 				<Leadership>3</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1292,7 +1292,7 @@
 				<Leadership>4</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
+				<Undead/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1321,10 +1321,10 @@
 				<Leadership>4</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Undead>true</Undead>
-				<Regeneration>true</Regeneration>
-				<Hate>true</Hate>
+				<Terror/>
+				<Undead/>
+				<Regeneration/>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1354,10 +1354,10 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Undead>true</Undead>
-				<Regeneration>true</Regeneration>
-				<Hate>true</Hate>
+				<Terror/>
+				<Undead/>
+				<Regeneration/>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1372,7 +1372,7 @@
 				<Option>
 					<Name>Tomb Banshee</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -1397,8 +1397,8 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Undead>true</Undead>
-				<Frenzy>true</Frenzy>
+				<Undead/>
+				<Frenzy/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1406,7 +1406,7 @@
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Lance</Name>
-					<Lance>true</Lance>
+					<Lance/>
 				</HandWeapon>
 				<Armour>
 					<Name>Heavy armour</Name>
@@ -1425,7 +1425,7 @@
 				<Option>
 					<Name>Kastellan</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Hero</MagicItemsType>
@@ -1433,13 +1433,13 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 					<MagicItems>75</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -1466,8 +1466,8 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Undead>true</Undead>
+				<Terror/>
+				<Undead/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>

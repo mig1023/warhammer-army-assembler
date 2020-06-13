@@ -57,14 +57,14 @@
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
@@ -109,7 +109,7 @@
 				<Type>Weapon</Type>
 				<OnlyFor>Mount</OnlyFor>
 				<Points>40</Points>
-				<Lance>true</Lance>
+				<Lance/>
 				<SpecialRuleDescription>Lance. The bearer receives +3 Strength on the turn he charges</SpecialRuleDescription>
 				<Description>Lance. The bearer receives +3 Strength on the turn he charges.</Description>
 			</Artefact>
@@ -125,7 +125,7 @@
 				<Type>Weapon</Type>
 				<OnlyFor>Infantry</OnlyFor>
 				<Points>40</Points>
-				<KillingBlow>true</KillingBlow>
+				<KillingBlow/>
 				<AddToStrength>2</AddToStrength>
 				<Description>Model on foot only, requires two hands. The bearer adds +2 to his Strength when using the White Sword. In addition it confers the Killing Blow special rule.</Description>
 			</Artefact>
@@ -133,7 +133,7 @@
 				<Name>Blade of Sea Gold</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
-				<NoArmour>true</NoArmour>
+				<NoArmour/>
 				<Description>No armour saves may be taken against wounds caused by the Blade of Sea Gold.</Description>
 			</Artefact>
 			<Artefact>
@@ -309,7 +309,7 @@
 				<Name>Standard of Balance</Name>
 				<Type>Banner</Type>
 				<Points>45</Points>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<ImmuneToPsychology/>
 				<Description>The unit carrying the Standard of Balance, and any enemy unit in base contact with it, is immune to psychology. In addition, they also lose hatred and frenzy abilities (in the same way as a unit that has alteady fought and lost a round of combat).</Description>
 			</Artefact>
 			<Artefact>
@@ -518,7 +518,7 @@
 			<Points>400</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Malhandir</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Tyrion</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -532,8 +532,8 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
-				<MustBeGeneral>true</MustBeGeneral>
+				<HitFirst/>
+				<MustBeGeneral/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -550,7 +550,7 @@
 				<Armour>
 					<Name>Heart of Avelorn</Name>
 					<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
-					<Regeneration>true</Regeneration>
+					<Regeneration/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -560,7 +560,7 @@
 			<Points>475</Points>
 			<Wizard>4</Wizard>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Teclis</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -574,7 +574,7 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -604,7 +604,7 @@
 			<Name>Eltharion</Name>
 			<Points>285</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Eltharion the Grim</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -622,11 +622,11 @@
 					<Name>Stormwing</Name>
 					<Type>Option</Type>
 					<Points>205</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -634,7 +634,7 @@
 				</Special>
 				<HandWeapon>
 					<Name>The Fangsword of Eltharion</Name>
-					<NoArmour>true</NoArmour>
+					<NoArmour/>
 					<SpecialRuleDescription>Add +2 to Strength on charge</SpecialRuleDescription>
 				</HandWeapon>
 				<RangeWeapon>
@@ -662,7 +662,7 @@
 			<Name>Alith Anar</Name>
 			<Points>245</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Alith Anar</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -676,7 +676,7 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -723,7 +723,7 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
 			</AdditionalParam>
@@ -733,7 +733,7 @@
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>6</Points>
-					<Lance>true</Lance>
+					<Lance/>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
@@ -744,7 +744,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>12</Points>
 				</Option>
 				<Option>
@@ -806,49 +806,49 @@
 					<Name>Elven Steed</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barded Elven Steed</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Great Eagle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Giffon</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Sun Dragon</Name>
 					<Type>Option</Type>
 					<Points>230</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Moon Dragon</Name>
 					<Type>Option</Type>
 					<Points>300</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Star Dragon</Name>
 					<Type>Option</Type>
 					<Points>370</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Tiranoc Chariot</Name>
 					<Type>Option</Type>
 					<Points>85</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>2</AddToArmour>
 				</Option>
 			</Options>
@@ -892,37 +892,37 @@
 					<Name>Elven Steed</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barded Elven Steed</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Great Eagle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Sun Dragon</Name>
 					<Type>Option</Type>
 					<Points>250</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Moon Dragon</Name>
 					<Type>Option</Type>
 					<Points>300</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Tiranoc Chariot</Name>
 					<Type>Option</Type>
 					<Points>85</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>2</AddToArmour>
 				</Option>
 			</Options>
@@ -937,7 +937,7 @@
 			<Name>Caradryan</Name>
 			<Points>175</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Caradryan</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -952,8 +952,8 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<HitFirst>true</HitFirst>
+				<Fear/>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -979,7 +979,7 @@
 			<Name>Korhil</Name>
 			<Points>140</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Korhil</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -993,8 +993,8 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Stubborn>true</Stubborn>
-				<HitFirst>true</HitFirst>
+				<Stubborn/>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1005,7 +1005,7 @@
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Chayal</Name>
-					<KillingBlow>true</KillingBlow>
+					<KillingBlow/>
 					<AddToStrength>2</AddToStrength>
 				</HandWeapon>
 				<Armour>
@@ -1024,7 +1024,7 @@
 					<Name>Lion Chariot</Name>
 					<Type>Option</Type>
 					<Points>130</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>2</AddToArmour>
 				</Option>
 			</Options>
@@ -1047,7 +1047,7 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
 			</AdditionalParam>
@@ -1057,7 +1057,7 @@
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>4</Points>
-					<Lance>true</Lance>
+					<Lance/>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
@@ -1068,7 +1068,7 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>8</Points>
 				</Option>
 				<Option>
@@ -1130,32 +1130,32 @@
 					<Name>Elven Steed</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barded Elven Steed</Name>
 					<Type>Option</Type>
 					<Points>16</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Great Eagle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Tiranoc Chariot</Name>
 					<Type>Option</Type>
 					<Points>85</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>2</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -1199,19 +1199,19 @@
 					<Name>Elven Steed</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barded Elven Steed</Name>
 					<Type>Option</Type>
 					<Points>24</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Tiranoc Chariot</Name>
 					<Type>Option</Type>
 					<Points>85</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>2</AddToArmour>
 				</Option>
 			</Options>
@@ -1380,7 +1380,7 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<UnitStrength>4</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1407,7 +1407,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<UnitStrength>5</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1435,7 +1435,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<SlotOf>Hero</SlotOf>
-				<Terror>true</Terror>
+				<Terror/>
 				<UnitStrength>5</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1468,7 +1468,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<SlotOf>Hero</SlotOf>
-				<Terror>true</Terror>
+				<Terror/>
 				<UnitStrength>6</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1501,7 +1501,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<SlotOf>Hero</SlotOf>
-				<Terror>true</Terror>
+				<Terror/>
 				<UnitStrength>7</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1521,7 +1521,7 @@
 			<Name>Tiranoc Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Barded Elven Steed</MountInit>
 			<MainParam>
 				<Movement>9</Movement>
@@ -1536,7 +1536,7 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<UnitStrength>3</UnitStrength>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
@@ -1559,7 +1559,7 @@
 			<Name>Lion Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>War Lion</MountInit>
 			<MainParam>
 				<Movement>8</Movement>
@@ -1574,8 +1574,8 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<HitFirst>true</HitFirst>
+				<Fear/>
+				<HitFirst/>
 				<UnitStrength>3</UnitStrength>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
@@ -1613,7 +1613,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1628,25 +1628,25 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Hawkeye</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -1668,7 +1668,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1690,19 +1690,19 @@
 				<Option>
 					<Name>Sentinel</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -1724,7 +1724,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1746,25 +1746,25 @@
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Sea Master</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -1786,7 +1786,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1802,7 +1802,7 @@
 				<Option>
 					<Name>Bladelord</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Hero</MagicItemsType>
@@ -1810,13 +1810,13 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -1841,8 +1841,8 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<HitFirst>true</HitFirst>
+				<Fear/>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1861,7 +1861,7 @@
 				<Option>
 					<Name>Keeper of the Flame</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Hero</MagicItemsType>
@@ -1869,13 +1869,13 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -1900,8 +1900,8 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Stubborn>true</Stubborn>
-				<HitFirst>true</HitFirst>
+				<Stubborn/>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1926,7 +1926,7 @@
 				<Option>
 					<Name>Guardian</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Hero</MagicItemsType>
@@ -1934,13 +1934,13 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -1966,12 +1966,12 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Lance</Name>
-					<Lance>true</Lance>
+					<Lance/>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1986,25 +1986,25 @@
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>High Helm</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 				</Option>
 			</Options>
@@ -2028,12 +2028,12 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Lance</Name>
-					<Lance>true</Lance>
+					<Lance/>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2052,7 +2052,7 @@
 				<Option>
 					<Name>Drakemaster</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Hero</MagicItemsType>
@@ -2060,13 +2060,13 @@
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>20</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
@@ -2092,7 +2092,7 @@
 				<Armour>6</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -2114,7 +2114,7 @@
 					<Name>Bow</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Swap spear for bow</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -2123,7 +2123,7 @@
 					<Name>Swap spear for bow</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Bow</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -2131,19 +2131,19 @@
 				<Option>
 					<Name>Harbinger</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>7</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>7</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>14</Points>
 				</Option>
 			</Options>
@@ -2165,7 +2165,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -2188,7 +2188,7 @@
 				<Option>
 					<Name>Shadow-walker</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 			</Options>
@@ -2199,7 +2199,7 @@
 			<Points>85</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Barded Elven Steed</MountInit>
 			<MainParam>
 				<Movement>9</Movement>
@@ -2214,7 +2214,7 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<UnitStrength>4</UnitStrength>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
@@ -2239,7 +2239,7 @@
 			<Points>140</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>War Lion</MountInit>
 			<MainParam>
 				<Movement>8</Movement>
@@ -2254,8 +2254,8 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<HitFirst>true</HitFirst>
+				<Fear/>
+				<HitFirst/>
 				<UnitStrength>4</UnitStrength>
 				<ImpactHit>D6</ImpactHit>	
 			</AdditionalParam>
@@ -2292,7 +2292,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>

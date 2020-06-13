@@ -64,14 +64,14 @@
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<Description>+2 dice to cast a spell</Description>
 			</Artefact>
 			<Artefact>
@@ -87,7 +87,7 @@
 				<Name>Deathmask</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<Terror>true</Terror>
+				<Terror/>
 				<Description>The character causes terror</Description>
 			</Artefact>
 			<Artefact>
@@ -123,7 +123,7 @@
 				<Name>Gem of Nightmares</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<Fear>true</Fear>
+				<Fear/>
 				<Description>One use only. The Gem of Nightmares can be used at the start of any turn. Until the end of that turn, the model and any unit it has joined cause Fear.</Description>
 			</Artefact>
 			<Artefact>
@@ -164,7 +164,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
-				<KillingBlow>true</KillingBlow>
+				<KillingBlow/>
 				<Description>The model has killing blow</Description>
 			</Artefact>
 			<Artefact>
@@ -246,7 +246,7 @@
 				<Name>Sword of Ruin</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
-				<NoArmour>true</NoArmour>
+				<NoArmour/>
 				<Description>No armour saves may be taken against hits from the Sword of Ruin.</Description>
 			</Artefact>
 			<Artefact>
@@ -289,7 +289,7 @@
 				<Name>Dagger of Hotek</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<Description>The Dagger of Hotek is an additional hand weapon, (it can be used with a mundane hand weapon) and grants the bearer the Always Strikes First special rule.</Description>
 			</Artefact>
 			<Artefact>
@@ -310,8 +310,8 @@
 				<Name>Deathpiercer</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<KillingBlow>true</KillingBlow>
-				<Lance>true</Lance>
+				<KillingBlow/>
+				<Lance/>
 				<Description>Lance. Killing blow.</Description>
 			</Artefact>
 			<Artefact>
@@ -326,7 +326,7 @@
 				<Type>Weapon</Type>
 				<Points>15</Points>
 				<AddToStrength>2</AddToStrength>
-				<HitLast>true</HitLast>
+				<HitLast/>
 				<ArmourPiercing>2</ArmourPiercing>
 				<Description>Great weapon. Armour piercing.</Description>
 			</Artefact>
@@ -339,7 +339,7 @@
 				<AddToArmour>5</AddToArmour>
 				<AddToToughness>1</AddToToughness>
 				<AddToWounds>1</AddToWounds>
-				<Stupidity>true</Stupidity>
+				<Stupidity/>
 				<Description>Heavy armour. In addition, the model has +1 Toughness and +1 Wound. Roll a D6 before deploying any models. On a roll of a 1, the wearer succumbs to the Armour of Living Death and is subject to stupidity for the battle.</Description>
 			</Artefact>
 			<Artefact>
@@ -347,7 +347,7 @@
 				<Type>Armour</Type>
 				<Points>35</Points>
 				<AddToArmour>5</AddToArmour>
-				<Regeneration>true</Regeneration>
+				<Regeneration/>
 				<Description>Heavy armour. The wearer can Regenerate.</Description>
 			</Artefact>
 			<Artefact>
@@ -416,7 +416,7 @@
 				<Name>Pearl of Infinite Bleakness</Name>
 				<Type>Armour</Type>
 				<Points>25</Points>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<ImmuneToPsychology/>
 				<Description>The character and his unit are Immune to Psychology.</Description>
 			</Artefact>
 			<Artefact>
@@ -430,7 +430,7 @@
 				<Name>Null Talisman</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
-				<Multiple>true</Multiple>
+				<Multiple/>
 				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
 				<Description>The Null Talisman grants magic resistance (1). Models may carry multiple Null Talismans, just like scrolls, and their effects are cumulative. For example, two Talismans confer magic resistance (2).</Description>
 			</Artefact>
@@ -477,7 +477,7 @@
 				<Name>Banner of Nagarythe</Name>
 				<Type>Banner</Type>
 				<Points>125</Points>
-				<Unbreakable>true</Unbreakable>
+				<Unbreakable/>
 				<AddToCloseCombat>1</AddToCloseCombat>
 				<Description>This standard gives an additional +1 to the combat resolution score of friendly units in combat within 12", and the unit containing the banner is Unbreakable</Description>
 			</Artefact>
@@ -492,7 +492,7 @@
 				<Name>Dread Banner</Name>
 				<Type>Banner</Type>
 				<Points>40</Points>
-				<Fear>true</Fear>
+				<Fear/>
 				<Description>The unit carrying this standard causes Fear</Description>
 			</Artefact>
 			<Artefact>
@@ -506,14 +506,14 @@
 				<Name>Standard of Hag Graef</Name>
 				<Type>Banner</Type>
 				<Points>35</Points>
-				<HitFirst>true</HitFirst>
+				<HitFirst/>
 				<Description>All models in the unit containing the Standard of Hag Graef gain the Always Strikes First rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sea Serpent Standard</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 				<Description>Corsairs only. The unit is subject to the rules for Frenzy.</Description>
 			</Artefact>
 			<Artefact>
@@ -540,7 +540,7 @@
 			<Points>600</Points>
 			<Wizard>4</Wizard>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Malekith, the Witch King</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -555,26 +555,26 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
+				<ImmuneToPsychology/>
 			</AdditionalParam>
 			<Options>
 				<Option>
 					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Black Dragon</Name>
 					<Type>Option</Type>
 					<Points>320</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Cold One Chariot</Name>
 					<Type>Option</Type>
 					<Points>110</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>2</AddToArmour>
 				</Option>
 			</Options>
@@ -615,7 +615,7 @@
 			<Wizard>4</Wizard>
 			<MinSize>1</MinSize>
 			<MountInit>Dark Pegasus Sulephet</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Morathi, the Hag Sorceress</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -637,7 +637,7 @@
 					<Name>Heartrender</Name>
 					<Type>Option</Type>
 					<Points>45</Points>
-					<KillingBlow>true</KillingBlow>
+					<KillingBlow/>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>The Darksword</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -681,7 +681,7 @@
 			<Name>Crone Hellebron, the Hag Queen</Name>
 			<Points>350</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Crone Hellebron, the Hag Queen</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -695,14 +695,14 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 			</AdditionalParam>
 			<Options>
 				<Option>
 					<Name>Manticore</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -754,13 +754,13 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<Lance>true</Lance>
+					<Lance/>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -825,37 +825,37 @@
 					<Name>Dark Steed</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Dark Pegasus</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Manticore</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Black Dragon</Name>
 					<Type>Option</Type>
 					<Points>320</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Cold One Chariot</Name>
 					<Type>Option</Type>
 					<Points>90</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>2</AddToArmour>
 				</Option>
 			</Options>
@@ -902,31 +902,31 @@
 					<Name>Dark Steed</Name>
 					<Type>Option</Type>
 					<Points>18</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Dark Pegasus</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Manticore</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Black Dragon</Name>
 					<Type>Option</Type>
 					<Points>320</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -945,7 +945,7 @@
 			<Points>275</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Spite</MountInit>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Malus Darkblade, Scion of Hag Graef</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -959,7 +959,7 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
+				<Frenzy/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -990,7 +990,7 @@
 			<Name>Shadowblade, Master of Assassins</Name>
 			<Points>300</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Shadowblade, Master of Assassins</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -1005,11 +1005,11 @@
 				<Ward>5</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<PoisonAttack>true</PoisonAttack>
-				<HitFirst>true</HitFirst>
-				<NotALeader>true</NotALeader>
-				<KillingBlow>true</KillingBlow>
+				<Frenzy/>
+				<PoisonAttack/>
+				<HitFirst/>
+				<NotALeader/>
+				<KillingBlow/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1038,7 +1038,7 @@
 			<Name>Lokhir Fellheart</Name>
 			<Points>250</Points>
 			<MinSize>1</MinSize>
-			<PersonifiedHero>true</PersonifiedHero>
+			<PersonifiedHero/>
 			<Description>Lokhir Fellheart, Captain of the Tower of Blessed Dread</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -1062,8 +1062,8 @@
 				</Armour>
 				<Armour>
 					<Name>Helm of the Kraken</Name>
-					<Regeneration>true</Regeneration>
-					<Terror>true</Terror>
+					<Regeneration/>
+					<Terror/>
 				</Armour>
 				<Special>
 					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
@@ -1106,19 +1106,19 @@
 					<Name>Dark Steed</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Dark Pegasus</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -1157,13 +1157,13 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<Lance>true</Lance>
+					<Lance/>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1233,38 +1233,38 @@
 					<Name>Dark Steed</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Cold One</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Dark Pegasus</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Manticore</Name>
 					<Type>Option</Type>
 					<Points>200</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Cold One Chariot</Name>
 					<Type>Option</Type>
 					<Points>90</Points>
-					<Mount>true</Mount>
+					<Mount/>
 					<AddToArmour>2</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -1297,20 +1297,20 @@
 			<AdditionalParam>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<Frenzy>true</Frenzy>
-				<PoisonAttack>true</PoisonAttack>
+				<Frenzy/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<Options>
 				<Option>
 					<Name>Cauldron of Blood</Name>
 					<Type>Option</Type>
 					<Points>110</Points>
-					<Mount>true</Mount>
+					<Mount/>
 				</Option><Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
 					<SpecialRuleDescription>BSB</SpecialRuleDescription>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
+					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
 			</Options>
@@ -1344,7 +1344,7 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
+				<Terror/>
 				<UnitStrength>3</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1376,7 +1376,7 @@
 				<Leadership>4</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
+				<Fear/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
@@ -1402,8 +1402,8 @@
 				<Leadership>3</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Fear>true</Fear>
-				<Stupidity>true</Stupidity>
+				<Fear/>
+				<Stupidity/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
@@ -1492,8 +1492,8 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<KillingBlow>true</KillingBlow>
+				<Terror/>
+				<KillingBlow/>
 				<UnitStrength>4</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1509,7 +1509,7 @@
 			<Name>Cold One Chariot</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Cold One</MountInit>
 			<MainParam>
 				<Movement>7</Movement>
@@ -1524,8 +1524,8 @@
 				<Armour>3</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Stupidity>true</Stupidity>
-				<Fear>true</Fear>
+				<Stupidity/>
+				<Fear/>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1566,9 +1566,9 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Frenzy>true</Frenzy>
-				<PoisonAttack>true</PoisonAttack>
+				<Terror/>
+				<Frenzy/>
+				<PoisonAttack/>
 				<UnitStrength>2</UnitStrength>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1607,9 +1607,9 @@
 				<MagicItems>75</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
 				
-				<PoisonAttack>true</PoisonAttack>
-				<HitFirst>true</HitFirst>
-				<NotALeader>true</NotALeader>
+				<PoisonAttack/>
+				<HitFirst/>
+				<NotALeader/>
 			</AdditionalParam>
 			<Options>
 				<Option>
@@ -1673,7 +1673,7 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -1681,25 +1681,25 @@
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Lordling</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>3</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 			</Options>
@@ -1738,7 +1738,7 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -1746,25 +1746,25 @@
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Guardmaster</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -1806,33 +1806,33 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
 				<Option>
 					<Name>Reaver</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Handbow</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 				<Option>
 					<Name>Pair of handbow to Reaver</Name>
@@ -1880,33 +1880,33 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
 				<Option>
 					<Name>Herald</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>14</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>7</Points>
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>1</Points>
 				</Option>
 				<Option>
 					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 					<SpecialRuleDescription>Not Fast Cavalry anymore</SpecialRuleDescription>
 				</Option>
@@ -1914,7 +1914,7 @@
 					<Name>Repeater crossbow</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 				</Option>
 			</Options>
 		</Unit>
@@ -1963,8 +1963,8 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Frenzy>true</Frenzy>
-				<PoisonAttack>true</PoisonAttack>
+				<Frenzy/>
+				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1983,7 +1983,7 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -1992,13 +1992,13 @@
 					<Type>Option</Type>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Hero</MagicItemsType>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>5</Points>
 				</Option>
 				<Option>
@@ -2006,7 +2006,7 @@
 					<Type>Option</Type>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -2043,7 +2043,7 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -2056,16 +2056,16 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 					<Points>2</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -2076,7 +2076,7 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>1</Points>
-					<PerModel>true</PerModel>
+					<PerModel/>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -2100,13 +2100,13 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<KillingBlow>true</KillingBlow>
+				<KillingBlow/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Great weapon</Name>
 					<AddToStrength>2</AddToStrength>
-					<HitLast>true</HitLast>
+					<HitLast/>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2123,7 +2123,7 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -2133,7 +2133,7 @@
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Tullaris</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>12</Points>
 				</Option>
 				<Option>
@@ -2142,15 +2142,15 @@
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Draich-master</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-					<PersonifiedCommander>true</PersonifiedCommander>
-					<FullCommand>true</FullCommand>
+					<OnlyOneInArmy/>
+					<PersonifiedCommander/>
+					<FullCommand/>
 					<Points>95</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -2158,7 +2158,7 @@
 					<Type>Option</Type>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -2181,13 +2181,13 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<Stupidity>true</Stupidity>
-				<Fear>true</Fear>
+				<Stupidity/>
+				<Fear/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Lance</Name>
-					<Lance>true</Lance>
+					<Lance/>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2211,7 +2211,7 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -2220,13 +2220,13 @@
 					<Type>Option</Type>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Hero</MagicItemsType>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>8</Points>
 				</Option>
 				<Option>
@@ -2234,7 +2234,7 @@
 					<Type>Option</Type>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>16</Points>
 				</Option>
 			</Options>
@@ -2245,7 +2245,7 @@
 			<Points>100</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Chariot>true</Chariot>
+			<Chariot/>
 			<MountInit>Cold One</MountInit>
 			<MainParam>
 				<Movement>7</Movement>
@@ -2260,15 +2260,15 @@
 				<Armour>3</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Stupidity>true</Stupidity>
-				<Fear>true</Fear>
+				<Stupidity/>
+				<Fear/>
 				<UnitStrength>3</UnitStrength>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -2307,8 +2307,8 @@
 				<Leadership>9</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<ImmuneToPsychology>true</ImmuneToPsychology>
-				<Stubborn>true</Stubborn>
+				<ImmuneToPsychology/>
+				<Stubborn/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -2330,7 +2330,7 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -2342,7 +2342,7 @@
 					</OnlyIfAnotherService>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Hero</MagicItemsType>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>14</Points>
 				</Option>
 				<Option>
@@ -2351,15 +2351,15 @@
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Tower Master</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<OnlyOneInArmy>true</OnlyOneInArmy>
-					<PersonifiedCommander>true</PersonifiedCommander>
-					<FullCommand>true</FullCommand>
+					<OnlyOneInArmy/>
+					<PersonifiedCommander/>
+					<FullCommand/>
 					<Points>75</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
 					<Type>Option</Type>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>7</Points>
 				</Option>
 				<Option>
@@ -2367,7 +2367,7 @@
 					<Type>Option</Type>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
-					<FullCommand>true</FullCommand>
+					<FullCommand/>
 					<Points>14</Points>
 				</Option>
 			</Options>
@@ -2392,7 +2392,7 @@
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
@@ -2430,14 +2430,14 @@
 				<Armour>4</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Terror>true</Terror>
-				<Regeneration>true</Regeneration>
+				<Terror/>
+				<Regeneration/>
 				<UnitStrength>5</UnitStrength>
 			</AdditionalParam>
 			<Options>
 				<Option>
 					<Name>Assassin</Name>
-					<Mount>true</Mount>
+					<Mount/>
 					<Type>Option</Type>
 					<Points>90</Points>
 				</Option>
