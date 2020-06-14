@@ -5,7 +5,7 @@ namespace WarhammerArmyAssembler.Export
 {
     class Other
     {
-        static string ARMYLIST_DIR = "armylists";
+        static string ARMYLIST_DIR = "ArmyLists";
 
         public static string GetFileName(string fileType)
         {
