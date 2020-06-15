@@ -279,6 +279,139 @@
 				<Description>Lanee. Attacks with the Balefire Spike are flaming.</Description>
 			</Artefact>
 		</ArtefactsGroup>	
+		<ArtefactsGroup Name = "Magic armour">
+			<Artefact>
+				<Name>Walach's Bloody Hauberk</Name>
+				<Type>Armour</Type>
+				<Points>45</Points>
+				<AddToArmour>4</AddToArmour>
+				<AddToWard>5</AddToWard>
+				<Description>The wearer has a 4+ armour save that may be combined with steeds, shield, etc. Walach's Bloody Hauberk also confers a 5+ ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Accursed Armour</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToToughness>1</AddToToughness>
+				<AddToWeaponSkill>-3</AddToWeaponSkill>
+				<AddToInitiative>-3</AddToInitiative>
+				<Description>Heavy armour. The wearer has +1 Toughness, but suffers -3 Weapon Skill and -3 Initiative.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Flayed Hauberk</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<ArmourTo>2</ArmourTo>
+				<Description>The Flayed Hauberk grants the wearer a 2+ armour save that cannot be improved by any means (shield, mount and so on).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Night</Name>
+				<Type>Armour</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<Points>25</Points>
+				<AddToArmour>5</AddToArmour>
+				<SpecialRuleDescription>Enemies suffer a -2 to hit penalty</SpecialRuleDescription>
+				<Description>Models on foot only. Heavy armour. As long as the wearer is on his own, enemies suffer a -2 to hit penalty when shooting at him.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Nightshroud</Name>
+				<Type>Armour</Type>
+				<OnlyFor>Infantry</OnlyFor>
+				<Points>20</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Enemy models lose all charging bonuses, lose the Always Strikes First rule</SpecialRuleDescription>
+				<Description>Light armour. Enemy models wishing to attack the wearer lose all charging bonuses, lose the Always Strikes First rule (if diey have it) and have their Initiative reduced to 1.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Cadaverous Cuirass</Name>
+				<Type>Armour</Type>
+				<OnlyForGroup>Vampire</OnlyForGroup>
+				<Points>15</Points>
+				<AddToArmour>5</AddToArmour>
+				<UnitStrength>2</UnitStrength>
+				<SpecialRuleDescription>Killing Blow and/or Poisoned Attacks have no additional effect against the wearer</SpecialRuleDescription>
+				<Description>Heavy armour. Killing Blow and/or Poisoned Attacks have no additional effect against the wearer.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Enchanted items">
+			<Artefact>
+				<Name>The Hand of Dust</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Bound Spell (power level 3). When successfully used, this item inflicts 2D6 Strength 5 hits on one unit in base contact with the bearer, distributed as shooting hits. Roll a dice each time the Hand is used. On a 1, the power is exhausted and it cannot be used again during the battle</SpecialRuleDescription>
+				<Description>Bound Spell (power level 3). When successfully used, this item inflicts 2D6 Strength 5 hits on one unit in base contact with the bearer, distributed as shooting hits. Roll a dice each time the Hand is used. On a 1, the power is exhausted and it cannot be used again during the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rod of Flaming Death</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Bound Spell (power level 3). When used, this item casts a magic missile with a range of 18" that inflicts D6 Strength 4 hits. Any unit taking one or more wounds from this attack must immediately take a Panic test. Roll a dice each time the Rod of Flaming Death is used. On a 1, the power is exhausted and the Rod of Flaming Death cannot be used again during the battle</SpecialRuleDescription>
+				<Description>Bound Spell (power level 3). When used, this item casts a magic missile with a range of 18" that inflicts D6 Strength 4 hits. Any unit taking one or more wounds from this attack must immediately take a Panic test. Roll a dice each time the Rod of Flaming Death is used. On a 1, the power is exhausted and the Rod of Flaming Death cannot be used again during the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Helm of Commandment</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>If the wearer is not in combat, one friendly Undead unit within 12" (not mounts) may use his Weapon Skill instead of their own for that Close Combat phase</SpecialRuleDescription>
+				<Description>If the wearer is not in combat, one friendly Undead unit within 12" (not mounts) may use his Weapon Skill instead of their own for that Close Combat phase.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Cursed Book</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>For one round of combat, enemy models are reduced to WS 1 when rolling to hit the bearer</SpecialRuleDescription>
+				<Description>One Use Only. For one round of combat, enemy models are reduced to WS 1 when rolling to hit the bearer.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of the Lycni</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Vampire</OnlyForGroup>
+				<Points>10</Points>
+				<MovementTo>9</MovementTo>
+				<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of the Lycni</Name>
+				<Type>Weapon</Type>
+				<OnlyForGroup>Vampire</OnlyForGroup>
+				<Points>10</Points>
+				<MovementTo>9</MovementTo>
+				<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Talismans">
+			<Artefact>
+				<Name>The Carstein Ring</Name>
+				<Type>AdditionalArmour</Type>
+				<OnlyForGroup>Vampire</OnlyForGroup>
+				<Points>75</Points>
+				<SpecialRuleDescription>The first time the wearer of this ring is slain roll a D6 at the end of the phase. On a score of 2+ the vampire is immediately returned to 'life' with a single Wound</SpecialRuleDescription>
+				<Description>The first time the wearer of this ring is slain roll a D6 at the end of the phase. On a score of 2+ the vampire is immediately returned to 'life' with a single Wound. The returning model must be placed in the front rank of a friendly unit anywhere on the battlefield (even one in close combat). If there is no unit for the Vampire to join, it is removed as a casualty.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Crown of the Damned</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>35</Points>
+				<AddToWard>4</AddToWard>
+				<Stupidity/>
+				<Description>Grants the bearer a 4+ ward save, but the bearer is subject to Stupidity.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Wristbands of Black Gold</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>3+ ward save against ranged attacks of any kind (including war machines, templates, magic missiles, etc)</SpecialRuleDescription>
+				<Description>Grants the bearer a 3+ ward save against ranged attacks of any kind (including war machines, templates, magic missiles, etc).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Gem of Blood</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed</SpecialRuleDescription>
+				<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed.</Description>
+			</Artefact>
+		</ArtefactsGroup>	
 	</Artefacts>
 	<Heroes>
 		<Hero>
@@ -315,7 +448,7 @@
 				</HandWeapon>
 				<Armour>
 					<Name>Carstein Ring</Name>
-					<SpecialRuleDescription>Returns to life on a roll of 2+</SpecialRuleDescription>
+					<SpecialRuleDescription>The first time the wearer of this ring is slain roll a D6 at the end of the phase. On a score of 2+ the vampire is immediately returned to 'life' with a single Wound</SpecialRuleDescription>
 				</Armour>
 				<Special>
 					<SpecialRuleDescription>Enemy within 6" are at -1 Ld</SpecialRuleDescription>
