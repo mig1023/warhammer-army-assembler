@@ -412,6 +412,136 @@
 				<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed.</Description>
 			</Artefact>
 		</ArtefactsGroup>	
+		<ArtefactsGroup Name = "Arcane items">	
+			<Artefact>
+				<Name>Skull Staff</Name>
+				<Type>Arcane</Type>
+				<Points>65</Points>
+				<SpecialRuleDescription>The bearer receives +1 to casting and dispelling rolls</SpecialRuleDescription>
+				<Description>The bearer receives +1 to casting and dispelling rolls.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Staff of Damnation</Name>
+				<Type>Arcane</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Bound Spell (power level 3). When the spell is successfully cast, friendly Undead models (and their mounts) within 12" of the bearer and in close combat each make a single attack. Any wounds caused are not counted for combat resolution in the subsequent Close Combat phase. Roll a dice each time the Staff of Damnation is used. On a 1, the power of the Staff is exhausted and it cannot be used again during the battle</SpecialRuleDescription>
+				<Description>Bound Spell (power level 3). When the spell is successfully cast, friendly Undead models (and their mounts) within 12" of the bearer and in close combat each make a single attack. Any wounds caused are not counted for combat resolution in the subsequent Close Combat phase. Roll a dice each time the Staff of Damnation is used. On a 1, the power of the Staff is exhausted and it cannot be used again during the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Book of Arkhan</Name>
+				<Type>Arcane</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Bound Spell (power level 3). This item casts the spell Vanhel's Danse Macabre. Roll a dice each time the Book of Arkhan is used. On a 1, its power is exhausted and cannot be used again during the battle</SpecialRuleDescription>
+				<Description>Bound Spell (power level 3). This item casts the spell Vanhel's Danse Macabre. Roll a dice each time the Book of Arkhan is used. On a 1, its power is exhausted and cannot be used again during the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sceptre de Noirot</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>The bearer raises D3+9 Zombies with each successful casting of Raise Dead</SpecialRuleDescription>
+				<Description>The bearer raises D3+9 Zombies with each successful casting of Raise Dead.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Crimson Gem of Lahmia</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>At any time in the Magic phase, the bearer may sacrifice a Wound to gain one power dice</SpecialRuleDescription>
+				<Description>At any time in the Magic phase, the bearer may sacrifice a Wound to gain one power dice.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Black Periapt</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>The Black Periapt allows the bearer to save one of his own unused power dice or one of the army's unused dispel dice at the end of any Magic phase, and then add it to his side's power or dispel dice pool in the next Magic phase</SpecialRuleDescription>
+				<Description>The Black Periapt allows the bearer to save one of his own unused power dice or one of the army's unused dispel dice at the end of any Magic phase, and then add it to his side's power or dispel dice pool in the next Magic phasee.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic standards">
+			<Artefact>
+				<Name>The Drakenhof Banner</Name>
+				<Type>Banner</Type>
+				<Points>125</Points>
+				<Regeneration/>
+				<Description>All models in the unit have Regeneration.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Flag of Blood Keep</Name>
+				<Type>Banner</Type>
+				<Points>75</Points>
+				<AddToWard>4</AddToWard>
+				<Description>Grants the unit a 4+ ward save against ranged attacks of any kind (including war machines, templates, magic missiles, etc).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of the Barrows</Name>
+				<Type>Banner</Type>
+				<Points>45</Points>
+				<SpecialRuleDescription>All Grave Guard, Black Knights and Wight Kings in the unit (not mounts) receive +1 to hit in close combat</SpecialRuleDescription>
+				<Description>All Grave Guard, Black Knights and Wight Kings in the unit (not mounts) receive +1 to hit in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Screaming Banner</Name>
+				<Type>Banner</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>Enemy units taking a Fear test caused by the unit carrying this banner must roll one extra dice for their test and discard the one with the lowest result</SpecialRuleDescription>
+				<Description>Enemy units taking a Fear test caused by the unit carrying this banner must roll one extra dice for their test and discard the one with the lowest result.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Royal Standard of Strigos</Name>
+				<Type>Banner</Type>
+				<Points>35</Points>
+				<Hate/>
+				<Description>All models in the unit Hate all enemies.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Icon of Vengeance</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>The unit carrying this standard never takes casualties as a result of the general's death</SpecialRuleDescription>
+				<Description>The unit carrying this standard never takes casualties as a result of the general's death.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of the Dead Legion</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Treat the unit carrying the banner as having twice the unit strength it actually does</SpecialRuleDescription>
+				<Description>Treat the unit carrying the banner as having twice the unit strength it actually does.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Cursed Pennant of Mousillon</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>If the enemy capture this standard they immediately suffer D6 Strength 4 hits, distributed as shooting hits. The unit also suffer an additional D6 Strength 3 hits at the start of each of its turns</SpecialRuleDescription>
+				<Description>If the enemy capture this standard they immediately suffer D6 Strength 4 hits, distributed as shooting hits. The unit also suffer an additional D6 Strength 3 hits at the start of each of its turns. The unit may abandon the Cursed Pennant at any time, in which case it suffers no further hits, but the standard is lost and so will not bestow any victory points for being captured.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of the Endless Nightmare</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>The unit carrying this banner may add up to +4 to its combat resolution score for additional ranks, rather than the usual +3 bonus</SpecialRuleDescription>
+				<Description>The unit carrying this banner may add up to +4 to its combat resolution score for additional ranks, rather than the usual +3 bonus.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Standard of Hellish Vigour</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>The unit carrying this banner may add up to +4 to its combat resolution score for additional ranks, rather than the usual +3 bonus</SpecialRuleDescription>
+				<Description>The unit carrying the standard may make march moves, as if it were within 6" of a Vampire.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Standard of Everlasting Death</Name>
+				<Type>Banner</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>If the unit with this standard loses a combat, roll a D6. On a 4+, the unit suffers one less casualty than normal</SpecialRuleDescription>
+				<Description>If the unit with this standard loses a combat, roll a D6. On a 4+, the unit suffers one less casualty than normal.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Hellfire</Name>
+				<Type>Banner</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>Flaming attacks</SpecialRuleDescription>
+				<Description>All close combat attacks by models in the unit (not mounts) are magical flaming attacks.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		<Hero>
