@@ -11,8 +11,72 @@
 	</Info>
 	<Artefacts>
 		<ArtefactsGroup Name = "Shiny Stuff">	
-
-			
+			<Artefact>
+				<Name>Battleaxe of The Last WAAAGH!</Name>
+				<Type>Weapon</Type>
+				<Points>100</Points>
+				<SpecialRuleDescription>Roll a D6 at the start of each round of combat — the wieldcr of this weapon adds that number to both his Attacks and Strength in that round. However, the more attacks the wielder makes, the more difficult the axe is to control. Because of this, the bearer's Weapon Skill is lowered by an amount equal to half the dice roll (i.e. 1-2 = -1 Weapon Skill, 3-4 = -2 Weapon Skill, and 5-6 = -3 Weapon Skill)</SpecialRuleDescription>
+				<Description>Roll a D6 at the start of each round of combat — the wielder of this weapon adds that number to both his Attacks and Strength in that round. However, the more attacks the wielder makes, the more difficult the axe is to control. Because of this, the bearer's Weapon Skill is lowered by an amount equal to half the dice roll (i.e. 1-2 = -1 Weapon Skill, 3-4 = -2 Weapon Skill, and 5-6 = -3 Weapon Skill).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Bashas Axe of Stunty Smashin'</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<ArmourPiercing>2</ArmourPiercing>
+				<AddToStrength>1</AddToStrength>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>The wielder of this weapon has the Armour Piercing special rule, and adds +1 to both his Attacks and Strength in close combat. This bonus is doubled if the wielder is in base contact with a model of Dwarfs. In addition, the wielder causes Fear in models of Dwarf army.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Gork</Name>
+				<Type>Armour</Type>
+				<Points>50</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToToughness>1</AddToToughness>
+				<ImpactHit>D6</ImpactHit>
+				<Description>Heavy Armour. The wearer has +D3 Toughness. Roll to determine the armour's effectiveness the first time the wearer is hit each turn, and use the result for the rest of the turn. In addition, the wearer has the Impact Hits (D6) special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Lucky Shrunken Head</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Orc</OnlyForGroup>
+				<AddToWard>5</AddToWard>
+				<Description>The Lucky Shrunken Head can only be taken by a Savage Ore Shaman or Great Shaman. It increases the Warpaint save of the bearer and any unit he joins from 6+ to 5+ . If Wurrzag is in the unit, his Warpaint save is increased to 4+.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Morks War Banner</Name>
+				<Type>Banner</Type>
+				<Points>100</Points>
+				<AddToWard>5</AddToWard>
+				<SpecialRuleDescription>A unit with Mork's War Banner has Magic Resistance(D6). Roll to determine the effectiveness of the banner the first time the unit needs to take any saving throws against spells in a turn. The result is used for all such saves made that turn</SpecialRuleDescription>
+				<Description>A unit with Mork's War Banner has Magic Resistance (D6). Roll to determine the effectiveness of the banner the first time the unit needs to take any saving throws against spells in a turn. The result is used for all such saves made that turn. In addition, all magic items belonging to enemy models that are in base contact with the bearer do not work (if an enemy in base contact has an item that would stop the banner from working, then roll off to see which item takes precedence).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Spider Banner</Name>
+				<Type>Banner</Type>
+				<Points>85</Points>
+				<OnlyForGroup>Goblin</OnlyForGroup>
+				<PoisonAttack/>
+				<Description>This Standard may only be taken by a Goblin Battle Standard Bearer (not a Night Goblin). Models in a unit with the Spider Banner, including the bearer, have Poisoned Attacks. Models that already have Poisoned Attacks will automatically wound on To Hit rolls of 5 or 6.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Bad Moon Banner</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<OnlyForGroup>Goblin</OnlyForGroup>
+				<Stubborn/>
+				<SpecialRuleDescription>The banner shrouds the unit in darkness. The bearer and any unit he joins count as being in soft cover, and any enemy model that charges into base contact with the bearer or the unit must take a Dangerous Terrain test.</SpecialRuleDescription>
+				<Description>This Standard may only be taken by a Night Goblin Battle Standard Bearer. Night Goblin models in a unit with the Bad Moon banner are Stubborn. In addition, the banner shrouds the unit in darkness. The bearer and any unit he joins count as being in soft cover, and any enemy model that charges into base contact with the bearer or the unit must take a Dangerous Terrain test.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Skull Wand of Kaloth</Name>
+				<Type>Arcane</Type>
+				<Points>75</Points>
+				<Terror/>
+				<Test Bet="Death" Context="Round">Leadership</Test>
+				<Description>The Skull Wand may only be taken by a Shaman. It unleashes a curse on a single enemy model that is in base contact with the bearer at the start of the Close Combat phase. The victim must pass a Leadership test (using its own, unmodified, Leadership) or be slain instandy, with no save of any kind allowed. In addition, the bearer of the Skull Wand causes Terror.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
