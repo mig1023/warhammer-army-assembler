@@ -216,13 +216,15 @@ namespace WarhammerArmyAssembler.Test
 
                 Test.Data.Console(Test.Data.text, "\n");
 
+                Dictionary<int, int> battleResult = new Dictionary<int, int>(roundWounds);
+
                 if (BothOpponentsAreAlive(participants))
                 {
                     bool draw = true;
 
                     foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
                         if (!((u.Key == unit.Mount) && (unit.Wounds > 0)) && !((u.Key == enemy.Mount) && (enemy.Wounds > 0)))
-                            roundWounds[u.Key.ID] += RoundBonus(u.Value, roundWounds);
+                            battleResult[u.Key.ID] += RoundBonus(u.Value, roundWounds);
                         
                     foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
                     {
@@ -232,9 +234,9 @@ namespace WarhammerArmyAssembler.Test
                         if (((u.Key == unit.Mount) && (unit.Wounds > 0)) || ((u.Key == enemy.Mount) && (enemy.Wounds > 0)))
                             continue;
 
-                        if (RoundLostBy(u.Value, roundWounds))
+                        if (RoundLostBy(u.Value, battleResult))
                         {
-                            if (BreakTestFail(u.Value, ref roundWounds))
+                            if (BreakTestFail(u.Value, ref battleResult))
                             {
                                 u.Key.Wounds = 0;
 
@@ -493,7 +495,7 @@ namespace WarhammerArmyAssembler.Test
         {
             int roundWounds = 0;
 
-            if ((unit.Wounds > 0) && (enemy.Wounds > 0) && !(impactHit && unit.SteamTank) && !afterSteamTankAttack) 
+            if ((unit.Wounds > 0) && (enemy.Wounds > 0) && !(impactHit && unit.SteamTank) && !afterSteamTankAttack && (attackNumber > 0)) 
                 Test.Data.Console(Test.Data.text, "\n");
 
             for (int i = 0; i < attackNumber; i++)
