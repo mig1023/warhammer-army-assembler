@@ -568,23 +568,29 @@ namespace WarhammerArmyAssembler
 
             unit.OriginalAttacks = unit.Attacks;
             unit.OriginalWounds = unit.Wounds;
+          
+            int frontSize = GetFront(unit.Size);
+
+            unit.Attacks *= frontSize;
+            unit.Wounds *= unit.Size;
+
+            return unit;
+        }
+
+        public int GetFront(int unitSize)
+        {
+            int frontSize = unitSize;
 
             Dictionary<int, int> ratio = new Dictionary<int, int>
             {
                 [5] = 3, [7] = 4, [9] = 5, [24] = 6, [28] = 7, [32] = 8,
             };
 
-            int frontSize = unit.Size;
-
-            foreach(KeyValuePair<int, int> r in ratio)
-                if (unit.Size >= r.Key)
+            foreach (KeyValuePair<int, int> r in ratio)
+                if (unitSize >= r.Key)
                     frontSize = r.Value;
 
-            unit.Attacks *= frontSize;
-
-            unit.Wounds *= unit.Size;
-
-            return unit;
+            return frontSize;
         }
 
         public int GetRank()
@@ -1096,15 +1102,23 @@ namespace WarhammerArmyAssembler
             return Option.OnlyForType.All;
         }
 
+        public bool IsOptionRealised(string optionName)
+        {
+            foreach (Option option in Options)
+                if ((option.Name.ToUpper() == optionName.ToUpper()) && option.Realised)
+                    return true;
+
+            return false;
+        }
+
         public bool IsAnotherOptionRealised(string[] optionNames, bool defaultResult)
         {
             if (optionNames.Length <= 0)
                 return defaultResult;
 
             foreach (string optionName in optionNames)
-                foreach (Option option in Options)
-                    if ((option.Name == optionName) && option.Realised)
-                        return true;
+                if (IsOptionRealised(optionName))
+                    return true;
 
             return false;
         }

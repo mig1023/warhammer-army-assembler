@@ -228,7 +228,7 @@ namespace WarhammerArmyAssembler.Test
                         if (((u.Key == unit.Mount) && (unit.Wounds > 0)) || ((u.Key == enemy.Mount) && (enemy.Wounds > 0)))
                             continue;
 
-                        roundWounds[u.Key.ID] += RoundBonus(u.Value);
+                        roundWounds[u.Key.ID] += RoundBonus(u.Value, roundWounds);
 
                         if (RoundLostBy(u.Value, roundWounds))
                         {
@@ -345,9 +345,15 @@ namespace WarhammerArmyAssembler.Test
             return unitRoundWounds > enemyRoundWounds;
         }
 
-        private static int RoundBonus(List<Unit> units)
+        private static void AddRoundBonus(string unitName, string bonusName, ref int roundBonus, int bonus)
         {
-            int roundBouns = 0;
+            Test.Data.Console(Test.Data.supplText, String.Format("\n{0} have +{1} battle result bonus by {2}", unitName, bonus, bonusName));
+            roundBonus += 1;
+        }
+
+        private static int RoundBonus(List<Unit> units, Dictionary<int, int> roundWounds)
+        {
+            int roundBonus = 0;
 
             Unit unit = units[2];
             Unit unitMount = units[3];
@@ -361,20 +367,24 @@ namespace WarhammerArmyAssembler.Test
             string unitSide = (((unitMount != null) && (unit.Wounds <= 0)) ? unitMount.Name : unit.Name);
 
             if (unitFullSize > enemyFullSize)
-            {
-                Test.Data.Console(Test.Data.supplText, "\n{0} have +1 battle result bonus by outnumber", unitSide);
-                roundBouns += 1;
-            }
+                AddRoundBonus(unitSide, "outnumber", ref roundBonus, bonus: 1);
+
+            if (unit.IsUnit() && unit.IsOptionRealised("standard bearer"))
+                AddRoundBonus(unitSide, "standard bearer", ref roundBonus, bonus: 1);
+
+            if (unit.IsOptionRealised("Battle Standard Bearer"))
+                AddRoundBonus(unitSide, "BSB", ref roundBonus, bonus: 1);
+
+            if (unit.GetRank() > 1)
+                AddRoundBonus(unitSide, "ranks", ref roundBonus, bonus: Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true));
 
             if (!String.IsNullOrEmpty(unit.AddToCloseCombat))
             {
                 int addBonus = RandomParamParse(unit.AddToCloseCombat);
-
-                Test.Data.Console(Test.Data.supplText, "\n{0} have +{1} battle result bonus by special rules", unitSide, addBonus);
-                roundBouns += addBonus;
+                AddRoundBonus(unitSide, "special rules", ref roundBonus, bonus: addBonus);
             }
 
-            return roundBouns;
+            return roundBonus;
         }
 
         private static Unit SelectOpponent(List<Unit> participants, Unit unit)
@@ -462,7 +472,7 @@ namespace WarhammerArmyAssembler.Test
             if (unit.Unbreakable)
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (unbreakable)");
             else if (unit.ImmuneToPsychology || unit.Undead)
-                Test.Data.Console(Test.Data.goodText, " --> autopassed (imunne to psychology)");
+                Test.Data.Console(Test.Data.goodText, " --> autopassed (immune to psychology)");
             else if (unit.Frenzy)
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (frenzy)");
             else if (Dice.Roll(unit, Dice.Types.LD, enemy, unit.Leadership, 2))
@@ -794,7 +804,7 @@ namespace WarhammerArmyAssembler.Test
         {
             if (unit.AutoDeath)
             {
-                Test.Data.Console(Test.Data.text, " <-- LOSE ALL WOUNDS");
+                Test.Data.Console(Test.Data.text, " <-- lose all wounds");
                 return enemy.Wounds;
             }
 
