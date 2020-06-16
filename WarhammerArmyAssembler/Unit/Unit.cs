@@ -595,21 +595,20 @@ namespace WarhammerArmyAssembler
 
         public int GetRank()
         {
-            int rank = 1;
-
             if (!this.IsUnit())
-                return rank;
+                return 1;
 
-            Dictionary<int, int> ratio = new Dictionary<int, int>
-            {
-                [6] = 2, [13] = 3, [18] = 4,
-            };
+            int front = GetFront(this.Size);
 
-            foreach (KeyValuePair<int, int> r in ratio)
-                if (this.Wounds >= r.Key)
-                    rank = r.Value;
+            if (front < 5)
+                return 1;
 
-            return rank;
+            int ranks = (this.Wounds / front) + (this.Wounds % front >= 5 ? 1 : 0);
+
+            if (ranks > 3)
+                return 3;
+
+            return ranks;
         }
 
         public void AddAmmunition(int id)
