@@ -10,9 +10,9 @@ Warhammer Army Assembler (WAAgh) - is a quick and simple editor for Warhammer Fa
 | ------------- | ------------- | ------------- | ------------- |
 | Orcs & Goblins | | X | in progress |
 | Lizardmen |  | X | X |
-| Scaven | | X | |
+| Skaven | | X | |
 | High Elves | | X | |
 | Dark Elves | | X | |
 | Hordes of Chaos | X |  | |
-| The Emipre | | X | |
+| The Emipre | | in progress | |
 | Vampire Counts | | X | |
