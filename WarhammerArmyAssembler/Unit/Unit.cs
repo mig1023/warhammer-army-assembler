@@ -1104,7 +1104,7 @@ namespace WarhammerArmyAssembler
         public bool IsOptionRealised(string optionName)
         {
             foreach (Option option in Options)
-                if ((option.Name.ToUpper() == optionName.ToUpper()) && option.Realised)
+                if ((option.Name.ToUpper() == optionName.ToUpper()) && (option.Realised || option.IsMagicItem() || option.IsPowers()))
                     return true;
 
             return false;
