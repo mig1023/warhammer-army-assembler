@@ -323,9 +323,7 @@ namespace WarhammerArmyAssembler
                         return false;
             }
 
-            if (!unit.IsAnotherOptionRealised(OnlyIfAnotherService, defaultResult: true)
-                ||
-                unit.IsAnotherOptionRealised(OnlyIfNotAnotherService, defaultResult: false))
+            if (unit.IsAnotherOptionIsIncompatible(this))
                 return false;
 
             if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems, unit.MagicItemCount))

@@ -336,14 +336,7 @@ namespace WarhammerArmyAssembler.Interface
             if (!mustBeEnabled)
                 optionIsEnabled = false;
 
-            if (
-                    (unit != null)
-                    && (
-                        !unit.IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true)
-                        ||
-                        unit.IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false)
-                    )
-                )
+            if ((unit != null) && unit.IsAnotherOptionIsIncompatible(option))
                 optionIsEnabled = false;
 
             if (!optionIsEnabled)

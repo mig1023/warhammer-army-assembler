@@ -1075,9 +1075,7 @@ namespace WarhammerArmyAssembler
             if ((option.OnlyFor == Option.OnlyForType.Infantry) && ((mountAlreadyOn > 0) || (mountTypeAlreadyFixed == Option.OnlyForType.Mount)))
                 return false;
 
-            if (!IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true) 
-                ||
-                IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false))
+            if (IsAnotherOptionIsIncompatible(option))
                 return false;
 
             if (option.IsSlannOption() && !option.Realised && IsMaxSlannOption())
@@ -1120,6 +1118,14 @@ namespace WarhammerArmyAssembler
                     return true;
 
             return false;
+        }
+
+        public bool IsAnotherOptionIsIncompatible(Option option)
+        {
+            bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true);
+            bool noWhenNecessaryYes = IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false);
+
+            return (yesWhenNecessaryNo || noWhenNecessaryYes ? true : false);
         }
 
         public bool IsMaxSlannOption()
