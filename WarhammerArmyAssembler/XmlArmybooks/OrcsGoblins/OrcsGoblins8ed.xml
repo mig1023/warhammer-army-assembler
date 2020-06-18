@@ -827,5 +827,279 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Orc Boar Boyz</Name>
+			<Points>16</Points>
+			<MinSize>5</MinSize>
+			<MountInit>War Boar</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+					<Flail/>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
+					<SpecialRuleDescription>Choppas</SpecialRuleDescription>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Big'Uns</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<PerModel/>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<OnlyOneInArmy/>
+				</Option>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Spears</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Boar Boy Boss</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Savage Orc Boar Boyz</Name>
+			<Points>18</Points>
+			<MinSize>5</MinSize>
+			<MountInit>War Boar</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+					<Flail/>
+				</HandWeapon>
+				<Armour>
+					<Name>Warpaint</Name>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
+					<SpecialRuleDescription>Choppas</SpecialRuleDescription>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+					<SpecialRuleDescription>Any Savage Ore on a war boar, except for Savage Ore Shamans and Great Shamans, can benefit from having two hand weapons despite being mounted. If so equipped, they must deduct -1 from the dice score (to a minimum of 1) whenever they take a Dangerous Terrain test</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Big'Uns</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<PerModel/>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<OnlyOneInArmy/>
+				</Option>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Spears</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Spears</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Savage Orc Boar Boy Boss</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Orc Boar Chariot</Name>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>War Boar</MountInit>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6+1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
+					<SpecialRuleDescription>Scythed wheels</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Extra Orc Crew</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Goblin Wolf Chariot</Name>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Giant Wolf</MountInit>
+			<ModelsInPack>5</ModelsInPack>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6+1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<RangWeapon>
+					<Name>Short bow</Name>
+				</RangWeapon>
+				<Special>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Scythed wheels</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Extra Goblin Crew</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Extra Giant Wolf</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
