@@ -287,6 +287,47 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Skarsnik</Name>
+			<Group>Goblin</Group>
+			<Points>275</Points>
+			<MinSize>1</MinSize>
+			<Description>Skarsnik. Warlord of the Eight Peaks</Description>
+			<MountInit>Gobbla</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Hate/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Skarsnik's Prodder</Name>
+					<SpecialRuleDescription>Bound Spell (power level 5). The spell is a magic missile with a range of 24". It causes D3 Strength 6 hits with no armour saves allowed. The number of hits is increased to D6 if Skarsnik is within 12" of a Night Goblin Horde</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Skarsnik's pet is a huge and ferocious Giant Cave Squig. Skarsnik and Gobbla are treated as a single infantry model with a single set of wounds. Gobbla's profile is used only when he attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Any friendly Night Goblin unit that chooses to flee as a charge reaction and subsequently rallies at the beginning of its next turn may reform as normal, but is then also free to move during the Remaining Moves sub-phase. The unit is also free to shoot as normal (but it always counts as having moved)</SpecialRuleDescription>
+					<SpecialRuleDescription>Skarsnik is renowned for his evil sneakiness, sending warriors through dank, secret tunnels to catch his enemy off guard before the battle has even begun. At the start of the game, before deployment, roll a D6 for each enemy unit. On a roll of 6, that unit has been delayed by a Wild Squig strike or some other happening. Affected units do not deploy as normal, but instead enter play as reinforcements in the Movement phase of their first turn</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -398,6 +439,26 @@
 					<SpecialRuleDescription>Great Cave Squigs are among the most obnoxious, bad-tempered beasts in the Warhammer world, and any Goblins that ride them are considered a 'bad sort' even by gobbo standards. The only unit a Night Goblin character mounted on a Great Cave Squig is allowed to join is a Squig Hopper unit. He is allowed to do this even though characters are not normally allowed to join Squig Hopper units</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Gobbla</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>18</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<KillingBlow/>
+			</AdditionalParam>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
