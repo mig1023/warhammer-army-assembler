@@ -247,6 +247,46 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Grom The Paunch</Name>
+			<Group>Goblin</Group>
+			<Points>285</Points>
+			<MinSize>1</MinSize>
+			<Description>Grom The Paunch of Misty Mountain</Description>
+			<MountInit>Goblin Wolf Chariot</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Axe of Grom</Name>
+					<AddToStrength>2</AddToStrength>
+					<KillingBlow/>
+					<SpecialRuleDescription>Killing Blow on a 5+ against Elves</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Lucky banner</Name>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Grom has overcome his fear of Elves. As long as Grom is alive, all units in his army that are subject to the Fear Elves special rule ignore its effects</SpecialRuleDescription>
+					<SpecialRuleDescription>Grom is so huge and mighty that he can call a Waaagh! just as if he were an Ore Warboss (see page 34). When Grom calls a Waaagh!, in addition to the units that would normally be affected, every unit of five or more Goblins, Goblin Wolf Riders, Night Goblins and Forest Goblin Spider Riders in the army adds +1 to its combat resolution for the rest of the player turn</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -460,6 +500,32 @@
 				<Special>
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Goblin Wolf Chariot</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<Chariot/>
+			<MountInit>Giant Wolf</MountInit>
+			<ModelsInPack>5</ModelsInPack>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<AddToArmour>5</AddToArmour>
+					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
