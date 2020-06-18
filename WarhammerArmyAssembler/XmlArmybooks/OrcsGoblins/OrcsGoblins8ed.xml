@@ -120,6 +120,47 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Azhag The Slaughterer</Name>
+			<Group>Orc</Group>
+			<Wizard>3</Wizard>
+			<Points>550</Points>
+			<Description>Azhag The Slaughterer</Description>
+			<MinSize>1</MinSize>
+			<MountInit>Skullmuncha</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Slagga's Slashas</Name>
+					<Reroll>ToHit</Reroll>
+				</HandWeapon>
+				<Armour>
+					<Name>Azhag's 'Ard Armour</Name>
+					<AddToArmour>5</AddToArmour>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Crown>
+					<Name>The Crown of Sorcery</Name>
+					<Stupidity/>
+					<SpecialRuleDescription>Use Lore of Death</SpecialRuleDescription>
+				</Crown>
+				<Special>
+					<SpecialRuleDescription>Azhag has no tolerance for in-fighting. Any unit within range of Azhag's Inspiring Presence that fails an Animosity test must immediately re-roll the dice.</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -281,6 +322,35 @@
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Wyvern</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<PoisonAttack/>
+				<UnitStrength>5</UnitStrength>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Skullmuncha</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
