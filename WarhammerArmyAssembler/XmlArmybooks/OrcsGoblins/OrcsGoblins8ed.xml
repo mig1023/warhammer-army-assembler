@@ -80,7 +80,46 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Gorbad Ironclaw</Name>
+			<Group>Orc</Group>
+			<Points>375</Points>
+			<Description>Gorbad Ironclaw</Description>
+			<MinSize>1</MinSize>
+			<MountInit>Gnarla</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Morglor The Mangler</Name>
+					<HitFirst/>
+					<NoArmour/>
+					<MultiWounds>D3</MultiWounds>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Waaagh!</SpecialRuleDescription>
+					<SpecialRuleDescription>Size Matter</SpecialRuleDescription>
+					<SpecialRuleDescription>Gorbad can whip any rabble into an effective fighting force. Friendly units within 18" of Gorbad that fail an Animosity test add his current number of Wounds to their roll on the Animosity table</SpecialRuleDescription>
+					<SpecialRuleDescription>Gorbad acts as both the General and Battle Standard of your army. In addition, the range of Gorbad's Inspiring Presence and Hold Your Ground! abilities is increased from 12" to 18". Note that you may not choose a separate Battle Standard in an army that includes Gorbad</SpecialRuleDescription>
+					<SpecialRuleDescription>Gorbad was the most inspirational Ore leader of all time and drew the biggest and best Ore fighters from across the land to fight under his banner. An Ore & Goblin army that includes Gorbad may upgrade any number of units of Ore Boyz and/or Ore Boar Boyz to Big'Uns</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -203,6 +242,29 @@
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
 				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>3</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Gnarla</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
 				<Toughness>4</Toughness>
 				<Wounds>1</Wounds>
 				<Initiative>3</Initiative>
