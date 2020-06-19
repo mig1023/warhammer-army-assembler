@@ -982,6 +982,44 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Gitilla Da Hunter</Name>
+			<Group>Goblin</Group>
+			<Points>110</Points>
+			<MinSize>1</MinSize>
+			<Description>Gitilla Da Hunter</Description>
+			<MountInit>Ulda</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Bone Bow</Name>
+					<SpecialRuleDescription>Carved from a single piece of mammoth bone and strung with wolfgut, the bone bow is a missile weapon with the Range 24", Strength 3, Multiple Shots (3) and Quick to fire special Rules</SpecialRuleDescription>
+				</RangeWeapon>
+				<Armour>
+					<Name>Stinky Pelt</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Gitilla is always accompanied by his trusty mob of slavering wolf boyz, da Howlerz. Da Howlerz are a unit of Goblin Wolf Riders with an additional +1 Ballistic Skill and the Quick to Fire special rule. Gitilla must set up with this unit and may not leave it. No other character may join the unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>		
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -1031,6 +1069,29 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Ulda</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Ulda is lethal in pursuit and has a knack for escaping when the fight goes poorly. Gitilla, and any unit he is with, can choose to re-roll any Pursuit or Flee rolls they make</SpecialRuleDescription>
 					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
