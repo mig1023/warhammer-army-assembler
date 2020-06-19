@@ -83,7 +83,6 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Gorbad Ironclaw</Name>
-			<Group>Orc</Group>
 			<Points>375</Points>
 			<Description>Gorbad Ironclaw</Description>
 			<MinSize>1</MinSize>
@@ -116,14 +115,13 @@
 					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
 					<SpecialRuleDescription>Gorbad can whip any rabble into an effective fighting force. Friendly units within 18" of Gorbad that fail an Animosity test add his current number of Wounds to their roll on the Animosity table</SpecialRuleDescription>
 					<SpecialRuleDescription>Gorbad acts as both the General and Battle Standard of your army. In addition, the range of Gorbad's Inspiring Presence and Hold Your Ground! abilities is increased from 12" to 18". Note that you may not choose a separate Battle Standard in an army that includes Gorbad</SpecialRuleDescription>
-					<SpecialRuleDescription>Gorbad was the most inspirational Ore leader of all time and drew the biggest and best Ore fighters from across the land to fight under his banner. An Ore & Goblin army that includes Gorbad may upgrade any number of units of Ore Boyz and/or Ore Boar Boyz to Big'Uns</SpecialRuleDescription>
+					<SpecialRuleDescription>Gorbad was the most inspirational Ore leader of all time and drew the biggest and best Ore fighters from across the land to fight under his banner. An army that includes Gorbad may upgrade any number of units of Ore Boyz and/or Ore Boar Boyz to Big'Uns</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Azhag The Slaughterer</Name>
-			<Group>Orc</Group>
 			<Wizard>3</Wizard>
 			<Points>550</Points>
 			<Description>Azhag The Slaughterer</Description>
@@ -164,7 +162,6 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Grimgor Ironhide</Name>
-			<Group>Orc</Group>
 			<Points>355</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero/>
@@ -204,7 +201,6 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Wurrzag</Name>
-			<Group>Orc</Group>
 			<Wizard>4</Wizard>
 			<Points>350</Points>
 			<Description>Wurrzag Da Great Green Prophet</Description>
@@ -250,7 +246,6 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Grom The Paunch</Name>
-			<Group>Goblin</Group>
 			<Points>285</Points>
 			<MinSize>1</MinSize>
 			<Description>Grom The Paunch of Misty Mountain</Description>
@@ -290,7 +285,6 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Skarsnik</Name>
-			<Group>Goblin</Group>
 			<Points>275</Points>
 			<MinSize>1</MinSize>
 			<Description>Skarsnik. Warlord of the Eight Peaks</Description>
@@ -516,10 +510,10 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Back Orc Warboss</Name>
+			<Name>Black Orc Warboss</Name>
 			<Group>Orc</Group>
 			<Points>160</Points>
-			<Description>Back Orc Warboss</Description>
+			<Description>Black Orc Warboss</Description>
 			<MinSize>1</MinSize>
 			<MainParam>
 				<Movement>4</Movement>
@@ -887,7 +881,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Goblin Great Shaman</Name>
-			<Group>Orc</Group>
+			<Group>Goblin</Group>
 			<Wizard>3</Wizard>
 			<Points>145</Points>
 			<MinSize>1</MinSize>
@@ -941,7 +935,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Night Goblin Great Shaman</Name>
-			<Group>Orc</Group>
+			<Group>Goblin</Group>
 			<Wizard>3</Wizard>
 			<Points>140</Points>
 			<MinSize>1</MinSize>
@@ -985,7 +979,6 @@
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Gitilla Da Hunter</Name>
-			<Group>Goblin</Group>
 			<Points>110</Points>
 			<MinSize>1</MinSize>
 			<Description>Gitilla Da Hunter</Description>
@@ -1023,7 +1016,6 @@
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Snagla Grobspit</Name>
-			<Group>Goblin</Group>
 			<Points>115</Points>
 			<MinSize>1</MinSize>
 			<Description>Snagla Grobspit</Description>
@@ -1040,9 +1032,6 @@
 				<Attacks>3</Attacks>
 				<Leadership>7</Leadership>
 			</MainParam>
-			<AdditionalParam>
-				
-			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Fangspike</Name>
@@ -1053,12 +1042,694 @@
 					<Name>Stig of Snarla</Name>
 					<SpecialRuleDescription>One use only. The Sting is a throwing weapon that has the Poisoned Attacks and Multiple Wounds (D3) special rules</SpecialRuleDescription>
 				</RangeWeapon>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
 				<Special>
 					<SpecialRuleDescription>Snagla always rides into battle at the head of his elite Deff Creepers. The Deff Creepers are a unit of Forest Goblin Spider Riders with the Ambushers, Devastating Charge and Hatred (Empire) special rules. In addition, they cause Fear in any turn that they successfully charge into combat. Snagla must set up with this unit and may not leave it. No other character may join the unit</SpecialRuleDescription>
 					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 					<SpecialRuleDescription>Hate Empire</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Orc Big Boss</Name>
+			<Group>Orc</Group>
+			<Points>55</Points>
+			<Description>Orc Big Boss</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+					<Flail/>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>War Boar</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Orc Boar Chariot</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Savage Orc Big Boss</Name>
+			<Group>Orc</Group>
+			<Points>75</Points>
+			<Description>Savage Orc Big Boss</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+					<Flail/>
+				</HandWeapon>
+				<Armour>
+					<Name>Warpaint</Name>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+					<SpecialRuleDescription>Any Savage Ore on a war boar, except for Savage Ore Shamans and Great Shamans, can benefit from having two hand weapons despite being mounted. If so equipped, they must deduct -1 from the dice score (to a minimum of 1) whenever they take a Dangerous Terrain test</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>War Boar</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Black Orc Big Boss</Name>
+			<Group>Orc</Group>
+			<Points>90</Points>
+			<Description>Black Orc Big Boss</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ImmuneToPsychology/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>A huge array of weapons</Name>
+					<AddToStrength>2</AddToStrength>
+					<Flail/>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Black Ores turn up to battle with as many weapons as they can carry. At the start of each combat a unit of Black Ores can choose to fight either with a single hand weapon (in case they have shields), two hand weapons, or with a great weapon</SpecialRuleDescription>
+					<SpecialRuleDescription>Black Ores do not tolerate unruly behaviour, and will bash heads together to restore order in the ranks. If a Black Ore character is in a unit that fails an Animosity test, he immediately inflicts D6 Strength 5 hits on his unit, distributed as shooting attacks. After removing casualties, the unit is treated as if the Animosity test was passed. These hits cannot be allocated to the Black Ore character, and cannot cause a Panic test</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>War Boar</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Orc Boar Chariot</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Goblin Big Boss</Name>
+			<Group>Goblin</Group>
+			<Points>35</Points>
+			<Description>Goblin Big Boss</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Short bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Short bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Short bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Short bow</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Giant Wolf</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Giant Spider</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Giantic Spider</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Wolf Chariot</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Night Goblin Big Boss</Name>
+			<Group>Goblin</Group>
+			<Points>30</Points>
+			<Description>Night Goblin Big Boss</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Short bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Short bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Short bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Short bow</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Great Cave Squig</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Orc Shaman</Name>
+			<Group>Orc</Group>
+			<Wizard>1</Wizard>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<Description>Orc Shaman</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+					<Flail/>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>War Boar</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Savage Orc Shaman</Name>
+			<Group>Orc</Group>
+			<Wizard>1</Wizard>
+			<Points>70</Points>
+			<MinSize>1</MinSize>
+			<Description>Savage Orc Shaman</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+					<Flail/>
+				</HandWeapon>
+				<Armour>
+					<Name>Warpaint</Name>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Size Matters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>War Boar</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Goblin Shaman</Name>
+			<Group>Goblin</Group>
+			<Wizard>1</Wizard>
+			<Points>55</Points>
+			<MinSize>1</MinSize>
+			<Description>Goblin Shaman</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Giant Wolf</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Wolf Chariot</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Night Goblin Shaman</Name>
+			<Group>Goblin</Group>
+			<Wizard>1</Wizard>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<Description>Night Goblin Shaman</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRuleDescription>Each time they attempt to cast a spell, after the casting dice have been rolled a Night Goblin Shaman must eat a Magic Mushroom. This adds 1D6 to the casting result. This dice does not count as a power dice, and cannot contribute to Irresistible Force. However, if you roll a i on this dice you must roll a further D6. On a roll of 4+ nothing else happens, but on a roll of 1-3 the mushroom was poisonous, and the Shaman suffers a wound with no armour saves allowed. Finally, unless it was cast with Irresistible Force, the spell automatically fails</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+			</Options>
 		</Hero>
 	</Heroes>
 	<Mounts>
