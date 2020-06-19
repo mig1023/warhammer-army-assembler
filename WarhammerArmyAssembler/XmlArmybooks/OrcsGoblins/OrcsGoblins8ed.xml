@@ -1019,7 +1019,47 @@
 					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Hero>		
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Snagla Grobspit</Name>
+			<Group>Goblin</Group>
+			<Points>115</Points>
+			<MinSize>1</MinSize>
+			<Description>Snagla Grobspit</Description>
+			<MountInit>Giant Spider</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Fangspike</Name>
+					<PoisonAttack/>
+					<MultiWounds>D3</MultiWounds>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Stig of Snarla</Name>
+					<SpecialRuleDescription>One use only. The Sting is a throwing weapon that has the Poisoned Attacks and Multiple Wounds (D3) special rules</SpecialRuleDescription>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Snagla always rides into battle at the head of his elite Deff Creepers. The Deff Creepers are a unit of Forest Goblin Spider Riders with the Ambushers, Devastating Charge and Hatred (Empire) special rules. In addition, they cause Fear in any turn that they successfully charge into combat. Snagla must set up with this unit and may not leave it. No other character may join the unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Empire</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
