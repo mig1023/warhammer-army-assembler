@@ -76,7 +76,7 @@ namespace WarhammerArmyAssembler
                 Fear = true,
                 Regeneration = true,
                 Stupidity = true,
-                UnitStrength = 3,
+                LargeBase = true,
             },
 
             new Enemy
@@ -95,7 +95,7 @@ namespace WarhammerArmyAssembler
                 Attacks = 2,
                 Leadership = 9,
                 Armour = 4,
-                UnitStrength = 3,
+                LargeBase = true,
             },
 
             new Enemy
@@ -115,7 +115,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 7,
                 Fear = true,
                 ColdBlooded = true,
-                UnitStrength = 3,
+                LargeBase = true,
             },
 
             new Enemy
@@ -136,6 +136,7 @@ namespace WarhammerArmyAssembler
                 Undead = true,
                 KillingBlow = true,
                 PoisonAttack = true,
+                LargeBase = true,
             },
 
             new Enemy
@@ -154,6 +155,7 @@ namespace WarhammerArmyAssembler
                 Attacks = 4,
                 Leadership = 8,
                 Terror = true,
+                LargeBase = true,
             },
 
             new Enemy
@@ -172,6 +174,7 @@ namespace WarhammerArmyAssembler
                 Attacks = 4,
                 Leadership = 7,
                 Terror = true,
+                LargeBase = true,
             },
 
             new Enemy
@@ -190,7 +193,8 @@ namespace WarhammerArmyAssembler
                 Attacks = 4,
                 Leadership = 5,
                 Terror = true,
-                KillingBlow = true
+                KillingBlow = true,
+                LargeBase = true,
             },
 
             new Enemy
@@ -212,7 +216,7 @@ namespace WarhammerArmyAssembler
                 Undead = true,
                 Regeneration = true,
                 Hate = true,
-                UnitStrength = 5,
+                LargeBase = true,
             },
 
             new Enemy
@@ -232,6 +236,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 6,
                 Armour = 4,
                 Terror = true,
+                LargeBase = true,
 
                 Mount = new Enemy
                 {
@@ -247,6 +252,7 @@ namespace WarhammerArmyAssembler
                     Initiative = 3,
                     Attacks = 2,
                     Leadership = 8,
+                    NoKollingBlow = true,
                 }
             },
 
@@ -268,7 +274,7 @@ namespace WarhammerArmyAssembler
                 Armour = 4,
                 Terror = true,
                 ImmuneToPsychology = true,
-                UnitStrength = 6,
+                LargeBase = true,
             },
 
             new Enemy
@@ -287,7 +293,7 @@ namespace WarhammerArmyAssembler
                 Attacks = 4,
                 Leadership = 5,
                 Armour = 4,
-                UnitStrength = 8,
+                LargeBase = true,
                 ColdBlooded = true,
                 Terror = true,
                 Stubborn = true,
@@ -310,6 +316,7 @@ namespace WarhammerArmyAssembler
                     Armour = 4,
                     ColdBlooded = true,
                     PoisonAttack = true,
+                    NoKollingBlow = true,
                 }
             },
 
@@ -330,7 +337,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 8,
                 Armour = 3,
                 Terror = true,
-                UnitStrength = 6,
+                LargeBase = true,
             },
 
             new Enemy
@@ -351,7 +358,7 @@ namespace WarhammerArmyAssembler
                 Regeneration = true,
                 Terror = true,
                 Stubborn = true,
-                UnitStrength = 6,
+                LargeBase = true,
                 HellPitAbomination = true,
             },
 
@@ -372,7 +379,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 8,
                 Armour = 3,
                 Terror = true,
-                UnitStrength = 5,
+                LargeBase = true,
                 HeroicKillingBlow = true,
                 Undead = true,
             },
@@ -394,7 +401,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 9,
                 Armour = 3,
                 Terror = true,
-                UnitStrength = 7,
+                LargeBase = true,
             },
 
             new Enemy
@@ -415,7 +422,7 @@ namespace WarhammerArmyAssembler
                 Armour = 1,
                 Unbreakable = true,
                 Terror = true,
-                UnitStrength = 10,
+                LargeBase = true,
                 SteamTank = true,
             },
         };
@@ -1445,7 +1452,7 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = true,
                 Armour = 3,
                 Stubborn = true,
-                UnitStrength = 2,
+                NoKollingBlow = true,
                 Reroll = "ToHit;OpponentToWound",
             },
 
@@ -1550,7 +1557,7 @@ namespace WarhammerArmyAssembler
                 Leadership = 8,
                 Fear = true,
                 Regeneration = true,
-                UnitStrength = 4,
+                LargeBase = true,
             },
 
             new Enemy
@@ -2084,7 +2091,7 @@ namespace WarhammerArmyAssembler
                     Terror = true,
                     ColdBlooded = true,
                     MultiWounds = "D3",
-                    UnitStrength = 5,
+                    LargeBase = true,
                 }
             },
 
@@ -2124,7 +2131,7 @@ namespace WarhammerArmyAssembler
                     Attacks = 3,
                     Leadership = 9,
                     Armour = 4,
-                    UnitStrength = 3,
+                    LargeBase = true,
                 }
             },
 
@@ -2169,7 +2176,7 @@ namespace WarhammerArmyAssembler
                 Ward = 5,
                 Terror = true,
                 KillingBlow = true,
-                UnitStrength = 7,
+                LargeBase = true,
             },
         };
     }

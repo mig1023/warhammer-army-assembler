@@ -116,7 +116,8 @@ namespace WarhammerArmyAssembler
         public bool StrengthInNumbers { get; set; }
         public string AddToCloseCombat { get; set; }
 
-        public int UnitStrength { get; set; }
+        public bool LargeBase { get; set; }
+        public bool NoKollingBlow { get; set; }
 
         public bool AutoHit { get; set; }
         public bool AutoWound { get; set; }
@@ -310,7 +311,8 @@ namespace WarhammerArmyAssembler
                 OriginalWounds = this.OriginalWounds,
                 OriginalAttacks = this.OriginalAttacks,
 
-                UnitStrength = this.UnitStrength,
+                NoKollingBlow = this.NoKollingBlow,
+                LargeBase = this.LargeBase,
 
                 ImmuneToPsychology = this.ImmuneToPsychology,
                 Stubborn = this.Stubborn,
@@ -951,7 +953,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsHeroOrHisMount()
         {
-            if (UnitStrength > 1)
+            if (LargeBase)
                 return true;
 
             return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount ? true : false);

@@ -598,8 +598,8 @@ namespace WarhammerArmyAssembler.Test
             bool unitMountFearOrTerror = ((unitFriend != null) && (unitFriend.Wounds > 0) ? unitFriend.IsFearOrTerror() : false);
 
             bool thereAreMoreOfThem = (
-                (unit.UnitStrength * unit.Size) + (unitFriend != null ? (unitFriend.UnitStrength * unitFriend.Size) : 0) <
-                (enemy.UnitStrength * enemy.Size) + (enemyFriend != null ? (enemyFriend.UnitStrength * enemyFriend.Size) : 0)
+                (unit.OriginalWounds * unit.Size) + (unitFriend != null ? (unitFriend.OriginalWounds * unitFriend.Size) : 0) <
+                (enemy.OriginalWounds * enemy.Size) + (enemyFriend != null ? (enemyFriend.OriginalWounds * enemyFriend.Size) : 0)
             );
 
             if (unit.Unbreakable)
@@ -843,7 +843,7 @@ namespace WarhammerArmyAssembler.Test
 
         private static bool KillingAttack(Unit unit, Unit enemy)
         {
-            bool killingBlow = unit.HeroicKillingBlow || (unit.KillingBlow && (enemy.UnitStrength <= 1));
+            bool killingBlow = !enemy.NoKollingBlow && (unit.HeroicKillingBlow || (unit.KillingBlow && !enemy.LargeBase));
 
             if (killingBlow && !attackIsPoisoned && (Dice.lastDice == 6))
             {

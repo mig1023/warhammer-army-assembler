@@ -179,15 +179,14 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
-                bool largeBase = entry.Value.UnitStrength > 1;
                 bool cavalryBase = entry.Value.MountOn > 1 || !String.IsNullOrEmpty(entry.Value.MountInit);
 
                 if (
-                    ((type == BasesTypes.large) && largeBase)
+                    ((type == BasesTypes.large) && entry.Value.LargeBase)
                     ||
                     ((type == BasesTypes.cavalry) && cavalryBase)
                     ||
-                    ((type == BasesTypes.normal) && !largeBase && !cavalryBase)
+                    ((type == BasesTypes.normal) && !entry.Value.LargeBase && !cavalryBase)
                 )
                     number += entry.Value.Size;
             }
