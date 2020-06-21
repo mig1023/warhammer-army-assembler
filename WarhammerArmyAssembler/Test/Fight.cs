@@ -475,7 +475,7 @@ namespace WarhammerArmyAssembler.Test
 
             if (unit.Unbreakable)
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (unbreakable)");
-            else if (unit.ImmuneToPsychology || unit.Undead)
+            else if (unit.ImmuneToPsychology || unit.Undead || unit.Stupidity)
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (immune to psychology)");
             else if (unit.Frenzy)
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (frenzy)");
@@ -609,7 +609,7 @@ namespace WarhammerArmyAssembler.Test
                 &&
                 (enemyFearOrTerror || enemyMountFearOrTerror)
                 &&
-                !(unit.ImmuneToPsychology || unit.Undead || unitFearOrTerror || unitMountFearOrTerror))
+                !(unit.ImmuneToPsychology || unit.Stupidity || unit.Undead || unitFearOrTerror || unitMountFearOrTerror))
             {
                 Test.Data.Console(Test.Data.badText, "autobreak by {0} fear", (enemyFearOrTerror ? enemy.Name : enemyFriend.Name));
                 return true;
