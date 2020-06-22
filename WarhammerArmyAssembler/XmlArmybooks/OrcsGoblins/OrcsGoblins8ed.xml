@@ -2050,6 +2050,31 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Forest Goblin Crew</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>8</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Short bows</Name>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -2969,6 +2994,130 @@
 					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Snotling Pump Wagon</Name>
+			<Points>45</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>12</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>4</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Unbreakable/>
+				<Stubborn/>
+				<LargeBase/>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Crude hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRuleDescription>Unstable</SpecialRuleDescription>
+					<SpecialRuleDescription>Before moving a Pump Wagon you may declare that the crew are 'pumping harder'. If you do so, you must roll 3D6 for its random movement</SpecialRuleDescription>
+					<SpecialRuleDescription>The exhilaration of batde can cause Snodings to lose control. Any time a Pump Wagon rolls two or more Is for its movement, it will not move as normal but instead veers out of control. Re-roll the Random Movement distance (including the extra dice if you were 'pumping harder'), but this time the Pump Wagon will move in a random direction. If the re-rolled movement also includes two or more Is, then the Pump Wagon has crashed — remove it as a casualty. Otherwise, all Random Movement rules apply, except that a Pump Wagon halted by a friendly unit will inflict 2D6 Impact Hits on die unit that blocks its move</SpecialRuleDescription>
+					<SpecialRuleDescription>Each Snotling base can make a single shooting attack in its Shooting phases, and as a stand and shoot reaction. An Explodin' Spore is a throwing weapon, hitting automatically with no armour saves allowed</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Spiky Roller</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Out-rigga</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>4D6 for the movement</SpecialRuleDescription>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Flappas</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>A Pump Wagon fitted with flappas only has to take Dangerous Terrain tests if they end their move in Dangerous Terrain</SpecialRuleDescription>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Giant Explodin' Spores</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>Impact Hits ignores armour saves</SpecialRuleDescription>
+					<Points>15</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Arachnarok Spider</Name>
+			<Points>290</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MountInit>Forest Goblin Crew</MountInit>
+			<ModelsInPack>9</ModelsInPack>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<Stubborn/>
+				<LargeBase/>
+				<PoisonAttack/>
+				<MultiWounds>D6</MultiWounds>
+				<Terror/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Forest Strider</SpecialRuleDescription>
+					<SpecialRuleDescription>Obstacle Strider</SpecialRuleDescription>
+					<SpecialRuleDescription>Swiftstride</SpecialRuleDescription>
+					<SpecialRuleDescription>Their ability to climb walls and squeeze through tight holes makes Giant Spiders ideal at assaulting buildings. Unlike other cavalry, Spider Riders do not have to dismount before assaulting a building, meaning the Giant Spiders are allowed to attack during the assault, and the riders increase their armour save for being mounted. Each Spider Rider and his mount count as a single model when determining the number of models that fight in a building assault. Note that Spider Riders still cannot garrison a building</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Flingers</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Catchweb Spidershrine</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>The Flinger is a range attack with range 12-48", Strength 1(3) and Multiple Wounds (D3). Any unit hit by a Flinger is covered in a mass of sticky webs, and has the Always Strikes Last special rule until the end of its next turn</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Catchweb Spidershrine</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Flingers</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>A Goblin Great Shaman mounted on an Arachnarok Spider with a Catchweb Spidershrine has the Loremaster (Little Waaagh!) special rule. In addition, he and any other friendly Wizard within 12" of the Arachnarok Spider adds +2 to their channelling attempts</SpecialRuleDescription>
+				</Option>
+			</Options>
 		</Unit>
 	</Units>
 </ArmyBook>
