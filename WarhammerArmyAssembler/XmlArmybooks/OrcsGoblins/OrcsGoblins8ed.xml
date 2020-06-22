@@ -2932,6 +2932,62 @@
 			</Options>
 		</Unit>
 		<Unit>
+			<Type>Special</Type>
+			<Name>Snotlings</Name>
+			<Points>30</Points>
+			<MinSize>2</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sticks, rusty knives, rocks</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Each Snotling base can make a single shooting attack in its Shooting phases, and as a stand and shoot reaction. An Explodin' Spore is a throwing weapon, hitting automatically with no armour saves allowed</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Trolls</Name>
+			<Points>35</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stupidity/>
+				<Fear/>
+				<Regeneration/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Bone, club or bit of tree</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Troll Vomit</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
 			<Type>Rare</Type>
 			<Name>Goblin Rock Lobber</Name>
 			<Points>85</Points>
@@ -3118,6 +3174,72 @@
 					<SpecialRuleDescription>A Goblin Great Shaman mounted on an Arachnarok Spider with a Catchweb Spidershrine has the Loremaster (Little Waaagh!) special rule. In addition, he and any other friendly Wizard within 12" of the Arachnarok Spider adds +2 to their channelling attempts</SpecialRuleDescription>
 				</Option>
 			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Stone Troll</Name>
+			<Points>45</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Stupidity/>
+				<Fear/>
+				<Regeneration/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Bone, club or bit of tree</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Troll Vomit</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>River Trolls</Name>
+			<Points>45</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stupidity/>
+				<Fear/>
+				<Regeneration/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Bone, club or bit of tree</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Troll Vomit</SpecialRuleDescription>
+					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 	</Units>
 </ArmyBook>
