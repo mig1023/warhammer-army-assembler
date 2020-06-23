@@ -18,7 +18,24 @@
 		
 	</Heroes>
 	<Mounts>
-		
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Skeletal Steed</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -138,6 +155,190 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Skeleton Horsemen</Name>
+			<Points>12</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Skeletal Steed</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Vanguard</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<Points>2</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Master of Horse</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Skeleton Horse Archers</Name>
+			<Points>14</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Skeletal Steed</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Bow</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit never count any bonuses or penalties to hit when shooting, regardless of the source of the modifier.</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Master of Scouts</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Skeleton Chariot</Name>
+			<Points>55</Points>
+			<MinSize>3</MinSize>
+			<Chariot/>
+			<MountInit>Skeletal Steed</MountInit>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6+1</ImpactHit>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Bow</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Characters in a Tomb Kings army that have a chariot (including Settra the Imperishable's Chariot of the Gods) can join a unit of Skeleton Chariots. They can remain with the unit even if their mount is destroyed but, if they subsequently leave the unit whilst on foot, they will not be able to rejoin it, or join another unit of Skeleton Chariots</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit never count any bonuses or penalties to hit when shooting, regardless of the source of the modifier.</SpecialRuleDescription>
+					<SpecialRuleDescription>A rank of Skeleton Chariots only needs three models to count for rank bonus. In addition, Skeleton Chariots add their rank bonus to the Strength of any Impact Hits that they inflict</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Master of Chariots</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
 		</Unit>
