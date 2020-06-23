@@ -1868,6 +1868,28 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
+			<Name>Squig</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>18</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<ImpactHit>1</ImpactHit>
+				<LargeBase/>
+			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
 			<Name>Gobbla</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -2932,6 +2954,108 @@
 			</Options>
 		</Unit>
 		<Unit>
+			<Type>Rare</Type>
+			<Name>Goblin Spear Chukka</Name>
+			<Points>35</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>3</ModelsInPack>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Spear Chukka</SpecialRuleDescription>
+					<SpecialRuleDescription>Goblin Spear Chukkas are notoriously unreliable. To represent this, if the To Hit roll for a shooting attack made by a Spear Chukka is a 1 (before any modifiers are applied), then it misfires. Roll on the Stone Thrower Misfire</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Orc Bully</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Night Goblin Squig Hoppers</Name>
+			<Points>12</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Squig</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Squigs are unpleasant creatures of vile disposition. Characters cannot (will not!) join a Squig Herd</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Night Goblin Squig Herd</Name>
+			<Points>11</Points>
+			<MinSize>10</MinSize>
+			<ModelsInPack>2</ModelsInPack>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
+					<SpecialRuleDescription>Squigs are unpleasant creatures of vile disposition. Characters cannot (will not!) join a Squig Herd</SpecialRuleDescription>
+					<SpecialRuleDescription>If the unit flees, or if at any time there are only Squigs left alive in the unit with no Herders, the Squigs go wild, biting at anything nearby. All units within 2D6" (friend and foe) immediately take D6 Strength 5 hits. For every 5 Cave Squigs remaining when the Squigs Go Wild, add +1 to the number of hits caused. After damage is resolved, the Squig Herd is removed in its entirety</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
 			<Type>Special</Type>
 			<Name>Snotlings</Name>
 			<Points>30</Points>
@@ -3019,7 +3143,7 @@
 					<Name>Orc Bully</Name>
 					<Type>Option</Type>
 					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>5</Points>
+					<Points>10</Points>
 				</Option>
 			</Options>
 		</Unit>
@@ -3174,6 +3298,35 @@
 					<SpecialRuleDescription>A Goblin Great Shaman mounted on an Arachnarok Spider with a Catchweb Spidershrine has the Loremaster (Little Waaagh!) special rule. In addition, he and any other friendly Wizard within 12" of the Arachnarok Spider adds +2 to their channelling attempts</SpecialRuleDescription>
 				</Option>
 			</Options>
+		</Unit>	
+		<Unit>
+			<Type>Special</Type>
+			<Name>Mangler Squigs</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>18</Movement>
+				<WeaponSkill>0</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>If the Mangier Squigs' move would bring them into contact with another unit, then they move through rather than stopping. If the Mangier Squigs' move would end within a unit, then they automatically bounce through the it - place the Mangier Squigs 1" beyond the unit, in the direction in which they were moving. When Mangier Squigs move through a unit (friend or foe) they inflict 2D6 Strength 6 Armour Piercing hits</SpecialRuleDescription>
+					<SpecialRuleDescription>Mangier Squigs that make a Ker-Splat! attack go wild, their Night Goblin crew being either pulped to death or too busy holding on to even attempt to control the Squigs' direction. Once Mangier Squigs have Gone Crazy they will move in a random direction when they move in the Compulsory Moves sub-phase</SpecialRuleDescription>
+					<SpecialRuleDescription>Mangier Squigs cannot be charged, but models can move into contact with them. Any unit that moves into contact with Mangier Squigs takes 2D6 Strength 6 hits for moving into the Squigs and a further D6 Strength 6 hits due to the Mangier Squigs' death throes (all hits are Armour Piercing). The Mangier Squig model is then removed, and the unit may carry on with its move. Additionally, Mangier Squigs targeted with shooting attacks count as being in soft cover to represent the difficulty of shooting at such an erratic target</SpecialRuleDescription>
+					<SpecialRuleDescription>Not surprisingly, the haphazard Mangier Squigs are prone to a number of spectacularly bloody accidents, such as choking themselves with their own chains, or pummelling each other repeatedly until both Great Cave Squigs are literally mashed to a pulp. Mangier Squigs are removed as a casualty when: they contact other Mangier Squigs (both Mangier Squigs are removed as casualties); they have gone crazy and rolled a triple for movement. This represents the Great Squigs ripping themselves to pieces or some other comic, yet fatal mishap; any unit moves into contact with the Mangier Squigs - see the Force of Total Destruction rule, above</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
 			<Type>Rare</Type>
@@ -3238,6 +3391,40 @@
 				<Special>
 					<SpecialRuleDescription>Troll Vomit</SpecialRuleDescription>
 					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Giant</Name>
+			<Points>200</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks></Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Stubborn/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>A tree-trunk club or other impressively large blunt implement</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Longshanks</SpecialRuleDescription>
+					<SpecialRuleDescription>Fall Over</SpecialRuleDescription>
+					<SpecialRuleDescription>Giant Special Attacks</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
