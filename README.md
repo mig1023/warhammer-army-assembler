@@ -8,7 +8,7 @@ Warhammer Army Assembler (WAAgh) - is a quick and simple editor for Warhammer Fa
 
 | Armybook | 6th Edition | 7th Edition | 8th Edition |
 | ------------- | ------------- | ------------- | ------------- |
-| Orcs & Goblins | | X | in progress |
+| Orcs & Goblins | | X | X |
 | Lizardmen |  | X | X |
 | Skaven | | X | |
 | High Elves | | X | |
