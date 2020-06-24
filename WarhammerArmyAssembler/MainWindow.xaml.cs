@@ -194,6 +194,7 @@ namespace WarhammerArmyAssembler
                 Army.Data.Units[u.ID].Size = u.Size;
 
             Interface.Reload.ReloadArmyData();
+            Interface.UnitDetails.UpdateUnitDescription(u.ID, Army.Data.Units[u.ID]);
         }
 
         private void ArmyGrid_LoadingRow(object sender, DataGridRowEventArgs e)
