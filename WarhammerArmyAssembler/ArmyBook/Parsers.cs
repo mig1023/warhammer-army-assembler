@@ -81,7 +81,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 if (xmlNode["MaxDependency"].Attributes["Ratio"] != null)
                 {
-                    bool success = int.TryParse(xmlNode["MaxDependency"].Attributes["Ratio"].InnerText, out int value);
+                    bool success = Double.TryParse(xmlNode["MaxDependency"].Attributes["Ratio"].InnerText, out double value);
                     countable.Ratio = (success ? value : 0);
                 }
             }

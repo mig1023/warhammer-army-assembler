@@ -346,7 +346,7 @@ namespace WarhammerArmyAssembler.Interface
                 PropertyInfo unitParam = typeof(Unit).GetProperty(option.Countable.Dependency);
                 int paramValue = (int)unitParam.GetValue(unit);
 
-                maxByDependency = paramValue / option.Countable.Ratio;
+                maxByDependency = (int)(paramValue / option.Countable.Ratio);
             }
 
             bool canBeReduced = ((option.Countable.Value > 0) && (option.Countable.Value > option.Countable.Min));

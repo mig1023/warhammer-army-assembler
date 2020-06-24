@@ -13,7 +13,7 @@ namespace WarhammerArmyAssembler
         public int Value { get; set; }
 
         public string Dependency { get; set; }
-        public int Ratio { get; set; }
+        public double Ratio { get; set; }
 
         public Countable Clone()
         {
