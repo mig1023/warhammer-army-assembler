@@ -192,7 +192,7 @@ namespace WarhammerArmyAssembler.Interface
             int optionID = Interface.Other.IntParse(id[1]);
             int unitID = Interface.Other.IntParse(id[0]);
 
-            Army.Data.Units[unitID].AddOption(optionID, Army.Data.Units[unitID], unitID);
+            Army.Data.Units[unitID].AddOption(optionID);
             Army.Data.Units[unitID].ThrowAwayIncompatibleOption();
 
             Interface.Reload.ReloadArmyData();

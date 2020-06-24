@@ -429,12 +429,12 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
-        private static void GetParamTestsFromOptions(ref Unit unit)
+        private void GetParamTestsFromOptions()
         {
-            foreach (Option option in unit.Options)
+            foreach (Option option in this.Options)
                 if (option.ParamTests.Count > 0)
                     foreach (Test.Param param in option.ParamTests)
-                        unit.ParamTests.Add(param);
+                        this.ParamTests.Add(param);
         }
 
         private string AddFromAnyOption(string name, bool reversParam = false,
@@ -510,7 +510,7 @@ namespace WarhammerArmyAssembler
             return paramValue.ToString() + paramModView;
         }
 
-        private void SetUnitParamByOption(Unit unit, string paramName)
+        private void SetUnitParamByOption(string paramName)
         {
             bool value = RuleFromAnyOption(paramName, out string stringValue, out int intValue);
 
@@ -518,11 +518,11 @@ namespace WarhammerArmyAssembler
                 return;
 
             if (intValue > 0)
-                typeof(Unit).GetProperty(paramName).SetValue(unit, intValue);
+                typeof(Unit).GetProperty(paramName).SetValue(this, intValue);
             else if (!String.IsNullOrEmpty(stringValue))
-                typeof(Unit).GetProperty(paramName).SetValue(unit, stringValue);
+                typeof(Unit).GetProperty(paramName).SetValue(this, stringValue);
             else
-                typeof(Unit).GetProperty(paramName).SetValue(unit, value);
+                typeof(Unit).GetProperty(paramName).SetValue(this, value);
         }
 
         public Unit GetOptionRules(bool directModification = false)
@@ -553,9 +553,9 @@ namespace WarhammerArmyAssembler
             if (directModification)
             {
                 foreach (KeyValuePair<string, string> specialRule in AllSpecialRules)
-                    SetUnitParamByOption(unit, specialRule.Key);
+                    unit.SetUnitParamByOption(specialRule.Key);
 
-                GetParamTestsFromOptions(ref unit);
+                unit.GetParamTestsFromOptions();
             }
 
             return unit;
@@ -645,33 +645,33 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public void AddOption(int optionID, Unit unit, int unitID)
+        public void AddOption(int optionID)
         {
-            for(int i = 0; i < unit.Options.Count; i++)
+            for(int i = 0; i < this.Options.Count; i++)
             {
-                Option option = unit.Options[i];
+                Option option = this.Options[i];
                 if (option.ID == optionID)
                 {
                     bool realise = false;
 
                     if (option.IsMagicItem() || option.IsPowers())
-                        unit.Options.Remove(option);
+                        this.Options.Remove(option);
                     else
                     {
                         if (option.Realised)
                             option.Realised = false;
                         else
                         {
-                            double optionPoints = (option.PerModel ? option.Points * Army.Data.Units[unitID].Size : option.Points);
+                            double optionPoints = (option.PerModel ? option.Points * this.Size : option.Points);
 
-                            if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, option.Points))
+                            if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
                             {
-                                Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", Army.Data.Units[unitID].UnitTypeName()));
+                                Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
                                 return;
                             }
                             else if (!Interface.Checks.EnoughUnitPointsForAddOption(optionPoints))
                             {
-                                Interface.Changes.Error(String.Format("Not enough points to add", Army.Data.Units[unitID].UnitTypeName()));
+                                Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
                                 return;
                             }
                             else
@@ -683,12 +683,12 @@ namespace WarhammerArmyAssembler
                     {
                         foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts)
                             if (mount.Value.Name == option.Name)
-                                Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: unitID);
+                                Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: this.ID);
                     }
                     else if (option.Mount && !realise)
                     {
-                        Army.Mod.DeleteUnitByID(Army.Data.Units[unitID].MountOn);
-                        unit.MountOn = 0;
+                        Army.Mod.DeleteUnitByID(this.MountOn);
+                        this.MountOn = 0;
                     }
 
                     option.Realised = realise;
@@ -1080,7 +1080,7 @@ namespace WarhammerArmyAssembler
                 if ((incompatible || notCompitableMore) && (Options[i].IsActual()))
                 {
                     Interface.Mod.SetArtefactAlreadyUsed(Options[i].ID, false);
-                    AddOption(Options[i].ID, this, this.ArmyID);
+                    AddOption(Options[i].ID);
                 }
             }
         }
