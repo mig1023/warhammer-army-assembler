@@ -191,8 +191,8 @@ namespace WarhammerArmyAssembler
             double points = Size * Points;
 
             foreach (Option option in Options)
-                if (option.Countable)
-                    points += option.Points * option.Value;
+                if (option.Countable != null)
+                    points += option.Points * option.Countable.Value;
                 else if (!option.IsOption() || (option.IsOption() && option.Realised && !option.IsSlannOption()))
                     points += option.Points * (option.PerModel ? Size : 1);
 
@@ -629,7 +629,7 @@ namespace WarhammerArmyAssembler
                 if (option.ID == optionID)
                 {
                     if (direction == "-")
-                        option.Value -= 1;
+                        option.Countable.Value -= 1;
                     else
                     {
                         if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
@@ -637,7 +637,7 @@ namespace WarhammerArmyAssembler
                         else if (!Interface.Checks.EnoughUnitPointsForAddOption(option.Points))
                             Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
                         else
-                            option.Value += 1;
+                            option.Countable.Value += 1;
                     }
 
                     return;

@@ -24,10 +24,7 @@ namespace WarhammerArmyAssembler
         public string OnlyForGroup { get; set; }
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
-        public bool Countable { get; set; }
-        public int Min { get; set; }
-        public int Max { get; set; }
-        public int Value { get; set; }
+        public Countable Countable { get; set; }
 
         public double Points { get; set; }
         public bool PerModel { get; set; }
@@ -159,10 +156,6 @@ namespace WarhammerArmyAssembler
                 SpecialRuleDescription = this.SpecialRuleDescription,
                 Realised = this.Realised,
                 Multiple = this.Multiple,
-                Countable = this.Countable,
-                Min = this.Min,
-                Max = this.Max,
-                Value = this.Value,
                 OnlyOneInArmy = this.OnlyOneInArmy,
                 OnlyOneForSuchUnits = this.OnlyOneForSuchUnits,
                 OnlyFor = this.OnlyFor,
@@ -203,7 +196,7 @@ namespace WarhammerArmyAssembler
                 Lance = this.Lance,
                 Flail = this.Flail,
                 BigWeapon = this.BigWeapon,
-
+                
                 ParamTests = Test.Param.Clone(this.ParamTests),
 
                 AddToMovement = this.AddToMovement,
@@ -245,6 +238,9 @@ namespace WarhammerArmyAssembler
 
                 InterfaceColor = this.InterfaceColor
             };
+
+            if (this.Countable != null)
+                newOption.Countable = this.Countable.Clone();
 
             return newOption;
         }

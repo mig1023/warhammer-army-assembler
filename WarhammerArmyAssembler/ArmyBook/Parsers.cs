@@ -60,6 +60,35 @@ namespace WarhammerArmyAssembler.ArmyBook
             return allSlots;
         }
 
+        public static Countable CountableParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            if (xmlNode["Countable"] == null)
+                return null;
+
+            Countable countable = new Countable();
+
+            countable.Min = IntParse(xmlNode["Min"]);
+            countable.Max = IntParse(xmlNode["Max"]);
+            countable.Value = IntParse(xmlNode["Value"]);
+
+            if (xmlNode["MaxDependency"] != null)
+            {
+                if (xmlNode["MaxDependency"].Attributes["Dependency"] != null)
+                    countable.Dependency = xmlNode["MaxDependency"].Attributes["Dependency"].InnerText;
+
+                if (xmlNode["MaxDependency"].Attributes["Ratio"] != null)
+                {
+                    bool success = int.TryParse(xmlNode["MaxDependency"].Attributes["Ratio"].InnerText, out int value);
+                    countable.Ratio = (success ? value : 0);
+                }
+            }
+
+            return countable;
+        }
+
         public static List<Param> ParamParse(XmlNode xmlNode)
         {
             if (xmlNode == null)

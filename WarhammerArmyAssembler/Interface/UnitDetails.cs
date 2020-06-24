@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -336,14 +337,27 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         private static void AddButtonsCountable(string caption, Brush backFirst, Brush backSecond,
-            Option option, double[] margins, string id, bool enabled = true)
+            Option option, Unit unit, double[] margins, string id, bool enabled = true)
         {
-            bool canBeReduced = ((option.Value > 0) && (option.Value > option.Min));
+            int maxByDependency = 0;
+
+            if (!String.IsNullOrEmpty(option.Countable.Dependency))
+            {
+                PropertyInfo unitParam = typeof(Unit).GetProperty(option.Countable.Dependency);
+                int paramValue = (int)unitParam.GetValue(unit);
+
+                maxByDependency = paramValue / option.Countable.Ratio;
+            }
+
+            bool canBeReduced = ((option.Countable.Value > 0) && (option.Countable.Value > option.Countable.Min));
             double left = AddButtonPart("-", margins, 0, id, (canBeReduced ? backFirst : Brushes.Gainsboro), enabled: canBeReduced, countable: true);
 
-            left += AddButtonPart(option.Value.ToString(), margins, left, id, backSecond, enabled: enabled, countable: true);
+            left += AddButtonPart(option.Countable.Value.ToString(), margins, left, id, backSecond, enabled: enabled, countable: true);
 
-            bool canBeIncreased = ((option.Value < option.Max) || (option.Max == 0));
+            bool canByIncreasedByDependency = ((maxByDependency == 0) || (option.Countable.Value < maxByDependency));
+            bool canBeIncreasedByMaxParam = ((option.Countable.Max == 0) || (option.Countable.Value < option.Countable.Max));
+            bool canBeIncreased = canByIncreasedByDependency && canBeIncreasedByMaxParam;
+
             AddButtonPart("+", margins, left, id, (canBeIncreased ? backFirst : Brushes.Gainsboro), enabled: canBeIncreased, countable: true);
         }
 
@@ -368,12 +382,13 @@ namespace WarhammerArmyAssembler.Interface
             if ((unit != null) && unit.IsAnotherOptionIsIncompatible(option))
                 optionIsEnabled = false;
 
-            if (option.Countable)
+            if (option.Countable != null)
                 AddButtonsCountable(
-                    caption: option.Value.ToString(),
+                    caption: option.Countable.Value.ToString(),
                     backFirst: ArmyBook.Data.AdditionalColor,
                     backSecond: ArmyBook.Data.MainColor,
                     option: option,
+                    unit: unit,
                     margins: margins,
                     id: id,
                     enabled: optionIsEnabled
