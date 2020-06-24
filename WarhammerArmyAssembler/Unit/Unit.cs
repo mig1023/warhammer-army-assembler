@@ -191,7 +191,9 @@ namespace WarhammerArmyAssembler
             double points = Size * Points;
 
             foreach (Option option in Options)
-                if (!option.IsOption() || (option.IsOption() && option.Realised && !option.IsSlannOption()))
+                if (option.Countable)
+                    points += option.Points * option.Value;
+                else if (!option.IsOption() || (option.IsOption() && option.Realised && !option.IsSlannOption()))
                     points += option.Points * (option.PerModel ? Size : 1);
 
             bool firstSlannOptionAlreadyIsFree = false;
@@ -616,6 +618,31 @@ namespace WarhammerArmyAssembler
         public void AddAmmunition(int id)
         {
             Options.Insert(0, ArmyBook.Data.Artefact[id].Clone());
+        }
+
+        public void ChangeCountableOption(int optionID, string direction)
+        {
+            for (int i = 0; i < this.Options.Count; i++)
+            {
+                Option option = this.Options[i];
+
+                if (option.ID == optionID)
+                {
+                    if (direction == "-")
+                        option.Value -= 1;
+                    else
+                    {
+                        if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
+                            Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
+                        else if (!Interface.Checks.EnoughUnitPointsForAddOption(option.Points))
+                            Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
+                        else
+                            option.Value += 1;
+                    }
+
+                    return;
+                }
+            }
         }
 
         public void AddOption(int optionID, Unit unit, int unitID)

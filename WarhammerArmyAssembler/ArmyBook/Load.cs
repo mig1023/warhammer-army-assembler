@@ -191,6 +191,10 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]);
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
+            newWeapon.Countable = BoolParse(xmlNode["Countable"]);
+            newWeapon.Min = IntParse(xmlNode["Min"]);
+            newWeapon.Max = IntParse(xmlNode["Max"]);
+            newWeapon.Value = IntParse(xmlNode["Value"], byDefault: 0);
             newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
 
             newWeapon.Group = StringParse(xmlNode["Group"]);

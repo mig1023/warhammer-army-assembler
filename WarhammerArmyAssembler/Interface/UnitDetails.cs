@@ -200,6 +200,21 @@ namespace WarhammerArmyAssembler.Interface
             UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
         }
 
+        private static void CountableOption_Click(object sender, RoutedEventArgs e)
+        {
+            Label label = sender as Label;
+
+            string[] id = label.Tag.ToString().Split('|');
+
+            int optionID = Interface.Other.IntParse(id[1]);
+            int unitID = Interface.Other.IntParse(id[0]);
+
+            Army.Data.Units[unitID].ChangeCountableOption(optionID, direction: label.Content.ToString());
+
+            Interface.Reload.ReloadArmyData();
+            UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
+        }
+
         public static void UpdateUnitDescription(int unitID, Unit unit)
         {
             Interface.Changes.main.unitName.Content = unit.Name.ToUpper();
@@ -288,7 +303,7 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
-            string id, Brush background, double? partWidth = null, bool enabled = true)
+            string id, Brush background, double? partWidth = null, bool enabled = true, bool countable = false)
         {
             Label newPart = new Label
             {
@@ -300,9 +315,11 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             newPart.Margin = Interface.Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
-            newPart.Width = partWidth ?? 77;
+            newPart.Width = partWidth ?? (countable ? 51 : 77);
 
-            if (enabled)
+            if (countable && enabled && (caption == "+" || caption == "-"))
+                newPart.MouseDown += CountableOption_Click;
+            else if (!countable && enabled)
                 newPart.MouseDown += AddOption_Click;
 
             Interface.Changes.main.unitDetail.Children.Add(newPart);
@@ -316,6 +333,18 @@ namespace WarhammerArmyAssembler.Interface
         {
             double actualWidth = AddButtonPart(captionFirst, margins, 0, id, backgroundFirst, enabled: enabled);
             AddButtonPart(captionSecond, margins, actualWidth, id, backgroundSecond, enabled: enabled);
+        }
+
+        private static void AddButtonsCountable(string caption, Brush backFirst, Brush backSecond,
+            Option option, double[] margins, string id, bool enabled = true)
+        {
+            bool canBeReduced = ((option.Value > 0) && (option.Value > option.Min));
+            double left = AddButtonPart("-", margins, 0, id, (canBeReduced ? backFirst : Brushes.Gainsboro), enabled: canBeReduced, countable: true);
+
+            left += AddButtonPart(option.Value.ToString(), margins, left, id, backSecond, enabled: enabled, countable: true);
+
+            bool canBeIncreased = ((option.Value < option.Max) || (option.Max == 0));
+            AddButtonPart("+", margins, left, id, (canBeIncreased ? backFirst : Brushes.Gainsboro), enabled: canBeIncreased, countable: true);
         }
 
         private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth, string id,
@@ -339,7 +368,17 @@ namespace WarhammerArmyAssembler.Interface
             if ((unit != null) && unit.IsAnotherOptionIsIncompatible(option))
                 optionIsEnabled = false;
 
-            if (!optionIsEnabled)
+            if (option.Countable)
+                AddButtonsCountable(
+                    caption: option.Value.ToString(),
+                    backFirst: ArmyBook.Data.AdditionalColor,
+                    backSecond: ArmyBook.Data.MainColor,
+                    option: option,
+                    margins: margins,
+                    id: id,
+                    enabled: optionIsEnabled
+                );
+            else if (!optionIsEnabled)
                 AddButtonAllParts(
                     captionFirst: String.Empty,
                     captionSecond: String.Empty,
@@ -349,7 +388,6 @@ namespace WarhammerArmyAssembler.Interface
                     id: id,
                     enabled: false
                 );
-
             else if (option.Realised)
                 AddButtonAllParts(
                     captionFirst: "drop",
@@ -359,7 +397,6 @@ namespace WarhammerArmyAssembler.Interface
                     margins: margins,
                     id: id
                 );
-
             else
                 AddButtonAllParts(
                     captionFirst: String.Empty,
