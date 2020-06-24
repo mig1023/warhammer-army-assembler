@@ -725,6 +725,10 @@ namespace WarhammerArmyAssembler
             }
 
             foreach (Option option in Options)
+                if ((option.Countable != null) && (option.Countable.Value > 0))
+                    equipment += String.Format("{0} {1}; ", option.Countable.Value, option.Name);
+
+            foreach (Option option in Options)
                 if (!String.IsNullOrEmpty(option.Name) && option.IsPowers())
                     equipment += String.Format("{0}; ", option.Name);
 
