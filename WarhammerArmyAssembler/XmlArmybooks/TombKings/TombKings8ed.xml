@@ -58,7 +58,81 @@
 				<Undead/>
 			</AdditionalParam>
 		</Mount>
-		
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Tomb Guard Crew</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<KillingBlow/>
+				<Undead/>
+			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Skeleton Crew</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Casket Guard</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<KillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -507,6 +581,7 @@
 				<Undead/>
 				<KillingBlow/>
 				<PoisonAttack/>
+				<LargeBase/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -537,6 +612,7 @@
 			</MainParam>
 			<AdditionalParam>
 				<Undead/>
+				<LargeBase/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -590,6 +666,352 @@
 					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Tomb Swarm</Name>
+			<Points>40</Points>
+			<MinSize>2</MinSize>
+			<MaxSize>10</MaxSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<PoisonAttack/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Entombed Beneath the Send</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Carrion</Name>
+			<Points>24</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Khemrian Warsphinxes</Name>
+			<Points>210</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MountInit>Tomb Guard Crew</MountInit>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>8</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+				<Terror/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>After its crew have attacked, a Khemrian Warsphinx may exchange all of its Attacks to make a single Thundercrush Attack (though it can still Thunderstomp). Roll To Hit against the highest Weapon Skill amongst the enemy models in base contact. II this Attack hits, place the small template anywhere so that it is touching the Khemrian Warsphinx's base. Any infantry, war beasts or swarm models that lie underneath the template (friend or foe!) suffer a single Strength 3 hit. The model under the template's central hole instead suffers a single Strength 9 hit with the Multiple Wounds (D3) special rule. Other troop types underneath the template are too big to be crushed, and don't suffer any hits</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Envenomed Sting</Name>
+					<Type>Option</Type>
+					<PoisonAttack/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Fiery Roar</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>A Khemrian Warsphinx has a Strength 4 Breath Weapon with the Flaming Attacks special rule</SpecialRuleDescription>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Sepulchral Stalkers</Name>
+			<Points>55</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HeadWeapon>
+					<Name>Halberd</Name>
+					<AddToStrength>1</AddToStrength>
+				</HeadWeapon>
+				<Special>
+					<SpecialRuleDescription>Entombed Beneath the Send</SpecialRuleDescription>
+					<SpecialRuleDescription>Transmogrifying Gaze: This is a shooting attack with range 8" and Strength 1. Does not require a roll To Hit. Instead, when the unit shoots, roll an artillery dice for each Sepulchral Stalker in the unit and add the results together. The target suffers a number of automatic hits equal to the result. When rolling To Wound with these hits, substitute the target's Toughness with its Initiative value. If the target has several Initiative values, always use the highest. Targets with no Initiative value are immune to this attack. No armour saves are allowed against a Transmogrifying Gaze. Finally, for each Misfire result rolled, the Sepulchral Stalkers suffer D3 automatic Wounds with no armour saves allowed, as they catch glimpses of their own reflection in their foe's sword blades or polished shields</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Necrolith Colossus</Name>
+			<Points>170</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+				<Terror/>
+				<PredatoryFighter/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HeadWeapon>
+					<Name>Huge sword</Name>
+				</HeadWeapon>
+				<Special>
+					<SpecialRuleDescription>Unit never count any bonuses or penalties to hit when shooting, regardless of the source of the modifier</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>In the turn in which a Necrolith Colossus charges, every unsaved Wound that it inflicts in close combat immediately allows it to make an additional Attack. Note that these additional Attacks also benefit from the Unstoppable Assault rule, but Thunderstomps do not</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Bow of the desert</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<OnlyIfNot>Bow of the desert</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Bow of the desert</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Hierotitan</Name>
+			<Points>175</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+				<Terror/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HeadWeapon>
+					<Name>Icon of Ptra</Name>
+					<SpecialRuleDescription>Bound spell (power level 3). An Icon of Ptra contains the spell Sliem's Burning Gaze</SpecialRuleDescription>
+				</HeadWeapon>
+				<HeadWeapon>
+					<Name>Scales of Usirian</Name>
+					<SpecialRuleDescription>Bound spell (power level 4). The Scales of Usirian contain the spell Spirit Leech</SpecialRuleDescription>
+				</HeadWeapon>
+				<Special>
+					<SpecialRuleDescription>Hierotitans act as magical loci for the army's Liche Priests. While a friendly Nehekharan Undead Wizard is within 12" of one or more Hierotitans adds +D3 to the casting result of each spell he attempts to cast (roll for the bonus each time</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription></SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Necrosphinx</Name>
+			<Points>225</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>8</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+				<Terror/>
+				<HeroicKillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Before rolling To Hit, nominate one of the Necrosphinx's Attacks to be made with the Decapitating Strike ability, and roll it separately. This special Attack strikes at Strength 10 and has the Heroic Killing Blow special rule</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Envenomed Sting</Name>
+					<Type>Option</Type>
+					<PoisonAttack/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Screaming Skull Catapult</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MountInit>Skeleton Crew</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Screaming Skulls</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Skulls of the Foe</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>If a target unit takes a Panic test as a result of being hit by the Skulls of the Foe, then they must take the test with a -1 penalty to their Leadership</SpecialRuleDescription>
+					<Points>30</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Casket of Souls</Name>
+			<Points>135</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MountInit>Casket Guard</MountInit>
+			<MainParam>
+				<Movement></Movement>
+				<WeaponSkill></WeaponSkill>
+				<BallisticSkill></BallisticSkill>
+				<Strength></Strength>
+				<Toughness>10</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative></Initiative>
+				<Attacks></Attacks>
+				<Leadership></Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>It you have one or more Caskets of Souls on the table at the start of your Magic phase, you add D3 power dice to your pool</SpecialRuleDescription>
+					<SpecialRuleDescription>Bound spell (power level 5). The Casket of Souls can use this spell as long as the Keeper of the Casket model is alive, and the Casket of Souls has not moved this turn. Light of Death is a direct damage spell with a range of 48". The target of Light of Death must take a Leadership test on 3D6, adding the results together. If the test is passed, nothing happens. Otherwise, for each point the unit failed the test by, it suffers an automatic Wound with no armour saves allowed, distributed as for shooting attacks. Once the Leadership test has been resolved, roll a D6: on a 3 or more, choose another unengaged enemy unit within 6" of the initial target — the tortured souls leap to that unit, which must also suffer the effects of the Light of Death spell. Keep rolling for further victims (each within 6" of the last target struck), until the roll is failed or there are no more viable targets. A unit can only be the target of Light of Death once per Magic phase</SpecialRuleDescription>
+					<SpecialRuleDescription>If a Casket of Souls is destroyed, roll a D6 for every unit (friend or foe!) within 12" of the Casket before it is removed from play. On a roll ot 4 + , that unit immediately suffers D6 Strength 6 hits, distributed as tor shooting. These are magical attacks, and no armour saves can be taken against them. After resolving the effects of Unleashed Souls, remove the Casket of Souls as normal.</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 	</Units>
 </ArmyBook>
