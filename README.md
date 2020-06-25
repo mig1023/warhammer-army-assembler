@@ -16,4 +16,4 @@ Warhammer Army Assembler (WAAgh) - is a quick and simple editor for Warhammer Fa
 | Hordes of Chaos | X |  | |
 | The Emipre | | in progress | |
 | Vampire Counts | | X | |
-| Tomb Kings | | | in progress |
+| Tomb Kings | | | X |
