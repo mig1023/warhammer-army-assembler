@@ -70,7 +70,6 @@
 			<Points>365</Points>
 			<Description>High Queen Khalida</Description>
 			<MinSize>1</MinSize>
-			<Wizard>1</Wizard>
 			<PersonifiedHero/>
 			<MainParam>
 				<Movement>6</Movement>
@@ -101,6 +100,249 @@
 					<SpecialRuleDescription>Any unit of Skeleton Archers joined by High Queen Khalida uses her unmodified Ballistic Skill in place of its own. In addition, all shooting attacks made by this unit have the Poisoned Attacks special rule</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Arkhan the Black</Name>
+			<Points>360</Points>
+			<Description>Arkhan the Black</Description>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Tomb Blade of Arkhan</Name>
+					<SpecialRuleDescription>For every unsaved Wound caused by this blade to an enemy in close combat, Arkhan's unit immediately recovers a Wound for each one inflicted, as described in Resurrecting Fallen Warriors</SpecialRuleDescription>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Staff of Nagash</Name>
+					<SpecialRuleDescription>At the end of the opponent's Magic phase, you can store up to three unused dispel dice from your pool in the Staff of Nagash. At the beginning of your next Magic-phase, add these dice to your power dice pool. If Arkhan the Black is removed as a casualty before your next Magic phase, these power dice are lost</SpecialRuleDescription>
+				</RangeWeapon>
+				<Arcana>
+					<Name>The Liber Mortis</Name>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Arcana>
+				<Special>
+					<SpecialRuleDescription>Use Lore of Death</SpecialRuleDescription>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>If a model removed from play, then the enemy unit responsible - by inflicting the final wound, for example — will immediately suffer D6 Strength 5 hits (if the model was a Tomb King) or D6 Strength 4 hits (if the model was a Tomb Prince)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Skeleton Chariot</Name>
+					<Type>Option</Type>
+					<Points>55</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>2 additional Skeletal Steeds</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Skeleton Chariot</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Fly special rule</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIf>Skeleton Chariot</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>30</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Grand Hierophant Khatep</Name>
+			<Points>330</Points>
+			<Description>Grand Hierophant Khatep</Description>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>The Liche Staff</Name>
+					<SpecialRuleDescription>Khatep can declare that he is using the Liche Staff immediately after rolling the dice to cast a spell, even if the result indicates irresistible force. If Khatep uses the Liche Staff, he re-rolls all the casting dice used in the attempt. Khatep can use the Liche Staff once per turn</SpecialRuleDescription>
+				</RangeWeapon>
+				<Arcana>
+					<Name>Scroll of the Cursing Word</Name>
+					<SpecialRuleDescription>One Use Only. When an enemy spell has been cast, Khatep can read this scroll instead of attempting to dispel it. The spell is cast as normal, but the caster must immediately take a Toughness test. If the test is passed, nothing happens. If the test is failed, the enemy Wizard cannot cast any more spells that turn, as he spits out a mouthful of foul-tasting insects. If the test is failed on the roll of a 6, the caster immediately suffers D3 Wounds as well, with no saves of any kind allowed</SpecialRuleDescription>
+				</Arcana>
+				<Special>
+					<SpecialRuleDescription>Use Lore of Nehekhara</SpecialRuleDescription>
+					<SpecialRuleDescription>Loremaster</SpecialRuleDescription>
+					<SpecialRuleDescription>If you take Grand Hierophant Khatep, he must be your army's Hierophant</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Tomb King</Name>
+			<Points>170</Points>
+			<Description>Tomb King</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>If a model removed from play, then the enemy unit responsible - by inflicting the final wound, for example — will immediately suffer D6 Strength 5 hits (if the model was a Tomb King) or D6 Strength 4 hits (if the model was a Tomb Prince)</SpecialRuleDescription>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Any unit of Nehekharan Undead accompanied by a model with this rule uses the character's unmodified Weapon Skill in place of its own (use the highest Weapon Skill if the unit is joined by several characters with this rule)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Flail</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Flail</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<Fail/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Flail</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Skeleton Chariot</Name>
+					<Type>Option</Type>
+					<Points>55</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Khemrian Warsphinxes</Name>
+					<Type>Option</Type>
+					<Points>210</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Liche High Priest</Name>
+			<Points>175</Points>
+			<Description>Liche High Priest</Description>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Skeletal Steed</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<Mount/>
+				</Option>
+			</Options>
 		</Hero>
 	</Heroes>
 	<Mounts>
@@ -237,6 +479,74 @@
 				<Armour>4</Armour>
 				<Ward>4</Ward>
 			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Skeleton Chariot</Name>
+			<Points>0</Points>
+			<MinSize>3</MinSize>
+			<Chariot/>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6+1</ImpactHit>
+				<Undead/>
+			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Special</Type>
+			<Name>Khemrian Warsphinxes</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>8</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+				<Terror/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>After its crew have attacked, a Khemrian Warsphinx may exchange all of its Attacks to make a single Thundercrush Attack (though it can still Thunderstomp). Roll To Hit against the highest Weapon Skill amongst the enemy models in base contact. II this Attack hits, place the small template anywhere so that it is touching the Khemrian Warsphinx's base. Any infantry, war beasts or swarm models that lie underneath the template (friend or foe!) suffer a single Strength 3 hit. The model under the template's central hole instead suffers a single Strength 9 hit with the Multiple Wounds (D3) special rule. Other troop types underneath the template are too big to be crushed, and don't suffer any hits</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Envenomed Sting</Name>
+					<Type>Option</Type>
+					<PoisonAttack/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Fiery Roar</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>A Khemrian Warsphinx has a Strength 4 Breath Weapon with the Flaming Attacks special rule</SpecialRuleDescription>
+					<Points>20</Points>
+				</Option>
+			</Options>
 		</Mount>
 	</Mounts>
 	<Units>
@@ -926,7 +1236,6 @@
 				<Undead/>
 				<LargeBase/>
 				<Terror/>
-				<PredatoryFighter/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HeadWeapon>
