@@ -15,7 +15,93 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Settra the Imperishable</Name>
+			<Points>475</Points>
+			<Description>Settra the Imperishable</Description>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<MountInit>Chariot of the Gods</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MustBeGeneral/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Blessed Blade of Ptra</Name>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<NoArmour/>
+					<SpecialRuleDescription>A character or monster that suffers one or more unsaved Wounds from the Blessed Blade of Ptra suffers -1 to its rolls To Hit (both shooting and close combat) for the remainder of the game</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Crown of Nehekhara</Name>
+					<SpecialRuleDescription>Settra the Imperishable's My Will Be Done special rule affects all friendly Nehekharan Undead units within 6" of him, not just the unit he has joined</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>The Scarab Brooch of Usirian</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Use Lore of Nehekhara</SpecialRuleDescription>
+					<SpecialRuleDescription>If a model removed from play, then the enemy unit responsible - by inflicting the final wound, for example — will immediately suffer D6 Strength 5 hits (if the model was a Tomb King) or D6 Strength 4 hits (if the model was a Tomb Prince)</SpecialRuleDescription>
+					<SpecialRuleDescription>Any unit of Nehekharan Undead accompanied by a model with this rule uses the character's unmodified Weapon Skill in place of its own (use the highest Weapon Skill if the unit is joined by several characters with this rule)</SpecialRuleDescription>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Settra's Inspiring Presence has a range of 18"</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>High Queen Khalida</Name>
+			<Points>365</Points>
+			<Description>High Queen Khalida</Description>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<HitFirst/>
+				<PoisonAttack/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<RangeWeapon>
+					<Name>The Venom Staff</Name>
+					<SpecialRuleDescription>Bound spell (power level 5). The Venom Staff contains a magic missile with a range of 24". If successfully east, the target takes 21)6 Strength 4 hits</SpecialRuleDescription>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>If a model removed from play, then the enemy unit responsible - by inflicting the final wound, for example — will immediately suffer D6 Strength 5 hits (if the model was a Tomb King) or D6 Strength 4 hits (if the model was a Tomb Prince)</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Vampires</SpecialRuleDescription>
+					<SpecialRuleDescription>Poisoned Attacks cannot wound Khalida automatically - they always roll To Wound</SpecialRuleDescription>
+					<SpecialRuleDescription>Any unit of Skeleton Archers joined by High Queen Khalida uses her unmodified Ballistic Skill in place of its own. In addition, all shooting attacks made by this unit have the Poisoned Attacks special rule</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -132,6 +218,25 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Chariot of the Gods</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
+				<Ward>4</Ward>
+			</MainParam>
 		</Mount>
 	</Mounts>
 	<Units>
