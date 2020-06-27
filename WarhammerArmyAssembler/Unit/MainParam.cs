@@ -8,6 +8,8 @@ namespace WarhammerArmyAssembler
 {
     public class MainParam
     {
+        private Unit unit;
+
         public int Value { get; set; }
 
         public string View
@@ -18,9 +20,10 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public MainParam(int value)
+        public MainParam(int value, Unit unit)
         {
             this.Value = value;
+            this.unit = unit;
         }
     }
 }
