@@ -380,7 +380,7 @@ namespace WarhammerArmyAssembler
             return line.IndexOf(subline, StringComparison.OrdinalIgnoreCase) >= 0;
         }
 
-        private bool OptionTypeAlreadyUsed(Option option, ref bool alreadyArmour, ref bool alreadyShield)
+        public bool OptionTypeAlreadyUsed(Option option, ref bool alreadyArmour, ref bool alreadyShield)
         {
             if (alreadyArmour && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
                 return true;
@@ -517,15 +517,21 @@ namespace WarhammerArmyAssembler
 
                 //typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
 
-                if (directModification && !String.IsNullOrEmpty(newParamLine))
-                {
-                    string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
 
-                    if (cleanParamLine.Contains("D"))
-                        typeof(Unit).GetProperty(name).SetValue(unit, 0);
-                    else
-                        typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
-                }
+                object param = typeof(Unit).GetProperty(name).GetValue(unit);
+
+
+
+
+                //if (directModification && !String.IsNullOrEmpty(newParamLine))
+                //{
+                //    string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
+
+                //    if (cleanParamLine.Contains("D"))
+                //        typeof(Unit).GetProperty(name).SetValue(unit, 0);
+                //    else
+                //        typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
+                //}
             }
 
             if (directModification)

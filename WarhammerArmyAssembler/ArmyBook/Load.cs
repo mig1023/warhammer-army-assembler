@@ -89,18 +89,18 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
-            newUnit.Movement = MainParamParse(mainParam["Movement"], newUnit);
-            newUnit.WeaponSkill = MainParamParse(mainParam["WeaponSkill"], newUnit);
-            newUnit.BallisticSkill = MainParamParse(mainParam["BallisticSkill"], newUnit);
-            newUnit.Strength = MainParamParse(mainParam["Strength"], newUnit);
-            newUnit.Toughness = MainParamParse(mainParam["Toughness"], newUnit);
-            newUnit.Wounds = MainParamParse(mainParam["Wounds"], newUnit);
-            newUnit.Initiative = MainParamParse(mainParam["Initiative"], newUnit);
-            newUnit.Attacks = MainParamParse(mainParam["Attacks"], newUnit);
-            newUnit.Leadership = MainParamParse(mainParam["Leadership"], newUnit);
+            newUnit.Movement = MainParamParse(mainParam["Movement"], newUnit, "Movement");
+            newUnit.WeaponSkill = MainParamParse(mainParam["WeaponSkill"], newUnit, "WeaponSkill");
+            newUnit.BallisticSkill = MainParamParse(mainParam["BallisticSkill"], newUnit, "BallisticSkill");
+            newUnit.Strength = MainParamParse(mainParam["Strength"], newUnit, "Strength");
+            newUnit.Toughness = MainParamParse(mainParam["Toughness"], newUnit, "Toughness");
+            newUnit.Wounds = MainParamParse(mainParam["Wounds"], newUnit, "Wounds");
+            newUnit.Initiative = MainParamParse(mainParam["Initiative"], newUnit, "Initiative");
+            newUnit.Attacks = MainParamParse(mainParam["Attacks"], newUnit, "Attacks");
+            newUnit.Leadership = MainParamParse(mainParam["Leadership"], newUnit, "Leadership");
 
-            newUnit.Armour = MainParamParse(mainParam["Armour"], newUnit);
-            newUnit.Ward = MainParamParse(mainParam["Ward"], newUnit);
+            newUnit.Armour = MainParamParse(mainParam["Armour"], newUnit, "Armour");
+            newUnit.Ward = MainParamParse(mainParam["Ward"], newUnit, "Ward");
 
             newUnit.PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]);
             newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
