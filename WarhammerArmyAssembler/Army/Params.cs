@@ -29,7 +29,7 @@ namespace WarhammerArmyAssembler.Army
                     if (option.IsOption() && (option.AddToModelsInPack > 0) && option.Realised)
                         modelsInPack += option.AddToModelsInPack;
 
-                if (!((entry.Value.Type == Unit.UnitType.Mount) && (entry.Value.Wounds <= 1)))
+                if (!((entry.Value.Type == Unit.UnitType.Mount) && (entry.Value.Wounds.Value <= 1)))
                     size += entry.Value.Size * modelsInPack;
             }
 
@@ -128,7 +128,7 @@ namespace WarhammerArmyAssembler.Army
                     (entry.Value.MountOn > 0)
                     &&
                         (
-                            (Army.Data.Units[entry.Value.MountOn].Wounds != 1)
+                            (Army.Data.Units[entry.Value.MountOn].Wounds.Value != 1)
                             ||
                             (Army.Data.Units[entry.Value.MountOn].WeaponTeam)
                         )

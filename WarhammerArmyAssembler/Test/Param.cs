@@ -77,11 +77,11 @@ namespace WarhammerArmyAssembler.Test
                         break;
                     case TestType.Wound:
                         Test.Data.Console(Test.Data.badText, " --> WOUND");
-                        unit.Wounds -= 1;
+                        unit.Wounds.Value -= 1;
                         break;
                     case TestType.Death:
                         Test.Data.Console(Test.Data.badText, " --> SLAIN");
-                        unit.Wounds = 0;
+                        unit.Wounds.Value = 0;
                         break;
                 }
         }

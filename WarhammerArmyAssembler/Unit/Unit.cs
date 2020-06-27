@@ -73,31 +73,19 @@ namespace WarhammerArmyAssembler
 
         public string Description { get; set; }
 
-        public int Movement { get; set; }
-        public int WeaponSkill { get; set; }
-        public int BallisticSkill { get; set; }
-        public int Strength { get; set; }
-        public int Toughness { get; set; }
-        public int Wounds { get; set; }
-        public int Initiative { get; set; }
-        public int Attacks { get; set; }
-        public int Leadership { get; set; }
-        public int? Armour { get; set; }
-        public int? Ward { get; set; }
+        public MainParam Movement { get; set; }
+        public MainParam WeaponSkill { get; set; }
+        public MainParam BallisticSkill { get; set; }
+        public MainParam Strength { get; set; }
+        public MainParam Toughness { get; set; }
+        public MainParam Wounds { get; set; }
+        public MainParam Initiative { get; set; }
+        public MainParam Attacks { get; set; }
+        public MainParam Leadership { get; set; }
+        public MainParam Armour { get; set; }
+        public MainParam Ward { get; set; }
 
         public int Wizard { get; set; }
-
-        public string MovementView { get; set; }
-        public string WeaponSkillView { get; set; }
-        public string BallisticSkillView { get; set; }
-        public string StrengthView { get; set; }
-        public string ToughnessView { get; set; }
-        public string WoundsView { get; set; }
-        public string InitiativeView { get; set; }
-        public string AttacksView { get; set; }
-        public string LeadershipView { get; set; }
-        public string ArmourView { get; set; }
-        public string WardView { get; set; }
 
         public int OriginalWounds { get; set; }
         public int OriginalAttacks { get; set; }
@@ -278,7 +266,7 @@ namespace WarhammerArmyAssembler
             return wizard;
         }
 
-        public Unit Clone(bool full = false)
+        public Unit Clone()
         {
             Unit newUnit = new Unit
             {
@@ -381,21 +369,6 @@ namespace WarhammerArmyAssembler
             if (this.Mount != null)
                 newUnit.Mount = this.Mount.Clone();
 
-            if (full)
-            {
-                newUnit.MovementView = this.MovementView;
-                newUnit.WeaponSkillView = this.WeaponSkillView;
-                newUnit.BallisticSkillView = this.BallisticSkillView;
-                newUnit.StrengthView = this.StrengthView;
-                newUnit.ToughnessView = this.ToughnessView;
-                newUnit.WoundsView = this.WoundsView;
-                newUnit.InitiativeView = this.InitiativeView;
-                newUnit.AttacksView = this.AttacksView;
-                newUnit.LeadershipView = this.LeadershipView;
-                newUnit.ArmourView = this.ArmourView;
-                newUnit.WardView = this.WardView;
-            }
-
             foreach (Option option in this.Options)
                 newUnit.Options.Add(option.Clone());
 
@@ -442,7 +415,12 @@ namespace WarhammerArmyAssembler
         {
             PropertyInfo unitParam = typeof(Unit).GetProperty(name);
             object paramObject = unitParam.GetValue(this);
-            int? paramValue = (int?)paramObject;
+            int? paramValue;
+                
+            if (paramObject is MainParam)
+                paramValue = (int?)(paramObject as MainParam).Value;
+            else
+                paramValue = (int?)paramObject;
 
             if (paramValue == 16)
                 return "D6";
@@ -537,7 +515,7 @@ namespace WarhammerArmyAssembler
 
                 string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
-                typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
+                //typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
 
                 if (directModification && !String.IsNullOrEmpty(newParamLine))
                 {
@@ -563,20 +541,20 @@ namespace WarhammerArmyAssembler
 
         public Unit GetUnitMultiplier(int? baseSize = null)
         {
-            Unit unit = this.Clone(full: true);
+            Unit unit = this.Clone();
 
             if (unit.Chariot)
                 unit.Size = 2;
 
             unit.Size = baseSize ?? unit.Size;
 
-            unit.OriginalAttacks = unit.Attacks;
-            unit.OriginalWounds = unit.Wounds;
+            unit.OriginalAttacks = unit.Attacks.Value;
+            unit.OriginalWounds = unit.Wounds.Value;
           
             int frontSize = GetFront(unit.Size);
 
-            unit.Attacks *= frontSize;
-            unit.Wounds *= unit.Size;
+            unit.Attacks.Value *= frontSize;
+            unit.Wounds.Value *= unit.Size;
 
             return unit;
         }
@@ -607,7 +585,7 @@ namespace WarhammerArmyAssembler
             if (front < 5)
                 return 1;
 
-            int ranks = (this.Wounds / front) + (this.Wounds % front >= 5 ? 1 : 0);
+            int ranks = (this.Wounds.Value / front) + (this.Wounds.Value % front >= 5 ? 1 : 0);
 
             if (ranks > 3)
                 return 3;
@@ -756,17 +734,17 @@ namespace WarhammerArmyAssembler
 
             Dictionary<string, string> unitParams = new Dictionary<string, string>
             {
-                ["M"] = unit.MovementView,
-                ["WS"] = unit.WeaponSkillView,
-                ["BS"] = unit.BallisticSkillView,
-                ["S"] = unit.StrengthView,
-                ["T"] = unit.ToughnessView,
-                ["W"] = unit.WoundsView,
-                ["I"] = unit.InitiativeView,
-                ["A"] = unit.AttacksView,
-                ["LD"] = unit.LeadershipView,
-                ["AS"] = unit.ArmourView,
-                ["Ward"] = unit.WardView
+                ["M"] = unit.Movement.View,
+                ["WS"] = unit.WeaponSkill.View,
+                ["BS"] = unit.BallisticSkill.View,
+                ["S"] = unit.Strength.View,
+                ["T"] = unit.Toughness.View,
+                ["W"] = unit.Wounds.View,
+                ["I"] = unit.Initiative.View,
+                ["A"] = unit.Attacks.View,
+                ["LD"] = unit.Leadership.View,
+                ["AS"] = unit.Armour.View,
+                ["Ward"] = unit.Ward.View
             };
 
             foreach(KeyValuePair<string, string> paramPair in unitParams)

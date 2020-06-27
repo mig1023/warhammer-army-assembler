@@ -89,18 +89,18 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
-            newUnit.Movement = IntParse(mainParam["Movement"]);
-            newUnit.WeaponSkill = IntParse(mainParam["WeaponSkill"]);
-            newUnit.BallisticSkill = IntParse(mainParam["BallisticSkill"]);
-            newUnit.Strength = IntParse(mainParam["Strength"]);
-            newUnit.Toughness = IntParse(mainParam["Toughness"]);
-            newUnit.Wounds = IntParse(mainParam["Wounds"]);
-            newUnit.Initiative = IntParse(mainParam["Initiative"]);
-            newUnit.Attacks = IntParse(mainParam["Attacks"]);
-            newUnit.Leadership = IntParse(mainParam["Leadership"]);
+            newUnit.Movement = MainParamParse(mainParam["Movement"]);
+            newUnit.WeaponSkill = MainParamParse(mainParam["WeaponSkill"]);
+            newUnit.BallisticSkill = MainParamParse(mainParam["BallisticSkill"]);
+            newUnit.Strength = MainParamParse(mainParam["Strength"]);
+            newUnit.Toughness = MainParamParse(mainParam["Toughness"]);
+            newUnit.Wounds = MainParamParse(mainParam["Wounds"]);
+            newUnit.Initiative = MainParamParse(mainParam["Initiative"]);
+            newUnit.Attacks = MainParamParse(mainParam["Attacks"]);
+            newUnit.Leadership = MainParamParse(mainParam["Leadership"]);
 
-            newUnit.Armour = IntNullableParse(mainParam["Armour"]);
-            newUnit.Ward = IntNullableParse(mainParam["Ward"]);
+            newUnit.Armour = MainParamParse(mainParam["Armour"]);
+            newUnit.Ward = MainParamParse(mainParam["Ward"]);
 
             newUnit.PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]);
             newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
