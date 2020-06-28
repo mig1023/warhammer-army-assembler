@@ -16,16 +16,18 @@ namespace WarhammerArmyAssembler.Test
 
             int attackType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
 
+            Test.Data.Console(Test.Data.text, "\n\n{0} chose special attack ", unit.Name);
+
             if (attackType == 1)
             {
-                Test.Data.Console(Test.Data.supplText, "\n\n{0} Yell and Bawl", unit.Name);
+                Test.Data.Console(Test.Data.text, "--> Yell and Bawl (pass round with opponent)");
 
                 giantOpponent.PassThisRound = true;
                 roundWounds[giantOpponent.ID] = 2;
             }
             else if (opponentIsMonster && (attackType >= 2) && (attackType <= 4))
             {
-                Test.Data.Console(Test.Data.supplText, "\n\n{0} Thump with Club\n{1} must pass Initiative test", unit.Name, giantOpponent.Name);
+                Test.Data.Console(Test.Data.text, "--> Thump with Club --> {0} must pass Initiative test", giantOpponent.Name);
 
                 if (Test.Dice.Roll(unit, Test.Dice.Types.I, giantOpponent, giantOpponent.Initiative, 1, paramTest: true, hiddenDice: true))
                     Test.Data.Console(Test.Data.goodText, " --> passed");
@@ -38,13 +40,13 @@ namespace WarhammerArmyAssembler.Test
 
                     if (firstWoundDice == secondWoundDice)
                     {
-                        Test.Data.Console(Test.Data.supplText, "\n\nGiant's club embeds itself in th eground");
+                        Test.Data.Console(Test.Data.text, " --> Giant's club embeds itself in the ground");
                         unit.PassThisRound = true;
                     }
                     else
                     {
                         int wounds = firstWoundDice + secondWoundDice;
-                        Test.Data.Console(Test.Data.supplText, " <-- Giant's inflict {0} wounds", wounds);
+                        Test.Data.Console(Test.Data.badText, " --> Giant's inflict {0} wounds", wounds);
 
                         roundWounds[giantOpponent.ID] += wounds;
                         giantOpponent.Wounds -= wounds;
@@ -53,7 +55,8 @@ namespace WarhammerArmyAssembler.Test
             }
             else if (opponentIsMonster && (attackType >= 5))
             {
-                Test.Data.Console(Test.Data.supplText, "\n\n{0} 'Eadbutt", unit.Name);
+                Test.Data.Console(Test.Data.text, "--> 'Eadbutt");
+                Test.Data.Console(Test.Data.badText, " --> {0} WOUND", giantOpponent.Name);
 
                 roundWounds[giantOpponent.ID] += 1;
                 giantOpponent.Wounds -= 1;
@@ -61,11 +64,12 @@ namespace WarhammerArmyAssembler.Test
             }
             else if (!opponentIsMonster && (attackType == 2))
             {
-                Test.Data.Console(Test.Data.supplText, "\n\n{0} Jump Up and Down", unit.Name);
+                Test.Data.Console(Test.Data.text, "--> Jump Up and Down", unit.Name);
 
                 if (Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true) == 1)
                 {
-                    Test.Data.Console(Test.Data.supplText, " <-- fall", unit.Name);
+                    Test.Data.Console(Test.Data.text, " --> fall");
+                    Test.Data.Console(Test.Data.badText, " --> {0} WOUND", unit.Name);
 
                     unit.PassThisRound = true;
                     roundWounds[unit.ID] += 1;
@@ -79,7 +83,7 @@ namespace WarhammerArmyAssembler.Test
             }
             else if (!opponentIsMonster && (attackType == 3))
             {
-                Test.Data.Console(Test.Data.supplText, "\n\n{0} Pick Up and... ", unit.Name);
+                Test.Data.Console(Test.Data.text, "--> Pick Up and... ");
 
                 Dictionary<int, string> pickUpType = new Dictionary<int, string>
                 {
@@ -92,14 +96,15 @@ namespace WarhammerArmyAssembler.Test
                 };
 
                 int pickType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
-                Test.Data.Console(Test.Data.supplText, pickUpType[pickType]);
+                Test.Data.Console(Test.Data.text, pickUpType[pickType]);
+                Test.Data.Console(Test.Data.badText, " --> {0} SLAIN", giantOpponent.Name);
 
                 roundWounds[giantOpponent.ID] += giantOpponent.Wounds;
                 giantOpponent.Wounds = 0;
             }
             else
             {
-                Test.Data.Console(Test.Data.supplText, "\n\n{0} Swing with Club", unit.Name);
+                Test.Data.Console(Test.Data.text, "--> {0} Swing with Club", unit.Name);
 
                 int attacks = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
                 roundWounds[giantOpponent.ID] += Fight.Round(ref unit, ref giantOpponent, attacks, round);
