@@ -79,12 +79,12 @@ namespace WarhammerArmyAssembler.ArmyBook
             return countable;
         }
 
-        public static MainParam MainParamParse(XmlNode xmlNode, Unit unit, string name)
+        public static MainParam MainParamParse(XmlNode xmlNode, ref Unit unit, string name)
         {
             if (xmlNode == null)
                 return null;
 
-            return new MainParam(IntParse(xmlNode), unit, name);
+            return new MainParam(IntParse(xmlNode), ref unit, name);
         }
 
         public static List<Param> ParamParse(XmlNode xmlNode)

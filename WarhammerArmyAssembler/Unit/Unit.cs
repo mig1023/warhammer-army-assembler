@@ -515,23 +515,23 @@ namespace WarhammerArmyAssembler
 
                 string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
-                //typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
+                PropertyInfo mainParamProperty = typeof(Unit).GetProperty(name);
+                MainParam mainParam = (MainParam)mainParamProperty.GetValue(this);
 
+                if (mainParam == null)
+                    continue;
 
-                object param = typeof(Unit).GetProperty(name).GetValue(unit);
+                mainParam.View = newParamLine;
 
+                if (directModification && !String.IsNullOrEmpty(newParamLine))
+                {
+                    string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
 
-
-
-                //if (directModification && !String.IsNullOrEmpty(newParamLine))
-                //{
-                //    string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
-
-                //    if (cleanParamLine.Contains("D"))
-                //        typeof(Unit).GetProperty(name).SetValue(unit, 0);
-                //    else
-                //        typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
-                //}
+                    if (cleanParamLine.Contains("D"))
+                        mainParam.Value = 0;
+                    else
+                        mainParam.View = cleanParamLine;
+                }
             }
 
             if (directModification)

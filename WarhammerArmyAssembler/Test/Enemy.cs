@@ -69,23 +69,23 @@ namespace WarhammerArmyAssembler
             bool SteamTank = false, bool NoArmour = false
             )
         {
-            Enemy enemy = new Enemy();
+            Unit enemy = new Unit();
 
             enemy.Name = Name;
             enemy.TestListName = TestListName;
             enemy.Type = Type;
             enemy.Size = Size;
-            enemy.Movement = new MainParam(Movement, enemy, "Movement");
-            enemy.WeaponSkill = new MainParam(WeaponSkill, enemy, "WeaponSkill");
-            enemy.BallisticSkill = new MainParam(BallisticSkill, enemy, "BallisticSkill");
-            enemy.Strength = new MainParam(Strength, enemy, "Strength");
-            enemy.Toughness = new MainParam(Toughness, enemy, "Toughness");
-            enemy.Wounds = new MainParam(Wounds, enemy, "Wounds");
-            enemy.Initiative = new MainParam(Initiative, enemy, "Initiative");
-            enemy.Attacks = new MainParam(Attacks, enemy, "Attacks");
-            enemy.Leadership = new MainParam(Leadership, enemy, "Leadership");
-            enemy.Armour = new MainParam(Armour, enemy, "Armour");
-            enemy.Ward = new MainParam(Ward, enemy, "Ward");
+            enemy.Movement = new MainParam(Movement, ref enemy, "Movement");
+            enemy.WeaponSkill = new MainParam(WeaponSkill, ref enemy, "WeaponSkill");
+            enemy.BallisticSkill = new MainParam(BallisticSkill, ref enemy, "BallisticSkill");
+            enemy.Strength = new MainParam(Strength, ref enemy, "Strength");
+            enemy.Toughness = new MainParam(Toughness, ref enemy, "Toughness");
+            enemy.Wounds = new MainParam(Wounds, ref enemy, "Wounds");
+            enemy.Initiative = new MainParam(Initiative, ref enemy, "Initiative");
+            enemy.Attacks = new MainParam(Attacks, ref enemy, "Attacks");
+            enemy.Leadership = new MainParam(Leadership, ref enemy, "Leadership");
+            enemy.Armour = new MainParam(Armour, ref enemy, "Armour");
+            enemy.Ward = new MainParam(Ward, ref enemy, "Ward");
             enemy.Fear = Fear;
             enemy.Terror = Terror;
             enemy.Regeneration = Regeneration;
@@ -115,7 +115,7 @@ namespace WarhammerArmyAssembler
             enemy.SteamTank = SteamTank;
             enemy.NoArmour = NoArmour;
 
-            return enemy;
+            return (Enemy)enemy;
         }
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
