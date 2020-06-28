@@ -81,29 +81,18 @@ namespace WarhammerArmyAssembler.Test
             {
                 Test.Data.Console(Test.Data.supplText, "\n\n{0} Pick Up and... ", unit.Name);
 
-                int pickType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
-
-                switch (pickType)
+                Dictionary<int, string> pickUpType = new Dictionary<int, string>
                 {
-                    case 1:
-                        Test.Data.Console(Test.Data.supplText, "Stuff into Bag", unit.Name);
-                        break;
-                    case 2:
-                        Test.Data.Console(Test.Data.supplText, "Throw back into Combat", unit.Name);
-                        break;
-                    case 3:
-                        Test.Data.Console(Test.Data.supplText, "Hurl", unit.Name);
-                        break;
-                    case 4:
-                        Test.Data.Console(Test.Data.supplText, "Squash", unit.Name);
-                        break;
-                    case 5:
-                        Test.Data.Console(Test.Data.supplText, "Eat", unit.Name);
-                        break;
-                    case 6:
-                        Test.Data.Console(Test.Data.supplText, "Pick Another", unit.Name);
-                        break;
-                }
+                    [1] = "Stuff into Bag",
+                    [2] = "Throw back into Combat",
+                    [3] = "Hurl",
+                    [4] = "Squash",
+                    [5] = "Eat",
+                    [6] = "Pick Another",
+                };
+
+                int pickType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
+                Test.Data.Console(Test.Data.supplText, pickUpType[pickType]);
 
                 roundWounds[giantOpponent.ID] += giantOpponent.Wounds;
                 giantOpponent.Wounds = 0;
