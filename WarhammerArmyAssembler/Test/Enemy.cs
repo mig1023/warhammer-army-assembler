@@ -2050,6 +2050,7 @@ namespace WarhammerArmyAssembler
                     Leadership = 8,
                     Armour = 3,
                     Terror = true,
+                    LargeBase = true,
                 }
             },
 

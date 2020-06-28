@@ -193,8 +193,12 @@ namespace WarhammerArmyAssembler.Test
 
                         if (actor.SteamTank)
                             ImpactHit(actor, participants, ref roundWounds);
-                        else if (u.HellPitAbomination)
+                        
+                        if (actor.HellPitAbomination)
                             HellPitAbomination(ref actor, participants, ref roundWounds);
+
+                        if (actor.Giant)
+                            GiantAttacks(ref actor, participants, ref roundWounds);
 
                         if (actor.Attacks <= 0)
                             continue;
@@ -277,10 +281,121 @@ namespace WarhammerArmyAssembler.Test
             }
         }
 
+        
+
+        private static void GiantAttacks(ref Unit unit, List<Unit> participants,
+            ref Dictionary<int, int> roundWounds)
+        {
+            Unit giantOpponent = SelectOpponent(participants, unit);
+            bool opponentIsMonster = giantOpponent.LargeBase;
+
+            int attackType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
+
+            if (attackType == 1)
+            {
+                Test.Data.Console(Test.Data.supplText, "\n\n{0} Yell and Bawl", unit.Name);
+
+                giantOpponent.PassThisRound = true;
+                roundWounds[giantOpponent.ID] = 2;
+            }
+            else if (opponentIsMonster && (attackType >= 2) && (attackType <= 4))
+            {
+                Test.Data.Console(Test.Data.supplText, "\n\n{0} Thump with Club\n{1} must pass Initiative test", unit.Name, giantOpponent.Name);
+
+                if (Test.Dice.Roll(unit, Test.Dice.Types.I, giantOpponent, giantOpponent.Initiative, 1, paramTest: true, hiddenDice: true))
+                    Test.Data.Console(Test.Data.goodText, " --> passed");
+                else
+                {
+                    Test.Data.Console(Test.Data.badText, " --> FAIL");
+
+                    int firstWoundDice = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
+                    int secondWoundDice = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
+
+                    if (firstWoundDice == secondWoundDice)
+                    {
+                        Test.Data.Console(Test.Data.supplText, "\nGiant's club embeds itself in th eground");
+                        unit.PassThisRound = true;
+                    }
+                    else
+                    {
+                        int wounds = firstWoundDice + secondWoundDice;
+                        Test.Data.Console(Test.Data.supplText, " <-- Giant's inflict {0} wounds", wounds);
+
+                        roundWounds[giantOpponent.ID] += wounds;
+                        giantOpponent.Wounds -= wounds;
+                    }
+                } 
+            }
+            else if (opponentIsMonster && (attackType >= 5))
+            {
+                Test.Data.Console(Test.Data.supplText, "\n\n{0} 'Eadbutt", unit.Name);
+
+                roundWounds[giantOpponent.ID] += 1;
+                giantOpponent.Wounds -= 1;
+                giantOpponent.PassThisRound = true;
+            }
+            else if (!opponentIsMonster && (attackType == 2))
+            {
+                Test.Data.Console(Test.Data.supplText, "\n\n{0} Jump Up and Down", unit.Name);
+
+                if (Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true) == 1)
+                {
+                    Test.Data.Console(Test.Data.supplText, "\n{0} fall", unit.Name);
+
+                    unit.PassThisRound = true;
+                    roundWounds[unit.ID] += 1;
+                    unit.Wounds -= 1;
+                }
+                else
+                {
+                    int attacks = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 2, hiddenDice: true);
+                    roundWounds[giantOpponent.ID] += Round(ref unit, ref giantOpponent, attacks, round);
+                }
+            }
+            else if (!opponentIsMonster && (attackType == 3))
+            {
+                Test.Data.Console(Test.Data.supplText, "\n{0} Pick Up and..", unit.Name);
+
+                int pickType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
+
+                switch(pickType)
+                {
+                    case 1:
+                        Test.Data.Console(Test.Data.supplText, "Stuff into Bag", unit.Name);
+                        break;
+                    case 2:
+                        Test.Data.Console(Test.Data.supplText, "Throw back into Combat", unit.Name);
+                        break;
+                    case 3:
+                        Test.Data.Console(Test.Data.supplText, "Hurl", unit.Name);
+                        break;
+                    case 4:
+                        Test.Data.Console(Test.Data.supplText, "Squash", unit.Name);
+                        break;
+                    case 5:
+                        Test.Data.Console(Test.Data.supplText, "Eat", unit.Name);
+                        break;
+                    case 6:
+                        Test.Data.Console(Test.Data.supplText, "Pick Another", unit.Name);
+                        break;
+                }
+
+                roundWounds[giantOpponent.ID] += giantOpponent.Wounds;
+                giantOpponent.Wounds = 0;
+            }
+            else
+            {
+                Test.Data.Console(Test.Data.supplText, "\n{0} Swing with Club", unit.Name);
+
+                int attacks = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
+                roundWounds[giantOpponent.ID] += Round(ref unit, ref giantOpponent, attacks, round);
+            }
+        }
+
         private static void HellPitAbomination(ref Unit unit, List<Unit> participants,
             ref Dictionary<int, int> roundWounds)
         {
-            Unit impactOpponent = SelectOpponent(participants, unit);
+            Unit hellOpponent = SelectOpponent(participants, unit);
 
             int attackType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
 
@@ -306,7 +421,7 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.Console(Test.Data.supplText, "\n\n{0} avalanche of flesh: 2D6 attack with autohit", unit.Name);
             }
 
-            roundWounds[impactOpponent.ID] += Round(ref unit, ref impactOpponent, attacks, round);
+            roundWounds[hellOpponent.ID] += Round(ref unit, ref hellOpponent, attacks, round);
         }
 
         private static void ImpactHit(Unit unit, List<Unit> participants, ref Dictionary<int, int> roundWounds)

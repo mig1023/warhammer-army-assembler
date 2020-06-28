@@ -146,6 +146,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.ImpactHit = StringParse(additionalParam["ImpactHit"]);
                 newUnit.SteamTank = BoolParse(additionalParam["SteamTank"]);
                 newUnit.HellPitAbomination = BoolParse(additionalParam["HellPitAbomination"]);
+                newUnit.Giant = BoolParse(additionalParam["Giant"]);
                 newUnit.Lance = BoolParse(additionalParam["Lance"]);
                 newUnit.Flail = BoolParse(additionalParam["Flail"]);
                 newUnit.PredatoryFighter = BoolParse(additionalParam["PredatoryFighter"]);

@@ -136,6 +136,7 @@ namespace WarhammerArmyAssembler
         public string ImpactHit { get; set; }
         public bool SteamTank { get; set; }
         public bool HellPitAbomination { get; set; }
+        public bool Giant { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
         public bool PredatoryFighter { get; set; }
@@ -345,6 +346,7 @@ namespace WarhammerArmyAssembler
                 ImpactHit = this.ImpactHit,
                 SteamTank = this.SteamTank,
                 HellPitAbomination = this.HellPitAbomination,
+                Giant = this.Giant,
                 Lance = this.Lance,
                 Flail = this.Flail,
                 PredatoryFighter = this.PredatoryFighter,
