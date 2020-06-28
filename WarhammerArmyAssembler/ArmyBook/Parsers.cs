@@ -19,6 +19,16 @@ namespace WarhammerArmyAssembler.ArmyBook
             return (success ? value : (byDefault ?? 0));
         }
 
+        public static int? IntNullableParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return null;
+
+            bool success = int.TryParse(xmlNode.InnerText, out int value);
+
+            return (success ? value : (int?)null);
+        }
+
         public static double DoubleParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
@@ -77,14 +87,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             return countable;
-        }
-
-        public static MainParam MainParamParse(XmlNode xmlNode, ref Unit unit, string name)
-        {
-            if (xmlNode == null)
-                return null;
-
-            return new MainParam(IntParse(xmlNode), ref unit, name);
         }
 
         public static List<Param> ParamParse(XmlNode xmlNode)

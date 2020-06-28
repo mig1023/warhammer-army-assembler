@@ -52,25 +52,17 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (string name in unitParam)
             {
-                PropertyInfo param = typeof(Unit).GetProperty(name);
-                Label testUnitElement = (Label)Interface.Changes.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
+                string paramName = (name == "Size" || name == "Name" ? name : String.Format("{0}View", name));
 
-                if (param.GetValue(unitForLoad) is MainParam)
-                {
-                    MainParam mainParam = (MainParam)param.GetValue(unitForLoad);
-                    testUnitElement.Content = mainParam.View;
-                }
-                else
-                {
-                    var value = param.GetValue(unitForLoad);
-                    testUnitElement.Content = (value != null ? value.ToString() : String.Empty);
-                }
+                PropertyInfo param = typeof(Unit).GetProperty(paramName);
+                Label testUnitElement = (Label)Interface.Changes.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
+                testUnitElement.Content = param.GetValue(unitForLoad);
 
                 if (mountForLoad != null)
                 {
-                    PropertyInfo mountParamProperty = typeof(Unit).GetProperty(name);
-                    MainParam mountParam = (MainParam)mountParamProperty.GetValue(unitForLoad);
-                    AddMountUnitParam(mountParam.View, mountIndex, unitGrid);
+                    PropertyInfo mountParam = typeof(Unit).GetProperty(paramName);
+                    var value = mountParam.GetValue(mountForLoad) ?? String.Empty;
+                    AddMountUnitParam(value.ToString(), mountIndex, unitGrid);
 
                     mountIndex += 1;
                 }

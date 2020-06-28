@@ -89,7 +89,7 @@ namespace WarhammerArmyAssembler.Army
                 if (entry.Value.ArmyGeneral)
                     entry.Value.ArmyGeneral = false;
 
-                int unitLeadership = entry.Value.Leadership.Value;
+                int unitLeadership = entry.Value.Leadership;
 
                 foreach (Option option in entry.Value.Options)
                     if (option.IsActual() && (option.AddToLeadership > 0))
