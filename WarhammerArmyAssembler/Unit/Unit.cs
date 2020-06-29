@@ -450,7 +450,7 @@ namespace WarhammerArmyAssembler
                 return "D6";
             else if ((paramValue > 10) && ((paramValue % 6)== 0))
                 return ((int)(paramValue / 6)).ToString() + "D6";
-            else if (paramValue < 0)
+            else if (paramValue <= 0)
                 return "-";
 
             string paramModView = String.Empty;
@@ -545,10 +545,10 @@ namespace WarhammerArmyAssembler
                 {
                     string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
 
-                    if (cleanParamLine.Contains("D"))
-                        typeof(Unit).GetProperty(name).SetValue(unit, 0);
-                    else
-                        typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
+                    if (cleanParamLine.Contains("D") || cleanParamLine.Contains("-"))
+                        cleanParamLine = "0";
+
+                    typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
                 }
             }
 
