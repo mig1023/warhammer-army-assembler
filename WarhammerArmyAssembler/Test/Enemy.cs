@@ -342,6 +342,27 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Giant",
+                TestListName = "Giant (Orcs&Goblins)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Movement = 6,
+                WeaponSkill = 3,
+                BallisticSkill = 3,
+                Strength = 6,
+                Toughness = 5,
+                Wounds = 6,
+                Initiative = 3,
+                Attacks = 0,
+                Leadership = 10,
+                Terror = true,
+                Stubborn = true,
+                LargeBase = true,
+                Giant = true,
+            },
+
+            new Enemy
+            {
                 Name = "Hell Pit Abomination",
                 TestListName = "Hell Pit Abomination (Skaven)",
                 Type = UnitType.Rare,
