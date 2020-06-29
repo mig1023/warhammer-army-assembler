@@ -48,6 +48,12 @@ namespace WarhammerArmyAssembler.Test
                         int wounds = firstWoundDice + secondWoundDice;
                         Test.Data.Console(Test.Data.badText, " --> Giant's inflict {0} wounds", wounds);
 
+                        if (wounds > giantOpponent.OriginalWounds)
+                        {
+                            wounds = giantOpponent.OriginalWounds;
+                            Test.Data.Console(Test.Data.supplText, ", only {0} can be inflicted", wounds);
+                        }
+
                         roundWounds[giantOpponent.ID] += wounds;
                         giantOpponent.Wounds -= wounds;
                     }
@@ -99,8 +105,8 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.Console(Test.Data.text, pickUpType[pickType]);
                 Test.Data.Console(Test.Data.badText, " --> {0} SLAIN", giantOpponent.Name);
 
-                roundWounds[giantOpponent.ID] += giantOpponent.Wounds;
-                giantOpponent.Wounds = 0;
+                roundWounds[giantOpponent.ID] += giantOpponent.OriginalWounds;
+                giantOpponent.Wounds -= giantOpponent.OriginalWounds;
             }
             else
             {
