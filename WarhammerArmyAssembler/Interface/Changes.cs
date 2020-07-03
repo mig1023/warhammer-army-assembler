@@ -130,8 +130,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void UnitDeleteDrop(int id)
         {
-            if (CurrentSelectedUnit == id)
-                DetailResize(open: false);
+            DetailResize(open: false);
 
             Army.Mod.DeleteUnitByID(id);
             Interface.Reload.ReloadArmyData();
