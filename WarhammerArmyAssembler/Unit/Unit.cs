@@ -51,6 +51,7 @@ namespace WarhammerArmyAssembler
             ["Flail"] = "Flail",
             ["PredatoryFighter"] = "Predatory Fighter",
             ["AddToCloseCombat"] = "Add to Close Combat Result ([X])",
+            ["Bloodroar"] = "Bloodroar",
         };
 
         public string Name { get; set; }
@@ -140,6 +141,7 @@ namespace WarhammerArmyAssembler
         public bool Lance { get; set; }
         public bool Flail { get; set; }
         public bool PredatoryFighter { get; set; }
+        public bool Bloodroar { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -351,6 +353,7 @@ namespace WarhammerArmyAssembler
                 Flail = this.Flail,
                 PredatoryFighter = this.PredatoryFighter,
                 AddToCloseCombat = this.AddToCloseCombat,
+                Bloodroar = this.Bloodroar,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 

@@ -111,6 +111,7 @@ namespace WarhammerArmyAssembler.Test
             bool restoreConsoleOutput = (hiddenDice && Interface.TestUnit.PreventConsoleOutputStatus());
 
             Unit unitTestPassed = ((diceType == Types.LD) || paramTest ? unit : enemy);
+            Unit hisOpponent = ((diceType == Types.LD) || paramTest ? enemy : unit);
 
             if (hiddenDice)
                 Interface.TestUnit.PreventConsoleOutput(prevent: true);
@@ -136,7 +137,7 @@ namespace WarhammerArmyAssembler.Test
             else
                 Test.Data.Console(Test.Data.supplText, "({0}+, ", condition);
 
-            int result = RollAll(diceType, unitTestPassed, diceNum);
+            int result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
 
             bool testPassed = TestPassedByDice(result, condition, diceType, breakTest, paramTest);
 
@@ -147,7 +148,7 @@ namespace WarhammerArmyAssembler.Test
             if ((diceType == Types.AS) && (condition > 6) && (condition < 10) && (result == 6))
             {
                 int supplCondition = condition - 3;
-                result = RollAll(diceType, unitTestPassed, 1);
+                result = RollAll(diceType, unitTestPassed, 1, enemy: hisOpponent);
                 Test.Data.Console(Test.Data.supplText, " --> {0}+, {1}", supplCondition, result);
 
                 testPassed = TestPassedByDice(result, supplCondition, diceType, breakTest, paramTest);
@@ -158,7 +159,7 @@ namespace WarhammerArmyAssembler.Test
                 (testPassed && MustBeRerolled(diceType, unit, enemy))
             )
             {
-                result = RollAll(diceType, unitTestPassed, diceNum);
+                result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
                 Test.Data.Console(Test.Data.supplText, ", reroll --> {0}", result);
                 testPassed = TestPassedByDice(result, condition, diceType, breakTest, paramTest);
             }
@@ -202,18 +203,24 @@ namespace WarhammerArmyAssembler.Test
             return false;
         }
 
-        public static int RollAll(Types diceType, Unit unit, int diceNum, bool hiddenDice = false)
+        public static int RollAll(Types diceType, Unit unit, int diceNum, bool hiddenDice = false, Unit enemy = null)
         {
             int maxRoll = 0;
+            int minRoll = 6;
+
             int result = 0;
 
-            if ((diceType == Types.LD) && unit.ColdBlooded)
+            bool bloodroar = ((enemy != null) && enemy.Bloodroar);
+
+            if ((diceType == Types.LD) && (unit.ColdBlooded || bloodroar))
             {
                 if (!hiddenDice)
-                    Test.Data.Console(Test.Data.supplText, "cold-blooded, ");
+                    Test.Data.Console(Test.Data.supplText, (unit.ColdBlooded ? "cold-blooded, " : "bloodroar, "));
 
                 diceNum += 1;
             }
+
+            Test.Data.Console(Test.Data.supplText, "[");
 
             for (int i = 0; i < diceNum; i++)
             {
@@ -222,10 +229,20 @@ namespace WarhammerArmyAssembler.Test
 
                 if (roll > maxRoll)
                     maxRoll = roll;
+
+                if (roll < minRoll)
+                    minRoll = roll;
+
+                Test.Data.Console(Test.Data.supplText, roll + ", ");
             }
+
+            Test.Data.Console(Test.Data.supplText, "]");
 
             if ((diceType == Types.LD) && unit.ColdBlooded)
                 result -= maxRoll;
+
+            if ((diceType == Types.LD) && bloodroar)
+                result -= minRoll;
 
             lastDice = result;
 

@@ -418,9 +418,9 @@ namespace WarhammerArmyAssembler.Test
             if ((!enemy.Terror && !enemyFriendTerror) || unit.Terror || friendTerrorOrFear)
                 return unit;
 
-            string terrorSource = (((enemyFriend != null) && !enemy.Terror) ? enemyFriend.Name : enemy.Name);
+            Unit terrorSource = (((enemyFriend != null) && !enemy.Terror) ? enemyFriend : enemy);
 
-            Test.Data.Console(Test.Data.text, "\n{0} try to resist of terror by {1} ", unit.Name, terrorSource);
+            Test.Data.Console(Test.Data.text, "\n{0} try to resist of terror by {1} ", unit.Name, terrorSource.Name);
 
             if (unit.Unbreakable)
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (unbreakable)");
@@ -428,7 +428,7 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (immune to psychology)");
             else if (unit.Frenzy)
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (frenzy)");
-            else if (Dice.Roll(unit, Dice.Types.LD, enemy, unit.Leadership, 2))
+            else if (Dice.Roll(unit, Dice.Types.LD, terrorSource, unit.Leadership, 2))
                 Test.Data.Console(Test.Data.goodText, " --> passed");
             else
             {
