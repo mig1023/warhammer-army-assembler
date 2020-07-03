@@ -685,7 +685,7 @@ namespace WarhammerArmyAssembler
                     {
                         foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts)
                             if (mount.Value.Name == option.Name)
-                                Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: this.ID);
+                                Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: ArmyID);
                     }
                     else if (option.Mount && !realise)
                     {
