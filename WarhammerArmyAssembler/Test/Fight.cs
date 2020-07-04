@@ -443,13 +443,14 @@ namespace WarhammerArmyAssembler.Test
             bool impactHit = false, string impactLine = "", bool afterSteamTankAttack = false)
         {
             int roundWounds = 0;
+            int originalAttackNumber = attackNumber;
 
             if ((unit.Wounds > 0) && (enemy.Wounds > 0) && !(impactHit && unit.SteamTank) && !afterSteamTankAttack && (attackNumber > 0)) 
                 Test.Data.Console(Test.Data.text, "\n");
 
             for (int i = 0; i < attackNumber; i++)
             {
-                int wounded = Attack(ref unit, ref enemy, round, out bool additionalAttack, impactHit, impactLine);
+                int wounded = Attack(ref unit, ref enemy, round, out bool additionalAttack, (i >= originalAttackNumber), impactHit, impactLine);
                 roundWounds += wounded;
                 enemy.Wounds -= wounded;
 
@@ -458,6 +459,7 @@ namespace WarhammerArmyAssembler.Test
                     Test.Data.Console(Test.Data.supplText, " <-- {0} have additional attack by predatory fighter rule", unit.Name);
                     attackNumber += 1;
                 }
+
                 if ((wounded > 0) && BecameBloodFrenzy(ref unit))
                     attackNumber += 1;
             }
@@ -595,7 +597,8 @@ namespace WarhammerArmyAssembler.Test
             return false;
         }
 
-        private static int Attack(ref Unit unit, ref Unit enemy, int round, out bool additionalAttack, bool impactHit = false, string impactLine = "")
+        private static int Attack(ref Unit unit, ref Unit enemy, int round, out bool additionalAttack,
+            bool thisIsAdditionalAttack = false, bool impactHit = false, string impactLine = "")
         {
             attackIsPoisoned = false;
             attackWithKillingBlow = false;
@@ -619,7 +622,7 @@ namespace WarhammerArmyAssembler.Test
                 {
                     Param.Tests(ref enemy, unit, context: Param.ContextType.Hit);
 
-                    if (unit.PredatoryFighter && (diceForHit == 6))
+                    if (unit.PredatoryFighter && !thisIsAdditionalAttack && (diceForHit == 6))
                         additionalAttack = true;
 
                     if (enemy.Wounds <= 0)
