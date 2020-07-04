@@ -54,6 +54,8 @@ namespace WarhammerArmyAssembler
             ["Bloodroar"] = "Bloodroar",
             ["AddToHit"] = "+[X] To Hit",
             ["SubOpponentToHit"] = "-[X] To Hit opponent penalty",
+            ["AddToWound"] = "+[X] To Wound",
+            ["SubOpponentToWound"] = "-[X] To Wound opponent penalty",
         };
 
         public string Name { get; set; }
@@ -146,6 +148,8 @@ namespace WarhammerArmyAssembler
         public bool Bloodroar { get; set; }
         public int AddToHit { get; set; }
         public int SubOpponentToHit { get; set; }
+        public int AddToWound { get; set; }
+        public int SubOpponentToWound { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -360,6 +364,8 @@ namespace WarhammerArmyAssembler
                 Bloodroar = this.Bloodroar,
                 AddToHit = this.AddToHit,
                 SubOpponentToHit = this.SubOpponentToHit,
+                AddToWound = this.AddToWound,
+                SubOpponentToWound = this.SubOpponentToWound,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 

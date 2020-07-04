@@ -154,6 +154,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.Bloodroar = BoolParse(additionalParam["Bloodroar"]);
                 newUnit.AddToHit = IntParse(additionalParam["AddToHit"]);
                 newUnit.SubOpponentToHit = IntParse(additionalParam["SubOpponentToHit"]);
+                newUnit.AddToWound = IntParse(additionalParam["AddToWound"]);
+                newUnit.SubOpponentToWound = IntParse(additionalParam["SubOpponentToWound"]);
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
@@ -236,6 +238,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.Bloodroar = BoolParse(xmlNode["Bloodroar"]);
             newWeapon.AddToHit = IntParse(xmlNode["AddToHit"]);
             newWeapon.SubOpponentToHit = IntParse(xmlNode["SubOpponentToHit"]);
+            newWeapon.AddToWound = IntParse(xmlNode["AddToWound"]);
+            newWeapon.SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 

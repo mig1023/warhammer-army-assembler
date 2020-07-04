@@ -152,6 +152,15 @@ namespace WarhammerArmyAssembler.Test
                     Test.Data.Console(Test.Data.supplText, ", -{0} penalty", enemy.SubOpponentToHit);
             }
 
+            if ((diceType == Types.S) && !paramTest)
+            {
+                if (unit.AddToWound > 0)
+                    Test.Data.Console(Test.Data.supplText, ", +{0} bonus", unit.AddToWound);
+
+                if (enemy.SubOpponentToWound > 0)
+                    Test.Data.Console(Test.Data.supplText, ", -{0} penalty", enemy.SubOpponentToWound);
+            }
+
             bool hateHitReroll = unit.Hate && (diceType == Types.WS);
 
             if ((diceType == Types.AS) && (condition > 6) && (condition < 10) && (result == 6))
@@ -207,6 +216,15 @@ namespace WarhammerArmyAssembler.Test
 
                 if (enemy.SubOpponentToHit > 0)
                     result -= enemy.SubOpponentToHit;
+            }
+
+            if ((diceType == Types.S) && !paramTest)
+            {
+                if (unit.AddToWound > 0)
+                    result += unit.AddToWound;
+
+                if (enemy.SubOpponentToWound > 0)
+                    result -= enemy.SubOpponentToWound;
             }
 
             if ((result == 6) && paramTest)

@@ -69,6 +69,8 @@ namespace WarhammerArmyAssembler
         public bool Bloodroar { get; set; }
         public int AddToHit { get; set; }
         public int SubOpponentToHit { get; set; }
+        public int AddToWound { get; set; }
+        public int SubOpponentToWound { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -198,6 +200,8 @@ namespace WarhammerArmyAssembler
                 Bloodroar = this.Bloodroar,
                 AddToHit = this.AddToHit,
                 SubOpponentToHit = this.SubOpponentToHit,
+                AddToWound = this.AddToWound,
+                SubOpponentToWound = this.SubOpponentToWound,
 
                 Lance = this.Lance,
                 Flail = this.Flail,
