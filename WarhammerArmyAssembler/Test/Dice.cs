@@ -139,9 +139,18 @@ namespace WarhammerArmyAssembler.Test
 
             int result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
 
-            bool testPassed = TestPassedByDice(result, condition, diceType, breakTest, paramTest);
+            bool testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, breakTest, paramTest);
 
             Test.Data.Console(Test.Data.supplText, "{0}", result);
+           
+            if ((diceType == Types.WS) && !paramTest)
+            {
+                if (unit.AddToHit > 0)
+                    Test.Data.Console(Test.Data.supplText, ", +{0} bonus", unit.AddToHit);
+
+                if (enemy.SubOpponentToHit > 0)
+                    Test.Data.Console(Test.Data.supplText, ", -{0} penalty", enemy.SubOpponentToHit);
+            }
 
             bool hateHitReroll = unit.Hate && (diceType == Types.WS);
 
@@ -151,7 +160,7 @@ namespace WarhammerArmyAssembler.Test
                 result = RollAll(diceType, unitTestPassed, 1, enemy: hisOpponent);
                 Test.Data.Console(Test.Data.supplText, " --> {0}+, {1}", supplCondition, result);
 
-                testPassed = TestPassedByDice(result, supplCondition, diceType, breakTest, paramTest);
+                testPassed = TestPassedByDice(unit, enemy, result, supplCondition, diceType, breakTest, paramTest);
             }
             else if (
                 (!testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy)))
@@ -161,7 +170,7 @@ namespace WarhammerArmyAssembler.Test
             {
                 result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
                 Test.Data.Console(Test.Data.supplText, ", reroll --> {0}", result);
-                testPassed = TestPassedByDice(result, condition, diceType, breakTest, paramTest);
+                testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, breakTest, paramTest);
             }
 
             dice = result;
@@ -174,8 +183,8 @@ namespace WarhammerArmyAssembler.Test
             return testPassed;
         }
 
-        public static bool TestPassedByDice(int result, int condition, Types diceType,
-            bool breakTest = false, bool paramTest = false)
+        public static bool TestPassedByDice(Unit unit, Unit enemy, int result, int condition,
+            Types diceType, bool breakTest = false, bool paramTest = false)
         {
             bool reversCheck = (diceType == Types.AS) || (diceType == Types.WARD);
 
@@ -183,6 +192,21 @@ namespace WarhammerArmyAssembler.Test
             {
                 Test.Data.Console(Test.Data.supplText, "insane courage! --> ");
                 return true;
+            }
+
+            if ((diceType == Types.WS) && !paramTest)
+            {
+                if (result == 6)
+                    return true;
+
+                if (result == 1)
+                    return false;
+
+                if (unit.AddToHit > 0)
+                    result += unit.AddToHit;
+
+                if (enemy.SubOpponentToHit > 0)
+                    result -= enemy.SubOpponentToHit;
             }
 
             if ((result == 6) && paramTest)

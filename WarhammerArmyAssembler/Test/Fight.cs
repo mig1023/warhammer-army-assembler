@@ -769,7 +769,7 @@ namespace WarhammerArmyAssembler.Test
             else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)
                 chance = 5;
 
-            return Dice.Roll (unit, Dice.Types.WS, enemy, chance, dice: out dice, round: round);
+            return Dice.Roll(unit, Dice.Types.WS, enemy, chance, dice: out dice, round: round);
         }
 
         private static bool Wound(Unit unit, Unit enemy, int round)

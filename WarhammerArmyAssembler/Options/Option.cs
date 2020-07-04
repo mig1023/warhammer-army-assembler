@@ -66,6 +66,9 @@ namespace WarhammerArmyAssembler
         public bool Flail { get; set; }
         public bool PredatoryFighter { get; set; }
         public bool BigWeapon { get; set; }
+        public bool Bloodroar { get; set; }
+        public int AddToHit { get; set; }
+        public int SubOpponentToHit { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -192,6 +195,9 @@ namespace WarhammerArmyAssembler
                 ImpactHit = this.ImpactHit,
                 SteamTank = this.SteamTank,
                 PredatoryFighter = this.PredatoryFighter,
+                Bloodroar = this.Bloodroar,
+                AddToHit = this.AddToHit,
+                SubOpponentToHit = this.SubOpponentToHit,
 
                 Lance = this.Lance,
                 Flail = this.Flail,

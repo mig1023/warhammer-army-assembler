@@ -152,6 +152,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.PredatoryFighter = BoolParse(additionalParam["PredatoryFighter"]);
                 newUnit.AddToCloseCombat = StringParse(additionalParam["AddToCloseCombat"]);
                 newUnit.Bloodroar = BoolParse(additionalParam["Bloodroar"]);
+                newUnit.AddToHit = IntParse(additionalParam["AddToHit"]);
+                newUnit.SubOpponentToHit = IntParse(additionalParam["SubOpponentToHit"]);
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
@@ -232,6 +234,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]);
             newWeapon.AddToCloseCombat = StringParse(xmlNode["AddToCloseCombat"]);
             newWeapon.Bloodroar = BoolParse(xmlNode["Bloodroar"]);
+            newWeapon.AddToHit = IntParse(xmlNode["AddToHit"]);
+            newWeapon.SubOpponentToHit = IntParse(xmlNode["SubOpponentToHit"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 
