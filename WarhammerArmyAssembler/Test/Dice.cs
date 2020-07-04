@@ -220,8 +220,6 @@ namespace WarhammerArmyAssembler.Test
                 diceNum += 1;
             }
 
-            Test.Data.Console(Test.Data.supplText, "[");
-
             for (int i = 0; i < diceNum; i++)
             {
                 int roll = Test.Data.rand.Next(6) + 1;
@@ -232,11 +230,7 @@ namespace WarhammerArmyAssembler.Test
 
                 if (roll < minRoll)
                     minRoll = roll;
-
-                Test.Data.Console(Test.Data.supplText, roll + ", ");
             }
-
-            Test.Data.Console(Test.Data.supplText, "]");
 
             if ((diceType == Types.LD) && unit.ColdBlooded)
                 result -= maxRoll;
