@@ -452,6 +452,13 @@ namespace WarhammerArmyAssembler.Test
             {
                 int wounded = Attack(ref unit, ref enemy, round, out bool additionalAttack, (i >= originalAttackNumber), impactHit, impactLine);
                 roundWounds += wounded;
+
+                if (enemy.Wounds < wounded)
+                {
+                    wounded = enemy.Wounds;
+                    Test.Data.Console(Test.Data.supplText, ", only {0} can be inflicted", wounded);
+                }
+
                 enemy.Wounds -= wounded;
 
                 if (additionalAttack)
@@ -714,14 +721,7 @@ namespace WarhammerArmyAssembler.Test
             int multiwounds = RandomParamParse(unit.MultiWounds);
 
             Test.Data.Console(Test.Data.text, " <-- {0} multiple wounds", multiwounds);
-
-            if (enemy.Wounds < multiwounds)
-            {
-                multiwounds = enemy.Wounds;
-                Test.Data.Console(Test.Data.supplText, ", only {0} can be inflicted", multiwounds);
-            }
                 
-
             return multiwounds;
         }
 
