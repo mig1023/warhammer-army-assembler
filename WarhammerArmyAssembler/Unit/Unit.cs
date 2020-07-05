@@ -590,17 +590,15 @@ namespace WarhammerArmyAssembler
             unit.OriginalAttacks = unit.Attacks;
             unit.OriginalWounds = unit.Wounds;
           
-            int frontSize = GetFront(unit.Size);
-
-            unit.Attacks *= frontSize;
+            unit.Attacks *= unit.GetFront();
             unit.Wounds *= unit.Size;
 
             return unit;
         }
 
-        public int GetFront(int unitSize)
+        public int GetFront()
         {
-            int frontSize = unitSize;
+            int frontSize = this.Size;
 
             Dictionary<int, int> ratio = new Dictionary<int, int>
             {
@@ -608,7 +606,7 @@ namespace WarhammerArmyAssembler
             };
 
             foreach (KeyValuePair<int, int> r in ratio)
-                if (unitSize >= r.Key)
+                if (this.Size >= r.Key)
                     frontSize = r.Value;
 
             return frontSize;
@@ -619,7 +617,7 @@ namespace WarhammerArmyAssembler
             if (!this.IsUnit())
                 return 1;
 
-            int front = GetFront(this.Size);
+            int front = this.GetFront();
 
             if (front < 5)
                 return 1;

@@ -24,7 +24,7 @@ namespace WarhammerArmyAssembler.Test
 
             List<Param> newParams = new List<Param>();
 
-            foreach(Param param in allParams)
+            foreach (Param param in allParams)
             {
                 Param newParamTest = new Param
                 {
@@ -45,11 +45,17 @@ namespace WarhammerArmyAssembler.Test
         {
             foreach (Param param in opponent.ParamTests)
             {
+                int testsCount = 1;
+
+                if (unit.IsUnit() && (context == ContextType.Round))
+                    testsCount = unit.GetFront();
+
                 bool canBeApplied = (param.Repeat == RepeatType.Normal) || ((param.Repeat == RepeatType.Once) && !param.UsedAlready);
 
                 if ((param.Context == context) && canBeApplied)
                 {
-                    ParamTest(ref unit, param.Type, opponent, param.Bet, context);
+                    for (int i = 0; i < testsCount; i++)
+                        ParamTest(ref unit, param.Type, opponent, param.Bet, context, i);
 
                     if (param.Repeat == RepeatType.Once)
                         param.UsedAlready = true;
@@ -57,11 +63,13 @@ namespace WarhammerArmyAssembler.Test
             }
         }
 
-        private static void ParamTest(ref Unit unit, string param, Unit opponent, TestType test, ContextType context)
+        private static void ParamTest(ref Unit unit, string param, Unit opponent, TestType test,
+            ContextType context, int testCount)
         {
             bool roundFormat = ((context == ContextType.Hit) || (context == ContextType.Wound));
 
-            Test.Data.Console(Test.Data.text, (roundFormat ? " --> " : "\n\n") + "{0} must pass {1} test ", unit.Name, param);
+            string newLine = (testCount >= 1 ? "\n" : "\n\n");
+            Test.Data.Console(Test.Data.text, (roundFormat ? " --> " : newLine) + "{0} must pass {1} test ", unit.Name, param);
 
             int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
             int diceNum = ((param == "Leadership") ? 2 : 1);
