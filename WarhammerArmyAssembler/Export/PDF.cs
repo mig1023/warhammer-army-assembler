@@ -47,7 +47,7 @@ namespace WarhammerArmyAssembler.Export
 
                     if (fullRules)
                     {
-                        linesForEachUnit.Add(unit.GetSpecialRulesLine());
+                        linesForEachUnit.Add(unit.GetSpecialRulesLine(noNeedToDoubleBSB: true));
                         linesForEachUnit.Add(unit.GetModifiedParamsLine());
                     }
 

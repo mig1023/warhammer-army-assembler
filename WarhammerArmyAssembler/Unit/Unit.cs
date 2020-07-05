@@ -713,12 +713,13 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public string GetSpecialRulesLine(bool withCommandData = false, bool onlyUnitParam = false)
+        public string GetSpecialRulesLine(bool withCommandData = false, bool onlyUnitParam = false, bool noNeedToDoubleBSB = false)
         {
             string rules = (withCommandData ? GetFullCommandLine() : String.Empty);
 
             foreach (string rule in GetSpecialRules(onlyUnitParam))
-                rules += String.Format("{0}; ", rule);
+                if (!(noNeedToDoubleBSB && (rule == "Battle Standard Bearer")))
+                    rules += String.Format("{0}; ", rule);
 
             if (!String.IsNullOrEmpty(rules))
                 rules = rules.Remove(rules.Length - 2);
