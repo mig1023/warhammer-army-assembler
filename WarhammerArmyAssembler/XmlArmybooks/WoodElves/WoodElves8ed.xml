@@ -919,5 +919,113 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Waywatchers</Name>
+			<Points>20</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Asrai longbow</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>Before a models makes a shooting attack, decide whether it will make afast shot or an aimed shot. If the former is chosen, the model's missile weapon has the Multiple Shots (2) special rule for the duration of that attack. If the latter is chosen, then armour saves cannot be taken against Wounds caused by the attack. Model in the same unit must choose the same type of shot</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Waywatchers Sentiel</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Great Eagles</Name>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Treeman</Name>
+			<Points>225</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>3</Armour>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+				<Terror/>
+				<Stubborn/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>A model can choose to make a single Tree Whack in place of making his normal close combat attacks. It must be declared before rolling To Hit. To resolve a Tree Whack, nominate an enemy model in base contact. That model must pass an Initiative test or suffer D6 Wounds with no armour saves allowed. A character with this special rule may make a Tree Whack in a challenge.</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Strangleroots</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>Shooting attack with Range 12", Strength 5 and Multiple Shots(D6+1)</SpecialRuleDescription>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
