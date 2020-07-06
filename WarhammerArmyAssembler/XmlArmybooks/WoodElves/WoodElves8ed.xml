@@ -15,7 +15,65 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+		<Unit>
+			<Type>Lord</Type>
+			<Name>Orion</Name>
+			<Points>600</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Orion</Description>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>8</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Frenzy/>
+				<Terror/>
+				<Unbreakable/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Spear of Kurnous</Name>
+					<NoArmour/>
+					<SpecialRuleDescription>A missile weapon with the Range 18", Strength 7 and Multiple Shots (D3)</SpecialRuleDescription>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Hawk's Talon</Name>
+					<SpecialRuleDescription>A missile weapon with the Range 30", Strength 5 and Multiple Shots (6)</SpecialRuleDescription>
+				</RangeWeapon>
+				<Armour>
+					<Name>Cloak of Isha</Name>
+					<AddToWard>5</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each of your turns, roll a D6. On a score of 6, Orion regains a Wound lost earlier in the battle</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Horn of the Wild Hunt</Name>
+					<AddToWard>5</AddToWard>
+					<SpecialRuleDescription>At the start of each turn, the Horn of the Wild Hunt grants the Devastating Charge special rule to Orion, his unit, and all friendly Wood Elf units within 6"</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<SpecialRuleDescription>If Orion is accompanied by Hounds of Orion, they must be deployed as a unit (even though as a monster, Orion is not normally permitted to join units). Orion cannot leave this unit, and cannot join other units</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Hound of Orion</Name>
+					<Type>Option</Type>
+					<Mount/>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -34,6 +92,28 @@
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
 			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Hound of Orion</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<ModelsInPack>2</ModelsInPack>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Unbreakable/>
+				<Frenzy/>
+			</AdditionalParam>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
