@@ -21,7 +21,7 @@
 			<Points>600</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero/>
-			<Description>Orion</Description>
+			<Description>Orion, The King in the Woods</Description>
 			<MainParam>
 				<Movement>9</Movement>
 				<WeaponSkill>8</WeaponSkill>
@@ -110,6 +110,41 @@
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
 					<SpecialRuleDescription>A model can choose to make a single Tree Whack in place of making his normal close combat attacks. It must be declared before rolling To Hit. To resolve a Tree Whack, nominate an enemy model in base contact. That model must pass an Initiative test or suffer D6 Wounds with no armour saves allowed. A character with this special rule may make a Tree Whack in a challenge.</SpecialRuleDescription>
 					<SpecialRuleDescription>Can make the shooting attack with Range 12", Strength 2, Multiple Shots (2D6) and Killing Blow special rule</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Lord</Type>
+			<Name>Araloth</Name>
+			<Points>260</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<PersonifiedHero/>
+			<Description>Araloth, Lord of Talsyn</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Unbreakable/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<RangeWeapon>
+					<Name>Skarvn the Eye Thief</Name>
+					<SpecialRuleDescription>At the start of each of your turns, nominate a single enemy model within 18" of Araloth. That model takes a Strength 4 hit. If the Wound is unsaved, and the To Wound roll was a 6, the model suffers a -5 penalty to Weapon Skill and Initiative (to a minimum of 1) for the rest of the game. A model can only suffer this penalty once</SpecialRuleDescription>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<SpecialRuleDescription>Whilst Araloth is a lone character, he has the Unbreakable special rule (this replaces Stubborn)</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
