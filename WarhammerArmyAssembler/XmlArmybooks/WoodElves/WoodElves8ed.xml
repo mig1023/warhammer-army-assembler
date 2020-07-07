@@ -148,6 +148,181 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Glade Lord</Name>
+			<Points>145</Points>
+			<MinSize>1</MinSize>
+			<Description>Glade Lord</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Asrai spear</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Asrai spear</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Asrai spear</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Hagbane tips</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Trueflight arrows</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Moontire shot</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Starfire shafts</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Swiftshiver shards</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Arcane bodkins</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Stag</Name>
+					<Type>Option</Type>
+					<Points>65</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Forest Dragon</Name>
+					<Type>Option</Type>
+					<Points>300</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Asrai longbow</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<SpecialRuleDescription>Once both sides have deployed, but before the first turn begins, check to see if the enemy General is within 36" and within line of sight of at least one of your models with this special rule. If he is, he immediately suffers a single Strength 3 hit against which no armour saves can be taken. Otherwise, nothing happens</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -251,6 +426,109 @@
 					<SpecialRuleDescription>Flying Cavalry</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Great Eagle</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Great Stag</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D3</ImpactHit>
+				<Fear/>
+				<LargeBase/>
+			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Unicorn</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<LargeBase/>
+			</AdditionalParam>
+			<Special>
+				<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+				<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
+				<SpecialRuleDescription>A Unicorn's close combat attacks have a +2 Strength bonus on a turn in which it charges</SpecialRuleDescription>
+			</Special>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Forest Dragon</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>3</Armour>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<Special>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+				<SpecialRuleDescription>A Forest Dragon has a Strength 2 Breath Weapon. Armour saves taken against Wounds caused by Soporific Breath suffer a -3 penalty. All models in a unit that suffers one or more hits from Soporific Breath gain the Stupidity special rule for the remainder of the game</SpecialRuleDescription>
+			</Special>
 		</Mount>
 	</Mounts>
 	<Units>
