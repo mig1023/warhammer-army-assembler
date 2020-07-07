@@ -386,7 +386,6 @@
 					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
 					<SpecialRuleDescription>+1 to all attempts to cast spells</SpecialRuleDescription>
 				</Special>
-				
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Unit>
@@ -453,6 +452,43 @@
 					<Points>20</Points>
 				</Option>
 			</Options>
+		</Unit>
+		<Unit>
+			<Type>Hero</Type>
+			<Name>Drycha</Name>
+			<Points>255</Points>
+			<MinSize>1</MinSize>
+			<Wizard>2</Wizard>
+			<Description>Drycha</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+				<Fear/>
+				<Hate/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Use Lore of Shadow</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to all attempts to cast spells</SpecialRuleDescription>
+					<SpecialRuleDescription>Each time Drycha suffers an unsaved Wound, her Attacks characteristic increases by 2 for the remainder of the battle. Each time Drycha regains a Wound lost earlier in the batde, her Attacks characteristic decreases by 2 for the remainder of the battle</SpecialRuleDescription>
+					<SpecialRuleDescription>This rule cannot be used if there are no forests on the battlefield when it is time to deploy vour army. When you deploy, you may choose D3 units wholly composed of the models with Forest Spirit special rule - thes are not deployed at the start of the game, but are 'slumbering' somewhere on the battiefield. At the start of the Remaining Moves sub-phase of your first turn, roll a D6 for each slumbering unit. On a roll of 1-2, nothing happens - roll again next turn. On a roll of 3-6, the unit awakens Place it on the battlefield so that all models in the unit are wholly within a forest, and at least 1" away from other units and impassable terrain. Treat units that cannot be placed as having rolled a 1-2. Any units that have not yet awoken by the timf the game ends award victory points as if they had been destroyed.
+					</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 	</Heroes>
 	<Mounts>
