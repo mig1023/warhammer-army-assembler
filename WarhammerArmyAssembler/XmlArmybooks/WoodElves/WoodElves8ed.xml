@@ -389,6 +389,71 @@
 				
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Unit>
+			<Type>Lord</Type>
+			<Name>Treeman Ancient</Name>
+			<Points>385</Points>
+			<MinSize>1</MinSize>
+			<Wizard>2</Wizard>
+			<Description>Treeman Ancient</Description>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>3</Armour>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+				<Terror/>
+				<Stubborn/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Use Lore of Life</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to all attempts to cast spells</SpecialRuleDescription>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>A model can choose to make a single Tree Whack in place of making his normal close combat attacks. It must be declared before rolling To Hit. To resolve a Tree Whack, nominate an enemy model in base contact. That model must pass an Initiative test or suffer D6 Wounds with no armour saves allowed. A character with this special rule may make a Tree Whack in a challenge.</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 3</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard Level 4</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>70</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard Level 3</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToCast>2</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<AddToWizard>2</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Strangleroots</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>Shooting attack with Range 12", Strength 5 and Multiple Shots(D6+1)</SpecialRuleDescription>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Heroes>
 	<Mounts>
 		<Mount>
