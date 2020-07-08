@@ -799,6 +799,76 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Hero</Type>
+			<Name>Waystalker</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<Description>Waystalker</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MagicItems>25</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Asrai longbow</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<SpecialRuleDescription>Before a models makes a shooting attack, decide whether it will make afast shot or an aimed shot. If the former is chosen, the model's missile weapon has the Multiple Shots (2) special rule for the duration of that attack. If the latter is chosen, then armour saves cannot be taken against Wounds caused by the attack. Model in the same unit must choose the same type of shot</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+					<SpecialRuleDescription>Sniper</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Hero</Type>
+			<Name>Branchwraith</Name>
+			<Points>75</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Branchwraith</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Hate/>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>+1 to all attempts to cast spells</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Heroes>
 	<Mounts>
 		<Mount>
