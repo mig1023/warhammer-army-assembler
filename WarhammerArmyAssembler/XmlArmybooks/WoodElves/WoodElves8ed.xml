@@ -10,8 +10,82 @@
 		<SymbolImage>WoodElves.png</SymbolImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Heirlooms of Athel Loren">	
-			
+		<ArtefactsGroup Name = "Heirlooms of Athel Loren">
+			<Artefact>
+				<Name>The Spirit Sword</Name>
+				<Type>Weapon</Type>
+				<Points>85</Points>
+				<NoArmour/>
+				<SpecialRuleDescription>Immediately when an enemy character, champion or monster suffers one or more unsaved Wounds from the Spirit Sword, both he and the wielder must roll 2D6 and add their respective Leadership values. If the wounded model's total is higher, or the totals are the same, nothing else happens. If the wounded model's total is lower, it immediately suffers a Wound for each point by which its total was exceeded, with no armour saves allowed</SpecialRuleDescription>
+				<Description>Armour saves cannot be taken against Wounds caused by the Spirit Sword. Furthermore, immediately when an enemy character, champion or monster suffers one or more unsaved Wounds from the Spirit Sword, both he and the wielder must roll 2D6 and add their respective Leadership values. If the wounded model's total is higher, or the totals are the same, nothing else happens. If the wounded model's total is lower, it immediately suffers a Wound for each point by which its total was exceeded, with no armour saves allowed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Daith's Reaper</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<Reroll>ToHit;ToWound;OpponentToArmour</Reroll>
+				<Description>All failed To Hit and To Wound rolls made with Daith's Reaper must be re-rolled, as must all successful armour saves taken against Wounds caused by this weapon.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Bow of Loren</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>The Bow of Loren is an Asrai longbow with the Multiple Shots (A+1) special rule, which means it fires a number of shots equal to 1 plus the wielder's Attacks characteristic. It cannot fire enchanted arrows</SpecialRuleDescription>
+				<Description>The Bow of Loren is an Asrai longbow with the Multiple Shots (A+1) special rule, which means it fires a number of shots equal to 1 plus the wielder's Attacks characteristic. It cannot fire enchanted arrows.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Helm of the Hunt</Name>
+				<Type>Armour</Type>
+				<Points>20</Points>
+				<AddToArmour>6</AddToArmour>
+				<AddToWeaponSkill>1</AddToWeaponSkill>
+				<SpecialRuleDescription>Devastating Charge</SpecialRuleDescription>
+				<Description>The wearer of the Helm of the Hunt counts his armour save as being one point higher than normal. Furthermore, the Helm of the Hunt grants the bearer the Devastating Charge special rule and +1 Weapon Skill on a turn in which he charges into combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Acorns of The Ages</Name>
+				<Type>Weapon</Type>
+				<Points>100</Points>
+				<SpecialRuleDescription>One use only. At the start of the game, after the battlefield has been set up, but before deployment begins, place D3 Citadel Woods on the battlefield. A forest can be placed anywhere at least 1" away from another terrain feature and the edge of the batdefield. Once all forests have been placed, scatter each 2D6". If this scatter causes a forest to end up within 1" (or on top of) other terrain, or within 1" of the batdefield edge, reduce or increase the scatter by the smallest amount necessary to avoid the obstruction. When this has been done, declare which type of forest you want these to be - choose from the types on the Mysterious Forest table. All forests created by the Acorn of the Ages must be of the same type</SpecialRuleDescription>
+				<Description>One use only. At the start of the game, after the battlefield has been set up, but before deployment begins, place D3 Citadel Woods on the battlefield. A forest can be placed anywhere at least 1" away from another terrain feature and the edge of the batdefield. Once all forests have been placed, scatter each 2D6". If this scatter causes a forest to end up within 1" (or on top of) other terrain, or within 1" of the batdefield edge, reduce or increase the scatter by the smallest amount necessary to avoid the obstruction. When this has been done, declare which type of forest you want these to be - choose from the types on the Mysterious Forest table. All forests created by the Acorn of the Ages must be of the same type.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Moonstone of the Hidden Ways</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>If the bearer's unit is wholly within a forest at the end of your Movement phase, and is not in close combat, it can forestwalk. If it does so, remove it from the battlefield and immediately replace it, wholly within any forest on the battlefield, in the same formation, but facing am direction. A forestwalking unit cannot be placed within 1" of an enemy unit or impassable terrain. A unit that forestwalks counts as having marched in the Movement phase</SpecialRuleDescription>
+				<Description>If the bearer's unit is wholly within a forest at the end of your Movement phase, and is not in close combat, it can forestwalk. If it does so, remove it from the battlefield and immediately replace it, wholly within any forest on the battlefield, in the same formation, but facing am direction. A forestwalking unit cannot be placed within 1" of an enemy unit or impassable terrain. A unit that forestwalks counts as having marched in the Movement phase.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Hail of Doom Arrow</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>One use only. Model with Asrai longbow only. The Hail of Doom arrow can be used instead of making a Shooting attack with the bearer's Asrai longbow. Declare that the Hail of Doom Arrow is being used before any dice are rolled. Range 30", Strength 4, Armour Piercing, Multiple SHots (3D6)</SpecialRuleDescription>
+				<Description>One use only. Model with Asrai longbow only. The Hail of Doom arrow can be used instead of making a Shooting attack with the bearer's Asrai longbow. Declare that the Hail of Doom Arrow is being used before any dice are rolled. Range 30", Strength 4, Armour Piercing, Multiple SHots (3D6).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Calaingors Stave</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>The bearer generates one less spell than is normal for his Wizard level, but knows the Tree Singing spell</SpecialRuleDescription>
+				<Description>The bearer generates one less spell than is normal for his Wizard level, but knows the Tree Singing spell.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Banner of the Eternal Queen</Name>
+				<Type>Banner</Type>
+				<Points>100</Points>
+				<SpecialRuleDescription>Magic Resistance (3)</SpecialRuleDescription>
+				<SpecialRuleDescription>Once per game, all models in the same unit as the Banner of the Eternal Queen have the Unbreakable special rule until the end of turn, or until the bearer is slain</SpecialRuleDescription>
+				<Description>The bearer has the Magic Resistance (3) special rule. In addition, once per game, all models in the same unit as the Banner of the Eternal Queen have the Unbreakable special rule until the end of turn, or until the bearer is slain (whichever comes first). Declare you are using this ability at the start of any turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Banner of the Hunter King</Name>
+				<Type>Banner</Type>
+				<Points>75</Points>
+				<SpecialRuleDescription>Vanguard deployment special rule</SpecialRuleDescription>
+				<SpecialRuleDescription>Unit re-roll their first failed charge of the game</SpecialRuleDescription>
+				<Description>All models in the same unit as the Banner of the Hunter King have the Vanguard deployment special rule. In addition, the bearer's unit re-roll their first failed charge of the game.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
