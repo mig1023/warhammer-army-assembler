@@ -489,7 +489,7 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
-		<Hero>
+		<Unit>
 			<Type>Hero</Type>
 			<Name>Glade Captain</Name>
 			<Points>75</Points>
@@ -663,7 +663,142 @@
 					<SpecialRuleDescription>Once both sides have deployed, but before the first turn begins, check to see if the enemy General is within 36" and within line of sight of at least one of your models with this special rule. If he is, he immediately suffers a single Strength 3 hit against which no armour saves can be taken. Otherwise, nothing happens</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Hero>
+		</Unit>
+		<Unit>
+			<Type>Hero</Type>
+			<Name>Spellsinger</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Spellsinger</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Asrai longbow</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+				</Option>				
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Unicorn</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to all attempts to cast spells</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Hero</Type>
+			<Name>Shadowdancer</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<Description>Shadowdancer</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<ImmuneToPsychology/>
+				<MagicItems>25</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 1</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<AddToWizard>1</AddToWizard>
+					<SpecialRuleDescription>Use Lore of Shadow</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Asrai longbow</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+				</Option>				
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Unicorn</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapon</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<SpecialRuleDescription>Once both sides have deployed, but before the first turn begins, check to see if the enemy General is within 36" and within line of sight of at least one of your models with this special rule. If he is, he immediately suffers a single Strength 3 hit against which no armour saves can be taken. Otherwise, nothing happens</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each round of close combat in which they are fighting, models choose one of the following dances: Whirling Death (Armour Piercing and Killing Blow), Storm of Blades (+1 Attack), The Shadows Coil (3+ ward save); the effect of which lasts until the end of that turn or until a new dance is chosen. This is done before Impact Hits are resolved. All dancers in the same unit must choose the same dance. Dancers cannot choose the same dance in two consecutive rounds of combat</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Heroes>
 	<Mounts>
 		<Mount>
