@@ -280,7 +280,6 @@
 						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
-
 				<Option>
 					<Name>Elven Steed</Name>
 					<Type>Option</Type>
@@ -490,6 +489,181 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Glade Captain</Name>
+			<Points>75</Points>
+			<MinSize>1</MinSize>
+			<Description>Glade Captain</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Asrai spear</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Asrai spear</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Asrai spear</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Hagbane tips</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Trueflight arrows</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Moontire shot</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Starfire shafts</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Swiftshiver shards</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Arcane bodkins</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Arcane bodkins</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hagbane tips</OnlyIfNot>
+						<OnlyIfNot>Trueflight arrows</OnlyIfNot>
+						<OnlyIfNot>Moontire shot</OnlyIfNot>
+						<OnlyIfNot>Starfire shafts</OnlyIfNot>
+						<OnlyIfNot>Swiftshiver shards</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Stag</Name>
+					<Type>Option</Type>
+					<Points>65</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Asrai longbow</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<SpecialRuleDescription>Once both sides have deployed, but before the first turn begins, check to see if the enemy General is within 36" and within line of sight of at least one of your models with this special rule. If he is, he immediately suffers a single Strength 3 hit against which no armour saves can be taken. Otherwise, nothing happens</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
