@@ -17,4 +17,4 @@ Warhammer Army Assembler - is a quick and simple editor for Warhammer Fantasy Ba
 | The Emipre | | in progress | |
 | Vampire Counts | | X | |
 | Tomb Kings | | | X |
-| Wood Elves | | | in progress |
+| Wood Elves | | | X |
