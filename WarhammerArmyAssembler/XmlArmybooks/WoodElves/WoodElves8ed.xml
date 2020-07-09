@@ -89,7 +89,7 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		<Unit>
+		<Hero>
 			<Type>Lord</Type>
 			<Name>Orion</Name>
 			<Points>600</Points>
@@ -147,8 +147,8 @@
 					<Points>20</Points>
 				</Option>
 			</Options>
-		</Unit>
-		<Unit>
+		</Hero>
+		<Hero>
 			<Type>Lord</Type>
 			<Name>Durthu</Name>
 			<Points>385</Points>
@@ -186,8 +186,8 @@
 					<SpecialRuleDescription>Can make the shooting attack with Range 12", Strength 2, Multiple Shots (2D6) and Killing Blow special rule</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
+		</Hero>
+		<Hero>
 			<Type>Lord</Type>
 			<Name>Araloth</Name>
 			<Points>260</Points>
@@ -221,7 +221,7 @@
 					<SpecialRuleDescription>Whilst Araloth is a lone character, he has the Unbreakable special rule (this replaces Stubborn)</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Unit>
+		</Hero>
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Glade Lord</Name>
@@ -461,7 +461,7 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
-		<Unit>
+		<Hero>
 			<Type>Lord</Type>
 			<Name>Treeman Ancient</Name>
 			<Points>385</Points>
@@ -525,13 +525,14 @@
 					<Points>20</Points>
 				</Option>
 			</Options>
-		</Unit>
-		<Unit>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Drycha</Name>
 			<Points>255</Points>
 			<MinSize>1</MinSize>
 			<Wizard>2</Wizard>
+			<PersonifiedHero/>
 			<Description>Drycha</Description>
 			<MainParam>
 				<Movement>5</Movement>
@@ -562,8 +563,8 @@
 					</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Glade Captain</Name>
 			<Points>75</Points>
@@ -737,8 +738,8 @@
 					<SpecialRuleDescription>Once both sides have deployed, but before the first turn begins, check to see if the enemy General is within 36" and within line of sight of at least one of your models with this special rule. If he is, he immediately suffers a single Strength 3 hit against which no armour saves can be taken. Otherwise, nothing happens</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Spellsinger</Name>
 			<Points>80</Points>
@@ -802,8 +803,8 @@
 					<SpecialRuleDescription>+1 to all attempts to cast spells</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Shadowdancer</Name>
 			<Points>100</Points>
@@ -872,8 +873,8 @@
 					<SpecialRuleDescription>At the start of each round of close combat in which they are fighting, models choose one of the following dances: Whirling Death (Armour Piercing and Killing Blow), Storm of Blades (+1 Attack), The Shadows Coil (3+ ward save); the effect of which lasts until the end of that turn or until a new dance is chosen. This is done before Impact Hits are resolved. All dancers in the same unit must choose the same dance. Dancers cannot choose the same dance in two consecutive rounds of combat</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Waystalker</Name>
 			<Points>100</Points>
@@ -910,8 +911,8 @@
 					<SpecialRuleDescription>Sniper</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Unit>
-		<Unit>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Branchwraith</Name>
 			<Points>75</Points>
@@ -942,7 +943,7 @@
 					<SpecialRuleDescription>+1 to all attempts to cast spells</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
-		</Unit>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -983,6 +984,8 @@
 				<Unbreakable/>
 				<Frenzy/>
 			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
