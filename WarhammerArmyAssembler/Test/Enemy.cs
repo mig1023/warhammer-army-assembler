@@ -2016,6 +2016,30 @@ namespace WarhammerArmyAssembler
 
             new Enemy
             {
+                Name = "Durthu",
+                TestListName = "Durthu, Eldest of Ancients (Wood Elves)",
+                Type = UnitType.Lord,
+                Size = 1,
+                Movement = 5,
+                WeaponSkill = 7,
+                BallisticSkill = 7,
+                Strength = 6,
+                Toughness = 6,
+                Wounds = 6,
+                Initiative = 2,
+                Attacks = 6,
+                Leadership = 10,
+                Armour = 3,
+                Ward = 6,
+                LargeBase = true,
+                Frenzy = true,
+                Terror = true,
+                Hate = true,
+                Stubborn = true,
+            },
+
+            new Enemy
+            {
                 Name = "Vermin Lord",
                 TestListName = "Vermin Lord (Skaven)",
                 Type = UnitType.Lord,
