@@ -335,8 +335,7 @@ namespace WarhammerArmyAssembler.Interface
             changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
             changeArmybook.imageArmybookBack.Source = changeArmybook.imageArmybook.Source;
 
-            changeArmybook.listArmybookVer.Content = "edition " + xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText;
-
+            changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText);
             changeArmybook.UpdateLayout();
 
             Brush mainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
