@@ -903,8 +903,13 @@ namespace WarhammerArmyAssembler
 
                     if ((name == "Reroll") && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
                     {
-                        string secondElement = (String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ");
-                        lineParamValue += String.Format("{0}{1}", secondElement, rerollsLines[lineOptionValue]);
+                        string[] allRerolls = lineOptionValue.Split(';');
+
+                        foreach(string reroll in allRerolls)
+                        {
+                            string secondElement = (String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ");
+                            lineParamValue += String.Format("{0}{1}", secondElement, rerollsLines[reroll]);
+                        }
                     }
                     else if (fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
                         lineParamValue = lineOptionValue;

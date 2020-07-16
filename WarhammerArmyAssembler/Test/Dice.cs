@@ -17,9 +17,9 @@ namespace WarhammerArmyAssembler.Test
             if (String.IsNullOrEmpty(unit.Reroll))
                 return false;
 
-            string[] allReroll = unit.Reroll.Split(';');
+            string[] allRerolls = unit.Reroll.Split(';');
 
-            foreach (string unitReroll in allReroll)
+            foreach (string unitReroll in allRerolls)
                 foreach (KeyValuePair<string, Types> reroll in unitRerolls)
                     if ((unitReroll.Trim() == reroll.Key) && (reroll.Value == diceType))
                         return true;
