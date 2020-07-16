@@ -876,6 +876,7 @@ namespace WarhammerArmyAssembler
             {
                 ["OpponentToHit"] = "opponent re-roll all succeful rolls to Hit",
                 ["OpponentToWound"] = "opponent re-roll all succeful rolls to Wound",
+                ["OpponentToArmour"] = "opponent re-roll all succeful rolls to Armour Save",
                 ["OpponentToWard"] = "opponent re-roll all succeful rolls to Ward",
                 ["ToHit"] = "all failed rolls To Hit",
                 ["ToShoot"] = "all failed rolls To Shoot",

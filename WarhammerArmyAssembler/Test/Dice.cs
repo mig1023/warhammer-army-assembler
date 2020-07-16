@@ -29,17 +29,13 @@ namespace WarhammerArmyAssembler.Test
 
         public static bool MustBeRerolled(Types diceType, Unit unit, Unit enemy)
         {
-            Dictionary<string, Types> unitRerolls = new Dictionary<string, Types>
+            Dictionary<string, Types> enemyRerolls = new Dictionary<string, Types>
             {
                 ["OpponentToHit"] = Types.WS,
                 ["OpponentToWound"] = Types.S,
-                ["OpponentToWard"] = Types.WARD,
             };
 
-            if (CheckReroll(unitRerolls, enemy, diceType))
-                return true;
-
-            return false;
+            return CheckReroll(enemyRerolls, enemy, diceType);
         }
 
         public static bool CanBeRerolled(Types diceType, Unit unit, Unit enemy)
@@ -52,6 +48,12 @@ namespace WarhammerArmyAssembler.Test
                 ["ToLeadership"] = Types.LD,
             };
 
+            Dictionary<string, Types> otherUnitRerolls = new Dictionary<string, Types>
+            {
+                ["OpponentToArmour"] = Types.AS,
+                ["OpponentToWard"] = Types.WARD,
+            };
+
             Dictionary<string, Types> enemyRerolls = new Dictionary<string, Types>
             {
                 ["ToArmour"] = Types.AS,
@@ -61,7 +63,7 @@ namespace WarhammerArmyAssembler.Test
             if (unit.Reroll == "All")
                 return true;
 
-            if (CheckReroll(unitRerolls, unit, diceType))
+            if (CheckReroll(unitRerolls, unit, diceType) || CheckReroll(otherUnitRerolls, unit, diceType))
                 return true;
 
             if (CheckReroll(enemyRerolls, enemy, diceType))
