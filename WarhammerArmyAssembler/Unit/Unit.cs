@@ -527,9 +527,9 @@ namespace WarhammerArmyAssembler
             return paramValue.ToString() + paramModView;
         }
 
-        private void SetUnitParamByOption(string paramName)
+        private void SetUnitParamByOption(string paramName, bool directModification = false)
         {
-            bool value = RuleFromAnyOption(paramName, out string stringValue, out int intValue);
+            bool value = RuleFromAnyOption(paramName, out string stringValue, out int intValue, directModification: directModification);
 
             if (!value)
                 return;
@@ -570,7 +570,7 @@ namespace WarhammerArmyAssembler
             if (directModification)
             {
                 foreach (KeyValuePair<string, string> specialRule in AllSpecialRules)
-                    unit.SetUnitParamByOption(specialRule.Key);
+                    unit.SetUnitParamByOption(specialRule.Key, directModification);
 
                 unit.GetParamTestsFromOptions();
             }
@@ -867,7 +867,8 @@ namespace WarhammerArmyAssembler
                 return false;
         }
 
-        public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue, bool onlyUnitParam = false)
+        public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue,
+            bool onlyUnitParam = false, bool directModification = false)
         {
             PropertyInfo unitField = typeof(Unit).GetProperty(name);
             bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out string lineParamValue, out int intParamValue);
@@ -901,7 +902,7 @@ namespace WarhammerArmyAssembler
 
                     anyIsTrue = (fromParamValue ? true : anyIsTrue);
 
-                    if ((name == "Reroll") && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
+                    if ((name == "Reroll") && !directModification && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
                     {
                         string[] allRerolls = lineOptionValue.Split(';');
 
@@ -975,7 +976,7 @@ namespace WarhammerArmyAssembler
                     rules.Add(option.Name);
 
             foreach (KeyValuePair<string, string> specialRule in AllSpecialRules) 
-                if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam))
+                if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam: onlyUnitParam))
                     rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
 
             Test.Param.Describe(ParamTests, ref rules);
