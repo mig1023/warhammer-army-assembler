@@ -659,7 +659,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Nurgle</OnlyIf>
 				</OnlyIfAnotherService>
-				<SpecialRuleDescription>-1 modifier on its rolls to hit</SpecialRuleDescription>
+				<SubOpponentToHit>1</SubOpponentToHit>
 				<Description>Any unit in close combat with one or more models with a Cloud of Flies suffers a -1 modifier on its rolls to hit.</Description>
 			</Artefact>
 			<Artefact>
@@ -954,12 +954,12 @@
 				<SlotOf>Hero</SlotOf>
 				<SlotOf>Rare</SlotOf>
 				<LargeBase/>
+				<SubOpponentToHit>1</SubOpponentToHit>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
-					<SpecialRuleDescription>Any unit in close combat wiih a Cloud of Flies suffers a -1 modifier on its rolls to hit</SpecialRuleDescription>
 					<SpecialRuleDescription>In Chaos player's Shooting phase if Daemon is not in combat it may unleash Stream of Corruption - Breath attack, Strength 3 with -2 armour saving throw modifier</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -2487,9 +2487,11 @@
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<SubOpponentToHit>1</SubOpponentToHit>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>-1 modifier on roll to hit</SpecialRuleDescription>
 					<SpecialRuleDescription>Breath attack Strength 3 with a -2 armour modifier</SpecialRuleDescription>
 				</Special>
 				<Mark>
@@ -2515,10 +2517,12 @@
 				<Attacks>4</Attacks>
 				<Leadership>8</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<SubOpponentToHit>1</SubOpponentToHit>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Swarn</SpecialRuleDescription>
-					<SpecialRuleDescription>-1 modifier on roll to hit</SpecialRuleDescription>
 				</Special>
 				<Mark>
 					<Name>Mark of Nurgle</Name>

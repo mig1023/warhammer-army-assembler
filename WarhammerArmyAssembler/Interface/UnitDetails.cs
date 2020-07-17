@@ -262,13 +262,15 @@ namespace WarhammerArmyAssembler.Interface
 
             double actualWidth = newOption.ActualWidth;
 
-            if (points > 0 || !String.IsNullOrEmpty(addLine))
+            if (points > 0 || points < 0 || !String.IsNullOrEmpty(addLine))
             {
                 double leftPadding = (points > 0 ? -5 : 5);
 
+                bool pointsNeed = (points > 0) || (points < 0);
+
                 Label optionPoints = new Label
                 {
-                    Content = (points > 0 ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine)
+                    Content = (pointsNeed ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine)
                 };
                 optionPoints.Margin = Interface.Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
                 optionPoints.Foreground = ArmyBook.Data.MainColor;

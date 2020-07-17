@@ -328,7 +328,7 @@
 				<Name>Aura of Quetzl</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
+				<SubOpponentToHit>1</SubOpponentToHit>
 				<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
 			</Artefact>
 			<Artefact>
@@ -432,7 +432,7 @@
 				</Special>
 				<HandWeapon>
 					<Name>Golden Death Mask</Name>
-					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
+					<SubOpponentToHit>1</SubOpponentToHit>
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -917,7 +917,7 @@
 				</HandWeapon>
 				<Armour>
 					<Name>Mask of Heavens</Name>
-					<SpecialRuleDescription>-1 to hit</SpecialRuleDescription>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
 					<AddToWard>6</AddToWard>
 				</Armour>
@@ -945,6 +945,7 @@
 			<AdditionalParam>
 				<ColdBlooded/>
 				<PoisonAttack/>
+				<SubOpponentToHit>1</SubOpponentToHit>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -956,7 +957,6 @@
 				<Special>
 					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
 					<SpecialRuleDescription>Scout</SpecialRuleDescription>
-					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
 					<SpecialRuleDescription>Preternatural Aim</SpecialRuleDescription>
 					<SpecialRuleDescription>Poisoned Attack on 5+</SpecialRuleDescription>
 				</Special>
@@ -1646,13 +1646,13 @@
 			<AdditionalParam>
 				<ColdBlooded/>
 				<PoisonAttack/>
+				<SubOpponentToHit>1</SubOpponentToHit>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
 					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
 					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
-					<SpecialRuleDescription>-1 to Hit</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
