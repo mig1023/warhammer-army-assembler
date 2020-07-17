@@ -500,7 +500,7 @@ namespace WarhammerArmyAssembler
                 object optionObject = optionParam.GetValue(option);
                 int optionValue = (int)optionObject;
 
-                if (optionValue > 0 && reversParam)
+                if (optionValue != 0 && reversParam)
                 {
                     if (paramValue == null)
                         paramValue = 7;
@@ -513,7 +513,7 @@ namespace WarhammerArmyAssembler
                     else
                         paramValue -= (7 - optionValue);
                 }
-                else if (optionValue > 0)
+                else if (optionValue != 0)
                 {
                     paramModView += '*';
                     paramValue += optionValue;

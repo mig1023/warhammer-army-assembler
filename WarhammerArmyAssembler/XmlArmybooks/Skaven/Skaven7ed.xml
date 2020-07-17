@@ -121,7 +121,7 @@
 				<Name>Weeping Blade</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>Armour Piercing</SpecialRuleDescription>
+				<ArmourPiercing>1</ArmourPiercing>
 				<MultiWounds>D3</MultiWounds>
 				<Description>The Weeping Blade has the Armour Piercing special rule. Each unsaved wound is multiplied to D3 wounds.</Description>
 			</Artefact>
@@ -131,7 +131,7 @@
 				<Points>25</Points>
 				<AddToStrength>1</AddToStrength>
 				<SpecialRuleDescription>Re-roll all failed to Wound rolls against Dwarfs</SpecialRuleDescription>
-				<SpecialRuleDescription>Armour Piercing against Dwarfs</SpecialRuleDescription>
+				<ArmourPiercing>1</ArmourPiercing>
 				<Description>The wielder of this sword is granted +1 Strength to all Attacks. Additionaly against Dwarfs, all hits are Armour Piercing and the user re-rolls all failed to Wound rolls.</Description>
 			</Artefact>
 			<Artefact>
@@ -1155,15 +1155,15 @@
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
 			<MainParam>
-				<Movement>-1</Movement>
+				<Movement>0</Movement>
 				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>-1</BallisticSkill>
+				<BallisticSkill>0</BallisticSkill>
 				<Strength>5</Strength>
 				<Toughness>6</Toughness>
 				<Wounds>6</Wounds>
 				<Initiative>4</Initiative>
 				<Attacks>3</Attacks>
-				<Leadership>-1</Leadership>
+				<Leadership>0</Leadership>
 			</MainParam>
 			<AdditionalParam>
 				<Fear/>
@@ -1198,15 +1198,15 @@
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
 			<MainParam>
-				<Movement>-1</Movement>
+				<Movement>0</Movement>
 				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>-1</BallisticSkill>
+				<BallisticSkill>0</BallisticSkill>
 				<Strength>5</Strength>
 				<Toughness>6</Toughness>
 				<Wounds>6</Wounds>
 				<Initiative>3</Initiative>
 				<Attacks>6</Attacks>
-				<Leadership>-1</Leadership>
+				<Leadership>0</Leadership>
 			</MainParam>
 			<AdditionalParam>
 				<Frenzy/>
@@ -1267,13 +1267,13 @@
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>-1</BallisticSkill>
+				<BallisticSkill>0</BallisticSkill>
 				<Strength>4</Strength>
-				<Toughness>-1</Toughness>
-				<Wounds>-1</Wounds>
+				<Toughness>0</Toughness>
+				<Wounds>0</Wounds>
 				<Initiative>5</Initiative>
 				<Attacks>4</Attacks>
-				<Leadership>-1</Leadership>
+				<Leadership>0</Leadership>
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
