@@ -35,6 +35,33 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Cold One</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<Stupidity/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Thick-skinned</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -433,6 +460,466 @@
 					<Points>10</Points>
 				</Option>
 			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Cold One Knights</Name>
+			<Points>30</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Cold One</MountInit>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Stupidity/>
+				<Reroll>ToWound</Reroll>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Lance</Name>
+					<Lance/>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shields</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<Special>
+						<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
+						<AddToArmour>5</AddToArmour>
+					</Special>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Dread Knight</Name>
+					<Type>Option</Type>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Black Guard of Naggarond</Name>
+			<Points>15</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Reroll>ToWound</Reroll>
+				<ImmuneToPsychology/>
+				<Stubborn/>
+				<Hate/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Halberd</Name>
+					<AddToStrength>1</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Tower Master</Name>
+					<Type>Option</Type>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Shades</Name>
+			<Points>16</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Reroll>ToWound</Reroll>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Repeater crossbow</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>2</AddToAttacks>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Bloodshadde</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Cold One Chariot</Name>
+			<Points>115</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Cold One</MountInit>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Stupidity/>
+				<Fear/>
+				<LargeBase/>
+				<Reroll>ToWound</Reroll>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Repeater crossbow</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Har Ganeth Executioners</Name>
+			<Points>12</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Reroll>ToWound</Reroll>
+				<KillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Draich Master</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Reaper Bold Thrower</Name>
+			<Points>70</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Reroll>ToWound</Reroll>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>War Machine</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Harpies</Name>
+			<Points>15</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Scourgerunner Chariot</Name>
+			<Points>150</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Dark Steed</MountInit>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<LargeBase/>
+				<Reroll>ToWound</Reroll>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Repeater crossbow</Name>
+				</RangeWeapon>
+				<RangeWeapon>
+					<Name>Ravager Harpoon</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>War Hydra</Name>
+			<Points>160</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Regeneration/>
+				<LargeBase/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Fiery Breath</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<SpecialRuleDescription>A War Hydra with this upgrade has a Strength 4 Breath Weapon with the Flaming Attacks special rule</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Spit Fire</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<SpecialRuleDescription>Shooting attack with the range 8" Flaming Attacks and Strength and Multiple Shots value equal to the War Hydra's remaining number of Wounds</SpecialRuleDescription>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>A War Hydra has three Attacks, +1 for each remaining Wound</SpecialRuleDescription>
+					<SpecialRuleDescription>If this model is alive at the end of your turn, roll a number of D6 equal to the difference between the War Hydra's starting number of Wounds and its current number of Wounds. For each roll of a 4+, the War Hydra immediately recovers a single Wound lost earlier in the battle</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 	</Units>
 </ArmyBook>
