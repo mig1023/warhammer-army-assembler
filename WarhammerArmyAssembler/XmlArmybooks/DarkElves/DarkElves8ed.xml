@@ -921,5 +921,110 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Doomfire Warlock</Name>
+			<Points>25</Points>
+			<MinSize>5</MinSize>
+			<Wizard>2</Wizard>
+			<MountInit>Dark Steed</MountInit>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Reroll>ToWound</Reroll>
+				<PoisonAttack/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Master of Warlocks</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>A unit of Doomfire Warlocks is considered to be a Level 2 Wizard that knows the spells Soulblight (Lore of Death) and Doombolt (Lore of Dark Magic). This doesn't stop other Wizards from knowing those same spells. The unit receives an additional +1 to cast for each rank of 5 or more models in the unit, after the first, to a maximum of +3. Each time the unit casts a spell, you must nominate one Master of Warlocks or Doomfire Warlock as the caster for the purposes of line of sight, range, etc. In the event that a Doomfire Warlock unit rolls a miscast, do not roll on the Miscast table. Instead, the unit suffers D3 Wounds with no armour saves allowed. If the unit is targeted by a rule that affects a Wizard, your opponent must choose one Master of Warlocks or Doomfire Warlock as the target</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Bloodwrack Medusa</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>2</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Reroll>ToWound</Reroll>
+				<Fear/>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each Close Combat phase, before challenges are issued, enemy models in base contact with this model must pass an Initiative test or suffer a Strength 4 hit with the Killing Blow special rule and no armour saves allowed. This is a magical attack</SpecialRuleDescription>
+					<SpecialRuleDescription>Magical shooting attack with range 12", Strength 4, Killing Blow and Multiple Shots (4). When rolling To Wound with this shooting attack, substitute the target's Toughness with its Initiative value. No armour saves are permitted against the Bloodwrack Stare</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Kharibdyss</Name>
+			<Points>160</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>7</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<PoisonAttack/>
+				<Terror/>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy units that are in base contact with one or more Kharibdyss models must re-roll successful Leadership tests. A unit is immune to the effects of Abyssal Howl if the majority of its models have one or more of the following special rules: Fear, Terror and Immune to Psychology</SpecialRuleDescription>
+					<SpecialRuleDescription>If the Kharibdyss directs all of its close combat Attacks against the same model, and all of those Attacks hit, then the target model suffers an additional D6 Strength 7 hits</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
