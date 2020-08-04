@@ -17,12 +17,12 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Malekith, the Witch King</Name>
+			<Name>Malekith</Name>
 			<Points>510</Points>
 			<Wizard>4</Wizard>
 			<MinSize>1</MinSize>
 			<PersonifiedHero/>
-			<Description>Malekith, the Witch King</Description>
+			<Description>Malekith, the Witch King of Naggaroth</Description>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>8</WeaponSkill>
@@ -91,6 +91,56 @@
 					<Name>Circlet of Iron</Name>
 					<SpecialRuleDescription>Once per Magic phase (yours and your opponent's), Malekith can use the Circlet of Iron to add a single bonus dice to any of his failed casting or dispel attempts. This bonus dice can contribute to irresistible force (and a miscast)</SpecialRuleDescription>
 				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Morathi</Name>
+			<Points>375</Points>
+			<Wizard>4</Wizard>
+			<MinSize>1</MinSize>
+			<MountInit>Dark Pegasus Sulephet</MountInit>
+			<PersonifiedHero/>
+			<Description>Morathi, The Hag Sorceress of Ghrond</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Reroll>ToWound</Reroll>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to all casting Dark Magic Spells</SpecialRuleDescription>
+				</Special>
+				<Arcane>
+					<Name>Enchanting Beauty</Name>
+					<SpecialRuleDescription>Any model, friend or foe, in base contact with Morathi at the start of each round of close combat must pass a Leadership test or suffer a -5 penalty to their Weapon Skill (to a minimum of 1) until the end of the round. This does not affect attacks that do not roll To Hit (such as Impact Hits), nor does it affect models that have the Immune to Psychology special rule</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>The First Sorceress</Name>
+					<SpecialRuleDescription>Morathi adds +D3 to all her casting attempts - roll each time a spell is cast. Combined with Hekarti's Blessing, this grants Morathi an extra D3+1 to all attempts to cast spells from the Lore of Dark Magic</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Thousand and One Dark Blessing</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				</Arcane>
+				<Option>
+					<Name>Heartrender and the Darksword</Name>
+					<KillingBlow/>
+					<Flail/>
+					<SpecialRuleDescription>A monster or character that suffers one or more unsaved Wounds from Heartrender and the Darksword reduces its Attacks, Strength and Toughness characteristics by one (to a minimum of 1) for each unsaved Wound. These penalties are applied at the end of the round of close combat in which the Wounds were suffered, and last for the remainder of the game</SpecialRuleDescription>
+				</Option>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
@@ -248,6 +298,29 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Dark Pegasus Sulephet</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 Strength when pegasus charges in combat</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
