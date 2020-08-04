@@ -15,7 +15,84 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Malekith, the Witch King</Name>
+			<Points>510</Points>
+			<Wizard>4</Wizard>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Malekith, the Witch King</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Hate/>
+				<Fear/>
+				<MustBeGeneral/>
+				<ImmuneToPsychology/>
+				<Reroll>ToWound</Reroll>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Seraphon</Name>
+					<Type>Option</Type>
+					<Points>300</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Cold One Chariot</Name>
+					<Type>Option</Type>
+					<Points>110</Points>
+					<Mount/>
+					<AddToArmour>2</AddToArmour>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Use Lore of Dark Magic</SpecialRuleDescription>
+					<SpecialRuleDescription>Eternal Hatred</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to all casting Dark Magic Spells</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Destroyer</Name>
+					<SpecialRuleDescription>At the start of every Close Combat phase, all enemy models in base contact with Malekith must reveal their magic items. Furthermore, if Malekith scores one or more hits against a model with any magic items, roll a D6; on a 4+, one randomly determined magic item is immediately destroyed and cannot be used further in this game. In addition, if a Wizard suffers one or more unsaved Wounds from Destroyer, roll a D6; on a 4+, the Wizard immediately loses a Wizard level.</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Armour of Midnight</Name>
+					<AddToArmour>5</AddToArmour>
+					<AddToWard>2</AddToWard>
+					<SpecialRuleDescription>2+ ward save against non-magical attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Malekith can never suffer more than one wound from a single attack</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Supreme Spellshield</Name>
+					<AddToArmour>6</AddToArmour>
+					<SpecialRuleDescription>Magic resistance (2)</SpecialRuleDescription>
+					<SpecialRuleDescription>If a spell cast at Malekith is dispelled by a dispel roll, the caster suffers a D6 Strength 6 hits</SpecialRuleDescription>
+				</Armour>
+				<Arcane>
+					<Name>Circlet of Iron</Name>
+					<SpecialRuleDescription>Once per Magic phase (yours and your opponent's), Malekith can use the Circlet of Iron to add a single bonus dice to any of his failed casting or dispel attempts. This bonus dice can contribute to irresistible force (and a miscast)</SpecialRuleDescription>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -62,6 +139,115 @@
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Black Dragon</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Scaly skin</Name>
+					<AddToArmour>3</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>A Black Dragon has a Strength 4 Breath Weapon. All models in a unit that has suffered one or more casualties from the attack suffers a -1 penalty to their Weapon Skill and Ballistic Skill until the end of the following turn</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Seraphon</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Scaly skin</Name>
+					<AddToArmour>3</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>A Black Dragon has a Strength 4 Breath Weapon. All models in a unit that has suffered one or more casualties from the attack suffers a -1 penalty to their Weapon Skill and Ballistic Skill until the end of the following turn</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Unit>
+			<Type>Mount</Type>
+			<Name>Cold One Chariot</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Cold One</MountInit>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Stupidity/>
+				<Fear/>
+				<LargeBase/>
+				<Reroll>ToWound</Reroll>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Repeater crossbow</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Mounts>
 	<Units>
 		<Unit>
