@@ -184,6 +184,54 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Malus</Name>
+			<Points>295</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Spite</MountInit>
+			<PersonifiedHero/>
+			<Description>Malus Darkblade, Scion of Hag Graef</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Hate/>
+				<Fear/>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Warpsword of Khaine</Name>
+					<Reroll>ToWound</Reroll>
+					<NoArmour/>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Not only is Spite not subject to the rules for Stupidity, any unit containing Malus Darkblade automatically passes Stupidity tests. Spite also benefits from the Eternal Hatred special rule</SpecialRuleDescription>
+				</Special>
+				<Demon>
+					<Name>Tz'arkan</Name>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<AddToToughness>2</AddToToughness>
+					<AddToInitiative>2</AddToInitiative>
+					<SpecialRuleDescription>Each time Malus Darkblade makes a To Hit roll of 1, a friendly model in base contact suffers an automatic hit at Malus Darkblade's Strength that must be re-rolled if it fails To Wound. Armour saves cannot be taken against Wounds Malus causes in this manner</SpecialRuleDescription>
+				</Demon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -222,6 +270,33 @@
 			<AdditionalParam>
 				<Fear/>
 				<Stupidity/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Thick-skinned</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Spite</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
