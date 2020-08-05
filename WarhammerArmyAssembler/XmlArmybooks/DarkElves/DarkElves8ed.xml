@@ -72,7 +72,7 @@
 				</Special>
 				<HandWeapon>
 					<Name>Destroyer</Name>
-					<SpecialRuleDescription>At the start of every Close Combat phase, all enemy models in base contact with Malekith must reveal their magic items. Furthermore, if Malekith scores one or more hits against a model with any magic items, roll a D6; on a 4+, one randomly determined magic item is immediately destroyed and cannot be used further in this game. In addition, if a Wizard suffers one or more unsaved Wounds from Destroyer, roll a D6; on a 4+, the Wizard immediately loses a Wizard level.</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of every Close Combat phase, all enemy models in base contact must reveal their magic items. If Malekith scores one or more hits against a model with any magic items, one randomly determined magic item is immediately destroyed on a 4+ and cannot be used further in this game. In addition, if a Wizard suffers one or more unsaved Wounds from Destroyer, immediately loses a Wizard level on a 4+.</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
 					<Name>Armour of Midnight</Name>
@@ -141,6 +141,47 @@
 					<Flail/>
 					<SpecialRuleDescription>A monster or character that suffers one or more unsaved Wounds from Heartrender and the Darksword reduces its Attacks, Strength and Toughness characteristics by one (to a minimum of 1) for each unsaved Wound. These penalties are applied at the end of the round of close combat in which the Wounds were suffered, and last for the remainder of the game</SpecialRuleDescription>
 				</Option>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Hellebron</Name>
+			<Points>310</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>The Blood Queen of Har Ganeth</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Frenzy/>
+				<Fear/>
+				<PoisonAttack/>
+				<Reroll>ToWound</Reroll>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Deathsword and the Cursed Blade</Name>
+					<StrengthTo>10</StrengthTo>
+				</HandWeapon>
+				<Arcane>
+					<Name>Amulet of Dark Fire</Name>
+					<SpecialRuleDescription>Dispel attempts made against spells that target Hellebron's unit receive a +4 bonus to dispel</SpecialRuleDescription>
+				</Arcane>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>+D3 Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>This model, and all models in the same unit, have the Frenzy special rule. If they already have the Frenzy special rule, that Frenzy grants +2 Attacks instead of just +1, but the unit suffers a -3 penalty to Leadership.</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
