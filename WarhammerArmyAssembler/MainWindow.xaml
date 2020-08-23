@@ -373,6 +373,7 @@
                             <DataGridTextColumn.CellStyle>
                                 <Style>
                                     <Setter Property="UIElement.IsEnabled" Value="{Binding SizableType}" />
+                                    <Setter Property="UIElement.Visibility" Value="{Binding VisibleType}" />
                                 </Style>
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reflection;
+using System.Windows;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
@@ -66,6 +67,7 @@ namespace WarhammerArmyAssembler
 
         public UnitType Type { get; set; }
         public bool SizableType { get; set; }
+        public Visibility VisibleType { get; set; }
 
         public int Size { get; set; }
         public int MinSize { get; set; }
@@ -377,6 +379,7 @@ namespace WarhammerArmyAssembler
                 MagicPowers = this.MagicPowers,
 
                 SizableType = this.SizableType,
+                VisibleType = this.VisibleType,
                 PersonifiedHero = this.PersonifiedHero,
                 ArmyGeneral = this.ArmyGeneral,
                 WeaponTeam = this.WeaponTeam,

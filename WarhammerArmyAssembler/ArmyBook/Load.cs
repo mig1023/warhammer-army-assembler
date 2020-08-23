@@ -173,6 +173,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
             newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount));
+            newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
 
             newUnit.ArmyColor = (SolidColorBrush)ArmyBook.Data.MainColor;
 
