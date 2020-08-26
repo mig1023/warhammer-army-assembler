@@ -158,6 +158,16 @@
 				<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but large targets lose their armour save due to the scaly skin special rule against hits from this sword.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic Armour">
+			<Artefact>
+				<Name>The Gilded Armour</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<AddToArmour>5</AddToArmour>
+				<Test Bet="Pass" Context="ArmourSave">Strength</Test>
+				<Description>Heavy armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		<Hero>
