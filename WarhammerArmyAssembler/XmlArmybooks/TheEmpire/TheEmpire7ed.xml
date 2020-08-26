@@ -167,6 +167,14 @@
 				<Test Bet="Pass" Context="ArmourSave">Strength</Test>
 				<Description>Heavy armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Dawn Armour</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<AddToArmour>4</AddToArmour>
+				<Reroll>ToArmour</Reroll>
+				<Description>Full plate armour (armour save 4+). The model can re-roll any failed armour save.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
