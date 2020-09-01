@@ -65,6 +65,7 @@ namespace WarhammerArmyAssembler
         public bool Lance { get; set; }
         public bool Flail { get; set; }
         public bool PredatoryFighter { get; set; }
+        public bool MurderousProwess { get; set; }
         public bool BigWeapon { get; set; }
         public bool Bloodroar { get; set; }
         public int AddToHit { get; set; }
@@ -197,6 +198,7 @@ namespace WarhammerArmyAssembler
                 ImpactHit = this.ImpactHit,
                 SteamTank = this.SteamTank,
                 PredatoryFighter = this.PredatoryFighter,
+                MurderousProwess = this.MurderousProwess,
                 Bloodroar = this.Bloodroar,
                 AddToHit = this.AddToHit,
                 SubOpponentToHit = this.SubOpponentToHit,

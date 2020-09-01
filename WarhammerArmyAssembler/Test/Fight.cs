@@ -788,6 +788,7 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.Console(Test.Data.text, "(autowound)");
                 return true;
             }
+
             if (strength == (enemy.Toughness + 1))
                 chance = 3;
             else if (strength > (enemy.Toughness + 1))

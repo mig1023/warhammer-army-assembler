@@ -63,6 +63,9 @@ namespace WarhammerArmyAssembler.Test
             if (unit.Reroll == "All")
                 return true;
 
+            if (unit.MurderousProwess && (lastDice == 1))
+                return true;
+
             if (CheckReroll(unitRerolls, unit, diceType) || CheckReroll(otherUnitRerolls, unit, diceType))
                 return true;
 

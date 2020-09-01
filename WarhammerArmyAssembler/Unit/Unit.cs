@@ -51,6 +51,7 @@ namespace WarhammerArmyAssembler
             ["Lance"] = "Lance",
             ["Flail"] = "Flail",
             ["PredatoryFighter"] = "Predatory Fighter",
+            ["MurderousProwess"] = "Murderous Prowess",
             ["AddToCloseCombat"] = "Add to Close Combat Result ([X])",
             ["Bloodroar"] = "Bloodroar",
             ["AddToHit"] = "+[X] To Hit",
@@ -147,6 +148,7 @@ namespace WarhammerArmyAssembler
         public bool Lance { get; set; }
         public bool Flail { get; set; }
         public bool PredatoryFighter { get; set; }
+        public bool MurderousProwess { get; set; }
         public bool Bloodroar { get; set; }
         public int AddToHit { get; set; }
         public int SubOpponentToHit { get; set; }
@@ -362,6 +364,7 @@ namespace WarhammerArmyAssembler
                 Lance = this.Lance,
                 Flail = this.Flail,
                 PredatoryFighter = this.PredatoryFighter,
+                MurderousProwess = this.MurderousProwess,
                 AddToCloseCombat = this.AddToCloseCombat,
                 Bloodroar = this.Bloodroar,
                 AddToHit = this.AddToHit,
