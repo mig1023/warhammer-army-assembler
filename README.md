@@ -14,7 +14,7 @@ Warhammer Army Assembler - is a quick and simple editor for Warhammer Fantasy Ba
 | High Elves | | X | |
 | Dark Elves | | X | in progress |
 | Hordes of Chaos | X |  | |
-| The Emipre | | in progress | |
+| The Emipre | | X | |
 | Vampire Counts | | X | |
 | Tomb Kings | | | X |
 | Wood Elves | | | X |
