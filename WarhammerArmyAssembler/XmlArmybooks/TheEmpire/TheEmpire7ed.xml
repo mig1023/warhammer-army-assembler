@@ -398,7 +398,8 @@
 				<Type>Banner</Type>
 				<Points>50</Points>
 				<Fear/>
-				<Description>Knightly Orders only. During the turn when it charges into combat, the unit causes Fear (from the moment it is found to be in charge range to the end of that turn).</Description>
+				<OnlyForGroup>Knights</OnlyForGroup>
+				<Description>During the turn when it charges into combat, the unit causes Fear (from the moment it is found to be in charge range to the end of that turn).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Banner of Valour</Name>
@@ -418,8 +419,9 @@
 				<Name>Steel Standard</Name>
 				<Type>Banner</Type>
 				<Points>20</Points>
+				<OnlyForGroup>Knights</OnlyForGroup>
 				<SpecialRuleDescription>The unit can add D3" to its charge move. If the charge is failed, the unit will move forward 7" as normal</SpecialRuleDescription>
-				<Description>Knightly Orders only. The unit can add D3" to its charge move. If the charge is failed, the unit will move forward 7" as normal.</Description>
+				<Description>The unit can add D3" to its charge move. If the charge is failed, the unit will move forward 7" as normal.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Banner of Duty</Name>
@@ -759,6 +761,7 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Templar Grand Master</Name>
+			<Group>Knights</Group>
 			<Points>400</Points>
 			<MinSize>1</MinSize>
 			<MountInit>Warhorse</MountInit>
@@ -1730,7 +1733,8 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Knightly orders</Name>
+			<Name>Knightly Orders</Name>
+			<Group>Knights</Group>
 			<Points>23</Points>
 			<MinSize>5</MinSize>
 			<MountInit>Warhorse</MountInit>
