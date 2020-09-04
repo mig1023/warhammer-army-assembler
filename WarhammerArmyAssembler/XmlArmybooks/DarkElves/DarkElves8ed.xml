@@ -474,6 +474,61 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>High Beastmaster</Name>
+			<Points>300</Points>
+			<MinSize>1</MinSize>
+			<Description>High Beastmaster</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MurderousProwess/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Manticore</Name>
+					<Type>Option</Type>
+					<Points>150</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Scourgerunner Chariot</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Type>Armour</Type>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Type>AdditionalArmour</Type>
+					<Name>Sea Dragon cloak</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each of your turns, choose a friendly monster within 3" of the Beastmaster: that monster has +D3 Attacks until the start of your next turn</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -656,7 +711,7 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
-		<Unit>
+		<Mount>
 			<Type>Mount</Type>
 			<Name>Cold One Chariot</Name>
 			<Points>0</Points>
@@ -684,21 +739,34 @@
 				<MurderousProwess/>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
-			<SpecialRulesAndAmmunition>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spears</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Repeater crossbow</Name>
-				</RangeWeapon>
-				<Special>
-					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
-				</Special>
-			</SpecialRulesAndAmmunition>
-		</Unit>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Scourgerunner Chariot</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Dark Steed</MountInit>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<LargeBase/>
+				<MurderousProwess/>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Dark Pegasus</Name>
