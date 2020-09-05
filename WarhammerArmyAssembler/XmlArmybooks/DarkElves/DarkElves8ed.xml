@@ -627,6 +627,55 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Lokhir Fellheart</Name>
+			<Points>235</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Lokhir Fellheart, Krakenlord of Karond Kar</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MurderousProwess/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Red Blades</Name>
+					<Reroll>ToWound</Reroll>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Sea Dragon cloak</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Helm of the Kraken</Name>
+					<AddToArmour>6</AddToArmour>
+					<Regeneration/>
+					<Terror/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>If this model fights in a challenge or kills an enemy character, and is alive, he (and all models in his unit) gain the Unbreakable special rule until the end of that turn</SpecialRuleDescription>
+					<SpecialRuleDescription>Unless fighting in a challenge, Lokhir Fellheart can direct his close combat Attacks against any enemy character model who is fighting in the same combat - even one that he is not in base contact with</SpecialRuleDescription>
+					<SpecialRuleDescription>If an enemy unit breaks from a close combat that includes Lokhir Fellheart, all units taking Panic tests as a result of that unit breaking suffer a -1 penalty to their Leadership value for that test</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
