@@ -575,6 +575,58 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Shadowblade</Name>
+			<Points>245</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Shadowblade, The Death that Walks Unseen</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>10</WeaponSkill>
+				<BallisticSkill>10</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<NotALeader/>
+				<HitFirst/>
+				<ImmuneToPsychology/>
+				<MurderousProwess/>
+				<PoisonAttack/>
+				<KillingBlow/>
+				<AddToWound>1</AddToWound>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Throwing weapons</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Heart of Woe</Name>
+					<SpecialRuleDescription>If Shadowblade is ever slain, centre the small round template over him before removing the model as a casualty. Every model touched by the template immediately suffers a Strength 3 hit. After any damage has been resolved, remove Shadowblade as a casualty as normal</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Potion of Diabolic Strength</Name>
+					<SpecialRuleDescription>One use only. The Potion of Diabolic Strength can be drunk at the start of any player's Close Combat phase, after any Assassins have revealed that they are hiding in a unit. Shadowblade has +4 Strength (to a maximum of 10) until the end of the turn</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Can choose to deploy 'hidden' within another friendly Dark Elf infantry unit, but not Harpies</SpecialRuleDescription>
+					<SpecialRuleDescription>If an opponent has an ability that forces you state that there are 'hidden' models within a unit, only need to say that Shadowblade is hiding within a unit, but not which unit he is currently within</SpecialRuleDescription>
+					<SpecialRuleDescription>For each unsaved Wound enemy suffers a -1 penalty to their Leadership for the rest of the game</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
