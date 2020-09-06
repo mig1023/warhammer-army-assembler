@@ -1019,6 +1019,10 @@
 					<Name>Cry of War</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Witchbrew</OnlyIfNot>
+						<OnlyIfNot>Rune of Khaine</OnlyIfNot>
+					</OnlyIfAnotherService>
 					<Fear/>
 					<SpecialRuleDescription>All Fear tests taken by enemy units in base contact with this model must be taken with a -3 penalty to Leadership</SpecialRuleDescription>
 				</Option>
@@ -1026,6 +1030,10 @@
 					<Name>Witchbrew</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Cry of War</OnlyIfNot>
+						<OnlyIfNot>Rune of Khaine</OnlyIfNot>
+					</OnlyIfAnotherService>
 					<Frenzy/>
 					<SpecialRuleDescription>All models in the same unit, have the Frenzy special rule. If they already have the Frenzy special rule, that Frenzy grants +2 Attacks instead of just +1, but the unit suffers a -3 penalty to Leadership when testing not to declare a charge</SpecialRuleDescription>
 				</Option>
@@ -1033,6 +1041,10 @@
 					<Name>Rune of Khaine</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Cry of War</OnlyIfNot>
+						<OnlyIfNot>Witchbrew</OnlyIfNot>
+					</OnlyIfAnotherService>
 					<SpecialRuleDescription>+D3 Attacks (roll each round of combat, immediately before the model attacks)</SpecialRuleDescription>
 				</Option>
 				<Option>
@@ -1056,6 +1068,97 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Khainite Assassin</Name>
+			<Points>245</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Khainite Assassin</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>9</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<NotALeader/>
+				<HitFirst/>
+				<ImmuneToPsychology/>
+				<MurderousProwess/>
+				<PoisonAttack/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Repeater handbow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Repeater handbow</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Black Lotus</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dark Venom</OnlyIfNot>
+						<OnlyIfNot>Manbane</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>15</Points>
+					<SpecialRuleDescription>For each unsaved Wound, enemy suffers a -1 penalty to their Leadership for the rest of the game
+				</Option>
+				<Option>
+					<Name>Dark Venom</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Black Lotus</OnlyIfNot>
+						<OnlyIfNot>Manbane</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>20</Points>
+					<KillingBlow/>
+				</Option>
+				<Option>
+					<Name>Manbane</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Black Lotus</OnlyIfNot>
+						<OnlyIfNot>Dark Venom</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>20</Points>
+					<AddToWound>1</AddToWound>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapons</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Throwing weapons</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Can choose to deploy 'hidden' within another friendly Dark Elf infantry unit, but not Harpies</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
