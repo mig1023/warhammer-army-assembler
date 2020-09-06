@@ -989,6 +989,76 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Death Hag</Name>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<Description>Death Hag</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Frenzy/>
+				<MurderousProwess/>
+				<PoisonAttack/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Cry of War</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<Fear/>
+					<SpecialRuleDescription>All Fear tests taken by enemy units in base contact with this model must be taken with a -3 penalty to Leadership</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Witchbrew</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Frenzy/>
+					<SpecialRuleDescription>All models in the same unit, have the Frenzy special rule. If they already have the Frenzy special rule, that Frenzy grants +2 Attacks instead of just +1, but the unit suffers a -3 penalty to Leadership when testing not to declare a charge</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Rune of Khaine</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<SpecialRuleDescription>+D3 Attacks (roll each round of combat, immediately before the model attacks)</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Cauldron of Blood</Name>
+					<Type>Option</Type>
+					<Points>190</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -1270,6 +1340,46 @@
 				<Special>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 					<SpecialRuleDescription>+1 Strength when pegasus charges in combat</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Cauldron of Blood</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership></Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<Frenzy/>
+				<PoisonAttack/>
+				<Terror/>
+				<MurderousProwess/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scythes</SpecialRuleDescription>
+					<SpecialRuleDescription>Innate bound spell: power level 3. Fury of Khaine is an augment spell that targets a single unit within 12". The target gains the Frenzy special rule until the start of the Cauldron of Blood's next Magic phase. If the target already has the Frenzy special rule, that Frenzy grants + 2 Attacks to every model in the unit instead of just 4-1 until the start of the Cauldron of Blood's next Magic phase</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<SpecialRuleDescription>Friendly models with the Murderous Prowess special rule in units within 6" of the Cauldron of Blood re-roll all failed To Wound rolls</SpecialRuleDescription>
+					<SpecialRuleDescription>This model has no steeds to draw it, but uses its own Movement value. Unlike other chariots, it can also march. It can also join units and leave as if it were a character, save for the fact that it must always be placed in the centre of the front rank (note that it is not otherwise treated as a character - it can only join and leave units like one). Only one model with this special rule can join each unit</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
