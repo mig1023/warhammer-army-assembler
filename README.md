@@ -12,7 +12,7 @@ Warhammer Army Assembler - is a quick and simple editor for Warhammer Fantasy Ba
 | Lizardmen |  | X | X |
 | Skaven | | X | |
 | High Elves | | X | |
-| Dark Elves | | X | in progress |
+| Dark Elves | | X | X |
 | Hordes of Chaos | X |  | |
 | The Emipre | | X | |
 | Vampire Counts | | X | |
