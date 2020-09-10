@@ -231,7 +231,7 @@ namespace WarhammerArmyAssembler.Interface
 
         private static double AddLabel(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
             bool selected = false, double points = 0, bool perModel = false, bool bold = false, string addLine = "",
-            int fixPadding = 0)
+            int fixPadding = 0, bool enabled = true)
         {
             Label newOption = new Label();
 
@@ -244,7 +244,9 @@ namespace WarhammerArmyAssembler.Interface
 
             newOption.Margin = Interface.Changes.Thick(newOption, margins[0], margins[1]);
 
-            if (selected)
+            if (!enabled)
+                newOption.Foreground = Brushes.Gray;
+            else if (selected)
                 newOption.Foreground = ArmyBook.Data.AdditionalColor;
 
             if (selected || bold)
@@ -273,7 +275,12 @@ namespace WarhammerArmyAssembler.Interface
                     Content = (pointsNeed ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine)
                 };
                 optionPoints.Margin = Interface.Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
-                optionPoints.Foreground = ArmyBook.Data.MainColor;
+
+                if (!enabled)
+                    optionPoints.Foreground = Brushes.Gray;
+                else
+                    optionPoints.Foreground = ArmyBook.Data.MainColor;
+
                 Interface.Changes.main.unitDetail.Children.Add(optionPoints);
 
                 Interface.Changes.main.UpdateLayout();
@@ -367,15 +374,6 @@ namespace WarhammerArmyAssembler.Interface
             Option option, int mountAlreadyOn = 0, Option.OnlyForType mountTypeAlreadyFixed = Option.OnlyForType.All, Unit unit = null,
             bool mustBeEnabled = true)
         {
-            AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
-                option.Points, option.PerModel);
-
-            if (option.IsMagicItem() || option.IsPowers())
-            {
-                AddButtonPart("drop " + (option.IsPowers() ? "power" : "artefact"), margins, 0, id, ArmyBook.Data.MainColor, 154);
-                return height;
-            }
-
             bool optionIsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);
 
             if (!mustBeEnabled)
@@ -383,6 +381,15 @@ namespace WarhammerArmyAssembler.Interface
 
             if ((unit != null) && unit.IsAnotherOptionIsIncompatible(option))
                 optionIsEnabled = false;
+
+            AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
+                option.Points, option.PerModel, enabled: optionIsEnabled);
+
+            if (option.IsMagicItem() || option.IsPowers())
+            {
+                AddButtonPart("drop " + (option.IsPowers() ? "power" : "artefact"), margins, 0, id, ArmyBook.Data.MainColor, 154);
+                return height;
+            }
 
             if (option.Countable != null)
                 AddButtonsCountable(
