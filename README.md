@@ -8,13 +8,14 @@ Warhammer Army Assembler - is a quick and simple editor for Warhammer Fantasy Ba
 
 | Armybook | 6th Edition | 7th Edition | 8th Edition |
 | ------------- | ------------- | ------------- | ------------- |
-| Orcs & Goblins | | X | X |
-| Lizardmen |  | X | X |
-| Skaven | | X | |
-| High Elves | | X | |
 | Dark Elves | | X | X |
+| Dwarfs | | | in progress |
+| High Elves | | X | |
 | Hordes of Chaos | X |  | |
+| Lizardmen |  | X | X |
+| Orcs & Goblins | | X | X |
+| Skaven | | X | |
 | The Emipre | | X | |
-| Vampire Counts | | X | |
 | Tomb Kings | | | X |
+| Vampire Counts | | X | |
 | Wood Elves | | | X |
