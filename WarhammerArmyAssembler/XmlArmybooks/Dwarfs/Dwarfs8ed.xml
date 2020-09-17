@@ -541,5 +541,63 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Slayers</Name>
+			<Points>12</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Flail/>
+				<Unbreakable/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Array of axes</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>If a model is reduced to 0 Wounds by close combat Attacks or Stomps (but not Impact Hits), he can immediately make a single Deathblow attack before he is removed as a casualty</SpecialRuleDescription>
+					<SpecialRuleDescription>Slavers ignore penalties to Strength and always cause a Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slaver's Strength characteristic to determine the armour save</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each combat, a Slayer unit must choose to fight with either a great axe (great weapon) or a pair of axes (additional hand weapon)</SpecialRuleDescription>
+					<SpecialRuleDescription>Only models with the Slayer special rule are allowed to join units of Slayers</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Giant Slayers</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
