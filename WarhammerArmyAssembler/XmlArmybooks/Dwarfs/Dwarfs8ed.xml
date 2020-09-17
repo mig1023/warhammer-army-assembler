@@ -466,5 +466,80 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Miners</Name>
+			<Points>10</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Flail/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>A unit with this special rule can deploy using the Ambushers special rule. Additionally, in the turn in which the unit arrives as Ambushers, they are counted as being in soft cover</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Blasting charges</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<SpecialRuleDescription>Missile weapons with one use only rule and range attack with range 4", Strength 4 and Armour Piercing, Flaming Attacks special rules</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Prospector</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Steam drill</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<SpecialRuleDescription>Can re-roll a failed arrival for its Ambushers special rule</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Prospector</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
