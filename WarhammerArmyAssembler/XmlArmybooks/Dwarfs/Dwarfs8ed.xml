@@ -274,10 +274,10 @@
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 				<Special>
+					<SpecialRuleDescription>Provided units are not fleeing, any friendly Dwarf units within 6" of a unit of Longbeards can re-roll failed Panic tests</SpecialRuleDescription>
 					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
 					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
 					<SpecialRuleDescription>+1 bonus to any Parry save in a turn in which unit is charged</SpecialRuleDescription>
-					<SpecialRuleDescription>Provided units are not fleeing, any friendly Dwarf units within 6" of a unit of Longbeards can re-roll failed Panic tests</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -314,6 +314,78 @@
 					<FullCommand/>
 					<Points>10</Points>
 					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Hammerers</Name>
+			<Points>14</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Flail/>
+				<Stubborn/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>If the Dwarf General is in a unit of Hammerers, any member of that unit can accept a challenge. This special rule lasts as long as the General is in the unit.</SpecialRuleDescription>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 bonus to any Parry save in a turn in which unit is charged</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Keeper of the Gate</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>75</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
