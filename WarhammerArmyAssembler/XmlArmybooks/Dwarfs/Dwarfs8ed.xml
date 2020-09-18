@@ -637,5 +637,56 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Gyrocopter</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Flail/>
+				<Stubborn/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Runes</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Steam gun</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Once per game, during the Remaining Moves sub-phase, models may drop bombs unless they are fleeing or have declared a charge that turn. To Dive Bomb, select one unengaged enemy unit that the Gyrocopter moved over in that turn.</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Brimstone gun</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+				</Option>
+				<Option>
+					<Name>Vanguard deployment rule</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
