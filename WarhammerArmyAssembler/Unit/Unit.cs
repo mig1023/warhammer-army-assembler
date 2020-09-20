@@ -36,6 +36,7 @@ namespace WarhammerArmyAssembler
             ["HitLast"] = "Hit Last",
             ["Regeneration"] = "Regeneration",
             ["KillingBlow"] = "Killing Blow",
+            ["ExtendedKillingBlow"] = "Killing Blow ([X]+)",
             ["HeroicKillingBlow"] = "Heroic Killing Blow",
             ["PoisonAttack"] = "Poison Attack",
             ["MultiWounds"] = "Multiple wounds ([X])",
@@ -134,6 +135,7 @@ namespace WarhammerArmyAssembler
         public bool HitLast { get; set; }
         public bool Regeneration { get; set; }
         public bool KillingBlow { get; set; }
+        public int ExtendedKillingBlow { get; set; }
         public bool HeroicKillingBlow { get; set; }
         public bool PoisonAttack { get; set; }
         public string MultiWounds { get; set; }
@@ -350,6 +352,7 @@ namespace WarhammerArmyAssembler
                 HitLast = this.HitLast,
                 Regeneration = this.Regeneration,
                 KillingBlow = this.KillingBlow,
+                ExtendedKillingBlow = this.ExtendedKillingBlow,
                 HeroicKillingBlow = this.HeroicKillingBlow,
                 PoisonAttack = this.PoisonAttack,
                 MultiWounds = this.MultiWounds,

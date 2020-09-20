@@ -131,6 +131,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.HitLast = BoolParse(additionalParam["HitLast"]);
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
                 newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
+                newUnit.ExtendedKillingBlow = IntParse(additionalParam["ExtendedKillingBlow"]);
+                newUnit.HeroicKillingBlow = BoolParse(additionalParam["HeroicKillingBlow"]);
                 newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
                 newUnit.MultiWounds = StringParse(additionalParam["MultiWounds"]);
                 newUnit.NoArmour = BoolParse(additionalParam["NoArmour"]);
@@ -211,6 +213,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
             newWeapon.HitLast = BoolParse(xmlNode["HitLast"]);
             newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
+            newWeapon.ExtendedKillingBlow = IntParse(xmlNode["ExtendedKillingBlow"]);
+            newWeapon.HeroicKillingBlow = BoolParse(xmlNode["HeroicKillingBlow"]);
             newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
             newWeapon.MultiWounds = StringParse(xmlNode["MultiWounds"]);
             newWeapon.NoArmour = BoolParse(xmlNode["NoArmour"]);

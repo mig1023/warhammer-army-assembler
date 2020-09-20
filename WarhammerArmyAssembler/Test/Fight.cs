@@ -739,9 +739,11 @@ namespace WarhammerArmyAssembler.Test
 
         private static bool KillingAttack(Unit unit, Unit enemy)
         {
-            bool killingBlow = !enemy.NoKollingBlow && (unit.HeroicKillingBlow || (unit.KillingBlow && !enemy.LargeBase));
+            bool killingBlow = (unit.HeroicKillingBlow || (unit.KillingBlow && !enemy.LargeBase)) && (Dice.lastDice == 6);
 
-            if (killingBlow && !attackIsPoisoned && (Dice.lastDice == 6))
+            bool extendedKillingBlow = (unit.ExtendedKillingBlow > 0) && !enemy.LargeBase && (Dice.lastDice >= unit.ExtendedKillingBlow);
+
+            if ((killingBlow || extendedKillingBlow) && !enemy.NoKollingBlow && !attackIsPoisoned)
             {
                 attackWithKillingBlow = true;
                 Test.Data.Console(Test.Data.text, " --> {0}killing blow", (unit.HeroicKillingBlow ? "heroic " : String.Empty));
