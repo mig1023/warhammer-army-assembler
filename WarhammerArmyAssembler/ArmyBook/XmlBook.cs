@@ -23,7 +23,15 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (string xmlName in allXmlFiles)
             {
                 XmlDocument xmlFile = new XmlDocument();
-                xmlFile.Load(xmlName);
+
+                try
+                {
+                    xmlFile.Load(xmlName);
+                }
+                catch (System.Xml.XmlException)
+                {
+                    continue;
+                }
 
                 XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
 
