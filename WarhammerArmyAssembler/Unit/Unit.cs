@@ -51,6 +51,7 @@ namespace WarhammerArmyAssembler
             ["StrengthInNumbers"] = "Strength in numbers!",
             ["Lance"] = "Lance",
             ["Flail"] = "Flail",
+            ["Resolute"] = "+1 Strength during a turn in which they charge",
             ["PredatoryFighter"] = "Predatory Fighter",
             ["MurderousProwess"] = "Murderous Prowess",
             ["AddToCloseCombat"] = "Add to Close Combat Result ([X])",
@@ -149,6 +150,7 @@ namespace WarhammerArmyAssembler
         public bool Giant { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
+        public bool Resolute { get; set; }
         public bool PredatoryFighter { get; set; }
         public bool MurderousProwess { get; set; }
         public bool Bloodroar { get; set; }
@@ -366,6 +368,7 @@ namespace WarhammerArmyAssembler
                 Giant = this.Giant,
                 Lance = this.Lance,
                 Flail = this.Flail,
+                Resolute = this.Resolute,
                 PredatoryFighter = this.PredatoryFighter,
                 MurderousProwess = this.MurderousProwess,
                 AddToCloseCombat = this.AddToCloseCombat,

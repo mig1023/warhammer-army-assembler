@@ -779,9 +779,9 @@ namespace WarhammerArmyAssembler.Test
             int chance = 4;
             int strength = unit.Strength;
 
-            if ((unit.Lance || unit.Flail) && (round == 1))
+            if ((unit.Lance || unit.Flail || unit.Resolute) && (round == 1))
             {
-                strength += 2;
+                strength += (unit.Resolute ? 1 : 2);
                 strength = Unit.ParamNormalization(strength);
             }
 

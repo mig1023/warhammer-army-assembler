@@ -65,6 +65,7 @@ namespace WarhammerArmyAssembler
         public bool SteamTank { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
+        public bool Resolute { get; set; }
         public bool PredatoryFighter { get; set; }
         public bool MurderousProwess { get; set; }
         public bool BigWeapon { get; set; }
@@ -209,6 +210,7 @@ namespace WarhammerArmyAssembler
 
                 Lance = this.Lance,
                 Flail = this.Flail,
+                Resolute = this.Resolute,
                 BigWeapon = this.BigWeapon,
                 
                 ParamTests = Test.Param.Clone(this.ParamTests),
