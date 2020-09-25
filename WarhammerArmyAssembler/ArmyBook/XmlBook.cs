@@ -22,19 +22,6 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (string xmlName in allXmlFiles)
             {
-                XmlDocument xmlFile = new XmlDocument();
-
-                try
-                {
-                    xmlFile.Load(xmlName);
-                }
-                catch (System.Xml.XmlException)
-                {
-                    continue;
-                }
-
-                XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
-
                 if (nextName)
                     return xmlName;
 
@@ -67,8 +54,26 @@ namespace WarhammerArmyAssembler.ArmyBook
             try
             {
                 foreach (string file in Directory.GetFiles(programDirectory))
-                    if (file.EndsWith(".xml") && !file.Contains("itextsharp.xml"))
+                    if (file.EndsWith("ed.xml"))
+                    {
+                        XmlDocument xmlFile = new XmlDocument();
+
+                        try
+                        {
+                            xmlFile.Load(file);
+                        }
+                        catch (System.Xml.XmlException)
+                        {
+                            continue;
+                        }
+
+                        XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
+
+                        if (armyName == null)
+                            continue;
+
                         files.Add(file);
+                    }
 
                 foreach (string directory in Directory.GetDirectories(programDirectory))
                     files.AddRange(FindAllXmlFiles(directory));
