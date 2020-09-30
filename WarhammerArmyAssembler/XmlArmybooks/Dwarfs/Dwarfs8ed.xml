@@ -657,9 +657,6 @@
 			</MainParam>
 			<AdditionalParam>
 				<Resolute/>
-				<Stubborn/>
-				<MagicItems>100</MagicItems>
-				<MagicItemsType>Runes</MagicItemsType>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1004,6 +1001,54 @@
 					<Points>10</Points>
 					<MagicItems>50</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Gyrobomber</Name>
+			<Points>125</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Resolute/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Clattergun</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>During the Remaining Moves may drop a bomb (unless they are fleeing or have declared a charge that turn) against one unengaged enemy unit that the Gyrobomber moved over</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Brimstone gun</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+				</Option>
+				<Option>
+					<Name>Vanguard deployment rule</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
 				</Option>
 			</Options>
 		</Unit>
