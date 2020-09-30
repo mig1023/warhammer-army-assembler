@@ -439,7 +439,7 @@
 					<Type>Option</Type>
 					<Points>0</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>Ironbeard</OnlyIfNot>
+						<OnlyIf>Ironbeard</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
@@ -447,7 +447,7 @@
 					<Type>Option</Type>
 					<Points>15</Points>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>Ironbeard</OnlyIfNot>
+						<OnlyIf>Ironbeard</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
@@ -524,7 +524,7 @@
 					<Points>25</Points>
 					<SpecialRuleDescription>Can re-roll a failed arrival for its Ambushers special rule</SpecialRuleDescription>
 					<OnlyIfAnotherService>
-						<OnlyIfNot>Prospector</OnlyIfNot>
+						<OnlyIf>Prospector</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
@@ -911,6 +911,99 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Irondrakes</Name>
+			<Points>15</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Resolute/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Drakegun</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Forge-proven Gromril Armour</Name>
+					<AddToArmour>4</AddToArmour>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>2+ Ward save against all hits with the Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Ironwarden</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Cinderblast Bomb</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Ironwarden</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Brace of Drakefire pistols</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Ironwarden</OnlyIf>
+						<OnlyIfNot>Trollhammer torpedo</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Trollhammer torpedo</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Ironwarden</OnlyIf>
+						<OnlyIfNot>Brace of Drakefire pistols</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
 		</Unit>
