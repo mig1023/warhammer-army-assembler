@@ -18,7 +18,62 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Thorgrim Grudgebearer</Name>
+			<Points>650</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Thorgrim Grudgebearer, High King of Karaz-a-Karak</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>7</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Resolute/>
+				<MustBeGeneral/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>If Thorgrim is slain, all friendly dwarfs models immediately gain the Frenzy special rule.</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>The Axe of Grimnir</Name>
+					<HitFirst/>
+					<SpecialRuleDescription>Wound any model not in magic armour on a To Wound roll of 2+, regardless of the target's Toughness; against models in magic armour, a roll of 3+ is required</SpecialRuleDescription>
+					<SpecialRuleDescription>Multiple Wounds (D6) if directed against a Giant or Chaos Giant</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Throne of Power</Name>
+					<AddToArmour>5</AddToArmour>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Inspiring Presence rule to 18"</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>The Armour of Skaldour</Name>
+					<AddToArmour>4</AddToArmour>
+					<SpecialRuleDescription>2+ Ward save against attacks with the Killing Blow, Heroic Killing Blow or Multiple Wounds</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>The Dragon Crown of Karaz</Name>
+					<ImmuneToPsychology/>
+					<Stubborn/>
+				</Armour>
+				<Arcane>
+					<Name>The Great Book of Grudges</Name>
+					<SpecialRuleDescription>Enchanted Item. If Thorgrim is on the battlefield when you roll on the Ancestral Grudge table, your army receives a'+3 modifier. If the total is 7 or more, Thorgrim, and any unit he joins, may re-roll failed To Hit rolls in every round of close combat, not just the first</SpecialRuleDescription>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		
