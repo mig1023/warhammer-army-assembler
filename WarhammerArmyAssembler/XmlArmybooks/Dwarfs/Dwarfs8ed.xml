@@ -44,7 +44,7 @@
 				<Special>
 					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
 					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
-					<SpecialRuleDescription>If Thorgrim is slain, all friendly dwarfs models immediately gain the Frenzy special rule.</SpecialRuleDescription>
+					<SpecialRuleDescription>If Thorgrim is slain, all friendly dwarfs models immediately gain the Frenzy special rule</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
 					<Name>The Axe of Grimnir</Name>
@@ -72,6 +72,51 @@
 					<Name>The Great Book of Grudges</Name>
 					<SpecialRuleDescription>Enchanted Item. If Thorgrim is on the battlefield when you roll on the Ancestral Grudge table, your army receives a'+3 modifier. If the total is 7 or more, Thorgrim, and any unit he joins, may re-roll failed To Hit rolls in every round of close combat, not just the first</SpecialRuleDescription>
 				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Thorek Ironbrow</Name>
+			<Points>435</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Thorek Ironbrow, Master Runelord of Karak Azul</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>10</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Unbreakable/>
+				<Resolute/>
+				<ArmourPiercing/>
+				<AddToDispell>1</AddToDispell>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>If vou have one or more Anvils of Doom on the battlefield at tie start of any Magic phase, add one dice to both your power and your dispel pool</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic resistance (3)</SpecialRuleDescription>
+					<SpecialRuleDescription>A model mounted on an Anvil of Doom can use each of the Mowing bound spells once per friendly Magic Phase as long he has not moved this turn</SpecialRuleDescription>
+					<SpecialRuleDescription>Thorek can re-roll a single dice on a failed attempt to cast one of the innate bound spells of the Anvil of Doom per turn</SpecialRuleDescription>
+					<SpecialRuleDescription>Thorek receives a +1 bonus on all his attempts to cast the Anvil of Doom's bound spells</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Klad Brakak</Name>
+					<NoArmour/>
+					<SpecialRuleDescription>If the victim suffers one or more unsaved Wounds, any magic armour, magic helmets and magic shields they were equipped with are destroyed and cannot be used for the remainder of the game</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Thorek's Rune Armour</Name>
+					<ArmourTo>1</ArmourTo>
+				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
