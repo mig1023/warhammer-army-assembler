@@ -80,6 +80,7 @@
 			<Points>435</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero/>
+			<MountInit>Anvil Guards</MountInit>
 			<Description>Thorek Ironbrow, Master Runelord of Karak Azul</Description>
 			<MainParam>
 				<Movement>3</Movement>
@@ -119,9 +120,79 @@
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Ungrim Ironfist</Name>
+			<Points>350</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Ungrim Ironfist, Last Slayer King of Karak Kadrin</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Unbreakable/>
+				<Resolute/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Any ward saves successfully made against Attacks made by the Slayer must be re-rolled</SpecialRuleDescription>
+					<SpecialRuleDescription>When attacking monsters, the Slayer's attacks have the Multiple Wounds (D3) special rule</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>If a model is reduced to 0 Wounds by close combat Attacks or Stomps (but not Impact Hits), he can immediately make a single Deathblow attack before he is removed as a casualty; if a model with the Deathblow special rule is slain in a challenge, his Deathblow attack must be directed at the opposing model in the challenge</SpecialRuleDescription>
+					<SpecialRuleDescription>Slavers ignore penalties to Strength and always cause a Wound on a To Wound roll of 4+</SpecialRuleDescription>
+					<SpecialRuleDescription>The only units Ungrim Ironfist can join are units of Slayers</SpecialRuleDescription>
+					<SpecialRuleDescription>Can be chosen as the army General</SpecialRuleDescription>
+					
+				</Special>
+				<HandWeapon>
+					<Name>Axe of Dargo</Name>
+					<KillingBlow/>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Gromril armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Dragon Cloak of Fyrskar</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>2+ Ward save against all hits with the Flaming Attacks special rule</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>The Slayer Crown</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
-		
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Anvil Guards</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>0</Leadership>
+			</MainParam>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
