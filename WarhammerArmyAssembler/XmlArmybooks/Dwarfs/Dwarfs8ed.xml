@@ -470,6 +470,99 @@
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Thane</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<Description>Thane</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>75</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Resolute/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>6</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dwarf crossbow</OnlyIfNot>
+						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Dwarf crossbow</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Dwarf handgun</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Dwarf crossbow</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Dwarf pistol</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Oath Stone</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 bonus to any Parry save in a turn in which unit is charged</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+					<HitFirst/>
+					<AddToWound>1</AddToWound>
+				</HandWeapon>
+				<Armour>
+					<Name>Gromril armour</Name>
+					<AddToArmour>4</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
