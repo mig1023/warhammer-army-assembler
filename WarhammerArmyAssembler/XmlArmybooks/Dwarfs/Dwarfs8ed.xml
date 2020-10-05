@@ -623,6 +623,78 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Master Engineer</Name>
+			<Points>70</Points>
+			<MinSize>1</MinSize>
+			<Description>Master Engineer</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Resolute/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Dwarf pistol</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Brace of Dwarf pistols</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Brace of Dwarf pistols</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dwarf pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Dwarf handgun</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>If a Master Engineer is not fleeing, a single war machine that is within 3" of him can use his Ballistic Skill and re-roll one artillery dice during the Shooting phase</SpecialRuleDescription>
+					<SpecialRuleDescription>Up to one unit with the troop type war machine can be entrenched for each Master Engineer in the army; an entrenched war machine is treated as being in hard cover when shot at and any charging models suffer a -1 To Hit modifier in close combat; an entrenched war machine can be pivoted to fire, but if it moves in any other way, the entrenchment is lost; if the war machine is destroyed, the entrenchment is considered destroyed as well; a war machine can only be entrenched once.</SpecialRuleDescription>
+					<SpecialRuleDescription>Within 3" of a war machine is allowed to take a "Look Out Sir!" roll just as if he was within 3" of a unit of five or more models of the same troop type as himself</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+					<HitFirst/>
+					<AddToWound>1</AddToWound>
+				</HandWeapon>
+				<Armour>
+					<Name>Gromril armour</Name>
+					<AddToArmour>4</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Dragon Slayer</Name>
 			<Points>70</Points>
 			<MinSize>1</MinSize>
