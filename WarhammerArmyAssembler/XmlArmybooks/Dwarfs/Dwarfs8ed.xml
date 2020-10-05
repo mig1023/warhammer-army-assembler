@@ -563,6 +563,65 @@
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Runesmith</Name>
+			<Points>60</Points>
+			<MinSize>1</MinSize>
+			<Description>Runesmith</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>75</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Resolute/>
+				<ArmourPiercing>1</ArmourPiercing>
+				<AddToDispell>1</AddToDispell>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>All friendly infantry models in a unit joined by a Runelord gain the Armour Piercing special rule</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic resistance (1)</SpecialRuleDescription>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 bonus to any Parry save in a turn in which unit is charged</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+					<HitFirst/>
+					<AddToWound>1</AddToWound>
+				</HandWeapon>
+				<Armour>
+					<Name>Gromril armour</Name>
+					<AddToArmour>4</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
