@@ -460,7 +460,6 @@
 					<SpecialRuleDescription>Any ward saves successfully made against Attacks made by the Slayer must be re-rolled</SpecialRuleDescription>
 					<SpecialRuleDescription>When attacking monsters, the Slayer's attacks have the Multiple Wounds (D3) special rule</SpecialRuleDescription>
 					<SpecialRuleDescription>If a model is reduced to 0 Wounds by close combat Attacks or Stomps (but not Impact Hits), he can immediately make a single Deathblow attack before he is removed as a casualty; if a model with the Deathblow special rule is slain in a challenge, his Deathblow attack must be directed at the opposing model in the challenge</SpecialRuleDescription>
-					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
 					<SpecialRuleDescription>Ignore penalties to Strength and always cause a Wound on a To Wound roll of 4+</SpecialRuleDescription>
 					<SpecialRuleDescription>Turn up to battle with a variety of axes; at the start of each combat must choose to fight with either a great axe (great weapon) or a pair of axes (additional hand weapon); if a Slayer has a runic weapon, he loses the benefit of this special rule</SpecialRuleDescription>
 					<SpecialRuleDescription>Only models with the Slayer special rule are allowed to join units of Slayers</SpecialRuleDescription>
@@ -620,6 +619,45 @@
 					<AddToArmour>4</AddToArmour>
 					<NativeArmour/>
 				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Dragon Slayer</Name>
+			<Points>70</Points>
+			<MinSize>1</MinSize>
+			<Description>Dragon Slayer</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>75</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Resolute/>
+				<Unbreakable>
+				<NotALeader/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>When attacking monsters, the Slayer's attacks have the Multiple Wounds (D3) special rule</SpecialRuleDescription>
+					<SpecialRuleDescription>If a model is reduced to 0 Wounds by close combat Attacks or Stomps (but not Impact Hits), he can immediately make a single Deathblow attack before he is removed as a casualty; if a model with the Deathblow special rule is slain in a challenge, his Deathblow attack must be directed at the opposing model in the challenge</SpecialRuleDescription>
+					<SpecialRuleDescription>Ignore penalties to Strength and always cause a Wound on a To Wound roll of 4+</SpecialRuleDescription>
+					<SpecialRuleDescription>Turn up to battle with a variety of axes; at the start of each combat must choose to fight with either a great axe (great weapon) or a pair of axes (additional hand weapon); if a Slayer has a runic weapon, he loses the benefit of this special rule</SpecialRuleDescription>
+					<SpecialRuleDescription>Only models with the Slayer special rule are allowed to join units of Slayers</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Array of axes</Name>
+				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
