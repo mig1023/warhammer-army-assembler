@@ -515,9 +515,56 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Arcane>
-					<Name>Shield</Name>
+					<Name>Bugman's Tankard</Name>
 					<SpecialRuleDescription>Bugman, or a single model in the same unit, can drink from Bugman's Tankard at the start of any friendly turn: the imbiber immediately recovers D3 Wounds, but cannot surpass his Wounds characteristic</SpecialRuleDescription>
 				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Grimm Burloksson</Name>
+			<Points>165</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Grimm Burloksson, Upstart Master Engineer</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Resolute/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Up to one unit with the troop type war machine can be entrenched for each Master Engineer in the army; an entrenched war machine is treated as being in hard cover when shot at and any charging models suffer a -1 To Hit modifier in close combat</SpecialRuleDescription>
+					<SpecialRuleDescription>As long as he is not fleeing, at the start of each friendly Shooting phase, roll a D6: jn a 2+, Grimm can bestow one of the following rules on a single friendly unit within 3": Artillery Adjustment, Increased Range, Superior Volley</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>Within 3" of a war machine is allowed to take a "Look Out Sir!" roll just as if he was within 3" of a unit of five or more models of the same troop type as himself</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>God Axe</Name>
+					<ArmourPiercing>1</ArmourPiercing>
+					<SpecialRuleDescription>If Grimm scores one or more hits in close combat against a model using a magic weapon, roll a D6; on a 5 + , that weapon is immediately destroyed and cannot be used further in this game</SpecialRuleDescription>
+				</HandWeapon>
+				<RangWeapon>
+					<Name>Grudge-raker</Name>
+					<SpecialRuleDescription>Grudge-raker has range 18", Strength 4, Armour Piercing, Dwarf-crafted, Multiple Shots (2D3)</SpecialRuleDescription>
+				</RangWeapon>
+				<RangWeapon>
+					<Name>Brace of Dwarf pistols</Name>
+				</RangWeapon>
+				<Armour>
+					<Name>Gromril armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -729,7 +776,7 @@
 					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
 					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
 					<SpecialRuleDescription>If a Master Engineer is not fleeing, a single war machine that is within 3" of him can use his Ballistic Skill and re-roll one artillery dice during the Shooting phase</SpecialRuleDescription>
-					<SpecialRuleDescription>Up to one unit with the troop type war machine can be entrenched for each Master Engineer in the army; an entrenched war machine is treated as being in hard cover when shot at and any charging models suffer a -1 To Hit modifier in close combat; an entrenched war machine can be pivoted to fire, but if it moves in any other way, the entrenchment is lost; if the war machine is destroyed, the entrenchment is considered destroyed as well; a war machine can only be entrenched once.</SpecialRuleDescription>
+					<SpecialRuleDescription>Up to one unit with the troop type war machine can be entrenched for each Master Engineer in the army; an entrenched war machine is treated as being in hard cover when shot at and any charging models suffer a -1 To Hit modifier in close combat</SpecialRuleDescription>
 					<SpecialRuleDescription>Within 3" of a war machine is allowed to take a "Look Out Sir!" roll just as if he was within 3" of a unit of five or more models of the same troop type as himself</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
