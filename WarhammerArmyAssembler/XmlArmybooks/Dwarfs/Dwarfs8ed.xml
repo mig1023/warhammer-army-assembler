@@ -471,6 +471,57 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Josef Bugman</Name>
+			<Points>165</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Josef Bugman, Mysterious Master Brewer</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Resolute/>
+				<ImmuneToPsychology/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Dwarfs always have the Hatred Orcs, Goblins and Skaven</SpecialRuleDescription>
+					<SpecialRuleDescription>Any army that includes Bugman can upgrade a single unit of Rangers to be Bugman's Rangers (WS5, BS4 and S4 and cost an additional +3 points per model), Bugman must join the unit and cannot leave it</SpecialRuleDescription>
+					<SpecialRuleDescription>As long as Bugman is alive, roll 2D6 at the start of each friendly turn and consult the Mowing chart to see what effects his draughts have upon himself and any unit he has currendy joined</SpecialRuleDescription>
+					<SpecialRuleDescription>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Ol'Trustworthy</Name>
+					<ArmourPiercing>1</ArmourPiercing>
+				</HandWeapon>
+				<RangWeapon>
+					<Name>Dwarf crossbow</Name>
+				</RangWeapon>
+				<Armour>
+					<Name>Gromril armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Arcane>
+					<Name>Shield</Name>
+					<SpecialRuleDescription>Bugman, or a single model in the same unit, can drink from Bugman's Tankard at the start of any friendly turn: the imbiber immediately recovers D3 Wounds, but cannot surpass his Wounds characteristic</SpecialRuleDescription>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Thane</Name>
 			<Points>65</Points>
 			<MinSize>1</MinSize>
