@@ -83,7 +83,9 @@ namespace WarhammerArmyAssembler.Interface
                 Interface.Reload.ReloadArmyData();
                 Interface.UnitDetails.UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
 
-                if (!ArmyBook.Data.Artefact[id].Multiple && (ArmyBook.Data.Artefact[id].Type != Option.OptionType.Powers))
+                bool multiple = ArmyBook.Data.Artefact[id].Multiple || ArmyBook.Data.Artefact[id].Runic;
+
+                if (!multiple && (ArmyBook.Data.Artefact[id].Type != Option.OptionType.Powers))
                     Interface.Mod.SetArtefactAlreadyUsed(id, true);
             }
         }

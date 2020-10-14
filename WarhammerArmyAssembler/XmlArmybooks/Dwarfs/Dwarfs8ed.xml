@@ -60,51 +60,58 @@
 		<ArtefactsGroup Name = "RUNIC ITEMS">
 			<Artefact>
 				<Name>Master Rune of Skalf Blackhammer</Name>
-				<Type>WeaponMasterRune</Type>
+				<Type>Weapon</Type>
+				<MasterRunic/>
 				<Points>75</Points>
 				<SpecialRuleDescription>Wound on roll of 2+ (3+ against models in magic armour)</SpecialRuleDescription>
 				<Description>A weapon engraved with the Master Rune of Skalf Blackhammer will wound any model not in magic armour on a To Wound roll of 2+, regardless of the target's Toughness. Against models in magic armour, a roll of 3+ is required.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Smiting</Name>
-				<Type>WeaponMasterRune</Type>
+				<Type>Weapon</Type>
+				<MasterRunic/>
 				<Points>60</Points>
 				<MultiWounds>D6</MultiWounds>
 				<Description>A weapon engraved with the Master Rune of Smiting has the Multiple Wounds (D6) special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Alaric the Mad</Name>
-				<Type>WeaponMasterRune</Type>
+				<Type>Weapon</Type>
+				<MasterRunic/>
 				<Points>50</Points>
 				<NoArmour/>
 				<Description>Armour saves cannot be taken against Wounds caused by a weapon engraved with the Master Rune of Alaric the Mad.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Breaking</Name>
-				<Type>WeaponMasterRune</Type>
+				<Type>Weapon</Type>
+				<MasterRunic/>
 				<Points>50</Points>
 				<SpecialRuleDescription>If a Dwarf with a weapon engraved with the Master Rune of Breaking scores one or more successful hits against a model with a magic weapon, the foe's magic weapon is destroyed on a D6 roll of 2+</SpecialRuleDescription>
 				<Description>If a Dwarf with a weapon engraved with the Master Rune of Breaking scores one or more successful hits against a model with a magic weapon, the foe's magic weapon is destroyed on a D6 roll of 2+ (roll once, regardless of the number of successful hits). A foe with a destroyed magic weapon counts as being armed with a hand weapon. If the foe has more than one magic weapon (note that Paired weapons count as one), roll a D6 to randomly determine which one is destroyed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Dragon Slaying</Name>
-				<Type>WeaponMasterRune</Type>
+				<Type>Weapon</Type>
+				<MasterRunic/>
 				<Points>50</Points>
 				<SpecialRuleDescription>Against a Dragon or Chaos Dragon, a weapon engraved with the Master Rune of Dragon Slaying will always wound on a To Wound roll of 2+ and has the Multiple Wounds (2) special rule</SpecialRuleDescription>
 				<Description>Against a Dragon or Chaos Dragon, a weapon engraved with the Master Rune of Dragon Slaying will always wound on a To Wound roll of 2+ and has the Multiple Wounds (2) special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Flight</Name>
-				<Type>WeaponMasterRune</Type>
+				<Type>Weapon</Type>
+				<MasterRunic/>
 				<Points>30</Points>
 				<SpecialRuleDescription>Weapon can be thrown like a throwing weapon with a range of up to 12" which always hits on a roll of 2+ as if the target had suffered a hit from the weapon in close combat</SpecialRuleDescription>
 				<Description>A weapon engraved with the Master Rune of Flight can be thrown like a throwing weapon with a range of up to 12" which always hits on a roll of 2+. Roll To Wound as if the target had suffered a hit from the weapon in close combat. Any additional runes on the weapon will also take effect. After this, the weapon flies back to the wielder. A weapon with the Master Rune of Flight can also be used in close combat as normal.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Snorri Spangelhelm</Name>
-				<Type>WeaponMasterRune</Type>
+				<Type>Weapon</Type>
+				<MasterRunic/>
 				<Points>25</Points>
-				<SpecialRuleDescription>Hits on a To Hit roll of 2+</SpecialRuleDescription>
+				<HitOn>2</HitOn>
 				<Description>A weapon engraved with the Master Rune of Snorri Spangelhelm always hits on a To Hit roll of 2+.</Description>
 			</Artefact>
 		</ArtefactsGroup>

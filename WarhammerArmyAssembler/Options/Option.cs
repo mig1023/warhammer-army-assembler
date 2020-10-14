@@ -25,6 +25,8 @@ namespace WarhammerArmyAssembler
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
         public Countable Countable { get; set; }
+        public bool Runic { get; set; }
+        public bool MasterRunic { get; set; }
 
         public double Points { get; set; }
         public bool PerModel { get; set; }
@@ -211,6 +213,8 @@ namespace WarhammerArmyAssembler
                 SubOpponentToWound = this.SubOpponentToWound,
                 HitOn = this.HitOn,
                 WoundOn = this.WoundOn,
+                Runic = this.Runic,
+                MasterRunic = this.MasterRunic,
 
                 Lance = this.Lance,
                 Flail = this.Flail,
