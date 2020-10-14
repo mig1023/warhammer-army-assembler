@@ -766,6 +766,8 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.Console(Test.Data.text, "(autohit)");
                 return true;
             }
+            else if (unit.HitOn > 0)
+                chance = unit.HitOn;
             else if (unit.WeaponSkill > enemy.WeaponSkill)
                 chance = 3;
             else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)
@@ -790,8 +792,9 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.Console(Test.Data.text, "(autowound)");
                 return true;
             }
-
-            if (strength == (enemy.Toughness + 1))
+            else if (unit.WoundOn > 0)
+                chance = unit.WoundOn;
+            else if (strength == (enemy.Toughness + 1))
                 chance = 3;
             else if (strength > (enemy.Toughness + 1))
                 chance = 2;

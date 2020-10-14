@@ -160,6 +160,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.SubOpponentToHit = IntParse(additionalParam["SubOpponentToHit"]);
                 newUnit.AddToWound = IntParse(additionalParam["AddToWound"]);
                 newUnit.SubOpponentToWound = IntParse(additionalParam["SubOpponentToWound"]);
+                newUnit.HitOn = IntParse(additionalParam["HitOn"]);
+                newUnit.WoundOn = IntParse(additionalParam["WoundOn"]);
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
@@ -249,6 +251,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.SubOpponentToHit = IntParse(xmlNode["SubOpponentToHit"]);
             newWeapon.AddToWound = IntParse(xmlNode["AddToWound"]);
             newWeapon.SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]);
+            newWeapon.HitOn = IntParse(xmlNode["HitOn"]);
+            newWeapon.WoundOn = IntParse(xmlNode["WoundOn"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 

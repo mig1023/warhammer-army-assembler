@@ -60,6 +60,8 @@ namespace WarhammerArmyAssembler
             ["SubOpponentToHit"] = "-[X] To Hit opponent penalty",
             ["AddToWound"] = "+[X] To Wound",
             ["SubOpponentToWound"] = "-[X] To Wound opponent penalty",
+            ["HitOn"] = "Hit on [X]+",
+            ["WoundOn"] = "Wound on [X]+",
         };
 
         public string Name { get; set; }
@@ -158,6 +160,8 @@ namespace WarhammerArmyAssembler
         public int SubOpponentToHit { get; set; }
         public int AddToWound { get; set; }
         public int SubOpponentToWound { get; set; }
+        public int HitOn { get; set; }
+        public int WoundOn { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -377,6 +381,8 @@ namespace WarhammerArmyAssembler
                 SubOpponentToHit = this.SubOpponentToHit,
                 AddToWound = this.AddToWound,
                 SubOpponentToWound = this.SubOpponentToWound,
+                HitOn = this.HitOn,
+                WoundOn = this.WoundOn,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 
