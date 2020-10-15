@@ -263,20 +263,20 @@ namespace WarhammerArmyAssembler.Interface
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
             if (menu)
-                Interface.Mod.View(canvasToShow: main.mainMenu);
+                Interface.Mod.View(canvasToShow: main.mainMenu, top: true);
 
             if (err)
-                Interface.Mod.View(canvasToShow: main.errorDetail);
+                Interface.Mod.View(canvasToShow: main.errorDetail, top: true);
 
             if (moveTo == MovingType.ToLeft)
             {
-                Interface.Mod.View(canvasToShow: null, left: true);
+                Interface.Mod.View(left: true);
                 newPosition = new Thickness(main.armybookDetailScroll.Width, 0, 0, 0);
             }
                 
             if (moveTo == MovingType.ToRight)
             {
-                Interface.Mod.View(canvasToShow: null, right: true);
+                Interface.Mod.View(right: true);
                 newPosition = new Thickness((main.ActualWidth * -1), 0, 0, 0);
             }
 

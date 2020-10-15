@@ -43,18 +43,21 @@ namespace WarhammerArmyAssembler.Interface
             Interface.Changes.main.mainGrid.Width = Interface.Changes.main.ActualWidth;
         }
 
-        public static void View(Canvas canvasToShow, bool left = false, bool right = false)
+        public static void View(Canvas canvasToShow = null, bool top = false, bool left = false, bool right = false)
         {
-            string canvasName = (canvasToShow == null ? String.Empty : canvasToShow.Name);
-
-            List<Canvas> canvases = new List<Canvas>
+            if (top)
             {
-                Interface.Changes.main.mainMenu,
-                Interface.Changes.main.errorDetail,
-            };
+                string canvasName = (canvasToShow == null ? String.Empty : canvasToShow.Name);
 
-            foreach (Canvas canvas in canvases)
-                canvas.Visibility = (canvasName == canvas.Name ? Visibility.Visible : Visibility.Hidden);
+                List<Canvas> canvases = new List<Canvas>
+                {
+                    Interface.Changes.main.mainMenu,
+                    Interface.Changes.main.errorDetail,
+                };
+
+                foreach (Canvas canvas in canvases)
+                    canvas.Visibility = (canvasName == canvas.Name ? Visibility.Visible : Visibility.Hidden);
+            }
 
             if (left)
             {
