@@ -196,6 +196,7 @@ namespace WarhammerArmyAssembler
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
+        public string Image { get; set; }
 
         public string RulesView { get; set; }
 
@@ -407,7 +408,8 @@ namespace WarhammerArmyAssembler
                 PassThisRound = false,
                 TestListName = this.TestListName,
 
-                ArmyColor = this.ArmyColor
+                ArmyColor = this.ArmyColor,
+                Image = this.Image,
             };
 
             if (this.SlotOf != null)

@@ -271,7 +271,7 @@ namespace WarhammerArmyAssembler.Interface
             if (moveTo == MovingType.ToLeft)
             {
                 Interface.Mod.View(left: true);
-                newPosition = new Thickness(main.armybookDetailScroll.Width, 0, 0, 0);
+                newPosition = new Thickness(main.ActualWidth, 0, 0, 0);
             }
                 
             if (moveTo == MovingType.ToRight)

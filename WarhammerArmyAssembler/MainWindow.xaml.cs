@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace WarhammerArmyAssembler
 {
@@ -95,6 +96,8 @@ namespace WarhammerArmyAssembler
 
         private void ChangeArmyListDetail(int id, bool group = false)
         {
+            armyUnitImage.Source = null;
+
             if (group)
             {
                 armyUnitName.Content = String.Empty;
@@ -106,6 +109,9 @@ namespace WarhammerArmyAssembler
                 armyUnitName.Content = ArmyBook.Data.Units[id].Name.ToUpper();
                 armyUnitDescription.Text = ArmyBook.Data.Units[id].Description;
                 armyUnitSpecific.Text = ArmyBook.Data.Units[id].SelfDescription();
+
+                if (!String.IsNullOrEmpty(ArmyBook.Data.Units[id].Image))
+                    armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.ImagesFolder + ArmyBook.Data.Units[id].Image));
             }
             else if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
@@ -282,9 +288,14 @@ namespace WarhammerArmyAssembler
                 mainGrid.Width = e.NewSize.Width;
             
             foreach (ScrollViewer scroll in new List<ScrollViewer> { armybookDetailScroll, armyUnitTestScroll })
+            {
                 scroll.Height = e.NewSize.Height;
+                scroll.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 25);
+            }
+                
 
-            armyUnitTestScroll.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 25);
+
+            //armyUnitTestScroll.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 25);
 
             foreach (Canvas canvas in new List<Canvas> { errorDetail, mainMenu, mainPlaceCanvas, armyUnitTest })
                 canvas.Width = e.NewSize.Width;
