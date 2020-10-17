@@ -25,7 +25,7 @@ namespace WarhammerArmyAssembler
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
         public Countable Countable { get; set; }
-        public bool Runic { get; set; }
+        public int Runic { get; set; }
         public bool MasterRunic { get; set; }
 
         public double Points { get; set; }
@@ -269,6 +269,17 @@ namespace WarhammerArmyAssembler
             return newOption;
         }
 
+        public Dictionary<int, Option> AllRunicVersions()
+        {
+            Dictionary<int, Option> runicVesions = new Dictionary<int, Option>();
+
+            foreach (KeyValuePair<int, Option> option in ArmyBook.Data.Artefact)
+                if (option.Value.Name == this.Name)
+                    runicVesions.Add(option.Value.Runic, option.Value);
+
+            return runicVesions;
+        }
+
         public string SelfDescription()
         {
             string describe = String.Empty;
@@ -335,10 +346,20 @@ namespace WarhammerArmyAssembler
             return (IsOption() && Realised) || IsMagicItem() || IsPowers();
         }
 
-        public bool IsUsableByUnit(Unit unit, bool addOption = true)
+        public bool IsUsableByUnit(Unit unit, bool addOption = true, bool dragOverCheck = false)
         {
             if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.GetGroup()))
                 return false;
+
+            if ((Runic > 0) && dragOverCheck)
+            {
+                Dictionary<int, Option> versions = AllRunicVersions();
+
+                Option currentItem = unit.GetCurrentRunicItemByName(this.Name);
+
+                if ((currentItem != null) && (currentItem.Runic >= versions.Count))
+                    return false;
+            }
 
             if (IsPowers())
             {

@@ -231,7 +231,7 @@ namespace WarhammerArmyAssembler
             if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
                 bool enabled = unit.IsOptionEnabled(ArmyBook.Data.Artefact[id], unit.GetMountOn(), unit.GetMountTypeAlreadyFixed());
-                bool usable = ArmyBook.Data.Artefact[id].IsUsableByUnit(unit);
+                bool usable = ArmyBook.Data.Artefact[id].IsUsableByUnit(unit, dragOverCheck: true);
                 e.Effects = (usable && enabled ? DragDropEffects.Copy : DragDropEffects.None);
             }
         }

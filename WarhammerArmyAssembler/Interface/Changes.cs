@@ -71,19 +71,42 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void ArmyGridDropArtefact(int id, int unitID)
         {
-            if (!Interface.Checks.EnoughPointsForAddArtefact(id))
+            Option prevRunicItem = null;
+            double prevRunicPointsPenalty = 0;
+
+            if (ArmyBook.Data.Artefact[id].Runic > 0)
+            {
+                Dictionary<int, Option> versions = ArmyBook.Data.Artefact[id].AllRunicVersions();
+
+                Option currentItem = Army.Data.Units[unitID].GetCurrentRunicItemByName(ArmyBook.Data.Artefact[id].Name);
+
+                if ((currentItem != null) && (currentItem.Runic >= versions.Count))
+                    return;
+                else if (currentItem != null)
+                {
+                    prevRunicItem = currentItem;
+                    prevRunicPointsPenalty = currentItem.Points;
+
+                    id = versions[currentItem.Runic + 1].ID;
+                }
+            }
+
+            if (!Interface.Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))
                 Error("Not enough points add an item");
-            else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID]))
+            else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID], pointsPenalty: prevRunicPointsPenalty))
                 Error(String.Format("Not enough magic item {0} to add an item", (Army.Data.Units[unitID].MagicItemCount > 0 ? "slots" : "points")));
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, ArmyBook.Data.Artefact[id].Points))
                 Error("For this type, a point cost limit has been reached");
             else
             {
+                if (prevRunicItem != null)
+                    Army.Data.Units[unitID].Options.Remove(prevRunicItem);
+
                 Army.Data.Units[unitID].AddAmmunition(id);
                 Interface.Reload.ReloadArmyData();
                 Interface.UnitDetails.UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
 
-                bool multiple = ArmyBook.Data.Artefact[id].Multiple || ArmyBook.Data.Artefact[id].Runic;
+                bool multiple = ArmyBook.Data.Artefact[id].Multiple || (ArmyBook.Data.Artefact[id].Runic > 0);
 
                 if (!multiple && (ArmyBook.Data.Artefact[id].Type != Option.OptionType.Powers))
                     Interface.Mod.SetArtefactAlreadyUsed(id, true);

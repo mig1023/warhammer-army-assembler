@@ -650,6 +650,15 @@ namespace WarhammerArmyAssembler
             return ranks;
         }
 
+        public Option GetCurrentRunicItemByName(string name)
+        {
+            foreach (Option option in Options)
+                if (option.Name == name)
+                    return option;
+
+            return null;
+        }
+
         public void AddAmmunition(int id)
         {
             Options.Insert(0, ArmyBook.Data.Artefact[id].Clone());

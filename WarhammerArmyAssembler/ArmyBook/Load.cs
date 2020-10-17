@@ -257,7 +257,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]);
             newWeapon.HitOn = IntParse(xmlNode["HitOn"]);
             newWeapon.WoundOn = IntParse(xmlNode["WoundOn"]);
-            newWeapon.Runic = BoolParse(xmlNode["Runic"]);
+            newWeapon.Runic = IntParse(xmlNode["Runic"]);
             newWeapon.MasterRunic = BoolParse(xmlNode["MasterRunic"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
