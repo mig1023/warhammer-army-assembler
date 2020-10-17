@@ -126,35 +126,77 @@
 			<Artefact>
 				<Name>Rune of Daemon Slaying</Name>
 				<Type>Weapon</Type>
-				<Runic/>
+				<Runic>1</Runic>
 				<Points>25</Points>
 				<SpecialRuleDescription>Against any Daemons of Chaos receives a +1 bonus To Hit and To Wound</SpecialRuleDescription>
-				<Description>Against any Daemons of Chaos, a weapon engraved with a Rune of Daemon Slaying receives a +1 bonus To Hit and To Wound.</Description>
+				<Description>Against any model from Warhammer: Daemons of I Chaos, a weapon engraved with a Rune of Daemon Slaying receives a +1 bonus To Hit and To Wound.||Against any model from Warhammer: Daemons of Chaos, a weapon engraved with two Runes of Daemon Slaying receives a +1 bonus To Hit and To Wound and gains the Multiple Wounds (D3) special rule.||Against any model from Warhammer: Daemons of Chaos, a weapon engraved with three Runes of Daemon Slaving hits and wounds on a roll of 2+ , has the Multiple Wounds (D3) special rule and no ward saves can be taken against it.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Daemon Slaying</Name>
+				<Type>Weapon</Type>
+				<Runic>2</Runic>
+				<Points>50</Points>
+				<SpecialRuleDescription>Against any Daemons of Chaos receives a +1 bonus To Hit and To Wound</SpecialRuleDescription>
+				<MultiWounds>D3</MultiWounds>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Daemon Slaying</Name>
+				<Type>Weapon</Type>
+				<Runic>3</Runic>
+				<Points>125</Points>
+				<SpecialRuleDescription>Against any Daemons of Chaos receives a +1 bonus To Hit and To Wound</SpecialRuleDescription>
+				<MultiWounds>D3</MultiWounds>
+				<NoWard/>
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Fire</Name>
 				<Type>Weapon</Type>
-				<Runic/>
+				<Runic>1</Runic>
 				<Points>10</Points>
 				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
-				<Description>A weapon engraved with a Rune of Fire has the Flaming Attacks special rule.</Description>
+				<Description>A weapon engraved with a Rune of Fire has the Flaming Attacks special rule.||A weapon engraved with two Runes of Fire has the Flaming Attacks special rule, and grants its wielder a Strength 4 Breath Weapon with the Flaming Attacks special rule.||A weapon engraved with three Runes of Fire has the Flaming Attacks special rule, and grants its wielder a Strength 4 Breath Weapon that has the Flaming Attacks and Multiple Wounds (D3) special rules.</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Rune of Fury (first)</Name>
+				<Name>Rune of Fire</Name>
 				<Type>Weapon</Type>
+				<Runic>2</Runic>
+				<Points>50</Points>
+				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+				<SpecialRuleDescription>Strength 4 Breath Weapon with the Flaming Attacks special rule</SpecialRuleDescription>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Fire</Name>
+				<Type>Weapon</Type>
+				<Runic>3</Runic>
+				<Points>125</Points>
+				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+				<SpecialRuleDescription>Strength 4 Breath Weapon with the Flaming Attacks special rule</SpecialRuleDescription>
+				<MultiWounds>D3</MultiWounds>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Fury</Name>
+				<Type>Weapon</Type>
+				<Runic>1</Runic>
 				<Points>25</Points>
 				<AddToAttacks>1</AddToAttacks>
-				<Description>A weapon engraved with a Rune of Fury grants its wielder +1 Attack.</Description>
+				<Description>A weapon engraved with a Rune of Fury grants its wielder +1 Attack.||A weapon engraved with two Runes of Fury grants its wielder +1 Attack and the Frenzy special rule.||A weapon engraved with three Runes of Fury grants its wielder +1 Attack and the Frenzy special rule and, after each successful roll To Hit, it grants its user another Attack; roll To Hit and To Wound as normal. Attacks generated in this way do not generate further Attacks.</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Rune of Fury (second)</Name>
+				<Name>Rune of Fury</Name>
 				<Type>Weapon</Type>
+				<Runic>2</Runic>
 				<Points>60</Points>
-				<OnlyIfAnotherService>
-					<OnlyIf>Rune of Fury (first)</OnlyIf>
-				</OnlyIfAnotherService>
+				<AddToAttacks>1</AddToAttacks>
 				<Frenzy/>
-				<Description>A weapon engraved with second Runes of Fury grants its wielder Frenzy special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Fury</Name>
+				<Type>Weapon</Type>
+				<Runic>3</Runic>
+				<Points>100</Points>
+				<AddToAttacks>1</AddToAttacks>
+				<SpecialRuleDescription>After each successful roll To Hit, it grants its user another Attack; roll To Hit and To Wound as normal; attacks generated in this way do not generate further Attacks</SpecialRuleDescription>
+				<Frenzy/>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
