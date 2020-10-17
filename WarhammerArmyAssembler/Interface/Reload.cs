@@ -54,18 +54,37 @@ namespace WarhammerArmyAssembler.Interface
                 Option artefacts = new Option() { Name = artefactType };
 
                 foreach (KeyValuePair<int, Option> entry in ArmyBook.Data.Artefact)
-                    if (entry.Value.ArtefactGroup == artefactType)
-                    {
-                        Option artefact = entry.Value.Clone();
-                        artefact.PointsView = String.Format(" {0} pts", artefact.Points);
-                        artefact.InterfaceColor = ArmyBook.Data.MainColor;
-                        artefacts.Items.Add(artefact);
-                    }
+                {
+                    if ((entry.Value.ArtefactGroup != artefactType) || (entry.Value.Runic > 1))
+                        continue;
+
+                    Option artefact = entry.Value.Clone();
+                    artefact.PointsView = PointsView(artefact);
+                    artefact.InterfaceColor = ArmyBook.Data.MainColor;
+                    artefacts.Items.Add(artefact);
+                }
 
                 artefacts.GroopBold = true;
                 artefacts.Artefacts = true;
                 Interface.Changes.main.ArmyList.Items.Add(artefacts);
             }
+        }
+
+        private static string PointsView(Option artefact)
+        {
+            if (artefact.Runic > 0)
+            {
+                List<string> points = new List<string>();
+
+                Dictionary<int, Option> runicVersions = artefact.AllRunicVersions();
+
+                foreach (KeyValuePair<int, Option> runic in runicVersions)
+                    points.Add(runic.Value.Points.ToString());
+
+                return String.Format(" {0} pts", String.Join("/", points.ToArray()));
+            }
+            else 
+                return String.Format(" {0} pts", artefact.Points);
         }
 
         public static void ReloadArmyData()
