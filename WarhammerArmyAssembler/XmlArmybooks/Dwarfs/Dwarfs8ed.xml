@@ -140,11 +140,21 @@
 				<Description>A weapon engraved with a Rune of Fire has the Flaming Attacks special rule.</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Rune of Fury</Name>
+				<Name>Rune of Fury (first)</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
 				<AddToAttacks>1</AddToAttacks>
 				<Description>A weapon engraved with a Rune of Fury grants its wielder +1 Attack.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Fury (second)</Name>
+				<Type>Weapon</Type>
+				<Points>60</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Rune of Fury (first)</OnlyIf>
+				</OnlyIfAnotherService>
+				<Frenzy/>
+				<Description>A weapon engraved with second Runes of Fury grants its wielder Frenzy special rule.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
