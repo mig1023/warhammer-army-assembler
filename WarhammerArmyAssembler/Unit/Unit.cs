@@ -766,7 +766,7 @@ namespace WarhammerArmyAssembler
                 bool thisIsNotMountOrFC = !(option.Mount || option.FullCommand);
 
                 if (!String.IsNullOrEmpty(option.Name) && thisIsRealised && thisIsNotMountOrFC)
-                    equipment += String.Format("{0}; ", option.Name);
+                    equipment += String.Format("{0}; ", option.FullName());
             }
 
             foreach (Option option in Options)

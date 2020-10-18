@@ -106,7 +106,7 @@ namespace WarhammerArmyAssembler.Interface
                             if (option.OnlyOneInArmy || option.OnlyOneForSuchUnits)
                                 canBeUsed = (Army.Checks.IsOptionAlreadyUsed(option.Name, unitID, unit.Name, option.OnlyOneForSuchUnits) == 0);
 
-                            margins[1] += AddButton(option.Name, margins, 25, ref lastColumnMaxWidth, String.Format("{0}|{1}", unitID, option.ID),
+                            margins[1] += AddButton(option.FullName(), margins, 25, ref lastColumnMaxWidth, String.Format("{0}|{1}", unitID, option.ID),
                                 option, mountAlreadyOn: mountAlreadyOn, mountTypeAlreadyFixed: mountTypeAlreadyFixed, unit: unit,
                                 mustBeEnabled: canBeUsed);
 

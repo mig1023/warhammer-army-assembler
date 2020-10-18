@@ -280,6 +280,14 @@ namespace WarhammerArmyAssembler
             return runicVesions;
         }
 
+        public string FullName()
+        {
+            if (Runic > 1)
+                return String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes"));
+            else
+                return Name;
+        }
+
         public string SelfDescription()
         {
             string describe = String.Empty;
