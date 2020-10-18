@@ -314,7 +314,7 @@
 		<ArtefactsGroup Name = "ARMOUR RUNES">
 			<Artefact>
 				<Name>Master Rune of Adamant</Name>
-				<Type>Weapon</Type>
+				<Type>Armour</Type>
 				<MasterRunic/>
 				<Points>100</Points>
 				<ToughnessTo>10</ToughnessTo>
@@ -322,11 +322,37 @@
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Gromril</Name>
-				<Type>Weapon</Type>
+				<Type>Armour</Type>
 				<MasterRunic/>
 				<Points>30</Points>
 				<ArmourTo>1</ArmourTo>
 				<Description>Armour engraved with the Master Rune of Gromril grants its wearer a 1+ armour save that cannot be improved upon in any way.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Fortitude</Name>
+				<Type>Armour</Type>
+				<Runic>1</Runic>
+				<Points>35</Points>
+				<AddToToughness>1</AddToToughness>
+				<Description>Armour engraved with a Rune of Fortitude grants its wearer +1 Toughness.||Armour engraved with two Runes of Fortitude grants its wearer +1 Toughness and a 5+ ward save.||Armour engraved with three Runes of Fortitude grants its wearer +1 Toughness and a 5+ ward save and, if the wearer suffers an unsaved Wound from an attack that has Multiple Wounds special rule, roll a D6. On a roll of 2+, he only suffers 1 Wound, regardless of how many Wounds would normally be caused; on a roll of 1, he suffers the full number of Wounds.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Fortitude</Name>
+				<Type>Armour</Type>
+				<Runic>2</Runic>
+				<Points>50</Points>
+				<AddToToughness>1</AddToToughness>
+				<AddToWard>5</AddToWard>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Fortitude</Name>
+				<Type>Armour</Type>
+				<Runic>3</Runic>
+				<Points>50</Points>
+				<AddToToughness>1</AddToToughness>
+				<AddToWard>5</AddToWard>
+				<NoKillingBlow/>
+				<SpecialRuleDescription>If the wearer suffers an unsaved Wound from an attack that has Multiple Wounds special rule, roll a D6: on a roll of 2+, he only suffers 1 Wound</SpecialRuleDescription>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
