@@ -1176,6 +1176,9 @@ namespace WarhammerArmyAssembler
 
         public bool IsNotCompitableMore(Option option)
         {
+            if ((option.MasterRunic || (option.Runic > 0)) && Army.Checks.IsRunicCombinationAlreadyExist(this, null))
+                return true;
+
             return !Interface.Checks.EnoughUnitPointsForAddArtefact(option.ID, this, addOption: false);
         }
 

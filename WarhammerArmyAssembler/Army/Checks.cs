@@ -27,7 +27,10 @@ namespace WarhammerArmyAssembler.Army
 
         public static bool IsRunicCombinationAlreadyExist(Unit unit, Option newOption)
         {
-            Dictionary<string, int> currentCombination = new Dictionary<string, int> { [newOption.Name] = 1 };
+            Dictionary<string, int> currentCombination = new Dictionary<string, int> {};
+
+            if (newOption != null)
+                currentCombination.Add(newOption.Name, 1);
 
             foreach (Option option in unit.Options)
                 if (option.MasterRunic)
