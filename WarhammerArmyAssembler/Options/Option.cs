@@ -367,6 +367,9 @@ namespace WarhammerArmyAssembler
 
                 if ((currentItem != null) && (currentItem.Runic >= versions.Count))
                     return false;
+
+                if (unit.GetCurrentRunicItemsByCount() >= 3)
+                    return false;
             }
 
             if (IsPowers())

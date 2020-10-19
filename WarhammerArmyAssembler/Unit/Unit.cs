@@ -659,6 +659,19 @@ namespace WarhammerArmyAssembler
             return null;
         }
 
+        public int GetCurrentRunicItemsByCount()
+        {
+            int count = 0;
+
+            foreach (Option option in Options)
+                if (option.MasterRunic)
+                    count += 1;
+                else if (option.Runic > 0)
+                    count += option.Runic;
+
+            return count;
+        }
+
         public void AddAmmunition(int id)
         {
             Options.Insert(0, ArmyBook.Data.Artefact[id].Clone());
