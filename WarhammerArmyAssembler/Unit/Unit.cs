@@ -1100,6 +1100,26 @@ namespace WarhammerArmyAssembler
             return false;
         }
 
+        public bool ExistsRunicCombinationInUnit(Dictionary<string, int> runicItems)
+        {
+            foreach (KeyValuePair<string, int> item in runicItems)
+            {
+                bool exist = false;
+
+                foreach (Option option in Options)
+                    if ((item.Key == option.Name) && (item.Value == option.Runic))
+                    {
+                        exist = true;
+                        break;
+                    }
+
+                if (!exist)
+                    return false;
+            }
+
+            return true;
+        }
+
         public bool ExistsOrdinaryItems()
         {
             foreach (Option option in Options)

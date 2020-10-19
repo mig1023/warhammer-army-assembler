@@ -89,6 +89,12 @@ namespace WarhammerArmyAssembler.Interface
 
                     id = versions[currentItem.Runic + 1].ID;
                 }
+
+                if (Army.Checks.IsRunicCombinationAlreadyExist(Army.Data.Units[unitID], ArmyBook.Data.Artefact[id]))
+                {
+                    Error("No more than one item may carry the same combination of runes");
+                    return;
+                }
             }
 
             if (!Interface.Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))

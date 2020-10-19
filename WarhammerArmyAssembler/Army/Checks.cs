@@ -25,6 +25,25 @@ namespace WarhammerArmyAssembler.Army
             return false;
         }
 
+        public static bool IsRunicCombinationAlreadyExist(Unit unit, Option newOption)
+        {
+            Dictionary<string, int> currentCombination = new Dictionary<string, int> { [newOption.Name] = 1 };
+
+            foreach (Option option in unit.Options)
+                if (option.MasterRunic)
+                    currentCombination.Add(option.Name, 1);
+                else if ((option.Runic > 0) && currentCombination.ContainsKey(option.Name))
+                    currentCombination[option.Name] += option.Runic;
+                else if (option.Runic > 0)
+                    currentCombination.Add(option.Name, option.Runic);
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+                if (entry.Value.ExistsRunicCombinationInUnit(currentCombination))
+                    return true;
+
+            return false;
+        }
+
         public static Dictionary<Unit.UnitType, double> UnitsPointsPercent()
         {
             Dictionary<Unit.UnitType, double> units = new Dictionary<Unit.UnitType, double>();

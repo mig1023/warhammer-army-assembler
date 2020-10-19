@@ -293,10 +293,6 @@ namespace WarhammerArmyAssembler
                 scroll.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 25);
             }
                 
-
-
-            //armyUnitTestScroll.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 25);
-
             foreach (Canvas canvas in new List<Canvas> { errorDetail, mainMenu, mainPlaceCanvas, armyUnitTest })
                 canvas.Width = e.NewSize.Width;
 
