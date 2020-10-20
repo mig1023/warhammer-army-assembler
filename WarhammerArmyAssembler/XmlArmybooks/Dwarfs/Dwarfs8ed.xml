@@ -11,7 +11,7 @@
 		<Images>ImagesDwarfs8ed</Images>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "ANCESTRAL HEIRLOOMS">
+		<ArtefactsGroup Name = "Ancestral Heirlooms">
 			<Artefact>
 				<Name>The Hammer of Karak Drazh</Name>
 				<Type>Weapon</Type>
@@ -630,6 +630,16 @@
 				<OnlyForGroup>Runesmith</OnlyForGroup>
 				<SpecialRuleDescription>2+ Ward save against all Wounds with the Flaming Attacks special rule</SpecialRuleDescription>
 				<Description>A model with the Rune of the Furnace has a 2+ ward save against all Wounds with the Flaming Attacks special rule.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Engineering Runes">
+			<Artefact>
+				<Name>Master Rune of Immolation</Name>
+				<Type>AdditionalArmour</Type>
+				<MasterRunic/>
+				<Points>30</Points>
+				<SpecialRuleDescription>A Dwarf player can at the end of any round of combat before determining the combat results removed the model from play, and each enemy unit in combat with the war machine suffers 2D6 magical Strength 4 hits with the Flaming Attacks special rule, allocated as for shooting</SpecialRuleDescription>
+				<Description>One use only. A Dwarf player can cause a war machine engraved with the Master Rune of Immolation to explode at the end of any round of combat before determining the combat results. Both the war machine and all its remaining crew are instantly removed from play, and each enemy unit in combat with the war machine suffers 2D6 magical Strength 4 hits with the Flaming Attacks special rule, allocated as for shooting. Any surviving enemy units who charged that turn may make an overrun move as normal. This rune will also be triggered automatically when the war machine loses its last Wound in close combat.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
