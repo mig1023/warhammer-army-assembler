@@ -550,7 +550,7 @@
 		<ArtefactsGroup Name = "Talismanic Runes">
 			<Artefact>
 				<Name>Master Rune of Balance</Name>
-				<Type>Arcane</Type>
+				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>50</Points>
 				<OnlyForGroup>Runesmith</OnlyForGroup>
@@ -558,8 +558,8 @@
 				<Description>Runesmiths/Runelords only. During the enemy's Magic phase, this rune allows the owning player to roll a D6; on a roll of 4+, he can remove one power dice from his opponent's pool and add it to his own dispel pool.</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Master Rune of Balance</Name>
-				<Type>Arcane</Type>
+				<Name>Master Rune of Spite</Name>
+				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>25</Points>
 				<SpecialRuleDescription>Every rime a model suffers an unsaved Wound in close combat, the model that inflicted it suffers a Strength 5 hit</SpecialRuleDescription>
@@ -567,7 +567,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Passage</Name>
-				<Type>Arcane</Type>
+				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>10</Points>
 				<SpecialRuleDescription>Automatically pass any Dangerous Terrain tests</SpecialRuleDescription>
@@ -575,7 +575,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Warding</Name>
-				<Type>Arcane</Type>
+				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>15</Points>
 				<AddToWard>6</AddToWard>
@@ -583,17 +583,35 @@
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Warding</Name>
-				<Type>Arcane</Type>
+				<Type>AdditionalArmour</Type>
 				<Runic>2</Runic>
 				<Points>35</Points>
 				<AddToWard>5</AddToWard>
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Warding</Name>
-				<Type>Arcane</Type>
+				<Type>AdditionalArmour</Type>
 				<Runic>3</Runic>
 				<Points>45</Points>
 				<AddToWard>4</AddToWard>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Spellbreaking</Name>
+				<Type>AdditionalArmour</Type>
+				<Runic>1</Runic>
+				<Points>25</Points>
+				<OnlyForGroup>Runesmith</OnlyForGroup>
+				<SpecialRuleDescription>One use only. When a spell has been cast, a Runesmith or Runelord can use Spellbreaking rune to dispel it automatically, without the need to roll dispel dice</SpecialRuleDescription>
+				<Description>Runesmiths/Runelords only. One use only. When a spell has been cast, a Runesmith or Runelord can use this rune to dispel it automatically, without the need to roll dispel dice. This rune cannot stop a spell cast with irresistible force, and cannot be used to dispel Remains in Play spells other than at the moment they are cast.||A second Rune of Spellbreaking maintains the previous effect and, after the spell is dispelled, roll a D6; on a 4+, the enemy spell is lost to the Wizard casting it and cannot be cast by him for the rest of the game. A third Rune of Spellbreaking has no farther effect.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Spellbreaking</Name>
+				<Type>AdditionalArmour</Type>
+				<Runic>2</Runic>
+				<Points>45</Points>
+				<OnlyForGroup>Runesmith</OnlyForGroup>
+				<SpecialRuleDescription>One use only. When a spell has been cast, a Runesmith or Runelord can use Spellbreaking rune to dispel it automatically, without the need to roll dispel dice, after roll a D6: on a 4+, the enemy spell is lost to the Wizard casting it and cannot be cast by him for the rest of the game</SpecialRuleDescription>
+				<Description>Runesmiths/Runelords only. One use only. When a spell has been cast, a Runesmith or Runelord can use this rune to dispel it automatically, without the need to roll dispel dice. This rune cannot stop a spell cast with irresistible force, and cannot be used to dispel Remains in Play spells other than at the moment they are cast.||A second Rune of Spellbreaking maintains the previous effect and, after the spell is dispelled, roll a D6; on a 4+, the enemy spell is lost to the Wizard casting it and cannot be cast by him for the rest of the game. A third Rune of Spellbreaking has no farther effect.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
