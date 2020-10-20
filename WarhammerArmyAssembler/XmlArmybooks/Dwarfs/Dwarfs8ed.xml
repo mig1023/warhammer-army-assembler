@@ -465,7 +465,7 @@
 			<Artefact>
 				<Name>Rune of Battle</Name>
 				<Type>Banner</Type>
-				<Runic>2</Runic>
+				<Runic>3</Runic>
 				<Points>125</Points>
 				<AddToCloseCombat>3</AddToCloseCombat>
 			</Artefact>
@@ -537,6 +537,25 @@
 				<Points>20</Points>
 				<ImmuneToPsychology/>
 				<Description>A standard bearing the Rune of Courage confers the Immune to Psychology special rule to the bearer's unit.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ancestor Rune</Name>
+				<Type>Banner</Type>
+				<Runic>1</Runic>
+				<Points>20</Points>
+				<SpecialRuleDescription>One use only: Break test on a single D6</SpecialRuleDescription>
+				<Description>One use only. Multiples of this rune have no further effect. A standard bearing this rune allows the bearer's unit to take a Break test on a single D6. Once used, the rune is expended.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Talismanic Runes">
+			<Artefact>
+				<Name>Master Rune of Balance</Name>
+				<Type>Banner</Type>
+				<Runic>1</Runic>
+				<Points>50</Points>
+				<OnlyForGroup>Runesmith</OnlyForGroup>
+				<SpecialRuleDescription>During the enemy's Magic phase roll a D6: on 4+ remove one power dice from  opponent's pool and add to your dispel pool, Runesmiths/Runelords only</SpecialRuleDescription>
+				<Description>Runesmiths/Runelords only. During the enemy's Magic phase, this rune allows the owning player to roll a D6; on a roll of 4+, he can remove one power dice from his opponent's pool and add it to his own dispel pool.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
@@ -676,7 +695,6 @@
 					<SpecialRuleDescription>Slavers ignore penalties to Strength and always cause a Wound on a To Wound roll of 4+</SpecialRuleDescription>
 					<SpecialRuleDescription>The only units Ungrim Ironfist can join are units of Slayers</SpecialRuleDescription>
 					<SpecialRuleDescription>Can be chosen as the army General</SpecialRuleDescription>
-					
 				</Special>
 				<HandWeapon>
 					<Name>Axe of Dargo</Name>
@@ -848,6 +866,7 @@
 			<Name>Runelord</Name>
 			<Points>120</Points>
 			<MinSize>1</MinSize>
+			<Group>Runesmith</Group>
 			<Description>Runelord</Description>
 			<MainParam>
 				<Movement>3</Movement>
@@ -1145,6 +1164,7 @@
 			<Name>Runesmith</Name>
 			<Points>60</Points>
 			<MinSize>1</MinSize>
+			<Group>Runesmith</Group>
 			<Description>Runesmith</Description>
 			<MainParam>
 				<Movement>3</Movement>
