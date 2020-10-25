@@ -282,5 +282,66 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Questing Knights</Name>
+			<Group>Knights</Group>
+			<Points>28</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>12</MaxSize>
+			<MountInit>Barded Warhorse</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Paragon</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>0</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>9</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>18</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
