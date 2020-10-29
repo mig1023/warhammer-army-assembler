@@ -15,7 +15,105 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Bretonnian Lord</Name>
+			<Points>110</Points>
+			<MinSize>1</MinSize>
+			<Description>Bretonnian Lord</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Questing Vow</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Grail Vow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Grail Vow</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Questing Vow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>28</Points>
+				</Option>
+				<Option>
+					<Name>Morning star</Name>
+					<Type>Option</Type>
+					<Flail/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Questing Vow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+					<Lance/>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<OnlyIfAnotherService>
+						<OnlyIf>Questing Vow</OnlyIf>
+					</OnlyIfAnotherService>
+					<HitLast/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Barded Warhorse</Name>
+					<Type>Option</Type>
+					<Points>21</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Royal Pegasus</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Hippogryph</Name>
+					<Type>Option</Type>
+					<Points>200</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -70,6 +168,30 @@
 			</MainParam>
 			<Special>
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+			</Special>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Hippogryph</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+			</AdditionalParam>
+			<Special>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<SpecialRuleDescription>Large target</SpecialRuleDescription>
 			</Special>
 		</Mount>
 	</Mounts>
