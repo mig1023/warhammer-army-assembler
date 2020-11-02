@@ -53,6 +53,7 @@
 						<OnlyIfNot>Grail Vow</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<Points>12</Points>
+					<SpecialRuleDescription>May re-roll any failed Psychology tests</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Grail Vow</Name>
@@ -61,6 +62,9 @@
 						<OnlyIfNot>Questing Vow</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<Points>28</Points>
+					<ImmuneToPsychology/>
+					<AddToWard>6</AddToWard>
+					<SpecialRuleDescription>5+ Ward save versus attacks with Strength 5 or higher</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Morning star</Name>
@@ -141,7 +145,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Aura of the Lady</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -213,6 +217,7 @@
 						<OnlyIfNot>Grail Vow</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<Points>8</Points>
+					<SpecialRuleDescription>May re-roll any failed Psychology tests</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Grail Vow</Name>
@@ -221,6 +226,9 @@
 						<OnlyIfNot>Questing Vow</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<Points>21</Points>
+					<ImmuneToPsychology/>
+					<AddToWard>6</AddToWard>
+					<SpecialRuleDescription>5+ Ward save versus attacks with Strength 5 or higher</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Morning star</Name>
@@ -302,7 +310,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Aura of the Lady</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -448,6 +456,9 @@
 					<Name>Shield</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
+				<Special>
+					<SpecialRuleDescription>After charges have been declared, if unit did not declare a charge but are within charge range of an enemy, then they must take a Leadership test to restrain themselves from charging; if this test is failed, they are forced to charge; if the test is passed, they may move normally; in addition, so reckless are the Knights Errant, that whenever they charge, the unit and any characters that have joined them are Immune to Psychology for the rest of that turn</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
@@ -564,6 +575,9 @@
 					<Name>Shield</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
+				<Special>
+					<SpecialRuleDescription>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
@@ -617,6 +631,10 @@
 				<Armour>
 					<Name>Defensive stakes</Name>
 				</Armour>
+				<Special>
+					<SpecialRuleDescription>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</SpecialRuleDescription>
+					<SpecialRuleDescription>No unit gains any charge bonus when they charge the unit's front</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
@@ -694,6 +712,9 @@
 					<Name>Shield</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
+				<Special>
+					<SpecialRuleDescription>May re-roll any failed Psychology tests</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
@@ -754,6 +775,9 @@
 					<Name>Shield</Name>
 					<AddToArmour>6</AddToArmour>
 				</Armour>
+				<Special>
+					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
@@ -803,6 +827,9 @@
 				<RangeWeapon>
 					<Name>Bow</Name>
 				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
@@ -858,7 +885,11 @@
 				<Attacks>2</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>5</Armour>
+				<Ward>6</Ward>
 			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Lance</Name>
@@ -876,6 +907,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
+					<SpecialRuleDescription>5+ Ward save versus attacks with Strength 5 or higher</SpecialRuleDescription>
 					<SpecialRuleDescription>Every model in a unit of Grail Knights can issue and accept challenges as if they were a Champion</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -917,6 +949,7 @@
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Field Trebuchet</SpecialRuleDescription>
+					<SpecialRuleDescription>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Option>
