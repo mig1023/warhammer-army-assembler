@@ -92,6 +92,17 @@
 				<SpecialRuleDescription>If the model has the Blessing of the Lady, then all attacks with the Silver Lance Of the Blessed automatically hit</SpecialRuleDescription>
 				<Description>The bearer has +2 Strength on the charge when mounted. If the model has the Blessing of the Lady, then all attacks with the Silver Lance Of the Blessed automatically hit.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Sword of the Quest</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<OnlyForGroup>QuestingVow</OnlyForGroup>
+				<NoArmour/>
+				<AddToStrength>2</AddToStrength>
+				<HitLast/>
+				<SpecialRuleDescription>May be used a hand weapon or a great weapon, decided at the start of combat as normal</SpecialRuleDescription>
+				<Description>May be used as either a hand weapon or a great weapon, decided at the start of combat as normal. No Armour saves may be taken against the Sword of the Quest.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
@@ -129,6 +140,7 @@
 				<Option>
 					<Name>Questing Vow</Name>
 					<Type>Option</Type>
+					<Group>QuestingVow</Group>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Grail Vow</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -138,6 +150,7 @@
 				<Option>
 					<Name>Grail Vow</Name>
 					<Type>Option</Type>
+					<Group>GrailVow</Group>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Questing Vow</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -293,6 +306,7 @@
 				<Option>
 					<Name>Questing Vow</Name>
 					<Type>Option</Type>
+					<Group>QuestingVow</Group>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Grail Vow</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -302,6 +316,7 @@
 				<Option>
 					<Name>Grail Vow</Name>
 					<Type>Option</Type>
+					<Group>GrailVow</Group>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Questing Vow</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -758,7 +773,7 @@
 		<Unit>
 			<Type>Special</Type>
 			<Name>Questing Knights</Name>
-			<Group>Knights</Group>
+			<Group>QuestingVow</Group>
 			<Points>28</Points>
 			<MinSize>5</MinSize>
 			<MaxSize>12</MaxSize>
@@ -949,7 +964,7 @@
 		<Unit>
 			<Type>Rare</Type>
 			<Name>Grail Knights</Name>
-			<Group>Knights</Group>
+			<Group>GrailVow</Group>
 			<Points>38</Points>
 			<MinSize>3</MinSize>
 			<MaxSize>12</MaxSize>
