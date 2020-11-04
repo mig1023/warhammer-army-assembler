@@ -10,8 +10,7 @@
 		<SymbolImage>Bretonnia.png</SymbolImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Blessed Heirlooms of Bretonnia">
-			<ArtefactsGroup Name = "Common magic items">
+		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -83,6 +82,16 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic Weapons">	
+			<Artefact>
+				<Name>The Silver Lance of the Blessed</Name>
+				<Type>Weapon</Type>
+				<Points>65</Points>
+				<OnlyFor>Mount</OnlyFor>
+				<AddToStrength>2</AddToStrength>
+				<SpecialRuleDescription>If the model has the Blessing of the Lady, then all attacks with the Silver Lance Of the Blessed automatically hit</SpecialRuleDescription>
+				<Description>The bearer has +2 Strength on the charge when mounted. If the model has the Blessing of the Lady, then all attacks with the Silver Lance Of the Blessed automatically hit.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
