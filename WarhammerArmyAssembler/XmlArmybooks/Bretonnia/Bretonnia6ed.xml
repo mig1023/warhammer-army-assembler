@@ -164,6 +164,17 @@
 				<Description>The bearer has +2 Strength on the charge when mounted. In addition, once per game, the model wielding the Wyrmlance may make a breath attack from the tip of the lance at Strength 3 provided he is not in close combat. Furthermore, all attacks made by the Wyrmlance count as flaming attacks.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic Armour">
+			<Artefact>
+				<Name>Gilded Cuirass</Name>
+				<Type>Armour</Type>
+				<Points>20</Points>
+				<OnlyForGroup>GrailVow</OnlyForGroup>	
+				<Regeneration/>
+				<AddToArmour>5</AddToArmour>
+				<Description>Character with the Grail Vow only. This armour replaces the Knight's heavy armour, and gives a 5+ Armour save that can be combined with other equipment as normal. In addition, the wearer has Regeneration.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		<Hero>
@@ -194,6 +205,7 @@
 				<Armour>
 					<Name>Heavy armour</Name>
 					<AddToArmour>5</AddToArmour>
+					<NativeArmour/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -360,6 +372,7 @@
 				<Armour>
 					<Name>Heavy armour</Name>
 					<AddToArmour>5</AddToArmour>
+					<NativeArmour/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 			<Options>
