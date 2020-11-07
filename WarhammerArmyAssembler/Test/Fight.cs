@@ -831,13 +831,21 @@ namespace WarhammerArmyAssembler.Test
         private static bool NotWard(ref Unit unit, Unit enemy)
         {
             bool firstWoundWardSave = (enemy.WardForFirstWound > 0) && (enemy.Wounds == enemy.OriginalWounds);
+            bool lastWoundWardSave = (enemy.WardForLastWound > 0) && (enemy.Wounds == 1);
 
-            if ((!firstWoundWardSave && (enemy.Ward == null)) || unit.NoWard)
+            if ((!firstWoundWardSave && !lastWoundWardSave && (enemy.Ward == null)) || unit.NoWard)
                 return true;
 
             Test.Data.Console(Test.Data.text, " --> ward ");
 
-            bool wardFail = Dice.Roll(unit, Dice.Types.WARD, enemy, (firstWoundWardSave ? enemy.WardForFirstWound : enemy.Ward));
+            bool wardFail = false;
+                
+            if (firstWoundWardSave)
+                wardFail = Dice.Roll(unit, Dice.Types.WARD, enemy, enemy.WardForFirstWound);
+            else if (lastWoundWardSave)
+                wardFail = Dice.Roll(unit, Dice.Types.WARD, enemy, enemy.WardForLastWound);
+            else
+                wardFail = Dice.Roll(unit, Dice.Types.WARD, enemy, enemy.Ward);
 
             if (!wardFail)
                 Param.Tests(ref unit, enemy, context: Param.ContextType.WardSave);

@@ -168,6 +168,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.HitOn = IntParse(additionalParam["HitOn"]);
                 newUnit.WoundOn = IntParse(additionalParam["WoundOn"]);
                 newUnit.WardForFirstWound = IntParse(additionalParam["WardForFirstWound"]);
+                newUnit.WardForLastWound = IntParse(additionalParam["WardForLastWound"]);
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
@@ -264,6 +265,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.Runic = IntParse(xmlNode["Runic"]);
             newWeapon.MasterRunic = BoolParse(xmlNode["MasterRunic"]);
             newWeapon.WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]);
+            newWeapon.WardForLastWound = IntParse(xmlNode["WardForLastWound"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 
