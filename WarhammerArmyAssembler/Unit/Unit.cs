@@ -62,6 +62,7 @@ namespace WarhammerArmyAssembler
             ["SubOpponentToWound"] = "-[X] To Wound opponent penalty",
             ["HitOn"] = "Hit on [X]+",
             ["WoundOn"] = "Wound on [X]+",
+            ["NoMultiWounds"] = "No Multiple wounds",
         };
 
         public string Name { get; set; }
@@ -130,6 +131,7 @@ namespace WarhammerArmyAssembler
 
         public bool LargeBase { get; set; }
         public bool NoKollingBlow { get; set; }
+        public bool NoMultiWounds { get; set; }
 
         public bool AutoHit { get; set; }
         public bool AutoWound { get; set; }
@@ -338,6 +340,7 @@ namespace WarhammerArmyAssembler
                 OriginalAttacks = this.OriginalAttacks,
 
                 NoKollingBlow = this.NoKollingBlow,
+                NoMultiWounds = this.NoMultiWounds,
                 LargeBase = this.LargeBase,
 
                 ImmuneToPsychology = this.ImmuneToPsychology,

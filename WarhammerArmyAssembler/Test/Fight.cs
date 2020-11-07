@@ -715,7 +715,7 @@ namespace WarhammerArmyAssembler.Test
                 return enemy.Wounds;
             }
 
-            if (String.IsNullOrEmpty(unit.MultiWounds))
+            if (String.IsNullOrEmpty(unit.MultiWounds) || enemy.NoMultiWounds)
                 return 1;
 
             int multiwounds = RandomParamParse(unit.MultiWounds);
