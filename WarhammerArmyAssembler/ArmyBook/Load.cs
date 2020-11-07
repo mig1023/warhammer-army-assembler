@@ -114,7 +114,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (additionalParam != null)
             {
-                newUnit.NoKollingBlow = BoolParse(additionalParam["NoKollingBlow"]);
+                newUnit.NoKillingBlow = BoolParse(additionalParam["NoKillingBlow"]);
                 newUnit.NoMultiWounds = BoolParse(additionalParam["NoMultiWounds"]);
                 newUnit.LargeBase = BoolParse(additionalParam["LargeBase"]);
                 newUnit.ImmuneToPsychology = BoolParse(additionalParam["ImmuneToPsychology"]);
@@ -228,6 +228,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.NoArmour = BoolParse(xmlNode["NoArmour"]);
             newWeapon.NoWard = BoolParse(xmlNode["NoWard"]);
             newWeapon.NoMultiWounds = BoolParse(xmlNode["NoMultiWounds"]);
+            newWeapon.NoKillingBlow = BoolParse(xmlNode["NoKillingBlow"]);
             newWeapon.ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]);
 
             newWeapon.Regeneration = BoolParse(xmlNode["Regeneration"]);

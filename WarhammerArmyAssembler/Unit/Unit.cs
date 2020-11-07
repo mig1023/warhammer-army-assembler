@@ -63,6 +63,7 @@ namespace WarhammerArmyAssembler
             ["HitOn"] = "Hit on [X]+",
             ["WoundOn"] = "Wound on [X]+",
             ["NoMultiWounds"] = "No Multiple wounds",
+            ["NoKillingBlow"] = "No Killing Blow",
         };
 
         public string Name { get; set; }
@@ -130,7 +131,7 @@ namespace WarhammerArmyAssembler
         public string AddToCloseCombat { get; set; }
 
         public bool LargeBase { get; set; }
-        public bool NoKollingBlow { get; set; }
+        public bool NoKillingBlow { get; set; }
         public bool NoMultiWounds { get; set; }
 
         public bool AutoHit { get; set; }
@@ -339,7 +340,7 @@ namespace WarhammerArmyAssembler
                 OriginalWounds = this.OriginalWounds,
                 OriginalAttacks = this.OriginalAttacks,
 
-                NoKollingBlow = this.NoKollingBlow,
+                NoKillingBlow = this.NoKillingBlow,
                 NoMultiWounds = this.NoMultiWounds,
                 LargeBase = this.LargeBase,
 

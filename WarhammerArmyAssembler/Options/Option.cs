@@ -48,6 +48,7 @@ namespace WarhammerArmyAssembler
         public string MultiWounds { get; set; }
         public bool NoArmour { get; set; }
         public bool NoWard { get; set; }
+        public bool NoKillingBlow { get; set; }
         public bool NoMultiWounds { get; set; }
         public int ArmourPiercing { get; set; }
         public string Reroll { get; set; }
@@ -189,6 +190,7 @@ namespace WarhammerArmyAssembler
                 NoArmour = this.NoArmour,
                 NoWard = this.NoWard,
                 NoMultiWounds = this.NoMultiWounds,
+                NoKillingBlow = this.NoKillingBlow,
                 ArmourPiercing = this.ArmourPiercing,
                 Regeneration = this.Regeneration,
                 ImmuneToPsychology = this.ImmuneToPsychology,

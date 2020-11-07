@@ -252,7 +252,7 @@ namespace WarhammerArmyAssembler
                     Initiative = 3,
                     Attacks = 2,
                     Leadership = 8,
-                    NoKollingBlow = true,
+                    NoKillingBlow = true,
                 }
             },
 
@@ -316,7 +316,7 @@ namespace WarhammerArmyAssembler
                     Armour = 4,
                     ColdBlooded = true,
                     PoisonAttack = true,
-                    NoKollingBlow = true,
+                    NoKillingBlow = true,
                 }
             },
 
@@ -1473,7 +1473,8 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = true,
                 Armour = 3,
                 Stubborn = true,
-                NoKollingBlow = true,
+                NoKillingBlow = true,
+                NoMultiWounds = true,
                 Reroll = "ToHit;OpponentToWound",
             },
 
