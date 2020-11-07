@@ -80,6 +80,7 @@ namespace WarhammerArmyAssembler
         public int SubOpponentToWound { get; set; }
         public int HitOn { get; set; }
         public int WoundOn { get; set; }
+        public int WardForFirstWound { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -217,6 +218,7 @@ namespace WarhammerArmyAssembler
                 SubOpponentToWound = this.SubOpponentToWound,
                 HitOn = this.HitOn,
                 WoundOn = this.WoundOn,
+                WardForFirstWound = this.WardForFirstWound,
                 Runic = this.Runic,
                 MasterRunic = this.MasterRunic,
 

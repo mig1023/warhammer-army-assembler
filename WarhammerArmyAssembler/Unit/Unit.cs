@@ -64,6 +64,7 @@ namespace WarhammerArmyAssembler
             ["WoundOn"] = "Wound on [X]+",
             ["NoMultiWounds"] = "No Multiple wounds",
             ["NoKillingBlow"] = "No Killing Blow",
+            ["WardForFirstWound"] = "Ward save [X]+ for first wound",
         };
 
         public string Name { get; set; }
@@ -165,6 +166,7 @@ namespace WarhammerArmyAssembler
         public int SubOpponentToWound { get; set; }
         public int HitOn { get; set; }
         public int WoundOn { get; set; }
+        public int WardForFirstWound { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -388,6 +390,7 @@ namespace WarhammerArmyAssembler
                 SubOpponentToWound = this.SubOpponentToWound,
                 HitOn = this.HitOn,
                 WoundOn = this.WoundOn,
+                WardForFirstWound = this.WardForFirstWound,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 
