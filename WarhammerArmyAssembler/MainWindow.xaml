@@ -32,7 +32,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Image x:Name="armyUnitImage" Grid.Row="0" Grid.Column="0" Margin="30" Stretch="UniformToFill" />
+                    <Image x:Name="armyUnitImage" Grid.Row="0" Grid.Column="0" Margin="30" Stretch="Uniform" />
                     <Canvas x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Height="300" VerticalAlignment="Center" Margin="0,20" Background="White">
                         <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
                         <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
@@ -582,7 +582,7 @@
                 ↖ Main menu<LineBreak/><LineBreak/>
                 ← Armybook, double click for detail<LineBreak/><LineBreak/>
                 Drop ↓ here you first hero or unit to start your army<LineBreak/><LineBreak/>
-                Double click on unit here → for configure it<LineBreak/><LineBreak/>
+                Double click on unit ↓ here for configure it<LineBreak/><LineBreak/>
                 Use delete ↘ for throw out unnecessary units<LineBreak/>
             </TextBlock>
         </Canvas>

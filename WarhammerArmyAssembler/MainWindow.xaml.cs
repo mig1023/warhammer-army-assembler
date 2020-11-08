@@ -111,7 +111,17 @@ namespace WarhammerArmyAssembler
                 armyUnitSpecific.Text = ArmyBook.Data.Units[id].SelfDescription();
 
                 if (!String.IsNullOrEmpty(ArmyBook.Data.Units[id].Image))
-                    armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.ImagesFolder + ArmyBook.Data.Units[id].Image));
+                {
+                    try
+                    {
+                        armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.ImagesFolder + ArmyBook.Data.Units[id].Image));
+                    }
+                    catch
+                    {
+                        armyUnitImage.Source = null;
+                    }
+                }
+                    
             }
             else if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
