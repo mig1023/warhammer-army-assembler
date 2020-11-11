@@ -13,60 +13,7 @@ namespace WarhammerArmyAssembler
         public enum MagicItemsTypes { Hero, Wizard, Unit }
         public enum TestTypeTypes { Unit, Enemy }
 
-        private static List<string> UnitParam = new List<string> {
-            "Movement", "WeaponSkill", "BallisticSkill", "Strength", "Toughness",
-            "Wounds", "Initiative", "Attacks", "Leadership", "Armour", "Ward"
-        };
-
-        private static Dictionary<string, string> AllSpecialRules = new Dictionary<string, string>()
-        {
-            ["ImmuneToPsychology"] = "Immune to Psychology",
-            ["Stubborn"] = "Stubborn",
-            ["Hate"] = "Hate",
-            ["Fear"] = "Fear",
-            ["Terror"] = "Terror",
-            ["Frenzy"] = "Frenzy",
-            ["BloodFrenzy"] = "Blood Frenzy",
-            ["Unbreakable"] = "Unbreakable",
-            ["ColdBlooded"] = "ColdBlooded",
-            ["AutoHit"] = "Hit automatically",
-            ["AutoWound"] = "Wound automatically",
-            ["AutoDeath"] = "Slain automatically",
-            ["HitFirst"] = "Hit First",
-            ["HitLast"] = "Hit Last",
-            ["Regeneration"] = "Regeneration",
-            ["KillingBlow"] = "Killing Blow",
-            ["ExtendedKillingBlow"] = "Killing Blow ([X]+)",
-            ["HeroicKillingBlow"] = "Heroic Killing Blow",
-            ["PoisonAttack"] = "Poison Attack",
-            ["MultiWounds"] = "Multiple wounds ([X])",
-            ["NoArmour"] = "No Armour",
-            ["NoWard"] = "No Ward",
-            ["ArmourPiercing"] = "Armour piercing ([X])",
-            ["Reroll"] = "Reroll ([X])",
-            ["ImpactHit"] = "Impact Hit ([X])",
-            ["SteamTank"] = "Steam Tank",
-            ["Stupidity"] = "Stupidity",
-            ["Undead"] = "Undead",
-            ["StrengthInNumbers"] = "Strength in numbers!",
-            ["Lance"] = "Lance",
-            ["Flail"] = "Flail",
-            ["Resolute"] = "+1 Strength during a turn in which they charge",
-            ["PredatoryFighter"] = "Predatory Fighter",
-            ["MurderousProwess"] = "Murderous Prowess",
-            ["AddToCloseCombat"] = "Add to Close Combat Result ([X])",
-            ["Bloodroar"] = "Bloodroar",
-            ["AddToHit"] = "+[X] To Hit",
-            ["SubOpponentToHit"] = "-[X] To Hit opponent penalty",
-            ["AddToWound"] = "+[X] To Wound",
-            ["SubOpponentToWound"] = "-[X] To Wound opponent penalty",
-            ["HitOn"] = "Hit on [X]+",
-            ["WoundOn"] = "Wound on [X]+",
-            ["NoMultiWounds"] = "No Multiple wounds",
-            ["NoKillingBlow"] = "No Killing Blow",
-            ["WardForFirstWound"] = "Ward save [X]+ for first wound",
-            ["WardForLastWound"] = "Ward save [X]+ for last wound",
-        };
+        
 
         public string Name { get; set; }
         string Group { get; set; }
@@ -576,7 +523,7 @@ namespace WarhammerArmyAssembler
         {
             Unit unit = this.Clone();
 
-            foreach (string name in UnitParam)
+            foreach (string name in SpecialRules.UnitParam)
             {
                 bool reverse = ((name == "Armour" || name == "Ward") ? true : false);
                 bool mount = (name == "Armour" ? true : false);
@@ -599,7 +546,7 @@ namespace WarhammerArmyAssembler
 
             if (directModification)
             {
-                foreach (KeyValuePair<string, string> specialRule in AllSpecialRules)
+                foreach (KeyValuePair<string, string> specialRule in SpecialRules.All)
                     unit.SetUnitParamByOption(specialRule.Key, directModification);
 
                 unit.GetParamTestsFromOptions();
@@ -1041,7 +988,7 @@ namespace WarhammerArmyAssembler
                 if (option.Realised && option.SpecialRuleDescription.Length > 0)
                     rules.Add(option.Name);
 
-            foreach (KeyValuePair<string, string> specialRule in AllSpecialRules) 
+            foreach (KeyValuePair<string, string> specialRule in SpecialRules.All) 
                 if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam: onlyUnitParam))
                     rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
 
