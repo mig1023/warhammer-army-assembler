@@ -6,25 +6,28 @@ namespace WarhammerArmyAssembler.Interface
 {
     class Reload
     {
-        public static void LoadArmyList()
+        public static void LoadArmyList(bool fastReload = false)
         {
             Interface.Changes.main.ArmyList.Items.Clear();
 
-            Interface.Changes.AllUnitDelete();
+            if (!fastReload)
+            {
+                Interface.Changes.AllUnitDelete();
 
-            Interface.Changes.main.armyMainLabel.Content = Army.Data.Name;
-            Interface.Changes.main.armyVersionLabel.Content = String.Format("{0}ed", Army.Data.ArmyVersion); 
+                Interface.Changes.main.armyMainLabel.Content = Army.Data.Name;
+                Interface.Changes.main.armyVersionLabel.Content = String.Format("{0}ed", Army.Data.ArmyVersion);
 
-            Interface.Changes.main.armyMainLabelPlace.Background = ArmyBook.Data.MainColor;
-            Interface.Changes.main.armyVersionLabel.Background = ArmyBook.Data.MainColor;
-            Interface.Changes.main.unitDetailHead.Background = ArmyBook.Data.MainColor;
+                Interface.Changes.main.armyMainLabelPlace.Background = ArmyBook.Data.MainColor;
+                Interface.Changes.main.armyVersionLabel.Background = ArmyBook.Data.MainColor;
+                Interface.Changes.main.unitDetailHead.Background = ArmyBook.Data.MainColor;
 
-            Interface.Changes.main.armyMainMenu.Content = '\u2630';
-            Interface.Changes.main.armyMainMenu.Foreground = Brushes.White;
-            Interface.Changes.main.armyMainMenu.Background = ArmyBook.Data.AdditionalColor;
+                Interface.Changes.main.armyMainMenu.Content = '\u2630';
+                Interface.Changes.main.armyMainMenu.Foreground = Brushes.White;
+                Interface.Changes.main.armyMainMenu.Background = ArmyBook.Data.AdditionalColor;
 
-            Interface.Changes.main.armyMainLabel.Foreground = Brushes.White;
-            Interface.Changes.main.armyMainLabel.Background = ArmyBook.Data.MainColor;
+                Interface.Changes.main.armyMainLabel.Foreground = Brushes.White;
+                Interface.Changes.main.armyMainLabel.Background = ArmyBook.Data.MainColor;
+            }
 
             List<Unit> categories = Army.Params.GetArmyCategories();
 

@@ -685,6 +685,12 @@ namespace WarhammerArmyAssembler
         public void AddAmmunition(int id)
         {
             Options.Insert(0, ArmyBook.Data.Artefact[id].Clone());
+
+            if (ArmyBook.Data.Artefact[id].Virtue)
+            {
+                ArmyBook.Data.Artefact[id].Points = Army.Params.GetVirtuePoints(id);
+                Interface.Reload.LoadArmyList(fastReload: true);
+            }
         }
 
         public void ChangeCountableOption(int optionID, string direction)
@@ -722,7 +728,15 @@ namespace WarhammerArmyAssembler
                     bool realise = false;
 
                     if (option.IsMagicItem() || option.IsPowers())
+                    {
                         this.Options.Remove(option);
+
+                        if (option.Virtue)
+                        {
+                            ArmyBook.Data.Artefact[option.ID].Points = Army.Params.GetVirtuePoints(option.ID);
+                            Interface.Reload.LoadArmyList(fastReload: true);
+                        }
+                    }
                     else
                     {
                         if (option.Realised)

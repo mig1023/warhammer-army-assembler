@@ -98,19 +98,17 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             if (ArmyBook.Data.Artefact[id].Virtue)
-            {
-                int virtueCount = Army.Params.GetVirtueCount(ArmyBook.Data.Artefact[id].Name);
-
-                if (virtueCount > 0)
-                    ArmyBook.Data.Artefact[id].Points *= (virtueCount + 1);
-            }
-
+                ArmyBook.Data.Artefact[id].Points = Army.Params.GetVirtuePoints(id);
+                
             if (!Interface.Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))
                 Error("Not enough points add an item");
+
             else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID], pointsPenalty: prevRunicPointsPenalty))
                 Error(String.Format("Not enough magic item {0} to add an item", (Army.Data.Units[unitID].MagicItemCount > 0 ? "slots" : "points")));
+
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, ArmyBook.Data.Artefact[id].Points))
                 Error("For this type, a point cost limit has been reached");
+
             else
             {
                 if (prevRunicItem != null)
@@ -138,14 +136,19 @@ namespace WarhammerArmyAssembler.Interface
 
             if (ArmyBook.Data.Units[id].PersonifiedHero && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
                 Error("Personalities cannot be repeated");
+
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)
                 Error(String.Format("The number of {0} of this type has been exhausted.", (ArmyBook.Data.Units[id].IsHero() ? "heroes" : "units")));
+
             else if (!Interface.Checks.EnoughPointsForAddUnit(id))
                 Error(String.Format("Not enough points to add a {0}", (ArmyBook.Data.Units[id].IsHero() ? "hero" : "unit")));
+
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(ArmyBook.Data.Units[id].Type, ArmyBook.Data.Units[id].Points))
                 Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Data.Units[id].UnitTypeName()));
+
             else if(!Army.Checks.IsArmyDublicationOk(ArmyBook.Data.Units[id]))
                 Error(String.Format("Army can't include as many duplicates of {0}", ArmyBook.Data.Units[id].UnitTypeName()));
+
             else
             {
                 CurrentSelectedUnit = Army.Mod.AddUnitByID(id);

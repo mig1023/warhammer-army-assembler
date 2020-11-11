@@ -194,16 +194,19 @@ namespace WarhammerArmyAssembler.Army
             return number;
         }
 
-        public static int GetVirtueCount(string name)
+        public static double GetVirtuePoints(int id, bool nextPricePreview = false)
         {
             int count = 0;
 
             foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                 foreach (Option option in entry.Value.Options)
-                    if (option.Name == name)
+                    if (option.Name == ArmyBook.Data.Artefact[id].Name)
                         count += 1;
 
-            return count;
+            if (count == 0)
+                return ArmyBook.Data.Artefact[id].VirtueOriginalPoints;
+            else
+                return ArmyBook.Data.Artefact[id].VirtueOriginalPoints * (count + 1 + (nextPricePreview ? 1 : 0));
         }
 
         public static string MagicPowersName()

@@ -31,6 +31,7 @@ namespace WarhammerArmyAssembler
 
         public double Points { get; set; }
         public bool PerModel { get; set; }
+        public double VirtueOriginalPoints { get; set; }
 
         public string PointsView { get; set; }
 
@@ -167,6 +168,7 @@ namespace WarhammerArmyAssembler
                 ID = this.ID,
                 IDView = this.IDView,
                 Points = this.Points,
+                VirtueOriginalPoints = this.VirtueOriginalPoints,
                 PerModel = this.PerModel,
                 Type = this.Type,
                 Description = this.Description,

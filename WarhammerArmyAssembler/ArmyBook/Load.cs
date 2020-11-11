@@ -272,6 +272,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newWeapon.Points = DoubleParse(xmlNode["Points"]);
             newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);
+            newWeapon.VirtueOriginalPoints = newWeapon.Points;
 
             newWeapon.AddToMovement = IntParse(xmlNode["AddToMovement"]);
             newWeapon.AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]);
