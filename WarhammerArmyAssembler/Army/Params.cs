@@ -194,6 +194,18 @@ namespace WarhammerArmyAssembler.Army
             return number;
         }
 
+        public static int GetVirtueCount(string name)
+        {
+            int count = 0;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+                foreach (Option option in entry.Value.Options)
+                    if (option.Name == name)
+                        count += 1;
+
+            return count;
+        }
+
         public static string MagicPowersName()
         {
             return (String.IsNullOrEmpty(Army.Data.MagicPowers) ? "MAGIC POWERS" : Army.Data.MagicPowers.ToUpper());

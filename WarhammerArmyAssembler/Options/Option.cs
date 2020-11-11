@@ -24,6 +24,7 @@ namespace WarhammerArmyAssembler
         public string OnlyForGroup { get; set; }
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
+        public bool Virtue { get; set; }
         public Countable Countable { get; set; }
         public int Runic { get; set; }
         public bool MasterRunic { get; set; }
@@ -172,6 +173,7 @@ namespace WarhammerArmyAssembler
                 SpecialRuleDescription = this.SpecialRuleDescription,
                 Realised = this.Realised,
                 Multiple = this.Multiple,
+                Virtue = this.Virtue,
                 OnlyOneInArmy = this.OnlyOneInArmy,
                 OnlyOneForSuchUnits = this.OnlyOneForSuchUnits,
                 OnlyFor = this.OnlyFor,
@@ -389,6 +391,9 @@ namespace WarhammerArmyAssembler
                     if (addOption && (option.Name == this.Name))
                         return false;
             }
+
+            if (Virtue && unit.IsVirtueAlready(this.Name))
+                return false;
 
             if (unit.IsAnotherOptionIsIncompatible(this))
                 return false;

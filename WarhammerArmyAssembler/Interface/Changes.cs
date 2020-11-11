@@ -97,6 +97,14 @@ namespace WarhammerArmyAssembler.Interface
                 }
             }
 
+            if (ArmyBook.Data.Artefact[id].Virtue)
+            {
+                int virtueCount = Army.Params.GetVirtueCount(ArmyBook.Data.Artefact[id].Name);
+
+                if (virtueCount > 0)
+                    ArmyBook.Data.Artefact[id].Points *= (virtueCount + 1);
+            }
+
             if (!Interface.Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))
                 Error("Not enough points add an item");
             else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID], pointsPenalty: prevRunicPointsPenalty))
@@ -112,7 +120,8 @@ namespace WarhammerArmyAssembler.Interface
                 Interface.Reload.ReloadArmyData();
                 Interface.UnitDetails.UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
 
-                bool multiple = ArmyBook.Data.Artefact[id].Multiple || (ArmyBook.Data.Artefact[id].Runic > 0);
+                bool multiple = ArmyBook.Data.Artefact[id].Multiple || ArmyBook.Data.Artefact[id].Virtue
+                    || (ArmyBook.Data.Artefact[id].Runic > 0);
 
                 if (!multiple && (ArmyBook.Data.Artefact[id].Type != Option.OptionType.Powers))
                     Interface.Mod.SetArtefactAlreadyUsed(id, true);

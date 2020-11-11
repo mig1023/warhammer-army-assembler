@@ -1291,5 +1291,14 @@ namespace WarhammerArmyAssembler
         {
             return (this.Terror || this.Fear || this.Undead);
         }
+
+        public bool IsVirtueAlready(string name)
+        {
+            foreach (Option option in Options)
+                if (option.Name == name)
+                    return true;
+
+            return false;
+        }
     }
 }

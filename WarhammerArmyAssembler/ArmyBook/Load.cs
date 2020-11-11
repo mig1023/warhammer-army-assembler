@@ -211,6 +211,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]);
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
+            newWeapon.Virtue = BoolParse(xmlNode["Virtue"]);
 
             newWeapon.Countable = CountableParse(xmlNode);
 
