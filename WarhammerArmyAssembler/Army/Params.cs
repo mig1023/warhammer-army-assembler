@@ -202,8 +202,11 @@ namespace WarhammerArmyAssembler.Army
             foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
                 if (entry.Value.Type == type)
                     units.Add(entry.Value.Name);
-                
-            return String.Join(", ", units);
+
+            if (units.Count == 0)
+                return "empty yet";
+            else          
+                return String.Join(", ", units);
         }
 
         public static double GetVirtuePoints(int id, bool nextPricePreview = false)

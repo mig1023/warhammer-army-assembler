@@ -372,65 +372,22 @@ namespace WarhammerArmyAssembler
 
         private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Dictionary<Unit.UnitType, double> units = Army.Checks.UnitsPointsPercent();
-            Dictionary<Unit.UnitType, double> unitPercents = Army.Checks.UnitsMaxPointsPercent();
-
-            double armyCurrentPoint = Army.Params.GetArmyPoints();
-            double availablePoints = (Army.Params.GetArmyMaxPoints() - armyCurrentPoint);
-
-            string pointsMsg = String.Format(
-                "All points:\t\t{0} pts\n\nAlready used:\t\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%\n\n\n\n",
-                Army.Params.GetArmyMaxPoints(),
-                armyCurrentPoint, Interface.Other.CalcPercent(armyCurrentPoint, Army.Params.GetArmyMaxPoints()),
-                availablePoints, Interface.Other.CalcPercent(availablePoints, Army.Params.GetArmyMaxPoints())
-            );
-
-            foreach(KeyValuePair<Unit.UnitType, double> entry in unitPercents)
-                pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t( {3} {4} pts / {5}% )\n\n",
-                    entry.Key,
-                    units[entry.Key],
-                    Interface.Other.CalcPercent(units[entry.Key], Army.Data.MaxPoints),
-                    (entry.Key == Unit.UnitType.Core ? "min" : "max"),
-                    (int)(Army.Data.MaxPoints * entry.Value),
-                    entry.Value * 100
-                );
-
-            MessageBox.Show(pointsMsg);
+            MessageBox.Show(Interface.Info.armyPoints());
         }
 
         private void armyUnits_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            string unitsMsg = String.Format(
-                "Core unit:\n{0}\n\nSpecial units:\n{1}\n\nRare units:\n{2}",
-                Army.Params.GetUnitsListByType(Unit.UnitType.Core),
-                Army.Params.GetUnitsListByType(Unit.UnitType.Special),
-                Army.Params.GetUnitsListByType(Unit.UnitType.Rare)
-            );
-
-            MessageBox.Show(unitsMsg);
+            MessageBox.Show(Interface.Info.armyUnits());
         }
 
         private void armyHeroes_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            string heroMsg = String.Format(
-                "Lords:\n{0}\n\nHearoes:\n{1}",
-                Army.Params.GetUnitsListByType(Unit.UnitType.Lord),
-                Army.Params.GetUnitsListByType(Unit.UnitType.Hero)
-            );
-
-            MessageBox.Show(heroMsg);
+            MessageBox.Show(Interface.Info.armyHeroes());
         }
 
         private void armyModels_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            string baseMsg = String.Format(
-                "Normal base:\t{0}\n\nCavalry base:\t{1}\n\nLarge base:\t{2}",
-                Army.Params.GetUnitsNumberByBase(Army.Params.BasesTypes.normal),
-                Army.Params.GetUnitsNumberByBase(Army.Params.BasesTypes.cavalry),
-                Army.Params.GetUnitsNumberByBase(Army.Params.BasesTypes.large)
-            );
-
-            MessageBox.Show(baseMsg);
+            MessageBox.Show(Interface.Info.armyModels());
         }
 
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e)
