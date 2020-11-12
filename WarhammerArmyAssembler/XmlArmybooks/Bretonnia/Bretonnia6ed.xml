@@ -585,6 +585,57 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Fay Enchantress</Name>
+			<Points>545</Points>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<PersonifiedHero/>
+			<MountInit>Silvaron</MountInit>
+			<Description>Fay Enchantress</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+				<Fear/>
+				<Test Bet="Wound" Context="Round">Initiative</Test>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Girdle of Gold</Name>
+					<AddToWard>4</AddToWard>
+				</Armour>
+				<Arcane>
+					<Name>The Chalice of Potions</Name>
+					<SpecialRuleDescription>At any point during each Bretonnian Magic phase, the Fay Enchantress may peer into the Chalice and stir up magical power to use against her foes: roll a D6 each time the Chalice is used, the number refers to which spell is automatically cast from the Lore of Heavens as a Bound Spell (at the Power Level equal to the minimum casting level for the spell)</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>The Toad Familiar</Name>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+				</Arcane>
+				<Special>
+					<SpecialRuleDescription>One model in the Bretonnian army may be given the Favour of the Fay, this model may add +1 on all rolls to hit in close combat; however, if the model loses the Blessing of the Lady, then both the Favoured model and the Fay Enchantress take a wound that cannot be saved by Armour or Ward saves</SpecialRuleDescription>
+					<SpecialRuleDescription>Bretonnian army does not need to pray at the start of the game to gain the Blessing of the Lady</SpecialRuleDescription>
+					<SpecialRuleDescription>Ward save gained from the Blessing of the Lady is increased to 5+ against any attack</SpecialRuleDescription>
+					<SpecialRuleDescription>The Fay Enchantress may be accompanied by 2-8 Grail Guardians, the Fay Enchantress can never choose to leave this unit</SpecialRuleDescription>
+					<SpecialRuleDescription>Against Skaven, Ores and Goblins and all Beasts of Chaos she causes Terror</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance (3)</SpecialRuleDescription>
+					<SpecialRuleDescription>May use any of the eight lores</SpecialRuleDescription>
+					<SpecialRuleDescription>+2 to cast Lore of Life spells</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Bretonnian Lord</Name>
 			<Points>110</Points>
 			<MinSize>1</MinSize>
@@ -964,6 +1015,28 @@
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
 			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Silvaron</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Flail/>
+				<Fear/>
+			</AdditionalParam>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
