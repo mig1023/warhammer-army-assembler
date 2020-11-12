@@ -541,6 +541,50 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Green Knight</Name>
+			<Points>275</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>The Shadow Steed</MountInit>
+			<Description>The Green Knight, the champion of the Lady of the Lake</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Dolorous Blade</Name>
+					<AddToStrength>2</AddToStrength>
+					<SpecialRuleDescription>The Dolorous Blade may be used in one of two ways. Either the Green Knight can use the Blade to gain +D6 Attacks, or it can be used to add +2 to his Strength. The Green Knight may change which method he is using to attack with in each Close Combat phase if he wishes to.</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>He suffers no movement penalties for moving over or through any kind of terrain; He never suffers any movement penalties, even from such things as magical effects</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Bretonnian Lord</Name>
 			<Points>110</Points>
 			<MinSize>1</MinSize>
@@ -900,6 +944,23 @@
 				<Toughness>3</Toughness>
 				<Wounds>1</Wounds>
 				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>The Shadow Steed</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
 			</MainParam>
