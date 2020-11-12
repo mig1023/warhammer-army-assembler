@@ -398,6 +398,28 @@ namespace WarhammerArmyAssembler
             MessageBox.Show(pointsMsg);
         }
 
+        private void armyUnits_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            string unitsMsg = String.Format(
+                "Core unit:\n{0}\n\nSpecial units:\n{1}\n\nRare units:\n{2}",
+                Army.Params.GetUnitsListByType(Unit.UnitType.Core),
+                Army.Params.GetUnitsListByType(Unit.UnitType.Special),
+                Army.Params.GetUnitsListByType(Unit.UnitType.Rare)
+            );
+
+            MessageBox.Show(unitsMsg);
+        }
+
+        private void armyHeroes_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            string heroMsg = String.Format(
+                "Lords:\n{0}\n\nHearoes:\n{1}",
+                Army.Params.GetUnitsListByType(Unit.UnitType.Lord),
+                Army.Params.GetUnitsListByType(Unit.UnitType.Hero)
+            );
+
+            MessageBox.Show(heroMsg);
+        }
 
         private void armyModels_MouseDown(object sender, MouseButtonEventArgs e)
         {

@@ -266,15 +266,15 @@
             <Grid x:Name="mainGrid">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="0"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="25"></ColumnDefinition>
-                    <ColumnDefinition Width="250"></ColumnDefinition>
-                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="auto"/>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
@@ -306,13 +306,13 @@
 
                 <Grid x:Name="MenuAndArmyListGrid" Grid.Row="0" Grid.Column="1" Grid.RowSpan="5">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="31"></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="31"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5"></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
                     <Canvas x:Name="armyMainLabelPlace" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="White" MouseLeftButtonDown="dragWindow_MouseLeftButtonDown"  PreviewMouseDown="dragWindowBottom_MouseDown">
@@ -517,22 +517,61 @@
 
                 <Grid Grid.Row="4" Grid.Column="3" VerticalAlignment="Top" HorizontalAlignment="Stretch" ShowGridLines="False" Width="Auto" Background="White">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="57*"></ColumnDefinition>
-                        <ColumnDefinition Width="16*"></ColumnDefinition>
-                        <ColumnDefinition Width="67*"/>
-                        <ColumnDefinition Width="57*"></ColumnDefinition>
-                        <ColumnDefinition Width="52*"></ColumnDefinition>
-                        <ColumnDefinition Width="35*"></ColumnDefinition>
-                        <ColumnDefinition Width="48*"></ColumnDefinition>
-                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="57*"/>
+                        <ColumnDefinition Width="57*"/>
+                        <ColumnDefinition Width="57*"/>
+                        <ColumnDefinition Width="52*"/>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="48*"/>
+                        <ColumnDefinition Width="70"/>
                     </Grid.ColumnDefinitions>
 
-                    <Label x:Name="armyHeroes" Grid.Row="0" Grid.Column="0" Content="" Height="30" Padding="7 7 0 0" Width="Auto" FontSize="12"/>
-                    <Label x:Name="armyUnits" Grid.Row="0" Grid.Column="1" Content="" Height="30" Padding="0 7 0 0" Width="Auto" FontSize="12" Grid.ColumnSpan="2"/>
-                    <Label Grid.Row="0" Grid.Column="3" Height="30" Width="Auto" FontSize="12" Padding="0 7 0 0" MouseDown="armyPoints_MouseDown">
+                    <Label Grid.Row="0" Grid.Column="0" Height="30" Width="Auto" FontSize="12" Padding="10 7 0 0" MouseDown="armyHeroes_MouseDown">
+                        <TextBlock x:Name="armyHeroes">
+                            <TextBlock.TextDecorations>
+                                <TextDecorationCollection>
+                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
+                                        <TextDecoration.Pen>
+                                            <Pen Thickness="1">
+                                                <Pen.Brush>
+                                                    <SolidColorBrush Color="Gray"/>
+                                                </Pen.Brush>
+                                                <Pen.DashStyle>
+                                                    <DashStyle Dashes="4,4"/>
+                                                </Pen.DashStyle>
+                                            </Pen>
+                                        </TextDecoration.Pen>
+                                    </TextDecoration>
+                                </TextDecorationCollection>
+                            </TextBlock.TextDecorations>
+                        </TextBlock>
+                    </Label>
+
+                    <Label Grid.Row="0" Grid.Column="1" Height="30" Width="Auto" FontSize="12" Padding="0 7 0 0" MouseDown="armyUnits_MouseDown">
+                        <TextBlock x:Name="armyUnits">
+                            <TextBlock.TextDecorations>
+                                <TextDecorationCollection>
+                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
+                                        <TextDecoration.Pen>
+                                            <Pen Thickness="1">
+                                                <Pen.Brush>
+                                                    <SolidColorBrush Color="Gray"/>
+                                                </Pen.Brush>
+                                                <Pen.DashStyle>
+                                                    <DashStyle Dashes="4,4"/>
+                                                </Pen.DashStyle>
+                                            </Pen>
+                                        </TextDecoration.Pen>
+                                    </TextDecoration>
+                                </TextDecorationCollection>
+                            </TextBlock.TextDecorations>
+                        </TextBlock>
+                    </Label>
+
+                    <Label Grid.Row="0" Grid.Column="2" Height="30" Width="Auto" FontSize="12" Padding="0 7 0 0" MouseDown="armyPoints_MouseDown">
                         <TextBlock x:Name="armyPoints">
                             <TextBlock.TextDecorations>
                                 <TextDecorationCollection>
@@ -552,7 +591,7 @@
                             </TextBlock.TextDecorations>
                         </TextBlock>
                     </Label>
-                    <Label Grid.Row="0" Grid.Column="4" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12" MouseDown="armyModels_MouseDown">
+                    <Label Grid.Row="0" Grid.Column="3" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12" MouseDown="armyModels_MouseDown">
                         <TextBlock x:Name="armySize">
                             <TextBlock.TextDecorations>
                                 <TextDecorationCollection>
@@ -572,9 +611,9 @@
                             </TextBlock.TextDecorations>
                         </TextBlock>
                     </Label>
-                    <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="5" Content="" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12"/>
-                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="6" Content="" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12"/>
-                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="7" HorizontalContentAlignment="Center" Padding="0 7 0 0" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
+                    <Label x:Name="armyCasting" Grid.Row="0" Grid.Column="4" Content="" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12"/>
+                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12"/>
+                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" HorizontalContentAlignment="Center" Padding="0 7 0 0" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
                 </Grid>
             </Grid>
 

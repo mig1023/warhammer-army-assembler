@@ -7,6 +7,7 @@ namespace WarhammerArmyAssembler.Army
     {
         public enum BasesTypes { normal, large, cavalry };
 
+
         public static double GetArmyPoints()
         {
             double points = 0;
@@ -192,6 +193,17 @@ namespace WarhammerArmyAssembler.Army
             }
 
             return number;
+        }
+
+        public static string GetUnitsListByType(Unit.UnitType type)
+        {
+            List<string> units = new List<string>();
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+                if (entry.Value.Type == type)
+                    units.Add(entry.Value.Name);
+                
+            return String.Join(", ", units);
         }
 
         public static double GetVirtuePoints(int id, bool nextPricePreview = false)

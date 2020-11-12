@@ -101,13 +101,13 @@ namespace WarhammerArmyAssembler.Interface
                     Interface.Changes.ArmyInInterface.Add(unit);
 
             Interface.Changes.main.ArmyGrid.ItemsSource = Interface.Changes.ArmyInInterface;
-            Interface.Changes.main.armyHeroes.Content = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
+            Interface.Changes.main.armyHeroes.Text = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
                 Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord),
                 Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero),
                 Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Lord),
                 Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero)
             );
-            Interface.Changes.main.armyUnits.Content = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
+            Interface.Changes.main.armyUnits.Text = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
                 Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core),
                 Army.Params.GetArmyUnitsNumber(Unit.UnitType.Special),
                 Army.Params.GetArmyUnitsNumber(Unit.UnitType.Rare),
