@@ -636,6 +636,60 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>King Louen</Name>
+			<Points>728</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>Beaquis</MountInit>
+			<Description>King Louen Leoncoeur</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+				<ImmuneToPsychology/>
+				<Reroll>ToHit;ToWound</Reroll>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Sword of Couronne</Name>
+					<AddToStrength>1</AddToStrength>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Lance</Name>
+					<Lance/>
+				</HandWeapon>
+				<Armour>
+					<Name>The Crown of Bretonnia</Name>
+					<SpecialRuleDescription>Friendly troops may use Louen Leoncoeur's Leadership characteristic when he is within 18" instead of the usual 12"; Any unit with line of sight to him is immune to panic</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>The Lion's Shield</Name>
+					<AddToArmour>6</AddToArmour>
+					<SpecialRuleDescription>Louen has a Magic Resistance value equal to the total number of dice used in the casting of any spell that affects him</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>If Louen is removed as a casualty, all Bretonnian units must take a Panic test; Such is the determination to reclaim their fallen ruler that all Bretonnian troops count as stubborn for the rest of the battle</SpecialRuleDescription>
+					<SpecialRuleDescription>The 0-1 restriction on Grail Knights is lifted, Men-at-arms and Bowmen become Special choices</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Bretonnian Lord</Name>
 			<Points>110</Points>
 			<MinSize>1</MinSize>
@@ -1056,6 +1110,30 @@
 			</MainParam>
 			<Special>
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+			</Special>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Beaquis</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+			</AdditionalParam>
+			<Special>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<SpecialRuleDescription>Large target</SpecialRuleDescription>
 			</Special>
 		</Mount>
 		<Mount>
