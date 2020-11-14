@@ -43,7 +43,13 @@ namespace WarhammerArmyAssembler.Export
 
         static public string UnitSizeIfNeed(Unit unit)
         {
-            return (unit.IsHeroOrHisMount() ? String.Empty : unit.Size.ToString() + ' ');
+            string unitSize = (unit.IsHeroOrHisMount() ? String.Empty : unit.Size.ToString());
+
+            foreach (Option option in unit.Options)
+                if ((option.Countable != null) && (option.Countable.ExportToUnitSize) && (option.Countable.Value > 0))
+                    unitSize += String.Format("+{0}", option.Countable.Value.ToString());
+
+            return (unit.IsHeroOrHisMount() ? String.Empty : unitSize + ' ');
         }
 
         static public string UnitPointsLine(Unit unit)
