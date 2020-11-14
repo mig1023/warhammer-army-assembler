@@ -267,5 +267,36 @@
 				<NoCoreSlot/>
 			</AdditionalParam>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Chaos Trolls</Name>
+			<Points>55</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stupidity/>
+				<Fear/>
+				<Regeneration/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Claws, fangs, club and potentially lethal halitosis!</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Troll Vomit</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
