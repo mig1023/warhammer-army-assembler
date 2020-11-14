@@ -11,7 +11,8 @@ namespace WarhammerArmyAssembler.Export
     {
         const int MARGIN_TOP = 30;
         const int MARGIN_LEFT = 45;
-        
+
+        static float unitSizeWidth = 20;
         static Document document;
         static PdfContentByte cb;
 
@@ -22,6 +23,8 @@ namespace WarhammerArmyAssembler.Export
             string fileName = Export.Other.GetFileName("pdf");
 
             currentY = MARGIN_TOP;
+
+            unitSizeWidth = CountMaxUnitSizeWidth();
 
             document = new Document();
             FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
@@ -78,7 +81,25 @@ namespace WarhammerArmyAssembler.Export
             return String.Empty;
         }
 
-        static public void AddText(string text = "", float? x = null, float? y = null, int aligment = 0,
+        static private float CountMaxUnitSizeWidth()
+        {
+            int maxLength = 0;
+
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            {
+                int unitSizeLen = Export.Other.UnitSizeIfNeed(entry.Value).Length;
+
+                if (maxLength < unitSizeLen)
+                    maxLength = unitSizeLen;
+            }
+
+            if (maxLength <= 3)
+                return 20;
+            else
+                return 20 + (maxLength * 4);
+        }
+
+        static private void AddText(string text = "", float? x = null, float? y = null, int aligment = 0,
             float fontSize = 14, float lineHeight = 13, bool leftColumn = false, bool newLine = true)
         {
             BaseFont bf = BaseFont.CreateFont("FONT.TTF", Encoding.GetEncoding(1251).BodyName, BaseFont.NOT_EMBEDDED);
@@ -88,7 +109,7 @@ namespace WarhammerArmyAssembler.Export
             float xPos = x ?? MARGIN_LEFT;
 
             cb.BeginText();
-            cb.ShowTextAligned(aligment, text, xPos + (leftColumn ? 0 : 20), (document.PageSize.Height - yPos), 0);
+            cb.ShowTextAligned(aligment, text, xPos + (leftColumn ? 0 : unitSizeWidth), (document.PageSize.Height - yPos), 0);
             cb.EndText();
 
             if (newLine)
