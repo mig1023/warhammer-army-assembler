@@ -381,5 +381,73 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Centigor</Name>
+			<Points>17</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Drunken</SpecialRuleDescription>
+					<SpecialRuleDescription>Move Through Woods</SpecialRuleDescription>
+					<SpecialRuleDescription>Trample</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Throwing axes</Name>
+					<Type>Option</Type>
+					<PerModel/>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<PerModel/>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>14</Points>
+				</Option>
+				<Option>
+					<Name>Gorehoof</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>14</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
