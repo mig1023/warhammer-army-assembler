@@ -583,5 +583,64 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Dragon Ogres</Name>
+			<Points>70</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Immune to all lightning-based attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>If Dracon Ogres are targeted by a lightning-based attack, they become Frenzy</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
