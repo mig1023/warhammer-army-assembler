@@ -452,5 +452,136 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Minotaurs</Name>
+			<Points>40</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Can never make Overrun</SpecialRuleDescription>
+					<SpecialRuleDescription>Pursue 3D6", rather than 2D6"</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Bloodkine</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Mark of Chaos Undivided</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>May re-roll failed Psychology tests</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Mark of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToCast>1</AddToCast>
+				</Option>
+				<Option>
+					<Name>Mark of Khorne</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Frenzy/>
+					<AddToDispell>1</AddToDispell>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Fear/>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology/>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
