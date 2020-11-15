@@ -778,7 +778,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>A tree-trunk club or other impressively large blunt implement</Name>
+					<Name>Big club, rock or dead animal</Name>
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Ignore Little 'Un Panic</SpecialRuleDescription>
@@ -786,6 +786,82 @@
 					<SpecialRuleDescription>Giant Special Attacks</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Mutant Monstrosity</Name>
+					<Type>Option</Type>
+					<AddToArmour>5</AddToArmour>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Spawn of Chaos</Name>
+			<Points>60</Points>
+			<MinSize>1</MinSize>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>12</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>16</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<Unbreakable/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Beast of Nurgle</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Fiend of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Bloodbeast of Khorne</OnlyIfNot>
+						<OnlyIfNot>Firewyrm of Tzeentch</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PoisonAttack/>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Fiend of Slaanesh</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Beast of Nurgle</OnlyIfNot>
+						<OnlyIfNot>Bloodbeast of Khorne</OnlyIfNot>
+						<OnlyIfNot>Firewyrm of Tzeentch</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Movement 3D6</SpecialRuleDescription>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Bloodbeast of Khorne</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Beast of Nurgle</OnlyIfNot>
+						<OnlyIfNot>Fiend of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Firewyrm of Tzeentch</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToStrength>1</AddToStrength>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Firewyrm of Tzeentch</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Beast of Nurgle</OnlyIfNot>
+						<OnlyIfNot>Fiend of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Bloodbeast of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Strength 3 breath weapon</SpecialRuleDescription>
+					<Points>15</Points>
+				</Option>
+			</Options>
 		</Unit>
 	</Units>
 </ArmyBook>
