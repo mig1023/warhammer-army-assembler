@@ -82,6 +82,25 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic Weapons">	
+			<Artefact>
+				<Name>Axes of Khorgor</Name>
+				<Type>Weapon</Type>
+				<Points>65</Points>
+				<OnlyFor>Infantry</OnlyFor>
+				<AddToAttacks>1</AddToAttacks>
+				<Reroll>ToHit</Reroll>
+				<Description>This pair of axes requires two hands to use. The bearer gains +1 Attack and may re-roll any missed rolls to hit in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Black Maul</Name>
+				<Type>Weapon</Type>
+				<Points>60</Points>
+				<AddToStrength>2</AddToStrength>
+				<Frenzy>
+				<Description>Adds +2 to the bearer's Strength, and the bearer is also subject to frenzy.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		
