@@ -205,6 +205,18 @@
 				<Description>The character and any unit led by him adds +D3" to their charge move. Roll after declaring charges - if the charge is failed, the models move their normal failed charge distance.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Arcane items">
+			<Artefact>
+				<Name>The Plague Chalice</Name>
+				<Type>Arcane</Type>
+				<Points>30</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>May drink from the Chalice at the start of his Magic phase, suffers an immediate Strength 4 hit that ignores Armour and Ward saves, for the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast</SpecialRuleDescription>
+				<Description>Mark of Nurgle only. The Shaman may drink from the Chalice at the start of his Magic phase. He suffers an immediate Strength 4 hit that ignores Armour and Ward saves (Regeneration may be taken as normal). For the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		
