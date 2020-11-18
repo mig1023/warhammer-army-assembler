@@ -391,8 +391,8 @@
                         <DataGridTemplateColumn Width="40">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Label Padding="0" MouseDown="Test_Click" HorizontalContentAlignment="Center" Foreground="{Binding ArmyColor}">
-                                        <TextBlock Text="test" TextDecorations="Underline"/>
+                                    <Label Padding="0" MouseDown="Test_Click" HorizontalContentAlignment="Center">
+                                        <TextBlock Text=" test " Foreground="White" Background="{Binding ArmyColor}"/>
                                     </Label>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
