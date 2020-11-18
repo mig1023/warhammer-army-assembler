@@ -484,7 +484,6 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Fear/>
 					<AddToWounds>1</AddToWounds>
 				</Option>
 				<Option>
@@ -598,6 +597,128 @@
 					<SpecialRuleDescription>Raiders</SpecialRuleDescription>
 					<SpecialRuleDescription>Ambush</SpecialRuleDescription>
 				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Wargor</Name>
+			<Points>60</Points>
+			<MinSize>1</MinSize>
+			<Description>Wargor</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Mark of Khorne</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Frenzy/>
+					<AddToDispell>1</AddToDispell>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Fear/>
+					<AddToWounds>1</AddToWounds>
+				</Option>
+				<Option>
+					<Name>Mark of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>70</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWizard>2</AddToWizard>
+					<AddToCast>2</AddToCast>
+					<AddToDispell>1</AddToDispell>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<SpecialRuleDescription>Raiders</SpecialRuleDescription>
+				<SpecialRuleDescription>Ambush</SpecialRuleDescription>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
