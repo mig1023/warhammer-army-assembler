@@ -390,6 +390,9 @@
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
 				<SpecialRuleDescription>Raiders</SpecialRuleDescription>
 				<SpecialRuleDescription>Ambush</SpecialRuleDescription>
 			</SpecialRulesAndAmmunition>
@@ -510,8 +513,91 @@
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
 				<SpecialRuleDescription>Can never make Overrun</SpecialRuleDescription>
 				<SpecialRuleDescription>Pursue 3D6", rather than 2D6"</SpecialRuleDescription>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Great Bray-shaman</Name>
+			<Points>180</Points>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<Description>Great Bray-shaman</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Braystaff</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Fear/>
+					<AddToWounds>1</AddToWounds>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Can use Lore of Beasts, Shadow or Death, or the Lores of Slaanesh or Nurgle if given the appropriate Mark</SpecialRuleDescription>
+					<SpecialRuleDescription>Raiders</SpecialRuleDescription>
+					<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 	</Heroes>
