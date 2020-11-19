@@ -277,6 +277,45 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Khazrak</Name>
+			<Points>292</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Khazrak the One-eye</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Scourge</Name>
+					<AddToAttacks>1</AddToAttacks>
+					<SpecialRuleDescription>Khazrak makes one attack with Scourge in each Close Combat phase, in addition to his four normal hand weapon attacks, if you successfully roll to wound with Scourge, Khazrak may immediately roll to wound again, and so on until he fails to make the required score</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Dark Mail</Name>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<SpecialRuleDescription>If he or the unit he is with is the target of a spell that is successfully cast, Khazrak gains +1 Strength (to a maximum of 10) for the remainder of the battle</SpecialRuleDescription>
+					<AddToArmour>2</AddToArmour>
+				</Armour>
+				<SpecialRuleDescription>Raiders</SpecialRuleDescription>
+				<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+				<SpecialRuleDescription>Any Warhounds in Khazrak's army have a Leadership characteristic of 6, rather than the usual 5</SpecialRuleDescription>
+				<SpecialRuleDescription>In Khazrak's army, all units with Ambush may use their ability, rather than just half</SpecialRuleDescription>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Beastlord</Name>
 			<Points>95</Points>
 			<MinSize>1</MinSize>
