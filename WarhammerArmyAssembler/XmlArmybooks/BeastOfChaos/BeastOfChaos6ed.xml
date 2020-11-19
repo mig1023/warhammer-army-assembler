@@ -319,6 +319,52 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Gorthor</Name>
+			<Points>463</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>Tuskgor Chariot</MountInit>
+			<Description>Gorthor the Beastlord</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<MustBeGeneral/>
+				<AddToCast>1</AddToCast>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Impaler</Name>
+					<SpecialRuleDescription>If any hit rolls are doubles, triples or quadruples, each of those attacks will wound automatically</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Skull of Mugrar</Name>
+					<NoMultiWounds/>
+				</Armour>
+				<Armour>
+					<Name>Cloak of the Beastlord</Name>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<SpecialRuleDescription>This talisman gives Gorthor a Ward save equal to the Strength of the attack that hit him (a Strength 3 hit would grant a 3+ Ward save, a Strength 5 hit would grant a 5+ Ward save)</SpecialRuleDescription>
+				</Armour>
+				<SpecialRuleDescription>Raiders</SpecialRuleDescription>
+				<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+				<SpecialRuleDescription>Counts as having the Mark of all four Chaos gods lor the purposes of army composition</SpecialRuleDescription>
+				<SpecialRuleDescription>At the start of each Magic phase roll a D6 on the Lore of Death magic table. Gorthor may use the spell rolled during this Chaos Magic phase as a Bound spell, with a Power Level equal to the casting value of the spell</SpecialRuleDescription>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Beastlord</Name>
 			<Points>95</Points>
 			<MinSize>1</MinSize>
