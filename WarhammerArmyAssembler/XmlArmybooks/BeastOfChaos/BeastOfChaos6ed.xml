@@ -293,6 +293,9 @@
 				<Attacks>4</Attacks>
 				<Leadership>8</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -426,6 +429,12 @@
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<ImmuneToPsychology/>
+				</Option>
+				<Option>
+					<Name>Tuskgor Chariot</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -625,6 +634,12 @@
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<ImmuneToPsychology/>
+				</Option>
+				<Option>
+					<Name>Tuskgor Chariot</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<Mount/>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -861,6 +876,37 @@
 			<AdditionalParam>
 				<Flail/>
 			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Tuskgor Chariot</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Tuskgor</MountInit>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Special</SlotOf>
+				<ImpactHit>D6+1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRuleDescription>Tuskgor Charge</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Mount>
 	</Mounts>
 	<Units>
