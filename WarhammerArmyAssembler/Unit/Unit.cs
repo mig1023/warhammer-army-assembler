@@ -30,7 +30,7 @@ namespace WarhammerArmyAssembler
         public int MaxSize { get; set; }
         public int ModelsInPack { get; set; }
 
-        public int Points { get; set; }
+        public double Points { get; set; }
 
         public string PointsView { get; set; }
 

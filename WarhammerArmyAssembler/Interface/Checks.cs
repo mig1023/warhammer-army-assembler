@@ -18,30 +18,30 @@ namespace WarhammerArmyAssembler.Interface
             return points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
         }
 
-        public static bool EnoughPointsForAddArtefact(int id)
+        public static bool EnoughPointsForAddArtefact(int id, double pointsPenalty)
         {
-            return ArmyBook.Data.Artefact[id].Points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
+            return (ArmyBook.Data.Artefact[id].Points - pointsPenalty) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
         }
 
-        public static bool EnoughUnitPointsForAddArtefact(int artefactID, Unit unit, bool addOption = true)
+        public static bool EnoughUnitPointsForAddArtefact(int artefactID, Unit unit, bool addOption = true, double pointsPenalty = 0)
         {
             if (!ArmyBook.Data.Artefact.ContainsKey(artefactID))
                 return true;
 
             bool isPowers = ArmyBook.Data.Artefact[artefactID].IsPowers();
 
-            double alreadyUsedPonts;
+            double alreadyUsedPoints;
 
             if (!addOption)
-                alreadyUsedPonts = 0;
+                alreadyUsedPoints = 0;
             else if (isPowers)
-                alreadyUsedPonts = unit.MagicPowersPointsAlreadyUsed();
+                alreadyUsedPoints = unit.MagicPowersPointsAlreadyUsed();
             else
-                alreadyUsedPonts = unit.MagicPointsAlreadyUsed();
+                alreadyUsedPoints = unit.MagicPointsAlreadyUsed();
 
             double magicPoints = (isPowers ? unit.GetUnitMagicPowersPoints() : unit.GetUnitMagicPoints());
 
-            bool enoughUnitPoints = ((ArmyBook.Data.Artefact[artefactID].Points + alreadyUsedPonts) <= magicPoints);
+            bool enoughUnitPoints = (((ArmyBook.Data.Artefact[artefactID].Points - pointsPenalty) + alreadyUsedPoints) <= magicPoints);
 
             if (!isPowers && (unit.MagicItemCount > 0))
                 enoughUnitPoints = (unit.MagicPointsAlreadyUsed() < unit.GetUnitMagicPoints());
@@ -53,8 +53,8 @@ namespace WarhammerArmyAssembler.Interface
 
         public static bool EnoughPointsForEditUnit(int id, int newSize)
         {
-            int newPrice = (newSize * Army.Data.Units[id].Points);
-            int currentPrice = (Army.Data.Units[id].Size * Army.Data.Units[id].Points);
+            double newPrice = newSize * Army.Data.Units[id].Points;
+            double currentPrice = Army.Data.Units[id].Size * Army.Data.Units[id].Points;
 
             return (newPrice - currentPrice) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
         }

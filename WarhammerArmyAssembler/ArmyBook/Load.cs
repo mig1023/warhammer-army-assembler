@@ -79,7 +79,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newUnit.Name = StringParse(xmlUnit["Name"]);
             newUnit.Type = UnitTypeParse(xmlUnit["Type"]);
-            newUnit.Points = IntParse(xmlUnit["Points"]);
+            newUnit.Points = DoubleParse(xmlUnit["Points"]);
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
             newUnit.MinSize = newUnit.Size;
             newUnit.MaxSize = IntParse(xmlUnit["MaxSize"]);
