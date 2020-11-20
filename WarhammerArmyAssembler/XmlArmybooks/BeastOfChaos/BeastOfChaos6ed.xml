@@ -365,6 +365,51 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Morghur</Name>
+			<Points>378</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Morghur, Master of skulls</Description>
+			<MainParam>
+				<Movement>12</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<Hate/>
+				<Unbreakable/>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Beast-Roar</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<AddToDispell>2</AddToDispell>
+					<SpecialRuleDescription>If a Wizard (friend or enemy) rolls a double when rolling on the Miscast table, then the unfortunate Wizard is instantly turned into a Chaos Spawn under the control of the Beastmen player</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Skull-Weave</Name>
+					<Terror/>
+					<SubOpponentToHit>1</SubOpponentToHit>
+				</Armour>				
+				<SpecialRuleDescription>An army that contains Morghur has no General</SpecialRuleDescription>
+				<SpecialRuleDescription>The enemy must take Fear tests to enter or move though a forest or wood - if this is failed, they stop at the edge of the forest</SpecialRuleDescription>
+				<SpecialRuleDescription>Morghur moves and will engage enemies in exactly the same fashion as Spawn of Chaos</SpecialRuleDescription>
+				<SpecialRuleDescription>In the Beastmen Shooting phase, any unit (including friends) within 8" of Morghur take a Leadership test: if failed, the unit suffers D6 Strength 4 hits with no Armour saves allowed, if one or more wounds are caused, then a Spawn of Chaos is created under the control of the Beastmen player, the Spawn has a starting number of Wounds equal to the number of Wounds that were caused</SpecialRuleDescription>
+				<SpecialRuleDescription>Any model, friend or foe, in base contact with Morghur at the start of any Close Combat phase suffers an immediate Strength 4 hit with no Armour save allowed</SpecialRuleDescription>
+				<SpecialRuleDescription>Any missile attack or spell targeted at Morghur will never effect him unless the shooting unit or spellcaster is within 12" of him</SpecialRuleDescription>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Beastlord</Name>
 			<Points>95</Points>
 			<MinSize>1</MinSize>
