@@ -311,10 +311,12 @@
 					<SpecialRuleDescription>If he or the unit he is with is the target of a spell that is successfully cast, Khazrak gains +1 Strength (to a maximum of 10) for the remainder of the battle</SpecialRuleDescription>
 					<AddToArmour>2</AddToArmour>
 				</Armour>
-				<SpecialRuleDescription>Raiders</SpecialRuleDescription>
-				<SpecialRuleDescription>Ambush</SpecialRuleDescription>
-				<SpecialRuleDescription>Any Warhounds in Khazrak's army have a Leadership characteristic of 6, rather than the usual 5</SpecialRuleDescription>
-				<SpecialRuleDescription>In Khazrak's army, all units with Ambush may use their ability, rather than just half</SpecialRuleDescription>
+				<Special>
+					<SpecialRuleDescription>Raiders</SpecialRuleDescription>
+					<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+					<SpecialRuleDescription>Any Warhounds in Khazrak's army have a Leadership characteristic of 6, rather than the usual 5</SpecialRuleDescription>
+					<SpecialRuleDescription>In Khazrak's army, all units with Ambush may use their ability, rather than just half</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -357,10 +359,12 @@
 					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
 					<SpecialRuleDescription>This talisman gives Gorthor a Ward save equal to the Strength of the attack that hit him (a Strength 3 hit would grant a 3+ Ward save, a Strength 5 hit would grant a 5+ Ward save)</SpecialRuleDescription>
 				</Armour>
-				<SpecialRuleDescription>Raiders</SpecialRuleDescription>
-				<SpecialRuleDescription>Ambush</SpecialRuleDescription>
-				<SpecialRuleDescription>Counts as having the Mark of all four Chaos gods lor the purposes of army composition</SpecialRuleDescription>
-				<SpecialRuleDescription>At the start of each Magic phase roll a D6 on the Lore of Death magic table. Gorthor may use the spell rolled during this Chaos Magic phase as a Bound spell, with a Power Level equal to the casting value of the spell</SpecialRuleDescription>
+				<Special>
+					<SpecialRuleDescription>Raiders</SpecialRuleDescription>
+					<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+					<SpecialRuleDescription>Counts as having the Mark of all four Chaos gods lor the purposes of army composition</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each Magic phase roll a D6 on the Lore of Death magic table. Gorthor may use the spell rolled during this Chaos Magic phase as a Bound spell, with a Power Level equal to the casting value of the spell</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -399,13 +403,15 @@
 					<Name>Skull-Weave</Name>
 					<Terror/>
 					<SubOpponentToHit>1</SubOpponentToHit>
-				</Armour>				
-				<SpecialRuleDescription>An army that contains Morghur has no General</SpecialRuleDescription>
-				<SpecialRuleDescription>The enemy must take Fear tests to enter or move though a forest or wood - if this is failed, they stop at the edge of the forest</SpecialRuleDescription>
-				<SpecialRuleDescription>Morghur moves and will engage enemies in exactly the same fashion as Spawn of Chaos</SpecialRuleDescription>
-				<SpecialRuleDescription>In the Beastmen Shooting phase, any unit (including friends) within 8" of Morghur take a Leadership test: if failed, the unit suffers D6 Strength 4 hits with no Armour saves allowed, if one or more wounds are caused, then a Spawn of Chaos is created under the control of the Beastmen player, the Spawn has a starting number of Wounds equal to the number of Wounds that were caused</SpecialRuleDescription>
-				<SpecialRuleDescription>Any model, friend or foe, in base contact with Morghur at the start of any Close Combat phase suffers an immediate Strength 4 hit with no Armour save allowed</SpecialRuleDescription>
-				<SpecialRuleDescription>Any missile attack or spell targeted at Morghur will never effect him unless the shooting unit or spellcaster is within 12" of him</SpecialRuleDescription>
+				</Armour>	
+				<Special>				
+					<SpecialRuleDescription>An army that contains Morghur has no General</SpecialRuleDescription>
+					<SpecialRuleDescription>The enemy must take Fear tests to enter or move though a forest or wood - if this is failed, they stop at the edge of the forest</SpecialRuleDescription>
+					<SpecialRuleDescription>Morghur moves and will engage enemies in exactly the same fashion as Spawn of Chaos</SpecialRuleDescription>
+					<SpecialRuleDescription>In the Beastmen Shooting phase, any unit (including friends) within 8" of Morghur take a Leadership test: if failed, the unit suffers D6 Strength 4 hits with no Armour saves allowed, if one or more wounds are caused, then a Spawn of Chaos is created under the control of the Beastmen player, the Spawn has a starting number of Wounds equal to the number of Wounds that were caused</SpecialRuleDescription>
+					<SpecialRuleDescription>Any model, friend or foe, in base contact with Morghur at the start of any Close Combat phase suffers an immediate Strength 4 hit with no Armour save allowed</SpecialRuleDescription>
+					<SpecialRuleDescription>Any missile attack or spell targeted at Morghur will never effect him unless the shooting unit or spellcaster is within 12" of him</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -532,8 +538,10 @@
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
-				<SpecialRuleDescription>Raiders</SpecialRuleDescription>
-				<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+				<Special>
+					<SpecialRuleDescription>Raiders</SpecialRuleDescription>
+					<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -654,8 +662,10 @@
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
-				<SpecialRuleDescription>Can never make Overrun</SpecialRuleDescription>
-				<SpecialRuleDescription>Pursue 3D6", rather than 2D6"</SpecialRuleDescription>
+				<Special>
+					<SpecialRuleDescription>Can never make Overrun</SpecialRuleDescription>
+					<SpecialRuleDescription>Pursue 3D6", rather than 2D6"</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -862,8 +872,10 @@
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
-				<SpecialRuleDescription>Raiders</SpecialRuleDescription>
-				<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+				<Special>
+					<SpecialRuleDescription>Raiders</SpecialRuleDescription>
+					<SpecialRuleDescription>Ambush</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
