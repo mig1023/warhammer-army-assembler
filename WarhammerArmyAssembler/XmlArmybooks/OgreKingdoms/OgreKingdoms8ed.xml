@@ -261,5 +261,120 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Maneaters</Name>
+			<Points>50</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+							<OnlyIfNot>Great weapon</OnlyIfNot>
+							<OnlyIfNot>Ogre pistol</OnlyIfNot>
+							<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+							<OnlyIfNot>Additional weapon</OnlyIfNot>
+							<OnlyIfNot>Ogre pistol</OnlyIfNot>
+							<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>11</Points>
+				</Option>
+				<Option>
+					<Name>Ogre pistol</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+							<OnlyIfNot>Additional weapon</OnlyIfNot>
+							<OnlyIfNot>Great weapon</OnlyIfNot>
+							<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Brace of Ogre pistol</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+							<OnlyIfNot>Additional weapon</OnlyIfNot>
+							<OnlyIfNot>Great weapon</OnlyIfNot>
+							<OnlyIfNot>Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<AddToArmour>5</AddToArmour>
+					<PerModel/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Captain</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+				<Option>
+					<Name>Look-out Gnoblar</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Standard bearer</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
