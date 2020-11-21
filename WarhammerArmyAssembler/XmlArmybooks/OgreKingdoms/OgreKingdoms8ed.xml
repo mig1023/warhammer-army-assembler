@@ -10,7 +10,7 @@
 		<SymbolImage>OgreKingdoms.png</SymbolImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Ogre Big Names">	
+		<ArtefactsGroup Name = "Ogre Big Names">
 			<Artefact>
 				<Name>Mawseeker</Name>
 				<Type>Weapon</Type>
@@ -77,6 +77,17 @@
 				<Points>15</Points>
 				<SpecialRuleDescription>Re-roll failed To Wound rolls from Impact Hits</SpecialRuleDescription>
 				<Description>Brawlerguts (but not their mounts) re-roll failed To Wound rolls from their Impact Hits.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Tools of Destruction">
+			<Artefact>
+				<Name>Thundermace</Name>
+				<Type>Weapon</Type>
+				<Points>85</Points>
+				<HitLast/>
+				<AddToStrength>2</AddToStrength>
+				<SpecialRuleDescription>Thundercrush Attack</SpecialRuleDescription>
+				<Description>Always Strikes Last. Requires Two Hands. In close combat, the wielder of the Thundermace has +2 Strength. In addition, the wielder may choose to exchange all of his Attacks in close combat to make a single 'Thundercrush Attack'. Roll To Hit against the highest Weapon Skill amongst the enemy models in base contact. If the Thundercrush Attack hits, place the small template anywhere so that it is touching the wielder's base. Any infantry, war beasts or swarm models that lie underneath the template (friend or foe!) suffer a single Strength 3 hit. The model under the template's central hole instead suffers a single Strength 9 hit with the Multiple Wounds (D3) special rule. A model with any other troop type beneath the template is too big to be crushed, and doesn't suffer any hits. The wielder of the Thundermace may still Stomp even if he uses the Thundercrush Attack.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
