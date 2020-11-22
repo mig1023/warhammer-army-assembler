@@ -15,7 +15,7 @@
 				<Name>Mawseeker</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
-				<AddToToughness>1</Toughness>
+				<AddToToughness>1</AddToToughness>
 				<Stupidity/>
 				<Description>A Tyrant with the Mawseeker name has +1 Toughness on his profile. He also suffers from the Stupidity special rule.</Description>
 			</Artefact>
@@ -150,6 +150,14 @@
 				<Points>60</Points>
 				<SpecialRuleDescription>When any spell targeting a unit is successfully cast, roll a D6: on 2+ the caster must choose a new target for the spell, if no other target is available, then the spell is wasted</SpecialRuleDescription>
 				<Description>When any spell targeting a unit with the Rune Maw is successfully cast, roll a D6. On a roll of 2+, the caster must choose a new target for the spell. If no other target is available (because no other target is in range or all eligible units have already been targeted, for example), then the spell is wasted but still counts as having been cast. Spells that do not specifically target the unit are not affected by the Rune Maw.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dragonhide Banner</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<Reroll>ToHit;ToWound</Reroll>
+				<SpecialRuleDescription>The bearer of the banner can use Strength 3 Breath Weapon: a unit hit by the icy blast has the Always Strikes Last special rule until the end of its next turn</SpecialRuleDescription>
+				<Description>Models in a unit with the Dragonhide Banner can re-roll all To Hit, To Wound and saving throw rolls of 1 on the turn they make a successful charge. In addition, the bearer of the banner can use it to unleash an icy blast. This is a Strength 3 Breath Weapon. A unit hit by the icy blast has the Always Strikes Last special rule until the end of its next turn.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
