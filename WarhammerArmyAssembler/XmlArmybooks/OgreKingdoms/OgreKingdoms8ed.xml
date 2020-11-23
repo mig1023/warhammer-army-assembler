@@ -431,9 +431,143 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Hunter</Name>
+			<Points>130</Points>
+			<Description>Hunter</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>1</ImpactHit>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Great throwing spear</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Harpoon launcher</OnlyIfNot>
+						<OnlyIfNot>Blood vulture</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Ironfists</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Harpoon launcher</OnlyIfNot>
+						<OnlyIfNot>Blood vulture</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Harpoon launcher</OnlyIfNot>
+						<OnlyIfNot>Blood vulture</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>11</Points>
+				</Option>
+				<Option>
+					<Name>Harpoon launcher</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Blood vulture</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Blood vulture</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Harpoon launcher</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Stonehorn</Name>
+					<Type>Option</Type>
+					<Points>250</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
-		
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Stonehorn</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Frenzy/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Beast Rider</SpecialRuleDescription>
+					<SpecialRuleDescription>Earth-shattering Charge</SpecialRuleDescription>
+					<SpecialRuleDescription>Hunting Beast</SpecialRuleDescription>
+					<SpecialRuleDescription>Stone Skeleton</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
