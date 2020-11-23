@@ -323,6 +323,114 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Bruiser</Name>
+			<Points>105</Points>
+			<Description>Bruiser</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>1</ImpactHit>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Ogre pistol</OnlyIfNot>
+						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Ironfists</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Ogre pistol</OnlyIfNot>
+						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Ogre pistol</OnlyIfNot>
+						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>11</Points>
+				</Option>
+				<Option>
+					<Name>Ogre pistol</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Brace of Ogre pistol</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		
