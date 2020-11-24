@@ -564,6 +564,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
+					<SpecialRuleDescription>Can use the Lore of the Great Maw, the Lore of Heavens, the Lore of Beasts, or the Lore of Death</SpecialRuleDescription>
 					<SpecialRuleDescription>Immune to Poison</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -603,6 +604,70 @@
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>9</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Firebelly</Name>
+			<Points>120</Points>
+			<Description>Firebelly</Description>
+			<Wizard>1</Wizard>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>1</ImpactHit>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Can use the Lore of Fire</SpecialRuleDescription>
+					<SpecialRuleDescription>4+ Ward save against any Attacks that have the Flaming Attacks special rule</SpecialRuleDescription>
+					<SpecialRuleDescription>Strength 4 Breath Weapon with the Flaming Attacks special rule</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<Points>9</Points>
 				</Option>
