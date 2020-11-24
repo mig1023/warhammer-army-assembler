@@ -164,6 +164,48 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Greasus Goldtooth</Name>
+			<Points>545</Points>
+			<Description>Greasus Goldtooth</Description>
+			<PersonifiedHero/>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sceptre of the Titans</Name>
+					<StrengthTo>10</StrengthTo>
+					<MultiWounds>D3</MultiWounds>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Overtyrant's Crown</Name>
+					<AddToWard>4</AddToWard>
+					<ImmuneToPsychology/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>At the start of each enemy turn you can nominate D3 enemy units that are within 18" of Greasus to have the Stupidity special rule for the remainder of the turn</SpecialRuleDescription>
+					<SpecialRuleDescription>Unless Greasus is fleeing, all friendly units within 18" of Greasus, add +1 to their combat result scores, and automatically pass Rally tests</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Skrag the Slaughterer</Name>
 			<Points>425</Points>
 			<Description>Skrag the Slaughterer</Description>
