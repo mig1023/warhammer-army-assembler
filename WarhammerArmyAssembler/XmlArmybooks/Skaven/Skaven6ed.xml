@@ -123,6 +123,79 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Chieftain</Name>
+			<Points>45</Points>
+			<Description>Chieftain</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<AddToArmour>5</AddToArmour>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
