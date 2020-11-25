@@ -13,10 +13,149 @@
 		
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Warlord</Name>
+			<Points>90</Points>
+			<Description>Warlord</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Warplock pistol</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<AddToArmour>5</AddToArmour>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
+				<Hero>
+			<Type>Lord</Type>
+			<Name>Gray Seer</Name>
+			<Wizard>4</Wizard>
+			<Points>235</Points>
+			<Description>Gray Seer</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>4 Warpstone tokens</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Screaming Bell</Name>
+					<Type>Option</Type>
+					<Points>200</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
-		
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Screaming Bell</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>0</Movement>
+				<WeaponSkill>0</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>0</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>0</Leadership>
+				<Ward>3</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<AddToCast>2</AddToCast>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRuleDescription>D6 Impacts Hits</SpecialRuleDescription>
+					<SpecialRuleDescription>Ringing the Bell</SpecialRuleDescription>
+				</Special>	
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		
