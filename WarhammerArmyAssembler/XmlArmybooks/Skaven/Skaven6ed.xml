@@ -196,6 +196,56 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Plague Priest</Name>
+			<Group>Pestilens</Group>
+			<Points>70</Points>
+			<Description>Plague Priest</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Plague Censer</Name>
+					<Type>Option</Type>
+					<Flail/>
+					<Test Bet="Wound" Context="Round">Toughness</Test>
+					<Points>16</Points>
+				</Option>
+				<Option>
+					<Name>Flail</Name>
+					<Type>Option</Type>
+					<Flail/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<AddToAttack>1</AddToAttack>
+					<Points>4</Points>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
