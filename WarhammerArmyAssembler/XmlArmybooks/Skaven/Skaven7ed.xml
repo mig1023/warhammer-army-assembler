@@ -906,6 +906,7 @@
 				<MagicItemsType>Hero</MagicItemsType>
 				<HitFirst/>
 				<PoisonAttack/>
+				<NotALeader/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -919,7 +920,6 @@
 					<SpecialRuleDescription>Scurry Away!</SpecialRuleDescription>
 					<SpecialRuleDescription>Sneaky Infiltrator</SpecialRuleDescription>
 					<SpecialRuleDescription>Verminous Valour</SpecialRuleDescription>
-					<SpecialRuleDescription>Killer, not a Leader</SpecialRuleDescription>
 					<SpecialRuleDescription>Hidden</SpecialRuleDescription>
 					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
 				</Special>
@@ -1710,6 +1710,8 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Unit</MagicItemsType>
 				</Option>
 					<Option>
 					<Name>Fangleader</Name>
