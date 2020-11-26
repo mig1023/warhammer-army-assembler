@@ -794,7 +794,7 @@
 					<Type>Option</Type>
 					<PerModel/>
 					<OnlyIfAnotherService>
-						<OnlyIf>Slings</OnlyIf>
+						<OnlyIfNot>Slings</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<Points>1</Points>
 				</Option>
@@ -803,7 +803,7 @@
 					<Type>Option</Type>
 					<PerModel/>
 					<OnlyIfAnotherService>
-						<OnlyIf>Spear</OnlyIf>
+						<OnlyIfNot>Spear</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<Points>2</Points>
 				</Option>
@@ -852,6 +852,80 @@
 					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Gutter Runners</Name>
+			<Points>12</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>15</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<StrengthInNumbers/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapon</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Scirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Slings</Name>
+					<Type>Option</Type>
+					<PerModel/>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Throwing stars</Name>
+					<Type>Option</Type>
+					<PerModel/>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Poisoned hand weapons</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PoisonAttack/>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Poisoned Throwing stars</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Throwing stars</OnlyIf>
+					</OnlyIfAnotherService>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Tunnelling teams</Name>
+					<Type>Option</Type>
+					<PerModel/>
+					<SpecialRuleDescription>Tunnelling rule</SpecialRuleDescription>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Black Skaven</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>12</Points>
+				</Option>
+			</Options>
 		</Unit>
 	</Units>
 </ArmyBook>
