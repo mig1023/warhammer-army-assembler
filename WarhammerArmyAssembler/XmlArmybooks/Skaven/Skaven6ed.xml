@@ -10,7 +10,89 @@
 		<SymbolImage>Skaven.png</SymbolImage>
 	</Info>
 	<Artefacts>
-		
+		<ArtefactsGroup Name = "Common magic items">
+			<Artefact>
+				<Name>Sword of Striking</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<AddToHit>1</AddToHit>
+				<Description>+1 to Hit</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Battle</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>+1 Attack</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Might</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<AddToStrength>1</AddToStrength>
+				<Description>+1 Strength</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Biting Blade</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<ArmourPiercing>1</ArmourPiercing>
+				<Description>-1 armour save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Enchanted shield</Name>
+				<Type>Shield</Type>
+				<Points>10</Points>
+				<AddToArmour>5</AddToArmour>
+				<Description>5+ armour save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of Protection</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>15</Points>
+				<AddToWard>6</AddToWard>
+				<Description>6+ ward save</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dispell Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple/>
+				<Description>automatically dispel an enemy spell, one use only</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Stone</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple/>
+				<Description>+2 dice to cast a spell</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Staff of Sorcery</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>+1 to dispel</SpecialRuleDescription>
+				<Description>+1 to dispel</Description>
+			</Artefact>
+			<Artefact>
+				<Name>War Banner</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<AddToCloseCombat>1</AddToCloseCombat>
+				<Description>+1 Combat Resolution</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Magic weapons">
+			<Artefact>
+				<Name>The Fellblade</Name>
+				<Type>Weapon</Type>
+				<Points>85</Points>
+				<StrengthTo>10</StrengthTo>
+				<MultiWounds>D6</MultiWounds>
+				<SpecialRuleDescription>Wound wielder with no armour save at the end of each turns on a 3+</SpecialRuleDescription>
+				<Description>The Fellblade's wielder has Strength 10. Each unsaved wound is multiplied into D6 wounds. Roll a dice at the end of the wielder s turn: on a 3+ there is no effect; on a roll of 1-2 the wielder suffers 1 wound with no armour save allowed.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		<Hero>
@@ -159,12 +241,18 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
 					<Points>3</Points>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<AddToArmour>5</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+					</OnlyIfAnotherService>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -264,12 +352,18 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<AddToArmour>5</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+					</OnlyIfAnotherService>
 					<Points>4</Points>
 				</Option>
 				<Option>
