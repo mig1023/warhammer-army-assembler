@@ -15,6 +15,56 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Gray Seer Thanquol</Name>
+			<Wizard>4</Wizard>
+			<Points>560</Points>
+			<Description>Gray Seer Thanquol</Description>
+			<MinSize>1</MinSize>
+			<MountInit>Boneripper</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Staff of the Horned One</Name>
+					<SpecialRuleDescription>Additional spell</SpecialRuleDescription>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Blessed by the Horned Rat</SpecialRuleDescription>
+					<AddToWard>4</AddToWard>
+				</Special>
+				<Armour>
+					<Name>Amulet of the Horned One</Name>
+					<SpecialRuleDescription>At the beginning of each turns regains a single Wound on roll of 5+</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Can re-roll the dice by Warpstone token then rolls a 1</SpecialRuleDescription>
+					<SpecialRuleDescription>13 Warpstone Tokens</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Screaming Bell</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>Screaming Bell</SpecialRuleDescription>
+					<Points>200</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Warlord</Name>
 			<Points>90</Points>
 			<Description>Warlord</Description>
@@ -484,6 +534,41 @@
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Boneripper</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<Unbreakable/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Razor sharp talon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Warpfire Thrower</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Bodyguard of Thanquol</SpecialRuleDescription>
+				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
 	</Mounts>
