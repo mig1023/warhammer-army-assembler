@@ -13,8 +13,6 @@ namespace WarhammerArmyAssembler
         public enum MagicItemsTypes { Hero, Wizard, Unit }
         public enum TestTypeTypes { Unit, Enemy }
 
-        
-
         public string Name { get; set; }
         string Group { get; set; }
         public int ID { get; set; }
@@ -150,7 +148,6 @@ namespace WarhammerArmyAssembler
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
-        public string Image { get; set; }
 
         public string RulesView { get; set; }
 
@@ -366,7 +363,6 @@ namespace WarhammerArmyAssembler
                 TestListName = this.TestListName,
 
                 ArmyColor = this.ArmyColor,
-                Image = this.Image,
             };
 
             if (this.SlotOf != null)

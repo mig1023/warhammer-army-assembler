@@ -8,7 +8,6 @@
 		<BackgroundColor>#FFD9FDF7</BackgroundColor>
 		<ArmyBookImage>Lizardmen7ed.png</ArmyBookImage>
 		<SymbolImage>Lizardmen.png</SymbolImage>
-		<Images>Lizardmen7ed.images</Images>
 	</Info>
 	<Artefacts>
 		<ArtefactsGroup Name = "Common magic items">
@@ -403,7 +402,6 @@
 			<Group>Slann</Group>
 			<Wizard>4</Wizard>
 			<Points>600</Points>
-			<Image>Kroak.jpg</Image>
 			<Description>Lord Kroak</Description>
 			<MinSize>1</MinSize>
 			<PersonifiedHero/>
@@ -495,7 +493,6 @@
 			<Points>635</Points>
 			<MinSize>1</MinSize>
 			<Description>Kroq-Gar Ancient</Description>
-			<Image>KroqGar.jpg</Image>
 			<MountInit>Grymloq</MountInit>
 			<PersonifiedHero/>
 			<MainParam>
@@ -535,7 +532,6 @@
 			<Wizard>4</Wizard>
 			<Points>250</Points>
 			<MinSize>1</MinSize>
-			<Image>Tehenhauin.jpg</Image>
 			<Description>Tehenhauin</Description>
 			<PersonifiedHero/>
 			<MainParam>
@@ -679,7 +675,6 @@
 			<Group>Saurus</Group>
 			<Points>145</Points>
 			<MinSize>1</MinSize>
-			<Image>SaurusOldblood.jpg</Image>
 			<Description>Saurus Oldblood</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -894,7 +889,6 @@
 			<MinSize>1</MinSize>
 			<MountInit>Zwup</MountInit>
 			<PersonifiedHero/>
-			<Image>Tiktakto.jpg</Image>
 			<Description>Tiktak'to</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -974,7 +968,6 @@
 			<Points>85</Points>
 			<MinSize>1</MinSize>
 			<Description>Saurus Scar-Veteran</Description>
-			<Image>SaurusScarVeteran.jpg</Image>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -1056,7 +1049,6 @@
 			<Points>65</Points>
 			<Wizard>1</Wizard>
 			<MinSize>1</MinSize>
-			<Image>SkinkPriest.jpg</Image>
 			<Description>Skink Priest</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -1105,7 +1097,6 @@
 			<Group>Skink</Group>
 			<Points>55</Points>
 			<MinSize>1</MinSize>
-			<Image>SkinkChief.jpg</Image>
 			<Description>Skink Chief</Description>
 			<MainParam>
 				<Movement>6</Movement>
@@ -1439,7 +1430,6 @@
 			<Name>Saurus Warrior</Name>
 			<Points>11</Points>
 			<MinSize>10</MinSize>
-			<Image>Saurus.jpg</Image>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>3</WeaponSkill>
@@ -1496,7 +1486,6 @@
 			<Name>Skinks</Name>
 			<Points>5</Points>
 			<MinSize>10</MinSize>
-			<Image>Skinks.jpg</Image>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>2</WeaponSkill>
@@ -1688,7 +1677,6 @@
 			<Name>Terradon Riders</Name>
 			<Points>30</Points>
 			<MinSize>3</MinSize>
-			<Image>TerradonRiders.jpg</Image>
 			<MountInit>Terradon</MountInit>
 			<MainParam>
 				<Movement>6</Movement>
@@ -1747,8 +1735,6 @@
 				<Armour>5</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Unit</MagicItemsType>
 				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1783,6 +1769,8 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>14</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Unit</MagicItemsType>
 				</Option>
 				<Option>
 					<Name>Revered Guardian</Name>
@@ -1797,7 +1785,6 @@
 			<Name>Cold One Cavalry</Name>
 			<Points>35</Points>
 			<MinSize>5</MinSize>
-			<Image>ColdOneCavalry.jpg</Image>
 			<MountInit>Cold One</MountInit>
 			<MainParam>
 				<Movement>4</Movement>
@@ -1812,8 +1799,6 @@
 				<Armour>3</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Unit</MagicItemsType>
 				<ColdBlooded/>
 				<Stupidity/>
 			</AdditionalParam>
@@ -1824,9 +1809,9 @@
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
-				<Armour>
+				<HandWeapon>
 					<Name>Spear</Name>
-				</Armour>
+				</HandWeapon>
 				<Armour>
 					<Name>Shield</Name>
 					<AddToArmour>6</AddToArmour>
@@ -1844,6 +1829,8 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>20</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Unit</MagicItemsType>
 				</Option>
 				<Option>
 					<Name>Champion</Name>
@@ -1858,7 +1845,6 @@
 			<Name>Kroxigor</Name>
 			<Points>55</Points>
 			<MinSize>3</MinSize>
-			<Image>Kroxigor.jpg</Image>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>3</WeaponSkill>
@@ -1898,7 +1884,6 @@
 			<Points>235</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Image>Stegadon.jpg</Image>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>3</WeaponSkill>
@@ -2015,7 +2000,6 @@
 			<MinSize>1</MinSize>
 			<MaxSize>3</MaxSize>
 			<ModelsInPack>4</ModelsInPack>
-			<Image>RazordonHuntingPack.jpg</Image>
 			<MainParam>
 				<Movement>6</Movement>
 				<WeaponSkill>3</WeaponSkill>
