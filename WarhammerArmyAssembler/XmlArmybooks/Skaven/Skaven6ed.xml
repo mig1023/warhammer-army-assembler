@@ -274,14 +274,14 @@
 			</Artefact>
 			<Artefact>
 				<Name>Brass Orb</Name>
-				<Type>AdditionalArmour</Type>
+				<Type>Weapon</Type>
 				<Points>50</Points>
 				<Test Bet="Death" Context="Round" Repeat="Once">Initiative</Test>
 				<Description>Once per battle, the user can throw the orb exactly like a Death Globe. Models hit must take an Initiative test or be destroyed, with no saves (of any kind) allowed. Remember that a 6 is always a failure, but characters are allowed a 'Look Out Sir!' roll as normal. An Empire Steam Tank hit by the orb suffers 3D6 points Of damage.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Skavenbrew</Name>
-				<Type>Weapon</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
 				<SpecialRuleDescription>Skavenbrew</SpecialRuleDescription>
 				<Description>A character can feed Skavenbrew to the unit he is with at the beginning of the battle. The Skavenbrew will have no effect on other characters in the unit. Roll a D6 to determine the effect of the Skavenbrew:||D6    Result||1      No effect.||2-3    The unit and the character are frenzied.||4-5    The unit and the character bate all enemies.||6   The unit and the character are frenzied and hate all enemies (despite being immune to psychology due to frenzy). In addition, the unit suffers D3 wounds from overexertion at the end of every Skaven turn (distribute them as missile hits, no armour save allowed)</Description>
@@ -289,13 +289,20 @@
 			<Artefact>
 				<Name>Liber Bubonicus</Name>
 				<Type>Weapon</Type>
-				<Points>50</Points>
+				<Points>40</Points>
 				<OnlyForGroup>Pestilens</OnlyForGroup>
 				<AddToWizard>1</AddToWizard>
 				<AddToCast>1</AddToCast>
 				<AddToDispell>1</AddToDispell>
 				<SpecialRuleDescription>Skavenbrew</SpecialRuleDescription>
 				<Description>The bearer is a Level 1 Wizard, but has no Warpstone tokens. He knows the Pestilent Breath spell.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Bands of Power</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Bound spell, Power Level 4: Once per Magic phase doubles the model's basic Strength value until the beginning of his side's following Magic phase</SpecialRuleDescription>
+				<Description>Once per Magic phase, the user can cast the spell bound within the bracers. The spell requires no Power dice to cast as all the power is provided by the bands. The spell doubles the model's basic Strength value until the beginning of his side's following Magic phase</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Arcane items">
