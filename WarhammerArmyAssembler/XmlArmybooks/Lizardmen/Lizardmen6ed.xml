@@ -435,5 +435,42 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Stegadon</Name>
+			<Points>235</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<ColdBlooded/>
+				<Stubborn/>
+				<PoisonAttack/>
+				<ImmuneToPsychology/>
+				<LargeBase/>
+				<ImpactHit>D6+1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Unit Strength 8</SpecialRuleDescription>
+				</Special>
+				<RangeWeapon>
+					<Name>Giant Bow</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
