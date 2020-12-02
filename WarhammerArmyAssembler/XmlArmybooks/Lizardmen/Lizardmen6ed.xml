@@ -171,6 +171,80 @@
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Saurus Scar-Veteran</Name>
+			<Group>Saurus</Group>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<Description>Saurus Scar-Veteran</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<ColdBlooded/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Helberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>23</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
