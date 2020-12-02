@@ -11,7 +11,8 @@
 		<MagicPowers>Sacred Spawnings</MagicPowers>
 	</Info>
 	<Artefacts>
-		<Artefact>
+		<ArtefactsGroup Name = "Common magic items">
+			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
@@ -111,6 +112,14 @@
 				<Points>35</Points>
 				<MultiWounds>2</MultiWounds>
 				<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Blade of Realities</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>No Ward saves are allowed against the Blade of Realities</SpecialRuleDescription>
+				<SpecialRuleDescription>Any wound inflicted on Baemons is multiplied into two wounds</SpecialRuleDescription>
+				<Description>No Ward saves are allowed against the Blade of Realities, although Armour saves and Regeneration may be taken as normal. In addition, any wound inflicted on Baemons is multiplied into two wounds (after Armour saves, etc)</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
