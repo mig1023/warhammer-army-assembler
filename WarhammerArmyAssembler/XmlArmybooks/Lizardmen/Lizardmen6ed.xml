@@ -14,7 +14,89 @@
 		
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Slann Mage-Priest</Name>
+			<Group>Slann</Group>
+			<Wizard>4</Wizard>
+			<Points>325</Points>
+			<MinSize>1</MinSize>
+			<Description>Slann Mage-Priest</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+				<ColdBlooded/>
+				<LargeBase/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Fourth Generation</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Third Generation</OnlyIfNot>
+						<OnlyIfNot>Second Generation</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>No roll on the Miscast Table</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Third Generation</Name>
+					<Type>Option</Type>
+					<SlotOf>Hero</SlotOf>
+					<AddToWounds>1</AddToWounds>
+					<Points>85</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Fourth Generation</OnlyIfNot>
+						<OnlyIfNot>Second Generation</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>No roll on the Miscast Table</SpecialRuleDescription>
+					<SpecialRuleDescription>Drain Magic spell</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Second Generation</Name>
+					<Type>Option</Type>
+					<SlotOf>Hero</SlotOf>
+					<SlotOf>Rare</SlotOf>
+					<AddToWounds>2</AddToWounds>
+					<Points>135</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Fourth Generation</OnlyIfNot>
+						<OnlyIfNot>Third Generation</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>No roll on the Miscast Table</SpecialRuleDescription>
+					<SpecialRuleDescription>Drain Magic spell</SpecialRuleDescription>
+					<SpecialRuleDescription>Extra dice for any spell cast, this dice not come from Power poll and is in affect a 'free' dice</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Unit Strength 5</SpecialRuleDescription>
+					<SpecialRuleDescription>Telepathy</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to cast or dispell</SpecialRuleDescription>
+				</Special>
+				<Armour>
+					<Name>Shield of the Old Ones</Name>
+					<AddToWard>4</AddToWard>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
