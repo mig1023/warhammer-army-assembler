@@ -350,6 +350,55 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Lord Kroak</Name>
+			<Group>Slann</Group>
+			<Wizard>4</Wizard>
+			<Points>1225</Points>
+			<Description>Lord Kroak</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>1</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>8</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded/>
+				<LargeBase/>
+				<SlotOf>Hero</SlotOf>
+				<SlotOf>Rare</SlotOf>
+				<AddToCast>1</AddToCast>
+				<AddToDispell>1</AddToDispell>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>The Spirit of venerable Lord Kroak</SpecialRuleDescription>
+					<SpecialRuleDescription>No Miscast roll</SpecialRuleDescription>
+					<SpecialRuleDescription>Ward save 2+, but not in close combat</SpecialRuleDescription>
+					<SpecialRuleDescription>Drain Magic spell</SpecialRuleDescription>
+					<SpecialRuleDescription>Extra dice for any spell cast, this dice not come from Power poll and is in affect a 'free' dice</SpecialRuleDescription>
+					<SpecialRuleDescription>+2 to all attempts to cast and dispell</SpecialRuleDescription>
+					<SpecialRuleDescription>The Ruination of cities (cast on 14+)</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
+				</Special>
+				<Armour>
+					<Name>Golden Death Mask</Name>
+					<SubOpponentToHit>1</SubOpponentToHit>
+				</Armour>
+				<Armour>
+					<Name>Shield of the Old Ones</Name>
+					<AddToWard>3</AddToWard>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Kroq-Gar Ancient</Name>
 			<Group>Saurus</Group>
 			<Points>576</Points>
