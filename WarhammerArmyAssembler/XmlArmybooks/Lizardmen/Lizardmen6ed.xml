@@ -350,6 +350,46 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Kroq-Gar Ancient</Name>
+			<Group>Saurus</Group>
+			<Points>576</Points>
+			<MinSize>1</MinSize>
+			<Description>Kroq-Gar Ancient</Description>
+			<MountInit>Grymloq</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>4</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ColdBlooded/>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Strength 5 hit for any wound inflicted</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Revered Spear of Tlanxla</Name>
+					<AddToStrength>1</AddToStrength>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Hands of Gods</Name>
+					<SpecialRuleDescription>D6 Strength 4 hits within 8", no Armour saves allowed</SpecialRuleDescription>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Slann Mage-Priest</Name>
 			<Group>Slann</Group>
 			<Wizard>4</Wizard>
