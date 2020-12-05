@@ -11,6 +11,16 @@
 		<MagicPowers>Sacred Spawnings</MagicPowers>
 	</Info>
 	<Artefacts>
+		<ArtefactsGroup Name = "Sacred spawnings">
+			<Artefact>
+				<Name>Blessed Spawning of Tzunki</Name>
+				<Type>Powers</Type>
+				<Points>5</Points>
+				<AddToInitiative>1</AddToInitiative>
+				<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+				<Description>Aquatic, +1 Initiative.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
@@ -542,6 +552,7 @@
 			<AdditionalParam>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
+				<MagicPowersCount>3</MagicPowersCount>
 				<ColdBlooded/>
 			</AdditionalParam>
 			<Options>
