@@ -41,11 +41,15 @@ namespace WarhammerArmyAssembler.Interface
 
         private static string GetMagicPointsString(int unitID, string head)
         {
-            if (head == "MAGIC ITEMS")
-                return String.Format("{0} / {1}", Army.Data.Units[unitID].MagicPointsAlreadyUsed(), Army.Data.Units[unitID].GetUnitMagicPoints());
+            Unit unit = Army.Data.Units[unitID];
 
-            if (head == Army.Params.MagicPowersName())
-                return String.Format("{0} / {1}", Army.Data.Units[unitID].MagicPowersPointsAlreadyUsed(), Army.Data.Units[unitID].GetUnitMagicPowersPoints());
+            if (head == "MAGIC ITEMS")
+                return String.Format("{0} / {1}", unit.MagicPointsAlreadyUsed(), unit.GetUnitMagicPoints());
+
+            if ((head == Army.Params.MagicPowersName()) && (unit.MagicPowersCount > 0))
+                return String.Format("{0} / {1}", unit.MagicPowersCountAlreadyUsed(), unit.GetMagicPowersCount());
+            else if (head == Army.Params.MagicPowersName())
+                return String.Format("{0} / {1}", unit.MagicPowersPointsAlreadyUsed(), unit.GetUnitMagicPowersPoints());
 
             return String.Empty;
         }
@@ -169,7 +173,7 @@ namespace WarhammerArmyAssembler.Interface
             if (unit.ExistsMagicItems() || (Army.Data.Units[unitID].GetUnitMagicPoints() > 0))
                 margins = CreateColumn("MAGIC ITEMS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
-            if (unit.GetUnitMagicPowersPoints() > 0)
+            if ((unit.GetUnitMagicPowersPoints() > 0) || (unit.GetMagicPowersCount() > 0))
                 margins = CreateColumn(Army.Params.MagicPowersName(), margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsOrdinaryItems())

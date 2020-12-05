@@ -143,6 +143,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.MagicItemCount = IntParse(additionalParam["MagicItemCount"]);
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
                 newUnit.MagicPowers = IntParse(additionalParam["MagicPowers"]);
+                newUnit.MagicPowersCount = IntParse(additionalParam["MagicPowersCount"]);
                 newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
                 newUnit.MustBeGeneral = BoolParse(additionalParam["MustBeGeneral"]);
                 newUnit.Reroll = StringParse(additionalParam["Reroll"]);

@@ -124,6 +124,7 @@ namespace WarhammerArmyAssembler
         public int MagicItemCount { get; set; }
         public MagicItemsTypes MagicItemsType { get; set; }
         public int MagicPowers { get; set; }
+        public int MagicPowersCount { get; set; }
 
         public int MountOn { get; set; }
         public string MountInit { get; set; }
@@ -226,10 +227,7 @@ namespace WarhammerArmyAssembler
             return alreayUsed;
         }
 
-        public double GetUnitMagicPowersPoints()
-        {
-            return MagicPowers;
-        }
+        public double GetUnitMagicPowersPoints() => MagicPowers;
 
         public double MagicPowersPointsAlreadyUsed()
         {
@@ -238,6 +236,19 @@ namespace WarhammerArmyAssembler
             foreach (Option option in Options)
                 if (option.IsPowers())
                     alreayUsed += option.Points;
+
+            return alreayUsed;
+        }
+
+        public double GetMagicPowersCount() => MagicPowersCount;
+
+        public double MagicPowersCountAlreadyUsed()
+        {
+            double alreayUsed = 0;
+
+            foreach (Option option in Options)
+                if (option.IsPowers())
+                    alreayUsed += 1;
 
             return alreayUsed;
         }
@@ -347,6 +358,7 @@ namespace WarhammerArmyAssembler
                 MagicItemCount = this.MagicItemCount,
                 MagicItemsType = this.MagicItemsType,
                 MagicPowers = this.MagicPowers,
+                MagicPowersCount = this.MagicPowersCount,
 
                 SizableType = this.SizableType,
                 VisibleType = this.VisibleType,

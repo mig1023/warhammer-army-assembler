@@ -384,7 +384,12 @@ namespace WarhammerArmyAssembler
                     return false;
             }
 
-            if (IsPowers())
+            if (IsPowers() && (unit.MagicPowersCount > 0))
+            {
+                if (unit.MagicPowersCountAlreadyUsed() > unit.MagicItemCount)
+                    return false;
+            }
+            else if (IsPowers())
             {
                 if (unit.MagicPowers <= 0)
                     return false;
