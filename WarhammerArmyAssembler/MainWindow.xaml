@@ -23,11 +23,11 @@
                 </Label.LayoutTransform>
             </Label>
 
-            <ScrollViewer x:Name="armybookDetailScroll" Width="320" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
-                <Canvas x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Height="300" VerticalAlignment="Center" Margin="0,20" Background="White">
-                    <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
-                    <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
-                    <TextBlock x:Name="armyUnitSpecific" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,65"/>
+            <ScrollViewer x:Name="armybookDetailScroll" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
+                <Canvas x:Name="armybookDetail" Height="300" VerticalAlignment="Center" Margin="0,20" Background="White">
+                    <Label x:Name="armyUnitName" Content="" FontSize="28" Width="Auto" Margin="18,5"/>
+                    <TextBlock x:Name="armyUnitDescription" FontSize="24" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,75"/>
+                    <TextBlock x:Name="armyUnitSpecific" FontSize="24" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,65"/>
                 </Canvas>
             </ScrollViewer>
 

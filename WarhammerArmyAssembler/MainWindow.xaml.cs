@@ -292,6 +292,9 @@ namespace WarhammerArmyAssembler
 
             closeErrorDetail.Margin = new Thickness(Interface.Changes.ZeroFuse(e.NewSize.Width - closeErrorDetail.Width - 10), 10, 0, 0);
 
+            foreach (TextBlock text in new List<TextBlock> { armyUnitDescription, armyUnitSpecific })
+                text.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 75);
+
             if (Interface.Changes.mainMenuIsOpen)
                 Interface.Changes.MainMenu();
         }

@@ -303,6 +303,11 @@ namespace WarhammerArmyAssembler.Interface
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
+            if (detail)
+                main.ResizeMode = ResizeMode.NoResize;
+            else
+                main.ResizeMode = ResizeMode.CanResizeWithGrip;
+
             if (menu)
                 Interface.Mod.View(canvasToShow: main.mainMenu, top: true);
 
