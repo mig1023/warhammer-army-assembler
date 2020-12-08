@@ -28,6 +28,7 @@ namespace WarhammerArmyAssembler
         public Countable Countable { get; set; }
         public int Runic { get; set; }
         public bool MasterRunic { get; set; }
+        public bool TypeUnitIncrese { get; set; }
 
         public double Points { get; set; }
         public bool PerModel { get; set; }
@@ -133,7 +134,6 @@ namespace WarhammerArmyAssembler
         public int MagicItems { get; set; }
         public Unit.MagicItemsTypes MagicItemsType { get; set; }
 
-
         private bool artefactAlreadyUsed = false;
         public bool ArtefactAlreadyUsed
         {
@@ -227,6 +227,7 @@ namespace WarhammerArmyAssembler
                 WardForLastWound = this.WardForLastWound,
                 Runic = this.Runic,
                 MasterRunic = this.MasterRunic,
+                TypeUnitIncrese = this.TypeUnitIncrese,
 
                 Lance = this.Lance,
                 Flail = this.Flail,

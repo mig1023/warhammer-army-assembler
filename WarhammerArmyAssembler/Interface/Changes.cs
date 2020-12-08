@@ -74,11 +74,13 @@ namespace WarhammerArmyAssembler.Interface
             Option prevRunicItem = null;
             double prevRunicPointsPenalty = 0;
 
+            Unit unit = Army.Data.Units[unitID];
+
             if (ArmyBook.Data.Artefact[id].Runic > 0)
             {
                 Dictionary<int, Option> versions = ArmyBook.Data.Artefact[id].AllRunicVersions();
 
-                Option currentItem = Army.Data.Units[unitID].GetCurrentRunicItemByName(ArmyBook.Data.Artefact[id].Name);
+                Option currentItem = unit.GetCurrentRunicItemByName(ArmyBook.Data.Artefact[id].Name);
 
                 if ((currentItem != null) && (currentItem.Runic >= versions.Count))
                     return;
@@ -90,7 +92,7 @@ namespace WarhammerArmyAssembler.Interface
                     id = versions[currentItem.Runic + 1].ID;
                 }
 
-                if (Army.Checks.IsRunicCombinationAlreadyExist(Army.Data.Units[unitID], ArmyBook.Data.Artefact[id]))
+                if (Army.Checks.IsRunicCombinationAlreadyExist(unit, ArmyBook.Data.Artefact[id]))
                 {
                     Error("No more than one item may carry the same combination of runes");
                     return;
@@ -103,20 +105,25 @@ namespace WarhammerArmyAssembler.Interface
             if (!Interface.Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))
                 Error("Not enough points add an item");
 
-            else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, Army.Data.Units[unitID], pointsPenalty: prevRunicPointsPenalty))
-                Error(String.Format("Not enough magic item {0} to add an item", (Army.Data.Units[unitID].MagicItemCount > 0 ? "slots" : "points")));
+            else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, unit, pointsPenalty: prevRunicPointsPenalty))
+                Error(String.Format("Not enough magic item {0} to add an item", (unit.MagicItemCount > 0 ? "slots" : "points")));
 
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unitID].Type, ArmyBook.Data.Artefact[id].Points))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, ArmyBook.Data.Artefact[id].Points))
                 Error("For this type, a point cost limit has been reached");
 
             else
             {
                 if (prevRunicItem != null)
-                    Army.Data.Units[unitID].Options.Remove(prevRunicItem);
+                    unit.Options.Remove(prevRunicItem);
 
-                Army.Data.Units[unitID].AddAmmunition(id);
+                if ((ArmyBook.Data.Artefact[id].TypeUnitIncrese) && (unit.Type == Unit.UnitType.Core))
+                    unit.Type = Unit.UnitType.Special;
+                else if ((ArmyBook.Data.Artefact[id].TypeUnitIncrese) && (unit.Type == Unit.UnitType.Special))
+                    unit.Type = Unit.UnitType.Rare;
+
+                unit.AddAmmunition(id);
                 Interface.Reload.ReloadArmyData();
-                Interface.UnitDetails.UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
+                Interface.UnitDetails.UpdateUnitDescription(unitID, unit);
 
                 bool multiple = ArmyBook.Data.Artefact[id].Multiple || ArmyBook.Data.Artefact[id].Virtue
                     || (ArmyBook.Data.Artefact[id].Runic > 0);

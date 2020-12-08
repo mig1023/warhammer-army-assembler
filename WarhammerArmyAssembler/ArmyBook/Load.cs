@@ -262,6 +262,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.WoundOn = IntParse(xmlNode["WoundOn"]);
             newWeapon.Runic = IntParse(xmlNode["Runic"]);
             newWeapon.MasterRunic = BoolParse(xmlNode["MasterRunic"]);
+            newWeapon.TypeUnitIncrese = BoolParse(xmlNode["TypeUnitIncrese"]);
             newWeapon.WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]);
             newWeapon.WardForLastWound = IntParse(xmlNode["WardForLastWound"]);
 
