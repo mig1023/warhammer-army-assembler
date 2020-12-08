@@ -16,6 +16,7 @@
 				<Name>Blessed Spawning of Tzunki</Name>
 				<Type>Powers</Type>
 				<Points>5</Points>
+				<TypeUnitIncrese/>
 				<AddToInitiative>1</AddToInitiative>
 				<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
 				<Description>Aquatic, +1 Initiative.</Description>
@@ -24,6 +25,7 @@
 				<Name>Blessed Spawning of Sotek</Name>
 				<Type>Powers</Type>
 				<Points>20</Points>
+				<TypeUnitIncrese/>
 				<AddToAttacks>1</AddToAttacks>
 				<Description>When the unit/character charges, they get +1 Attack for that round of combat.</Description>
 			</Artefact>
@@ -31,6 +33,7 @@
 				<Name>Blessed Spawning of Quetzl</Name>
 				<Type>Powers</Type>
 				<Points>15</Points>
+				<TypeUnitIncrese/>
 				<AddToArmour>1</AddToArmour>
 				<Description>Scaly Skin save increased by +1.</Description>
 			</Artefact>
@@ -38,6 +41,7 @@
 				<Name>Blessed Spawning of Tlazcotl</Name>
 				<Type>Powers</Type>
 				<Points>20</Points>
+				<TypeUnitIncrese/>
 				<ImmuneToPsychology/>
 				<Description>Immune to Psychology (note that a Carnosaur ridden by a Saurus Oldblood with the Blessed Spawning of Tlazcotl is still subject to Blood-Frenzy, and Cold Ones will still be subject to stupidity).</Description>
 			</Artefact>
@@ -45,6 +49,7 @@
 				<Name>Blessed Spawning of Chotec</Name>
 				<Type>Powers</Type>
 				<Points>15</Points>
+				<TypeUnitIncrese/>
 				<SpecialRuleDescription>Roll an extra dice when pursuing and choose the highest two (or three if mounted)</SpecialRuleDescription>
 				<Description>Roll an extra dice when pursuing and choose the highest two (or three if mounted).</Description>
 			</Artefact>
@@ -52,6 +57,7 @@
 				<Name>Blessed Spawning of Huanchi</Name>
 				<Type>Powers</Type>
 				<Points>20</Points>
+				<TypeUnitIncrese/>
 				<SpecialRuleDescription>May move through jungle, woods and forest as if it were open ground, suffering no penalties for movement</SpecialRuleDescription>
 				<Description>The unit may move through jungle, woods and forest as if it were open ground, suffering no penalties for movement.</Description>
 			</Artefact>
@@ -59,6 +65,7 @@
 				<Name>Blessed Spawning of Tepok</Name>
 				<Type>Powers</Type>
 				<Points>20</Points>
+				<TypeUnitIncrese/>
 				<AddToDispell>1</AddToDispell>
 				<Description>The presence of the unit or character on the battlefield adds one dice to the player's Dispel dice pool.</Description>
 			</Artefact>
@@ -66,12 +73,14 @@
 				<Name>Blessed Spawning of Itzl</Name>
 				<Type>Powers</Type>
 				<Points>5</Points>
+				<TypeUnitIncrese/>
 				<Description>Characters must take the Blessed Spawning of Itzl if they wish to ride a Cold One or a Carnosaur.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Blessed Mark of the Old Ones</Name>
 				<Type>Powers</Type>
 				<Points>35</Points>
+				<TypeUnitIncrese/>
 				<SpecialRuleDescription>may re-roll a total of D3 single D6's per game</SpecialRuleDescription>
 				<Description>The character may re-roll a total of D3 (roll at the start of the game) single D6's per game. Each re-roll entitles the player to take a single D6 of his own that directly effects the character (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. This can potentially cause Irresistible Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
 			</Artefact>
@@ -959,7 +968,7 @@
 				<Armour>6</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<MagicPowersCount>1</MagicPowersCount>
+				<MagicPowersCount>2</MagicPowersCount>
 				<ColdBlooded/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
