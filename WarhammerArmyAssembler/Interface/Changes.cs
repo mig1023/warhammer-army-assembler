@@ -111,6 +111,9 @@ namespace WarhammerArmyAssembler.Interface
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, ArmyBook.Data.Artefact[id].Points))
                 Error("For this type, a point cost limit has been reached");
 
+            else if (ArmyBook.Data.Artefact[id].TypeUnitIncrese && Army.Checks.IsArmyFullForTypeIcrease(unit))
+                Error("Cant upgrade unit type: the army already has many such units");
+
             else
             {
                 if (prevRunicItem != null)
@@ -153,7 +156,7 @@ namespace WarhammerArmyAssembler.Interface
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(ArmyBook.Data.Units[id].Type, ArmyBook.Data.Units[id].Points))
                 Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Data.Units[id].UnitTypeName()));
 
-            else if(!Army.Checks.IsArmyDublicationOk(ArmyBook.Data.Units[id]))
+            else if (!Army.Checks.IsArmyDublicationOk(ArmyBook.Data.Units[id]))
                 Error(String.Format("Army can't include as many duplicates of {0}", ArmyBook.Data.Units[id].UnitTypeName()));
 
             else

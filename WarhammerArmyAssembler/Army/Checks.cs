@@ -130,5 +130,21 @@ namespace WarhammerArmyAssembler.Army
 
             return (String.IsNullOrEmpty(armyProblems) ? true : false);
         }
+
+        public static bool IsArmyFullForTypeIcrease(Unit unit)
+        {
+            Unit.UnitType type;
+
+            if (unit.Type == Unit.UnitType.Rare)
+                return true;
+            else if (unit.Type == Unit.UnitType.Special)
+                type = Unit.UnitType.Rare;
+            else if (unit.Type == Unit.UnitType.Core)
+                type = Unit.UnitType.Special;
+            else
+                return false;
+
+            return Army.Params.GetArmyUnitsNumber(type) >= Army.Params.GetArmyMaxUnitsNumber(type);
+        }
     }
 }
