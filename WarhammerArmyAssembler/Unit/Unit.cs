@@ -686,6 +686,13 @@ namespace WarhammerArmyAssembler
                     {
                         this.Options.Remove(option);
 
+                        Option artefact = ArmyBook.Data.Artefact[option.ID];
+
+                        if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Special))
+                            this.Type = Unit.UnitType.Core;
+                        else if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Rare))
+                            this.Type = Unit.UnitType.Special;
+
                         if (option.Virtue)
                         {
                             ArmyBook.Data.Artefact[option.ID].Points = Army.Params.GetVirtuePoints(option.ID);
