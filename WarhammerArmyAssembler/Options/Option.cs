@@ -386,7 +386,7 @@ namespace WarhammerArmyAssembler
 
             if (IsPowers() && (unit.MagicPowersCount > 0))
             {
-                if (unit.MagicPowersCountAlreadyUsed() > unit.MagicItemCount)
+                if (unit.MagicPowersCountAlreadyUsed() > unit.GetMagicPowersCount())
                     return false;
             }
             else if (IsPowers())
