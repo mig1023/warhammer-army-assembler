@@ -30,30 +30,21 @@ namespace WarhammerArmyAssembler.Interface
 
             bool isPowers = ArmyBook.Data.Artefact[artefactID].IsPowers();
 
-            double alreadyUsedPoints;
-
-            if (!addOption)
-                alreadyUsedPoints = 0;
-            else if (isPowers && (unit.MagicPowersCount > 0))
-                alreadyUsedPoints = unit.MagicPowersCountAlreadyUsed();
-            else if (isPowers)
-                alreadyUsedPoints = unit.MagicPowersPointsAlreadyUsed();
-            else
-                alreadyUsedPoints = unit.MagicPointsAlreadyUsed();
-
-            double magicPoints;
+            bool enoughUnitPoints;
 
             if (isPowers && (unit.MagicPowersCount > 0))
-                magicPoints = unit.GetMagicPowersCount();
-            else if (isPowers)
-                magicPoints = unit.GetUnitMagicPowersPoints();
+                enoughUnitPoints = ((addOption ? unit.MagicPowersCountAlreadyUsed() : 0) < unit.GetMagicPowersCount());
+
+            else if (isPowers && (unit.MagicPowersCount > 0))
+                enoughUnitPoints = ((addOption ? unit.MagicPowersPointsAlreadyUsed() : 0) < unit.GetUnitMagicPowersPoints());
+
             else
-                magicPoints = unit.GetUnitMagicPoints();
+            {
+                double alreadyUsedPoints = (addOption ? unit.MagicPointsAlreadyUsed() : 0);
+                double magicPoints = unit.GetUnitMagicPoints();
 
-            bool enoughUnitPoints = (((ArmyBook.Data.Artefact[artefactID].Points - pointsPenalty) + alreadyUsedPoints) <= magicPoints);
-
-            if ((isPowers && (unit.MagicPowersCount > 0)) || (!isPowers && (unit.MagicItemCount > 0)))
-                enoughUnitPoints = (unit.MagicPointsAlreadyUsed() < unit.GetUnitMagicPoints());
+                enoughUnitPoints = (((ArmyBook.Data.Artefact[artefactID].Points - pointsPenalty) + alreadyUsedPoints) <= magicPoints);
+            }
 
             bool enoughOptionsPoints = ArmyBook.Data.Artefact[artefactID].IsUsableByUnit(unit, addOption);
 

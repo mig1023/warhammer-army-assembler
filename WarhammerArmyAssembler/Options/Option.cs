@@ -405,6 +405,9 @@ namespace WarhammerArmyAssembler
             if (unit.IsAnotherOptionIsIncompatible(this))
                 return false;
 
+            if ((Type == OptionType.Powers) && (unit.GetMagicPowersCount() > unit.MagicPowersCountAlreadyUsed()))
+                return true;
+
             if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems, unit.MagicItemCount))
                 return true;
 
