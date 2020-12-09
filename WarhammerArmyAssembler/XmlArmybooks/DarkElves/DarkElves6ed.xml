@@ -576,5 +576,58 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Black Guard</Name>
+			<Points>16</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stubborn/>
+				<Hate/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Halberd</Name>
+					<AddToStrength>1</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<MagicItems>75</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+					<FullCommand/>
+					<Points>14</Points>
+				</Option>
+				<Option>
+					<Name>Master</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>14</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
