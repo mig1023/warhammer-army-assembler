@@ -594,11 +594,51 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Hand weapon</Name>
+					<Name>Whip</Name>
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
 					<SpecialRuleDescription>Beastmaster</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Assassin</Name>
+			<Points>125</Points>
+			<MinSize>1</MinSize>
+			<Description>Assassin</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>9</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<NotALeader/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hidden</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
