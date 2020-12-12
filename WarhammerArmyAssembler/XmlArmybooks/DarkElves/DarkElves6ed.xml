@@ -109,7 +109,6 @@
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>6</Points>
 				</Option>
@@ -297,7 +296,6 @@
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 				</Option>
@@ -436,6 +434,174 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Dark Elf Noble</Name>
+			<Points>70</Points>
+			<MinSize>1</MinSize>
+			<Description>Dark Elf Noble</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<Lance/>
+				</Option>
+				<Option>
+					<Name>Repeater Crossbow</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Sea Dragon Cloak</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>	
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Dark Steed</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>26</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Dark Pegasus</Name>
+					<Type>Option</Type>
+					<Points>55</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Beastmaster</Name>
+			<Points>40</Points>
+			<MinSize>1</MinSize>
+			<Description>Beastmaster</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>25</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Dark Pegasus</Name>
+					<Type>Option</Type>
+					<Points>55</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Cold One</Name>
+					<Type>Option</Type>
+					<Points>26</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Manticore</Name>
+					<Type>Option</Type>
+					<SlotOf>Hero</SlotOf>
+					<Points>190</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Hate High Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Beastmaster</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -553,6 +719,7 @@
 			<AdditionalParam>
 				<Terror/>
 				<LargeBase/>
+				<SlotOf>Hero</SlotOf>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>
