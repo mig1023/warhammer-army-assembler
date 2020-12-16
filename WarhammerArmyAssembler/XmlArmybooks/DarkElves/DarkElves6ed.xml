@@ -82,7 +82,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic weapons">	
+		<ArtefactsGroup Name = "Magic weapons">
 			<Artefact>
 				<Name>Executioner's Axe</Name>
 				<Type>Weapon</Type>
@@ -157,7 +157,7 @@
 				<Description>Any model losing one or more wounds (after saves, etc) to the Dark Sword becomes subject to the rules for stupidity for the remainder of the battle.</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic armour">	
+		<ArtefactsGroup Name = "Magic armour">
 			<Artefact>
 				<Name>Armour of Living Death</Name>
 				<Type>Armour</Type>
@@ -199,7 +199,7 @@
 				<Description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improuved by 1 (to 4+ then 3+, etc) up to maximum of 1+.</Description>
 			</Artefact>
 		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Talismans">	
+		<ArtefactsGroup Name = "Talismans">
 			<Artefact>
 				<Name>Black Amulet</Name>
 				<Type>AdditionalArmour</Type>
@@ -236,6 +236,16 @@
 				<Points>20</Points>
 				<SpecialRuleDescription>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double</SpecialRuleDescription>
 				<Description>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double. If they roll a double 6 they cast the spell (with Irresistible Force) and then suffer a Miscast.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Enchanted items">
+			<Artefact>
+				<Name>Rubric of Dark Dimensions</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<OnlyFor>Infantry</OnlyFor>
+				<SpecialRuleDescription>Bound spell, power level 3, one use only: all enemy models in base contact must roll equal to or under their Strength on a D6 or be slain</SpecialRuleDescription>
+				<Description>One use only. Bound spell, power level 5. All enemy models in base contact with the bearer must roll equal to or under their Strength on a D6 (6 always fails) or be sucked into the dimension of Eternal Nightmares (and count as slain!).</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
