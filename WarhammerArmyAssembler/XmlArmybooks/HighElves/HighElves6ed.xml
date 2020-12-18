@@ -657,7 +657,7 @@
 			<Type>Special</Type>
 			<Name>White Lions</Name>
 			<Points>13</Points>
-			<MinSize>5</MinSize>
+			<MinSize>10</MinSize>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -715,6 +715,32 @@
 					<MagicItemsType>Hero</MagicItemsType>
 				</Option>
 			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Great Eagle</Name>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 	</Units>
 </ArmyBook>
