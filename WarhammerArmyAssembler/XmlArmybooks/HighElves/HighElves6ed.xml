@@ -18,6 +18,23 @@
 	<Mounts>
 		<Mount>
 			<Type>Mount</Type>
+			<Name>Elven Steed</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
 			<Name>Barded Elven Steed</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -211,7 +228,7 @@
 			</Options>
 		</Unit>
 		<Unit>
-			<Type>Special</Type>
+			<Type>Core</Type>
 			<Name>Silver Helms</Name>
 			<Points>19</Points>
 			<MinSize>5</MinSize>
@@ -271,6 +288,78 @@
 				</Option>
 				<Option>
 					<Name>Champion</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>14</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Ellyrian Reavers</Name>
+			<Points>18</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Elven Steed</MountInit>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Bow</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Swap spear for bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Swap spear for bow</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Harbinger</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>14</Points>
