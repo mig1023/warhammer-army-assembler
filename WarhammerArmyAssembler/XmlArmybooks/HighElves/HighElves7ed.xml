@@ -101,7 +101,7 @@
 				<Name>Sword of Hoeth</Name>
 				<Type>Weapon</Type>
 				<Points>60</Points>
-				<SpecialRuleDescription>All hits wound automatically</SpecialRuleDescription>
+				<AutoHit/>
 				<Description>All hits wound automatically.</Description>
 			</Artefact>
 			<Artefact>
@@ -215,7 +215,6 @@
 				<Points>20</Points>
 				<AddToArmour>5</AddToArmour>
 				<AddToWard>6</AddToWard>
-				<Reroll>ToArmour</Reroll>
 				<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save.</Description>
 			</Artefact>
 			<Artefact>
@@ -2113,26 +2112,20 @@
 				<Option>
 					<Name>Bow</Name>
 					<Type>Option</Type>
-					<Points>4</Points>
+					<Points>6</Points>
 					<PerModel/>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Swap spear for bow</OnlyIfNot>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
-					<Name>Swap spear for bow</Name>
+					<Name>Exchange spear for bow</Name>
 					<Type>Option</Type>
-					<Points>2</Points>
+					<Points>5</Points>
 					<PerModel/>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Bow</OnlyIfNot>
 					</OnlyIfAnotherService>
-				</Option>
-				<Option>
-					<Name>Harbinger</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -2142,6 +2135,12 @@
 				</Option>
 				<Option>
 					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>14</Points>
+				</Option>
+				<Option>
+					<Name>Harbinger</Name>
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>14</Points>
