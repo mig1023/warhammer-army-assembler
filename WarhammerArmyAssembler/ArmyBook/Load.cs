@@ -209,6 +209,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.Realised = false;
             newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
             newWeapon.Virtue = BoolParse(xmlNode["Virtue"]);
+            newWeapon.Honours = BoolParse(xmlNode["Honours"]);
 
             newWeapon.Countable = CountableParse(xmlNode);
 

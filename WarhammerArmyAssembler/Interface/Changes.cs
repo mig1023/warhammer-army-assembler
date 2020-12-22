@@ -75,12 +75,13 @@ namespace WarhammerArmyAssembler.Interface
             double prevRunicPointsPenalty = 0;
 
             Unit unit = Army.Data.Units[unitID];
+            Option artefact = ArmyBook.Data.Artefact[id];
 
-            if (ArmyBook.Data.Artefact[id].Runic > 0)
+            if (artefact.Runic > 0)
             {
-                Dictionary<int, Option> versions = ArmyBook.Data.Artefact[id].AllRunicVersions();
+                Dictionary<int, Option> versions = artefact.AllRunicVersions();
 
-                Option currentItem = unit.GetCurrentRunicItemByName(ArmyBook.Data.Artefact[id].Name);
+                Option currentItem = unit.GetCurrentRunicItemByName(artefact.Name);
 
                 if ((currentItem != null) && (currentItem.Runic >= versions.Count))
                     return;
@@ -99,8 +100,8 @@ namespace WarhammerArmyAssembler.Interface
                 }
             }
 
-            if (ArmyBook.Data.Artefact[id].Virtue)
-                ArmyBook.Data.Artefact[id].Points = Army.Params.GetVirtuePoints(id);
+            if (artefact.Virtue)
+                artefact.Points = Army.Params.GetVirtuePoints(id);
                 
             if (!Interface.Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))
                 Error("Not enough points add an item");
@@ -108,10 +109,10 @@ namespace WarhammerArmyAssembler.Interface
             else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, unit, pointsPenalty: prevRunicPointsPenalty))
                 Error(String.Format("Not enough magic item {0} to add an item", (unit.MagicItemCount > 0 ? "slots" : "points")));
 
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, ArmyBook.Data.Artefact[id].Points))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, artefact.Points))
                 Error("For this type, a point cost limit has been reached");
 
-            else if (ArmyBook.Data.Artefact[id].TypeUnitIncrese && Army.Checks.IsArmyFullForTypeIcrease(unit))
+            else if (artefact.TypeUnitIncrese && Army.Checks.IsArmyFullForTypeIcrease(unit))
                 Error("Cant upgrade unit type: the army already has many such units");
 
             else
@@ -128,10 +129,9 @@ namespace WarhammerArmyAssembler.Interface
                 Interface.Reload.ReloadArmyData();
                 Interface.UnitDetails.UpdateUnitDescription(unitID, unit);
 
-                bool multiple = ArmyBook.Data.Artefact[id].Multiple || ArmyBook.Data.Artefact[id].Virtue
-                    || (ArmyBook.Data.Artefact[id].Runic > 0);
+                bool multiple = artefact.Multiple || artefact.Virtue || artefact.Honours || (artefact.Runic > 0);
 
-                if (!multiple && (ArmyBook.Data.Artefact[id].Type != Option.OptionType.Powers))
+                if (!multiple && (artefact.Type != Option.OptionType.Powers))
                     Interface.Mod.SetArtefactAlreadyUsed(id, true);
             }
         }

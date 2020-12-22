@@ -1268,7 +1268,7 @@ namespace WarhammerArmyAssembler
             return (this.Terror || this.Fear || this.Undead);
         }
 
-        public bool IsVirtueAlready(string name)
+        public bool IsAlready(string name)
         {
             foreach (Option option in Options)
                 if (option.Name == name)

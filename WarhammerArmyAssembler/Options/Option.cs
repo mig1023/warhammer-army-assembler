@@ -25,6 +25,7 @@ namespace WarhammerArmyAssembler
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
         public bool Virtue { get; set; }
+        public bool Honours { get; set; }
         public Countable Countable { get; set; }
         public int Runic { get; set; }
         public bool MasterRunic { get; set; }
@@ -176,6 +177,7 @@ namespace WarhammerArmyAssembler
                 Realised = this.Realised,
                 Multiple = this.Multiple,
                 Virtue = this.Virtue,
+                Honours = this.Honours,
                 OnlyOneInArmy = this.OnlyOneInArmy,
                 OnlyOneForSuchUnits = this.OnlyOneForSuchUnits,
                 OnlyFor = this.OnlyFor,
@@ -400,7 +402,7 @@ namespace WarhammerArmyAssembler
                         return false;
             }
 
-            if (Virtue && unit.IsVirtueAlready(this.Name))
+            if ((Virtue || Honours) && unit.IsAlready(this.Name))
                 return false;
 
             if (unit.IsAnotherOptionIsIncompatible(this))
