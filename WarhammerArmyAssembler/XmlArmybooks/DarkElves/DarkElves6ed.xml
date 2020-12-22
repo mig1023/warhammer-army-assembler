@@ -409,6 +409,55 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Malekith</Name>
+			<Points>945</Points>
+			<Wizard>4</Wizard>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>Seraphon</MountInit>
+			<Description>Malekith, the Witch King of Naggaroth</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+				<MustBeGeneral/>
+				<ImmuneToPsychology/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Use Dark Magic</SpecialRuleDescription>
+					<SpecialRuleDescription>If your army is led by Malekith, Black Guard are no longer a 0-1 choice - you may include as many units as you have Rare choices</SpecialRuleDescription>
+					<SpecialRuleDescription>May re-roll missed close combat attacks against High Elves in any round of combat, not just the first round</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Destroyer</Name>
+					<SpecialRuleDescription>If Malekith hits an opponent with a magic weapon or with magic armour, instead of rolling to wound you may choose to destroy one item (opponent's choice)</SpecialRuleDescription>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand of Khaine</Name>
+					<StrenghtTo>6</StrenghtTo>
+					<NoArmour/>
+				</HandWeapon>
+				<Armour>
+					<Name>Armour of Midnight</Name>
+					<AddToArmour>5</AddToArmour>
+					<AddToWard>2</AddToWard>
+					<NoMultiWounds/>
+					<SpecialRuleDescription>2+ Ward save against non-magical attacks</SpecialRuleDescription>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Dark Elf Highborn</Name>
 			<Points>125</Points>
 			<MinSize>1</MinSize>
@@ -1077,6 +1126,39 @@
 				<Toughness>6</Toughness>
 				<Wounds>6</Wounds>
 				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Scaly skin</Name>
+					<AddToArmour>3</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Noxious breath</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Seraphon</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>4</Initiative>
 				<Attacks>5</Attacks>
 				<Leadership>8</Leadership>
 			</MainParam>
