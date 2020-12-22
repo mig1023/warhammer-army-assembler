@@ -97,7 +97,7 @@ namespace WarhammerArmyAssembler.Interface
                             if (head == "COMMAND" && !option.FullCommand)
                                 continue;
 
-                            if (head == "MAGIC ITEMS" && (!option.IsMagicItem() || (option.Points <= 0)))
+                            if (head == "MAGIC ITEMS" && (!option.IsMagicItem() || ((option.Points <= 0) && !option.Honours)))
                                 continue;
 
                             if (head == Army.Params.MagicPowersName() && !option.IsPowers())
@@ -118,7 +118,8 @@ namespace WarhammerArmyAssembler.Interface
                         }
                         else
                         {
-                            bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0) || String.IsNullOrEmpty(option.Name);
+                            bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0) ||
+                                option.Honours || String.IsNullOrEmpty(option.Name);
                             bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount &&
                                 !option.FullCommand && option.SpecialRuleDescription.Length == 0;
 

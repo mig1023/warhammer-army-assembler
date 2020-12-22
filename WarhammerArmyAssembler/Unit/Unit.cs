@@ -1071,7 +1071,7 @@ namespace WarhammerArmyAssembler
         public bool ExistsMagicItems()
         {
             foreach (Option option in Options)
-                if (option.IsMagicItem() && (option.Points > 0))
+                if (option.IsMagicItem() && ((option.Points > 0) || option.Honours))
                     return true;
 
             return false;
