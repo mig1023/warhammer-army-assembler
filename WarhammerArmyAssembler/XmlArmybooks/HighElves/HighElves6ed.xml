@@ -106,6 +106,18 @@
 				<Points>40</Points>
 				<Description>The character is a Level 1 Wizard. Note that he may not cast spells if he is wearing armour (remember that barding for his steed will not affect his spell casting).</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Swordmaster</Name>
+				<Type>Weapon</Type>
+				<WizardTo>1</WizardTo>
+				<KillingBlow/>
+				<AddToStrength>2</AddToStrength>
+				<OnlyIfAnotherService>
+					<OnlyIfNot>Great weapon</OnlyIfNot>
+				</OnlyIfAnotherService>
+				<Points>40</Points>
+				<Description>The character is equipped with a Great weapon and may not take a magic weapon. Instead of striking last in any turn he does not charge, the character will strike in initiative order. The character also has the killing blow special rule.</Description>
+			</Artefact>
 		</ArtefactsGroup>	
 		<ArtefactsGroup Name = "Magic weapons">	
 			<Artefact>
