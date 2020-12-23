@@ -471,6 +471,55 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Tyrion</Name>
+			<Points>585</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Malhandir</MountInit>
+			<PersonifiedHero/>
+			<Description>Tyrion, Defender of Ulthuan</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MustBeGeneral/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Parries the first enemy hit against him per Close Combat phase and it has no effect</SpecialRuleDescription>
+					<SpecialRuleDescription>May re-roll any failed rolls to hit on the first turn of each close combat</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Sunfang</Name>
+					<AddToStrength>3</AddToStrength>
+					<SpecialRuleDescription>Once per battle in his own Magic phase, Tyrion may use Sunfang to cast the bound spell Fury of Khaine (power level 6), the spell requires no Power dice to cast, all the power required is provided by Sunfang itself</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Dragon Armour of Aenarion</Name>
+					<SpecialRuleDescription>Immune to all breath and all Flaming attacks</SpecialRuleDescription>
+					<ArmourTo>1</ArmourTo>
+					<AddToWard>4</AddToWard>
+				</Armour>
+				<Armour>
+					<Name>Heart of Avelorn</Name>
+					<SpecialRuleDescription>If Tyrion is slain, Heart of Avelorn returns Tyrion to life with 1 Wound, obviously it will only work once</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Curse of Aenarion</Name>
+					<WardForLastWound>2</WardForLastWound>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Prince</Name>
 			<Points>125</Points>
 			<MinSize>1</MinSize>
@@ -867,6 +916,24 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Malhandir</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
