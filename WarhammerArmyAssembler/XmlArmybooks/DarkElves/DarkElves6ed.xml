@@ -458,6 +458,48 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Morathi, the Hag Sorceress</Name>
+			<Points>470</Points>
+			<Wizard>4</Wizard>
+			<MinSize>1</MinSize>
+			<MountInit>Dark Pegasus Sulephet</MountInit>
+			<PersonifiedHero/>
+			<Description>Morathi, the Hag Sorceress</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Heartrender</Name>
+					<KillingBlow/>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Always use Dark Magic, you may choose which four spells she has at the start of the battle</SpecialRuleDescription>
+					<SpecialRuleDescription>Adds +2 to all of her casting rolls</SpecialRuleDescription>
+					<SpecialRuleDescription>Any Witch Elves within 12" may use her Leadership value, as if she was their army General</SpecialRuleDescription>
+				</Special>
+				<Arcane>
+					<Name>Thousand and One Dark Blessing</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Enchanting Beauty</Name>
+					<SpecialRuleDescription>Any enemy model in base contact with Morathi at the start of round of combat must pass a Leadership test or have their WS reduced to 1 for the duration of that round</SpecialRuleDescription>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Dark Elf Highborn</Name>
 			<Points>125</Points>
 			<MinSize>1</MinSize>
@@ -1064,6 +1106,29 @@
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Dark Pegasus</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 Strength when pegasus charges in combat</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Dark Pegasus Sulephet</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
