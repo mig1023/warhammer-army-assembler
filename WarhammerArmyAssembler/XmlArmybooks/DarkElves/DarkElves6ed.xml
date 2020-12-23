@@ -458,7 +458,7 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Morathi, the Hag Sorceress</Name>
+			<Name>Morathi</Name>
 			<Points>470</Points>
 			<Wizard>4</Wizard>
 			<MinSize>1</MinSize>
@@ -496,6 +496,49 @@
 					<Name>Enchanting Beauty</Name>
 					<SpecialRuleDescription>Any enemy model in base contact with Morathi at the start of round of combat must pass a Leadership test or have their WS reduced to 1 for the duration of that round</SpecialRuleDescription>
 				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Malus Darkblade</Name>
+			<Points>350</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Spite</MountInit>
+			<PersonifiedHero/>
+			<Description>Malus Darkblade, Scion of Hag Graef</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Warpsword of Khaine</Name>
+					<NoArmour/>
+					<Reroll>ToWound</Reroll>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>3</AddToArmour>
+				</Armour>
+				<Demon>
+					<Name>Tz'arkan</Name>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<AddToToughness>2</AddToToughness>
+					<AddToInitiative>2</AddToInitiative>
+					<SpecialRuleDescription>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6: on a 4+ Tz'arkan's murderous rage drives Malus to attack his allies</SpecialRuleDescription>
+				</Demon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
@@ -1095,6 +1138,32 @@
 			<AdditionalParam>
 				<Fear/>
 				<Stupidity/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Thick-skinned</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Spite</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Armour>

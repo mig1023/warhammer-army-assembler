@@ -177,7 +177,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Witchbrew</Name>
-				<Type>Arcane</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
 				<SpecialRuleDescription>Witchbrew affects the Hag's unit for the entire battle. Enemy units cannot claim combat resolution bonuses for outnumbering, flank or rear attacks, or higher ground if they are only fighting a unit affected by Witchbrew</SpecialRuleDescription>
@@ -964,8 +964,8 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Warpsword of Khaine</Name>
-					<SpecialRuleDescription>Re-roll failed rolls to wound</SpecialRuleDescription>
-					<SpecialRuleDescription>Enemy models may not take armour saves</SpecialRuleDescription>
+					<NoArmour/>
+					<Reroll>ToWound</Reroll>
 				</HandWeapon>
 				<Armour>
 					<Name>Heavy armour</Name>
