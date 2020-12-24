@@ -421,5 +421,91 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Night Goblins</Name>
+			<Points>2</Points>
+			<MinSize>20</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapons</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Shields</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRuleDescription>Netters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Spears</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Bows</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Bows</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Spears</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Nets</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Fanatic</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<Countable/>
+					<Min>0</Min>
+					<Max>3</Max>
+					<Value>0</Value>
+					<ExportToUnitSize/>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>8</Points>
+				</Option>
+					<Option>
+					<Name>Boss</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>8</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>

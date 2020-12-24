@@ -15,7 +15,7 @@
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>+1 to Hit</SpecialRuleDescription>
+				<AddToHit>1</AddToHit>
 				<Description>+1 to Hit</Description>
 			</Artefact>
 			<Artefact>
@@ -1983,19 +1983,14 @@
 					<Points>35</Points>
 				</Option>
 				<Option>
-					<Name>First fanatic</Name>
+					<Name>Fanatic</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-				</Option>
-				<Option>
-					<Name>Second fanatic</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-				</Option>
-				<Option>
-					<Name>Third fanatic</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
+					<Countable/>
+					<Min>0</Min>
+					<Max>3</Max>
+					<Value>0</Value>
+					<ExportToUnitSize/>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
