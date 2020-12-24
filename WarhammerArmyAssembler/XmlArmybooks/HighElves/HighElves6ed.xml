@@ -471,6 +471,48 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Imrik</Name>
+			<Points>675</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Minaithnir</MountInit>
+			<PersonifiedHero/>
+			<Description>Imrik, Dragon Prince of Caledor</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>No Dragons will fight Imrik, if they are in base contact with other models (and not in a challenge) then they light them instead, otherwise they may do nothing</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Star Lance</Name>
+					<SpecialRuleDescription>On the turn he charges, Imrik gets +3 Strength with no armour saves allowed</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Armour of Caledor</Name>
+					<ArmourTo>2</ArmourTo>
+					<SpecialRuleDescription>Immune to all breath and all Flaming attacks</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Dragonhorn</Name>
+					<SpecialRuleDescription>Once per battle, at the start of any of his own turns, Imrik may sound the Dragonhorn: until the start of his next turn, all friendly High Elf units may re-roll any Leadership-based tests</SpecialRuleDescription>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Tyrion</Name>
 			<Points>585</Points>
 			<MinSize>1</MinSize>
@@ -489,7 +531,6 @@
 				<Leadership>10</Leadership>
 			</MainParam>
 			<AdditionalParam>
-				<HitFirst/>
 				<MustBeGeneral/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
@@ -1077,6 +1118,39 @@
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 					<SpecialRuleDescription>Breathe Fire</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Minaithnir</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>7</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Scaly skin</Name>
+					<AddToArmour>3</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Breathe Fire</SpecialRuleDescription>
+					<SpecialRuleDescription>If Imrik is slain, will become subject to the rules for frenzy, but will otherwise remain under the control of the High Elf player</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
