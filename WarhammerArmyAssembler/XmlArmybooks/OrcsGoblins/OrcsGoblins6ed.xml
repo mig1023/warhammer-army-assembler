@@ -62,7 +62,7 @@
 				<Option>
 					<Name>Spears</Name>
 					<Type>Option</Type>
-					<Points>1</Points>
+					<Points>2</Points>
 					<PerModel/>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
@@ -106,7 +106,7 @@
 		</Unit>
 		<Unit>
 			<Type>Core</Type>
-			<Name>Orc Arrer Boys</Name>
+			<Name>Orc Arrer Boyz</Name>
 			<Points>7</Points>
 			<MinSize>10</MinSize>
 			<MainParam>
@@ -137,7 +137,107 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
+					<PerModel/>
 					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+					<Option>
+					<Name>Boss</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>13</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Savage Orc Boyz</Name>
+			<Points>6</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Spears</OnlyIfNot>
+						<OnlyIfNot>Bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToAttacks>1</AddToAttacks>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Bow</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Bow</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Spears</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Warprint</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<PerModel/>
+					<AddToWard>1</AddToWard>
+				</Option>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Big'Uns</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<OnlyOneInArmy/>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
