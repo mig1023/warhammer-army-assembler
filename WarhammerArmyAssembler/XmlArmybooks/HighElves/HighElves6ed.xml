@@ -520,6 +520,66 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Teclis</Name>
+			<Points>630</Points>
+			<Wizard>4</Wizard>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Teclis, High Loremaster of the White Tower</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Any spell cast by Teclis will be cast with Irresistible Force on any successful casting roll which includes a double, except a Miscast</SpecialRuleDescription>
+					<SpecialRuleDescription>Use High Magic know all six spells, regardless ot his current level</SpecialRuleDescription>
+					<SpecialRuleDescription>May re-roll all dice for spell effects</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Sword of Teclis</Name>
+					<NoArmour/>
+					<WoundOn>2</WoundOn>
+				</HandWeapon>
+				<Armour>
+					<Name>Curse of Aenarion</Name>
+					<WardForLastWound>2</WardForLastWound>
+				</Armour>
+				<Arcane>
+					<Name>Potions of Inner Strength</Name>
+					<WeaponSkillTo>6</WeaponSkillTo>
+					<BallisticSkillTo>4</BallisticSkillTo>
+					<StrengthTo>3</StrengthTo>
+					<InitiativeTo>6</InitiativeTo>
+					<AttacksTo>3</AttacksTo>
+				</Arcane>
+				<Arcane>
+					<Name>The Moon Staff of Lileath</Name>
+					<AddToCast>1</AddToCast>
+					<SpecialRuleDescription>Once per battle, Moon Staff may granted D6 extra dice to cast, but no more additional dice for the rest of the battle</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Scroll of Hoeth</Name>
+					<SpecialRuleDescription>One use only, same as Dispel scroll, in addition, both Teclis and the caster roll a D6: if Teclis scores higher, the spell cannot be reused by caster</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>The War Crown</Name>
+					<SpecialRuleDescription>Any spell which is normally limited to a specific range in inches is now of unlimited range</SpecialRuleDescription>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Prince</Name>
 			<Points>125</Points>
 			<MinSize>1</MinSize>
