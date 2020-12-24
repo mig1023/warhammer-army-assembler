@@ -402,7 +402,7 @@ namespace WarhammerArmyAssembler
                         return false;
             }
 
-            if ((Virtue || Honours) && unit.IsAlready(this.Name))
+            if ((Virtue || Honours) && addOption && unit.IsAlready(this.Name))
                 return false;
 
             if (unit.IsAnotherOptionIsIncompatible(this))

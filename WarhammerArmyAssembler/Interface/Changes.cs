@@ -129,9 +129,10 @@ namespace WarhammerArmyAssembler.Interface
                 Interface.Reload.ReloadArmyData();
                 Interface.UnitDetails.UpdateUnitDescription(unitID, unit);
 
-                bool multiple = artefact.Multiple || artefact.Virtue || artefact.Honours || (artefact.Runic > 0);
+                bool multiple = artefact.Multiple || artefact.Virtue || (artefact.Runic > 0);
+                bool honours = artefact.Honours && (artefact.Points > 0);
 
-                if (!multiple && (artefact.Type != Option.OptionType.Powers))
+                if (!multiple && !honours && (artefact.Type != Option.OptionType.Powers))
                     Interface.Mod.SetArtefactAlreadyUsed(id, true);
             }
         }
