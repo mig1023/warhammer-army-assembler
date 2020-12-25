@@ -831,5 +831,50 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Orc Boar Chariot</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Boar</MountInit>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
+					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Extra Orc</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>6</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
