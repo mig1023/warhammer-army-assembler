@@ -1080,5 +1080,37 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Snotling Pump Wagon</Name>
+			<Points>40</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>12</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Unbreakable//>
+				<LargeBase/>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Snotling Pump Wagon</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
