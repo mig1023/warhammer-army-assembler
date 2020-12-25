@@ -876,5 +876,60 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Goblin Wolf Chariot</Name>
+			<Points>60</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Wolf</MountInit>
+			<ModelsInPack>5</ModelsInPack>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangedWeapon>
+					<Name>Short bows</Name>
+				</RangedWeapon>
+				<Special>
+					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Extra Goblin</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Extra Wolf</Name>
+					<Type>Option</Type>
+					<AddToModelsInPack>1</AddToModelsInPack>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Spears</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
