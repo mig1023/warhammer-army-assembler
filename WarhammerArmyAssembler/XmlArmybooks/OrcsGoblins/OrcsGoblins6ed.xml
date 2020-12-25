@@ -674,6 +674,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
 					<SpecialRuleDescription>Ignore Goblin Panic</SpecialRuleDescription>
 					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
 				</Special>
@@ -740,6 +741,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
 					<SpecialRuleDescription>Ignore Goblin Panic</SpecialRuleDescription>
 					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
 				</Special>
@@ -786,6 +788,46 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>17</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Night Goblin Squig Herd</Name>
+			<Points>16</Points>
+			<MinSize>5</MinSize>
+			<ModelsInPack>2</ModelsInPack>
+			<MainParam>
+				<Movement>12</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Animosity</SpecialRuleDescription>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRuleDescription>Squigs</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Squig Hopper</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<PerModel/>
+					<Countable/>
+					<MaxDependency Dependency="Size" Ratio="3"/>
+					<ExportToUnitSize/>
 				</Option>
 			</Options>
 		</Unit>
