@@ -1099,7 +1099,7 @@
 				<Armour>6</Armour>
 			</MainParam>
 			<AdditionalParam>
-				<Unbreakable//>
+				<Unbreakable/>
 				<LargeBase/>
 				<ImpactHit>D6</ImpactHit>
 			</AdditionalParam>
@@ -1109,6 +1109,41 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Snotling Pump Wagon</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Giant</Name>
+			<Points>205</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Stubborn/>
+				<LargeBase/>
+				<Giant/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand wepon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Ignore Greenskin Panic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fall Over</SpecialRuleDescription>
+					<SpecialRuleDescription>Giant Special Attacks</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
