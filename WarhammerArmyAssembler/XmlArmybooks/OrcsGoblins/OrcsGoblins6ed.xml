@@ -463,7 +463,72 @@
 					<Mount/>
 				</Option>
 			</Options>
-		</Hero>		
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Night Goblin Warboss</Name>
+			<Group>Goblin</Group>
+			<Points>55</Points>
+			<Description>Night Goblin Warboss</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great axe</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Great axe</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>			
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
