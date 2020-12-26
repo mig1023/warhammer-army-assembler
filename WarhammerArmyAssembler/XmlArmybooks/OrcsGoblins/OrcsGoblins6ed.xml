@@ -535,6 +535,7 @@
 			<Group>Goblin</Group>
 			<Wizard>3</Wizard>
 			<Points>155</Points>
+			<Description>Goblin Great Shaman</Description>
 			<MinSize>1</MinSize>
 			<MainParam>
 				<Movement>4</Movement>
@@ -572,6 +573,48 @@
 					<Type>Option</Type>
 					<Points>18</Points>
 					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Night Goblin Great Shaman</Name>
+			<Group>Goblin</Group>
+			<Wizard>3</Wizard>
+			<Points>160</Points>
+			<Description>Night Goblin Great Shaman</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
 				</Option>
 			</Options>
 		</Hero>
