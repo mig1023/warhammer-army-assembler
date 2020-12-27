@@ -1239,6 +1239,48 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Night Goblin Shaman</Name>
+			<Group>Goblin</Group>
+			<Wizard>3</Wizard>
+			<Points>60</Points>
+			<Description>Night Goblin Shaman</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
