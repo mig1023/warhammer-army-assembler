@@ -711,6 +711,19 @@
 					<Points>16</Points>
 					<Mount/>
 				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great axe</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Shield</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
 			</Options>
 		</Hero>
 		<Hero>
@@ -793,6 +806,19 @@
 					<Points>16</Points>
 					<Mount/>
 				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great axe</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Shield</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
 			</Options>
 		</Hero>
 		<Hero>
@@ -870,6 +896,66 @@
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Boar</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great axe</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Shield</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Orc Shaman</Name>
+			<Group>Orc</Group>
+			<Wizard>1</Wizard>
+			<Points>65</Points>
+			<Description>Orc Shaman</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Ignore Goblin Panic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
 				</Option>
 				<Option>
 					<Name>Boar</Name>
