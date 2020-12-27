@@ -15,6 +15,52 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Grimgor Ironhide</Name>
+			<Group>Orc</Group>
+			<Points>400</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Grimgor Ironhide</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Hate/>
+				<ImmuneToPsychology/>
+				<MustBeGeneral/>
+				<AddToCloseCombat>2</AddToCloseCombat>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Gitsnik</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitFirst/>
+				</HandWeapon>
+				<Armour>
+					<Name>Blood-forged Armour</Name>
+					<AddToArmour>1</AddToArmour>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Armour>
+					<Name>Mork's All-Seeing Eye</Name>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Ignore Greenskin Panic</SpecialRuleDescription>
+					<SpecialRuleDescription>Quell Animosity</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Black Orc Warboss</Name>
 			<Group>Orc</Group>
 			<Points>135</Points>
