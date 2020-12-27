@@ -965,6 +965,61 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Savage Orc Shaman</Name>
+			<Group>Orc</Group>
+			<Wizard>1</Wizard>
+			<Points>67</Points>
+			<Description>Savage Orc Shaman</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Frenzy/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Choppa</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Ignore Goblin Panic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Warprint</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+					<PerModel/>
+					<AddToWard>6</AddToWard>
+				</Option>
+				<Option>
+					<Name>Boar</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
