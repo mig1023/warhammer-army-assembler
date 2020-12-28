@@ -72,5 +72,20 @@ namespace WarhammerArmyAssembler
             "Armour",
             "Ward"
         };
+
+        public static Dictionary<string, string> RerollsLines = new Dictionary<string, string>
+        {
+            ["OpponentToHit"] = "opponent re-roll all succeful rolls to Hit",
+            ["OpponentToWound"] = "opponent re-roll all succeful rolls to Wound",
+            ["OpponentToArmour"] = "opponent re-roll all succeful rolls to Armour Save",
+            ["OpponentToWard"] = "opponent re-roll all succeful rolls to Ward",
+            ["ToHit"] = "all failed rolls To Hit",
+            ["ToShoot"] = "all failed rolls To Shoot",
+            ["ToWound"] = "all failed rolls To Wound",
+            ["ToLeadership"] = "all failed rolls To Leadership",
+            ["ToArmour"] = "all failed rolls To Armour Save",
+            ["ToWard"] = "all failed rolls To Ward",
+            ["All"] = "all failed rolls",
+        };
     }
 }
