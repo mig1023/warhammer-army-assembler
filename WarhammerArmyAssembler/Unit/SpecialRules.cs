@@ -56,6 +56,7 @@ namespace WarhammerArmyAssembler
             ["NoKillingBlow"] = "No Killing Blow",
             ["WardForFirstWound"] = "Ward save [X]+ for first wound",
             ["WardForLastWound"] = "Ward save [X]+ for last wound",
+            ["FirstWoundDiscount"] = "Discounts the first wound",
         };
 
         public static List<string> UnitParam = new List<string> {

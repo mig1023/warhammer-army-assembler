@@ -166,6 +166,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.WoundOn = IntParse(additionalParam["WoundOn"]);
                 newUnit.WardForFirstWound = IntParse(additionalParam["WardForFirstWound"]);
                 newUnit.WardForLastWound = IntParse(additionalParam["WardForLastWound"]);
+                newUnit.FirstWoundDiscount = BoolParse(additionalParam["FirstWoundDiscount"]);
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
@@ -266,6 +267,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.TypeUnitIncrese = BoolParse(xmlNode["TypeUnitIncrese"]);
             newWeapon.WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]);
             newWeapon.WardForLastWound = IntParse(xmlNode["WardForLastWound"]);
+            newWeapon.FirstWoundDiscount = BoolParse(xmlNode["FirstWoundDiscount"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 

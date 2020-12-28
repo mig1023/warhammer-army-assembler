@@ -642,7 +642,9 @@ namespace WarhammerArmyAssembler.Test
                         &&
                         (KillingAttack(unit, enemy) || NotAS(ref unit, enemy))
                         &&
-                        (NotWard(ref unit, enemy))
+                        NotWard(ref unit, enemy)
+                        &&
+                        NotDiscountWound(ref enemy)
                     ) {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
@@ -826,6 +828,20 @@ namespace WarhammerArmyAssembler.Test
                 Param.Tests(ref unit, enemy, context: Param.ContextType.ArmourSave);
 
             return armourFail;
+        }
+
+        private static bool NotDiscountWound(ref Unit enemy)
+        {
+            if (!enemy.FirstWoundDiscount)
+                return true;
+            else
+            {
+                Test.Data.Console(Test.Data.goodText, " --> first wound discount");
+
+                enemy.FirstWoundDiscount = false;
+
+                return false;
+            }
         }
 
         private static bool NotWard(ref Unit unit, Unit enemy)
