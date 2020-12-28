@@ -644,7 +644,7 @@ namespace WarhammerArmyAssembler.Test
                         &&
                         NotWard(ref unit, enemy)
                         &&
-                        NotDiscountWound(ref enemy)
+                        NotDiscountWound(unit, ref enemy)
                     ) {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
@@ -659,7 +659,7 @@ namespace WarhammerArmyAssembler.Test
                             Param.Tests(ref enemy, unit, context: Param.ContextType.Wound);
 
                             if (enemy.Wounds > 0)
-                                return WoundsNumbers(unit, enemy);
+                                return WoundsNumbers(unit, ref enemy);
                             else
                                 return woundsAtStart;
                         }
@@ -709,7 +709,7 @@ namespace WarhammerArmyAssembler.Test
             return randomParam;
         }
 
-        private static int WoundsNumbers(Unit unit, Unit enemy)
+        private static int WoundsNumbers(Unit unit, ref Unit enemy)
         {
             if (unit.AutoDeath)
             {
@@ -723,7 +723,16 @@ namespace WarhammerArmyAssembler.Test
             int multiwounds = RandomParamParse(unit.MultiWounds);
 
             Test.Data.Console(Test.Data.text, " <-- {0} multiple wounds", multiwounds);
-                
+
+            if (enemy.FirstWoundDiscount)
+            {
+                Test.Data.Console(Test.Data.text, " <-- first wound discount");
+
+                enemy.FirstWoundDiscount = false;
+
+                multiwounds -= 1;
+            }
+
             return multiwounds;
         }
 
@@ -830,13 +839,13 @@ namespace WarhammerArmyAssembler.Test
             return armourFail;
         }
 
-        private static bool NotDiscountWound(ref Unit enemy)
+        private static bool NotDiscountWound(Unit unit, ref Unit enemy)
         {
-            if (!enemy.FirstWoundDiscount)
+            if (!enemy.FirstWoundDiscount || !String.IsNullOrEmpty(unit.MultiWounds))
                 return true;
             else
             {
-                Test.Data.Console(Test.Data.goodText, " --> first wound discount");
+                Test.Data.Console(Test.Data.text, " --> first wound discount");
 
                 enemy.FirstWoundDiscount = false;
 
