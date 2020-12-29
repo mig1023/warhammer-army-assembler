@@ -119,6 +119,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 else
                     newParamTest.Repeat = Param.RepeatType.Normal;
 
+                newParamTest.MountsOnly = xmlParamTest.Attributes["MountsOnly"] != null;
+
                 newParamTest.UsedAlready = false;
 
                 allParamTests.Add(newParamTest);

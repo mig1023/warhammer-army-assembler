@@ -252,6 +252,13 @@
 				<SpecialRuleDescription>May attempt to nullify any enemy spell cast: roll the same number of D6 as the caster used to cast the spell, if all are 2-6 then the Amulet dispels the spell, if one or more dice is a 1 then model is slain with no saves of any kind allowed</SpecialRuleDescription>
 				<Description>Instead of making a normal dispel attempt, a model with the Amulet may attempt to nullify any enemy spell cast at the bearer or the unit he is with. Roll the same number of D6 as the caster used to cast the spell. If all are 2-6 then the Amulet dispels the spell. However, if one or more dice is a 1 then the spell gets through as the Amulet overloads and explodes, killing the wearer outright (with no saves of any kind allowed). The Amulet cannot stop spells cast with Irresistible Force.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>The Collar of Zorga</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>15</Points>
+				<Test Bet="Pass" Context="Round" MountsOnly="true">Leadership</Test>
+				<Description>Monsters and mounts of any size must pass a Leadership test (on their own Leadership characteristic) to attack the wearer. If they fail, they may choose to attack another model instead. Roll once each close combat round.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>	
 	<Heroes>

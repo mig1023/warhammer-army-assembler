@@ -13,6 +13,7 @@ namespace WarhammerArmyAssembler.Test
         public TestType Bet { get; set; }
         public ContextType Context { get; set; }
         public RepeatType Repeat { get; set; }
+        public bool MountsOnly { get; set; }
 
         public bool UsedAlready { get; set; }
 
@@ -32,6 +33,7 @@ namespace WarhammerArmyAssembler.Test
                     Bet = param.Bet,
                     Context = param.Context,
                     Repeat = param.Repeat,
+                    MountsOnly = param.MountsOnly,
                     UsedAlready = false,
                 };
 
@@ -51,6 +53,9 @@ namespace WarhammerArmyAssembler.Test
                     testsCount = unit.GetFront();
 
                 bool canBeApplied = (param.Repeat == RepeatType.Normal) || ((param.Repeat == RepeatType.Once) && !param.UsedAlready);
+
+                if (param.MountsOnly && (unit.Type != Unit.UnitType.Mount))
+                    canBeApplied = false;
 
                 if ((param.Context == context) && canBeApplied)
                 {
@@ -119,7 +124,9 @@ namespace WarhammerArmyAssembler.Test
                 if (p.Context == ContextType.Round)
                     head = String.Empty;
 
-                rules.Add(String.Format("{0}{1} opponent must pass {2} test or {3}", head, contextType[p.Context], p.Type, betType[p.Bet]));
+                string opponent = (p.MountsOnly ? "opponent's mount" : "opponent");
+
+                rules.Add(String.Format("{0}{1} {2} must pass {3} test or {4}", head, contextType[p.Context], opponent, p.Type, betType[p.Bet]));
             }
         }
     }
