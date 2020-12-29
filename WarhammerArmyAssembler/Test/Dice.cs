@@ -20,8 +20,8 @@ namespace WarhammerArmyAssembler.Test
             string[] allRerolls = unit.Reroll.Split(';');
 
             foreach (string unitReroll in allRerolls)
-                foreach (KeyValuePair<string, Types> reroll in unitRerolls)
-                    if ((unitReroll.Trim() == reroll.Key) && (reroll.Value == diceType))
+                foreach (string reroll in unitRerolls.Keys.ToList())
+                    if ((unitReroll.Trim() == reroll) && (unitRerolls[reroll] == diceType))
                         return true;
 
             return false;
@@ -33,6 +33,8 @@ namespace WarhammerArmyAssembler.Test
             {
                 ["OpponentToHit"] = Types.WS,
                 ["OpponentToWound"] = Types.S,
+                ["ToArmour"] = Types.AS,
+                ["ToWard"] = Types.WARD,
             };
 
             return CheckReroll(enemyRerolls, enemy, diceType);
@@ -46,18 +48,8 @@ namespace WarhammerArmyAssembler.Test
                 ["ToShoot"] = Types.BS,
                 ["ToWound"] = Types.S,
                 ["ToLeadership"] = Types.LD,
-            };
-
-            Dictionary<string, Types> otherUnitRerolls = new Dictionary<string, Types>
-            {
                 ["OpponentToArmour"] = Types.AS,
                 ["OpponentToWard"] = Types.WARD,
-            };
-
-            Dictionary<string, Types> enemyRerolls = new Dictionary<string, Types>
-            {
-                ["ToArmour"] = Types.AS,
-                ["ToWard"] = Types.WARD,
             };
 
             if (unit.Reroll == "All")
@@ -66,13 +58,7 @@ namespace WarhammerArmyAssembler.Test
             if (unit.MurderousProwess && (lastDice == 1))
                 return true;
 
-            if (CheckReroll(unitRerolls, unit, diceType) || CheckReroll(otherUnitRerolls, unit, diceType))
-                return true;
-
-            if (CheckReroll(enemyRerolls, enemy, diceType))
-                return true;
-
-            return false;
+            return CheckReroll(unitRerolls, unit, diceType);
         }
 
         public static int GetRankBonus(Unit unit)
