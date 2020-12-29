@@ -238,6 +238,13 @@
 				<AddToWard>5</AddToWard>
 				<Description>Magical Boss's 'at wot protects you - giz you a 5+ Ward save dunnit. May be worn in addition to normal or magical armour.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Magical Warpaint</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToWard>5</AddToWard>
+				<Description>Savage Orcs only. If the wearer fails his armour save, he may make a 5+ Ward save. A model cannot wear any armour (not even magical) if it has the Magical Warpaint, though it may carry a shield.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>	
 	<Heroes>
@@ -414,7 +421,7 @@
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour>5</AddToArmour>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 					</OnlyIfAnotherService>
@@ -1019,7 +1026,7 @@
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour>5</AddToArmour>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 					</OnlyIfAnotherService>
