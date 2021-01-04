@@ -460,5 +460,41 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Black Coach</Name>
+			<Points>200</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>4</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Undead/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Evocation of Death</SpecialRuleDescription>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
