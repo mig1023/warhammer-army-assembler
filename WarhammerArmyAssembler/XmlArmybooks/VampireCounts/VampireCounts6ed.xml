@@ -21,6 +21,16 @@
 				<SpecialRuleDescription>Once per game can summon either a Bat Swarm (one Base) or D3+1 Fell Bats</SpecialRuleDescription>
 				<Description>Once per game the Vampire can use this power at the start of one of his turns. He can choose to summon either a Bat Swarm (one Base) or D3+1 Fell Bats. Immediately calculate the Victory points value new unit. The uniy can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Call Winds</Name>
+				<Type>Weapon</Type>
+				<Points>55</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Von Carstein</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Call Wind instead of movement: all shooting is at -1 lo hit, all flying movement is impossible</SpecialRuleDescription>
+				<Description>At the beginning of each of his turns the Vampire can decide not to move in that Movement phase and attempt to call winds. Roll a dice: on a result of 1 nothing happens, on a 2 to 6 the Vampire summons a wild storm that will last until the beginning of his next turn. If he is engaged in close combat, wounded or killed, the storm ends immediately. The storm affects the entire battlefield. All shooting is at -1 lo hit. All flying movement is impossible and flying creatures have to use their gnuind Movement value.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
