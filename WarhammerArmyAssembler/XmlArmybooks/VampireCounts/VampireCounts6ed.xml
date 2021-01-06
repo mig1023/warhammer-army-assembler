@@ -31,6 +31,16 @@
 				<SpecialRuleDescription>Call Wind instead of movement: all shooting is at -1 lo hit, all flying movement is impossible</SpecialRuleDescription>
 				<Description>At the beginning of each of his turns the Vampire can decide not to move in that Movement phase and attempt to call winds. Roll a dice: on a result of 1 nothing happens, on a 2 to 6 the Vampire summons a wild storm that will last until the beginning of his next turn. If he is engaged in close combat, wounded or killed, the storm ends immediately. The storm affects the entire battlefield. All shooting is at -1 lo hit. All flying movement is impossible and flying creatures have to use their gnuind Movement value.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Walking Death</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Von Carstein</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToCloseCombat>1</AddToCloseCombat>
+				<Description>The presence of one or more von Carstein Vampires with this power in a combat adds +1 io their side's combat resolution.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
