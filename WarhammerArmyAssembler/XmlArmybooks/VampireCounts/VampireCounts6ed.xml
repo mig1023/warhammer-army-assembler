@@ -41,6 +41,16 @@
 				<AddToCloseCombat>1</AddToCloseCombat>
 				<Description>The presence of one or more von Carstein Vampires with this power in a combat adds +1 io their side's combat resolution.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Summon Wolves</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Von Carstein</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Once per game can summon D3 Dire Wolves</SpecialRuleDescription>
+				<Description>Once per game, the Vampire can use this power at the start of one of his turns to summon D3 Dire Wolves. Immediately calculate the Victory points value new unit. The uniy can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
