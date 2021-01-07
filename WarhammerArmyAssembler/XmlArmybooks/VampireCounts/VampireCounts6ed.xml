@@ -83,6 +83,16 @@
 				<AddToAttacks>1</AddToAttacks>
 				<Description>The Vampire has +1 Attack</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Blademaster</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Blood Dragon</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Model in base contact lose one of his Attacks, chosen by the Vampire</SpecialRuleDescription>
+				<Description>The Vampire can choose one model in base contact with him at the beginning of the Close Combat phase. The chosen model will lose one of his Attacks, chosen by the Vampire if he has different kinds of attack (for example, from a riding beast, bite attacks, etc).</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
