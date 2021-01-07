@@ -134,6 +134,20 @@
 				<Description>At the start of a challenge, the enemy character selected to take on the Vampire must take a Leadership test before any blows are struck (a character Immune to Psychology is also immune to this effect). If the test is failed, the enemy character will change his mind and hide in the rear ranks, refusing to fight the Vampire. Then the combat will proceed as normal, with no challenges fought that turn and the Vampire will be free to fight against any models he is in contact with.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Necrarch">
+			<Artefact>
+				<Name>Nehekhara's Noble Blood</Name>
+				<Type>Weapon</Type>
+				<Points>45</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Necrarch</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToCast>1</AddToCast>
+				<AddToDispell>1</AddToDispell>
+				<AddToWizard>1</AddToWizard>
+				<Description>Ihe Vampire has one extra Magic Level. A Thrall with this power is a Level 1 Wizard in all respects and can be the army's General</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
