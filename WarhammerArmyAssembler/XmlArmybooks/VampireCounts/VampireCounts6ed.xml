@@ -103,6 +103,16 @@
 				<SpecialRuleDescription>Re-roll missed close combat attacks in the first round of every combat</SpecialRuleDescription>
 				<Description>The Vampire can re-roll missed close combat attacks in the first round of every combat.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Master Strike</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Blood Dragon</OnlyIf>
+				</OnlyIfAnotherService>
+				<KillingBlow/>
+				<Description>The Vampire has the Killing Blow special rule.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
