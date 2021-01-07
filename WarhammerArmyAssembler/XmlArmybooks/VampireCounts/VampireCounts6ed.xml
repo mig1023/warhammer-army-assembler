@@ -145,7 +145,17 @@
 				<AddToCast>1</AddToCast>
 				<AddToDispell>1</AddToDispell>
 				<AddToWizard>1</AddToWizard>
-				<Description>Ihe Vampire has one extra Magic Level. A Thrall with this power is a Level 1 Wizard in all respects and can be the army's General</Description>
+				<Description>The Vampire has one extra Magic Level. A Thrall with this power is a Level 1 Wizard in all respects and can be the army's General</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Awakening</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Necrarch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>+D3 to the total number of Skeletons or Zombies created by Invocation of Nehek</SpecialRuleDescription>
+				<Description>Whenever the Vampire casts the Necromantic spell Invocation of Nehek he can add +D3 to the total number of Skeletons or Zombies created. For example, if he casts a level 2 Invocation, he can raise 2D6+D3 Skeletons.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
