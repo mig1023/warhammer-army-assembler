@@ -72,6 +72,18 @@
 				<Description>The Movement of the Vampire is increased to 9 as long as he is moving on foot</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Blood Dragon">
+			<Artefact>
+				<Name>Red Fury</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Blood Dragon</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>The Vampire has +1 Attack</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
