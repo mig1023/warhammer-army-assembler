@@ -167,6 +167,16 @@
 				<AddToCast>1</AddToCast>
 				<Description>The presence of the Vampire on the battlefield adds one dice to the player's pile of Power dice (no effect on the Dispel dice).</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Unholy Cynosure</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Necrarch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Once per game, can re-roll one of the dice rolled to cast a spell</SpecialRuleDescription>
+				<Description>Once per game, the Vampire can re-roll one of the dice rolled to cast a spell. This can be used     to negate a Miscast result or could cause an Irresistible Force result.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
