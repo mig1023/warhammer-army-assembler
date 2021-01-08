@@ -239,6 +239,16 @@
 				<Reroll>ToHit</Reroll>
 				<Description>The Vampire can re-roll all failed To Hit rolls.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Summon Ghouls</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Strigoi</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Once per game can summon D3+1 Ghouls</SpecialRuleDescription>
+				<Description>Once per game, the Vampire can use this power at the start of one of his turns to summon D3+1 Ghouls. Immediately calculate the Victory points value of the new unit. The unit can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
