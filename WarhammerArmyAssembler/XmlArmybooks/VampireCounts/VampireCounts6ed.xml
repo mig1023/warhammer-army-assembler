@@ -219,6 +219,16 @@
 				<AddToWounds>1</AddToWounds>
 				<Description>The Vampire has +1 Wound on his profile.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Bat Form</Name>
+				<Type>Weapon</Type>
+				<Points>45</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Strigoi</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<Description>The model has the Fly special rule.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
