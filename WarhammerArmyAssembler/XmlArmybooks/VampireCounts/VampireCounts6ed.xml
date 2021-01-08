@@ -229,6 +229,16 @@
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
 				<Description>The model has the Fly special rule.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Infinite Hatred</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Strigoi</OnlyIf>
+				</OnlyIfAnotherService>
+				<Reroll>ToHit</Reroll>
+				<Description>The Vampire can re-roll all failed To Hit rolls.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
