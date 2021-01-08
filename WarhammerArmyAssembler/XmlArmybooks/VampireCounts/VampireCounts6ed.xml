@@ -198,6 +198,18 @@
 				<Description>The Vampire knows one more spell than he is normally allowed. This does not increase his Magic Level.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Strigoi">
+			<Artefact>
+				<Name>Curse of the Revenant</Name>
+				<Type>Weapon</Type>
+				<Points>55</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Necrarch</OnlyIf>
+				</OnlyIfAnotherService>
+				<Regeneration/>
+				<Description>The Vampire has the Regeneration special rule</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
