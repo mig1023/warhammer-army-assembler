@@ -266,20 +266,30 @@
 				<Type>Weapon</Type>
 				<Points>55</Points>
 				<OnlyIfAnotherService>
-					<OnlyIf>Strigoi</OnlyIf>
+					<OnlyIf>Lahmia</OnlyIf>
 				</OnlyIfAnotherService>
 				<SpecialRuleDescription>One model in base contact with the Vampire must take a Leadership test, if the test is failed, the victim is controlled by the Vampire player in that Close Combat phase</SpecialRuleDescription>
-				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If the test is failed, the victim is controlled by the Vampire player in that Close Combat phase. The model will direct its attacks against his own side. The model cannot be attacked by either side in that Close Comhat phase but, after combat resolution has been worked out, he reverts immediately to the original player's control and can therefore use his Leadership for any Break tests and can be broken and pursued as normal. If the model has no friendly models in base contact, it will count as being dominated</Description>
+				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If the test is failed, the victim is controlled by the Vampire player in that Close Combat phase. The model will direct its attacks against his own side. The model cannot be attacked by either side in that Close Comhat phase but, after combat resolution has been worked out, he reverts immediately to the original player's control and can therefore use his Leadership for any Break tests and can be broken and pursued as normal. If the model has no friendly models in base contact, it will count as being dominated.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Domination</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
 				<OnlyIfAnotherService>
-					<OnlyIf>Strigoi</OnlyIf>
+					<OnlyIf>Lahmia</OnlyIf>
 				</OnlyIfAnotherService>
 				<SpecialRuleDescription>One model in base contact must take a Leadership test, if the test is failed, the victim cannot attack in that Close Combat phase and all attacks directed against the victim will hit automatically</SpecialRuleDescription>
-				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If the test is failed, the victim cannot attack in that Close Combat phase and all attacks directed against the victim will hit automatically</Description>
+				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If the test is failed, the victim cannot attack in that Close Combat phase and all attacks directed against the victim will hit automatically.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Quickblood</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Lahmia</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToWard>5</AddToWard>
+				<Description>The Vampire has a Ward save of 5+.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
