@@ -177,6 +177,16 @@
 				<SpecialRuleDescription>Once per game, can re-roll one of the dice rolled to cast a spell</SpecialRuleDescription>
 				<Description>Once per game, the Vampire can re-roll one of the dice rolled to cast a spell. This can be used     to negate a Miscast result or could cause an Irresistible Force result.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Master of the Black Arts</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Necrarch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>The range of all spells is increased by 6"</SpecialRuleDescription>
+				<Description>The range of all spells cast by the Vampire is increased by 6". This power won't affect spells without a range (like Hand of Dust) nor the range or spells cast from bound spell items.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
