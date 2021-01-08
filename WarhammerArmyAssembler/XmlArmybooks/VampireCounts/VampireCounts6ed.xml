@@ -157,6 +157,16 @@
 				<SpecialRuleDescription>+D3 to the total number of Skeletons or Zombies created by Invocation of Nehek</SpecialRuleDescription>
 				<Description>Whenever the Vampire casts the Necromantic spell Invocation of Nehek he can add +D3 to the total number of Skeletons or Zombies created. For example, if he casts a level 2 Invocation, he can raise 2D6+D3 Skeletons.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Dark Acolyte</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Necrarch</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToCast>1</AddToCast>
+				<Description>The presence of the Vampire on the battlefield adds one dice to the player's pile of Power dice (no effect on the Dispel dice).</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
