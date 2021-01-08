@@ -204,10 +204,20 @@
 				<Type>Weapon</Type>
 				<Points>55</Points>
 				<OnlyIfAnotherService>
-					<OnlyIf>Necrarch</OnlyIf>
+					<OnlyIf>Strigoi</OnlyIf>
 				</OnlyIfAnotherService>
 				<Regeneration/>
-				<Description>The Vampire has the Regeneration special rule</Description>
+				<Description>The Vampire has the Regeneration special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Massive Monstrosity</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Strigoi</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToWounds>1</AddToWounds>
+				<Description>The Vampire has +1 Wound on his profile.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
