@@ -249,6 +249,16 @@
 				<SpecialRuleDescription>Once per game can summon D3+1 Ghouls</SpecialRuleDescription>
 				<Description>Once per game, the Vampire can use this power at the start of one of his turns to summon D3+1 Ghouls. Immediately calculate the Victory points value of the new unit. The unit can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Iron Sinews</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Strigoi</OnlyIf>
+				</OnlyIfAnotherService>
+				<AddToStrength>1</AddToStrength>
+				<Description>The Vampire has +1 Strength on his profile.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
