@@ -499,6 +499,47 @@
 					<AddToWeaponSkill>-1</AddToWeaponSkill>
 				</Option>
 				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<OnlyIfAnotherService>
+						<OnlyIf>Von Carstein</OnlyIf>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<HitLast/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Von Carstein</OnlyIf>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIf>Von Carstein</OnlyIf>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+					<Lance/>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
 					<Name>Wizard Level 3</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
