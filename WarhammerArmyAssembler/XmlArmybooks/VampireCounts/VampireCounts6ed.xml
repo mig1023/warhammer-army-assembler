@@ -763,6 +763,72 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Master Necromancer</Name>
+			<Points>185</Points>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<Description>Master Necromancer</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>				
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<AddToArmour>2</AddToArmour>
+					<Points>12</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Nightmare</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Winged Nightmare</Name>
+					<Type>Option</Type>
+					<Points>175</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Zombie Dragon</Name>
+					<Type>Option</Type>
+					<Points>300</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
