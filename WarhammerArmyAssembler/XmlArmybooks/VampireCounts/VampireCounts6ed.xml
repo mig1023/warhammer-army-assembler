@@ -1168,6 +1168,60 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Necromancer</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Necromancer</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>				
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<AddToArmour>2</AddToArmour>
+					<Points>8</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Nightmare</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
