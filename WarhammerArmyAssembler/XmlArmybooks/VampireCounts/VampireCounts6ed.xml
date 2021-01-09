@@ -1007,6 +1007,112 @@
 					</OnlyIfAnotherService>
 					<AddToArmour>6</AddToArmour>
 				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Wight Lord</Name>
+			<Points>60</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Group>Wight Lord</Group>
+			<Description>Wight Lord</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<KillingBlow/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<Points>4</Points>
+					<Lance/>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Nightmare</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
 			</Options>
 		</Hero>
 	</Heroes>
