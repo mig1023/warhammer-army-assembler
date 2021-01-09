@@ -301,6 +301,16 @@
 				<HitFirst/>
 				<Description>The Vampire always attacks first in close combat, even if charged. If an enemy has the same power because of a magic item or spell, hits are resolved in order of Initiative. If the Vampire and her enemy have the same Initiative, roll a dice to decide who attacks first.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Transfix</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Lahmia</OnlyIf>
+				</OnlyIfAnotherService>
+				<Test Bet="Pass" Context="Round">Leadership</Test>
+				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack at the Close Combat phase.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
