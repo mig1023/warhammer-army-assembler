@@ -829,6 +829,186 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Vampire Thrall</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<Description>Vampire Thrall</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Von Carstein</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Necrarch</OnlyIfNot>
+						<OnlyIfNot>Blood Dragon</OnlyIfNot>
+						<OnlyIfNot>Strigoi</OnlyIfNot>
+						<OnlyIfNot>Lahmia</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Necrarch</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Von Carstein</OnlyIfNot>
+						<OnlyIfNot>Blood Dragon</OnlyIfNot>
+						<OnlyIfNot>Strigoi</OnlyIfNot>
+						<OnlyIfNot>Lahmia</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWeaponSkill>-2</AddToWeaponSkill>
+				</Option>
+				<Option>
+					<Name>Blood Dragon</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Von Carstein</OnlyIfNot>
+						<OnlyIfNot>Necrarch</OnlyIfNot>
+						<OnlyIfNot>Strigoi</OnlyIfNot>
+						<OnlyIfNot>Lahmia</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWeaponSkill>2</AddToWeaponSkill>
+					<SpecialRuleDescription>Must always issue challenges and must always accept enemy challenges</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Strigoi</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Von Carstein</OnlyIfNot>
+						<OnlyIfNot>Necrarch</OnlyIfNot>
+						<OnlyIfNot>Blood Dragon</OnlyIfNot>
+						<OnlyIfNot>Lahmia</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToAttacks>1</AddToAttacks>
+					<Hate/>
+					<SpecialRuleDescription>Cannot choose any mundane weapons or armour</SpecialRuleDescription>
+					<SpecialRuleDescription>Cannot use any magic item</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Lahmia</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Von Carstein</OnlyIfNot>
+						<OnlyIfNot>Necrarch</OnlyIfNot>
+						<OnlyIfNot>Blood Dragon</OnlyIfNot>
+						<OnlyIfNot>Strigoi</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToInitiative>2</AddToInitiative>
+					<Hate/>
+					<SpecialRuleDescription>All models in base contact suffer a -1 to their Leadership</SpecialRuleDescription>
+					<SpecialRuleDescription>Cannot choose any mundane weapons or armour</SpecialRuleDescription>
+					<AddToWeaponSkill>-1</AddToWeaponSkill>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<OnlyIfAnotherService>
+						<OnlyIf>Von Carstein</OnlyIf>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<HitLast/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Von Carstein</OnlyIf>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIf>Von Carstein</OnlyIf>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+					<Lance/>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<OnlyIf>Von Carstein</OnlyIf>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+						<OnlyIf>Von Carstein</OnlyIf>
+						<OnlyIf>Blood Dragon</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Blood Dragon</OnlyIf>
+						<OnlyIf>Von Carstein</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Nightmare</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Strigoi</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Nightmare</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
