@@ -291,6 +291,16 @@
 				<AddToWard>5</AddToWard>
 				<Description>The Vampire has a Ward save of 5+.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Innocence Lost</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Lahmia</OnlyIf>
+				</OnlyIfAnotherService>
+				<HitFirst/>
+				<Description>The Vampire always attacks first in close combat, even if charged. If an enemy has the same power because of a magic item or spell, hits are resolved in order of Initiative. If the Vampire and her enemy have the same Initiative, roll a dice to decide who attacks first.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
