@@ -453,7 +453,7 @@ namespace WarhammerArmyAssembler.Test
                 int wounded = Attack(ref unit, ref enemy, round, out bool additionalAttack, (i >= originalAttackNumber), impactHit, impactLine);
                 roundWounds += wounded;
 
-                if (enemy.Wounds < wounded)
+                if ((enemy.Wounds < wounded) && !enemy.WoundedWithKillingBlow)
                 {
                     wounded = enemy.Wounds;
                     Test.Data.Console(Test.Data.supplText, ", only {0} can be inflicted", wounded);

@@ -95,6 +95,7 @@ namespace WarhammerArmyAssembler.Test
                     case TestType.Death:
                         Test.Data.Console(Test.Data.badText, " --> SLAIN");
                         unit.Wounds = 0;
+                        unit.WoundedWithKillingBlow = true;
                         break;
                 }
         }
