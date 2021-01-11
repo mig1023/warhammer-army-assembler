@@ -494,6 +494,20 @@
 				<SpecialRuleDescription>One enemy in base contact (bearer's choice) lose 1 Attack</SpecialRuleDescription>
 				<Description>Gives a 6+ armour save and may be combined with other equipment normally. One enemy in base contact (bearer's choice) lose 1 Attack. All Bretonnian Knights and Characters hate the model carrying the shield.</Description>
 			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Talismans">
+			<Artefact>
+				<Name>The Carstein Ring</Name>
+				<Type>AdditionalArmour</Type>
+				<OnlyForGroup>Vampire</OnlyForGroup>
+				<OnlyIfAnotherService>
+					<OnlyIf>Von Carstein</OnlyIf>
+				</OnlyIfAnotherService>
+				<Points>75</Points>
+				<AddToWard>4</AddToWard>
+				<Regeneration/>
+				<Description>The model has a 4+ Ward save and the Regeneration special rule.</Description>
+			</Artefact>
 		</ArtefactsGroup>	
 	</Artefacts>
 	<Heroes>
