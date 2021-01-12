@@ -624,6 +624,14 @@
 				<SpecialRuleDescription>5+ Ward save against normal and magical missiles</SpecialRuleDescription>
 				<Description>The unit has a 5+ Ward save against normal and magical missiles.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Banner of the Barrows</Name>
+				<Type>Banner</Type>
+				<Points>45</Points>
+				<OnlyForGroup>Wights</OnlyForGroup>
+				<HitOn>3</HitOn>
+				<Description>All Wights (Grave Guard, Black Knight and Wight lords) in the unit carrying the Banner will hit the enemy on a 3+ regardless of relative Weapon Skills or any other modifier.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
@@ -1253,7 +1261,7 @@
 			<Points>60</Points>
 			<MinSize>1</MinSize>
 			<Wizard>1</Wizard>
-			<Group>Wight Lord</Group>
+			<Group>Wights</Group>
 			<Description>Wight Lord</Description>
 			<MainParam>
 				<Movement>4</Movement>
@@ -1732,6 +1740,7 @@
 			<Type>Special</Type>
 			<Name>Grave Guard</Name>
 			<Points>12</Points>
+			<Group>Wights</Group>
 			<MinSize>10</MinSize>
 			<MaxSize>30</MaxSize>
 			<MainParam>
@@ -1799,6 +1808,7 @@
 			<Type>Special</Type>
 			<Name>Black Knight</Name>
 			<Points>23</Points>
+			<Group>Wights</Group>
 			<MinSize>5</MinSize>
 			<MaxSize>20</MaxSize>
 			<MountInit>Nightmare</MountInit>
