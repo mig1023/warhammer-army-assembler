@@ -609,6 +609,44 @@
 				<Description>The familiar's owner knows one more spell than he is normally allowed. This does not increase his magic level.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Enchanted items">
+			<Artefact>
+				<Name>Rod of Flaming Death</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Bound spell, power level 4: a flaming magic missile with a range of 24" and causing D3 Strength 4 hits, a unit taking at least one casualty must take a Panic test</SpecialRuleDescription>
+				<Description>Bound spell, power level 4. The bearer can cast the Rod's spell once in his Magic phase. The spell requires no Power dice to cast. A flaming magic missile with a range of 24" and causing D3 Strength 4 hits spews from the staff. A unit taking at least one casualty must take a Panic test.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Cursed Book</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>All enemy models within 6" suffer a -1 penalty on their rolls to hit in close combat</SpecialRuleDescription>
+				<Description>All enemy models within 6" of the Book's bearer suffer a -1 penalty on their rolls to hit in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Cloak of Mist and Shadows</Name>
+				<Type>Weapon</Type>
+				<Points>45</Points>
+				<OnlyFor>Infantry</OnlyFor>
+				<SpecialRuleDescription>Ethereal</SpecialRuleDescription>
+				<Description>This item can be used only by models on foot. The wearer is Ethereal for the entire game. He may cast spells in this form, but cannot use missile weapons nor strike blows in close combat, except against other Ethereal creatures.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talon of Death</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<SpecialRuleDescription>All enemy models in base contact automatically suffer 1 Strength 5 hit at the end of each of the Vampires Movement phases</SpecialRuleDescription>
+				<Description>All enemy models in base contact with the bearer of the Talon of Death automatically suffer 1 Strength 5 hit at the end of each of the bearer's Movement phases. If a character riding a monster/chariot is touching the bearer then both reader and the mount chariot suffer 1 Strength 5 hit.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Casket of Ages</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Bound spell, power level 4, one use only: a model in base contact suffers one wound, no armour save is allowed, if the wound is not saved, the victim must take a Toughness test or die immediately, with no saves allowed whatsoever</SpecialRuleDescription>
+				<Description>Bound spell, power level 4. One use only. The Casket may cast the spell once during the battle. The spell requires no Power dice to cast; all the power required is provided by the Casket itself. When the Casket's spell is cast, a model in base contact with the bearer (chosen by the bearer) suffers one wound. No armour save is allowed. If the wound is not saved, the victim must also take a Toughness test or die immediately, with no saves allowed whatsoever, not even Ward saves.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Magic standards">
 			<Artefact>
 				<Name>Hell Banner</Name>
@@ -645,37 +683,6 @@
 				<Points>25</Points>
 				<SpecialRuleDescription>+1D6 Unit Strength</SpecialRuleDescription>
 				<Description>Treat the unit carrying the Banner as if it had 1D6 higher Unit Strength than it actually does. Roll each time you need to calculate the Unit Strength. The result applies only for that phase (Movement, Magic, etc) and you will have to roll again in other phases when needed.</Description>
-			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Enchanted items">
-			<Artefact>
-				<Name>Rod of Flaming Death</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<SpecialRuleDescription>Bound spell, power level 4: a flaming magic missile with a range of 24" and causing D3 Strength 4 hits, a unit taking at least one casualty must take a Panic test</SpecialRuleDescription>
-				<Description>Bound spell, power level 4. The bearer can cast the Rod's spell once in his Magic phase. The spell requires no Power dice to cast. A flaming magic missile with a range of 24" and causing D3 Strength 4 hits spews from the staff. A unit taking at least one casualty must take a Panic test.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Cursed Book</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<SpecialRuleDescription>All enemy models within 6" suffer a -1 penalty on their rolls to hit in close combat</SpecialRuleDescription>
-				<Description>All enemy models within 6" of the Book's bearer suffer a -1 penalty on their rolls to hit in close combat.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Cloak of Mist and Shadows</Name>
-				<Type>Weapon</Type>
-				<Points>45</Points>
-				<OnlyFor>Infantry</OnlyFor>
-				<SpecialRuleDescription>Ethereal</SpecialRuleDescription>
-				<Description>This item can be used only by models on foot. The wearer is Ethereal for the entire game. He may cast spells in this form, but cannot use missile weapons nor strike blows in close combat, except against other Ethereal creatures.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talon of Death</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<SpecialRuleDescription>All enemy models in base contact automatically suffer 1 Strength 5 hit at the end of each of the Vampires Movement phases</SpecialRuleDescription>
-				<Description>All enemy models in base contact with the bearer of the Talon of Death automatically suffer 1 Strength 5 hit at the end of each of the bearer's Movement phases. If a character riding a monster/chariot is touching the bearer then both reader and the mount chariot suffer 1 Strength 5 hit.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
