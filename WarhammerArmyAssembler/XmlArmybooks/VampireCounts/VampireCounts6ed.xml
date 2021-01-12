@@ -546,6 +546,20 @@
 				<SpecialRuleDescription>On a 2+ the first Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed</SpecialRuleDescription>
 				<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed.</Description>
 			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Arcane items">	
+			<Artefact>
+				<Name>Power Familiar</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<OnlyIfAnotherService>
+					<OnlyIfNot>Blood Dragon</OnlyIfNot>
+				</OnlyIfAnotherService>
+				<AddToCast>1</AddToCast>
+				<AddToDispell>1</AddToDispell>
+				<Description>The Familiar adds one dice to both the Power dice and the Dispel dice pool of the bearer's side.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		<Hero>
