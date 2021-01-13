@@ -245,6 +245,105 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Thane</Name>
+			<Points>55</Points>
+			<MinSize>1</MinSize>
+			<Description>Thane</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Pistol</Name>
+					<Type>Option</Type>
+					<Points>7</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Crossbow</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Dwarf handgun</Name>
+					<Type>Option</Type>
+					<Points>14</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Crossbow</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<OnlyIfNot>Gromril armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+						<OnlyIfNot>Gromril armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Gromril armour</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Light armour</OnlyIfNot>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToArmour>4</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
