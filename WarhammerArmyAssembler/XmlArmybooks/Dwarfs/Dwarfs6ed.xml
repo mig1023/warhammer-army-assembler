@@ -184,7 +184,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Adamant</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>75</Points>
 				<AddToToughness>1</AddToToughness>
@@ -192,7 +192,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Master Rune of Gromril</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>25</Points>
 				<ArmourTo>1</ArmourTo>
@@ -200,7 +200,7 @@
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Fortitude</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>50</Points>
 				<AddToWounds>1</AddToWounds>
@@ -208,14 +208,14 @@
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Fortitude</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Runic>2</Runic>
 				<Points>100</Points>
 				<AddToWounds>2</AddToWounds>
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Shielding</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>30</Points>
 				<SpecialRuleDescription>2+ Ward save against missile attacks only</SpecialRuleDescription>
@@ -223,11 +223,27 @@
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Resistance</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>25</Points>
 				<Reroll>ToArmour</Reroll>
 				<Description>This rune allows the character to re-roll any failed armour saving throws. As you're only ever allowed one re-roll, multiples of this rune would have no effect.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Iron</Name>
+				<Type>AdditionalArmour</Type>
+				<Runic>1</Runic>
+				<Points>15</Points>
+				<AddToWard>6</AddToWard>
+				<Description>This rune confers a 6+ Ward save. Two of these runes confer a 5+ Ward save, but three cannot be taken, because only the-Master Rune of Spite can bind such huge power.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Rune of Iron</Name>
+				<Type>AdditionalArmour</Type>
+				<Runic>2</Runic>
+				<Points>30</Points>
+				<AddToWard>5</AddToWard>
+				<Description>This rune confers a 6+ Ward save. Two of these runes confer a 5+ Ward save, but three cannot be taken, because only the-Master Rune of Spite can bind such huge power.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
