@@ -135,6 +135,7 @@ namespace WarhammerArmyAssembler
 
         public int MagicItems { get; set; }
         public Unit.MagicItemsTypes MagicItemsType { get; set; }
+        public SolidColorBrush ArmyBackgroundColor { get; set; }
 
         private bool artefactAlreadyUsed = false;
         public bool ArtefactAlreadyUsed
@@ -274,6 +275,7 @@ namespace WarhammerArmyAssembler
 
                 MagicItems = this.MagicItems,
                 MagicItemsType = this.MagicItemsType,
+                ArmyBackgroundColor = this.ArmyBackgroundColor,
 
                 Mount = this.Mount,
 

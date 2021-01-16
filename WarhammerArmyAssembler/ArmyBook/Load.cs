@@ -87,6 +87,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newUnit.Description = StringParse(xmlUnit["Description"]);
 
+            if (String.IsNullOrEmpty(newUnit.Description))
+                newUnit.Description = newUnit.Name;
+
             XmlNode mainParam = xmlUnit["MainParam"];
 
             newUnit.Movement = IntParse(mainParam["Movement"]);
@@ -187,6 +190,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
 
             newUnit.ArmyColor = (SolidColorBrush)ArmyBook.Data.MainColor;
+            newUnit.ArmyBackgroundColor = (SolidColorBrush)ArmyBook.Data.BackgroundColor;
 
             return newUnit;
         }
@@ -312,6 +316,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.Mount = BoolParse(xmlNode["Mount"]);
 
             newWeapon.ArtefactGroup = artefactGroup ?? String.Empty;
+            newWeapon.ArmyBackgroundColor = (SolidColorBrush)ArmyBook.Data.BackgroundColor;
 
             return newWeapon;
         }

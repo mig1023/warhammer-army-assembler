@@ -328,6 +328,11 @@
                             <HierarchicalDataTemplate ItemsSource="{Binding Items}">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown">
+                                        <ToolTipService.ToolTip>
+                                            <ToolTip Background="{Binding ArmyBackgroundColor}">
+                                                <Label Content="{Binding Description}"/>
+                                            </ToolTip>
+                                        </ToolTipService.ToolTip>
                                         <TextBlock.Style>
                                             <Style TargetType="TextBlock">
                                                 <Style.Triggers>
