@@ -220,7 +220,7 @@
 				<Type>Weapon</Type>
 				<Points>20</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
-				<SpecialRuleDescription>The model may re-roll any dice that score a 1 when rolling to wound</SpecialRuleDescription>
+				<Reroll>ToWound(1)</Reroll>
 				<Description>The model may re-roll any dice that score a 1 when rolling to wound with a weapon coated With Black Lotus.</Description>
 			</Artefact>
 			<Artefact>
@@ -1054,7 +1054,8 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>The Red Blades</Name>
-					<SpecialRuleDescription>A model wielding the Red Blades gains additional attacks in close combat equal to the number of ranks in the enemy unit he is attacking. In addition, he re-rolls failed rolls to Wound</SpecialRuleDescription>
+					<Reroll>ToWound</Reroll>
+					<SpecialRuleDescription>Gains additional attacks in close combat equal to the number of ranks in the enemy unit he is attacking</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
 					<Name>Sea Dragon cloak</Name>
