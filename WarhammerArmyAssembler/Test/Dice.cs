@@ -12,7 +12,7 @@ namespace WarhammerArmyAssembler.Test
 
         public static int lastDice = 0;
 
-        public static bool CheckReroll(Dictionary<string, Types> unitRerolls, Unit unit, Types diceType)
+        public static bool CheckReroll(Dictionary<string, Types> unitRerolls, Unit unit, Types diceType, int dice)
         {
             if (String.IsNullOrEmpty(unit.Reroll))
                 return false;
@@ -20,14 +20,29 @@ namespace WarhammerArmyAssembler.Test
             string[] allRerolls = unit.Reroll.Split(';');
 
             foreach (string unitReroll in allRerolls)
+            {
+                string strParam = String.Empty;
+
+                if (unitReroll.Contains("("))
+                {
+                    strParam = unitReroll.Substring(unitReroll.IndexOf("(") + 1, 1);
+                    bool parseParamOk = int.TryParse(strParam, out int param);
+
+                    if (!parseParamOk || (param != dice))
+                        continue;
+                }
+
+                string rerollType = unitReroll.Trim().Replace(String.Format("({0})", strParam), String.Empty);
+
                 foreach (string reroll in unitRerolls.Keys.ToList())
-                    if ((unitReroll.Trim() == reroll) && (unitRerolls[reroll] == diceType))
+                    if ((rerollType == reroll) && (unitRerolls[reroll] == diceType))
                         return true;
+            }
 
             return false;
         }
 
-        public static bool MustBeRerolled(Types diceType, Unit unit, Unit enemy)
+        public static bool MustBeRerolled(Types diceType, Unit unit, Unit enemy, int dice)
         {
             Dictionary<string, Types> enemyRerolls = new Dictionary<string, Types>
             {
@@ -37,10 +52,10 @@ namespace WarhammerArmyAssembler.Test
                 ["ToWard"] = Types.WARD,
             };
 
-            return CheckReroll(enemyRerolls, enemy, diceType);
+            return CheckReroll(enemyRerolls, enemy, diceType, dice);
         }
 
-        public static bool CanBeRerolled(Types diceType, Unit unit, Unit enemy)
+        public static bool CanBeRerolled(Types diceType, Unit unit, Unit enemy, int dice)
         {
             Dictionary<string, Types> unitRerolls = new Dictionary<string, Types>
             {
@@ -58,7 +73,7 @@ namespace WarhammerArmyAssembler.Test
             if (unit.MurderousProwess && (lastDice == 1))
                 return true;
 
-            return CheckReroll(unitRerolls, unit, diceType);
+            return CheckReroll(unitRerolls, unit, diceType, dice);
         }
 
         public static int GetRankBonus(Unit unit)
@@ -163,9 +178,9 @@ namespace WarhammerArmyAssembler.Test
                 testPassed = TestPassedByDice(unit, enemy, result, supplCondition, diceType, breakTest, paramTest);
             }
             else if (
-                (!testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy)))
+                (!testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy, result)))
                 ||
-                (testPassed && MustBeRerolled(diceType, unit, enemy))
+                (testPassed && MustBeRerolled(diceType, unit, enemy, result))
             )
             {
                 result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);

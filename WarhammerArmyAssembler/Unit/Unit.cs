@@ -926,7 +926,11 @@ namespace WarhammerArmyAssembler
                         foreach(string reroll in allRerolls)
                         {
                             string secondElement = (String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ");
-                            lineParamValue += String.Format("{0}{1}", secondElement, SpecialRules.RerollsLines[reroll]);
+                            string[] rerollsParams = reroll.Split('(');
+                            lineParamValue += String.Format("{0}{1}", secondElement, SpecialRules.RerollsLines[rerollsParams[0]]);
+
+                            if (rerollsParams.Length > 1)
+                                lineParamValue += "(" + rerollsParams[1];
                         }
                     }
                     else if (fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
