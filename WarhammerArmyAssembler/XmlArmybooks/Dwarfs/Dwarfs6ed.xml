@@ -357,6 +357,7 @@
 				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>40</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>All incoming missiles (including magic missiles) hit the machine itself on a 1-5 and the crew only on a 6</SpecialRuleDescription>
 				<Description>All incoming missiles (including magic missiles) hit the machine itself on a 1-5 and the crew only on a 6.</Description>
 			</Artefact>
@@ -365,6 +366,7 @@
 				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>30</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>Until it moves or shoots, the machine cannot be seen</SpecialRuleDescription>
 				<Description>Until it moves or shoots, the machine cannot be seen, and cannot therefore be targeted with spells, shot at, or charged. Once the machine has moved fired, or if an enemy unit moves to within 3" of it, the machine is revealed and can be Seen and attacked as normal for the rest of the battle.</Description>
 			</Artefact>
@@ -373,6 +375,7 @@
 				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>30</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>The Dwarf player can cause the machine to explode at any time (large circular template, all models under the template suffer a Strength 4 hit, models partially covered are hit on the roll of a 4+ </SpecialRuleDescription>
 				<Description>The Dwarf player can cause the machine to explode at any time. If the machine explodes, place the large circular template on the machine. The machine is destroyed and all models under the template suffer a Strength 4 hit (models partially covered are hit on the roll of a 4+).</Description>
 			</Artefact>
@@ -381,6 +384,7 @@
 				<Type>AdditionalArmour</Type>
 				<MasterRunic/>
 				<Points>25</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>Once per game the Bolt Thrower hits on a 2+ with no modifiers</SpecialRuleDescription>
 				<Description>This rune may only be inscribed on a Bolt Thrower. Once per game the Bolt Thrower hits on a 2+ with no modifiers. You must choose to use this rune before rolling to hit.</Description>
 			</Artefact>
@@ -389,6 +393,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>35</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>Allows to re-roll Artillery dice when he rolls a Misfire</SpecialRuleDescription>
 				<Description>Can only be placed on a cannon. Allows Dwarf player to re-roll Artillery dice when he rolls a Misfire. If you roll a Misfire when rolling Artillery dice either to hit or to bounce, then you can roll again. You are bound by the second roll even if it's another Misfire. Multiples have no effect.</Description>
 			</Artefact>
@@ -397,6 +402,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>30</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>Can shoot every turn, as long as there is at least one crewman left</SpecialRuleDescription>
 				<Description>Cannon can shoot every turn, as long as there is at least one crewman left, even if the machine has rolled a 2-3 on the Misfire table in the previous turn. Multiples have no effect.</Description>
 			</Artefact>
@@ -405,22 +411,25 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>25</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>May re-roll the Scatter dice</SpecialRuleDescription>
 				<Description>May only be put on a Stone Thrower. The Dwarf player may re-roll the Scatter dice if he wishes, enabling the machine to shoot more accurately. If you re-roll the dice, you must accept the result of the second roll. Multiples have no effect.</Description>
 			</Artefact>
 			<Artefact>
-				<Name>Rune of Fortitude</Name>
-				<Type>Armour</Type>
+				<Name>Rune of Fortune</Name>
+				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>25</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>May re-roll a dice rolled on the machine's Misfire chart</SpecialRuleDescription>
 				<Description>If a machine has the Rune of Fortune the player may re-roll a dice rolled on the machine's Misfire chart. For example, you can re-roll a result on the Cannon Misfire chart, or the Misfire chart for Stone Throwers. However, you must accept the result of the second dice roll. Multiples have no effect.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Valiant Rune</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>25</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<Unbreakable/>
 				<Description>As long as their war machine is not destroyed, the war machine crew are Unbreakable.</Description>
 			</Artefact>
@@ -429,6 +438,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>25</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>The Strength of a hit from the war machine increases by +1</SpecialRuleDescription>
 				<Description>The Strength of a hit from the war machine increases by +1.</Description>
 			</Artefact>
@@ -437,13 +447,15 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>2</Runic>
 				<Points>50</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>The Strength of a hit from the war machine increases by +2</SpecialRuleDescription>
 			</Artefact>
 			<Artefact>
 				<Name>Rune of Penetrating</Name>
 				<Type>AdditionalArmour</Type>
-				<Runic>2</Runic>
+				<Runic>3</Runic>
 				<Points>75</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>The Strength of a hit from the war machine increases by +3</SpecialRuleDescription>
 			</Artefact>
 			<Artefact>
@@ -451,6 +463,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>25</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>+1 to hit rolls against targets with the Fly special ability</SpecialRuleDescription>
 				<Description>Each rune adds +1 to the bolt thrower's to hit rolls against targets with the Fly special ability.</Description>
 			</Artefact>
@@ -459,6 +472,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>2</Runic>
 				<Points>50</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>+2 to hit rolls against targets with the Fly special ability</SpecialRuleDescription>
 			</Artefact>
 			<Artefact>
@@ -466,6 +480,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>3</Runic>
 				<Points>75</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>+3 to hit rolls against targets with the Fly special ability</SpecialRuleDescription>
 			</Artefact>
 			<Artefact>
@@ -473,6 +488,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>20</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<AddToCloseCombat>1</AddToCloseCombat>
 				<Description>This rune adds +1 to the crew's combat resolution score.</Description>
 			</Artefact>
@@ -481,6 +497,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>2</Runic>
 				<Points>40</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<AddToCloseCombat>2</AddToCloseCombat>
 			</Artefact>
 			<Artefact>
@@ -488,6 +505,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>3</Runic>
 				<Points>60</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<AddToCloseCombat>3</AddToCloseCombat>
 			</Artefact>
 			<Artefact>
@@ -495,6 +513,7 @@
 				<Type>AdditionalArmour</Type>
 				<Runic>1</Runic>
 				<Points>5</Points>
+				<OnlyForGroup>Engineering</OnlyForGroup>
 				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
 				<Description>The war engine makes flaming attacks.</Description>
 			</Artefact>
@@ -909,6 +928,7 @@
 			<Name>Engineer</Name>
 			<Points>65</Points>
 			<MinSize>1</MinSize>
+			<Group>Engineering</Group>
 			<Description>Engineer</Description>
 			<MainParam>
 				<Movement>3</Movement>
