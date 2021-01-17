@@ -689,6 +689,55 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Mannfred von Carstein</Name>
+			<Points>690</Points>
+			<MinSize>1</MinSize>
+			<Group>Vampire</Group>
+			<PersonifiedHero/>
+			<Wizard>4</Wizard>
+			<MountInit>Nightmare</MountInit>
+			<Description>Mannfred von Carstein</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<SlotOf>Hero</SlotOf>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword of Unholy Power</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<SpecialRuleDescription>For each unsaved Wound gains an extra Power or Dispel dice in the following Magic phase</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Cloak of Darkness</Name>
+					<AddToWard>3</AddToWard>
+				</Armour>
+				<Arcane>
+					<Name>Ebony Staff</Name>
+					<SpecialRuleDescription>This staff allows Mannfred to cast one spell for free in each of his Magic phases. The spell is cast with Power Level equal to its casting value and can be dispelled normally</SpecialRuleDescription>
+				</Arcane>
+				<Special>
+					<SpecialRuleDescription>Normal range of 12" for his troops to be able to march and use his Leadership is extended to 18"</SpecialRuleDescription>
+					<SpecialRuleDescription>Once per game can summon D3 Dire Wolves</SpecialRuleDescription>
+					<SpecialRuleDescription>Call Wind instead of movement: all shooting is at -1 lo hit, all flying movement is impossible</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Vampire Lord</Name>
 			<Points>285</Points>
 			<MinSize>1</MinSize>
