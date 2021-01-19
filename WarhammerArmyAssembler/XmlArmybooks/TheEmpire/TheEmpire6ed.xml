@@ -129,6 +129,13 @@
 				<AddToStrength>2</AddToStrength>
 				<Description>The sword confers +2 Strength to all close combat attacks made by the character fighting with it.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Hammer of Judgement</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<Test Bet="Wound" Context="Hit">Leadership</Test>
+				<Description>Models hit by this hammer must take a Leadership test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
