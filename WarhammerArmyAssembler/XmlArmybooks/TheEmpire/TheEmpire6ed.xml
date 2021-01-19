@@ -167,6 +167,14 @@
 				<Test Bet="Pass" Context="ArmourSave">Strength</Test>
 				<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie, roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed, the Attack is lost.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Dawn Armour</Name>
+				<Type>Armour</Type>
+				<Points>40</Points>
+				<AddToArmour>4</AddToArmour>
+				<Reroll>ToArmour</Reroll>
+				<Description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
