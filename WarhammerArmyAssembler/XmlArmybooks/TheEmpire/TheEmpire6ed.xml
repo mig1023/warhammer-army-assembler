@@ -577,6 +577,57 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Templar Grand Master</Name>
+			<Group>Knights</Group>
+			<Points>160</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Warhorse</MountInit>
+			<Description>Templar Grand Master</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Lance</Name>
+					<Lance/>
+				</HandWeapon>
+				<Armour>
+					<Name>Full plate armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>				
+					<Name>Cavalry hammer</Name>
+					<Type>Option</Type>
+					<HitLast/>
+					<AddToStrength>2</AddToStrength>
+					<Points>6</Points>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
