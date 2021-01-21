@@ -931,6 +931,87 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Master Engineer</Name>
+			<Points>55</Points>
+			<MinSize>1</MinSize>
+			<Description>Master Engineer</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Master of Ballistics</SpecialRuleDescription>
+					<SpecialRuleDescription>Extra Crewman</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Repeater pistol</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfMot>Handgun</OnlyIfMot>
+						<OnlyIfMot>Hochland long rifle</OnlyIfMot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Handgun</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfMot>Repeater pistol</OnlyIfMot>
+						<OnlyIfMot>Hochland long rifle</OnlyIfMot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Hochland long rifle</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfMot>Repeater pistol</OnlyIfMot>
+						<OnlyIfMot>Handgun</OnlyIfMot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>		
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding for Warhorse</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
