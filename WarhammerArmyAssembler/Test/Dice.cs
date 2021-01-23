@@ -253,10 +253,7 @@ namespace WarhammerArmyAssembler.Test
 
         public static int RollAll(Types diceType, Unit unit, int diceNum, bool hiddenDice = false, Unit enemy = null)
         {
-            int maxRoll = 0;
-            int minRoll = 6;
-
-            int result = 0;
+            int maxRoll = 0, minRoll = 6, result = 0;
 
             bool bloodroar = ((enemy != null) && enemy.Bloodroar);
 

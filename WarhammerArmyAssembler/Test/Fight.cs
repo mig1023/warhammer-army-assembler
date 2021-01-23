@@ -171,7 +171,7 @@ namespace WarhammerArmyAssembler.Test
                 Dictionary<int, int> attacksRound = new Dictionary<int, int>();
 
                 foreach (Unit u in participants)
-                    attacksRound[u.ID] = PrintAttack(u, u.Attacks, roundWounds, unit, enemy, unit.Mount);
+                    attacksRound[u.ID] = PrintAttack(u, roundWounds, unit, enemy, unit.Mount);
 
                 InitRoundWounds(participants, ref roundWounds);
 
@@ -360,8 +360,7 @@ namespace WarhammerArmyAssembler.Test
             return randomOpponent;
         }
 
-        private static int PrintAttack(Unit unit, int attackNum, Dictionary<int, int> death,
-            Unit tUnit, Unit tEnemy, Unit tMount)
+        private static int PrintAttack(Unit unit, Dictionary<int, int> death, Unit tUnit, Unit tEnemy, Unit tMount)
         {
             if (unit.Frenzy)
                 Test.Data.Console(Test.Data.supplText, "\n{0} --> is {1}frenzy", unit.Name, (unit.BloodFrenzy ? "blood " : String.Empty));
@@ -371,16 +370,47 @@ namespace WarhammerArmyAssembler.Test
             if (unit.IsSimpleMount())
                 deathInRound = ((tMount != null) && (unit.ID == tMount.ID) ? death[tUnit.ID] : death[tEnemy.ID]);
 
+            int attackNum = unit.Attacks, attacks = 0;
+
+            int unitFront = (unit.IsHeroOrHisMount() ? 1 : unit.GetFront());
+
             if ((!unit.IsHeroOrHisMount()) && (unit.Wounds > 0) && (deathInRound > 0))
             {
-                attackNum -= deathInRound;
-                Test.Data.Console(Test.Data.supplText, "\n-{0} attack {1}", deathInRound, unit.Name);
+                unitFront -= deathInRound;
+                Test.Data.Console(Test.Data.supplText, "\n\n-{0} unit{1} in {2} front", deathInRound, (deathInRound > 1 ? "s" : String.Empty), unit.Name);
             }
 
-            if (unit.IsUnit() && ((unit.Wounds * unit.OriginalAttacks) < attackNum))
-                attackNum = unit.Wounds * unit.OriginalAttacks;
+            if (unit.IsUnit())
+            {
+                if (attackNum > 100)
+                    for (int i = 0; i < unitFront; i++)
+                        attacks += GetRandomAttack(attackNum, unit.Name, i);
+                else
+                    attacks = attackNum * unitFront;
+            }
+            else
+                attacks = (attackNum > 100 ? GetRandomAttack(attackNum, unit.Name, 0) : attackNum);
 
-            return attackNum;
+            return attacks;
+        }
+
+        private static int GetRandomAttack(int attackNum, string unitName, int current)
+        {
+            string param = attackNum.ToString();
+
+            int dices = int.Parse(param[0].ToString());
+            int diceSize = int.Parse(param[1].ToString());
+            int attacks = int.Parse(param[2].ToString());
+
+            for (int i = 0; i < dices; i++)
+                attacks += Test.Data.rand.Next(diceSize) + 1;
+
+            if (current == 0)
+                Test.Data.Console(Test.Data.supplText, "\n");
+
+            Test.Data.Console(Test.Data.supplText, "\n{0} attacks for {1}: {2}", unitName, Unit.GetRandomAttacksLine(attackNum), attacks);
+
+            return attacks;
         }
 
         private static void CheckLostFrenzy(ref Unit unit)
