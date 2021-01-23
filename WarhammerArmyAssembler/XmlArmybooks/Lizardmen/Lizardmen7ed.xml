@@ -151,7 +151,7 @@
 				<Type>Weapon</Type>
 				<Points>20</Points>
 				<SpecialRuleDescription>Flaming attacks</SpecialRuleDescription>
-				<SpecialRuleDescription>-2 penalty of armour</SpecialRuleDescription>
+				<ArmourPiercing>2</ArmourPiercing>
 				<Description>Flaming attacks. Targets struck by the Burning of Chotek suffer a -2 penalty to their armour save in addition to any modifiers from the user's Strength</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -342,7 +342,7 @@
 				<Name>Amulet of Itza</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
-				<AddToWard>2</AddToWard>
+				<WardForFirstWound>2</WardForFirstWound>
 				<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered, after Armour saves have boon taken</Description>
 			</Artefact>
 		</ArtefactsGroup>
@@ -394,7 +394,6 @@
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
-	
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
@@ -1058,7 +1057,7 @@
 				<Toughness>2</Toughness>
 				<Wounds>2</Wounds>
 				<Initiative>4</Initiative>
-				<Attacks>3</Attacks>
+				<Attacks>1</Attacks>
 				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>

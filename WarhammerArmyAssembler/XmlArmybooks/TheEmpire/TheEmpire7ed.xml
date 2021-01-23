@@ -1264,11 +1264,11 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
-			<Name>Battle Lord</Name>
+			<Name>Battle Wizard</Name>
 			<Points>65</Points>
 			<MinSize>1</MinSize>
 			<Wizard>1</Wizard>
-			<Description>Battle Lord</Description>
+			<Description>Battle Wizard</Description>
 			<MainParam>
 				<Movement>4</Movement>
 				<WeaponSkill>3</WeaponSkill>
@@ -1291,6 +1291,13 @@
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
@@ -1311,7 +1318,6 @@
 					</OnlyIfAnotherService>
 					<Points>4</Points>
 				</Option>
-				
 			</Options>
 		</Hero>
 		<Hero>
@@ -1341,13 +1347,6 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>	
 				<Option>
 					<Name>Warhorse</Name>
 					<Type>Option</Type>
