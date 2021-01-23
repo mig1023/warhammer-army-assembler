@@ -450,10 +450,13 @@ namespace WarhammerArmyAssembler
             object paramObject = unitParam.GetValue(this);
             int? paramValue = (int?)paramObject;
 
-            if (paramValue == 16)
-                return "D6";
-            else if ((paramValue > 10) && ((paramValue % 6)== 0))
-                return ((int)(paramValue / 6)).ToString() + "D6";
+            if (paramValue > 100)
+            {
+                string param = paramValue.ToString();
+                string addToDice = (param[2] == '0' ? String.Empty : "+" + param[2].ToString());
+
+                return String.Format("{0}D{1}{2}", param[0], param[1], addToDice);
+            }
             else if (paramValue <= 0)
                 return "-";
 
