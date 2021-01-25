@@ -373,6 +373,13 @@
 				<SpecialRuleDescription>Will never lose their Frenzy, even if beaten in close combat</SpecialRuleDescription>
 				<Description>The unit with this banner has the Frenzy special rule. They will never lose their Frenzy, even if beaten in close combat.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Festering Shroud</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<Test Bet="Wound" Context="Round">Toughness</Test>
+				<Description>Any model that does not have the Mark of Nurgle and is in contact with the banner bearer at the start of the friendly Magic phase must pass a Toughness test or suffer a wound with no armour saves allowed.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
