@@ -175,6 +175,14 @@
 				<AddToWard>5</AddToWard>
 				<Description>Heavy armour. The Armour of Fortune grants the wearer a 5+ ward save.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Helm of Discord</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<AddToArmour>6</AddToArmour>
+				<Test Bet="Pass" Context="Round">Leadership</Test>
+				<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "The Black Armoury">
 			<Artefact>
