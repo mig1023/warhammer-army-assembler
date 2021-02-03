@@ -78,6 +78,600 @@
 				<Description>The Skull Wand may only be taken by a Shaman. It unleashes a curse on a single enemy model that is in base contact with the bearer at the start of the Close Combat phase. The victim must pass a Leadership test (using its own, unmodified, Leadership) or be slain instandy, with no save of any kind allowed. In addition, the bearer of the Skull Wand causes Terror.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Common magic weapons">
+			<Artefact>
+				<Name>Giant Blade</Name>
+				<Type>Weapon</Type>
+				<Points>60</Points>
+				<AddToStrength>3</AddToStrength>
+				<Description>Close combat attacks made with this sword are resolved at +3 Strength.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Bloodshed</Name>
+				<Type>Weapon</Type>
+				<Points>60</Points>
+				<AddToAttacks>3</AddToAttacks>
+				<Description>The wielder has +3 Attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Obsidian Blade</Name>
+				<Type>Weapon</Type>
+				<Points>50</Points>
+				<NoArmour/>
+				<Description>Armour saves cannot be taken against wounds caused by the Obsidian Blade.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ogre Blade</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<AddToStrength>2</AddToStrength>
+				<Description>Close combat attacks made with this sword are resolved at +2 Strength.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Strife</Name>
+				<Type>Weapon</Type>
+				<Points>40</Points>
+				<AddToAttacks>2</AddToAttacks>
+				<Description>This wieider of the Sword of Strife has +2 Attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Fencer's Blades</Name>
+				<Type>Weapon</Type>
+				<Points>35</Points>
+				<WeaponSkillTo>10</WeaponSkillTo>
+				<Description>Paired weapons. The bearer has Weapon Skill 10.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Anti-Heroes</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>+1 Strength and +1 Attack for every enemy character in base contact</SpecialRuleDescription>
+				<Description>The bearer has +1 Strength and +1 Attack for every enemy character in base contact with him or his unit. These bonuses are calculated at the start of each round ol close combat and last until its end.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Spellthieving Sword</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells</SpecialRuleDescription>
+				<Description>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Swift Slaying</Name>
+				<Type>Weapon</Type>
+				<Points>25</Points>
+				<HitFirst/>
+				<Description>The wieider of the Sword of Swift Slaying has the Always Strikes First special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Battle</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<AddToAttacks>1</AddToAttacks>
+				<Description>The wieider tins +1 Attack.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Berserker Sword</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<Frenzy/>
+				<Description>The bearer has the Frenzy special rule and can never lose his Frenzy.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Might</Name>
+				<Type>Weapon</Type>
+				<Points>20</Points>
+				<AddToStrength>1</AddToStrength>
+				<Description>Close combat attacks made with this sword are resolved at +1 Strength.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Gold Sigil Sword</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<InitiativeTo>10</InitiativeTo>
+				<Description>Attacks from the Gold Sigil Sword are made at Initiative 10.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sword of Striking</Name>
+				<Type>Weapon</Type>
+				<Points>15</Points>
+				<AddToHit>1</AddToHit>
+				<Description>Attacks made with the Sword of Striking receive a +1 bonus to hit.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Biting Blade</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<ArmourPiercing>1</ArmourPiercing>
+				<Description>Close combat attacks made by the Biting Blade are armour piercing.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Relic Sword</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<WoundOn>5</WoundOn>
+				<Description>Attacks made with the Relic Sword will always wound on a 5+, unless they would normally need a lower result.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Shrieking Blade</Name>
+				<Type>Weapon</Type>
+				<Points>10</Points>
+				<Fear/>
+				<Description>The bearer causes Fear.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Tormentor Sword</Name>
+				<Type>Weapon</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game</SpecialRuleDescription>
+				<Description>A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Warrior Bane</Name>
+				<Type>Weapon</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound</SpecialRuleDescription>
+				<Description>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1).</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Common magic armour">
+			<Artefact>
+				<Name>Armour of Destiny</Name>
+				<Type>Armour</Type>
+				<Points>50</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToWard>4</AddToWard>
+				<Description>Heavy armour. The Armour of Destiny grants the wearer a 4+ ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Trickster's Helm</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>50</Points>
+				<AddToArmour>6</AddToArmour>
+				<Reroll>OpponentToWound</Reroll>
+				<Description>The wearer counts his armour save as being one point higher than normal. Any successful roll to wound made against the wearer of the Trickster's Helm must be re-rolled.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Silvered Steel</Name>
+				<Type>Armour</Type>
+				<Points>50</Points>
+				<ArmourTo>2</ArmourTo>
+				<Description>The Armour of Silvered Steel grants its wearer a 2+ armour save that cannot be improved by any means.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Fortune</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToWard>5</AddToWard>
+				<Description>Heavy armour. The Armour of Fortune grants the wearer a 5+ ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Helm of Discord</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<AddToArmour>6</AddToArmour>
+				<Test Bet="Pass" Context="Round">Leadership</Test>
+				<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Glittering Scales</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToArmour>6</AddToArmour>
+				<SubOpponentToHit>-1</SubOpponentToHit>
+				<Description>Light armour. Enemies suffer a -1 to hit penalty when attempting to strike the wearer in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Shield of Ptolos</Name>
+				<Type>Shield</Type>
+				<Points>25</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>1+ armour save against shooting attacks</SpecialRuleDescription>
+				<Description>Shield. The bearer has a 1+ armour save against shooting attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Spellshield</Name>
+				<Type>Shield</Type>
+				<Points>20</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<Description>Shield. The bearer gains Magic Resistance (1).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Gambler's Armour</Name>
+				<Type>Armour</Type>
+				<Points>20</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToWard>6</AddToWard>
+				<Description>Heavy armour. The Gambler's Armour grants the wearer a 6+ Ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dragonhelm</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>10</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>2+ Ward save against flaming attacks</SpecialRuleDescription>
+				<Description>The wearer counts his armour save as being one point higher than normal. The wearer has a 2+ ward save against flaming attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Enchanted Shield</Name>
+				<Type>Shield</Type>
+				<Points>5</Points>
+				<AddToArmour>5</AddToArmour>
+				<Description>Shield. The bearer counts his armour save as being two points higher than normal, rather than the usual one point that a shield would normally grant.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Charmed Shield</Name>
+				<Type>Shield</Type>
+				<Points>5</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>First hit suffered is discounted on a roll of 2+</SpecialRuleDescription>
+				<Description>Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is discounted on a roll of 2+.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Common magic talismans">
+			<Artefact>
+				<Name>Talisman of Preservation</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>45</Points>
+				<AddToWard>4</AddToWard>
+				<Description>The Talisman of Preservation grants the bearer a 4+ Ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Obsidian Lodestone</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
+				<Description>The Obsidian Lodestone grants Magic Resistance (3).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of Endurance</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<AddToWard>5</AddToWard>
+				<Description>The Talisman of Endurance grants the bearer a 5+ Ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dawnstone</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<Reroll>ToArmour</Reroll>
+				<Description>The bearer re-rolls failed armour saves.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Opal Amulet</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>15</Points>
+				<WardForFirstWound>4</WardForFirstWound>
+				<Description>One use only. The Opal Amulet bestows a 4+ Ward save against the first wound suffered by the bearer, after which its power fades and it cannot be used again during the game.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Obsidian Trinket</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<Description>The Obsidian Trinket grants Magic Resistance (1).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Talisman of Protection</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>15</Points>
+				<AddToWard>6</AddToWard>
+				<Description>The Talisman of Protection grants the bearer a 6+ Ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Seed of Rebirth</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>Regeneration (6+) special rule</SpecialRuleDescription>
+				<Description>The bearer of the Seed of Rebirth has the Regeneration (6+) special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dragonbane Gem</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>2+ Ward save against flaming attacks</SpecialRuleDescription>
+				<Description>The bearer of the Dragonbane Gem has a 2+ Ward save against flaming attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Pidgeon Plucker Pendant</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>5+ Ward save against wounds caused in close combat by models that have the Fly special rule</SpecialRuleDescription>
+				<Description>This item grants the bearer a 5+ Ward save against wounds caused in close combat by models that have the Fly special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Luckstone</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>May re-roll single failed armour save</SpecialRuleDescription>
+				<Description>The Luckstone allows the bearer to re-roll single failed armour save.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Common magic standards">
+			<Artefact>
+				<Name>Rampager's Standard</Name>
+				<Type>Banner</Type>
+				<Points>55</Points>
+				<SpecialRuleDescription>May re-roll charge distance dice</SpecialRuleDescription>
+				<Description>A unit with this magic standard can re-roll its charge distance dice.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Wailing Banner</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<Terror/>
+				<Description>A unit with this banner causes Terror in its enemies.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ranger's Standard</Name>
+				<Type>Banner</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Strider</SpecialRuleDescription>
+				<Description>A unit with the Ranger's Standard has the Strider special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Razor Standard</Name>
+				<Type>Banner</Type>
+				<Points>45</Points>
+				<ArmourPiercing>1</ArmourPiercing>
+				<Description>Models in a unit with the Razor Standard have the Armour Piercing special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>War Banner</Name>
+				<Type>Banner</Type>
+				<Points>35</Points>
+				<AddToCloseCombat>1</AddToCloseCombat>
+				<Description>A unit with this banner adds +1 to combat resolution.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Swiftness</Name>
+				<Type>Banner</Type>
+				<Points>15</Points>
+				<AddToMovement>1</AddToMovement>
+				<Description>Models in a unit with the Banner of Swiftness have +1 to their Movement characteristic.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Lichebone Pennant</Name>
+				<Type>Banner</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<Description>Models in a unit with the Lichebone Pennant have Magic Resistance (1).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Standard of Discipline</Name>
+				<Type>Banner</Type>
+				<Points>15</Points>
+				<AddToLeadership>1</AddToLeadership>
+				<Description>Models in a unit with the Standard of Discipline have +1 Leadership, but cannot use the General's Inspiring Presence special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Banner of Eternal Flame</Name>
+				<Type>Banner</Type>
+				<Points>10</Points>
+				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+				<Description>Models in a unit with the Banner of Eternal Flame have Flaming Attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Gleaming Pennant</Name>
+				<Type>Banner</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>Сan re-roll first failed Leadership test</SpecialRuleDescription>
+				<Description>One use only. A unit with the Gleaming Pennant can re-roll its first failed Leadership test.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Scarecrow Banner</Name>
+				<Type>Banner</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>Сauses Fear in models with the Fly special rule</SpecialRuleDescription>
+				<Description>A unit with the Scarecrow Banner causes Fear in models with the Fly special rule.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Common arcane items">
+			<Artefact>
+				<Name>Book of Ashur</Name>
+				<Type>Arcane</Type>
+				<Points>70</Points>
+				<SpecialRuleDescription>+1 bonus on attempts to cast and dispel</SpecialRuleDescription>
+				<Description>The bearer receives a +1 bonus on attempts to cast and dispel.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Feedback Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed</SpecialRuleDescription>
+				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Feedback Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, roll a dice for every dice used to cast the spell. The casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Scroll of Leeching</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, add a number of dispel dice to your pool equal to the number of dice used to cast the spell</SpecialRuleDescription>
+				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Leeching can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, the bearer of the scroll adds a number of dispel dice to his pool equal to the number of dice used to cast the spell (remember that your dispel pool cannot exceed 12 dice).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sivejir's Hex Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, the enemy wizard must roll equal to or under his wizard level on a D6, if he fails he becomes a small, slimy toad</SpecialRuleDescription>
+				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Hex Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but a portion of the spell's energy is transformed and redirected at the caster. The enemy wizard can resist the spell's effects by rolling equal to or under his wizard level on a D6. If he fails, an amphibian transformation takes hold and he becomes a small, slimy toad! Whilst transformed, the wizard cannot channel or cast spells, all of his magic items and mundane equipment (armour, weapons, etc.) temporarily stop working and all of his characteristics are reduced to 1 (except for his wounds, which are unaffected). His controlling player can roll a D6 at the start of each of his subsequent magic phases; the spell dissipates on a roll of 4+ and the wizard returns to his normal form (but still attempts to eat flies for several days afterward).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Once per game, during one casting attempt any roll of a double will cause Irresistible Force (and a Miscast)</SpecialRuleDescription>
+				<Description>One use only. A Power Scroll can be used when the Wizard makes a casting attempt. During that casting attempt, any roll of a double will cause irresistible force (and a miscast).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Wand of Jet</Name>
+				<Type>Arcane</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Once per game, can increase one of his casting results by an additional +D6, after other casting dice have been rolled</SpecialRuleDescription>
+				<Description>One use only. The bearer can increase one of his casting results by an additional +D6, after other casting dice have been rolled. This extra power dice can contribute to casting a spell with Irresistible Force (and a Miscast).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Forbidden Rod</Name>
+				<Type>Arcane</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Once per game, adds +D6 dice in the power pool and inflicts D3 wounds</SpecialRuleDescription>
+				<Description>One use only. The forbidden rod adds +D6 dice in the power pool at the start of the caster's own magic phase, but also inflicts D3 wounds on the bearer (with no armour saves allowed).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Trickster's Shard</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Once per game, declare you are using Shard at the start of one of your magic phases, for the duration of the phase, when one of spells is dispelled by an enemy wizard, on a 5+, that wizard surfers a wound with no armour saves allowed</SpecialRuleDescription>
+				<Description>One use only. Declare you are using this item at the start of one of your magic phases. For the duration of the phase, when one of the bearer's spells is dispelled by an enemy wizard, roll a D6. On a 5+, that wizard surfers a wound with no armour saves allowed.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Earthing Rod</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Once per game, can re-roll the Miscast</SpecialRuleDescription>
+				<Description>One use only. If the wizard rolls on the miscast table he can re-roll the result.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dispell Scroll</Name>
+				<Type>Arcane</Type>
+				<Points>25</Points>
+				<Multiple/>
+				<Description>One use only. When an enemy spell has been cast, a wizard who has a dispel scroll can read it instead of attempting to dispel the spell by using dispel dice. This automatically dispels the enemy spell; no dice roll is required. Note that even a dispel scroll will not help if the spell has been cast with Irresistible Force. Note also that a dispel scroll cannot be used to dispel spells that remain in play other than at the moment they are cast.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Power Stone</Name>
+				<Type>Arcane</Type>
+				<Points>20</Points>
+				<Multiple/>
+				<Description>One use only. The Wizard can declare that he is using the power stone immediately before casting a spell. If he does so, two extra dice are added to the power dice that he is going to roll (you still need to roll at least one dice from the power pool).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sceptre of Stability</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>Once per game, can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled</SpecialRuleDescription>
+				<Description>One use only. The bearer can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled. This extra dispel dice can contribute to dispelling with Irresistible Force.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Channelling Staff</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>+1 to all of his channeling attempts</SpecialRuleDescription>
+				<Description>The Wizard adds +1 to all of his channeling attempts.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Scroll of Shielding</Name>
+				<Type>Arcane</Type>
+				<Points>15</Points>
+				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, the target of the spell is granted a 4+ Ward save against any wounds caused by the spell</SpecialRuleDescription>
+				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted a 4+ Ward save against any wounds caused by the spell.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Common enchanted items">
+			<Artefact>
+				<Name>Wizarding Hat</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>100</Points>
+				<AddToWizard>2</AddToWizard>
+				<AddToCast>2</AddToCast>
+				<AddToDispell>1</AddToDispell>
+				<Stupidity/>
+				<Description>The wearer is treated as being a Level 2 Wizard who can use a randomly chosen spell lore. However, he also has the Stupidity special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Fozzrik's Folding Fortress</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>100</Points>
+				<SpecialRuleDescription>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress</SpecialRuleDescription>
+				<Description>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building (or scratch-built structure of a similar size) in your deployment zone to represent rhe Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik's Folding Fortress.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Arabyan Carpet</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>50</Points>
+				<OnlyFor>Infantry</OnlyFor>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<Description>Infantry or monstrous infantry models on foot only. The owner of this magical carpet has the Fly special rule. However, he cannot join units.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Crown of Command</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>35</Points>
+				<Stubborn/>
+				<Description>The bearer of the Crown of Command has the Stubborn special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Healing Potion</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Once per battle recovers D6 Wounds lost in the battle</SpecialRuleDescription>
+				<Description>One use only. The Healing Potion can be drunk at the start of the controlling player's turn. The imbiber immediately recovers D6 Wounds lost in the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Featherfoe Torc</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat</SpecialRuleDescription>
+				<Description>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ruby Ring of Ruin</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Bound spell, Power level 3: Fireball spell from Lore of Fire</SpecialRuleDescription>
+				<Description>Bound spell (power level 3). The Ruby Ring of Ruin contains the Fireball spell (see the Lore of Fire).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Terrifying Mask of Eee!</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<Terror/>
+				<NotALeader/>
+				<Description>The wearer of this mask causes Terror. However, other models can never use his Leadership.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Strength</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Strength until the end of the turn</SpecialRuleDescription>
+				<Description>One use only. The Potion of Strength can be drunk at the start of any player's turn. The imbiber has +3 Strength until the end of the turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Toughness</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Toughness until the end of the turn</SpecialRuleDescription>
+				<Description>One use only. The Potion of Toughness can be drunk at the start of any player's turn. The imbiber has +3 Toughness until the end of the turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Other Trickster's Shard</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>15</Points>
+				<Reroll>OpponentToWard</Reroll>
+				<Description>Models in base contact with the bearer (friends and foes) must re-roll successful ward saves.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ironcurse Icon</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>The character (and any unit he is with) have 6+ Ward save against war machine weapons</SpecialRuleDescription>
+				<Description>The character (and any unit he is with) gain a 6+ ward save against war machine weapons.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Foolhardiness</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn</SpecialRuleDescription>
+				<Description>One use only. The Potion of Foolhardiness can be drunk at the start of any player's turn. The imbiber has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Speed</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Initiative until the end of the turn</SpecialRuleDescription>
+				<Description>One use only. The Potion of Speed can be drunk at the start of any player's turn. The imbiber has +3 Initiative until the end of the turn.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		<Hero>
