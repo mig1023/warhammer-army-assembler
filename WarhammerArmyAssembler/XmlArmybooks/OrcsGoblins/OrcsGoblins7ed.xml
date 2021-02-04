@@ -51,14 +51,14 @@
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
 				<AddToWard>6</AddToWard>
-				<Description>6+ ward save</Description>
+				<Description>6+ Ward save</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Dispell Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
 				<Multiple/>
-				<Description>automatically dispel an enemy spell, one use only</Description>
+				<Description>Automatically dispel an enemy spell, one use only</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Stone</Name>
@@ -172,7 +172,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>10</Points>
-				<SpecialRuleDescription>-3 armour save modifier</SpecialRuleDescription>
+				<ArmourPiercing>3</ArmourPiercing>
 				<Description>Wounds caused by this weapon suffer an additional -3 armour save modifier</Description>
 			</Artefact>
 			<Artefact>
@@ -215,21 +215,21 @@
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
 				<AddToWard>5</AddToWard>
-				<Description>Grants the rearer a 5+ ward save</Description>
+				<Description>Grants the rearer a 5+ Ward save</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Amulet of Protectyness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Armour save and ward save as the enemy</SpecialRuleDescription>
+				<SpecialRuleDescription>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</SpecialRuleDescription>
 				<Description>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Description>
 			</Artefact>
 			<Artefact>
 				<Name>The Collar of Zorga</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Steeds and monsters require 6s to hit the bearer</SpecialRuleDescription>
-				<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6s to hit the bearer</Description>
+				<SpecialRuleDescription>Steeds and monsters require Strength 6 to hit the bearer</SpecialRuleDescription>
+				<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6S to hit the bearer</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Arcane items">
@@ -247,7 +247,7 @@
 				<Type>Arcane</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>steals 1 Power dice from the enemy to dispel</SpecialRuleDescription>
+				<SpecialRuleDescription>Steals 1 Power dice from the enemy to dispel</SpecialRuleDescription>
 				<Description>At the start of each of your opponent's magic phases, you may take one dice from you opponent's power poll and add it to your dispel poll</Description>
 			</Artefact>
 			<Artefact>
@@ -279,8 +279,7 @@
 				<Name>The Horn of Urgok</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>+1 Leadership for all friendly units</SpecialRuleDescription>
-				<SpecialRuleDescription>-1 Leadership for all enemy units</SpecialRuleDescription>
+				<SpecialRuleDescription>Bound item, Power Level 5: +1 Leadership for all friendly units, -1 Leadership for all enemy units</SpecialRuleDescription>
 				<Description>Bound item, Power Level 5. +1 Leadership for all friendly units, -1 Leadership for all enemy units. Roll a D6 after each use. On the roll of a 1, the bearer suffer a Strength 5 hit with no armour save allowed</Description>
 			</Artefact>
 			<Artefact>
@@ -297,7 +296,6 @@
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>35</Points>
 				<ImpactHit>D3</ImpactHit>
-				<SpecialRuleDescription>+D3 Strength 5 impact hits</SpecialRuleDescription>
 				<Description>Boar. When charging, this steed does D3 Strength 5 impact hits in addition to its norman attack</Description>
 			</Artefact>
 			<Artefact>
@@ -402,7 +400,6 @@
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
-	
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
@@ -550,8 +547,7 @@
 				<HandWeapon>
 					<Name>The Axe of Grom</Name>
 					<AddToStrength>2</AddToStrength>
-					<KillingBlow/>
-					<SpecialRuleDescription>Killing Blow on a 5+ against ane Elves</SpecialRuleDescription>
+					<ExtendedKillingBlow>5</ExtendedKillingBlow>
 				</HandWeapon>
 				<Armour>
 					<Name>Lucky banner</Name>
