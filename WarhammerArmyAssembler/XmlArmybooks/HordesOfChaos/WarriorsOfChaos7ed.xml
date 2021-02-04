@@ -645,7 +645,7 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
-			<Name>Sorceserer Lord</Name>
+			<Name>Sorcerer Lord</Name>
 			<Points>235</Points>
 			<MinSize>1</MinSize>
 			<Wizard>3</Wizard>
@@ -687,17 +687,6 @@
 					<Points>35</Points>
 					<AddToCast>1</AddToCast>
 					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-					<OnlyIfAnotherService>
-						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
-						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
-						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
-					<Frenzy/>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -860,6 +849,123 @@
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<ImmuneToPsychology/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Chaos Sorcerer</Name>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Chaos Sorcerer</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Type>Armour</Type>
+					<Name>Chaos armour</Name>
+					<AddToArmour>4</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>The Will of Chaos</SpecialRuleDescription>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Mark of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWard>6</AddToWard>
+					<SpecialRuleDescription>+1 on attempts to cast spell</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology/>
+				</Option>
+				<Option>
+					<Name>Chaos Steed</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Demonic Mount</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Disc of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Tzeentch</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Palanquin of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Nurgle</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Steed of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Slaanesh</OnlyIf>
+					</OnlyIfAnotherService>
 				</Option>
 			</Options>
 		</Hero>
