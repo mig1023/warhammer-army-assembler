@@ -451,7 +451,6 @@
 		<Hero>
 			<Type>Lord</Type>
 			<Name>Chaos Lord</Name>
-			<Group>Mortal</Group>
 			<Points>210</Points>
 			<MinSize>1</MinSize>
 			<Description>Chaos Lord</Description>
@@ -947,6 +946,188 @@
 					<Mount/>
 					<OnlyIfAnotherService>
 						<OnlyIf>Mark of Tzeentch</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Palanquin of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Nurgle</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Steed of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Slaanesh</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Exalted Hero</Name>
+			<Points>110</Points>
+			<MinSize>1</MinSize>
+			<Description>Exalted Hero</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Type>Armour</Type>
+					<Name>Chaos armour</Name>
+					<AddToArmour>4</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>The Will of Chaos</SpecialRuleDescription>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>8</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Flail</OnlyIfNot>
+						<OnlyIfNot>Halberd</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Flail</OnlyIfNot>
+						<OnlyIfNot>Halberd</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Flail</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<Flail/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Halberd</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<AddToStrength>1</AddToStrength>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Flail</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Mark of Khorne</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Frenzy/>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Mark of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWard>6</AddToWard>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology/>
+				</Option>
+				<Option>
+					<Name>Chaos Steed</Name>
+					<Type>Option</Type>
+					<Points>16</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Demonic Mount</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Disc of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Tzeentch</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Juggernaut</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Khorne</OnlyIf>
 					</OnlyIfAnotherService>
 				</Option>
 				<Option>
