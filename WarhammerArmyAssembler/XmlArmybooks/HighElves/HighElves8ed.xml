@@ -174,7 +174,7 @@
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
-					<Name>Shield</Name>
+					<Name>Shields</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<AddToArmour>6</AddToArmour>
@@ -182,6 +182,77 @@
 				</Option>
 				<Option>
 					<Name>Sea Master</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Silver Helms</Name>
+			<Points>21</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Lance</Name>
+					<Lance/>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Bow</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Ithilmar barding</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>High Helm</Name>
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
