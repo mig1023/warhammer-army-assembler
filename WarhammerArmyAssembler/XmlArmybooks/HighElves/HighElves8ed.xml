@@ -630,6 +630,10 @@
 				<HitFirst/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
 				<HandWeapon>
 					<Name>Halberd</Name>
 					<AddToStrength>1</AddToStrength>
@@ -660,6 +664,78 @@
 					<FullCommand/>
 					<Points>10</Points>
 					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Dragon Princes of Caledor</Name>
+			<Points>29</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Barded Elven Steed</MountInit>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Lance</Name>
+					<Lance/>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Dragon armour</Name>
+					<AddToArmour>5</AddToArmour>
+					<SpecialRuleDescription>Immune to all Flaming attacks</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Shields</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Ithilmar barding</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Drakemaster</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+					<MagicItems>75</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
