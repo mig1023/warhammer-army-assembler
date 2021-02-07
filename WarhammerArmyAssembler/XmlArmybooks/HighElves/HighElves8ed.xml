@@ -72,6 +72,23 @@
 				<Leadership>8</Leadership>
 			</MainParam>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Swiftfeather Roc</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -737,6 +754,50 @@
 					<Points>20</Points>
 					<MagicItems>75</MagicItems>
 					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Lothern Skycutter</Name>
+			<Points>95</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MountInit>Swiftfeather Roc</MountInit>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<RangWeapon>
+					<Name>Bow</Name>
+				</RangWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Eagle Eye Bolt Thrower</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
 				</Option>
 			</Options>
 		</Unit>
