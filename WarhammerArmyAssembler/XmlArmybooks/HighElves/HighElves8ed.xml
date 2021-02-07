@@ -441,7 +441,7 @@
 			<Type>Special</Type>
 			<Name>White Lions of Chrace</Name>
 			<Points>13</Points>
-			<MinSize>5</MinSize>
+			<MinSize>10</MinSize>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
@@ -466,7 +466,6 @@
 				<HandWeapon>
 					<Name>Great weapon</Name>
 					<AddToStrength>2</AddToStrength>
-					<HitLast/>
 				</HandWeapon>
 				<Armour>
 					<Name>Heavy armour</Name>
@@ -479,6 +478,65 @@
 			<Options>
 				<Option>
 					<Name>Guardian</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Hero</MagicItemsType>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Swordmasters of Hoeth</Name>
+			<Points>13</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Bladelord</Name>
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
