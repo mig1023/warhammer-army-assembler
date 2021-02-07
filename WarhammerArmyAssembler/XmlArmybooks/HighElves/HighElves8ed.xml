@@ -876,5 +876,44 @@
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Great Eagles</Name>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Swiftsense</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Shredding Talons</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<PerModel/>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
