@@ -10,7 +10,7 @@
 		<SymbolImage>HighElves.png</SymbolImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Common magic items">
+		<ArtefactsGroup Name = "Vaul's Forge">
 			<Artefact>
 				<Name>Blade of Leaping Gold</Name>
 				<Type>Weapon</Type>
@@ -18,6 +18,14 @@
 				<AddToAttacks>3</AddToAttacks>
 				<SpecialRuleDescription>Any roll of 6 To Wound ignores armour saves</SpecialRuleDescription>
 				<Description>The Blade of Leaping Gold grants the wielder +3 Attacks. In addition, any roll of 6 To Wound made with the Blade of Leaping Gold ignores armour saves.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Star Lance</Name>
+				<Type>Weapon</Type>
+				<OnlyFor>Mount</OnlyFor>
+				<Points>30</Points>
+				<SpecialRuleDescription>+3 Strength on the turn he charges, and armour saves cannot be taken against Wounds caused this turn</SpecialRuleDescription>
+				<Description>Mounted character only. The Star Lance can only be used in a turn in which the bearer makes a successful charge. Attacks with the Star Lance are resolved at +3 Strength, and armour saves cannot be taken against Wounds caused by the Star Lance. If the bearer did not make a successful charge this turn, or if his mount has been slain, he must instead fight using another weapon.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
