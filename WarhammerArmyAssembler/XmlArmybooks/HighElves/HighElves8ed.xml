@@ -604,6 +604,111 @@
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted a 4+ Ward save against any wounds caused by the spell.</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Common enchanted items">
+			<Artefact>
+				<Name>Wizarding Hat</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>100</Points>
+				<AddToWizard>2</AddToWizard>
+				<AddToCast>2</AddToCast>
+				<AddToDispell>1</AddToDispell>
+				<Stupidity/>
+				<Description>The wearer is treated as being a Level 2 Wizard who can use a randomly chosen spell lore. However, he also has the Stupidity special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Fozzrik's Folding Fortress</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>100</Points>
+				<SpecialRuleDescription>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress</SpecialRuleDescription>
+				<Description>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building (or scratch-built structure of a similar size) in your deployment zone to represent rhe Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik's Folding Fortress.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Arabyan Carpet</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>50</Points>
+				<OnlyFor>Infantry</OnlyFor>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<Description>Infantry or monstrous infantry models on foot only. The owner of this magical carpet has the Fly special rule. However, he cannot join units.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Crown of Command</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>35</Points>
+				<Stubborn/>
+				<Description>The bearer of the Crown of Command has the Stubborn special rule.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Healing Potion</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Once per battle recovers D6 Wounds lost in the battle</SpecialRuleDescription>
+				<Description>One use only. The Healing Potion can be drunk at the start of the controlling player's turn. The imbiber immediately recovers D6 Wounds lost in the battle.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Featherfoe Torc</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>35</Points>
+				<SpecialRuleDescription>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat</SpecialRuleDescription>
+				<Description>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ruby Ring of Ruin</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<SpecialRuleDescription>Bound spell, Power level 3: Fireball spell from Lore of Fire</SpecialRuleDescription>
+				<Description>Bound spell (power level 3). The Ruby Ring of Ruin contains the Fireball spell (see the Lore of Fire).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Terrifying Mask of Eee!</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>25</Points>
+				<Terror/>
+				<NotALeader/>
+				<Description>The wearer of this mask causes Terror. However, other models can never use his Leadership.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Strength</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Strength until the end of the turn</SpecialRuleDescription>
+				<Description>One use only. The Potion of Strength can be drunk at the start of any player's turn. The imbiber has +3 Strength until the end of the turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Toughness</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>20</Points>
+				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Toughness until the end of the turn</SpecialRuleDescription>
+				<Description>One use only. The Potion of Toughness can be drunk at the start of any player's turn. The imbiber has +3 Toughness until the end of the turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>The Other Trickster's Shard</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>15</Points>
+				<Reroll>OpponentToWard</Reroll>
+				<Description>Models in base contact with the bearer (friends and foes) must re-roll successful ward saves.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Ironcurse Icon</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>The character (and any unit he is with) have 6+ Ward save against war machine weapons</SpecialRuleDescription>
+				<Description>The character (and any unit he is with) gain a 6+ ward save against war machine weapons.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Foolhardiness</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn</SpecialRuleDescription>
+				<Description>One use only. The Potion of Foolhardiness can be drunk at the start of any player's turn. The imbiber has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Potion of Speed</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>5</Points>
+				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Initiative until the end of the turn</SpecialRuleDescription>
+				<Description>One use only. The Potion of Speed can be drunk at the start of any player's turn. The imbiber has +3 Initiative until the end of the turn.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		
