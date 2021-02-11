@@ -443,6 +443,14 @@ namespace WarhammerArmyAssembler
                         this.ParamTests.Add(param);
         }
 
+        public static string GetRandomAttacksLine(int? attack)
+        {
+            string param = attack.ToString();
+            string addToDice = (param[2] == '0' ? String.Empty : "+" + param[2].ToString());
+
+            return String.Format("{0}D{1}{2}", param[0], param[1], addToDice);
+        }
+
         private string AddFromAnyOption(string name, bool reversParam = false,
             bool mountParam = false, bool doNotCombine = false)
         {
@@ -451,12 +459,8 @@ namespace WarhammerArmyAssembler
             int? paramValue = (int?)paramObject;
 
             if (paramValue > 100)
-            {
-                string param = paramValue.ToString();
-                string addToDice = (param[2] == '0' ? String.Empty : "+" + param[2].ToString());
+                return GetRandomAttacksLine(paramValue);
 
-                return String.Format("{0}D{1}{2}", param[0], param[1], addToDice);
-            }
             else if (paramValue <= 0)
                 return "-";
 
@@ -552,10 +556,11 @@ namespace WarhammerArmyAssembler
                 {
                     string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
 
-                    if (cleanParamLine.Contains("D") || cleanParamLine.Contains("-"))
+                    if (cleanParamLine.Contains("-"))
                         cleanParamLine = "0";
 
-                    typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
+                    if (!cleanParamLine.Contains("D"))
+                        typeof(Unit).GetProperty(name).SetValue(unit, int.Parse(cleanParamLine));
                 }
             }
 
@@ -579,10 +584,8 @@ namespace WarhammerArmyAssembler
 
             unit.Size = baseSize ?? unit.Size;
 
-            unit.OriginalAttacks = unit.Attacks;
             unit.OriginalWounds = unit.Wounds;
-          
-            unit.Attacks *= unit.GetFront();
+
             unit.Wounds *= unit.Size;
 
             return unit;

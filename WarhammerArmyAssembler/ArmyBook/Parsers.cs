@@ -14,7 +14,15 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return byDefault ?? 0;
 
-            bool success = int.TryParse(xmlNode.InnerText, out int value);
+            if (xmlNode.InnerText.StartsWith("D6"))
+                xmlNode.InnerText = "1" + xmlNode.InnerText;
+
+            if (xmlNode.InnerText.EndsWith("D6"))
+                xmlNode.InnerText += "0";
+
+            string text = xmlNode.InnerText.Replace("D", String.Empty).Replace("+", String.Empty);
+
+            bool success = int.TryParse(text, out int value);
 
             return (success ? value : (byDefault ?? 0));
         }
