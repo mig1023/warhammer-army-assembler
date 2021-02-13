@@ -711,7 +711,52 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Tyrion</Name>
+			<Points>410</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Malhandir</MountInit>
+			<PersonifiedHero/>
+			<Description>Tyrion</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+					<SpecialRuleDescription>Inspiring Presence has range of 18"</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Sunfang</Name>
+					<AddToStrength>3</AddToStrength>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Once per battle, Tyrion can make a Strength 4 Breath Weapon attack with Flaming Attacks special rule</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Dragon Armour of Aenarion</Name>
+					<ArmourTo>1</ArmourTo>
+					<AddToWard>4</AddToWard>
+				</Armour>
+				<Armour>
+					<Name>Heart of Avelorn</Name>
+					<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
+					<WardForLastWound>2</WardForLastWound>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -785,6 +830,23 @@
 				<Initiative>4</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>8</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Malhandir</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
 			</MainParam>
 		</Mount>
 	</Mounts>
