@@ -806,6 +806,69 @@
 				</Arcane>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Eltharion the Grim</Name>
+			<Points>295</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Eltharion the Grim</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<Options>
+				<Option>
+					<Name>Stormwing</Name>
+					<Type>Option</Type>
+					<Points>195</Points>
+					<Mount/>
+					<Lance/>
+				</Option>
+			</Options>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Hates all Goblins</SpecialRuleDescription>
+					<SpecialRuleDescription>Blood Oath</SpecialRuleDescription>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Fangsword of Eltharion</Name>
+					<NoArmour/>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Longbow</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Helm of Yvresse</Name>
+					<AddToArmour>6</AddToArmour>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Arcane>
+					<Name>Talisman of Hoeth</Name>
+					<SpecialRuleDescription>Magic Resitance(1)</SpecialRuleDescription>
+					<AddToWizard>2</AddToWizard>
+					<AddToCast>2</AddToCast>
+					<AddToDispell>1</AddToDispell>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -897,6 +960,33 @@
 				<Attacks>2</Attacks>
 				<Leadership>7</Leadership>
 			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Stormwing</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Mount>
 	</Mounts>
 	<Units>
