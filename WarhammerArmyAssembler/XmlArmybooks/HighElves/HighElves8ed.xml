@@ -812,7 +812,7 @@
 			<Points>295</Points>
 			<MinSize>1</MinSize>
 			<PersonifiedHero/>
-			<Description>Eltharion the Grim</Description>
+			<Description>Eltharion the Grim, Warden of Tor Yvresse</Description>
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>8</WeaponSkill>
@@ -866,6 +866,57 @@
 					<AddToWizard>2</AddToWizard>
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Alith Anar</Name>
+			<Points>250</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Alith Anar, The Shadow King</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>7</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<SpecialRuleDescription>Hate Dark Elves</SpecialRuleDescription>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Moonbow</Name>
+					<SpecialRuleDescription>Moonbow shoot for 36" with Strength 7, Multiple Wounds (D3), no Armour saves permitted and Quick to Fire secial rule</SpecialRuleDescription>
+					<SpecialRuleDescription>Any unit of Dark Elves that suffers one or more casualties from the Moonbow also suffers a -1 penalty to their Leadership until the end of the phase</SpecialRuleDescription>
+				</RangeWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Arcane>
+					<Name>Shadow Crown</Name>
+					<SpecialRuleDescription>Swiftstride</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Stone of Midnight</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</SpecialRuleDescription>
 				</Arcane>
 			</SpecialRulesAndAmmunition>
 		</Hero>
