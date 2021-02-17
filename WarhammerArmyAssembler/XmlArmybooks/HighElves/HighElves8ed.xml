@@ -783,7 +783,7 @@
 				<Special>
 					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
 					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
-					<SpecialRuleDescription>+1 to all attempts to cast spells from the Lore of High Magic.</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to all attempts to cast spells from the Lore of High Magic</SpecialRuleDescription>
 				</Special>
 				<HandWeapon>
 					<Name>Sword of Teclis</Name>
@@ -917,6 +917,63 @@
 					<Name>Stone of Midnight</Name>
 					<AddToWard>4</AddToWard>
 					<SpecialRuleDescription>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</SpecialRuleDescription>
+				</Arcane>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Alarielle the Radiant</Name>
+			<Points>350</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>4</Wizard>
+			<Description>Alarielle the Radiant, Everqueen of Ulthuan</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<ImmuneToPsychology/>
+				<HeroicKillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Boon of Isha</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to all attempts to cast spells from the Lore of High Magic</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each of Alarielle's Magic phases, every unit with the Daemonic special rule within 12" suffers D6 Strength 4 hits, distributed as for shooting attacks.</SpecialRuleDescription>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>The Shieldstone of Isha</Name>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Arcane>
+					<Name>Star of Avelorn</Name>
+					<SpecialRuleDescription>At the start of your Movement phase, nominate a single friendly character within 12" — that model immediately regains a single Wound lost earlier in the battie</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Stave of Avelorn</Name>
+					<SpecialRuleDescription>Once per battle, can cast a spell she has already cast that phase, even if the casting attempt failed, or was miscast</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Horn of Isha</Name>
+					<SpecialRuleDescription>Once per battle, all models in unit receive a +1 To Hit bonus on all shooting and close combat attacks</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Banner of Avelorn</Name>
+					<SpecialRuleDescription>Spells from the Lore of Light and the Lore of Life cast by a friendly Wizard that target a unit receive a +4 bonus to cast</SpecialRuleDescription>
 				</Arcane>
 			</SpecialRulesAndAmmunition>
 		</Hero>
