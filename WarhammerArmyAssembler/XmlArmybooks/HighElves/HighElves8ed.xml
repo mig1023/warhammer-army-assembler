@@ -1497,6 +1497,63 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Mage</Name>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Mage</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>+1 to all attempts to cast spells from the Lore of High Magic</SpecialRuleDescription>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>			
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Ithilmar barding</Name>
+					<Type>Option</Type>
+					<Points>7</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Elven Steed</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
