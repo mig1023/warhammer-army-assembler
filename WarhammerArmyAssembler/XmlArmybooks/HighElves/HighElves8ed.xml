@@ -1386,6 +1386,54 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Korhil</Name>
+			<Points>150</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Korhil</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stubborn/>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Forest Strider</SpecialRuleDescription>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Chayal</Name>
+					<KillingBlow/>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Pelt of Charandis</Name>
+					<AddToArmour>6</AddToArmour>
+					<SpecialRuleDescription>3+ Armour save against shooting attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Immune to Poison</SpecialRuleDescription>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Noble</Name>
 			<Points>70</Points>
 			<MinSize>1</MinSize>
