@@ -1067,7 +1067,6 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast/>
 					<Points>6</Points>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
@@ -1347,6 +1346,45 @@
 			</Options>
 		</Hero>
 		<Hero>
+			<Type>Lord</Type>
+			<Name>Loremaster of Hoeth</Name>
+			<Points>230</Points>
+			<MinSize>1</MinSize>
+			<Wizard>2</Wizard>
+			<Description>Loremaster of Hoeth</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>6+ Ward save against non-magical shooting attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Noble</Name>
 			<Points>70</Points>
@@ -1436,7 +1474,6 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<HitLast/>
 					<Points>4</Points>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
