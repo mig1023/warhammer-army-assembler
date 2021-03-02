@@ -1800,6 +1800,61 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Lothern Sea Helm</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<Description>Lothern Sea Helm</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Martial Prowess</SpecialRuleDescription>
+					<SpecialRuleDescription>Naval Discipline</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
+					<SpecialRuleDescription>Windrider</SpecialRuleDescription>
+				</Special>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Bow</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Lothern Skycutter</Name>
+					<Type>Option</Type>
+					<Points>95</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -2159,6 +2214,34 @@
 					<SpecialRuleDescription>Any enemy unit in base contact has the Always Strikes Last special rule and suffers -1 to its Strength</SpecialRuleDescription>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Lothern Skycutter</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MountInit>Lothern Skycutter</MountInit>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Valour of Age</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
