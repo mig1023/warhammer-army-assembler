@@ -193,5 +193,44 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Dryads</Name>
+			<Points>12</Points>
+			<MinSize>8</MinSize>
+			<MaxSize>20</MaxSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Razor sharp talons</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Branch Nymph</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>12</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
