@@ -65,19 +65,46 @@ namespace WarhammerArmyAssembler.Test
             WinDefeatScale(result[1], result[2]);
         }
 
-        private static void WinDefeatScale(double win, double defeat)
+        private static void ScaleLine(string marker, int len, string el)
         {
-            Brush scaleColor = Test.Data.goodText;
+            Test.Data.Console(Test.Data.supplText, marker);
 
-            foreach(double param in new List<double> { win, defeat })
-            {
-                int scale = (int)param / 10;
+            for (int i = 0; i < len; i++)
+                Test.Data.Console(Test.Data.supplText, el);
+        }
 
-                for (int i = 0; i < scale; i++)
-                    Test.Data.Console(scaleColor, "|");
+        private static void ScaleDraw()
+        {
+            Test.Data.Console(Test.Data.text, "\n");
 
-                scaleColor = Test.Data.badText;
-            }
+            ScaleLine("0%", 46, " ");
+            ScaleLine("50%", 45, " ");
+            Test.Data.Console(Test.Data.supplText, "100%");
+
+            Test.Data.Console(Test.Data.text, "\n");
+
+            ScaleLine("+", 48, "-");
+            ScaleLine("+", 49, "-");
+            Test.Data.Console(Test.Data.supplText, "+");
+
+            Test.Data.Console(Test.Data.text, "\n");
+        }
+
+        private static void WinDefeatLine(int columns, Brush scaleColor, bool floor = false)
+        {
+            double scaleColumns = (double)columns / 10;
+            int scale = (floor ? (int)Math.Floor(scaleColumns) : (int)Math.Ceiling(scaleColumns));
+
+            for (int i = 0; i < scale; i++)
+                Test.Data.Console(scaleColor, "|");
+        }
+
+        private static void WinDefeatScale(int win, int defeat)
+        {
+            ScaleDraw();
+
+            WinDefeatLine(win, Test.Data.goodText);
+            WinDefeatLine(defeat, Test.Data.badText, floor: true);
 
             Test.Data.Console(Test.Data.text, "\n\n");
         }
