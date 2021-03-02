@@ -477,5 +477,40 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Treeman</Name>
+			<Points>285</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>3</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+				<Terror/>
+				<Stubborn/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Gnarled fists</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Strangle-roots</SpecialRuleDescription>
+					<SpecialRuleDescription>Tree Singing</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
