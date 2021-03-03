@@ -200,12 +200,22 @@
 			</Artefact>
 			<Artefact>
 				<Name>Briarsheath</Name>
-				<Type>AdditionalArmour</Type>
+				<Type>Armour</Type>
 				<Points>20</Points>
 				<OnlyFor>Infantry</OnlyFor>
 				<AddToArmour>6</AddToArmour>
 				<SpecialRuleDescription>Enemies wishing to target the model with a shooting attack suffer an additional -1 to hit penalty</SpecialRuleDescription>
 				<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Enemies wishing to target the model wearing the Briarsheath with a shooting attack suffer an additional -1 to hit penalty. This is increased to -2 if the wearer is within a wood.</Description>
+			</Artefact>
+		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Talismans">
+			<Artefact>
+				<Name>The Rhymer's Harp</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>75</Points>
+				<AddToWard>5</AddToWard>
+				<SpecialRuleDescription>May move through all kinds of difficult terrain without penalty</SpecialRuleDescription>
+				<Description>This item bestows a 5+ Ward Save on the bearer, their mount, and any unit they join. In addition, the bearer, their mount, and any unit they join may move through all kinds of difficult terrain without penalty.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
