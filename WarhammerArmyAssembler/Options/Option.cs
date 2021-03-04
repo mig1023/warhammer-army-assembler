@@ -83,6 +83,7 @@ namespace WarhammerArmyAssembler
         public int AddToWound { get; set; }
         public int SubOpponentToWound { get; set; }
         public int HitOn { get; set; }
+        public int OpponentHitOn { get; set; }
         public int WoundOn { get; set; }
         public int WardForFirstWound { get; set; }
         public int WardForLastWound { get; set; }
@@ -226,6 +227,7 @@ namespace WarhammerArmyAssembler
                 AddToWound = this.AddToWound,
                 SubOpponentToWound = this.SubOpponentToWound,
                 HitOn = this.HitOn,
+                OpponentHitOn = this.OpponentHitOn,
                 WoundOn = this.WoundOn,
                 WardForFirstWound = this.WardForFirstWound,
                 WardForLastWound = this.WardForLastWound,

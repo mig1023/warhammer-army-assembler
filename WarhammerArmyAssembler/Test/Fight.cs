@@ -836,6 +836,8 @@ namespace WarhammerArmyAssembler.Test
             }
             else if (unit.HitOn > 0)
                 chance = unit.HitOn;
+            else if (enemy.OpponentHitOn > 0)
+                chance = enemy.OpponentHitOn;
             else if (unit.WeaponSkill > enemy.WeaponSkill)
                 chance = 3;
             else if ((unit.WeaponSkill * 2) < enemy.WeaponSkill)

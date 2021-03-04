@@ -166,6 +166,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.AddToWound = IntParse(additionalParam["AddToWound"]);
                 newUnit.SubOpponentToWound = IntParse(additionalParam["SubOpponentToWound"]);
                 newUnit.HitOn = IntParse(additionalParam["HitOn"]);
+                newUnit.OpponentHitOn = IntParse(additionalParam["OpponentHitOn"]);
                 newUnit.WoundOn = IntParse(additionalParam["WoundOn"]);
                 newUnit.WardForFirstWound = IntParse(additionalParam["WardForFirstWound"]);
                 newUnit.WardForLastWound = IntParse(additionalParam["WardForLastWound"]);
@@ -265,6 +266,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.AddToWound = IntParse(xmlNode["AddToWound"]);
             newWeapon.SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]);
             newWeapon.HitOn = IntParse(xmlNode["HitOn"]);
+            newWeapon.OpponentHitOn = IntParse(xmlNode["OpponentHitOn"]);
             newWeapon.WoundOn = IntParse(xmlNode["WoundOn"]);
             newWeapon.Runic = IntParse(xmlNode["Runic"]);
             newWeapon.MasterRunic = BoolParse(xmlNode["MasterRunic"]);
