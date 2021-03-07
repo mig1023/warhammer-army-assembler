@@ -424,10 +424,45 @@
 			</MainParam>
 			<AdditionalParam>
 				<Undead/>
+				<LargeBase/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Flying unit</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Tomb Scorpion</Name>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<KillingBlow/>
+				<PoisonAttack/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Stinging tail and wicked claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<SpecialRuleDescription>"It Came From Below..."</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
