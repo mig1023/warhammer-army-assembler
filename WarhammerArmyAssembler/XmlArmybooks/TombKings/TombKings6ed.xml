@@ -466,5 +466,41 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Screaming Skull Catapult</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<ModelsInPack>4</ModelsInPack>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Stone Thrower</SpecialRuleDescription>
+					<SpecialRuleDescription>Screaming Skulls</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Skulls of the Foe</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
