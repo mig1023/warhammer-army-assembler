@@ -405,5 +405,31 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Carrion</Name>
+			<Points>24</Points>
+			<MinSize>3</MinSize>
+			<MaxSize>10</MaxSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Flying unit</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
