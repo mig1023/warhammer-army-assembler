@@ -164,5 +164,35 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Tomb Swarm</Name>
+			<Points>45</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>5</MaxSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<PoisonAttack/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Swarm</SpecialRuleDescription>
+					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRuleDescription>"It Came From Below..."</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
