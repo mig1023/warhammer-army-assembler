@@ -776,6 +776,195 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Wood Elf Noble</Name>
+			<Points>75</Points>
+			<MinSize>1</MinSize>
+			<Description>Wood Elf Noble</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Wardancer</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<AddToStrength>1</AddToStrength>
+					<AddToAttacks>1</AddToAttacks>
+					<SpecialRuleDescription>Shadow dances of Loec</SpecialRuleDescription>
+					<ImmuneToPsychology/>
+					<AddToWard>6</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wild Rider</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToWard>5</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<AddToAttacks>1</AddToAttacks>
+					<ImmuneToPsychology/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Waywatcher</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<SpecialRuleDescription>Lethal shot</SpecialRuleDescription>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Alter</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<MovementTo>9</MovementTo>
+					<InitiativeTo>9</InitiativeTo>
+					<AddToAttacks>1</AddToAttacks>
+					<NotALeader/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Scout</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Eternal</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<AddToArmour>5</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Great Stag</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Wild Rider</OnlyIf>
+					</OnlyIfAnotherService>			
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<RangeWeapon>
+					<Name>Longbow</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
