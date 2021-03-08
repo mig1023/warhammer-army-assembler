@@ -490,6 +490,65 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Orion</Name>
+			<Points>575</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Orion, The King in the Woods</Description>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>10</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Unbreakable/>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Spear of Kurnous</Name>
+					<Lance/>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Hawk's Talon</Name>
+					<SpecialRuleDescription>A missile weapon with the Strength 6 and can penetrate ranks as a bolt thrower, each unsaved wound become D3 wounds</SpecialRuleDescription>
+				</RangeWeapon>
+				<Armour>
+					<Name>Cloak of Isha</Name>
+					<AddToDispell>2</AddToDispell>
+				</Armour>
+				<Armour>
+					<Name>Horn of the Wild Hunt</Name>
+					<AddToWard>5</AddToWard>
+					<SpecialRuleDescription>Then Orion declare a first charge in game, all enemies within 18" must take a Panic test</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>The Wild Hunt</SpecialRuleDescription>
+					<SpecialRuleDescription>Does not suffer a -1 to hit penalty for moving and shooting</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Hounds</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<PerModel/>
+					<Countable/>
+					<Max>2</Max>
+					<ExportToUnitSize/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Wood Elf Highborn</Name>
 			<Points>145</Points>
 			<MinSize>1</MinSize>
