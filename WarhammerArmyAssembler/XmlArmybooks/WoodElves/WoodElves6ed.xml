@@ -676,6 +676,70 @@
 				</RangeWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Spellweaver</Name>
+			<Points>215</Points>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<Description>Spellweaver</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Glamourweave</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<AddToWard>5</AddToWard>
+				</Option>
+				<Option>
+					<Name>Unicorn</Name>
+					<Type>Option</Type>
+					<Points>65</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Glamourweave</OnlyIf>
+					</OnlyIfAnotherService>			
+					<Mount/>
+				</Option>				
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Longbow</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
