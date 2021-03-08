@@ -488,7 +488,194 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Wood Elf Highborn</Name>
+			<Points>145</Points>
+			<MinSize>1</MinSize>
+			<Description>Wood Elf Highborn</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Spear</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Wardancer</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToStrength>1</AddToStrength>
+					<AddToAttacks>1</AddToAttacks>
+					<SpecialRuleDescription>Shadow dances of Loec</SpecialRuleDescription>
+					<ImmuneToPsychology/>
+					<AddToWard>6</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wild Rider</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToWard>5</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<AddToAttacks>1</AddToAttacks>
+					<ImmuneToPsychology/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Waywatcher</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<SpecialRuleDescription>Lethal shot</SpecialRuleDescription>
+					<SpecialRuleDescription>Forest Stalker</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Alter</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<MovementTo>9</MovementTo>
+					<InitiativeTo>9</InitiativeTo>
+					<AddToAttacks>1</AddToAttacks>
+					<NotALeader/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Scout</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<SpecialRuleDescription>Scout</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Eternal</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Eternal</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<AddToArmour>5</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wardancer</OnlyIfNot>
+						<OnlyIfNot>Wild Rider</OnlyIfNot>
+						<OnlyIfNot>Waywatcher</OnlyIfNot>
+						<OnlyIfNot>Alter</OnlyIfNot>
+						<OnlyIfNot>Scout</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Great Stag</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Wild Rider</OnlyIf>
+					</OnlyIfAnotherService>			
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Elven Steed</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Great Eagle</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Forest Dragon</Name>
+					<Type>Option</Type>
+					<Points>320</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<RangeWeapon>
+					<Name>Longbow</Name>
+				</RangeWeapon>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -510,6 +697,52 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
+			<Name>Great Stag</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>9</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Great Eagle</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
 			<Name>Warhawk</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -524,6 +757,58 @@
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
 			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Unicorn</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+			</AdditionalParam>
+			<Special>
+				<SpecialRuleDescription>Impale</SpecialRuleDescription>
+				<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
+			</Special>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Forest Dragon</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<Special>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+				<SpecialRuleDescription>Poison Breath</SpecialRuleDescription>
+			</Special>
 		</Mount>
 	</Mounts>
 	<Units>
