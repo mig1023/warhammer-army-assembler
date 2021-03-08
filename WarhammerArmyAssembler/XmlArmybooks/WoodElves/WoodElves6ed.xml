@@ -1023,6 +1023,41 @@
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Branchwraith</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<Group>Treemen</Group>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<LargeBase/>
+				<Fear/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard Level 1</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
