@@ -136,7 +136,7 @@
 				<Name>A Cluster of Radiants</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyFor>TreemenGroup</OnlyFor>
+				<OnlyForGroup>Treemen</OnlyForGroup>
 				<AddToDispell>1</AddToDispell>
 				<Description>Treemen Ancients and Branchwraiths only. A character with Radiants may add one extra dice to their Dispel pool in their opponent's Magic phase.</Description>
 			</Artefact>
@@ -740,6 +740,42 @@
 				</HandWeapon>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Treeman Ancient</Name>
+			<Points>325</Points>
+			<MinSize>1</MinSize>
+			<Group>Treemen</Group>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>3</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<LargeBase/>
+				<Terror/>
+				<Stubborn/>
+				<SlotOf>Rare</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Strangle-roots</SpecialRuleDescription>
+					<SpecialRuleDescription>Tree Singing</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -867,6 +903,7 @@
 			<AdditionalParam>
 				<Terror/>
 				<LargeBase/>
+				<SlotOf>Hero</SlotOf>
 			</AdditionalParam>
 			<Special>
 				<SpecialRuleDescription>Fly</SpecialRuleDescription>
