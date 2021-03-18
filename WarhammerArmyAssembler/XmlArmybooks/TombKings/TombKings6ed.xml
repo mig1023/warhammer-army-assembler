@@ -434,6 +434,49 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Liche High Priest</Name>
+			<Points>245</Points>
+			<Description>Liche High Priest</Description>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Skeletal Steed</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Casket of Soul</Name>
+					<Type>Option</Type>
+					<Points>165</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -457,7 +500,7 @@
 			<Type>Mount</Type>
 			<Name>Chariot</Name>
 			<Points>0</Points>
-			<MinSize>3</MinSize>
+			<MinSize>1</MinSize>
 			<Chariot/>
 			<ModelsInPack>3</ModelsInPack>
 			<MainParam>
@@ -476,6 +519,36 @@
 				<ImpactHit>D6+1</ImpactHit>
 				<Undead/>
 			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Casket of Soul</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<Chariot/>
+			<ModelsInPack>3</ModelsInPack>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Undead/>
+				<KillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Light of Death</SpecialRuleDescription>
+					<SpecialRuleDescription>Spirit-Souls</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Mount>
 	</Mounts>
 	<Units>
