@@ -392,7 +392,7 @@
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<Points>3</Points>
+					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Flail</Name>
@@ -473,6 +473,90 @@
 					<Name>Casket of Soul</Name>
 					<Type>Option</Type>
 					<Points>165</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Tomb Prince</Name>
+			<Points>100</Points>
+			<Description>Tomb Prince</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Embalmed</SpecialRuleDescription>
+					<SpecialRuleDescription>The Curse</SpecialRuleDescription>
+					<SpecialRuleDescription>"My Will Be Done!"</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Flail</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Flail</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<Fail/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Flail</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Chariot</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
 					<Mount/>
 				</Option>
 			</Options>
