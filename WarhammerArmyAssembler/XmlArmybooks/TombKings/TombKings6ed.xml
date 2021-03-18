@@ -350,7 +350,90 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Tomb King</Name>
+			<Points>170</Points>
+			<Description>Tomb King</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Embalmed</SpecialRuleDescription>
+					<SpecialRuleDescription>The Curse</SpecialRuleDescription>
+					<SpecialRuleDescription>"My Will Be Done!"</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Flail</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Flail</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<Fail/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Spear</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Flail</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Chariot</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -369,6 +452,30 @@
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
 			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Chariot</Name>
+			<Points>0</Points>
+			<MinSize>3</MinSize>
+			<Chariot/>
+			<ModelsInPack>3</ModelsInPack>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6+1</ImpactHit>
+				<Undead/>
+			</AdditionalParam>
 		</Mount>
 	</Mounts>
 	<Units>
