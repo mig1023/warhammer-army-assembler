@@ -478,7 +478,7 @@
 			</Options>
 		</Hero>
 		<Hero>
-			<Type>Lord</Type>
+			<Type>Hero</Type>
 			<Name>Tomb Prince</Name>
 			<Points>100</Points>
 			<Description>Tomb Prince</Description>
@@ -552,6 +552,55 @@
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Chariot</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Icon Bearer</Name>
+			<Points>65</Points>
+			<Description>Icon Bearer</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<KillingBlow/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Skeletal Steed</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+					<Mount/>
 				</Option>
 				<Option>
 					<Name>Chariot</Name>
