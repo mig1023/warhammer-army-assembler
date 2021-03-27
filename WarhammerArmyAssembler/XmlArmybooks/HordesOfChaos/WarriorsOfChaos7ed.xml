@@ -450,6 +450,53 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Kholek Suneater</Name>
+			<Points>605</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Kholek Suneater</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>8</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>8</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>7</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<ImmuneToPsychology/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Starcrusher</Name>
+					<MultiWounds>D3</MultiWounds>
+				</HandWeapon>
+				<Armour>
+					<Name>Armour of the Storm</Name>
+					<AddToArmour>5</AddToArmour>
+					<SpecialRuleDescription>If any lightning-based spell targets a unit within 12" of Kholek, the spell's effects are redirected toward Kholek instead</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Daemonshield</Name>
+					<SpecialRuleDescription>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Immune to all lightning-based attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>If targeted by a lightning-based attack, they become Frenzy</SpecialRuleDescription>
+					<SpecialRuleDescription>May never join units</SpecialRuleDescription>		
+					<SpecialRuleDescription>During the Shooting phase, choose an unengaged enemy unit within Kholek's line of sight and roll a dice: on a roll of a 2-6 a bolt of lightning hits the unit, inflicting D6 Strenght 6 hits, on the roll of a 1, the lightning hits Kholek</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Valkia the Bloody</Name>
 			<Points>410</Points>
 			<MinSize>1</MinSize>
