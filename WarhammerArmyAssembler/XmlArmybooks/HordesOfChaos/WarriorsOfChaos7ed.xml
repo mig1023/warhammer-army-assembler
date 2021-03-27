@@ -450,6 +450,45 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Vilitch the Curseling</Name>
+			<Points>395</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>4</Wizard>
+			<Description>Vilitch the Curseling</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>6</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Vessel of Chaos</Name>
+					<SpecialRuleDescription>When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch may utilise later that phase. Conversely, should the enemy make a failed dispel attempt to counter one of Vilitch's spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase.</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Mark of Tzeentch</Name>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>The Will of Chaos</SpecialRuleDescription>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows all six spells from the Lore of Tzeentch</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Chaos Lord</Name>
 			<Points>210</Points>
 			<MinSize>1</MinSize>
@@ -879,11 +918,14 @@
 					<PoisonAttack/>
 					<SpecialRuleDescription>Any unit joined gains the Regenerate ability, though Wounds are only regenerated on the roll of a 5+ rather than the usual 4+</SpecialRuleDescription>
 					<SpecialRuleDescription>Any unit joined gains the Poisoned Attacks ability</SpecialRuleDescription>
-				</HandWeapon>
+				</HandWeapon>			
+				<Armour>
+					<Name>Mark of Nurgle</Name>
+					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+				</Armour>
 				<Special>
 					<SpecialRuleDescription>The Will of Chaos</SpecialRuleDescription>
 					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
 					<SpecialRuleDescription>When making a pursuit move, Festus and any unit he is with will only pursue 1D6" as they begin to bind their captives; enemy units caught by Festus or his unit are worth double victory points</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
