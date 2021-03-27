@@ -450,6 +450,48 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Valkia the Bloody</Name>
+			<Points>410</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Valkia the Bloody</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Spear Slaupnir</Name>
+					<ArmourPiercing>1</ArmourPiercing>
+					<SpecialRuleDescription>On any turn in which Valkia charges, Slaupnir confers +2 Strength and Killing Blow</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Scarlet Armour</Name>
+					<AddToArmour>3</AddToArmour>
+					<SpecialRuleDescription>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Daemonshield</Name>
+					<SpecialRuleDescription>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>The Will of Chaos</SpecialRuleDescription>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRuleDescription>Consort of Khorne</SpecialRuleDescription>
+					<SpecialRuleDescription>Any friendly unit within 12" of Valkia may re-roll failed Break tests</SpecialRuleDescription>
+					<SpecialRuleDescription>As long as she is on the table, any results rolled on the 'Eye of the Gods' table may be re-rolled</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Vilitch the Curseling</Name>
 			<Points>395</Points>
 			<MinSize>1</MinSize>
