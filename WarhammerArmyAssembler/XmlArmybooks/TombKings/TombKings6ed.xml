@@ -401,6 +401,47 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>High Queen Khalida</Name>
+			<Points>420</Points>
+			<Description>High Queen Khalida</Description>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<HitFirst/>
+				<PoisonAttack/>
+				<Terror/>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<RangeWeapon>
+					<Name>The Venom Staff</Name>
+					<SpecialRuleDescription>Bound spell (power level 5): a magic missile with a range of 24", the target takes 2D6 Strength 4 hits, if unit takes any wounds, it may not move in its next Movement phase</SpecialRuleDescription>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Immune to Poisoned Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Any model or unit responsible for the death of Queen Khalida is affected by her curse on the dice roll of 4+: if affected, then roll a D6 for each model/unit, and on the dice roll of a 6, the model loses a wound that cannot be saved in any way (including Ward saves) nor Regenerated, roll again at the start of each of your Opponent's turns for the rest of the game, and they take a further wound on a roll of 6.</SpecialRuleDescription>
+					<SpecialRuleDescription>Any attacks that count as poisoned will inflict D3 wounds</SpecialRuleDescription>
+					<SpecialRuleDescription>May cast Horekhah's Incantation of Righteous Smiting once per Magic phase: it is automatically cast, and cannot be dispelled</SpecialRuleDescription>
+					<SpecialRuleDescription>Army of the Queen</SpecialRuleDescription>
+					<SpecialRuleDescription>Units of Skeletal Bowmen, Skeletal Light Horsemen and Chariots in an army that includes Queen Khalida may he given the Blessing of the Asp at the cost of +2 points per model, all shooting by these units count as Poisoned Attacks</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Tomb King</Name>
 			<Points>170</Points>
 			<Description>Tomb King</Description>
