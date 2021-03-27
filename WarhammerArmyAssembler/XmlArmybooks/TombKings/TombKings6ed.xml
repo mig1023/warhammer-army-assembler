@@ -352,6 +352,55 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Settra the Imperishable</Name>
+			<Points>625</Points>
+			<Description>Settra the Imperishable</Description>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<MountInit>Chariot</MountInit>
+			<PersonifiedHero/>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Lord</SlotOf>
+				<Undead/>
+				<MustBeGeneral/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Blessed Blade of Ptra</Name>
+					<HitFirst/>
+					<SpecialRuleDescription>Keep track of the number of hits Settra scores with his weapon: after his attacks have been resolved, any enemv unit in base contact with Settra must take a Leadership test, with a negative modifier equal to the number ol hits caused by Settra, if the test is passed, the enemy avert their gaze and suffer no ill effects, if the enemy fail the test then they are reduced to Weapon Skill 1 for the remainder of that combat round, if they roll double or more than their modified Leadership value then in addition to being reduced to Weapon Skill 1, the unit suffrs D6 Strength 4 hits</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Armour of Golden Magnificence</Name>
+					<AddToArmour>2</AddToArmour>
+					<SpecialRuleDescription>Armour saving is nerev modified to worse than a 4+, even of hit by attack that normally allows no Armour save</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>The Crown of Nehekhara</Name>
+					<AddToWard>4</AddToWard>
+					<Terror/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
+					<SpecialRuleDescription>Settra's Army</SpecialRuleDescription>
+					<SpecialRuleDescription>The Will of Settra</SpecialRuleDescription>
+					<SpecialRuleDescription>If a model removed from play, then the enemy within 2D6" suffer 2D6 Strength 2 hits</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Tomb King</Name>
 			<Points>170</Points>
 			<Description>Tomb King</Description>
