@@ -450,6 +450,51 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Prince Sigvald</Name>
+			<Points>425</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Prince Sigvald The Magnificent</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stubborn/>
+				<ImmuneToPsychology/>
+				<Stupidity/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sliverslash</Name>
+					<HitFirst/>
+					<AddToAttacks>2</AddToAttacks>
+				</HandWeapon>
+				<Armour>
+					<Name>Auric Armour</Name>
+					<AddToArmour>1</AddToArmour>
+					<Regeneration/>
+				</Armour>
+				<Armour>
+					<Name>Mark of Slaanesh</Name>
+					<ImmuneToPsychology/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>The Will of Chaos</SpecialRuleDescription>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>			
+					<SpecialRuleDescription>May always march, and treats dangerous terrain as open ground</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Kholek Suneater</Name>
 			<Points>605</Points>
 			<MinSize>1</MinSize>
