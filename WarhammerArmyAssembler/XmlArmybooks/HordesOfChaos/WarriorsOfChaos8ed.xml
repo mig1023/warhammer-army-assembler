@@ -714,7 +714,7 @@
 				</Armour>
 				<Special>
 					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					
 					<SpecialRuleDescription>Soul Hunters</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -726,10 +726,11 @@
 					<PerModel/>
 				</Option>
 				<Option>
-					<Name>Hellreacer</Name>
+					<Name>Hellreaver</Name>
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -742,6 +743,147 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Chosen</Name>
+			<Points>18</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Chaos armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Special>	
+					<SpecialRuleDescription>The Rewards of Chaos</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Mark of Khorne</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Frenzy/>
+				</Option>
+				<Option>
+					<Name>Mark of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWard>6</AddToWard>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+				</Option>	
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology/>
+				</Option>
+				<Option>
+					<Name>Shields</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<Points>2</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Halberd</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToAttacks>1</AddToAttacks>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Halberd</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToStrength>1</AddToStrength>
+				</Option>
+				<Option>
+					<Name>Chosen Champion</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
 		</Unit>
