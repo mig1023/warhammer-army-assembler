@@ -33,6 +33,34 @@
 				<Leadership>5</Leadership>
 			</MainParam>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Steed of Slaanesh</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ArmourPiercing>1</ArmourPiercing>
+				<PoisonAttack/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -634,6 +662,71 @@
 				</Option>			
 				<Option>
 					<Name>Marauder Horseman</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Hellstriders of Slaanesh</Name>
+			<Points>19</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Steed of Slaanesh</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Spears</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Shields</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Mark of Slaanesh</Name>
+					<ImmuneToPsychology/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRuleDescription>Soul Hunters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Hellscourges</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Hellreacer</Name>
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
