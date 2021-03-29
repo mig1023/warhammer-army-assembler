@@ -1134,5 +1134,80 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Dragon Ogres</Name>
+			<Points>60</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Storm Rage</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Halberd</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToAttacks>1</AddToAttacks>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Halberd</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</Option>
+				<Option>
+					<Name>Halberd</Name>
+					<Type>Option</Type>
+					<Points>8</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToStrength>1</AddToStrength>
+				</Option>
+				<Option>
+					<Name>Dragon Ogre Shartak</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
