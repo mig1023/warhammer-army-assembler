@@ -1248,5 +1248,55 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Chimera</Name>
+			<Points>230</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Fiend Tail</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Flaming Breath</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<SpecialRuleDescription>Strength 4 Breath Weapon with Flaming Attacks special rule</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Regenerating Flesh</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<Regeneration/>
+				</Option>
+				<Option>
+					<Name>Venemous Ooze</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<PoisonAttack/>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
