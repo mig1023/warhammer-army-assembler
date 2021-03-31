@@ -1656,5 +1656,73 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Chaos Spawn</Name>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>2D6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>D6+1</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<Unbreakable/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Mark of Khorne</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Devastating Charge</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PoisonAttack/>
+				</Option>
+				<Option>
+					<Name>Mark of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Strength 3 Breath Weapon with Flaming Attacks special rule</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<HitFirst/>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
