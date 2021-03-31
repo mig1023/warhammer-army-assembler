@@ -35,6 +35,23 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
+			<Name>Gorebeast</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>0</Leadership>
+			</MainParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
 			<Name>Steed of Slaanesh</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
@@ -469,6 +486,9 @@
 				<Leadership>8</Leadership>
 				<Armour>3</Armour>
 			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Halberd</Name>
@@ -1268,7 +1288,6 @@
 			</MainParam>
 			<AdditionalParam>
 				<Terror/>
-				<Regeneration/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1295,6 +1314,90 @@
 					<Type>Option</Type>
 					<Points>15</Points>
 					<PoisonAttack/>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Gorebeast Chariots</Name>
+			<Points>130</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Gorebeast</MountInit>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>D6</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Halberd</Name>
+					<AddToStrength>1</AddToStrength>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Scythes</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRuleDescription>Gorebeast Charge</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Mark of Khorne</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Frenzy/>
+				</Option>
+				<Option>
+					<Name>Mark of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<AddToWard>6</AddToWard>
+				</Option>
+				<Option>
+					<Name>Mark of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Mark of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
+						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ImmuneToPsychology/>
 				</Option>
 			</Options>
 		</Unit>
