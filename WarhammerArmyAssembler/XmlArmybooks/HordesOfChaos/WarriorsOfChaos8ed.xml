@@ -75,6 +75,16 @@
 				<SpecialRuleDescription>For each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle</SpecialRuleDescription>
 				<Description>The bearer of the Pendant of Slaanesh can only join units that have the Mark of Slaanesh. No other character may join the same unit as the bearer and he cannot join units that already contain a character. Whenever the bearer, or his unit, take a Break test, it is taken on one less dice than usual (note that a Break test cannot be passed with Insane Courage on a single D6). In addition, for each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Blasted Standard</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Each time the character, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound: on the roll of 2+, the Strength of that hit is halved, if the result is a 1, the Strength of that hit is instead doubled</SpecialRuleDescription>
+				<Description>Each time the bearer, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound. On the roll of 2+, the Strength of that hit is halved. However, if the result is a 1, the Strength of that hit is instead doubled. Attacks that do not roll To Wound, or that wound automatically, are not affected by the Blasted Standard.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic weapons">
 			<Artefact>
