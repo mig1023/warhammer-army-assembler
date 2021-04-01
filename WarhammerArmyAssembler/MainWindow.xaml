@@ -26,8 +26,8 @@
             <ScrollViewer x:Name="armybookDetailScroll" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
                 <Canvas x:Name="armybookDetail" Height="300" VerticalAlignment="Center" Margin="0,20" Background="White">
                     <Label x:Name="armyUnitName" Content="" FontSize="28" Width="Auto" Margin="18,5"/>
-                    <TextBlock x:Name="armyUnitDescription" FontSize="24" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,75"/>
-                    <TextBlock x:Name="armyUnitSpecific" FontSize="24" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,65"/>
+                    <TextBlock x:Name="armyUnitDescription" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,75"/>
+                    <TextBlock x:Name="armyUnitSpecific" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,65"/>
                 </Canvas>
             </ScrollViewer>
 
@@ -249,7 +249,7 @@
                     <Label x:Name="startFullTest" Content="Full test" Visibility="Hidden" Height="39" Canvas.Left="37" Canvas.Top="479" Width="54" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startFullTest_MouseDown"/>
                     <Label x:Name="startStatisticTest" Content="Statistic test" Visibility="Hidden" Height="39" Canvas.Left="107" Canvas.Top="479" Width="78" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startStatisticTest_MouseDown"/>
                     <Label x:Name="startBattleRoyale" Content="Battle Royale" Visibility="Visible" Height="39" Canvas.Left="37" Canvas.Top="325" Width="88" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startBattleRoyale_MouseDown"/>
-                    <RichTextBox x:Name="testConsole" Block.LineHeight="4" BorderBrush="Black" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Visibility="Hidden" BorderThickness="1" Padding="15" Height="59" Canvas.Left="37" Canvas.Top="538" Width="330"/>
+                    <RichTextBox x:Name="testConsole" Block.LineHeight="4" BorderBrush="Black" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Visibility="Hidden" BorderThickness="1" Padding="15" Height="59" Canvas.Left="37" Canvas.Top="538" Width="330" FontFamily="Courier New"/>
                 </Canvas>
             </ScrollViewer>
 
@@ -329,8 +329,8 @@
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown">
                                         <ToolTipService.ToolTip>
-                                            <ToolTip Background="{Binding ArmyBackgroundColor}">
-                                                <Label Content="{Binding Description}"/>
+                                            <ToolTip Background="{Binding ArmyBackgroundColor}" MaxWidth="300">
+                                                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Padding="5"/>
                                             </ToolTip>
                                         </ToolTipService.ToolTip>
                                         <TextBlock.Style>
