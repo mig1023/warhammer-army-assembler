@@ -29,6 +29,18 @@
 				<SpecialRuleDescription>If an enemy character or monster is slain in close combat, roll a D6: on the roll of a 4+, the model is transformed into a Chaos Spawn under the control of the owner of the Sword of Change</SpecialRuleDescription>
 				<Description>If an enemy character or monster is slain by the Sword of Change in close combat, roll a D6. On the roll of a 4+, the model is transformed into a Chaos Spawn under the control of the owner of the Sword of Change, exactly as if the enemy model were a Chaos Champion that had suffered a Spawndom result on the Eye of the Gods table.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Filth Mace</Name>
+				<Type>Weapon</Type>
+				<Points>30</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<Terror/>
+				<PoisonAttack/>
+				<MultiWounds>D3</MultiWounds>
+				<Description>Close combat attacks made with the Filth Mace have the Poisoned Attacks special rule. Once the wielder has killed an enemy model in close combat, he immediately gains the Terror special rule and, from the start of the next Close Combat phase (friend or foe), all subsequent Attacks made with the Filth Mace that result in a successful Poisoned Attack have the Multiple Wounds (D3) special rule.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic weapons">
 			<Artefact>
