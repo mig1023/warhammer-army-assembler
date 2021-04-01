@@ -59,6 +59,16 @@
 				<AddToArmour>5</AddToArmour>
 				<Description>The character has the Scaly Skin (5+) special rule.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Allure of Slaanesh</Name>
+				<Type>Powers</Type>
+				<Points>15</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Slaanesh</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Any opponent wishing to strike the character in close combat must first pass a Leadership test, if the test is failed, that model cannot make any close combat attacks that phase</SpecialRuleDescription>
+				<Description>Model with Mark of Slaanesh only. Any opponent wishing to strike the character in close combat must first pass a Leadership test (test immediately before the model rolls To Hit). If the test is failed, that model cannot make any close combat attacks that phase. This does not affect Attacks that do not roll To Hit.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Dread Artefacts of Chaos">
 			<Artefact>
