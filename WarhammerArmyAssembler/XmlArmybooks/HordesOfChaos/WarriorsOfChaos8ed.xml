@@ -8,8 +8,19 @@
 		<BackgroundColor>#FFCBC8C8</BackgroundColor>
 		<ArmyBookImage>WarriorsOfChaos8ed.png</ArmyBookImage>
 		<SymbolImage>HordesOfChaos.png</SymbolImage>
+		<MagicPowers>Chaos mutation</MagicPowers>
 	</Info>
 	<Artefacts>
+		<ArtefactsGroup Name = "Chaos Mutations and Powers">
+			<Artefact>
+				<Name>Daemonblade</Name>
+				<Type>Powers</Type>
+				<Points>50</Points>
+				<SpecialRuleDescription>Random Attacks (D6 + 3) special rule</SpecialRuleDescription>
+				<SpecialRuleDescription>Every ToHit roll of a 1 made by this character in close combat is resolved against himself - the character can never re-roll a To Hit roll of a 1</SpecialRuleDescription>
+				<Description>The wielder of a Daemonblade has the Random Attacks (D6 + 3) special rule. However, every To Hit roll of a 1 made by this character in close combat is resolved against himself; the character can never re-roll a To Hit roll of a 1.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Dread Artefacts of Chaos">
 			<Artefact>
 				<Name>Hellfire sword</Name>
@@ -39,7 +50,7 @@
 				<Terror/>
 				<PoisonAttack/>
 				<MultiWounds>D3</MultiWounds>
-				<Description>Close combat attacks made with the Filth Mace have the Poisoned Attacks special rule. Once the wielder has killed an enemy model in close combat, he immediately gains the Terror special rule and, from the start of the next Close Combat phase (friend or foe), all subsequent Attacks made with the Filth Mace that result in a successful Poisoned Attack have the Multiple Wounds (D3) special rule.</Description>
+				<Description>Model with Mark of Nurgle only. Close combat attacks made with the Filth Mace have the Poisoned Attacks special rule. Once the wielder has killed an enemy model in close combat, he immediately gains the Terror special rule and, from the start of the next Close Combat phase (friend or foe), all subsequent Attacks made with the Filth Mace that result in a successful Poisoned Attack have the Multiple Wounds (D3) special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Helm of Many Eyes</Name>
@@ -73,7 +84,7 @@
 				</OnlyIfAnotherService>
 				<SpecialRuleDescription>Whenever character or his unit take a Break test, it is taken on one less dice than usual</SpecialRuleDescription>
 				<SpecialRuleDescription>For each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle</SpecialRuleDescription>
-				<Description>The bearer of the Pendant of Slaanesh can only join units that have the Mark of Slaanesh. No other character may join the same unit as the bearer and he cannot join units that already contain a character. Whenever the bearer, or his unit, take a Break test, it is taken on one less dice than usual (note that a Break test cannot be passed with Insane Courage on a single D6). In addition, for each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle.</Description>
+				<Description>Model with Mark of Slaanesh only. The bearer of the Pendant of Slaanesh can only join units that have the Mark of Slaanesh. No other character may join the same unit as the bearer and he cannot join units that already contain a character. Whenever the bearer, or his unit, take a Break test, it is taken on one less dice than usual (note that a Break test cannot be passed with Insane Courage on a single D6). In addition, for each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Blasted Standard</Name>
@@ -83,7 +94,7 @@
 					<OnlyIf>Mark of Tzeentch</OnlyIf>
 				</OnlyIfAnotherService>
 				<SpecialRuleDescription>Each time the character, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound: on the roll of 2+, the Strength of that hit is halved, if the result is a 1, the Strength of that hit is instead doubled</SpecialRuleDescription>
-				<Description>Each time the bearer, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound. On the roll of 2+, the Strength of that hit is halved. However, if the result is a 1, the Strength of that hit is instead doubled. Attacks that do not roll To Wound, or that wound automatically, are not affected by the Blasted Standard.</Description>
+				<Description>Model with Mark of Tzeentch only. Each time the bearer, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound. On the roll of 2+, the Strength of that hit is halved. However, if the result is a 1, the Strength of that hit is instead doubled. Attacks that do not roll To Wound, or that wound automatically, are not affected by the Blasted Standard.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Banner of Rage</Name>
@@ -94,7 +105,7 @@
 				</OnlyIfAnotherService>
 				<Frenzy/>
 				<SpecialRuleDescription>Will never lose their Frenzy, even if beaten in close combat</SpecialRuleDescription>
-				<Description>The bearer of the Banner of Rage can only join units that are completely comprised of models with the Mark of Khorne. Only characters that have the Mark of Khorne may join the same unit as the bearer. Whilst the bearer is alive, neither he, nor his unit, can ever lose their Frenzy special rule. If the bearer joins a unit that has lost its Frenzy, the unit immediately regains the Frenzy special rule.</Description>
+				<Description>Model with Mark of Khorne only. The bearer of the Banner of Rage can only join units that are completely comprised of models with the Mark of Khorne. Only characters that have the Mark of Khorne may join the same unit as the bearer. Whilst the bearer is alive, neither he, nor his unit, can ever lose their Frenzy special rule. If the bearer joins a unit that has lost its Frenzy, the unit immediately regains the Frenzy special rule.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic weapons">
@@ -693,7 +704,7 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-		
+
 	</Heroes>
 	<Mounts>
 		<Mount>
