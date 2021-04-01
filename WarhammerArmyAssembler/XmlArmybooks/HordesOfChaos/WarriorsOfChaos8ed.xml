@@ -85,6 +85,17 @@
 				<SpecialRuleDescription>Each time the character, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound: on the roll of 2+, the Strength of that hit is halved, if the result is a 1, the Strength of that hit is instead doubled</SpecialRuleDescription>
 				<Description>Each time the bearer, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound. On the roll of 2+, the Strength of that hit is halved. However, if the result is a 1, the Strength of that hit is instead doubled. Attacks that do not roll To Wound, or that wound automatically, are not affected by the Blasted Standard.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Banner of Rage</Name>
+				<Type>Banner</Type>
+				<Points>25</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Khorne</OnlyIf>
+				</OnlyIfAnotherService>
+				<Frenzy/>
+				<SpecialRuleDescription>Will never lose their Frenzy, even if beaten in close combat</SpecialRuleDescription>
+				<Description>The bearer of the Banner of Rage can only join units that are completely comprised of models with the Mark of Khorne. Only characters that have the Mark of Khorne may join the same unit as the bearer. Whilst the bearer is alive, neither he, nor his unit, can ever lose their Frenzy special rule. If the bearer joins a unit that has lost its Frenzy, the unit immediately regains the Frenzy special rule.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Common magic weapons">
 			<Artefact>
