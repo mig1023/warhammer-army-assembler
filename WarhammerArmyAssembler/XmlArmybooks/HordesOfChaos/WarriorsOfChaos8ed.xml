@@ -110,6 +110,16 @@
 				<SpecialRuleDescription>Re-rolls ward save results of 1</SpecialRuleDescription>
 				<Description>Model with Mark of Tzeentch only. The character re-rolls ward save results of 1.</Description>
 			</Artefact>
+			<Artefact>
+				<Name>Nurgle's Rot</Name>
+				<Type>Powers</Type>
+				<Points>10</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Nurgle</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>At the start of every Magic phase, every enemy model in base contact with the character suffers a single Strength 1 hit, with no armour saves allowed</SpecialRuleDescription>
+				<Description>Model with Mark of Nurgle only. At the start of every Magic phase, every enemy model in base contact with the character suffers a single Strength 1 hit, with no armour saves allowed.</Description>
+			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Dread Artefacts of Chaos">
 			<Artefact>
