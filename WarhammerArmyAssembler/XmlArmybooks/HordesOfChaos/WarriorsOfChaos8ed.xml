@@ -1099,6 +1099,50 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
+			<Name>Manticore</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<KillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Uncontrollable</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+					<Options>
+				<Option>
+					<Name>Iron Hard Skin</Name>
+					<Type>Option</Type>
+					<AddToArmour>4</AddToArmour>
+					<Points>25</Points>
+				</Option>
+				<Option>
+					<Name>Venom Tail</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>Additional Poisoned Attack with Multiple Wounds (2) special rules, +1 To Hit bonus if it is targeted against a unit in the Manticore's rear arc.</SpecialRuleDescription>
+					<HitLast/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
 			<Name>Gorebeast</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
