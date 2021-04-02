@@ -913,8 +913,6 @@ namespace WarhammerArmyAssembler
             PropertyInfo unitField = typeof(Unit).GetProperty(name);
             bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out string lineParamValue, out int intParamValue);
 
-            
-
             if (!onlyUnitParam)
                 foreach (Option option in Options)
                 {
