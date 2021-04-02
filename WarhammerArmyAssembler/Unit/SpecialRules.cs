@@ -51,12 +51,14 @@ namespace WarhammerArmyAssembler
             ["AddToWound"] = "+[X] To Wound",
             ["SubOpponentToWound"] = "-[X] To Wound opponent penalty",
             ["HitOn"] = "Hit on [X]+",
+            ["OpponentHitOn"] = "Opponent Hit on [X]+",
             ["WoundOn"] = "Wound on [X]+",
             ["NoMultiWounds"] = "No Multiple wounds",
             ["NoKillingBlow"] = "No Killing Blow",
             ["WardForFirstWound"] = "Ward save [X]+ for first wound",
             ["WardForLastWound"] = "Ward save [X]+ for last wound",
             ["FirstWoundDiscount"] = "Discounts the first wound",
+            ["NotALeader"] = "Not a leader: can't be General, other models can never use this character's Leadership",
         };
 
         public static List<string> UnitParam = new List<string> {

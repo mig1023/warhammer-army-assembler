@@ -274,6 +274,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newWeapon.WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]);
             newWeapon.WardForLastWound = IntParse(xmlNode["WardForLastWound"]);
             newWeapon.FirstWoundDiscount = BoolParse(xmlNode["FirstWoundDiscount"]);
+            newWeapon.NotALeader = BoolParse(xmlNode["NotALeader"]);
 
             newWeapon.ParamTests = ParamParse(xmlNode);
 

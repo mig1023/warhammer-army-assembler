@@ -88,6 +88,7 @@ namespace WarhammerArmyAssembler
         public int WardForFirstWound { get; set; }
         public int WardForLastWound { get; set; }
         public bool FirstWoundDiscount { get; set; }
+        public bool NotALeader { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -232,6 +233,7 @@ namespace WarhammerArmyAssembler
                 WardForFirstWound = this.WardForFirstWound,
                 WardForLastWound = this.WardForLastWound,
                 FirstWoundDiscount = this.FirstWoundDiscount,
+                NotALeader = this.NotALeader,
                 Runic = this.Runic,
                 MasterRunic = this.MasterRunic,
                 TypeUnitIncrese = this.TypeUnitIncrese,
