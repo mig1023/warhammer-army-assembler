@@ -90,12 +90,18 @@ namespace WarhammerArmyAssembler.Army
                     entry.Value.ArmyGeneral = false;
 
                 int unitLeadership = entry.Value.Leadership;
+                bool notALeader = false;
 
                 foreach (Option option in entry.Value.Options)
+                {
                     if (option.IsActual() && (option.AddToLeadership > 0))
                         unitLeadership += option.AddToLeadership;
 
-                bool newChallenger = !entry.Value.NotALeader && (unitLeadership > maxLeadership);
+                    if (option.IsActual() && option.NotALeader)
+                        notALeader = true;
+                }
+
+                bool newChallenger = !entry.Value.NotALeader && !notALeader && (unitLeadership > maxLeadership);
 
                 if (entry.Value.IsHero() && (newChallenger || entry.Value.MustBeGeneral))
                 {
@@ -107,17 +113,17 @@ namespace WarhammerArmyAssembler.Army
                     break;
             }
 
-            if (maxLeadershipOwner < 0)
-                return;
+            if (maxLeadershipOwner >= 0)
+            {
+                Army.Data.Units[maxLeadershipOwner].ArmyGeneral = true;
 
-            Army.Data.Units[maxLeadershipOwner].ArmyGeneral = true;
+                bool newGeneralIsDemon = (Army.Data.Units[maxLeadershipOwner].GetGroup() == "Demonic");
 
-            bool newGeneralIsDemon = (Army.Data.Units[maxLeadershipOwner].GetGroup() == "Demonic");
-
-            if (ArmyBook.Data.DemonicMortal && newGeneralIsDemon && !ArmyBook.Data.DemonicAlreadyReplaced)
-                ChangeCoreSpecialUnits();
-            else if (ArmyBook.Data.DemonicMortal && !newGeneralIsDemon && ArmyBook.Data.DemonicAlreadyReplaced)
-                ChangeCoreSpecialUnits();
+                if (ArmyBook.Data.DemonicMortal && newGeneralIsDemon && !ArmyBook.Data.DemonicAlreadyReplaced)
+                    ChangeCoreSpecialUnits();
+                else if (ArmyBook.Data.DemonicMortal && !newGeneralIsDemon && ArmyBook.Data.DemonicAlreadyReplaced)
+                    ChangeCoreSpecialUnits();
+            }
 
             Interface.Reload.ReloadArmyData();
         }

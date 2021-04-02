@@ -134,6 +134,8 @@ namespace WarhammerArmyAssembler.Interface
 
                 if (!multiple && !honours && (artefact.Type != Option.OptionType.Powers))
                     Interface.Mod.SetArtefactAlreadyUsed(id, true);
+
+                Army.Mod.ChangeGeneralIfNeed();
             }
         }
 
