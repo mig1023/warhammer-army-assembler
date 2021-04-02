@@ -964,7 +964,7 @@
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<ImmuneToPsychology/>
-				</Option>				
+				</Option>
 			</Options>
 		</Hero>
 	</Heroes>
@@ -1021,7 +1021,7 @@
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
-			<Name>Demonic mount</Name>
+			<Name>Demonic Mount</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1067,6 +1067,33 @@
 				<Special>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 					<SpecialRuleDescription>Daemonic Attacks</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Juggernaut</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Brass Behemoth</SpecialRuleDescription>
+					<SpecialRuleDescription>Daemonic Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Murderous Charge</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
