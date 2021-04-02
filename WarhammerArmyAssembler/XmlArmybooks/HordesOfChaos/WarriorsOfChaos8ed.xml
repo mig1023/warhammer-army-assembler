@@ -89,7 +89,6 @@
 				<Name>Burning Body</Name>
 				<Type>Powers</Type>
 				<Points>10</Points>
-				<PoisonAttack/>
 				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
 				<SpecialRuleDescription>5+ Ward save against Flaming Attacks</SpecialRuleDescription>
 				<Description>The character has the Flaming Attacks special rule and a 5+ Ward save against Flaming Attacks.</Description>
@@ -98,9 +97,18 @@
 				<Name>Soul Feeder</Name>
 				<Type>Powers</Type>
 				<Points>10</Points>
-				<PoisonAttack/>
 				<SpecialRuleDescription>Roll a D6 for every unsaved Wound inflicted by the character in close combat: for each result of a 6 rolled, he immediately regains a single lost Wound.</SpecialRuleDescription>
 				<Description>Roll a D6 for every unsaved Wound inflicted by the character in close combat. For each result of a 6 rolled, he immediately regains a single lost Wound.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Third Eye of Tzeentch</Name>
+				<Type>Powers</Type>
+				<Points>10</Points>
+				<OnlyIfAnotherService>
+					<OnlyIf>Mark of Tzeentch</OnlyIf>
+				</OnlyIfAnotherService>
+				<SpecialRuleDescription>Re-rolls ward save results of 1</SpecialRuleDescription>
+				<Description>Model with Mark of Tzeentch only. The character re-rolls ward save results of 1.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 		<ArtefactsGroup Name = "Dread Artefacts of Chaos">
