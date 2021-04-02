@@ -965,6 +965,77 @@
 					</OnlyIfAnotherService>
 					<ImmuneToPsychology/>
 				</Option>
+				<Option>
+					<Name>Chaos Steed</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Steed of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Slaanesh</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Disc of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Tzeentch</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Demonic Mount</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Demonic Mount</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Palanquin of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Nurgle</OnlyIf>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Juggernaut</Name>
+					<Type>Option</Type>
+					<Points>55</Points>
+					<Mount/>
+					<OnlyIfAnotherService>
+						<OnlyIf>Mark of Khorne</OnlyIf>
+					</OnlyIfAnotherService>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Manticore</Name>
+					<Type>Option</Type>
+					<Points>150</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Chaos Dragon</Name>
+					<Type>Option</Type>
+					<Points>330</Points>
+					<Mount/>
+				</Option>
 			</Options>
 		</Hero>
 	</Heroes>
