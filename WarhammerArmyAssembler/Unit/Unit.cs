@@ -1153,9 +1153,15 @@ namespace WarhammerArmyAssembler
 
                 bool notCompitableMore = IsNotCompitableMore(Options[i]);
 
-                if ((incompatible || notCompitableMore) && (Options[i].IsActual()))
+                bool isCountable = (Options[i].Countable != null);
+
+                if ((incompatible || notCompitableMore) && (Options[i].IsActual() || isCountable))
                 {
                     Interface.Mod.SetArtefactAlreadyUsed(Options[i].ID, false);
+
+                    if (isCountable)
+                        Options[i].Countable.Value = 0;
+
                     AddOption(Options[i].ID);
                 }
             }
