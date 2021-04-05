@@ -363,14 +363,15 @@ namespace WarhammerArmyAssembler.Interface
                 maxByDependency = (int)(paramValue / option.Countable.Ratio);
             }
 
-            bool canBeReduced = ((option.Countable.Value > 0) && (option.Countable.Value > option.Countable.Min));
+            bool canBeReduced = ((option.Countable.Value > 0) && (option.Countable.Value > option.Countable.Min)) && enabled;
+
             double left = AddButtonPart("-", margins, 0, id, (canBeReduced ? backFirst : Brushes.Gainsboro), enabled: canBeReduced, countable: true);
 
             left += AddButtonPart(option.Countable.Value.ToString(), margins, left, id, backSecond, enabled: enabled, countable: true);
 
             bool canByIncreasedByDependency = ((maxByDependency == 0) || (option.Countable.Value < maxByDependency));
             bool canBeIncreasedByMaxParam = ((option.Countable.Max == 0) || (option.Countable.Value < option.Countable.Max));
-            bool canBeIncreased = canByIncreasedByDependency && canBeIncreasedByMaxParam;
+            bool canBeIncreased = canByIncreasedByDependency && canBeIncreasedByMaxParam && enabled;
 
             AddButtonPart("+", margins, left, id, (canBeIncreased ? backFirst : Brushes.Gainsboro), enabled: canBeIncreased, countable: true);
         }
