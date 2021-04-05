@@ -15,6 +15,7 @@ namespace WarhammerArmyAssembler
         public string Dependency { get; set; }
         public double Ratio { get; set; }
         public bool ExportToUnitSize { get; set; }
+        public bool ExportToWizardLevel { get; set; }
 
         public Countable Clone()
         {
@@ -26,6 +27,7 @@ namespace WarhammerArmyAssembler
                 Dependency = this.Dependency,
                 Ratio = this.Ratio,
                 ExportToUnitSize = this.ExportToUnitSize,
+                ExportToWizardLevel = this.ExportToWizardLevel,
             };
 
             return newParam;
