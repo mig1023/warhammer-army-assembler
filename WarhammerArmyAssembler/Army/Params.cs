@@ -90,8 +90,13 @@ namespace WarhammerArmyAssembler.Army
                 cast += entry.Value.Wizard;
 
                 foreach (Option option in entry.Value.Options)
+                {
                     if (option.IsActual())
                         cast += option.AddToCast;
+
+                    if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
+                        cast += option.Countable.Value;
+                }
             }
 
             return cast;
@@ -103,9 +108,15 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
             {
-                if (entry.Value.Wizard > 2)
+                int wizard = entry.Value.Wizard;
+
+                foreach (Option option in entry.Value.Options)
+                    if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
+                        wizard += option.Countable.Value;
+
+                if (wizard > 2)
                     dispell += 2;
-                else if (entry.Value.Wizard > 0)
+                else if (wizard > 0)
                     dispell += 1;
 
                 foreach (Option option in entry.Value.Options)

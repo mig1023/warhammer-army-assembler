@@ -261,8 +261,13 @@ namespace WarhammerArmyAssembler
             int wizard = Wizard;
 
             foreach (Option option in Options)
+            {
                 if (!option.IsOption() || option.IsActual())
                     wizard += option.AddToWizard;
+
+                if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
+                    wizard += option.Countable.Value;
+            }
 
             return wizard;
         }
@@ -850,9 +855,10 @@ namespace WarhammerArmyAssembler
                 describe += ((MaxSize > 0) && (MinSize != MaxSize) ? minAndMax : minOnly);
             }
 
-            if (Wizard > 0)
-                describe += String.Format("\nWizard: {0}", Wizard);
+            int wizard = GetUnitWizard();
 
+            if (wizard > 0)
+                describe += String.Format("\nWizard: {0}", wizard);
 
             if (!String.IsNullOrEmpty(Group))
                 describe += String.Format("\nGroup: {0}", Group);
