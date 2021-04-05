@@ -1189,6 +1189,118 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Daemon Prince</Name>
+			<Points>235</Points>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<Description>Daemon Prince</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<Unbreakable/>
+				<MagicItems>25</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<MagicPowers>100</MagicPowers>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Daemonic attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Scion of Chaos</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Chaos armour</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<AddToArmour>4</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Daemonic Flight</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Daemon of Khorne</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Hate Daemon of Slaanesh</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 Strength for the rest of the turn after successful charge</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Daemon of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Hate Daemon of Nurgle</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll Ward save results of 1</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll Channelling results of 1</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Daemon of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<SpecialRuleDescription>Hate Daemon of Tzeentch</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Daemon of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<PerModel/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<ArmourPiercing>1</ArmourPiercing>
+					<SpecialRuleDescription>Hate Daemon of Khorne</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Wizard level</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<Countable/>
+					<Min>0</Min>
+					<Max>4</Max>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
