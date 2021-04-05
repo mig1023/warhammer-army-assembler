@@ -1374,6 +1374,48 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Festus the Leechlord</Name>
+			<Points>190</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>2</Wizard>
+			<Description>Festus the Leechlord</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Regeneration/>
+				<PoisonAttack/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Pestilent Potions</Name>
+					<SpecialRuleDescription>At the beginning of each Close Combat phase may immediately regain a single lost Wound, or try to force them down the throat of a single enemy model in base contact: if he attempts the latter, both players roll a D6 and add their model's unmodified Strength to the result, if your opponent's total is higher, nothing happens, if Festus' total is equal or higher, his victim immediately suffers D3 Wounds, with no armour saves allowed</SpecialRuleDescription>
+				</HandWeapon>			
+				<Armour>
+					<Name>Mark of Nurgle</Name>
+					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRuleDescription>Whilst Festus the Leechlord is in a unit, all models in that unit have the Poisoned Attacks special rule</SpecialRuleDescription>
+					<SpecialRuleDescription>Whilst Festus the Leechlord is in a unit, all models in that unit have the Regeneration (5+) special rule</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Exalted Hero</Name>
 			<Points>110</Points>
 			<MinSize>1</MinSize>
