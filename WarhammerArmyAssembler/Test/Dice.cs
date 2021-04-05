@@ -218,10 +218,7 @@ namespace WarhammerArmyAssembler.Test
                     return true;
 
                 if (result == 1)
-                {
-                    addResult = " - always fail";
                     return false;
-                }
 
                 if (unit.AddToHit > 0)
                     result += unit.AddToHit;
@@ -248,15 +245,15 @@ namespace WarhammerArmyAssembler.Test
             if (((result <= condition) || (result == 1)) && paramTest)
                 return true;
 
+            if ((result < condition) && reversCheck)
+                return true;
+
             if ((result == 1) && reversCheck)
             {
                 addResult = " - always fail";
                 return true;
             }
             
-            if ((result < condition) && reversCheck)
-                return true;
-
             if ((result <= condition) && (diceType == Types.LD))
                 return true;
 
