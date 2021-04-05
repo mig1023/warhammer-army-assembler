@@ -558,7 +558,7 @@ namespace WarhammerArmyAssembler
                 {
                     string cleanParamLine = newParamLine.Replace("+", String.Empty).Replace("*", String.Empty);
 
-                    if (cleanParamLine.Contains("-"))
+                    if (cleanParamLine.Contains("-") && (name != "Armour"))
                         cleanParamLine = "0";
 
                     if (!cleanParamLine.Contains("D"))
