@@ -145,9 +145,11 @@ namespace WarhammerArmyAssembler.Test
 
             int result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
 
-            bool testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, breakTest, paramTest);
+            bool testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, out string addResult, breakTest, paramTest);
 
-            Test.Data.Console(Test.Data.supplText, "{0}", result);
+            Test.Data.Console(Test.Data.supplText, "{0}{1}", result, addResult);
+
+            if ((diceType == Types.AS) && (result == 1))
            
             if ((diceType == Types.WS) && !paramTest)
             {
@@ -168,24 +170,23 @@ namespace WarhammerArmyAssembler.Test
             }
 
             bool hateHitReroll = unit.Hate && (diceType == Types.WS);
+            bool canBeRerolled = !testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy, result));
+            bool mustBeRerolled = testPassed && MustBeRerolled(diceType, unit, enemy, result);
 
             if ((diceType == Types.AS) && (condition > 6) && (condition < 10) && (result == 6))
             {
                 int supplCondition = condition - 3;
                 result = RollAll(diceType, unitTestPassed, 1, enemy: hisOpponent);
-                Test.Data.Console(Test.Data.supplText, " --> {0}+, {1}", supplCondition, result);
+                testPassed = TestPassedByDice(unit, enemy, result, supplCondition, diceType, out string addAddRoll, breakTest, paramTest);
 
-                testPassed = TestPassedByDice(unit, enemy, result, supplCondition, diceType, breakTest, paramTest);
+                Test.Data.Console(Test.Data.supplText, " --> {0}+, {1}{2}", supplCondition, result, addAddRoll);
             }
-            else if (
-                (!testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy, result)))
-                ||
-                (testPassed && MustBeRerolled(diceType, unit, enemy, result))
-            )
+            else if (canBeRerolled || mustBeRerolled)
             {
                 result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
-                Test.Data.Console(Test.Data.supplText, ", reroll --> {0}", result);
-                testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, breakTest, paramTest);
+                testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, out string addReroll, breakTest, paramTest);
+
+                Test.Data.Console(Test.Data.supplText, ", reroll --> {0}{1}", result, addReroll);
             }
 
             dice = result;
@@ -199,8 +200,10 @@ namespace WarhammerArmyAssembler.Test
         }
 
         public static bool TestPassedByDice(Unit unit, Unit enemy, int result, int condition,
-            Types diceType, bool breakTest = false, bool paramTest = false)
+            Types diceType, out string addResult, bool breakTest = false, bool paramTest = false)
         {
+            addResult = String.Empty;
+
             bool reversCheck = (diceType == Types.AS) || (diceType == Types.WARD);
 
             if (breakTest && (result == 2))
@@ -215,7 +218,10 @@ namespace WarhammerArmyAssembler.Test
                     return true;
 
                 if (result == 1)
+                {
+                    addResult = " - always fail";
                     return false;
+                }
 
                 if (unit.AddToHit > 0)
                     result += unit.AddToHit;
@@ -234,12 +240,21 @@ namespace WarhammerArmyAssembler.Test
             }
 
             if ((result == 6) && paramTest)
+            {
+                addResult = " - always fail";
                 return false;
+            }
 
             if (((result <= condition) || (result == 1)) && paramTest)
                 return true;
 
-            if (((result < condition) || (result == 1)) && reversCheck)
+            if ((result == 1) && reversCheck)
+            {
+                addResult = " - always fail";
+                return true;
+            }
+            
+            if ((result < condition) && reversCheck)
                 return true;
 
             if ((result <= condition) && (diceType == Types.LD))
