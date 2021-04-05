@@ -154,9 +154,11 @@ namespace WarhammerArmyAssembler.Interface
 
             double lastColumnMaxWidth = 0;
 
-            if (unit.GetUnitWizard() > 0)
+            int wizard = unit.GetUnitWizard();
+
+            if (wizard > 0)
                 AddLabel(
-                    caption: String.Format("Wizard Level {0}", unit.GetUnitWizard()),
+                    caption: String.Format("Wizard Level {0}", wizard),
                     margins: new double[] {
                         Interface.Changes.main.unitName.Margin.Left + Interface.Changes.main.unitName.ActualWidth + 5,
                         Interface.Changes.main.unitName.Margin.Top
