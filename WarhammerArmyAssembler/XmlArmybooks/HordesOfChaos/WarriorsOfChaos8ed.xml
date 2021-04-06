@@ -814,6 +814,67 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Archaon</Name>
+			<Points>580</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>2</Wizard>
+			<Description>Archaon, The Everchosen, The Lord of the End Times</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MustBeGeneral/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>			
+				<HandWeapon>
+					<Name>The Slayer of Kings</Name>
+					<NoArmour/>
+					<SpecialRuleDescription>Greater Daemon U'zuhl</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Armour of Morkar</Name>
+					<ArmourTo>3</ArmourTo>
+					<SpecialRuleDescription>No attack against him may ever have a better chance to wound him than a 3+ roll</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>The Crown of Domination</Name>
+					<Terror/>
+					<SpecialRuleDescription>Any friendly unit within 12" of Archaon may re-roll failed Break tests</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>The Eye of Sheerian</Name>
+					<AddToWard>3</AddToWard>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRuleDescription>Inspiring Presence has a range of 18"</SpecialRuleDescription>
+					<SpecialRuleDescription>The Swords of Chaos</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Dorghar</Name>
+					<Type>Option</Type>
+					<Points>70</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Galrauch</Name>
 			<Points>510</Points>
 			<MinSize>1</MinSize>
@@ -2263,6 +2324,32 @@
 				<Special>
 					<SpecialRuleDescription>Demonic Attacks</SpecialRuleDescription>
 					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Dorghar</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Strider</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
