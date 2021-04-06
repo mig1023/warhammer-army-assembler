@@ -702,9 +702,18 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
-					<Name>Vessel of Chaos</Name>
-					<SpecialRuleDescription>When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch may utilise later that phase. Conversely, should the enemy make a failed dispel attempt to counter one of Vilitch's spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase.</SpecialRuleDescription>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
 				</HandWeapon>
+				<HandWeapon>
+					<Name>Vessel of Chaos</Name>
+					<SpecialRuleDescription>When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch may utilise later that phase; conversely, should the enemy make a failed dispel attempt to counter one of Vilitch's spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Type>Armour</Type>
+					<Name>Chaos armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
 				<Armour>
 					<Name>Mark of Tzeentch</Name>
 					<AddToWard>6</AddToWard>
