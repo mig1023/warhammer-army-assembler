@@ -814,6 +814,52 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Vilitch the Curseling</Name>
+			<Points>380</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>4</Wizard>
+			<Description>Vilitch the Curseling</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two hand weapons</Name>
+					<AddToAttacks>1</AddToAttacks>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Vessel of Chaos</Name>
+					<SpecialRuleDescription>When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch may utilise later that phase; conversely, should the enemy make a failed dispel attempt to counter one of Vilitch's spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Type>Armour</Type>
+					<Name>Chaos armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Mark of Tzeentch</Name>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRuleDescription>Loremaster</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Chaos Lord</Name>
 			<Points>210</Points>
 			<MinSize>1</MinSize>
@@ -1414,7 +1460,7 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
-		<Unit>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Scyla Anfingrimm</Name>
 			<Points>105</Points>
@@ -1449,7 +1495,7 @@
 					<Frenzy/>
 				</Armour>
 			</SpecialRulesAndAmmunition>
-		</Unit>
+		</Hero>
 		<Hero>
 			<Type>Hero</Type>
 			<Name>Exalted Hero</Name>
