@@ -814,6 +814,43 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Kholek Suneater</Name>
+			<Points>545</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Kholek Suneater</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>8</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>8</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>7</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<ImmuneToPsychology/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Starcrusher</Name>
+					<MultiWounds>D3</MultiWounds>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Immune to all lightning-based attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>If targeted by a lightning-based attack, they become Frenzy</SpecialRuleDescription>
+					<SpecialRuleDescription>During the Shooting phase, choose an unengaged enemy unit within 24" and roll a dice: on a roll of a 2-6 a bolt of lightning hits the unit, inflicting D6 Strenght 6 hits, on the roll of a 1, the lightning hits Kholek</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Sigvald the Magnificent</Name>
 			<Points>375</Points>
 			<MinSize>1</MinSize>
