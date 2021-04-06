@@ -814,6 +814,44 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Galrauch</Name>
+			<Points>510</Points>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<PersonifiedHero/>
+			<Description>Galrauch, The Great Drake, First of the Chaos Dragons</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>3</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Armour>
+					<Name>Mark of Tzeentch</Name>
+					<AddToWard>6</AddToWard>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Dark Fire of Chaos</SpecialRuleDescription>
+					<SpecialRuleDescription>Breath of Change is a Breath Weapon. Any models hit must pass a Toughness test or be removed from play with no saves of any kind allowed</SpecialRuleDescription>
+					<SpecialRuleDescription>At the beginning of each turn, Galrauch must take a Leadership test: if the test is passed, Galrauch will be controlled as normal, but if the test is failed, Galrauch will not move, cast spells or use his breath weapons, in the Close Combat phase he will direct half of his attacks against himself.</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Kholek Suneater</Name>
 			<Points>545</Points>
 			<MinSize>1</MinSize>
