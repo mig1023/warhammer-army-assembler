@@ -814,6 +814,55 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Sigvald the Magnificent</Name>
+			<Points>375</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Sigvald the Magnificent, Scion of Slaanesh, The Geld-Prince</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Stubborn/>
+				<Stupidity/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sliverslash</Name>
+					<HitFirst/>
+					<AddToAttacks>2</AddToAttacks>
+				</HandWeapon>
+				<Armour>
+					<Name>Auric Armour</Name>
+					<AddToArmour>2</AddToArmour>
+					<Regeneration/>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Mark of Slaanesh</Name>
+					<ImmuneToPsychology/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRuleDescription>Strider</SpecialRuleDescription>
+					<SpecialRuleDescription>If Sigvald the Magnificent is required to roll on the Eye of the Gods table, do not roll any dice: instead, he is always counted as having rolled the Dark Fury reward</SpecialRuleDescription>
+					<SpecialRuleDescription>Sigvald the Magnificent may never re-roll a failed Stupidity test, nor use another model's Leadership when taking a Stupidity test</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Valkia the Bloody</Name>
 			<Points>405</Points>
 			<MinSize>1</MinSize>
