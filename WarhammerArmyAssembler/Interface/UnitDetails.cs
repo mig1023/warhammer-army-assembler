@@ -36,7 +36,7 @@ namespace WarhammerArmyAssembler.Interface
             if (captionLines.Length < 2)
                 return false;
 
-            return (margins[1] + 25 + (height * captionLines.Length) > GetDetailHeight() ? true : false);
+            return margins[1] + 25 + (height * captionLines.Length) > GetDetailHeight();
         }
 
         private static string GetMagicPointsString(int unitID, string head)
@@ -390,7 +390,7 @@ namespace WarhammerArmyAssembler.Interface
             if ((unit != null) && unit.IsAnotherOptionIsIncompatible(option))
                 optionIsEnabled = false;
 
-            AddLabel(caption, margins, height, ref lastColumnMaxWidth, (option.Realised ? true : false),
+            AddLabel(caption, margins, height, ref lastColumnMaxWidth, option.Realised,
                 option.Points, option.PerModel, enabled: optionIsEnabled);
 
             if (option.IsMagicItem() || option.IsPowers())

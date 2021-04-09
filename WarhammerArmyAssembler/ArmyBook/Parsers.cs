@@ -193,7 +193,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static bool BoolParse(XmlNode xmlNode)
         {
-            return (xmlNode == null ? false : true);
+            return xmlNode != null;
         }
     }
 }

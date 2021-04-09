@@ -79,10 +79,10 @@ namespace WarhammerArmyAssembler.Army
             int twentyFivePercent = (int)(Army.Data.MaxPoints * 0.25);
 
             if (type == Unit.UnitType.Lord || type == Unit.UnitType.Hero || type == Unit.UnitType.Rare)
-                return (units[type] + points > twentyFivePercent ? false : true);
+                return (units[type] + points <= twentyFivePercent);
 
             if (type == Unit.UnitType.Special)
-                return (units[type] + points > (twentyFivePercent * 2) ? false : true);
+                return units[type] + points <= (twentyFivePercent * 2);
 
             return true;
         }
@@ -128,7 +128,7 @@ namespace WarhammerArmyAssembler.Army
         {
             string armyProblems = ArmyProblems();
 
-            return (String.IsNullOrEmpty(armyProblems) ? true : false);
+            return String.IsNullOrEmpty(armyProblems);
         }
 
         public static bool IsArmyFullForTypeIcrease(Unit unit)

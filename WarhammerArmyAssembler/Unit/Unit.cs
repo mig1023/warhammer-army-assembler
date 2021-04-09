@@ -551,9 +551,9 @@ namespace WarhammerArmyAssembler
 
             foreach (string name in SpecialRules.UnitParam)
             {
-                bool reverse = ((name == "Armour" || name == "Ward") ? true : false);
-                bool mount = (name == "Armour" ? true : false);
-                bool combine = (name == "Ward" ? true : false);
+                bool reverse = (name == "Armour" || name == "Ward");
+                bool mount = (name == "Armour");
+                bool combine = (name == "Ward");
 
                 string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
@@ -898,16 +898,16 @@ namespace WarhammerArmyAssembler
             intValue = 0;
 
             if (unitValue is bool)
-                return ((bool)unitValue ? true : false);
+                return (bool)unitValue;
             else if (unitValue is string)
             {
                 additionalParam = unitValue.ToString();
-                return (String.IsNullOrEmpty(additionalParam) ? false : true);
+                return !String.IsNullOrEmpty(additionalParam);
             }
             else if (unitValue is int)
             {
                 intValue = (int)unitValue;
-                return (intValue > 0 ? true : false);
+                return intValue > 0;
             }
             else
                 return false;
@@ -1037,7 +1037,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsHero()
         {
-            return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero ? true : false);
+            return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero);
         }
 
         public bool IsHeroOrHisMount()
@@ -1045,7 +1045,7 @@ namespace WarhammerArmyAssembler
             if (LargeBase)
                 return true;
 
-            return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount ? true : false);
+            return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount);
         }
 
         public bool IsUnit()
@@ -1054,7 +1054,7 @@ namespace WarhammerArmyAssembler
             bool special = (this.Type == Unit.UnitType.Special);
             bool rare = (this.Type == Unit.UnitType.Rare);
 
-            return (core || special || rare ? true : false);
+            return (core || special || rare);
         }
 
         public bool ExistsOptions()
@@ -1245,7 +1245,7 @@ namespace WarhammerArmyAssembler
             bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true);
             bool noWhenNecessaryYes = IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false);
 
-            return (yesWhenNecessaryNo || noWhenNecessaryYes ? true : false);
+            return (yesWhenNecessaryNo || noWhenNecessaryYes);
         }
 
         public bool IsMaxSlannOption()
@@ -1256,7 +1256,7 @@ namespace WarhammerArmyAssembler
                 if (option.IsSlannOption() && option.Realised)
                     slannOption += 1;
 
-            return (slannOption >= 4 ? true : false);
+            return slannOption >= 4;
         }
 
         public Unit SetTestType(TestTypeTypes testType)
