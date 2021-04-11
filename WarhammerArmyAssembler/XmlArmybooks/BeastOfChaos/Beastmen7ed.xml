@@ -85,5 +85,74 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Ungor herd</Name>
+			<Points>5</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>1</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Primal Fury</SpecialRuleDescription>
+					<SpecialRuleDescription>Beastman Ambush</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Spear</Name>
+					<Type>Option</Type>
+					<PerModel/>
+					<Points>1</Points>
+				</Option>
+				<Option>
+					<Name>Halfhorn</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Ungrol Four-Horn</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<FullCommand/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Ungrol Four-Horn</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Halfhorn</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<FullCommand/>
+					<OnlyOneInArmy/>
+					<Points>75</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>6</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
