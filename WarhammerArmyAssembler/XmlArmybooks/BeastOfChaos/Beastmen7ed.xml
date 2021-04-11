@@ -381,5 +381,87 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Centigor</Name>
+			<Points>25</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Primal Fury</SpecialRuleDescription>
+					<SpecialRuleDescription>Drunken</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Throwing axes</Name>
+					<Type>Option</Type>
+					<PerModel/>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<AddToArmour>-1</AddToArmour>
+					<HitLast/>
+					<PerModel/>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Gorehoof</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Ghorros Warhoof</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<FullCommand/>
+					<Points>14</Points>
+				</Option>
+				<Option>
+					<Name>Ghorros Warhoof</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Gorehoof</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<FullCommand/>
+					<OnlyOneInArmy/>
+					<Points>155</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>7</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>14</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
