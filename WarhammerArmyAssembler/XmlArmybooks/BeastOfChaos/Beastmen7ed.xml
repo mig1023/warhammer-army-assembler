@@ -397,6 +397,23 @@
 				<Flail/>
 			</AdditionalParam>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Razorgor</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>0</Toughness>
+				<Wounds>0</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>0</Leadership>
+			</MainParam>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -913,6 +930,46 @@
 					<MagicItemsType>Banner</MagicItemsType>
 				</Option>
 			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Razorgor Chariot</Name>
+			<Points>145</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MountInit>Razorgor</MountInit>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>D6+1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Spear</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Primal Fury</SpecialRuleDescription>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRuleDescription>Thunderous Charge</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Unit>
 	</Units>
 </ArmyBook>
