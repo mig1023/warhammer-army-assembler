@@ -413,6 +413,9 @@
 				<Attacks>1</Attacks>
 				<Leadership>0</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
 		</Mount>
 	</Mounts>
 	<Units>
@@ -967,6 +970,34 @@
 				<Special>
 					<SpecialRuleDescription>Primal Fury</SpecialRuleDescription>
 					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRuleDescription>Thunderous Charge</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Razorgor</Name>
+			<Points>55</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Tusks, hooves and a bad attitude</Name>
+				</HandWeapon>
+				<Special>
 					<SpecialRuleDescription>Thunderous Charge</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
