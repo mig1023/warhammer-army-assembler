@@ -983,7 +983,7 @@
 		</Unit>
 		<Unit>
 			<Type>Special</Type>
-			<Name>Razorgor</Name>
+			<Name>Razorgor herd</Name>
 			<Points>55</Points>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -1006,6 +1006,42 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Thunderous Charge</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Cygor</Name>
+			<Points>275</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>2</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<Stubborn/>
+				<ImmuneToPsychology/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Massively over-sized claws and horns</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Large Btarget</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRuleDescription>When fighting enemy Wizards, models with any sort of magic item or magical attacks, Undead, or creatures with a ward save, the Cygor may re-roll any failed To Hit rolls</SpecialRuleDescription>
+					<SpecialRuleDescription>Hurl Attack</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy Wizards within 24" of one or more Cygors must take a Leadership test at the beginning of the Magic phase, if the test is failed any spell he fails to cast this Magic phase will result in a miscast</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
