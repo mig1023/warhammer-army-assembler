@@ -1075,8 +1075,39 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Bloodgreed</SpecialRuleDescription>
-					<SpecialRuleDescription>may forego all of its normal attacks and instead make a single special attack at an Initiative of 1: this attack has the Killing Blow ability, but To Wound rolls of a 4, 5 or 6 act as Killing Blow attacks, instead of just rolls of 6</SpecialRuleDescription>
+					<SpecialRuleDescription>May forego all of its normal attacks and instead make a single special attack at an Initiative of 1: this attack has the Killing Blow ability, but To Wound rolls of a 4, 5 or 6 act as Killing Blow attacks, instead of just rolls of 6</SpecialRuleDescription>
 					<SpecialRuleDescription>Each time a Ghorgon causes a Killing Blow with its Swallow Whole ability, it regains D3 Wounds that it has lost earlier in the battle</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Chaos Spawn</Name>
+			<Points>55</Points>
+			<MinSize>1</MinSize>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>2D6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>D6+1</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<Unbreakable/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Tentacles, claws and teeth</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Flailing Appendages</SpecialRuleDescription>
+					<SpecialRuleDescription>Lurching Horror</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
