@@ -417,6 +417,55 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Gorthor</Name>
+			<Points>350</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>Tuskgor Chariot</MountInit>
+			<Description>Gorthor the Beastlord</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Impaler</Name>
+					<KillingBlow/>
+				</HandWeapon>
+				<Armour>
+					<Name>Skull of Mugrar</Name>
+					<SpecialRuleDescription>When rolling for the chariot's impact hits, the Skull of Mugrar allows an extra dice to be rolled, and the highest result to be chosen</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Cloak of the Beastlord</Name>
+					<SpecialRuleDescription>If Gorthor is the Army General, the range at which friendly units may use his Leadership characteristic is 18"</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Primal Fury</SpecialRuleDescription>
+					<SpecialRuleDescription>Man-bane</SpecialRuleDescription>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRuleDescription>At the start of each friendly Magic phase randomly generate a spell from the Lore of Death: Gorthor may use this spell during this Magic phase as a Bound Spell, with a Power Level equal to half the casting value of the spell, rounding up</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Razorgor Chariot</Name>
+					<Type>Option</Type>
+					<Points>65</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Beastlord</Name>
 			<Points>145</Points>
 			<MinSize>1</MinSize>
