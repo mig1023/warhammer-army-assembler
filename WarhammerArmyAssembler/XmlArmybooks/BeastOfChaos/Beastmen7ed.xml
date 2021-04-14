@@ -383,6 +383,40 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Khazrak</Name>
+			<Points>270</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Khazrak the One-eye</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>1</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Scourge</Name>
+					<SpecialRuleDescription>Instead of making normal attacks, Khazrak may choose to use his whip: in this case he has a number of attacks equal to the number of models in the front rank of one enemy unit that Khazrak is in base contact with, these attacks are distributed as per shooting</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Dark Mail</Name>
+					<AddToArmour>2</AddToArmour>
+					<SpecialRuleDescription>The Dark Mail negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Primal Fury</SpecialRuleDescription>
+					<SpecialRuleDescription>All units using the Beastman Ambush special rule in the same army as Khazrak may choose to re-roll the dice to see how and when they enter play</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Beastlord</Name>
 			<Points>145</Points>
 			<MinSize>1</MinSize>
