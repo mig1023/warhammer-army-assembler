@@ -645,6 +645,42 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Thorek Ironbrow</Name>
+			<Points>505</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>Anvil of Doom</MountInit>
+			<Description>Thorek Ironbrow, Master Runelord of Karak Azul</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Klad Brakak</Name>
+					<NoArmour/>
+					<AddToAttacks>1</AddToAttacks>
+					<SpecialRuleDescription>If the victim suffers one or more unsaved Wounds, any magic armour, magic helmets and magic shields they were equipped with are destroyed and cannot be used for the remainder of the game</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Thorek's rune-armour</Name>
+					<ArmourTo>1</ArmourTo>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Rune of Doom</SpecialRuleDescription>
+					<SpecialRuleDescription>Assistant at the forge</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Lord</Name>
 			<Points>135</Points>
 			<MinSize>1</MinSize>
