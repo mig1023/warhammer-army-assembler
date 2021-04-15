@@ -760,6 +760,39 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Morghur</Name>
+			<Points>280</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Morghur, Master of skulls</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Unbreakable/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>		
+					<SpecialRuleDescription>Primal Fury</SpecialRuleDescription>
+					<SpecialRuleDescription>Cannot be harmed in any way by missile attacks or spells, unless the model which is the source of the attack is within 12" of him</SpecialRuleDescription>
+					<SpecialRuleDescription>At the beginning of each round of close combat, all enemy models in base contact take a S3 hit with no armour save allowed</SpecialRuleDescription>
+					<SpecialRuleDescription>At the beginning of your Magic phase, you must remove a friendly model within 12" from play, then roll a D6: on the roll of a 3+ you may place a Chaos Spawn within 3" of the spot vacated, provided there is space, and you have the appropriate model available</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Wargor</Name>
 			<Points>85</Points>
 			<MinSize>1</MinSize>
