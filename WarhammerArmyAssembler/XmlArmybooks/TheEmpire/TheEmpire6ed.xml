@@ -437,6 +437,49 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Luthor Huss</Name>
+			<Points>300</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>Warhorse</MountInit>
+			<Description>Luthor Huss, Prophet of Sigmar</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+				<Armour>6</Armour>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<SlotOf>Hero</SlotOf>
+				<AddToDispell>2</AddToDispell>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Two-handed hammer</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>When he joins a unit, even characters in the unit and models who are normally Immune to Psychology will share Luihor's burning hatred for all blasphemies against Sigmar</SpecialRuleDescription>
+					<SpecialRuleDescription>Cannot join units of Knights of the White Wolf</SpecialRuleDescription>
+					<SpecialRuleDescription>Can cast the Prayers as normal, but with a Power Level of 4</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Elector Count</Name>
 			<Points>80</Points>
 			<MinSize>1</MinSize>
