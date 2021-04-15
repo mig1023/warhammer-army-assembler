@@ -662,6 +662,9 @@
 				<Attacks>2</Attacks>
 				<Leadership>10</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Klad Brakak</Name>
@@ -676,6 +679,59 @@
 				<Special>
 					<SpecialRuleDescription>Rune of Doom</SpecialRuleDescription>
 					<SpecialRuleDescription>Assistant at the forge</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>King Alrik Ranulfsson</Name>
+			<Points>425</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>Anvil Guards</MountInit>
+			<Description>Dwarf King Alrik Ranulfsson of Karak-Hirn</Description>
+			<MainParam>
+				<Movement>3</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+				<MustBeGeneral/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Axe of Retribution</Name>
+					<SpecialRuleDescription>Nominate one enemy character or monster at the beginning of the game: the model may re-roll misses in close combat when attacking this enemy model</SpecialRuleDescription>
+					<SpecialRuleDescription>If character scores a hit against an enemy with a magic weapon, the enemy's magic weapon is destroyed immediately</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Hrappi-klad</Name>
+					<AddToArmour>4</AddToArmour>
+					<SpecialRuleDescription>2+ Ward save against missile attacks only</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Kurgaz's Shield</Name>
+					<AddToWard>5</AddToWard>
+				</Armour>
+				<Armour>
+					<Name>Helm of Eagles</Name>
+					<SpecialRuleDescription>At the start of each Dwarf turn, Alrik may gaze at one enemy unit: opponent must reveal any hidden troops within the unit as well as all magic items carried by models within the unit</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Karak-Hirn's Book of Grudges</Name>
+					<SpecialRuleDescription>In battle, this has the effect of allowing friendly units within 12" of King Alrik to re-roll failed break tests, just like an army standard</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Shield Bearers</SpecialRuleDescription>
+					<SpecialRuleDescription>Friendly Dwarfs within 18" of him may use his Leadership value, rather than those within 12" as normal</SpecialRuleDescription>
+					<SpecialRuleDescription>Gyrocopters, Flame Cannons and Organ Guns cost twice the points they do normally, army cannot have more models armed with a handgun than a crossbow</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
