@@ -826,6 +826,46 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Moonclaw</Name>
+			<Points>200</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<PersonifiedHero/>
+			<Description>Son of Morrslieb</Description>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<Options>
+				<Option>
+					<Name>Umbralok</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Braystaff</Name>
+				</HandWeapon>
+				<Special>		
+					<SpecialRuleDescription>Primal Fury</SpecialRuleDescription>
+					<SpecialRuleDescription>Every unit, friend or foe, within 12" of Moonclaw at the start of their turn must take a Stupidity test</SpecialRuleDescription>
+					<SpecialRuleDescription>At the beginning of the game, secretly roll a D3 and record the number, in the turn that corresponds to this number, Morrslieb is full: for the entire duration of that turn Moonclaw has a +2 bonus to his casting rolls, he may make D3 shooting attacks resolved as if he were a stone thrower for that turn only, any results of a misfire cause a single wound upon Moonclaw that cannot be saved by any means</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Wargor</Name>
 			<Points>85</Points>
 			<MinSize>1</MinSize>
@@ -1078,6 +1118,26 @@
 				<Initiative>2</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>0</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Flail/>
+			</AdditionalParam>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Umbralok</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>6</Leadership>
 			</MainParam>
 			<AdditionalParam>
 				<Flail/>
