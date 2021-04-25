@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Xml;
 
 namespace WarhammerArmyAssembler.ArmyBook
@@ -51,8 +52,11 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static List<string> FindAllXmlFiles(string programDirectory)
         {
             List<string> files = new List<string>();
+
             try
             {
+                SortedDictionary<string, string> filesBeforeSort = new SortedDictionary<string, string>();
+
                 foreach (string file in Directory.GetFiles(programDirectory))
                     if (file.EndsWith("ed.xml"))
                     {
@@ -72,11 +76,24 @@ namespace WarhammerArmyAssembler.ArmyBook
                         if (armyName == null)
                             continue;
 
-                        files.Add(file);
+                        string armyOrderName = String.Empty;
+
+                        XmlNode armyVersion = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion");
+                        XmlNode orderName = xmlFile.SelectSingleNode("ArmyBook/Info/OrderName");
+
+                        if (orderName == null)
+                            armyOrderName = String.Format("{0}{1}", armyName.InnerText, armyVersion.InnerText);
+                        else
+                            armyOrderName = orderName.InnerText;
+
+                        filesBeforeSort.Add(armyOrderName, file);
                     }
+
+                files = filesBeforeSort.Values.ToList();
 
                 foreach (string directory in Directory.GetDirectories(programDirectory))
                     files.AddRange(FindAllXmlFiles(directory));
+
             }
             catch
             {
