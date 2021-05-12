@@ -47,20 +47,16 @@ namespace WarhammerArmyAssembler.Test
         {
             if (testType == TestTypes.battleRoyale)
                 Test.Fight.BattleRoyaleTest(unit, unitMount);
+
             else if (testType == TestTypes.statisticTest)
                 Test.Fight.StatisticTest(unit, unitMount, enemy, enemyMount);
+
             else
                 Test.Fight.FullTest(unit, unitMount, enemy, enemyMount);
         }
 
-        public static void Console(Brush color, string line)
-        {
-            Interface.TestUnit.LineToConsole(line, color);
-        }
+        public static void Console(Brush color, string line) => Interface.TestUnit.LineToConsole(line, color);
 
-        public static void Console(Brush color, string line, params object[] p)
-        {
-            Console(color, String.Format(line, p));
-        }
+        public static void Console(Brush color, string line, params object[] p) => Console(color, String.Format(line, p));
     }
 }
