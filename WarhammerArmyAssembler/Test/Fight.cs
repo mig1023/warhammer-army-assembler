@@ -50,10 +50,12 @@ namespace WarhammerArmyAssembler.Test
             Interface.TestUnit.PreventConsoleOutput(prevent: false);
 
             if (royalNotation)
-                Test.Data.Console(Test.Data.text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n", enemy.TestListName, (double)result[1] / 10, (double)result[2] / 10);                
+                Test.Data.Console(Test.Data.text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n",
+                    enemy.TestListName, (double)result[1] / 10, (double)result[2] / 10);                
             else
             {
-                Test.Data.Console(Test.Data.text, "{0} win: {1:f1}%\n{2} win: {3:f1}%", unit.Name, (double)result[1] / 10, enemy.TestListName, (double)result[2] / 10);
+                Test.Data.Console(Test.Data.text, "{0} win: {1:f1}%\n{2} win: {3:f1}%",
+                    unit.Name, (double)result[1] / 10, enemy.TestListName, (double)result[2] / 10);
 
                 if (result[0] > 0)
                     Test.Data.Console(Test.Data.text, "\nNobody win: {0:f1}%", (double)result[0] / 10);
@@ -614,17 +616,14 @@ namespace WarhammerArmyAssembler.Test
 
             bool thereAreMoreOfThem = (
                 (unit.OriginalWounds * unit.Size) + (unitFriend != null ? (unitFriend.OriginalWounds * unitFriend.Size) : 0) <
-                (enemy.OriginalWounds * enemy.Size) + (enemyFriend != null ? (enemyFriend.OriginalWounds * enemyFriend.Size) : 0)
-            );
+                (enemy.OriginalWounds * enemy.Size) + (enemyFriend != null ? (enemyFriend.OriginalWounds * enemyFriend.Size) : 0));
+
+            bool itNotFear = (unit.ImmuneToPsychology || unit.Stupidity || unit.Undead || unitFearOrTerror || unitMountFearOrTerror);
 
             if (unit.Unbreakable)
                 Test.Data.Console(Test.Data.text, "unbreakable");
-            else if (
-                thereAreMoreOfThem
-                &&
-                (enemyFearOrTerror || enemyMountFearOrTerror)
-                &&
-                !(unit.ImmuneToPsychology || unit.Stupidity || unit.Undead || unitFearOrTerror || unitMountFearOrTerror))
+
+            else if (thereAreMoreOfThem && (enemyFearOrTerror || enemyMountFearOrTerror) && !itNotFear)
             {
                 Test.Data.Console(Test.Data.badText, "autobreak by {0} fear", (enemyFearOrTerror ? enemy.Name : enemyFriend.Name));
                 return true;
@@ -672,13 +671,10 @@ namespace WarhammerArmyAssembler.Test
 
             if ((unit.Wounds > 0) && (enemy.Wounds > 0))
             {
-                if (!impactHit)
-                    Test.Data.Console(Test.Data.text, "\n{0} --> hit ", unit.Name);
-                else
-                {
-                    Test.Data.Console(Test.Data.text, "\n{0} --> hit", unit.Name);
+                Test.Data.Console(Test.Data.text, "\n{0} --> hit{1}", unit.Name, (!impactHit ? " " : String.Empty));
+
+                if (impactHit)
                     Test.Data.Console(Test.Data.supplText, " ({0} impact hit)", impactLine);
-                }
 
                 int diceForHit = 0;
 
@@ -864,14 +860,19 @@ namespace WarhammerArmyAssembler.Test
             }
             else if (unit.WoundOn > 0)
                 chance = unit.WoundOn;
+
             else if (strength == (enemy.Toughness + 1))
                 chance = 3;
+
             else if (strength > (enemy.Toughness + 1))
                 chance = 2;
+
             else if ((strength + 1) == enemy.Toughness)
                 chance = 5;
+
             else if ((strength + 2) == enemy.Toughness)
                 chance = 6;
+
             else if ((strength + 2) < enemy.Toughness)
             {
                 Test.Data.Console(Test.Data.supplText, "(impossible)");
