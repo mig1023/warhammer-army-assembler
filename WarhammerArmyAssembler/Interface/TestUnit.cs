@@ -15,9 +15,20 @@ namespace WarhammerArmyAssembler.Interface
         private static Dictionary<string, List<FrameworkElement>> mountRow = new Dictionary<string, List<FrameworkElement>>();
 
         private static List<string> unitParam = new List<string> {
-                "Name", "Size", "Movement", "WeaponSkill", "BallisticSkill", "Strength",
-                "Toughness", "Wounds", "Initiative", "Attacks", "Leadership", "Armour", "Ward"
-            };
+            "Name",
+            "Size",
+            "Movement",
+            "WeaponSkill",
+            "BallisticSkill",
+            "Strength",
+            "Toughness",
+            "Wounds",
+            "Initiative",
+            "Attacks",
+            "Leadership",
+            "Armour",
+            "Ward"
+        };
 
         private static void LoadUnitParamInInterface(Unit unitForLoad, Unit mountForLoad, string elemetnsPostfix, Grid unitGrid)
         {
@@ -181,15 +192,9 @@ namespace WarhammerArmyAssembler.Interface
             Interface.Changes.main.armyUnitTest_Resize();
         }
 
-        private static string SelectedEnemy()
-        {
-            return (string)Interface.Changes.main.enemyForTest.SelectedItem;
-        }
+        private static string SelectedEnemy() => (string)Interface.Changes.main.enemyForTest.SelectedItem;
 
-        private static string SelectedGroup()
-        {
-            return (string)Interface.Changes.main.enemyGroup.SelectedItem;
-        }
+        private static string SelectedGroup() => (string)Interface.Changes.main.enemyGroup.SelectedItem;
 
         public static void TestEnemyPrepare()
         {
@@ -199,7 +204,8 @@ namespace WarhammerArmyAssembler.Interface
             Test.Data.PrepareEnemy(SelectedEnemy());
 
             Interface.Changes.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
-            LoadUnitParamInInterface(unitForLoad: Test.Data.enemy, mountForLoad: Test.Data.enemyMount, elemetnsPostfix: "Enemy", unitGrid: Interface.Changes.main.enemyGrid);
+            LoadUnitParamInInterface(unitForLoad: Test.Data.enemy, mountForLoad: Test.Data.enemyMount,
+                elemetnsPostfix: "Enemy", unitGrid: Interface.Changes.main.enemyGrid);
             LoadSpecialRules(unitForLoad: Test.Data.enemy, target: Interface.Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
 
             Interface.Changes.main.armyUnitTest_Resize();
@@ -216,31 +222,22 @@ namespace WarhammerArmyAssembler.Interface
                 Interface.Changes.main.enemyForTest.Items.Add(enemy.TestListName);
         }
 
-        public static void CleanConsole()
-        {
-            Interface.Changes.main.testConsole.Document.Blocks.Clear();
-        }
+        public static void CleanConsole() => Interface.Changes.main.testConsole.Document.Blocks.Clear();
 
         public static void LineToConsole(string line, Brush color = null)
         {
             if (!showLinesToConsole)
                 return;
 
-            TextRange tr = new TextRange(Interface.Changes.main.testConsole.Document.ContentEnd, Interface.Changes.main.testConsole.Document.ContentEnd)
-            {
-                Text = line
-            };
-            tr.ApplyPropertyValue(TextElement.ForegroundProperty, color ?? Brushes.Black);
+            RichTextBox box = Interface.Changes.main.testConsole;
+
+            TextRange text = new TextRange(box.Document.ContentEnd, box.Document.ContentEnd);
+            text.Text = line;
+            text.ApplyPropertyValue(TextElement.ForegroundProperty, color ?? Brushes.Black);
         }
 
-        public static void PreventConsoleOutput(bool prevent = true)
-        {
-            showLinesToConsole = !prevent;
-        }
+        public static void PreventConsoleOutput(bool prevent = true) => showLinesToConsole = !prevent;
 
-        public static bool PreventConsoleOutputStatus()
-        {
-            return showLinesToConsole;
-        }
+        public static bool PreventConsoleOutputStatus() => showLinesToConsole;
     }
 }
