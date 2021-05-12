@@ -9,10 +9,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     class Load
     {
-        public static int GetNextIndex()
-        {
-            return ArmyBook.Data.MaxIDindex++;
-        }
+        public static int GetNextIndex() => ArmyBook.Data.MaxIDindex++;
 
         private static void LoadUnitsFromXml(XmlDocument xmlFile, string path, ref Dictionary<int, Unit> dict)
         {
