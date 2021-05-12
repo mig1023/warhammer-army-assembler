@@ -52,8 +52,10 @@ namespace WarhammerArmyAssembler.Interface
         {
             if (ArmyBook.Data.Artefact.ContainsKey(id))
                 ArmyGridDropArtefact(id, container);
+
             else if (ArmyBook.Data.Mounts.ContainsKey(id))
                 ArmyGridDropMount(id, points, unit);
+
             else
                 ArmyGridDropUnit(id);
 
@@ -173,10 +175,13 @@ namespace WarhammerArmyAssembler.Interface
         {
             if (!Interface.Checks.EnoughUnitPointsForAddOption(points))
                 Error("Not enough points to add a mount");
+
             else if (Army.Data.Units[unit].MountOn > 0)
                 Error("The hero already has a mount");
+
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unit].Type, points))
                 Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Data.Units[id].UnitTypeName()));
+
             else
             {
                 Army.Mod.AddMountByID(id, unit);
@@ -210,11 +215,12 @@ namespace WarhammerArmyAssembler.Interface
         {
             if (!Army.Checks.IsArmyValid())
                 MessageBox.Show(Army.Checks.ArmyProblems());
+
+            else  if (toPDF)
+                Export.PDF.SaveArmy(fullRules);
+
             else
-                if (toPDF)
-                    Export.PDF.SaveArmy(fullRules);
-                else
-                    Export.Text.SaveArmy();
+                Export.Text.SaveArmy();
 
             Move(MovingType.ToMain, menu: true);
         }
@@ -254,10 +260,8 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (string name in buttonName)
             {
-                Label newButton = new Label
-                {
-                    Content = name
-                };
+                Label newButton = new Label { Content = name };
+
                 newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
                 newButton.Height = 30;
                 newButton.Width = Double.NaN;
@@ -439,11 +443,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void CreatePointsButtons()
         {
-            int[] points =
-            {
-                200, 500, 600, 750, 1000, 1250, 1500, 1750,
-                1850, 2000, 2250, 2400, 2500, 2700, 3000
-            };
+            int[] points = { 200, 500, 600, 750, 1000, 1250, 1500, 1750, 1850, 2000, 2250, 2400, 2500, 2700, 3000 };
             double[] xButtons = { 20, 116, 213 };
             double[] yButtons = { 377, 416, 455, 494, 533 };
 
@@ -489,9 +489,6 @@ namespace WarhammerArmyAssembler.Interface
             }
         }
 
-        public static double ZeroFuse(double currentParam)
-        {
-            return (currentParam < 0 ? 0 : currentParam);
-        }
+        public static double ZeroFuse(double currentParam) => (currentParam< 0 ? 0 : currentParam);
     }
 }
