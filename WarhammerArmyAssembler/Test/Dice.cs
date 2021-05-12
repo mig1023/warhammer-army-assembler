@@ -76,13 +76,7 @@ namespace WarhammerArmyAssembler.Test
             return CheckReroll(unitRerolls, unit, diceType, dice);
         }
 
-        public static int GetRankBonus(Unit unit)
-        {
-            if (!unit.StrengthInNumbers)
-                return 0;
-            else
-                return Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true);
-        }
+        public static int GetRankBonus(Unit unit) => (!unit.StrengthInNumbers ? 0 : Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true));
 
         public static bool Roll(Unit unit, Types diceType, Unit enemy, int? conditionParam,
             int diceNum = 1, int round = 2, bool breakTest = false, bool hiddenDice = false, bool paramTest = false)
