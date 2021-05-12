@@ -48,6 +48,7 @@ namespace WarhammerArmyAssembler.Interface
 
             if ((head == Army.Params.MagicPowersName()) && (unit.MagicPowersCount > 0))
                 return String.Format("{0} / {1}", unit.MagicPowersCountAlreadyUsed(), unit.GetMagicPowersCount());
+
             else if (head == Army.Params.MagicPowersName())
                 return String.Format("{0} / {1}", unit.MagicPowersPointsAlreadyUsed(), unit.GetUnitMagicPowersPoints());
 
@@ -378,9 +379,9 @@ namespace WarhammerArmyAssembler.Interface
             AddButtonPart("+", margins, left, id, (canBeIncreased ? backFirst : Brushes.Gainsboro), enabled: canBeIncreased, countable: true);
         }
 
-        private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth, string id,
-            Option option, int mountAlreadyOn = 0, Option.OnlyForType mountTypeAlreadyFixed = Option.OnlyForType.All, Unit unit = null,
-            bool mustBeEnabled = true)
+        private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
+            string id, Option option, int mountAlreadyOn = 0, Option.OnlyForType mountTypeAlreadyFixed = Option.OnlyForType.All,
+            Unit unit = null, bool mustBeEnabled = true)
         {
             bool optionIsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);
 
