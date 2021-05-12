@@ -57,10 +57,7 @@ namespace WarhammerArmyAssembler.Army
             return units[type];
         }
 
-        public static int GetArmyMaxPoints()
-        {
-            return Army.Data.MaxPoints;
-        }
+        public static int GetArmyMaxPoints() => Army.Data.MaxPoints;
 
         public static int GetArmyMaxUnitsNumber(Unit.UnitType type)
         {
@@ -68,14 +65,19 @@ namespace WarhammerArmyAssembler.Army
             {
                 case Unit.UnitType.Lord:
                     return (Army.Data.MaxPoints < 2000 ? 0 : 1 + ((Army.Data.MaxPoints - 2000) / 1000));
+
                 case Unit.UnitType.Hero:
                     return (Army.Data.MaxPoints < 2000 ? 3 : (Army.Data.MaxPoints / 1000) * 2);
+
                 case Unit.UnitType.Core:
                     return (Army.Data.MaxPoints < 2000 ? 2 : 1 + (Army.Data.MaxPoints / 1000));
+
                 case Unit.UnitType.Special:
                     return (Army.Data.MaxPoints < 2000 ? 3 : 2 + (Army.Data.MaxPoints / 1000));
+
                 case Unit.UnitType.Rare:
                     return (Army.Data.MaxPoints < 2000 ? 1 : (Army.Data.MaxPoints / 1000));
+
                 default:
                     return 0;
             }
@@ -116,6 +118,7 @@ namespace WarhammerArmyAssembler.Army
 
                 if (wizard > 2)
                     dispell += 2;
+
                 else if (wizard > 0)
                     dispell += 1;
 
@@ -136,18 +139,13 @@ namespace WarhammerArmyAssembler.Army
                 if (entry.Value.Type != Unit.UnitType.Mount)
                     categories[(int)entry.Value.Type].Items.Add(ReloadArmyUnit(entry.Key, entry.Value));
 
-                if (
-                    (entry.Value.MountOn > 0)
-                    &&
-                        (
-                            (Army.Data.Units[entry.Value.MountOn].Wounds != 1)
-                            ||
-                            (Army.Data.Units[entry.Value.MountOn].WeaponTeam)
-                        )
-                    )
-                    categories[(int)entry.Value.Type].Items.Add(
-                        ReloadArmyUnit(entry.Value.MountOn, Army.Data.Units[entry.Value.MountOn])
-                    );
+                if (entry.Value.MountOn <= 0)
+                    continue;
+
+                bool multiWounds = (Army.Data.Units[entry.Value.MountOn].Wounds != 1) || (Army.Data.Units[entry.Value.MountOn].WeaponTeam);
+
+                if (multiWounds)
+                    categories[(int)entry.Value.Type].Items.Add(ReloadArmyUnit(entry.Value.MountOn, Army.Data.Units[entry.Value.MountOn]));
             }
 
             return categories;
@@ -164,17 +162,14 @@ namespace WarhammerArmyAssembler.Army
             return newUnit;
         }
 
-        public static List<Unit> GetArmyCategories()
+        public static List<Unit> GetArmyCategories() => new List<Unit>
         {
-            return new List<Unit>
-            {
-                new Unit() { Name = "Lords" },
-                new Unit() { Name = "Heroes" },
-                new Unit() { Name = "Core" },
-                new Unit() { Name = "Special" },
-                new Unit() { Name = "Rare" },
-            };
-        }
+            new Unit() { Name = "Lords" },
+            new Unit() { Name = "Heroes" },
+            new Unit() { Name = "Core" },
+            new Unit() { Name = "Special" },
+            new Unit() { Name = "Rare" },
+        };
 
         public static Unit GetArmyGeneral()
         {
@@ -214,10 +209,7 @@ namespace WarhammerArmyAssembler.Army
                 if (entry.Value.Type == type)
                     units.Add(entry.Value.Name);
 
-            if (units.Count == 0)
-                return "empty yet";
-            else          
-                return String.Join(", ", units);
+            return (units.Count == 0 ? "empty yet" : String.Join(", ", units));
         }
 
         public static double GetVirtuePoints(int id, bool nextPricePreview = false)
@@ -235,9 +227,6 @@ namespace WarhammerArmyAssembler.Army
                 return ArmyBook.Data.Artefact[id].VirtueOriginalPoints * (count + 1 + (nextPricePreview ? 1 : 0));
         }
 
-        public static string MagicPowersName()
-        {
-            return (String.IsNullOrEmpty(Army.Data.MagicPowers) ? "MAGIC POWERS" : Army.Data.MagicPowers.ToUpper());
-        }
+        public static string MagicPowersName() => (String.IsNullOrEmpty(Army.Data.MagicPowers) ? "MAGIC POWERS" : Army.Data.MagicPowers.ToUpper());
     }
 }
