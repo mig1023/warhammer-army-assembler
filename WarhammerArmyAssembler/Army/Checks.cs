@@ -60,17 +60,14 @@ namespace WarhammerArmyAssembler.Army
             return units;
         }
 
-        public static Dictionary<Unit.UnitType, double> UnitsMaxPointsPercent()
+        public static Dictionary<Unit.UnitType, double> UnitsMaxPointsPercent() => new Dictionary<Unit.UnitType, double>
         {
-            return new Dictionary<Unit.UnitType, double>
-            {
-                [Unit.UnitType.Lord] = 0.25,
-                [Unit.UnitType.Hero] = 0.25,
-                [Unit.UnitType.Core] = 0.25,
-                [Unit.UnitType.Special] = 0.50,
-                [Unit.UnitType.Rare] = 0.25,
-            };
-        }
+            [Unit.UnitType.Lord] = 0.25,
+            [Unit.UnitType.Hero] = 0.25,
+            [Unit.UnitType.Core] = 0.25,
+            [Unit.UnitType.Special] = 0.50,
+            [Unit.UnitType.Rare] = 0.25,
+        };
 
         public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points)
         {
@@ -118,10 +115,9 @@ namespace WarhammerArmyAssembler.Army
 
         public static string ArmyProblems()
         {
-            if (Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core))
-                return "Not enough core unit in army";
+            bool problem = (Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core));
 
-            return String.Empty;
+            return (problem ? "Not enough core unit in army" : String.Empty);
         } 
 
         public static bool IsArmyValid()
@@ -137,10 +133,13 @@ namespace WarhammerArmyAssembler.Army
 
             if (unit.Type == Unit.UnitType.Rare)
                 return true;
+
             else if (unit.Type == Unit.UnitType.Special)
                 type = Unit.UnitType.Rare;
+
             else if (unit.Type == Unit.UnitType.Core)
                 type = Unit.UnitType.Special;
+
             else
                 return false;
 
