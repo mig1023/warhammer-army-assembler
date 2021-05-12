@@ -10,26 +10,28 @@ namespace WarhammerArmyAssembler
     {
         public static int MaxIDindex = -10;
 
-        private static Dictionary<string, List<Enemy>> GetEnemiesDictionary()
+        private static Dictionary<string, List<Enemy>> GetEnemiesDictionary() => new Dictionary<string, List<Enemy>>
         {
-            return  new Dictionary<string, List<Enemy>>
-            {
-                ["Lords"] = new List<Enemy>(EnemiesLords),
-                ["Heroes"] = new List<Enemy>(EnemiesHeroes),
-                ["Core Units"] = new List<Enemy>(EnemiesCoreUnits),
-                ["Special Units"] = new List<Enemy>(EnemiesSpecialUnits),
-                ["Rare Units"] = new List<Enemy>(EnemiesRareUnits),
-                ["Monsters"] = new List<Enemy>(EnemiesMonsters),
-            };
-        }
+            ["Lords"] = new List<Enemy>(EnemiesLords),
+            ["Heroes"] = new List<Enemy>(EnemiesHeroes),
+            ["Core Units"] = new List<Enemy>(EnemiesCoreUnits),
+            ["Special Units"] = new List<Enemy>(EnemiesSpecialUnits),
+            ["Rare Units"] = new List<Enemy>(EnemiesRareUnits),
+            ["Monsters"] = new List<Enemy>(EnemiesMonsters),
+        };
 
         public static Enemy GetByName(string enemyName)
         {
-            foreach (List<Enemy> enemyList in new List<List<Enemy>>
-            {
-                EnemiesMonsters, EnemiesHeroes, EnemiesLords,
-                EnemiesCoreUnits, EnemiesSpecialUnits, EnemiesRareUnits,
-            })
+            List<List<Enemy>> enemies = new List<List<Enemy>> {
+                EnemiesMonsters,
+                EnemiesHeroes,
+                EnemiesLords,
+                EnemiesCoreUnits,
+                EnemiesSpecialUnits,
+                EnemiesRareUnits
+            };
+
+            foreach (List<Enemy> enemyList in enemies)
                 foreach (Enemy enemy in enemyList)
                     if (enemy.TestListName == enemyName)
                         return enemy.SetID();
@@ -46,15 +48,9 @@ namespace WarhammerArmyAssembler
             return this;
         }
 
-        public static List<string> GetEnemiesGroups()
-        {
-            return GetEnemiesDictionary().Keys.ToList<string>();
-        }
+        public static List<string> GetEnemiesGroups() => GetEnemiesDictionary().Keys.ToList<string>();
 
-        public static List<Enemy> GetEnemiesByGroup(string groupName)
-        {
-            return GetEnemiesDictionary()[groupName];
-        }
+        public static List<Enemy> GetEnemiesByGroup(string groupName) => GetEnemiesDictionary()[groupName];
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
