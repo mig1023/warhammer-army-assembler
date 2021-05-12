@@ -155,15 +155,9 @@ namespace WarhammerArmyAssembler
 
         public string RulesView { get; set; }
 
-        public Unit()
-        {
-            this.Items = new ObservableCollection<Unit>();
-        }
+        public Unit() => this.Items = new ObservableCollection<Unit>();
 
-        public int CompareTo(Unit anotherUnit)
-        {
-            return (Test.Fight.CheckInitiative(this, anotherUnit) ? -1 : 1);
-        }
+        public int CompareTo(Unit anotherUnit) => (Test.Fight.CheckInitiative(this, anotherUnit) ? -1 : 1);
 
         public double GetUnitPoints()
         {
@@ -198,10 +192,7 @@ namespace WarhammerArmyAssembler
             return group;
         }
 
-        public void SetGroup(string newGroup)
-        {
-            this.Group = newGroup;
-        }
+        public void SetGroup(string newGroup) => this.Group = newGroup;
 
         public int GetUnitMagicPoints()
         {
@@ -415,27 +406,31 @@ namespace WarhammerArmyAssembler
             return newUnit;
         }
 
-        private bool ContainsCaseless(string line, string subline)
-        {
-            return line.IndexOf(subline, StringComparison.OrdinalIgnoreCase) >= 0;
-        }
+        private bool ContainsCaseless(string line, string subline) => line.IndexOf(subline, StringComparison.OrdinalIgnoreCase) >= 0;
 
         private bool OptionTypeAlreadyUsed(Option option, ref bool alreadyArmour, ref bool alreadyShield)
         {
             if (alreadyArmour && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
                 return true;
+
             else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
                 alreadyArmour = true;
+
             else if (alreadyShield && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
                 return true;
+
             else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
                 alreadyShield = true;
+
             else if (alreadyArmour && (option.Type == Option.OptionType.Armour))
                 return true;
+
             else if (option.Type == Option.OptionType.Armour)
                 alreadyArmour = true;
+
             else if (alreadyShield && (option.Type == Option.OptionType.Shield))
                 return true;
+
             else if (option.Type == Option.OptionType.Shield)
                 alreadyShield = true;
 
@@ -539,8 +534,10 @@ namespace WarhammerArmyAssembler
 
             if (intValue > 0)
                 typeof(Unit).GetProperty(paramName).SetValue(this, intValue);
+
             else if (!String.IsNullOrEmpty(stringValue))
                 typeof(Unit).GetProperty(paramName).SetValue(this, stringValue);
+
             else
                 typeof(Unit).GetProperty(paramName).SetValue(this, value);
         }
@@ -868,26 +865,25 @@ namespace WarhammerArmyAssembler
 
         public string UnitTypeName()
         {
-            if (Type == Unit.UnitType.Lord)
-                return "lords";
-            else if (Type == Unit.UnitType.Hero)
-                return "heroes";
-            else if (Type == Unit.UnitType.Core)
-                return "core units";
-            else if (Type == Unit.UnitType.Special)
-                return "special units";
-            else if (Type == Unit.UnitType.Rare)
-                return "rare units";
+            Dictionary<UnitType, string> typesNames = new Dictionary<UnitType, string>
+            {
+                [Unit.UnitType.Lord] = "lords",
+                [Unit.UnitType.Hero] = "heroes",
+                [Unit.UnitType.Core] = "core units",
+                [Unit.UnitType.Special] = "special units",
+                [Unit.UnitType.Rare] = "rare units",
+            };
 
-            return String.Empty;
+            return (typesNames.ContainsKey(Type) ? typesNames[Type] : String.Empty);
         }
 
         public static int ParamNormalization(int param, bool onlyZeroCheck = false)
         {
             if (param < 0)
-                param = 0;
-            else if ((param > 10) && !onlyZeroCheck)
-                param = 10;
+                return 0;
+            
+            if ((param > 10) && !onlyZeroCheck)
+                return 10;
 
             return param;
         }
@@ -899,6 +895,7 @@ namespace WarhammerArmyAssembler
 
             if (unitValue is bool)
                 return (bool)unitValue;
+
             else if (unitValue is string)
             {
                 additionalParam = unitValue.ToString();
@@ -1035,10 +1032,7 @@ namespace WarhammerArmyAssembler
             return rules;
         }
 
-        public bool IsHero()
-        {
-            return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero);
-        }
+        public bool IsHero() => (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero);
 
         public bool IsHeroOrHisMount()
         {
@@ -1266,20 +1260,11 @@ namespace WarhammerArmyAssembler
             return this;
         }
 
-        public bool IsSimpleMount()
-        {
-            return (this.Type == Unit.UnitType.Mount) && (this.OriginalWounds == 1);
-        }
+        public bool IsSimpleMount() => (this.Type == Unit.UnitType.Mount) && (this.OriginalWounds == 1);
 
-        public bool IsNotSimpleMount()
-        {
-            return (this.Type != Unit.UnitType.Mount) || (this.OriginalWounds != 1);
-        }
+        public bool IsNotSimpleMount() => (this.Type != Unit.UnitType.Mount) || (this.OriginalWounds != 1);
 
-        public bool IsFearOrTerror()
-        {
-            return (this.Terror || this.Fear || this.Undead);
-        }
+        public bool IsFearOrTerror() => (this.Terror || this.Fear || this.Undead);
 
         public bool IsAlready(string name)
         {
