@@ -155,15 +155,9 @@ namespace WarhammerArmyAssembler
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void OnPropertyChanged(string propName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-        }
+        public void OnPropertyChanged(string propName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
 
-        public Option()
-        {
-            this.Items = new ObservableCollection<Option>();
-        }
+        public Option() => this.Items = new ObservableCollection<Option>();
 
         public Option Clone()
         {
@@ -303,13 +297,7 @@ namespace WarhammerArmyAssembler
             return runicVesions;
         }
 
-        public string FullName()
-        {
-            if (Runic > 1)
-                return String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes"));
-            else
-                return Name;
-        }
+        public string FullName() => (Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name);
 
         public string SelfDescription()
         {
@@ -332,28 +320,22 @@ namespace WarhammerArmyAssembler
 
         public bool IsMagicItem()
         {
-            if (this.Type == OptionType.Weapon || this.Type == OptionType.Armour ||
-                this.Type == OptionType.AdditionalArmour || this.Type == OptionType.Shield ||
-                this.Type == OptionType.Arcane || this.Type == OptionType.Banner)
+            if (this.Type == OptionType.Weapon ||
+                this.Type == OptionType.Armour ||
+                this.Type == OptionType.AdditionalArmour ||
+                this.Type == OptionType.Shield ||
+                this.Type == OptionType.Arcane ||
+                this.Type == OptionType.Banner)
                 return true;
             else
                 return false;
         }
 
-        public bool IsPowers()
-        {
-            return (this.Type == OptionType.Powers);
-        }
+        public bool IsPowers() => (this.Type == OptionType.Powers);
 
-        public bool IsOption()
-        {
-            return (this.Type == OptionType.Option || this.Type == OptionType.SlannOption);
-        }
+        public bool IsOption() => (this.Type == OptionType.Option || this.Type == OptionType.SlannOption);
 
-        public bool IsSlannOption()
-        {
-            return (this.Type == OptionType.SlannOption);
-        }
+        public bool IsSlannOption() => (this.Type == OptionType.SlannOption);
 
         private bool TypeAndPointsSatisfy(Unit.MagicItemsTypes itemsType, int itemsPoints, int itemsCout)
         {
@@ -372,10 +354,7 @@ namespace WarhammerArmyAssembler
             return true;
         }
 
-        public bool IsActual()
-        {
-            return (IsOption() && Realised) || IsMagicItem() || IsPowers();
-        }
+        public bool IsActual() => (IsOption() && Realised) || IsMagicItem() || IsPowers();
 
         public bool IsUsableByUnit(Unit unit, bool addOption = true, bool dragOverCheck = false)
         {
