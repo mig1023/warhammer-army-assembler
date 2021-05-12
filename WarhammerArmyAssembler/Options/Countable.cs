@@ -17,20 +17,15 @@ namespace WarhammerArmyAssembler
         public bool ExportToUnitSize { get; set; }
         public bool ExportToWizardLevel { get; set; }
 
-        public Countable Clone()
+        public Countable Clone() => new Countable
         {
-            Countable newParam = new Countable
-            {
-                Min = this.Min,
-                Max = this.Max,
-                Value = this.Value,
-                Dependency = this.Dependency,
-                Ratio = this.Ratio,
-                ExportToUnitSize = this.ExportToUnitSize,
-                ExportToWizardLevel = this.ExportToWizardLevel,
-            };
-
-            return newParam;
-        } 
+            Min = this.Min,
+            Max = this.Max,
+            Value = this.Value,
+            Dependency = this.Dependency,
+            Ratio = this.Ratio,
+            ExportToUnitSize = this.ExportToUnitSize,
+            ExportToWizardLevel = this.ExportToWizardLevel,
+        };
     }
 }
