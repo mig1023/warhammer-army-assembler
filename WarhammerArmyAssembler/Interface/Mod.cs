@@ -13,10 +13,7 @@ namespace WarhammerArmyAssembler.Interface
     {
         public delegate void ShowSomething();
 
-        public static void SetArmyGridAltColor(Brush color)
-        {
-            Interface.Changes.main.ArmyGrid.AlternatingRowBackground = color;
-        }
+        public static void SetArmyGridAltColor(Brush color) => Interface.Changes.main.ArmyGrid.AlternatingRowBackground = color;
 
         public static void SetArtefactAlreadyUsed(int id, bool value)
         {
