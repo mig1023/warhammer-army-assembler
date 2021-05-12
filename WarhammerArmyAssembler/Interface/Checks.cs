@@ -8,20 +8,13 @@ namespace WarhammerArmyAssembler.Interface
 {
     class Checks
     {
-        public static bool EnoughPointsForAddUnit(int id)
-        {
-            return (ArmyBook.Data.Units[id].Size * ArmyBook.Data.Units[id].Points) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
-        }
+        public static bool EnoughPointsForAddUnit(int id) =>
+            (ArmyBook.Data.Units[id].Size * ArmyBook.Data.Units[id].Points) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
 
-        public static bool EnoughUnitPointsForAddOption(double points)
-        {
-            return points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
-        }
+        public static bool EnoughUnitPointsForAddOption(double points) => points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
 
-        public static bool EnoughPointsForAddArtefact(int id, double pointsPenalty)
-        {
-            return (ArmyBook.Data.Artefact[id].Points - pointsPenalty) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
-        }
+        public static bool EnoughPointsForAddArtefact(int id, double pointsPenalty) => 
+            (ArmyBook.Data.Artefact[id].Points - pointsPenalty) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
 
         public static bool EnoughUnitPointsForAddArtefact(int artefactID, Unit unit, bool addOption = true, double pointsPenalty = 0)
         {
