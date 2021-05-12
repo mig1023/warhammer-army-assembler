@@ -172,7 +172,6 @@ namespace WarhammerArmyAssembler.Test
             }
         }
 
-
         private static int ImpactHitNumer(Unit unit, Unit unitMount, out string impactOutLine, out bool steamFail)
         {
             string impactHit = String.Empty;
@@ -203,8 +202,10 @@ namespace WarhammerArmyAssembler.Test
             }
             else if ((unitMount == null) || String.IsNullOrEmpty(unitMount.ImpactHit))
                 impactHit = unit.ImpactHit;
+
             else if (String.IsNullOrEmpty(unit.ImpactHit))
                 impactHit = unitMount.ImpactHit;
+
             else
             {
                 int currentImpact = 0, currentAdd = 0;
