@@ -21,10 +21,8 @@ namespace WarhammerArmyAssembler.Export
             return fileName;
         }
 
-        public static string GetArmyName()
-        {
-            return (String.IsNullOrWhiteSpace(Army.Data.AdditionalName) ? "warhammer fantasy battles" : Army.Data.AdditionalName);
-        }
+        public static string GetArmyName() =>
+            (String.IsNullOrWhiteSpace(Army.Data.AdditionalName) ? "warhammer fantasy battles" : Army.Data.AdditionalName);
 
         private static string NewFileName(int newIndex, string fileType, out string newFileName)
         {
@@ -52,19 +50,11 @@ namespace WarhammerArmyAssembler.Export
             return (unit.IsHeroOrHisMount() ? String.Empty : unitSize + ' ');
         }
 
-        static public string UnitPointsLine(Unit unit)
-        {
-            return (unit.GetUnitPoints() > 0 ? String.Format(" ({0} pts)", unit.GetUnitPoints()) : String.Empty);
-        }
+        static public string UnitPointsLine(Unit unit) =>
+            (unit.GetUnitPoints() > 0 ? String.Format(" ({0} pts)", unit.GetUnitPoints()) : String.Empty);
 
-        static public string AllArmyName()
-        {
-            return String.Format("{0} // {1}", Army.Data.Name, GetArmyName());
-        }
+        static public string AllArmyName() => String.Format("{0} // {1}", Army.Data.Name, GetArmyName());
 
-        static public string AllArmyPointsAndEdition()
-        {
-            return String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyVersion);
-        }
+        static public string AllArmyPointsAndEdition() => String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyVersion);
     }
 }
