@@ -6,10 +6,7 @@ namespace WarhammerArmyAssembler.Army
 {
     class Mod
     {
-        public static int GetNextIndex()
-        {
-            return Army.Data.MaxIDindex += 1;
-        }
+        public static int GetNextIndex() => Army.Data.MaxIDindex += 1;
 
         public static int AddUnitByID(int id)
         {
@@ -45,10 +42,7 @@ namespace WarhammerArmyAssembler.Army
             Army.Data.Units.Add(newID, mount);
         }
 
-        public static void DeleteAllUnits()
-        {
-            Army.Data.Units.Clear();
-        }
+        public static void DeleteAllUnits() => Army.Data.Units.Clear();
 
         public static void DeleteUnitByID(int id)
         {
@@ -144,19 +138,15 @@ namespace WarhammerArmyAssembler.Army
 
         private static Unit.UnitType ChangeUnitType(Unit.UnitType unitType)
         {
-            if (unitType == Unit.UnitType.Core)
-                unitType = Unit.UnitType.ToSpecial;
+            Dictionary<Unit.UnitType, Unit.UnitType> types = new Dictionary<Unit.UnitType, Unit.UnitType>
+            {
+                [Unit.UnitType.Core] = Unit.UnitType.ToSpecial,
+                [Unit.UnitType.Special] = Unit.UnitType.ToCore,
+                [Unit.UnitType.ToCore] = Unit.UnitType.Core,
+                [Unit.UnitType.ToSpecial] = Unit.UnitType.Special,
+            };
 
-            else if (unitType == Unit.UnitType.Special)
-                unitType = Unit.UnitType.ToCore;
-
-            else if (unitType == Unit.UnitType.ToCore)
-                unitType = Unit.UnitType.Core;
-
-            else if (unitType == Unit.UnitType.ToSpecial)
-                unitType = Unit.UnitType.Special;
-
-            return unitType;
+            return (types.ContainsKey(unitType) ? types[unitType] : unitType);
         }
 
         private static void ChangeCoreSpecialUnits()
