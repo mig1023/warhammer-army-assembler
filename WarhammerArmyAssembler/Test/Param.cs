@@ -88,10 +88,12 @@ namespace WarhammerArmyAssembler.Test
                         Test.Data.Console(Test.Data.badText, " --> pass this round");
                         unit.PassThisRound = true;
                         break;
+
                     case TestType.Wound:
                         Test.Data.Console(Test.Data.badText, " --> WOUND");
                         unit.Wounds -= 1;
                         break;
+
                     case TestType.Death:
                         Test.Data.Console(Test.Data.badText, " --> SLAIN");
                         unit.Wounds = 0;
