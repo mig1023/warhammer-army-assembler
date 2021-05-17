@@ -480,6 +480,52 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Balthasar Gelt</Name>
+			<Points>450</Points>
+			<MinSize>1</MinSize>
+			<Wizard>4</Wizard>
+			<MountInit>Pegasus</MountInit>
+			<PersonifiedHero/>
+			<Description>Balthasar Gelt</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>The Staff of Volans</Name>
+					<SpecialRuleDescription>Immediately after rolling the dice to cast a spell or to dispel an enemy spell, can pick up one of the dice rolled and turn it so that its result is one higher than the number rolled.</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>The Gleaming Robe</Name>
+					<SpecialRuleDescription>3+ Ward save against any missle attack</SpecialRuleDescription>
+				</Armour>
+				<Armour>
+					<Name>Amulet of Sea Gold</Name>
+					<SpecialRuleDescription>+1 dice to any attempt to dispel an enemy spell targeted at Balthasar or his mount or otherwise affecting them</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Knows all spell from lore of Metal</SpecialRuleDescription>
+					<SpecialRuleDescription>In the Shooting phase can throw a vial of highly acidic alchemical substances; it have range of 6" and  wounding any target on a 4+, no armour saving allowed</SpecialRuleDescription>
+					<SpecialRuleDescription>Instead of throwing a vial, can heal one wound suffered by either Balthasar or his Pegasus</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Elector Count</Name>
 			<Points>80</Points>
 			<MinSize>1</MinSize>
