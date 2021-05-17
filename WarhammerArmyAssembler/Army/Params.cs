@@ -12,8 +12,8 @@ namespace WarhammerArmyAssembler.Army
         {
             double points = 0;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                points += entry.Value.GetUnitPoints();
+            foreach (Unit entry in Army.Data.Units.Values)
+                points += entry.GetUnitPoints();
 
             return points;
         }
@@ -22,16 +22,16 @@ namespace WarhammerArmyAssembler.Army
         {
             int size = 0;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            foreach (Unit entry in Army.Data.Units.Values)
             {
-                int modelsInPack = entry.Value.ModelsInPack;
+                int modelsInPack = entry.ModelsInPack;
 
-                foreach (Option option in entry.Value.Options)
+                foreach (Option option in entry.Options)
                     if (option.IsOption() && (option.AddToModelsInPack > 0) && option.Realised)
                         modelsInPack += option.AddToModelsInPack;
 
-                if (!((entry.Value.Type == Unit.UnitType.Mount) && (entry.Value.Wounds <= 1)))
-                    size += entry.Value.Size * modelsInPack;
+                if (!((entry.Type == Unit.UnitType.Mount) && (entry.Wounds <= 1)))
+                    size += entry.Size * modelsInPack;
             }
 
             return size;
@@ -44,13 +44,13 @@ namespace WarhammerArmyAssembler.Army
             foreach (Unit.UnitType u in Enum.GetValues(typeof(Unit.UnitType)))
                 units.Add(u, 0);
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            foreach (Unit entry in Army.Data.Units.Values)
             {
-                if ((entry.Value.Type != Unit.UnitType.Core) || !entry.Value.NoCoreSlot)
-                    units[entry.Value.Type] += 1;
+                if ((entry.Type != Unit.UnitType.Core) || !entry.NoCoreSlot)
+                    units[entry.Type] += 1;
 
-                if (entry.Value.SlotOf != null)
-                    foreach (string slot in entry.Value.SlotOf)
+                if (entry.SlotOf != null)
+                    foreach (string slot in entry.SlotOf)
                         units[(Unit.UnitType)Enum.Parse(typeof(Unit.UnitType), slot)] += 1;
             }
 
@@ -87,11 +87,11 @@ namespace WarhammerArmyAssembler.Army
         {
             int cast = 2;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            foreach (Unit entry in Army.Data.Units.Values)
             {
-                cast += entry.Value.Wizard;
+                cast += entry.Wizard;
 
-                foreach (Option option in entry.Value.Options)
+                foreach (Option option in entry.Options)
                 {
                     if (option.IsActual())
                         cast += option.AddToCast;
@@ -108,11 +108,11 @@ namespace WarhammerArmyAssembler.Army
         {
             int dispell = 2;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            foreach (Unit entry in Army.Data.Units.Values)
             {
-                int wizard = entry.Value.Wizard;
+                int wizard = entry.Wizard;
 
-                foreach (Option option in entry.Value.Options)
+                foreach (Option option in entry.Options)
                     if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
                         wizard += option.Countable.Value;
 
@@ -122,7 +122,7 @@ namespace WarhammerArmyAssembler.Army
                 else if (wizard > 0)
                     dispell += 1;
 
-                foreach (Option option in entry.Value.Options)
+                foreach (Option option in entry.Options)
                     if (option.IsActual())
                         dispell += option.AddToDispell;
             }
@@ -173,9 +173,9 @@ namespace WarhammerArmyAssembler.Army
 
         public static Unit GetArmyGeneral()
         {
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                if (entry.Value.ArmyGeneral)
-                    return entry.Value;
+            foreach (Unit entry in Army.Data.Units.Values)
+                if (entry.ArmyGeneral)
+                    return entry;
 
             return null;
         }
@@ -184,18 +184,15 @@ namespace WarhammerArmyAssembler.Army
         {
             int number = 0;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            foreach (Unit entry in Army.Data.Units.Values)
             {
-                bool cavalryBase = entry.Value.MountOn > 1 || !String.IsNullOrEmpty(entry.Value.MountInit);
+                bool cavalry = entry.MountOn > 1 || !String.IsNullOrEmpty(entry.MountInit);
+                bool largeBase = (type == BasesTypes.large) && entry.LargeBase;
+                bool cavalryBase = (type == BasesTypes.cavalry) && cavalry;
+                bool normalBase = (type == BasesTypes.normal) && !entry.LargeBase && !cavalry;
 
-                if (
-                    ((type == BasesTypes.large) && entry.Value.LargeBase)
-                    ||
-                    ((type == BasesTypes.cavalry) && cavalryBase)
-                    ||
-                    ((type == BasesTypes.normal) && !entry.Value.LargeBase && !cavalryBase)
-                )
-                    number += entry.Value.Size;
+                if (largeBase || cavalryBase || normalBase)
+                    number += entry.Size;
             }
 
             return number;
@@ -205,9 +202,9 @@ namespace WarhammerArmyAssembler.Army
         {
             List<string> units = new List<string>();
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                if (entry.Value.Type == type)
-                    units.Add(entry.Value.Name);
+            foreach (Unit entry in Army.Data.Units.Values)
+                if (entry.Type == type)
+                    units.Add(entry.Name);
 
             return (units.Count == 0 ? "empty yet" : String.Join(", ", units));
         }
@@ -216,8 +213,8 @@ namespace WarhammerArmyAssembler.Army
         {
             int count = 0;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                foreach (Option option in entry.Value.Options)
+            foreach (Unit entry in Army.Data.Units.Values)
+                foreach (Option option in entry.Options)
                     if (option.Name == ArmyBook.Data.Artefact[id].Name)
                         count += 1;
 

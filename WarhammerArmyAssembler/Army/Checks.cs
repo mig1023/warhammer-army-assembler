@@ -18,8 +18,8 @@ namespace WarhammerArmyAssembler.Army
 
         public static bool IsUnitExistInArmyByArmyBookID(int UnitID)
         {
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                if (entry.Value.ID == UnitID)
+            foreach (Unit entry in Army.Data.Units.Values)
+                if (entry.ID == UnitID)
                     return true;
 
             return false;
@@ -40,8 +40,8 @@ namespace WarhammerArmyAssembler.Army
                 else if (option.Runic > 0)
                     currentCombination.Add(option.Name, option.Runic);
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                if (entry.Value.ExistsRunicCombinationInUnit(currentCombination))
+            foreach (Unit entry in Army.Data.Units.Values)
+                if (entry.ExistsRunicCombinationInUnit(currentCombination))
                     return true;
 
             return false;
@@ -54,8 +54,8 @@ namespace WarhammerArmyAssembler.Army
             foreach (Unit.UnitType u in Enum.GetValues(typeof(Unit.UnitType)))
                 units.Add(u, 0);
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                units[entry.Value.Type] += entry.Value.GetUnitPoints();
+            foreach (Unit entry in Army.Data.Units.Values)
+                units[entry.Type] += entry.GetUnitPoints();
 
             return units;
         }
@@ -88,8 +88,8 @@ namespace WarhammerArmyAssembler.Army
         {
             int alreadyInArmy = 0;
 
-            foreach (KeyValuePair<int, Unit> armyUnit in Army.Data.Units)
-                if (armyUnit.Value.ID == unit.ID)
+            foreach (Unit armyUnit in Army.Data.Units.Values)
+                if (armyUnit.ID == unit.ID)
                     alreadyInArmy += 1;
 
             int limitForArmy = -1;
