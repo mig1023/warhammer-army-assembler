@@ -175,7 +175,7 @@
 					<OnlyIf>Necrarch</OnlyIf>
 				</OnlyIfAnotherService>
 				<SpecialRuleDescription>Once per game, can re-roll one of the dice rolled to cast a spell</SpecialRuleDescription>
-				<Description>Once per game, the Vampire can re-roll one of the dice rolled to cast a spell. This can be used     to negate a Miscast result or could cause an Irresistible Force result.</Description>
+				<Description>Once per game, the Vampire can re-roll one of the dice rolled to cast a spell. This can be used to negate a Miscast result or could cause an Irresistible Force result.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Master of the Black Arts</Name>
@@ -733,6 +733,56 @@
 					<SpecialRuleDescription>Normal range of 12" for his troops to be able to march and use his Leadership is extended to 18"</SpecialRuleDescription>
 					<SpecialRuleDescription>Once per game can summon D3 Dire Wolves</SpecialRuleDescription>
 					<SpecialRuleDescription>Call Wind instead of movement: all shooting is at -1 lo hit, all flying movement is impossible</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Zacharias the Everliving</Name>
+			<Points>1015</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>4</Wizard>
+			<MountInit>Zombie Dragon</MountInit>
+			<Description>Zacharias the Everliving</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<AddToCast>1</AddToCast>
+				<SlotOf>Hero</SlotOf>
+				<SlotOf>Hero</SlotOf>
+				<SlotOf>Hero</SlotOf>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Arcane>
+					<Name>Book of Nagash</Name>
+					<SpecialRuleDescription>Can cast Invocation of Nehek on a 15+ and rise 4D6 Skeleton or 4D6+4 Zombies, or heal 4 Wounds on an undead model</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Staff of Kaphamon</Name>
+					<SpecialRuleDescription>Casts Dark Hand of Death once per bearer's Magic phase, Power level 4</SpecialRuleDescription>
+				</Arcane>
+				<Arcane>
+					<Name>Circlet of Rathek</Name>
+					<AddToWard>4</AddToWard>
+				</Arcane>
+				<Special>
+					<SpecialRuleDescription>Knows all six Necromantic spells</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to the total rolled for casting spells</SpecialRuleDescription>
+					<SpecialRuleDescription>Once per game, can re-roll one of the dice rolled to cast a spell</SpecialRuleDescription>
+					<SpecialRuleDescription>The range of all spells is increased by 6"</SpecialRuleDescription>
+					<SpecialRuleDescription>+D3 to the total number of Skeletons or Zombies created by Invocation of Nehek</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
