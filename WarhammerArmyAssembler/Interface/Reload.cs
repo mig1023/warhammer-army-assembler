@@ -32,9 +32,9 @@ namespace WarhammerArmyAssembler.Interface
 
             List<Unit> categories = Army.Params.GetArmyCategories();
 
-            foreach (KeyValuePair<int, Unit> entry in ArmyBook.Data.Units)
+            foreach (Unit entry in ArmyBook.Data.Units.Values)
             {
-                Unit unit = entry.Value.Clone();
+                Unit unit = entry.Clone();
                 unit.PointsView = String.Format(" {0} pts", unit.Points);
                 unit.InterfaceColor = ArmyBook.Data.MainColor;
                 categories[(int)unit.Type].Items.Add(unit);
@@ -49,20 +49,20 @@ namespace WarhammerArmyAssembler.Interface
 
             List<string> artefactsTypes = new List<string>();
 
-            foreach (KeyValuePair<int, Option> entry in ArmyBook.Data.Artefact)
-                if (!artefactsTypes.Contains(entry.Value.ArtefactGroup))
-                    artefactsTypes.Add(entry.Value.ArtefactGroup);
+            foreach (Option entry in ArmyBook.Data.Artefact.Values)
+                if (!artefactsTypes.Contains(entry.ArtefactGroup))
+                    artefactsTypes.Add(entry.ArtefactGroup);
 
             foreach (string artefactType in artefactsTypes)
             {
                 Option artefacts = new Option() { Name = artefactType };
 
-                foreach (KeyValuePair<int, Option> entry in ArmyBook.Data.Artefact)
+                foreach (Option entry in ArmyBook.Data.Artefact.Values)
                 {
-                    if ((entry.Value.ArtefactGroup != artefactType) || (entry.Value.Runic > 1))
+                    if ((entry.ArtefactGroup != artefactType) || (entry.Runic > 1))
                         continue;
 
-                    Option artefact = entry.Value.Clone();
+                    Option artefact = entry.Clone();
                     artefact.PointsView = PointsView(artefact);
                     artefact.InterfaceColor = ArmyBook.Data.MainColor;
                     artefacts.Items.Add(artefact);
@@ -82,8 +82,8 @@ namespace WarhammerArmyAssembler.Interface
 
                 Dictionary<int, Option> runicVersions = artefact.AllRunicVersions();
 
-                foreach (KeyValuePair<int, Option> runic in runicVersions)
-                    points.Add(runic.Value.Points.ToString());
+                foreach (Option runic in runicVersions.Values)
+                    points.Add(runic.Points.ToString());
 
                 return String.Format(" {0} pts", String.Join("/", points.ToArray()));
             }

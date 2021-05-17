@@ -18,10 +18,10 @@ namespace WarhammerArmyAssembler.Army
 
             if (!String.IsNullOrEmpty(unit.MountInit))
             {
-                foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts)
-                    if (mount.Value.Name == unit.MountInit)
+                foreach (Unit mount in ArmyBook.Data.Mounts.Values)
+                    if (mount.Name == unit.MountInit)
                     {
-                        Unit newMount = mount.Value.Clone();
+                        Unit newMount = mount.Clone();
 
                         int newMountID = GetNextIndex();
                         Army.Data.Units[unit.ArmyID].MountOn = newMountID;
@@ -155,11 +155,11 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (int i in new List<int> { 1, 2 })
             {
-                foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                    entry.Value.Type = ChangeUnitType(entry.Value.Type);
+                foreach (Unit entry in Army.Data.Units.Values)
+                    entry.Type = ChangeUnitType(entry.Type);
 
-                foreach (KeyValuePair<int, Unit> entry in ArmyBook.Data.Units)
-                    entry.Value.Type = ChangeUnitType(entry.Value.Type);
+                foreach (Unit entry in ArmyBook.Data.Units.Values)
+                    entry.Type = ChangeUnitType(entry.Type);
             }
         }
     }

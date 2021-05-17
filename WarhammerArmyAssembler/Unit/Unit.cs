@@ -572,8 +572,8 @@ namespace WarhammerArmyAssembler
 
             if (directModification)
             {
-                foreach (KeyValuePair<string, string> specialRule in SpecialRules.All)
-                    unit.SetUnitParamByOption(specialRule.Key, directModification);
+                foreach (string specialRule in SpecialRules.All.Keys)
+                    unit.SetUnitParamByOption(specialRule, directModification);
 
                 unit.GetParamTestsFromOptions();
             }

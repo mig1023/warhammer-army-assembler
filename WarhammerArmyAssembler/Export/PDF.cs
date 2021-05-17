@@ -85,9 +85,9 @@ namespace WarhammerArmyAssembler.Export
         {
             int maxLength = 0;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            foreach (Unit entry in Army.Data.Units.Values)
             {
-                int unitSizeLen = Export.Other.UnitSizeIfNeed(entry.Value).Length;
+                int unitSizeLen = Export.Other.UnitSizeIfNeed(entry).Length;
 
                 if (maxLength < unitSizeLen)
                     maxLength = unitSizeLen;
