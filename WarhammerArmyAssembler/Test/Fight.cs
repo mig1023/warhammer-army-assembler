@@ -178,8 +178,8 @@ namespace WarhammerArmyAssembler.Test
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
             InitRoundWounds(participants, ref roundWounds);
 
-            foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
-                u.Value[0] = CheckTerror(u.Value[0], u.Value[1], u.Value[2], u.Value[3]);
+            foreach (List<Unit> unitInOrd in BreakTestOrder.Values)
+                unitInOrd[0] = CheckTerror(unitInOrd[0], unitInOrd[1], unitInOrd[2], unitInOrd[3]);
 
             while (BothOpponentsAreAlive(participants) && (round < 100))
             {

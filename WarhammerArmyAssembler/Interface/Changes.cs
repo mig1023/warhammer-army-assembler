@@ -167,7 +167,7 @@ namespace WarhammerArmyAssembler.Interface
                 Error(String.Format("Army can't include as many duplicates of {0}", unit.UnitTypeName()));
 
             else if (!Army.Checks.IsArmyUnitMaxLimitOk(unit))
-                Error(String.Format("Army can contain a maximum of {0} regiment {1}", unit.MaxUnits, unit.Name));
+                Error("Only one unit of this type can be in the army");
 
             else
             {

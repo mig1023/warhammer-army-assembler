@@ -104,16 +104,14 @@ namespace WarhammerArmyAssembler.Army
         
         public static bool IsArmyUnitMaxLimitOk(Unit newUnit)
         {
-            if (newUnit.MaxUnits <= 0)
+            if (!newUnit.UniqueUnits)
                 return true;
-
-            int unitsInArmy = 0;
 
             foreach (Unit unit in Army.Data.Units.Values)
                 if (unit.ID == newUnit.ID)
-                    unitsInArmy += 1;
+                    return false;
 
-            return (unitsInArmy < newUnit.MaxUnits);
+            return true;
         }
 
         public static int IsOptionAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)

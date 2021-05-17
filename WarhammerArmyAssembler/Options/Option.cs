@@ -290,9 +290,9 @@ namespace WarhammerArmyAssembler
         {
             Dictionary<int, Option> runicVesions = new Dictionary<int, Option>();
 
-            foreach (KeyValuePair<int, Option> option in ArmyBook.Data.Artefact)
-                if (option.Value.Name == this.Name)
-                    runicVesions.Add(option.Value.Runic, option.Value);
+            foreach (Option option in ArmyBook.Data.Artefact.Values)
+                if (option.Name == this.Name)
+                    runicVesions.Add(option.Runic, option);
 
             return runicVesions;
         }

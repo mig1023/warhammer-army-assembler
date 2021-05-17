@@ -27,7 +27,7 @@ namespace WarhammerArmyAssembler
         public int MinSize { get; set; }
         public int MaxSize { get; set; }
         public int ModelsInPack { get; set; }
-        public int MaxUnits { get; set; }
+        public bool UniqueUnits { get; set; }
 
         public double Points { get; set; }
 
@@ -278,7 +278,7 @@ namespace WarhammerArmyAssembler
                 MinSize = this.MinSize,
                 MaxSize = this.MaxSize,
                 ModelsInPack = this.ModelsInPack,
-                MaxUnits = this.MaxUnits,
+                UniqueUnits = this.UniqueUnits,
                 Points = this.Points,
                 MountOn = this.MountOn,
                 MountInit = this.MountInit,
@@ -853,8 +853,8 @@ namespace WarhammerArmyAssembler
 
                 describe += ((MaxSize > 0) && (MinSize != MaxSize) ? minAndMax : minOnly);
 
-                if (MaxUnits > 0)
-                    describe += String.Format("\nUnits in army: 0-{0}", MaxUnits);
+                if (UniqueUnits)
+                    describe += "\nOnly one unit of this type can be in the army";
             }
 
             int wizard = GetUnitWizard();
