@@ -143,26 +143,31 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void ArmyGridDropUnit(int id)
         {
-            bool slotExists = (Army.Params.GetArmyUnitsNumber(ArmyBook.Data.Units[id].Type) < Army.Params.GetArmyMaxUnitsNumber(ArmyBook.Data.Units[id].Type));
-            bool coreUnit = (ArmyBook.Data.Units[id].Type == Unit.UnitType.Core);
+            Unit unit = ArmyBook.Data.Units[id];
+
+            bool slotExists = (Army.Params.GetArmyUnitsNumber(unit.Type) < Army.Params.GetArmyMaxUnitsNumber(unit.Type));
+            bool coreUnit = (unit.Type == Unit.UnitType.Core);
 
             int allHeroes = Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord) + Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero);
-            bool lordInHeroSlot = (ArmyBook.Data.Units[id].Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
+            bool lordInHeroSlot = (unit.Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
 
-            if (ArmyBook.Data.Units[id].PersonifiedHero && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
+            if (unit.PersonifiedHero && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
                 Error("Personalities cannot be repeated");
 
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)
-                Error(String.Format("The number of {0} of this type has been exhausted.", (ArmyBook.Data.Units[id].IsHero() ? "heroes" : "units")));
+                Error(String.Format("The number of {0} of this type has been exhausted.", (unit.IsHero() ? "heroes" : "units")));
 
             else if (!Interface.Checks.EnoughPointsForAddUnit(id))
-                Error(String.Format("Not enough points to add a {0}", (ArmyBook.Data.Units[id].IsHero() ? "hero" : "unit")));
+                Error(String.Format("Not enough points to add a {0}", (unit.IsHero() ? "hero" : "unit")));
 
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(ArmyBook.Data.Units[id].Type, ArmyBook.Data.Units[id].Points))
-                Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Data.Units[id].UnitTypeName()));
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, unit.Points))
+                Error(String.Format("The {0} has reached a point cost limit", unit.UnitTypeName()));
 
-            else if (!Army.Checks.IsArmyDublicationOk(ArmyBook.Data.Units[id]))
-                Error(String.Format("Army can't include as many duplicates of {0}", ArmyBook.Data.Units[id].UnitTypeName()));
+            else if (!Army.Checks.IsArmyDublicationOk(unit))
+                Error(String.Format("Army can't include as many duplicates of {0}", unit.UnitTypeName()));
+
+            else if (!Army.Checks.IsArmyUnitMaxLimitOk(unit))
+                Error(String.Format("Army can contain a maximum of {0} regiment {1}", unit.MaxUnits, unit.Name));
 
             else
             {

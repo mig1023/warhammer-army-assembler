@@ -77,6 +77,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.Size = IntParse(xmlUnit["MinSize"]);
             newUnit.MinSize = newUnit.Size;
             newUnit.MaxSize = IntParse(xmlUnit["MaxSize"]);
+            newUnit.MaxUnits = IntParse(xmlUnit["MaxUnits"]);
             newUnit.Wizard = IntParse(xmlUnit["Wizard"]);
             newUnit.MountOn = IntParse(xmlUnit["MountOn"]);
             newUnit.MountInit = StringParse(xmlUnit["MountInit"]);
