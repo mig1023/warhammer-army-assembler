@@ -1180,6 +1180,23 @@ namespace WarhammerArmyAssembler
             return !Interface.Checks.EnoughUnitPointsForAddArtefact(option.ID, this, addOption: false);
         }
 
+        public bool IsArmourOptionAdded()
+        {
+            foreach (Option option in Options)
+            {
+                if ((option.Type == Option.OptionType.Armour) && !option.NativeArmour)
+                    return true;
+
+                string optionName = option.Name.ToLower();
+                bool optionAndNotNative = (option.Type == Option.OptionType.Option) && !option.NativeArmour;
+
+                if (optionAndNotNative && optionName.Contains("armour") && option.Realised)
+                    return true;
+            }
+
+            return false;
+        }
+
         public bool IsOptionEnabled(Option option, int mountAlreadyOn, Option.OnlyForType mountTypeAlreadyFixed, bool postCheck = false)
         {
             if (!postCheck && option.Mount && (mountAlreadyOn > 0) && (option.ID != mountAlreadyOn))

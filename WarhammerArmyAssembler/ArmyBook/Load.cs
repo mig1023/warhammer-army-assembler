@@ -219,6 +219,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
 
+            newWeapon.NativeArmour = BoolParse(xmlNode["NativeArmour"]);
             newWeapon.Group = StringParse(xmlNode["Group"]);
             newWeapon.AutoHit = BoolParse(xmlNode["AutoHit"]);
             newWeapon.AutoWound = BoolParse(xmlNode["AutoWound"]);

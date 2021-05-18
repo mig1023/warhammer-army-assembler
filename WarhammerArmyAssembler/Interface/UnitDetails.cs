@@ -127,6 +127,9 @@ namespace WarhammerArmyAssembler.Interface
                             if (head == "WEAPONS & ARMOUR" && thisIsStandartEquipment && !thisIsSpecialRuleOrMount)
                                 continue;
 
+                            if (option.NativeArmour && unit.IsArmourOptionAdded())
+                                continue;
+
                             margins = CheckColumn(margins, ref lastColumnMaxWidth);
                             margins[1] += AddLabel(option.Name, margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
                         }

@@ -89,6 +89,7 @@ namespace WarhammerArmyAssembler
         public int WardForLastWound { get; set; }
         public bool FirstWoundDiscount { get; set; }
         public bool NotALeader { get; set; }
+        public bool NativeArmour { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -231,6 +232,7 @@ namespace WarhammerArmyAssembler
                 Runic = this.Runic,
                 MasterRunic = this.MasterRunic,
                 TypeUnitIncrese = this.TypeUnitIncrese,
+                NativeArmour = this.NativeArmour,
 
                 Lance = this.Lance,
                 Flail = this.Flail,
