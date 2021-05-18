@@ -165,19 +165,24 @@ namespace WarhammerArmyAssembler
             double points = Size * Points;
 
             foreach (Option option in Options)
+            {
                 if (option.Countable != null)
                     points += option.Points * option.Countable.Value;
+
                 else if (!option.IsOption() || (option.IsOption() && option.Realised && !option.IsSlannOption()))
                     points += option.Points * (option.PerModel ? Size : 1);
+            }
 
             bool firstSlannOptionAlreadyIsFree = false;
 
             foreach (Option option in Options)
                 if (option.IsSlannOption() && option.Realised)
+                {
                     if (firstSlannOptionAlreadyIsFree)
                         points += option.Points;
                     else
                         firstSlannOptionAlreadyIsFree = true;
+                }
 
             return points;
         }
@@ -214,10 +219,13 @@ namespace WarhammerArmyAssembler
             double alreayUsed = 0;
 
             foreach (Option option in Options)
+            {
                 if (option.IsMagicItem() && (MagicItemCount <= 0))
                     alreayUsed += option.Points;
+
                 else if (option.IsMagicItem() && (MagicItemCount > 0) && (option.Points > 0))
                     alreayUsed += 1;
+            }
 
             return alreayUsed;
         }
@@ -412,7 +420,10 @@ namespace WarhammerArmyAssembler
 
         private bool OptionTypeAlreadyUsed(Option option, ref bool alreadyArmour, ref bool alreadyShield)
         {
-            if (alreadyArmour && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
+            if (option.NativeArmour && IsArmourOptionAdded())
+                return true;
+
+            else if (alreadyArmour && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
                 return true;
 
             else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
@@ -475,8 +486,7 @@ namespace WarhammerArmyAssembler
             if (mountParam && (MountOn > 0))
                 allOption.AddRange(Army.Data.Units[MountOn].Options);
 
-            bool alreadyArmour = false;
-            bool alreadyShield = false;
+            bool alreadyArmour = false, alreadyShield = false;
 
             foreach (Option option in allOption)
             {
@@ -603,7 +613,12 @@ namespace WarhammerArmyAssembler
 
             Dictionary<int, int> ratio = new Dictionary<int, int>
             {
-                [5] = 3, [7] = 4, [9] = 5, [24] = 6, [28] = 7, [32] = 8,
+                [5] = 3,
+                [7] = 4,
+                [9] = 5,
+                [24] = 6,
+                [28] = 7,
+                [32] = 8,
             };
 
             foreach (KeyValuePair<int, int> r in ratio)
@@ -645,10 +660,13 @@ namespace WarhammerArmyAssembler
             int count = 0;
 
             foreach (Option option in Options)
+            {
                 if (option.MasterRunic)
                     count += 1;
+
                 else if (option.Runic > 0)
                     count += option.Runic;
+            }
 
             return count;
         }
@@ -678,8 +696,10 @@ namespace WarhammerArmyAssembler
                     {
                         if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
                             Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
+
                         else if (!Interface.Checks.EnoughUnitPointsForAddOption(option.Points))
                             Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
+
                         else
                             option.Countable.Value += 1;
                     }
@@ -694,6 +714,7 @@ namespace WarhammerArmyAssembler
             for(int i = 0; i < this.Options.Count; i++)
             {
                 Option option = this.Options[i];
+
                 if (option.ID == optionID)
                 {
                     bool realise = false;
@@ -706,6 +727,7 @@ namespace WarhammerArmyAssembler
 
                         if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Special))
                             this.Type = Unit.UnitType.Core;
+
                         else if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Rare))
                             this.Type = Unit.UnitType.Special;
 
@@ -751,7 +773,6 @@ namespace WarhammerArmyAssembler
                     }
 
                     option.Realised = realise;
-
                     return;
                 }
             }
@@ -1187,10 +1208,9 @@ namespace WarhammerArmyAssembler
                 if ((option.Type == Option.OptionType.Armour) && !option.NativeArmour)
                     return true;
 
-                string optionName = option.Name.ToLower();
                 bool optionAndNotNative = (option.Type == Option.OptionType.Option) && !option.NativeArmour;
 
-                if (optionAndNotNative && optionName.Contains("armour") && option.Realised)
+                if (optionAndNotNative && ContainsCaseless(option.Name, "Armour") && option.Realised)
                     return true;
             }
 
