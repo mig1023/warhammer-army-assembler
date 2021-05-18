@@ -41,6 +41,24 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Juggernaut</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+			</MainParam>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -531,6 +549,77 @@
 					</OnlyIfAnotherService>
 					<Points>25</Points>
 					<SpecialRuleDescription>Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee</SpecialRuleDescription>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Bloodcrushers of Khorne</Name>
+			<Points>70</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Juggernaut</MountInit>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<KillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hellblade</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<SpecialRuleDescription>Brass Behemoth</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Bloodreaper</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Skull Totem</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Standard bearer</OnlyIf>
+						<OnlyIfNot>Icon of Endless War</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>25</Points>
+					<SpecialRuleDescription>May march even if enemy models are within 8"</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Icon of Endless War</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Standard bearer</OnlyIf>
+						<OnlyIfNot>Skull Totem</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>25</Points>
+					<SpecialRuleDescription>Adds D6" to its first charge move</SpecialRuleDescription>
 				</Option>
 			</Options>
 		</Unit>
