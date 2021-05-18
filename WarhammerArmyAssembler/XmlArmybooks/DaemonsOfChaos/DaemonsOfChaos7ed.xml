@@ -16,7 +16,7 @@
 		
 	</Heroes>
 	<Mounts>
-		
+
 	</Mounts>
 	<Units>
 		<Unit>
@@ -346,6 +346,40 @@
 					<SpecialRuleDescription>Flying Unit</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Flesh hounds of Khorne</Name>
+			<Points>35</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Teeth and Claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Karanak</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>75</Points>
+				</Option>
+			</Options>
 		</Unit>
 	</Units>
 </ArmyBook>
