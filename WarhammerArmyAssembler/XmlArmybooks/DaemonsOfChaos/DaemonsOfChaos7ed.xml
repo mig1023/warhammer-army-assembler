@@ -16,7 +16,31 @@
 		
 	</Heroes>
 	<Mounts>
-
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Steed of Slaanesh</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<PoisonAttack/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -385,7 +409,7 @@
 			<Name>Screamers of Tzeentch</Name>
 			<Points>30</Points>
 			<MinSize>3</MinSize>
-			<MaxSize>6</Maxize>
+			<MaxSize>6</MaxSize>
 			<MainParam>
 				<Movement>1</Movement>
 				<WeaponSkill>3</WeaponSkill>
@@ -439,6 +463,76 @@
 					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Seekers of Slaanesh</Name>
+			<Points>24</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Steed of Slaanesh</MountInit>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ArmourPiercing>1</ArmourPiercing>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Alluress</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Banner of Ecstasy</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Standard bearer</OnlyIf>
+						<OnlyIfNot>Siren Standard</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>25</Points>
+					<Stubborn/>
+				</Option>
+				<Option>
+					<Name>Siren Standard</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Standard bearer</OnlyIf>
+						<OnlyIfNot>Banner of Ecstasy</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>25</Points>
+					<SpecialRuleDescription>Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee</SpecialRuleDescription>
+				</Option>
+			</Options>
 		</Unit>
 	</Units>
 </ArmyBook>
