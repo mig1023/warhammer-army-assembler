@@ -12,7 +12,7 @@ namespace WarhammerArmyAssembler.Interface
     {
         private static double GetDetailHeight()
         {
-            double detailHeight = Interface.Changes.main.unitDetail.ActualHeight;
+            double detailHeight = Changes.main.unitDetail.ActualHeight;
             return (detailHeight > 0 ? detailHeight : 250);
         }
 
@@ -31,7 +31,7 @@ namespace WarhammerArmyAssembler.Interface
 
         private static bool NotEnoughColumnForThis(string caption, double height, double[] margins)
         {
-            string[] captionLines = Interface.Other.WordSplit(caption);
+            string[] captionLines = Other.WordSplit(caption);
 
             if (captionLines.Length < 2)
                 return false;
@@ -111,9 +111,9 @@ namespace WarhammerArmyAssembler.Interface
                             if (option.OnlyOneInArmy || option.OnlyOneForSuchUnits)
                                 canBeUsed = (Army.Checks.IsOptionAlreadyUsed(option.Name, unitID, unit.Name, option.OnlyOneForSuchUnits) == 0);
 
-                            margins[1] += AddButton(option.FullName(), margins, 25, ref lastColumnMaxWidth, String.Format("{0}|{1}", unitID, option.ID),
-                                option, mountAlreadyOn: mountAlreadyOn, mountTypeAlreadyFixed: mountTypeAlreadyFixed, unit: unit,
-                                mustBeEnabled: canBeUsed);
+                            margins[1] += AddButton(option.FullName(), margins, 25, ref lastColumnMaxWidth,
+                                String.Format("{0}|{1}", unitID, option.ID), option, mountAlreadyOn: mountAlreadyOn,
+                                mountTypeAlreadyFixed: mountTypeAlreadyFixed, unit: unit, mustBeEnabled: canBeUsed);
 
                             margins[1] += 20;
                         }
@@ -143,16 +143,16 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void AddOptionsList(int unitID, Unit unit)
         {
-            double[] margins = new double[] { Interface.Changes.main.unitName.Margin.Left, Interface.Changes.main.unitName.Margin.Top + 35 };
+            double[] margins = new double[] { Changes.main.unitName.Margin.Left, Changes.main.unitName.Margin.Top + 35 };
 
             List<FrameworkElement> elementsForRemoving = new List<FrameworkElement>();
 
-            foreach (FrameworkElement element in Interface.Changes.main.unitDetail.Children)
+            foreach (FrameworkElement element in Changes.main.unitDetail.Children)
                 if (element.Name != "closeUnitDetail" && element.Name != "unitName")
                     elementsForRemoving.Add(element);
 
             foreach (FrameworkElement element in elementsForRemoving)
-                Interface.Changes.main.unitDetail.Children.Remove(element);
+                Changes.main.unitDetail.Children.Remove(element);
 
             bool notFirstColumn = false;
 
@@ -161,16 +161,17 @@ namespace WarhammerArmyAssembler.Interface
             int wizard = unit.GetUnitWizard();
 
             if (wizard > 0)
-                AddLabel(
-                    caption: String.Format("Wizard Level {0}", wizard),
-                    margins: new double[] {
-                        Interface.Changes.main.unitName.Margin.Left + Interface.Changes.main.unitName.ActualWidth + 5,
-                        Interface.Changes.main.unitName.Margin.Top
-                    },
-                    height: 25,
-                    lastColumnMaxWidth: ref lastColumnMaxWidth
-                );
+            {
+                double[] wizardMargins = new double[]
+                {
+                    Changes.main.unitName.Margin.Left + Changes.main.unitName.ActualWidth + 5,
+                    Changes.main.unitName.Margin.Top
+                };
 
+                AddLabel(caption: String.Format("Wizard Level {0}", wizard), margins: wizardMargins, height: 25,
+                    lastColumnMaxWidth: ref lastColumnMaxWidth);
+            }
+                
             if (unit.ExistsOptions())
                 margins = CreateColumn("OPTION", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
@@ -189,10 +190,10 @@ namespace WarhammerArmyAssembler.Interface
             if (unit.GetSpecialRules().Count > 0)
                 margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
-            Interface.Changes.main.unitDetail.Width = margins[0] + lastColumnMaxWidth + 25;
+            Changes.main.unitDetail.Width = margins[0] + lastColumnMaxWidth + 25;
 
-            if (Interface.Changes.main.unitDetail.Width > Interface.Changes.main.unitDetailScroll.Width)
-                Interface.Changes.main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
+            if (Changes.main.unitDetail.Width > Changes.main.unitDetailScroll.Width)
+                Changes.main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
         }
 
         private static void AddOption_Click(object sender, RoutedEventArgs e)
@@ -201,14 +202,14 @@ namespace WarhammerArmyAssembler.Interface
 
             string[] id = id_tag.Split('|');
 
-            int optionID = Interface.Other.IntParse(id[1]);
-            int unitID = Interface.Other.IntParse(id[0]);
+            int optionID = Other.IntParse(id[1]);
+            int unitID = Other.IntParse(id[0]);
 
             Army.Data.Units[unitID].AddOption(optionID);
             Army.Data.Units[unitID].ThrowAwayIncompatibleOption();
 
-            Interface.Reload.ReloadArmyData();
-            Interface.Mod.SetArtefactAlreadyUsed(Interface.Other.IntParse(id[1]), false);
+            Reload.ReloadArmyData();
+            Mod.SetArtefactAlreadyUsed(Other.IntParse(id[1]), false);
             UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
         }
 
@@ -218,24 +219,24 @@ namespace WarhammerArmyAssembler.Interface
 
             string[] id = label.Tag.ToString().Split('|');
 
-            int optionID = Interface.Other.IntParse(id[1]);
-            int unitID = Interface.Other.IntParse(id[0]);
+            int optionID = Other.IntParse(id[1]);
+            int unitID = Other.IntParse(id[0]);
 
             Army.Data.Units[unitID].ChangeCountableOption(optionID, direction: label.Content.ToString());
 
-            Interface.Reload.ReloadArmyData();
+            Reload.ReloadArmyData();
             UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
         }
 
         public static void UpdateUnitDescription(int unitID, Unit unit)
         {
-            Interface.Changes.main.unitName.Content = unit.Name.ToUpper();
+            Changes.main.unitName.Content = unit.Name.ToUpper();
 
-            Interface.Changes.main.unitName.Foreground = Brushes.White;
-            Interface.Changes.main.unitName.Background = ArmyBook.Data.MainColor;
-            Interface.Changes.main.unitName.FontWeight = FontWeights.Bold;
+            Changes.main.unitName.Foreground = Brushes.White;
+            Changes.main.unitName.Background = ArmyBook.Data.MainColor;
+            Changes.main.unitName.FontWeight = FontWeights.Bold;
 
-            Interface.Changes.main.UpdateLayout();
+            Changes.main.UpdateLayout();
 
             AddOptionsList(unitID, unit);
         }
@@ -246,14 +247,14 @@ namespace WarhammerArmyAssembler.Interface
         {
             Label newOption = new Label();
 
-            string[] captionLines = Interface.Other.WordSplit(caption);
+            string[] captionLines = Other.WordSplit(caption);
 
             newOption.Content = String.Empty;
 
             foreach (string line in captionLines)
                 newOption.Content += (String.IsNullOrEmpty(newOption.Content.ToString()) ? String.Empty : Environment.NewLine + "   ") + line;
 
-            newOption.Margin = Interface.Changes.Thick(newOption, margins[0], margins[1]);
+            newOption.Margin = Changes.Thick(newOption, margins[0], margins[1]);
 
             if (!enabled)
                 newOption.Foreground = Brushes.Gray;
@@ -269,9 +270,8 @@ namespace WarhammerArmyAssembler.Interface
                 newOption.Background = ArmyBook.Data.MainColor;
             }
 
-            Interface.Changes.main.unitDetail.Children.Add(newOption);
-
-            Interface.Changes.main.UpdateLayout();
+            Changes.main.unitDetail.Children.Add(newOption);
+            Changes.main.UpdateLayout();
 
             double actualWidth = newOption.ActualWidth;
 
@@ -285,16 +285,15 @@ namespace WarhammerArmyAssembler.Interface
                 {
                     Content = (pointsNeed ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine)
                 };
-                optionPoints.Margin = Interface.Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
+                optionPoints.Margin = Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
 
                 if (!enabled)
                     optionPoints.Foreground = Brushes.Gray;
                 else
                     optionPoints.Foreground = ArmyBook.Data.MainColor;
 
-                Interface.Changes.main.unitDetail.Children.Add(optionPoints);
-
-                Interface.Changes.main.UpdateLayout();
+                Changes.main.unitDetail.Children.Add(optionPoints);
+                Changes.main.UpdateLayout();
 
                 actualWidth += optionPoints.ActualWidth - 5;
             }
@@ -312,7 +311,7 @@ namespace WarhammerArmyAssembler.Interface
                 longOptionLine.StrokeThickness = 2;
                 longOptionLine.Stroke = ArmyBook.Data.MainColor;
 
-                Interface.Changes.main.unitDetail.Children.Add(longOptionLine);
+                Changes.main.unitDetail.Children.Add(longOptionLine);
             }
 
             if (actualWidth > lastColumnMaxWidth)
@@ -335,7 +334,7 @@ namespace WarhammerArmyAssembler.Interface
                 Background = background,
             };
 
-            newPart.Margin = Interface.Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
+            newPart.Margin = Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
             newPart.Width = partWidth ?? (countable ? 51 : 77);
 
             if (countable && enabled && (caption == "+" || caption == "-"))
@@ -343,8 +342,8 @@ namespace WarhammerArmyAssembler.Interface
             else if (!countable && enabled)
                 newPart.MouseDown += AddOption_Click;
 
-            Interface.Changes.main.unitDetail.Children.Add(newPart);
-            Interface.Changes.main.UpdateLayout();
+            Changes.main.unitDetail.Children.Add(newPart);
+            Changes.main.UpdateLayout();
 
             return newPart.ActualWidth;
         }
@@ -364,9 +363,7 @@ namespace WarhammerArmyAssembler.Interface
             if (!String.IsNullOrEmpty(option.Countable.Dependency))
             {
                 PropertyInfo unitParam = typeof(Unit).GetProperty(option.Countable.Dependency);
-                int paramValue = (int)unitParam.GetValue(unit);
-
-                maxByDependency = (int)(paramValue / option.Countable.Ratio);
+                maxByDependency = (int)((int)unitParam.GetValue(unit) / option.Countable.Ratio);
             }
 
             bool canBeReduced = ((option.Countable.Value > 0) && (option.Countable.Value > option.Countable.Min)) && enabled;
@@ -394,8 +391,8 @@ namespace WarhammerArmyAssembler.Interface
             if ((unit != null) && unit.IsAnotherOptionIsIncompatible(option))
                 optionIsEnabled = false;
 
-            AddLabel(caption, margins, height, ref lastColumnMaxWidth, option.Realised,
-                option.Points, option.PerModel, enabled: optionIsEnabled);
+            AddLabel(caption, margins, height, ref lastColumnMaxWidth, option.Realised, option.Points,
+                option.PerModel, enabled: optionIsEnabled);
 
             if (option.IsMagicItem() || option.IsPowers())
             {
@@ -404,44 +401,20 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             if (option.Countable != null)
-                AddButtonsCountable(
-                    caption: option.Countable.Value.ToString(),
-                    backFirst: ArmyBook.Data.AdditionalColor,
-                    backSecond: ArmyBook.Data.MainColor,
-                    option: option,
-                    unit: unit,
-                    margins: margins,
-                    id: id,
-                    enabled: optionIsEnabled
-                );
+                AddButtonsCountable(caption: option.Countable.Value.ToString(), backFirst: ArmyBook.Data.AdditionalColor,
+                    backSecond: ArmyBook.Data.MainColor, option: option, unit: unit, margins: margins, id: id, enabled: optionIsEnabled);
+
             else if (!optionIsEnabled)
-                AddButtonAllParts(
-                    captionFirst: String.Empty,
-                    captionSecond: String.Empty,
-                    backgroundFirst: Brushes.WhiteSmoke,
-                    backgroundSecond: Brushes.Gainsboro,
-                    margins: margins,
-                    id: id,
-                    enabled: false
-                );
+                AddButtonAllParts(captionFirst: String.Empty, captionSecond: String.Empty, backgroundFirst: Brushes.WhiteSmoke,
+                    backgroundSecond: Brushes.Gainsboro, margins: margins, id: id, enabled: false);
+
             else if (option.Realised)
-                AddButtonAllParts(
-                    captionFirst: "drop",
-                    captionSecond: String.Empty,
-                    backgroundFirst: ArmyBook.Data.AdditionalColor,
-                    backgroundSecond: ArmyBook.Data.MainColor,
-                    margins: margins,
-                    id: id
-                );
+                AddButtonAllParts(captionFirst: "drop", captionSecond: String.Empty, backgroundFirst: ArmyBook.Data.AdditionalColor,
+                    backgroundSecond: ArmyBook.Data.MainColor, margins: margins, id: id);
+
             else
-                AddButtonAllParts(
-                    captionFirst: String.Empty,
-                    captionSecond: "add",
-                    backgroundFirst: Brushes.LightGray,
-                    backgroundSecond: Brushes.Silver,
-                    margins: margins,
-                    id: id
-                );
+                AddButtonAllParts(captionFirst: String.Empty, captionSecond: "add", backgroundFirst: Brushes.LightGray,
+                    backgroundSecond: Brushes.Silver, margins: margins, id: id);
 
             return height;
         }
