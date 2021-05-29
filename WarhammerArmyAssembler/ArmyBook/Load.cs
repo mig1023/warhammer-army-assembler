@@ -64,50 +64,53 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml)
         {
-            Unit newUnit = new Unit();
+            string description = StringParse(xmlUnit["Description"]);
 
-            newUnit.ID = id;
-            newUnit.IDView = id.ToString();
-
-            newUnit.SetGroup(StringParse(xmlUnit["Group"]));
-
-            newUnit.Name = StringParse(xmlUnit["Name"]);
-            newUnit.Type = UnitTypeParse(xmlUnit["Type"]);
-            newUnit.Points = DoubleParse(xmlUnit["Points"]);
-            newUnit.Size = IntParse(xmlUnit["MinSize"]);
-            newUnit.MinSize = newUnit.Size;
-            newUnit.MaxSize = IntParse(xmlUnit["MaxSize"]);
-            newUnit.UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]);
-            newUnit.Wizard = IntParse(xmlUnit["Wizard"]);
-            newUnit.MountOn = IntParse(xmlUnit["MountOn"]);
-            newUnit.MountInit = StringParse(xmlUnit["MountInit"]);
-            newUnit.ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1);
-
-            newUnit.Description = StringParse(xmlUnit["Description"]);
-
-            if (String.IsNullOrEmpty(newUnit.Description))
-                newUnit.Description = newUnit.Name;
+            if (String.IsNullOrEmpty(description))
+                description = StringParse(xmlUnit["Name"]);
 
             XmlNode mainParam = xmlUnit["MainParam"];
 
-            newUnit.Movement = IntParse(mainParam["Movement"]);
-            newUnit.WeaponSkill = IntParse(mainParam["WeaponSkill"]);
-            newUnit.BallisticSkill = IntParse(mainParam["BallisticSkill"]);
-            newUnit.Strength = IntParse(mainParam["Strength"]);
-            newUnit.Toughness = IntParse(mainParam["Toughness"]);
-            newUnit.Wounds = IntParse(mainParam["Wounds"]);
-            newUnit.Initiative = IntParse(mainParam["Initiative"]);
-            newUnit.Attacks = IntParse(mainParam["Attacks"]);
-            newUnit.Leadership = IntParse(mainParam["Leadership"]);
+            Unit newUnit = new Unit
+            {
+                ID = id,
+                IDView = id.ToString(),
 
-            newUnit.Armour = IntNullableParse(mainParam["Armour"]);
-            newUnit.Ward = IntNullableParse(mainParam["Ward"]);
+                Name = StringParse(xmlUnit["Name"]),
+                Type = UnitTypeParse(xmlUnit["Type"]),
+                Points = DoubleParse(xmlUnit["Points"]),
+                Size = IntParse(xmlUnit["MinSize"]),
+                MinSize = IntParse(xmlUnit["MinSize"]),
+                MaxSize = IntParse(xmlUnit["MaxSize"]),
+                UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]),
+                Wizard = IntParse(xmlUnit["Wizard"]),
+                MountOn = IntParse(xmlUnit["MountOn"]),
+                MountInit = StringParse(xmlUnit["MountInit"]),
+                ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1),
 
-            newUnit.PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]);
-            newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
-            newUnit.Chariot = BoolParse(xmlUnit["Chariot"]);
+                Description = description,
+
+                Movement = IntParse(mainParam["Movement"]),
+                WeaponSkill = IntParse(mainParam["WeaponSkill"]),
+                BallisticSkill = IntParse(mainParam["BallisticSkill"]),
+                Strength = IntParse(mainParam["Strength"]),
+                Toughness = IntParse(mainParam["Toughness"]),
+                Wounds = IntParse(mainParam["Wounds"]),
+                Initiative = IntParse(mainParam["Initiative"]),
+                Attacks = IntParse(mainParam["Attacks"]),
+                Leadership = IntParse(mainParam["Leadership"]),
+
+                Armour = IntNullableParse(mainParam["Armour"]),
+                Ward = IntNullableParse(mainParam["Ward"]),
+
+                PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]),
+                WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]),
+                Chariot = BoolParse(xmlUnit["Chariot"]),
+            };
 
             XmlNode additionalParam = xmlUnit["AdditionalParam"];
+
+            newUnit.SetGroup(StringParse(xmlUnit["Group"]));
 
             if (additionalParam != null)
             {
@@ -194,133 +197,129 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newUnit;
         }
 
-        public static Option LoadOption(int id, XmlNode xmlNode, string artefactGroup = null)
+        public static Option LoadOption(int id, XmlNode xmlNode, string artefactGroup = null) => new Option
         {
-            Option newWeapon = new Option();
+            ID = id,
+            IDView = id.ToString(),
 
-            newWeapon.ID = id;
-            newWeapon.IDView = id.ToString();
+            Name = StringParse(xmlNode["Name"]),
+            Description = StringParse(xmlNode["Description"]),
+            Type = OptionTypeParse(xmlNode["Type"]),
+            OnlyFor = OnlyForParse(xmlNode["OnlyFor"]),
+            OnlyIfAnotherService = AllStringParse(xmlNode["OnlyIfAnotherService"], "OnlyIf"),
+            OnlyIfNotAnotherService = AllStringParse(xmlNode["OnlyIfAnotherService"], "OnlyIfNot"),
+            OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]),
+            OnlyOneForSuchUnits = BoolParse(xmlNode["OnlyOneForSuchUnits"]),
+            OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]),
+            Realised = false,
+            Multiple = BoolParse(xmlNode["Multiple"]),
+            Virtue = BoolParse(xmlNode["Virtue"]),
+            Honours = BoolParse(xmlNode["Honours"]),
 
-            newWeapon.Name = StringParse(xmlNode["Name"]);
-            newWeapon.Description = StringParse(xmlNode["Description"]);
-            newWeapon.Type = OptionTypeParse(xmlNode["Type"]);
-            newWeapon.OnlyFor = OnlyForParse(xmlNode["OnlyFor"]);
-            newWeapon.OnlyIfAnotherService = AllStringParse(xmlNode["OnlyIfAnotherService"], "OnlyIf");
-            newWeapon.OnlyIfNotAnotherService = AllStringParse(xmlNode["OnlyIfAnotherService"], "OnlyIfNot");
-            newWeapon.OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]);
-            newWeapon.OnlyOneForSuchUnits = BoolParse(xmlNode["OnlyOneForSuchUnits"]);
-            newWeapon.OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]);
-            newWeapon.Realised = false;
-            newWeapon.Multiple = BoolParse(xmlNode["Multiple"]);
-            newWeapon.Virtue = BoolParse(xmlNode["Virtue"]);
-            newWeapon.Honours = BoolParse(xmlNode["Honours"]);
+            Countable = CountableParse(xmlNode),
 
-            newWeapon.Countable = CountableParse(xmlNode);
+            SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription"),
 
-            newWeapon.SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription");
+            NativeArmour = BoolParse(xmlNode["NativeArmour"]),
+            Group = StringParse(xmlNode["Group"]),
+            AutoHit = BoolParse(xmlNode["AutoHit"]),
+            AutoWound = BoolParse(xmlNode["AutoWound"]),
+            AutoDeath = BoolParse(xmlNode["AutoDeath"]),
+            HitFirst = BoolParse(xmlNode["HitFirst"]),
+            HitLast = BoolParse(xmlNode["HitLast"]),
+            KillingBlow = BoolParse(xmlNode["KillingBlow"]),
+            ExtendedKillingBlow = IntParse(xmlNode["ExtendedKillingBlow"]),
+            HeroicKillingBlow = BoolParse(xmlNode["HeroicKillingBlow"]),
+            PoisonAttack = BoolParse(xmlNode["PoisonAttack"]),
+            MultiWounds = StringParse(xmlNode["MultiWounds"]),
+            NoArmour = BoolParse(xmlNode["NoArmour"]),
+            NoWard = BoolParse(xmlNode["NoWard"]),
+            NoMultiWounds = BoolParse(xmlNode["NoMultiWounds"]),
+            NoKillingBlow = BoolParse(xmlNode["NoKillingBlow"]),
+            ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]),
 
-            newWeapon.NativeArmour = BoolParse(xmlNode["NativeArmour"]);
-            newWeapon.Group = StringParse(xmlNode["Group"]);
-            newWeapon.AutoHit = BoolParse(xmlNode["AutoHit"]);
-            newWeapon.AutoWound = BoolParse(xmlNode["AutoWound"]);
-            newWeapon.AutoDeath = BoolParse(xmlNode["AutoDeath"]);
-            newWeapon.HitFirst = BoolParse(xmlNode["HitFirst"]);
-            newWeapon.HitLast = BoolParse(xmlNode["HitLast"]);
-            newWeapon.KillingBlow = BoolParse(xmlNode["KillingBlow"]);
-            newWeapon.ExtendedKillingBlow = IntParse(xmlNode["ExtendedKillingBlow"]);
-            newWeapon.HeroicKillingBlow = BoolParse(xmlNode["HeroicKillingBlow"]);
-            newWeapon.PoisonAttack = BoolParse(xmlNode["PoisonAttack"]);
-            newWeapon.MultiWounds = StringParse(xmlNode["MultiWounds"]);
-            newWeapon.NoArmour = BoolParse(xmlNode["NoArmour"]);
-            newWeapon.NoWard = BoolParse(xmlNode["NoWard"]);
-            newWeapon.NoMultiWounds = BoolParse(xmlNode["NoMultiWounds"]);
-            newWeapon.NoKillingBlow = BoolParse(xmlNode["NoKillingBlow"]);
-            newWeapon.ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]);
+            Regeneration = BoolParse(xmlNode["Regeneration"]),
+            ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]),
+            Stubborn = BoolParse(xmlNode["Stubborn"]),
+            Hate = BoolParse(xmlNode["Hate"]),
+            Fear = BoolParse(xmlNode["Fear"]),
+            Terror = BoolParse(xmlNode["Terror"]),
+            Frenzy = BoolParse(xmlNode["Frenzy"]),
+            BloodFrenzy = BoolParse(xmlNode["BloodFrenzy"]),
+            Unbreakable = BoolParse(xmlNode["Unbreakable"]),
+            ColdBlooded = BoolParse(xmlNode["ColdBlooded"]),
+            Reroll = StringParse(xmlNode["Reroll"]),
+            Stupidity = BoolParse(xmlNode["Stupidity"]),
+            Undead = BoolParse(xmlNode["Undead"]),
+            StrengthInNumbers = BoolParse(xmlNode["StrengthInNumbers"]),
+            ImpactHit = StringParse(xmlNode["ImpactHit"]),
+            SteamTank = BoolParse(xmlNode["SteamTank"]),
+            Lance = BoolParse(xmlNode["Lance"]),
+            Flail = BoolParse(xmlNode["Flail"]),
+            Resolute = BoolParse(xmlNode["Resolute"]),
+            PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]),
+            MurderousProwess = BoolParse(xmlNode["MurderousProwess"]),
+            AddToCloseCombat = StringParse(xmlNode["AddToCloseCombat"]),
+            Bloodroar = BoolParse(xmlNode["Bloodroar"]),
+            AddToHit = IntParse(xmlNode["AddToHit"]),
+            SubOpponentToHit = IntParse(xmlNode["SubOpponentToHit"]),
+            AddToWound = IntParse(xmlNode["AddToWound"]),
+            SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]),
+            HitOn = IntParse(xmlNode["HitOn"]),
+            OpponentHitOn = IntParse(xmlNode["OpponentHitOn"]),
+            WoundOn = IntParse(xmlNode["WoundOn"]),
+            Runic = IntParse(xmlNode["Runic"]),
+            MasterRunic = BoolParse(xmlNode["MasterRunic"]),
+            TypeUnitIncrese = BoolParse(xmlNode["TypeUnitIncrese"]),
+            WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]),
+            WardForLastWound = IntParse(xmlNode["WardForLastWound"]),
+            FirstWoundDiscount = BoolParse(xmlNode["FirstWoundDiscount"]),
+            NotALeader = BoolParse(xmlNode["NotALeader"]),
 
-            newWeapon.Regeneration = BoolParse(xmlNode["Regeneration"]);
-            newWeapon.ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]);
-            newWeapon.Stubborn = BoolParse(xmlNode["Stubborn"]);
-            newWeapon.Hate = BoolParse(xmlNode["Hate"]);
-            newWeapon.Fear = BoolParse(xmlNode["Fear"]);
-            newWeapon.Terror = BoolParse(xmlNode["Terror"]);
-            newWeapon.Frenzy = BoolParse(xmlNode["Frenzy"]);
-            newWeapon.BloodFrenzy = BoolParse(xmlNode["BloodFrenzy"]);
-            newWeapon.Unbreakable = BoolParse(xmlNode["Unbreakable"]);
-            newWeapon.ColdBlooded = BoolParse(xmlNode["ColdBlooded"]);
-            newWeapon.Reroll = StringParse(xmlNode["Reroll"]);
-            newWeapon.Stupidity = BoolParse(xmlNode["Stupidity"]);
-            newWeapon.Undead = BoolParse(xmlNode["Undead"]);
-            newWeapon.StrengthInNumbers = BoolParse(xmlNode["StrengthInNumbers"]);
-            newWeapon.ImpactHit = StringParse(xmlNode["ImpactHit"]);
-            newWeapon.SteamTank = BoolParse(xmlNode["SteamTank"]);
-            newWeapon.Lance = BoolParse(xmlNode["Lance"]);
-            newWeapon.Flail = BoolParse(xmlNode["Flail"]);
-            newWeapon.Resolute = BoolParse(xmlNode["Resolute"]);
-            newWeapon.PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]);
-            newWeapon.MurderousProwess = BoolParse(xmlNode["MurderousProwess"]);
-            newWeapon.AddToCloseCombat = StringParse(xmlNode["AddToCloseCombat"]);
-            newWeapon.Bloodroar = BoolParse(xmlNode["Bloodroar"]);
-            newWeapon.AddToHit = IntParse(xmlNode["AddToHit"]);
-            newWeapon.SubOpponentToHit = IntParse(xmlNode["SubOpponentToHit"]);
-            newWeapon.AddToWound = IntParse(xmlNode["AddToWound"]);
-            newWeapon.SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]);
-            newWeapon.HitOn = IntParse(xmlNode["HitOn"]);
-            newWeapon.OpponentHitOn = IntParse(xmlNode["OpponentHitOn"]);
-            newWeapon.WoundOn = IntParse(xmlNode["WoundOn"]);
-            newWeapon.Runic = IntParse(xmlNode["Runic"]);
-            newWeapon.MasterRunic = BoolParse(xmlNode["MasterRunic"]);
-            newWeapon.TypeUnitIncrese = BoolParse(xmlNode["TypeUnitIncrese"]);
-            newWeapon.WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]);
-            newWeapon.WardForLastWound = IntParse(xmlNode["WardForLastWound"]);
-            newWeapon.FirstWoundDiscount = BoolParse(xmlNode["FirstWoundDiscount"]);
-            newWeapon.NotALeader = BoolParse(xmlNode["NotALeader"]);
+            ParamTests = ParamParse(xmlNode),
 
-            newWeapon.ParamTests = ParamParse(xmlNode);
+            Points = DoubleParse(xmlNode["Points"]),
+            PerModel = BoolParse(xmlNode["PerModel"]),
+            VirtueOriginalPoints = DoubleParse(xmlNode["Points"]),
 
-            newWeapon.Points = DoubleParse(xmlNode["Points"]);
-            newWeapon.PerModel = BoolParse(xmlNode["PerModel"]);
-            newWeapon.VirtueOriginalPoints = newWeapon.Points;
+            AddToMovement = IntParse(xmlNode["AddToMovement"]),
+            AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]),
+            AddToBallisticSkill = IntParse(xmlNode["AddToBallisticSkill"]),
+            AddToStrength = IntParse(xmlNode["AddToStrength"]),
+            AddToToughness = IntParse(xmlNode["AddToToughness"]),
+            AddToWounds = IntParse(xmlNode["AddToWounds"]),
+            AddToInitiative = IntParse(xmlNode["AddToInitiative"]),
+            AddToAttacks = IntParse(xmlNode["AddToAttacks"]),
+            AddToLeadership = IntParse(xmlNode["AddToLeadership"]),
+            AddToArmour = IntParse(xmlNode["AddToArmour"]),
+            AddToWard = IntParse(xmlNode["AddToWard"]),
+            AddToCast = IntParse(xmlNode["AddToCast"]),
+            AddToDispell = IntParse(xmlNode["AddToDispell"]),
+            AddToWizard = IntParse(xmlNode["AddToWizard"]),
+            AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]),
 
-            newWeapon.AddToMovement = IntParse(xmlNode["AddToMovement"]);
-            newWeapon.AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]);
-            newWeapon.AddToBallisticSkill = IntParse(xmlNode["AddToBallisticSkill"]);
-            newWeapon.AddToStrength = IntParse(xmlNode["AddToStrength"]);
-            newWeapon.AddToToughness = IntParse(xmlNode["AddToToughness"]);
-            newWeapon.AddToWounds = IntParse(xmlNode["AddToWounds"]);
-            newWeapon.AddToInitiative = IntParse(xmlNode["AddToInitiative"]);
-            newWeapon.AddToAttacks = IntParse(xmlNode["AddToAttacks"]);
-            newWeapon.AddToLeadership = IntParse(xmlNode["AddToLeadership"]);
-            newWeapon.AddToArmour = IntParse(xmlNode["AddToArmour"]);
-            newWeapon.AddToWard = IntParse(xmlNode["AddToWard"]);
-            newWeapon.AddToCast = IntParse(xmlNode["AddToCast"]);
-            newWeapon.AddToDispell = IntParse(xmlNode["AddToDispell"]);
-            newWeapon.AddToWizard = IntParse(xmlNode["AddToWizard"]);
-            newWeapon.AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]);
+            MovementTo = IntParse(xmlNode["MovementTo"]),
+            WeaponSkillTo = IntParse(xmlNode["WeaponSkillTo"]),
+            BallisticSkillTo = IntParse(xmlNode["BallisticSkillTo"]),
+            StrengthTo = IntParse(xmlNode["StrengthTo"]),
+            ToughnessTo = IntParse(xmlNode["ToughnessTo"]),
+            WoundsTo = IntParse(xmlNode["WoundsTo"]),
+            InitiativeTo = IntParse(xmlNode["InitiativeTo"]),
+            AttacksTo = IntParse(xmlNode["AttacksTo"]),
+            LeadershipTo = IntParse(xmlNode["LeadershipTo"]),
+            ArmourTo = IntParse(xmlNode["ArmourTo"]),
+            WizardTo = IntParse(xmlNode["WizardTo"]),
 
-            newWeapon.MovementTo = IntParse(xmlNode["MovementTo"]);
-            newWeapon.WeaponSkillTo = IntParse(xmlNode["WeaponSkillTo"]);
-            newWeapon.BallisticSkillTo = IntParse(xmlNode["BallisticSkillTo"]);
-            newWeapon.StrengthTo = IntParse(xmlNode["StrengthTo"]);
-            newWeapon.ToughnessTo = IntParse(xmlNode["ToughnessTo"]);
-            newWeapon.WoundsTo = IntParse(xmlNode["WoundsTo"]);
-            newWeapon.InitiativeTo = IntParse(xmlNode["InitiativeTo"]);
-            newWeapon.AttacksTo = IntParse(xmlNode["AttacksTo"]);
-            newWeapon.LeadershipTo = IntParse(xmlNode["LeadershipTo"]);
-            newWeapon.ArmourTo = IntParse(xmlNode["ArmourTo"]);
-            newWeapon.WizardTo = IntParse(xmlNode["WizardTo"]);
+            MagicItems = IntParse(xmlNode["MagicItems"]),
+            MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]),
 
-            newWeapon.MagicItems = IntParse(xmlNode["MagicItems"]);
-            newWeapon.MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]);
+            FullCommand = BoolParse(xmlNode["FullCommand"]),
+            PersonifiedCommander = BoolParse(xmlNode["PersonifiedCommander"]),
 
-            newWeapon.FullCommand = BoolParse(xmlNode["FullCommand"]);
-            newWeapon.PersonifiedCommander = BoolParse(xmlNode["PersonifiedCommander"]);
+            Mount = BoolParse(xmlNode["Mount"]),
 
-            newWeapon.Mount = BoolParse(xmlNode["Mount"]);
-
-            newWeapon.ArtefactGroup = artefactGroup ?? String.Empty;
-            newWeapon.ArmyBackgroundColor = (SolidColorBrush)ArmyBook.Data.BackgroundColor;
-
-            return newWeapon;
-        }
+            ArtefactGroup = artefactGroup ?? String.Empty,
+            ArmyBackgroundColor = (SolidColorBrush)ArmyBook.Data.BackgroundColor,
+        };
     }
 }
