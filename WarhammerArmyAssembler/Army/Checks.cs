@@ -8,22 +8,9 @@ namespace WarhammerArmyAssembler.Army
 {
     class Checks
     {
-        public static bool IsUnitExistInArmy(int unitID)
-        {
-            if (!Army.Data.Units.ContainsKey(unitID))
-                return false;
+        public static bool IsUnitExistInArmy(int unitID) => Army.Data.Units.ContainsKey(unitID);
 
-            return true;
-        }
-
-        public static bool IsUnitExistInArmyByArmyBookID(int UnitID)
-        {
-            foreach (Unit entry in Army.Data.Units.Values)
-                if (entry.ID == UnitID)
-                    return true;
-
-            return false;
-        }
+        public static bool IsUnitExistInArmyByArmyBookID(int UnitID) => Data.Units.Values.Where(u => u.ID == UnitID).FirstOrDefault() != null;
 
         public static bool IsRunicCombinationAlreadyExist(Unit unit, Option newOption)
         {
@@ -86,33 +73,21 @@ namespace WarhammerArmyAssembler.Army
 
         public static bool IsArmyDublicationOk(Unit unit)
         {
-            int alreadyInArmy = 0;
-
-            foreach (Unit armyUnit in Army.Data.Units.Values)
-                if (armyUnit.ID == unit.ID)
-                    alreadyInArmy += 1;
+            int alreadyInArmy = Army.Data.Units.Values.Where(u => u.ID == unit.ID).Count();
 
             int limitForArmy = -1;
 
             if (unit.Type == Unit.UnitType.Special)
                 limitForArmy = (Army.Data.MaxPoints >= 3000 ? 6 : 3);
+
             else if (unit.Type == Unit.UnitType.Rare)
                 limitForArmy = (Army.Data.MaxPoints >= 3000 ? 4 : 2);
 
             return (limitForArmy < 0 ? true : (alreadyInArmy < limitForArmy));
         }
-        
-        public static bool IsArmyUnitMaxLimitOk(Unit newUnit)
-        {
-            if (!newUnit.UniqueUnits)
-                return true;
 
-            foreach (Unit unit in Army.Data.Units.Values)
-                if (unit.ID == newUnit.ID)
-                    return false;
-
-            return true;
-        }
+        public static bool IsArmyUnitMaxLimitOk(Unit newUnit) =>
+            !newUnit.UniqueUnits || !(Data.Units.Values.Where(u => u.ID == newUnit.ID).FirstOrDefault() != null);
 
         public static int IsOptionAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
         {
@@ -128,16 +103,10 @@ namespace WarhammerArmyAssembler.Army
         public static string ArmyProblems()
         {
             bool problem = (Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core));
-
             return (problem ? "Not enough core unit in army" : String.Empty);
-        } 
-
-        public static bool IsArmyValid()
-        {
-            string armyProblems = ArmyProblems();
-
-            return String.IsNullOrEmpty(armyProblems);
         }
+
+        public static bool IsArmyValid() => String.IsNullOrEmpty(ArmyProblems());
 
         public static bool IsArmyFullForTypeIcrease(Unit unit)
         {
