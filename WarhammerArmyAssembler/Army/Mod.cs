@@ -16,19 +16,17 @@ namespace WarhammerArmyAssembler.Army
 
             Army.Data.Units.Add(unit.ArmyID, unit);
 
-            if (!String.IsNullOrEmpty(unit.MountInit))
-            {
-                foreach (Unit mount in ArmyBook.Data.Mounts.Values)
-                    if (mount.Name == unit.MountInit)
-                    {
-                        Unit newMount = mount.Clone();
+            Unit mount = ArmyBook.Data.Mounts.Values.Where(m => m.Name == unit.MountInit).FirstOrDefault();
 
-                        int newMountID = GetNextIndex();
-                        Army.Data.Units[unit.ArmyID].MountOn = newMountID;
-                        newMount.ArmyID = newMountID;
-                        Army.Data.Units.Add(newMountID, newMount);
-                    }
-            }
+            if (mount == null)
+                return unit.ArmyID;
+
+            Unit newMount = mount.Clone();
+
+            int newMountID = GetNextIndex();
+            Army.Data.Units[unit.ArmyID].MountOn = newMountID;
+            newMount.ArmyID = newMountID;
+            Army.Data.Units.Add(newMountID, newMount);
 
             return unit.ArmyID;
         }
