@@ -28,13 +28,16 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 if ((newArmyList == xmlName) && prev && String.IsNullOrEmpty(prevFile))
                     return lastFile;
+
                 else if ((newArmyList == xmlName) && prev)
                     return prevFile;
 
                 if ((newArmyList == xmlName) && next && (indexName >= allXmlFiles.Count))
                     return firstFile;
+
                 else if ((newArmyList == xmlName) && next)
                     nextName = true;
+
                 else if (newArmyList == xmlName)
                     return xmlName;
 
@@ -82,7 +85,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                         XmlNode orderName = xmlFile.SelectSingleNode("ArmyBook/Info/OrderName");
 
                         if (orderName == null)
-                            armyOrderName = String.Format("{0}{1}", armyName.InnerText, armyVersion.InnerText);
+                            armyOrderName = armyName.InnerText + armyVersion.InnerText;
                         else
                             armyOrderName = orderName.InnerText;
 
@@ -93,7 +96,6 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 foreach (string directory in Directory.GetDirectories(programDirectory))
                     files.AddRange(FindAllXmlFiles(directory));
-
             }
             catch
             {
