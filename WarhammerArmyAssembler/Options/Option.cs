@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
@@ -143,10 +144,7 @@ namespace WarhammerArmyAssembler
         private bool artefactAlreadyUsed = false;
         public bool ArtefactAlreadyUsed
         {
-            get
-            {
-                return artefactAlreadyUsed;
-            }
+            get => artefactAlreadyUsed;
             set
             {
                 artefactAlreadyUsed = value;
@@ -160,144 +158,129 @@ namespace WarhammerArmyAssembler
 
         public Option() => this.Items = new ObservableCollection<Option>();
 
-        public Option Clone()
+        public Option Clone() => new Option
         {
-            Option newOption = new Option
-            {
-                Name = this.Name,
-                ID = this.ID,
-                IDView = this.IDView,
-                Points = this.Points,
-                VirtueOriginalPoints = this.VirtueOriginalPoints,
-                PerModel = this.PerModel,
-                Type = this.Type,
-                Description = this.Description,
-                SpecialRuleDescription = this.SpecialRuleDescription,
-                Realised = this.Realised,
-                Multiple = this.Multiple,
-                Virtue = this.Virtue,
-                Honours = this.Honours,
-                OnlyOneInArmy = this.OnlyOneInArmy,
-                OnlyOneForSuchUnits = this.OnlyOneForSuchUnits,
-                OnlyFor = this.OnlyFor,
-                OnlyIfAnotherService = this.OnlyIfAnotherService,
-                OnlyIfNotAnotherService = this.OnlyIfNotAnotherService,
-                OnlyForGroup = this.OnlyForGroup,
-                Group = this.Group,
-                AutoHit = this.AutoHit,
-                AutoWound = this.AutoWound,
-                AutoDeath = this.AutoDeath,
-                HitFirst = this.HitFirst,
-                HitLast = this.HitLast,
-                KillingBlow = this.KillingBlow,
-                ExtendedKillingBlow = this.ExtendedKillingBlow,
-                HeroicKillingBlow = this.HeroicKillingBlow,
-                PoisonAttack = this.PoisonAttack,
-                MultiWounds = this.MultiWounds,
-                NoArmour = this.NoArmour,
-                NoWard = this.NoWard,
-                NoMultiWounds = this.NoMultiWounds,
-                NoKillingBlow = this.NoKillingBlow,
-                ArmourPiercing = this.ArmourPiercing,
-                Regeneration = this.Regeneration,
-                ImmuneToPsychology = this.ImmuneToPsychology,
-                Stubborn = this.Stubborn,
-                Hate = this.Hate,
-                Fear = this.Fear,
-                Terror = this.Terror,
-                Frenzy = this.Frenzy,
-                BloodFrenzy = this.BloodFrenzy,
-                Unbreakable = this.Unbreakable,
-                ColdBlooded = this.ColdBlooded,
-                Reroll = this.Reroll,
-                Stupidity = this.Stupidity,
-                Undead = this.Undead,
-                StrengthInNumbers = this.StrengthInNumbers,
-                ImpactHit = this.ImpactHit,
-                SteamTank = this.SteamTank,
-                PredatoryFighter = this.PredatoryFighter,
-                MurderousProwess = this.MurderousProwess,
-                Bloodroar = this.Bloodroar,
-                AddToHit = this.AddToHit,
-                SubOpponentToHit = this.SubOpponentToHit,
-                AddToWound = this.AddToWound,
-                SubOpponentToWound = this.SubOpponentToWound,
-                HitOn = this.HitOn,
-                OpponentHitOn = this.OpponentHitOn,
-                WoundOn = this.WoundOn,
-                WardForFirstWound = this.WardForFirstWound,
-                WardForLastWound = this.WardForLastWound,
-                FirstWoundDiscount = this.FirstWoundDiscount,
-                NotALeader = this.NotALeader,
-                Runic = this.Runic,
-                MasterRunic = this.MasterRunic,
-                TypeUnitIncrese = this.TypeUnitIncrese,
-                NativeArmour = this.NativeArmour,
+            Name = this.Name,
+            ID = this.ID,
+            IDView = this.IDView,
+            Points = this.Points,
+            VirtueOriginalPoints = this.VirtueOriginalPoints,
+            PerModel = this.PerModel,
+            Type = this.Type,
+            Description = this.Description,
+            SpecialRuleDescription = this.SpecialRuleDescription,
+            Realised = this.Realised,
+            Multiple = this.Multiple,
+            Virtue = this.Virtue,
+            Honours = this.Honours,
+            OnlyOneInArmy = this.OnlyOneInArmy,
+            OnlyOneForSuchUnits = this.OnlyOneForSuchUnits,
+            OnlyFor = this.OnlyFor,
+            OnlyIfAnotherService = this.OnlyIfAnotherService,
+            OnlyIfNotAnotherService = this.OnlyIfNotAnotherService,
+            OnlyForGroup = this.OnlyForGroup,
+            Group = this.Group,
+            AutoHit = this.AutoHit,
+            AutoWound = this.AutoWound,
+            AutoDeath = this.AutoDeath,
+            HitFirst = this.HitFirst,
+            HitLast = this.HitLast,
+            KillingBlow = this.KillingBlow,
+            ExtendedKillingBlow = this.ExtendedKillingBlow,
+            HeroicKillingBlow = this.HeroicKillingBlow,
+            PoisonAttack = this.PoisonAttack,
+            MultiWounds = this.MultiWounds,
+            NoArmour = this.NoArmour,
+            NoWard = this.NoWard,
+            NoMultiWounds = this.NoMultiWounds,
+            NoKillingBlow = this.NoKillingBlow,
+            ArmourPiercing = this.ArmourPiercing,
+            Regeneration = this.Regeneration,
+            ImmuneToPsychology = this.ImmuneToPsychology,
+            Stubborn = this.Stubborn,
+            Hate = this.Hate,
+            Fear = this.Fear,
+            Terror = this.Terror,
+            Frenzy = this.Frenzy,
+            BloodFrenzy = this.BloodFrenzy,
+            Unbreakable = this.Unbreakable,
+            ColdBlooded = this.ColdBlooded,
+            Reroll = this.Reroll,
+            Stupidity = this.Stupidity,
+            Undead = this.Undead,
+            StrengthInNumbers = this.StrengthInNumbers,
+            ImpactHit = this.ImpactHit,
+            SteamTank = this.SteamTank,
+            PredatoryFighter = this.PredatoryFighter,
+            MurderousProwess = this.MurderousProwess,
+            Bloodroar = this.Bloodroar,
+            AddToHit = this.AddToHit,
+            SubOpponentToHit = this.SubOpponentToHit,
+            AddToWound = this.AddToWound,
+            SubOpponentToWound = this.SubOpponentToWound,
+            HitOn = this.HitOn,
+            OpponentHitOn = this.OpponentHitOn,
+            WoundOn = this.WoundOn,
+            WardForFirstWound = this.WardForFirstWound,
+            WardForLastWound = this.WardForLastWound,
+            FirstWoundDiscount = this.FirstWoundDiscount,
+            NotALeader = this.NotALeader,
+            Runic = this.Runic,
+            MasterRunic = this.MasterRunic,
+            TypeUnitIncrese = this.TypeUnitIncrese,
+            NativeArmour = this.NativeArmour,
 
-                Lance = this.Lance,
-                Flail = this.Flail,
-                Resolute = this.Resolute,
-                BigWeapon = this.BigWeapon,
+            Lance = this.Lance,
+            Flail = this.Flail,
+            Resolute = this.Resolute,
+            BigWeapon = this.BigWeapon,
                 
-                ParamTests = Test.Param.Clone(this.ParamTests),
+            ParamTests = Test.Param.Clone(this.ParamTests),
 
-                AddToMovement = this.AddToMovement,
-                AddToWeaponSkill = this.AddToWeaponSkill,
-                AddToBallisticSkill = this.AddToBallisticSkill,
-                AddToStrength = this.AddToStrength,
-                AddToToughness = this.AddToToughness,
-                AddToWounds = this.AddToWounds,
-                AddToInitiative = this.AddToInitiative,
-                AddToAttacks = this.AddToAttacks,
-                AddToLeadership = this.AddToLeadership,
-                AddToArmour = this.AddToArmour,
-                AddToWard = this.AddToWard,
-                AddToCast = this.AddToCast,
-                AddToDispell = this.AddToDispell,
-                AddToWizard = this.AddToWizard,
-                AddToCloseCombat = this.AddToCloseCombat,
+            AddToMovement = this.AddToMovement,
+            AddToWeaponSkill = this.AddToWeaponSkill,
+            AddToBallisticSkill = this.AddToBallisticSkill,
+            AddToStrength = this.AddToStrength,
+            AddToToughness = this.AddToToughness,
+            AddToWounds = this.AddToWounds,
+            AddToInitiative = this.AddToInitiative,
+            AddToAttacks = this.AddToAttacks,
+            AddToLeadership = this.AddToLeadership,
+            AddToArmour = this.AddToArmour,
+            AddToWard = this.AddToWard,
+            AddToCast = this.AddToCast,
+            AddToDispell = this.AddToDispell,
+            AddToWizard = this.AddToWizard,
+            AddToCloseCombat = this.AddToCloseCombat,
 
-                MovementTo = this.MovementTo,
-                WeaponSkillTo = this.WeaponSkillTo,
-                BallisticSkillTo = this.BallisticSkillTo,
-                StrengthTo = this.StrengthTo,
-                ToughnessTo = this.ToughnessTo,
-                WoundsTo = this.WoundsTo,
-                InitiativeTo = this.InitiativeTo,
-                AttacksTo = this.AttacksTo,
-                LeadershipTo = this.LeadershipTo,
-                ArmourTo = this.ArmourTo,
-                WizardTo = this.WizardTo,
+            MovementTo = this.MovementTo,
+            WeaponSkillTo = this.WeaponSkillTo,
+            BallisticSkillTo = this.BallisticSkillTo,
+            StrengthTo = this.StrengthTo,
+            ToughnessTo = this.ToughnessTo,
+            WoundsTo = this.WoundsTo,
+            InitiativeTo = this.InitiativeTo,
+            AttacksTo = this.AttacksTo,
+            LeadershipTo = this.LeadershipTo,
+            ArmourTo = this.ArmourTo,
+            WizardTo = this.WizardTo,
 
-                AddToModelsInPack = this.AddToModelsInPack,
-                FullCommand = this.FullCommand,
-                PersonifiedCommander = this.PersonifiedCommander,
+            AddToModelsInPack = this.AddToModelsInPack,
+            FullCommand = this.FullCommand,
+            PersonifiedCommander = this.PersonifiedCommander,
 
-                MagicItems = this.MagicItems,
-                MagicItemsType = this.MagicItemsType,
-                ArmyBackgroundColor = this.ArmyBackgroundColor,
+            MagicItems = this.MagicItems,
+            MagicItemsType = this.MagicItemsType,
+            ArmyBackgroundColor = this.ArmyBackgroundColor,
 
-                Mount = this.Mount,
+            Mount = this.Mount,
 
-                InterfaceColor = this.InterfaceColor
-            };
+            InterfaceColor = this.InterfaceColor,
+            Countable = (this.Countable != null ? this.Countable.Clone() : null),
+        };
 
-            if (this.Countable != null)
-                newOption.Countable = this.Countable.Clone();
-
-            return newOption;
-        }
-
-        public Dictionary<int, Option> AllRunicVersions()
-        {
-            Dictionary<int, Option> runicVesions = new Dictionary<int, Option>();
-
-            foreach (Option option in ArmyBook.Data.Artefact.Values)
-                if (option.Name == this.Name)
-                    runicVesions.Add(option.Runic, option);
-
-            return runicVesions;
-        }
+        public Dictionary<int, Option> AllRunicVersions() =>
+            ArmyBook.Data.Artefact.Where(x => x.Value.Name == this.Name).ToDictionary(x => x.Value.Runic, x => x.Value);
 
         public string FullName() => (Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name);
 
@@ -322,15 +305,10 @@ namespace WarhammerArmyAssembler
 
         public bool IsMagicItem()
         {
-            if (this.Type == OptionType.Weapon ||
-                this.Type == OptionType.Armour ||
-                this.Type == OptionType.AdditionalArmour ||
-                this.Type == OptionType.Shield ||
-                this.Type == OptionType.Arcane ||
-                this.Type == OptionType.Banner)
-                return true;
-            else
-                return false;
+            bool weaponsOrArmours = (this.Type == OptionType.Weapon || this.Type == OptionType.Armour || this.Type == OptionType.Shield);
+            bool otherStuffs = (this.Type == OptionType.AdditionalArmour || this.Type == OptionType.Arcane || this.Type == OptionType.Banner);
+
+            return (weaponsOrArmours || otherStuffs);
         }
 
         public bool IsPowers() => (this.Type == OptionType.Powers);
@@ -386,9 +364,10 @@ namespace WarhammerArmyAssembler
                 if (unit.MagicPowers <= 0)
                     return false;
 
-                foreach (Option option in unit.Options)
-                    if (addOption && (option.Name == this.Name))
-                        return false;
+                Option option = unit.Options.Where(x => addOption && (x.Name == this.Name)).FirstOrDefault();
+                
+                if (option != null)
+                    return false;
             }
 
             if ((Virtue || Honours) && addOption && unit.IsAlready(this.Name))
@@ -403,10 +382,9 @@ namespace WarhammerArmyAssembler
             if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems, unit.MagicItemCount))
                 return true;
 
-            foreach (Option option in unit.Options)
-                if (option.IsActual())
-                    if (TypeAndPointsSatisfy(option.MagicItemsType, option.MagicItems, unit.MagicItemCount))
-                        return true;
+            foreach (Option option in unit.Options.Where(x => x.IsActual()))
+                if (TypeAndPointsSatisfy(option.MagicItemsType, option.MagicItems, unit.MagicItemCount))
+                    return true;
 
             return false;
         }
