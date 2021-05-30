@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -49,19 +50,15 @@ namespace WarhammerArmyAssembler.Interface
 
             List<string> artefactsTypes = new List<string>();
 
-            foreach (Option entry in ArmyBook.Data.Artefact.Values)
-                if (!artefactsTypes.Contains(entry.ArtefactGroup))
-                    artefactsTypes.Add(entry.ArtefactGroup);
+            foreach (Option entry in ArmyBook.Data.Artefact.Values.Where(o => !artefactsTypes.Contains(o.ArtefactGroup)))
+                artefactsTypes.Add(entry.ArtefactGroup);
 
             foreach (string artefactType in artefactsTypes)
             {
                 Option artefacts = new Option() { Name = artefactType };
 
-                foreach (Option entry in ArmyBook.Data.Artefact.Values)
+                foreach (Option entry in ArmyBook.Data.Artefact.Values.Where(o => (o.ArtefactGroup == artefactType) && (o.Runic <= 0)))
                 {
-                    if ((entry.ArtefactGroup != artefactType) || (entry.Runic > 1))
-                        continue;
-
                     Option artefact = entry.Clone();
                     artefact.PointsView = PointsView(artefact);
                     artefact.InterfaceColor = ArmyBook.Data.MainColor;
@@ -103,32 +100,27 @@ namespace WarhammerArmyAssembler.Interface
 
             Interface.Changes.main.ArmyGrid.ItemsSource = Interface.Changes.ArmyInInterface;
             Interface.Changes.main.armyHeroes.Text = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
-                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord),
-                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero),
-                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Lord),
-                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero)
-            );
+                UnitsNumber(Unit.UnitType.Lord), UnitsNumber(Unit.UnitType.Hero), MaxUnits(Unit.UnitType.Lord), MaxUnits(Unit.UnitType.Hero));
+
             Interface.Changes.main.armyUnits.Text = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
-                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core),
-                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Special),
-                Army.Params.GetArmyUnitsNumber(Unit.UnitType.Rare),
-                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core),
-                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Special),
-                Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Rare)
-            );
+                UnitsNumber(Unit.UnitType.Core), UnitsNumber(Unit.UnitType.Special), UnitsNumber(Unit.UnitType.Rare),
+                MaxUnits(Unit.UnitType.Core), MaxUnits(Unit.UnitType.Special), MaxUnits(Unit.UnitType.Rare));
+
             Interface.Changes.main.armyPoints.Text = String.Format("Points: {0} [ {1} ]", Army.Params.GetArmyPoints(), Army.Params.GetArmyMaxPoints());
             Interface.Changes.main.armySize.Text = String.Format("Models: {0}", Army.Params.GetArmySize());
             Interface.Changes.main.armyCasting.Content = String.Format("Cast: {0}", Army.Params.GetArmyCast());
             Interface.Changes.main.armyDispell.Content = String.Format("Dispell: {0}", Army.Params.GetArmyDispell());
         }
 
+        private static int UnitsNumber(Unit.UnitType type) => Army.Params.GetArmyUnitsNumber(type);
+        private static int MaxUnits(Unit.UnitType type) => Army.Params.GetArmyUnitsNumber(type);
+
         public static void LoadArmySize(int points, string armyName)
         {
             Army.Data.MaxPoints = points;
             Army.Data.AdditionalName = armyName;
 
-            string windowsHeaderWithName = "Warhammer Army Assembler (WAAgh)";
-            Interface.Changes.main.dragWindowBottom.Content = windowsHeaderWithName +
+            Interface.Changes.main.dragWindowBottom.Content = "Warhammer Army Assembler (WAAgh)" +
                 (String.IsNullOrWhiteSpace(armyName) ? String.Empty : String.Format(" // {0}", armyName));
 
             ArmyBook.Load.LoadArmy(Interface.Changes.CurrentSelectedArmy);
