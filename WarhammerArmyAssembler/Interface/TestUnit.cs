@@ -90,22 +90,13 @@ namespace WarhammerArmyAssembler.Interface
             Interface.Changes.main.testConsole.Visibility = Visibility.Visible;
         }
 
-        public static string GetFullConsoleText()
-        {
-            TextRange text = new TextRange(
-                Interface.Changes.main.testConsole.Document.ContentStart,
-                Interface.Changes.main.testConsole.Document.ContentEnd
-            );
-
-            return text.Text;
-        }
+        public static string GetFullConsoleText() => new TextRange(Interface.Changes.main.testConsole.Document.ContentStart,
+            Interface.Changes.main.testConsole.Document.ContentEnd).Text;
 
         private static void AddMountUnitParam(string param, int gridIndex, Grid unitGrid)
         {
-            StackPanel panel = new StackPanel
-            {
-                HorizontalAlignment = HorizontalAlignment.Center
-            };
+            StackPanel panel = new StackPanel { HorizontalAlignment = HorizontalAlignment.Center };
+
             unitGrid.Children.Add(panel);
             Grid.SetRow(panel, 2);
             Grid.SetColumn(panel, gridIndex);
@@ -138,58 +129,62 @@ namespace WarhammerArmyAssembler.Interface
             if (String.IsNullOrEmpty(SelectedEnemy()))
                 return;
 
-            foreach (FrameworkElement element in new List<FrameworkElement> {
-                Interface.Changes.main.enemyTestUnit,
-                Interface.Changes.main.enemyGridContainer,
-                Interface.Changes.main.specialRulesEnemyTest,
-                Interface.Changes.main.startFullTest,
-                Interface.Changes.main.startStatisticTest,
-            })
+            MainWindow main = Interface.Changes.main;
+
+            List<FrameworkElement> elements = new List<FrameworkElement>
+            {
+                main.enemyTestUnit,
+                main.enemyGridContainer,
+                main.specialRulesEnemyTest,
+                main.startFullTest,
+                main.startStatisticTest
+            };
+
+            foreach (FrameworkElement element in elements)
                 element.Visibility = System.Windows.Visibility.Visible;
 
-            Interface.Changes.main.startBattleRoyale.Margin = Interface.Changes.Thick(
-                Interface.Changes.main.startBattleRoyale,
-                top: Interface.Changes.main.startStatisticTest.Margin.Top + 154,
-                left: Interface.Changes.main.startBattleRoyale.Margin.Left + 163
-            ); 
+            Interface.Changes.main.startBattleRoyale.Margin = Interface.Changes.Thick(main.startBattleRoyale,
+                top: main.startStatisticTest.Margin.Top + 154, left: main.startBattleRoyale.Margin.Left + 163); 
         }
 
         public static void TestCanvasPrepare(Unit unit)
         {
             Test.Data.PrepareUnit(unit);
 
-            foreach (FrameworkElement element in new List<FrameworkElement> {
-                Interface.Changes.main.enemyTestUnit,
-                Interface.Changes.main.enemyGridContainer,
-                Interface.Changes.main.specialRulesEnemyTest,
-                Interface.Changes.main.startFullTest,
-                Interface.Changes.main.startStatisticTest,
-                Interface.Changes.main.testConsole
-            })
+            MainWindow main = Interface.Changes.main;
+
+            List<FrameworkElement> elements = new List<FrameworkElement>
+            {
+                main.enemyTestUnit,
+                main.enemyGridContainer,
+                main.specialRulesEnemyTest,
+                main.startFullTest,
+                main.startStatisticTest,
+                main.testConsole
+            };
+
+            foreach (FrameworkElement element in elements)
                 element.Visibility = Visibility.Hidden;
 
-            Interface.Changes.main.startBattleRoyale.Visibility = Visibility.Visible;
+            main.startBattleRoyale.Visibility = Visibility.Visible;
 
-            Interface.Changes.main.armyTestUnit.Content = Test.Data.unit.Name;
+            main.armyTestUnit.Content = Test.Data.unit.Name;
             LoadUnitParamInInterface(unitForLoad: Test.Data.unit, mountForLoad: Test.Data.unitMount, elemetnsPostfix: "Test", unitGrid: Interface.Changes.main.unitGrid);
-            LoadSpecialRules(unitForLoad: Test.Data.unit, target: Interface.Changes.main.specialRulesTest, onlyUnitRules: true);
+            LoadSpecialRules(unitForLoad: Test.Data.unit, target: main.specialRulesTest, onlyUnitRules: true);
 
-            foreach (Label label in new List<Label> {
-                Interface.Changes.main.startFullTest,
-                Interface.Changes.main.startStatisticTest,
-                Interface.Changes.main.startBattleRoyale,
-            }) {
+            foreach (Label label in new List<Label> { main.startFullTest, main.startStatisticTest, main.startBattleRoyale })
+            {
                 label.Foreground = ArmyBook.Data.MainColor;
                 label.BorderBrush = ArmyBook.Data.MainColor;
             }
 
-            Interface.Changes.main.enemyGroup.Items.Clear();
-            Interface.Changes.main.enemyForTest.Items.Clear();
+            main.enemyGroup.Items.Clear();
+            main.enemyForTest.Items.Clear();
 
             foreach (string enemy in Enemy.GetEnemiesGroups())
-                Interface.Changes.main.enemyGroup.Items.Add(enemy);
+                main.enemyGroup.Items.Add(enemy);
 
-            Interface.Changes.main.armyUnitTest_Resize();
+            main.armyUnitTest_Resize();
         }
 
         private static string SelectedEnemy() => (string)Interface.Changes.main.enemyForTest.SelectedItem;
