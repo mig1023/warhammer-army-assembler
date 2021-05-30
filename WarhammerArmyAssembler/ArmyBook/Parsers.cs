@@ -108,10 +108,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (XmlNode xmlParamTest in xmlNode.SelectNodes("Test"))
             {
-                Param newParamTest = new Param
-                {
-                    Type = xmlParamTest.InnerText,
-                };
+                Param newParamTest = new Param { Type = xmlParamTest.InnerText };
 
                 bool success = Enum.TryParse(xmlParamTest.Attributes["Bet"].Value, out Param.TestType bet);
                 newParamTest.Bet = (success ? bet : Param.TestType.Wound);
@@ -191,9 +188,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             return (success ? value : Option.OnlyForType.All);
         }
 
-        public static bool BoolParse(XmlNode xmlNode)
-        {
-            return xmlNode != null;
-        }
+        public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;
     }
 }
