@@ -19,17 +19,19 @@ namespace WarhammerArmyAssembler.Interface
         {
             foreach (Object group in Interface.Changes.main.ArmyList.Items)
             {
-                if (group is Option)
-                    foreach (Object item in (group as Option).Items)
-                    {
-                        Option artefact = item as Option;
+                if (!(group is Option))
+                    continue;
 
-                        if (artefact.ID == id)
-                        {
-                            artefact.ArtefactAlreadyUsed = value;
-                            ArmyBook.Data.Artefact[artefact.ID].ArtefactAlreadyUsed = value;
-                        }
+                foreach (Object item in (group as Option).Items)
+                {
+                    Option artefact = item as Option;
+
+                    if (artefact.ID == id)
+                    {
+                        artefact.ArtefactAlreadyUsed = value;
+                        ArmyBook.Data.Artefact[artefact.ID].ArtefactAlreadyUsed = value;
                     }
+                }
             }
         }
 
