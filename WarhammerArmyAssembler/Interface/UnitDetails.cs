@@ -10,11 +10,7 @@ namespace WarhammerArmyAssembler.Interface
 {
     class UnitDetails
     {
-        private static double GetDetailHeight()
-        {
-            double detailHeight = Changes.main.unitDetail.ActualHeight;
-            return (detailHeight > 0 ? detailHeight : 250);
-        }
+        private static double GetDetailHeight() => (Changes.main.unitDetail.ActualHeight > 0 ? Changes.main.unitDetail.ActualHeight : 250);
 
         private static double[] CheckColumn(double[] margins, ref double lastColumnMaxWidth,
             bool header = false, bool newColumn = false, bool sizeCollapse = false)
@@ -121,6 +117,7 @@ namespace WarhammerArmyAssembler.Interface
                         {
                             bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0) ||
                                 option.Honours || String.IsNullOrEmpty(option.Name);
+
                             bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount &&
                                 !option.FullCommand && option.SpecialRuleDescription.Length == 0;
 
