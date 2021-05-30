@@ -46,22 +46,19 @@ namespace WarhammerArmyAssembler.Army
         {
             int? removeUnitAlso = null;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
-                if (entry.Value.MountOn == id)
-                {
-                    foreach (Option option in entry.Value.Options)
-                        if (option.Name == Army.Data.Units[id].Name)
-                            option.Realised = false;
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units.Where(u => u.Value.MountOn == id))
+            {
+                foreach (Option option in entry.Value.Options.Where(o => o.Name == Army.Data.Units[id].Name))
+                    option.Realised = false;
 
-                    entry.Value.MountOn = 0;
+                entry.Value.MountOn = 0;
 
-                    if (!String.IsNullOrEmpty(entry.Value.MountInit))
-                        removeUnitAlso = entry.Key;
-                }
+                if (!String.IsNullOrEmpty(entry.Value.MountInit))
+                    removeUnitAlso = entry.Key;
+            }
 
-            foreach (Option option in Army.Data.Units[id].Options)
-                if (option.IsMagicItem())
-                    Interface.Mod.SetArtefactAlreadyUsed(option.ID, false);
+            foreach (Option option in Army.Data.Units[id].Options.Where(o => o.IsMagicItem()))
+                Interface.Mod.SetArtefactAlreadyUsed(option.ID, false);
 
             if (removeUnitAlso != null)
                 Army.Data.Units.Remove((int)removeUnitAlso);
@@ -84,12 +81,12 @@ namespace WarhammerArmyAssembler.Army
                 int unitLeadership = entry.Value.Leadership;
                 bool notALeader = false;
 
-                foreach (Option option in entry.Value.Options)
+                foreach (Option option in entry.Value.Options.Where(o => o.IsActual()))
                 {
-                    if (option.IsActual() && (option.AddToLeadership > 0))
+                    if (option.AddToLeadership > 0)
                         unitLeadership += option.AddToLeadership;
 
-                    if (option.IsActual() && option.NotALeader)
+                    if (option.NotALeader)
                         notALeader = true;
                 }
 
