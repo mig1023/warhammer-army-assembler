@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace WarhammerArmyAssembler.Army
 {
@@ -171,14 +172,7 @@ namespace WarhammerArmyAssembler.Army
             new Unit() { Name = "Rare" },
         };
 
-        public static Unit GetArmyGeneral()
-        {
-            foreach (Unit entry in Army.Data.Units.Values)
-                if (entry.ArmyGeneral)
-                    return entry;
-
-            return null;
-        }
+        public static Unit GetArmyGeneral() => Army.Data.Units.Values.Where(u => u.ArmyGeneral).FirstOrDefault();
 
         public static int GetUnitsNumberByBase(BasesTypes type)
         {
@@ -202,9 +196,8 @@ namespace WarhammerArmyAssembler.Army
         {
             List<string> units = new List<string>();
 
-            foreach (Unit entry in Army.Data.Units.Values)
-                if (entry.Type == type)
-                    units.Add(entry.Name);
+            foreach (Unit entry in Army.Data.Units.Values.Where(u => u.Type == type))
+                units.Add(entry.Name);
 
             return (units.Count == 0 ? "empty yet" : String.Join(", ", units));
         }
@@ -214,9 +207,8 @@ namespace WarhammerArmyAssembler.Army
             int count = 0;
 
             foreach (Unit entry in Army.Data.Units.Values)
-                foreach (Option option in entry.Options)
-                    if (option.Name == ArmyBook.Data.Artefact[id].Name)
-                        count += 1;
+                foreach (Option option in entry.Options.Where(o => o.Name == ArmyBook.Data.Artefact[id].Name))
+                    count += 1;
 
             if (count == 0)
                 return ArmyBook.Data.Artefact[id].VirtueOriginalPoints;
