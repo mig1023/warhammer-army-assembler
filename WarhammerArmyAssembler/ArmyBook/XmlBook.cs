@@ -60,37 +60,36 @@ namespace WarhammerArmyAssembler.ArmyBook
             {
                 SortedDictionary<string, string> filesBeforeSort = new SortedDictionary<string, string>();
 
-                foreach (string file in Directory.GetFiles(programDirectory))
-                    if (file.EndsWith("ed.xml"))
+                foreach (string file in Directory.GetFiles(programDirectory).Where(f => f.EndsWith("ed.xml")))
+                {
+                    XmlDocument xmlFile = new XmlDocument();
+
+                    try
                     {
-                        XmlDocument xmlFile = new XmlDocument();
-
-                        try
-                        {
-                            xmlFile.Load(file);
-                        }
-                        catch (System.Xml.XmlException)
-                        {
-                            continue;
-                        }
-
-                        XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
-
-                        if (armyName == null)
-                            continue;
-
-                        string armyOrderName = String.Empty;
-
-                        XmlNode armyVersion = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion");
-                        XmlNode orderName = xmlFile.SelectSingleNode("ArmyBook/Info/OrderName");
-
-                        if (orderName == null)
-                            armyOrderName = armyName.InnerText + armyVersion.InnerText;
-                        else
-                            armyOrderName = orderName.InnerText;
-
-                        filesBeforeSort.Add(armyOrderName, file);
+                        xmlFile.Load(file);
                     }
+                    catch (System.Xml.XmlException)
+                    {
+                        continue;
+                    }
+
+                    XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
+
+                    if (armyName == null)
+                        continue;
+
+                    string armyOrderName = String.Empty;
+
+                    XmlNode armyVersion = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion");
+                    XmlNode orderName = xmlFile.SelectSingleNode("ArmyBook/Info/OrderName");
+
+                    if (orderName == null)
+                        armyOrderName = armyName.InnerText + armyVersion.InnerText;
+                    else
+                        armyOrderName = orderName.InnerText;
+
+                    filesBeforeSort.Add(armyOrderName, file);
+                }
 
                 files = filesBeforeSort.Values.ToList();
 
