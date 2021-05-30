@@ -4,6 +4,7 @@ using System.Text;
 using System.Collections.Generic;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Linq;
 
 namespace WarhammerArmyAssembler.Export
 {
@@ -55,22 +56,17 @@ namespace WarhammerArmyAssembler.Export
                     }
 
                     foreach (string param in linesForEachUnit)
-                        foreach (string line in Interface.Other.WordSplit(param, partLength: 210))
-                            if (!String.IsNullOrEmpty(line))
-                                AddText(line, fontSize: 6, lineHeight: 8);
+                        foreach (string line in Interface.Other.WordSplit(param, partLength: 210).Where(l => !String.IsNullOrEmpty(l)))
+                            AddText(line, fontSize: 6, lineHeight: 8);
 
                     AddText(lineHeight: 16);
                 }
 
             AddText(lineHeight: 8);
 
-            AddText(
-                String.Format(
-                    "Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
-                    Army.Params.GetArmyPoints(), Army.Params.GetArmySize(), Army.Params.GetArmyCast(), Army.Params.GetArmyDispell()
-                ),
-                fontSize: 12, lineHeight: 18, leftColumn: true
-            );
+            AddText(String.Format("Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
+                Army.Params.GetArmyPoints(), Army.Params.GetArmySize(), Army.Params.GetArmyCast(), Army.Params.GetArmyDispell()),
+                fontSize: 12, lineHeight: 18, leftColumn: true);
 
             document.Close();
             fs.Close();
