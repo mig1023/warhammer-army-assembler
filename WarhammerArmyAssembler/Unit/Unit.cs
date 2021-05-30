@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
@@ -175,27 +176,21 @@ namespace WarhammerArmyAssembler
 
             bool firstSlannOptionAlreadyIsFree = false;
 
-            foreach (Option option in Options)
-                if (option.IsSlannOption() && option.Realised)
-                {
-                    if (firstSlannOptionAlreadyIsFree)
-                        points += option.Points;
-                    else
-                        firstSlannOptionAlreadyIsFree = true;
-                }
+            foreach (Option option in Options.Where(o => o.IsSlannOption() && o.Realised))
+            {
+                if (firstSlannOptionAlreadyIsFree)
+                    points += option.Points;
+                else
+                    firstSlannOptionAlreadyIsFree = true;
+            }
 
             return points;
         }
 
         public string GetGroup()
         {
-            string group = this.Group;
-
-            foreach (Option option in Options)
-                if ((!option.IsOption() || (option.IsOption() && option.Realised)) && !String.IsNullOrEmpty(option.Group))
-                    group = option.Group;
-
-            return group;
+            Option option = Options.Where(o => (!o.IsOption() || (o.IsOption() && o.Realised)) && !String.IsNullOrEmpty(o.Group)).FirstOrDefault();
+            return (option == null ? String.Empty : option.Group);
         }
 
         public void SetGroup(string newGroup) => this.Group = newGroup;
@@ -207,9 +202,8 @@ namespace WarhammerArmyAssembler
             if (MagicItemCount > 0)
                 return MagicItemCount;
 
-            foreach (Option option in Options)
-                if (option.IsActual())
-                    unitAllMagicPoints += option.MagicItems;
+            foreach (Option option in Options.Where(x => x.IsActual()))
+                unitAllMagicPoints += option.MagicItems;
 
             return unitAllMagicPoints;
         }
@@ -232,29 +226,11 @@ namespace WarhammerArmyAssembler
 
         public double GetUnitMagicPowersPoints() => MagicPowers;
 
-        public double MagicPowersPointsAlreadyUsed()
-        {
-            double alreayUsed = 0;
-
-            foreach (Option option in Options)
-                if (option.IsPowers())
-                    alreayUsed += option.Points;
-
-            return alreayUsed;
-        }
+        public double MagicPowersPointsAlreadyUsed() => Options.Where(x => x.IsPowers()).Sum(x => x.Points);
 
         public double GetMagicPowersCount() => MagicPowersCount;
 
-        public double MagicPowersCountAlreadyUsed()
-        {
-            double alreayUsed = 0;
-
-            foreach (Option option in Options)
-                if (option.IsPowers())
-                    alreayUsed += 1;
-
-            return alreayUsed;
-        }
+        public double MagicPowersCountAlreadyUsed() => Options.Where(x => x.IsPowers()).Count();
 
         public int GetUnitWizard()
         {
@@ -452,10 +428,8 @@ namespace WarhammerArmyAssembler
 
         private void GetParamTestsFromOptions()
         {
-            foreach (Option option in this.Options)
-                if (option.ParamTests.Count > 0)
-                    foreach (Test.Param param in option.ParamTests)
-                        this.ParamTests.Add(param);
+            foreach (Option option in this.Options.Where(x => x.ParamTests.Count > 0))
+                this.ParamTests.AddRange(option.ParamTests);
         }
 
         public static string GetRandomAttacksLine(int? attack)
@@ -488,11 +462,8 @@ namespace WarhammerArmyAssembler
 
             bool alreadyArmour = false, alreadyShield = false;
 
-            foreach (Option option in allOption)
+            foreach (Option option in allOption.Where(x => !x.IsActual()))
             {
-                if (!option.IsActual())
-                    continue;
-
                 if (OptionTypeAlreadyUsed(option, ref alreadyArmour, ref alreadyShield))
                     continue;
 
@@ -599,9 +570,7 @@ namespace WarhammerArmyAssembler
                 unit.Size = 2;
 
             unit.Size = baseSize ?? unit.Size;
-
             unit.OriginalWounds = unit.Wounds;
-
             unit.Wounds *= unit.Size;
 
             return unit;
@@ -646,14 +615,7 @@ namespace WarhammerArmyAssembler
             return ranks;
         }
 
-        public Option GetCurrentRunicItemByName(string name)
-        {
-            foreach (Option option in Options)
-                if (option.Name == name)
-                    return option;
-
-            return null;
-        }
+        public Option GetCurrentRunicItemByName(string name) => Options.Where(x => x.Name == name).FirstOrDefault();
 
         public int GetCurrentRunicItemsByCount()
         {
@@ -762,9 +724,8 @@ namespace WarhammerArmyAssembler
 
                     if (option.Mount && realise)
                     {
-                        foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts)
-                            if (mount.Value.Name == option.Name)
-                                Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: ArmyID);
+                        foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts.Where(x => x.Value.Name == option.Name))
+                            Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: ArmyID);
                     }
                     else if (option.Mount && !realise)
                     {
@@ -805,13 +766,11 @@ namespace WarhammerArmyAssembler
                     equipment += String.Format("{0}; ", option.FullName());
             }
 
-            foreach (Option option in Options)
-                if ((option.Countable != null) && (option.Countable.Value > 0))
-                    equipment += String.Format("{0} {1}; ", option.Countable.Value, option.Name);
+            foreach (Option option in Options.Where(x => (x.Countable != null) && (x.Countable.Value > 0)))
+                equipment += String.Format("{0} {1}; ", option.Countable.Value, option.Name);
 
-            foreach (Option option in Options)
-                if (!String.IsNullOrEmpty(option.Name) && option.IsPowers())
-                    equipment += String.Format("{0}; ", option.Name);
+            foreach (Option option in Options.Where(x => !String.IsNullOrEmpty(x.Name) && x.IsPowers()))
+                equipment += String.Format("{0}; ", option.Name);
 
             if (!String.IsNullOrEmpty(equipment))
                 equipment = equipment.Remove(equipment.Length - 2);
@@ -943,11 +902,8 @@ namespace WarhammerArmyAssembler
             bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out string lineParamValue, out int intParamValue);
 
             if (!onlyUnitParam)
-                foreach (Option option in Options)
+                foreach (Option option in Options.Where(x => (!x.IsOption() || x.Realised)))
                 {
-                    if (option.IsOption() && !option.Realised)
-                        continue;
-
                     PropertyInfo optionField = typeof(Option).GetProperty(name);
 
                     bool fromParamValue = GetUnitValueTrueOrFalse(
@@ -1007,9 +963,8 @@ namespace WarhammerArmyAssembler
                     rules.Add(personifiedCommander);
             }
             else
-                foreach (Option option in Options)
-                    if (option.FullCommand && option.Realised)
-                        rules.Add(option.Name);
+                foreach (Option option in Options.Where(x => (x.FullCommand && x.Realised)))
+                    rules.Add(option.Name);
 
             string rulesLine = String.Empty;
 
@@ -1029,9 +984,8 @@ namespace WarhammerArmyAssembler
             if (MountOn > 0)
                 rules.Add(Army.Data.Units[MountOn].Name);
 
-            foreach (Option option in Options)
-                if (option.Realised && option.SpecialRuleDescription.Length > 0)
-                    rules.Add(option.Name);
+            foreach (Option option in Options.Where(x => (x.Realised && x.SpecialRuleDescription.Length > 0)))
+                rules.Add(option.Name);
 
             foreach (KeyValuePair<string, string> specialRule in SpecialRules.All) 
                 if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam: onlyUnitParam))
@@ -1043,75 +997,26 @@ namespace WarhammerArmyAssembler
                 foreach (Option option in Options)
                     Test.Param.Describe(option.ParamTests, ref rules);
 
-            foreach (Option option in Options)
-            {
-                if (option.SpecialRuleDescription.Length <= 0)
-                    continue;
-
-                if (option.IsOption() && !option.Realised)
-                    continue;
-
+            foreach (Option option in Options.Where(x => (x.SpecialRuleDescription.Length > 0) && (!x.IsOption() || x.Realised)))
                 foreach (string specialRule in option.SpecialRuleDescription)
                     rules.Add(specialRule);
-            }
 
             return rules;
         }
 
         public bool IsHero() => (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero);
 
-        public bool IsHeroOrHisMount()
-        {
-            if (LargeBase)
-                return true;
+        public bool IsHeroOrHisMount() => (LargeBase || Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount);
 
-            return (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount);
-        }
+        public bool IsUnit() => (this.Type == Unit.UnitType.Core || this.Type == Unit.UnitType.Special || this.Type == Unit.UnitType.Rare);
 
-        public bool IsUnit()
-        {
-            bool core = (this.Type == Unit.UnitType.Core);
-            bool special = (this.Type == Unit.UnitType.Special);
-            bool rare = (this.Type == Unit.UnitType.Rare);
+        public bool ExistsOptions() => Options.Where(x => x.IsOption() && !x.FullCommand).FirstOrDefault() != null;
 
-            return (core || special || rare);
-        }
+        public bool ExistsCommand() => Options.Where(x => x.FullCommand).FirstOrDefault() != null;
 
-        public bool ExistsOptions()
-        {
-            foreach (Option option in Options)
-                if (option.IsOption() && !option.FullCommand)
-                    return true;
+        public bool ExistsMagicItems() => Options.Where(x => x.IsMagicItem() && ((x.Points > 0) || x.Honours)).FirstOrDefault() != null;
 
-            return false;
-        }
-
-        public bool ExistsCommand()
-        {
-            foreach (Option option in Options)
-                if (option.FullCommand)
-                    return true;
-
-            return false;
-        }
-
-        public bool ExistsMagicItems()
-        {
-            foreach (Option option in Options)
-                if (option.IsMagicItem() && ((option.Points > 0) || option.Honours))
-                    return true;
-
-            return false;
-        }
-
-        public bool ExistsMagicPowers()
-        {
-            foreach (Option option in Options)
-                if (option.Type == Option.OptionType.Powers)
-                    return true;
-
-            return false;
-        }
+        public bool ExistsMagicPowers() => Options.Where(x => x.Type == Option.OptionType.Powers).FirstOrDefault() != null; 
 
         public bool ExistsRunicCombinationInUnit(Dictionary<string, int> runicItems)
         {
@@ -1133,42 +1038,27 @@ namespace WarhammerArmyAssembler
             return true;
         }
 
-        public bool ExistsOrdinaryItems()
-        {
-            foreach (Option option in Options)
-                if (option.IsMagicItem() && !String.IsNullOrEmpty(option.Name) && (option.Points == 0))
-                    return true;
-
-            return false;
-        }
+        public bool ExistsOrdinaryItems() =>
+            Options.Where(x => x.IsMagicItem() && !String.IsNullOrEmpty(x.Name) && (x.Points == 0)).FirstOrDefault() != null;
 
         public int GetMountOn()
         {
             if (MountOn > 0)
                 return MountOn;
 
-            foreach (Option option in Options)
-                if (option.Mount && (option.IsActual()))
-                    return option.ID;
+            Option option = Options.Where(x => x.Mount && x.IsActual()).FirstOrDefault();
 
-            return 0;
+            return (option == null ? 0 : option.ID);
         }
 
         public int GetMountOption()
         {
-            Unit mount = null;
-            foreach (KeyValuePair<int, Unit> armyUnit in Army.Data.Units)
-                if (armyUnit.Key == MountOn)
-                    mount = armyUnit.Value;
-
-            if (mount == null)
+            if (!Army.Data.Units.ContainsKey(MountOn))
                 return 0;
 
-            foreach (Option option in Options)
-                if (option.Name == mount.Name)
-                    return option.ID;
+            Option option = Options.Where(x => x.Name == Army.Data.Units[MountOn].Name).FirstOrDefault();
 
-            return 0;
+            return (option == null ? 0 : option.ID);
         }
 
         public void ThrowAwayIncompatibleOption()
@@ -1176,9 +1066,7 @@ namespace WarhammerArmyAssembler
             for(int i = 0; i < Options.Count; i++)
             {
                 bool incompatible = !IsOptionEnabled(Options[i], GetMountOn(), GetMountTypeAlreadyFixed(), postCheck: true);
-
                 bool notCompitableMore = IsNotCompitableMore(Options[i]);
-
                 bool isCountable = (Options[i].Countable != null);
 
                 if ((incompatible || notCompitableMore) && (Options[i].IsActual() || isCountable))
@@ -1242,38 +1130,27 @@ namespace WarhammerArmyAssembler
 
         public Option.OnlyForType GetMountTypeAlreadyFixed()
         {
-            foreach (Option option in Options)
-                if (option.IsActual())
-                {
-                    if (option.OnlyFor == Option.OnlyForType.Mount)
-                        return Option.OnlyForType.Mount;
+            foreach (Option option in Options.Where(x => x.IsActual()))
+            {
+                if (option.OnlyFor == Option.OnlyForType.Mount)
+                    return Option.OnlyForType.Mount;
 
-                    if (option.OnlyFor == Option.OnlyForType.Infantry)
-                        return Option.OnlyForType.Infantry;
-                }
+                if (option.OnlyFor == Option.OnlyForType.Infantry)
+                    return Option.OnlyForType.Infantry;
+            }
 
             return Option.OnlyForType.All;
         }
 
-        public bool IsOptionRealised(string optionName)
-        {
-            foreach (Option option in Options)
-                if ((option.Name.ToUpper() == optionName.ToUpper()) && (option.Realised || option.IsMagicItem() || option.IsPowers()))
-                    return true;
-
-            return false;
-        }
-
+        public bool IsOptionRealised(string optionName) =>
+            Options.Where(x => (x.Name.ToUpper() == optionName.ToUpper()) && (x.Realised || x.IsMagicItem() || x.IsPowers())).FirstOrDefault() != null;
+ 
         public bool IsAnotherOptionRealised(string[] optionNames, bool defaultResult)
         {
             if (optionNames.Length <= 0)
                 return defaultResult;
 
-            foreach (string optionName in optionNames)
-                if (IsOptionRealised(optionName))
-                    return true;
-
-            return false;
+            return optionNames.Where(x => IsOptionRealised(x)).FirstOrDefault() != null;
         }
 
         public bool IsAnotherOptionIsIncompatible(Option option)
@@ -1284,16 +1161,7 @@ namespace WarhammerArmyAssembler
             return (yesWhenNecessaryNo || noWhenNecessaryYes);
         }
 
-        public bool IsMaxSlannOption()
-        {
-            int slannOption = 0;
-
-            foreach (Option option in Options)
-                if (option.IsSlannOption() && option.Realised)
-                    slannOption += 1;
-
-            return slannOption >= 4;
-        }
+        public bool IsMaxSlannOption() => Options.Where(x => x.IsSlannOption() && x.Realised).Count() >= 4;
 
         public Unit SetTestType(TestTypeTypes testType)
         {
@@ -1308,13 +1176,6 @@ namespace WarhammerArmyAssembler
 
         public bool IsFearOrTerror() => (this.Terror || this.Fear || this.Undead);
 
-        public bool IsAlready(string name)
-        {
-            foreach (Option option in Options)
-                if (option.Name == name)
-                    return true;
-
-            return false;
-        }
+        public bool IsAlready(string name) => Options.Where(x => x.Name == name).FirstOrDefault() != null;
     }
 }
