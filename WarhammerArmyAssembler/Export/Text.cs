@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace WarhammerArmyAssembler.Export
 {
@@ -17,28 +18,20 @@ namespace WarhammerArmyAssembler.Export
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in armyByCategories)
-                foreach (Unit unit in unitType.Items)
+                foreach (Unit unit in unitType.Items.Where(u => u.Type != Unit.UnitType.Mount))
                 {
-                    if (unit.Type == Unit.UnitType.Mount)
-                        continue;
-
                     string equipmentLine = unit.GetEquipmentLine();
 
                     Add(fileName, String.Format("{0}{1}{2}{3}{4}",
                         Export.Other.UnitSizeIfNeed(unit), unit.Name, Export.Other.UnitPointsLine(unit), 
                         (String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": "),
-                        equipmentLine)
-                    );
+                        equipmentLine));
                 }
 
             Add(fileName);
 
-            Add(fileName,
-                String.Format(
-                    "Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
-                    Army.Params.GetArmyPoints(), Army.Params.GetArmySize(), Army.Params.GetArmyCast(), Army.Params.GetArmyDispell()
-                )
-            );
+            Add(fileName, String.Format("Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
+                Army.Params.GetArmyPoints(), Army.Params.GetArmySize(), Army.Params.GetArmyCast(), Army.Params.GetArmyDispell()));
 
             System.Diagnostics.Process.Start(fileName);
 
