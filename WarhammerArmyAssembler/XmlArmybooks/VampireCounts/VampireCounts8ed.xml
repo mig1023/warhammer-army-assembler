@@ -757,5 +757,40 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Black Coach</Name>
+			<Points>225</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>3</Armour>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Vampiric</SpecialRuleDescription>
+					<SpecialRuleDescription>Evocation of Death</SpecialRuleDescription>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRuleDescription>Chill Grasp</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
