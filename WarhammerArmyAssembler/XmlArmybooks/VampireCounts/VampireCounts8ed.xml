@@ -843,5 +843,51 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Mortis Engine</Name>
+			<Points>220</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>2D6+4</Attacks>
+				<Leadership>5</Leadership>
+					<Armour>3</Armour>
+					<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Undead/>
+				<LargeBase/>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Banshee Swarm</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Spectral Steeds</SpecialRuleDescription>
+					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRuleDescription>The Reliquary</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Blasphemous Tome</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
