@@ -209,314 +209,361 @@
 				</Option>
 			</Options>
 		</Unit>
-	</Units>
-	<Unit>
-		<Type>Special</Type>
-		<Name>Corpse Cart</Name>
-		<Points>90</Points>
-		<MinSize>1</MinSize>
-		<MaxSize>1</MaxSize>
-		<MainParam>
-			<Movement>4</Movement>
-			<WeaponSkill>3</WeaponSkill>
-			<BallisticSkill>0</BallisticSkill>
-			<Strength>4</Strength>
-			<Toughness>4</Toughness>
-			<Wounds>4</Wounds>
-			<Initiative>1</Initiative>
-			<Attacks>2D6</Attacks>
-			<Leadership>7</Leadership>
-			<Armour>5</Armour>
-		</MainParam>
-		<AdditionalParam>
-			<Undead/>
-			<Regeneration/>
-		</AdditionalParam>
-		<SpecialRulesAndAmmunition>
-			<Special>
-				<SpecialRuleDescription>Vigour Mortis</SpecialRuleDescription>
-			</Special>
-		</SpecialRulesAndAmmunition>
-		<Options>
-			<Option>
-				<Name>Spear for Corpsemaster</Name>
-				<Type>Option</Type>
-				<Points>1</Points>
-			</Option>
-			<Option>
-				<Name>Balefire</Name>
-				<Type>Option</Type>
-				<Points>15</Points>
-				<OnlyIfAnotherService>
-					<OnlyIfNot>Unholy Lodestone</OnlyIfNot>
-				</OnlyIfAnotherService>
-				<SpecialRuleDescription>Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"</SpecialRuleDescription>
-			</Option>
-			<Option>
-				<Name>Unholy Lodestone</Name>
-				<Type>Option</Type>
-				<Points>30</Points>
-				<OnlyIfAnotherService>
-					<OnlyIfNot>Balefire</OnlyIfNot>
-				</OnlyIfAnotherService>
-				<SpecialRuleDescription>When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored</SpecialRuleDescription>
-			</Option>
-		</Options>
-	</Unit>
-	<Unit>
-		<Type>Special</Type>
-		<Name>Grave Guard</Name>
-		<Points>11</Points>
-		<MinSize>10</MinSize>
-		<MainParam>
-			<Movement>4</Movement>
-			<WeaponSkill>3</WeaponSkill>
-			<BallisticSkill>0</BallisticSkill>
-			<Strength>4</Strength>
-			<Toughness>4</Toughness>
-			<Wounds>1</Wounds>
-			<Initiative>3</Initiative>
-			<Attacks>1</Attacks>
-			<Leadership>6</Leadership>
-		</MainParam>
-		<AdditionalParam>
-			<Undead/>
-			<KillingBlow/>
-		</AdditionalParam>
-		<SpecialRulesAndAmmunition>
-			<HandWeapon>
-				<Name>Hand weapon</Name>
-			</HandWeapon>
-			<Armour>
-				<Name>Heavy armour</Name>
-				<AddToArmour>5</AddToArmour>
-			</Armour>
-			<Armour>
-				<Name>Shield</Name>
-				<AddToArmour>6</AddToArmour>
-			</Armour>
-		</SpecialRulesAndAmmunition>
-		<Options>
-			<Option>
-				<Name>Great weapon</Name>
-				<Type>Option</Type>
-				<AddToStrength>2</AddToStrength>
-				<HitLast/>
-				<Points>1</Points>
-				<PerModel/>
-			</Option>
-			<Option>
-				<Name>Seneschal</Name>
-				<Type>Option</Type>
-				<FullCommand/>
-				<Points>10</Points>
-			</Option>
-			<Option>
-				<Name>Musician</Name>
-				<Type>Option</Type>
-				<FullCommand/>
-				<Points>10</Points>
-			</Option>
-			<Option>
-				<Name>Standard bearer</Name>
-				<Type>Option</Type>
-				<FullCommand/>
-				<Points>10</Points>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Banner</MagicItemsType>
-			</Option>
-		</Options>
-	</Unit>
-	<Unit>
-		<Type>Special</Type>
-		<Name>Black Knight</Name>
-		<Points>21</Points>
-		<MinSize>5</MinSize>
-		<MountInit>Skeletal Steed</MountInit>
-		<MainParam>
-			<Movement>4</Movement>
-			<WeaponSkill>3</WeaponSkill>
-			<BallisticSkill>0</BallisticSkill>
-			<Strength>4</Strength>
-			<Toughness>4</Toughness>
-			<Wounds>1</Wounds>
-			<Initiative>3</Initiative>
-			<Attacks>1</Attacks>
-			<Leadership>6</Leadership>
-			<Armour>6</Armour>
-		</MainParam>
-		<AdditionalParam>
-			<Undead/>
-			<KillingBlow/>
-		</AdditionalParam>
-		<SpecialRulesAndAmmunition>
-			<HandWeapon>
-				<Name>Hand weapon</Name>
-			</HandWeapon>
-			<Armour>
-				<Name>Heavy armour</Name>
-				<AddToArmour>5</AddToArmour>
-			</Armour>
-			<Armour>
-				<Name>Shield</Name>
-				<AddToArmour>6</AddToArmour>
-			</Armour>
-			<Special>
-				<SpecialRuleDescription>Spectral Steed</SpecialRuleDescription>
-			</Special>
-		</SpecialRulesAndAmmunition>
-		<Options>
-			<Option>
-				<Name>Skeletal Steed barding</Name>
-				<Type>Option</Type>
-				<AddToArmour>6</AddToArmour>
-				<Points>3</Points>
-				<PerModel/>
-			</Option>
-			<Option>
-				<Name>Lances</Name>
-				<Type>Option</Type>
-				<Lance/>
-				<Points>2</Points>
-				<PerModel/>
-			</Option>
-			<Option>
-				<Name>Hell Knight</Name>
-				<Type>Option</Type>
-				<FullCommand/>
-				<Points>10</Points>
-			</Option>
-			<Option>
-				<Name>Musician</Name>
-				<Type>Option</Type>
-				<FullCommand/>
-				<Points>10</Points>
-			</Option>
-			<Option>
-				<Name>Standard bearer</Name>
-				<Type>Option</Type>
-				<FullCommand/>
-				<Points>10</Points>
-				<MagicItems>50</MagicItems>
-				<MagicItemsType>Banner</MagicItemsType>
-			</Option>
-		</Options>
-	</Unit>
 		<Unit>
-		<Type>Special</Type>
-		<Name>Crypt Horrors</Name>
-		<Points>38</Points>
-		<MinSize>3</MinSize>
-		<MainParam>
-			<Movement>6</Movement>
-			<WeaponSkill>3</WeaponSkill>
-			<BallisticSkill>0</BallisticSkill>
-			<Strength>4</Strength>
-			<Toughness>5</Toughness>
-			<Wounds>3</Wounds>
-			<Initiative>1</Initiative>
-			<Attacks>3</Attacks>
-			<Leadership>5</Leadership>
-		</MainParam>
-		<AdditionalParam>
-			<Undead/>
-			<PoisonAttack/>
-			<Regeneration/>
-		</AdditionalParam>
-		<SpecialRulesAndAmmunition>
-			<HandWeapon>
-				<Name>Hand weapon</Name>
-			</HandWeapon>
-		</SpecialRulesAndAmmunition>
-		<Options>
-			<Option>
-				<Name>Crypt Haunter</Name>
-				<Type>Option</Type>
-				<FullCommand/>
-				<Points>10</Points>
-			</Option>
-		</Options>
-	</Unit>
-	<Unit>
-		<Type>Special</Type>
-		<Name>Fell Bats</Name>
-		<Points>16</Points>
-		<MinSize>2</MinSize>
-		<MainParam>
-			<Movement>1</Movement>
-			<WeaponSkill>3</WeaponSkill>
-			<BallisticSkill>0</BallisticSkill>
-			<Strength>3</Strength>
-			<Toughness>3</Toughness>
-			<Wounds>2</Wounds>
-			<Initiative>3</Initiative>
-			<Attacks>2</Attacks>
-			<Leadership>3</Leadership>
-		</MainParam>
-		<AdditionalParam>
-			<Undead/>
-		</AdditionalParam>
-		<SpecialRulesAndAmmunition>
-			<Special>
-				<SpecialRuleDescription>Fly</SpecialRuleDescription>
-			</Special>
-		</SpecialRulesAndAmmunition>
-	</Unit>
-	<Unit>
-		<Type>Special</Type>
-		<Name>Bat Swarm</Name>
-		<Points>35</Points>
-		<MinSize>2</MinSize>
-		<MainParam>
-			<Movement>1</Movement>
-			<WeaponSkill>3</WeaponSkill>
-			<BallisticSkill>0</BallisticSkill>
-			<Strength>2</Strength>
-			<Toughness>2</Toughness>
-			<Wounds>5</Wounds>
-			<Initiative>1</Initiative>
-			<Attacks>5</Attacks>
-			<Leadership>3</Leadership>
-		</MainParam>
-		<AdditionalParam>
-			<Undead/>
-			<LargeBase/>
-		</AdditionalParam>
-		<SpecialRulesAndAmmunition>
-			<Special>
-				<SpecialRuleDescription>Fly</SpecialRuleDescription>
-				<SpecialRuleDescription>Hover</SpecialRuleDescription>
-				<SpecialRuleDescription>An enemy unit in base contact with one or more Bat Swarm has the Always Strikes Last special rule</SpecialRuleDescription>
-			</Special>
-		</SpecialRulesAndAmmunition>
-	</Unit>
-	<Unit>
-		<Type>Special</Type>
-		<Name>Spirit Host</Name>
-		<Points>45</Points>
-		<MinSize>1</MinSize>
-		<MaxSize>10</MaxSize>
-		<MainParam>
-			<Movement>6</Movement>
-			<WeaponSkill>3</WeaponSkill>
-			<BallisticSkill>0</BallisticSkill>
-			<Strength>3</Strength>
-			<Toughness>3</Toughness>
-			<Wounds>4</Wounds>
-			<Initiative>1</Initiative>
-			<Attacks>4</Attacks>
-			<Leadership>4</Leadership>
-		</MainParam>
-		<AdditionalParam>
-			<Undead/>
-		</AdditionalParam>
-		<SpecialRulesAndAmmunition>
-			<HandWeapon>
-				<Name>Hand weapon</Name>
-			</HandWeapon>
-			<Special>
-				<SpecialRuleDescription>Ethereal</SpecialRuleDescription>
-			</Special>
-		</SpecialRulesAndAmmunition>
-	</Unit>
+			<Type>Special</Type>
+			<Name>Corpse Cart</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>2D6</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Vigour Mortis</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Spear for Corpsemaster</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+				</Option>
+				<Option>
+					<Name>Balefire</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Unholy Lodestone</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Unholy Lodestone</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Balefire</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored</SpecialRuleDescription>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Grave Guard</Name>
+			<Points>11</Points>
+			<MinSize>10</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<KillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>1</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Seneschal</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Black Knight</Name>
+			<Points>21</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Skeletal Steed</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>6</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<KillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Shield</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Spectral Steed</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Skeletal Steed barding</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<Points>3</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Lances</Name>
+					<Type>Option</Type>
+					<Lance/>
+					<Points>2</Points>
+					<PerModel/>
+				</Option>
+				<Option>
+					<Name>Hell Knight</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Banner</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Crypt Horrors</Name>
+			<Points>38</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>5</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<PoisonAttack/>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Crypt Haunter</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Fell Bats</Name>
+			<Points>16</Points>
+			<MinSize>2</MinSize>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Bat Swarm</Name>
+			<Points>35</Points>
+			<MinSize>2</MinSize>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>2</Strength>
+				<Toughness>2</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>3</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Hover</SpecialRuleDescription>
+					<SpecialRuleDescription>An enemy unit in base contact with one or more Bat Swarm has the Always Strikes Last special rule</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Spirit Host</Name>
+			<Points>45</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>10</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>4</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Ethereal</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Hexwraiths</Name>
+			<Points>30</Points>
+			<MinSize>5</MinSize>
+			<MaxSize>10</MaxSize>
+			<MountInit>Skeletal Steed</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>6</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<Terror/>
+				<NoArmour/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Great weapon</Name>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Ethereal</SpecialRuleDescription>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Soulsriders</SpecialRuleDescription>
+					<SpecialRuleDescription>Spec Hunters</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Hellwraith</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+	</Units>
 </ArmyBook>
