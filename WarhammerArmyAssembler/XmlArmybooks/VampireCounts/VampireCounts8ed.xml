@@ -402,7 +402,7 @@
 			</Option>
 		</Options>
 	</Unit>
-	<Unit>
+		<Unit>
 		<Type>Special</Type>
 		<Name>Crypt Horrors</Name>
 		<Points>38</Points>
@@ -436,5 +436,30 @@
 				<Points>10</Points>
 			</Option>
 		</Options>
+	</Unit>
+	<Unit>
+		<Type>Special</Type>
+		<Name>Fell Bats</Name>
+		<Points>16</Points>
+		<MinSize>2</MinSize>
+		<MainParam>
+			<Movement>1</Movement>
+			<WeaponSkill>3</WeaponSkill>
+			<BallisticSkill>0</BallisticSkill>
+			<Strength>3</Strength>
+			<Toughness>3</Toughness>
+			<Wounds>2</Wounds>
+			<Initiative>3</Initiative>
+			<Attacks>2</Attacks>
+			<Leadership>3</Leadership>
+		</MainParam>
+		<AdditionalParam>
+			<Undead/>
+		</AdditionalParam>
+		<SpecialRulesAndAmmunition>
+			<Special>
+				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+			</Special>
+		</SpecialRulesAndAmmunition>
 	</Unit>
 </ArmyBook>
