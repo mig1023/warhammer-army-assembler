@@ -18,7 +18,7 @@ namespace WarhammerArmyAssembler.Export
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in armyByCategories)
-                foreach (Unit unit in unitType.Items.Where(u => u.Type != Unit.UnitType.Mount))
+                foreach (Unit unit in unitType.Items.Where(x => x.Type != Unit.UnitType.Mount))
                 {
                     string equipmentLine = unit.GetEquipmentLine();
 
