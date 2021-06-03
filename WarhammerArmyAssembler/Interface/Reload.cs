@@ -50,15 +50,18 @@ namespace WarhammerArmyAssembler.Interface
 
             List<string> artefactsTypes = new List<string>();
 
-            foreach (Option entry in ArmyBook.Data.Artefact.Values.Where(o => !artefactsTypes.Contains(o.ArtefactGroup)))
+            foreach (Option entry in ArmyBook.Data.Artefact.Values.Where(x => !artefactsTypes.Contains(x.ArtefactGroup)))
                 artefactsTypes.Add(entry.ArtefactGroup);
 
             foreach (string artefactType in artefactsTypes)
             {
                 Option artefacts = new Option() { Name = artefactType };
 
-                foreach (Option entry in ArmyBook.Data.Artefact.Values.Where(o => (o.ArtefactGroup == artefactType) && (o.Runic <= 0)))
+                foreach (Option entry in ArmyBook.Data.Artefact.Values)
                 {
+                    if ((entry.ArtefactGroup != artefactType) || (entry.Runic > 1))
+                        continue;
+
                     Option artefact = entry.Clone();
                     artefact.PointsView = PointsView(artefact);
                     artefact.InterfaceColor = ArmyBook.Data.MainColor;
