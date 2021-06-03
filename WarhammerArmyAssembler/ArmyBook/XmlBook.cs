@@ -60,7 +60,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             {
                 SortedDictionary<string, string> filesBeforeSort = new SortedDictionary<string, string>();
 
-                foreach (string file in Directory.GetFiles(programDirectory).Where(f => f.EndsWith("ed.xml")))
+                foreach (string file in Directory.GetFiles(programDirectory).Where(x => x.EndsWith("ed.xml")))
                 {
                     XmlDocument xmlFile = new XmlDocument();
 
