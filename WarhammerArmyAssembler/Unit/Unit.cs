@@ -176,7 +176,7 @@ namespace WarhammerArmyAssembler
 
             bool firstSlannOptionAlreadyIsFree = false;
 
-            foreach (Option option in Options.Where(o => o.IsSlannOption() && o.Realised))
+            foreach (Option option in Options.Where(x => x.IsSlannOption() && x.Realised))
             {
                 if (firstSlannOptionAlreadyIsFree)
                     points += option.Points;
@@ -189,7 +189,7 @@ namespace WarhammerArmyAssembler
 
         public string GetGroup()
         {
-            Option option = Options.Where(o => (!o.IsOption() || (o.IsOption() && o.Realised)) && !String.IsNullOrEmpty(o.Group)).FirstOrDefault();
+            Option option = Options.Where(x => (!x.IsOption() || (x.IsOption() && x.Realised)) && !String.IsNullOrEmpty(x.Group)).FirstOrDefault();
             return (option == null ? String.Empty : option.Group);
         }
 
