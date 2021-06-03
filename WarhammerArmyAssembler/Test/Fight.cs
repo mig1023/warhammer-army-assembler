@@ -948,7 +948,7 @@ namespace WarhammerArmyAssembler.Test
             return wardFail;
         }
 
-        private static Unit UnitFromParticipants(List<Unit> participants, Unit unit) => participants.Where(u => u.ID == unit.ID).FirstOrDefault();
+        private static Unit UnitFromParticipants(List<Unit> participants, Unit unit) => participants.Where(x => x.ID == unit.ID).FirstOrDefault();
 
         private static void UnitRoundShow(Unit unit, bool firstLine)
         {
