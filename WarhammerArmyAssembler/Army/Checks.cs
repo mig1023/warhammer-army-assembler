@@ -10,7 +10,7 @@ namespace WarhammerArmyAssembler.Army
     {
         public static bool IsUnitExistInArmy(int unitID) => Army.Data.Units.ContainsKey(unitID);
 
-        public static bool IsUnitExistInArmyByArmyBookID(int UnitID) => Data.Units.Values.Where(u => u.ID == UnitID).FirstOrDefault() != null;
+        public static bool IsUnitExistInArmyByArmyBookID(int UnitID) => Data.Units.Values.Where(x => x.ID == UnitID).FirstOrDefault() != null;
 
         public static bool IsRunicCombinationAlreadyExist(Unit unit, Option newOption)
         {
@@ -73,7 +73,7 @@ namespace WarhammerArmyAssembler.Army
 
         public static bool IsArmyDublicationOk(Unit unit)
         {
-            int alreadyInArmy = Army.Data.Units.Values.Where(u => u.ID == unit.ID).Count();
+            int alreadyInArmy = Army.Data.Units.Values.Where(x => x.ID == unit.ID).Count();
 
             int limitForArmy = -1;
 
@@ -87,7 +87,7 @@ namespace WarhammerArmyAssembler.Army
         }
 
         public static bool IsArmyUnitMaxLimitOk(Unit newUnit) =>
-            !newUnit.UniqueUnits || !(Data.Units.Values.Where(u => u.ID == newUnit.ID).FirstOrDefault() != null);
+            !newUnit.UniqueUnits || !(Data.Units.Values.Where(x => x.ID == newUnit.ID).FirstOrDefault() != null);
 
         public static int IsOptionAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
         {
