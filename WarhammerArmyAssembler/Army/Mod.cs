@@ -16,7 +16,7 @@ namespace WarhammerArmyAssembler.Army
 
             Army.Data.Units.Add(unit.ArmyID, unit);
 
-            Unit mount = ArmyBook.Data.Mounts.Values.Where(m => m.Name == unit.MountInit).FirstOrDefault();
+            Unit mount = ArmyBook.Data.Mounts.Values.Where(x => x.Name == unit.MountInit).FirstOrDefault();
 
             if (mount == null)
                 return unit.ArmyID;
@@ -46,9 +46,9 @@ namespace WarhammerArmyAssembler.Army
         {
             int? removeUnitAlso = null;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units.Where(u => u.Value.MountOn == id))
+            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units.Where(x => x.Value.MountOn == id))
             {
-                foreach (Option option in entry.Value.Options.Where(o => o.Name == Army.Data.Units[id].Name))
+                foreach (Option option in entry.Value.Options.Where(x => x.Name == Army.Data.Units[id].Name))
                     option.Realised = false;
 
                 entry.Value.MountOn = 0;
@@ -57,7 +57,7 @@ namespace WarhammerArmyAssembler.Army
                     removeUnitAlso = entry.Key;
             }
 
-            foreach (Option option in Army.Data.Units[id].Options.Where(o => o.IsMagicItem()))
+            foreach (Option option in Army.Data.Units[id].Options.Where(x => x.IsMagicItem()))
                 Interface.Mod.SetArtefactAlreadyUsed(option.ID, false);
 
             if (removeUnitAlso != null)
@@ -81,7 +81,7 @@ namespace WarhammerArmyAssembler.Army
                 int unitLeadership = entry.Value.Leadership;
                 bool notALeader = false;
 
-                foreach (Option option in entry.Value.Options.Where(o => o.IsActual()))
+                foreach (Option option in entry.Value.Options.Where(x => x.IsActual()))
                 {
                     if (option.AddToLeadership > 0)
                         unitLeadership += option.AddToLeadership;
