@@ -172,7 +172,7 @@ namespace WarhammerArmyAssembler.Army
             new Unit() { Name = "Rare" },
         };
 
-        public static Unit GetArmyGeneral() => Army.Data.Units.Values.Where(u => u.ArmyGeneral).FirstOrDefault();
+        public static Unit GetArmyGeneral() => Army.Data.Units.Values.Where(x => x.ArmyGeneral).FirstOrDefault();
 
         public static int GetUnitsNumberByBase(BasesTypes type)
         {
@@ -196,7 +196,7 @@ namespace WarhammerArmyAssembler.Army
         {
             List<string> units = new List<string>();
 
-            foreach (Unit entry in Army.Data.Units.Values.Where(u => u.Type == type))
+            foreach (Unit entry in Army.Data.Units.Values.Where(x => x.Type == type))
                 units.Add(entry.Name);
 
             return (units.Count == 0 ? "empty yet" : String.Join(", ", units));
@@ -207,7 +207,7 @@ namespace WarhammerArmyAssembler.Army
             int count = 0;
 
             foreach (Unit entry in Army.Data.Units.Values)
-                foreach (Option option in entry.Options.Where(o => o.Name == ArmyBook.Data.Artefact[id].Name))
+                foreach (Option option in entry.Options.Where(x => x.Name == ArmyBook.Data.Artefact[id].Name))
                     count += 1;
 
             if (count == 0)
