@@ -32,7 +32,7 @@ namespace WarhammerArmyAssembler
             };
 
             foreach (List<Enemy> enemyList in enemies)
-                foreach (Enemy enemy in enemyList.Where(e => e.TestListName == enemyName))
+                foreach (Enemy enemy in enemyList.Where(x => x.TestListName == enemyName))
                     return enemy.SetID();
 
             return null;
