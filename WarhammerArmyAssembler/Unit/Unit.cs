@@ -462,7 +462,7 @@ namespace WarhammerArmyAssembler
 
             bool alreadyArmour = false, alreadyShield = false;
 
-            foreach (Option option in allOption.Where(x => !x.IsActual()))
+            foreach (Option option in allOption.Where(x => x.IsActual()))
             {
                 if (OptionTypeAlreadyUsed(option, ref alreadyArmour, ref alreadyShield))
                     continue;
