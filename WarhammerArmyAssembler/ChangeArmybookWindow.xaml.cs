@@ -21,10 +21,7 @@ namespace WarhammerArmyAssembler
             InitializeComponent();
         }
 
-        private void Window_Closed(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
+        private void Window_Closed(object sender, EventArgs e) => Environment.Exit(0);
 
         private void changeArmybook_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -46,15 +43,9 @@ namespace WarhammerArmyAssembler
             imageArmybookBack.Margin = startHelpInfo.Margin;
         }
 
-        private void prev_Click(object sender, RoutedEventArgs e)
-        {
-            Interface.Changes.PreviewArmyList(prev: true);
-        }
+        private void prev_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(prev: true);
 
-        private void next_Click(object sender, RoutedEventArgs e)
-        {
-            Interface.Changes.PreviewArmyList(next: true);
-        }
+        private void next_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(next: true);
 
         private void StartArmybook(int points)
         {
@@ -77,25 +68,13 @@ namespace WarhammerArmyAssembler
                 MessageBox.Show("Wrong army points!");
         }
 
-        public void buttonPoints_Click(object sender, RoutedEventArgs e)
-        {
-            StartArmybookOption((sender as Label).Content.ToString().Split()[0]);
-        }
+        public void buttonPoints_Click(object sender, RoutedEventArgs e) => StartArmybookOption((sender as Label).Content.ToString().Split()[0]);
 
-        private void buttonArmybook_Click(object sender, RoutedEventArgs e)
-        {
-            StartArmybookOption(listArmybookPoints.Text);
-        }
+        private void buttonArmybook_Click(object sender, RoutedEventArgs e) => StartArmybookOption(listArmybookPoints.Text);
 
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
 
-        private void closeArmybook_Click(object sender, MouseButtonEventArgs e)
-        {
-            Environment.Exit(0);
-        }
+        private void closeArmybook_Click(object sender, MouseButtonEventArgs e) => Environment.Exit(0);
 
         private void Window_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
