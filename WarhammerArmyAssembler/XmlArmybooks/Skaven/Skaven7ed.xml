@@ -1146,7 +1146,6 @@
 			</Options>
 		</Hero>
 	</Heroes>
-	
 	<Mounts>
 		<Mount>
 			<Type>Mount</Type>
@@ -1164,10 +1163,13 @@
 				<Initiative>4</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>0</Leadership>
+				<Ward>4</Ward>
+				<Armour>6</Armour>
 			</MainParam>
 			<AdditionalParam>
 				<Fear/>
 				<LargeBase/>
+				<Unbreakable/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1176,18 +1178,9 @@
 					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
 					<SpecialRuleDescription>Pushed into Battle</SpecialRuleDescription>
 					<SpecialRuleDescription>Ringing the Bell</SpecialRuleDescription>
-				</Special>	
-				<Special>
 					<SpecialRuleDescription>Altar of the Horned Rat</SpecialRuleDescription>
-					<Unbreakable/>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Protection of the Horned Rat</SpecialRuleDescription>
-					<AddToWard>4</AddToWard>
-				</Special>
-				<Special>
 					<SpecialRuleDescription>Above the Masses</SpecialRuleDescription>
-					<AddToArmour>6</AddToArmour>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1212,6 +1205,7 @@
 				<Frenzy/>
 				<LargeBase/>
 				<ImpactHit>D6</ImpactHit>
+				<Unbreakable/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
@@ -1222,10 +1216,7 @@
 					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
 					<SpecialRuleDescription>Pushed into Battle</SpecialRuleDescription>
 					<SpecialRuleDescription>Pestilent Blessing</SpecialRuleDescription>
-				</Special>	
-				<Special>
 					<SpecialRuleDescription>Icon of the Horned Rat</SpecialRuleDescription>
-					<Unbreakable/>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
