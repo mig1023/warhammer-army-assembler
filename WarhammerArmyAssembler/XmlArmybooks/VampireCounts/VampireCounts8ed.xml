@@ -779,7 +779,122 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Vampire Lord</Name>
+			<Points>220</Points>
+			<MinSize>1</MinSize>
+			<Description>Vampire Lord</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<MagicPowers>100</MagicPowers>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Vampiric</SpecialRuleDescription>
+					<SpecialRuleDescription>The Hunger</SpecialRuleDescription>
+					<SpecialRuleDescription>May use spells from Lore of Death, Shadow or Lore of the Vampires</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard level</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<Countable/>
+					<Min>1</Min>
+					<Max>4</Max>
+					<Value>1</Value>
+					<ExportToWizardLevel/>
+				</Option>
+				<Option>
+					<Name>Additional hand weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>4</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lance</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>6</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lance</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<Points>6</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Lance/>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>6</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				
+				<Option>
+					<Name>Barded Nightmare</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Hellsteed</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Abyssal Terror</Name>
+					<Type>Option</Type>
+					<Points>120</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Zombie Dragon</Name>
+					<Type>Option</Type>
+					<Points>245</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
