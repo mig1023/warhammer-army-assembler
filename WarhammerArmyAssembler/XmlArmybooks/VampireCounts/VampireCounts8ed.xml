@@ -892,6 +892,12 @@
 					<Points>245</Points>
 					<Mount/>
 				</Option>
+				<Option>
+					<Name>Coven Throne</Name>
+					<Type>Option</Type>
+					<Points>230</Points>
+					<Mount/>
+				</Option>
 			</Options>
 		</Hero>
 	</Heroes>
@@ -1039,6 +1045,39 @@
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
 					<SpecialRuleDescription>Pestilential Breath</SpecialRuleDescription>
 					<SpecialRuleDescription>Swarm of Flies</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Coven Throne</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2D6</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>5</Armour>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<LargeBase/>
+				<HitFirst/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Spectral steeds</SpecialRuleDescription>
+					<SpecialRuleDescription>Vampiric</SpecialRuleDescription>
+					<SpecialRuleDescription>Battle of Wills</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
