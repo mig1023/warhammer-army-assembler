@@ -1020,6 +1020,60 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Mannfred the Acolyte</Name>
+			<Points>200</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>2</Wizard>
+			<Description>Mannfred the Acolyte</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItemCount>1</MagicItemCount>
+				<MagicItemsType>Hero</MagicItemsType>
+				<AddToCloseCombat>1</AddToCloseCombat>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword of Unholy Power</Name>
+					<SpecialRuleDescription>For each unsaved Wound gains an extra dice in the Magic phase</SpecialRuleDescription>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Vampiric</SpecialRuleDescription>
+					<SpecialRuleDescription>The Hunger</SpecialRuleDescription>
+					<SpecialRuleDescription>Loremaster</SpecialRuleDescription>
+					<SpecialRuleDescription>Adds D3 to the casting total whenever he successfully casts Invocation of Nehek</SpecialRuleDescription>
+					<SpecialRuleDescription>May use spells from Lore of the Vampires</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Barded Nightmare</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<Points>16</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Abyssal Terror</Name>
+					<Type>Option</Type>
+					<Points>120</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Necromancer</Name>
 			<Points>65</Points>
 			<MinSize>1</MinSize>
