@@ -1039,9 +1039,6 @@
 			</MainParam>
 			<AdditionalParam>
 				<Undead/>
-				<MagicItemCount>1</MagicItemCount>
-				<MagicItemsType>Hero</MagicItemsType>
-				<AddToCloseCombat>1</AddToCloseCombat>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1071,6 +1068,47 @@
 					<Mount/>
 				</Option>
 			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Krell</Name>
+			<Points>205</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Krell, Lord of Undeath</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<Terror/>
+				<KillingBlow/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Black Axe of Krell</Name>
+					<AddToStrength>2</AddToStrength>
+					<MultiWounds>D3</MultiWounds>
+					<HitLast/>
+					<SpecialRuleDescription>Any model taking an unsaved Wound must roll a D6 at the start of each of its subsequent turns: if the result is higher than the number of Wounds it has remaining, that model suffers an additional Wound with no armour saves allowed</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Armour of the Barrows</Name>
+					<AddToArmour>4</AddToArmour>
+					<SpecialRuleDescription>If an enemy with a magic weapon wounds Krell in close combat and Krell passes his armour save, that magic weapon's abilities are nullified</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Must always issue a challenge whenever possible, and must answer any challenge issued by the enemy</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
