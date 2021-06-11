@@ -781,6 +781,56 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Vlad von Carstein</Name>
+			<Points>495</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>3</Wizard>
+			<Description>Vlad von Carstein</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<Undead/>
+				<Reroll>ToWound</Reroll>
+				<AddToCloseCombat>1</AddToCloseCombat>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Blood Drinker</Name>
+					<AddToStrength>1</AddToStrength>
+					<SpecialRuleDescription>Restores lost Wounds on a score of 4+ for the purposes of The Hunger special rule</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>Carstein Ring</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>The first time Vlad is removed from play, roll a D6 at the end of the phase: on a score of 2+ the vampire is immediately returned to 'life' with a single Wound</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Vampiric</SpecialRuleDescription>
+					<SpecialRuleDescription>The Hunger</SpecialRuleDescription>
+					<SpecialRuleDescription>All enemy units within 6" suffer a -1 penalty to their Leadership</SpecialRuleDescription>
+					<SpecialRuleDescription>At the beginning of the Close Combat round, after challenges have been issued and/or accepted, select a model in base contact with the Vampire: that model must take a Leadership test with a -3 modifier, if the test is failed, the model must re-roll successful To Hit rolls that phase</SpecialRuleDescription>
+					<SpecialRuleDescription>Beloved in Death</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Vampire Lord</Name>
 			<Points>220</Points>
 			<MinSize>1</MinSize>
