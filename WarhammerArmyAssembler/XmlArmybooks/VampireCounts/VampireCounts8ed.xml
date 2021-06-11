@@ -893,6 +893,49 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Heinrich Kemmler</Name>
+			<Points>350</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>4</Wizard>
+			<Description>Heinrich Kemmler</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Chaos Tomb Blade</Name>
+					<AddToAttacks>2</AddToAttacks>
+					<SpecialRuleDescription>If Kemmler is in a unit of Skeleton Warriors or Grave Guard, for each model he slays in close combat, an extra model is added to his unit following the rules for Resurrecting Fallen Warriors</SpecialRuleDescription>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Skull Staff</Name>
+					<SpecialRuleDescription>At the beginning of the friendly Magic phase, your opponent must declare all of his magic items that are within 12" of Kemmler, and the models/units that are carrying them</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 to his dice rolls when he attempts to dispel</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Cloak of Mists and Shadows</Name>
+					<SpecialRuleDescription>At the beginning of each of Kemmler's turns, choose either the Fly or Ethereal special rule: Kemmler has that rule until the beginning of his next turn</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Loremaster</SpecialRuleDescription>
+					<SpecialRuleDescription>Master of the Dead</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Vampire Lord</Name>
 			<Points>220</Points>
 			<MinSize>1</MinSize>
