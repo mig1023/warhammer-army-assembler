@@ -900,6 +900,78 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Master Necromancer</Name>
+			<Points>165</Points>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<Description>Master Necromancer</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>May use spells from Lore of Death or Lore of the Vampires</SpecialRuleDescription>
+				</Special>				
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>
+				<Option>
+					<Name>Master of the Dead</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<OnlyOneInArmy/>
+				</Option>
+				<Option>
+					<Name>Barded Nightmare</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Hellsteed</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Corpse Cart</Name>
+					<Type>Option</Type>
+					<Points>90</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Abyssal Terror</Name>
+					<Type>Option</Type>
+					<Points>120</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -1080,6 +1152,54 @@
 					<SpecialRuleDescription>Battle of Wills</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Corpse Cart</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>2D6</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<Regeneration/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Vigour Mortis</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Balefire</Name>
+					<Type>Option</Type>
+					<Points>15</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Unholy Lodestone</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Unholy Lodestone</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Balefire</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored</SpecialRuleDescription>
+				</Option>
+			</Options>
 		</Mount>
 	</Mounts>
 	<Units>
