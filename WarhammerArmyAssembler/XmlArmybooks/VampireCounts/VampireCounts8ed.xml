@@ -802,8 +802,6 @@
 			<AdditionalParam>
 				<Terror/>
 				<Undead/>
-				<Reroll>ToWound</Reroll>
-				<AddToCloseCombat>1</AddToCloseCombat>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -828,6 +826,70 @@
 					<SpecialRuleDescription>Beloved in Death</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Count Mannfred</Name>
+			<Points>530</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Wizard>4</Wizard>
+			<Description>Count Mannfred</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword of Unholy Power</Name>
+					<SpecialRuleDescription>For each unsaved Wound gains an extra dice in the Magic phase</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Armour of Templehof</Name>
+					<AddToArmour>5</AddToArmour>
+					<AddToWounds>2</AddToWounds>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>May use spells from Lore ofDeath and the Lore of the Vampires</SpecialRuleDescription>
+					<SpecialRuleDescription>Loremaster</SpecialRuleDescription>
+					<SpecialRuleDescription>Vampiric</SpecialRuleDescription>
+					<SpecialRuleDescription>The Hunger</SpecialRuleDescription>
+					<SpecialRuleDescription>Adds D3 to the casting total whenever he successfully casts Invocation of Nehek</SpecialRuleDescription>
+					<SpecialRuleDescription>Can use the Invocation of Nehek spell to increase units of Dire Wolves, Bat Swarms and Fell Bats beyond their starting size</SpecialRuleDescription>
+					<SpecialRuleDescription>A player can re-roll one of the dice when he is determining the strength of the Winds of Magic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>			
+				<Option>
+					<Name>Barded Nightmare</Name>
+					<Type>Option</Type>
+					<Points>24</Points>
+					<Mount/>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Hellsteed</Name>
+					<Type>Option</Type>
+					<Points>30</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Abyssal Terror</Name>
+					<Type>Option</Type>
+					<Points>120</Points>
+					<Mount/>
+				</Option>
+			</Options>
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
