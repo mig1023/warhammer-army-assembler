@@ -1162,7 +1162,14 @@
 					<Type>Option</Type>
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
-				</Option>			
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>				
 				<Option>
 					<Name>Barded Nightmare</Name>
 					<Type>Option</Type>
@@ -1181,6 +1188,89 @@
 					<Type>Option</Type>
 					<Points>230</Points>
 					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Wight King</Name>
+			<Points>85</Points>
+			<MinSize>1</MinSize>
+			<Description>Wight King</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Undead/>
+				<KillingBlow/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<Points>2</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<Points>5</Points>
+					<Lance/>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Skeletal Steed</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding for Skeletal Steed</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Skeletal Steed</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
 				</Option>
 			</Options>
 		</Hero>
