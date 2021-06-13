@@ -14,7 +14,7 @@
 
         <Image x:Name="imageArmybookBack" Stretch="UniformToFill"/>
         <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="660" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
-            <Canvas x:Name="menuArmybookPlace" Width="320" Height="660" VerticalAlignment="Top" Background="WHite">
+            <Canvas x:Name="menuArmybookPlace" Width="320" Height="660" VerticalAlignment="Top" Background="White">
                 <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="47" Canvas.Top="36"/>
                 <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="333" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
                 <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="580" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>
