@@ -122,7 +122,9 @@ namespace WarhammerArmyAssembler
                 (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) +
                 (armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20) + 20;
 
-            armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 35);
+            armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20,
+                top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 35);
+
             armyUnitSpecific.Foreground = ArmyBook.Data.MainColor;
         }
 
@@ -158,6 +160,7 @@ namespace WarhammerArmyAssembler
         public static T FindVisualParent<T>(UIElement element) where T : UIElement
         {
             UIElement parent = element;
+
             while (parent != null)
             {
                 if (parent is T correctlyTyped)
@@ -165,6 +168,7 @@ namespace WarhammerArmyAssembler
 
                 parent = VisualTreeHelper.GetParent(parent) as UIElement;
             }
+
             return null;
         }
 
@@ -182,12 +186,16 @@ namespace WarhammerArmyAssembler
 
             if (!Interface.Checks.EnoughPointsForEditUnit(u.ID, u.Size))
                 u.Size = ErrorAndReturnSizeBack("Not enough points to change", u.ID);
+
             else if ((u.MaxSize != 0) && (u.Size > u.MaxSize))
                 u.Size = ErrorAndReturnSizeBack("Unit size exceeds the maximum allowed", u.ID);
+
             else if (u.Size < u.MinSize)
                 u.Size = ErrorAndReturnSizeBack("Unit size is less than the minimum allowed", u.ID);
+
             else if ((u.Size > Army.Data.Units[u.ID].Size) && (!Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
                 u.Size = ErrorAndReturnSizeBack(String.Format("The {0} has reached a point cost limit", u.UnitTypeName()), u.ID);
+
             else
                 Army.Data.Units[u.ID].Size = u.Size;
 
@@ -403,17 +411,31 @@ namespace WarhammerArmyAssembler
 
             marginTop += specialRulesTest.ActualHeight;
 
-            foreach (FrameworkElement element in new List<FrameworkElement> {
-                enemyForTestText, enemyForTest, enemyTestUnit, enemyGridContainer,
-                enemyGroupText, enemyGroup
-            })
+            List<FrameworkElement> elements = new List<FrameworkElement>
+            {
+                enemyForTestText,
+                enemyForTest,
+                enemyTestUnit,
+                enemyGridContainer,
+                enemyGroupText,
+                enemyGroup
+            };
+
+            foreach (FrameworkElement element in elements)
                 element.Margin = Interface.Changes.Thick(enemyForTestText, top: marginTop);
 
             marginTop += Interface.Changes.ZeroFuse(enemyGrid.ActualHeight - 66);
 
-            foreach (FrameworkElement element in new List<FrameworkElement> {
-                specialRulesEnemyTest, startFullTest, startStatisticTest, startBattleRoyale, testConsole,
-            })
+            elements = new List<FrameworkElement>
+            {
+                specialRulesEnemyTest,
+                startFullTest,
+                startStatisticTest,
+                startBattleRoyale,
+                testConsole,
+            };
+
+            foreach (FrameworkElement element in elements)
                 element.Margin = Interface.Changes.Thick(enemyForTestText, top: marginTop);
 
             double unitTestHeight = (double)enemyForTest.GetValue(Canvas.TopProperty) + enemyForTest.ActualHeight + 50;
@@ -424,11 +446,8 @@ namespace WarhammerArmyAssembler
                 double startButtonPosition = (double)startFullTest.GetValue(Canvas.TopProperty);
                 unitTestHeight = startFullTest.Margin.Top + startFullTest.ActualHeight + startButtonPosition + 20;
 
-                startBattleRoyale.Margin = Interface.Changes.Thick(
-                    enemyForTestText,
-                    top: marginTop + 154,
-                    left: startBattleRoyale.Margin.Left + 163
-                );
+                startBattleRoyale.Margin = Interface.Changes.Thick(enemyForTestText, top: marginTop + 154,
+                    left: startBattleRoyale.Margin.Left + 163);
             }
             else
             {
