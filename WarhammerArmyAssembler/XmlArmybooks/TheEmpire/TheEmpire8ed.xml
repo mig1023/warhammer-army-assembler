@@ -814,5 +814,51 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Steam Tank</Name>
+			<Points>250</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>0</Movement>
+				<WeaponSkill>0</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>10</Wounds>
+				<Initiative>0</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>1</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Unbreakable/>
+				<Terror/>
+				<LargeBase/>
+				<SteamTank/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<RangWeapon>
+					<Name>Main cannon</Name>
+				</RangWeapon>
+				<RangWeapon>
+					<Name>Steam cannon</Name>
+				</RangWeapon>
+				<Special>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Random Movement</SpecialRuleDescription>
+					<SpecialRuleDescription>Steam Points</SpecialRuleDescription>
+					<SpecialRuleDescription>Steel Behemoth Points</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Hochland long rifle</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
