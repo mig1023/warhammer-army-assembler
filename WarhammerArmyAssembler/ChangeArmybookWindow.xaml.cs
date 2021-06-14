@@ -74,14 +74,6 @@ namespace WarhammerArmyAssembler
 
         private void closeArmybook_Click(object sender, MouseButtonEventArgs e) => Environment.Exit(0);
 
-        private void Window_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
-        {
-            if (e.Delta > 0)
-                Interface.Changes.PreviewArmyList(prev: true);
-            else
-                Interface.Changes.PreviewArmyList(next: true);
-        }
-
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Left)

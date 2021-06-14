@@ -448,7 +448,6 @@ namespace WarhammerArmyAssembler.Interface
         public static void LoadAllArmy(List<string> allXmlFiles)
         {
             int left = -1, top = 0;
-            double height = 0;
 
             Image lastImage = null;
 
@@ -488,7 +487,6 @@ namespace WarhammerArmyAssembler.Interface
 
                 changeArmybook.armybookList.Children.Add(newImage);
 
-                height = newImage.ActualHeight;
                 lastImage = newImage;
             }
 

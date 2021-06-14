@@ -8,7 +8,7 @@
         Title="Warhammer Army Assembler (WAAgh)" Height="675" Width="1000" 
         WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
         Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged"
-        MouseLeftButtonDown="Window_MouseLeftButtonDown" PreviewMouseWheel="Window_PreviewMouseWheel" PreviewKeyDown="Window_PreviewKeyDown">
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" PreviewKeyDown="Window_PreviewKeyDown">
 
     <Canvas x:Name="armybookCanvas" Margin="0,0,0,0">
 
@@ -33,7 +33,7 @@
                 </Label>
             </Grid>
         </Canvas>
-        <ScrollViewer x:Name="armybookListScroll" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
+        <ScrollViewer x:Name="armybookListScroll" VerticalScrollBarVisibility="Visible" Canvas.Top="0" Canvas.Left="40">
             <Grid x:Name="armybookList" Background="Black"/>
         </ScrollViewer>
     </Canvas>
