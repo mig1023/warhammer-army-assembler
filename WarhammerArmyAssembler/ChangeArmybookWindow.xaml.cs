@@ -33,14 +33,12 @@ namespace WarhammerArmyAssembler
             gridCloseArmybook.Height = e.NewSize.Height;
             gridCloseArmybook.Width = 30;
 
-            startHelpInfo.Height = armybookCanvas.Height;
-            startHelpInfo.Width = armybookCanvas.Width - 360;
-            startHelpInfo.Margin = new Thickness(360, 0, 0, 0);
-            startHelpMainText.Width = startHelpInfo.Width - 100;
+            armybookList.Width = armybookCanvas.Width - 330;
 
-            imageArmybookBack.Height = startHelpInfo.Height;
-            imageArmybookBack.Width = startHelpInfo.Width;
-            imageArmybookBack.Margin = startHelpInfo.Margin;
+            armybookListScroll.SetValue(Canvas.LeftProperty, menuArmybookPlace.Width + 41);
+
+            armybookListScroll.Height = armybookCanvas.Height;
+            armybookListScroll.Width = armybookCanvas.Width - 360;
         }
 
         private void prev_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(prev: true);

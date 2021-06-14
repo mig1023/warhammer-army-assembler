@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -403,8 +404,6 @@ namespace WarhammerArmyAssembler.Interface
 
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
             changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
-            changeArmybook.imageArmybookBack.Source = changeArmybook.imageArmybook.Source;
-
             changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText);
             changeArmybook.UpdateLayout();
 
@@ -444,6 +443,58 @@ namespace WarhammerArmyAssembler.Interface
             string currentFile = ArmyBook.XmlBook.GetXmlArmyBooks(next, prev);
             CurrentSelectedArmy = currentFile;
             PreviewLoadCurrentSelectedArmy(currentFile);
+        }
+
+        public static void LoadAllArmy(List<string> allXmlFiles)
+        {
+            int left = -1, top = 0;
+            double height = 0;
+
+            Image lastImage = null;
+
+            foreach (string armyName in allXmlFiles)
+            {
+                XmlDocument xmlFile = new XmlDocument();
+                xmlFile.Load(armyName);
+
+                XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
+
+                Image newImage = new Image();
+                newImage.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
+
+                left += 1;
+
+                if (left > 3)
+                {
+                    left = 0;
+                    top += 1;
+
+                    ColumnDefinition column = new ColumnDefinition();
+                    column.Width = new GridLength(6, GridUnitType.Pixel);
+                    changeArmybook.armybookList.ColumnDefinitions.Add(column);
+                }
+
+                if (changeArmybook.armybookList.ColumnDefinitions.Count <= left)
+                    changeArmybook.armybookList.ColumnDefinitions.Add(new ColumnDefinition());
+
+                if (changeArmybook.armybookList.RowDefinitions.Count <= top)
+                    changeArmybook.armybookList.RowDefinitions.Add(new RowDefinition());
+
+                newImage.SetValue(Grid.RowProperty, top);
+                newImage.SetValue(Grid.ColumnProperty, left);
+
+                newImage.Margin = new Thickness(2);
+                newImage.Stretch = Stretch.UniformToFill;
+
+                changeArmybook.armybookList.Children.Add(newImage);
+
+                height = newImage.ActualHeight;
+                lastImage = newImage;
+            }
+
+            changeArmybook.UpdateLayout();
+
+            Grid.SetRow(changeArmybook.armybookList, (int)lastImage.ActualHeight);           
         }
 
         public static void CreatePointsButtons()

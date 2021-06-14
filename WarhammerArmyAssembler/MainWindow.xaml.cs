@@ -27,6 +27,7 @@ namespace WarhammerArmyAssembler
             List<string> allXmlFiles = ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
             Interface.Changes.CurrentSelectedArmy = allXmlFiles[Interface.Other.Rand.Next(allXmlFiles.Count)];
 
+            Interface.Changes.LoadAllArmy(allXmlFiles);
             Interface.Changes.PreviewArmyList();
         }
 
