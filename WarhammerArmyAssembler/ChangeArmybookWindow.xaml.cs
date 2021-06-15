@@ -70,7 +70,11 @@ namespace WarhammerArmyAssembler
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e) => StartArmybookOption(listArmybookPoints.Text);
 
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
+        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Interface.Changes.changeArmybook.Visibility == Visibility.Visible)
+                this.DragMove();
+        }
 
         private void closeArmybook_Click(object sender, MouseButtonEventArgs e) => Environment.Exit(0);
 
