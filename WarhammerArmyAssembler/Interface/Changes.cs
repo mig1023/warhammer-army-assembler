@@ -16,21 +16,16 @@ namespace WarhammerArmyAssembler.Interface
     class Changes
     {
         public static MainWindow main = null;
-
         public static ChangeArmybookWindow changeArmybook = new ChangeArmybookWindow();
-
         public static ObservableCollection<Unit> ArmyInInterface = new ObservableCollection<Unit>();
 
         public static object DragSender = null;
-
         public static string CurrentSelectedArmy = null;
-
         public static int CurrentSelectedUnit = -1;
 
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop, ToMainMenu }
 
         public static List<Label> PointsButtons = new List<Label>();
-
         public static List<Label> MainMenuButtons = new List<Label>();
 
         public static bool mainMenuIsOpen = false;
@@ -88,6 +83,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 if ((currentItem != null) && (currentItem.Runic >= versions.Count))
                     return;
+
                 else if (currentItem != null)
                 {
                     prevRunicItem = currentItem;
@@ -125,6 +121,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 if ((ArmyBook.Data.Artefact[id].TypeUnitIncrese) && (unit.Type == Unit.UnitType.Core))
                     unit.Type = Unit.UnitType.Special;
+
                 else if ((ArmyBook.Data.Artefact[id].TypeUnitIncrese) && (unit.Type == Unit.UnitType.Special))
                     unit.Type = Unit.UnitType.Rare;
 
@@ -198,7 +195,6 @@ namespace WarhammerArmyAssembler.Interface
         public static void UnitDeleteDrop(int id)
         {
             DetailResize(open: false);
-
             Army.Mod.DeleteUnitByID(id);
             Interface.Reload.ReloadArmyData();
         }
@@ -213,7 +209,6 @@ namespace WarhammerArmyAssembler.Interface
         public static void Error(string text)
         {
             main.errorText.Content = text;
-
             Move(MovingType.ToTop, err: true);
         }
 
@@ -222,7 +217,7 @@ namespace WarhammerArmyAssembler.Interface
             if (!Army.Checks.IsArmyValid())
                 MessageBox.Show(Army.Checks.ArmyProblems());
 
-            else  if (toPDF)
+            else if (toPDF)
                 Export.PDF.SaveArmy(fullRules);
 
             else
@@ -266,16 +261,19 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (string name in buttonName)
             {
-                Label newButton = new Label { Content = name };
+                Label newButton = new Label
+                {
+                    Content = name,
+                    Height = 30,
+                    Width = Double.NaN,
+                    Foreground = Brushes.White,
+                    Background = (name == "Close" ? Brushes.DarkGray : ArmyBook.Data.MainColor),
+                    FontSize = 16,
+                    FontWeight = FontWeights.Bold,
+                };
 
-                newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
-                newButton.Height = 30;
-                newButton.Width = Double.NaN;
                 newButton.MouseDown += buttonAction[buttonIndex];
-                newButton.Foreground = Brushes.White;
-                newButton.Background = (name == "Close" ? Brushes.DarkGray : ArmyBook.Data.MainColor);
-                newButton.FontSize = 16;
-                newButton.FontWeight = FontWeights.Bold;
+                newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
 
                 main.mainMenu.Children.Add(newButton);
                 MainMenuButtons.Add(newButton);
@@ -326,10 +324,7 @@ namespace WarhammerArmyAssembler.Interface
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
-            if (detail)
-                main.ResizeMode = ResizeMode.NoResize;
-            else
-                main.ResizeMode = ResizeMode.CanResizeWithGrip;
+            main.ResizeMode = (detail ? ResizeMode.NoResize : ResizeMode.CanResizeWithGrip);
 
             if (menu)
                 Interface.Mod.View(canvasToShow: main.mainMenu, top: true);
@@ -415,22 +410,29 @@ namespace WarhammerArmyAssembler.Interface
                 label.Foreground = mainColor;
             }
 
-            foreach (Control label in new List<Control> {
+            List<Control> labels = new List<Control>
+            {
                 changeArmybook.next,
                 changeArmybook.prev,
                 changeArmybook.listArmybookPoints,
                 changeArmybook.armyAdditionalName
-            }) {
+            };
+
+            foreach (Control label in labels)
+            {
                 label.BorderBrush = mainColor;
                 label.Foreground = mainColor;
             }
 
-            foreach (Control label in new List<Control>() {
+            labels = new List<Control>
+            {
                 changeArmybook.listArmybookVer,
                 changeArmybook.buttonArmybook,
                 changeArmybook.closeArmybook,
                 main.closeArmybookDetail,
-            })
+            };
+
+            foreach (Control label in labels)
                 label.Background = mainColor;
 
             main.mainWindowHeader.Background = mainColor;
@@ -438,18 +440,13 @@ namespace WarhammerArmyAssembler.Interface
             changeArmybook.showArmyAdditionalName.Foreground = mainColor;
         }
 
-        public static void PreviewArmyList(bool next = false, bool prev = false)
-        {
-            string currentFile = ArmyBook.XmlBook.GetXmlArmyBooks(next, prev);
-            CurrentSelectedArmy = currentFile;
-            PreviewLoadCurrentSelectedArmy(currentFile);
-        }
-
         public static void PreviewArmy(string armyName)
         {
             CurrentSelectedArmy = armyName;
             PreviewLoadCurrentSelectedArmy(armyName);
         }
+
+        public static void PreviewArmyList(bool next = false, bool prev = false) => PreviewArmy(ArmyBook.XmlBook.GetXmlArmyBooks(next, prev));
 
         public static void LoadAllArmy(List<string> allXmlFiles)
         {
@@ -461,11 +458,15 @@ namespace WarhammerArmyAssembler.Interface
             {
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
-
                 XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
 
-                Image newImage = new Image();
-                newImage.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
+                Image newImage = new Image()
+                {
+                    Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText)),
+                    Margin = new Thickness(2),
+                    Stretch = Stretch.UniformToFill,
+                    Tag = armyName,
+                };
 
                 left += 1;
 
@@ -487,10 +488,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 newImage.SetValue(Grid.RowProperty, top);
                 newImage.SetValue(Grid.ColumnProperty, left);
-
-                newImage.Margin = new Thickness(2);
-                newImage.Stretch = Stretch.UniformToFill;
-                newImage.Tag = armyName;
+                
                 newImage.MouseDown += Armybook_Click;
 
                 changeArmybook.armybookList.Children.Add(newImage);
@@ -524,20 +522,17 @@ namespace WarhammerArmyAssembler.Interface
                 Label newPointsBotton = new Label
                 {
                     Name = String.Format("button{0}pts", button),
-                    Content = String.Format("{0} points", button)
+                    Content = String.Format("{0} points", button),
+                    Height = 34,
+                    Width = 78,
+                    FontSize = 12,
+                    Background = Brushes.White,
+                    BorderThickness = new Thickness(1),
+                    HorizontalContentAlignment = HorizontalAlignment.Center,
+                    VerticalContentAlignment = VerticalAlignment.Center,
                 };
 
                 newPointsBotton.Margin = Thick(newPointsBotton, xButtons[xIndex], yButtons[yIndex]);
-
-                newPointsBotton.Height = 34;
-                newPointsBotton.Width = 78;
-                newPointsBotton.FontSize = 12;
-                newPointsBotton.Background = Brushes.White;
-                newPointsBotton.BorderThickness = new Thickness(1);
-
-                newPointsBotton.HorizontalContentAlignment = HorizontalAlignment.Center;
-                newPointsBotton.VerticalContentAlignment = VerticalAlignment.Center;
-
                 newPointsBotton.MouseDown += changeArmybook.buttonPoints_Click;
 
                 changeArmybook.menuArmybookPlace.Children.Add(newPointsBotton);
@@ -553,6 +548,6 @@ namespace WarhammerArmyAssembler.Interface
             }
         }
 
-        public static double ZeroFuse(double currentParam) => (currentParam< 0 ? 0 : currentParam);
+        public static double ZeroFuse(double currentParam) => (currentParam < 0 ? 0 : currentParam);
     }
 }
