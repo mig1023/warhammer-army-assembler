@@ -116,7 +116,7 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         private static int UnitsNumber(Unit.UnitType type) => Army.Params.GetArmyUnitsNumber(type);
-        private static int MaxUnits(Unit.UnitType type) => Army.Params.GetArmyUnitsNumber(type);
+        private static int MaxUnits(Unit.UnitType type) => Army.Params.GetArmyMaxUnitsNumber(type);
 
         public static void LoadArmySize(int points, string armyName)
         {
