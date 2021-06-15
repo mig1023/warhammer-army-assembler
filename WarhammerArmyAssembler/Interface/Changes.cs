@@ -445,6 +445,12 @@ namespace WarhammerArmyAssembler.Interface
             PreviewLoadCurrentSelectedArmy(currentFile);
         }
 
+        public static void PreviewArmy(string armyName)
+        {
+            CurrentSelectedArmy = armyName;
+            PreviewLoadCurrentSelectedArmy(armyName);
+        }
+
         public static void LoadAllArmy(List<string> allXmlFiles)
         {
             int left = -1, top = 0;
@@ -469,7 +475,7 @@ namespace WarhammerArmyAssembler.Interface
                     top += 1;
 
                     ColumnDefinition column = new ColumnDefinition();
-                    column.Width = new GridLength(6, GridUnitType.Pixel);
+                    column.Width = new GridLength(5, GridUnitType.Pixel);
                     changeArmybook.armybookList.ColumnDefinitions.Add(column);
                 }
 
@@ -484,6 +490,8 @@ namespace WarhammerArmyAssembler.Interface
 
                 newImage.Margin = new Thickness(2);
                 newImage.Stretch = Stretch.UniformToFill;
+                newImage.Tag = armyName;
+                newImage.MouseDown += Armybook_Click;
 
                 changeArmybook.armybookList.Children.Add(newImage);
 
@@ -494,6 +502,8 @@ namespace WarhammerArmyAssembler.Interface
 
             Grid.SetRow(changeArmybook.armybookList, (int)lastImage.ActualHeight);           
         }
+
+        private static void Armybook_Click(object sender, RoutedEventArgs e) => PreviewArmy((sender as Image).Tag.ToString());
 
         public static void CreatePointsButtons()
         {

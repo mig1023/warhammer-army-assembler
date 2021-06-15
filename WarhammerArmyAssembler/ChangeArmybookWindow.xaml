@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarhammerArmyAssembler"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Warhammer Army Assembler (WAAgh)" Height="675" Width="1000" 
         WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
@@ -13,6 +14,9 @@
     <Canvas x:Name="armybookCanvas" Margin="0,0,0,0">
 
         <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="660" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
+            <ScrollViewer.Resources>
+                <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">7</sys:Double>
+            </ScrollViewer.Resources>
             <Canvas x:Name="menuArmybookPlace" Width="320" Height="660" VerticalAlignment="Top" Background="White">
                 <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="47" Canvas.Top="36"/>
                 <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="333" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
@@ -34,6 +38,9 @@
             </Grid>
         </Canvas>
         <ScrollViewer x:Name="armybookListScroll" VerticalScrollBarVisibility="Visible" Canvas.Top="0" Canvas.Left="40">
+            <ScrollViewer.Resources>
+                <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">7</sys:Double>
+            </ScrollViewer.Resources>
             <Grid x:Name="armybookList" Background="Black"/>
         </ScrollViewer>
     </Canvas>
