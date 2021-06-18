@@ -218,6 +218,48 @@
 				<ArmourPiercing>1</ArmourPiercing>
 			</AdditionalParam>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Imperial Griffon</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Bloodroar</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<SpecialRuleDescription>Enemy units must roll an additional D6, discarding the lowest result, for Leadership tests caused by this beast's Fear of Terror special rules</SpecialRuleDescription>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Two Heads</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<SpecialRuleDescription>+1 To Hit against models with the Large Target special rule</SpecialRuleDescription>
+					<Points>30</Points>
+				</Option>
+			</Options>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
