@@ -260,6 +260,42 @@
 				</Option>
 			</Options>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Imperial Pegasus</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>6</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Iron-hard Hooves</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<SpecialRuleDescription>Re-rolls failed To Wound rolls when making a Stomp</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Swift as the Wind</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>Re-roll ant dice results of a 1 when determining its charge range</SpecialRuleDescription>
+					<Points>10</Points>
+				</Option>
+			</Options>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
