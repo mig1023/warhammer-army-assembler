@@ -211,7 +211,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]),
             OnlyOneForSuchUnits = BoolParse(xmlNode["OnlyOneForSuchUnits"]),
             OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]),
-            Realised = false,
+            Realised = BoolParse(xmlNode["RealisedByDefault"]),
             Multiple = BoolParse(xmlNode["Multiple"]),
             Virtue = BoolParse(xmlNode["Virtue"]),
             Honours = BoolParse(xmlNode["Honours"]),
