@@ -13,7 +13,172 @@
 		
 	</Artefacts>
 	<Heroes>
-		
+		<Hero>
+			<Type>Lord</Type>
+			<Name>General of the Empire</Name>
+			<Points>95</Points>
+			<MinSize>1</MinSize>
+			<Description>General of the Empire</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<NativeArmour/>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hold the Line!</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Lance</OnlyIfNot>
+						<OnlyIfNot>Handgun</OnlyIfNot>
+						<OnlyIfNot>Longbow</OnlyIfNot>
+						<OnlyIfNot>Pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Lance</OnlyIfNot>
+						<OnlyIfNot>Handgun</OnlyIfNot>
+						<OnlyIfNot>Longbow</OnlyIfNot>
+						<OnlyIfNot>Pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Lance</Name>
+					<Type>Option</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Handgun</OnlyIfNot>
+						<OnlyIfNot>Longbow</OnlyIfNot>
+						<OnlyIfNot>Pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>7</Points>
+					<Lance/>
+				</Option>
+				<Option>
+					<Name>Handgun</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Lance</OnlyIfNot>
+						<OnlyIfNot>Longbow</OnlyIfNot>
+						<OnlyIfNot>Pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Longbow</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Lance</OnlyIfNot>
+						<OnlyIfNot>Handgun</OnlyIfNot>
+						<OnlyIfNot>Pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Pistol</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Lance</OnlyIfNot>
+						<OnlyIfNot>Handgun</OnlyIfNot>
+						<OnlyIfNot>Longbow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Full plate armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Heavy armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>9</Points>
+					<AddToArmour>4</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Full plate armour</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>4</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Imperial Griffon</Name>
+					<Type>Option</Type>
+					<Points>170</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Imperial Pegasus</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding for warhorse</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
