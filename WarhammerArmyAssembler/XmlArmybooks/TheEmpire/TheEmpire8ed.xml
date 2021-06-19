@@ -795,6 +795,133 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Master Engineer</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<Description>Master Engineer</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Master of Ballistics</SpecialRuleDescription>
+					<SpecialRuleDescription>'Stand back, Sir!'</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Grenade blunderbuss</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Hochland long rifke</OnlyIfNot>
+						<OnlyIfNot>Pigeon bombs</OnlyIfNot>
+						<OnlyIfNot>Repeater handgun</OnlyIfNot>
+						<OnlyIfNot>Repeater pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Hochland long rifke</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Grenade blunderbuss</OnlyIfNot>
+						<OnlyIfNot>Pigeon bombs</OnlyIfNot>
+						<OnlyIfNot>Repeater handgun</OnlyIfNot>
+						<OnlyIfNot>Repeater pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Pigeon bombs</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Grenade blunderbuss</OnlyIfNot>
+						<OnlyIfNot>Hochland long rifke</OnlyIfNot>
+						<OnlyIfNot>Repeater handgun</OnlyIfNot>
+						<OnlyIfNot>Repeater pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Repeater handgun</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Grenade blunderbuss</OnlyIfNot>
+						<OnlyIfNot>Hochland long rifke</OnlyIfNot>
+						<OnlyIfNot>Pigeon bombs</OnlyIfNot>
+						<OnlyIfNot>Repeater pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Repeater pistol</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Grenade blunderbuss</OnlyIfNot>
+						<OnlyIfNot>Hochland long rifke</OnlyIfNot>
+						<OnlyIfNot>Pigeon bombs</OnlyIfNot>
+						<OnlyIfNot>Repeater handgun</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Pistol</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Lance</OnlyIfNot>
+						<OnlyIfNot>Handgun</OnlyIfNot>
+						<OnlyIfNot>Longbow</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<Points>1</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Mechanical Steed</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>12</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding for warhorse</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>2</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
