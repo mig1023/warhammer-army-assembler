@@ -897,7 +897,7 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Mechanical Steed</Name>
@@ -919,6 +919,69 @@
 					</OnlyIfAnotherService>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Witch Hunter</Name>
+			<Points>50</Points>
+			<MinSize>1</MinSize>
+			<Description>Witch Hunter</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Accusation</SpecialRuleDescription>
+					<SpecialRuleDescription>Grim Resolve</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRuleDescription>Tool of Judgement</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Pistol</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Brace of pistols</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<RealisedByDefault/>
+				</Option>
+				<Option>
+					<Name>Brace of pistols</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<Points>5</Points>
 				</Option>
 			</Options>
 		</Hero>
