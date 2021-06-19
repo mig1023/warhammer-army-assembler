@@ -253,6 +253,85 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Battle Wizard Lord</Name>
+			<Points>165</Points>
+			<MinSize>1</MinSize>
+			<Wizard>3</Wizard>
+			<Description>Battle Wizard Lord</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Wizard Level 4</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
+				</Option>	
+				<Option>
+					<Name>Imperial Pegasus</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding for Warhorse</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Celestail Hurricanum</Name>
+					<Type>Option</Type>
+					<Points>125</Points>
+					<SpecialRuleDescription>May choose spells only from the Lore of Heaven</SpecialRuleDescription>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Luminark of Hysh</Name>
+					<Type>Option</Type>
+					<Points>120</Points>
+					<SpecialRuleDescription>May choose spells only from the Lore of Light</SpecialRuleDescription>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Imperial Griffon</Name>
+					<Type>Option</Type>
+					<Points>170</Points>
+					<SpecialRuleDescription>May choose spells only from the Lore of Beasts</SpecialRuleDescription>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
