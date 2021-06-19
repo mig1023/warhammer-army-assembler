@@ -332,6 +332,99 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Arch Lector</Name>
+			<Points>100</Points>
+			<MinSize>1</MinSize>
+			<Description>Arch Lector</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<Hate/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<NativeArmour/>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Battle Prayers</SpecialRuleDescription>
+					<SpecialRuleDescription>Divine Power</SpecialRuleDescription>
+					<SpecialRuleDescription>Righteous Fury</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Shield</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+				<Option>
+					<Name>The War Altar</Name>
+					<Type>Option</Type>
+					<Points>150</Points>
+					<Mount/>
+					<OnlyOneInArmy/>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding for Warhorse</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
