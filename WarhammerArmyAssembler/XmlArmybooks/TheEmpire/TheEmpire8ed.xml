@@ -89,6 +89,103 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Karl Franz</Name>
+			<Points>340</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Karl Franz, The Emperor</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<MustBeGeneral/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Reikland Runefang</Name>
+					<MultiWounds>D3</MultiWounds>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Ghal Maraz</Name>
+					<NoArmour/>
+					<AutoWound/>
+				</HandWeapon>
+				<Armour>
+					<Name>Full plate armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Armour>
+					<Name>The Silver Seal</Name>
+					<AddToWard>4</AddToWard>
+					<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Hold the Line!</SpecialRuleDescription>
+					<SpecialRuleDescription>Leader of Men</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>The Reikland Runefang</Name>
+					<NoArmour/>
+					<AutoWound/>
+					<Points>0</Points>
+					<RealisedByDefault/>
+				</Option>
+				<Option>
+					<Name>Ghal Maraz</Name>
+					<Type>Option</Type>
+					<NoArmour/>
+					<AutoWound/>
+					<MultiWounds>D3</MultiWounds>
+					<Points>30</Points>
+				</Option>
+				<Option>
+					<Name>Deathclaw</Name>
+					<Type>Option</Type>
+					<Points>225</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>The Imperial Dragon</Name>
+					<Type>Option</Type>
+					<Points>300</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Imperial Pegasus</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Warhorse</Name>
+					<Type>Option</Type>
+					<Points>18</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Barding for warhorse</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Warhorse</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+					<AddToArmour>6</AddToArmour>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>General of the Empire</Name>
 			<Points>95</Points>
 			<MinSize>1</MinSize>
@@ -955,7 +1052,7 @@
 					<SpecialRuleDescription>Accusation</SpecialRuleDescription>
 					<SpecialRuleDescription>Grim Resolve</SpecialRuleDescription>
 					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
-					<SpecialRuleDescription>Tool of Judgement</SpecialRuleDescription>
+					<SpecialRuleDescription>Tools of Judgement</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
