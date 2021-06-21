@@ -1255,10 +1255,12 @@
 			<AdditionalParam>
 				<LargeBase/>
 			</AdditionalParam>
-			<Special>
-				<SpecialRuleDescription>Impale</SpecialRuleDescription>
-				<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
-			</Special>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Impale</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
@@ -1282,11 +1284,13 @@
 				<LargeBase/>
 				<SlotOf>Hero</SlotOf>
 			</AdditionalParam>
-			<Special>
-				<SpecialRuleDescription>Fly</SpecialRuleDescription>
-				<SpecialRuleDescription>Large Target</SpecialRuleDescription>
-				<SpecialRuleDescription>Poison Breath</SpecialRuleDescription>
-			</Special>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Poison Breath</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Mount>
 	</Mounts>
 	<Units>
@@ -1337,7 +1341,7 @@
 					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>25</MagicItems>
-					<MagicItemsType>Banner</MagicItemsType>
+					<MagicItemsType>Unit</MagicItemsType>
 				</Option>
 				<Option>
 					<Name>Lord's Bowman</Name>
@@ -1438,7 +1442,7 @@
 					<FullCommand/>
 					<Points>12</Points>
 					<MagicItems>50</MagicItems>
-					<MagicItemsType>Banner</MagicItemsType>
+					<MagicItemsType>Unit</MagicItemsType>
 				</Option>
 				<Option>
 					<Name>Eternal Warden</Name>
@@ -1623,7 +1627,7 @@
 					<FullCommand/>
 					<Points>18</Points>
 					<MagicItems>50</MagicItems>
-					<MagicItemsType>Banner</MagicItemsType>
+					<MagicItemsType>Unit</MagicItemsType>
 				</Option>
 				<Option>
 					<Name>Wild Hunter</Name>
