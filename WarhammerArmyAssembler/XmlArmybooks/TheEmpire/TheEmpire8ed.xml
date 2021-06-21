@@ -290,6 +290,10 @@
 					<SpecialRuleDescription>+2 to Strength if mounted upon the War Altar</SpecialRuleDescription>
 				</HandWeapon>
 				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+				</Armour>
+				<Armour>
 					<Name>Jade Griffon</Name>
 					<Regeneration/>
 				</Armour>
@@ -341,6 +345,10 @@
 					<Name>Hand weapon</Name>
 					<AddToAttacks>1</AddToAttacks>
 				</HandWeapon>
+				<Armour>
+					<Name>Full plate armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
 				<Armour>
 					<Name>Jade Griffon</Name>
 					<Regeneration/>
@@ -755,6 +763,51 @@
 					<AddToArmour>6</AddToArmour>
 				</Option>
 			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Ludwig Schwarzhelm</Name>
+			<Points>185</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Warhorse</MountInit>
+			<PersonifiedHero/>
+			<Description>Ludwig Schwarzhelm,The Emperor's Champion</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<NotALeader/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sword of Justice</Name>
+					<Reroll>ToWound</Reroll>
+					<KillingBlow/>
+				</HandWeapon>
+				<Armour>
+					<Name>Full plate armour</Name>
+					<AddToArmour>4</AddToArmour>
+				</Armour>
+				<Standart>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Banner</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+				</Standart>
+				<Special>
+					<SpecialRuleDescription>The Emperor's Bodyguard</SpecialRuleDescription>
+					<SpecialRuleDescription>The Emperor's Herald</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
