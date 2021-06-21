@@ -220,6 +220,102 @@
 				<Description>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1).</Description>
 			</Artefact>
 		</ArtefactsGroup>
+		<ArtefactsGroup Name = "Common magic armour">
+			<Artefact>
+				<Name>Armour of Destiny</Name>
+				<Type>Armour</Type>
+				<Points>50</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToWard>4</AddToWard>
+				<Description>Heavy armour. The Armour of Destiny grants the wearer a 4+ ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Trickster's Helm</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>50</Points>
+				<AddToArmour>6</AddToArmour>
+				<Reroll>OpponentToWound</Reroll>
+				<Description>The wearer counts his armour save as being one point higher than normal. Any successful roll to wound made against the wearer of the Trickster's Helm must be re-rolled.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Silvered Steel</Name>
+				<Type>Armour</Type>
+				<Points>50</Points>
+				<ArmourTo>2</ArmourTo>
+				<Description>The Armour of Silvered Steel grants its wearer a 2+ armour save that cannot be improved by any means.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Armour of Fortune</Name>
+				<Type>Armour</Type>
+				<Points>35</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToWard>5</AddToWard>
+				<Description>Heavy armour. The Armour of Fortune grants the wearer a 5+ ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Helm of Discord</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>30</Points>
+				<AddToArmour>6</AddToArmour>
+				<Test Bet="Pass" Context="Round">Leadership</Test>
+				<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Glittering Scales</Name>
+				<Type>Armour</Type>
+				<Points>25</Points>
+				<AddToArmour>6</AddToArmour>
+				<SubOpponentToHit>-1</SubOpponentToHit>
+				<Description>Light armour. Enemies suffer a -1 to hit penalty when attempting to strike the wearer in close combat.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Shield of Ptolos</Name>
+				<Type>Shield</Type>
+				<Points>25</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>1+ armour save against shooting attacks</SpecialRuleDescription>
+				<Description>Shield. The bearer has a 1+ armour save against shooting attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Spellshield</Name>
+				<Type>Shield</Type>
+				<Points>20</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<Description>Shield. The bearer gains Magic Resistance (1).</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Gambler's Armour</Name>
+				<Type>Armour</Type>
+				<Points>20</Points>
+				<AddToArmour>5</AddToArmour>
+				<AddToWard>6</AddToWard>
+				<Description>Heavy armour. The Gambler's Armour grants the wearer a 6+ Ward save.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Dragonhelm</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>10</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>2+ Ward save against flaming attacks</SpecialRuleDescription>
+				<Description>The wearer counts his armour save as being one point higher than normal. The wearer has a 2+ ward save against flaming attacks.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Enchanted Shield</Name>
+				<Type>Shield</Type>
+				<Points>5</Points>
+				<AddToArmour>5</AddToArmour>
+				<Description>Shield. The bearer counts his armour save as being two points higher than normal, rather than the usual one point that a shield would normally grant.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Charmed Shield</Name>
+				<Type>Shield</Type>
+				<Points>5</Points>
+				<AddToArmour>6</AddToArmour>
+				<SpecialRuleDescription>First hit suffered is discounted on a roll of 2+</SpecialRuleDescription>
+				<Description>Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is discounted on a roll of 2+.</Description>
+			</Artefact>
+		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
 		<Hero>
