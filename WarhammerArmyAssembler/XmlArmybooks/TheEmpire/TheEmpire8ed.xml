@@ -268,6 +268,52 @@
 		</Hero>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Volkmar The Grim</Name>
+			<Points>190</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Volkmar The Grim, The Grand Theogonist</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Staff of Command</Name>
+					<SpecialRuleDescription>+2 to Strength if mounted upon the War Altar</SpecialRuleDescription>
+				</HandWeapon>
+				<Armour>
+					<Name>Jade Griffon</Name>
+					<Regeneration/>
+				</Armour>
+				<Special>
+				<Special>
+					<SpecialRuleDescription>Battle Prayers</SpecialRuleDescription>
+					<SpecialRuleDescription>Divine Power</SpecialRuleDescription>
+					<SpecialRuleDescription>Righteous Fury</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 bonus attempt to cast a Battle Prayer</SpecialRuleDescription>
+				</Special>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>The War Altar</Name>
+					<Type>Option</Type>
+					<Points>150</Points>
+					<Mount/>
+					<OnlyOneInArmy/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>General of the Empire</Name>
 			<Points>95</Points>
 			<MinSize>1</MinSize>
