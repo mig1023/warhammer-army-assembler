@@ -66,6 +66,7 @@ namespace WarhammerArmyAssembler
         public int OriginalAttacks { get; set; }
 
         public bool ImmuneToPsychology { get; set; }
+        public bool ImmuneToPoison { get; set; }
         public bool Stubborn { get; set; }
         public bool Hate { get; set; }
         public bool Fear { get; set; }
@@ -289,6 +290,7 @@ namespace WarhammerArmyAssembler
                 LargeBase = this.LargeBase,
 
                 ImmuneToPsychology = this.ImmuneToPsychology,
+                ImmuneToPoison = this.ImmuneToPoison,
                 Stubborn = this.Stubborn,
                 Hate = this.Hate,
                 Fear = this.Fear,

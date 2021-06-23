@@ -259,7 +259,7 @@ namespace WarhammerArmyAssembler.Test
 
                     foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
                         if (!((u.Key == unit.Mount) && (unit.Wounds > 0)) && !((u.Key == enemy.Mount) && (enemy.Wounds > 0)))
-                            battleResult[u.Key.ID] += RoundBonus(u.Value, roundWounds);
+                            battleResult[u.Key.ID] += RoundBonus(u.Value);
                         
                     foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
                     {
@@ -335,7 +335,7 @@ namespace WarhammerArmyAssembler.Test
             roundBonus += 1;
         }
 
-        private static int RoundBonus(List<Unit> units, Dictionary<int, int> roundWounds)
+        private static int RoundBonus(List<Unit> units)
         {
             int roundBonus = 0;
 
@@ -701,7 +701,7 @@ namespace WarhammerArmyAssembler.Test
                     Test.Data.Console(Test.Data.text, " --> wound ");
 
                     if (
-                        (PoisonedAttack(unit, impactHit) || Wound(unit, enemy, round))
+                        (PoisonedAttack(unit, enemy, impactHit) || Wound(unit, enemy, round))
                         &&
                         (KillingAttack(unit, enemy) || NotAS(ref unit, enemy))
                         &&
@@ -799,9 +799,9 @@ namespace WarhammerArmyAssembler.Test
             return multiwounds;
         }
 
-        private static bool PoisonedAttack(Unit unit, bool impactHit = false)
+        private static bool PoisonedAttack(Unit unit, Unit enemy, bool impactHit = false)
         {
-            if (impactHit || !unit.PoisonAttack || (Dice.lastDice != 6))
+            if (impactHit || !unit.PoisonAttack || enemy.ImmuneToPoison || (Dice.lastDice != 6))
                 return false;
 
             attackIsPoisoned = true;

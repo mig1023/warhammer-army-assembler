@@ -118,6 +118,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.NoMultiWounds = BoolParse(additionalParam["NoMultiWounds"]);
                 newUnit.LargeBase = BoolParse(additionalParam["LargeBase"]);
                 newUnit.ImmuneToPsychology = BoolParse(additionalParam["ImmuneToPsychology"]);
+                newUnit.ImmuneToPoison = BoolParse(additionalParam["ImmuneToPoison"]);
                 newUnit.Stubborn = BoolParse(additionalParam["Stubborn"]);
                 newUnit.Hate = BoolParse(additionalParam["Hate"]);
                 newUnit.Fear = BoolParse(additionalParam["Fear"]);
@@ -240,6 +241,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Regeneration = BoolParse(xmlNode["Regeneration"]),
             ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]),
+            ImmuneToPoison = BoolParse(xmlNode["ImmuneToPoison"]),
             Stubborn = BoolParse(xmlNode["Stubborn"]),
             Hate = BoolParse(xmlNode["Hate"]),
             Fear = BoolParse(xmlNode["Fear"]),

@@ -59,6 +59,7 @@ namespace WarhammerArmyAssembler
         public string Reroll { get; set; }
         public bool Regeneration { get; set; }
         public bool ImmuneToPsychology { get; set; }
+        public bool ImmuneToPoison { get; set; }
         public bool Stubborn { get; set; }
         public bool Hate { get; set; }
         public bool Fear { get; set; }
@@ -197,6 +198,7 @@ namespace WarhammerArmyAssembler
             ArmourPiercing = this.ArmourPiercing,
             Regeneration = this.Regeneration,
             ImmuneToPsychology = this.ImmuneToPsychology,
+            ImmuneToPoison = this.ImmuneToPoison,
             Stubborn = this.Stubborn,
             Hate = this.Hate,
             Fear = this.Fear,

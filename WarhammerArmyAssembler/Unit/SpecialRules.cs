@@ -11,6 +11,7 @@ namespace WarhammerArmyAssembler
         public static Dictionary<string, string> All = new Dictionary<string, string>()
         {
             ["ImmuneToPsychology"] = "Immune to Psychology",
+            ["ImmuneToPoison"] = "Immune to poison",
             ["Stubborn"] = "Stubborn",
             ["Hate"] = "Hate",
             ["Fear"] = "Fear",
