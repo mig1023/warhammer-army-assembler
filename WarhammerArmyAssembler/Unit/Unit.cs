@@ -105,6 +105,7 @@ namespace WarhammerArmyAssembler
         public bool Giant { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
+        public int ChargeStrengthBonus { get; set; }
         public bool Resolute { get; set; }
         public bool PredatoryFighter { get; set; }
         public bool MurderousProwess { get; set; }
@@ -323,6 +324,7 @@ namespace WarhammerArmyAssembler
                 Giant = this.Giant,
                 Lance = this.Lance,
                 Flail = this.Flail,
+                ChargeStrengthBonus = this.ChargeStrengthBonus,
                 Resolute = this.Resolute,
                 PredatoryFighter = this.PredatoryFighter,
                 MurderousProwess = this.MurderousProwess,

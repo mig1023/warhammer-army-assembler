@@ -75,6 +75,7 @@ namespace WarhammerArmyAssembler
         public bool SteamTank { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
+        public int ChargeStrengthBonus { get; set; }
         public bool Resolute { get; set; }
         public bool PredatoryFighter { get; set; }
         public bool MurderousProwess { get; set; }
@@ -234,6 +235,7 @@ namespace WarhammerArmyAssembler
 
             Lance = this.Lance,
             Flail = this.Flail,
+            ChargeStrengthBonus = this.ChargeStrengthBonus,
             Resolute = this.Resolute,
             BigWeapon = this.BigWeapon,
                 

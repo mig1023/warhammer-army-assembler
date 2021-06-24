@@ -158,6 +158,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.Giant = BoolParse(additionalParam["Giant"]);
                 newUnit.Lance = BoolParse(additionalParam["Lance"]);
                 newUnit.Flail = BoolParse(additionalParam["Flail"]);
+                newUnit.ChargeStrengthBonus = IntParse(additionalParam["ChargeStrengthBonus"]);
                 newUnit.Resolute = BoolParse(additionalParam["Resolute"]);
                 newUnit.PredatoryFighter = BoolParse(additionalParam["PredatoryFighter"]);
                 newUnit.MurderousProwess = BoolParse(additionalParam["MurderousProwess"]);
@@ -258,6 +259,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             SteamTank = BoolParse(xmlNode["SteamTank"]),
             Lance = BoolParse(xmlNode["Lance"]),
             Flail = BoolParse(xmlNode["Flail"]),
+            ChargeStrengthBonus = IntParse(xmlNode["ChargeStrengthBonus"]),
             Resolute = BoolParse(xmlNode["Resolute"]),
             PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]),
             MurderousProwess = BoolParse(xmlNode["MurderousProwess"]),

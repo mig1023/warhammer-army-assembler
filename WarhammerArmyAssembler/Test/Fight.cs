@@ -853,16 +853,22 @@ namespace WarhammerArmyAssembler.Test
             return Dice.Roll(unit, Dice.Types.WS, enemy, chance, dice: out dice, round: round);
         }
 
+        private static void StrengthBonus(ref int strength, int bonus)
+        {
+            strength += bonus;
+            strength = Unit.ParamNormalization(strength);
+        }
+
         private static bool Wound(Unit unit, Unit enemy, int round)
         {
             int chance = 4;
             int strength = unit.Strength;
 
             if ((unit.Lance || unit.Flail || unit.Resolute) && (round == 1))
-            {
-                strength += (unit.Resolute ? 1 : 2);
-                strength = Unit.ParamNormalization(strength);
-            }
+                StrengthBonus(ref strength, (unit.Resolute ? 1 : 2));
+
+            if ((unit.ChargeStrengthBonus > 0) && (round == 1))
+                StrengthBonus(ref strength, unit.ChargeStrengthBonus);
 
             if (unit.AutoWound)
             {

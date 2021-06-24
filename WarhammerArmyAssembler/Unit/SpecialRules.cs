@@ -33,6 +33,7 @@ namespace WarhammerArmyAssembler
             ["MultiWounds"] = "Multiple wounds ([X])",
             ["NoArmour"] = "No Armour",
             ["NoWard"] = "No Ward",
+            ["ChargeStrengthBonus"] = "+[X] Strength on charge",
             ["ArmourPiercing"] = "Armour piercing ([X])",
             ["Reroll"] = "Reroll ([X])",
             ["ImpactHit"] = "Impact Hit ([X])",
