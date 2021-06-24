@@ -281,7 +281,7 @@
 				<Name>Caledor's Bane</Name>
 				<Type>Weapon</Type>
 				<Points>35</Points>
-				<AddToStrength>3</AddToStrength>
+				<ChargeStrengthBonus>3</ChargeStrengthBonus>
 				<SpecialRuleDescription>Enemy may not use Scaly Skin saving</SpecialRuleDescription>
 				<Description>+3 Strength on the charge. Models may not use Scaly Skin saving throws against hits from Caledor's Bane.</Description>
 			</Artefact>
@@ -1429,10 +1429,12 @@
 				<Attacks>3</Attacks>
 				<Leadership>6</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<ChargeStrengthBonus>1</ChargeStrengthBonus>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
-					<SpecialRuleDescription>+1 Strength when pegasus charges in combat</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1452,10 +1454,12 @@
 				<Attacks>2</Attacks>
 				<Leadership>6</Leadership>
 			</MainParam>
+			<AdditionalParam>
+				<ChargeStrengthBonus>1</ChargeStrengthBonus>
+			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
-					<SpecialRuleDescription>+1 Strength when pegasus charges in combat</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
