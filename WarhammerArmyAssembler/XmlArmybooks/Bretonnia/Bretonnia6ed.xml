@@ -205,7 +205,7 @@
 				<Type>Weapon</Type>
 				<Points>65</Points>
 				<OnlyFor>Mount</OnlyFor>
-				<AddToStrength>2</AddToStrength>
+				<Lance/>
 				<SpecialRuleDescription>If the model has the Blessing of the Lady, then all attacks with the Silver Lance Of the Blessed automatically hit</SpecialRuleDescription>
 				<Description>The bearer has +2 Strength on the charge when mounted. If the model has the Blessing of the Lady, then all attacks with the Silver Lance Of the Blessed automatically hit.</Description>
 			</Artefact>
@@ -241,7 +241,7 @@
 				<Type>Weapon</Type>
 				<Points>35</Points>
 				<OnlyFor>Mount</OnlyFor>
-				<Flail/>
+				<Lance/>
 				<Reroll>ToWound</Reroll>
 				<Description>The bearer has +2 Strength on the charge when mounted. The Heartwood Lance allows the bearer to re-roll all failed rolls to wound.</Description>
 			</Artefact>
@@ -1088,7 +1088,7 @@
 				<Ward>5</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Flail/>
+				<ChargeStrengthBonus>2</ChargeStrengthBonus>
 				<Fear/>
 			</AdditionalParam>
 		</Mount>
