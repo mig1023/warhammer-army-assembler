@@ -102,8 +102,14 @@ namespace WarhammerArmyAssembler.Army
 
         public static string ArmyProblems()
         {
-            bool problem = (Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core));
-            return (problem ? "Not enough core unit in army" : String.Empty);
+            if (Army.Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core))
+                return "Not enough core unit in army";
+
+            else if (Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero) + (Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord)) <= 0)
+                return "Not enough characters in army";
+
+            else
+                return String.Empty;
         }
 
         public static bool IsArmyValid() => String.IsNullOrEmpty(ArmyProblems());
