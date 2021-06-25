@@ -24,8 +24,9 @@ namespace WarhammerArmyAssembler.Interface
         public static int CurrentSelectedUnit = -1;
 
         public static Image lastImage = null;
-        public static Dictionary<Image, string> allImages = new Dictionary<Image, string>();
         public static string lastArmy = String.Empty;
+        public static Dictionary<Image, string> allImages = new Dictionary<Image, string>();
+        public static Dictionary<string, string> allArmies = new Dictionary<string, string>();
 
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop, ToMainMenu }
 
@@ -452,10 +453,9 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void PreviewArmyList(bool next = false, bool prev = false, bool reset = false)
         {
-            if (reset)
-                SetArmySelected(String.Empty);
-
-            PreviewArmy(ArmyBook.XmlBook.GetXmlArmyBooks(next, prev));
+            string army = ArmyBook.XmlBook.GetXmlArmyBooks(next, prev);
+            SetArmySelected(allArmies[army]);
+            PreviewArmy(army);
         }
 
         public static void LoadAllArmy(List<string> allXmlFiles)
@@ -506,6 +506,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 changeArmybook.armybookList.Children.Add(newImage);
                 allImages.Add(newImage, source);
+                allArmies.Add(armyName, source);
 
                 lastImage = newImage;
             }
