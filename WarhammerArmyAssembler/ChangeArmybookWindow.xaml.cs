@@ -41,9 +41,9 @@ namespace WarhammerArmyAssembler
             armybookListScroll.Width = armybookCanvas.Width - 360;
         }
 
-        private void prev_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(prev: true);
+        private void prev_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(prev: true, reset: true);
 
-        private void next_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(next: true);
+        private void next_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(next: true, reset: true);
 
         private void StartArmybook(int points)
         {

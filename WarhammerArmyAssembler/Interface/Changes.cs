@@ -24,6 +24,7 @@ namespace WarhammerArmyAssembler.Interface
         public static int CurrentSelectedUnit = -1;
 
         public static Image lastImage = null;
+        public static Dictionary<Image, string> allImages = new Dictionary<Image, string>();
         public static string lastArmy = String.Empty;
 
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop, ToMainMenu }
@@ -449,13 +450,10 @@ namespace WarhammerArmyAssembler.Interface
             PreviewLoadCurrentSelectedArmy(armyName);
         }
 
-        public static void PreviewArmyList(bool next = false, bool prev = false)
+        public static void PreviewArmyList(bool next = false, bool prev = false, bool reset = false)
         {
-            if (!String.IsNullOrEmpty(lastArmy))
-            {
-                lastImage.Source = new BitmapImage(new Uri(lastArmy));
-                lastArmy = String.Empty;
-            }
+            if (reset)
+                SetArmySelected(String.Empty);
 
             PreviewArmy(ArmyBook.XmlBook.GetXmlArmyBooks(next, prev));
         }
@@ -465,6 +463,7 @@ namespace WarhammerArmyAssembler.Interface
             int left = -1, top = 0;
 
             Image lastImage = null;
+            allImages.Clear();
 
             foreach (string armyName in allXmlFiles)
             {
@@ -472,12 +471,14 @@ namespace WarhammerArmyAssembler.Interface
                 xmlFile.Load(armyName);
                 XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
 
+                string source = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
+
                 Image newImage = new Image()
                 {
-                    Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText)),
+                    Source = new BitmapImage(new Uri(source)),
                     Margin = new Thickness(2),
                     Stretch = Stretch.UniformToFill,
-                    Tag = armyName,
+                    Tag = String.Format("{0}|{1}", armyName, source),
                 };
 
                 left += 1;
@@ -504,6 +505,7 @@ namespace WarhammerArmyAssembler.Interface
                 newImage.MouseDown += Armybook_Click;
 
                 changeArmybook.armybookList.Children.Add(newImage);
+                allImages.Add(newImage, source);
 
                 lastImage = newImage;
             }
@@ -516,40 +518,30 @@ namespace WarhammerArmyAssembler.Interface
         private static void Armybook_Click(object sender, RoutedEventArgs e)
         {
             Image image = (sender as Image);
+            string[] armyData = image.Tag.ToString().Split('|');
 
-            string armyName = image.Tag.ToString();
-
-            if (!String.IsNullOrEmpty(lastArmy))
-                lastImage.Source = new BitmapImage(new Uri(lastArmy));
-
-            lastArmy = SetNewArmyImage(image, armyName, blackAndWhite: true);
-            lastImage = image;
-
-            PreviewArmy(armyName);
+            PreviewArmy(armyData[0]);
+            SetArmySelected(armyData[1]);
         }
 
-        private static string SetNewArmyImage(Image image, string armyName, bool blackAndWhite = false)
+        private static void SetArmySelected(string armySource)
         {
-            XmlDocument xmlFile = new XmlDocument();
-            xmlFile.Load(armyName);
-            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
-
-            string path = Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText;
-
-            if (blackAndWhite)
+            foreach (KeyValuePair<Image, string> image in allImages)
             {
-                FormatConvertedBitmap bwImage = new FormatConvertedBitmap();
-                bwImage.BeginInit();
-                bwImage.Source = new BitmapImage(new Uri(path));
-                bwImage.DestinationFormat = PixelFormats.Gray8;
-                bwImage.EndInit();
+                if (String.IsNullOrEmpty(armySource) || (armySource == image.Value))
+                    image.Key.Source = new BitmapImage(new Uri(image.Value));
 
-                image.Source = bwImage;
+                else
+                {
+                    FormatConvertedBitmap bwImage = new FormatConvertedBitmap();
+                    bwImage.BeginInit();
+                    bwImage.Source = new BitmapImage(new Uri(image.Value));
+                    bwImage.DestinationFormat = PixelFormats.Gray8;
+                    bwImage.EndInit();
+
+                    image.Key.Source = bwImage;
+                }
             }
-            else
-                image.Source = new BitmapImage(new Uri(path));
-
-            return path;
         }
 
         public static void CreatePointsButtons()
