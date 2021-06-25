@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Xml;
+using System.Linq;
 
 namespace WarhammerArmyAssembler.Interface
 {
@@ -458,6 +459,14 @@ namespace WarhammerArmyAssembler.Interface
             PreviewArmy(army);
         }
 
+        public static void RandomArmy()
+        {
+            string randomArmy = allArmies.ElementAt(Test.Data.rand.Next(0, allArmies.Count)).Key;
+
+            SetArmySelected(allArmies[randomArmy]);
+            PreviewArmy(randomArmy);
+        }
+
         public static void LoadAllArmy(List<string> allXmlFiles)
         {
             int left = -1, top = 0;
@@ -525,7 +534,7 @@ namespace WarhammerArmyAssembler.Interface
             SetArmySelected(armyData[1]);
         }
 
-        private static void SetArmySelected(string armySource)
+        public static void SetArmySelected(string armySource)
         {
             foreach (KeyValuePair<Image, string> image in allImages)
             {

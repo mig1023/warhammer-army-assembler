@@ -91,5 +91,9 @@ namespace WarhammerArmyAssembler
             showArmyAdditionalName.Visibility = Visibility.Hidden;
             armyAdditionalName.Visibility = Visibility.Visible;
         }
+
+        private void randomArmy_MouseDown(object sender, MouseButtonEventArgs e) => Interface.Changes.RandomArmy();
+
+        private void resetSelection_MouseDown(object sender, MouseButtonEventArgs e) => Interface.Changes.SetArmySelected(String.Empty);
     }
 }
