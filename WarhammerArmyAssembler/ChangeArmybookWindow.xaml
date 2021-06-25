@@ -40,7 +40,7 @@
             <ScrollViewer.Resources>
                 <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">7</sys:Double>
             </ScrollViewer.Resources>
-            <Grid x:Name="armybookList" Background="LightGray"/>
+            <Grid x:Name="armybookList" Background="LightGray" MouseLeftButtonDown="Window_MouseLeftButtonDown"/>
         </ScrollViewer>
     </Canvas>
 </Window>
