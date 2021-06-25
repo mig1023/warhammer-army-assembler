@@ -421,7 +421,9 @@ namespace WarhammerArmyAssembler.Interface
                 changeArmybook.next,
                 changeArmybook.prev,
                 changeArmybook.listArmybookPoints,
-                changeArmybook.armyAdditionalName
+                changeArmybook.armyAdditionalName,
+                changeArmybook.randomArmy,
+                changeArmybook.resetSelection,
             };
 
             foreach (Control label in labels)
