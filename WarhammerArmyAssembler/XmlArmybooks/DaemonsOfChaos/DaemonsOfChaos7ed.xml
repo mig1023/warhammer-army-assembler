@@ -118,6 +118,9 @@
 				<PoisonAttack/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Huge plaguesword</Name>
+				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
@@ -133,7 +136,6 @@
 			<Name>Skulltaker</Name>
 			<Points>150</Points>
 			<MinSize>1</MinSize>
-			<Wizard>1</Wizard>
 			<PersonifiedHero/>
 			<Description>Khorne's Champion, Blooded Wanderer, Slayer of Kings</Description>
 			<MainParam>
@@ -146,18 +148,55 @@
 				<Initiative>9</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>8</Leadership>
-				<Armour>3</Armour>
 			</MainParam>
 			<AdditionalParam>
 				<ExtendedKillingBlow>5</ExtendedKillingBlow>
 				<Hate/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hellblade</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Cloak of Skulls</Name>
+					<AddToArmour>3</AddToArmour>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				</Armour>
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
 					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
 					<SpecialRuleDescription>Must always issue a challenge, of accept a challenge if one is offered</SpecialRuleDescription>
-					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>The Blue Scribes of Tzeentch</Name>
+			<Points>81</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Azure Arcanologists, Wandering Wizardkin, Tzeentch's Quaestors</Description>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Flailing tentacles</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Energy Syphon</SpecialRuleDescription>
+					<SpecialRuleDescription>Scrolls of Sorcery</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
