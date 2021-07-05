@@ -418,6 +418,81 @@
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
+			<Type>Lord</Type>
+			<Name>Keeper of Secrets</Name>
+			<Points>450</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Keeper of Secrets</Description>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<HitFirst/>
+				<ArmourPiercing>1</ArmourPiercing>
+				<LargeBase/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard level 3</OnlyIfNot>
+						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wizard level 3</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<AddToWizard>2</AddToWizard>
+					<AddToCast>2</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard level 2</OnlyIfNot>
+						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wizard level 4</Name>
+					<Type>Option</Type>
+					<Points>120</Points>
+					<AddToWizard>3</AddToWizard>
+					<AddToCast>3</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard level 2</OnlyIfNot>
+						<OnlyIfNot>Wizard level 3</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows all the spells from the Daemon Lore of Slaanesh</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Skulltaker</Name>
 			<Points>150</Points>
