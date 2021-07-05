@@ -262,7 +262,7 @@
 				<LargeBase/>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</AdditionalParam>
+			</AdditionalParam>	
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Axe and whip</Name>
@@ -302,6 +302,8 @@
 				<Terror/>
 				<ImmuneToPsychology/>
 				<LargeBase/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
 			</AdditionalParam>
 			<Options>
 				<Option>
@@ -337,6 +339,81 @@
 					<SpecialRuleDescription>Large target</SpecialRuleDescription>
 					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
 					<SpecialRuleDescription>Knows all the spells from the Daemon Lore of Tzeentch</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Great Unclean One</Name>
+			<Points>450</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Great Unclean One</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>10</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<PoisonAttack/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard level 3</OnlyIfNot>
+						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wizard level 3</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<AddToWizard>2</AddToWizard>
+					<AddToCast>2</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard level 2</OnlyIfNot>
+						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wizard level 4</Name>
+					<Type>Option</Type>
+					<Points>120</Points>
+					<AddToWizard>3</AddToWizard>
+					<AddToCast>3</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard level 2</OnlyIfNot>
+						<OnlyIfNot>Wizard level 3</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Flail</Name>
+					<Flail/>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows all the spells from the Daemon Lore of Nurgle</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
