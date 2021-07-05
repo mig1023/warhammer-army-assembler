@@ -139,6 +139,106 @@
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
+			<Type>Lord</Type>
+			<Name>Daemon Prince</Name>
+			<Points>300</Points>
+			<MinSize>1</MinSize>
+			<Description>Daemon Prince</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>8</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<Fear/>
+				<MagicItems>75</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<LargeBase/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Dedicate to Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dedicate to Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
+						<OnlyIfNot>Dedicate to Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Dedicate to Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dedicate to Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
+						<OnlyIfNot>Dedicate to Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Dedicate to Khorne</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dedicate to Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Dedicate to Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Dedicate to Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Dedicate to Nurgle</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dedicate to Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Dedicate to Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wizard level 1</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
+						<OnlyIfNot>Wizard level 2</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wizard level 2</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToWizard>2</AddToWizard>
+					<AddToCast>2</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
+						<OnlyIfNot>Wizard level 1</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Skulltaker</Name>
 			<Points>150</Points>
