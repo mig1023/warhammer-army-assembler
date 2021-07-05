@@ -280,6 +280,67 @@
 			</SpecialRulesAndAmmunition>
 		</Hero>
 		<Hero>
+			<Type>Lord</Type>
+			<Name>Lord of Change</Name>
+			<Points>450</Points>
+			<MinSize>1</MinSize>
+			<Wizard>2</Wizard>
+			<Description>Lord of Change</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>6</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<ImmuneToPsychology/>
+				<LargeBase/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level 3</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wizard level 4</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<AddToWizard>2</AddToWizard>
+					<AddToCast>2</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Wizard level 3</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Talons</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows all the spells from the Daemon Lore of Tzeentch</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
 			<Type>Hero</Type>
 			<Name>Skulltaker</Name>
 			<Points>150</Points>
