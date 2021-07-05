@@ -157,11 +157,11 @@
 				<Ward>5</Ward>
 			</MainParam>
 			<AdditionalParam>
+				<LargeBase/>
 				<ImmuneToPsychology/>
 				<Fear/>
 				<MagicItems>75</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<LargeBase/>
 			</AdditionalParam>
 			<Options>
 				<Option>
@@ -235,6 +235,47 @@
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Bloodthirster of Khorne</Name>
+			<Points>450</Points>
+			<MinSize>1</MinSize>
+			<Description>Bloodthirster of Khorne</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>10</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>7</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<ImmuneToPsychology/>
+				<LargeBase/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Axe and whip</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
