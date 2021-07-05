@@ -690,6 +690,57 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Herald of Tzeentch</Name>
+			<Points>115</Points>
+			<MinSize>1</MinSize>
+			<Wizard>2</Wizard>
+			<Description>Herald of Tzeentch</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>4</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Hate/>
+				<KillingBlow/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+				<LargeBase/>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Disc of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Burning Chariot</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Flailing tentacles</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Locus of Tzeentch</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -738,6 +789,10 @@
 				<Armour>4</Armour>
 				<Ward>5</Ward>
 			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<Fear/>
+			</AdditionalParam>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
@@ -756,6 +811,8 @@
 				<Leadership>7</Leadership>
 			</MainParam>
 			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<Fear/>
 				<PoisonAttack/>
 			</AdditionalParam>
 		</Mount>
@@ -782,6 +839,8 @@
 			<AdditionalParam>
 				<ImpactHit>D6+1</ImpactHit>
 				<KillingBlow/>
+				<ImmuneToPsychology/>
+				<Fear/>
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
