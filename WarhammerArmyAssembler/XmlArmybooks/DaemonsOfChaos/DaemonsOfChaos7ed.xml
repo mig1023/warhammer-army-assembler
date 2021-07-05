@@ -661,9 +661,10 @@
 			<AdditionalParam>
 				<Hate/>
 				<KillingBlow/>
+				<ImmuneToPsychology/>
+				<Fear/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-				<LargeBase/>
 			</AdditionalParam>
 			<Options>
 				<Option>
@@ -710,11 +711,10 @@
 				<Ward>4</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<Hate/>
-				<KillingBlow/>
+				<ImmuneToPsychology/>
+				<Fear/>
 				<MagicItems>50</MagicItems>
-				<MagicItemsType>Hero</MagicItemsType>
-				<LargeBase/>
+				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
 			<Options>
 				<Option>
@@ -738,6 +738,56 @@
 					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
 					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
 					<SpecialRuleDescription>Locus of Tzeentch</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Herald of Nurgle</Name>
+			<Points>115</Points>
+			<MinSize>1</MinSize>
+			<Description>Herald of Nurgle</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<PoisonAttack/>
+				<Regeneration/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level 1</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+				</Option>
+				<Option>
+					<Name>Palanquin</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Plaguesword</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Locus of Nurgle</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
