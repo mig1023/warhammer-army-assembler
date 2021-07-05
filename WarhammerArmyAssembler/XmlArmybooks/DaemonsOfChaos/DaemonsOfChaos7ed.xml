@@ -760,6 +760,8 @@
 				<Ward>5</Ward>
 			</MainParam>
 			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<Fear/>
 				<PoisonAttack/>
 				<Regeneration/>
 				<MagicItems>50</MagicItems>
@@ -788,6 +790,64 @@
 				<Special>
 					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
 					<SpecialRuleDescription>Locus of Nurgle</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Herald of Slaanesh</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<Description>Herald of Slaanesh</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ImmuneToPsychology/>
+				<Fear/>
+				<ArmourPiercing>1</ArmourPiercing>
+				<HitFirst/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level 1</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+				</Option>
+				<Option>
+					<Name>Steed of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Seeker Chariot</Name>
+					<Type>Option</Type>
+					<Points>75</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Locus of Slaanesh</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -956,7 +1016,7 @@
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
-					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
