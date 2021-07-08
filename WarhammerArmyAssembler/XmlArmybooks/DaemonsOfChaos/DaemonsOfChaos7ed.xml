@@ -1072,6 +1072,17 @@
 					<SpecialRuleDescription>All Daemons within 12" are stubborn</SpecialRuleDescription>
 				</Option>
 				<Option>
+					<Name>Banner of Hellfire</Name>
+					<Type>Option</Type>
+					<Points>100</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Battle Standard Bearer</OnlyIf>
+						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
+						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</SpecialRuleDescription>
+				</Option>
+				<Option>
 					<Name>Juggernaut</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
