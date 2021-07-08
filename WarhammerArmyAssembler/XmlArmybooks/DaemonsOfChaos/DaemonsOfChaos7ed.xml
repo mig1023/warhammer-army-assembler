@@ -8,10 +8,9 @@
 		<BackgroundColor>#ffbcad</BackgroundColor>
 		<ArmyBookImage>DaemonsOfChaos7ed.png</ArmyBookImage>
 		<SymbolImage>DaemonsOfChaos.png</SymbolImage>
+		<NoMagicItemsColumn/>
 	</Info>
-	<Artefacts>
-		
-	</Artefacts>
+	<Artefacts/>
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
@@ -232,54 +231,63 @@
 					<Name>Etherblade</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<NoArmour/>
 				</Option>
 				<Option>
 					<Name>Armed Monstrosity</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<AddToAttacks>2</AddToAttacks>
 				</Option>
 				<Option>
 					<Name>Daemonic Robes</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Can never be wounded on better than a 3+</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Enrapturing Gaze</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Models in base contact may not use another model's Leadership value</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Immortal Fury</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Reroll>ToHit</Reroll>
 				</Option>
 				<Option>
 					<Name>Iridescent Corona</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Enemy models in base contact at start of any combat suffer a Flaming Strength 3 hit before any blows are struck</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Soul Hunger</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Reroll>ToWound</Reroll>
 				</Option>
 				<Option>
 					<Name>Unnatural Swiftness</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<HitFirst/>
 				</Option>
 				<Option>
 					<Name>Winged Horror</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 				</Option>
 			</Options>
@@ -322,18 +330,21 @@
 					<Name>Awesome Strength</Name>
 					<Type>Option</Type>
 					<Points>75</Points>
+					<MagicItemsPoints/>
 					<StrengthTo>10</StrengthTo>
 				</Option>
 				<Option>
 					<Name>Dark Insanity</Name>
 					<Type>Option</Type>
 					<Points>55</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>2D6+2 Attacks, roll at the start of each combat</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Obsidian Armour</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<AddToArmour>3</AddToArmour>
 					<SpecialRuleDescription>Magic weapons carriad by enemy models lose their magical abilities in base contact</SpecialRuleDescription>
 				</Option>
@@ -341,11 +352,14 @@
 					<Name>Axe of Khorne</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<KillingBlow/>
 				</Option>
 				<Option>
 					<Name>Firestorm Blade</Name>
 					<Type>Option</Type>
+					<Points>25</Points>
+					<MagicItemsPoints/>
 					<AddToStrength>1</AddToStrength>
 					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
 				</Option>
@@ -353,24 +367,28 @@
 					<Name>Immortal Fury</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Reroll>ToHit</Reroll>
 				</Option>
 				<Option>
 					<Name>Spell Breaker</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Once per battle may automatically dispel one enemy spell</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Armour of Khorne</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
+					<MagicItemsPoints/>
 					<AddToArmour>3</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Collar of Khorne</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
 				</Option>
 			</Options>
@@ -443,60 +461,70 @@
 					<Name>Twin Heads</Name>
 					<Type>Option</Type>
 					<Points>75</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>+2 to all casting rolls</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Tzeentch's Will</Name>
 					<Type>Option</Type>
 					<Points>70</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>May re-roll a single D6 once per player turn</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Staff of Change</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<Test Bet="Death" Context="Wound">Toughness</Test>
 				</Option>
 				<Option>
 					<Name>Spell Destroyer</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Once per battle may automatically dispel one enemy spell, the spell is lost on the roll of a 4+</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Power Vortex</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
+					<MagicItemsPoints/>
 					<AddToCast>1</AddToCast>
 				</Option>
 				<Option>
 					<Name>Dark Magister</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Ignores the result of his first miscast</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Daemonic Robes</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Can never be wounded on better than a 3+</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Flames of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>D6 bolts in the Shooting phase with a range of 18" and a Strength of 4</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Iridescent Corona</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Enemy models in base contact at start of any combat suffer a Flaming Strength 3 hit before any blows are struck</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Master of Sorcery</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses</SpecialRuleDescription>
 				</Option>
 			</Options>
@@ -579,6 +607,7 @@
 					<Name>Balesword</Name>
 					<Type>Option</Type>
 					<Points>75</Points>
+					<MagicItemsPoints/>
 					<AutoWound/>
 					<MultiWounds>D6</MultiWounds>
 				</Option>
@@ -586,18 +615,21 @@
 					<Name>Nurglings Infestation</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Roll a D6 at the start of each Magic phase, on 2+ it may immediately increase, by one base, the size of one Nurgling unit within 6"</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Staff of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Bound spell, Power level 3: Rancid Visitation</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Trapping of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<AddToArmour>4</AddToArmour>
 					<Regeneration/>
 				</Option>
@@ -605,36 +637,42 @@
 					<Name>Noxious Vapours</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>All enemies models in base contact lose the Always Strikes First rule and always strike last</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Pestilent Mucus</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Nurgle's Rot</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed</SpecialRuleDescription>
 				</Option>		
 				<Option>
 					<Name>Soul Hunger</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Reroll>ToWound</Reroll>
 				</Option>
 				<Option>
 					<Name>Stream of Bile</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Strength 4 breath weapon</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Slime Trail</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Enemy inits do not receive combat result bonuses for attacking the flank or rear</SpecialRuleDescription>
 				</Option>
 			</Options>
@@ -717,48 +755,56 @@
 					<Name>Spirit Swallower</Name>
 					<Type>Option</Type>
 					<Points>100</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Gains one wound for each unsaved wound it causes in close combat</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Etherblade</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<NoArmour/>
 				</Option>
 				<Option>
 					<Name>Temptator</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<SpecialRuleDescription>At the beginning of a combat, one enemy character in base contact must take a Leadership test? if the test is failed, the character will direct his attacks against friendly models or units chosen by Daemon's controlling player</SpecialRuleDescription>
+					<MagicItemsPoints/>
+					<SpecialRuleDescription>At the beginning of a combat, one enemy character in base contact must take a Leadership test, if the test is failed, the character will direct his attacks against friendly models or units chosen by Daemon's controlling player</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Allure of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 				</Option>
 				<Option>
 					<Name>Daemonic Robes</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Can never be wounded on better than a 3+</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Enrapturing Gaze</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Models in base contact may not use another model's Leadership value</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Soul Hunger</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Reroll>ToWound</Reroll>
 				</Option>
 				<Option>
 					<Name>Soporific Musk</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>A unit in base contact rolls an extra dice when fleeing and then discards the highest result</SpecialRuleDescription>
 				</Option>
 			</Options>
@@ -952,12 +998,14 @@
 					<Name>Etherblade</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<NoArmour/>
 				</Option>
 				<Option>
 					<Name>Obsidian Armour</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<AddToArmour>3</AddToArmour>
 					<SpecialRuleDescription>Magic weapons carriad by enemy models lose their magical abilities in base contact</SpecialRuleDescription>
 				</Option>
@@ -965,11 +1013,14 @@
 					<Name>Daemonic Robes</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Can never be wounded on better than a 3+</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Firestorm Blade</Name>
 					<Type>Option</Type>
+					<Points>25</Points>
+					<MagicItemsPoints/>
 					<AddToStrength>1</AddToStrength>
 					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
 				</Option>
@@ -977,12 +1028,14 @@
 					<Name>Soul Hunger</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Reroll>ToWound</Reroll>
 				</Option>
 				<Option>
 					<Name>Armour of Khorne</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
+					<MagicItemsPoints/>
 					<AddToArmour>3</AddToArmour>
 				</Option>
 				<Option>
@@ -1039,48 +1092,56 @@
 					<Name>Staff of Change</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<Test Bet="Death" Context="Wound">Toughness</Test>
 				</Option>
 				<Option>
 					<Name>Power Vortex</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
+					<MagicItemsPoints/>
 					<AddToCast>1</AddToCast>
 				</Option>
 				<Option>
 					<Name>Flames of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>D6 bolts in the Shooting phase with a range of 18" and a Strength of 4</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Daemonic Robes</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Can never be wounded on better than a 3+</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Iridescent Corona</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Enemy models in base contact at start of any combat suffer a Flaming Strength 3 hit before any blows are struck</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Master of Sorcery</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Spell Breaker</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Once per battle may automatically dispel one enemy spell</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Winged Horror</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 				</Option>
 				<Option>
@@ -1138,6 +1199,7 @@
 					<Name>Wizard level 1</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<AddToWizard>1</AddToWizard>
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
@@ -1146,42 +1208,49 @@
 					<Name>Staff of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Bound spell, Power level 3: Rancid Visitation</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Noxious Vapours</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>All enemies models in base contact lose the Always Strikes First rule and always strike last</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Nurgle's Rot</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Pestilent Mucus</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed</SpecialRuleDescription>
 				</Option>	
 				<Option>
 					<Name>Stream of Bile</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Strength 4 breath weapon</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Soul Hunger</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Reroll>ToWound</Reroll>
 				</Option>
 				<Option>
 					<Name>Slime Trail</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Enemy inits do not receive combat result bonuses for attacking the flank or rear</SpecialRuleDescription>
 				</Option>
 				<Option>
@@ -1240,36 +1309,42 @@
 					<Name>Etherblade</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<NoArmour/>
 				</Option>
 				<Option>
 					<Name>Armed Monstrosity</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
+					<MagicItemsPoints/>
 					<AddToAttacks>2</AddToAttacks>
 				</Option>
 				<Option>
 					<Name>Allure of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 				</Option>
 				<Option>
 					<Name>Daemonic Robes</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Can never be wounded on better than a 3+</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Enrapturing Gaze</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>Models in base contact may not use another model's Leadership value</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Soporific Musk</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
+					<MagicItemsPoints/>
 					<SpecialRuleDescription>A unit in base contact rolls an extra dice when fleeing and then discards the highest result</SpecialRuleDescription>
 				</Option>
 				<Option>
