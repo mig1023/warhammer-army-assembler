@@ -1083,6 +1083,17 @@
 					<SpecialRuleDescription>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</SpecialRuleDescription>
 				</Option>
 				<Option>
+					<Name>Great Icon of Despair</Name>
+					<Type>Option</Type>
+					<Points>75</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Battle Standard Bearer</OnlyIf>
+						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
+						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>All enemy units within 12" suffer a -2 penalty to their Leadership</SpecialRuleDescription>
+				</Option>
+				<Option>
 					<Name>Juggernaut</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
