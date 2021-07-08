@@ -814,6 +814,13 @@
 					<MagicItemsPoints/>
 					<SpecialRuleDescription>A unit in base contact rolls an extra dice when fleeing and then discards the highest result</SpecialRuleDescription>
 				</Option>
+				<Option>
+					<Name>Torment Blade</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<MagicItemsPoints/>
+					<Test Bet="Pass" Context="Wound">Leadership</Test>
+				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
@@ -1360,6 +1367,13 @@
 					<Points>25</Points>
 					<MagicItemsPoints/>
 					<SpecialRuleDescription>A unit in base contact rolls an extra dice when fleeing and then discards the highest result</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Torment Blade</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<MagicItemsPoints/>
+					<Test Bet="Pass" Context="Wound">Leadership</Test>
 				</Option>
 				<Option>
 					<Name>Steed of Slaanesh</Name>
