@@ -285,6 +285,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Points = DoubleParse(xmlNode["Points"]),
             PerModel = BoolParse(xmlNode["PerModel"]),
             VirtueOriginalPoints = DoubleParse(xmlNode["Points"]),
+            MagicItemsPoints = BoolParse(xmlNode["MagicItemsPoints"]),
 
             AddToMovement = IntParse(xmlNode["AddToMovement"]),
             AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]),

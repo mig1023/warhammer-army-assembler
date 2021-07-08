@@ -1129,6 +1129,11 @@ namespace WarhammerArmyAssembler
             if (option.IsSlannOption() && !option.Realised && IsMaxSlannOption())
                 return false;
 
+            double alreadyRealised = Options.Where(x => x.MagicItemsPoints && x.Realised).Sum(x => x.Points) + (postCheck ? 0 : option.Points);
+
+            if (option.MagicItemsPoints && !option.Realised && (alreadyRealised > MagicItems))
+                return false;
+
             return true;
         }
 
