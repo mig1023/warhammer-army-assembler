@@ -1060,6 +1060,18 @@
 					<Points>25</Points>
 				</Option>
 				<Option>
+					<Name>Standard of Chaos Glory</Name>
+					<Type>Option</Type>
+					<Points>125</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Battle Standard Bearer</OnlyIf>
+						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
+						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Stubborn/>
+					<SpecialRuleDescription>All Daemons within 12" are stubborn</SpecialRuleDescription>
+				</Option>
+				<Option>
 					<Name>Juggernaut</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
