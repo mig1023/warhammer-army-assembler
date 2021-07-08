@@ -331,7 +331,6 @@ namespace WarhammerArmyAssembler.Interface
                 Background = background,
             };
 
-            newPart.Margin = Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
             newPart.Width = partWidth ?? (countable ? 51 : 77);
 
             if (countable && enabled && (caption == "+" || caption == "-"))
@@ -339,7 +338,26 @@ namespace WarhammerArmyAssembler.Interface
             else if (!countable && enabled)
                 newPart.MouseDown += AddOption_Click;
 
-            Changes.main.unitDetail.Children.Add(newPart);
+            if (!String.IsNullOrEmpty(caption))
+            {
+                Border border = new Border
+                {
+                    BorderThickness = new Thickness(1),
+                    BorderBrush = Brushes.Black,
+                    Background = background,
+                    Child = newPart,
+                };
+                border.Margin = Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
+                border.Width = partWidth ?? (countable ? 51 : 77);
+
+                Changes.main.unitDetail.Children.Add(border);
+            }
+            else
+            {
+                newPart.Margin = Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 21);
+                Changes.main.unitDetail.Children.Add(newPart);
+            }
+            
             Changes.main.UpdateLayout();
 
             return newPart.ActualWidth;
