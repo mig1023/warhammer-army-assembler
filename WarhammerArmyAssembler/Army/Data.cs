@@ -17,5 +17,6 @@ namespace WarhammerArmyAssembler.Army
 
         public static int MaxPoints = 2000;
         public static int MaxIDindex = 0;
+        public static bool NoMagicItemsColumn = false;
     }
 }

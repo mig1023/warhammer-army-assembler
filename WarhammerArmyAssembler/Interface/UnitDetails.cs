@@ -54,6 +54,9 @@ namespace WarhammerArmyAssembler.Interface
         private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit,
             ref bool notFirstColumn, ref double lastColumnMaxWidth)
         {
+            if ((head == "MAGIC ITEMS") && Army.Data.NoMagicItemsColumn)
+                return margins;
+
             if (notFirstColumn)
                 margins[1] += 10;
 
