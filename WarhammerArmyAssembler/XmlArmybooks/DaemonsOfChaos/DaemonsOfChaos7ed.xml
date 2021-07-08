@@ -1068,6 +1068,7 @@
 						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
 						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
 						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
+						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<Stubborn/>
 					<SpecialRuleDescription>All Daemons within 12" are stubborn</SpecialRuleDescription>
@@ -1081,6 +1082,7 @@
 						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
 						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
 						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
+						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<SpecialRuleDescription>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</SpecialRuleDescription>
 				</Option>
@@ -1093,6 +1095,7 @@
 						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
 						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
 						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
+						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<SpecialRuleDescription>All enemy units within 12" suffer a -2 penalty to their Leadership</SpecialRuleDescription>
 				</Option>
@@ -1105,8 +1108,22 @@
 						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
 						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
 						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
+						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<AddToCloseCombat>D3</AddToCloseCombat>
+				</Option>
+				<Option>
+					<Name>Great Standard of Sundering</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<OnlyIfAnotherService>
+						<OnlyIf>Battle Standard Bearer</OnlyIf>
+						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
+						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
+						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
+						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<SpecialRuleDescription>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</SpecialRuleDescription>
 				</Option>
 				<Option>
 					<Name>Juggernaut</Name>
