@@ -231,7 +231,7 @@
 			<Type>Special</Type>
 			<Name>Bloodcrushers of Khorne</Name>
 			<Points>65</Points>
-			<MinSize>1</MinSize>
+			<MinSize>3</MinSize>
 			<MountInit>Juggernaut</MountInit>
 			<MainParam>
 				<Movement>5</Movement>
@@ -276,6 +276,38 @@
 					<Points>10</Points>
 					<MagicItems>25</MagicItems>
 					<MagicItemsType>Unit</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Flesh Hounds of Khorne</Name>
+			<Points>30</Points>
+			<MinSize>5</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>6</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Ambushers</Name>
+					<Type>Option</Type>
+					<Points>3</Points>
+					<PerModel/>
 				</Option>
 			</Options>
 		</Unit>
