@@ -15,7 +15,25 @@
 	
 	</Heroes>
 	<Mounts>
-	
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Juggernaut</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -189,6 +207,58 @@
 			<Options>
 				<Option>
 					<Name>Alluress</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Unit</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Bloodcrushers of Khorne</Name>
+			<Points>65</Points>
+			<MinSize>1</MinSize>
+			<MountInit>Juggernaut</MountInit>
+			<MainParam>
+				<Movement>5</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>6</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hellblade</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+					<SpecialRuleDescription>Brass Behemoth</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Bloodreaper</Name>
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
