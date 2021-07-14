@@ -26,7 +26,7 @@
 			<MainParam>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
+				<BallisticSkill>5</BallisticSkill>
 				<Strength>4</Strength>
 				<Toughness>3</Toughness>
 				<Wounds>1</Wounds>
@@ -64,6 +64,54 @@
 					<FullCommand/>
 					<Points>10</Points>
 					<MagicItems>25</MagicItems>
+					<MagicItemsType>Unit</MagicItemsType>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Core</Type>
+			<Name>Pink Horrors of Tzeentch</Name>
+			<Points>13</Points>
+			<MinSize>10</MinSize>
+			<Wizard>1</Wizard>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Blue Horrors</SpecialRuleDescription>
+					<SpecialRuleDescription>A unit of Horrors can cast Spells from the Daemon Lore of Tzeentch</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Iridescent Horrors</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
 					<MagicItemsType>Unit</MagicItemsType>
 				</Option>
 			</Options>
