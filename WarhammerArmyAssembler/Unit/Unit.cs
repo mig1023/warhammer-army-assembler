@@ -216,7 +216,10 @@ namespace WarhammerArmyAssembler
 
             foreach (Option option in Options)
             {
-                if (option.IsMagicItem() && (MagicItemCount <= 0))
+                if (option.MagicItemsPoints && option.Realised)
+                    alreayUsed += option.Points;
+
+                else if (option.IsMagicItem() && (MagicItemCount <= 0))
                     alreayUsed += option.Points;
 
                 else if (option.IsMagicItem() && (MagicItemCount > 0) && (option.Points > 0))
