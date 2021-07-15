@@ -37,7 +37,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             Army.Data.Name = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName"));
             Army.Data.ArmyVersion = IntParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion"));
             Army.Data.MagicPowers = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/MagicPowers"));
-            Army.Data.NoMagicItemsColumn = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Info/NoMagicItemsColumn"));
 
             ArmyBook.Data.MainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
             ArmyBook.Data.AdditionalColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
