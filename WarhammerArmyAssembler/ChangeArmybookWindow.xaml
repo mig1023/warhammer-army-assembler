@@ -18,7 +18,8 @@
             </ScrollViewer.Resources>
             <Canvas x:Name="menuArmybookPlace" Width="320" Height="660" VerticalAlignment="Top" Background="White" MouseLeftButtonDown="Window_MouseLeftButtonDown">
                 <Label x:Name="randomArmy" Content="Random army" Canvas.Left="42" Canvas.Top="12" Width="63" MouseDown="randomArmy_MouseDown" FontSize="8"/>
-                <Label x:Name="resetSelection" Content="Reset selection" Canvas.Left="202" Canvas.Top="12" Width="63" FontSize="8" MouseDown="resetSelection_MouseDown"/>
+                <Label x:Name="resetSelection" Content="Reset selection" Canvas.Left="108" Canvas.Top="12" Width="63" FontSize="8" MouseDown="resetSelection_MouseDown"/>
+                <Label x:Name="sortedBy" Content="Sorted by army name" Canvas.Left="177" Canvas.Top="12" Width="91" FontSize="8" MouseDown="sortedBy_MouseDown" />
                 <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="47" Canvas.Top="36"/>
                 <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="333" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
                 <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="580" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>

@@ -16,6 +16,8 @@ namespace WarhammerArmyAssembler
 {
     public partial class ChangeArmybookWindow : Window
     {
+        public static bool sortedByEditions = false;
+
         public ChangeArmybookWindow()
         {
             InitializeComponent();
@@ -95,5 +97,24 @@ namespace WarhammerArmyAssembler
         private void randomArmy_MouseDown(object sender, MouseButtonEventArgs e) => Interface.Changes.RandomArmy();
 
         private void resetSelection_MouseDown(object sender, MouseButtonEventArgs e) => Interface.Changes.SetArmySelected(String.Empty);
+
+        private void sortedBy_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            sortedByEditions = !sortedByEditions;
+
+            if (sortedByEditions)
+            {
+                sortedBy.Content = "Sorted by army edition";
+                sortedBy.Margin = Interface.Changes.Thick(sortedBy, left: -3);
+            }
+            else
+            {
+                sortedBy.Content = "Sorted by army name";
+                sortedBy.Margin = Interface.Changes.Thick(sortedBy, left: 0);
+            }
+
+            Interface.Changes.LoadAllArmy(ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory), reload: true);
+            Interface.Changes.PreviewArmyList();
+        }
     }
 }

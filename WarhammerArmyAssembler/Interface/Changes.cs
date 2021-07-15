@@ -424,6 +424,7 @@ namespace WarhammerArmyAssembler.Interface
                 changeArmybook.armyAdditionalName,
                 changeArmybook.randomArmy,
                 changeArmybook.resetSelection,
+                changeArmybook.sortedBy,
             };
 
             foreach (Control label in labels)
@@ -469,12 +470,13 @@ namespace WarhammerArmyAssembler.Interface
             PreviewArmy(randomArmy);
         }
 
-        public static void LoadAllArmy(List<string> allXmlFiles)
+        public static void LoadAllArmy(List<string> allXmlFiles, bool reload = false)
         {
             int left = -1, top = 0;
 
             Image lastImage = null;
             allImages.Clear();
+            allArmies.Clear();
 
             foreach (string armyName in allXmlFiles)
             {
@@ -499,9 +501,12 @@ namespace WarhammerArmyAssembler.Interface
                     left = 0;
                     top += 1;
 
-                    ColumnDefinition column = new ColumnDefinition();
-                    column.Width = new GridLength(5, GridUnitType.Pixel);
-                    changeArmybook.armybookList.ColumnDefinitions.Add(column);
+                    if (!reload)
+                    {
+                        ColumnDefinition column = new ColumnDefinition();
+                        column.Width = new GridLength(5, GridUnitType.Pixel);
+                        changeArmybook.armybookList.ColumnDefinitions.Add(column);
+                    }
                 }
 
                 if (changeArmybook.armybookList.ColumnDefinitions.Count <= left)

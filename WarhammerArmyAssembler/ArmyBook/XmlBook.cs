@@ -52,14 +52,14 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Empty;
         }
 
-        public static List<string> FindAllXmlFiles(string programDirectory)
+        public static List<string> FindAllXmlFiles(string programDirectory) => FindAllXmlFilesInDirectories(programDirectory).Values.ToList();
+
+        private static SortedDictionary<string, string> FindAllXmlFilesInDirectories(string programDirectory)
         {
-            List<string> files = new List<string>();
+            SortedDictionary<string, string> files = new SortedDictionary<string, string>();
 
             try
             {
-                SortedDictionary<string, string> filesBeforeSort = new SortedDictionary<string, string>();
-
                 foreach (string file in Directory.GetFiles(programDirectory).Where(x => x.EndsWith("ed.xml")))
                 {
                     XmlDocument xmlFile = new XmlDocument();
@@ -78,27 +78,26 @@ namespace WarhammerArmyAssembler.ArmyBook
                     if (armyName == null)
                         continue;
 
-                    string armyOrderName = String.Empty;
-
                     XmlNode armyVersion = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion");
                     XmlNode orderName = xmlFile.SelectSingleNode("ArmyBook/Info/OrderName");
 
-                    if (orderName == null)
-                        armyOrderName = armyName.InnerText + armyVersion.InnerText;
-                    else
-                        armyOrderName = orderName.InnerText;
+                    string armyOrderName = (orderName == null ? armyName.InnerText : orderName.InnerText);
 
-                    filesBeforeSort.Add(armyOrderName, file);
+                    if (ChangeArmybookWindow.sortedByEditions)
+                        armyOrderName = armyVersion.InnerText + armyOrderName;
+                    else
+                        armyOrderName += armyVersion.InnerText;
+
+                    files.Add(armyOrderName, file);
                 }
 
-                files = filesBeforeSort.Values.ToList();
-
                 foreach (string directory in Directory.GetDirectories(programDirectory))
-                    files.AddRange(FindAllXmlFiles(directory));
+                    foreach (KeyValuePair<string, string> file in FindAllXmlFilesInDirectories(directory))
+                        files.Add(file.Key, file.Value);
             }
             catch
             {
-                return new List<string>();
+                return new SortedDictionary<string, string>();
             }
 
             return files;
