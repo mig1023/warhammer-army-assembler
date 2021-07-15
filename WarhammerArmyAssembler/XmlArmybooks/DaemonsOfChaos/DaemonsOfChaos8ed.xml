@@ -629,5 +629,37 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Skull Cannon of Khorne</Name>
+			<Points>135</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>7</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>3</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ImpactHit>D6+1</ImpactHit>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Skull Cannon</SpecialRuleDescription>
+					<SpecialRuleDescription>Daemon Engine</SpecialRuleDescription>
+					<SpecialRuleDescription>Gorefeast</SpecialRuleDescription>
+					<SpecialRuleDescription>Implacable Advance</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
