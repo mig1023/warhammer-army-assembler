@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
@@ -54,8 +55,8 @@ namespace WarhammerArmyAssembler.Interface
         private static double[] CreateColumn(string head, double[] margins, int unitID, Unit unit,
             ref bool notFirstColumn, ref double lastColumnMaxWidth)
         {
-            if ((head == "MAGIC ITEMS") && Army.Data.NoMagicItemsColumn)
-                return margins;
+            //if ((head == "MAGIC ITEMS") && Army.Data.NoMagicItemsColumn)
+            //    return margins;
 
             if (notFirstColumn)
                 margins[1] += 10;
@@ -79,7 +80,10 @@ namespace WarhammerArmyAssembler.Interface
             }
             else
             {
-                if ((!unit.ExistsMagicItems() && (head == "MAGIC ITEMS")) || (!unit.ExistsMagicPowers() && (head == Army.Params.MagicPowersName())))
+                bool magicItemsPointsExists = unit.Options.Where(x => x.MagicItemsPoints).Count() > 0;
+                bool magicPowersDontExists = !unit.ExistsMagicPowers() && (head == Army.Params.MagicPowersName());
+
+                if ((!unit.ExistsMagicItems() && (head == "MAGIC ITEMS") && !magicItemsPointsExists) || magicPowersDontExists)
                 {
                     margins = CheckColumn(margins, ref lastColumnMaxWidth);
                     margins[1] += AddLabel("empty yet", margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
@@ -91,13 +95,13 @@ namespace WarhammerArmyAssembler.Interface
                     {
                         if (head == "OPTION" || head == "COMMAND" || head == "MAGIC ITEMS" || head == Army.Params.MagicPowersName())
                         {
-                            if (head == "OPTION" && (!option.IsOption() || option.FullCommand))
+                            if (head == "OPTION" && (!option.IsOption() || option.FullCommand || option.MagicItemsPoints))
                                 continue;
 
                             if (head == "COMMAND" && !option.FullCommand)
                                 continue;
 
-                            if (head == "MAGIC ITEMS" && (!option.IsMagicItem() || ((option.Points <= 0) && !option.Honours)))
+                            if (head == "MAGIC ITEMS" && !option.MagicItemsPoints && (!option.IsMagicItem() || ((option.Points <= 0) && !option.Honours)))
                                 continue;
 
                             if (head == Army.Params.MagicPowersName() && !option.IsPowers())
