@@ -34,6 +34,32 @@
 				<Ward>5</Ward>
 			</MainParam>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Steed of Slaanesh</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<PoisonAttack/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Mount>
 	</Mounts>
 	<Units>
 		<Unit>
@@ -57,6 +83,7 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hellblade</Name>
+					<KillingBlow/>
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
@@ -154,6 +181,7 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Plaguesword</Name>
+					<PoisonAttack/>
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
@@ -243,12 +271,13 @@
 				<Initiative>4</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>7</Leadership>
-				<Armour>6</Armour>
+				<Armour>5</Armour>
 				<Ward>5</Ward>
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hellblade</Name>
+					<KillingBlow/>
 				</HandWeapon>
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
@@ -300,6 +329,7 @@
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -427,6 +457,53 @@
 					<SpecialRuleDescription>Slime Trail</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Seekers of Slaanesh</Name>
+			<Points>20</Points>
+			<MinSize>5</MinSize>
+			<MountInit>Steed of Slaanesh</MountInit>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>5</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>7</Leadership>
+				<Ward>5</Ward>
+			</MainParam>	
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Heartseeker</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Unit</MagicItemsType>
+				</Option>
+			</Options>
 		</Unit>
 	</Units>
 </ArmyBook>
