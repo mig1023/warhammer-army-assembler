@@ -107,10 +107,10 @@ namespace WarhammerArmyAssembler.Army
                 Army.Data.Units[maxLeadershipOwner].ArmyGeneral = true;
 
                 bool newGeneralIsDemon = (Army.Data.Units[maxLeadershipOwner].GetGroup() == "Demonic");
+                bool generalIsDaemon = newGeneralIsDemon && !ArmyBook.Data.DemonicAlreadyReplaced;
+                bool generalIsNotDaemon = !newGeneralIsDemon && ArmyBook.Data.DemonicAlreadyReplaced;
 
-                if (ArmyBook.Data.DemonicMortal && newGeneralIsDemon && !ArmyBook.Data.DemonicAlreadyReplaced)
-                    ChangeCoreSpecialUnits();
-                else if (ArmyBook.Data.DemonicMortal && !newGeneralIsDemon && ArmyBook.Data.DemonicAlreadyReplaced)
+                if (ArmyBook.Data.DemonicMortal && (generalIsDaemon || generalIsNotDaemon))
                     ChangeCoreSpecialUnits();
             }
 
