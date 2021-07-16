@@ -189,10 +189,16 @@ namespace WarhammerArmyAssembler
             return points;
         }
 
-        public string GetGroup()
+        public string GetGroup(Option option = null)
         {
-            Option option = Options.Where(x => (!x.IsOption() || (x.IsOption() && x.Realised)) && !String.IsNullOrEmpty(x.Group)).FirstOrDefault();
-            return (option == null ? String.Empty : option.Group);
+            if (option == null)
+            {
+                Option change = Options.Where(x => (!x.IsOption() || (x.IsOption() && x.Realised)) && !String.IsNullOrEmpty(x.Group)).FirstOrDefault();
+
+                return (change != null ? change.Group : Group);
+            }
+            else
+                return option.Group;
         }
 
         public void SetGroup(string newGroup) => this.Group = newGroup;
