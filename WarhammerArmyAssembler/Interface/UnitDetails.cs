@@ -324,7 +324,7 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
-            string id, Brush background, double? partWidth = null, bool enabled = true, bool countable = false)
+            string id, Brush background, double? partWidth = null, bool enabled = true, bool countable = false, bool withoutBorder = false)
         {
             Label newPart = new Label
             {
@@ -342,7 +342,7 @@ namespace WarhammerArmyAssembler.Interface
             else if (!countable && enabled)
                 newPart.MouseDown += AddOption_Click;
 
-            if (!String.IsNullOrEmpty(caption))
+            if (!String.IsNullOrEmpty(caption) && !withoutBorder)
             {
                 Border border = new Border
                 {
@@ -389,7 +389,7 @@ namespace WarhammerArmyAssembler.Interface
 
             double left = AddButtonPart("-", margins, 0, id, (canBeReduced ? backFirst : Brushes.Gainsboro), enabled: canBeReduced, countable: true);
 
-            left += AddButtonPart(option.Countable.Value.ToString(), margins, left, id, backSecond, enabled: enabled, countable: true);
+            left += AddButtonPart(option.Countable.Value.ToString(), margins, left, id, backSecond, enabled: enabled, countable: true, withoutBorder: true);
 
             bool canByIncreasedByDependency = ((maxByDependency == 0) || (option.Countable.Value < maxByDependency));
             bool canBeIncreasedByMaxParam = ((option.Countable.Max == 0) || (option.Countable.Value < option.Countable.Max));
