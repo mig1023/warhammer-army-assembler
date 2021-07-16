@@ -33,6 +33,12 @@
 				<Armour>4</Armour>
 				<Ward>5</Ward>
 			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Brass Behemoth</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
@@ -59,6 +65,48 @@
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Rot Fly</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Plague Proboscis</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Venom Sting</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PoisonAttack/>
+				</Option>
+				<Option>
+					<Name>Venom Sting</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Plague Proboscis</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+			</Options>
 		</Mount>
 	</Mounts>
 	<Units>
@@ -876,6 +924,63 @@
 					<SpecialRuleDescription>Soulscent</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Plague Drones of Nurgle</Name>
+			<Points>55</Points>
+			<MinSize>3</MinSize>
+			<MountInit>Rot Fly</MountInit>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>1</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>1</Attacks>
+				<Leadership>7</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Plaguesword</Name>
+					<PoisonAttack/>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Hover</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Plaguebringer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Musician</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>25</MagicItems>
+					<MagicItemsType>Unit</MagicItemsType>
+				</Option>
+				<Option>
+					<Name>Death's Heads</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<PerModel/>
+				</Option>
+			</Options>
 		</Unit>
 	</Units>
 </ArmyBook>
