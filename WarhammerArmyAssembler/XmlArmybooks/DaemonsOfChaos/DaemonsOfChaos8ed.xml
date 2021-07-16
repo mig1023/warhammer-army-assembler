@@ -14,10 +14,17 @@
 		<ArtefactsGroup Name = "Common magic items">
 			<Artefact>
 				<Name>Aura of Disruption</Name>
-				<Type>Armour</Type>
+				<Type>AdditionalArmour</Type>
 				<Points>75</Points>
 				<SpecialRuleDescription>Any dispel attempt you make while this model is on the table recieves one extra 'free' dispel dice</SpecialRuleDescription>
-				<Description>Any dispel attempt you make while this model is on the table recieves one extra 'free' dispel dice</Description>
+				<Description>Any dispel attempt you make while this model is on the table recieves one extra 'free' dispel dice.</Description>
+			</Artefact>
+			<Artefact>
+				<Name>Sorcerous Lodestone</Name>
+				<Type>AdditionalArmour</Type>
+				<Points>75</Points>
+				<SpecialRuleDescription>Whenever a spell is successfully cast by any Wizard, roll a D6 - this Daemon regains a Wound lost earlier in the battie on a roll of 5+</SpecialRuleDescription>
+				<Description>Whenever a spell is successfully cast by any Wizard, roll a D6 - this Daemon regains a Wound lost earlier in the battie on a roll of 5+. Whenever a spell is miscast by any Wizard, the Daemon instead suffers a Wound on a roll of 4+.</Description>
 			</Artefact>
 		</ArtefactsGroup>
 	</Artefacts>
