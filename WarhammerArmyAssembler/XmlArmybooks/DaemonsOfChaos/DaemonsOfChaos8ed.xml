@@ -134,7 +134,49 @@
 		</ArtefactsGroup>
 	</Artefacts>
 	<Heroes>
-	
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Bloodthirster of Khorne</Name>
+			<Points>400</Points>
+			<MinSize>1</MinSize>
+			<Description>Bloodthirster of Khorne</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>10</WeaponSkill>
+				<BallisticSkill>10</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>7</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>	
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Axe</Name>
+				</HandWeapon>
+				<HandWeapon>
+					<Name>Whip</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Heavy armour</Name>
+					<AddToArmour>5</AddToArmour>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
