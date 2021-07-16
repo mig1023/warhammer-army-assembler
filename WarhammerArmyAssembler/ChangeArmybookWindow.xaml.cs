@@ -102,14 +102,16 @@ namespace WarhammerArmyAssembler
         {
             sortedByEditions = !sortedByEditions;
 
+            sortedBy.Content = "Sorted by army ";
+
             if (sortedByEditions)
             {
-                sortedBy.Content = "Sorted by army edition";
+                sortedBy.Content += "edition";
                 sortedBy.Margin = Interface.Changes.Thick(sortedBy, left: -3);
             }
             else
             {
-                sortedBy.Content = "Sorted by army name";
+                sortedBy.Content += "name";
                 sortedBy.Margin = Interface.Changes.Thick(sortedBy, left: 0);
             }
 
