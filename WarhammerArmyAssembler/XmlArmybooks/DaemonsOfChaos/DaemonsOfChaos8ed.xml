@@ -662,9 +662,9 @@
 			</SpecialRulesAndAmmunition>
 		</Unit>
 		<Unit>
-			<Type>Special</Type>
+			<Type>Rare</Type>
 			<Name>Burning Chariot of Tzeentch</Name>
-			<Points>0</Points>
+			<Points>150</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
 			<Chariot/>
@@ -688,7 +688,7 @@
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
 					<SpecialRuleDescription>Fly</SpecialRuleDescription>
 					<SpecialRuleDescription>Exalted Fire of Tzeentch</SpecialRuleDescription>
-					<SpecialRuleDescription>Warplame</SpecialRuleDescription>
+					<SpecialRuleDescription>Warpflame</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -697,6 +697,119 @@
 					<Type>Option</Type>
 					<Points>20</Points>
 					<FullCommand/>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Soul Grinder</Name>
+			<Points>250</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<Chariot/>
+			<MainParam>
+				<Movement>1</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>4</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Harvester cannon</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Caught by the Iron Claw</SpecialRuleDescription>
+					<SpecialRuleDescription>Implacable Advance</SpecialRuleDescription>
+					<SpecialRuleDescription>Large traget</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Daemon of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Daemon of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Daemons of Khorne</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Daemon of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Daemonbone Claw</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Baleful Torrent</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Phlegm Bombardment</OnlyIfNot>
+						<OnlyIfNot>Warp Gaze</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Phlegm Bombardment</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Baleful Torrent</OnlyIfNot>
+						<OnlyIfNot>Warp Gaze</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Warp Gaze</Name>
+					<Type>Option</Type>
+					<Points>55</Points>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Baleful Torrent</OnlyIfNot>
+						<OnlyIfNot>Phlegm Bombardment</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 			</Options>
 		</Unit>
