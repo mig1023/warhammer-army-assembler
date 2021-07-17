@@ -872,6 +872,55 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Keeper of Secrets</Name>
+			<Points>375</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Keeper of Secrets</Description>
+			<MainParam>
+				<Movement>10</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>5</Wounds>
+				<Initiative>10</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<MagicItems>100</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<Countable/>
+					<Nullable/>
+					<Min>2</Min>
+					<Max>4</Max>
+					<Value>0</Value>
+					<ExportToWizardLevel/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Claws</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Knows all the spells from the Daemon Lore of Slaanesh</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
