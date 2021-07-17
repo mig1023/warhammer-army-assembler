@@ -103,7 +103,7 @@ namespace WarhammerArmyAssembler.Army
                         cast += option.AddToCast;
 
                     if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
-                        cast += option.Countable.Value;
+                        cast += option.GetWizardLevelBonus();
                 }
             }
 
@@ -120,7 +120,7 @@ namespace WarhammerArmyAssembler.Army
 
                 foreach (Option option in entry.Options)
                     if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
-                        wizard += option.Countable.Value;
+                        wizard += option.GetWizardLevelBonus();
 
                 if (wizard > 2)
                     dispell += 2;

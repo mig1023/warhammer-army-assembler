@@ -293,6 +293,8 @@ namespace WarhammerArmyAssembler
         public List<Option> AllRandomByGroup() =>
             ArmyBook.Data.Artefact.Where(x => x.Value.RandomGroup == this.RandomGroup).Select(x => x.Value).ToList();
 
+        public int GetWizardLevelBonus() => this.Countable.Value - (this.Countable.Nullable && (this.Countable.Value > 0) ? 1 : 0);
+
         public string FullName() => (Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name);
 
         public string SelfDescription()

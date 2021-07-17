@@ -259,7 +259,7 @@ namespace WarhammerArmyAssembler
                     wizard += option.AddToWizard;
 
                 if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
-                    wizard += option.Countable.Value;
+                    wizard += option.GetWizardLevelBonus();
             }
 
             return wizard;
