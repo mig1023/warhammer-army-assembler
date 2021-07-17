@@ -28,8 +28,13 @@ namespace WarhammerArmyAssembler.Army
                 int modelsInPack = entry.ModelsInPack;
 
                 foreach (Option option in entry.Options)
+                {
                     if (option.IsOption() && (option.AddToModelsInPack > 0) && option.Realised)
                         modelsInPack += option.AddToModelsInPack;
+
+                    if ((option.Countable != null) && (option.Countable.ExportToUnitSize))
+                        size += option.Countable.Value;
+                }
 
                 if (!((entry.Type == Unit.UnitType.Mount) && (entry.Wounds <= 1)))
                     size += entry.Size * modelsInPack;
