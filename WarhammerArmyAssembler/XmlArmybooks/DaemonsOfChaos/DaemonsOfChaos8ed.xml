@@ -11,11 +11,12 @@
 		<NoMagicItemsColumn/>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Common magic items">
+		<ArtefactsGroup Name = "Daemonic Gifts">
 			<Artefact>
 				<Name>Aura of Disruption</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>75</Points>
+				<RandomGroup>Exalted Gifts</RandomGroup>
 				<SpecialRuleDescription>Any dispel attempt you make while this model is on the table recieves one extra 'free' dispel dice</SpecialRuleDescription>
 				<Description>Any dispel attempt you make while this model is on the table recieves one extra 'free' dispel dice.</Description>
 			</Artefact>
@@ -23,6 +24,7 @@
 				<Name>Sorcerous Lodestone</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>75</Points>
+				<RandomGroup>Exalted Gifts</RandomGroup>
 				<SpecialRuleDescription>Whenever a spell is successfully cast by any Wizard, roll a D6 - this Daemon regains a Wound lost earlier in the battie on a roll of 5+</SpecialRuleDescription>
 				<Description>Whenever a spell is successfully cast by any Wizard, roll a D6 - this Daemon regains a Wound lost earlier in the battie on a roll of 5+. Whenever a spell is miscast by any Wizard, the Daemon instead suffers a Wound on a roll of 4+.</Description>
 			</Artefact>
@@ -30,6 +32,7 @@
 				<Name>Bringer of the Swarm</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>75</Points>
+				<RandomGroup>Exalted Gifts</RandomGroup>
 				<SpecialRuleDescription>At the end of every Close Combat phase in which the Daemon causes one or more unsaved Wounds, a unit of Chaos Furies is created within 6"</SpecialRuleDescription>
 				<Description>At the end of every Close Combat phase in which the Daemon causes one or more unsaved Wounds, a unit of Chaos Furies is created. The unit consists of one Chaos Fury for every unsaved Wound caused. The unit must be placed wholly within 6" of the Daemon and cannot be placed with 1" of another unit or impassable terrain. If any model cannot be placed because there isn't enough room, or you do not have sufficient models, it is lost. Units created in this way do not award victory points.</Description>
 			</Artefact>
@@ -37,6 +40,7 @@
 				<Name>Impenetrable Hide</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>75</Points>
+				<RandomGroup>Exalted Gifts</RandomGroup>
 				<AddToToughness>2</AddToToughness>
 				<Description>The Daemon has +2 Toughness.</Description>
 			</Artefact>
@@ -44,13 +48,15 @@
 				<Name>Massive Might</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>75</Points>
-				<AddToStrength>2</AddToStrength>
+				<RandomGroup>Exalted Gifts</RandomGroup>
+				<AddToStrength>3</AddToStrength>
 				<Description>The Daemon has +3 Strength.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Unholy Sacrifice</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
+				<RandomGroup>Greater Gifts</RandomGroup>
 				<SpecialRuleDescription>Can choose to lose D3 Wounds at the start of any of your Magic phases and add D3+1 dice to Power pool</SpecialRuleDescription>
 				<Description>This Daemon can choose to lose D3 Wounds (with no saves allowed) at the start of any of your Magic phases. If it does so, add D3+1 dice to your power pool</Description>
 			</Artefact>
@@ -58,6 +64,7 @@
 				<Name>Corpulence</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
+				<RandomGroup>Greater Gifts</RandomGroup>
 				<AddToWounds>2</AddToWounds>
 				<Description>The Daemon has +1 Wound</Description>
 			</Artefact>
@@ -65,6 +72,7 @@
 				<Name>Incorporeal Strike</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
+				<RandomGroup>Greater Gifts</RandomGroup>
 				<NoArmour/>
 				<Description>Armour saves cannot be taken against the Daemon's close combat Attacks</Description>
 			</Artefact>
@@ -72,12 +80,14 @@
 				<Name>Souleater</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
+				<RandomGroup>Greater Gifts</RandomGroup>
 				<SpecialRuleDescription>At the end of any phase in which the Daemon causes one or more unsaved Wounds in close combat, it regains a single lost Wound</SpecialRuleDescription>
 				<Description>At the end of any phase in which the Daemon causes one or more unsaved Wounds in close combat, it regains a single lost Wound</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Unbreakable Skin</Name>
 				<Type>AdditionalArmour</Type>
+				<RandomGroup>Greater Gifts</RandomGroup>
 				<Points>50</Points>
 				<ArmourTo>2</ArmourTo>
 				<Description>The Daemon has a 2+ armour save that cannot be improved by any means.</Description>
@@ -86,6 +96,7 @@
 				<Name>Unholy Flurry</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
+				<RandomGroup>Greater Gifts</RandomGroup>
 				<AddToAttacks>2</AddToAttacks>
 				<Description>The Daemon has +2 Attacks.</Description>
 			</Artefact>
@@ -93,6 +104,7 @@
 				<Name>Skill Swallower</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
+				<RandomGroup>Lesser Gifts</RandomGroup>
 				<SpecialRuleDescription>Whenever the Daemon slays an enemy character, it immediately increases one characteristic, of your choice, by one point</SpecialRuleDescription>
 				<Description>Whenever the Daemon slays an enemy character, it immediately increases one characteristic, of your choice, by one point.</Description>
 			</Artefact>
@@ -100,6 +112,7 @@
 				<Name>Cleaving Blow</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
+				<RandomGroup>Lesser Gifts</RandomGroup>
 				<MultiWounds>2</MultiWounds>
 				<Description>The Daemon's close combat attacks have the Multiple Wounds (2) special rule.</Description>
 			</Artefact>
@@ -107,6 +120,7 @@
 				<Name>Crushing Mass</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
+				<RandomGroup>Lesser Gifts</RandomGroup>
 				<ImpactHit>D3</ImpactHit>
 				<Description>The Daemon has the Impact Hits (D3) special rule.</Description>
 			</Artefact>
@@ -114,6 +128,7 @@
 				<Name>Dark Blessing</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
+				<RandomGroup>Lesser Gifts</RandomGroup>
 				<WardForFirstWound>2</WardForFirstWound>
 				<Description>The Daemon has a 2+ ward save against the first Wound it suffers in the batde.</Description>
 			</Artefact>
@@ -121,6 +136,7 @@
 				<Name>Noxious Breath</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
+				<RandomGroup>Lesser Gifts</RandomGroup>
 				<SpecialRuleDescription>Strength 2 Breath Weapon with no Armour saves allowed</SpecialRuleDescription>
 				<Description>The Daemon has a Strength 2 Breath Weapon. Armour saves cannot be taken against Wounds caused by this attack.</Description>
 			</Artefact>
@@ -128,6 +144,7 @@
 				<Name>Unnatural Swiftness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
+				<RandomGroup>Lesser Gifts</RandomGroup>
 				<HitFirst/>
 				<Description>The Daemon has the Always Strikes First special rule.</Description>
 			</Artefact>
