@@ -385,7 +385,9 @@ namespace WarhammerArmyAssembler.Interface
                 maxByDependency = (int)((int)unitParam.GetValue(unit) / option.Countable.Ratio);
             }
 
-            bool canBeReduced = ((option.Countable.Value > 0) && (option.Countable.Value > option.Countable.Min)) && enabled;
+            bool canBeReducedByMin = (option.Countable.Value > option.Countable.Min);
+            bool canBeReducedByNullable = (option.Countable.Min > 0) && option.Countable.Nullable;
+            bool canBeReduced = ((option.Countable.Value > 0) && (canBeReducedByMin || canBeReducedByNullable)) && enabled;
 
             double left = AddButtonPart("-", margins, 0, id, (canBeReduced ? backFirst : Brushes.Gainsboro), enabled: canBeReduced, countable: true);
 

@@ -11,6 +11,7 @@ namespace WarhammerArmyAssembler
         public int Min { get; set; }
         public int Max { get; set; }
         public int Value { get; set; }
+        public bool Nullable { get; set; }
 
         public string Dependency { get; set; }
         public double Ratio { get; set; }
@@ -22,6 +23,7 @@ namespace WarhammerArmyAssembler
             Min = this.Min,
             Max = this.Max,
             Value = this.Value,
+            Nullable = this.Nullable,
             Dependency = this.Dependency,
             Ratio = this.Ratio,
             ExportToUnitSize = this.ExportToUnitSize,
