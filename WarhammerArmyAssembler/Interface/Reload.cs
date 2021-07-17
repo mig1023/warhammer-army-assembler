@@ -64,7 +64,7 @@ namespace WarhammerArmyAssembler.Interface
                     if ((entry.ArtefactGroup != artefactType) || (entry.Runic > 1))
                         continue;
 
-                    if (entry.RandomGroup == lastRandomGroup)
+                    if (!String.IsNullOrEmpty(entry.RandomGroup) && (entry.RandomGroup == lastRandomGroup))
                         continue;
 
                     Option artefact = entry.Clone();
