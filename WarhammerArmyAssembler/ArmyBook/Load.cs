@@ -274,6 +274,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             WoundOn = IntParse(xmlNode["WoundOn"]),
             Runic = IntParse(xmlNode["Runic"]),
             MasterRunic = BoolParse(xmlNode["MasterRunic"]),
+            RandomGroup = StringParse(xmlNode["RandomGroup"]),
             TypeUnitIncrese = BoolParse(xmlNode["TypeUnitIncrese"]),
             WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]),
             WardForLastWound = IntParse(xmlNode["WardForLastWound"]),

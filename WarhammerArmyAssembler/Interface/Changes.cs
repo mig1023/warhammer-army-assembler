@@ -81,7 +81,12 @@ namespace WarhammerArmyAssembler.Interface
             Unit unit = Army.Data.Units[unitID];
             Option artefact = ArmyBook.Data.Artefact[id];
 
-            if (artefact.Runic > 0)
+            if (!String.IsNullOrEmpty(artefact.RandomGroup))
+            {
+                List<Option> group = artefact.AllRandomByGroup();
+                id = group[Test.Data.rand.Next(0, group.Count)].ID;
+            }
+            else if (artefact.Runic > 0)
             {
                 Dictionary<int, Option> versions = artefact.AllRunicVersions();
 

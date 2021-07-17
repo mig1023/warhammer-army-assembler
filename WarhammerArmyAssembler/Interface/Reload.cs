@@ -53,6 +53,8 @@ namespace WarhammerArmyAssembler.Interface
             foreach (Option entry in ArmyBook.Data.Artefact.Values.Where(x => !artefactsTypes.Contains(x.ArtefactGroup)))
                 artefactsTypes.Add(entry.ArtefactGroup);
 
+            string lastRandomGroup = String.Empty;
+
             foreach (string artefactType in artefactsTypes)
             {
                 Option artefacts = new Option() { Name = artefactType };
@@ -62,7 +64,17 @@ namespace WarhammerArmyAssembler.Interface
                     if ((entry.ArtefactGroup != artefactType) || (entry.Runic > 1))
                         continue;
 
+                    if (entry.RandomGroup == lastRandomGroup)
+                        continue;
+
                     Option artefact = entry.Clone();
+
+                    if (!String.IsNullOrEmpty(entry.RandomGroup))
+                    {
+                        artefact.Name = entry.RandomGroup + " (random)";
+                        lastRandomGroup = entry.RandomGroup;
+                    }
+                    
                     artefact.PointsView = PointsView(artefact);
                     artefact.InterfaceColor = ArmyBook.Data.MainColor;
                     artefacts.Items.Add(artefact);

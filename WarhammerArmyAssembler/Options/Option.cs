@@ -30,6 +30,7 @@ namespace WarhammerArmyAssembler
         public Countable Countable { get; set; }
         public int Runic { get; set; }
         public bool MasterRunic { get; set; }
+        public string RandomGroup { get; set; }
         public bool TypeUnitIncrese { get; set; }
 
         public double Points { get; set; }
@@ -232,6 +233,7 @@ namespace WarhammerArmyAssembler
             NotALeader = this.NotALeader,
             Runic = this.Runic,
             MasterRunic = this.MasterRunic,
+            RandomGroup = this.RandomGroup,
             TypeUnitIncrese = this.TypeUnitIncrese,
             NativeArmour = this.NativeArmour,
 
@@ -287,6 +289,9 @@ namespace WarhammerArmyAssembler
 
         public Dictionary<int, Option> AllRunicVersions() =>
             ArmyBook.Data.Artefact.Where(x => x.Value.Name == this.Name).ToDictionary(x => x.Value.Runic, x => x.Value);
+
+        public List<Option> AllRandomByGroup() =>
+            ArmyBook.Data.Artefact.Where(x => x.Value.RandomGroup == this.RandomGroup).Select(x => x.Value).ToList();
 
         public string FullName() => (Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name);
 
