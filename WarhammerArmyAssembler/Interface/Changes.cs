@@ -84,7 +84,9 @@ namespace WarhammerArmyAssembler.Interface
             if (!String.IsNullOrEmpty(artefact.RandomGroup))
             {
                 List<Option> group = artefact.AllRandomByGroup();
-                id = group[Test.Data.rand.Next(0, group.Count)].ID;
+
+                do id = group[Test.Data.rand.Next(0, group.Count)].ID;
+                while (Army.Data.Units[unitID].Options.Where(x => x.ID == id).Count() > 0);
             }
             else if (artefact.Runic > 0)
             {
@@ -143,7 +145,7 @@ namespace WarhammerArmyAssembler.Interface
                 bool multiple = artefact.Multiple || artefact.Virtue || (artefact.Runic > 0);
                 bool honours = artefact.Honours && (artefact.Points > 0);
 
-                if (!multiple && !honours && (artefact.Type != Option.OptionType.Powers))
+                if (!multiple && !honours && (artefact.Type != Option.OptionType.Powers) && String.IsNullOrEmpty(artefact.RandomGroup))
                     Interface.Mod.SetArtefactAlreadyUsed(id, true);
 
                 Army.Mod.ChangeGeneralIfNeed();
