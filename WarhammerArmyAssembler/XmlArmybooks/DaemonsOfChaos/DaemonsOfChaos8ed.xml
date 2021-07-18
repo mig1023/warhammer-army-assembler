@@ -921,6 +921,109 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Daemon Prince</Name>
+			<Points>250</Points>
+			<MinSize>1</MinSize>
+			<Description>Daemon Prince</Description>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>8</Initiative>
+				<Attacks>5</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<LargeBase/>
+				<Terror/>
+				<MagicItems>75</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Daemon of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>10</Points>
+					<SpecialRuleDescription>Re-roll Ward save results of 1</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll Channelling results of 1</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Daemon of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>0</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Daemons of Khorne</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<SpecialRuleDescription>On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Daemon of Nurgle</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
+						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
+						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
+					</OnlyIfAnotherService>
+				</Option>
+				<Option>
+					<Name>Wizard level</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<Countable/>
+					<Min>0</Min>
+					<Max>4</Max>
+					<Value>0</Value>
+					<ExportToWizardLevel/>
+				</Option>
+				<Option>
+					<Name>Chaos Armour</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<AddToArmour>4</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Daemonic Flight</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -1700,6 +1803,8 @@
 					<Name>Daemon of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
+					<SpecialRuleDescription>Re-roll Ward save results of 1</SpecialRuleDescription>
+					<SpecialRuleDescription>Re-roll Channelling results of 1</SpecialRuleDescription>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
@@ -1710,6 +1815,7 @@
 					<Name>Daemon of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
+					<ArmourPiercing>1</ArmourPiercing>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
@@ -1720,6 +1826,7 @@
 					<Name>Daemons of Khorne</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
+					<SpecialRuleDescription>On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</SpecialRuleDescription>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
@@ -1730,6 +1837,7 @@
 					<Name>Daemon of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<OnlyIfAnotherService>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
