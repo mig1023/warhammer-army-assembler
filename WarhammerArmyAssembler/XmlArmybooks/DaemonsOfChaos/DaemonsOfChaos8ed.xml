@@ -1163,6 +1163,74 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Herald of Nurgle</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<Description>Herald of Nurgle</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<PoisonAttack/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level 1</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<MagicItemsPoints/>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+				</Option>
+				<Option>
+					<Name>Lesser Locus of Virulence</Name>
+					<Type>Option</Type>
+					<Points>40</Points>
+					<SpecialRuleDescription>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Greater Locus of Fecundity</Name>
+					<Type>Option</Type>
+					<Points>45</Points>
+					<Regeneration/>
+				</Option>
+				<Option>
+					<Name>Exalted Locus of Contagion</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Palanquin</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Plaguesword</Name>
+					<PoisonAttack/>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
