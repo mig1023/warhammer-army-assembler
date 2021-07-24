@@ -1231,6 +1231,83 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Herald of Slaanesh</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<Description>Herald of Slaanesh</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>7</WeaponSkill>
+				<BallisticSkill>6</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>7</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level 1</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+				</Option>
+				<Option>
+					<Name>Lesser Locus of Grace</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<SpecialRuleDescription>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Greater Locus of Swiftness</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>This model, and all models in her unit, have the Always Strikes First special rule</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Exalted Locus of Beguilement</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
+					<SpecialRuleDescription>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Steed of Slaanesh</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Seeker Chariot</Name>
+					<Type>Option</Type>
+					<Points>85</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Exalted Seeker Chariot</Name>
+					<Type>Option</Type>
+					<Points>190</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
