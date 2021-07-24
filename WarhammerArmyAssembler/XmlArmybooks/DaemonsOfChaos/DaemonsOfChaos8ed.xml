@@ -1052,19 +1052,31 @@
 					<Name>Lesser Locus of Abjuration</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRuleDescription>+1 Magic Resistance</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Greater Locus of Fury</OnlyIfNot>
+						<OnlyIfNot>Exalted Locus of Wrath</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Greater Locus of Fury</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
 					<Frenzy/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lesser Locus of Abjuration</OnlyIfNot>
+						<OnlyIfNot>Exalted Locus of Wrath</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Exalted Locus of Wrath</Name>
 					<Type>Option</Type>
 					<Points>75</Points>
 					<Hate/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lesser Locus of Abjuration</OnlyIfNot>
+						<OnlyIfNot>Greater Locus of Fury</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Juggernaut</Name>
@@ -1133,18 +1145,30 @@
 					<Type>Option</Type>
 					<Points>25</Points>
 					<SpecialRuleDescription>When a model is slain, place D3+1 Blue Horror</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Greater Locus of Change</OnlyIfNot>
+						<OnlyIfNot>Exalted Locus of Conjuration</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Greater Locus of Change</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
 					<SpecialRuleDescription>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lesser Locus of Transmogrification</OnlyIfNot>
+						<OnlyIfNot>Exalted Locus of Conjuration</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Exalted Locus of Conjuration</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
 					<SpecialRuleDescription>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lesser Locus of Transmogrification</OnlyIfNot>
+						<OnlyIfNot>Greater Locus of Chang</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Disc of Tzeentch</Name>
@@ -1215,18 +1239,30 @@
 					<Type>Option</Type>
 					<Points>40</Points>
 					<SpecialRuleDescription>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Greater Locus of Fecundity</OnlyIfNot>
+						<OnlyIfNot>Exalted Locus of Contagion</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Greater Locus of Fecundity</Name>
 					<Type>Option</Type>
 					<Points>45</Points>
 					<Regeneration/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lesser Locus of Virulence</OnlyIfNot>
+						<OnlyIfNot>Exalted Locus of Contagion</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Exalted Locus of Contagion</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
 					<SpecialRuleDescription>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lesser Locus of Virulence</OnlyIfNot>
+						<OnlyIfNot>Greater Locus of Fecundity</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Palanquin</Name>
@@ -1288,18 +1324,30 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<SpecialRuleDescription>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Greater Locus of Swiftness</OnlyIfNot>
+						<OnlyIfNot>Exalted Locus of Beguilement</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Greater Locus of Swiftness</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
 					<SpecialRuleDescription>This model, and all models in her unit, have the Always Strikes First special rule</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lesser Locus of Grace</OnlyIfNot>
+						<OnlyIfNot>Exalted Locus of Beguilement</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Exalted Locus of Beguilement</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
 					<SpecialRuleDescription>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</SpecialRuleDescription>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Lesser Locus of Grace</OnlyIfNot>
+						<OnlyIfNot>Greater Locus of Swiftness</OnlyIfNot>
+					</OnlyIfAnotherService>
 				</Option>
 				<Option>
 					<Name>Steed of Slaanesh</Name>
