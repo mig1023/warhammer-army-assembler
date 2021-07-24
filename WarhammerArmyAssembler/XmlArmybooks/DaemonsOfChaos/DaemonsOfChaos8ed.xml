@@ -1026,6 +1026,41 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Epidemius</Name>
+			<Points>200</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<MountInit>Palanquin</MountInit>
+			<Description>The Maggot King, Plagued Panjandrum</Description>
+			<MainParam>
+				<Movement></Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>5</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<SubOpponentToHit>1</SubOpponentToHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Plaguesword</Name>
+					<PoisonAttack/>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>The Tally of Pestilence</SpecialRuleDescription>
+					<SpecialRuleDescription>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Herald of Khorne</Name>
 			<Points>100</Points>
 			<MinSize>1</MinSize>
@@ -1220,7 +1255,7 @@
 				<Ward>5</Ward>
 			</MainParam>
 			<AdditionalParam>
-				<PoisonAttack/>
+				<SubOpponentToHit>1</SubOpponentToHit>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
