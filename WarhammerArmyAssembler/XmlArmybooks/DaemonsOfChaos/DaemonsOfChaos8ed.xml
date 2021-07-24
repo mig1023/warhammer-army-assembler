@@ -1143,6 +1143,60 @@
 		</Hero>
 		<Hero>
 			<Type>Hero</Type>
+			<Name>Skulltaker</Name>
+			<Points>200</Points>
+			<MinSize>1</MinSize>
+			<PersonifiedHero/>
+			<Description>Khorne's Champion, Blooded Wanderer, Slayer of Kings</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>9</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>9</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+				<Armour>6</Armour>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<ExtendedKillingBlow>5</ExtendedKillingBlow>
+				<Hate/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>The Slayer Sword</Name>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<HeroicKillingBlow/>
+				</HandWeapon>
+				<Armour>
+					<Name>Cloak of Skulls</Name>
+					<AddToArmour>4</AddToArmour>					
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Juggernaut</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Blood Throne</Name>
+					<Type>Option</Type>
+					<Points>120</Points>
+					<Mount/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
 			<Name>Epidemius</Name>
 			<Points>200</Points>
 			<MinSize>1</MinSize>
