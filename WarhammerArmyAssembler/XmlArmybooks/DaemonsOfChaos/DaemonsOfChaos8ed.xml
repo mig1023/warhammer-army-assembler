@@ -1090,6 +1090,79 @@
 				</Special>
 			</SpecialRulesAndAmmunition>			
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Herald of Tzeentch</Name>
+			<Points>90</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<Description>Herald of Tzeentch</Description>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>3</Strength>
+				<Toughness>3</Toughness>
+				<Wounds>2</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>2</Attacks>
+				<Leadership>8</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<Options>
+				<Option>
+					<Name>Wizard level 2</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+				</Option>
+				<Option>
+					<Name>Lesser Locus of Transmogrification</Name>
+					<Type>Option</Type>
+					<Points>25</Points>
+					<SpecialRuleDescription>When a model is slain, place D3+1 Blue Horror</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Greater Locus of Change</Name>
+					<Type>Option</Type>
+					<Points>35</Points>
+					<SpecialRuleDescription>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Exalted Locus of Conjuration</Name>
+					<Type>Option</Type>
+					<Points>50</Points>
+					<SpecialRuleDescription>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</SpecialRuleDescription>
+				</Option>
+				<Option>
+					<Name>Disc of Tzeentch</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Mount/>
+				</Option>
+				<Option>
+					<Name>Burning Chariot</Name>
+					<Type>Option</Type>
+					<Points>60</Points>
+					<Mount/>
+				</Option>
+			</Options>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Flailing tentacles</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Daemonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+					<SpecialRuleDescription>Locus of Tzeentch</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
 	</Heroes>
 	<Mounts>
 		<Mount>
@@ -1218,6 +1291,7 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
+		
 	</Mounts>
 	<Units>
 		<Unit>
