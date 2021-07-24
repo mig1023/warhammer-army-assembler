@@ -721,6 +721,43 @@
 	<Heroes>
 		<Hero>
 			<Type>Lord</Type>
+			<Name>Ku'gath Plaguefather</Name>
+			<Points>625</Points>
+			<MinSize>1</MinSize>
+			<Wizard>1</Wizard>
+			<PersonifiedHero/>
+			<Description>Fetid Brewmaster, Plagueweaver, Rotting Poxmaker</Description>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>7</Toughness>
+				<Wounds>7</Wounds>
+				<Initiative>4</Initiative>
+				<Attacks>6</Attacks>
+				<Leadership>9</Leadership>
+				<Ward>5</Ward>
+			</MainParam>
+			<AdditionalParam>
+				<SubOpponentToHit>1</SubOpponentToHit>
+				<Terror/>
+				<LargeBase/>
+				<Hate/>
+				<PoisonAttack/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<Special>
+					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy units do not receive combat resolution bonuses for attacking the flank or rear of a Daemon or any unit he has joined</SpecialRuleDescription>
+					<SpecialRuleDescription>Nurgling Infestation</SpecialRuleDescription>
+					<SpecialRuleDescription>Necrotic Missiles</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
 			<Name>Bloodthirster of Khorne</Name>
 			<Points>400</Points>
 			<MinSize>1</MinSize>
@@ -2089,7 +2126,7 @@
 				<Special>
 					<SpecialRuleDescription>Demonic</SpecialRuleDescription>
 					<SpecialRuleDescription>Attention Seeker</SpecialRuleDescription>
-					<SpecialRuleDescription>Slime Trail</SpecialRuleDescription>
+					<SpecialRuleDescription>Enemy units do not receive combat resolution bonuses for attacking the flank or rear of a Daemon or any unit he has joined</SpecialRuleDescription>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
