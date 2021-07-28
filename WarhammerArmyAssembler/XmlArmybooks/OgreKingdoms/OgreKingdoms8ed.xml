@@ -957,6 +957,7 @@
 			<AdditionalParam>
 				<Fear/>
 				<ImpactHit>1</ImpactHit>
+				<ImmuneToPoison/>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
 			</AdditionalParam>
@@ -964,9 +965,6 @@
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
-				<Special>
-					<SpecialRuleDescription>Immune to Poison</SpecialRuleDescription>
-				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
 				<Option>
@@ -1638,9 +1636,7 @@
 					<Name>Standard bearer</Name>
 					<Type>Option</Type>
 					<FullCommand/>
-					<Points>20</Points>
-					<MagicItems>50</MagicItems>
-					<MagicItemsType>Unit</MagicItemsType>
+					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Gnoblar Trappers</Name>
