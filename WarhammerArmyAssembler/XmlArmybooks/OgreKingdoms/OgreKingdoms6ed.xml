@@ -429,5 +429,41 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Slavegiant</Name>
+			<Points>175</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>0</Attacks>
+				<Leadership>10</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+				<Giant/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Manacles, chains and bad attitude</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRuleDescription>Ignore Little 'un Panic</SpecialRuleDescription>
+					<SpecialRuleDescription>Fall Over</SpecialRuleDescription>
+					<SpecialRuleDescription>Move Over Obstacles</SpecialRuleDescription>
+					<SpecialRuleDescription>Broken</SpecialRuleDescription>
+					<SpecialRuleDescription>Giant Special Attacks</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>
 </ArmyBook>
