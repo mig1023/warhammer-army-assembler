@@ -352,5 +352,82 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Maneaters</Name>
+			<Points>80</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>4</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImmuneToPsychology/>
+				<Stubborn/>
+				<ImpactHit>1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Ogre club</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Dogs of War</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<AddToArmour>5</AddToArmour>
+					<PerModel/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Cathalayan longsword</Name>
+					<Type>Option</Type>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToInitiative>1</AddToInitiative>
+					<ArmourPiercing>1</ArmourPiercing>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Brace of handguns</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
+						<OnlyIfNot>Brace of handguns</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Brace of handguns</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
