@@ -19,6 +19,89 @@
 
 	</Mounts>
 	<Units>
-	
+		<Unit>
+			<Type>Core</Type>
+			<Name>Bulls</Name>
+			<Points>35</Points>
+			<MinSize>3</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>1</ImpactHit>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Ogre club</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Dogs of War</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>4</Points>
+				</Option>
+				<Option>
+					<Name>Ironfists</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Light armour</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<PerModel/>
+					<Points>3</Points>
+				</Option>
+				<Option>
+					<Name>Crusher</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Bellower</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>20</Points>
+				</Option>
+				<Option>
+					<Name>Look-out Gnoblar</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Standard bearer</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>5</Points>
+				</Option>
+			</Options>
+		</Unit>
 	</Units>
 </ArmyBook>
