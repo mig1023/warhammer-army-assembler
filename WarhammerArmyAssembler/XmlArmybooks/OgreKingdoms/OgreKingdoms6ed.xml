@@ -183,6 +183,132 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Bruiser</Name>
+			<Points>130</Points>
+			<Description>Bruiser</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>8</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>1</ImpactHit>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Ogre club</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Ogre pistol</OnlyIfNot>
+						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Additional weapon</Name>
+					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Ogre pistol</OnlyIfNot>
+						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Ironfists</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Ogre pistol</OnlyIfNot>
+						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Cathalayan longsword</Name>
+					<Type>Option</Type>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToInitiative>1</AddToInitiative>
+					<ArmourPiercing>1</ArmourPiercing>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Brace of handguns</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Brace of handguns</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>12</Points>
+				</Option>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>4</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Sword-Gnoblars</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<Countable/>
+					<Min>0</Min>
+					<Max>2</Max>
+					<Value>0</Value>
+					<ExportToUnitSize/>
+				</Option>
+				<Option>
+					<Name>Luck-Gnoblar</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Battle Standard Bearer</Name>
+					<Type>Option</Type>
+					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<OnlyOneInArmy/>
+					<Points>25</Points>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 
