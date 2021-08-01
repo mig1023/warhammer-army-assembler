@@ -342,7 +342,6 @@
 				<Armour>
 					<Name>Light armour</Name>
 					<AddToArmour>6</AddToArmour>
-					<NativeArmour/>
 				</Armour>
 				<Special>
 					<SpecialRuleDescription>Sic'em boys</SpecialRuleDescription>
@@ -359,6 +358,57 @@
 					<Max>2</Max>
 					<Value>0</Value>
 					<ExportToUnitSize/>
+				</Option>
+			</Options>
+		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Butcher</Name>
+			<Points>130</Points>
+			<Description>Butcher</Description>
+			<Wizard>1</Wizard>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>1</ImpactHit>
+				<ImmuneToPoison/>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Wizard</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Special>
+					<SpecialRuleDescription>Use Gut Magic</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Tooth-Gnoblars</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<Countable/>
+					<Min>0</Min>
+					<Max>2</Max>
+					<Value>0</Value>
+					<ExportToUnitSize/>
+				</Option>
+				<Option>
+					<Name>Luck-Gnoblar</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
 				</Option>
 			</Options>
 		</Hero>
