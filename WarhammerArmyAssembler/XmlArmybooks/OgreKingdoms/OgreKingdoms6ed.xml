@@ -309,6 +309,59 @@
 				</Option>
 			</Options>
 		</Hero>
+		<Hero>
+			<Type>Hero</Type>
+			<Name>Hunter</Name>
+			<Points>145</Points>
+			<Description>Hunter</Description>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>5</WeaponSkill>
+				<BallisticSkill>4</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>5</Toughness>
+				<Wounds>4</Wounds>
+				<Initiative>3</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHit>1</ImpactHit>
+				<MagicItems>50</MagicItems>
+				<MagicItemsType>Hero</MagicItemsType>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Harpoon crossbow</Name>
+				</RangeWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Sic'em boys</SpecialRuleDescription>
+					<SpecialRuleDescription>Loner</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Sabretusks</Name>
+					<Type>Option</Type>
+					<Points>20</Points>
+					<Countable/>
+					<Min>0</Min>
+					<Max>2</Max>
+					<Value>0</Value>
+					<ExportToUnitSize/>
+				</Option>
+			</Options>
+		</Hero>
 	</Heroes>
 	<Mounts>
 
