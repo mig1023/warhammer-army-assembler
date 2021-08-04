@@ -37,6 +37,7 @@ namespace WarhammerArmyAssembler
             ["ArmourPiercing"] = "Armour piercing ([X])",
             ["Reroll"] = "Reroll ([X])",
             ["ImpactHit"] = "Impact Hit ([X])",
+            ["ImpactHitByFront"] = "Impact Hit ([X])",
             ["SteamTank"] = "Steam Tank",
             ["Stupidity"] = "Stupidity",
             ["Undead"] = "Undead",

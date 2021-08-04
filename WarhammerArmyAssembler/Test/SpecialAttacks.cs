@@ -151,31 +151,35 @@ namespace WarhammerArmyAssembler.Test
 
         public static void ImpactHit(Unit unit, List<Unit> participants, ref Dictionary<int, int> roundWounds, int round)
         {
-            bool impactHit = (round == 1) &&
-                (!String.IsNullOrEmpty(unit.ImpactHit) || (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit)));
+            bool impactHit = !String.IsNullOrEmpty(unit.ImpactHit) || (unit.ImpactHitByFront > 0);
+            bool impactHitByMount = (unit.Mount != null) && !String.IsNullOrEmpty(unit.Mount.ImpactHit);
 
-            if (impactHit || unit.SteamTank)
+            if ((round == 1) && (impactHit || impactHitByMount || unit.SteamTank))
             {
                 Unit impactUnit = (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit) ? unit.Mount : unit);
                 Unit impactOpponent = Fight.SelectOpponent(participants, impactUnit);
 
-                string impactOutLine = String.Empty;
-
-                int attacks = ImpactHitNumer(unit, unit.Mount, out impactOutLine, out bool steamFail);
+                int attacks = ImpactHitNumber(unit, unit.Mount, out string impactOutLine, out bool steamFail);
 
                 if (steamFail)
                     unit.Wounds -= 1;
 
-                roundWounds[impactOpponent.ID] += Fight.Round(
-                    ref impactUnit, ref impactOpponent, attacks, round, impactHit: true, impactLine: impactOutLine
-                );
+                roundWounds[impactOpponent.ID] += Fight.Round(ref impactUnit, ref impactOpponent,
+                    attacks, round, impactHit: true, impactLine: impactOutLine);
             }
         }
 
-        private static int ImpactHitNumer(Unit unit, Unit unitMount, out string impactOutLine, out bool steamFail)
+        private static int ImpactHitNumber(Unit unit, Unit unitMount, out string impactOutLine, out bool steamFail)
         {
-            string impactHit = String.Empty;
             steamFail = false;
+
+            if (unit.ImpactHitByFront > 0)
+            {
+                impactOutLine = unit.GetFront().ToString();
+                return unit.GetFront();
+            }
+
+            string impactHit = String.Empty;
 
             if (unit.SteamTank)
             {

@@ -100,6 +100,7 @@ namespace WarhammerArmyAssembler
         public int ArmourPiercing { get; set; }
         public string Reroll { get; set; }
         public string ImpactHit { get; set; }
+        public int ImpactHitByFront { get; set; }
         public bool SteamTank { get; set; }
         public bool HellPitAbomination { get; set; }
         public bool Giant { get; set; }
@@ -334,6 +335,7 @@ namespace WarhammerArmyAssembler
                 ArmourPiercing = this.ArmourPiercing,
                 Reroll = this.Reroll,
                 ImpactHit = this.ImpactHit,
+                ImpactHitByFront = this.ImpactHitByFront,
                 SteamTank = this.SteamTank,
                 HellPitAbomination = this.HellPitAbomination,
                 Giant = this.Giant,
@@ -933,13 +935,18 @@ namespace WarhammerArmyAssembler
                 {
                     PropertyInfo optionField = typeof(Option).GetProperty(name);
 
-                    bool fromParamValue = GetUnitValueTrueOrFalse(
-                        optionField.GetValue(option), out string lineOptionValue, out int intOptionValue
-                    );
+                    bool fromParamValue = GetUnitValueTrueOrFalse(optionField.GetValue(option),
+                        out string lineOptionValue, out int intOptionValue);
 
                     anyIsTrue = (fromParamValue ? true : anyIsTrue);
 
-                    if ((name == "Reroll") && !directModification && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
+                    if ((name == "ImpactHitByFront") && (((int)unitField.GetValue(this) > 0) || option.ImpactHitByFront > 0))
+                    {
+                        intParamValue = GetFront();
+                        anyIsTrue = true;
+                    }
+
+                    else if ((name == "Reroll") && !directModification && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
                     {
                         string[] allRerolls = lineOptionValue.Split(';');
 

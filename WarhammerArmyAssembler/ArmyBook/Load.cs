@@ -153,6 +153,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.MustBeGeneral = BoolParse(additionalParam["MustBeGeneral"]);
                 newUnit.Reroll = StringParse(additionalParam["Reroll"]);
                 newUnit.ImpactHit = StringParse(additionalParam["ImpactHit"]);
+                newUnit.ImpactHitByFront = (BoolParse(additionalParam["ImpactHitByFront"]) ? 1 : 0);
                 newUnit.SteamTank = BoolParse(additionalParam["SteamTank"]);
                 newUnit.HellPitAbomination = BoolParse(additionalParam["HellPitAbomination"]);
                 newUnit.Giant = BoolParse(additionalParam["Giant"]);
@@ -256,6 +257,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Undead = BoolParse(xmlNode["Undead"]),
             StrengthInNumbers = BoolParse(xmlNode["StrengthInNumbers"]),
             ImpactHit = StringParse(xmlNode["ImpactHit"]),
+            ImpactHitByFront = (BoolParse(xmlNode["ImpactHitByFront"]) ? 1 : 0),
             SteamTank = BoolParse(xmlNode["SteamTank"]),
             Lance = BoolParse(xmlNode["Lance"]),
             Flail = BoolParse(xmlNode["Flail"]),

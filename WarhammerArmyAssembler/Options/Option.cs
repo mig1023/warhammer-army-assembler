@@ -74,6 +74,7 @@ namespace WarhammerArmyAssembler
         public bool Undead { get; set; }
         public bool StrengthInNumbers { get; set; }
         public string ImpactHit { get; set; }
+        public int ImpactHitByFront { get; set; }
         public bool SteamTank { get; set; }
         public bool Lance { get; set; }
         public bool Flail { get; set; }
@@ -216,6 +217,7 @@ namespace WarhammerArmyAssembler
             Undead = this.Undead,
             StrengthInNumbers = this.StrengthInNumbers,
             ImpactHit = this.ImpactHit,
+            ImpactHitByFront = this.ImpactHitByFront,
             SteamTank = this.SteamTank,
             PredatoryFighter = this.PredatoryFighter,
             MurderousProwess = this.MurderousProwess,
