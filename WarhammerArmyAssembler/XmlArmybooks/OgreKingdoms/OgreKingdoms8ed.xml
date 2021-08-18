@@ -1450,6 +1450,27 @@
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
+		<Mount>
+			<Type>Mount</Type>
+			<Name>Mournfang</Name>
+			<Points>0</Points>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>8</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+		</Mount>	
 	</Mounts>
 	<Units>
 		<Unit>
@@ -1869,6 +1890,95 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
+				</Option>
+			</Options>
+		</Unit>
+		<Unit>
+			<Type>Special</Type>
+			<Name>Mournfang Cavalry</Name>
+			<Points>60</Points>
+			<MinSize>2</MinSize>
+			<MountInit>Mournfang</MountInit>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>2</BallisticSkill>
+				<Strength>4</Strength>
+				<Toughness>4</Toughness>
+				<Wounds>3</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>7</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+				<ImpactHitByFront/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Hand weapon</Name>
+				</HandWeapon>
+				<Armour>
+					<Name>Light armour</Name>
+					<AddToArmour>6</AddToArmour>
+					<NativeArmour/>
+				</Armour>
+			</SpecialRulesAndAmmunition>
+			<Options>
+				<Option>
+					<Name>Heavy armour</Name>
+					<Type>Option</Type>
+					<Points>5</Points>
+					<AddToArmour>5</AddToArmour>
+				</Option>
+				<Option>
+					<Name>Great weapon</Name>
+					<Type>Option</Type>
+					<AddToStrength>2</AddToStrength>
+					<HitLast/>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Ironfists</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<Points>8</Points>
+				</Option>
+				<Option>
+					<Name>Ironfists</Name>
+					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<OnlyIfAnotherService>
+						<OnlyIfNot>Great weapon</OnlyIfNot>
+					</OnlyIfAnotherService>
+					<PerModel/>
+					<Points>5</Points>
+				</Option>
+				<Option>
+					<Name>Crusher</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Brace of Ogre pistol</Name>
+					<Type>Option</Type>
+					<OnlyIfAnotherService>
+						<OnlyIf>Brace of Ogre pistol</OnlyIf>
+					</OnlyIfAnotherService>
+					<Points>6</Points>
+				</Option>
+				<Option>
+					<Name>Bellower</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+				</Option>
+				<Option>
+					<Name>Standard bearer</Name>
+					<Type>Option</Type>
+					<FullCommand/>
+					<Points>10</Points>
+					<MagicItems>50</MagicItems>
+					<MagicItemsType>Unit</MagicItemsType>
 				</Option>
 			</Options>
 		</Unit>
