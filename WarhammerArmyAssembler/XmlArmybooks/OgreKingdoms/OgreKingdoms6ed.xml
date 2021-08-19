@@ -306,7 +306,7 @@
 			<Type>Lord</Type>
 			<Name>Skrag the Slaughterer</Name>
 			<Points>400</Points>
-			<Description>Skrag the Slaughterer</Description>
+			<Description>Prophet of the Great Maw</Description>
 			<PersonifiedHero/>
 			<MinSize>1</MinSize>
 			<MainParam>
@@ -333,6 +333,47 @@
 				<Special>
 					<SpecialRuleDescription>The Blessing of the Great Maw</SpecialRuleDescription>
 					<SpecialRuleDescription>Army of the Slaughterer</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Hero>
+		<Hero>
+			<Type>Lord</Type>
+			<Name>Greasus Goldtooth</Name>
+			<Points>565</Points>
+			<Description>Overtyrant of the Ogre Kingdom</Description>
+			<PersonifiedHero/>
+			<MinSize>1</MinSize>
+			<MainParam>
+				<Movement>4</Movement>
+				<WeaponSkill>6</WeaponSkill>
+				<BallisticSkill>3</BallisticSkill>
+				<Strength>5</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>1</Initiative>
+				<Attacks>3</Attacks>
+				<Leadership>9</Leadership>
+			</MainParam>
+			<AdditionalParam>
+				<Fear/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Sceptre of the Titans</Name>
+					<StrengthTo>10</StrengthTo>
+					<MultiWounds>D3</MultiWounds>
+				</HandWeapon>
+				<Armour>
+					<Name>Overtyrant's Crown</Name>
+					<SpecialRuleDescription>4+ Ward against all non-magical massles</SpecialRuleDescription>
+					<ImmuneToPsychology/>
+				</Armour>
+				<Special>
+					<SpecialRuleDescription>Too Rich to Walk</SpecialRuleDescription>
+					<SpecialRuleDescription>Everyone Has Their Price</SpecialRuleDescription>
+					<SpecialRuleDescription>The Goldtooth Tribe</SpecialRuleDescription>
+					<SpecialRuleDescription>All freely units within line of sight receive a +1 bonus to their combat resolution</SpecialRuleDescription>
+					
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
