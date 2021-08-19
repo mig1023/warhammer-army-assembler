@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler.Test
@@ -14,7 +15,7 @@ namespace WarhammerArmyAssembler.Test
         public static Unit enemy = null;
         public static Unit enemyMount = null;
 
-        public static List<string> testConsole = new List<string>();
+        public static List<Interface.Text> testConsole = new List<Interface.Text>();
 
         public static Brush text = Brushes.Black;
         public static Brush supplText = Brushes.Gray;
@@ -22,6 +23,7 @@ namespace WarhammerArmyAssembler.Test
         public static Brush badText = Brushes.Red;
 
         public static Random rand = new Random();
+
 
         public static void PrepareUnit(Unit unit)
         {
@@ -43,16 +45,26 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.enemyMount = null;
         }
 
-        public static void TestByName(TestTypes testType)
+        public static async void TestByName(TestTypes testType)
         {
-            if (testType == TestTypes.battleRoyale)
-                Test.Fight.BattleRoyaleTest(unit, unitMount);
+            testConsole.Clear();
 
+            Interface.Changes.main.waitingSpinner.Visibility = System.Windows.Visibility.Visible;
+
+            if (testType == TestTypes.battleRoyale)
+                await Task.Run(() => Test.Fight.BattleRoyaleTest(unit, unitMount));
+                
             else if (testType == TestTypes.statisticTest)
-                Test.Fight.StatisticTest(unit, unitMount, enemy, enemyMount);
+                await Task.Run(() => Test.Fight.StatisticTest(unit, unitMount, enemy, enemyMount));
 
             else
-                Test.Fight.FullTest(unit, unitMount, enemy, enemyMount);
+                await Task.Run(() => Test.Fight.FullTest(unit, unitMount, enemy, enemyMount));
+
+            foreach (Interface.Text line in testConsole)
+                Interface.TestUnit.FromConsoleToOutput(line.Content, line.Color);
+
+            Interface.Changes.main.waitingSpinner.Visibility = System.Windows.Visibility.Hidden;
+            Interface.Changes.main.testConsole.Visibility = System.Windows.Visibility.Visible;
         }
 
         public static void Console(Brush color, string line) => Interface.TestUnit.LineToConsole(line, color);

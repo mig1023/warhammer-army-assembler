@@ -464,6 +464,10 @@ namespace WarhammerArmyAssembler
                 testConsole.Height = 120 + royalConsoleSize;
             }
 
+            waitingSpinner.Margin = Interface.Changes.Thick(testConsole,
+                top: testConsole.Margin.Top - Interface.Other.SPINNER_TOP_MARGIN,
+                left: testConsole.Margin.Left - Interface.Other.SPINNER_LEFT_MARGIN);
+
             armyUnitTest.Height = unitTestHeight;
         }
 
@@ -541,6 +545,12 @@ namespace WarhammerArmyAssembler
         {
             if (Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl))
                 ArmyGrid.FontSize += (e.Delta > 0 ? 1 : -1);
+        }
+
+        private void waitingSpinner_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            waitingSpinner.Position = new TimeSpan(0, 0, 1);
+            waitingSpinner.Play();
         }
     }
 }

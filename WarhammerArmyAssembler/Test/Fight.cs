@@ -40,7 +40,6 @@ namespace WarhammerArmyAssembler.Test
             bool royalNotation = false)
         {
             int[] result = new int[3];
-            string currentText = Interface.TestUnit.GetFullConsoleText();
 
             Interface.TestUnit.PreventConsoleOutput(prevent: true);
 
@@ -60,9 +59,6 @@ namespace WarhammerArmyAssembler.Test
                 if (result[0] > 0)
                     Test.Data.Console(Test.Data.text, "\nNobody win: {0:f1}%", (double)result[0] / 10);
             }
-
-            if (currentText == String.Empty)
-                Test.Data.Console(Test.Data.text, "\n");
 
             WinDefeatScale(result[1], result[2]);
         }
@@ -132,8 +128,6 @@ namespace WarhammerArmyAssembler.Test
 
         public static int FullTest(Unit originalUnit, Unit originalUnitMount, Unit originalEnemy, Unit originalEnemyMount)
         {
-            Test.Data.testConsole.Clear();
-
             round = 0;
 
             Unit unit = originalUnit.Clone().SetTestType(Unit.TestTypeTypes.Unit);

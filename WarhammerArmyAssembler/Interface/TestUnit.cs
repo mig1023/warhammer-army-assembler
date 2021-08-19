@@ -15,19 +15,8 @@ namespace WarhammerArmyAssembler.Interface
         private static Dictionary<string, List<FrameworkElement>> mountRow = new Dictionary<string, List<FrameworkElement>>();
 
         private static List<string> unitParam = new List<string> {
-            "Name",
-            "Size",
-            "Movement",
-            "WeaponSkill",
-            "BallisticSkill",
-            "Strength",
-            "Toughness",
-            "Wounds",
-            "Initiative",
-            "Attacks",
-            "Leadership",
-            "Armour",
-            "Ward"
+            "Name", "Size", "Movement", "WeaponSkill", "BallisticSkill", "Strength", "Toughness",
+            "Wounds", "Initiative", "Attacks", "Leadership", "Armour", "Ward"
         };
 
         private static void LoadUnitParamInInterface(Unit unitForLoad, Unit mountForLoad, string elemetnsPostfix, Grid unitGrid)
@@ -87,7 +76,6 @@ namespace WarhammerArmyAssembler.Interface
             Interface.Changes.main.armyUnitTest_Resize();
             CleanConsole();
             Test.Data.TestByName(testType);
-            Interface.Changes.main.testConsole.Visibility = Visibility.Visible;
         }
 
         public static string GetFullConsoleText() => new TextRange(Interface.Changes.main.testConsole.Document.ContentStart,
@@ -137,14 +125,21 @@ namespace WarhammerArmyAssembler.Interface
                 main.enemyGridContainer,
                 main.specialRulesEnemyTest,
                 main.startFullTest,
-                main.startStatisticTest
+                main.startStatisticTest,
+                main.waitingSpinner
             };
 
             foreach (FrameworkElement element in elements)
                 element.Visibility = System.Windows.Visibility.Visible;
 
             Interface.Changes.main.startBattleRoyale.Margin = Interface.Changes.Thick(main.startBattleRoyale,
-                top: main.startStatisticTest.Margin.Top + 154, left: main.startBattleRoyale.Margin.Left + 163); 
+                top: main.startStatisticTest.Margin.Top + 154, left: main.startBattleRoyale.Margin.Left + 163);
+
+            Interface.Changes.main.waitingSpinner.Margin = Interface.Changes.main.testConsole.Margin;
+
+            Interface.Changes.main.waitingSpinner.Margin = Interface.Changes.Thick(Changes.main.testConsole,
+                top: Changes.main.testConsole.Margin.Top - Other.SPINNER_TOP_MARGIN,
+                left: Changes.main.testConsole.Margin.Left - Other.SPINNER_LEFT_MARGIN);
         }
 
         public static void TestCanvasPrepare(Unit unit)
@@ -224,6 +219,11 @@ namespace WarhammerArmyAssembler.Interface
             if (!showLinesToConsole)
                 return;
 
+            Test.Data.testConsole.Add(new Text { Content = line, Color = color });
+        }
+
+        public static void FromConsoleToOutput(string line, Brush color = null)
+        {
             RichTextBox box = Interface.Changes.main.testConsole;
 
             TextRange text = new TextRange(box.Document.ContentEnd, box.Document.ContentEnd);

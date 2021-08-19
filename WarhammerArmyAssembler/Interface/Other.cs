@@ -9,6 +9,9 @@ namespace WarhammerArmyAssembler.Interface
     {
         public static Random Rand = new Random();
 
+        public static readonly int SPINNER_TOP_MARGIN = 50;
+        public static readonly int SPINNER_LEFT_MARGIN = 40;
+
         public static int IntParse(string line)
         {
             bool success = Int32.TryParse(line, out int value);
