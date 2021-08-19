@@ -2181,5 +2181,44 @@
 				</Option>
 			</Options>
 		</Unit>
+		<Unit>
+			<Type>Rare</Type>
+			<Name>Thundertusk</Name>
+			<Points>250</Points>
+			<MinSize>1</MinSize>
+			<MaxSize>1</MaxSize>
+			<MountInit>Ogre Beast Rider</MountInit>
+			<MainParam>
+				<Movement>6</Movement>
+				<WeaponSkill>3</WeaponSkill>
+				<BallisticSkill>0</BallisticSkill>
+				<Strength>6</Strength>
+				<Toughness>6</Toughness>
+				<Wounds>6</Wounds>
+				<Initiative>2</Initiative>
+				<Attacks>4</Attacks>
+				<Leadership>5</Leadership>
+				<Armour>5</Armour>
+			</MainParam>
+			<AdditionalParam>
+				<Terror/>
+				<LargeBase/>
+			</AdditionalParam>
+			<SpecialRulesAndAmmunition>
+				<HandWeapon>
+					<Name>Chaintrap</Name>
+				</HandWeapon>
+				<RangeWeapon>
+					<Name>Harpoon Launcher</Name>
+				</RangeWeapon>
+				<Special>
+					<SpecialRuleDescription>Beast Rider</SpecialRuleDescription>
+					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
+					<SpecialRuleDescription>Numbing Chill</SpecialRuleDescription>
+					<SpecialRuleDescription>Smooth Ride</SpecialRuleDescription>
+					<SpecialRuleDescription>Sphere of Frost-wreathed Ice</SpecialRuleDescription>
+				</Special>
+			</SpecialRulesAndAmmunition>
+		</Unit>
 	</Units>		
 </ArmyBook>
