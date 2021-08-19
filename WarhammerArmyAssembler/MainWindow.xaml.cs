@@ -495,6 +495,9 @@ namespace WarhammerArmyAssembler
             Interface.TestUnit.TestEnemyPrepare();
             Interface.TestUnit.TestCanvasShow();
 
+            waitingSpinner.Visibility = Visibility.Hidden;
+            testConsole.Visibility = Visibility.Hidden;
+
             armyUnitTest_Resize();
         }
 

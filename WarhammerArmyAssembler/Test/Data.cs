@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Windows;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
@@ -49,7 +49,8 @@ namespace WarhammerArmyAssembler.Test
         {
             testConsole.Clear();
 
-            Interface.Changes.main.waitingSpinner.Visibility = System.Windows.Visibility.Visible;
+            Interface.Changes.main.waitingSpinner.Visibility = Visibility.Visible;
+            Interface.Changes.main.testConsole.Visibility = Visibility.Hidden;
 
             if (testType == TestTypes.battleRoyale)
                 await Task.Run(() => Test.Fight.BattleRoyaleTest(unit, unitMount));
@@ -63,8 +64,8 @@ namespace WarhammerArmyAssembler.Test
             foreach (Interface.Text line in testConsole)
                 Interface.TestUnit.FromConsoleToOutput(line.Content, line.Color);
 
-            Interface.Changes.main.waitingSpinner.Visibility = System.Windows.Visibility.Hidden;
-            Interface.Changes.main.testConsole.Visibility = System.Windows.Visibility.Visible;
+            Interface.Changes.main.waitingSpinner.Visibility = Visibility.Hidden;
+            Interface.Changes.main.testConsole.Visibility = Visibility.Visible;
         }
 
         public static void Console(Brush color, string line) => Interface.TestUnit.LineToConsole(line, color);
