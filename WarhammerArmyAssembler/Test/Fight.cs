@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Documents;
+using System.Windows.Markup;
 using System.Windows.Media;
+using System.Xml;
 
 namespace WarhammerArmyAssembler.Test
 {
@@ -12,7 +15,18 @@ namespace WarhammerArmyAssembler.Test
         static bool attackWithKillingBlow = false;
         static bool attackIsPoisoned = false;
 
-        public static void BattleRoyaleTest(Unit unit, Unit unitMount)
+        public static FlowDocument consoleDocument = new FlowDocument();
+
+        private static string FlowToXml(FlowDocument document)
+        {
+            XmlDocument xdoc = new XmlDocument();
+
+            xdoc.LoadXml(XamlWriter.Save(document));
+
+            return xdoc.OuterXml;
+        }
+
+        public static string BattleRoyaleTest(Unit unit, Unit unitMount)
         {
             foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
             {
@@ -34,9 +48,11 @@ namespace WarhammerArmyAssembler.Test
                     StatisticTest(unit, unitMount, currentEnemy, currentMount, royalNotation: true);
                 }
             }
+
+            return FlowToXml(consoleDocument);
         }
 
-        public static void StatisticTest(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount,
+        public static string StatisticTest(Unit unit, Unit unitMount, Unit enemy, Unit enemyMount,
             bool royalNotation = false)
         {
             int[] result = new int[3];
@@ -44,7 +60,10 @@ namespace WarhammerArmyAssembler.Test
             Interface.TestUnit.PreventConsoleOutput(prevent: true);
 
             for (int i = 0; i < 1000; i++)
-                result[FullTest(unit, unitMount, enemy, enemyMount)] += 1;
+            {
+                FullTest(unit, unitMount, enemy, enemyMount, out int fightResult);
+                result[fightResult] += 1;
+            }
 
             Interface.TestUnit.PreventConsoleOutput(prevent: false);
 
@@ -61,6 +80,8 @@ namespace WarhammerArmyAssembler.Test
             }
 
             WinDefeatScale(result[1], result[2]);
+
+            return FlowToXml(consoleDocument);
         }
 
         private static void ScaleLine(string marker, int len, string el)
@@ -126,7 +147,7 @@ namespace WarhammerArmyAssembler.Test
             return ((opponentsWounds[Unit.TestTypeTypes.Unit] > 0) && (opponentsWounds[Unit.TestTypeTypes.Enemy] > 0));
         }
 
-        public static int FullTest(Unit originalUnit, Unit originalUnitMount, Unit originalEnemy, Unit originalEnemyMount)
+        public static string FullTest(Unit originalUnit, Unit originalUnitMount, Unit originalEnemy, Unit originalEnemyMount, out int result)
         {
             round = 0;
 
@@ -292,18 +313,20 @@ namespace WarhammerArmyAssembler.Test
             if (enemy.Wounds + (enemy.Mount != null && enemy.Mount.IsNotSimpleMount() ? enemy.Mount.Wounds : 0) <= 0)
             {
                 Test.Data.Console(Test.Data.text, "{0} win", unit.Name);
-                return 1;
+                result = 1;
             }
             else if (unit.Wounds + (unit.Mount != null && unit.Mount.IsNotSimpleMount() ? unit.Mount.Wounds : 0) <= 0)
             {
                 Test.Data.Console(Test.Data.text, "{0} win", enemy.Name);
-                return 2;
+                result = 2;
             }
             else
             {
                 Test.Data.Console(Test.Data.text, "{0} and {1} failed to kill each other", unit.Name, enemy.Name);
-                return 0;
+                result = 0;
             }
+
+            return FlowToXml(consoleDocument);
         }
 
         private static bool RoundLostBy(List<Unit> units, Dictionary<int, int> roundWounds)

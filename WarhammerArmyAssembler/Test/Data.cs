@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
@@ -45,27 +44,18 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.enemyMount = null;
         }
 
-        public static async void TestByName(TestTypes testType)
+        public static async Task<string> TestByName(TestTypes testType)
         {
             testConsole.Clear();
 
-            Interface.Changes.main.waitingSpinner.Visibility = Visibility.Visible;
-            Interface.Changes.main.testConsole.Visibility = Visibility.Hidden;
-
             if (testType == TestTypes.battleRoyale)
-                await Task.Run(() => Test.Fight.BattleRoyaleTest(unit, unitMount));
+                return await Task.Run(() => Test.Fight.BattleRoyaleTest(unit, unitMount));
                 
             else if (testType == TestTypes.statisticTest)
-                await Task.Run(() => Test.Fight.StatisticTest(unit, unitMount, enemy, enemyMount));
+                return await Task.Run(() => Test.Fight.StatisticTest(unit, unitMount, enemy, enemyMount));
 
             else
-                await Task.Run(() => Test.Fight.FullTest(unit, unitMount, enemy, enemyMount));
-
-            foreach (Interface.Text line in testConsole)
-                Interface.TestUnit.FromConsoleToOutput(line.Content, line.Color);
-
-            Interface.Changes.main.waitingSpinner.Visibility = Visibility.Hidden;
-            Interface.Changes.main.testConsole.Visibility = Visibility.Visible;
+                return await Task.Run(() => Test.Fight.FullTest(unit, unitMount, enemy, enemyMount, out int _));
         }
 
         public static void Console(Brush color, string line) => Interface.TestUnit.LineToConsole(line, color);
