@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
-using System.Windows.Markup;
 using System.Windows.Media;
-using System.Xml;
 
 namespace WarhammerArmyAssembler.Interface
 {
@@ -74,29 +71,11 @@ namespace WarhammerArmyAssembler.Interface
             Interface.Changes.main.armyUnitTest_Resize();
         }
 
-        private static FlowDocument XmlToFlow(string document)
-        {
-            FlowDocument flowDocument = new FlowDocument();
-
-            using (TextReader stringReader = new StringReader(document))
-                using (XmlReader xmlReader = new XmlTextReader(stringReader))
-                    flowDocument = (FlowDocument)XamlReader.Load(xmlReader);
-
-            return flowDocument;
-        }
-
-        public static async void startTest(Test.Data.TestTypes testType)
+        public static void startTest(Test.Data.TestTypes testType)
         {
             Interface.Changes.main.armyUnitTest_Resize();
-
-            Interface.Changes.main.waitingSpinner.Visibility = Visibility.Visible;
-            Interface.Changes.main.testConsole.Visibility = Visibility.Hidden;
-
-            string console = await Test.Data.TestByName(testType);
-            Interface.Changes.main.testConsole.Document = XmlToFlow(console);
-
-            Interface.Changes.main.waitingSpinner.Visibility = Visibility.Hidden;
-            Interface.Changes.main.testConsole.Visibility = Visibility.Visible;
+            CleanConsole();
+            Test.Data.TestByName(testType);
         }
 
         public static string GetFullConsoleText() => new TextRange(Interface.Changes.main.testConsole.Document.ContentStart,
@@ -240,7 +219,14 @@ namespace WarhammerArmyAssembler.Interface
             if (!showLinesToConsole)
                 return;
 
-            TextRange text = new TextRange(Test.Fight.consoleDocument.ContentEnd, Test.Fight.consoleDocument.ContentEnd);
+            Test.Data.testConsole.Add(new Text { Content = line, Color = color });
+        }
+
+        public static void FromConsoleToOutput(string line, Brush color = null)
+        {
+            RichTextBox box = Interface.Changes.main.testConsole;
+
+            TextRange text = new TextRange(box.Document.ContentEnd, box.Document.ContentEnd);
             text.Text = line;
             text.ApplyPropertyValue(TextElement.ForegroundProperty, color ?? Brushes.Black);
         }
