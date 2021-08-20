@@ -131,15 +131,6 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (FrameworkElement element in elements)
                 element.Visibility = System.Windows.Visibility.Visible;
-
-            Interface.Changes.main.startBattleRoyale.Margin = Interface.Changes.Thick(main.startBattleRoyale,
-                top: main.startStatisticTest.Margin.Top + 154, left: main.startBattleRoyale.Margin.Left + 163);
-
-            Interface.Changes.main.waitingSpinner.Margin = Interface.Changes.main.testConsole.Margin;
-
-            Interface.Changes.main.waitingSpinner.Margin = Interface.Changes.Thick(Changes.main.testConsole,
-                top: Changes.main.testConsole.Margin.Top - Other.SPINNER_TOP_MARGIN,
-                left: Changes.main.testConsole.Margin.Left - Other.SPINNER_LEFT_MARGIN);
         }
 
         public static void TestCanvasPrepare(Unit unit)

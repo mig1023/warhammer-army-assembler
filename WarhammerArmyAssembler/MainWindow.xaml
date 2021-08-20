@@ -248,6 +248,7 @@
                     <Label x:Name="startFullTest" Content="Full test" Visibility="Hidden" Height="39" Canvas.Left="37" Canvas.Top="479" Width="54" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startFullTest_MouseDown" Panel.ZIndex="100"/>
                     <Label x:Name="startStatisticTest" Content="Statistic test" Visibility="Hidden" Height="39" Canvas.Left="107" Canvas.Top="479" Width="78" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startStatisticTest_MouseDown" Panel.ZIndex="100"/>
                     <Label x:Name="startBattleRoyale" Content="Battle Royale" Visibility="Visible" Height="39" Canvas.Left="37" Canvas.Top="325" Width="88" Background="White" BorderThickness="1" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="startBattleRoyale_MouseDown" Panel.ZIndex="100"/>
+                    <Label x:Name="currentTest" Content="" Visibility="Hidden" Height="39" Canvas.Left="130" Canvas.Top="325" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Panel.ZIndex="100"/>
                     <RichTextBox x:Name="testConsole" Block.LineHeight="4" BorderBrush="Black" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" Visibility="Hidden" BorderThickness="1" Padding="15" Height="59" Canvas.Left="37" Canvas.Top="538" Width="330" FontFamily="Courier New"/>
                     <MediaElement x:Name="waitingSpinner" Height="150" Visibility="Hidden" Width="150" UnloadedBehavior="Manual" Source="Images\spinner.gif" LoadedBehavior="Play" Stretch="None" MediaEnded="waitingSpinner_MediaEnded" Canvas.Left="37" Canvas.Top="538" Panel.ZIndex="99"/>
                 </Canvas>
@@ -616,6 +617,7 @@
                 ↖ Main menu<LineBreak/><LineBreak/>
                 ← Armybook, double click for detail<LineBreak/><LineBreak/>
                 Drop ↓ here you first hero or unit to start your army<LineBreak/><LineBreak/>
+                Double click on unit ↓ here for configure it<LineBreak/><LineBreak/>
                 Double click on unit ↓ here for configure it<LineBreak/><LineBreak/>
                 Use delete ↘ for throw out unnecessary units<LineBreak/>
             </TextBlock>

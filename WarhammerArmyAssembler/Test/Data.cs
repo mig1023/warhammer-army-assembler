@@ -49,11 +49,15 @@ namespace WarhammerArmyAssembler.Test
         {
             testConsole.Clear();
 
+            Progress<string> current = new Progress<string>();
+            current.ProgressChanged += (sender, args) => Interface.Changes.main.currentTest.Content = args.ToString();
+
             Interface.Changes.main.waitingSpinner.Visibility = Visibility.Visible;
+            Interface.Changes.main.currentTest.Visibility = Visibility.Visible;
             Interface.Changes.main.testConsole.Visibility = Visibility.Hidden;
 
             if (testType == TestTypes.battleRoyale)
-                await Task.Run(() => Test.Fight.BattleRoyaleTest(unit, unitMount));
+                await Task.Run(() => Test.Fight.BattleRoyaleTest(unit, unitMount, current));
                 
             else if (testType == TestTypes.statisticTest)
                 await Task.Run(() => Test.Fight.StatisticTest(unit, unitMount, enemy, enemyMount));
@@ -65,6 +69,7 @@ namespace WarhammerArmyAssembler.Test
                 Interface.TestUnit.FromConsoleToOutput(line.Content, line.Color);
 
             Interface.Changes.main.waitingSpinner.Visibility = Visibility.Hidden;
+            Interface.Changes.main.currentTest.Visibility = Visibility.Hidden;
             Interface.Changes.main.testConsole.Visibility = Visibility.Visible;
         }
 

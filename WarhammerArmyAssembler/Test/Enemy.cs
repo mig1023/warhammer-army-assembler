@@ -51,6 +51,16 @@ namespace WarhammerArmyAssembler
 
         public static List<Enemy> GetEnemiesByGroup(string groupName) => GetEnemiesDictionary()[groupName];
 
+        public static int GetEnemiesCount()
+        {
+            int count = 0;
+
+            foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
+                count += Enemy.GetEnemiesByGroup(enemyGroupName).Count();
+
+            return count;
+        }
+
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
             new Enemy

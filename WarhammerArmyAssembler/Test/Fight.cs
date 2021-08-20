@@ -12,8 +12,10 @@ namespace WarhammerArmyAssembler.Test
         static bool attackWithKillingBlow = false;
         static bool attackIsPoisoned = false;
 
-        public static void BattleRoyaleTest(Unit unit, Unit unitMount)
+        public static void BattleRoyaleTest(Unit unit, Unit unitMount, IProgress<string> progress)
         {
+            int current = 0; 
+
             foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
             {
                 string currentText = Interface.TestUnit.GetFullConsoleText();
@@ -25,11 +27,18 @@ namespace WarhammerArmyAssembler.Test
 
                 foreach (Enemy enemy in Enemy.GetEnemiesByGroup(enemyGroupName))
                 {
+                    current += 1;
+
                     Unit currentEnemy = enemy.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
                     Unit currentMount = null;
 
                     if (currentEnemy.Mount != null)
                         currentMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+
+                    if (current < Enemy.GetEnemiesCount())
+                        progress.Report(String.Format("{0}/{1} {2}", current, Enemy.GetEnemiesCount(), enemy.Name));
+                    else
+                        progress.Report("Preparing a report... please wait");
 
                     StatisticTest(unit, unitMount, currentEnemy, currentMount, royalNotation: true);
                 }

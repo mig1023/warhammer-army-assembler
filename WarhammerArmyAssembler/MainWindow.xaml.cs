@@ -434,6 +434,7 @@ namespace WarhammerArmyAssembler
                 startStatisticTest,
                 startBattleRoyale,
                 testConsole,
+                currentTest,
             };
 
             foreach (FrameworkElement element in elements)
