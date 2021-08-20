@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Media;
+using System.Windows;
+using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler.Test
 {
@@ -11,6 +13,30 @@ namespace WarhammerArmyAssembler.Test
 
         static bool attackWithKillingBlow = false;
         static bool attackIsPoisoned = false;
+
+        public static async void TestByName(Data.TestTypes testType)
+        {
+            Data.testConsole.Clear();
+
+            Progress<string> current = new Progress<string>();
+            current.ProgressChanged += (sender, args) => Interface.Changes.main.currentTest.Content = args.ToString();
+
+            Interface.TestUnit.VisibilityTest(before: true);
+
+            if (testType == Data.TestTypes.battleRoyale)
+                await Task.Run(() => Test.Fight.BattleRoyaleTest(Data.unit, Data.unitMount, current));
+
+            else if (testType == Data.TestTypes.statisticTest)
+                await Task.Run(() => Test.Fight.StatisticTest(Data.unit, Data.unitMount, Data.enemy, Data.enemyMount));
+
+            else
+                await Task.Run(() => Test.Fight.FullTest(Data.unit, Data.unitMount, Data.enemy, Data.enemyMount));
+
+            foreach (Interface.Text line in Data.testConsole)
+                Interface.TestUnit.FromConsoleToOutput(line.Content, line.Color);
+
+            Interface.TestUnit.VisibilityTest();
+        }
 
         public static void BattleRoyaleTest(Unit unit, Unit unitMount, IProgress<string> progress)
         {

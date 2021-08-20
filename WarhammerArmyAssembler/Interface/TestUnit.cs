@@ -73,9 +73,10 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void startTest(Test.Data.TestTypes testType)
         {
-            Interface.Changes.main.armyUnitTest_Resize();
             CleanConsole();
-            Test.Data.TestByName(testType);
+            Interface.Changes.main.armyUnitTest_Resize();
+            
+            Test.Fight.TestByName(testType);
         }
 
         public static string GetFullConsoleText() => new TextRange(Interface.Changes.main.testConsole.Document.ContentStart,
@@ -171,6 +172,22 @@ namespace WarhammerArmyAssembler.Interface
                 main.enemyGroup.Items.Add(enemy);
 
             main.armyUnitTest_Resize();
+        }
+
+        public static void VisibilityTest(bool before = false)
+        {
+            if (before)
+            {
+                Changes.main.waitingSpinner.Visibility = Visibility.Visible;
+                Changes.main.currentTest.Visibility = Visibility.Visible;
+                Changes.main.testConsole.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Changes.main.waitingSpinner.Visibility = Visibility.Hidden;
+                Changes.main.currentTest.Visibility = Visibility.Hidden;
+                Changes.main.testConsole.Visibility = Visibility.Visible;
+            }
         }
 
         private static string SelectedEnemy() => (string)Interface.Changes.main.enemyForTest.SelectedItem;

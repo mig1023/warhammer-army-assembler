@@ -45,34 +45,6 @@ namespace WarhammerArmyAssembler.Test
                 Test.Data.enemyMount = null;
         }
 
-        public static async void TestByName(TestTypes testType)
-        {
-            testConsole.Clear();
-
-            Progress<string> current = new Progress<string>();
-            current.ProgressChanged += (sender, args) => Interface.Changes.main.currentTest.Content = args.ToString();
-
-            Interface.Changes.main.waitingSpinner.Visibility = Visibility.Visible;
-            Interface.Changes.main.currentTest.Visibility = Visibility.Visible;
-            Interface.Changes.main.testConsole.Visibility = Visibility.Hidden;
-
-            if (testType == TestTypes.battleRoyale)
-                await Task.Run(() => Test.Fight.BattleRoyaleTest(unit, unitMount, current));
-                
-            else if (testType == TestTypes.statisticTest)
-                await Task.Run(() => Test.Fight.StatisticTest(unit, unitMount, enemy, enemyMount));
-
-            else
-                await Task.Run(() => Test.Fight.FullTest(unit, unitMount, enemy, enemyMount));
-
-            foreach (Interface.Text line in testConsole)
-                Interface.TestUnit.FromConsoleToOutput(line.Content, line.Color);
-
-            Interface.Changes.main.waitingSpinner.Visibility = Visibility.Hidden;
-            Interface.Changes.main.currentTest.Visibility = Visibility.Hidden;
-            Interface.Changes.main.testConsole.Visibility = Visibility.Visible;
-        }
-
         public static void Console(Brush color, string line) => Interface.TestUnit.LineToConsole(line, color);
 
         public static void Console(Brush color, string line, params object[] p) => Console(color, String.Format(line, p));
