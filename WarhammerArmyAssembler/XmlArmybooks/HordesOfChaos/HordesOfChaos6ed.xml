@@ -12,7 +12,7 @@
 		<OrderName>WarriorsOfChaos</OrderName>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Common magic items">
+		<Group Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -93,8 +93,8 @@
 				<AddToCloseCombat>1</AddToCloseCombat>
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic weapons">	
+		</Group>
+		<Group Name = "Magic weapons">	
 			<Artefact>
 				<Name>Chaos Daemon Sword</Name>
 				<Type>Weapon</Type>
@@ -196,8 +196,8 @@
 				<KillingBlow/>
 				<Description>Confers on the bearer the Killing Blow ability.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic armour">
+		</Group>
+		<Group Name = "Magic armour">
 			<Artefact>
 				<Name>Spelleater Shield</Name>
 				<Type>Shield</Type>
@@ -252,8 +252,8 @@
 				<Description>The Crimson Armour is a suit of Chaos armour. In addition, any model wishing to attack the wearer in close combat must first pass a Leadership test or they may not attack that combat round.</Description>
 				<OnlyForGroup>Mortal</OnlyForGroup>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Talismans">	
+		</Group>
+		<Group Name = "Talismans">	
 			<Artefact>
 				<Name>The Beguiling Gem</Name>
 				<Type>AdditionalArmour</Type>
@@ -304,8 +304,8 @@
 				<SpecialRuleDescription>Magic Resistance (2)</SpecialRuleDescription>
 				<Description>The model has Magic Resistance (2).</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Arcane items">	
+		</Group>
+		<Group Name = "Arcane items">	
 			<Artefact>
 				<Name>Staff of Change</Name>
 				<Type>Arcane</Type>
@@ -350,8 +350,8 @@
 				<SpecialRuleDescription>One more spell</SpecialRuleDescription>
 				<Description>The Familiar's owner knows one more spell than is normal for his level. This does not increase his Magic Level.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Enchanted items">	
+		</Group>
+		<Group Name = "Enchanted items">	
 			<Artefact>
 				<Name>Rod of Corruption</Name>
 				<Type>AdditionalArmour</Type>
@@ -437,8 +437,8 @@
 				<SpecialRuleDescription>Opponent must reveal everything that is not apparent about the unit</SpecialRuleDescription>
 				<Description>The bearer can pick any enemy unit on the battlefield at the beginning of each of his Magic phases. The opponent must reveal everything that is not apparent about the unit (magic items and their bearers, hidden Assassins and Fanatics, etc).</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic banner">
+		</Group>
+		<Group Name = "Magic banner">
 			<Artefact>
 				<Name>Banner of the Gods</Name>
 				<Type>Banner</Type>
@@ -499,8 +499,8 @@
 				<SpecialRuleDescription>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk</SpecialRuleDescription>
 				<Description>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Demonic Gifts">
+		</Group>
+		<Group Name = "Demonic Gifts">
 			<Artefact>
 				<Name>Chaos Disruption</Name>
 				<Type>Weapon</Type>
@@ -557,8 +557,8 @@
 				<Group>Mortal</Group>
 				<Description>If the Daemon is the army General, Mortal units count as Core choices and Daemonic units count as Special.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Khorne Gifts">
+		</Group>
+		<Group Name = "Khorne Gifts">
 			<Artefact>
 				<Name>Collar of Khorne</Name>
 				<Type>Weapon</Type>
@@ -603,8 +603,8 @@
 				<AddToStrength>1</AddToStrength>
 				<Description>The Daemon has +1 Strength on its profile.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Tzeentch Gifts">
+		</Group>
+		<Group Name = "Tzeentch Gifts">
 			<Artefact>
 				<Name>Tzeentch's Will</Name>
 				<Type>Weapon</Type>
@@ -649,8 +649,8 @@
 				<SpecialRuleDescription>Daemon may give up Wounds to generate D3 Power dice</SpecialRuleDescription>
 				<Description>At any point during the Chaos Magic phase, the Daemon may give up Wounds to generate Power dice (with no saves of any kind allowed, no Ward saves, no regeneration, etc). For each Wound sacrificed, the Daemon generates an extra D3 Power dice, that turn which only it may use.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Nurgle Gifts">
+		</Group>
+		<Group Name = "Nurgle Gifts">
 			<Artefact>
 				<Name>Cloud of Flies</Name>
 				<Type>AdditionalArmour</Type>
@@ -684,8 +684,8 @@
 				<PoisonAttack/>
 				<Description>The Daemon's attacks count as poisoned attacks. This gift cannot be combined with a Blade of the Ether gift.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Slaanesh Gifts">
+		</Group>
+		<Group Name = "Slaanesh Gifts">
 			<Artefact>
 				<Name>Aura of Slaanesh</Name>
 				<Type>AdditionalArmour</Type>
@@ -719,7 +719,7 @@
 				<Test Bet="Pass" Context="Round">Leadership</Test>
 				<Description>At the beginning of the Close Combat phase, select one model in base contact with the Daemon. The target must pass a Leadership test or may not make any attacks in that Close Combat phase. Models immune to psychology cannot be affected.</Description>
 			</Artefact>
-		</ArtefactsGroup>
+		</Group>
 	</Artefacts>
 	<Heroes>
 		<Hero>
