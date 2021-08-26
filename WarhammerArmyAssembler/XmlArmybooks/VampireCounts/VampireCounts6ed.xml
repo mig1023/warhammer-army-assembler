@@ -10,7 +10,7 @@
 		<SymbolImage>VampireCounts.png</SymbolImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Von Carstein">
+		<Group Name = "Von Carstein">
 			<Artefact>
 				<Name>Summon Bats</Name>
 				<Type>Weapon</Type>
@@ -71,8 +71,8 @@
 				<MovementTo>9</MovementTo>
 				<Description>The Movement of the Vampire is increased to 9 as long as he is moving on foot</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Blood Dragon">
+		</Group>
+		<Group Name = "Blood Dragon">
 			<Artefact>
 				<Name>Red Fury</Name>
 				<Type>Weapon</Type>
@@ -133,8 +133,8 @@
 				<SpecialRuleDescription>Enemy character must take a Leadership test and hide in the rear ranks, refusing to fight the Vampire, if the test is failed</SpecialRuleDescription>
 				<Description>At the start of a challenge, the enemy character selected to take on the Vampire must take a Leadership test before any blows are struck (a character Immune to Psychology is also immune to this effect). If the test is failed, the enemy character will change his mind and hide in the rear ranks, refusing to fight the Vampire. Then the combat will proceed as normal, with no challenges fought that turn and the Vampire will be free to fight against any models he is in contact with.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Necrarch">
+		</Group>
+		<Group Name = "Necrarch">
 			<Artefact>
 				<Name>Nehekhara's Noble Blood</Name>
 				<Type>Weapon</Type>
@@ -197,8 +197,8 @@
 				<SpecialRuleDescription>Knows one more spell than he is normally allowed</SpecialRuleDescription>
 				<Description>The Vampire knows one more spell than he is normally allowed. This does not increase his Magic Level.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Strigoi">
+		</Group>
+		<Group Name = "Strigoi">
 			<Artefact>
 				<Name>Curse of the Revenant</Name>
 				<Type>Weapon</Type>
@@ -259,8 +259,8 @@
 				<AddToStrength>1</AddToStrength>
 				<Description>The Vampire has +1 Strength on his profile.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Lahmia">
+		</Group>
+		<Group Name = "Lahmia">
 			<Artefact>
 				<Name>Seduction</Name>
 				<Type>Weapon</Type>
@@ -321,8 +321,8 @@
 				<Test Bet="Pass" Context="Round">Leadership</Test>
 				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack the Vampire in that the Close Combat phase.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Common magic items">
+		</Group>
+		<Group Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -393,8 +393,8 @@
 				<AddToCloseCombat>1</AddToCloseCombat>
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic weapons">
+		</Group>
+		<Group Name = "Magic weapons">
 			<Artefact>
 				<Name>Frostblade</Name>
 				<Type>Weapon</Type>
@@ -454,8 +454,8 @@
 				<ExtendedKillingBlow>5</ExtendedKillingBlow>
 				<Description>This sword scores a Killing Blow on the result of a 5+.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic armour">
+		</Group>
+		<Group Name = "Magic armour">
 			<Artefact>
 				<Name>Wailing Helm</Name>
 				<Type>AdditionalArmour</Type>
@@ -494,8 +494,8 @@
 				<SpecialRuleDescription>One enemy in base contact (bearer's choice) lose 1 Attack</SpecialRuleDescription>
 				<Description>Gives a 6+ armour save and may be combined with other equipment normally. One enemy in base contact (bearer's choice) lose 1 Attack. All Bretonnian Knights and Characters hate the model carrying the shield.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Talismans">
+		</Group>
+		<Group Name = "Talismans">
 			<Artefact>
 				<Name>The Carstein Ring</Name>
 				<Type>AdditionalArmour</Type>
@@ -546,8 +546,8 @@
 				<SpecialRuleDescription>On a 2+ the first Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed</SpecialRuleDescription>
 				<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Arcane items">	
+		</Group>
+		<Group Name = "Arcane items">	
 			<Artefact>
 				<Name>Power Familiar</Name>
 				<Type>Arcane</Type>
@@ -608,8 +608,8 @@
 				<SpecialRuleDescription>Knows one more spell than he is normally allowed</SpecialRuleDescription>
 				<Description>The familiar's owner knows one more spell than he is normally allowed. This does not increase his magic level.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Enchanted items">
+		</Group>
+		<Group Name = "Enchanted items">
 			<Artefact>
 				<Name>Rod of Flaming Death</Name>
 				<Type>Weapon</Type>
@@ -646,8 +646,8 @@
 				<SpecialRuleDescription>Bound spell, power level 4, one use only: a model in base contact suffers one wound, no armour save is allowed, if the wound is not saved, the victim must take a Toughness test or die immediately, with no saves allowed whatsoever</SpecialRuleDescription>
 				<Description>Bound spell, power level 4. One use only. The Casket may cast the spell once during the battle. The spell requires no Power dice to cast; all the power required is provided by the Casket itself. When the Casket's spell is cast, a model in base contact with the bearer (chosen by the bearer) suffers one wound. No armour save is allowed. If the wound is not saved, the victim must also take a Toughness test or die immediately, with no saves allowed whatsoever, not even Ward saves.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic standards">
+		</Group>
+		<Group Name = "Magic standards">
 			<Artefact>
 				<Name>Hell Banner</Name>
 				<Type>Banner</Type>
@@ -684,7 +684,7 @@
 				<SpecialRuleDescription>+1D6 Unit Strength</SpecialRuleDescription>
 				<Description>Treat the unit carrying the Banner as if it had 1D6 higher Unit Strength than it actually does. Roll each time you need to calculate the Unit Strength. The result applies only for that phase (Movement, Magic, etc) and you will have to roll again in other phases when needed.</Description>
 			</Artefact>
-		</ArtefactsGroup>
+		</Group>
 	</Artefacts>
 	<Heroes>
 		<Hero>
