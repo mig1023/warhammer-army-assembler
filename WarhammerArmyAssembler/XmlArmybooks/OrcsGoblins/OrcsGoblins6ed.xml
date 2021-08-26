@@ -10,7 +10,7 @@
 		<SymbolImage>OrcsGoblins.png</SymbolImage>
 	</Info>
 	<Artefacts>
-		<ArtefactsGroup Name = "Common magic items">
+		<Group Name = "Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -81,8 +81,8 @@
 				<AddToCloseCombat>1</AddToCloseCombat>
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic weapons">
+		</Group>
+		<Group Name = "Magic weapons">
 			<Artefact>
 				<Name>Battleaxe of the Last WAAAGH!</Name>
 				<Type>Weapon</Type>
@@ -163,8 +163,8 @@
 				<SpecialRuleDescription>+3 Strengthr once in the game</SpecialRuleDescription>
 				<Description>Wollopa's One Hit Wunda provides it user with +3S... but it only works once in the game. The player can decide to use the weapon after hits have been scored but before rolling for wounds. The +3S bonus applies to one hit that has been scored by the bearer that turn. Any other hits scored by the bearer are at normal Strength.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic armour">
+		</Group>
+		<Group Name = "Magic armour">
 			<Artefact>
 				<Name>Armour of Protectyness</Name>
 				<Type>Armour</Type>
@@ -222,8 +222,8 @@
 				<AddToWard>6</AddToWard>
 				<Description>Gives the wearer a 6+ armour save and may be worn in addition to normal armour. Also gives the wearer a 6+ Ward save.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Talismans">
+		</Group>
+		<Group Name = "Talismans">
 			<Artefact>
 				<Name>Sizzla's Shiny Baubles</Name>
 				<Type>AdditionalArmour</Type>
@@ -259,8 +259,8 @@
 				<Test Bet="Pass" Context="Round" MountsOnly="true">Leadership</Test>
 				<Description>Monsters and mounts of any size must pass a Leadership test (on their own Leadership characteristic) to attack the wearer. If they fail, they may choose to attack another model instead. Roll once each close combat round.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Arcane items">
+		</Group>
+		<Group Name = "Arcane items">
 			<Artefact>
 				<Name>Staff of Baduumm</Name>
 				<Type>Arcane</Type>
@@ -304,8 +304,8 @@
 				<SpecialRuleDescription>Once per battle, in a friendly Magic phase, may steal one dice from his opponent's Dispel pile and add it to his own Power dice pile</SpecialRuleDescription>
 				<Description>Once per battle, in a friendly Magic phase, the bearer may steal one dice from his opponent's Dispel pile and add it to his own Power dice pile (whatever colour the dice previously was, it now turns green).</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Enchanted itams">
+		</Group>
+		<Group Name = "Enchanted itams">
 			<Artefact>
 				<Name>Warboss Imbad's Iron Gnashas</Name>
 				<Type>Weapon</Type>
@@ -362,8 +362,8 @@
 				<SpecialRuleDescription>Bound spell, power level 3: 'Eadbutt spell</SpecialRuleDescription>
 				<Description>Bound spell, power level 3: the 'Itty Ring may cast its Bound spell once per Magic phase like an ordinary spell. The spell require no Power dice to cast, all the power required is provided by the ring itself. The 'Itty Ring contains the 'Eadbutt spell.</Description>
 			</Artefact>
-		</ArtefactsGroup>
-		<ArtefactsGroup Name = "Magic standards">
+		</Group>
+		<Group Name = "Magic standards">
 			<Artefact>
 				<Name>Mork's Spirit-Totem</Name>
 				<Type>Banner</Type>
@@ -424,7 +424,7 @@
 				<SpecialRuleDescription>Ignores the first failed Animosity roll of the game</SpecialRuleDescription>
 				<Description>The unit which carries the Bashin' Flag of Bork ignores the first failed Animosity roll of the game - it passes the test instead. Any further rolls are taken as normal (even the spirit of Bork Crazy-Bear can only do so much).</Description>
 			</Artefact>
-		</ArtefactsGroup>
+		</Group>
 	</Artefacts>	
 	<Heroes>
 		<Hero>
