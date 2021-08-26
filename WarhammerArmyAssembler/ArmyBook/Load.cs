@@ -50,7 +50,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref ArmyBook.Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref ArmyBook.Data.Mounts);
 
-            foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Artefacts/ArtefactsGroup"))
+            foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Artefacts/Group"))
             {
                 string groupName = xmlArtefactGroup.Attributes["Name"].Value;
 
