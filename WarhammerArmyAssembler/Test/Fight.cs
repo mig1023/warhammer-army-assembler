@@ -271,7 +271,9 @@ namespace WarhammerArmyAssembler.Test
 
                     roundWounds[opponent.ID] += Round(ref actor, ref opponent, attacksRound[actor.ID], round);
 
-                    if (opponent.Regeneration && (woundsAtStartOfRound > opponent.Wounds) && !opponent.WoundedWithKillingBlow)
+                    bool regeneration = opponent.Regeneration || (opponent.ExtendedRegeneration > 0);
+
+                    if (regeneration && (woundsAtStartOfRound > opponent.Wounds) && !opponent.WoundedWithKillingBlow)
                         Regeneration(opponent, (woundsAtStartOfRound - opponent.Wounds));
 
                     if (opponent.Wounds <= 0)
@@ -571,11 +573,16 @@ namespace WarhammerArmyAssembler.Test
         {
             Test.Data.Console(Test.Data.text, "\n");
 
+            int regeneration = (unit.ExtendedRegeneration > 0 ? unit.ExtendedRegeneration : 4);
+
             for (int i = 0; i < roundWounds; i++)
             {
-                Test.Data.Console(Test.Data.text, "\n{0} --> regeneration ", unit.Name);
+                if (regeneration == 4)
+                    Test.Data.Console(Test.Data.text, "\n{0} --> regeneration ", unit.Name);
+                else
+                    Test.Data.Console(Test.Data.text, "\n{0} --> regeneration ({1}+) ", unit.Name, regeneration);
 
-                if (Dice.Roll(unit, Dice.Types.REGENERATION, unit, 4))
+                if (Dice.Roll(unit, Dice.Types.REGENERATION, unit, regeneration))
                 {
                     Test.Data.Console(Test.Data.goodText, " --> success");
                     unit.Wounds += 1;

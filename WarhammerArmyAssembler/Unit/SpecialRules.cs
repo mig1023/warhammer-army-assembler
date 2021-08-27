@@ -26,6 +26,7 @@ namespace WarhammerArmyAssembler
             ["HitFirst"] = "Hit First",
             ["HitLast"] = "Hit Last",
             ["Regeneration"] = "Regeneration",
+            ["ExtendedRegeneration"] = "Regeneration ([X]+)",
             ["KillingBlow"] = "Killing Blow",
             ["ExtendedKillingBlow"] = "Killing Blow ([X]+)",
             ["HeroicKillingBlow"] = "Heroic Killing Blow",

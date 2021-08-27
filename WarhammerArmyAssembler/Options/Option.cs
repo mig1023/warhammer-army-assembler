@@ -60,6 +60,7 @@ namespace WarhammerArmyAssembler
         public int ArmourPiercing { get; set; }
         public string Reroll { get; set; }
         public bool Regeneration { get; set; }
+        public int ExtendedRegeneration { get; set; }
         public bool ImmuneToPsychology { get; set; }
         public bool ImmuneToPoison { get; set; }
         public bool Stubborn { get; set; }
@@ -202,6 +203,7 @@ namespace WarhammerArmyAssembler
             NoKillingBlow = this.NoKillingBlow,
             ArmourPiercing = this.ArmourPiercing,
             Regeneration = this.Regeneration,
+            ExtendedRegeneration = this.ExtendedRegeneration,
             ImmuneToPsychology = this.ImmuneToPsychology,
             ImmuneToPoison = this.ImmuneToPoison,
             Stubborn = this.Stubborn,

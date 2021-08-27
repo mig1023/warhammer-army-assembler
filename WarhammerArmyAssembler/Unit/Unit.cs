@@ -90,6 +90,7 @@ namespace WarhammerArmyAssembler
         public bool HitFirst { get; set; }
         public bool HitLast { get; set; }
         public bool Regeneration { get; set; }
+        public int ExtendedRegeneration { get; set; }
         public bool KillingBlow { get; set; }
         public int ExtendedKillingBlow { get; set; }
         public bool HeroicKillingBlow { get; set; }
@@ -325,6 +326,7 @@ namespace WarhammerArmyAssembler
                 HitFirst = this.HitFirst,
                 HitLast = this.HitLast,
                 Regeneration = this.Regeneration,
+                ExtendedRegeneration = this.ExtendedRegeneration,
                 KillingBlow = this.KillingBlow,
                 ExtendedKillingBlow = this.ExtendedKillingBlow,
                 HeroicKillingBlow = this.HeroicKillingBlow,

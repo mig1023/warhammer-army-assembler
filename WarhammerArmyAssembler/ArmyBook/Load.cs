@@ -136,6 +136,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
                 newUnit.HitLast = BoolParse(additionalParam["HitLast"]);
                 newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
+                newUnit.ExtendedRegeneration = IntParse(additionalParam["ExtendedRegeneration"]);
                 newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
                 newUnit.ExtendedKillingBlow = IntParse(additionalParam["ExtendedKillingBlow"]);
                 newUnit.HeroicKillingBlow = BoolParse(additionalParam["HeroicKillingBlow"]);
@@ -242,6 +243,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]),
 
             Regeneration = BoolParse(xmlNode["Regeneration"]),
+            ExtendedRegeneration = IntParse(xmlNode["ExtendedRegeneration"]),
             ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]),
             ImmuneToPoison = BoolParse(xmlNode["ImmuneToPoison"]),
             Stubborn = BoolParse(xmlNode["Stubborn"]),
