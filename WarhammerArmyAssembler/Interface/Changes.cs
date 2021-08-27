@@ -410,12 +410,13 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
+            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Image");
             changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
-            changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion").InnerText);
+            changeArmybook.listArmybookVer.Content =
+                String.Format("{0}th edition", xmlFile.SelectSingleNode("ArmyBook/Introduction/Version").InnerText);
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
+            Brush mainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Color"));
 
             foreach (Label label in PointsButtons)
             {
@@ -489,7 +490,7 @@ namespace WarhammerArmyAssembler.Interface
             {
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
-                XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookImage");
+                XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Image");
 
                 string source = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
 

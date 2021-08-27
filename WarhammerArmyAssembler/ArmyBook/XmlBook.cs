@@ -73,13 +73,13 @@ namespace WarhammerArmyAssembler.ArmyBook
                         continue;
                     }
 
-                    XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName");
+                    XmlNode armyName = xmlFile.SelectSingleNode("ArmyBook/Introduction/Name");
 
                     if (armyName == null)
                         continue;
 
-                    XmlNode armyVersion = xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion");
-                    XmlNode orderName = xmlFile.SelectSingleNode("ArmyBook/Info/OrderName");
+                    XmlNode armyVersion = xmlFile.SelectSingleNode("ArmyBook/Introduction/Version");
+                    XmlNode orderName = xmlFile.SelectSingleNode("ArmyBook/Introduction/OrderName");
 
                     string armyOrderName = (orderName == null ? armyName.InnerText : orderName.InnerText);
 

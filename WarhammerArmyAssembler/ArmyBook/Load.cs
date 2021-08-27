@@ -31,18 +31,18 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
-            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Info/SymbolImage");
+            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
-            Army.Data.Name = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyName"));
-            Army.Data.ArmyVersion = IntParse(xmlFile.SelectSingleNode("ArmyBook/Info/ArmyBookVersion"));
-            Army.Data.MagicPowers = StringParse(xmlFile.SelectSingleNode("ArmyBook/Info/MagicPowers"));
+            Army.Data.Name = StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Name"));
+            Army.Data.ArmyVersion = IntParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Version"));
+            Army.Data.MagicPowers = StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/MagicPowers"));
 
-            ArmyBook.Data.MainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/MainColor"));
-            ArmyBook.Data.AdditionalColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/AdditionalColor"));
-            ArmyBook.Data.BackgroundColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Info/BackgroundColor"));
+            ArmyBook.Data.MainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Color"));
+            ArmyBook.Data.AdditionalColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Additional"));
+            ArmyBook.Data.BackgroundColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Background"));
 
-            ArmyBook.Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Info/DemonicMortal"));
+            ArmyBook.Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/DemonicMortal"));
 
             Interface.Mod.SetArmyGridAltColor(ArmyBook.Data.BackgroundColor);
 
