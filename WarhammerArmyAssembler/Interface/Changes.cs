@@ -502,6 +502,20 @@ namespace WarhammerArmyAssembler.Interface
                     Tag = String.Format("{0}|{1}", armyName, source),
                 };
 
+                XmlNode descrNode = xmlFile.SelectSingleNode("ArmyBook/Introduction/Description");
+
+                newImage.ToolTip = new ToolTip
+                {
+                    MaxWidth = 300,
+                    Background = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Background")),
+                    Content = new TextBlock
+                    {
+                        Text = descrNode?.InnerText,
+                        TextWrapping = TextWrapping.Wrap,
+                        Padding = new Thickness(5),
+                    },
+                };
+
                 left += 1;
 
                 if (left > 3)
@@ -511,8 +525,7 @@ namespace WarhammerArmyAssembler.Interface
 
                     if (!reload)
                     {
-                        ColumnDefinition column = new ColumnDefinition();
-                        column.Width = new GridLength(5, GridUnitType.Pixel);
+                        ColumnDefinition column = new ColumnDefinition { Width = new GridLength(5, GridUnitType.Pixel) };
                         changeArmybook.armybookList.ColumnDefinitions.Add(column);
                     }
                 }
