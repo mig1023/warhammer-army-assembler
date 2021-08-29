@@ -14,6 +14,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static Brush MainColor = null;
         public static Brush AdditionalColor = null;
         public static Brush BackgroundColor = null;
+        public static Brush TooltipColor = null;
 
         public static bool DemonicMortal = false;
         public static bool DemonicAlreadyReplaced = false;

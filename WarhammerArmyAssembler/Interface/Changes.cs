@@ -507,7 +507,7 @@ namespace WarhammerArmyAssembler.Interface
                 newImage.ToolTip = new ToolTip
                 {
                     MaxWidth = 300,
-                    Background = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Background")),
+                    Background = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Tooltips")),
                     Content = new TextBlock
                     {
                         Text = descrNode?.InnerText,

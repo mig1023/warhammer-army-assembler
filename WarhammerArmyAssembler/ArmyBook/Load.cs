@@ -9,7 +9,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     class Load
     {
-        public static int GetNextIndex() => ArmyBook.Data.MaxIDindex++;
+        public static int GetNextIndex() => Data.MaxIDindex++;
 
         private static void LoadUnitsFromXml(XmlDocument xmlFile, string path, ref Dictionary<int, Unit> dict)
         {
@@ -24,9 +24,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static void LoadArmy(string xmlFileName)
         {
-            ArmyBook.Data.Units.Clear();
-            ArmyBook.Data.Mounts.Clear();
-            ArmyBook.Data.Artefact.Clear();
+            Data.Units.Clear();
+            Data.Mounts.Clear();
+            Data.Artefact.Clear();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
@@ -38,17 +38,18 @@ namespace WarhammerArmyAssembler.ArmyBook
             Army.Data.ArmyVersion = IntParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Version"));
             Army.Data.MagicPowers = StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/MagicPowers"));
 
-            ArmyBook.Data.MainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Color"));
-            ArmyBook.Data.AdditionalColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Additional"));
-            ArmyBook.Data.BackgroundColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Background"));
+            Data.MainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Color"));
+            Data.AdditionalColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Additional"));
+            Data.BackgroundColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Background"));
+            Data.TooltipColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Tooltips"));
 
-            ArmyBook.Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/DemonicMortal"));
+            Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/DemonicMortal"));
 
-            Interface.Mod.SetArmyGridAltColor(ArmyBook.Data.BackgroundColor);
+            Interface.Mod.SetArmyGridAltColor(Data.BackgroundColor);
 
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref ArmyBook.Data.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref ArmyBook.Data.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref ArmyBook.Data.Mounts);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref Data.Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref Data.Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref Data.Mounts);
 
             foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Artefacts/Group"))
             {
@@ -57,7 +58,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("Artefact"))
                 {
                     int newID = GetNextIndex();
-                    ArmyBook.Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
+                    Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
                 }
             }
         }
