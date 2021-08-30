@@ -502,18 +502,35 @@ namespace WarhammerArmyAssembler.Interface
                     Tag = String.Format("{0}|{1}", armyName, source),
                 };
 
-                XmlNode descrNode = xmlFile.SelectSingleNode("ArmyBook/Introduction/Description");
+                string fullDescription = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Description"));
+
+                string headDescription = fullDescription.Substring(0, fullDescription.IndexOf("\n"));
+                string bodyDescription = fullDescription.Substring(fullDescription.IndexOf("\n") + 1, fullDescription.Length - fullDescription.IndexOf("\n") - 1);
 
                 newImage.ToolTip = new ToolTip
                 {
                     MaxWidth = 300,
                     Background = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Tooltips")),
-                    Content = new TextBlock
+                    Content = new Border
                     {
-                        Text = descrNode?.InnerText,
-                        TextWrapping = TextWrapping.Wrap,
                         Padding = new Thickness(5),
-                    },
+                        Child = new StackPanel
+                        {
+                            Children =
+                            {
+                                new TextBlock
+                                {
+                                    Text = headDescription,
+                                    FontWeight = FontWeights.Bold,
+                                },
+                                new TextBlock
+                                {
+                                    Text = bodyDescription,
+                                    TextWrapping = TextWrapping.Wrap,
+                                },
+                            }
+                        }
+                    }
                 };
 
                 left += 1;
