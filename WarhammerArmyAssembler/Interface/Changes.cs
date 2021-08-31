@@ -478,6 +478,8 @@ namespace WarhammerArmyAssembler.Interface
             PreviewArmy(randomArmy);
         }
 
+
+
         public static void LoadAllArmy(List<string> allXmlFiles, bool reload = false)
         {
             int left = -1, top = 0;
@@ -502,10 +504,9 @@ namespace WarhammerArmyAssembler.Interface
                     Tag = String.Format("{0}|{1}", armyName, source),
                 };
 
-                string fullDescription = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Description"));
-
-                string headDescription = fullDescription.Substring(0, fullDescription.IndexOf("\n"));
-                string bodyDescription = fullDescription.Substring(fullDescription.IndexOf("\n") + 1, fullDescription.Length - fullDescription.IndexOf("\n") - 1);
+                string head = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Name")).ToUpper();
+                string version = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Version"));
+                string description = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Description"));
 
                 newImage.ToolTip = new ToolTip
                 {
@@ -514,22 +515,7 @@ namespace WarhammerArmyAssembler.Interface
                     Content = new Border
                     {
                         Padding = new Thickness(5),
-                        Child = new StackPanel
-                        {
-                            Children =
-                            {
-                                new TextBlock
-                                {
-                                    Text = headDescription,
-                                    FontWeight = FontWeights.Bold,
-                                },
-                                new TextBlock
-                                {
-                                    Text = bodyDescription,
-                                    TextWrapping = TextWrapping.Wrap,
-                                },
-                            }
-                        }
+                        Child = TooltipBlock(head, version, description),
                     }
                 };
 
@@ -645,5 +631,22 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         public static double ZeroFuse(double currentParam) => (currentParam < 0 ? 0 : currentParam);
+
+        private static StackPanel TooltipBlock(string head, string version, string description) => new StackPanel
+        {
+            Children =
+            {
+                new TextBlock
+                {
+                    Text = head,
+                    FontWeight = FontWeights.Bold,
+                },
+                new TextBlock
+                {
+                    Text = String.Format("{0}th Edition\n\n{1}", version, description),
+                    TextWrapping = TextWrapping.Wrap,
+                },
+            }
+        };
     }
 }
