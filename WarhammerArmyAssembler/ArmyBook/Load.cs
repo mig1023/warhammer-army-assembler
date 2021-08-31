@@ -197,7 +197,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
 
             newUnit.ArmyColor = (SolidColorBrush)ArmyBook.Data.MainColor;
-            newUnit.ArmyBackgroundColor = (SolidColorBrush)ArmyBook.Data.BackgroundColor;
+            newUnit.TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor;
 
             return newUnit;
         }
@@ -330,7 +330,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Mount = BoolParse(xmlNode["Mount"]),
 
             ArtefactGroup = artefactGroup ?? String.Empty,
-            ArmyBackgroundColor = (SolidColorBrush)ArmyBook.Data.BackgroundColor,
+            TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
         };
     }
 }

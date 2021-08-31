@@ -478,8 +478,6 @@ namespace WarhammerArmyAssembler.Interface
             PreviewArmy(randomArmy);
         }
 
-
-
         public static void LoadAllArmy(List<string> allXmlFiles, bool reload = false)
         {
             int left = -1, top = 0;
