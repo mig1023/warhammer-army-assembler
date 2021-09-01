@@ -73,7 +73,7 @@
 				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>+1 to dispel</SpecialRuleDescription>
+				<SpecialRule>+1 to dispel</SpecialRule>
 				<Description>+1 to dispel</Description>
 			</Artefact>
 			<Artefact>
@@ -99,7 +99,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>100</Points>
-				<SpecialRuleDescription>Attacks and Strength bonus equal rank bonus</SpecialRuleDescription>
+				<SpecialRule>Attacks and Strength bonus equal rank bonus</SpecialRule>
 				<Description>The wielder of this weapon receives a bonus equal to his unit's rank bonus to both his Attacks and Strength - calculate this when the wielder makes his attacks</Description>
 			</Artefact>
 			<Artefact>
@@ -115,7 +115,7 @@
 				<Name>Shaga's Screamin' sword</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>+1 Strength and +1 Attack for each enemy character within 12"</SpecialRuleDescription>
+				<SpecialRule>+1 Strength and +1 Attack for each enemy character within 12"</SpecialRule>
 				<Description>The wielder receives +1 Strength and +1 Attack for each enemy character within 12"</Description>
 			</Artefact>
 			<Artefact>
@@ -130,7 +130,7 @@
 				<Type>Weapon</Type>
 				<OnlyFor>Mount</OnlyFor>
 				<Points>40</Points>
-				<SpecialRuleDescription>Additional attack for each pointt of rank bonus</SpecialRuleDescription>
+				<SpecialRule>Additional attack for each pointt of rank bonus</SpecialRule>
 				<Description>Spear. On the turn the wielder charges, he receives an additional attack for each point of rank bonus that the unit hi is attacking has (up to a maximum of +3)</Description>
 			</Artefact>
 			<Artefact>
@@ -148,8 +148,8 @@
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>25</Points>
 				<PoisonAttack/>
-				<SpecialRuleDescription>+1 Strength flank attack bonus</SpecialRuleDescription>
-				<SpecialRuleDescription>+2 Strength rear attack bonus</SpecialRuleDescription>
+				<SpecialRule>+1 Strength flank attack bonus</SpecialRule>
+				<SpecialRule>+2 Strength rear attack bonus</SpecialRule>
 				<Description>Grants poisoned attacks. Grants the wielder +1 Strength if he is attacking the enemy in the flank and +2 Strength if he is attacking them in the rear</Description>
 			</Artefact>
 			<Artefact>
@@ -157,7 +157,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>15</Points>
-				<SpecialRuleDescription>Strength 10 for one combat phase</SpecialRuleDescription>
+				<SpecialRule>Strength 10 for one combat phase</SpecialRule>
 				<Description>Once per game, this weapon grants the wielder Strength 10 for duration of the combat phase. One use only</Description>
 			</Artefact>
 			<Artefact>
@@ -182,7 +182,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>5</Points>
-				<SpecialRuleDescription>+1 Strength for each enemy magic item</SpecialRuleDescription>
+				<SpecialRule>+1 Strength for each enemy magic item</SpecialRule>
 				<Description>If the bearer strikes an enemy character carrying one or more magic item, his hits at +1 Strength for each magic item</Description>
 			</Artefact>
 		</Group>
@@ -200,7 +200,7 @@
 				<Type>Shield</Type>
 				<Points>25</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>Strength 5 hit for each 1 on a enemy roll to Hit</SpecialRuleDescription>
+				<SpecialRule>Strength 5 hit for each 1 on a enemy roll to Hit</SpecialRule>
 				<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
 			</Artefact>
 		</Group>
@@ -223,14 +223,14 @@
 				<Name>Amulet of Protectyness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</SpecialRuleDescription>
+				<SpecialRule>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</SpecialRule>
 				<Description>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Description>
 			</Artefact>
 			<Artefact>
 				<Name>The Collar of Zorga</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Steeds and monsters require Strength 6 to hit the bearer</SpecialRuleDescription>
+				<SpecialRule>Steeds and monsters require Strength 6 to hit the bearer</SpecialRule>
 				<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6S to hit the bearer</Description>
 			</Artefact>
 		</Group>
@@ -240,8 +240,8 @@
 				<Type>Arcane</Type>
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>+1 Power dice for each Orc unit within 24"</SpecialRuleDescription>
-				<SpecialRuleDescription>-1 Power dice for each fleeing frendly unit within 24"</SpecialRuleDescription>
+				<SpecialRule>+1 Power dice for each Orc unit within 24"</SpecialRule>
+				<SpecialRule>-1 Power dice for each fleeing frendly unit within 24"</SpecialRule>
 				<Description>+1 Power dice for each Orc unit within 24"|-1 Power dice for each fleeing frendly unit within 24" </Description>
 			</Artefact>
 			<Artefact>
@@ -249,14 +249,14 @@
 				<Type>Arcane</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>Steals 1 Power dice from the enemy to dispel</SpecialRuleDescription>
+				<SpecialRule>Steals 1 Power dice from the enemy to dispel</SpecialRule>
 				<Description>At the start of each of your opponent's magic phases, you may take one dice from you opponent's power poll and add it to your dispel poll</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Staff of Baduumm</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>+1 to any casting attempts</SpecialRuleDescription>
+				<SpecialRule>+1 to any casting attempts</SpecialRule>
 				<Description>Adds +1 to any casting attempts made by the bearer</Description>
 			</Artefact>
 			<Artefact>
@@ -264,7 +264,7 @@
 				<Type>Arcane</Type>
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>10</Points>
-				<SpecialRuleDescription>+2 to any casting attemts in close combat</SpecialRuleDescription>
+				<SpecialRule>+2 to any casting attemts in close combat</SpecialRule>
 				<Description>If the Shaman is in combat at the start of the Orcs and Goblins magic phase, he receives +2 to any casting attempts</Description>
 			</Artefact>
 			<Artefact>
@@ -272,7 +272,7 @@
 				<Type>Arcane</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>10</Points>
-				<SpecialRuleDescription>+D6 to casting roll, one use only</SpecialRuleDescription>
+				<SpecialRule>+D6 to casting roll, one use only</SpecialRule>
 				<Description>+D6 to casting roll, one use only. If Mushroom dice is an 1 then the spell is miscast</Description>
 			</Artefact>
 		</Group>
@@ -281,7 +281,7 @@
 				<Name>The Horn of Urgok</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
-				<SpecialRuleDescription>Bound item, Power Level 5: +1 Leadership for all friendly units, -1 Leadership for all enemy units</SpecialRuleDescription>
+				<SpecialRule>Bound item, Power Level 5: +1 Leadership for all friendly units, -1 Leadership for all enemy units</SpecialRule>
 				<Description>Bound item, Power Level 5. +1 Leadership for all friendly units, -1 Leadership for all enemy units. Roll a D6 after each use. On the roll of a 1, the bearer suffer a Strength 5 hit with no armour save allowed</Description>
 			</Artefact>
 			<Artefact>
@@ -289,7 +289,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>35</Points>
-				<SpecialRuleDescription>Panic test for enemy cavalry, one use only</SpecialRuleDescription>
+				<SpecialRule>Panic test for enemy cavalry, one use only</SpecialRule>
 				<Description>The pipes can be played at the start of the shooting phase. Each enemy cavalry unit, monster (ridden or unridden) and chariot within 24" must take a Panic test</Description>
 			</Artefact>
 			<Artefact>
@@ -318,7 +318,7 @@
 				<Name>Maad's map</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Scout deploy by D6 roll</SpecialRuleDescription>
+				<SpecialRule>Scout deploy by D6 roll</SpecialRule>
 				<Description>Before deploymnet begins roll a D6. On 2-6 the bearer of the map may be deployed as a scout. On a roll of a 1, he got lost and must be deployed as normal</Description>
 			</Artefact>
 			<Artefact>
@@ -326,14 +326,14 @@
 				<Type>AdditionalArmour</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>25</Points>
-				<SpecialRuleDescription>D6 Strength 6 hits when bearer is slain</SpecialRuleDescription>
+				<SpecialRule>D6 Strength 6 hits when bearer is slain</SpecialRule>
 				<Description>When bearer is slain, all units (friend or foe) in base contact suffer D6 Strength 6 hits, distributed as for shooting</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Nibbla's Titty ring</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>Bound spell 'Eadbutt Power Level 3</SpecialRuleDescription>
+				<SpecialRule>Bound spell 'Eadbutt Power Level 3</SpecialRule>
 				<Description>Bound spell 'Eadbutt Power Level 3. Roll a D6 after each use. On the roll of a 1, the bearer suffers a Strength 5 hit with no armour saves allowed</Description>
 			</Artefact>
 			<Artefact>
@@ -341,7 +341,7 @@
 				<Type>Weapon</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>20</Points>
-				<SpecialRuleDescription>Fanatics may re-roll the number of Hits caused</SpecialRuleDescription>
+				<SpecialRule>Fanatics may re-roll the number of Hits caused</SpecialRule>
 				<Description>Fanatics may re-roll the number of Hits caused</Description>
 			</Artefact>
 			<Artefact>
@@ -359,7 +359,7 @@
 				<Type>Banner</Type>
 				<OnlyForGroup>Orc</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>Adds a number of dispel dice equal rank bonus</SpecialRuleDescription>
+				<SpecialRule>Adds a number of dispel dice equal rank bonus</SpecialRule>
 				<Description>This magical banner adds a number of dispel dice to the pool equal to the unit's rank bonus</Description>
 			</Artefact>
 			<Artefact>
@@ -367,7 +367,7 @@
 				<Type>Banner</Type>
 				<OnlyForGroup>Goblin</OnlyForGroup>
 				<Points>50</Points>
-				<SpecialRuleDescription>All Goblins within 12" may re-roll Panic test</SpecialRuleDescription>
+				<SpecialRule>All Goblins within 12" may re-roll Panic test</SpecialRule>
 				<Description>All Goblins within 12" of the banner may re-roll failed Panic test</Description>
 			</Artefact>
 			<Artefact>
@@ -390,14 +390,14 @@
 				<Name>Gork's WAAAGH! banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>D6" to charge move, only one use</SpecialRuleDescription>
+				<SpecialRule>D6" to charge move, only one use</SpecialRule>
 				<Description>The unit adds D6" to its charge move. Declare charges first and then roll</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Nogg's banner of Buthery</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>+1 Attack, only one use</SpecialRuleDescription>
+				<SpecialRule>+1 Attack, only one use</SpecialRule>
 				<Description>All model in the unit have +1 Attack in the turn the banner is used. In the case of mounted models, only the rider gets the bonus, not the mount</Description>
 			</Artefact>
 		</Group>
@@ -434,9 +434,9 @@
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Da boss 'as a Plan!</SpecialRuleDescription>
-					<SpecialRuleDescription>Orcs are Da Best!</SpecialRuleDescription>
-					<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
+					<SpecialRule>Da boss 'as a Plan!</SpecialRule>
+					<SpecialRule>Orcs are Da Best!</SpecialRule>
+					<SpecialRule>Thick-skinned</SpecialRule>
 					<AddToArmour>5</AddToArmour>
 				</Special>
 			</SpecialRulesAndAmmunition>
@@ -478,7 +478,7 @@
 				</Armour>
 				<Crown>
 					<Name>The Crown of Sorcery</Name>
-					<SpecialRuleDescription>Wizard Level 2</SpecialRuleDescription>
+					<SpecialRule>Wizard Level 2</SpecialRule>
 				</Crown>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -517,7 +517,7 @@
 					<AddToWard>5</AddToWard>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Da Immortulz</SpecialRuleDescription>
+					<SpecialRule>Da Immortulz</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -583,7 +583,7 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Skarsnik's Prodder</Name>
-					<SpecialRuleDescription>Bound spell Strength 5, hit Strength 6 with a range of 24"</SpecialRuleDescription>
+					<SpecialRule>Bound spell Strength 5, hit Strength 6 with a range of 24"</SpecialRule>
 				</HandWeapon>
 				<Armour>
 					<Name>Light armour</Name>
@@ -591,11 +591,11 @@
 				</Armour>
 				<Special>
 					<KillingBlow/>
-					<SpecialRuleDescription>Down in One</SpecialRuleDescription>
-					<SpecialRuleDescription>Tricksy Traps</SpecialRuleDescription>
-					<SpecialRuleDescription>Sneaky Schemes</SpecialRuleDescription>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRule>Down in One</SpecialRule>
+					<SpecialRule>Tricksy Traps</SpecialRule>
+					<SpecialRule>Sneaky Schemes</SpecialRule>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -633,7 +633,7 @@
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Frenzy/>
-					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
+					<SpecialRule>Warprint</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Black Orc</Name>
@@ -798,8 +798,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -898,8 +898,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -964,7 +964,7 @@
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Frenzy/>
-					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
+					<SpecialRule>Warprint</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Black Orc</Name>
@@ -975,7 +975,7 @@
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
-					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<SpecialRule>BSB</SpecialRule>
 					<OnlyOneInArmy/>
 					<Points>25</Points>
 					<OnlyIfAnotherService>
@@ -1091,7 +1091,7 @@
 					<Points>5</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Frenzy/>
-					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
+					<SpecialRule>Warprint</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Wizard Level 2</Name>
@@ -1134,8 +1134,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1149,7 +1149,7 @@
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
-					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<SpecialRule>BSB</SpecialRule>
 					<OnlyOneInArmy/>
 					<Points>25</Points>
 					<OnlyIfAnotherService>
@@ -1259,8 +1259,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1321,8 +1321,8 @@
 					<AddToArmour>4</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
-					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
+					<SpecialRule>Fly</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1345,8 +1345,8 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
-					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
+					<SpecialRule>Thick-skinned</SpecialRule>
+					<SpecialRule>Tusker Charge</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1419,9 +1419,9 @@
 			</MainParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
-					<SpecialRuleDescription>May not join unit</SpecialRuleDescription>
-					<SpecialRuleDescription>Boiiing!</SpecialRuleDescription>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
+					<SpecialRule>May not join unit</SpecialRule>
+					<SpecialRule>Boiiing!</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1484,8 +1484,8 @@
 					<Name>Short bows</Name>
 				</RangedWeapon>
 				<Special>
-					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRule>Scythed wheel</SpecialRule>
+					<SpecialRule>Fear Elves</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1520,8 +1520,8 @@
 					<Name>Spears</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
-					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
+					<SpecialRule>Tusker Charge</SpecialRule>
+					<SpecialRule>Scythed wheel</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1675,7 +1675,7 @@
 					<Name>Choppa</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Warprint</SpecialRuleDescription>
+					<SpecialRule>Warprint</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1759,7 +1759,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRule>Fear Elves</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1828,8 +1828,8 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Fast Cavalry</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1904,9 +1904,9 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Fast cavalry</SpecialRuleDescription>
-					<SpecialRuleDescription>Wall-crawlers</SpecialRuleDescription>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Fast cavalry</SpecialRule>
+					<SpecialRule>Wall-crawlers</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1961,9 +1961,9 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
-					<SpecialRuleDescription>Netters</SpecialRuleDescription>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
+					<SpecialRule>Netters</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2122,11 +2122,11 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
+					<SpecialRule>Thick-skinned</SpecialRule>
 					<AddToArmour>5</AddToArmour>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
+					<SpecialRule>Tusker Charge</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2186,11 +2186,11 @@
 					<Name>Choppa</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Thick-skinned</SpecialRuleDescription>
+					<SpecialRule>Thick-skinned</SpecialRule>
 					<AddToArmour>5</AddToArmour>
 				</Special>
 				<Special>
-					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
+					<SpecialRule>Tusker Charge</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2268,8 +2268,8 @@
 				</HandWeapon>
 				<Special>
 					<AddToArmour>4</AddToArmour>
-					<SpecialRuleDescription>Tusker Charge</SpecialRuleDescription>
-					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
+					<SpecialRule>Tusker Charge</SpecialRule>
+					<SpecialRule>Scythed wheel</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2306,10 +2306,10 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Skirmish</SpecialRuleDescription>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
-					<SpecialRuleDescription>Boiiing!</SpecialRuleDescription>
+					<SpecialRule>Skirmish</SpecialRule>
+					<SpecialRule>Fear Elves</SpecialRule>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
+					<SpecialRule>Boiiing!</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
@@ -2338,10 +2338,10 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Squig</SpecialRuleDescription>
-					<SpecialRuleDescription>Squig Herds</SpecialRuleDescription>
-					<SpecialRuleDescription>Hate Dwarfs</SpecialRuleDescription>
-					<SpecialRuleDescription>Boiiing!</SpecialRuleDescription>
+					<SpecialRule>Squig</SpecialRule>
+					<SpecialRule>Squig Herds</SpecialRule>
+					<SpecialRule>Hate Dwarfs</SpecialRule>
+					<SpecialRule>Boiiing!</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
@@ -2380,8 +2380,8 @@
 				</RangedWeapon>
 				<Special>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRuleDescription>Scythed wheel</SpecialRuleDescription>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRule>Scythed wheel</SpecialRule>
+					<SpecialRule>Fear Elves</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2422,8 +2422,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Rock Lobber</SpecialRuleDescription>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRule>Rock Lobber</SpecialRule>
+					<SpecialRule>Fear Elves</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2458,8 +2458,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Spear Chukka</SpecialRuleDescription>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRule>Spear Chukka</SpecialRule>
+					<SpecialRule>Fear Elves</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2498,7 +2498,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Troll Vomit</SpecialRuleDescription>
+					<SpecialRule>Troll Vomit</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2509,7 +2509,7 @@
 					<PerModel/>
 					<AddToArmour>5</AddToArmour>
 					<AddToStrength>1</AddToStrength>
-					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRule>Magic Resistance(2)</SpecialRule>
 				</Option>
 				<Option>
 					<Name>River troll</Name>
@@ -2543,8 +2543,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Doom Diver Catapult</SpecialRuleDescription>
-					<SpecialRuleDescription>Fear Elves</SpecialRuleDescription>
+					<SpecialRule>Doom Diver Catapult</SpecialRule>
+					<SpecialRule>Fear Elves</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
@@ -2576,9 +2576,9 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
-					<SpecialRuleDescription>Pedal Faster</SpecialRuleDescription>
-					<SpecialRuleDescription>Crunch!</SpecialRuleDescription>
+					<SpecialRule>Chariot</SpecialRule>
+					<SpecialRule>Pedal Faster</SpecialRule>
+					<SpecialRule>Crunch!</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
@@ -2610,10 +2610,10 @@
 					<Name>Hand wepon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
-					<SpecialRuleDescription>Longshanks</SpecialRuleDescription>
-					<SpecialRuleDescription>Fall Over</SpecialRuleDescription>
-					<SpecialRuleDescription>Giant Special Attacks</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
+					<SpecialRule>Longshanks</SpecialRule>
+					<SpecialRule>Fall Over</SpecialRule>
+					<SpecialRule>Giant Special Attacks</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
