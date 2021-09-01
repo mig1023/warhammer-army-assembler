@@ -22,6 +22,7 @@ namespace WarhammerArmyAssembler
             armybookCanvas.Width = e.NewSize.Width;
 
             menuArmybookScroll.Height = e.NewSize.Height - 14;
+            menuArmybookPlace.Height = menuArmybookScroll.Height;
 
             gridCloseArmybook.Height = e.NewSize.Height;
             gridCloseArmybook.Width = 30;
