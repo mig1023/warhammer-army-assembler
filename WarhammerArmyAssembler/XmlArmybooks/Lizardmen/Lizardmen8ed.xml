@@ -18,28 +18,28 @@
 				<Name>Reservoir of Eldritch Energy</Name>
 				<Type>Powers</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>At the end of the opponent's Magic phase, the Slann Mage-Priest can store a single unused dispel dice remaining in your pool. At the beginning of your next Magic phase, roll a D6; on a 2 + you can add that dice to your power pool (this cannot take your power pool beyond the normal limit). On the roll of a 1, that bonus dice is lost. If the Slann is slain before his next Magic phase, the bonus dice is lost</SpecialRuleDescription>
+				<SpecialRule>At the end of the opponent's Magic phase, the Slann Mage-Priest can store a single unused dispel dice remaining in your pool. At the beginning of your next Magic phase, roll a D6; on a 2 + you can add that dice to your power pool (this cannot take your power pool beyond the normal limit). On the roll of a 1, that bonus dice is lost. If the Slann is slain before his next Magic phase, the bonus dice is lost</SpecialRule>
 				<Description>At the end of the opponent's Magic phase, the Slann Mage-Priest can store a single unused dispel dice remaining in your pool. At the beginning of your next Magic phase, roll a D6; on a 2 + you can add that dice to your power pool (this cannot take your power pool beyond the normal limit). On the roll of a 1, that bonus dice is lost. If the Slann is slain before his next Magic phase, the bonus dice is lost.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Soul of Stone</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>When rolling on the Miscast table, the Slann Mage-Priest can choose to subtract one from the result (to a minimum of 2), or add one to the result (to a maximum of 12), instead of accepting the original result</SpecialRuleDescription>
+				<SpecialRule>When rolling on the Miscast table, the Slann Mage-Priest can choose to subtract one from the result (to a minimum of 2), or add one to the result (to a maximum of 12), instead of accepting the original result</SpecialRule>
 				<Description>When rolling on the Miscast table, the Slann Mage-Priest can choose to subtract one from the result (to a minimum of 2), or add one to the result (to a maximum of 12), instead of accepting the original result.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Becalming Cogitation</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>The Slann Mage-Priest re-rolls its first failed dispel attempt in each Magic phase</SpecialRuleDescription>
+				<SpecialRule>The Slann Mage-Priest re-rolls its first failed dispel attempt in each Magic phase</SpecialRule>
 				<Description>The Slann Mage-Priest re-rolls its first failed dispel attempt in each Magic phase.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Wandering Deliberations</Name>
 				<Type>Powers</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>Instead of generating spells normally, the Slann Mage-Priest knows the signature spell for each of the eight lores of Battle Magic. This discipline cannot be combined with the Focus of Mystery discipline</SpecialRuleDescription>
+				<SpecialRule>Instead of generating spells normally, the Slann Mage-Priest knows the signature spell for each of the eight lores of Battle Magic. This discipline cannot be combined with the Focus of Mystery discipline</SpecialRule>
 				<OnlyIfAnotherService>
 					<OnlyIfNot>Focus of Mystery</OnlyIfNot>
 				</OnlyIfAnotherService>
@@ -49,7 +49,7 @@
 				<Name>Harmonic Convergence</Name>
 				<Type>Powers</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>The Slann Mage-Priest rolls two additional dice whenever he attempts to channel power or dispel dice</SpecialRuleDescription>
+				<SpecialRule>The Slann Mage-Priest rolls two additional dice whenever he attempts to channel power or dispel dice</SpecialRule>
 				<Description>The Slann Mage-Priest rolls two additional dice whenever he attempts to channel power or dispel dice.</Description>
 			</Artefact>
 			<Artefact>
@@ -63,21 +63,21 @@
 				<Name>Transcendent Healing</Name>
 				<Type>Powers</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>If this model is alive at the end of any friendly Magic phase, roll a number of D6 equal to the difference between the Slann Mage-Priest's starting number of Wounds and its current number of Wounds. For each roll of a 6, the Slann Mage-Priest immediately recovers a single Wound lost earlier in the battle</SpecialRuleDescription>
+				<SpecialRule>If this model is alive at the end of any friendly Magic phase, roll a number of D6 equal to the difference between the Slann Mage-Priest's starting number of Wounds and its current number of Wounds. For each roll of a 6, the Slann Mage-Priest immediately recovers a single Wound lost earlier in the battle</SpecialRule>
 				<Description>If this model is alive at the end of any friendly Magic phase, roll a number of D6 equal to the difference between the Slann Mage-Priest's starting number of Wounds and its current number of Wounds. For each roll of a 6, the Slann Mage-Priest immediately recovers a single Wound lost earlier in the battle.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Unfathomable Presence</Name>
 				<Type>Powers</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>Roll a D3 at the start of each enemy Magic phase; the Slann Mage-Priest has the Magic Resistance(x) special rule until the end of that phase, where x is the result of the D3</SpecialRuleDescription>
+				<SpecialRule>Roll a D3 at the start of each enemy Magic phase; the Slann Mage-Priest has the Magic Resistance(x) special rule until the end of that phase, where x is the result of the D3</SpecialRule>
 				<Description>Roll a D3 at the start of each enemy Magic phase; the Slann Mage-Priest has the Magic Resistance(x) special rule until the end of that phase, where x is the result of the D3.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Focus of Mystery</Name>
 				<Type>Powers</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>The Slann Mage-Priest has the Loremaster (Lore of High Magic) special rule. This discipline cannot be combined with the Wandering Deliberations discipline</SpecialRuleDescription>
+				<SpecialRule>The Slann Mage-Priest has the Loremaster (Lore of High Magic) special rule. This discipline cannot be combined with the Wandering Deliberations discipline</SpecialRule>
 				<OnlyIfAnotherService>
 					<OnlyIfNot>Wandering Deliberations</OnlyIfNot>
 				</OnlyIfAnotherService>
@@ -87,7 +87,7 @@
 				<Name>Higher State of Consciousness</Name>
 				<Type>Powers</Type>
 				<Points>60</Points>
-				<SpecialRuleDescription>The Slann Mage-Priest has the Ethereal and Unstable special rules, but cannot join units</SpecialRuleDescription>
+				<SpecialRule>The Slann Mage-Priest has the Ethereal and Unstable special rules, but cannot join units</SpecialRule>
 				<Description>The Slann Mage-Priest has the Ethereal and Unstable special rules, but cannot join units.</Description>
 			</Artefact>
 		</Group>
@@ -129,21 +129,21 @@
 				<Name>The Jaguar Standard</Name>
 				<Type>Banner</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>All models in a unit with the Jaguar Standard have the Swiftstride special rule</SpecialRuleDescription>
+				<SpecialRule>All models in a unit with the Jaguar Standard have the Swiftstride special rule</SpecialRule>
 				<Description>All models in a unit with the Jaguar Standard have the Swiftstride special rule</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Cube of Darkness</Name>
 				<Type>Arcane</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>One use only. When an enemy spell has been cast, a Wizard with the Cube of Darkness can use it instead of attempting to dispel the spell using dispel dice. If he does so, roll a D6; on the roll of a 2+ the spell is automatically dispelled - otherwise the spell is resolved as normal. In either case, roll a separate D6 for every Remains in Play spell currendy in effect; on a 2+ that spell automatically ends</SpecialRuleDescription>
+				<SpecialRule>One use only. When an enemy spell has been cast, a Wizard with the Cube of Darkness can use it instead of attempting to dispel the spell using dispel dice. If he does so, roll a D6; on the roll of a 2+ the spell is automatically dispelled - otherwise the spell is resolved as normal. In either case, roll a separate D6 for every Remains in Play spell currendy in effect; on a 2+ that spell automatically ends</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard with the Cube of Darkness can use it instead of attempting to dispel the spell using dispel dice. If he does so, roll a D6; on the roll of a 2+ the spell is automatically dispelled - otherwise the spell is resolved as normal. In either case, roll a separate D6 for every Remains in Play spell currendy in effect; on a 2+ that spell automatically ends</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Plaque of Dominion</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Bound spell (power level 3). The Plaque of Dominion contains a hex spell that targets all enemy Wizards within 18". The targets of this spell have the Stupidity special rule until the start of the caster's next Magic phase</SpecialRuleDescription>
+				<SpecialRule>Bound spell (power level 3). The Plaque of Dominion contains a hex spell that targets all enemy Wizards within 18". The targets of this spell have the Stupidity special rule until the start of the caster's next Magic phase</SpecialRule>
 				<Description>Bound spell (power level 3). The Plaque of Dominion contains a hex spell that targets all enemy Wizards within 18". The targets of this spell have the Stupidity special rule until the start of the caster's next Magic phase.</Description>
 			</Artefact>
 			<Artefact>
@@ -152,8 +152,8 @@
 				<OnlyFor>Infantry</OnlyFor>
 				<OnlyForGroup>Skink</OnlyForGroup>
 				<Points>35</Points>
-				<SpecialRuleDescription>Fly</SpecialRuleDescription>
-				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<SpecialRule>Fly</SpecialRule>
+				<SpecialRule>Magic Resistance(1)</SpecialRule>
 				<Description>Skink character on foot only. The wearer of the Cloak of Feathers has the Fly special rule. In addition, the wearer has the Magic Resistance(1) special rule</Description>
 			</Artefact>
 			<Artefact>
@@ -161,7 +161,7 @@
 				<Type>Armour</Type>
 				<Points>35</Points>
 				<Fear/>
-				<SpecialRuleDescription>One use only. The bearer of the Horn of Kygor can sound it at the start of any of his Movement phases. If he does so, all friendly monsters, monster mounts, monstrous beasts, monstrous cavalry mounts, cavalry mounts, chariot beasts and war beasts within 12" of the bearer have the Frenzy special rule until the start of their next Movement phase</SpecialRuleDescription>
+				<SpecialRule>One use only. The bearer of the Horn of Kygor can sound it at the start of any of his Movement phases. If he does so, all friendly monsters, monster mounts, monstrous beasts, monstrous cavalry mounts, cavalry mounts, chariot beasts and war beasts within 12" of the bearer have the Frenzy special rule until the start of their next Movement phase</SpecialRule>
 				<Description>One use only. The bearer of the Horn of Kygor can sound it at the start of any of his Movement phases. If he does so, all friendly monsters, monster mounts, monstrous beasts, monstrous cavalry mounts, cavalry mounts, chariot beasts and war beasts within 12" of the bearer have the Frenzy special rule until the start of their next Movement phase. Note that the Horn of Kygor has no effect on riders, just their mounts</Description>
 			</Artefact>
 			<Artefact>
@@ -169,7 +169,7 @@
 				<Type>Weapon</Type>
 				<Points>35</Points>
 				<Fear/>
-				<SpecialRuleDescription>One use only. The Egg of Quango can be cracked open at the start of any Close Combat phase. Nominate one enemy unit in base contact with the bearer or his unit, roll a D6 and consult the table below to find out what happens</SpecialRuleDescription>
+				<SpecialRule>One use only. The Egg of Quango can be cracked open at the start of any Close Combat phase. Nominate one enemy unit in base contact with the bearer or his unit, roll a D6 and consult the table below to find out what happens</SpecialRule>
 				<Description>One use only. The Egg of Quango can be cracked open at the start of any Close Combat phase. Nominate one enemy unit in base contact with the bearer or his unit, roll a D6 and consult the table below to find out what happens. Any Wounds inflicted count towards combat results.||D6 - Result|1 - The egg opens and a withered Quango hatchling bites the enemy feebly before dying of old age. The enemy unit immediately suffers D6 Strength 3 hits.|2-3 - A Quango hatchling emerges to bite the enemy with vigour before succumbing to its extreme age. The enemy unit immediately suffers D6 Strength 4 hits.|4-6 - The heavens resound to thunderous peals as a Quango, bursts forth in full glory and casts its radiant hues upon the world. After smiting its foes, it flies off, taking no further part in the battle. The enemy unit immediately suffers 2D6 Strength 5 hits.</Description>
 			</Artefact>
 		</Group>
@@ -220,14 +220,14 @@
 				<Name>Sword of Anti-Heroes</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>+1 Strength and +1 Attack for every enemy character in base contact</SpecialRuleDescription>
+				<SpecialRule>+1 Strength and +1 Attack for every enemy character in base contact</SpecialRule>
 				<Description>The bearer has +1 Strength and +1 Attack for every enemy character in base contact with him or his unit. These bonuses are calculated at the start of each round ol close combat and last until its end.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Spellthieving Sword</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells</SpecialRuleDescription>
+				<SpecialRule>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells</SpecialRule>
 				<Description>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound.</Description>
 			</Artefact>
 			<Artefact>
@@ -297,14 +297,14 @@
 				<Name>Tormentor Sword</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game</SpecialRuleDescription>
+				<SpecialRule>A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game</SpecialRule>
 				<Description>A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Warrior Bane</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound</SpecialRuleDescription>
+				<SpecialRule>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound</SpecialRule>
 				<Description>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1).</Description>
 			</Artefact>
 		</Group>
@@ -361,7 +361,7 @@
 				<Type>Shield</Type>
 				<Points>25</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>1+ armour save against shooting attacks</SpecialRuleDescription>
+				<SpecialRule>1+ armour save against shooting attacks</SpecialRule>
 				<Description>Shield. The bearer has a 1+ armour save against shooting attacks.</Description>
 			</Artefact>
 			<Artefact>
@@ -369,7 +369,7 @@
 				<Type>Shield</Type>
 				<Points>20</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance(1)</SpecialRule>
 				<Description>Shield. The bearer gains Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -385,7 +385,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>10</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>2+ Ward save against flaming attacks</SpecialRuleDescription>
+				<SpecialRule>2+ Ward save against flaming attacks</SpecialRule>
 				<Description>The wearer counts his armour save as being one point higher than normal. The wearer has a 2+ ward save against flaming attacks.</Description>
 			</Artefact>
 			<Artefact>
@@ -400,7 +400,7 @@
 				<Type>Shield</Type>
 				<Points>5</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>First hit suffered is discounted on a roll of 2+</SpecialRuleDescription>
+				<SpecialRule>First hit suffered is discounted on a roll of 2+</SpecialRule>
 				<Description>Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is discounted on a roll of 2+.</Description>
 			</Artefact>
 		</Group>
@@ -416,7 +416,7 @@
 				<Name>Obsidian Lodestone</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance(3)</SpecialRule>
 				<Description>The Obsidian Lodestone grants Magic Resistance (3).</Description>
 			</Artefact>
 			<Artefact>
@@ -444,7 +444,7 @@
 				<Name>Obsidian Trinket</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance(1)</SpecialRule>
 				<Description>The Obsidian Trinket grants Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -465,21 +465,21 @@
 				<Name>Dragonbane Gem</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>2+ Ward save against flaming attacks</SpecialRuleDescription>
+				<SpecialRule>2+ Ward save against flaming attacks</SpecialRule>
 				<Description>The bearer of the Dragonbane Gem has a 2+ Ward save against flaming attacks.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Pidgeon Plucker Pendant</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>5+ Ward save against wounds caused in close combat by models that have the Fly special rule</SpecialRuleDescription>
+				<SpecialRule>5+ Ward save against wounds caused in close combat by models that have the Fly special rule</SpecialRule>
 				<Description>This item grants the bearer a 5+ Ward save against wounds caused in close combat by models that have the Fly special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Luckstone</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>May re-roll single failed armour save</SpecialRuleDescription>
+				<SpecialRule>May re-roll single failed armour save</SpecialRule>
 				<Description>The Luckstone allows the bearer to re-roll single failed armour save.</Description>
 			</Artefact>
 		</Group>
@@ -488,7 +488,7 @@
 				<Name>Rampager's Standard</Name>
 				<Type>Banner</Type>
 				<Points>55</Points>
-				<SpecialRuleDescription>May re-roll charge distance dice</SpecialRuleDescription>
+				<SpecialRule>May re-roll charge distance dice</SpecialRule>
 				<Description>A unit with this magic standard can re-roll its charge distance dice.</Description>
 			</Artefact>
 			<Artefact>
@@ -502,7 +502,7 @@
 				<Name>Ranger's Standard</Name>
 				<Type>Banner</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Strider</SpecialRuleDescription>
+				<SpecialRule>Strider</SpecialRule>
 				<Description>A unit with the Ranger's Standard has the Strider special rule.</Description>
 			</Artefact>
 			<Artefact>
@@ -530,7 +530,7 @@
 				<Name>Lichebone Pennant</Name>
 				<Type>Banner</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance(1)</SpecialRule>
 				<Description>Models in a unit with the Lichebone Pennant have Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -544,21 +544,21 @@
 				<Name>Banner of Eternal Flame</Name>
 				<Type>Banner</Type>
 				<Points>10</Points>
-				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+				<SpecialRule>Flaming Attacks</SpecialRule>
 				<Description>Models in a unit with the Banner of Eternal Flame have Flaming Attacks.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Gleaming Pennant</Name>
 				<Type>Banner</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Сan re-roll first failed Leadership test</SpecialRuleDescription>
+				<SpecialRule>Сan re-roll first failed Leadership test</SpecialRule>
 				<Description>One use only. A unit with the Gleaming Pennant can re-roll its first failed Leadership test.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scarecrow Banner</Name>
 				<Type>Banner</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Сauses Fear in models with the Fly special rule</SpecialRuleDescription>
+				<SpecialRule>Сauses Fear in models with the Fly special rule</SpecialRule>
 				<Description>A unit with the Scarecrow Banner causes Fear in models with the Fly special rule.</Description>
 			</Artefact>
 		</Group>
@@ -567,63 +567,63 @@
 				<Name>Book of Ashur</Name>
 				<Type>Arcane</Type>
 				<Points>70</Points>
-				<SpecialRuleDescription>+1 bonus on attempts to cast and dispel</SpecialRuleDescription>
+				<SpecialRule>+1 bonus on attempts to cast and dispel</SpecialRule>
 				<Description>The bearer receives a +1 bonus on attempts to cast and dispel.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Feedback Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed</SpecialRuleDescription>
+				<SpecialRule>Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Feedback Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, roll a dice for every dice used to cast the spell. The casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scroll of Leeching</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, add a number of dispel dice to your pool equal to the number of dice used to cast the spell</SpecialRuleDescription>
+				<SpecialRule>Once per game, after the enemy spell has been resolved, add a number of dispel dice to your pool equal to the number of dice used to cast the spell</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Leeching can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, the bearer of the scroll adds a number of dispel dice to his pool equal to the number of dice used to cast the spell (remember that your dispel pool cannot exceed 12 dice).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sivejir's Hex Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, the enemy wizard must roll equal to or under his wizard level on a D6, if he fails he becomes a small, slimy toad</SpecialRuleDescription>
+				<SpecialRule>Once per game, after the enemy spell has been resolved, the enemy wizard must roll equal to or under his wizard level on a D6, if he fails he becomes a small, slimy toad</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Hex Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but a portion of the spell's energy is transformed and redirected at the caster. The enemy wizard can resist the spell's effects by rolling equal to or under his wizard level on a D6. If he fails, an amphibian transformation takes hold and he becomes a small, slimy toad! Whilst transformed, the wizard cannot channel or cast spells, all of his magic items and mundane equipment (armour, weapons, etc.) temporarily stop working and all of his characteristics are reduced to 1 (except for his wounds, which are unaffected). His controlling player can roll a D6 at the start of each of his subsequent magic phases; the spell dissipates on a roll of 4+ and the wizard returns to his normal form (but still attempts to eat flies for several days afterward).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Once per game, during one casting attempt any roll of a double will cause Irresistible Force (and a Miscast)</SpecialRuleDescription>
+				<SpecialRule>Once per game, during one casting attempt any roll of a double will cause Irresistible Force (and a Miscast)</SpecialRule>
 				<Description>One use only. A Power Scroll can be used when the Wizard makes a casting attempt. During that casting attempt, any roll of a double will cause irresistible force (and a miscast).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Wand of Jet</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Once per game, can increase one of his casting results by an additional +D6, after other casting dice have been rolled</SpecialRuleDescription>
+				<SpecialRule>Once per game, can increase one of his casting results by an additional +D6, after other casting dice have been rolled</SpecialRule>
 				<Description>One use only. The bearer can increase one of his casting results by an additional +D6, after other casting dice have been rolled. This extra power dice can contribute to casting a spell with Irresistible Force (and a Miscast).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Forbidden Rod</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Once per game, adds +D6 dice in the power pool and inflicts D3 wounds</SpecialRuleDescription>
+				<SpecialRule>Once per game, adds +D6 dice in the power pool and inflicts D3 wounds</SpecialRule>
 				<Description>One use only. The forbidden rod adds +D6 dice in the power pool at the start of the caster's own magic phase, but also inflicts D3 wounds on the bearer (with no armour saves allowed).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Trickster's Shard</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Once per game, declare you are using Shard at the start of one of your magic phases, for the duration of the phase, when one of spells is dispelled by an enemy wizard, on a 5+, that wizard surfers a wound with no armour saves allowed</SpecialRuleDescription>
+				<SpecialRule>Once per game, declare you are using Shard at the start of one of your magic phases, for the duration of the phase, when one of spells is dispelled by an enemy wizard, on a 5+, that wizard surfers a wound with no armour saves allowed</SpecialRule>
 				<Description>One use only. Declare you are using this item at the start of one of your magic phases. For the duration of the phase, when one of the bearer's spells is dispelled by an enemy wizard, roll a D6. On a 5+, that wizard surfers a wound with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Earthing Rod</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Once per game, can re-roll the Miscast</SpecialRuleDescription>
+				<SpecialRule>Once per game, can re-roll the Miscast</SpecialRule>
 				<Description>One use only. If the wizard rolls on the miscast table he can re-roll the result.</Description>
 			</Artefact>
 			<Artefact>
@@ -644,21 +644,21 @@
 				<Name>Sceptre of Stability</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Once per game, can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled</SpecialRuleDescription>
+				<SpecialRule>Once per game, can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled</SpecialRule>
 				<Description>One use only. The bearer can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled. This extra dispel dice can contribute to dispelling with Irresistible Force.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Channelling Staff</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>+1 to all of his channeling attempts</SpecialRuleDescription>
+				<SpecialRule>+1 to all of his channeling attempts</SpecialRule>
 				<Description>The Wizard adds +1 to all of his channeling attempts.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scroll of Shielding</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, the target of the spell is granted a 4+ Ward save against any wounds caused by the spell</SpecialRuleDescription>
+				<SpecialRule>Once per game, after the enemy spell has been resolved, the target of the spell is granted a 4+ Ward save against any wounds caused by the spell</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted a 4+ Ward save against any wounds caused by the spell.</Description>
 			</Artefact>
 		</Group>
@@ -677,7 +677,7 @@
 				<Name>Fozzrik's Folding Fortress</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>100</Points>
-				<SpecialRuleDescription>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress</SpecialRuleDescription>
+				<SpecialRule>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress</SpecialRule>
 				<Description>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building (or scratch-built structure of a similar size) in your deployment zone to represent rhe Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik's Folding Fortress.</Description>
 			</Artefact>
 			<Artefact>
@@ -685,7 +685,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
 				<OnlyFor>Infantry</OnlyFor>
-				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<SpecialRule>Fly</SpecialRule>
 				<Description>Infantry or monstrous infantry models on foot only. The owner of this magical carpet has the Fly special rule. However, he cannot join units.</Description>
 			</Artefact>
 			<Artefact>
@@ -699,21 +699,21 @@
 				<Name>Healing Potion</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Once per battle recovers D6 Wounds lost in the battle</SpecialRuleDescription>
+				<SpecialRule>Once per battle recovers D6 Wounds lost in the battle</SpecialRule>
 				<Description>One use only. The Healing Potion can be drunk at the start of the controlling player's turn. The imbiber immediately recovers D6 Wounds lost in the battle.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Featherfoe Torc</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat</SpecialRuleDescription>
+				<SpecialRule>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat</SpecialRule>
 				<Description>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Ruby Ring of Ruin</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Bound spell, Power level 3: Fireball spell from Lore of Fire</SpecialRuleDescription>
+				<SpecialRule>Bound spell, Power level 3: Fireball spell from Lore of Fire</SpecialRule>
 				<Description>Bound spell (power level 3). The Ruby Ring of Ruin contains the Fireball spell (see the Lore of Fire).</Description>
 			</Artefact>
 			<Artefact>
@@ -728,14 +728,14 @@
 				<Name>Potion of Strength</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Strength until the end of the turn</SpecialRuleDescription>
+				<SpecialRule>Once per battle at the start of any player's turn has +3 Strength until the end of the turn</SpecialRule>
 				<Description>One use only. The Potion of Strength can be drunk at the start of any player's turn. The imbiber has +3 Strength until the end of the turn.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Toughness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Toughness until the end of the turn</SpecialRuleDescription>
+				<SpecialRule>Once per battle at the start of any player's turn has +3 Toughness until the end of the turn</SpecialRule>
 				<Description>One use only. The Potion of Toughness can be drunk at the start of any player's turn. The imbiber has +3 Toughness until the end of the turn.</Description>
 			</Artefact>
 			<Artefact>
@@ -749,21 +749,21 @@
 				<Name>Ironcurse Icon</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>The character (and any unit he is with) have 6+ Ward save against war machine weapons</SpecialRuleDescription>
+				<SpecialRule>The character (and any unit he is with) have 6+ Ward save against war machine weapons</SpecialRule>
 				<Description>The character (and any unit he is with) gain a 6+ ward save against war machine weapons.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Foolhardiness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn</SpecialRuleDescription>
+				<SpecialRule>Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn</SpecialRule>
 				<Description>One use only. The Potion of Foolhardiness can be drunk at the start of any player's turn. The imbiber has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Speed</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Initiative until the end of the turn</SpecialRuleDescription>
+				<SpecialRule>Once per battle at the start of any player's turn has +3 Initiative until the end of the turn</SpecialRule>
 				<Description>One use only. The Potion of Speed can be drunk at the start of any player's turn. The imbiber has +3 Initiative until the end of the turn.</Description>
 			</Artefact>
 		</Group>
@@ -798,24 +798,24 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>At the start of each friendly Magic phase, before dice are rolled to determine the strength of the Winds of Magic, you may pick two friendly Wizards with this special rule anywhere on the battlefield and they may exchange a single spell with each other. In subsequent turns, a different pairing of Wizards with this special rule may be chosen</SpecialRuleDescription>
-					<SpecialRuleDescription>Knows all the spells from his chosen Lore of Magic</SpecialRuleDescription>
-					<SpecialRuleDescription>Re-rolls its first failed dispel attempt in each Magic phase</SpecialRuleDescription>
-					<SpecialRuleDescription>Rolls two additional dice whenever he attempts to channel power or dispel dice</SpecialRuleDescription>
-					<SpecialRuleDescription>When rollint on the Miscast table, can choose to subtract one from the result or add one to the result</SpecialRuleDescription>
-					<SpecialRuleDescription>If this model is alive at the end of any friendly Magic phase, roll a number of D6 equal to the difference between the Slann Mage-Priest's starting number of Wounds and its current number of Wounds. For each roll of a 6, the Slann Mage-Priest immediately recovers a single Wound lost earlier in the battle.</SpecialRuleDescription>
+					<SpecialRule>At the start of each friendly Magic phase, before dice are rolled to determine the strength of the Winds of Magic, you may pick two friendly Wizards with this special rule anywhere on the battlefield and they may exchange a single spell with each other. In subsequent turns, a different pairing of Wizards with this special rule may be chosen</SpecialRule>
+					<SpecialRule>Knows all the spells from his chosen Lore of Magic</SpecialRule>
+					<SpecialRule>Re-rolls its first failed dispel attempt in each Magic phase</SpecialRule>
+					<SpecialRule>Rolls two additional dice whenever he attempts to channel power or dispel dice</SpecialRule>
+					<SpecialRule>When rollint on the Miscast table, can choose to subtract one from the result or add one to the result</SpecialRule>
+					<SpecialRule>If this model is alive at the end of any friendly Magic phase, roll a number of D6 equal to the difference between the Slann Mage-Priest's starting number of Wounds and its current number of Wounds. For each roll of a 6, the Slann Mage-Priest immediately recovers a single Wound lost earlier in the battle.</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Cobra Mace of Mazadamundi</Name>
 					<HitFirst/>
 					<PoisonAttack/>
-					<SpecialRuleDescription>Destruction of magic weapons</SpecialRuleDescription>
+					<SpecialRule>Destruction of magic weapons</SpecialRule>
 				</HandWeapon>
 				<Banner>
 					<Name>Sunburst Standard of Hexoatl</Name>
-					<SpecialRuleDescription>Battle Standard Bearer</SpecialRuleDescription>
+					<SpecialRule>Battle Standard Bearer</SpecialRule>
 					<Type>Banner</Type>
-					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<SpecialRule>BSB</SpecialRule>
 					<OnlyOneInArmy/>
 				</Banner>
 			</SpecialRulesAndAmmunition>
@@ -849,11 +849,11 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Flammable</SpecialRuleDescription>
-					<SpecialRuleDescription>Knows only one spell - The Deliverance of Itza: a direct damage spell that targets all enemy units within 12". Each target suffers 2D6 Strength 4 hits. If a target has the Daemonic, Undead or Nehekharan Undead special rule, it suffers 3D6 hits instead</SpecialRuleDescription>
-					<SpecialRuleDescription>If Lord Kroak joins a unit of Temple Guard, all models in the combined unit gain the Unbreakable special rule</SpecialRuleDescription>
-					<SpecialRuleDescription>Lord Kroak can cast The Deliverance of Itza as many times per turn as he has sufficient power dice</SpecialRuleDescription>
-					<SpecialRuleDescription>Lord Kroak's Wizard level can never be reduced to less than 1</SpecialRuleDescription>
+					<SpecialRule>Flammable</SpecialRule>
+					<SpecialRule>Knows only one spell - The Deliverance of Itza: a direct damage spell that targets all enemy units within 12". Each target suffers 2D6 Strength 4 hits. If a target has the Daemonic, Undead or Nehekharan Undead special rule, it suffers 3D6 hits instead</SpecialRule>
+					<SpecialRule>If Lord Kroak joins a unit of Temple Guard, all models in the combined unit gain the Unbreakable special rule</SpecialRule>
+					<SpecialRule>Lord Kroak can cast The Deliverance of Itza as many times per turn as he has sufficient power dice</SpecialRule>
+					<SpecialRule>Lord Kroak's Wizard level can never be reduced to less than 1</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Golden Death Mask</Name>
@@ -890,7 +890,7 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand of Gods</Name>
-					<SpecialRuleDescription>Bound spell (power level 3). Hand of Gods contains the spell Shem's Burning Gaze</SpecialRuleDescription>
+					<SpecialRule>Bound spell (power level 3). Hand of Gods contains the spell Shem's Burning Gaze</SpecialRule>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Revered Spear of Tlanxla</Name>
@@ -939,12 +939,12 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Use Lore of Beast</SpecialRuleDescription>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRuleDescription>
-					<SpecialRuleDescription>Unless mounted, Tehenhauin can join Jungle Swarm units, even though characters are not normally permitted to join Swarms. Whilst Tehenhauin leads a Jungle Swarm, he gains the Unbreakable</SpecialRuleDescription>
-					<SpecialRuleDescription>If your army includes Tehenhauin, all Skinks in army (not their mounts or any Kroxigor) have the Hatred (Skaven) special rule</SpecialRuleDescription>
-					<SpecialRuleDescription>Unless mounted, in close combat Tehenhauin can make an extra D6 Attacks at Initiative 1. These extra Attacks are always resolved at Weapon Skill 2 and Strength 2 and have the Poisoned Attacks special rule</SpecialRuleDescription>
+					<SpecialRule>Use Lore of Beast</SpecialRule>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRule>
+					<SpecialRule>Unless mounted, Tehenhauin can join Jungle Swarm units, even though characters are not normally permitted to join Swarms. Whilst Tehenhauin leads a Jungle Swarm, he gains the Unbreakable</SpecialRule>
+					<SpecialRule>If your army includes Tehenhauin, all Skinks in army (not their mounts or any Kroxigor) have the Hatred (Skaven) special rule</SpecialRule>
+					<SpecialRule>Unless mounted, in close combat Tehenhauin can make an extra D6 Attacks at Initiative 1. These extra Attacks are always resolved at Weapon Skill 2 and Strength 2 and have the Poisoned Attacks special rule</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Blade of the Serpent's Tongue</Name>
@@ -993,8 +993,8 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Can always re-roll failed Dangerous Terrain tests. Additionally, while they have the troop type Infantry, they are never considered to be 'models on foot' for the purposes of spells, magic items and special rules</SpecialRuleDescription>
-					<SpecialRuleDescription>At the start of each friendly Magic phase, before dice are rolled to determine the strength of the Winds of Magic, you may pick two friendly Wizards with this special rule anywhere on the battlefield and they may exchange a single spell with each other</SpecialRuleDescription>
+					<SpecialRule>Can always re-roll failed Dangerous Terrain tests. Additionally, while they have the troop type Infantry, they are never considered to be 'models on foot' for the purposes of spells, magic items and special rules</SpecialRule>
+					<SpecialRule>At the start of each friendly Magic phase, before dice are rolled to determine the strength of the Winds of Magic, you may pick two friendly Wizards with this special rule anywhere on the battlefield and they may exchange a single spell with each other</SpecialRule>
 				</Special>
 				<Armour>
 					<Name>Shield of the Old Ones</Name>
@@ -1110,20 +1110,20 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Whilst Chakax is part of a combined unit that contains both a model with the Mage-Priest Palanquin special rule and Temple Guard, all models in the combined unit gain the Unbreakable special rule.</SpecialRuleDescription>
-					<SpecialRuleDescription>Chakax must always issue a challenge, and can never refuse one</SpecialRuleDescription>
+					<SpecialRule>Whilst Chakax is part of a combined unit that contains both a model with the Mage-Priest Palanquin special rule and Temple Guard, all models in the combined unit gain the Unbreakable special rule.</SpecialRule>
+					<SpecialRule>Chakax must always issue a challenge, and can never refuse one</SpecialRule>
 					<Reroll>ToHit</Reroll>
 				</Special>
 				<HandWeapon>
 					<Name>The Star-stone Mace</Name>
 					<AddToStrength>2</AddToStrength>
 					<HitFirst/>
-					<SpecialRuleDescription>At the start of every Close Combat phase, all enemy models in base contact with Chakax must reveal their magic items. If Chakax scores one or more hits against a model with any magic items, roll a D6; on a 5+ one randomly determined magic item is immediately destroyed and cannot be used further in this game</SpecialRuleDescription>
+					<SpecialRule>At the start of every Close Combat phase, all enemy models in base contact with Chakax must reveal their magic items. If Chakax scores one or more hits against a model with any magic items, roll a D6; on a 5+ one randomly determined magic item is immediately destroyed and cannot be used further in this game</SpecialRule>
 				</HandWeapon>
 				<Armour>
 					<Name>The Helm of Prime Guardian</Name>
-					<SpecialRuleDescription>Enemy units with the Scouts special rule may not use their special deployment to set up within 20" of Chakax</SpecialRuleDescription>
-					<SpecialRuleDescription>If an enemy unit within 20" of Chakax contains 'hidden' models, their presence must be announced as soon as they come within 20" of Chakax</SpecialRuleDescription>
+					<SpecialRule>Enemy units with the Scouts special rule may not use their special deployment to set up within 20" of Chakax</SpecialRule>
+					<SpecialRule>If an enemy unit within 20" of Chakax contains 'hidden' models, their presence must be announced as soon as they come within 20" of Chakax</SpecialRule>
 				</Armour>
 				<Armour>
 					<Name>Key to the Eternity Chamber</Name>
@@ -1163,7 +1163,7 @@
 				<Armour>
 					<Name>The Shield of Aeons</Name>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRuleDescription>Any enemy model that makes a successful charge against Gor-Rok and ends the Movement phase in base contact with him must immediately take a Dangerous Terrain test with a -1 penalty</SpecialRuleDescription>
+					<SpecialRule>Any enemy model that makes a successful charge against Gor-Rok and ends the Movement phase in base contact with him must immediately take a Dangerous Terrain test with a -1 penalty</SpecialRule>
 				</Armour>
 				<HandWeapon>
 					<Name>The Mace of Ulamak</Name>
@@ -1197,15 +1197,15 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Use Lore of Heavens</SpecialRuleDescription>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRuleDescription>
-					<SpecialRuleDescription>Knows all the spells from spells from the Lore of Heavens</SpecialRuleDescription>
-					<SpecialRuleDescription>Roll a D6 at the start of each friendly Magic phase. On a roll of 1, all friendly Wizards casting a spell must re-roll any of the power dice that roll a 6 this phase, but on a roll of 2-6, all friendly Wizards must re-roll power dice rolls of a 1 this phase</SpecialRuleDescription>
+					<SpecialRule>Use Lore of Heavens</SpecialRule>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRule>
+					<SpecialRule>Knows all the spells from spells from the Lore of Heavens</SpecialRule>
+					<SpecialRule>Roll a D6 at the start of each friendly Magic phase. On a roll of 1, all friendly Wizards casting a spell must re-roll any of the power dice that roll a 6 this phase, but on a roll of 2-6, all friendly Wizards must re-roll power dice rolls of a 1 this phase</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>The Stellar Staff</Name>
-					<SpecialRuleDescription>If Tetto'eko successfully casts the spell Comet of Casandora (see Lore of Heavens), you may re-roll the dice at the start of each Magic phase to see if the comet arrives</SpecialRuleDescription>
+					<SpecialRule>If Tetto'eko successfully casts the spell Comet of Casandora (see Lore of Heavens), you may re-roll the dice at the start of each Magic phase to see if the comet arrives</SpecialRule>
 				</HandWeapon>
 				<Armour>
 					<Name>Monor Shield of the Old Ones</Name>
@@ -1213,11 +1213,11 @@
 				</Armour>
 				<Armour>
 					<Name>Eye of the Old Ones</Name>
-					<SpecialRuleDescription>After deployment, but before Vanguard moves are made, if Tetto'eko is on the battlefield he can consult the Eye of the Old Ones. If he does so, D3 friendly units of your choice gain the Vanguard special rule</SpecialRuleDescription>
+					<SpecialRule>After deployment, but before Vanguard moves are made, if Tetto'eko is on the battlefield he can consult the Eye of the Old Ones. If he does so, D3 friendly units of your choice gain the Vanguard special rule</SpecialRule>
 				</Armour>
 				<Armour>
 					<Name>The Palanquin of Constellations</Name>
-					<SpecialRuleDescription>Can always re-roll failed Dangerous Terrain tests</SpecialRuleDescription>
+					<SpecialRule>Can always re-roll failed Dangerous Terrain tests</SpecialRule>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1247,17 +1247,17 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>If your army contains Tiktaq'to, one unit of Terradon Riders can be upgraded to have the Ambushers special rule</SpecialRuleDescription>
+					<SpecialRule>If your army contains Tiktaq'to, one unit of Terradon Riders can be upgraded to have the Ambushers special rule</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Blade of Ancient Skies</Name>
 					<NoArmour/>
-					<SpecialRuleDescription>When fighting against a model with the Fly special rule, attacks made receive a +1 bonus To Hit</SpecialRuleDescription>
+					<SpecialRule>When fighting against a model with the Fly special rule, attacks made receive a +1 bonus To Hit</SpecialRule>
 				</HandWeapon>
 				<Armour>
 					<Name>Mask of Heavens</Name>
-					<SpecialRuleDescription>All Terradons in Tiktaq'to's unit use his Weapon Skill instead of their own</SpecialRuleDescription>
-					<SpecialRuleDescription>Enemy units suffer an additional -1 To Hit penalty when shooting Tiktaq'to and his unit</SpecialRuleDescription>
+					<SpecialRule>All Terradons in Tiktaq'to's unit use his Weapon Skill instead of their own</SpecialRule>
+					<SpecialRule>Enemy units suffer an additional -1 To Hit penalty when shooting Tiktaq'to and his unit</SpecialRule>
 				</Armour>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1291,11 +1291,11 @@
 					<Name>The Golden Blowpipe of P'Toohee</Name>
 				</RangeWeapon>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>Scout</SpecialRuleDescription>
-					<SpecialRuleDescription>Sniper</SpecialRuleDescription>
-					<SpecialRuleDescription>Enemy units shooting at a unit of Chameleon Skinks suffer an additional -1 To Hit. Missile weapons that do not roll To Hit are unaffected</SpecialRuleDescription>
-					<SpecialRuleDescription>If Oxyotl remained stationary in his preceding Movement phase, shots made from the Golden Blowpipe of P'Toohee in the Shooting phase wound automatically on any successful To Hit roll of a 5+ (no separate roll To Wound is necessary)</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>Scout</SpecialRule>
+					<SpecialRule>Sniper</SpecialRule>
+					<SpecialRule>Enemy units shooting at a unit of Chameleon Skinks suffer an additional -1 To Hit. Missile weapons that do not roll To Hit are unaffected</SpecialRule>
+					<SpecialRule>If Oxyotl remained stationary in his preceding Movement phase, shots made from the Golden Blowpipe of P'Toohee in the Shooting phase wound automatically on any successful To Hit roll of a 5+ (no separate roll To Wound is necessary)</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1341,8 +1341,8 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1529,7 +1529,7 @@
 			</Options>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1588,9 +1588,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
-					<SpecialRuleDescription>Once per game, during the Remaining Moves sub-phase, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as for shooting attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Forest Strider</SpecialRuleDescription>
+					<SpecialRule>Flying cavalry</SpecialRule>
+					<SpecialRule>Once per game, during the Remaining Moves sub-phase, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as for shooting attacks</SpecialRule>
+					<SpecialRule>Forest Strider</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1617,9 +1617,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
-					<SpecialRuleDescription>Once per game, during the Remaining Moves sub-phase, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as for shooting attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Forest Strider</SpecialRuleDescription>
+					<SpecialRule>Flying cavalry</SpecialRule>
+					<SpecialRule>Once per game, during the Remaining Moves sub-phase, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as for shooting attacks</SpecialRule>
+					<SpecialRule>Forest Strider</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1649,7 +1649,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
+					<SpecialRule>Flying cavalry</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1714,7 +1714,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1746,7 +1746,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1789,7 +1789,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1819,7 +1819,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1863,9 +1863,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>If Kroq-Gar is ever killed, Grymloq automatically passes his Monster Reaction test and immediately becomes subject to Frenzy. In addition, Grymloq never loses his Frenzy</SpecialRuleDescription>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
-					<SpecialRuleDescription>Swiftstride</SpecialRuleDescription>
+					<SpecialRule>If Kroq-Gar is ever killed, Grymloq automatically passes his Monster Reaction test and immediately becomes subject to Frenzy. In addition, Grymloq never loses his Frenzy</SpecialRule>
+					<SpecialRule>Large target</SpecialRule>
+					<SpecialRule>Swiftstride</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -1950,7 +1950,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2022,8 +2022,8 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>Skirmishers</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2076,7 +2076,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Whilst they are part of a combined unit that has been joined by a model with the Mage-Priest Palanquin special rule, all Temple Guard models in the combined unit have the Stubborn and Immune to Psychology special rules.</SpecialRuleDescription>
+					<SpecialRule>Whilst they are part of a combined unit that has been joined by a model with the Mage-Priest Palanquin special rule, all Temple Guard models in the combined unit have the Stubborn and Immune to Psychology special rules.</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Helberd</Name>
@@ -2138,9 +2138,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>Swarm</SpecialRuleDescription>
-					<SpecialRuleDescription>Whilst an enemy unit is in base contact with one or more Jungle Swarms, all close combat attacks directed against the enemy have the Poisoned Attacks special rule</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>Swarm</SpecialRule>
+					<SpecialRule>Whilst an enemy unit is in base contact with one or more Jungle Swarms, all close combat attacks directed against the enemy have the Poisoned Attacks special rule</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
@@ -2167,10 +2167,10 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Enemy units shooting at a unit of Chameleon Skinks suffer an additional -1 To Hit. Missile weapons that do not roll To Hit are unaffected</SpecialRuleDescription>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
-					<SpecialRuleDescription>Scouts</SpecialRuleDescription>
+					<SpecialRule>Enemy units shooting at a unit of Chameleon Skinks suffer an additional -1 To Hit. Missile weapons that do not roll To Hit are unaffected</SpecialRule>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>Skirmishers</SpecialRule>
+					<SpecialRule>Scouts</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2212,7 +2212,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Cold One</SpecialRuleDescription>
+					<SpecialRule>Cold One</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2279,7 +2279,7 @@
 					<HitLast/>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2315,9 +2315,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
-					<SpecialRuleDescription>Once per game, during the Remaining Moves sub-phase, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as for shooting attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Forest Strider</SpecialRuleDescription>
+					<SpecialRule>Flying cavalry</SpecialRule>
+					<SpecialRule>Once per game, during the Remaining Moves sub-phase, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as for shooting attacks</SpecialRule>
+					<SpecialRule>Forest Strider</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2370,7 +2370,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
 				</Special>
 				<RangeWeapon>
 					<Name>Giant Bow</Name>
@@ -2418,9 +2418,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
-					<SpecialRuleDescription>For the purposes of calculating combat result bonuses, a Bastiladon counts as having no flanks or rear</SpecialRuleDescription>
-					<SpecialRuleDescription>Before rolling To Hit, nominate one of the Bastiladon's Attacks as the Thunderous Bludgeon (a different coloured dice works best). This Attack is resolved at Strength 10 and receives a +1 To Hit bonus against models in the creature's rear arc</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
+					<SpecialRule>For the purposes of calculating combat result bonuses, a Bastiladon counts as having no flanks or rear</SpecialRule>
+					<SpecialRule>Before rolling To Hit, nominate one of the Bastiladon's Attacks as the Thunderous Bludgeon (a different coloured dice works best). This Attack is resolved at Strength 10 and receives a +1 To Hit bonus against models in the creature's rear arc</SpecialRule>
 				</Special>
 				<RangeWeapon>
 					<Name>Ark of Sotek</Name>
@@ -2457,8 +2457,8 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Flying cavalry</SpecialRuleDescription>
-					<SpecialRuleDescription>Before the game starts, but after Scouts have been deployed, a Lustrian blot toad marker can be placed for each unit of Ripperdactyl Riders in your army. A single blot toad marker can be placed on any enemy unit on the tabletop, this marker remains throughout the battie</SpecialRuleDescription>
+					<SpecialRule>Flying cavalry</SpecialRule>
+					<SpecialRule>Before the game starts, but after Scouts have been deployed, a Lustrian blot toad marker can be placed for each unit of Ripperdactyl Riders in your army. A single blot toad marker can be placed on any enemy unit on the tabletop, this marker remains throughout the battie</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Spear</Name>
@@ -2506,7 +2506,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
 				</Special>
 				<RangeWeapon>
 					<Name>Giant blowpapies</Name>
@@ -2555,10 +2555,10 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
-					<SpecialRuleDescription>A unit consists of a number of monstrous beasts and infantry handlers. Although they are monstrous beasts and not monsters, they follow all the rules for Monsters and Handlers, as described in the Warhammer rulebook</SpecialRuleDescription>
-					<SpecialRuleDescription>Spout Flames Attacks</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>Skirmishers</SpecialRule>
+					<SpecialRule>A unit consists of a number of monstrous beasts and infantry handlers. Although they are monstrous beasts and not monsters, they follow all the rules for Monsters and Handlers, as described in the Warhammer rulebook</SpecialRule>
+					<SpecialRule>Spout Flames Attacks</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2595,11 +2595,11 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>Skirmishers</SpecialRuleDescription>
-					<SpecialRuleDescription>A unit consists of a number of monstrous beasts and infantry handlers. Although they are monstrous beasts and not monsters, they follow all the rules for Monsters and Handlers, as described in the Warhammer rulebook</SpecialRuleDescription>
-					<SpecialRuleDescription>If charged, a Razordon Hunting Pack must Stand and Shoot if it is able to do so. However, when calculating the number of shots fired, each Razordon can re-roll the artillery dice</SpecialRuleDescription>
-					<SpecialRuleDescription>Shoot Barbs attacks</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>Skirmishers</SpecialRule>
+					<SpecialRule>A unit consists of a number of monstrous beasts and infantry handlers. Although they are monstrous beasts and not monsters, they follow all the rules for Monsters and Handlers, as described in the Warhammer rulebook</SpecialRule>
+					<SpecialRule>If charged, a Razordon Hunting Pack must Stand and Shoot if it is able to do so. However, when calculating the number of shots fired, each Razordon can re-roll the artillery dice</SpecialRule>
+					<SpecialRule>Shoot Barbs attacks</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2640,11 +2640,11 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Aquatic</SpecialRuleDescription>
-					<SpecialRuleDescription>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRuleDescription>
-					<SpecialRuleDescription>Once per battle, at the start of any friendly Close Combat phase, a Troglodon can unleash its Primeval Roar. This affects the Troglodon, and all friendly units within 12". All models in these units that have the Predatory Fighter special rule gain an additional Attack on any successful To Hit roll of a 5 or 6 (instead of just a 6) until the end of the phase</SpecialRuleDescription>
-					<SpecialRuleDescription>Spit Venom shooting attack</SpecialRuleDescription>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
+					<SpecialRule>Aquatic</SpecialRule>
+					<SpecialRule>A Slann Mage-Priest can choose to cast any magic missile or direct damage spell through a model with this special rule within 24" of him</SpecialRule>
+					<SpecialRule>Once per battle, at the start of any friendly Close Combat phase, a Troglodon can unleash its Primeval Roar. This affects the Troglodon, and all friendly units within 12". All models in these units that have the Predatory Fighter special rule gain an additional Attack on any successful To Hit roll of a 5 or 6 (instead of just a 6) until the end of the phase</SpecialRule>
+					<SpecialRule>Spit Venom shooting attack</SpecialRule>
+					<SpecialRule>Large target</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
