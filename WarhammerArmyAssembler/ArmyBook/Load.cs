@@ -223,7 +223,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Countable = CountableParse(xmlNode),
 
-            SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRuleDescription"),
+            SpecialRuleDescription = AllStringParse(xmlNode, "SpecialRule"),
 
             NativeArmour = BoolParse(xmlNode["NativeArmour"]),
             Group = StringParse(xmlNode["Group"]),
