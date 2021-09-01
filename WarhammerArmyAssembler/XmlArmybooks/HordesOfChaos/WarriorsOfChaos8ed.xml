@@ -19,8 +19,8 @@
 				<Name>Daemonblade</Name>
 				<Type>Powers</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Random Attacks (D6+3) special rule</SpecialRuleDescription>
-				<SpecialRuleDescription>Every ToHit roll of a 1 made by this character in close combat is resolved against himself - the character can never re-roll a To Hit roll of a 1</SpecialRuleDescription>
+				<SpecialRule>Random Attacks (D6+3) special rule</SpecialRule>
+				<SpecialRule>Every ToHit roll of a 1 made by this character in close combat is resolved against himself - the character can never re-roll a To Hit roll of a 1</SpecialRule>
 				<Description>The wielder of a Daemonblade has the Random Attacks (D6 + 3) special rule. However, every To Hit roll of a 1 made by this character in close combat is resolved against himself; the character can never re-roll a To Hit roll of a 1.</Description>
 			</Artefact>
 			<Artefact>
@@ -30,29 +30,29 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Khorne</OnlyIf>
 				</OnlyIfAnotherService>
-				<SpecialRuleDescription>Magic Resistance (3)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance (3)</SpecialRule>
 				<Description>Daemon of Khorne or model with Mark of Khorne only. The character has the Magic Resistance (3) special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Unholy Strike</Name>
 				<Type>Powers</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Instead of striking normally, the character can choose to make a single special Attack with double the character's Strength and has the Multiple Wounds (D3) special rule</SpecialRuleDescription>
+				<SpecialRule>Instead of striking normally, the character can choose to make a single special Attack with double the character's Strength and has the Multiple Wounds (D3) special rule</SpecialRule>
 				<Description>Instead of striking normally, the character can choose to make a single special Attack. If he does so, and the Attack hits, the hit is resolved at double the character's Strength and has the Multiple Wounds (D3) special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Flaming Breath</Name>
 				<Type>Powers</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>Strength 4 Breath Weapon that has the Flaming Attacks special rule</SpecialRuleDescription>
+				<SpecialRule>Strength 4 Breath Weapon that has the Flaming Attacks special rule</SpecialRule>
 				<Description>The character has a Strength 4 Breath Weapon that has the Flaming Attacks special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Chaos Familiar</Name>
 				<Type>Powers</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>+1 to all of his channelling attempts</SpecialRuleDescription>
-				<SpecialRuleDescription>Knows one extra spell than normal for his level</SpecialRuleDescription>
+				<SpecialRule>+1 to all of his channelling attempts</SpecialRule>
+				<SpecialRule>Knows one extra spell than normal for his level</SpecialRule>
 				<Description>The character adds +1 to all of his channelling attempts and knows one extra spell than normal for his level.</Description>
 			</Artefact>
 			<Artefact>
@@ -77,7 +77,7 @@
 				<Type>Powers</Type>
 				<Points>15</Points>
 				<PoisonAttack/>
-				<SpecialRuleDescription>5+ Ward save against Poisoned Attacks</SpecialRuleDescription>
+				<SpecialRule>5+ Ward save against Poisoned Attacks</SpecialRule>
 				<Description>The character has the Poisoned Attacks special rule and a 5+ ward save against Poisoned Attacks.</Description>
 			</Artefact>
 			<Artefact>
@@ -85,22 +85,22 @@
 				<Type>Powers</Type>
 				<Points>10</Points>
 				<PoisonAttack/>
-				<SpecialRuleDescription>Whenever this character suffers an unsaved Wound in close combat, the model that inflicted that hit must pass an Initiative test or suffer a Strength 4 hit</SpecialRuleDescription>
+				<SpecialRule>Whenever this character suffers an unsaved Wound in close combat, the model that inflicted that hit must pass an Initiative test or suffer a Strength 4 hit</SpecialRule>
 				<Description>Whenever this character suffers an unsaved Wound in close combat, the model that inflicted that hit must pass an Initiative test or suffer a Strength 4 hit. Wounds inflicted by Acid Ichor count towards the combat result.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Burning Body</Name>
 				<Type>Powers</Type>
 				<Points>10</Points>
-				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
-				<SpecialRuleDescription>5+ Ward save against Flaming Attacks</SpecialRuleDescription>
+				<SpecialRule>Flaming Attacks</SpecialRule>
+				<SpecialRule>5+ Ward save against Flaming Attacks</SpecialRule>
 				<Description>The character has the Flaming Attacks special rule and a 5+ Ward save against Flaming Attacks.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Soul Feeder</Name>
 				<Type>Powers</Type>
 				<Points>10</Points>
-				<SpecialRuleDescription>Roll a D6 for every unsaved Wound inflicted by the character in close combat: for each result of a 6 rolled, he immediately regains a single lost Wound.</SpecialRuleDescription>
+				<SpecialRule>Roll a D6 for every unsaved Wound inflicted by the character in close combat: for each result of a 6 rolled, he immediately regains a single lost Wound.</SpecialRule>
 				<Description>Roll a D6 for every unsaved Wound inflicted by the character in close combat. For each result of a 6 rolled, he immediately regains a single lost Wound.</Description>
 			</Artefact>
 			<Artefact>
@@ -110,7 +110,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Tzeentch</OnlyIf>
 				</OnlyIfAnotherService>
-				<SpecialRuleDescription>Re-rolls ward save results of 1</SpecialRuleDescription>
+				<SpecialRule>Re-rolls ward save results of 1</SpecialRule>
 				<Description>Model with Mark of Tzeentch only. The character re-rolls ward save results of 1.</Description>
 			</Artefact>
 			<Artefact>
@@ -120,7 +120,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Nurgle</OnlyIf>
 				</OnlyIfAnotherService>
-				<SpecialRuleDescription>At the start of every Magic phase, every enemy model in base contact with the character suffers a single Strength 1 hit, with no armour saves allowed</SpecialRuleDescription>
+				<SpecialRule>At the start of every Magic phase, every enemy model in base contact with the character suffers a single Strength 1 hit, with no armour saves allowed</SpecialRule>
 				<Description>Model with Mark of Nurgle only. At the start of every Magic phase, every enemy model in base contact with the character suffers a single Strength 1 hit, with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
@@ -139,16 +139,16 @@
 				<Points>65</Points>
 				<MultiWounds>D3</MultiWounds>
 				<NoArmour/>
-				<SpecialRuleDescription>Flaming attacks</SpecialRuleDescription>
-				<SpecialRuleDescription>After all close combat blows have been struck, roll a D6 for every foe slain: on the roll of a 6, the slain foe's body explodes, inflicting an additional D6 Strength 4 hits on the enemy unit with the Flaming Attacks special rule</SpecialRuleDescription>
-				<SpecialRuleDescription>At the end of each turns, roll a D6: on the roll of a 1, he suffers one Wound with no armour saves allowed</SpecialRuleDescription>
+				<SpecialRule>Flaming attacks</SpecialRule>
+				<SpecialRule>After all close combat blows have been struck, roll a D6 for every foe slain: on the roll of a 6, the slain foe's body explodes, inflicting an additional D6 Strength 4 hits on the enemy unit with the Flaming Attacks special rule</SpecialRule>
+				<SpecialRule>At the end of each turns, roll a D6: on the roll of a 1, he suffers one Wound with no armour saves allowed</SpecialRule>
 				<Description>Close combat attacks made with the Hellfire Sword have the Flaming Attacks and Multiple Wounds (D3) special rules. No armour saves can be taken against Wounds caused by the Hellfire Sword. After all close combat blows have been struck, roll a D6 for every foe slain by the Hellfire Sword - on the roll of a 6, the slain foe's body explodes, inflicting an additional D6 Strength 4 hits on the enemy unit with the Flaming Attacks special rule. Unsaved Wounds inflicted in this way count towards the combat result. At the end of each of the wielder's turns, roll a D6; on the roll of a 1, he suffers one Wound with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sword of Change</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>If an enemy character or monster is slain in close combat, roll a D6: on the roll of a 4+, the model is transformed into a Chaos Spawn under the control of the owner of the Sword of Change</SpecialRuleDescription>
+				<SpecialRule>If an enemy character or monster is slain in close combat, roll a D6: on the roll of a 4+, the model is transformed into a Chaos Spawn under the control of the owner of the Sword of Change</SpecialRule>
 				<Description>If an enemy character or monster is slain by the Sword of Change in close combat, roll a D6. On the roll of a 4+, the model is transformed into a Chaos Spawn under the control of the owner of the Sword of Change, exactly as if the enemy model were a Chaos Champion that had suffered a Spawndom result on the Eye of the Gods table.</Description>
 			</Artefact>
 			<Artefact>
@@ -176,14 +176,14 @@
 				<Name>Skull of Katam</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Can choose to consult Skull of Katam before attempting to channel power dice: if he does so, roll 6 dice instead of 1, but the bearer suffers a -1 Leadership penalty for the rest of the game for every result of a 1 rolled</SpecialRuleDescription>
+				<SpecialRule>Can choose to consult Skull of Katam before attempting to channel power dice: if he does so, roll 6 dice instead of 1, but the bearer suffers a -1 Leadership penalty for the rest of the game for every result of a 1 rolled</SpecialRule>
 				<Description>The bearer of the Skull of Katam can choose to consult it before attempting to channel power dice. If he does so, roll 6 dice instead of 1. If the bearer consulted the Skull of Katam, he suffers a -1 Leadership penalty for the rest of the game for every result of a 1 rolled when channelling - if it is ever reduced to 0, he is immediately removed as a casualty. A Wizard with the Mark of Tzeentch may not re-roll channelling results of a 1 when using the Skull of Katam.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Chalice of Chaos</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>10</Points>
-				<SpecialRuleDescription>Chalice of Chaos: consult the table</SpecialRuleDescription>
+				<SpecialRule>Chalice of Chaos: consult the table</SpecialRule>
 				<Description>One use only. The bearer of the Chalice of Chaos may drink from it at the start of any phase. If he chooses to do so, roll a D6 and consult the table below.||D6 Result||1 Unworthy Fool: The imbiber immediately suffers a Wound, with no saves of any kind allowed.||2 Inhuman Speed: The imbiber gains the Always Strikes First special rule until the end of the turn.||3 Regenerating Flesh: The imbiber gains the Regeneration special rule until the end of the turn.||4 Dark Fortune: The imbiber gains a 5+ ward save until the end of the turn.||5 Daemonic Strength: The imbiber gains the Killing Blow special rule until the end of the turn.||6 Final Transformation: If the imbiber is already a Daemon Prince, he instead treats this result as Unworthy Fool. Otherwise, he must immediately take a Leadership test. If passed, he is gifted with Daemonhood, as described on the Eye of the Gods table on page 25. If failed, he is gifted with Spawndom, as described on the same table.</Description>
 			</Artefact>
 			<Artefact>
@@ -193,8 +193,8 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Slaanesh</OnlyIf>
 				</OnlyIfAnotherService>
-				<SpecialRuleDescription>Whenever character or his unit take a Break test, it is taken on one less dice than usual</SpecialRuleDescription>
-				<SpecialRuleDescription>For each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle</SpecialRuleDescription>
+				<SpecialRule>Whenever character or his unit take a Break test, it is taken on one less dice than usual</SpecialRule>
+				<SpecialRule>For each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle</SpecialRule>
 				<Description>Model with Mark of Slaanesh only. The bearer of the Pendant of Slaanesh can only join units that have the Mark of Slaanesh. No other character may join the same unit as the bearer and he cannot join units that already contain a character. Whenever the bearer, or his unit, take a Break test, it is taken on one less dice than usual (note that a Break test cannot be passed with Insane Courage on a single D6). In addition, for each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle.</Description>
 			</Artefact>
 			<Artefact>
@@ -204,7 +204,7 @@
 				<OnlyIfAnotherService>
 					<OnlyIf>Mark of Tzeentch</OnlyIf>
 				</OnlyIfAnotherService>
-				<SpecialRuleDescription>Each time the character, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound: on the roll of 2+, the Strength of that hit is halved, if the result is a 1, the Strength of that hit is instead doubled</SpecialRuleDescription>
+				<SpecialRule>Each time the character, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound: on the roll of 2+, the Strength of that hit is halved, if the result is a 1, the Strength of that hit is instead doubled</SpecialRule>
 				<Description>Model with Mark of Tzeentch only. Each time the bearer, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound. On the roll of 2+, the Strength of that hit is halved. However, if the result is a 1, the Strength of that hit is instead doubled. Attacks that do not roll To Wound, or that wound automatically, are not affected by the Blasted Standard.</Description>
 			</Artefact>
 			<Artefact>
@@ -215,7 +215,7 @@
 					<OnlyIf>Mark of Khorne</OnlyIf>
 				</OnlyIfAnotherService>
 				<Frenzy/>
-				<SpecialRuleDescription>Will never lose their Frenzy, even if beaten in close combat</SpecialRuleDescription>
+				<SpecialRule>Will never lose their Frenzy, even if beaten in close combat</SpecialRule>
 				<Description>Model with Mark of Khorne only. The bearer of the Banner of Rage can only join units that are completely comprised of models with the Mark of Khorne. Only characters that have the Mark of Khorne may join the same unit as the bearer. Whilst the bearer is alive, neither he, nor his unit, can ever lose their Frenzy special rule. If the bearer joins a unit that has lost its Frenzy, the unit immediately regains the Frenzy special rule.</Description>
 			</Artefact>
 		</Group>
@@ -266,14 +266,14 @@
 				<Name>Sword of Anti-Heroes</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>+1 Strength and +1 Attack for every enemy character in base contact</SpecialRuleDescription>
+				<SpecialRule>+1 Strength and +1 Attack for every enemy character in base contact</SpecialRule>
 				<Description>The bearer has +1 Strength and +1 Attack for every enemy character in base contact with him or his unit. These bonuses are calculated at the start of each round ol close combat and last until its end.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Spellthieving Sword</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells</SpecialRuleDescription>
+				<SpecialRule>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells</SpecialRule>
 				<Description>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound.</Description>
 			</Artefact>
 			<Artefact>
@@ -343,14 +343,14 @@
 				<Name>Tormentor Sword</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game</SpecialRuleDescription>
+				<SpecialRule>A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game</SpecialRule>
 				<Description>A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Warrior Bane</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound</SpecialRuleDescription>
+				<SpecialRule>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound</SpecialRule>
 				<Description>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1).</Description>
 			</Artefact>
 		</Group>
@@ -407,7 +407,7 @@
 				<Type>Shield</Type>
 				<Points>25</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>1+ armour save against shooting attacks</SpecialRuleDescription>
+				<SpecialRule>1+ armour save against shooting attacks</SpecialRule>
 				<Description>Shield. The bearer has a 1+ armour save against shooting attacks.</Description>
 			</Artefact>
 			<Artefact>
@@ -415,7 +415,7 @@
 				<Type>Shield</Type>
 				<Points>20</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance(1)</SpecialRule>
 				<Description>Shield. The bearer gains Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -431,7 +431,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>10</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>2+ Ward save against flaming attacks</SpecialRuleDescription>
+				<SpecialRule>2+ Ward save against flaming attacks</SpecialRule>
 				<Description>The wearer counts his armour save as being one point higher than normal. The wearer has a 2+ ward save against flaming attacks.</Description>
 			</Artefact>
 			<Artefact>
@@ -446,7 +446,7 @@
 				<Type>Shield</Type>
 				<Points>5</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRuleDescription>First hit suffered is discounted on a roll of 2+</SpecialRuleDescription>
+				<SpecialRule>First hit suffered is discounted on a roll of 2+</SpecialRule>
 				<Description>Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is discounted on a roll of 2+.</Description>
 			</Artefact>
 		</Group>
@@ -462,7 +462,7 @@
 				<Name>Obsidian Lodestone</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
-				<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance(3)</SpecialRule>
 				<Description>The Obsidian Lodestone grants Magic Resistance (3).</Description>
 			</Artefact>
 			<Artefact>
@@ -490,7 +490,7 @@
 				<Name>Obsidian Trinket</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance(1)</SpecialRule>
 				<Description>The Obsidian Trinket grants Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -511,21 +511,21 @@
 				<Name>Dragonbane Gem</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>2+ Ward save against flaming attacks</SpecialRuleDescription>
+				<SpecialRule>2+ Ward save against flaming attacks</SpecialRule>
 				<Description>The bearer of the Dragonbane Gem has a 2+ Ward save against flaming attacks.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Pidgeon Plucker Pendant</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>5+ Ward save against wounds caused in close combat by models that have the Fly special rule</SpecialRuleDescription>
+				<SpecialRule>5+ Ward save against wounds caused in close combat by models that have the Fly special rule</SpecialRule>
 				<Description>This item grants the bearer a 5+ Ward save against wounds caused in close combat by models that have the Fly special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Luckstone</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>May re-roll single failed armour save</SpecialRuleDescription>
+				<SpecialRule>May re-roll single failed armour save</SpecialRule>
 				<Description>The Luckstone allows the bearer to re-roll single failed armour save.</Description>
 			</Artefact>
 		</Group>
@@ -534,7 +534,7 @@
 				<Name>Rampager's Standard</Name>
 				<Type>Banner</Type>
 				<Points>55</Points>
-				<SpecialRuleDescription>May re-roll charge distance dice</SpecialRuleDescription>
+				<SpecialRule>May re-roll charge distance dice</SpecialRule>
 				<Description>A unit with this magic standard can re-roll its charge distance dice.</Description>
 			</Artefact>
 			<Artefact>
@@ -548,7 +548,7 @@
 				<Name>Ranger's Standard</Name>
 				<Type>Banner</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Strider</SpecialRuleDescription>
+				<SpecialRule>Strider</SpecialRule>
 				<Description>A unit with the Ranger's Standard has the Strider special rule.</Description>
 			</Artefact>
 			<Artefact>
@@ -576,7 +576,7 @@
 				<Name>Lichebone Pennant</Name>
 				<Type>Banner</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Magic Resistance(1)</SpecialRuleDescription>
+				<SpecialRule>Magic Resistance(1)</SpecialRule>
 				<Description>Models in a unit with the Lichebone Pennant have Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -590,21 +590,21 @@
 				<Name>Banner of Eternal Flame</Name>
 				<Type>Banner</Type>
 				<Points>10</Points>
-				<SpecialRuleDescription>Flaming Attacks</SpecialRuleDescription>
+				<SpecialRule>Flaming Attacks</SpecialRule>
 				<Description>Models in a unit with the Banner of Eternal Flame have Flaming Attacks.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Gleaming Pennant</Name>
 				<Type>Banner</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Сan re-roll first failed Leadership test</SpecialRuleDescription>
+				<SpecialRule>Сan re-roll first failed Leadership test</SpecialRule>
 				<Description>One use only. A unit with the Gleaming Pennant can re-roll its first failed Leadership test.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scarecrow Banner</Name>
 				<Type>Banner</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Сauses Fear in models with the Fly special rule</SpecialRuleDescription>
+				<SpecialRule>Сauses Fear in models with the Fly special rule</SpecialRule>
 				<Description>A unit with the Scarecrow Banner causes Fear in models with the Fly special rule.</Description>
 			</Artefact>
 		</Group>
@@ -613,63 +613,63 @@
 				<Name>Book of Ashur</Name>
 				<Type>Arcane</Type>
 				<Points>70</Points>
-				<SpecialRuleDescription>+1 bonus on attempts to cast and dispel</SpecialRuleDescription>
+				<SpecialRule>+1 bonus on attempts to cast and dispel</SpecialRule>
 				<Description>The bearer receives a +1 bonus on attempts to cast and dispel.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Feedback Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed</SpecialRuleDescription>
+				<SpecialRule>Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Feedback Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, roll a dice for every dice used to cast the spell. The casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scroll of Leeching</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, add a number of dispel dice to your pool equal to the number of dice used to cast the spell</SpecialRuleDescription>
+				<SpecialRule>Once per game, after the enemy spell has been resolved, add a number of dispel dice to your pool equal to the number of dice used to cast the spell</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Leeching can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, the bearer of the scroll adds a number of dispel dice to his pool equal to the number of dice used to cast the spell (remember that your dispel pool cannot exceed 12 dice).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sivejir's Hex Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, the enemy wizard must roll equal to or under his wizard level on a D6, if he fails he becomes a small, slimy toad</SpecialRuleDescription>
+				<SpecialRule>Once per game, after the enemy spell has been resolved, the enemy wizard must roll equal to or under his wizard level on a D6, if he fails he becomes a small, slimy toad</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Hex Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but a portion of the spell's energy is transformed and redirected at the caster. The enemy wizard can resist the spell's effects by rolling equal to or under his wizard level on a D6. If he fails, an amphibian transformation takes hold and he becomes a small, slimy toad! Whilst transformed, the wizard cannot channel or cast spells, all of his magic items and mundane equipment (armour, weapons, etc.) temporarily stop working and all of his characteristics are reduced to 1 (except for his wounds, which are unaffected). His controlling player can roll a D6 at the start of each of his subsequent magic phases; the spell dissipates on a roll of 4+ and the wizard returns to his normal form (but still attempts to eat flies for several days afterward).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Once per game, during one casting attempt any roll of a double will cause Irresistible Force (and a Miscast)</SpecialRuleDescription>
+				<SpecialRule>Once per game, during one casting attempt any roll of a double will cause Irresistible Force (and a Miscast)</SpecialRule>
 				<Description>One use only. A Power Scroll can be used when the Wizard makes a casting attempt. During that casting attempt, any roll of a double will cause irresistible force (and a miscast).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Wand of Jet</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Once per game, can increase one of his casting results by an additional +D6, after other casting dice have been rolled</SpecialRuleDescription>
+				<SpecialRule>Once per game, can increase one of his casting results by an additional +D6, after other casting dice have been rolled</SpecialRule>
 				<Description>One use only. The bearer can increase one of his casting results by an additional +D6, after other casting dice have been rolled. This extra power dice can contribute to casting a spell with Irresistible Force (and a Miscast).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Forbidden Rod</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Once per game, adds +D6 dice in the power pool and inflicts D3 wounds</SpecialRuleDescription>
+				<SpecialRule>Once per game, adds +D6 dice in the power pool and inflicts D3 wounds</SpecialRule>
 				<Description>One use only. The forbidden rod adds +D6 dice in the power pool at the start of the caster's own magic phase, but also inflicts D3 wounds on the bearer (with no armour saves allowed).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Trickster's Shard</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Once per game, declare you are using Shard at the start of one of your magic phases, for the duration of the phase, when one of spells is dispelled by an enemy wizard, on a 5+, that wizard surfers a wound with no armour saves allowed</SpecialRuleDescription>
+				<SpecialRule>Once per game, declare you are using Shard at the start of one of your magic phases, for the duration of the phase, when one of spells is dispelled by an enemy wizard, on a 5+, that wizard surfers a wound with no armour saves allowed</SpecialRule>
 				<Description>One use only. Declare you are using this item at the start of one of your magic phases. For the duration of the phase, when one of the bearer's spells is dispelled by an enemy wizard, roll a D6. On a 5+, that wizard surfers a wound with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Earthing Rod</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Once per game, can re-roll the Miscast</SpecialRuleDescription>
+				<SpecialRule>Once per game, can re-roll the Miscast</SpecialRule>
 				<Description>One use only. If the wizard rolls on the miscast table he can re-roll the result.</Description>
 			</Artefact>
 			<Artefact>
@@ -690,21 +690,21 @@
 				<Name>Sceptre of Stability</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Once per game, can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled</SpecialRuleDescription>
+				<SpecialRule>Once per game, can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled</SpecialRule>
 				<Description>One use only. The bearer can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled. This extra dispel dice can contribute to dispelling with Irresistible Force.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Channelling Staff</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>+1 to all of his channeling attempts</SpecialRuleDescription>
+				<SpecialRule>+1 to all of his channeling attempts</SpecialRule>
 				<Description>The Wizard adds +1 to all of his channeling attempts.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scroll of Shielding</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRuleDescription>Once per game, after the enemy spell has been resolved, the target of the spell is granted a 4+ Ward save against any wounds caused by the spell</SpecialRuleDescription>
+				<SpecialRule>Once per game, after the enemy spell has been resolved, the target of the spell is granted a 4+ Ward save against any wounds caused by the spell</SpecialRule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted a 4+ Ward save against any wounds caused by the spell.</Description>
 			</Artefact>
 		</Group>
@@ -723,7 +723,7 @@
 				<Name>Fozzrik's Folding Fortress</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>100</Points>
-				<SpecialRuleDescription>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress</SpecialRuleDescription>
+				<SpecialRule>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress</SpecialRule>
 				<Description>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building (or scratch-built structure of a similar size) in your deployment zone to represent rhe Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik's Folding Fortress.</Description>
 			</Artefact>
 			<Artefact>
@@ -731,7 +731,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
 				<OnlyFor>Infantry</OnlyFor>
-				<SpecialRuleDescription>Fly</SpecialRuleDescription>
+				<SpecialRule>Fly</SpecialRule>
 				<Description>Infantry or monstrous infantry models on foot only. The owner of this magical carpet has the Fly special rule. However, he cannot join units.</Description>
 			</Artefact>
 			<Artefact>
@@ -745,21 +745,21 @@
 				<Name>Healing Potion</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Once per battle recovers D6 Wounds lost in the battle</SpecialRuleDescription>
+				<SpecialRule>Once per battle recovers D6 Wounds lost in the battle</SpecialRule>
 				<Description>One use only. The Healing Potion can be drunk at the start of the controlling player's turn. The imbiber immediately recovers D6 Wounds lost in the battle.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Featherfoe Torc</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
-				<SpecialRuleDescription>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat</SpecialRuleDescription>
+				<SpecialRule>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat</SpecialRule>
 				<Description>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Ruby Ring of Ruin</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRuleDescription>Bound spell, Power level 3: Fireball spell from Lore of Fire</SpecialRuleDescription>
+				<SpecialRule>Bound spell, Power level 3: Fireball spell from Lore of Fire</SpecialRule>
 				<Description>Bound spell (power level 3). The Ruby Ring of Ruin contains the Fireball spell (see the Lore of Fire).</Description>
 			</Artefact>
 			<Artefact>
@@ -774,14 +774,14 @@
 				<Name>Potion of Strength</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Strength until the end of the turn</SpecialRuleDescription>
+				<SpecialRule>Once per battle at the start of any player's turn has +3 Strength until the end of the turn</SpecialRule>
 				<Description>One use only. The Potion of Strength can be drunk at the start of any player's turn. The imbiber has +3 Strength until the end of the turn.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Toughness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Toughness until the end of the turn</SpecialRuleDescription>
+				<SpecialRule>Once per battle at the start of any player's turn has +3 Toughness until the end of the turn</SpecialRule>
 				<Description>One use only. The Potion of Toughness can be drunk at the start of any player's turn. The imbiber has +3 Toughness until the end of the turn.</Description>
 			</Artefact>
 			<Artefact>
@@ -795,21 +795,21 @@
 				<Name>Ironcurse Icon</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>The character (and any unit he is with) have 6+ Ward save against war machine weapons</SpecialRuleDescription>
+				<SpecialRule>The character (and any unit he is with) have 6+ Ward save against war machine weapons</SpecialRule>
 				<Description>The character (and any unit he is with) gain a 6+ ward save against war machine weapons.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Foolhardiness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn</SpecialRuleDescription>
+				<SpecialRule>Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn</SpecialRule>
 				<Description>One use only. The Potion of Foolhardiness can be drunk at the start of any player's turn. The imbiber has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Speed</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRuleDescription>Once per battle at the start of any player's turn has +3 Initiative until the end of the turn</SpecialRuleDescription>
+				<SpecialRule>Once per battle at the start of any player's turn has +3 Initiative until the end of the turn</SpecialRule>
 				<Description>One use only. The Potion of Speed can be drunk at the start of any player's turn. The imbiber has +3 Initiative until the end of the turn.</Description>
 			</Artefact>
 		</Group>
@@ -841,17 +841,17 @@
 				<HandWeapon>
 					<Name>The Slayer of Kings</Name>
 					<NoArmour/>
-					<SpecialRuleDescription>Greater Daemon U'zuhl</SpecialRuleDescription>
+					<SpecialRule>Greater Daemon U'zuhl</SpecialRule>
 				</HandWeapon>
 				<Armour>
 					<Name>The Armour of Morkar</Name>
 					<ArmourTo>3</ArmourTo>
-					<SpecialRuleDescription>No attack against him may ever have a better chance to wound him than a 3+ roll</SpecialRuleDescription>
+					<SpecialRule>No attack against him may ever have a better chance to wound him than a 3+ roll</SpecialRule>
 				</Armour>
 				<Armour>
 					<Name>The Crown of Domination</Name>
 					<Terror/>
-					<SpecialRuleDescription>Any friendly unit within 12" of Archaon may re-roll failed Break tests</SpecialRuleDescription>
+					<SpecialRule>Any friendly unit within 12" of Archaon may re-roll failed Break tests</SpecialRule>
 				</Armour>
 				<Armour>
 					<Name>The Eye of Sheerian</Name>
@@ -862,9 +862,9 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
-					<SpecialRuleDescription>Inspiring Presence has a range of 18"</SpecialRuleDescription>
-					<SpecialRuleDescription>The Swords of Chaos</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
+					<SpecialRule>Inspiring Presence has a range of 18"</SpecialRule>
+					<SpecialRule>The Swords of Chaos</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -906,11 +906,11 @@
 					<AddToWard>6</AddToWard>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Fly</SpecialRuleDescription>
-					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
-					<SpecialRuleDescription>Dark Fire of Chaos</SpecialRuleDescription>
-					<SpecialRuleDescription>Breath of Change is a Breath Weapon. Any models hit must pass a Toughness test or be removed from play with no saves of any kind allowed</SpecialRuleDescription>
-					<SpecialRuleDescription>At the beginning of each turn, Galrauch must take a Leadership test: if the test is passed, Galrauch will be controlled as normal, but if the test is failed, Galrauch will not move, cast spells or use his breath weapons, in the Close Combat phase he will direct half of his attacks against himself.</SpecialRuleDescription>
+					<SpecialRule>Fly</SpecialRule>
+					<SpecialRule>Large Target</SpecialRule>
+					<SpecialRule>Dark Fire of Chaos</SpecialRule>
+					<SpecialRule>Breath of Change is a Breath Weapon. Any models hit must pass a Toughness test or be removed from play with no saves of any kind allowed</SpecialRule>
+					<SpecialRule>At the beginning of each turn, Galrauch must take a Leadership test: if the test is passed, Galrauch will be controlled as normal, but if the test is failed, Galrauch will not move, cast spells or use his breath weapons, in the Close Combat phase he will direct half of his attacks against himself.</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -944,10 +944,10 @@
 					<MultiWounds>D3</MultiWounds>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
-					<SpecialRuleDescription>Immune to all lightning-based attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>If targeted by a lightning-based attack, they become Frenzy</SpecialRuleDescription>
-					<SpecialRuleDescription>During the Shooting phase, choose an unengaged enemy unit within 24" and roll a dice: on a roll of a 2-6 a bolt of lightning hits the unit, inflicting D6 Strenght 6 hits, on the roll of a 1, the lightning hits Kholek</SpecialRuleDescription>
+					<SpecialRule>Large Target</SpecialRule>
+					<SpecialRule>Immune to all lightning-based attacks</SpecialRule>
+					<SpecialRule>If targeted by a lightning-based attack, they become Frenzy</SpecialRule>
+					<SpecialRule>During the Shooting phase, choose an unengaged enemy unit within 24" and roll a dice: on a roll of a 2-6 a bolt of lightning hits the unit, inflicting D6 Strenght 6 hits, on the roll of a 1, the lightning hits Kholek</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -993,10 +993,10 @@
 					<ImmuneToPsychology/>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
-					<SpecialRuleDescription>Strider</SpecialRuleDescription>
-					<SpecialRuleDescription>If Sigvald the Magnificent is required to roll on the Eye of the Gods table, do not roll any dice: instead, he is always counted as having rolled the Dark Fury reward</SpecialRuleDescription>
-					<SpecialRuleDescription>Sigvald the Magnificent may never re-roll a failed Stupidity test, nor use another model's Leadership when taking a Stupidity test</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
+					<SpecialRule>Strider</SpecialRule>
+					<SpecialRule>If Sigvald the Magnificent is required to roll on the Eye of the Gods table, do not roll any dice: instead, he is always counted as having rolled the Dark Fury reward</SpecialRule>
+					<SpecialRule>Sigvald the Magnificent may never re-roll a failed Stupidity test, nor use another model's Leadership when taking a Stupidity test</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1028,17 +1028,17 @@
 				<Armour>
 					<Name>The Scarlet Armour</Name>
 					<AddToArmour>3</AddToArmour>
-					<SpecialRuleDescription>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</SpecialRuleDescription>
+					<SpecialRule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</SpecialRule>
 				</Armour>
 				<Armour>
 					<Name>Daemonshield</Name>
 					<AddToArmour>6</AddToArmour>
-					<SpecialRuleDescription>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</SpecialRuleDescription>
+					<SpecialRule>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</SpecialRule>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
-					<SpecialRuleDescription>Consort of Khorne</SpecialRuleDescription>
-					<SpecialRuleDescription>Any friendly unit within 12" of Valkia may re-roll failed Break tests</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
+					<SpecialRule>Consort of Khorne</SpecialRule>
+					<SpecialRule>Any friendly unit within 12" of Valkia may re-roll failed Break tests</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1071,7 +1071,7 @@
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Vessel of Chaos</Name>
-					<SpecialRuleDescription>When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch may utilise later that phase; conversely, should the enemy make a failed dispel attempt to counter one of Vilitch's spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase</SpecialRuleDescription>
+					<SpecialRule>When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch may utilise later that phase; conversely, should the enemy make a failed dispel attempt to counter one of Vilitch's spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase</SpecialRule>
 				</HandWeapon>
 				<Armour>
 					<Type>Armour</Type>
@@ -1083,8 +1083,8 @@
 					<AddToWard>6</AddToWard>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
-					<SpecialRuleDescription>Loremaster</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
+					<SpecialRule>Loremaster</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1121,7 +1121,7 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1227,7 +1227,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -1348,7 +1348,7 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1379,7 +1379,7 @@
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -1483,9 +1483,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Daemonic attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Fly</SpecialRuleDescription>
-					<SpecialRuleDescription>Scion of Chaos</SpecialRuleDescription>
+					<SpecialRule>Daemonic attacks</SpecialRule>
+					<SpecialRule>Fly</SpecialRule>
+					<SpecialRule>Scion of Chaos</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1499,7 +1499,7 @@
 					<Name>Daemonic Flight</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<SpecialRuleDescription>Fly</SpecialRuleDescription>
+					<SpecialRule>Fly</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Daemon of Khorne</Name>
@@ -1510,8 +1510,8 @@
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>Hate Daemon of Slaanesh</SpecialRuleDescription>
-					<SpecialRuleDescription>+1 Strength for the rest of the turn after successful charge</SpecialRuleDescription>
+					<SpecialRule>Hate Daemon of Slaanesh</SpecialRule>
+					<SpecialRule>+1 Strength for the rest of the turn after successful charge</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Daemon of Tzeentch</Name>
@@ -1523,9 +1523,9 @@
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>Hate Daemon of Nurgle</SpecialRuleDescription>
-					<SpecialRuleDescription>Re-roll Ward save results of 1</SpecialRuleDescription>
-					<SpecialRuleDescription>Re-roll Channelling results of 1</SpecialRuleDescription>
+					<SpecialRule>Hate Daemon of Nurgle</SpecialRule>
+					<SpecialRule>Re-roll Ward save results of 1</SpecialRule>
+					<SpecialRule>Re-roll Channelling results of 1</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Daemon of Nurgle</Name>
@@ -1538,7 +1538,7 @@
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<SubOpponentToHit>1</SubOpponentToHit>
-					<SpecialRuleDescription>Hate Daemon of Tzeentch</SpecialRuleDescription>
+					<SpecialRule>Hate Daemon of Tzeentch</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Daemon of Slaanesh</Name>
@@ -1551,7 +1551,7 @@
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
 					<ArmourPiercing>1</ArmourPiercing>
-					<SpecialRuleDescription>Hate Daemon of Khorne</SpecialRuleDescription>
+					<SpecialRule>Hate Daemon of Khorne</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Wizard level</Name>
@@ -1588,7 +1588,7 @@
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Seafang</Name>
-					<SpecialRuleDescription>Wulfrik and a single unit of Marauders may have Ambushers special rule</SpecialRuleDescription>
+					<SpecialRule>Wulfrik and a single unit of Marauders may have Ambushers special rule</SpecialRule>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1603,9 +1603,9 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
-					<SpecialRuleDescription>Opponent cannot choose to refuse a challenge</SpecialRuleDescription>
-					<SpecialRuleDescription>Nominate a single enemy character: Wulfrik gains +2 Strength and may re-roll all rolls To Hit against the chosen character</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
+					<SpecialRule>Opponent cannot choose to refuse a challenge</SpecialRule>
+					<SpecialRule>Nominate a single enemy character: Wulfrik gains +2 Strength and may re-roll all rolls To Hit against the chosen character</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1639,12 +1639,12 @@
 				</HandWeapon>
 				<Armour>
 					<Name>The Wintertooth Crown</Name>
-					<SpecialRuleDescription>All friendly war beasts, monstrous beasts, monstrous infantry and monsters within 18" use his Leadership instead of their own, unless it would normally be higher</SpecialRuleDescription>
+					<SpecialRule>All friendly war beasts, monstrous beasts, monstrous infantry and monsters within 18" use his Leadership instead of their own, unless it would normally be higher</SpecialRule>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
-					<SpecialRuleDescription>Trolls Vomit</SpecialRuleDescription>
-					<SpecialRuleDescription>Strength 5 Breath Weapon with no Armour save allowed</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
+					<SpecialRule>Trolls Vomit</SpecialRule>
+					<SpecialRule>Strength 5 Breath Weapon with no Armour save allowed</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1678,16 +1678,16 @@
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Pestilent Potions</Name>
-					<SpecialRuleDescription>At the beginning of each Close Combat phase may immediately regain a single lost Wound, or try to force them down the throat of a single enemy model in base contact: if he attempts the latter, both players roll a D6 and add their model's unmodified Strength to the result, if your opponent's total is higher, nothing happens, if Festus' total is equal or higher, his victim immediately suffers D3 Wounds, with no armour saves allowed</SpecialRuleDescription>
+					<SpecialRule>At the beginning of each Close Combat phase may immediately regain a single lost Wound, or try to force them down the throat of a single enemy model in base contact: if he attempts the latter, both players roll a D6 and add their model's unmodified Strength to the result, if your opponent's total is higher, nothing happens, if Festus' total is equal or higher, his victim immediately suffers D3 Wounds, with no armour saves allowed</SpecialRule>
 				</HandWeapon>			
 				<Armour>
 					<Name>Mark of Nurgle</Name>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
-					<SpecialRuleDescription>Whilst Festus the Leechlord is in a unit, all models in that unit have the Poisoned Attacks special rule</SpecialRuleDescription>
-					<SpecialRuleDescription>Whilst Festus the Leechlord is in a unit, all models in that unit have the Regeneration (5+) special rule</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
+					<SpecialRule>Whilst Festus the Leechlord is in a unit, all models in that unit have the Poisoned Attacks special rule</SpecialRule>
+					<SpecialRule>Whilst Festus the Leechlord is in a unit, all models in that unit have the Regeneration (5+) special rule</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Hero>
@@ -1719,7 +1719,7 @@
 				<Armour>
 					<Name>Brass Collar of Khorne</Name>
 					<AddToWard>6</AddToWard>
-					<SpecialRuleDescription>Magic Resistance(3)</SpecialRuleDescription>
+					<SpecialRule>Magic Resistance(3)</SpecialRule>
 				</Armour>
 				<Armour>
 					<Name>Mark of Khorne</Name>
@@ -1760,7 +1760,7 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1849,7 +1849,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -1925,7 +1925,7 @@
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
-					<SpecialRuleDescription>BSB</SpecialRuleDescription>
+					<SpecialRule>BSB</SpecialRule>
 					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
@@ -1965,7 +1965,7 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -1996,7 +1996,7 @@
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -2088,10 +2088,10 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
-					<SpecialRuleDescription>Fly</SpecialRuleDescription>
-					<SpecialRuleDescription>Dark Fire of Chaos</SpecialRuleDescription>
-					<SpecialRuleDescription>Fumes of Contagion</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
+					<SpecialRule>Fly</SpecialRule>
+					<SpecialRule>Dark Fire of Chaos</SpecialRule>
+					<SpecialRule>Fumes of Contagion</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2133,7 +2133,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Daemonic Attacks</SpecialRuleDescription>
+					<SpecialRule>Daemonic Attacks</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2158,8 +2158,8 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Fly</SpecialRuleDescription>
-					<SpecialRuleDescription>Daemonic Attacks</SpecialRuleDescription>
+					<SpecialRule>Fly</SpecialRule>
+					<SpecialRule>Daemonic Attacks</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2184,9 +2184,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Brass Behemoth</SpecialRuleDescription>
-					<SpecialRuleDescription>Daemonic Attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Murderous Charge</SpecialRuleDescription>
+					<SpecialRule>Brass Behemoth</SpecialRule>
+					<SpecialRule>Daemonic Attacks</SpecialRule>
+					<SpecialRule>Murderous Charge</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2213,9 +2213,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Fly</SpecialRuleDescription>
-					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
-					<SpecialRuleDescription>Uncontrollable</SpecialRuleDescription>
+					<SpecialRule>Fly</SpecialRule>
+					<SpecialRule>Large Target</SpecialRule>
+					<SpecialRule>Uncontrollable</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2228,7 +2228,7 @@
 				<Option>
 					<Name>Venom Tail</Name>
 					<Type>Option</Type>
-					<SpecialRuleDescription>Additional Poisoned Attack with Multiple Wounds (2) special rules, +1 To Hit bonus if it is targeted against a unit in the Manticore's rear arc.</SpecialRuleDescription>
+					<SpecialRule>Additional Poisoned Attack with Multiple Wounds (2) special rules, +1 To Hit bonus if it is targeted against a unit in the Manticore's rear arc.</SpecialRule>
 					<HitLast/>
 					<Points>10</Points>
 				</Option>
@@ -2255,7 +2255,7 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Daemonic Attacks</SpecialRuleDescription>
+					<SpecialRule>Daemonic Attacks</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2282,8 +2282,8 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Daemonic Attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+					<SpecialRule>Daemonic Attacks</SpecialRule>
+					<SpecialRule>Fast Cavalry</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2327,8 +2327,8 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Demonic Attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Demonic Attacks</SpecialRule>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2353,8 +2353,8 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Demonic Attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Strider</SpecialRuleDescription>
+					<SpecialRule>Demonic Attacks</SpecialRule>
+					<SpecialRule>Strider</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Mount>
@@ -2420,7 +2420,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -2480,7 +2480,7 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -2554,7 +2554,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -2652,7 +2652,7 @@
 					<AddToArmour>4</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Freakish Mutation</SpecialRuleDescription>
+					<SpecialRule>Freakish Mutation</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2678,7 +2678,7 @@
 						<OnlyIfNot>Forsaken of Khorne</OnlyIfNot>
 						<OnlyIfNot>Forsaken of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>Magic Resistance(2)</SpecialRuleDescription>
+					<SpecialRule>Magic Resistance(2)</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Forsaken of Nurgle</Name>
@@ -2728,7 +2728,7 @@
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel/>
-					<SpecialRuleDescription>Vinguard special rule</SpecialRuleDescription>
+					<SpecialRule>Vinguard special rule</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Scaly Hide</Name>
@@ -2778,7 +2778,7 @@
 					<Name>Scythes</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
+					<SpecialRule>Chariot</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2813,7 +2813,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -2850,7 +2850,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
+					<SpecialRule>Fast Cavalry</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -2888,7 +2888,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>	
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -3013,8 +3013,8 @@
 					<ImmuneToPsychology/>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Fast Cavalry</SpecialRuleDescription>
-					<SpecialRuleDescription>Soul Hunters</SpecialRuleDescription>
+					<SpecialRule>Fast Cavalry</SpecialRule>
+					<SpecialRule>Soul Hunters</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3029,7 +3029,7 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -3070,7 +3070,7 @@
 					<AddToArmour>4</AddToArmour>
 				</Armour>
 				<Special>	
-					<SpecialRuleDescription>The Rewards of Chaos</SpecialRuleDescription>
+					<SpecialRule>The Rewards of Chaos</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3108,7 +3108,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>	
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -3168,7 +3168,7 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -3255,7 +3255,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>	
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -3293,7 +3293,7 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -3340,7 +3340,7 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Ogre Charge</SpecialRuleDescription>
+					<SpecialRule>Ogre Charge</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3378,7 +3378,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>	
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -3418,7 +3418,7 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Points>10</Points>
-					<SpecialRuleDescription>Eye of the Gods</SpecialRuleDescription>
+					<SpecialRule>Eye of the Gods</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -3463,7 +3463,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Storm Rage</SpecialRuleDescription>
+					<SpecialRule>Storm Rage</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3535,7 +3535,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Troll Vomit</SpecialRuleDescription>
+					<SpecialRule>Troll Vomit</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3571,9 +3571,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Fly</SpecialRuleDescription>
-					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
-					<SpecialRuleDescription>Fiend Tail</SpecialRuleDescription>
+					<SpecialRule>Fly</SpecialRule>
+					<SpecialRule>Large Target</SpecialRule>
+					<SpecialRule>Fiend Tail</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3581,7 +3581,7 @@
 					<Name>Flaming Breath</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<SpecialRuleDescription>Strength 4 Breath Weapon with Flaming Attacks special rule</SpecialRuleDescription>
+					<SpecialRule>Strength 4 Breath Weapon with Flaming Attacks special rule</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Regenerating Flesh</Name>
@@ -3630,8 +3630,8 @@
 					<Name>Scythes</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Chariot</SpecialRuleDescription>
-					<SpecialRuleDescription>Gorebeast Charge</SpecialRuleDescription>
+					<SpecialRule>Chariot</SpecialRule>
+					<SpecialRule>Gorebeast Charge</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3666,7 +3666,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -3705,9 +3705,9 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Favour of the Ruinous Powers</SpecialRuleDescription>
-					<SpecialRuleDescription>Giver of Glory</SpecialRuleDescription>
-					<SpecialRuleDescription>War Platform</SpecialRuleDescription>
+					<SpecialRule>Favour of the Ruinous Powers</SpecialRule>
+					<SpecialRule>Giver of Glory</SpecialRule>
+					<SpecialRule>War Platform</SpecialRule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -3745,7 +3745,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>-1 to hit shooting and -1 WS in close combat</SpecialRuleDescription>
+					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -3786,11 +3786,11 @@
 			</AdditionalParam>
 			<SpecialRulesAndAmmunition>
 				<Special>
-					<SpecialRuleDescription>Large target</SpecialRuleDescription>
-					<SpecialRuleDescription>Daemonic Attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>Monsters and Handlers</SpecialRuleDescription>
-					<SpecialRuleDescription>Caged Fury</SpecialRuleDescription>
-					<SpecialRuleDescription>Doomfire</SpecialRuleDescription>
+					<SpecialRule>Large target</SpecialRule>
+					<SpecialRule>Daemonic Attacks</SpecialRule>
+					<SpecialRule>Monsters and Handlers</SpecialRule>
+					<SpecialRule>Caged Fury</SpecialRule>
+					<SpecialRule>Doomfire</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 		</Unit>
@@ -3826,9 +3826,9 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
-					<SpecialRuleDescription>Immune to all lightning-based attacks</SpecialRuleDescription>
-					<SpecialRuleDescription>If Dracon Ogres Shaggoth are targeted by a lightning-based attack, they become Frenzy</SpecialRuleDescription>
+					<SpecialRule>Large Target</SpecialRule>
+					<SpecialRule>Immune to all lightning-based attacks</SpecialRule>
+					<SpecialRule>If Dracon Ogres Shaggoth are targeted by a lightning-based attack, they become Frenzy</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3883,9 +3883,9 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRuleDescription>Large Target</SpecialRuleDescription>
-					<SpecialRuleDescription>Fall Over</SpecialRuleDescription>
-					<SpecialRuleDescription>Giant Special Attacks</SpecialRuleDescription>
+					<SpecialRule>Large Target</SpecialRule>
+					<SpecialRule>Fall Over</SpecialRule>
+					<SpecialRule>Giant Special Attacks</SpecialRule>
 				</Special>
 			</SpecialRulesAndAmmunition>
 			<Options>
@@ -3967,7 +3967,7 @@
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>Devastating Charge</SpecialRuleDescription>
+					<SpecialRule>Devastating Charge</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
@@ -3989,7 +3989,7 @@
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
 					</OnlyIfAnotherService>
-					<SpecialRuleDescription>Strength 3 Breath Weapon with Flaming Attacks special rule</SpecialRuleDescription>
+					<SpecialRule>Strength 3 Breath Weapon with Flaming Attacks special rule</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
