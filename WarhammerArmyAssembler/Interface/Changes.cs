@@ -634,20 +634,21 @@ namespace WarhammerArmyAssembler.Interface
         {
             Children =
             {
+                new Image
+                {
+                    Source = new BitmapImage(new Uri(image)),
+                },
                 new TextBlock
                 {
-                    Text = head,
+                    Text = String.Format("\n{0}", head),
                     FontWeight = FontWeights.Bold,
                 },
                 new TextBlock
                 {
-                    Text = String.Format("{0}th Edition\n\n{1}\n", version, description),
+                    Text = String.Format("{0}th Edition\n\n{1}", version, description),
                     TextWrapping = TextWrapping.Wrap,
                 },
-                new Image
-                {
-                    Source = new BitmapImage(new Uri(image)),
-                }
+
             }
         };
     }
