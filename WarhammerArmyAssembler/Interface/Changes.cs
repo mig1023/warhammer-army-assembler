@@ -513,7 +513,7 @@ namespace WarhammerArmyAssembler.Interface
                     Content = new Border
                     {
                         Padding = new Thickness(5),
-                        Child = TooltipBlock(head, version, description),
+                        Child = TooltipBlock(head, version, description, source),
                     }
                 };
 
@@ -630,7 +630,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static double ZeroFuse(double currentParam) => (currentParam < 0 ? 0 : currentParam);
 
-        private static StackPanel TooltipBlock(string head, string version, string description) => new StackPanel
+        private static StackPanel TooltipBlock(string head, string version, string description, string image) => new StackPanel
         {
             Children =
             {
@@ -641,9 +641,13 @@ namespace WarhammerArmyAssembler.Interface
                 },
                 new TextBlock
                 {
-                    Text = String.Format("{0}th Edition\n\n{1}", version, description),
+                    Text = String.Format("{0}th Edition\n\n{1}\n", version, description),
                     TextWrapping = TextWrapping.Wrap,
                 },
+                new Image
+                {
+                    Source = new BitmapImage(new Uri(image)),
+                }
             }
         };
     }

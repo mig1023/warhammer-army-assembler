@@ -284,14 +284,11 @@ namespace WarhammerArmyAssembler.Interface
 
                 Label optionPoints = new Label
                 {
-                    Content = (pointsNeed ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine)
+                    Content = (pointsNeed ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine),
+                    Foreground = (!enabled || selected ? Brushes.Gray : ArmyBook.Data.MainColor),
                 };
-                optionPoints.Margin = Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
 
-                if (!enabled)
-                    optionPoints.Foreground = Brushes.Gray;
-                else
-                    optionPoints.Foreground = ArmyBook.Data.MainColor;
+                optionPoints.Margin = Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
 
                 Changes.main.unitDetail.Children.Add(optionPoints);
                 Changes.main.UpdateLayout();
@@ -339,6 +336,7 @@ namespace WarhammerArmyAssembler.Interface
 
             if (countable && enabled && (caption == "+" || caption == "-"))
                 newPart.MouseDown += CountableOption_Click;
+
             else if (!countable && enabled)
                 newPart.MouseDown += AddOption_Click;
 
