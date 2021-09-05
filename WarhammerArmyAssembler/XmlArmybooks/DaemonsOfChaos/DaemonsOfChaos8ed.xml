@@ -913,9 +913,9 @@
 					<AddToWizard>1</AddToWizard>
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wizard level 4</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Wizard level 4</Name>
@@ -924,9 +924,9 @@
 					<AddToWizard>2</AddToWizard>
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wizard level 3</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -1071,44 +1071,44 @@
 					<Points>10</Points>
 					<SpecialRule>Re-roll Ward save results of 1</SpecialRule>
 					<SpecialRule>Re-roll Channelling results of 1</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemon of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
 					<ArmourPiercing>1</ArmourPiercing>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemons of Khorne</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<SpecialRule>On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemon of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<SubOpponentToHit>1</SubOpponentToHit>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Wizard level</Name>
@@ -1388,30 +1388,30 @@
 					<Type>Option</Type>
 					<Points>30</Points>
 					<SpecialRule>+1 Magic Resistance</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Greater Locus of Fury</OnlyIfNot>
 						<OnlyIfNot>Exalted Locus of Wrath</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Greater Locus of Fury</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
 					<Frenzy/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lesser Locus of Abjuration</OnlyIfNot>
 						<OnlyIfNot>Exalted Locus of Wrath</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Exalted Locus of Wrath</Name>
 					<Type>Option</Type>
 					<Points>75</Points>
 					<Hate/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lesser Locus of Abjuration</OnlyIfNot>
 						<OnlyIfNot>Greater Locus of Fury</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Juggernaut</Name>
@@ -1480,30 +1480,30 @@
 					<Type>Option</Type>
 					<Points>25</Points>
 					<SpecialRule>When a model is slain, place D3+1 Blue Horror</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Greater Locus of Change</OnlyIfNot>
 						<OnlyIfNot>Exalted Locus of Conjuration</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Greater Locus of Change</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
 					<SpecialRule>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lesser Locus of Transmogrification</OnlyIfNot>
 						<OnlyIfNot>Exalted Locus of Conjuration</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Exalted Locus of Conjuration</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
 					<SpecialRule>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lesser Locus of Transmogrification</OnlyIfNot>
 						<OnlyIfNot>Greater Locus of Chang</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Disc of Tzeentch</Name>
@@ -1574,30 +1574,30 @@
 					<Type>Option</Type>
 					<Points>40</Points>
 					<SpecialRule>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Greater Locus of Fecundity</OnlyIfNot>
 						<OnlyIfNot>Exalted Locus of Contagion</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Greater Locus of Fecundity</Name>
 					<Type>Option</Type>
 					<Points>45</Points>
 					<Regeneration/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lesser Locus of Virulence</OnlyIfNot>
 						<OnlyIfNot>Exalted Locus of Contagion</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Exalted Locus of Contagion</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
 					<SpecialRule>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lesser Locus of Virulence</OnlyIfNot>
 						<OnlyIfNot>Greater Locus of Fecundity</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Palanquin</Name>
@@ -1659,30 +1659,30 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<SpecialRule>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Greater Locus of Swiftness</OnlyIfNot>
 						<OnlyIfNot>Exalted Locus of Beguilement</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Greater Locus of Swiftness</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
 					<SpecialRule>This model, and all models in her unit, have the Always Strikes First special rule</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lesser Locus of Grace</OnlyIfNot>
 						<OnlyIfNot>Exalted Locus of Beguilement</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Exalted Locus of Beguilement</Name>
 					<Type>Option</Type>
 					<Points>60</Points>
 					<SpecialRule>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lesser Locus of Grace</OnlyIfNot>
 						<OnlyIfNot>Greater Locus of Swiftness</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Steed of Slaanesh</Name>
@@ -1946,18 +1946,18 @@
 					<Name>Plague Proboscis</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Venom Sting</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PoisonAttack/>
 				</Option>
 				<Option>
 					<Name>Venom Sting</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Plague Proboscis</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 			</Options>
 		</Mount>
@@ -2524,44 +2524,44 @@
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemons of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemons of Khorne</OnlyIfNot>
 						<OnlyIfNot>Daemons of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemons of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemons of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemons of Khorne</OnlyIfNot>
 						<OnlyIfNot>Daemons of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemons of Khorne</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemons of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemons of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemons of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemons of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemons of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemons of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemons of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 			</Options>
 		</Unit>
@@ -2681,44 +2681,44 @@
 					<Points>10</Points>
 					<SpecialRule>Re-roll Ward save results of 1</SpecialRule>
 					<SpecialRule>Re-roll Channelling results of 1</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemon of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
 					<ArmourPiercing>1</ArmourPiercing>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemons of Khorne</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<SpecialRule>On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemon of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemon of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<SubOpponentToHit>1</SubOpponentToHit>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Daemon of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Daemon of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Daemon of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Daemonbone Claw</Name>
@@ -2729,28 +2729,28 @@
 					<Name>Baleful Torrent</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Phlegm Bombardment</OnlyIfNot>
 						<OnlyIfNot>Warp Gaze</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Phlegm Bombardment</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Baleful Torrent</OnlyIfNot>
 						<OnlyIfNot>Warp Gaze</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Warp Gaze</Name>
 					<Type>Option</Type>
 					<Points>55</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Baleful Torrent</OnlyIfNot>
 						<OnlyIfNot>Phlegm Bombardment</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 			</Options>
 		</Unit>
