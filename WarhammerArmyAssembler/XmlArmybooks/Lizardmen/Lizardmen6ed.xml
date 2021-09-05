@@ -543,10 +543,10 @@
 					<Name>Fourth Generation</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Third Generation</OnlyIfNot>
 						<OnlyIfNot>Second Generation</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>No roll on the Miscast Table</SpecialRule>
 				</Option>
 				<Option>
@@ -555,10 +555,10 @@
 					<SlotOf>Hero</SlotOf>
 					<AddToWounds>1</AddToWounds>
 					<Points>85</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Fourth Generation</OnlyIfNot>
 						<OnlyIfNot>Second Generation</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>No roll on the Miscast Table</SpecialRule>
 					<SpecialRule>Drain Magic spell</SpecialRule>
 				</Option>
@@ -569,10 +569,10 @@
 					<SlotOf>Rare</SlotOf>
 					<AddToWounds>2</AddToWounds>
 					<Points>135</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Fourth Generation</OnlyIfNot>
 						<OnlyIfNot>Third Generation</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>No roll on the Miscast Table</SpecialRule>
 					<SpecialRule>Drain Magic spell</SpecialRule>
 					<SpecialRule>Extra dice for any spell cast, this dice not come from Power poll and is in affect a 'free' dice</SpecialRule>
@@ -655,18 +655,18 @@
 				<Option>
 					<Name>Cold One</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Blessed Spawning of Itzl</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>37</Points>
 					<Mount/>
 				</Option>
 				<Option>
 					<Name>Carnosaur</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Blessed Spawning of Itzl</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>210</Points>
 					<Mount/>
 				</Option>
@@ -736,9 +736,9 @@
 				<Option>
 					<Name>Cold One</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Blessed Spawning of Itzl</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>23</Points>
 					<Mount/>
 				</Option>
@@ -784,34 +784,34 @@
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Blowpipe</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Javelins</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Javelins</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Blowpipe</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
