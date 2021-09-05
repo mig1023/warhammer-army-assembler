@@ -415,9 +415,9 @@
 				<Name>The Mane of the Purebreed</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Barded Warhorse</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>+1 Strength to the character's Warhorse and those of any unit he is with the first time they charge</SpecialRule>
 				<Description>Character on Warhorse only. The Mane confers +1 Strength to the character's Warhorse and those of any unit he is with the first time they charge.</Description>
 			</Artefact>
@@ -726,9 +726,9 @@
 					<Name>Questing Vow</Name>
 					<Type>Option</Type>
 					<Group>QuestingVow</Group>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Grail Vow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>12</Points>
 					<SpecialRule>May re-roll any failed Psychology tests</SpecialRule>
 				</Option>
@@ -736,9 +736,9 @@
 					<Name>Grail Vow</Name>
 					<Type>Option</Type>
 					<Group>GrailVow</Group>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Questing Vow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>28</Points>
 					<ImmuneToPsychology/>
 					<AddToWard>6</AddToWard>
@@ -754,9 +754,9 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Questing Vow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<Lance/>
 				</Option>
@@ -764,9 +764,9 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Questing Vow</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<HitLast/>
 					<Points>6</Points>
 				</Option>
@@ -844,9 +844,9 @@
 					<Name>Barding for Warhorse</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Horse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -893,9 +893,9 @@
 					<Name>Questing Vow</Name>
 					<Type>Option</Type>
 					<Group>QuestingVow</Group>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Grail Vow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 					<SpecialRule>May re-roll any failed Psychology tests</SpecialRule>
 				</Option>
@@ -903,9 +903,9 @@
 					<Name>Grail Vow</Name>
 					<Type>Option</Type>
 					<Group>GrailVow</Group>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Questing Vow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>21</Points>
 					<ImmuneToPsychology/>
 					<AddToWard>6</AddToWard>
@@ -921,9 +921,9 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Questing Vow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 					<Lance/>
 				</Option>
@@ -931,9 +931,9 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Questing Vow</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<HitLast/>
 					<Points>4</Points>
 				</Option>
@@ -1012,9 +1012,9 @@
 					<Name>Barding for Warhorse</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Horse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 			</Options>
