@@ -213,9 +213,9 @@
 				<Name>The Plague Chalice</Name>
 				<Type>Arcane</Type>
 				<Points>30</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Mark of Nurgle</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>May drink from the Chalice at the start of his Magic phase, suffers an immediate Strength 4 hit that ignores Armour and Ward saves, for the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast</SpecialRule>
 				<Description>Mark of Nurgle only. The Shaman may drink from the Chalice at the start of his Magic phase. He suffers an immediate Strength 4 hit that ignores Armour and Ward saves (Regeneration may be taken as normal). For the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast.</Description>
 			</Artefact>
@@ -444,18 +444,18 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -467,18 +467,18 @@
 				<Option>
 					<Name>Light armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -486,11 +486,11 @@
 					<Name>Mark of Khorne</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
@@ -498,11 +498,11 @@
 					<Name>Mark of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Fear/>
 					<AddToWounds>1</AddToWounds>
 				</Option>
@@ -510,11 +510,11 @@
 					<Name>Mark of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>140</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWizard>4</AddToWizard>
 					<AddToCast>4</AddToCast>
 					<AddToDispell>2</AddToDispell>
@@ -523,11 +523,11 @@
 					<Name>Mark of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<ImmuneToPsychology/>
 				</Option>
 				<Option>
@@ -575,18 +575,18 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -598,18 +598,18 @@
 				<Option>
 					<Name>Light armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -617,11 +617,11 @@
 					<Name>Mark of Khorne</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
@@ -629,22 +629,22 @@
 					<Name>Mark of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWounds>1</AddToWounds>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>80</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWizard>2</AddToWizard>
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
@@ -653,11 +653,11 @@
 					<Name>Mark of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<ImmuneToPsychology/>
 				</Option>
 			</Options>
@@ -706,27 +706,27 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Braystaff</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Fear/>
 					<AddToWounds>1</AddToWounds>
 				</Option>
@@ -734,9 +734,9 @@
 					<Name>Mark of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<ImmuneToPsychology/>
 				</Option>
 				<Option>
@@ -784,18 +784,18 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -807,18 +807,18 @@
 				<Option>
 					<Name>Light armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -826,11 +826,11 @@
 					<Name>Mark of Khorne</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
@@ -838,11 +838,11 @@
 					<Name>Mark of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Fear/>
 					<AddToWounds>1</AddToWounds>
 				</Option>
@@ -850,11 +850,11 @@
 					<Name>Mark of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>70</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWizard>2</AddToWizard>
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
@@ -863,11 +863,11 @@
 					<Name>Mark of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<ImmuneToPsychology/>
 				</Option>
 			</Options>
@@ -916,27 +916,27 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Braystaff</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Mark of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Fear/>
 					<AddToWounds>1</AddToWounds>
 				</Option>
@@ -944,9 +944,9 @@
 					<Name>Mark of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<ImmuneToPsychology/>
 				</Option>
 			</Options>
@@ -1137,36 +1137,36 @@
 					<Name>Mark of Chaos Undivided</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>May re-roll failed Psychology tests</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToCast>1</AddToCast>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
 					<Type>Option</Type>
 					<Points>45</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
@@ -1174,24 +1174,24 @@
 					<Name>Mark of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Fear/>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<ImmuneToPsychology/>
 				</Option>
 			</Options>
@@ -1311,9 +1311,9 @@
 					<Name>Additional hand weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>4</Points>
 				</Option>
@@ -1322,9 +1322,9 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>6</Points>
 				</Option>
@@ -1461,9 +1461,9 @@
 					<Name>Additional hand weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>4</Points>
 				</Option>
@@ -1472,9 +1472,9 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>6</Points>
 				</Option>
@@ -1500,36 +1500,36 @@
 					<Name>Mark of Chaos Undivided</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>May re-roll failed Psychology tests</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToCast>1</AddToCast>
 				</Option>
 				<Option>
 					<Name>Mark of Khorne</Name>
 					<Type>Option</Type>
 					<Points>45</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
@@ -1537,24 +1537,24 @@
 					<Name>Mark of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Chaos Undivided</OnlyIfNot>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<ImmuneToPsychology/>
 				</Option>
 			</Options>
@@ -1593,9 +1593,9 @@
 					<Name>Additional hand weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>4</Points>
 				</Option>
@@ -1604,9 +1604,9 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>6</Points>
 				</Option>
@@ -1657,9 +1657,9 @@
 					<Name>Additional hand weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>6</Points>
 				</Option>
@@ -1668,9 +1668,9 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>8</Points>
 				</Option>
@@ -1684,11 +1684,11 @@
 					<Name>Mark of Tzeentch</Name>
 					<Type>Option</Type>
 					<Points>80</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWizard>2</AddToWizard>
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
@@ -1697,11 +1697,11 @@
 					<Name>Mark of Khorne</Name>
 					<Type>Option</Type>
 					<Points>35</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Frenzy/>
 					<AddToDispell>1</AddToDispell>
 				</Option>
@@ -1709,22 +1709,22 @@
 					<Name>Mark of Nurgle</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWounds>1</AddToWounds>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Mark of Tzeentch</OnlyIfNot>
 						<OnlyIfNot>Mark of Khorne</OnlyIfNot>
 						<OnlyIfNot>Mark of Nurgle</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<HitFirst/>
 				</Option>
 			</Options>
@@ -1796,44 +1796,44 @@
 				<Option>
 					<Name>Beast of Nurgle</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Fiend of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Bloodbeast of Khorne</OnlyIfNot>
 						<OnlyIfNot>Firewyrm of Tzeentch</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PoisonAttack/>
 					<Points>15</Points>
 				</Option>
 				<Option>
 					<Name>Fiend of Slaanesh</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Beast of Nurgle</OnlyIfNot>
 						<OnlyIfNot>Bloodbeast of Khorne</OnlyIfNot>
 						<OnlyIfNot>Firewyrm of Tzeentch</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>Movement 3D6</SpecialRule>
 					<Points>15</Points>
 				</Option>
 				<Option>
 					<Name>Bloodbeast of Khorne</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Beast of Nurgle</OnlyIfNot>
 						<OnlyIfNot>Fiend of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Firewyrm of Tzeentch</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToStrength>1</AddToStrength>
 					<Points>15</Points>
 				</Option>
 				<Option>
 					<Name>Firewyrm of Tzeentch</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Beast of Nurgle</OnlyIfNot>
 						<OnlyIfNot>Fiend of Slaanesh</OnlyIfNot>
 						<OnlyIfNot>Bloodbeast of Khorne</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>Strength 3 breath weapon</SpecialRule>
 					<Points>15</Points>
 				</Option>
