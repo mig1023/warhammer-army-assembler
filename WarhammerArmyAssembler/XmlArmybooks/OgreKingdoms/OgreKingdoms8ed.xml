@@ -874,24 +874,24 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
@@ -899,34 +899,34 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>12</Points>
 				</Option>
 				<Option>
 					<Name>Ogre pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Brace of Ogre pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>14</Points>
 				</Option>
 				<Option>
@@ -979,18 +979,18 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 			</Options>
@@ -1106,24 +1106,24 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1131,34 +1131,34 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>11</Points>
 				</Option>
 				<Option>
 					<Name>Ogre pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Brace of Ogre pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
@@ -1217,24 +1217,24 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Harpoon launcher</OnlyIfNot>
 						<OnlyIfNot>Blood vulture</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Harpoon launcher</OnlyIfNot>
 						<OnlyIfNot>Blood vulture</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1242,34 +1242,34 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Harpoon launcher</OnlyIfNot>
 						<OnlyIfNot>Blood vulture</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>11</Points>
 				</Option>
 				<Option>
 					<Name>Harpoon launcher</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Blood vulture</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Blood vulture</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Harpoon launcher</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
@@ -1325,20 +1325,20 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
@@ -1346,10 +1346,10 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>9</Points>
 				</Option>
 			</Options>
@@ -1401,9 +1401,9 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
@@ -1411,9 +1411,9 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>9</Points>
 				</Option>
 			</Options>
@@ -1528,9 +1528,9 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>1</Points>
 				</Option>
@@ -1538,9 +1538,9 @@
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>2</Points>
 				</Option>
@@ -1565,9 +1565,9 @@
 				<Option>
 					<Name>Look-out Gnoblar</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Standard bearer</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 			</Options>
@@ -1627,9 +1627,9 @@
 				<Option>
 					<Name>Look-out Gnoblar</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Standard bearer</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 			</Options>
@@ -1772,11 +1772,11 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>2</Points>
 				</Option>
@@ -1785,33 +1785,33 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>11</Points>
 				</Option>
 				<Option>
 					<Name>Ogre pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>7</Points>
 				</Option>
 				<Option>
 					<Name>Brace of Ogre pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>12</Points>
 				</Option>
@@ -1845,9 +1845,9 @@
 				<Option>
 					<Name>Look-out Gnoblar</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Standard bearer</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 			</Options>
@@ -1958,18 +1958,18 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>5</Points>
 				</Option>
@@ -1982,9 +1982,9 @@
 				<Option>
 					<Name>Brace of Ogre pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Brace of Ogre pistol</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -2167,18 +2167,18 @@
 					<Name>Chaintrap</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Harpoon Launcher</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<RealisedByDefault/>
 				</Option>
 				<Option>
 					<Name>Harpoon Launcher</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Chaintrap</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 			</Options>
 		</Unit>
