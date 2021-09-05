@@ -600,18 +600,18 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
@@ -788,18 +788,18 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
