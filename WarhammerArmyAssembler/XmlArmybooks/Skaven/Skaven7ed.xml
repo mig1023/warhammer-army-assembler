@@ -970,9 +970,9 @@
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<AddToWizard>1</AddToWizard>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Level 2 Wizard</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Level 2 Wizard</Name>
@@ -981,9 +981,9 @@
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<AddToWizard>2</AddToWizard>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Level 1 Wizard</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Warlock-Augmented Weapon</Name>
@@ -2001,17 +2001,17 @@
 					<Name>Smoke Bombs</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Deathrunner</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Weeping Blade</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Deathrunner</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Warp-grinder</Name>
@@ -2246,9 +2246,9 @@
 					<Name>Death Globe</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Bombardier</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Poison Wind Mortar</Name>
