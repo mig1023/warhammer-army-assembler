@@ -418,36 +418,36 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
 						<OnlyIfNot>Brace of handguns</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>14</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
 						<OnlyIfNot>Brace of handguns</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
 						<OnlyIfNot>Brace of handguns</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>12</Points>
 				</Option>
 				<Option>
@@ -456,23 +456,23 @@
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToInitiative>1</AddToInitiative>
 					<ArmourPiercing>1</ArmourPiercing>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Brace of handguns</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Brace of handguns</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>12</Points>
 				</Option>
 				<Option>
@@ -588,36 +588,36 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Ogre pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of Ogre pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
@@ -626,23 +626,23 @@
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToInitiative>1</AddToInitiative>
 					<ArmourPiercing>1</ArmourPiercing>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Brace of handguns</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
 					<Name>Brace of handguns</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
 						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>12</Points>
 				</Option>
 				<Option>
@@ -814,9 +814,9 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ironfists</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>4</Points>
 				</Option>
@@ -824,9 +824,9 @@
 					<Name>Ironfists</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>5</Points>
 				</Option>
@@ -858,9 +858,9 @@
 				<Option>
 					<Name>Look-out Gnoblar</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Standard bearer</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 			</Options>
@@ -924,9 +924,9 @@
 				<Option>
 					<Name>Look-out Gnoblar</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Standard bearer</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 			</Options>
@@ -1163,10 +1163,10 @@
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToInitiative>1</AddToInitiative>
 					<ArmourPiercing>1</ArmourPiercing>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Brace of handguns</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -1174,19 +1174,19 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
 						<OnlyIfNot>Brace of handguns</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Brace of handguns</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Cathalayan longsword</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 			</Options>
