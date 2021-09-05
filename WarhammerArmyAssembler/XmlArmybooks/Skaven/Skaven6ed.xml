@@ -544,18 +544,18 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -655,18 +655,18 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1318,18 +1318,18 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Slings</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>1</Points>
 				</Option>
 				<Option>
 					<Name>Slings</Name>
 					<Type>Option</Type>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
@@ -1432,9 +1432,9 @@
 					<Name>Poisoned Throwing stars</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Throwing stars</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 				</Option>
 				<Option>
