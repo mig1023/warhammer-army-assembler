@@ -611,19 +611,19 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
@@ -631,10 +631,10 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -659,13 +659,13 @@
 					<ImmuneToPsychology/>
 					<AddToWard>6</AddToWard>
 					<SpecialRule>Magic Resistance(1)</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Wild Rider</Name>
@@ -675,13 +675,13 @@
 					<SpecialRule>Magic Resistance(1)</SpecialRule>
 					<AddToAttacks>1</AddToAttacks>
 					<ImmuneToPsychology/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Waywatcher</Name>
@@ -689,13 +689,13 @@
 					<Points>45</Points>
 					<SpecialRule>Lethal shot</SpecialRule>
 					<SpecialRule>Forest Stalker</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Alter</Name>
@@ -705,47 +705,47 @@
 					<InitiativeTo>9</InitiativeTo>
 					<AddToAttacks>1</AddToAttacks>
 					<NotALeader/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Scout</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
 					<SpecialRule>Scout</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Eternal</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great Stag</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Wild Rider</OnlyIf>
-					</OnlyIfAnotherService>			
+					</Dependencies>			
 					<Mount/>
 				</Option>
 				<Option>
@@ -813,9 +813,9 @@
 					<Name>Unicorn</Name>
 					<Type>Option</Type>
 					<Points>65</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Glamourweave</OnlyIf>
-					</OnlyIfAnotherService>			
+					</Dependencies>			
 					<Mount/>
 				</Option>				
 				<Option>
@@ -899,19 +899,19 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
@@ -919,10 +919,10 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -947,13 +947,13 @@
 					<ImmuneToPsychology/>
 					<AddToWard>6</AddToWard>
 					<SpecialRule>Magic Resistance(1)</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Wild Rider</Name>
@@ -963,13 +963,13 @@
 					<SpecialRule>Magic Resistance(1)</SpecialRule>
 					<AddToAttacks>1</AddToAttacks>
 					<ImmuneToPsychology/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Waywatcher</Name>
@@ -977,13 +977,13 @@
 					<Points>35</Points>
 					<SpecialRule>Lethal shot</SpecialRule>
 					<SpecialRule>Forest Stalker</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Alter</Name>
@@ -993,47 +993,47 @@
 					<InitiativeTo>9</InitiativeTo>
 					<AddToAttacks>1</AddToAttacks>
 					<NotALeader/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Scout</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
 					<SpecialRule>Scout</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Eternal</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Eternal</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Wardancer</OnlyIfNot>
 						<OnlyIfNot>Wild Rider</OnlyIfNot>
 						<OnlyIfNot>Waywatcher</OnlyIfNot>
 						<OnlyIfNot>Alter</OnlyIfNot>
 						<OnlyIfNot>Scout</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great Stag</Name>
 					<Type>Option</Type>
 					<Points>50</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Wild Rider</OnlyIf>
-					</OnlyIfAnotherService>			
+					</Dependencies>			
 					<Mount/>
 				</Option>
 				<Option>
@@ -1102,9 +1102,9 @@
 					<Name>Unicorn</Name>
 					<Type>Option</Type>
 					<Points>65</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Glamourweave</OnlyIf>
-					</OnlyIfAnotherService>			
+					</Dependencies>			
 					<Mount/>
 				</Option>				
 				<Option>
