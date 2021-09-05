@@ -763,30 +763,30 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Dragon armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Dragon armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Dragon armour</Name>
 					<Type>Option</Type>
 					<Points>9</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
 				</Option>
@@ -1087,30 +1087,30 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Dragon armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Dragon armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Dragon armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
 				</Option>
@@ -2110,18 +2110,18 @@
 					<Type>Option</Type>
 					<Points>6</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Swap spear for bow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Exchange spear for bow</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Bow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
