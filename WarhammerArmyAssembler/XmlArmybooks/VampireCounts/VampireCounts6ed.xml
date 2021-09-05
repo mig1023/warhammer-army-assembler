@@ -17,9 +17,9 @@
 				<Name>Summon Bats</Name>
 				<Type>Weapon</Type>
 				<Points>65</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Von Carstein</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Once per game can summon either a Bat Swarm (one Base) or D3+1 Fell Bats</SpecialRule>
 				<Description>Once per game the Vampire can use this power at the start of one of his turns. He can choose to summon either a Bat Swarm (one Base) or D3+1 Fell Bats. Immediately calculate the Victory points value new unit. The uniy can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
 			</Artefact>
@@ -27,9 +27,9 @@
 				<Name>Call Winds</Name>
 				<Type>Weapon</Type>
 				<Points>55</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Von Carstein</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Call Wind instead of movement: all shooting is at -1 lo hit, all flying movement is impossible</SpecialRule>
 				<Description>At the beginning of each of his turns the Vampire can decide not to move in that Movement phase and attempt to call winds. Roll a dice: on a result of 1 nothing happens, on a 2 to 6 the Vampire summons a wild storm that will last until the beginning of his next turn. If he is engaged in close combat, wounded or killed, the storm ends immediately. The storm affects the entire battlefield. All shooting is at -1 lo hit. All flying movement is impossible and flying creatures have to use their gnuind Movement value.</Description>
 			</Artefact>
@@ -37,9 +37,9 @@
 				<Name>Walking Death</Name>
 				<Type>Weapon</Type>
 				<Points>35</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Von Carstein</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToCloseCombat>1</AddToCloseCombat>
 				<Description>The presence of one or more von Carstein Vampires with this power in a combat adds +1 io their side's combat resolution.</Description>
 			</Artefact>
@@ -47,9 +47,9 @@
 				<Name>Summon Wolves</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Von Carstein</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Once per game can summon D3 Dire Wolves</SpecialRule>
 				<Description>Once per game, the Vampire can use this power at the start of one of his turns to summon D3 Dire Wolves. Immediately calculate the Victory points value new unit. The uniy can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
 			</Artefact>
@@ -57,9 +57,9 @@
 				<Name>Aura of Dark Majesty</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Von Carstein</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Normal range of 12" for his troops to be able to march and use his Leadership is extended to 18"</SpecialRule>
 				<Description>If the Vampire is the army's General, the normal range of 12" for his troops to be able to march and use his Leadership is extended to 18".</Description>
 			</Artefact>
@@ -67,9 +67,9 @@
 				<Name>Wolf Form</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Von Carstein</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<MovementTo>9</MovementTo>
 				<Description>The Movement of the Vampire is increased to 9 as long as he is moving on foot</Description>
 			</Artefact>
@@ -79,9 +79,9 @@
 				<Name>Red Fury</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Blood Dragon</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToAttacks>1</AddToAttacks>
 				<Description>The Vampire has +1 Attack</Description>
 			</Artefact>
@@ -89,9 +89,9 @@
 				<Name>Blademaster</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Blood Dragon</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Model in base contact lose one of his Attacks, chosen by the Vampire</SpecialRule>
 				<Description>The Vampire can choose one model in base contact with him at the beginning of the Close Combat phase. The chosen model will lose one of his Attacks, chosen by the Vampire if he has different kinds of attack (for example, from a riding beast, bite attacks, etc).</Description>
 			</Artefact>
@@ -99,9 +99,9 @@
 				<Name>Heart Piercing</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Blood Dragon</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Re-roll missed close combat attacks in the first round of every combat</SpecialRule>
 				<Description>The Vampire can re-roll missed close combat attacks in the first round of every combat.</Description>
 			</Artefact>
@@ -109,9 +109,9 @@
 				<Name>Master Strike</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Blood Dragon</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<KillingBlow/>
 				<Description>The Vampire has the Killing Blow special rule.</Description>
 			</Artefact>
@@ -119,9 +119,9 @@
 				<Name>Strength of Steel</Name>
 				<Type>Weapon</Type>
 				<Points>15</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Blood Dragon</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<ChargeStrengthBonus>1</ChargeStrengthBonus>
 				<Description>The Vampire has +1 Strength the turn he charges.</Description>
 			</Artefact>
@@ -129,9 +129,9 @@
 				<Name>Honour or Death</Name>
 				<Type>Weapon</Type>
 				<Points>10</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Blood Dragon</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Enemy character must take a Leadership test and hide in the rear ranks, refusing to fight the Vampire, if the test is failed</SpecialRule>
 				<Description>At the start of a challenge, the enemy character selected to take on the Vampire must take a Leadership test before any blows are struck (a character Immune to Psychology is also immune to this effect). If the test is failed, the enemy character will change his mind and hide in the rear ranks, refusing to fight the Vampire. Then the combat will proceed as normal, with no challenges fought that turn and the Vampire will be free to fight against any models he is in contact with.</Description>
 			</Artefact>
@@ -141,9 +141,9 @@
 				<Name>Nehekhara's Noble Blood</Name>
 				<Type>Weapon</Type>
 				<Points>45</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Necrarch</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToCast>1</AddToCast>
 				<AddToDispell>1</AddToDispell>
 				<AddToWizard>1</AddToWizard>
@@ -153,9 +153,9 @@
 				<Name>The Awakening</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Necrarch</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>+D3 to the total number of Skeletons or Zombies created by Invocation of Nehek</SpecialRule>
 				<Description>Whenever the Vampire casts the Necromantic spell Invocation of Nehek he can add +D3 to the total number of Skeletons or Zombies created. For example, if he casts a level 2 Invocation, he can raise 2D6+D3 Skeletons.</Description>
 			</Artefact>
@@ -163,9 +163,9 @@
 				<Name>Dark Acolyte</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Necrarch</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToCast>1</AddToCast>
 				<Description>The presence of the Vampire on the battlefield adds one dice to the player's pile of Power dice (no effect on the Dispel dice).</Description>
 			</Artefact>
@@ -173,9 +173,9 @@
 				<Name>Unholy Cynosure</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Necrarch</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Once per game, can re-roll one of the dice rolled to cast a spell</SpecialRule>
 				<Description>Once per game, the Vampire can re-roll one of the dice rolled to cast a spell. This can be used to negate a Miscast result or could cause an Irresistible Force result.</Description>
 			</Artefact>
@@ -183,9 +183,9 @@
 				<Name>Master of the Black Arts</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Necrarch</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>The range of all spells is increased by 6"</SpecialRule>
 				<Description>The range of all spells cast by the Vampire is increased by 6". This power won't affect spells without a range (like Hand of Dust) nor the range or spells cast from bound spell items.</Description>
 			</Artefact>
@@ -193,9 +193,9 @@
 				<Name>Forbidden Lore</Name>
 				<Type>Weapon</Type>
 				<Points>15</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Necrarch</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Knows one more spell than he is normally allowed</SpecialRule>
 				<Description>The Vampire knows one more spell than he is normally allowed. This does not increase his Magic Level.</Description>
 			</Artefact>
@@ -205,9 +205,9 @@
 				<Name>Curse of the Revenant</Name>
 				<Type>Weapon</Type>
 				<Points>55</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Strigoi</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<Regeneration/>
 				<Description>The Vampire has the Regeneration special rule.</Description>
 			</Artefact>
@@ -215,9 +215,9 @@
 				<Name>Massive Monstrosity</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Strigoi</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToWounds>1</AddToWounds>
 				<Description>The Vampire has +1 Wound on his profile.</Description>
 			</Artefact>
@@ -225,9 +225,9 @@
 				<Name>Bat Form</Name>
 				<Type>Weapon</Type>
 				<Points>45</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Strigoi</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Fly</SpecialRule>
 				<Description>The model has the Fly special rule.</Description>
 			</Artefact>
@@ -235,9 +235,9 @@
 				<Name>Infinite Hatred</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Strigoi</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<Reroll>ToHit</Reroll>
 				<Description>The Vampire can re-roll all failed To Hit rolls.</Description>
 			</Artefact>
@@ -245,9 +245,9 @@
 				<Name>Summon Ghouls</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Strigoi</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Once per game can summon D3+1 Ghouls</SpecialRule>
 				<Description>Once per game, the Vampire can use this power at the start of one of his turns to summon D3+1 Ghouls. Immediately calculate the Victory points value of the new unit. The unit can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
 			</Artefact>
@@ -255,9 +255,9 @@
 				<Name>Iron Sinews</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Strigoi</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToStrength>1</AddToStrength>
 				<Description>The Vampire has +1 Strength on his profile.</Description>
 			</Artefact>
@@ -267,9 +267,9 @@
 				<Name>Seduction</Name>
 				<Type>Weapon</Type>
 				<Points>55</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Lahmia</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>One model in base contact with the Vampire must take a Leadership test, if the test is failed, the victim is controlled by the Vampire player in that Close Combat phase</SpecialRule>
 				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If the test is failed, the victim is controlled by the Vampire player in that Close Combat phase. The model will direct its attacks against his own side. The model cannot be attacked by either side in that Close Comhat phase but, after combat resolution has been worked out, he reverts immediately to the original player's control and can therefore use his Leadership for any Break tests and can be broken and pursued as normal. If the model has no friendly models in base contact, it will count as being dominated.</Description>
 			</Artefact>
@@ -277,9 +277,9 @@
 				<Name>Domination</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Lahmia</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>One model in base contact must take a Leadership test, if the test is failed, the victim cannot attack in that Close Combat phase and all attacks directed against the victim will hit automatically</SpecialRule>
 				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If the test is failed, the victim cannot attack in that Close Combat phase and all attacks directed against the victim will hit automatically.</Description>
 			</Artefact>
@@ -287,9 +287,9 @@
 				<Name>Quickblood</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Lahmia</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToWard>5</AddToWard>
 				<Description>The Vampire has a Ward save of 5+.</Description>
 			</Artefact>
@@ -297,9 +297,9 @@
 				<Name>Innocence Lost</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Lahmia</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<HitFirst/>
 				<Description>The Vampire always attacks first in close combat, even if charged. If an enemy has the same power because of a magic item or spell, hits are resolved in order of Initiative. If the Vampire and her enemy have the same Initiative, roll a dice to decide who attacks first.</Description>
 			</Artefact>
@@ -307,9 +307,9 @@
 				<Name>Transfix</Name>
 				<Type>Weapon</Type>
 				<Points>20</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Lahmia</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<Test Bet="Pass" Context="Round">Leadership</Test>
 				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack in that Close Combat phase.</Description>
 			</Artefact>
@@ -317,9 +317,9 @@
 				<Name>Beguile</Name>
 				<Type>Weapon</Type>
 				<Points>10</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Lahmia</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<Test Bet="Pass" Context="Round">Leadership</Test>
 				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack the Vampire in that the Close Combat phase.</Description>
 			</Artefact>
@@ -442,9 +442,9 @@
 				<Name>Asp Bow</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Lahmia</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Range 24", the bearer can pick any target it can see, hits are resolved at Strength 4 and count as Poisoned Attacks</SpecialRule>
 				<Description>Range 24". The bearer can pick any target it can see (including a character/Champion in a unit, a war machine's crew, a chariot/monster rider etc), but if he uses this special ability he suffers a -1 to hit. Note that the normal -1 modifier for shooting at a single model does not apply (but other to hit modifiers do apply) and a character/Champion cannot benefit from the "Look out Sir!" rule. Hits are resolved at Strength 4 and count as Poisoned Attacks.</Description>
 			</Artefact>
@@ -479,9 +479,9 @@
 				<Name>The Flayed Hauberk</Name>
 				<Type>Armour</Type>
 				<Points>30</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIfNot>Lahmia</OnlyIfNot>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<ArmourTo>1</ArmourTo>
 				<Description>1+ armour save. This cannot be improved by any means.</Description>
 			</Artefact>
@@ -489,9 +489,9 @@
 				<Name>The Cursed shield of Mousillon</Name>
 				<Type>Shield</Type>
 				<Points>25</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIfNot>Lahmia</OnlyIfNot>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToArmour>6</AddToArmour>
 				<SpecialRule>One enemy in base contact (bearer's choice) lose 1 Attack</SpecialRule>
 				<Description>Gives a 6+ armour save and may be combined with other equipment normally. One enemy in base contact (bearer's choice) lose 1 Attack. All Bretonnian Knights and Characters hate the model carrying the shield.</Description>
@@ -502,9 +502,9 @@
 				<Name>The Carstein Ring</Name>
 				<Type>AdditionalArmour</Type>
 				<OnlyForGroup>Vampire</OnlyForGroup>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIf>Von Carstein</OnlyIf>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<Points>75</Points>
 				<AddToWard>4</AddToWard>
 				<Regeneration/>
@@ -554,9 +554,9 @@
 				<Name>Power Familiar</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIfNot>Blood Dragon</OnlyIfNot>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<AddToCast>1</AddToCast>
 				<AddToDispell>1</AddToDispell>
 				<Description>The Familiar adds one dice to both the Power dice and the Dispel dice pool of the bearer's side.</Description>
@@ -580,9 +580,9 @@
 				<Name>Warrior Familiar</Name>
 				<Type>Arcane</Type>
 				<Points>30</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIfNot>Blood Dragon</OnlyIfNot>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>At the beginning of the Close Combat phase, before blows are struck, the familiar inflicts one Strength 5 hit on a single model in base contact with him</SpecialRule>
 				<Description>At the beginning of the Close Combat phase, before blows are struck, the familiar inflicts one Strength 5 hit on a single model chosen by the Wizard from among those in base contact with him.</Description>
 			</Artefact>
@@ -604,9 +604,9 @@
 				<Name>Spell Familiar</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<OnlyIfAnotherService>
+				<Dependencies>
 					<OnlyIfNot>Blood Dragon</OnlyIfNot>
-				</OnlyIfAnotherService>
+				</Dependencies>
 				<SpecialRule>Knows one more spell than he is normally allowed</SpecialRule>
 				<Description>The familiar's owner knows one more spell than he is normally allowed. This does not increase his magic level.</Description>
 			</Artefact>
@@ -823,23 +823,23 @@
 					<Name>Von Carstein</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Necrarch</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWeaponSkill>-2</AddToWeaponSkill>
 					<SpecialRule>+1 to the total rolled when trying to cast a spell</SpecialRule>
 					<SpecialRule>Cannot choose any mundane weapons or armour</SpecialRule>
@@ -848,12 +848,12 @@
 					<Name>Blood Dragon</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWeaponSkill>2</AddToWeaponSkill>
 					<AddToArmour>4</AddToArmour>
 					<SpecialRule>Full Plate Armour</SpecialRule>
@@ -863,12 +863,12 @@
 					<Name>Strigoi</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Hate/>
 					<SpecialRule>Cannot choose any mundane weapons or armour</SpecialRule>
@@ -878,12 +878,12 @@
 					<Name>Lahmia</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToInitiative>2</AddToInitiative>
 					<Hate/>
 					<SpecialRule>All models in base contact suffer a -1 to their Leadership</SpecialRule>
@@ -894,20 +894,20 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>6</Points>
 				</Option>
@@ -915,10 +915,10 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<Lance/>
 				</Option>
@@ -926,9 +926,9 @@
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
@@ -943,36 +943,36 @@
 					<Name>Nightmare</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Nightmare</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Winged Nightmare</Name>
 					<Type>Option</Type>
 					<Points>175</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Mount/>
 				</Option>
 				<Option>
 					<Name>Zombie Dragon</Name>
 					<Type>Option</Type>
 					<Points>300</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Mount/>
 				</Option>
 			</Options>
@@ -1011,23 +1011,23 @@
 					<Name>Von Carstein</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Necrarch</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWeaponSkill>-2</AddToWeaponSkill>
 					<SpecialRule>+1 to the total rolled when trying to cast a spell</SpecialRule>
 					<SpecialRule>Cannot choose any mundane weapons or armour</SpecialRule>
@@ -1036,12 +1036,12 @@
 					<Name>Blood Dragon</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWeaponSkill>2</AddToWeaponSkill>
 					<AddToArmour>4</AddToArmour>
 					<SpecialRule>Full Plate Armour</SpecialRule>
@@ -1051,12 +1051,12 @@
 					<Name>Strigoi</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Hate/>
 					<SpecialRule>Cannot choose any mundane weapons or armour</SpecialRule>
@@ -1066,12 +1066,12 @@
 					<Name>Lahmia</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToInitiative>2</AddToInitiative>
 					<Hate/>
 					<SpecialRule>All models in base contact suffer a -1 to their Leadership</SpecialRule>
@@ -1082,20 +1082,20 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<HitLast/>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>6</Points>
 				</Option>
@@ -1103,10 +1103,10 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<Lance/>
 				</Option>
@@ -1114,9 +1114,9 @@
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
@@ -1130,27 +1130,27 @@
 					<Name>Nightmare</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Nightmare</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Winged Nightmare</Name>
 					<Type>Option</Type>
 					<Points>175</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Mount/>
 				</Option>
 			</Options>
@@ -1202,9 +1202,9 @@
 					<Name>Barding</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Nightmare</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
@@ -1254,35 +1254,35 @@
 					<Name>Von Carstein</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Necrarch</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWeaponSkill>-2</AddToWeaponSkill>
 				</Option>
 				<Option>
 					<Name>Blood Dragon</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToWeaponSkill>2</AddToWeaponSkill>
 					<SpecialRule>Must always issue challenges and must always accept enemy challenges</SpecialRule>
 				</Option>
@@ -1290,12 +1290,12 @@
 					<Name>Strigoi</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Lahmia</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Hate/>
 					<SpecialRule>Cannot choose any mundane weapons or armour</SpecialRule>
@@ -1305,12 +1305,12 @@
 					<Name>Lahmia</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Von Carstein</OnlyIfNot>
 						<OnlyIfNot>Necrarch</OnlyIfNot>
 						<OnlyIfNot>Blood Dragon</OnlyIfNot>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToInitiative>2</AddToInitiative>
 					<Hate/>
 					<SpecialRule>All models in base contact suffer a -1 to their Leadership</SpecialRule>
@@ -1321,20 +1321,20 @@
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<HitLast/>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 				</Option>
@@ -1342,10 +1342,10 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 					<Lance/>
 				</Option>
@@ -1353,50 +1353,50 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIf>Von Carstein</OnlyIf>
 						<OnlyIf>Blood Dragon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Blood Dragon</OnlyIf>
 						<OnlyIf>Von Carstein</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Nightmare</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Strigoi</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Mount/>
 				</Option>
 				<Option>
 					<Name>Barding</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Nightmare</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
@@ -1463,18 +1463,18 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
@@ -1493,9 +1493,9 @@
 					<Name>Barding</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Nightmare</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
@@ -1553,9 +1553,9 @@
 					<Name>Barding</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Nightmare</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 			</Options>
@@ -1607,9 +1607,9 @@
 					<Name>Barding</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Nightmare</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 			</Options>

@@ -987,10 +987,10 @@
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
@@ -998,20 +998,20 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Lance/>
 				</Option>
 				<Option>
@@ -1460,10 +1460,10 @@
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
@@ -1471,20 +1471,20 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>8</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>8</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Lance/>
 				</Option>
 				<Option>
@@ -1596,9 +1596,9 @@
 				<Option>
 					<Name>Barding for Skeletal Steed</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Skeletal Steed</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>8</Points>
 				</Option>
 				<Option>
@@ -1885,18 +1885,18 @@
 					<Name>Balefire</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Unholy Lodestone</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Unholy Lodestone</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Balefire</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored</SpecialRule>
 				</Option>
 			</Options>
@@ -1936,18 +1936,18 @@
 					<Name>Rancid Maw</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Infested</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PoisonAttack/>
 				</Option>
 				<Option>
 					<Name>Infested</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Rancid Maw</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>When Terrorgheist removed as casualty, all units in base contact (friend or foe) take 3D6 Strength 2 hits</SpecialRule>
 				</Option>
 			</Options>
@@ -2156,18 +2156,18 @@
 					<Name>Balefire</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Unholy Lodestone</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Unholy Lodestone</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Balefire</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored</SpecialRule>
 				</Option>
 			</Options>
@@ -2720,18 +2720,18 @@
 					<Name>Rancid Maw</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Infested</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PoisonAttack/>
 				</Option>
 				<Option>
 					<Name>Infested</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Rancid Maw</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>When Terrorgheist removed as casualty, all units in base contact (friend or foe) take 3D6 Strength 2 hits</SpecialRule>
 				</Option>
 			</Options>
