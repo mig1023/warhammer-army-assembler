@@ -157,7 +157,7 @@ namespace WarhammerArmyAssembler
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
-        public SolidColorBrush ArmyBackgroundColor { get; set; }
+        public SolidColorBrush TooltipColor { get; set; }
 
         public string RulesView { get; set; }
 
@@ -385,7 +385,7 @@ namespace WarhammerArmyAssembler
                 TestListName = this.TestListName,
 
                 ArmyColor = this.ArmyColor,
-                ArmyBackgroundColor = this.ArmyBackgroundColor,
+                TooltipColor = this.TooltipColor,
             };
 
             if (this.SlotOf != null)
@@ -1196,8 +1196,8 @@ namespace WarhammerArmyAssembler
 
         public bool IsAnotherOptionIsIncompatible(Option option)
         {
-            bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.OnlyIfAnotherService, defaultResult: true);
-            bool noWhenNecessaryYes = IsAnotherOptionRealised(option.OnlyIfNotAnotherService, defaultResult: false);
+            bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.ServiceDependencies, defaultResult: true);
+            bool noWhenNecessaryYes = IsAnotherOptionRealised(option.ServiceInverseDependencies, defaultResult: false);
 
             return (yesWhenNecessaryNo || noWhenNecessaryYes);
         }

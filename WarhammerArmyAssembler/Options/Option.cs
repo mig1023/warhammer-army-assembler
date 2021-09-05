@@ -18,8 +18,8 @@ namespace WarhammerArmyAssembler
         public string IDView { get; set; }
         public OptionType Type { get; set; }
         public OnlyForType OnlyFor { get; set; }
-        public string[] OnlyIfAnotherService { get; set; }
-        public string[] OnlyIfNotAnotherService { get; set; }
+        public string[] ServiceDependencies { get; set; }
+        public string[] ServiceInverseDependencies { get; set; }
         public bool OnlyOneInArmy { get; set; }
         public bool OnlyOneForSuchUnits { get; set; }
         public string OnlyForGroup { get; set; }
@@ -183,8 +183,8 @@ namespace WarhammerArmyAssembler
             OnlyOneInArmy = this.OnlyOneInArmy,
             OnlyOneForSuchUnits = this.OnlyOneForSuchUnits,
             OnlyFor = this.OnlyFor,
-            OnlyIfAnotherService = this.OnlyIfAnotherService,
-            OnlyIfNotAnotherService = this.OnlyIfNotAnotherService,
+            ServiceDependencies = this.ServiceDependencies,
+            ServiceInverseDependencies = this.ServiceInverseDependencies,
             OnlyForGroup = this.OnlyForGroup,
             Group = this.Group,
             AutoHit = this.AutoHit,
