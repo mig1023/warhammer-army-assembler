@@ -727,9 +727,9 @@
 					<NoArmour/>
 					<AutoWound/>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Ghal Maraz</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<RealisedByDefault/>
 				</Option>
 				<Option>
@@ -739,9 +739,9 @@
 					<AutoWound/>
 					<MultiWounds>D3</MultiWounds>
 					<Points>30</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>The Reikland Runefang</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Deathclaw</Name>
@@ -770,9 +770,9 @@
 				<Option>
 					<Name>Barding for warhorse</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Warhorse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
@@ -997,13 +997,13 @@
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
@@ -1011,80 +1011,80 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>7</Points>
 					<Lance/>
 				</Option>
 				<Option>
 					<Name>Handgun</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Longbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Full plate armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>9</Points>
 					<AddToArmour>4</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Full plate armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -1115,9 +1115,9 @@
 				<Option>
 					<Name>Barding for warhorse</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Warhorse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
@@ -1174,9 +1174,9 @@
 					<Name>Barding for Warhorse</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Warhorse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -1244,9 +1244,9 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
@@ -1254,9 +1254,9 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -1288,9 +1288,9 @@
 					<Name>Barding for Warhorse</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Warhorse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 			</Options>
@@ -1337,18 +1337,18 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lance</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>7</Points>
 					<Lance/>
 				</Option>
@@ -1526,13 +1526,13 @@
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
@@ -1540,80 +1540,80 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>7</Points>
 					<Lance/>
 				</Option>
 				<Option>
 					<Name>Handgun</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Longbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Full plate armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<AddToArmour>4</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Full plate armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -1638,9 +1638,9 @@
 				<Option>
 					<Name>Barding for warhorse</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Warhorse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
@@ -1698,9 +1698,9 @@
 					<Name>Barding for Warhorse</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Warhorse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 			</Options>
@@ -1747,9 +1747,9 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
@@ -1757,9 +1757,9 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
@@ -1784,9 +1784,9 @@
 					<Name>Barding for Warhorse</Name>
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Warhorse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 			</Options>
@@ -1825,68 +1825,68 @@
 				<Option>
 					<Name>Grenade blunderbuss</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Hochland long rifke</OnlyIfNot>
 						<OnlyIfNot>Pigeon bombs</OnlyIfNot>
 						<OnlyIfNot>Repeater handgun</OnlyIfNot>
 						<OnlyIfNot>Repeater pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Hochland long rifke</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Grenade blunderbuss</OnlyIfNot>
 						<OnlyIfNot>Pigeon bombs</OnlyIfNot>
 						<OnlyIfNot>Repeater handgun</OnlyIfNot>
 						<OnlyIfNot>Repeater pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>20</Points>
 				</Option>
 				<Option>
 					<Name>Pigeon bombs</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Grenade blunderbuss</OnlyIfNot>
 						<OnlyIfNot>Hochland long rifke</OnlyIfNot>
 						<OnlyIfNot>Repeater handgun</OnlyIfNot>
 						<OnlyIfNot>Repeater pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>20</Points>
 				</Option>
 				<Option>
 					<Name>Repeater handgun</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Grenade blunderbuss</OnlyIfNot>
 						<OnlyIfNot>Hochland long rifke</OnlyIfNot>
 						<OnlyIfNot>Pigeon bombs</OnlyIfNot>
 						<OnlyIfNot>Repeater pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Repeater pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Grenade blunderbuss</OnlyIfNot>
 						<OnlyIfNot>Hochland long rifke</OnlyIfNot>
 						<OnlyIfNot>Pigeon bombs</OnlyIfNot>
 						<OnlyIfNot>Repeater handgun</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Pistol</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Handgun</OnlyIfNot>
 						<OnlyIfNot>Longbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
@@ -1910,9 +1910,9 @@
 				<Option>
 					<Name>Barding for warhorse</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Warhorse</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
 				</Option>
@@ -1959,18 +1959,18 @@
 					<Name>Pistol</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Brace of pistols</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<RealisedByDefault/>
 				</Option>
 				<Option>
 					<Name>Brace of pistols</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
@@ -2549,31 +2549,31 @@
 				<Option>
 					<Name>Brace pistols for Marksman</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Marksman</OnlyIf>
 						<OnlyIfNot>Hochland long rifle for Marksman</OnlyIfNot>
 						<OnlyIfNot>Repeater handgun for Marksman</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Hochland long rifle for Marksman</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Marksman</OnlyIf>
 						<OnlyIfNot>Repeater handgun for Marksman</OnlyIfNot>
 						<OnlyIfNot>Brace pistols for Marksman</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>20</Points>
 				</Option>
 				<Option>
 					<Name>Repeater handgun for Marksman</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Marksman</OnlyIf>
 						<OnlyIfNot>Hochland long rifle for Marksman</OnlyIfNot>
 						<OnlyIfNot>Brace pistols for Marksman</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -2832,9 +2832,9 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Halberd</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Lance/>
 					<RealisedByDefault/>
 				</Option>
@@ -2842,9 +2842,9 @@
 					<Name>Halberd</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Lance</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToStrength>1</AddToStrength>
 				</Option>
 				<Option>
@@ -3024,19 +3024,19 @@
 				<Option>
 					<Name>Repeater pistol for Outrider</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Outrider</OnlyIf>
 						<OnlyIfNot>Repeater Handgun for Outrider</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Repeater Handgun for Outrider</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Outrider</OnlyIf>
 						<OnlyIfNot>Repeater pistol for Outrider</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 			</Options>
@@ -3096,19 +3096,19 @@
 				<Option>
 					<Name>Brace of pistol for Sharpshooter</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Sharpshooter</OnlyIf>
 						<OnlyIfNot>Grenade launching for Sharpshooter</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Grenade launching for Sharpshooter</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Sharpshooter</OnlyIf>
 						<OnlyIfNot>Brace of pistol for Sharpshooter</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 			</Options>
