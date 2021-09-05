@@ -645,10 +645,14 @@ namespace WarhammerArmyAssembler.Interface
                 },
                 new TextBlock
                 {
-                    Text = String.Format("{0}th Edition\n\n{1}", version, description),
-                    TextWrapping = TextWrapping.Wrap,
+                    Text = String.Format("{0}th Edition", version),
                 },
-
+                new TextBlock
+                {
+                    Text = String.Format("\n{0}", description),
+                    TextWrapping = TextWrapping.Wrap,
+                    FontSize = 9,
+                },
             }
         };
     }
