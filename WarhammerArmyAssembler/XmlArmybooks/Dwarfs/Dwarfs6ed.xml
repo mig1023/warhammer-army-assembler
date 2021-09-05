@@ -770,62 +770,62 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Pistol</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Crossbow</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf handgun</Name>
 					<Type>Option</Type>
 					<Points>21</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Crossbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Gromril armour</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>4</AddToArmour>
 				</Option>
 				<Option>
@@ -876,30 +876,30 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Gromril armour</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>4</AddToArmour>
 				</Option>
 				<Option>
@@ -949,9 +949,9 @@
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>6</Points>
@@ -959,9 +959,9 @@
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>6</Points>
 				</Option>
@@ -1000,62 +1000,62 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Pistol</Name>
 					<Type>Option</Type>
 					<Points>7</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Crossbow</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf handgun</Name>
 					<Type>Option</Type>
 					<Points>14</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Crossbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Gromril armour</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>4</AddToArmour>
 				</Option>
 				<Option>
@@ -1106,30 +1106,30 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Gromril armour</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>4</AddToArmour>
 				</Option>
 				<Option>
@@ -1169,28 +1169,28 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Pistol</OnlyIfNot>
 						<OnlyIfNot>Brace of pistols</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Pistol</Name>
 					<Type>Option</Type>
 					<Points>7</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Brace of pistols</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Brace of pistols</Name>
 					<Type>Option</Type>
 					<Points>14</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Pistol</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf handgun</Name>
@@ -1201,30 +1201,30 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Gromril armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Gromril armour</Name>
 					<Type>Option</Type>
 					<Points>8</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Light armour</OnlyIfNot>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>4</AddToArmour>
 				</Option>
 			</Options>
@@ -1270,9 +1270,9 @@
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>4</Points>
@@ -1280,9 +1280,9 @@
 				<Option>
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 				</Option>
@@ -1498,9 +1498,9 @@
 					<Name>Dwarf pistols</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Veteran</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 			</Options>
 		</Unit>
