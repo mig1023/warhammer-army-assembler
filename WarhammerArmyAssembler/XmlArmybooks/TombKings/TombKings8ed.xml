@@ -809,18 +809,18 @@
 				<Option>
 					<Name>2 additional Skeletal Steeds</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Skeleton Chariot</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>15</Points>
 				</Option>
 				<Option>
 					<Name>Fly special rule</Name>
 					<Type>Option</Type>
 					<SpecialRule>Fly</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Skeleton Chariot</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>30</Points>
 				</Option>
 			</Options>
@@ -908,10 +908,10 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -919,19 +919,19 @@
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<Flail/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Flail</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
@@ -1177,10 +1177,10 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1188,19 +1188,19 @@
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<Fail/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Flail</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
@@ -1265,32 +1265,32 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
 					<Type>Option</Type>
 					<AddToStrength>1</AddToStrength>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
@@ -1298,11 +1298,11 @@
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<Fail/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -1418,10 +1418,10 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -1429,19 +1429,19 @@
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<Fail/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Flail</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
@@ -2165,9 +2165,9 @@
 					<Type>Option</Type>
 					<AddToStrength>-2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>0</Points>
 				</Option>
 				<Option>
@@ -2175,9 +2175,9 @@
 					<Type>Option</Type>
 					<AddToStrength>-2</AddToStrength>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great bow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>0</Points>
 				</Option>
 				<Option>
@@ -2372,10 +2372,10 @@
 					<Name>Additional hand weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Bow of the desert</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
@@ -2383,19 +2383,19 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
 						<OnlyIfNot>Bow of the desert</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
 					<Name>Bow of the desert</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>20</Points>
 				</Option>
 			</Options>

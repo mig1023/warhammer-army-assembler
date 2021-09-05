@@ -480,10 +480,10 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 				</Option>
 				<Option>
@@ -491,19 +491,19 @@
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<Flail/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Flail</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>3</Points>
 				</Option>
 				<Option>
@@ -607,10 +607,10 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Flail</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>4</Points>
 				</Option>
 				<Option>
@@ -618,19 +618,19 @@
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
 					<Fail/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Flail</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>2</Points>
 				</Option>
 				<Option>
@@ -854,9 +854,9 @@
 					<Type>Option</Type>
 					<Points>0</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Shields and spears</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
@@ -864,9 +864,9 @@
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Shields</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
 				<Option>
