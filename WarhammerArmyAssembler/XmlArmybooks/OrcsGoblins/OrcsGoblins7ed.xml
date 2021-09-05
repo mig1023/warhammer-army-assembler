@@ -647,9 +647,9 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Black Orc</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
@@ -669,19 +669,19 @@
 					<Type>Option</Type>
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Black Orc</OnlyIf>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
@@ -859,9 +859,9 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Mount/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Night Goblin</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Goblin Wolf Chariot</Name>
@@ -978,12 +978,12 @@
 					<SpecialRule>BSB</SpecialRule>
 					<OnlyOneInArmy/>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Shield</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
@@ -991,10 +991,10 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Black Orc</OnlyIfNot>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
@@ -1002,46 +1002,46 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Black Orc</OnlyIf>
 						<OnlyIfNot>Light armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Boar</Name>
@@ -1152,12 +1152,12 @@
 					<SpecialRule>BSB</SpecialRule>
 					<OnlyOneInArmy/>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Shield</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
@@ -1165,9 +1165,9 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Additional weapon</Name>
@@ -1175,18 +1175,18 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Light armour</Name>
@@ -1199,9 +1199,9 @@
 					<Type>Option</Type>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Wolf</Name>
@@ -1220,9 +1220,9 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Mount/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Night Goblin</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Goblin Wolf chariot</Name>
