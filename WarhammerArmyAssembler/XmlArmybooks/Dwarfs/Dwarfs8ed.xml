@@ -945,28 +945,28 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dwarf crossbow</OnlyIfNot>
 						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf crossbow</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf handgun</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Dwarf crossbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf pistol</Name>
@@ -986,17 +986,17 @@
 					<AddToArmour>5</AddToArmour>
 					<AddToWounds>2</AddToWounds>
 					<Mount/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Oath Stone</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Oath Stone</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Shieldbearers</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 			</Options>
 			<SpecialRulesAndAmmunition>
@@ -1251,28 +1251,28 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dwarf crossbow</OnlyIfNot>
 						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf crossbow</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Dwarf handgun</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf handgun</Name>
 					<Type>Option</Type>
 					<Points>12</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
 						<OnlyIfNot>Dwarf crossbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Dwarf pistol</Name>
@@ -1402,17 +1402,17 @@
 					<Name>Dwarf pistol</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Brace of Dwarf pistols</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Brace of Dwarf pistols</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dwarf pistol</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
@@ -1727,9 +1727,9 @@
 					<Name>Dwarf pistols</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Veteran</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -1938,17 +1938,17 @@
 					<Name>A brace of drakefire pistols</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Ironbeard</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Cinderblast bombs</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Ironbeard</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -2023,9 +2023,9 @@
 					<Type>Option</Type>
 					<Points>25</Points>
 					<SpecialRule>Can re-roll a failed arrival for its Ambushers special rule</SpecialRule>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Prospector</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -2466,27 +2466,27 @@
 					<Name>Cinderblast Bomb</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Ironwarden</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Brace of Drakefire pistols</Name>
 					<Type>Option</Type>
 					<Points>0</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Ironwarden</OnlyIf>
 						<OnlyIfNot>Trollhammer torpedo</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Trollhammer torpedo</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Ironwarden</OnlyIf>
 						<OnlyIfNot>Brace of Drakefire pistols</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
