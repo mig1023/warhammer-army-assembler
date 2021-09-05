@@ -931,22 +931,22 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>3</Points>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToStrength>1</AddToStrength>
 					<Points>3</Points>
 				</Option>
@@ -954,22 +954,22 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>7</Points>
 					<Lance/>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>6</Points>
@@ -977,28 +977,28 @@
 				<Option>
 					<Name>Repeater Crossbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Repeater handbow</OnlyIfNot>
 						<OnlyIfNot>Pair of repeater handbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Repeater handbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Repeater Crossbow</OnlyIfNot>
 						<OnlyIfNot>Pair of repeater handbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Pair of repeater handbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Repeater Crossbow</OnlyIfNot>
 						<OnlyIfNot>Repeater handbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
@@ -1517,33 +1517,33 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToStrength>1</AddToStrength>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Points>4</Points>
@@ -1552,39 +1552,39 @@
 					<Name>Lance</Name>
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>6</Points>
 					<Lance/>
 				</Option>
 				<Option>
 					<Name>Repeater Crossbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Repeater handbow</OnlyIfNot>
 						<OnlyIfNot>Pair of repeater handbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Repeater handbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Repeater Crossbow</OnlyIfNot>
 						<OnlyIfNot>Pair of repeater handbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Pair of repeater handbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Repeater Crossbow</OnlyIfNot>
 						<OnlyIfNot>Repeater handbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>10</Points>
 				</Option>
 				<Option>
@@ -1689,10 +1689,10 @@
 					<Name>Cry of War</Name>
 					<Type>Option</Type>
 					<Points>15</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Witchbrew</OnlyIfNot>
 						<OnlyIfNot>Rune of Khaine</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Fear/>
 					<SpecialRule>All Fear tests taken by enemy units in base contact with this model must be taken with a -3 penalty to Leadership</SpecialRule>
 				</Option>
@@ -1700,10 +1700,10 @@
 					<Name>Witchbrew</Name>
 					<Type>Option</Type>
 					<Points>30</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Cry of War</OnlyIfNot>
 						<OnlyIfNot>Rune of Khaine</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Frenzy/>
 					<SpecialRule>All models in the same unit, have the Frenzy special rule. If they already have the Frenzy special rule, that Frenzy grants +2 Attacks instead of just +1, but the unit suffers a -3 penalty to Leadership when testing not to declare a charge</SpecialRule>
 				</Option>
@@ -1711,10 +1711,10 @@
 					<Name>Rune of Khaine</Name>
 					<Type>Option</Type>
 					<Points>40</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Cry of War</OnlyIfNot>
 						<OnlyIfNot>Witchbrew</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<SpecialRule>+D3 Attacks (roll each round of combat, immediately before the model attacks)</SpecialRule>
 				</Option>
 				<Option>
@@ -1773,47 +1773,47 @@
 					<Name>Additional weapon</Name>
 					<Type>Option</Type>
 					<OnlyFor>Infantry</OnlyFor>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Repeater handbow</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Repeater handbow</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>5</Points>
 				</Option>
 				<Option>
 					<Name>Black Lotus</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dark Venom</OnlyIfNot>
 						<OnlyIfNot>Manbane</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>15</Points>
 					<SpecialRule>For each unsaved Wound, enemy suffers a -1 penalty to their Leadership for the rest of the game</SpecialRule>
 				</Option>
 				<Option>
 					<Name>Dark Venom</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Black Lotus</OnlyIfNot>
 						<OnlyIfNot>Manbane</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>20</Points>
 					<KillingBlow/>
 				</Option>
 				<Option>
 					<Name>Manbane</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Black Lotus</OnlyIfNot>
 						<OnlyIfNot>Dark Venom</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<Points>20</Points>
 					<AddToWound>1</AddToWound>
 				</Option>
@@ -2385,18 +2385,18 @@
 					<Name>Additional hand weapon</Name>
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Repeater handbows</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>2</Points>
 				</Option>
 				<Option>
 					<Name>Repeater handbows</Name>
 					<Type>Option</Type>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<PerModel/>
 					<Points>2</Points>
 				</Option>
@@ -2410,9 +2410,9 @@
 					<Name>A brace of repeater handbows</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Reaver</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Musician</Name>
@@ -2729,9 +2729,9 @@
 					<AddToAttacks>2</AddToAttacks>
 					<Points>2</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
@@ -2740,9 +2740,9 @@
 					<HitLast/>
 					<Points>2</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Light armour</Name>
