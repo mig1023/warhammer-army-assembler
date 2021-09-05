@@ -1023,24 +1023,24 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
 					<Type>Option</Type>
 					<AddToStrength>1</AddToStrength>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Lance</Name>
@@ -1048,35 +1048,35 @@
 					<OnlyFor>Mount</OnlyFor>
 					<Points>7</Points>
 					<Lance/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Longbow</Name>
@@ -1087,19 +1087,19 @@
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>6</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dragon armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Dragon armour</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Lion cloak</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
 				</Option>
@@ -1113,9 +1113,9 @@
 					<Name>Lion cloak</Name>
 					<Type>Option</Type>
 					<Points>3</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dragon armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
@@ -1128,9 +1128,9 @@
 					<Name>Ithilmar barding</Name>
 					<Type>Option</Type>
 					<Points>7</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Elven Steed</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great Eagle</Name>
@@ -1142,17 +1142,17 @@
 					<Name>Swiftsense</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Great Eagle</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Shredding Talon</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Great Eagle</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Giffon</Name>
@@ -1164,17 +1164,17 @@
 					<Name>Swooping Strike</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Giffon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Swiftsense</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Giffon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Sun Dragon</Name>
@@ -1247,9 +1247,9 @@
 					<Name>Ithilmar barding</Name>
 					<Type>Option</Type>
 					<Points>7</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Elven Steed</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great Eagle</Name>
@@ -1261,17 +1261,17 @@
 					<Name>Swiftsense</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Great Eagle</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Shredding Talon</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Great Eagle</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Sun Dragon</Name>
@@ -1532,24 +1532,24 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<AddToAttacks>1</AddToAttacks>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Halberd</Name>
 					<Type>Option</Type>
 					<AddToStrength>1</AddToStrength>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Lance</Name>
@@ -1557,35 +1557,35 @@
 					<OnlyFor>Mount</OnlyFor>
 					<Points>6</Points>
 					<Lance/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Points>2</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Great weapon</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great weapon</Name>
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Additional weapon</OnlyIfNot>
 						<OnlyIfNot>Halberd</OnlyIfNot>
 						<OnlyIfNot>Lance</OnlyIfNot>
 						<OnlyIfNot>Spear</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Longbow</Name>
@@ -1596,19 +1596,19 @@
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dragon armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
 					<Name>Dragon armour</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Heavy armour</OnlyIfNot>
 						<OnlyIfNot>Lion cloak</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
 				</Option>
@@ -1622,9 +1622,9 @@
 					<Name>Lion cloak</Name>
 					<Type>Option</Type>
 					<Points>4</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Dragon armour</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
 				<Option>
@@ -1637,9 +1637,9 @@
 					<Name>Ithilmar barding</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Elven Steed</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Great Eagle</Name>
@@ -1651,17 +1651,17 @@
 					<Name>Swiftsense</Name>
 					<Type>Option</Type>
 					<Points>10</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Great Eagle</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Shredding Talon</Name>
 					<Type>Option</Type>
 					<Points>5</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Great Eagle</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Giffon</Name>
@@ -1673,17 +1673,17 @@
 					<Name>Swooping Strike</Name>
 					<Type>Option</Type>
 					<Points>25</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Giffon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Swiftsense</Name>
 					<Type>Option</Type>
 					<Points>20</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Giffon</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Battle Standard Bearer</Name>
@@ -1745,9 +1745,9 @@
 					<Name>Ithilmar barding</Name>
 					<Type>Option</Type>
 					<Points>7</Points>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIf>Elven Steed</OnlyIf>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 			</Options>
 		</Hero>
@@ -2579,18 +2579,18 @@
 					<Type>Option</Type>
 					<Points>3</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Replace spears with bows</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Replace spears with bows</Name>
 					<Type>Option</Type>
 					<Points>1</Points>
 					<PerModel/>
-					<OnlyIfAnotherService>
+					<Dependencies>
 						<OnlyIfNot>Bows</OnlyIfNot>
-					</OnlyIfAnotherService>
+					</Dependencies>
 				</Option>
 				<Option>
 					<Name>Harbinger</Name>
