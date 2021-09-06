@@ -6,7 +6,7 @@ namespace WarhammerArmyAssembler.Army
 {
     class Params
     {
-        public enum BasesTypes { normal, large, cavalry };
+        public enum BasesTypes { normal, large, cavalry, chariot };
 
 
         public static double GetArmyPoints()
@@ -185,12 +185,14 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (Unit entry in Army.Data.Units.Values)
             {
-                bool cavalry = entry.MountOn > 1 || !String.IsNullOrEmpty(entry.MountInit);
-                bool largeBase = (type == BasesTypes.large) && entry.LargeBase;
-                bool cavalryBase = (type == BasesTypes.cavalry) && cavalry;
-                bool normalBase = (type == BasesTypes.normal) && !entry.LargeBase && !cavalry;
+                bool cavalry = (entry.MountOn > 1 || !String.IsNullOrEmpty(entry.MountInit));
 
-                if (largeBase || cavalryBase || normalBase)
+                bool chariotBase = (type == BasesTypes.chariot) && entry.Chariot;
+                bool largeBase = (type == BasesTypes.large) && entry.LargeBase;
+                bool cavalryBase = (type == BasesTypes.cavalry) && cavalry && !entry.Chariot;
+                bool normalBase = (type == BasesTypes.normal) && !entry.LargeBase && !cavalry && !entry.Chariot;
+
+                if (largeBase || cavalryBase || normalBase || chariotBase)
                     number += entry.Size;
             }
 

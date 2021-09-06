@@ -38,8 +38,10 @@ namespace WarhammerArmyAssembler.Interface
         public static string armyHeroes() => String.Format("LORDS:\n{0}\n\nHEROES:\n{1}",
             UnitsByType(Unit.UnitType.Lord), UnitsByType(Unit.UnitType.Hero));
 
-        public static string armyModels() => String.Format("Normal base:\t{0}\n\nCavalry base:\t{1}\n\nLarge base:\t{2}",
-            UnitsByBase(Army.Params.BasesTypes.normal), UnitsByBase(Army.Params.BasesTypes.cavalry), UnitsByBase(Army.Params.BasesTypes.large));
+        public static string armyModels() => String.Format(
+            "Normal base:\t{0}\n\nCavalry base:\t{1}\n\nLarge base:\t{2}\n\nChariots:\t\t{3}",
+            UnitsByBase(Army.Params.BasesTypes.normal), UnitsByBase(Army.Params.BasesTypes.cavalry),
+            UnitsByBase(Army.Params.BasesTypes.large), UnitsByBase(Army.Params.BasesTypes.chariot));
 
         private static string UnitsByType(Unit.UnitType u) => Army.Params.GetUnitsListByType(u);
 
