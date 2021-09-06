@@ -186,11 +186,12 @@ namespace WarhammerArmyAssembler.Army
             foreach (Unit entry in Army.Data.Units.Values)
             {
                 bool cavalry = (entry.MountOn > 1 || !String.IsNullOrEmpty(entry.MountInit));
+                bool chariot = entry.Chariot > 0;
 
-                bool chariotBase = (type == BasesTypes.chariot) && entry.Chariot;
+                bool chariotBase = (type == BasesTypes.chariot) && chariot;
                 bool largeBase = (type == BasesTypes.large) && entry.LargeBase;
-                bool cavalryBase = (type == BasesTypes.cavalry) && cavalry && !entry.Chariot;
-                bool normalBase = (type == BasesTypes.normal) && !entry.LargeBase && !cavalry && !entry.Chariot;
+                bool cavalryBase = (type == BasesTypes.cavalry) && cavalry && !chariot;
+                bool normalBase = (type == BasesTypes.normal) && !entry.LargeBase && !cavalry && !chariot;
 
                 if (largeBase || cavalryBase || normalBase || chariotBase)
                     number += entry.Size;

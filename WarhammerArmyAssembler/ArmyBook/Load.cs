@@ -106,7 +106,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 PersonifiedHero = BoolParse(xmlUnit["PersonifiedHero"]),
                 WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]),
-                Chariot = BoolParse(xmlUnit["Chariot"]),
+                Chariot = IntParse(xmlUnit["Chariot"]),
             };
 
             XmlNode additionalParam = xmlUnit["AdditionalParam"];

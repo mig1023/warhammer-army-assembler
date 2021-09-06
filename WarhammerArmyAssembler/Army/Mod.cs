@@ -23,6 +23,9 @@ namespace WarhammerArmyAssembler.Army
 
             Unit newMount = mount.Clone();
 
+            if (Army.Data.Units[unit.ArmyID].Chariot > 0)
+                newMount.Size = Army.Data.Units[unit.ArmyID].Chariot;
+
             int newMountID = GetNextIndex();
             Army.Data.Units[unit.ArmyID].MountOn = newMountID;
             newMount.ArmyID = newMountID;
