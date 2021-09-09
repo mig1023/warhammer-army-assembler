@@ -27,10 +27,17 @@ namespace WarhammerArmyAssembler.Test
 
         public static void PrepareUnit(Unit unit)
         {
-            Test.Data.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+            Data.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
             if (unit.MountOn > 0)
-                Test.Data.unitMount = Army.Data.Units[unit.MountOn].Clone().GetOptionRules(directModification: true).GetUnitMultiplier(Test.Data.unit.Size);
+            {
+                int size = (Army.Data.Units[unit.ArmyID].Chariot > 0 ? Army.Data.Units[unit.ArmyID].Chariot : Data.unit.Size);
+
+                Test.Data.unitMount = Army.Data.Units[unit.MountOn]
+                    .Clone()
+                    .GetOptionRules(directModification: true)
+                    .GetUnitMultiplier(size);
+            }
             else
                 Test.Data.unitMount = null;
         }
