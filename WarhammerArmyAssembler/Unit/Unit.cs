@@ -140,7 +140,7 @@ namespace WarhammerArmyAssembler
         public Brush InterfaceColor { get; set; }
         public bool GroopBold { get; set; }
 
-        public bool PersonifiedHero { get; set; }
+        public bool Personified { get; set; }
         public bool ArmyGeneral { get; set; }
         public bool WeaponTeam { get; set; }
         public bool NotALeader { get; set; }
@@ -372,7 +372,7 @@ namespace WarhammerArmyAssembler
 
                 SizableType = this.SizableType,
                 VisibleType = this.VisibleType,
-                PersonifiedHero = this.PersonifiedHero,
+                Personified = this.Personified,
                 ArmyGeneral = this.ArmyGeneral,
                 WeaponTeam = this.WeaponTeam,
                 NotALeader = this.NotALeader,
@@ -850,7 +850,7 @@ namespace WarhammerArmyAssembler
         {
             string describe = String.Format("\nUnit type: {0}", Type);
 
-            if (PersonifiedHero)
+            if (Personified)
                 describe += " (personified)";
 
             if (!IsHeroOrHisMount())

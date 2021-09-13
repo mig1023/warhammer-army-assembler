@@ -162,7 +162,7 @@ namespace WarhammerArmyAssembler.Interface
             int allHeroes = Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord) + Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero);
             bool lordInHeroSlot = (unit.Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
 
-            if (unit.PersonifiedHero && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
+            if (unit.Personified && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
                 Error("Personalities cannot be repeated");
 
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)

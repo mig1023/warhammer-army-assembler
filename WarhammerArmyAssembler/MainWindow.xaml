@@ -347,7 +347,7 @@
                                                     <DataTrigger Binding="{Binding Artefacts}" Value="True">
                                                         <Setter Property="TextBlock.Foreground" Value="LightGray"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding PersonifiedHero}" Value="True">
+                                                    <DataTrigger Binding="{Binding Personified}" Value="True">
                                                         <Setter Property="Foreground" Value="LightGray"/>
                                                     </DataTrigger>
                                                 </Style.Triggers>
