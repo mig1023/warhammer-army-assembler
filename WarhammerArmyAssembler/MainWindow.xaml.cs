@@ -25,22 +25,24 @@ namespace WarhammerArmyAssembler
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
             List<string> allXmlFiles = ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
-            Interface.Changes.CurrentSelectedArmy = allXmlFiles[Interface.Other.Rand.Next(allXmlFiles.Count)];
+
+            if (allXmlFiles.Count > 0)
+                Interface.Changes.CurrentSelectedArmy = allXmlFiles[Interface.Other.Rand.Next(allXmlFiles.Count)];
 
             Interface.Changes.LoadAllArmy(allXmlFiles);
             Interface.Changes.PreviewArmyList();
         }
 
-        public void armyVersionLabel_PositionCorrect()
+        public void armyEditionLabel_PositionCorrect()
         {
             UpdateLayout();
-            armyVersionLabel.Margin = Interface.Changes.Thick(armyVersionLabel, left: armyMainLabel.Margin.Left + armyMainLabel.ActualWidth - 5);
+            armyEditionLabel.Margin = Interface.Changes.Thick(armyEditionLabel, left: armyMainLabel.Margin.Left + armyMainLabel.ActualWidth - 5);
         }
 
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             armyMainMenu.Margin = Interface.Changes.Thick(armyMainMenu, left: (e.NewSize.Width - armyMainMenu.ActualWidth));
-            armyVersionLabel_PositionCorrect();
+            armyEditionLabel_PositionCorrect();
         }
 
         private void ArmyList_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)

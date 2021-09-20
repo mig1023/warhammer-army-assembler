@@ -55,6 +55,6 @@ namespace WarhammerArmyAssembler.Export
 
         static public string AllArmyName() => String.Format("{0} // {1}", Army.Data.Name, GetArmyName());
 
-        static public string AllArmyPointsAndEdition() => String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyVersion);
+        static public string AllArmyPointsAndEdition() => String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyEdition);
     }
 }

@@ -413,7 +413,7 @@ namespace WarhammerArmyAssembler.Interface
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Image");
             changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
             changeArmybook.listArmybookVer.Content =
-                String.Format("{0}th edition", xmlFile.SelectSingleNode("ArmyBook/Introduction/Version").InnerText);
+                String.Format("{0}th edition", xmlFile.SelectSingleNode("ArmyBook/Introduction/Edition").InnerText);
             changeArmybook.UpdateLayout();
 
             Brush mainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Color"));
@@ -503,7 +503,7 @@ namespace WarhammerArmyAssembler.Interface
                 };
 
                 string head = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Name")).ToUpper();
-                string version = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Version"));
+                string edition = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Edition"));
                 string description = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Description"));
 
                 newImage.ToolTip = new ToolTip
@@ -513,7 +513,7 @@ namespace WarhammerArmyAssembler.Interface
                     Content = new Border
                     {
                         Padding = new Thickness(5),
-                        Child = TooltipBlock(head, version, description, source),
+                        Child = TooltipBlock(head, edition, description, source),
                     }
                 };
 
@@ -630,7 +630,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static double ZeroFuse(double currentParam) => (currentParam < 0 ? 0 : currentParam);
 
-        private static StackPanel TooltipBlock(string head, string version, string description, string image) => new StackPanel
+        private static StackPanel TooltipBlock(string head, string edition, string description, string image) => new StackPanel
         {
             Children =
             {
@@ -645,7 +645,7 @@ namespace WarhammerArmyAssembler.Interface
                 },
                 new TextBlock
                 {
-                    Text = String.Format("{0}th Edition", version),
+                    Text = String.Format("{0}th Edition", edition),
                 },
                 new TextBlock
                 {

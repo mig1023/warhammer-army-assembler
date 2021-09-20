@@ -43,7 +43,7 @@ namespace WarhammerArmyAssembler
         {
             Interface.Reload.LoadArmySize(points, armyAdditionalName.Text);
 
-            Interface.Changes.main.armyVersionLabel_PositionCorrect();
+            Interface.Changes.main.armyEditionLabel_PositionCorrect();
 
             this.Hide();
 

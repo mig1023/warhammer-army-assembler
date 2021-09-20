@@ -78,15 +78,15 @@ namespace WarhammerArmyAssembler.ArmyBook
                     if (armyName == null)
                         continue;
 
-                    XmlNode armyVersion = xmlFile.SelectSingleNode("ArmyBook/Introduction/Version");
+                    XmlNode armyEdition = xmlFile.SelectSingleNode("ArmyBook/Introduction/Edition");
                     XmlNode orderName = xmlFile.SelectSingleNode("ArmyBook/Introduction/OrderName");
 
                     string armyOrderName = (orderName == null ? armyName.InnerText : orderName.InnerText);
 
                     if (ChangeArmybookWindow.sortedByEditions)
-                        armyOrderName = armyVersion.InnerText + armyOrderName;
+                        armyOrderName = armyEdition.InnerText + armyOrderName;
                     else
-                        armyOrderName += armyVersion.InnerText;
+                        armyOrderName += armyEdition.InnerText;
 
                     files.Add(armyOrderName, file);
                 }

@@ -17,10 +17,10 @@ namespace WarhammerArmyAssembler.Interface
                 Interface.Changes.AllUnitDelete();
 
                 Interface.Changes.main.armyMainLabel.Content = Army.Data.Name;
-                Interface.Changes.main.armyVersionLabel.Content = String.Format("{0}ed", Army.Data.ArmyVersion);
+                Interface.Changes.main.armyEditionLabel.Content = String.Format("{0}ed", Army.Data.ArmyEdition);
 
                 Interface.Changes.main.armyMainLabelPlace.Background = ArmyBook.Data.MainColor;
-                Interface.Changes.main.armyVersionLabel.Background = ArmyBook.Data.MainColor;
+                Interface.Changes.main.armyEditionLabel.Background = ArmyBook.Data.MainColor;
                 Interface.Changes.main.unitDetailHead.Background = ArmyBook.Data.MainColor;
 
                 Interface.Changes.main.armyMainMenu.Content = '\u2630';
