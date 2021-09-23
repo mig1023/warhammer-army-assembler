@@ -70,7 +70,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (String.IsNullOrEmpty(description))
                 description = StringParse(xmlUnit["Name"]);
 
-            XmlNode mainParam = xmlUnit["MainParam"];
+            XmlNode mainParam = xmlUnit["Main"];
 
             Unit newUnit = new Unit
             {
@@ -109,7 +109,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Chariot = IntParse(xmlUnit["Chariot"]),
             };
 
-            XmlNode additionalParam = xmlUnit["AdditionalParam"];
+            XmlNode additionalParam = xmlUnit["Additional"];
 
             newUnit.SetGroup(StringParse(xmlUnit["Group"]));
 
