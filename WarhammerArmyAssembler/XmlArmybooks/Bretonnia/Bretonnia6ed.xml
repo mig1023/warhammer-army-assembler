@@ -549,7 +549,7 @@
 			<Personified/>
 			<MountInit>The Shadow Steed</MountInit>
 			<Description>The Green Knight, the champion of the Lady of the Lake</Description>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -561,11 +561,11 @@
 				<Leadership>9</Leadership>
 				<Ward>5</Ward>
 				<Armour>5</Armour>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<Terror/>
 				<Undead/>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>The Dolorous Blade</Name>
@@ -594,7 +594,7 @@
 			<Personified/>
 			<MountInit>Silvaron</MountInit>
 			<Description>Fay Enchantress</Description>
-			<MainParam>
+			<Main>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -604,12 +604,12 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<SlotOf>Hero</SlotOf>
 				<Fear/>
 				<Test Bet="Wound" Context="Round">Initiative</Test>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<Armour>
 					<Name>Girdle of Gold</Name>
@@ -644,7 +644,7 @@
 			<Personified/>
 			<MountInit>Beaquis</MountInit>
 			<Description>King Louen Leoncoeur</Description>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>5</BallisticSkill>
@@ -655,13 +655,13 @@
 				<Attacks>5</Attacks>
 				<Leadership>9</Leadership>
 				<Ward>5</Ward>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<SlotOf>Hero</SlotOf>
 				<ImmuneToPsychology/>
 				<Reroll>ToHit;ToWound</Reroll>
 				<Regeneration/>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>The Sword of Couronne</Name>
@@ -696,7 +696,7 @@
 			<Points>110</Points>
 			<MinSize>1</MinSize>
 			<Description>Bretonnian Lord</Description>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -706,11 +706,11 @@
 				<Initiative>6</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>9</Leadership>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -803,7 +803,7 @@
 			<MinSize>1</MinSize>
 			<Wizard>3</Wizard>
 			<Description>Prophetess of the Lady</Description>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -813,11 +813,11 @@
 				<Initiative>3</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -863,7 +863,7 @@
 			<Points>60</Points>
 			<MinSize>1</MinSize>
 			<Description>Paladin</Description>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -873,11 +873,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>8</Leadership>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -971,7 +971,7 @@
 			<MinSize>1</MinSize>
 			<Wizard>1</Wizard>
 			<Description>Damsel of the Lady</Description>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -981,11 +981,11 @@
 				<Initiative>3</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>7</Leadership>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1026,7 +1026,7 @@
 			<Name>Horse</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>8</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1036,14 +1036,14 @@
 				<Initiative>3</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
-			</MainParam>
+			</Main>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Barded Warhorse</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>8</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1053,14 +1053,14 @@
 				<Initiative>3</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
-			</MainParam>
+			</Main>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>The Shadow Steed</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>8</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1070,14 +1070,14 @@
 				<Initiative>4</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
-			</MainParam>
+			</Main>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Silvaron</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>10</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1088,18 +1088,18 @@
 				<Attacks>2</Attacks>
 				<Leadership>8</Leadership>
 				<Ward>5</Ward>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<ChargeStrengthBonus>2</ChargeStrengthBonus>
 				<Fear/>
-			</AdditionalParam>
+			</Additional>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Royal Pegasus</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>8</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1109,7 +1109,7 @@
 				<Initiative>4</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>7</Leadership>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRule>Fly</SpecialRule>
@@ -1121,7 +1121,7 @@
 			<Name>Beaquis</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>8</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1131,11 +1131,11 @@
 				<Initiative>6</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>9</Leadership>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<Terror/>
 				<LargeBase/>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRule>Fly</SpecialRule>
@@ -1148,7 +1148,7 @@
 			<Name>Hippogryph</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>8</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1158,11 +1158,11 @@
 				<Initiative>4</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>7</Leadership>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<Terror/>
 				<LargeBase/>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRule>Fly</SpecialRule>
@@ -1180,7 +1180,7 @@
 			<MinSize>5</MinSize>
 			<MaxSize>15</MaxSize>
 			<MountInit>Barded Warhorse</MountInit>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -1191,7 +1191,7 @@
 				<Attacks>1</Attacks>
 				<Leadership>7</Leadership>
 				<Armour>5</Armour>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1243,7 +1243,7 @@
 			<MinSize>5</MinSize>
 			<MaxSize>15</MaxSize>
 			<MountInit>Barded Warhorse</MountInit>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -1254,7 +1254,7 @@
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>5</Armour>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1300,7 +1300,7 @@
 			<Name>Men-at-arms</Name>
 			<Points>5</Points>
 			<MinSize>10</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>2</WeaponSkill>
 				<BallisticSkill>2</BallisticSkill>
@@ -1310,7 +1310,7 @@
 				<Initiative>3</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1362,7 +1362,7 @@
 			<Name>Peasant Bowman</Name>
 			<Points>6</Points>
 			<MinSize>10</MinSize>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>2</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -1372,7 +1372,7 @@
 				<Initiative>3</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1435,7 +1435,7 @@
 			<MinSize>5</MinSize>
 			<MaxSize>12</MaxSize>
 			<MountInit>Barded Warhorse</MountInit>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -1446,7 +1446,7 @@
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>5</Armour>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Great weapon</Name>
@@ -1500,7 +1500,7 @@
 			<MaxSize>10</MaxSize>
 			<UniqueUnits/>
 			<MountInit>Royal Pegasus</MountInit>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -1511,7 +1511,7 @@
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>6</Armour>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Lance</Name>
@@ -1559,7 +1559,7 @@
 			<Points>15</Points>
 			<MinSize>5</MinSize>
 			<MountInit>Horse</MountInit>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -1569,7 +1569,7 @@
 				<Initiative>3</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>6</Leadership>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Spear</Name>
@@ -1628,7 +1628,7 @@
 			<MaxSize>12</MaxSize>
 			<UniqueUnits/>
 			<MountInit>Barded Warhorse</MountInit>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -1640,10 +1640,10 @@
 				<Leadership>8</Leadership>
 				<Armour>5</Armour>
 				<Ward>6</Ward>
-			</MainParam>
-			<AdditionalParam>
+			</Main>
+			<Additional>
 				<ImmuneToPsychology/>
-			</AdditionalParam>
+			</Additional>
 			<SpecialRulesAndAmmunition>
 				<HandWeapon>
 					<Name>Lance</Name>
@@ -1689,7 +1689,7 @@
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
 			<MountInit>Peasant</MountInit>
-			<MainParam>
+			<Main>
 				<Movement>4</Movement>
 				<WeaponSkill>2</WeaponSkill>
 				<BallisticSkill>2</BallisticSkill>
@@ -1699,7 +1699,7 @@
 				<Initiative>3</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
-			</MainParam>
+			</Main>
 			<SpecialRulesAndAmmunition>
 				<Special>
 					<SpecialRule>Field Trebuchet</SpecialRule>
