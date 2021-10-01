@@ -490,8 +490,8 @@ namespace WarhammerArmyAssembler.Interface
             {
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
-                XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Image");
 
+                XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Image");
                 string source = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
 
                 Image newImage = new Image()
@@ -505,15 +505,23 @@ namespace WarhammerArmyAssembler.Interface
                 string head = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Name")).ToUpper();
                 string edition = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Edition"));
                 string description = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Description"));
+                string illustration = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Illustration"));
+
+                if (String.IsNullOrEmpty(illustration))
+                    illustration = source;
+                else
+                    illustration = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), illustration);
+
+                int armyEdition = int.Parse(edition);
 
                 newImage.ToolTip = new ToolTip
                 {
-                    MaxWidth = 300,
+                    MaxWidth = (armyEdition > 6 ? 600 : 300),
                     Background = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Tooltips")),
                     Content = new Border
                     {
                         Padding = new Thickness(5),
-                        Child = TooltipBlock(head, edition, description, source),
+                        Child = TooltipBlock(head, armyEdition, description, illustration),
                     }
                 };
 
@@ -630,7 +638,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static double ZeroFuse(double currentParam) => (currentParam < 0 ? 0 : currentParam);
 
-        private static StackPanel TooltipBlock(string head, string edition, string description, string image) => new StackPanel
+        private static StackPanel TooltipBlock(string head, int edition, string description, string image) => new StackPanel
         {
             Children =
             {
