@@ -516,7 +516,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 newImage.ToolTip = new ToolTip
                 {
-                    MaxWidth = (armyEdition > 6 ? 600 : 300),
+                    MaxWidth = 600,
                     Background = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Tooltips")),
                     Content = new Border
                     {
