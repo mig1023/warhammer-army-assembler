@@ -10,7 +10,7 @@
 		<Image>DarkElves8ed.png</Image>
 		<Symbol>DarkElves.png</Symbol>
 		<Illustration>DarkElves8ed.jpg</Illustration>
-				<Description>The Dark Elves, or the Druchii as they call themselves in their own tongue, also known as the Naggarothi or the "Dark Ones", are one of the most ancient, powerful, and certainly the most sadistic of the three Elven civilisations of the world.||In the bleak, chilly lands of the continent of Naggaroth in the New World lies the Dark Elven kingdoms of the Witch King Malekith, a realm born from the depths of malice and hate, a kingdom that seeks nothing more than to despoil a world its people believe loathes their existence. With malevolent eyes, the Dark Elves watch this dying world, knowing it is their birthright to rule all that they survey and those that live upon it are born to do nothing more than to grovel at their feet.||The Druchii are raiders, slavers and heartless reavers of the first degree, their every whim being nothing more than to sow misery and pain to all that oppose them, for misery and pain is the very lifeblood of their existence. Thus do their Black Arks and Corsair Fleets ply the great waters of the world, raiding and enslaving all before them as a tribute to their own avaricious desires.</Description>
+		<Description>The Dark Elves, or the Druchii as they call themselves in their own tongue, also known as the Naggarothi or the "Dark Ones", are one of the most ancient, powerful, and certainly the most sadistic of the three Elven civilisations of the world.||In the bleak, chilly lands of the continent of Naggaroth in the New World lies the Dark Elven kingdoms of the Witch King Malekith, a realm born from the depths of malice and hate, a kingdom that seeks nothing more than to despoil a world its people believe loathes their existence. With malevolent eyes, the Dark Elves watch this dying world, knowing it is their birthright to rule all that they survey and those that live upon it are born to do nothing more than to grovel at their feet.||The Druchii are raiders, slavers and heartless reavers of the first degree, their every whim being nothing more than to sow misery and pain to all that oppose them, for misery and pain is the very lifeblood of their existence. Thus do their Black Arks and Corsair Fleets ply the great waters of the world, raiding and enslaving all before them as a tribute to their own avaricious desires.</Description>
 	</Introduction>
 	<Artefacts>
 		<Group Name = "The Black Armoury">
@@ -695,7 +695,7 @@
 			<MinSize>1</MinSize>
 			<Personified/>
 			<Description>Malekith, the Witch King of Naggaroth</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>8</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -706,15 +706,15 @@
 				<Attacks>4</Attacks>
 				<Leadership>10</Leadership>
 				<Armour>4</Armour>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Hate/>
 				<Fear/>
 				<MustBeGeneral/>
 				<ImmuneToPsychology/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Cold One</Name>
@@ -774,7 +774,7 @@
 			<MountInit>Dark Pegasus Sulephet</MountInit>
 			<Personified/>
 			<Description>Morathi, The Hag Sorceress of Ghrond</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -784,11 +784,11 @@
 				<Initiative>6</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>10</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Hate High Elves</SpecialRule>
@@ -822,7 +822,7 @@
 			<MinSize>1</MinSize>
 			<Personified/>
 			<Description>The Blood Queen of Har Ganeth</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>7</BallisticSkill>
@@ -832,14 +832,14 @@
 				<Initiative>9</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>10</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Frenzy/>
 				<Fear/>
 				<PoisonAttack/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Deathsword and the Cursed Blade</Name>
@@ -864,7 +864,7 @@
 			<MountInit>Spite</MountInit>
 			<Personified/>
 			<Description>Malus Darkblade, Scion of Hag Graef</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>7</BallisticSkill>
@@ -874,13 +874,13 @@
 				<Initiative>8</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>10</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Hate/>
 				<Fear/>
 				<Frenzy/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Warpsword of Khaine</Name>
@@ -910,7 +910,7 @@
 			<Points>140</Points>
 			<MinSize>1</MinSize>
 			<Description>Dreadlord</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>7</BallisticSkill>
@@ -920,13 +920,13 @@
 				<Initiative>8</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>10</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Additional weapon</Name>
@@ -1080,7 +1080,7 @@
 			<MinSize>1</MinSize>
 			<Wizard>3</Wizard>
 			<Description>Supreme Sorceress</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1090,13 +1090,13 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Wizard Level 4</Name>
@@ -1152,7 +1152,7 @@
 			<Points>300</Points>
 			<MinSize>1</MinSize>
 			<Description>High Beastmaster</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>7</BallisticSkill>
@@ -1162,13 +1162,13 @@
 				<Initiative>8</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Manticore</Name>
@@ -1209,7 +1209,7 @@
 			<Points>155</Points>
 			<MinSize>1</MinSize>
 			<Description>Black Ark Fleetmaster</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -1219,13 +1219,13 @@
 				<Initiative>7</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Two hand weapon</Name>
@@ -1254,7 +1254,7 @@
 			<MinSize>1</MinSize>
 			<Personified/>
 			<Description>Shadowblade, The Death that Walks Unseen</Description>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>10</WeaponSkill>
 				<BallisticSkill>10</BallisticSkill>
@@ -1265,8 +1265,8 @@
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
 				<Ward>5</Ward>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<NotALeader/>
 				<HitFirst/>
 				<ImmuneToPsychology/>
@@ -1274,7 +1274,7 @@
 				<PoisonAttack/>
 				<KillingBlow/>
 				<AddToWound>1</AddToWound>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Two hand weapons</Name>
@@ -1306,7 +1306,7 @@
 			<MinSize>1</MinSize>
 			<Personified/>
 			<Description>Lokhir Fellheart, Krakenlord of Karond Kar</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -1316,11 +1316,11 @@
 				<Initiative>7</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>The Red Blades</Name>
@@ -1355,7 +1355,7 @@
 			<MinSize>1</MinSize>
 			<Personified/>
 			<Description>Kouran Darkhand, Captain of the Black Guard</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>9</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -1365,14 +1365,14 @@
 				<Initiative>7</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Hate/>
 				<ImmuneToPsychology/>
 				<MurderousProwess/>
 				<Stubborn/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Crimson Death</Name>
@@ -1395,7 +1395,7 @@
 			<MinSize>1</MinSize>
 			<Personified/>
 			<Description>Tullaris Dreadbringer, The Hand of Khaine</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -1405,13 +1405,13 @@
 				<Initiative>7</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Fear/>
 				<ExtendedKillingBlow>5</ExtendedKillingBlow>
 				<MurderousProwess/>
 				<Frenzy/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>The First Draich</Name>
@@ -1436,7 +1436,7 @@
 			<MinSize>1</MinSize>
 			<Wizard>1</Wizard>
 			<Description>Sorceress</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1446,13 +1446,13 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Wizard Level 2</Name>
@@ -1496,7 +1496,7 @@
 			<Points>70</Points>
 			<MinSize>1</MinSize>
 			<Description>Master</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -1506,13 +1506,13 @@
 				<Initiative>7</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Additional weapon</Name>
@@ -1666,7 +1666,7 @@
 			<Points>85</Points>
 			<MinSize>1</MinSize>
 			<Description>Death Hag</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -1676,15 +1676,15 @@
 				<Initiative>7</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Frenzy/>
 				<MurderousProwess/>
 				<PoisonAttack/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Cry of War</Name>
@@ -1748,7 +1748,7 @@
 			<Points>245</Points>
 			<MinSize>1</MinSize>
 			<Description>Khainite Assassin</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>9</WeaponSkill>
 				<BallisticSkill>9</BallisticSkill>
@@ -1759,8 +1759,8 @@
 				<Attacks>3</Attacks>
 				<Leadership>8</Leadership>
 				<Ward>5</Ward>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<NotALeader/>
 				<HitFirst/>
 				<ImmuneToPsychology/>
@@ -1768,7 +1768,7 @@
 				<PoisonAttack/>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Additional weapon</Name>
@@ -1839,7 +1839,7 @@
 			<Name>Dark Steed</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1849,14 +1849,14 @@
 				<Initiative>4</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
-			</Main>
+			</Profile>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Cold One</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>7</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1866,11 +1866,11 @@
 				<Initiative>2</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>3</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Fear/>
 				<Stupidity/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Armour>
 					<Name>Thick-skinned</Name>
@@ -1883,7 +1883,7 @@
 			<Name>Spite</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>7</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1893,11 +1893,11 @@
 				<Initiative>2</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>4</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Fear/>
 				<Hate/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Armour>
 					<Name>Thick-skinned</Name>
@@ -1910,7 +1910,7 @@
 			<Name>Black Dragon</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1920,11 +1920,11 @@
 				<Initiative>3</Initiative>
 				<Attacks>5</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Terror/>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Armour>
 					<Name>Scaly skin</Name>
@@ -1943,7 +1943,7 @@
 			<Name>Manticore</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1953,12 +1953,12 @@
 				<Initiative>5</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>5</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Terror/>
 				<KillingBlow/>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Iron Hard Skin</Name>
@@ -1986,7 +1986,7 @@
 			<Name>Seraphon</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1996,11 +1996,11 @@
 				<Initiative>3</Initiative>
 				<Attacks>6</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Terror/>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Armour>
 					<Name>Scaly skin</Name>
@@ -2022,7 +2022,7 @@
 			<MaxSize>1</MaxSize>
 			<Chariot>2</Chariot>
 			<MountInit>Cold One</MountInit>
-			<Main>
+			<Profile>
 				<Movement>7</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2033,15 +2033,15 @@
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
 				<Armour>3</Armour>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Stupidity/>
 				<Fear/>
 				<LargeBase/>
 				<MurderousProwess/>
 				<ImpactHit>D6</ImpactHit>
-			</Additional>
+			</Rules>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
@@ -2051,7 +2051,7 @@
 			<MaxSize>1</MaxSize>
 			<Chariot>2</Chariot>
 			<MountInit>Dark Steed</MountInit>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2062,20 +2062,20 @@
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>3</Armour>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<LargeBase/>
 				<MurderousProwess/>
 				<ImpactHit>D6</ImpactHit>
-			</Additional>
+			</Rules>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Dark Pegasus</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>8</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -2085,10 +2085,10 @@
 				<Initiative>4</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>6</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<ChargeStrengthBonus>1</ChargeStrengthBonus>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Fly</SpecialRule>
@@ -2100,7 +2100,7 @@
 			<Name>Dark Pegasus Sulephet</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>8</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -2110,10 +2110,10 @@
 				<Initiative>4</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>6</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<ChargeStrengthBonus>1</ChargeStrengthBonus>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Fly</SpecialRule>
@@ -2125,7 +2125,7 @@
 			<Name>Cauldron of Blood</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2136,15 +2136,15 @@
 				<Attacks>2</Attacks>
 				<Leadership></Leadership>
 				<Ward>4</Ward>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Frenzy/>
 				<PoisonAttack/>
 				<Terror/>
 				<MurderousProwess/>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Two hand weapons</Name>
@@ -2167,7 +2167,7 @@
 			<Name>Dreadspears</Name>
 			<Points>9</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2177,11 +2177,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Spear</Name>
@@ -2226,7 +2226,7 @@
 			<Name>Bleakswords</Name>
 			<Points>9</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2236,11 +2236,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2285,7 +2285,7 @@
 			<Name>Darkshards</Name>
 			<Points>12</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2295,11 +2295,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2350,7 +2350,7 @@
 			<Name>Black Ark Corsairs</Name>
 			<Points>9</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2360,11 +2360,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2438,7 +2438,7 @@
 			<Points>16</Points>
 			<MinSize>5</MinSize>
 			<MountInit>Dark Steed</MountInit>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2448,11 +2448,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Spear</Name>
@@ -2505,7 +2505,7 @@
 			<Name>Witch Elves</Name>
 			<Points>11</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2515,13 +2515,13 @@
 				<Initiative>6</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<Frenzy/>
 				<PoisonAttack/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Two hand weapons</Name>
@@ -2565,7 +2565,7 @@
 			<Points>30</Points>
 			<MinSize>5</MinSize>
 			<MountInit>Cold One</MountInit>
-			<Main>
+			<Profile>
 				<Movement>7</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2575,13 +2575,13 @@
 				<Initiative>6</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Stupidity/>
 				<MurderousProwess/>
 				<Fear/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Lance</Name>
@@ -2636,7 +2636,7 @@
 			<Name>Black Guard of Naggarond</Name>
 			<Points>15</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2646,14 +2646,14 @@
 				<Initiative>6</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<ImmuneToPsychology/>
 				<Stubborn/>
 				<Hate/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Halberd</Name>
@@ -2694,7 +2694,7 @@
 			<Name>Shades</Name>
 			<Points>16</Points>
 			<MinSize>5</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>5</BallisticSkill>
@@ -2704,11 +2704,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2780,7 +2780,7 @@
 			<MaxSize>1</MaxSize>
 			<Chariot>2</Chariot>
 			<MountInit>Cold One</MountInit>
-			<Main>
+			<Profile>
 				<Movement>7</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2791,15 +2791,15 @@
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
 				<Armour>3</Armour>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<Stupidity/>
 				<Fear/>
 				<LargeBase/>
 				<MurderousProwess/>
 				<ImpactHit>D6</ImpactHit>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2820,7 +2820,7 @@
 			<Name>Har Ganeth Executioners</Name>
 			<Points>12</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2830,12 +2830,12 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<KillingBlow/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Great weapon</Name>
@@ -2880,7 +2880,7 @@
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
 			<ModelsInPack>3</ModelsInPack>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2890,11 +2890,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2914,7 +2914,7 @@
 			<Name>Harpies</Name>
 			<Points>15</Points>
 			<MinSize>5</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -2924,7 +2924,7 @@
 				<Initiative>5</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>6</Leadership>
-			</Main>
+			</Profile>
 			<Other>
 				<Special>
 					<SpecialRule>Fly</SpecialRule>
@@ -2939,7 +2939,7 @@
 			<MaxSize>1</MaxSize>
 			<Chariot>2</Chariot>
 			<MountInit>Dark Steed</MountInit>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2950,13 +2950,13 @@
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>3</Armour>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<LargeBase/>
 				<MurderousProwess/>
 				<ImpactHit>D6</ImpactHit>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2981,7 +2981,7 @@
 			<Points>160</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -2992,12 +2992,12 @@
 				<Attacks>3</Attacks>
 				<Leadership>6</Leadership>
 				<Armour>4</Armour>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Terror/>
 				<Regeneration/>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Fiery Breath</Name>
@@ -3027,7 +3027,7 @@
 			<MinSize>5</MinSize>
 			<Wizard>2</Wizard>
 			<MountInit>Dark Steed</MountInit>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -3038,12 +3038,12 @@
 				<Attacks>2</Attacks>
 				<Leadership>8</Leadership>
 				<Ward>4</Ward>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<PoisonAttack/>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Master of Warlocks</Name>
@@ -3069,7 +3069,7 @@
 			<Points>90</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Main>
+			<Profile>
 				<Movement>7</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>5</BallisticSkill>
@@ -3079,13 +3079,13 @@
 				<Initiative>5</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>2</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<HitFirst/>
 				<MurderousProwess/>
 				<Fear/>
 				<Frenzy/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Hate High Elves</SpecialRule>
@@ -3100,7 +3100,7 @@
 			<Points>160</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -3111,12 +3111,12 @@
 				<Attacks>5</Attacks>
 				<Leadership>6</Leadership>
 				<Armour>4</Armour>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<PoisonAttack/>
 				<Terror/>
 				<Frenzy/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Large target</SpecialRule>
