@@ -480,7 +480,7 @@
 			<MountInit>Minaithnir</MountInit>
 			<Personified/>
 			<Description>Imrik, Dragon Prince of Caledor</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>8</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -490,11 +490,11 @@
 				<Initiative>9</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>10</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<SlotOf>Hero</SlotOf>
 				<SlotOf>Hero</SlotOf>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>No Dragons will fight Imrik, if they are in base contact with other models (and not in a challenge) then they light them instead, otherwise they may do nothing</SpecialRule>
@@ -523,7 +523,7 @@
 			<MountInit>Malhandir</MountInit>
 			<Personified/>
 			<Description>Tyrion, Defender of Ulthuan</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>9</WeaponSkill>
 				<BallisticSkill>7</BallisticSkill>
@@ -533,10 +533,10 @@
 				<Initiative>10</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>10</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<MustBeGeneral/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Parries the first enemy hit against him per Close Combat phase and it has no effect</SpecialRule>
@@ -571,7 +571,7 @@
 			<MinSize>1</MinSize>
 			<Personified/>
 			<Description>Teclis, High Loremaster of the White Tower</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>3</BallisticSkill>
@@ -581,10 +581,10 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>10</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<SlotOf>Hero</SlotOf>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Any spell cast by Teclis will be cast with Irresistible Force on any successful casting roll which includes a double, except a Miscast</SpecialRule>
@@ -629,7 +629,7 @@
 			<Points>125</Points>
 			<MinSize>1</MinSize>
 			<Description>Prince</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -639,11 +639,11 @@
 				<Initiative>8</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>10</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Lance</Name>
@@ -763,7 +763,7 @@
 			<MinSize>1</MinSize>
 			<Wizard>3</Wizard>
 			<Description>Archmage</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -773,11 +773,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<MagicItems>100</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Wizard Level 4</Name>
@@ -817,7 +817,7 @@
 			<Points>70</Points>
 			<MinSize>1</MinSize>
 			<Description>Commander</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>6</BallisticSkill>
@@ -827,11 +827,11 @@
 				<Initiative>7</Initiative>
 				<Attacks>3</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Hero</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Lance</Name>
@@ -939,7 +939,7 @@
 			<MinSize>1</MinSize>
 			<Wizard>1</Wizard>
 			<Description>Mage</Description>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -949,11 +949,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<MagicItems>50</MagicItems>
 				<MagicItemsType>Wizard</MagicItemsType>
-			</Additional>
+			</Rules>
 			<Options>
 				<Option>
 					<Name>Wizard Level 2</Name>
@@ -988,7 +988,7 @@
 			<Name>Elven Steed</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -998,14 +998,14 @@
 				<Initiative>4</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
-			</Main>
+			</Profile>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Barded Elven Steed</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>3</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1016,14 +1016,14 @@
 				<Attacks>1</Attacks>
 				<Leadership>5</Leadership>
 				<Armour>6</Armour>
-			</Main>
+			</Profile>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Malhandir</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>10</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1034,14 +1034,14 @@
 				<Attacks>2</Attacks>
 				<Leadership>7</Leadership>
 				<Armour>5</Armour>
-			</Main>
+			</Profile>
 		</Mount>
 		<Mount>
 			<Type>Mount</Type>
 			<Name>Great Eagle</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>2</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1051,10 +1051,10 @@
 				<Initiative>4</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Fly</SpecialRule>
@@ -1066,7 +1066,7 @@
 			<Name>Giffon</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1076,11 +1076,11 @@
 				<Initiative>5</Initiative>
 				<Attacks>4</Attacks>
 				<Leadership>7</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Terror/>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Large target</SpecialRule>
@@ -1093,7 +1093,7 @@
 			<Name>Dragon</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1103,12 +1103,12 @@
 				<Initiative>3</Initiative>
 				<Attacks>5</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<SlotOf>Hero</SlotOf>
 				<Terror/>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Armour>
 					<Name>Scaly skin</Name>
@@ -1126,7 +1126,7 @@
 			<Name>Minaithnir</Name>
 			<Points>0</Points>
 			<MinSize>1</MinSize>
-			<Main>
+			<Profile>
 				<Movement>6</Movement>
 				<WeaponSkill>7</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1136,11 +1136,11 @@
 				<Initiative>3</Initiative>
 				<Attacks>5</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Terror/>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Armour>
 					<Name>Scaly skin</Name>
@@ -1161,7 +1161,7 @@
 			<Name>Archers</Name>
 			<Points>12</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1171,7 +1171,7 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
+			</Profile>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1213,7 +1213,7 @@
 			<Name>Spearman</Name>
 			<Points>11</Points>
 			<MinSize>10</MinSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1223,7 +1223,7 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
+			</Profile>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1270,7 +1270,7 @@
 			<Points>15</Points>
 			<MinSize>10</MinSize>
 			<UniqueUnits/>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1280,7 +1280,7 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
+			</Profile>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1333,7 +1333,7 @@
 			<Points>19</Points>
 			<MinSize>5</MinSize>
 			<MountInit>Barded Elven Steed</MountInit>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1344,7 +1344,7 @@
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>5</Armour>
-			</Main>
+			</Profile>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1400,7 +1400,7 @@
 			<Points>18</Points>
 			<MinSize>5</MinSize>
 			<MountInit>Elven Steed</MountInit>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1411,7 +1411,7 @@
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>6</Armour>
-			</Main>
+			</Profile>
 			<Other>
 				<Special>
 					<SpecialRule>Fast Cavalry</SpecialRule>
@@ -1473,7 +1473,7 @@
 			<MinSize>5</MinSize>
 			<UniqueUnits/>
 			<MountInit>Barded Elven Steed</MountInit>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1484,7 +1484,7 @@
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
 				<Armour>5</Armour>
-			</Main>
+			</Profile>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1534,7 +1534,7 @@
 			<Points>13</Points>
 			<MinSize>5</MinSize>
 			<UniqueUnits/>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>6</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1544,7 +1544,7 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
+			</Profile>
 			<Other>
 				<HandWeapon>
 					<Name>Great weapon</Name>
@@ -1592,7 +1592,7 @@
 			<Points>15</Points>
 			<MinSize>5</MinSize>
 			<MaxSize>15</MaxSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1602,7 +1602,7 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
+			</Profile>
 			<Other>
 				<Special>
 					<SpecialRule>Scouts</SpecialRule>
@@ -1637,7 +1637,7 @@
 			<MaxSize>1</MaxSize>
 			<Chariot>2</Chariot>
 			<MountInit>Barded Elven Steed</MountInit>
-			<Main>
+			<Profile>
 				<Movement>9</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1648,11 +1648,11 @@
 				<Attacks>2</Attacks>
 				<Leadership>8</Leadership>
 				<Armour>5</Armour>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<LargeBase/>
 				<ImpactHit>D6</ImpactHit>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Chariot</SpecialRule>
@@ -1674,7 +1674,7 @@
 			<Points>15</Points>
 			<MinSize>10</MinSize>
 			<UniqueUnits/>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1684,10 +1684,10 @@
 				<Initiative>6</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>9</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Fear/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1732,7 +1732,7 @@
 			<Points>100</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>4</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1742,7 +1742,7 @@
 				<Initiative>5</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
+			</Profile>
 			<Other>
 				<Special>
 					<SpecialRule>Repeater Bolt Thrower</SpecialRule>
@@ -1762,7 +1762,7 @@
 			<Points>13</Points>
 			<MinSize>10</MinSize>
 			<UniqueUnits/>
-			<Main>
+			<Profile>
 				<Movement>5</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>4</BallisticSkill>
@@ -1772,10 +1772,10 @@
 				<Initiative>5</Initiative>
 				<Attacks>1</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<Stubborn/>
-			</Additional>
+			</Rules>
 			<Other>
 				<HandWeapon>
 					<Name>Great axes</Name>
@@ -1826,7 +1826,7 @@
 			<Points>50</Points>
 			<MinSize>1</MinSize>
 			<MaxSize>1</MaxSize>
-			<Main>
+			<Profile>
 				<Movement>2</Movement>
 				<WeaponSkill>5</WeaponSkill>
 				<BallisticSkill>0</BallisticSkill>
@@ -1836,10 +1836,10 @@
 				<Initiative>4</Initiative>
 				<Attacks>2</Attacks>
 				<Leadership>8</Leadership>
-			</Main>
-			<Additional>
+			</Profile>
+			<Rules>
 				<LargeBase/>
-			</Additional>
+			</Rules>
 			<Other>
 				<Special>
 					<SpecialRule>Fly</SpecialRule>
