@@ -22,6 +22,15 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
         }
 
+        private static string LoadString(XmlDocument xmlFile, string node) =>
+            StringParse(xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", node)));
+
+        private static int LoadInt(XmlDocument xmlFile, string node) =>
+            IntParse(xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", node)));
+
+        private static Brush LoadColor(XmlDocument xmlFile, string node) =>
+            Interface.Other.BrushFromXml(xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", node)));
+
         public static void LoadArmy(string xmlFileName)
         {
             Data.Units.Clear();
@@ -34,14 +43,14 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
-            Army.Data.Name = StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Name"));
-            Army.Data.ArmyEdition = IntParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Edition"));
-            Army.Data.MagicPowers = StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/MagicPowers"));
+            Army.Data.Name = LoadString(xmlFile, "Name");
+            Army.Data.ArmyEdition = LoadInt(xmlFile, "Edition");
+            Army.Data.MagicPowers = LoadString(xmlFile, "MagicPowers");
 
-            Data.MainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Color"));
-            Data.AdditionalColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Additional"));
-            Data.BackgroundColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Background"));
-            Data.TooltipColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Tooltips"));
+            Data.MainColor = LoadColor(xmlFile, "Color");
+            Data.AdditionalColor = LoadColor(xmlFile, "Additional");
+            Data.BackgroundColor = LoadColor(xmlFile, "Background");
+            Data.TooltipColor = LoadColor(xmlFile, "Tooltips");
 
             Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/DemonicMortal"));
 
