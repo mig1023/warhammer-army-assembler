@@ -11,6 +11,8 @@ namespace WarhammerArmyAssembler.ArmyBook
     {
         public static int GetNextIndex() => Data.MaxIDindex++;
 
+        private static string Intro(string name) => String.Format("ArmyBook/Introduction/{0}", name);
+
         private static void LoadUnitsFromXml(XmlDocument xmlFile, string path, ref Dictionary<int, Unit> dict)
         {
             XmlNodeList xmlNodes = xmlFile.SelectNodes(path);
@@ -23,13 +25,13 @@ namespace WarhammerArmyAssembler.ArmyBook
         }
 
         private static string LoadString(XmlDocument xmlFile, string node) =>
-            StringParse(xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", node)));
+            StringParse(xmlFile.SelectSingleNode(Intro(node)));
 
         private static int LoadInt(XmlDocument xmlFile, string node) =>
-            IntParse(xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", node)));
+            IntParse(xmlFile.SelectSingleNode(Intro(node)));
 
         private static Brush LoadColor(XmlDocument xmlFile, string node) =>
-            Interface.Other.BrushFromXml(xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", node)));
+            Interface.Other.BrushFromXml(xmlFile.SelectSingleNode(Intro(node)));
 
         public static void LoadArmy(string xmlFileName)
         {
@@ -40,7 +42,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
-            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Symbol");
+            XmlNode armyFile = xmlFile.SelectSingleNode(Intro("Symbol"));
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Name");
@@ -52,7 +54,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.BackgroundColor = LoadColor(xmlFile, "Background");
             Data.TooltipColor = LoadColor(xmlFile, "Tooltips");
 
-            Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/DemonicMortal"));
+            Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode(Intro("DemonicMortal")));
 
             Interface.Mod.SetArmyGridAltColor(Data.BackgroundColor);
 
