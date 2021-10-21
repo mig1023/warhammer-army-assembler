@@ -11,27 +11,25 @@ namespace WarhammerArmyAssembler.ArmyBook
     {
         public static int GetNextIndex() => Data.MaxIDindex++;
 
-        private static string Intro(string name) => String.Format("ArmyBook/Introduction/{0}", name);
-
         private static void LoadUnitsFromXml(XmlDocument xmlFile, string path, ref Dictionary<int, Unit> dict)
         {
             XmlNodeList xmlNodes = xmlFile.SelectNodes(path);
 
             foreach (XmlNode xmlUnit in xmlNodes)
             {
-                int newID = GetNextIndex();
+                int newID = GetNextIndex(); 
                 dict.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
             }
         }
 
         private static string LoadString(XmlDocument xmlFile, string node) =>
-            StringParse(xmlFile.SelectSingleNode(Intro(node)));
+            StringParse(Other.Intro(xmlFile, node));
 
         private static int LoadInt(XmlDocument xmlFile, string node) =>
-            IntParse(xmlFile.SelectSingleNode(Intro(node)));
+            IntParse(Other.Intro(xmlFile, node));
 
         private static Brush LoadColor(XmlDocument xmlFile, string node) =>
-            Interface.Other.BrushFromXml(xmlFile.SelectSingleNode(Intro(node)));
+            Interface.Other.BrushFromXml(Other.Intro(xmlFile, String.Format("Colors/{0}", node)));
 
         public static void LoadArmy(string xmlFileName)
         {
@@ -42,19 +40,19 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
-            XmlNode armyFile = xmlFile.SelectSingleNode(Intro("Symbol"));
+            XmlNode armyFile = Other.Intro(xmlFile, "Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Name");
             Army.Data.ArmyEdition = LoadInt(xmlFile, "Edition");
             Army.Data.MagicPowers = LoadString(xmlFile, "MagicPowers");
 
-            Data.MainColor = LoadColor(xmlFile, "Color");
+            Data.MainColor = LoadColor(xmlFile, "Main");
             Data.AdditionalColor = LoadColor(xmlFile, "Additional");
             Data.BackgroundColor = LoadColor(xmlFile, "Background");
             Data.TooltipColor = LoadColor(xmlFile, "Tooltips");
 
-            Data.DemonicMortal = BoolParse(xmlFile.SelectSingleNode(Intro("DemonicMortal")));
+            Data.DemonicMortal = BoolParse(Other.Intro(xmlFile, "DemonicMortal"));
 
             Interface.Mod.SetArmyGridAltColor(Data.BackgroundColor);
 

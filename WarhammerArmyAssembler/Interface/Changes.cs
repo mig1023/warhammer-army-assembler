@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -410,13 +409,12 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            XmlNode armyFile = xmlFile.SelectSingleNode("ArmyBook/Introduction/Image");
+            XmlNode armyFile = ArmyBook.Other.Intro(xmlFile, "Image");
             changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
-            changeArmybook.listArmybookVer.Content =
-                String.Format("{0}th edition", xmlFile.SelectSingleNode("ArmyBook/Introduction/Edition").InnerText);
+            changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", ArmyBook.Other.Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode("ArmyBook/Introduction/Color"));
+            Brush mainColor = Interface.Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Main"));
 
             foreach (Label label in PointsButtons)
             {
@@ -478,7 +476,6 @@ namespace WarhammerArmyAssembler.Interface
             PreviewArmy(randomArmy);
         }
 
-        private static string Intro(string name) => String.Format("ArmyBook/Introduction/{0}", name);
 
         public static void LoadAllArmy(List<string> allXmlFiles, bool reload = false)
         {
@@ -493,7 +490,7 @@ namespace WarhammerArmyAssembler.Interface
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
 
-                XmlNode armyFile = xmlFile.SelectSingleNode(Intro("Image"));
+                XmlNode armyFile = ArmyBook.Other.Intro(xmlFile, "Image");
                 string source = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
 
                 Image newImage = new Image()
@@ -504,10 +501,10 @@ namespace WarhammerArmyAssembler.Interface
                     Tag = String.Format("{0}|{1}", armyName, source),
                 };
 
-                string head = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode(Intro("Name"))).ToUpper();
-                string edition = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode(Intro("Edition")));
-                string description = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode(Intro("Description")));
-                string illustration = ArmyBook.Parsers.StringParse(xmlFile.SelectSingleNode(Intro("Illustration")));
+                string head = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Name")).ToUpper();
+                string edition = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Edition"));
+                string description = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Description"));
+                string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Illustration"));
 
                 if (String.IsNullOrEmpty(illustration))
                     illustration = source;
@@ -519,7 +516,7 @@ namespace WarhammerArmyAssembler.Interface
                 newImage.ToolTip = new ToolTip
                 {
                     MaxWidth = 600,
-                    Background = Interface.Other.BrushFromXml(xmlFile.SelectSingleNode(Intro("Tooltips"))),
+                    Background = Interface.Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Tooltips")),
                     Content = new Border
                     {
                         Padding = new Thickness(5),

@@ -14,5 +14,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             return nodeName;
         }
+
+        public static XmlNode Intro(XmlDocument xmlFile, string name) =>
+            xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", name));
     }
 }
