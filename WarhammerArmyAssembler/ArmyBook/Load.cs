@@ -40,7 +40,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
-            XmlNode armyFile = Other.Intro(xmlFile, "Symbol");
+            XmlNode armyFile = Other.Intro(xmlFile, "Images/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Name");

@@ -409,7 +409,7 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            XmlNode armyFile = ArmyBook.Other.Intro(xmlFile, "Image");
+            XmlNode armyFile = ArmyBook.Other.Intro(xmlFile, "Images/Image");
             changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
             changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", ArmyBook.Other.Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
@@ -490,7 +490,7 @@ namespace WarhammerArmyAssembler.Interface
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
 
-                XmlNode armyFile = ArmyBook.Other.Intro(xmlFile, "Image");
+                XmlNode armyFile = ArmyBook.Other.Intro(xmlFile, "Images/Image");
                 string source = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
 
                 Image newImage = new Image()
@@ -504,7 +504,7 @@ namespace WarhammerArmyAssembler.Interface
                 string head = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Name")).ToUpper();
                 string edition = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Edition"));
                 string description = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Description"));
-                string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Illustration"));
+                string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Images/Illustration"));
 
                 if (String.IsNullOrEmpty(illustration))
                     illustration = source;
