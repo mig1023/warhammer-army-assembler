@@ -95,7 +95,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]),
                 Wizard = IntParse(xmlUnit["Wizard"]),
                 MountOn = IntParse(xmlUnit["MountOn"]),
-                MountInit = StringParse(xmlUnit["MountInit"]),
+                MountInit = StringParse(xmlUnit["Mount"]),
                 ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1),
 
                 Description = description,
