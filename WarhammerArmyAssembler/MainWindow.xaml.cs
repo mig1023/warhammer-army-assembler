@@ -31,6 +31,9 @@ namespace WarhammerArmyAssembler
 
             Interface.Changes.LoadAllArmy(allXmlFiles);
             Interface.Changes.PreviewArmyList();
+
+            ToolTipService.ShowDurationProperty.OverrideMetadata(
+                typeof(DependencyObject), new FrameworkPropertyMetadata(Int32.MaxValue));
         }
 
         public void armyEditionLabel_PositionCorrect()
