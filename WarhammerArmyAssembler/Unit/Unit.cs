@@ -558,6 +558,17 @@ namespace WarhammerArmyAssembler
                 typeof(Unit).GetProperty(paramName).SetValue(this, value);
         }
 
+        private Brush ColorByMods(string newParamLine)
+        {
+            string[] colors = ArmyBook.Data.Selected.Split(',');
+            int count = newParamLine.Count(x => x == '*') - 1;
+
+            if (count > 2)
+                count = 2;
+
+            return (SolidColorBrush)new BrushConverter().ConvertFromString(colors[count]);
+        }
+
         public Unit GetOptionRules(bool directModification = false)
         {
             Unit unit = this.Clone();
@@ -573,11 +584,7 @@ namespace WarhammerArmyAssembler
                 typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
 
                 if (newParamLine.Contains("*"))
-                {
-                    string[] colors = ArmyBook.Data.Selected.Split(',');
-                    Brush color = (SolidColorBrush)new BrushConverter().ConvertFromString(colors[newParamLine.Count(x => x == '*') - 1]);
-                    typeof(Unit).GetProperty(String.Format("{0}Color", name)).SetValue(unit, color);
-                }
+                    typeof(Unit).GetProperty(String.Format("{0}Color", name)).SetValue(unit, ColorByMods(newParamLine));
 
                 if (directModification && !String.IsNullOrEmpty(newParamLine))
                 {
