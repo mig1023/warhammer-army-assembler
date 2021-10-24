@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler.ArmyBook
@@ -15,6 +16,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static Brush AdditionalColor = null;
         public static Brush BackgroundColor = null;
         public static Brush TooltipColor = null;
+        public static string Selected = String.Empty;
 
         public static bool DemonicMortal = false;
         public static bool DemonicAlreadyReplaced = false;

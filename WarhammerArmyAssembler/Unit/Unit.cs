@@ -62,6 +62,16 @@ namespace WarhammerArmyAssembler
         public string ArmourView { get; set; }
         public string WardView { get; set; }
 
+        public SolidColorBrush MovementColor { get; set; }
+        public SolidColorBrush WeaponSkillColor { get; set; }
+        public SolidColorBrush BallisticSkillColor { get; set; }
+        public SolidColorBrush StrengthColor { get; set; }
+        public SolidColorBrush ToughnessColor { get; set; }
+        public SolidColorBrush WoundsColor { get; set; }
+        public SolidColorBrush InitiativeColor { get; set; }
+        public SolidColorBrush AttacksColor { get; set; }
+        public SolidColorBrush LeadershipColor { get; set; }
+
         public int OriginalWounds { get; set; }
         public int OriginalAttacks { get; set; }
 
@@ -561,6 +571,13 @@ namespace WarhammerArmyAssembler
                 string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
                 typeof(Unit).GetProperty(String.Format("{0}View", name)).SetValue(unit, newParamLine);
+
+                if (newParamLine.Contains("*"))
+                {
+                    string[] colors = ArmyBook.Data.Selected.Split(',');
+                    Brush color = (SolidColorBrush)new BrushConverter().ConvertFromString(colors[newParamLine.Count(x => x == '*') - 1]);
+                    typeof(Unit).GetProperty(String.Format("{0}Color", name)).SetValue(unit, color);
+                }
 
                 if (directModification && !String.IsNullOrEmpty(newParamLine))
                 {
