@@ -119,7 +119,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Chariot = IntParse(xmlUnit["Chariot"]),
             };
 
-            XmlNode additionalParam = xmlUnit["Rules"];
+            XmlNode additionalParam = xmlUnit["SpecialRules"];
 
             newUnit.SetGroup(StringParse(xmlUnit["Group"]));
 
