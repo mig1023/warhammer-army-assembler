@@ -204,10 +204,18 @@ namespace WarhammerArmyAssembler.Army
         {
             List<string> units = new List<string>();
 
-            foreach (Unit entry in Army.Data.Units.Values.Where(x => x.Type == type))
-                units.Add(entry.Name);
+            foreach (Unit entry in Army.Data.Units.Values.Where(x => x.Type == type).GroupBy(x => x.Name).Select(x => x.First()))
+            {
+                int count = Army.Data.Units.Values.Count(x => x.Name == entry.Name);
 
-            return (units.Count == 0 ? "empty yet" : String.Join(", ", units));
+                if (count > 1)
+                    units.Add(String.Format("{0} x {1}", entry.Name, count));
+                else
+                    units.Add(entry.Name);
+            }
+                
+
+            return (units.Count == 0 ? "empty yet" : String.Join("\n", units));
         }
 
         public static double GetVirtuePoints(int id, bool nextPricePreview = false)
