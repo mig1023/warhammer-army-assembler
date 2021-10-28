@@ -74,7 +74,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             Army.Data.ImagesFolder = Path.GetDirectoryName(xmlFileName) + "\\" +
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/ImagesFolder")) + "\\";
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/Folder")) + "\\";
         }
 
         public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml)
