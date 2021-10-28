@@ -168,6 +168,7 @@ namespace WarhammerArmyAssembler
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
         public SolidColorBrush TooltipColor { get; set; }
+        public string Image { get; set; }
 
         public string RulesView { get; set; }
 
@@ -396,6 +397,7 @@ namespace WarhammerArmyAssembler
 
                 ArmyColor = this.ArmyColor,
                 TooltipColor = this.TooltipColor,
+                Image = this.Image,
             };
 
             if (this.SlotOf != null)

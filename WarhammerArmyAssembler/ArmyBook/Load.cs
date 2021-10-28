@@ -4,6 +4,7 @@ using System.Xml;
 using static WarhammerArmyAssembler.Unit;
 using static WarhammerArmyAssembler.ArmyBook.Parsers;
 using System.Windows.Media;
+using System.IO;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
@@ -71,6 +72,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                     Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
                 }
             }
+
+            Army.Data.ImagesFolder = Path.GetDirectoryName(xmlFileName) + "\\" +
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/ImagesFolder")) + "\\";
         }
 
         public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml)
@@ -100,6 +104,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1),
 
                 Description = description,
+                Image = StringParse(xmlUnit["Image"]),
 
                 Movement = IntParse(mainParam["Movement"]),
                 WeaponSkill = IntParse(mainParam["WeaponSkill"]),

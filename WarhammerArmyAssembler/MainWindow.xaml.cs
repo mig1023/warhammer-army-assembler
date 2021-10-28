@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace WarhammerArmyAssembler
 {
@@ -99,6 +100,8 @@ namespace WarhammerArmyAssembler
 
         private void ChangeArmyListDetail(int id, bool group = false)
         {
+            armyUnitImage.Source = null;
+
             if (group)
             {
                 armyUnitName.Content = String.Empty;
@@ -110,6 +113,18 @@ namespace WarhammerArmyAssembler
                 armyUnitName.Content = ArmyBook.Data.Units[id].Name.ToUpper();
                 armyUnitDescription.Text = ArmyBook.Data.Units[id].Description;
                 armyUnitSpecific.Text = ArmyBook.Data.Units[id].SelfDescription();
+
+                if (!String.IsNullOrEmpty(ArmyBook.Data.Units[id].Image))
+                {
+                    try
+                    {
+                        armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.ImagesFolder + ArmyBook.Data.Units[id].Image));
+                    }
+                    catch
+                    {
+                        armyUnitImage.Source = null;
+                    }
+                }
             }
             else if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
