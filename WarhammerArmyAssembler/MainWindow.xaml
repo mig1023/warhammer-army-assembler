@@ -22,6 +22,14 @@
                 </Label.LayoutTransform>
             </Label>
 
+            <ScrollViewer x:Name="armybookArtefactDetailScroll" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
+                <Canvas x:Name="armybookArtefactDetail" Height="300" VerticalAlignment="Center" Margin="0,20" Background="White">
+                    <Label x:Name="armyArtefactName" Content="" FontSize="28" Width="Auto" Margin="18,5"/>
+                    <TextBlock x:Name="armyArtefactDescription" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,75"/>
+                    <TextBlock x:Name="armyArtefactSpecific" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap"/>
+                </Canvas>
+            </ScrollViewer>
+            
             <ScrollViewer x:Name="armybookDetailScroll" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
                 <Grid x:Name="detailGrid">
                     <Grid.RowDefinitions>

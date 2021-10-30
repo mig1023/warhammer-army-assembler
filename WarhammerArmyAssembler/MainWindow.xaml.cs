@@ -125,17 +125,27 @@ namespace WarhammerArmyAssembler
                         armyUnitImage.Source = null;
                     }
                 }
+
+                armyUnitName.Foreground = Brushes.White;
+                armyUnitName.Background = (group ? Brushes.White : ArmyBook.Data.MainColor);
+                armyUnitName.FontWeight = FontWeights.Bold;
+
+                armybookDetailScroll.Visibility = Visibility.Visible;
+                armybookArtefactDetailScroll.Visibility = Visibility.Hidden;
             }
             else if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
-                armyUnitName.Content = ArmyBook.Data.Artefact[id].Name.ToUpper();
-                armyUnitDescription.Text = ArmyBook.Data.Artefact[id].Description;
-                armyUnitSpecific.Text = ArmyBook.Data.Artefact[id].SelfDescription();
-            }
+                armyArtefactName.Content = ArmyBook.Data.Artefact[id].Name.ToUpper();
+                armyArtefactDescription.Text = ArmyBook.Data.Artefact[id].Description;
+                armyArtefactSpecific.Text = ArmyBook.Data.Artefact[id].SelfDescription();
 
-            armyUnitName.Foreground = Brushes.White;
-            armyUnitName.Background = ( group ? Brushes.White : ArmyBook.Data.MainColor );
-            armyUnitName.FontWeight = FontWeights.Bold;
+                armyArtefactName.Foreground = Brushes.White;
+                armyArtefactName.Background = (group ? Brushes.White : ArmyBook.Data.MainColor);
+                armyArtefactName.FontWeight = FontWeights.Bold;
+
+                armybookArtefactDetailScroll.Visibility = Visibility.Visible;
+                armybookDetailScroll.Visibility = Visibility.Hidden;
+            }
 
             UpdateLayout();
 
@@ -143,10 +153,15 @@ namespace WarhammerArmyAssembler
                 (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) +
                 (armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20) + 20;
 
+            armybookArtefactDetail.Height = armybookDetail.Height;
+
             armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20,
                 top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 35);
 
             armyUnitSpecific.Foreground = ArmyBook.Data.MainColor;
+
+            armyArtefactSpecific.Margin = armyUnitSpecific.Margin;
+            armyArtefactSpecific.Foreground = ArmyBook.Data.MainColor;
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
@@ -304,7 +319,7 @@ namespace WarhammerArmyAssembler
             if (!Interface.Changes.unitTestIsOpen)
                 mainGrid.Width = e.NewSize.Width;
             
-            foreach (ScrollViewer scroll in new List<ScrollViewer> { armybookDetailScroll, armyUnitTestScroll })
+            foreach (ScrollViewer scroll in new List<ScrollViewer> { armybookDetailScroll, armyUnitTestScroll, armybookArtefactDetailScroll })
             {
                 scroll.Height = e.NewSize.Height;
                 scroll.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 25);
@@ -315,7 +330,7 @@ namespace WarhammerArmyAssembler
 
             closeErrorDetail.Margin = new Thickness(Interface.Changes.ZeroFuse(e.NewSize.Width - closeErrorDetail.Width - 10), 10, 0, 0);
 
-            foreach (TextBlock text in new List<TextBlock> { armyUnitDescription, armyUnitSpecific })
+            foreach (TextBlock text in new List<TextBlock> { armyUnitDescription, armyUnitSpecific, armyArtefactDescription, armyArtefactSpecific })
                 text.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 75);
 
             if (Interface.Changes.mainMenuIsOpen)
