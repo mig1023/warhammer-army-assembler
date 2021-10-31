@@ -9,9 +9,14 @@
         WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
         Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" PreviewKeyDown="Window_PreviewKeyDown">
-
+    
+    <Window.Resources>
+        <Style TargetType="Image">
+            <Setter Property="ToolTipService.InitialShowDelay" Value="1200"/>
+        </Style>
+    </Window.Resources>
+    
     <Canvas x:Name="armybookCanvas" Margin="0,0,0,0">
-
         <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="660" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
             <ScrollViewer.Resources>
                 <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarWidthKey}">7</sys:Double>
