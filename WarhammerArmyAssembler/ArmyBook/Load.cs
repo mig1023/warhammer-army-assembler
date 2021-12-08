@@ -94,9 +94,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Name = StringParse(xmlUnit["Name"]),
                 Type = UnitTypeParse(xmlUnit["Type"]),
                 Points = DoubleParse(xmlUnit["Points"]),
-                Size = IntParse(xmlUnit["MinSize"]),
-                MinSize = IntParse(xmlUnit["MinSize"]),
-                MaxSize = IntParse(xmlUnit["MaxSize"]),
+                Size = IntParse(xmlUnit["Min"]),
+                MinSize = IntParse(xmlUnit["Min"]),
+                MaxSize = IntParse(xmlUnit["Max"]),
                 UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]),
                 Wizard = IntParse(xmlUnit["Wizard"]),
                 MountOn = IntParse(xmlUnit["MountOn"]),
@@ -208,7 +208,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
                 newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
-            newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount));
+            newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize));
             newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
 
             newUnit.ArmyColor = (SolidColorBrush)ArmyBook.Data.MainColor;
