@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WarhammerArmyAssembler.Army
 {
@@ -14,7 +10,7 @@ namespace WarhammerArmyAssembler.Army
         public static string AdditionalName { get; set; }
         public static int ArmyEdition { get; set; }
         public static string MagicPowers { get; set; }
-        public static string ImagesFolder { get; set; }
+        public static string Directory { get; set; }
 
         public static int MaxPoints = 2000;
         public static int MaxIDindex = 0;

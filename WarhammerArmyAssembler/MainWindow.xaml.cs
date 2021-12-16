@@ -118,7 +118,7 @@ namespace WarhammerArmyAssembler
                 {
                     try
                     {
-                        armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.ImagesFolder + ArmyBook.Data.Units[id].Image));
+                        armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.Directory + ArmyBook.Data.Units[id].Image));
                     }
                     catch
                     {
