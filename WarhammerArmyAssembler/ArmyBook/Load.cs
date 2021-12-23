@@ -51,7 +51,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.MainColor = LoadColor(xmlFile, "Main");
             Data.AdditionalColor = LoadColor(xmlFile, "Additional");
             Data.BackgroundColor = LoadColor(xmlFile, "Background");
-            Data.TooltipColor = LoadColor(xmlFile, "Tooltips");
+            Data.TooltipColor = LoadColor(xmlFile, "Tooltip");
             Data.Selected = LoadString(xmlFile, "Colors/Selected");
 
             Data.DemonicMortal = BoolParse(Other.Intro(xmlFile, "DemonicMortal"));

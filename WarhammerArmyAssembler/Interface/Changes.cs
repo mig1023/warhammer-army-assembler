@@ -516,7 +516,7 @@ namespace WarhammerArmyAssembler.Interface
                 newImage.ToolTip = new ToolTip
                 {
                     MaxWidth = 600,
-                    Background = Interface.Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Tooltips")),
+                    Background = Interface.Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Tooltip")),
                     Content = new Border
                     {
                         Padding = new Thickness(5),
