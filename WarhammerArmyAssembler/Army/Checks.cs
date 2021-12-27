@@ -10,6 +10,8 @@ namespace WarhammerArmyAssembler.Army
     {
         public static bool IsUnitExistInArmy(int unitID) => Army.Data.Units.ContainsKey(unitID);
 
+        public static bool ThisIsAftefact(int id) => ArmyBook.Data.Artefact.ContainsKey(id);
+
         public static bool IsUnitExistInArmyByArmyBookID(int UnitID) => Data.Units.Values.Where(x => x.ID == UnitID).FirstOrDefault() != null;
 
         public static bool IsRunicCombinationAlreadyExist(Unit unit, Option newOption)

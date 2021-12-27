@@ -179,7 +179,7 @@ namespace WarhammerArmyAssembler
             if (!Army.Checks.IsUnitExistInArmy(Interface.Changes.CurrentSelectedUnit))
                 return;
 
-            if (sender is ScrollViewer)
+            if ((sender is ScrollViewer) && Army.Checks.ThisIsAftefact(id))
                 Interface.Changes.ArmyGridDropArtefact(id, Interface.Changes.CurrentSelectedUnit);
             else
                 Interface.UnitDetails.UpdateUnitDescription(Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
