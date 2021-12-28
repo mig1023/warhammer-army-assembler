@@ -63,26 +63,26 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
-            //new Enemy
-            //{
-            //    Name = "Troll",
-            //    TestListName = "Troll (Orcs&Goblins)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 1,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 1,
-            //    Attacks = 3,
-            //    Leadership = 4,
-            //    Fear = true,
-            //    Regeneration = true,
-            //    Stupidity = true,
-            //    LargeBase = true,
-            //},
+            new Enemy
+            {
+                Name = "Troll",
+                TestListName = "Troll (Orcs&Goblins)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Movement = new Profile { Value = 6 },
+                WeaponSkill = new Profile { Value = 3 },
+                BallisticSkill = new Profile { Value = 1 },
+                Strength = new Profile { Value = 5 },
+                Toughness = new Profile { Value = 4 },
+                Wounds = new Profile { Value = 3 },
+                Initiative = new Profile { Value = 1 },
+                Attacks = new Profile { Value = 3 },
+                Leadership = new Profile { Value = 4 },
+                Fear = true,
+                Regeneration = true,
+                Stupidity = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{

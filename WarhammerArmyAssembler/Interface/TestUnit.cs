@@ -52,23 +52,28 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (string name in unitParam)
             {
-                string paramName = (name == "Size" || name == "Name" ? name : String.Format("{0}View", name));
-
-                PropertyInfo param = typeof(Unit).GetProperty(paramName);
                 Label testUnitElement = (Label)Interface.Changes.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
-                testUnitElement.Content = param.GetValue(unitForLoad);
+                testUnitElement.Content = ParamView(name, unitForLoad);
 
                 if (mountForLoad != null)
                 {
-                    PropertyInfo mountParam = typeof(Unit).GetProperty(paramName);
-                    var value = mountParam.GetValue(mountForLoad) ?? String.Empty;
-                    AddMountUnitParam(value.ToString(), mountIndex, unitGrid);
-
+                    AddMountUnitParam(ParamView(name, mountForLoad), mountIndex, unitGrid);
                     mountIndex += 1;
                 }
             }
 
             Interface.Changes.main.armyUnitTest_Resize();
+        }
+
+        private static string ParamView(string name, Unit unitForLoad)
+        {
+            if ((name != "Size") && (name != "Name"))
+            {
+                Profile param = (Profile)typeof(Unit).GetProperty(name).GetValue(unitForLoad);
+                return param?.View;
+            }
+            else
+                return typeof(Unit).GetProperty(name).GetValue(unitForLoad).ToString();
         }
 
         public static void startTest(Test.Data.TestTypes testType)

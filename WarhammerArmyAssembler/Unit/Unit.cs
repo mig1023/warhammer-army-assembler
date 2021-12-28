@@ -212,7 +212,8 @@ namespace WarhammerArmyAssembler
         {
             if (option == null)
             {
-                Option change = Options.Where(x => (!x.IsOption() || (x.IsOption() && x.Realised)) && !String.IsNullOrEmpty(x.Group)).FirstOrDefault();
+                Option change = Options.Where(x => (!x.IsOption() || (x.IsOption() && x.Realised)) &&
+                    !String.IsNullOrEmpty(x.Group)).FirstOrDefault();
 
                 return (change != null ? change.Group : Group);
             }
@@ -410,29 +411,18 @@ namespace WarhammerArmyAssembler
             newUnit.Initiative = this.Initiative.Clone();
             newUnit.Attacks = this.Attacks.Clone();
             newUnit.Leadership = this.Leadership.Clone();
-            newUnit.Armour = this.Armour.Clone();
-            newUnit.Ward = this.Ward.Clone();
+
+            if (this.Armour != null)
+                newUnit.Armour = this.Armour.Clone();
+
+            if (this.Ward != null)
+                newUnit.Ward = this.Ward.Clone();
 
             if (this.SlotOf != null)
                 newUnit.SlotOf = new List<string>(this.SlotOf);
 
             if (this.Mount != null)
                 newUnit.Mount = this.Mount.Clone();
-
-            //if (full)
-            //{
-            //    newUnit.MovementView = this.MovementView;
-            //    newUnit.WeaponSkillView = this.WeaponSkillView;
-            //    newUnit.BallisticSkillView = this.BallisticSkillView;
-            //    newUnit.StrengthView = this.StrengthView;
-            //    newUnit.ToughnessView = this.ToughnessView;
-            //    newUnit.WoundsView = this.WoundsView;
-            //    newUnit.InitiativeView = this.InitiativeView;
-            //    newUnit.AttacksView = this.AttacksView;
-            //    newUnit.LeadershipView = this.LeadershipView;
-            //    newUnit.ArmourView = this.ArmourView;
-            //    newUnit.WardView = this.WardView;
-            //}
 
             foreach (Option option in this.Options)
                 newUnit.Options.Add(option.Clone());
@@ -494,11 +484,11 @@ namespace WarhammerArmyAssembler
 
             Profile paramValue = (Profile)typeof(Unit).GetProperty(name).GetValue(this);
 
+            if ((paramValue == null) || (paramValue.Value <= 0))
+                return "-";
+
             if (paramValue.Value > 100)
                 return GetRandomAttacksLine(paramValue.Value);
-
-            else if (paramValue.Value <= 0)
-                return "-";
 
             string paramModView = String.Empty;
 
@@ -593,6 +583,10 @@ namespace WarhammerArmyAssembler
                 string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
                 Profile param = (Profile)typeof(Unit).GetProperty(name).GetValue(unit);
+
+                if (param == null)
+                    continue;
+
                 param.View = newParamLine;
 
                 if (newParamLine.Contains("*"))

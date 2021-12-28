@@ -456,12 +456,12 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="W" Binding="{Binding WoundsView}" Width="35" IsReadOnly="True">
+                        <DataGridTextColumn Header="W" Binding="{Binding Wounds.View}" Width="35" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
                                     <Setter Property="TextBlock.TextAlignment" Value="Center"/>
-                                    <Setter Property="Background" Value="{Binding WoundsColor}"/>
+                                    <Setter Property="Background" Value="{Binding Wounds.Color}"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>

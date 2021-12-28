@@ -937,12 +937,12 @@ namespace WarhammerArmyAssembler.Test
 
         private static bool NotAS(ref Unit unit, Unit enemy)
         {
-            if ((enemy.Armour.Null) || unit.NoArmour)
+            if ((enemy.Armour == null) || (enemy.Armour.Null) || unit.NoArmour)
                 return true;
 
             int chance = Unit.ParamNormalization((unit.Strength.Value + unit.ArmourPiercing) - 3, onlyZeroCheck: true);
 
-            chance += (enemy.Armour.Null ? 0 : enemy.Armour.Value);
+            chance += enemy.Armour.Value;
 
             bool armourFail = Dice.Roll(unit, Dice.Types.AS, enemy, chance);
 
@@ -966,7 +966,7 @@ namespace WarhammerArmyAssembler.Test
 
         private static bool NotWard(ref Unit unit, Unit enemy)
         {
-            int ward = (enemy.Ward.Null ? 0 : enemy.Ward.Value);
+            int ward = (((enemy.Ward == null) || enemy.Ward.Null) ? 0 : enemy.Ward.Value);
 
             if ((enemy.WardForFirstWound > 0) && (enemy.Wounds.Value == enemy.OriginalWounds))
             {

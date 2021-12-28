@@ -18,6 +18,7 @@ namespace WarhammerArmyAssembler
         {
             Value = this.Value,
             Original = this.Original,
+            View = this.View,
             Color = this.Color,
             Null = this.Null,
         };
