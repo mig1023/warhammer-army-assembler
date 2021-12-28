@@ -27,14 +27,14 @@ namespace WarhammerArmyAssembler.ArmyBook
             return (success ? value : (byDefault ?? 0));
         }
 
-        public static int? IntNullableParse(XmlNode xmlNode)
+        public static Profile IntNullableParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
-                return null;
+                return new Profile { Value = 0, Null = true };
 
             bool success = int.TryParse(xmlNode.InnerText, out int value);
 
-            return (success ? value : (int?)null);
+            return (success ? new Profile { Value = value } : new Profile { Value = 0, Null = true });
         }
 
         public static double DoubleParse(XmlNode xmlNode)

@@ -81,7 +81,7 @@ namespace WarhammerArmyAssembler.Army
                 if (entry.Value.ArmyGeneral)
                     entry.Value.ArmyGeneral = false;
 
-                int unitLeadership = entry.Value.Leadership;
+                int unitLeadership = entry.Value.Leadership.Value;
                 bool notALeader = false;
 
                 foreach (Option option in entry.Value.Options.Where(x => x.IsActual()))

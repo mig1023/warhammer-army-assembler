@@ -36,7 +36,7 @@ namespace WarhammerArmyAssembler.Army
                         size += option.Countable.Value;
                 }
 
-                if (!((entry.Type == Unit.UnitType.Mount) && (entry.Wounds <= 1)))
+                if (!((entry.Type == Unit.UnitType.Mount) && (entry.Wounds.Value <= 1)))
                     size += entry.Size * modelsInPack;
             }
 
@@ -148,7 +148,7 @@ namespace WarhammerArmyAssembler.Army
                 if (entry.Value.MountOn <= 0)
                     continue;
 
-                bool multiWounds = (Army.Data.Units[entry.Value.MountOn].Wounds != 1) || (Army.Data.Units[entry.Value.MountOn].WeaponTeam);
+                bool multiWounds = (Army.Data.Units[entry.Value.MountOn].Wounds.Value != 1) || (Army.Data.Units[entry.Value.MountOn].WeaponTeam);
 
                 if (multiWounds)
                     categories[(int)entry.Value.Type].Items.Add(ReloadArmyUnit(entry.Value.MountOn, Army.Data.Units[entry.Value.MountOn]));

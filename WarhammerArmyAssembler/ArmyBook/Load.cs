@@ -106,23 +106,26 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Description = description,
                 Image = StringParse(xmlUnit["Image"]),
 
-                Movement = IntParse(mainParam["Movement"]),
-                WeaponSkill = IntParse(mainParam["WeaponSkill"]),
-                BallisticSkill = IntParse(mainParam["BallisticSkill"]),
-                Strength = IntParse(mainParam["Strength"]),
-                Toughness = IntParse(mainParam["Toughness"]),
-                Wounds = IntParse(mainParam["Wounds"]),
-                Initiative = IntParse(mainParam["Initiative"]),
-                Attacks = IntParse(mainParam["Attacks"]),
-                Leadership = IntParse(mainParam["Leadership"]),
-
-                Armour = IntNullableParse(mainParam["Armour"]),
-                Ward = IntNullableParse(mainParam["Ward"]),
+                //Armour = IntNullableParse(mainParam["Armour"]),
+                //Ward = IntNullableParse(mainParam["Ward"]),
 
                 Personified = BoolParse(xmlUnit["Personified"]),
                 WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]),
                 Chariot = IntParse(xmlUnit["Chariot"]),
             };
+
+            newUnit.Movement = new Profile { Value = IntParse(mainParam["Movement"]) };
+            newUnit.WeaponSkill = new Profile { Value = IntParse(mainParam["WeaponSkill"]) };
+            newUnit.BallisticSkill = new Profile { Value = IntParse(mainParam["BallisticSkill"]) };
+            newUnit.Strength = new Profile { Value = IntParse(mainParam["Strength"]) };
+            newUnit.Toughness = new Profile { Value = IntParse(mainParam["Toughness"]) };
+            newUnit.Wounds = new Profile { Value = IntParse(mainParam["Wounds"]) };
+            newUnit.Initiative = new Profile { Value = IntParse(mainParam["Initiative"]) };
+            newUnit.Attacks = new Profile { Value = IntParse(mainParam["Attacks"]) };
+            newUnit.Leadership = new Profile { Value = IntParse(mainParam["Leadership"]) };
+
+            newUnit.Armour = IntNullableParse(mainParam["Armour"]);
+            newUnit.Ward = IntNullableParse(mainParam["Ward"]);
 
             XmlNode additionalParam = xmlUnit["SpecialRules"];
 
