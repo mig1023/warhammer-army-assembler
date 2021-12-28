@@ -130,24 +130,15 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Hippogryph",
-            //    TestListName = "Hippogryph (Bretonnia)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 8,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 4,
-            //    Initiative = 4,
-            //    Attacks = 4,
-            //    Leadership = 8,
-            //    Terror = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("8/4/0/5/5/4/4/4/8//")
+            {
+                Name = "Hippogryph",
+                TestListName = "Hippogryph (Bretonnia)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
