@@ -150,25 +150,16 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Manticore",
-            //    TestListName = "Manticore (Chaos)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 4,
-            //    Initiative = 5,
-            //    Attacks = 4,
-            //    Leadership = 5,
-            //    Terror = true,
-            //    KillingBlow = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("6/5/0/5/5/4/5/4/5//")
+            {
+                Name = "Manticore",
+                TestListName = "Manticore (Chaos)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                KillingBlow = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
