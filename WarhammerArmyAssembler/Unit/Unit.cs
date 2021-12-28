@@ -50,28 +50,6 @@ namespace WarhammerArmyAssembler
 
         public int Wizard { get; set; }
 
-        //public string MovementView { get; set; }
-        //public string WeaponSkillView { get; set; }
-        //public string BallisticSkillView { get; set; }
-        //public string StrengthView { get; set; }
-        //public string ToughnessView { get; set; }
-        //public string WoundsView { get; set; }
-        //public string InitiativeView { get; set; }
-        //public string AttacksView { get; set; }
-        //public string LeadershipView { get; set; }
-        //public string ArmourView { get; set; }
-        //public string WardView { get; set; }
-
-        //public SolidColorBrush MovementColor { get; set; }
-        //public SolidColorBrush WeaponSkillColor { get; set; }
-        //public SolidColorBrush BallisticSkillColor { get; set; }
-        //public SolidColorBrush StrengthColor { get; set; }
-        //public SolidColorBrush ToughnessColor { get; set; }
-        //public SolidColorBrush WoundsColor { get; set; }
-        //public SolidColorBrush InitiativeColor { get; set; }
-        //public SolidColorBrush AttacksColor { get; set; }
-        //public SolidColorBrush LeadershipColor { get; set; }
-
         public int OriginalWounds { get; set; }
         public int OriginalAttacks { get; set; }
 
@@ -163,7 +141,7 @@ namespace WarhammerArmyAssembler
         public Unit Mount { get; set; }
         public bool WoundedWithKillingBlow { get; set; }
         public bool PassThisRound { get; set; }
-        public string TestListName { get; set; }
+        public string Armybook { get; set; }
 
         public ObservableCollection<Unit> Items { get; set; }
         public SolidColorBrush ArmyColor { get; set; }
@@ -395,7 +373,7 @@ namespace WarhammerArmyAssembler
                 TestType = this.TestType,
                 WoundedWithKillingBlow = false,
                 PassThisRound = false,
-                TestListName = this.TestListName,
+                Armybook = this.Armybook,
 
                 ArmyColor = this.ArmyColor,
                 TooltipColor = this.TooltipColor,

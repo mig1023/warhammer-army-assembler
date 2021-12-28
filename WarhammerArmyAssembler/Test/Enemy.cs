@@ -8,30 +8,34 @@ namespace WarhammerArmyAssembler
     {
         public static int MaxIDindex = -10;
 
-        public Enemy(string enemyProfile)
+        public Enemy(string enemyName)
         {
-            string[] profile = enemyProfile.Split('/');
+            string[] profile = enemyName.Split('/');
 
-            this.Movement = new Profile { Value = int.Parse(profile[0].Trim()) };
-            this.WeaponSkill = new Profile { Value = int.Parse(profile[1].Trim()) };
-            this.BallisticSkill = new Profile { Value = int.Parse(profile[2].Trim()) };
-            this.Strength = new Profile { Value = int.Parse(profile[3].Trim()) };
-            this.Toughness = new Profile { Value = int.Parse(profile[4].Trim()) };
-            this.Wounds = new Profile { Value = int.Parse(profile[5].Trim()) };
-            this.Initiative = new Profile { Value = int.Parse(profile[6].Trim()) };
-            this.Attacks = new Profile { Value = int.Parse(profile[7].Trim()) };
-            this.Leadership = new Profile { Value = int.Parse(profile[8].Trim()) };
+            this.Name = profile[0];
 
-            bool isArmour = int.TryParse(profile[9].Trim(), out int armour);
+            this.Movement = new Profile { Value = int.Parse(profile[1]) };
+            this.WeaponSkill = new Profile { Value = int.Parse(profile[2]) };
+            this.BallisticSkill = new Profile { Value = int.Parse(profile[3]) };
+            this.Strength = new Profile { Value = int.Parse(profile[4]) };
+            this.Toughness = new Profile { Value = int.Parse(profile[5]) };
+            this.Wounds = new Profile { Value = int.Parse(profile[6]) };
+            this.Initiative = new Profile { Value = int.Parse(profile[7]) };
+            this.Attacks = new Profile { Value = int.Parse(profile[8]) };
+            this.Leadership = new Profile { Value = int.Parse(profile[9]) };
+
+            bool isArmour = int.TryParse(profile[10], out int armour);
 
             if (isArmour)
                 this.Armour = new Profile { Value = armour };
 
-            bool isWard = int.TryParse(profile[10].Trim(), out int ward);
+            bool isWard = int.TryParse(profile[11], out int ward);
 
             if (isWard)
                 this.Ward = new Profile { Value = ward };
         }
+
+        public string Fullname() => String.Format("{0} ({1})", this.Name, this.Armybook);
 
         private static Dictionary<string, List<Enemy>> GetEnemiesDictionary() => new Dictionary<string, List<Enemy>>
         {
@@ -55,7 +59,7 @@ namespace WarhammerArmyAssembler
             };
 
             foreach (List<Enemy> enemyList in enemies)
-                foreach (Enemy enemy in enemyList.Where(x => x.TestListName == enemyName))
+                foreach (Enemy enemy in enemyList.Where(x => x.Fullname() == enemyName))
                     return enemy.SetID();
 
             return null;
@@ -86,10 +90,9 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
-            new Enemy("6/3/1/5/4/3/1/3/4//")
+            new Enemy("Troll/6/3/1/5/4/3/1/3/4//")
             {
-                Name = "Troll",
-                TestListName = "Troll (Orcs&Goblins)",
+                Armybook = "Orcs&Goblins",
                 Type = UnitType.Rare,
                 Size = 1,
                 Fear = true,
@@ -98,19 +101,17 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("1/4/3/4/5/3/2/2/9/4/")
+            new Enemy("Gyrobomber/1/4/3/4/5/3/2/2/9/4/")
             {
-                Name = "Gyrobomber",
-                TestListName = "Gyrobomber (Dwarfs)",
+                Armybook = "Dwarfs",
                 Type = UnitType.Rare,
                 Size = 1,
                 LargeBase = true,
             },
 
-            new Enemy("6/3/1/7/4/3/1/4/7//")
+            new Enemy("Ancient Kroxigor/6/3/1/7/4/3/1/4/7//")
             {
-                Name = "Ancient Kroxigor",
-                TestListName = "Ancient Kroxigor (Lizardmen)",
+                Armybook = "Lizardmen",
                 Type = UnitType.Rare,
                 Size = 1,
                 Fear = true,
@@ -118,10 +119,9 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("7/4/0/5/5/3/3/4/8//")
+            new Enemy("Tomb Scorpion/7/4/0/5/5/3/3/4/8//")
             {
-                Name = "Tomb Scorpion",
-                TestListName = "Tomb Scorpion (Tomb Kings)",
+                Armybook = "Tomb Kings",
                 Type = UnitType.Rare,
                 Size = 1,
                 Undead = true,
@@ -130,30 +130,27 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("8/4/0/5/5/4/4/4/8//")
+            new Enemy("Hippogryph/8/4/0/5/5/4/4/4/8//")
             {
-                Name = "Hippogryph",
-                TestListName = "Hippogryph (Bretonnia)",
+                Armybook = "Bretonnia",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("6/5/0/5/5/4/5/4/7//")
+            new Enemy("Griffon/6/5/0/5/5/4/5/4/7//")
             {
-                Name = "Griffon",
-                TestListName = "Griffon (The Empire)",
+                Armybook = "The Empire",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("6/5/0/5/5/4/5/4/5//")
+            new Enemy("Manticore/6/5/0/5/5/4/5/4/5//")
             {
-                Name = "Manticore",
-                TestListName = "Manticore (Chaos)",
+                Armybook = "Chaos",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
@@ -161,10 +158,9 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("8/5/0/5/5/4/2/5/4//")
+            new Enemy("Varghulf/8/5/0/5/5/4/2/5/4//")
             {
-                Name = "Varghulf",
-                TestListName = "Varghulf (Vampire)",
+                Armybook = "Vampire",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,

@@ -85,11 +85,11 @@ namespace WarhammerArmyAssembler.Test
 
             if (royalNotation)
                 Test.Data.Console(Test.Data.text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n",
-                    enemy.TestListName, (double)result[1] / 10, (double)result[2] / 10);                
+                    enemy.Name, (double)result[1] / 10, (double)result[2] / 10);                
             else
             {
                 Test.Data.Console(Test.Data.text, "{0} win: {1:f1}%\n{2} win: {3:f1}%",
-                    unit.Name, (double)result[1] / 10, enemy.TestListName, (double)result[2] / 10);
+                    unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
 
                 if (result[0] > 0)
                     Test.Data.Console(Test.Data.text, "\nNobody win: {0:f1}%", (double)result[0] / 10);

@@ -222,7 +222,7 @@ namespace WarhammerArmyAssembler.Interface
             Interface.Changes.main.enemyForTest.Items.Clear();
 
             foreach (Enemy enemy in Enemy.GetEnemiesByGroup(SelectedGroup()))
-                Interface.Changes.main.enemyForTest.Items.Add(enemy.TestListName);
+                Interface.Changes.main.enemyForTest.Items.Add(enemy.Fullname());
         }
 
         public static void CleanConsole() => Interface.Changes.main.testConsole.Document.Blocks.Clear();
