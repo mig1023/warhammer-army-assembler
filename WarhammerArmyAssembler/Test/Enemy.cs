@@ -86,7 +86,7 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
-            new Enemy("6/3/1/5/4/3/1/3/4")
+            new Enemy("6/3/1/5/4/3/1/3/4//")
             {
                 Name = "Troll",
                 TestListName = "Troll (Orcs&Goblins)",
@@ -98,22 +98,12 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("1/4/3/4/5/3/2/2/9")
+            new Enemy("1/4/3/4/5/3/2/2/9/4/")
             {
                 Name = "Gyrobomber",
                 TestListName = "Gyrobomber (Dwarfs)",
                 Type = UnitType.Rare,
                 Size = 1,
-                Movement = 1,
-                WeaponSkill = 4,
-                BallisticSkill = 3,
-                Strength = 4,
-                Toughness = 5,
-                Wounds = 3,
-                Initiative = 2,
-                Attacks = 2,
-                Leadership = 9,
-                Armour = 4,
                 LargeBase = true,
             },
 
