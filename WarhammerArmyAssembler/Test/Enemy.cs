@@ -118,26 +118,17 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Tomb Scorpion",
-            //    TestListName = "Tomb Scorpion (Tomb Kings)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 7,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 3,
-            //    Initiative = 3,
-            //    Attacks = 4,
-            //    Leadership = 8,
-            //    Undead = true,
-            //    KillingBlow = true,
-            //    PoisonAttack = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("7/4/0/5/5/3/3/4/8//")
+            {
+                Name = "Tomb Scorpion",
+                TestListName = "Tomb Scorpion (Tomb Kings)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Undead = true,
+                KillingBlow = true,
+                PoisonAttack = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
