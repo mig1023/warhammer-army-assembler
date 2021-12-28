@@ -161,27 +161,18 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Varghulf",
-            //    TestListName = "Varghulf (Vampire)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 8,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 4,
-            //    Initiative = 2,
-            //    Attacks = 5,
-            //    Leadership = 4,
-            //    Terror = true,
-            //    Undead = true,
-            //    Regeneration = true,
-            //    Hate = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("8/5/0/5/5/4/2/5/4//")
+            {
+                Name = "Varghulf",
+                TestListName = "Varghulf (Vampire)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                Undead = true,
+                Regeneration = true,
+                Hate = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
