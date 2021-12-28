@@ -1,14 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler
 {
     class Enemy : Unit
     {
         public static int MaxIDindex = -10;
+
+        public Enemy(string enemyProfile)
+        {
+            string[] profile = enemyProfile.Split('/');
+
+            this.Movement = new Profile { Value = int.Parse(profile[0].Trim()) };
+            this.WeaponSkill = new Profile { Value = int.Parse(profile[1].Trim()) };
+            this.BallisticSkill = new Profile { Value = int.Parse(profile[2].Trim()) };
+            this.Strength = new Profile { Value = int.Parse(profile[3].Trim()) };
+            this.Toughness = new Profile { Value = int.Parse(profile[4].Trim()) };
+            this.Wounds = new Profile { Value = int.Parse(profile[5].Trim()) };
+            this.Initiative = new Profile { Value = int.Parse(profile[6].Trim()) };
+            this.Attacks = new Profile { Value = int.Parse(profile[7].Trim()) };
+            this.Leadership = new Profile { Value = int.Parse(profile[8].Trim()) };
+
+            bool isArmour = int.TryParse(profile[9].Trim(), out int armour);
+
+            if (isArmour)
+                this.Armour = new Profile { Value = armour };
+
+            bool isWard = int.TryParse(profile[9].Trim(), out int ward);
+
+            if (isWard)
+                this.Ward = new Profile { Value = ward };
+        }
 
         private static Dictionary<string, List<Enemy>> GetEnemiesDictionary() => new Dictionary<string, List<Enemy>>
         {
@@ -63,45 +86,36 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
-            new Enemy
+            new Enemy("6/3/1/5/4/3/1/3/4")
             {
                 Name = "Troll",
                 TestListName = "Troll (Orcs&Goblins)",
                 Type = UnitType.Rare,
                 Size = 1,
-                Movement = new Profile { Value = 6 },
-                WeaponSkill = new Profile { Value = 3 },
-                BallisticSkill = new Profile { Value = 1 },
-                Strength = new Profile { Value = 5 },
-                Toughness = new Profile { Value = 4 },
-                Wounds = new Profile { Value = 3 },
-                Initiative = new Profile { Value = 1 },
-                Attacks = new Profile { Value = 3 },
-                Leadership = new Profile { Value = 4 },
                 Fear = true,
                 Regeneration = true,
                 Stupidity = true,
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Gyrobomber",
-            //    TestListName = "Gyrobomber (Dwarfs)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 1,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 5,
-            //    Wounds = 3,
-            //    Initiative = 2,
-            //    Attacks = 2,
-            //    Leadership = 9,
-            //    Armour = 4,
-            //    LargeBase = true,
-            //},
+            new Enemy("1/4/3/4/5/3/2/2/9")
+            {
+                Name = "Gyrobomber",
+                TestListName = "Gyrobomber (Dwarfs)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Movement = 1,
+                WeaponSkill = 4,
+                BallisticSkill = 3,
+                Strength = 4,
+                Toughness = 5,
+                Wounds = 3,
+                Initiative = 2,
+                Attacks = 2,
+                Leadership = 9,
+                Armour = 4,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
