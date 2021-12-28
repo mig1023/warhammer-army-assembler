@@ -27,7 +27,7 @@ namespace WarhammerArmyAssembler
             if (isArmour)
                 this.Armour = new Profile { Value = armour };
 
-            bool isWard = int.TryParse(profile[9].Trim(), out int ward);
+            bool isWard = int.TryParse(profile[10].Trim(), out int ward);
 
             if (isWard)
                 this.Ward = new Profile { Value = ward };
@@ -140,24 +140,15 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Griffon",
-            //    TestListName = "Griffon (The Empire)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 4,
-            //    Initiative = 5,
-            //    Attacks = 4,
-            //    Leadership = 7,
-            //    Terror = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("6/5/0/5/5/4/5/4/7//")
+            {
+                Name = "Griffon",
+                TestListName = "Griffon (The Empire)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
