@@ -107,25 +107,16 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Ancient Kroxigor",
-            //    TestListName = "Ancient Kroxigor (Lizardmen)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 1,
-            //    Strength = 7,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 1,
-            //    Attacks = 4,
-            //    Leadership = 7,
-            //    Fear = true,
-            //    ColdBlooded = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("6/3/1/7/4/3/1/4/7//")
+            {
+                Name = "Ancient Kroxigor",
+                TestListName = "Ancient Kroxigor (Lizardmen)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Fear = true,
+                ColdBlooded = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
