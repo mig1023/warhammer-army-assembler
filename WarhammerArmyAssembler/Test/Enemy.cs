@@ -320,24 +320,13 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Lothern Sea Guard",
-            //    TestListName = "20 Lothern Sea Guard (High Elves)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 5,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 4,
-            //    Strength = 3,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 5,
-            //    Attacks = 1,
-            //    Leadership = 8,
-            //    Armour = 6,
-            //    HitFirst = true,
-            //},
+            new Enemy("Lothern Sea Guard/5/4/4/3/3/1/5/1/8/6/")
+            {
+                Armybook = "High Elves",
+                Type = UnitType.Core,
+                Size = 20,
+                HitFirst = true,
+            },
 
             //new Enemy
             //{
