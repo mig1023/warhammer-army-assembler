@@ -170,42 +170,21 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "War Hydra",
-            //    TestListName = "War Hydra (Dark Elves)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 6,
-            //    Initiative = 2,
-            //    Attacks = 5,
-            //    Leadership = 6,
-            //    Armour = 4,
-            //    Terror = true,
-            //    LargeBase = true,
+            new Enemy("War Hydra/6/4/0/5/5/6/2/5/6/4/")
+            {
+                Armybook = "Dark Elves",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                LargeBase = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Apparentice",
-            //        Type = UnitType.Mount,
-            //        Size = 2,
-            //        Movement = 5,
-            //        WeaponSkill = 4,
-            //        BallisticSkill = 4,
-            //        Strength = 3,
-            //        Toughness = 3,
-            //        Wounds = 2,
-            //        Initiative = 3,
-            //        Attacks = 2,
-            //        Leadership = 8,
-            //        NoKillingBlow = true,
-            //    }
-            //},
+                Mount = new Enemy("Apparentice/5/4/4/3/3/2/3/2/8//")
+                {
+                    Type = UnitType.Mount,
+                    Size = 2,
+                    NoKillingBlow = true,
+                }
+            },
 
             //new Enemy
             //{
