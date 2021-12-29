@@ -353,24 +353,13 @@ namespace WarhammerArmyAssembler
                 Fear = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Bestigor",
-            //    TestListName = "20 Bestigor (Beastmen)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 5,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 3,
-            //    Strength = 6,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 3,
-            //    Attacks = 1,
-            //    Leadership = 7,
-            //    Armour = 5,
-            //    HitLast = true,
-            //},
+            new Enemy("20 Bestigor/5/4/3/6/4/1/3/1/7/5/")
+            {
+                Armybook = "Beastmen",
+                Type = UnitType.Core,
+                Size = 20,
+                HitLast = true,
+            },
 
             //new Enemy
             //{
