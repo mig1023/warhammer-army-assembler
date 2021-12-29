@@ -312,24 +312,13 @@ namespace WarhammerArmyAssembler
                 Size = 20,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Skeleton Warriors",
-            //    TestListName = "20 Skeleton Warriors (Tomb Kings)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 4,
-            //    WeaponSkill = 2,
-            //    BallisticSkill = 2,
-            //    Strength = 3,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 2,
-            //    Attacks = 1,
-            //    Leadership = 5,
-            //    Armour = 5,
-            //    Undead = true,
-            //},
+            new Enemy("Skeleton Warriors/4/2/2/3/3/1/2/1/5/5/")
+            {
+                Armybook = "Tomb Kings",
+                Type = UnitType.Core,
+                Size = 20,
+                Undead = true,
+            },
 
             //new Enemy
             //{
