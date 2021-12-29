@@ -345,23 +345,13 @@ namespace WarhammerArmyAssembler
                 Hate = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Dryads",
-            //    TestListName = "20 Dryads (Wood Elves)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 5,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 0,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 6,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Fear = true,
-            //},
+            new Enemy("20 Dryads/5/4/0/4/4/1/6/2/8//")
+            {
+                Armybook = "Wood Elves",
+                Type = UnitType.Core,
+                Size = 20,
+                Fear = true,
+            },
 
             //new Enemy
             //{
