@@ -417,40 +417,20 @@ namespace WarhammerArmyAssembler
                 Fear = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Pegasus Knights",
-            //    TestListName = "8 Pegasus Knights (Bretonnia)",
-            //    Type = UnitType.Special,
-            //    Size = 8,
-            //    Movement = 4,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 3,
-            //    Strength = 3,
-            //    Toughness = 4,
-            //    Wounds = 2,
-            //    Initiative = 4,
-            //    Attacks = 1,
-            //    Leadership = 8,
-            //    Armour = 3,
-            //    Lance = true,
+            new Enemy("Pegasus Knights/4/4/3/3/4/2/4/1/8/3/")
+            {
+                Armybook = "Bretonnia",
+                Type = UnitType.Special,
+                Size = 8,
+                Lance = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Boar",
-            //        Type = UnitType.Mount,
-            //        Size = 8,
-            //        Movement = 8,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 4,
-            //        Wounds = 1,
-            //        Initiative = 4,
-            //        Attacks = 2,
-            //        Leadership = 7,
-            //    }
-            //},
+                Mount = new Enemy("Pegasus/8/3/0/4/4/1/4/2/7//")
+                {
+                    Name = "Boar",
+                    Type = UnitType.Mount,
+                    Size = 8,
+                }
+            },
 
             //new Enemy
             //{
