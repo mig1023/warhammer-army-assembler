@@ -300,28 +300,17 @@ namespace WarhammerArmyAssembler
 
             new Enemy("Empire swordmens/4/3/3/3/3/1/3/1/7/6/")
             {
-                Armybook = "20 Empire swordmens (Empire)",
+                Armybook = "The Empire",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Orc boys",
-            //    TestListName = "20 Orc Boys (Orcs&Goblins)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 4,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 3,
-            //    Strength = 3,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 2,
-            //    Attacks = 1,
-            //    Leadership = 7,
-            //    Armour = 5,
-            //},
+            new Enemy("Orc boys/4/3/3/3/4/1/2/1/7/5/")
+            {
+                Armybook = "Orcs&Goblins",
+                Type = UnitType.Core,
+                Size = 20,
+            },
 
             //new Enemy
             //{
