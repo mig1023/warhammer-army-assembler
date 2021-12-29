@@ -186,26 +186,15 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Dragon Ogre",
-            //    TestListName = "Dragon Ogre Shaggoth (Beastmen)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 7,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 3,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 6,
-            //    Initiative = 4,
-            //    Attacks = 5,
-            //    Leadership = 9,
-            //    Armour = 4,
-            //    Terror = true,
-            //    ImmuneToPsychology = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("Dragon Ogre Shaggoth/7/6/3/5/5/6/4/5/9/4/")
+            {
+                Armybook = "Dragon Ogre Shaggoth (Beastmen)",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                ImmuneToPsychology = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
