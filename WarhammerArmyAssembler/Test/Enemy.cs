@@ -384,24 +384,13 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true
             },
 
-            //new Enemy
-            //{
-            //    Name = "Temple Guard",
-            //    TestListName = "20 Temple Guard (Lizardmen)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 4,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 2,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 4,
-            //    ColdBlooded = true
-            //},
+            new Enemy("20 Temple Guard/4/4/0/5/4/1/2/2/8/4/")
+            {
+                Armybook = "Lizardmen",
+                Type = UnitType.Core,
+                Size = 20,
+                ColdBlooded = true
+            },
 
             //new Enemy
             //{
