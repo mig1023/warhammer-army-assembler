@@ -260,25 +260,14 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Star Dragon",
-            //    TestListName = "Star Dragon (High Elves)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 0,
-            //    Strength = 7,
-            //    Toughness = 6,
-            //    Wounds = 7,
-            //    Initiative = 2,
-            //    Attacks = 6,
-            //    Leadership = 9,
-            //    Armour = 3,
-            //    Terror = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("Star Dragon/6/7/0/7/6/7/2/6/9/3/")
+            {
+                Armybook = "High Elves",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
