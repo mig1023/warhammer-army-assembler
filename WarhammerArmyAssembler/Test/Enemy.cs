@@ -361,40 +361,20 @@ namespace WarhammerArmyAssembler
                 HitLast = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Knights of the Realms",
-            //    TestListName = "8 Knights of the Realms (Bretonnia)",
-            //    Type = UnitType.Core,
-            //    Size = 8,
-            //    Movement = 4,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 3,
-            //    Strength = 3,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 3,
-            //    Attacks = 1,
-            //    Leadership = 8,
-            //    Armour = 2,
-            //    Lance = true,
+            new Enemy("8 Knights of the Realms/4/4/3/3/3/1/3/1/8/2/")
+            {
+                Armybook = "Bretonnia",
+                Type = UnitType.Core,
+                Size = 8,
+                Lance = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Warhorse",
-            //        Type = UnitType.Mount,
-            //        Size = 8,
-            //        Movement = 8,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 3,
-            //        Toughness = 3,
-            //        Wounds = 1,
-            //        Initiative = 3,
-            //        Attacks = 1,
-            //        Leadership = 5,
-            //    }
-            //},
+                Mount = new Enemy("Warhorse/8/3/0/3/3/1/3/1/5//")
+                {
+                    Name = "Warhorse",
+                    Type = UnitType.Mount,
+                    Size = 8,
+                }
+            },
 
             //new Enemy
             //{
