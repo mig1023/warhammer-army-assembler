@@ -337,24 +337,13 @@ namespace WarhammerArmyAssembler
                 PoisonAttack = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Back Ark Corsairs",
-            //    TestListName = "20 Back Ark Corsairs (Dark Elves)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 5,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 4,
-            //    Strength = 3,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 5,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 5,
-            //    Hate = true,
-            //},
+            new Enemy("20 Back Ark Corsairs/5/4/4/3/3/1/5/2/8/5/")
+            {
+                Armybook = "Dark Elves",
+                Type = UnitType.Core,
+                Size = 20,
+                Hate = true,
+            },
 
             //new Enemy
             //{
