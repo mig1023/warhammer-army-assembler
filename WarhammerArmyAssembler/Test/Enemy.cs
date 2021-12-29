@@ -467,25 +467,14 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Greatswords",
-            //    TestListName = "20 Greatswords (Empire)",
-            //    Type = UnitType.Special,
-            //    Size = 20,
-            //    Movement = 4,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 3,
-            //    Strength = 5,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 3,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 5,
-            //    HitLast = true,
-            //    Stubborn = true
-            //},
+            new Enemy("Greatswords/4/4/3/5/3/1/3/2/8/5/")
+            {
+                Armybook = "The Empire",
+                Type = UnitType.Special,
+                Size = 20,
+                HitLast = true,
+                Stubborn = true
+            },
 
             //new Enemy
             //{
