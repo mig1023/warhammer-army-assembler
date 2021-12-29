@@ -237,27 +237,17 @@ namespace WarhammerArmyAssembler
                 Giant = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Hell Pit Abomination",
-            //    TestListName = "Hell Pit Abomination (Skaven)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 0,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 1,
-            //    Strength = 6,
-            //    Toughness = 5,
-            //    Wounds = 6,
-            //    Initiative = 4,
-            //    Attacks = 0,
-            //    Leadership = 8,
-            //    Regeneration = true,
-            //    Terror = true,
-            //    Stubborn = true,
-            //    LargeBase = true,
-            //    HellPitAbomination = true,
-            //},
+            new Enemy("Hell Pit Abomination/6/3/3/6/5/6/3/0/10//")
+            {
+                Armybook = "Skaven",
+                Type = UnitType.Rare,
+                Size = 1,
+                Regeneration = true,
+                Terror = true,
+                Stubborn = true,
+                LargeBase = true,
+                HellPitAbomination = true,
+            },
 
             //new Enemy
             //{
