@@ -217,25 +217,14 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Treeman",
-            //    TestListName = "Treeman (Wood Elves)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 5,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 0,
-            //    Strength = 6,
-            //    Toughness = 6,
-            //    Wounds = 6,
-            //    Initiative = 2,
-            //    Attacks = 5,
-            //    Leadership = 8,
-            //    Armour = 3,
-            //    Terror = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("Treeman/5/5/0/6/6/6/2/5/8/3/")
+            {
+                Armybook = "Wood Elves",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
