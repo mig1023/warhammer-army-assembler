@@ -283,7 +283,7 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
         {
-            new Enemy("20 Clanrat Slaves/5/2/2/3/3/1/4/1/2//")
+            new Enemy("Clanrat Slaves/5/2/2/3/3/1/4/1/2//")
             {
                 Armybook = "Skaven",
                 Type = UnitType.Core,
@@ -291,21 +291,21 @@ namespace WarhammerArmyAssembler
                 StrengthInNumbers = true,
             },
 
-            new Enemy("20 Men-at-arms/4/2/2/3/3/1/3/1/5/5/")
+            new Enemy("Men-at-arms/4/2/2/3/3/1/3/1/5/5/")
             {
                 Armybook = "Bretonnia",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            new Enemy("20 Empire swordmens/4/3/3/3/3/1/3/1/7/6/")
+            new Enemy("Empire swordmens/4/3/3/3/3/1/3/1/7/6/")
             {
                 Armybook = "The Empire",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            new Enemy("20 Orc boys/4/3/3/3/4/1/2/1/7/5/")
+            new Enemy("Orc boys/4/3/3/3/4/1/2/1/7/5/")
             {
                 Armybook = "Orcs&Goblins",
                 Type = UnitType.Core,
@@ -320,7 +320,7 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            new Enemy("20 Lothern Sea Guard/5/4/4/3/3/1/5/1/8/6/")
+            new Enemy("Lothern Sea Guard/5/4/4/3/3/1/5/1/8/6/")
             {
                 Armybook = "High Elves",
                 Type = UnitType.Core,
@@ -328,7 +328,7 @@ namespace WarhammerArmyAssembler
                 HitFirst = true,
             },
 
-            new Enemy("20 Crypt Ghouls/4/3/0/3/4/1/3/2/5//")
+            new Enemy("Crypt Ghouls/4/3/0/3/4/1/3/2/5//")
             {
                 Armybook = "Vampire Counts",
                 Type = UnitType.Core,
@@ -337,7 +337,7 @@ namespace WarhammerArmyAssembler
                 PoisonAttack = true,
             },
 
-            new Enemy("20 Back Ark Corsairs/5/4/4/3/3/1/5/2/8/5/")
+            new Enemy("Back Ark Corsairs/5/4/4/3/3/1/5/2/8/5/")
             {
                 Armybook = "Dark Elves",
                 Type = UnitType.Core,
@@ -345,7 +345,7 @@ namespace WarhammerArmyAssembler
                 Hate = true,
             },
 
-            new Enemy("20 Dryads/5/4/0/4/4/1/6/2/8//")
+            new Enemy("Dryads/5/4/0/4/4/1/6/2/8//")
             {
                 Armybook = "Wood Elves",
                 Type = UnitType.Core,
@@ -353,7 +353,7 @@ namespace WarhammerArmyAssembler
                 Fear = true,
             },
 
-            new Enemy("20 Bestigor/5/4/3/6/4/1/3/1/7/5/")
+            new Enemy("Bestigor/5/4/3/6/4/1/3/1/7/5/")
             {
                 Armybook = "Beastmen",
                 Type = UnitType.Core,
@@ -361,7 +361,7 @@ namespace WarhammerArmyAssembler
                 HitLast = true,
             },
 
-            new Enemy("8 Knights of the Realms/4/4/3/3/3/1/3/1/8/2/")
+            new Enemy("Knights of the Realms/4/4/3/3/3/1/3/1/8/2/")
             {
                 Armybook = "Bretonnia",
                 Type = UnitType.Core,
@@ -376,7 +376,7 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("20 Longbeards/3/5/3/4/4/1/2/1/9/4/")
+            new Enemy("Longbeards/3/5/3/4/4/1/2/1/9/4/")
             {
                 Armybook = "Dwarfs",
                 Type = UnitType.Core,
@@ -384,7 +384,7 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true
             },
 
-            new Enemy("20 Temple Guard/4/4/0/5/4/1/2/2/8/4/")
+            new Enemy("Temple Guard/4/4/0/5/4/1/2/2/8/4/")
             {
                 Armybook = "Lizardmen",
                 Type = UnitType.Core,
@@ -392,61 +392,30 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = true
             },
 
-            //new Enemy
-            //{
-            //    Name = "Chosen Knights of Chaos",
-            //    TestListName = "8 Chosen Knights (Chaos)",
-            //    Type = UnitType.Core,
-            //    Size = 8,
-            //    Movement = 4,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 3,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 5,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 1,
+            new Enemy("Chosen Knights/4/5/3/5/4/1/5/2/8/1/")
+            {
+                Armybook = "Chaos",
+                Type = UnitType.Core,
+                Size = 8,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Chaos Steed",
-            //        Type = UnitType.Mount,
-            //        Size = 8,
-            //        Movement = 8,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 3,
-            //        Wounds = 1,
-            //        Initiative = 3,
-            //        Attacks = 1,
-            //        Leadership = 5,
-            //    }
-            //},
+                Mount = new Enemy("Chaos Steed/8/3/0/4/3/1/3/1/5//")
+                {
+                    Name = "Chaos Steed",
+                    Type = UnitType.Mount,
+                    Size = 8,
+                }
+            },
         };
 
         private static List<Enemy> EnemiesSpecialUnits = new List<Enemy>
         {
-            //new Enemy
-            //{
-            //    Name = "Tree Kin",
-            //    TestListName = "5 Tree Kin (Wood Elves)",
-            //    Type = UnitType.Special,
-            //    Size = 5,
-            //    Movement = 5,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 4,
-            //    Strength = 4,
-            //    Toughness = 5,
-            //    Wounds = 3,
-            //    Initiative = 3,
-            //    Attacks = 3,
-            //    Leadership = 8,
-            //    Armour = 4,
-            //    Fear = true,
-            //},
+            new Enemy("Tree Kin/5/4/4/4/5/3/3/3/8/4/")
+            {
+                Armybook = "Wood Elves",
+                Type = UnitType.Special,
+                Size = 5,
+                Fear = true,
+            },
 
             //new Enemy
             //{
