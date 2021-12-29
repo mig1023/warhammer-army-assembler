@@ -249,27 +249,16 @@ namespace WarhammerArmyAssembler
                 HellPitAbomination = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Necrosphinx",
-            //    TestListName = "Necrosphinx (Tomb Kings)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 8,
-            //    Wounds = 5,
-            //    Initiative = 1,
-            //    Attacks = 5,
-            //    Leadership = 8,
-            //    Armour = 3,
-            //    Terror = true,
-            //    LargeBase = true,
-            //    HeroicKillingBlow = true,
-            //    Undead = true,
-            //},
+            new Enemy("Necrosphinx/6/4/0/5/8/5/1/5/8/3/")
+            {
+                Armybook = "Tomb Kings",
+                Type = UnitType.Rare,
+                Size = 1,
+                Terror = true,
+                LargeBase = true,
+                HeroicKillingBlow = true,
+                Undead = true,
+            },
 
             //new Enemy
             //{
