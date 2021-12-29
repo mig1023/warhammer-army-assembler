@@ -188,7 +188,7 @@ namespace WarhammerArmyAssembler
 
             new Enemy("Dragon Ogre Shaggoth/7/6/3/5/5/6/4/5/9/4/")
             {
-                Armybook = "Dragon Ogre Shaggoth (Beastmen)",
+                Armybook = "Beastmen",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
@@ -196,48 +196,26 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Stegadon",
-            //    TestListName = "Stegadon (Lizardmen)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 6,
-            //    Wounds = 5,
-            //    Initiative = 2,
-            //    Attacks = 4,
-            //    Leadership = 5,
-            //    Armour = 4,
-            //    LargeBase = true,
-            //    ColdBlooded = true,
-            //    Terror = true,
-            //    Stubborn = true,
-            //    ImmuneToPsychology = true,
+            new Enemy("Stegadon/6/3/0/5/6/5/2/4/5/4/")
+            {
+                Armybook = "Lizardmen",
+                Type = UnitType.Rare,
+                Size = 1,
+                LargeBase = true,
+                ColdBlooded = true,
+                Terror = true,
+                Stubborn = true,
+                ImmuneToPsychology = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Skink Crew",
-            //        Type = UnitType.Mount,
-            //        Size = 5,
-            //        Movement = 6,
-            //        WeaponSkill = 2,
-            //        BallisticSkill = 3,
-            //        Strength = 3,
-            //        Toughness = 2,
-            //        Wounds = 4,
-            //        Initiative = 4,
-            //        Attacks = 4,
-            //        Leadership = 5,
-            //        Armour = 4,
-            //        ColdBlooded = true,
-            //        PoisonAttack = true,
-            //        NoKillingBlow = true,
-            //    }
-            //},
+                Mount = new Enemy("Skink Crew/6/2/3/3/2/4/4/4/5/4/")
+                {
+                    Type = UnitType.Mount,
+                    Size = 5,
+                    ColdBlooded = true,
+                    PoisonAttack = true,
+                    NoKillingBlow = true,
+                }
+            },
 
             //new Enemy
             //{
