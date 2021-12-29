@@ -283,7 +283,7 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
         {
-            new Enemy("Clanrat Slaves/5/2/2/3/3/1/4/1/2//")
+            new Enemy("20 Clanrat Slaves/5/2/2/3/3/1/4/1/2//")
             {
                 Armybook = "Skaven",
                 Type = UnitType.Core,
@@ -291,21 +291,21 @@ namespace WarhammerArmyAssembler
                 StrengthInNumbers = true,
             },
 
-            new Enemy("Men-at-arms/4/2/2/3/3/1/3/1/5/5/")
+            new Enemy("20 Men-at-arms/4/2/2/3/3/1/3/1/5/5/")
             {
                 Armybook = "Bretonnia",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            new Enemy("Empire swordmens/4/3/3/3/3/1/3/1/7/6/")
+            new Enemy("20 Empire swordmens/4/3/3/3/3/1/3/1/7/6/")
             {
                 Armybook = "The Empire",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            new Enemy("Orc boys/4/3/3/3/4/1/2/1/7/5/")
+            new Enemy("20 Orc boys/4/3/3/3/4/1/2/1/7/5/")
             {
                 Armybook = "Orcs&Goblins",
                 Type = UnitType.Core,
@@ -320,7 +320,7 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            new Enemy("Lothern Sea Guard/5/4/4/3/3/1/5/1/8/6/")
+            new Enemy("20 Lothern Sea Guard/5/4/4/3/3/1/5/1/8/6/")
             {
                 Armybook = "High Elves",
                 Type = UnitType.Core,
@@ -328,24 +328,14 @@ namespace WarhammerArmyAssembler
                 HitFirst = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Crypt Ghouls",
-            //    TestListName = "20 Crypt Ghouls (Vampire Counts)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 4,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 0,
-            //    Strength = 3,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 3,
-            //    Attacks = 2,
-            //    Leadership = 5,
-            //    Undead = true,
-            //    PoisonAttack = true,
-            //},
+            new Enemy("20 Crypt Ghouls/4/3/0/3/4/1/3/2/5//")
+            {
+                Armybook = "Vampire Counts",
+                Type = UnitType.Core,
+                Size = 20,
+                Undead = true,
+                PoisonAttack = true,
+            },
 
             //new Enemy
             //{
