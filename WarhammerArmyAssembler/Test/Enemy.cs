@@ -440,24 +440,14 @@ namespace WarhammerArmyAssembler
                 Fear = true,
             },
 
-            // new Enemy
-            //{
-            //    Name = "Plague Monks",
-            //    TestListName = "20 Plague Monks (Skaven)",
-            //    Type = UnitType.Special,
-            //    Size = 20,
-            //    Movement = 5,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 3,
-            //    Strength = 3,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 3,
-            //    Attacks = 3,
-            //    Leadership = 5,
-            //    Frenzy = true,
-            //    StrengthInNumbers = true,
-            //},
+             new Enemy("Plague Monks/5/3/3/3/4/1/3/3/5//")
+            {
+                Armybook = "Skaven",
+                Type = UnitType.Special,
+                Size = 20,
+                Frenzy = true,
+                StrengthInNumbers = true,
+            },
 
             //new Enemy
             //{
