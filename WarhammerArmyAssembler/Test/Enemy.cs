@@ -376,24 +376,13 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Longbeards",
-            //    TestListName = "20 Longbeards (Dwarfs)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 3,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 2,
-            //    Attacks = 1,
-            //    Leadership = 9,
-            //    Armour = 4,
-            //    ImmuneToPsychology = true
-            //},
+            new Enemy("20 Longbeards/3/5/3/4/4/1/2/1/9/4/")
+            {
+                Armybook = "Dwarfs",
+                Type = UnitType.Core,
+                Size = 20,
+                ImmuneToPsychology = true
+            },
 
             //new Enemy
             //{
