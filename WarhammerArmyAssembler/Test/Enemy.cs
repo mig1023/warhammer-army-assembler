@@ -432,24 +432,13 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Chaos Ogres",
-            //    TestListName = "5 Chaos Ogres (Beastmen)",
-            //    Type = UnitType.Special,
-            //    Size = 5,
-            //    Movement = 6,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 2,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 2,
-            //    Attacks = 3,
-            //    Leadership = 7,
-            //    Armour = 6,
-            //    Fear = true,
-            //},
+            new Enemy("Chaos Ogre/6/3/2/4/4/3/2/3/7/6/")
+            {
+                Armybook = "Beastmen",
+                Type = UnitType.Special,
+                Size = 5,
+                Fear = true,
+            },
 
             // new Enemy
             //{
