@@ -449,25 +449,14 @@ namespace WarhammerArmyAssembler
                 StrengthInNumbers = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Tomb Guard",
-            //    TestListName = "16 Tomb Guard (Tomb Kings)",
-            //    Type = UnitType.Special,
-            //    Size = 16,
-            //    Movement = 4,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 3,
-            //    Attacks = 1,
-            //    Leadership = 8,
-            //    Armour = 5,
-            //    KillingBlow = true,
-            //    Undead = true,
-            //},
+            new Enemy("Tomb Guard/4/3/3/4/4/1/3/1/8/5/")
+            {
+                Armybook = "Tomb Kings",
+                Type = UnitType.Special,
+                Size = 16,
+                KillingBlow = true,
+                Undead = true,
+            },
 
             //new Enemy
             //{
