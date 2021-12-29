@@ -293,29 +293,17 @@ namespace WarhammerArmyAssembler
 
             new Enemy("Men-at-arms/4/2/2/3/3/1/3/1/5/5/")
             {
-                Name = "Men-at-arms",
                 Armybook = "Bretonnia",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Empire swordmens",
-            //    TestListName = "20 Empire swordmens (Empire)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 4,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 3,
-            //    Strength = 3,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 3,
-            //    Attacks = 1,
-            //    Leadership = 7,
-            //    Armour = 6,
-            //},
+            new Enemy("Empire swordmens/4/3/3/3/3/1/3/1/7/6/")
+            {
+                Armybook = "20 Empire swordmens (Empire)",
+                Type = UnitType.Core,
+                Size = 20,
+            },
 
             //new Enemy
             //{
