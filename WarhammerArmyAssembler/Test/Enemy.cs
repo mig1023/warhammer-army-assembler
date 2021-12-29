@@ -283,23 +283,13 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
         {
-            //new Enemy
-            //{
-            //    Name = "Clanrat Slaves",
-            //    TestListName = "20 Clanrat Slaves (Skaven)",
-            //    Type = UnitType.Core,
-            //    Size = 20,
-            //    Movement = 5,
-            //    WeaponSkill = 2,
-            //    BallisticSkill = 2,
-            //    Strength = 3,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 4,
-            //    Attacks = 1,
-            //    Leadership = 2,
-            //    StrengthInNumbers = true,
-            //},
+            new Enemy("Clanrat Slaves/5/2/2/3/3/1/4/1/2//")
+            {
+                Armybook = "Skaven",
+                Type = UnitType.Core,
+                Size = 20,
+                StrengthInNumbers = true,
+            },
 
             //new Enemy
             //{
