@@ -370,7 +370,6 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Warhorse/8/3/0/3/3/1/3/1/5//")
                 {
-                    Name = "Warhorse",
                     Type = UnitType.Mount,
                     Size = 8,
                 }
@@ -400,7 +399,6 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Chaos Steed/8/3/0/4/3/1/3/1/5//")
                 {
-                    Name = "Chaos Steed",
                     Type = UnitType.Mount,
                     Size = 8,
                 }
@@ -426,7 +424,6 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Pegasus/8/3/0/4/4/1/4/2/7//")
                 {
-                    Name = "Boar",
                     Type = UnitType.Mount,
                     Size = 8,
                 }
@@ -476,24 +473,13 @@ namespace WarhammerArmyAssembler
                 Stubborn = true
             },
 
-            //new Enemy
-            //{
-            //    Name = "Black Orcs",
-            //    TestListName = "16 Black Orcs (Orcs&Goblins)",
-            //    Type = UnitType.Special,
-            //    Size = 16,
-            //    Movement = 4,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 3,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 2,
-            //    Attacks = 1,
-            //    Leadership = 8,
-            //    Armour = 5,
-            //    HitLast = true
-            //},
+            new Enemy("Black Orcs/4/4/3/5/4/1/2/1/8/5/")
+            {
+                Armybook = "Orcs&Goblins",
+                Type = UnitType.Special,
+                Size = 16,
+                HitLast = true
+            },
 
             //new Enemy
             //{
