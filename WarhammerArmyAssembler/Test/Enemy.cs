@@ -495,43 +495,22 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Cold One Knights",
-            //    TestListName = "8 Cold One Knights (Dark Elves)",
-            //    Type = UnitType.Special,
-            //    Size = 8,
-            //    Movement = 5,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 4,
-            //    Strength = 4,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 6,
-            //    Attacks = 1,
-            //    Leadership = 9,
-            //    Armour = 2,
-            //    Hate = true,
-            //    Fear = true,
-            //    Lance = true,
+            new Enemy("Cold One Knights/5/5/4/4/3/1/6/1/9/2/")
+            {
+                Armybook = "Dark Elves",
+                Type = UnitType.Special,
+                Size = 8,
+                Hate = true,
+                Fear = true,
+                Lance = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Cold One",
-            //        Type = UnitType.Mount,
-            //        Size = 8,
-            //        Movement = 7,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 4,
-            //        Wounds = 1,
-            //        Initiative = 2,
-            //        Attacks = 1,
-            //        Leadership = 3,
-            //    }
-            //},
-
+                Mount = new Enemy("Cold One/7/3/0/4/4/1/2/1/3//")
+                {
+                    Name = "Cold One",
+                    Type = UnitType.Mount,
+                    Size = 8,
+                }
+            },
 
             //new Enemy
             //{
