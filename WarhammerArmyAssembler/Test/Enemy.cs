@@ -598,23 +598,13 @@ namespace WarhammerArmyAssembler
                 Stubborn = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Troll Slayers",
-            //    TestListName = "16 Troll Slayers (Dwarfs)",
-            //    Type = UnitType.Rare,
-            //    Size = 16,
-            //    Movement = 3,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 3,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 2,
-            //    Attacks = 1,
-            //    Leadership = 10,
-            //    Unbreakable = true,
-            //},
+            new Enemy("Troll Slayers/3/4/3/5/4/1/2/1/10//")
+            {
+                Armybook = "Dwarfs",
+                Type = UnitType.Rare,
+                Size = 16,
+                Unbreakable = true,
+            },
 
             //new Enemy
             //{
