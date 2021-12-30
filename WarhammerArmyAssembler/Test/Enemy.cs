@@ -681,39 +681,18 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Moonclaw",
-            //    TestListName = "Moonclaw, Son of Murrslieb (Beastmen)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 5,
-            //    WeaponSkill = 3,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 2,
-            //    Initiative = 3,
-            //    Attacks = 3,
-            //    Leadership = 7,
-            //    Ward = 5,
+            new Enemy("Moonclaw/5/3/3/4/4/2/3/3/7//5")
+            {
+                Armybook = "Beastmen",
+                Type = UnitType.Hero,
+                Size = 1,
 
-            //    Mount = new Enemy
-            //    {
-            //        Type = UnitType.Mount,
-            //        Name = "Umbralok",
-            //        Size = 1,
-            //        Movement = 7,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 4,
-            //        Wounds = 1,
-            //        Initiative = 2,
-            //        Attacks = 3,
-            //        Leadership = 6,
-            //    }
-            //},
+                Mount = new Enemy("Umbralok/7/3/0/4/4/1/2/3/6//")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                }
+            },
 
             //new Enemy
             //{
