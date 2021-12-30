@@ -621,43 +621,22 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Blood Knights",
-            //    TestListName = "6 Blood Knights (Vampire Counts)",
-            //    Type = UnitType.Rare,
-            //    Size = 6,
-            //    Movement = 4,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 3,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 4,
-            //    Attacks = 2,
-            //    Leadership = 7,
-            //    Armour = 2,
-            //    Ward = 5,
-            //    Frenzy = true,
-            //    Undead = true,
-            //    Lance = true,
+            new Enemy("Blood Knights/4/5/3/5/4/1/4/2/7/2/5")
+            {
+                Armybook = "Vampire Counts",
+                Type = UnitType.Rare,
+                Size = 6,
+                Frenzy = true,
+                Undead = true,
+                Lance = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Type = UnitType.Mount,
-            //        Name = "Nightmare",
-            //        Size = 6,
-            //        Movement = 8,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 4,
-            //        Wounds = 1,
-            //        Initiative = 2,
-            //        Attacks = 1,
-            //        Leadership = 3,
-            //    }
-            //},
+                Mount = new Enemy("Nightmare/8/3/0/4/4/1/2/1/3//")
+                {
+                    Type = UnitType.Mount,
+                    Name = "Nightmare",
+                    Size = 6,
+                }
+            },
 
             //new Enemy
             //{
