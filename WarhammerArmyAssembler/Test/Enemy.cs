@@ -770,43 +770,22 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Malus Darkblade (Tz'arkan)",
-            //    TestListName = "Malus Darkblade in Tz'arkan state (Dark Elves)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 5,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 2,
-            //    Initiative = 9,
-            //    Attacks = 3,
-            //    Leadership = 10,
-            //    Armour = 3,
-            //    Reroll = "ToWound",
-            //    NoArmour = true,
+            new Enemy("Malus (Tz'arkan)/6/7/5/5/5/2/9/3/10/3/")
+            {
+                Armybook = "Dark Elves",
+                Type = UnitType.Hero,
+                Size = 1,
+                Reroll = "ToWound",
+                NoArmour = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Spite",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 7,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 4,
-            //        Wounds = 1,
-            //        Initiative = 2,
-            //        Attacks = 2,
-            //        Leadership = 4,
-            //        Armour = 5,
-            //        Fear = true,
-            //    }
-            //},
+                Mount = new Enemy("Spite/7/3/0/4/4/1/2/2/4/5/")
+                {
+                    Name = "Spite",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Fear = true,
+                }
+            },
 
             //new Enemy
             //{
