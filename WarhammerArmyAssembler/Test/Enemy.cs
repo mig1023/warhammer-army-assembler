@@ -663,27 +663,16 @@ namespace WarhammerArmyAssembler
                 Size = 1,
             },
 
-            //new Enemy
-            //{
-            //    Name = "The Herald Nekaph",
-            //    TestListName = "The Herald Nekaph (Tomb Kings)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 2,
-            //    Initiative = 3,
-            //    Attacks = 3,
-            //    Leadership = 8,
-            //    Ward = 5,
-            //    KillingBlow = true,
-            //    Undead = true,
-            //    Flail = true,
-            //    MultiWounds = "2",
-            //},
+            new Enemy("The Herald Nekaph/4/5/3/4/4/2/3/3/8//5")
+            {
+                Armybook = "Tomb Kings",
+                Type = UnitType.Hero,
+                Size = 1,
+                KillingBlow = true,
+                Undead = true,
+                Flail = true,
+                MultiWounds = "2",
+            },
 
             //new Enemy
             //{
