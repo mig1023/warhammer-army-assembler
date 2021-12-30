@@ -694,41 +694,20 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Ludwig Schwarzhelm",
-            //    TestListName = "Ludwig Schwarzhelm (The Empire)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 5,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 2,
-            //    Initiative = 5,
-            //    Attacks = 3,
-            //    Leadership = 8,
-            //    Armour = 2,
-            //    KillingBlow = true,
-            //    Reroll = "ToWound",
+            new Enemy("Ludwig Schwarzhelm/4/6/5/4/4/2/5/3/8/2/")
+            {
+                Armybook = "The Empire",
+                Type = UnitType.Hero,
+                Size = 1,
+                KillingBlow = true,
+                Reroll = "ToWound",
 
-            //    Mount = new Enemy
-            //    {
-            //        Type = UnitType.Mount,
-            //        Name = "Warhorse",
-            //        Size = 1,
-            //        Movement = 8,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 3,
-            //        Toughness = 3,
-            //        Wounds = 1,
-            //        Initiative = 3,
-            //        Attacks = 1,
-            //        Leadership = 5,
-            //    }
-            //},
+                Mount = new Enemy("Warhorse/8/3/0/3/3/1/3/1/5//")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                }
+            },
 
             //new Enemy
             //{
