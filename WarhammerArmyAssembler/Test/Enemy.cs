@@ -563,25 +563,15 @@ namespace WarhammerArmyAssembler
                 Unbreakable = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Flagellants",
-            //    TestListName = "24 Flagellant Warband (The Empire)",
-            //    Type = UnitType.Rare,
-            //    Size = 24,
-            //    Movement = 4,
-            //    WeaponSkill = 2,
-            //    BallisticSkill = 2,
-            //    Strength = 3,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 3,
-            //    Attacks = 1,
-            //    Leadership = 10,
-            //    Unbreakable = true,
-            //    Frenzy = true,
-            //    Flail = true,
-            //},
+            new Enemy("Flagellants/4/2/2/3/3/1/3/1/10//")
+            {
+                Armybook = "24 Flagellant Warband (The Empire)",
+                Type = UnitType.Rare,
+                Size = 24,
+                Unbreakable = true,
+                Frenzy = true,
+                Flail = true,
+            },
 
             //new Enemy
             //{
