@@ -536,24 +536,13 @@ namespace WarhammerArmyAssembler
                 Frenzy = true
             },
 
-            //new Enemy
-            //{
-            //    Name = "Sword Masters",
-            //    TestListName = "16 Sword Masters of Hoeth (High Elves)",
-            //    Type = UnitType.Special,
-            //    Size = 16,
-            //    Movement = 5,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 4,
-            //    Strength = 5,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 5,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 5,
-            //    HitFirst = true
-            //},
+            new Enemy("Sword Masters/5/6/4/5/3/1/5/2/8/5/")
+            {
+                Armybook = "High Elves",
+                Type = UnitType.Special,
+                Size = 16,
+                HitFirst = true
+            },
 
             //new Enemy
             //{
