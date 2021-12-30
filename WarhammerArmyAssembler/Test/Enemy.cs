@@ -528,24 +528,13 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Bloodletters",
-            //    TestListName = "20 Bloodletters (Chaos)",
-            //    Type = UnitType.Special,
-            //    Size = 20,
-            //    Movement = 4,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 4,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 6,
-            //    Frenzy = true
-            //},
+            new Enemy("Bloodletters/4/5/0/5/3/1/4/2/8/6/")
+            {
+                Armybook = "Chaos",
+                Type = UnitType.Special,
+                Size = 20,
+                Frenzy = true
+            },
 
             //new Enemy
             //{
