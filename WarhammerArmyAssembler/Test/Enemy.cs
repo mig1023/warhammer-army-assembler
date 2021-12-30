@@ -606,41 +606,20 @@ namespace WarhammerArmyAssembler
                 Unbreakable = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Grail Knights",
-            //    TestListName = "12 Grail Knights (Bretonnia)",
-            //    Type = UnitType.Rare,
-            //    Size = 12,
-            //    Movement = 4,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 5,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 2,
-            //    Ward = 5,
-            //    Lance = true,
+            new Enemy("Grail Knights/4/5/3/4/3/1/5/2/8/2/5")
+            {
+                Armybook = "Bretonnia",
+                Type = UnitType.Rare,
+                Size = 12,
+                Lance = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Type = UnitType.Mount,
-            //        Name = "Warhorse",
-            //        Size = 12,
-            //        Movement = 8,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 3,
-            //        Toughness = 3,
-            //        Wounds = 1,
-            //        Initiative = 3,
-            //        Attacks = 1,
-            //        Leadership = 5,
-            //    }
-            //},
+                Mount = new Enemy("Warhorse/8/3/0/3/3/1/3/1/5//")
+                {
+                    Type = UnitType.Mount,
+                    Name = "Warhorse",
+                    Size = 12,
+                }
+            },
 
             //new Enemy
             //{
