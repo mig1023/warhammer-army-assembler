@@ -544,24 +544,13 @@ namespace WarhammerArmyAssembler
                 HitFirst = true
             },
 
-            //new Enemy
-            //{
-            //    Name = "Hammerers",
-            //    TestListName = "16 Hammerers (Dwarfs)",
-            //    Type = UnitType.Special,
-            //    Size = 16,
-            //    Movement = 3,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 3,
-            //    Strength = 6,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 2,
-            //    Attacks = 1,
-            //    Leadership = 9,
-            //    Armour = 5,
-            //    Stubborn = true,
-            //},
+            new Enemy("Hammerers/3/5/3/6/4/1/2/1/9/5/")
+            {
+                Armybook = "Dwarfs",
+                Type = UnitType.Special,
+                Size = 16,
+                Stubborn = true,
+            },
         };
 
         private static List<Enemy> EnemiesRareUnits = new List<Enemy>
