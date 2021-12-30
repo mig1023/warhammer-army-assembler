@@ -721,25 +721,13 @@ namespace WarhammerArmyAssembler
                 Reroll = "ToHit;OpponentToWound",
             },
 
-            //new Enemy
-            //{
-            //    Name = "Josef Bugman",
-            //    TestListName = "Josef Bugman Master Brewer (Dwarfs)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 3,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 5,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 2,
-            //    Initiative = 4,
-            //    Attacks = 4,
-            //    Leadership = 10,
-            //    Armour = 3,
-            //    Ward = 4,
-            //    ImmuneToPsychology = true,
-            //},
+            new Enemy("Josef Bugman/3/6/5/5/5/2/4/4/10/3/4")
+            {
+                Armybook = "Dwarfs",
+                Type = UnitType.Hero,
+                Size = 1,
+                ImmuneToPsychology = true,
+            },
 
             //new Enemy
             //{
