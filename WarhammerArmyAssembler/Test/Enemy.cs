@@ -581,24 +581,13 @@ namespace WarhammerArmyAssembler
                 HitFirst = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "White Lions",
-            //    TestListName = "16 White Lions (High Elves)",
-            //    Type = UnitType.Rare,
-            //    Size = 16,
-            //    Movement = 5,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 4,
-            //    Strength = 6,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 5,
-            //    Attacks = 1,
-            //    Leadership = 8,
-            //    Armour = 6,
-            //    HitFirst = true
-            //},
+            new Enemy("White Lions/5/5/4/6/3/1/5/1/8/6/")
+            {
+                Armybook = "High Elves",
+                Type = UnitType.Rare,
+                Size = 16,
+                HitFirst = true
+            },
 
             //new Enemy
             //{
