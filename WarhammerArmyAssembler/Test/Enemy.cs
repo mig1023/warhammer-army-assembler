@@ -589,25 +589,14 @@ namespace WarhammerArmyAssembler
                 HitFirst = true
             },
 
-            //new Enemy
-            //{
-            //    Name = "Black Guard",
-            //    TestListName = "16 Black Guard (Dark Elves)",
-            //    Type = UnitType.Rare,
-            //    Size = 16,
-            //    Movement = 5,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 4,
-            //    Strength = 4,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 6,
-            //    Attacks = 1,
-            //    Leadership = 9,
-            //    Armour = 5,
-            //    Hate = true,
-            //    Stubborn = true,
-            //},
+            new Enemy("Black Guard/5/5/4/4/3/1/6/1/9/5/")
+            {
+                Armybook = "Dark Elves",
+                Type = UnitType.Rare,
+                Size = 16,
+                Hate = true,
+                Stubborn = true,
+            },
 
             //new Enemy
             //{
