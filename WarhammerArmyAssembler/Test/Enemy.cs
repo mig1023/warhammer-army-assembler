@@ -748,28 +748,17 @@ namespace WarhammerArmyAssembler
                 MultiWounds = "D3",
             },
 
-            //new Enemy
-            //{
-            //    Name = "Konrad",
-            //    TestListName = "Konrad Von Carstein (Vampire Counts)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 4,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 2,
-            //    Initiative = 6,
-            //    Attacks = 4,
-            //    Leadership = 6,
-            //    Armour = 5,
-            //    Fear = true,
-            //    HitFirst = true,
-            //    Reroll = "ToHit",
-            //    MultiWounds = "2",
-            //    Undead = true,
-            //},
+            new Enemy("Konrad/6/7/4/5/4/2/6/4/6/5/5")
+            {
+                Armybook = "Vampire Counts",
+                Type = UnitType.Hero,
+                Size = 1,
+                Fear = true,
+                HitFirst = true,
+                Reroll = "ToHit",
+                MultiWounds = "2",
+                Undead = true,
+            },
 
             //new Enemy
             //{
