@@ -565,7 +565,7 @@ namespace WarhammerArmyAssembler
 
             new Enemy("Flagellants/4/2/2/3/3/1/3/1/10//")
             {
-                Armybook = "24 Flagellant Warband (The Empire)",
+                Armybook = "The Empire",
                 Type = UnitType.Rare,
                 Size = 24,
                 Unbreakable = true,
@@ -573,23 +573,13 @@ namespace WarhammerArmyAssembler
                 Flail = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Waywathers",
-            //    TestListName = "16 Waywathers (Wood Elves)",
-            //    Type = UnitType.Rare,
-            //    Size = 16,
-            //    Movement = 5,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 5,
-            //    Strength = 3,
-            //    Toughness = 3,
-            //    Wounds = 1,
-            //    Initiative = 5,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    HitFirst = true
-            //},
+            new Enemy("Waywathers/5/4/5/3/3/1/5/2/8//")
+            {
+                Armybook = "Wood Elves",
+                Type = UnitType.Rare,
+                Size = 16,
+                HitFirst = true,
+            },
 
             //new Enemy
             //{
