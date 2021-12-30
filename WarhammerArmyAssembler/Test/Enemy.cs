@@ -709,28 +709,17 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Gor-Rok",
-            //    TestListName = "Gor-Rok, The Great White Lizard (Lizardmen)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 0,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 2,
-            //    Initiative = 3,
-            //    Attacks = 4,
-            //    Leadership = 8,
-            //    ColdBlooded = true,
-            //    Armour = 3,
-            //    Stubborn = true,
-            //    NoKillingBlow = true,
-            //    NoMultiWounds = true,
-            //    Reroll = "ToHit;OpponentToWound",
-            //},
+            new Enemy("Gor-Rok/4/5/0/5/5/2/3/4/8/3/")
+            {
+                Armybook = "Lizardmen",
+                Type = UnitType.Hero,
+                Size = 1,
+                ColdBlooded = true,
+                Stubborn = true,
+                NoKillingBlow = true,
+                NoMultiWounds = true,
+                Reroll = "ToHit;OpponentToWound",
+            },
 
             //new Enemy
             //{
