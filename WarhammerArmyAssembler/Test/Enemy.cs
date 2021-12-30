@@ -780,7 +780,6 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Spite/7/3/0/4/4/1/2/2/4/5/")
                 {
-                    Name = "Spite",
                     Type = UnitType.Mount,
                     Size = 1,
                     Fear = true,
@@ -810,43 +809,21 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
         {
-            //new Enemy
-            //{
-            //    Name = "Green Knight",
-            //    TestListName = "Green Knight (Bretonnia)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 3,
-            //    Strength = 6,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 6,
-            //    Attacks = 4,
-            //    Leadership = 9,
-            //    Ward = 5,
-            //    ImmuneToPsychology = true,
-            //    Terror = true,
-            //    Undead = true,
+            new Enemy("Green Knight/6/7/3/6/4/3/6/4/9//4")
+            {
+                Armybook = "Bretonnia",
+                Type = UnitType.Lord,
+                Size = 1,
+                ImmuneToPsychology = true,
+                Terror = true,
+                Undead = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Shadow Steed",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 8,
-            //        WeaponSkill = 4,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 3,
-            //        Wounds = 1,
-            //        Initiative = 4,
-            //        Attacks = 1,
-            //        Leadership = 5,
-            //        Armour = 5,
-            //    }
-            //},
+                Mount = new Enemy("Shadow Steed/8/4/0/4/3/1/4/1/5/5/")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                }
+            },
 
             //new Enemy
             //{
