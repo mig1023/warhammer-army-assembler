@@ -489,7 +489,6 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Boar/7/3/0/3/4/1/3/1/3//")
                 {
-                    Name = "Boar",
                     Type = UnitType.Mount,
                     Size = 8,
                 }
@@ -506,7 +505,6 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Cold One/7/3/0/4/4/1/2/1/3//")
                 {
-                    Name = "Cold One",
                     Type = UnitType.Mount,
                     Size = 8,
                 }
@@ -522,7 +520,6 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Cold One/7/3/0/4/4/1/2/1/3//")
                 {
-                    Name = "Cold One",
                     Type = UnitType.Mount,
                     Size = 8,
                 }
@@ -616,7 +613,6 @@ namespace WarhammerArmyAssembler
                 Mount = new Enemy("Warhorse/8/3/0/3/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
-                    Name = "Warhorse",
                     Size = 12,
                 }
             },
@@ -633,7 +629,6 @@ namespace WarhammerArmyAssembler
                 Mount = new Enemy("Nightmare/8/3/0/4/4/1/2/1/3//")
                 {
                     Type = UnitType.Mount,
-                    Name = "Nightmare",
                     Size = 6,
                 }
             },
@@ -648,7 +643,6 @@ namespace WarhammerArmyAssembler
                 Mount = new Enemy("Juggernaut/7/5/0/5/4/3/2/3/7//")
                 {
                     Type = UnitType.Mount,
-                    Name = "Juggernaut",
                     Size = 6,
                 }
             },
@@ -674,39 +668,18 @@ namespace WarhammerArmyAssembler
                 MultiWounds = "2",
             },
 
-            //new Enemy
-            //{
-            //    Name = "Gitilla",
-            //    TestListName = "Gitilla da Hunter (Orcs&Goblins)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 4,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 2,
-            //    Initiative = 4,
-            //    Attacks = 3,
-            //    Leadership = 7,
-            //    Armour = 3,
+            new Enemy("Gitilla/4/4/4/4/4/2/4/3/7/3/")
+            {
+                Armybook = "Orcs&Goblins",
+                Type = UnitType.Hero,
+                Size = 1,
 
-            //    Mount = new Enemy
-            //    {
-            //        Type = UnitType.Mount,
-            //        Name = "Ulda the Great Wolf",
-            //        Size = 1,
-            //        Movement = 9,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 3,
-            //        Toughness = 3,
-            //        Wounds = 1,
-            //        Initiative = 3,
-            //        Attacks = 2,
-            //        Leadership = 3,
-            //    }
-            //},
+                Mount = new Enemy("Ulda the Great Wolf/9/3/0/3/3/1/3/2/3//")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                }
+            },
 
             //new Enemy
             //{
