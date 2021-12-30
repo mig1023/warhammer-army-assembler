@@ -555,24 +555,13 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesRareUnits = new List<Enemy>
         {
-            //new Enemy
-            //{
-            //    Name = "Snotling Pump Wagon",
-            //    TestListName = "Snotling Pump Wagon (Orcs&Goblins)",
-            //    Type = UnitType.Rare,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 2,
-            //    BallisticSkill = 0,
-            //    Strength = 2,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 3,
-            //    Attacks = 5,
-            //    Leadership = 4,
-            //    Unbreakable = true,
-            //    Armour = 6,
-            //},
+            new Enemy("Snotling Pump Wagon/6/2/0/2/4/3/3/5/4/6/")
+            {
+                Armybook = "Orcs&Goblins",
+                Type = UnitType.Rare,
+                Size = 1,
+                Unbreakable = true,
+            },
 
             //new Enemy
             //{
