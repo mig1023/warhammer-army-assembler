@@ -656,24 +656,12 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesHeroes = new List<Enemy>
         {
-            //new Enemy
-            //{
-            //    Name = "Tretch Craventail",
-            //    TestListName = "Tretch Craventail (Skaven)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 5,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 4,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 2,
-            //    Initiative = 6,
-            //    Attacks = 4,
-            //    Leadership = 6,
-            //    Armour = 5,
-            //    Ward = 4,
-            //},
+            new Enemy("Tretch Craventail/5/5/4/4/4/2/6/4/6/5/4")
+            {
+                Armybook = "Skaven",
+                Type = UnitType.Hero,
+                Size = 1,
+            },
 
             //new Enemy
             //{
