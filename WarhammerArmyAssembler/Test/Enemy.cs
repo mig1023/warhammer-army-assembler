@@ -729,24 +729,14 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Drycha",
-            //    TestListName = "Drycha (Wood Elves)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 5,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 4,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 8,
-            //    Attacks = 5,
-            //    Leadership = 8,
-            //    Terror = true,
-            //    Reroll = "ToHit",
-            //},
+            new Enemy("Drycha/5/7/4/5/4/3/8/5/8//")
+            {
+                Armybook = "Wood Elves",
+                Type = UnitType.Hero,
+                Size = 1,
+                Terror = true,
+                Reroll = "ToHit",
+            },
 
             //new Enemy
             //{
