@@ -638,40 +638,20 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Skullcrushers",
-            //    TestListName = "6 Skullcrushers of Khorne (Chaos)",
-            //    Type = UnitType.Rare,
-            //    Size = 6,
-            //    Movement = 4,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 5,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 1,
-            //    Fear = true,
+            new Enemy("Skullcrushers/4/5/3/4/4/1/5/2/8/1/")
+            {
+                Armybook = "Chaos",
+                Type = UnitType.Rare,
+                Size = 6,
+                Fear = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Type = UnitType.Mount,
-            //        Name = "Juggernaut",
-            //        Size = 6,
-            //        Movement = 7,
-            //        WeaponSkill = 5,
-            //        BallisticSkill = 0,
-            //        Strength = 5,
-            //        Toughness = 4,
-            //        Wounds = 3,
-            //        Initiative = 2,
-            //        Attacks = 3,
-            //        Leadership = 7,
-            //    }
-            //},
+                Mount = new Enemy("Juggernaut/7/5/0/5/4/3/2/3/7//")
+                {
+                    Type = UnitType.Mount,
+                    Name = "Juggernaut",
+                    Size = 6,
+                }
+            },
         };
 
         private static List<Enemy> EnemiesHeroes = new List<Enemy>
