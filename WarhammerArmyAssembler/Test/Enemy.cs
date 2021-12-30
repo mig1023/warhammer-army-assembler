@@ -738,27 +738,15 @@ namespace WarhammerArmyAssembler
                 Reroll = "ToHit",
             },
 
-            //new Enemy
-            //{
-            //    Name = "Caradryan",
-            //    TestListName = "Caradryan, Capitain ot The Phoenix Guard (High Elves)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 5,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 6,
-            //    Strength = 4,
-            //    Toughness = 3,
-            //    Wounds = 2,
-            //    Initiative = 7,
-            //    Attacks = 3,
-            //    Leadership = 9,
-            //    Armour = 5,
-            //    Ward = 4,
-            //    Fear = true,
-            //    HitFirst = true,
-            //    MultiWounds = "D3",
-            //},
+            new Enemy("Caradryan/5/6/6/4/3/4/7/3/9/5/4")
+            {
+                Armybook = "High Elves",
+                Type = UnitType.Hero,
+                Size = 1,
+                Fear = true,
+                HitFirst = true,
+                MultiWounds = "D3",
+            },
 
             //new Enemy
             //{
