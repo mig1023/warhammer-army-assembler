@@ -797,28 +797,15 @@ namespace WarhammerArmyAssembler
                 MultiWounds = "D3",
             },
 
-            //new Enemy
-            //{
-            //    Name = "Chakax",
-            //    TestListName = "Chakax, The Eternity Warden (Lizardmen)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 0,
-            //    Strength = 7,
-            //    Toughness = 5,
-            //    Wounds = 2,
-            //    Initiative = 3,
-            //    Attacks = 4,
-            //    Leadership = 8,
-            //    ColdBlooded = true,
-            //    Armour = 4,
-            //    Ward = 5,
-            //    Unbreakable = true,
-            //    HitFirst = true,
-            //    Reroll = "ToHit",
-            //},
+            new Enemy("Chakax/4/5/0/7/5/2/3/4/8/4/5")
+            {
+                Armybook = "Lizardmen",
+                Type = UnitType.Hero,
+                Size = 1,
+                Unbreakable = true,
+                HitFirst = true,
+                Reroll = "ToHit",
+            },
         };
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
