@@ -760,25 +760,15 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Throgg",
-            //    TestListName = "Throgg, King of Trolls (Chaos)",
-            //    Type = UnitType.Hero,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 2,
-            //    Strength = 6,
-            //    Toughness = 5,
-            //    Wounds = 4,
-            //    Initiative = 2,
-            //    Attacks = 5,
-            //    Leadership = 8,
-            //    Fear = true,
-            //    Regeneration = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("Throgg/6/5/2/6/5/4/2/5/8//")
+            {
+                Armybook = "Chaos",
+                Type = UnitType.Hero,
+                Size = 1,
+                Fear = true,
+                Regeneration = true,
+                LargeBase = true,
+            },
 
             //new Enemy
             //{
