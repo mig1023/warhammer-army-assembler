@@ -512,41 +512,21 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Cold One Cavalry",
-            //    TestListName = "8 Cold One Cavalry (Lizardmen)",
-            //    Type = UnitType.Special,
-            //    Size = 8,
-            //    Movement = 4,
-            //    WeaponSkill = 4,
-            //    BallisticSkill = 0,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 1,
-            //    Initiative = 2,
-            //    Attacks = 2,
-            //    Leadership = 8,
-            //    Armour = 2,
-            //    ColdBlooded = true,
-            //    Fear = true,
+            new Enemy("Cold One Cavalry/4/4/0/4/4/1/2/2/8/2/")
+            {
+                Armybook = "Lizardmen",
+                Type = UnitType.Special,
+                Size = 8,
+                ColdBlooded = true,
+                Fear = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Cold One",
-            //        Type = UnitType.Mount,
-            //        Size = 8,
-            //        Movement = 7,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 4,
-            //        Wounds = 1,
-            //        Initiative = 2,
-            //        Attacks = 1,
-            //        Leadership = 3,
-            //    }
-            //},
+                Mount = new Enemy("Cold One/7/3/0/4/4/1/2/1/3//")
+                {
+                    Name = "Cold One",
+                    Type = UnitType.Mount,
+                    Size = 8,
+                }
+            },
 
             //new Enemy
             //{
