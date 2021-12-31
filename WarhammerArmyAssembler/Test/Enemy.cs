@@ -894,44 +894,23 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Karl Franz",
-            //    TestListName = "The Emperor Karl Franz (The Empire)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 5,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 6,
-            //    Attacks = 4,
-            //    Leadership = 10,
-            //    Armour = 4,
-            //    Ward = 4,
-            //    AutoWound = true,
-            //    NoArmour = true,
-            //    MultiWounds = "D3",
+            new Enemy("Karl Franz/4/6/5/4/4/3/6/4/10/4/4")
+            {
+                Armybook = "The Empire",
+                Type = UnitType.Lord,
+                Size = 1,
+                AutoWound = true,
+                NoArmour = true,
+                MultiWounds = "D3",
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Deathclaw",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 6,
-            //        WeaponSkill = 6,
-            //        BallisticSkill = 0,
-            //        Strength = 5,
-            //        Toughness = 5,
-            //        Wounds = 4,
-            //        Initiative = 5,
-            //        Attacks = 4,
-            //        Leadership = 8,
-            //        Terror = true,
-            //    }
-            //},
+                Mount = new Enemy("Deathclaw/6/6/0/5/5/4/5/4/8//")
+                {
+                    Name = "Deathclaw",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Terror = true,
+                }
+            },
 
             //new Enemy
             //{
