@@ -1034,27 +1034,15 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Grimgor Ironhide",
-            //    TestListName = "Grimgor Ironhide (Orcs&Goblins)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 8,
-            //    BallisticSkill = 1,
-            //    Strength = 7,
-            //    Toughness = 5,
-            //    Wounds = 3,
-            //    Initiative = 5,
-            //    Attacks = 7,
-            //    Leadership = 9,
-            //    Armour = 1,
-            //    Ward = 5,
-            //    Hate = true,
-            //    HitFirst = true,
-            //    ImmuneToPsychology = true,
-            //},
+            new Enemy("Grimgor Ironhide/4/8/1/7/5/3/5/7/9/1/5")
+            {
+                Armybook = "Orcs&Goblins",
+                Type = UnitType.Lord,
+                Size = 1,
+                Hate = true,
+                HitFirst = true,
+                ImmuneToPsychology = true,
+            },
 
             //new Enemy
             //{
