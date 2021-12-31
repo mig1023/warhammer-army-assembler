@@ -877,43 +877,22 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Zacharias",
-            //    TestListName = "Zacharias The Everliving (Vampire Counts)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 6,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 4,
-            //    Initiative = 8,
-            //    Attacks = 5,
-            //    Leadership = 10,
-            //    Ward = 4,
-            //    Undead = true,
+            new Enemy("Zacharias/6/6/6/5/5/4/8/5/10//4")
+            {
+                Armybook = "Vampire Counts",
+                Type = UnitType.Lord,
+                Size = 1,
+                Undead = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Zombie Dragon",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 6,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 6,
-            //        Toughness = 6,
-            //        Wounds = 6,
-            //        Initiative = 1,
-            //        Attacks = 4,
-            //        Leadership = 4,
-            //        Armour = 5,
-            //        Terror = true,
-            //        Undead = true,
-            //    }
-            //},
+                Mount = new Enemy("Zombie Dragon/6/3/0/6/6/6/1/4/4/5/")
+                {
+                    Name = "Zombie Dragon",
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Terror = true,
+                    Undead = true,
+                }
+            },
 
             //new Enemy
             //{
