@@ -925,43 +925,21 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Torgrim Grudgebearer",
-            //    TestListName = "Torgrim Grudgebearer (Dwarfs)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 3,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 6,
-            //    Strength = 4,
-            //    Toughness = 5,
-            //    Wounds = 7,
-            //    Initiative = 4,
-            //    Attacks = 4,
-            //    Leadership = 10,
-            //    Armour = 2,
-            //    Ward = 4,
-            //    HitFirst = true,
-            //    ImmuneToPsychology = true,
-            //    Stubborn = true,
+            new Enemy("Torgrim Grudgebearer/3/7/6/4/5/7/4/4/10/2/4")
+            {
+                Armybook = "Dwarfs",
+                Type = UnitType.Lord,
+                Size = 1,
+                HitFirst = true,
+                ImmuneToPsychology = true,
+                Stubborn = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Thronebearers",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 3,
-            //        WeaponSkill = 5,
-            //        BallisticSkill = 3,
-            //        Strength = 4,
-            //        Toughness = 0,
-            //        Wounds = 1,
-            //        Initiative = 3,
-            //        Attacks = 4,
-            //        Leadership = 0,
-            //    }
-            //},
+                Mount = new Enemy("Thronebearers/3/5/3/4/0/1/3/4/0//")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                }
+            },
 
             //new Enemy
             //{
