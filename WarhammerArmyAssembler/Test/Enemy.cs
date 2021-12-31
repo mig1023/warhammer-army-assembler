@@ -1044,27 +1044,15 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Bloodthister",
-            //    TestListName = "Greater Daemon Bloodthister (Chaos)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 10,
-            //    BallisticSkill = 0,
-            //    Strength = 7,
-            //    Toughness = 6,
-            //    Wounds = 7,
-            //    Initiative = 10,
-            //    Attacks = 7,
-            //    Leadership = 9,
-            //    Armour = 4,
-            //    Ward = 5,
-            //    Terror = true,
-            //    KillingBlow = true,
-            //    LargeBase = true,
-            //},
+            new Enemy("Bloodthister/6/10/0/7/6/7/10/7/9/4/5")
+            {
+                Armybook = "Chaos",
+                Type = UnitType.Lord,
+                Size = 1,
+                Terror = true,
+                KillingBlow = true,
+                LargeBase = true,
+            },
         };
     }
 }
