@@ -886,7 +886,6 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Zombie Dragon/6/3/0/6/6/6/1/4/4/5/")
                 {
-                    Name = "Zombie Dragon",
                     Type = UnitType.Mount,
                     Size = 1,
                     Terror = true,
@@ -905,49 +904,26 @@ namespace WarhammerArmyAssembler
 
                 Mount = new Enemy("Deathclaw/6/6/0/5/5/4/5/4/8//")
                 {
-                    Name = "Deathclaw",
                     Type = UnitType.Mount,
                     Size = 1,
                     Terror = true,
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Tyrion",
-            //    TestListName = "Tyrion, The Defender of Ulthuan (High Elves)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 5,
-            //    WeaponSkill = 9,
-            //    BallisticSkill = 7,
-            //    Strength = 7,
-            //    Toughness = 3,
-            //    Wounds = 4,
-            //    Initiative = 10,
-            //    Attacks = 4,
-            //    Leadership = 10,
-            //    HitFirst = true,
-            //    Armour = 1,
-            //    Ward = 4,
-            //    Regeneration = true,
+            new Enemy("Tyrion/5/9/7/7/3/4/10/4/10/1/4")
+            {
+                Armybook = "High Elves",
+                Type = UnitType.Lord,
+                Size = 1,
+                HitFirst = true,
+                Regeneration = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Malhandir",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 10,
-            //        WeaponSkill = 4,
-            //        BallisticSkill = 0,
-            //        Strength = 4,
-            //        Toughness = 3,
-            //        Wounds = 1,
-            //        Initiative = 5,
-            //        Attacks = 2,
-            //        Leadership = 7,
-            //    }
-            //},
+                Mount = new Enemy("Malhandir/10/4/0/4/3/1/5/2/7//")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                }
+            },
 
             //new Enemy
             //{
