@@ -1017,45 +1017,22 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Archaon",
-            //    TestListName = "Archaon, Lord of the End Times (Chaos)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 9,
-            //    BallisticSkill = 5,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 4,
-            //    Initiative = 7,
-            //    Attacks = 10,
-            //    Leadership = 10,
-            //    Armour = 1,
-            //    Ward = 3,
-            //    ImmuneToPsychology = true,
-            //    NoArmour = true,
-            //    Terror = true,
+            new Enemy("Archaon/4/9/5/5/5/4/7/10/10/1/3")
+            {
+                Armybook = "Chaos",
+                Type = UnitType.Lord,
+                Size = 1,
+                ImmuneToPsychology = true,
+                NoArmour = true,
+                Terror = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Dorghar",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 8,
-            //        WeaponSkill = 4,
-            //        BallisticSkill = 0,
-            //        Strength = 5,
-            //        Toughness = 5,
-            //        Wounds = 3,
-            //        Initiative = 3,
-            //        Attacks = 3,
-            //        Leadership = 9,
-            //        Armour = 4,
-            //        LargeBase = true,
-            //    }
-            //},
+                Mount = new Enemy("Dorghar/8/4/0/5/5/3/3/3/9/4/")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    LargeBase = true,
+                }
+            },
 
             //new Enemy
             //{
