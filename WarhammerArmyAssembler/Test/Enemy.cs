@@ -832,25 +832,15 @@ namespace WarhammerArmyAssembler
                 Size = 1,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Khalida",
-            //    TestListName = "High Queen Khalida, Beloved of Asaph (Tomb Kings)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 5,
-            //    Wounds = 3,
-            //    Initiative = 9,
-            //    Attacks = 5,
-            //    Leadership = 10,
-            //    HitFirst = true,
-            //    Undead = true,
-            //    PoisonAttack = true,
-            //},
+            new Enemy("Khalida/6/6/3/4/5/3/9/5/10//")
+            {
+                Armybook = "Tomb Kings",
+                Type = UnitType.Lord,
+                Size = 1,
+                HitFirst = true,
+                Undead = true,
+                PoisonAttack = true,
+            },
 
             //new Enemy
             //{
