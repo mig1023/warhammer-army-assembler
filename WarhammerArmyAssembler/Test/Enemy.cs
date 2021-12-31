@@ -998,47 +998,24 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Kroq-Gar",
-            //    TestListName = "Kroq-Gar Ancient (Lizardmen)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 6,
-            //    BallisticSkill = 3,
-            //    Strength = 6,
-            //    Toughness = 5,
-            //    Wounds = 3,
-            //    Initiative = 4,
-            //    Attacks = 5,
-            //    Leadership = 8,
-            //    ColdBlooded = true,
-            //    Armour = 3,
-            //    Ward = 5,
-            //    MultiWounds = "2",
+            new Enemy("Kroq-Gar/4/6/3/6/5/3/4/5/8/3/5")
+            {
+                Armybook = "Lizardmen",
+                Type = UnitType.Lord,
+                Size = 1,
+                ColdBlooded = true,
+                MultiWounds = "2",
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Grymloq",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 7,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 7,
-            //        Toughness = 5,
-            //        Wounds = 5,
-            //        Initiative = 2,
-            //        Attacks = 5,
-            //        Leadership = 5,
-            //        Armour = 4,
-            //        Terror = true,
-            //        ColdBlooded = true,
-            //        MultiWounds = "D3",
-            //        LargeBase = true,
-            //    }
-            //},
+                Mount = new Enemy("Grymloq/7/3/0/7/5/5/2/5/5/4/")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Terror = true,
+                    ColdBlooded = true,
+                    MultiWounds = "D3",
+                    LargeBase = true,
+                }
+            },
 
             //new Enemy
             //{
