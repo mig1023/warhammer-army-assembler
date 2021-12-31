@@ -982,44 +982,21 @@ namespace WarhammerArmyAssembler
                 MultiWounds = "D3",
             },
 
-            //new Enemy
-            //{
-            //    Name = "Malekith",
-            //    TestListName = "Malekith, Witch King of Naggaroth (Dark Elves)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 8,
-            //    WeaponSkill = 5,
-            //    BallisticSkill = 4,
-            //    Strength = 6,
-            //    Toughness = 3,
-            //    Wounds = 3,
-            //    Initiative = 8,
-            //    Attacks = 4,
-            //    Leadership = 10,
-            //    NoArmour = true,
-            //    Armour = 4,
-            //    Ward = 2,
+            new Enemy("Malekith/8/5/4/6/3/3/8/4/10/4/2")
+            {
+                Armybook = "Dark Elves",
+                Type = UnitType.Lord,
+                Size = 1,
+                NoArmour = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Seraphon",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 6,
-            //        WeaponSkill = 6,
-            //        BallisticSkill = 0,
-            //        Strength = 6,
-            //        Toughness = 6,
-            //        Wounds = 6,
-            //        Initiative = 4,
-            //        Attacks = 5,
-            //        Leadership = 8,
-            //        Armour = 3,
-            //        Terror = true,
-            //        LargeBase = true,
-            //    }
-            //},
+                Mount = new Enemy("Seraphon/6/6/0/6/6/6/4/5/8/3/")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Terror = true,
+                    LargeBase = true,
+                }
+            },
 
             //new Enemy
             //{
