@@ -202,7 +202,9 @@ namespace WarhammerArmyAssembler.Test
                     enemy.Mount.Name += " (enemy)";
             }
 
-            Test.Data.Console(Test.Data.text, "{0} vs {1}", unit.Name,  enemy.Name);
+            string testHead = String.Format("{0} vs {1}", unit.Name, enemy.Name);
+            Test.Data.Console(Test.Data.text, testHead);
+            Test.Data.Console(Test.Data.supplText, String.Format("\n{0}", new string('-', testHead.Length)));
 
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
             InitRoundWounds(participants, ref roundWounds);
@@ -510,7 +512,7 @@ namespace WarhammerArmyAssembler.Test
 
             Unit terrorSource = (((enemyFriend != null) && !enemy.Terror) ? enemyFriend : enemy);
 
-            Test.Data.Console(Test.Data.text, "\n{0} try to resist of terror by {1} ", unit.Name, terrorSource.Name);
+            Test.Data.Console(Test.Data.text, "\n\n{0} try to resist of terror by {1} ", unit.Name, terrorSource.Name);
 
             if (unit.Unbreakable)
                 Test.Data.Console(Test.Data.goodText, " --> autopassed (unbreakable)");
