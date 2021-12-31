@@ -825,24 +825,12 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Khuzrak",
-            //    TestListName = "Khuzrak, The One-eye (Beastmen)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 5,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 1,
-            //    Strength = 5,
-            //    Toughness = 5,
-            //    Wounds = 3,
-            //    Initiative = 5,
-            //    Attacks = 4,
-            //    Leadership = 9,
-            //    Armour = 2,
-            //},
-
+            new Enemy("Khuzrak/5/7/1/5/5/3/5/4/9/2/")
+            {
+                Armybook = "Beastmen",
+                Type = UnitType.Lord,
+                Size = 1,
+            },
 
             //new Enemy
             //{
