@@ -860,43 +860,22 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            //new Enemy
-            //{
-            //    Name = "Kurt Helborg",
-            //    TestListName = "Kurt Helborg (The Empire)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 6,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 3,
-            //    Strength = 4,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 6,
-            //    Attacks = 4,
-            //    Leadership = 9,
-            //    Armour = 2,
-            //    Stubborn = true,
-            //    ImmuneToPsychology = true,
-            //    AutoWound = true,
-            //    NoArmour = true,
+            new Enemy("Kurt Helborg/6/7/3/4/4/3/6/4/9/2/")
+            {
+                Armybook = "The Empire",
+                Type = UnitType.Lord,
+                Size = 1,
+                Stubborn = true,
+                ImmuneToPsychology = true,
+                AutoWound = true,
+                NoArmour = true,
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Warhorse",
-            //        Type = UnitType.Mount,
-            //        Size = 8,
-            //        Movement = 8,
-            //        WeaponSkill = 3,
-            //        BallisticSkill = 0,
-            //        Strength = 3,
-            //        Toughness = 3,
-            //        Wounds = 1,
-            //        Initiative = 3,
-            //        Attacks = 1,
-            //        Leadership = 5,
-            //    }
-            //},
+                Mount = new Enemy("Warhorse/8/3/0/3/3/1/3/1/5//")
+                {
+                    Type = UnitType.Mount,
+                    Size = 8,
+                }
+            },
 
             //new Enemy
             //{
