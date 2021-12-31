@@ -842,46 +842,23 @@ namespace WarhammerArmyAssembler
                 PoisonAttack = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Louen Leoncoeur",
-            //    TestListName = "Louen Leoncoeur, The Lionhearted (Bretonnia)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 4,
-            //    WeaponSkill = 7,
-            //    BallisticSkill = 5,
-            //    Strength = 5,
-            //    Toughness = 4,
-            //    Wounds = 3,
-            //    Initiative = 7,
-            //    Attacks = 5,
-            //    Leadership = 9,
-            //    Armour = 3,
-            //    Ward = 5,
-            //    Lance = true,
-            //    ImmuneToPsychology = true,
-            //    Regeneration = true,
-            //    Reroll = "ToHit;ToWound",
+            new Enemy("Louen Leoncoeur/4/7/5/5/4/3/7/5/9/3/5")
+            {
+                Armybook = "Bretonnia",
+                Type = UnitType.Lord,
+                Size = 1,
+                Lance = true,
+                ImmuneToPsychology = true,
+                Regeneration = true,
+                Reroll = "ToHit;ToWound",
 
-            //    Mount = new Enemy
-            //    {
-            //        Name = "Beaquis",
-            //        Type = UnitType.Mount,
-            //        Size = 1,
-            //        Movement = 8,
-            //        WeaponSkill = 5,
-            //        BallisticSkill = 0,
-            //        Strength = 5,
-            //        Toughness = 5,
-            //        Wounds = 4,
-            //        Initiative = 6,
-            //        Attacks = 4,
-            //        Leadership = 9,
-            //        Armour = 5,
-            //        Terror = true,
-            //    }
-            //},
+                Mount = new Enemy("Beaquis/8/5/0/5/5/4/6/4/9/5/")
+                {
+                    Type = UnitType.Mount,
+                    Size = 1,
+                    Terror = true,
+                }
+            },
 
             //new Enemy
             //{
