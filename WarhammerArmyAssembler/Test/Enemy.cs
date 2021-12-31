@@ -35,7 +35,13 @@ namespace WarhammerArmyAssembler
                 this.Ward = new Profile { Value = ward };
         }
 
-        public string Fullname() => String.Format("{0} ({1})", this.Name, this.Armybook);
+        public string Fullname()
+        {
+            if (this.Size > 1)
+                return String.Format("{0} {1} ({2})", this.Size, this.Name, this.Armybook);
+            else
+                return String.Format("{0} ({1})", this.Name, this.Armybook);
+        }
 
         private static Dictionary<string, List<Enemy>> GetEnemiesDictionary() => new Dictionary<string, List<Enemy>>
         {
