@@ -972,27 +972,15 @@ namespace WarhammerArmyAssembler
                 Stubborn = true,
             },
 
-            //new Enemy
-            //{
-            //    Name = "Vermin Lord",
-            //    TestListName = "Vermin Lord (Skaven)",
-            //    Type = UnitType.Lord,
-            //    Size = 1,
-            //    Movement = 8,
-            //    WeaponSkill = 8,
-            //    BallisticSkill = 4,
-            //    Strength = 6,
-            //    Toughness = 5,
-            //    Wounds = 5,
-            //    Initiative = 10,
-            //    Attacks = 5,
-            //    Leadership = 8,
-            //    Ward = 5,
-            //    ImmuneToPsychology = true,
-            //    Terror = true,
-            //    MultiWounds = "D3",
-            //},
-
+            new Enemy("Vermin Lord/8/8/4/6/5/5/10/5/8//5")
+            {
+                Armybook = "Skaven",
+                Type = UnitType.Lord,
+                Size = 1,
+                ImmuneToPsychology = true,
+                Terror = true,
+                MultiWounds = "D3",
+            },
 
             //new Enemy
             //{
