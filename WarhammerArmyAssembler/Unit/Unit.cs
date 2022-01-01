@@ -455,9 +455,6 @@ namespace WarhammerArmyAssembler
             if (paramValue == null)
                 return String.Empty;
 
-            //else if (paramValue == null)
-            //    return "-";
-
             if (paramValue.Value > 100)
                 return GetRandomAttacksLine(paramValue.Value);
 
