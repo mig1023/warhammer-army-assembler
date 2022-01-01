@@ -488,7 +488,7 @@ namespace WarhammerArmyAssembler
 
                 if (optionValue != 0 && reversParam)
                 {
-                    if (paramValue.Null)
+                    if (paramValue.Value <= 0)
                         paramValue.Value = 7;
 
                     if (doNotCombine)
