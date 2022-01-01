@@ -996,9 +996,9 @@ namespace WarhammerArmyAssembler.Test
 
         private static void UnitRoundShow(Unit unit, bool firstLine)
         {
-            string uLine = (unit.Wounds.Value > 0 ? String.Format("{0}: {1}W", unit.Name, unit.Wounds) : String.Empty);
+            string uLine = (unit.Wounds.Value > 0 ? String.Format("{0}: {1}W", unit.Name, unit.Wounds.Value) : String.Empty);
             bool monstrousMount = (unit.Mount != null) && (unit.Mount.Wounds.Value > 0) && unit.Mount.IsNotSimpleMount();
-            string uMount = (monstrousMount ? String.Format("{0}: {1}W", unit.Mount.Name, unit.Mount.Wounds) : String.Empty);
+            string uMount = (monstrousMount ? String.Format("{0}: {1}W", unit.Mount.Name, unit.Mount.Wounds.Value) : String.Empty);
             string bothLine = (!String.IsNullOrEmpty(uLine) && !String.IsNullOrEmpty(uMount) ? " + " : String.Empty);
 
             Test.Data.Console(Test.Data.supplText, "{0}{1}{2}{3}", uLine, bothLine, uMount, (firstLine ? ", " : String.Empty));
