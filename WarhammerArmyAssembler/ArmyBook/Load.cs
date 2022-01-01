@@ -106,9 +106,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Description = description,
                 Image = StringParse(xmlUnit["Image"]),
 
-                //Armour = IntNullableParse(mainParam["Armour"]),
-                //Ward = IntNullableParse(mainParam["Ward"]),
-
                 Personified = BoolParse(xmlUnit["Personified"]),
                 WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]),
                 Chariot = IntParse(xmlUnit["Chariot"]),

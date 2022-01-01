@@ -277,18 +277,6 @@ namespace WarhammerArmyAssembler
                 MountInit = this.MountInit,
                 Description = this.Description,
 
-                //Movement = this.Movement,
-                //WeaponSkill = this.WeaponSkill,
-                //BallisticSkill = this.BallisticSkill,
-                //Strength = this.Strength,
-                //Toughness = this.Toughness,
-                //Wounds = this.Wounds,
-                //Initiative = this.Initiative,
-                //Attacks = this.Attacks,
-                //Leadership = this.Leadership,
-
-                //Armour = this.Armour,
-                //Ward = this.Ward,
                 Wizard = this.Wizard,
 
                 OriginalWounds = this.OriginalWounds,
@@ -462,7 +450,12 @@ namespace WarhammerArmyAssembler
 
             Profile paramValue = (Profile)typeof(Unit).GetProperty(name).GetValue(this);
 
-            if ((paramValue == null) || (paramValue.Value <= 0))
+            bool optionalProfile = (name == "Armour") || (name == "Ward");
+
+            if (((paramValue == null) || (paramValue.Value <= 0)) && optionalProfile)
+                return String.Empty;
+
+            else if ((paramValue == null) || (paramValue.Value <= 0))
                 return "-";
 
             if (paramValue.Value > 100)
