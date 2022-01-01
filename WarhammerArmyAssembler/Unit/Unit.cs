@@ -452,11 +452,11 @@ namespace WarhammerArmyAssembler
 
             bool optionalProfile = (name == "Armour") || (name == "Ward");
 
-            if (((paramValue == null) || (paramValue.Value < 0)) && optionalProfile)
+            if (paramValue == null)
                 return String.Empty;
 
-            else if ((paramValue == null) || (paramValue.Value < 0))
-                return "-";
+            //else if (paramValue == null)
+            //    return "-";
 
             if (paramValue.Value > 100)
                 return GetRandomAttacksLine(paramValue.Value);
@@ -488,6 +488,8 @@ namespace WarhammerArmyAssembler
 
                 if (optionValue != 0 && reversParam)
                 {
+                    paramValue.Null = false;
+
                     if (paramValue.Value <= 0)
                         paramValue.Value = 7;
 
@@ -507,10 +509,10 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            if (((paramValue == null) || (paramValue.Value <= 0)) && optionalProfile)
+            if (((paramValue == null) || (paramValue.Null)) && optionalProfile)
                 return String.Empty;
 
-            else if ((paramValue == null) || (paramValue.Value <= 0))
+            else if (paramValue == null)
                 return "-";
 
             if (reversParam)
