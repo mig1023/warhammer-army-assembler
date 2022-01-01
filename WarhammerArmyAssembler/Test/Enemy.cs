@@ -13,23 +13,24 @@ namespace WarhammerArmyAssembler
             string[] profile = enemyName.Split('/');
 
             this.Name = profile[0];
+            this.Armybook = profile[1];
 
-            this.Movement = new Profile { Value = int.Parse(profile[1]) };
-            this.WeaponSkill = new Profile { Value = int.Parse(profile[2]) };
-            this.BallisticSkill = new Profile { Value = int.Parse(profile[3]) };
-            this.Strength = new Profile { Value = int.Parse(profile[4]) };
-            this.Toughness = new Profile { Value = int.Parse(profile[5]) };
-            this.Wounds = new Profile { Value = int.Parse(profile[6]) };
-            this.Initiative = new Profile { Value = int.Parse(profile[7]) };
-            this.Attacks = new Profile { Value = int.Parse(profile[8]) };
-            this.Leadership = new Profile { Value = int.Parse(profile[9]) };
+            this.Movement = new Profile { Value = int.Parse(profile[2]) };
+            this.WeaponSkill = new Profile { Value = int.Parse(profile[3]) };
+            this.BallisticSkill = new Profile { Value = int.Parse(profile[4]) };
+            this.Strength = new Profile { Value = int.Parse(profile[5]) };
+            this.Toughness = new Profile { Value = int.Parse(profile[6]) };
+            this.Wounds = new Profile { Value = int.Parse(profile[7]) };
+            this.Initiative = new Profile { Value = int.Parse(profile[8]) };
+            this.Attacks = new Profile { Value = int.Parse(profile[9]) };
+            this.Leadership = new Profile { Value = int.Parse(profile[10]) };
 
-            bool isArmour = int.TryParse(profile[10], out int armour);
+            bool isArmour = int.TryParse(profile[11], out int armour);
 
             if (isArmour)
                 this.Armour = new Profile { Value = armour };
 
-            bool isWard = int.TryParse(profile[11], out int ward);
+            bool isWard = int.TryParse(profile[12], out int ward);
 
             if (isWard)
                 this.Ward = new Profile { Value = ward };
@@ -96,9 +97,8 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
-            new Enemy("Troll/6/3/1/5/4/3/1/3/4//")
+            new Enemy("Troll/Orcs&Goblins/6/3/1/5/4/3/1/3/4//")
             {
-                Armybook = "Orcs&Goblins",
                 Type = UnitType.Rare,
                 Size = 1,
                 Fear = true,
@@ -107,17 +107,15 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Gyrobomber/1/4/3/4/5/3/2/2/9/4/")
+            new Enemy("Gyrobomber/Dwarfs/1/4/3/4/5/3/2/2/9/4/")
             {
-                Armybook = "Dwarfs",
                 Type = UnitType.Rare,
                 Size = 1,
                 LargeBase = true,
             },
 
-            new Enemy("Ancient Kroxigor/6/3/1/7/4/3/1/4/7//")
+            new Enemy("Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7//")
             {
-                Armybook = "Lizardmen",
                 Type = UnitType.Rare,
                 Size = 1,
                 Fear = true,
@@ -125,9 +123,8 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Tomb Scorpion/7/4/0/5/5/3/3/4/8//")
+            new Enemy("Tomb Scorpion/Tomb Kings/7/4/0/5/5/3/3/4/8//")
             {
-                Armybook = "Tomb Kings",
                 Type = UnitType.Rare,
                 Size = 1,
                 Undead = true,
@@ -136,27 +133,24 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Hippogryph/8/4/0/5/5/4/4/4/8//")
+            new Enemy("Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8//")
             {
-                Armybook = "Bretonnia",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Griffon/6/5/0/5/5/4/5/4/7//")
+            new Enemy("Griffon/The Empire/6/5/0/5/5/4/5/4/7//")
             {
-                Armybook = "The Empire",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Manticore/6/5/0/5/5/4/5/4/5//")
+            new Enemy("Manticore/Chaos/6/5/0/5/5/4/5/4/5//")
             {
-                Armybook = "Chaos",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
@@ -164,9 +158,8 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Varghulf/8/5/0/5/5/4/2/5/4//")
+            new Enemy("Varghulf/Vampire/8/5/0/5/5/4/2/5/4//")
             {
-                Armybook = "Vampire",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
@@ -176,15 +169,14 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("War Hydra/6/4/0/5/5/6/2/5/6/4/")
+            new Enemy("War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4/")
             {
-                Armybook = "Dark Elves",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
                 LargeBase = true,
 
-                Mount = new Enemy("Apparentice/5/4/4/3/3/2/3/2/8//")
+                Mount = new Enemy("Apparentice//5/4/4/3/3/2/3/2/8//")
                 {
                     Type = UnitType.Mount,
                     Size = 2,
@@ -192,9 +184,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Dragon Ogre Shaggoth/7/6/3/5/5/6/4/5/9/4/")
+            new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4/")
             {
-                Armybook = "Beastmen",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
@@ -202,9 +193,8 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Stegadon/6/3/0/5/6/5/2/4/5/4/")
+            new Enemy("Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4/")
             {
-                Armybook = "Lizardmen",
                 Type = UnitType.Rare,
                 Size = 1,
                 LargeBase = true,
@@ -213,7 +203,7 @@ namespace WarhammerArmyAssembler
                 Stubborn = true,
                 ImmuneToPsychology = true,
 
-                Mount = new Enemy("Skink Crew/6/2/3/3/2/4/4/4/5/4/")
+                Mount = new Enemy("Skink Crew//6/2/3/3/2/4/4/4/5/4/")
                 {
                     Type = UnitType.Mount,
                     Size = 5,
@@ -223,18 +213,16 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Treeman/5/5/0/6/6/6/2/5/8/3/")
+            new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3/")
             {
-                Armybook = "Wood Elves",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Giant/6/3/3/6/5/6/3/0/10//")
+            new Enemy("Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10//")
             {
-                Armybook = "Orcs&Goblins",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
@@ -243,9 +231,8 @@ namespace WarhammerArmyAssembler
                 Giant = true,
             },
 
-            new Enemy("Hell Pit Abomination/6/3/3/6/5/6/3/0/10//")
+            new Enemy("Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10//")
             {
-                Armybook = "Skaven",
                 Type = UnitType.Rare,
                 Size = 1,
                 Regeneration = true,
@@ -255,9 +242,8 @@ namespace WarhammerArmyAssembler
                 HellPitAbomination = true,
             },
 
-            new Enemy("Necrosphinx/6/4/0/5/8/5/1/5/8/3/")
+            new Enemy("Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3/")
             {
-                Armybook = "Tomb Kings",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
@@ -266,18 +252,16 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            new Enemy("Star Dragon/6/7/0/7/6/7/2/6/9/3/")
+            new Enemy("Star Dragon/High Elves/6/7/0/7/6/7/2/6/9/3/")
             {
-                Armybook = "High Elves",
                 Type = UnitType.Rare,
                 Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Steam Tank/0/0/4/6/6/10/0/0/10/1/")
+            new Enemy("Steam Tank/The Empire/0/0/4/6/6/10/0/0/10/1/")
             {
-                Armybook = "The Empire",
                 Type = UnitType.Rare,
                 Size = 1,
                 Unbreakable = true,
@@ -289,121 +273,107 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
         {
-            new Enemy("Clanrat Slaves/5/2/2/3/3/1/4/1/2//")
+            new Enemy("Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2//")
             {
-                Armybook = "Skaven",
                 Type = UnitType.Core,
                 Size = 20,
                 StrengthInNumbers = true,
             },
 
-            new Enemy("Men-at-arms/4/2/2/3/3/1/3/1/5/5/")
+            new Enemy("Men-at-arms/Bretonnia/4/2/2/3/3/1/3/1/5/5/")
             {
-                Armybook = "Bretonnia",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            new Enemy("Empire swordmens/4/3/3/3/3/1/3/1/7/6/")
+            new Enemy("Empire swordmens/The Empire/4/3/3/3/3/1/3/1/7/6/")
             {
-                Armybook = "The Empire",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            new Enemy("Orc boys/4/3/3/3/4/1/2/1/7/5/")
+            new Enemy("Orc boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/5/")
             {
-                Armybook = "Orcs&Goblins",
                 Type = UnitType.Core,
                 Size = 20,
             },
 
-            new Enemy("Skeleton Warriors/4/2/2/3/3/1/2/1/5/5/")
+            new Enemy("Skeleton Warriors/Tomb Kings/4/2/2/3/3/1/2/1/5/5/")
             {
-                Armybook = "Tomb Kings",
                 Type = UnitType.Core,
                 Size = 20,
                 Undead = true,
             },
 
-            new Enemy("Lothern Sea Guard/5/4/4/3/3/1/5/1/8/6/")
+            new Enemy("Lothern Sea Guard/High Elves/5/4/4/3/3/1/5/1/8/6/")
             {
-                Armybook = "High Elves",
                 Type = UnitType.Core,
                 Size = 20,
                 HitFirst = true,
             },
 
-            new Enemy("Crypt Ghouls/4/3/0/3/4/1/3/2/5//")
+            new Enemy("Crypt Ghouls/Vampire Counts/4/3/0/3/4/1/3/2/5//")
             {
-                Armybook = "Vampire Counts",
                 Type = UnitType.Core,
                 Size = 20,
                 Undead = true,
                 PoisonAttack = true,
             },
 
-            new Enemy("Back Ark Corsairs/5/4/4/3/3/1/5/2/8/5/")
+            new Enemy("Back Ark Corsairs/Dark Elves/5/4/4/3/3/1/5/2/8/5/")
             {
-                Armybook = "Dark Elves",
                 Type = UnitType.Core,
                 Size = 20,
                 Hate = true,
             },
 
-            new Enemy("Dryads/5/4/0/4/4/1/6/2/8//")
+            new Enemy("Dryads/Wood Elves/5/4/0/4/4/1/6/2/8//")
             {
-                Armybook = "Wood Elves",
                 Type = UnitType.Core,
                 Size = 20,
                 Fear = true,
             },
 
-            new Enemy("Bestigor/5/4/3/6/4/1/3/1/7/5/")
+            new Enemy("Bestigor/Beastmen/5/4/3/6/4/1/3/1/7/5/")
             {
-                Armybook = "Beastmen",
                 Type = UnitType.Core,
                 Size = 20,
                 HitLast = true,
             },
 
-            new Enemy("Knights of the Realms/4/4/3/3/3/1/3/1/8/2/")
+            new Enemy("Knights of the Realms/Bretonnia/4/4/3/3/3/1/3/1/8/2/")
             {
-                Armybook = "Bretonnia",
                 Type = UnitType.Core,
                 Size = 8,
                 Lance = true,
 
-                Mount = new Enemy("Warhorse/8/3/0/3/3/1/3/1/5//")
+                Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
                     Size = 8,
                 }
             },
 
-            new Enemy("Longbeards/3/5/3/4/4/1/2/1/9/4/")
+            new Enemy("Longbeards/Dwarfs/3/5/3/4/4/1/2/1/9/4/")
             {
-                Armybook = "Dwarfs",
                 Type = UnitType.Core,
                 Size = 20,
                 ImmuneToPsychology = true
             },
 
-            new Enemy("Temple Guard/4/4/0/5/4/1/2/2/8/4/")
+            new Enemy("Temple Guard/Lizardmen/4/4/0/5/4/1/2/2/8/4/")
             {
-                Armybook = "Lizardmen",
                 Type = UnitType.Core,
                 Size = 20,
                 ColdBlooded = true
             },
 
-            new Enemy("Chosen Knights/4/5/3/5/4/1/5/2/8/1/")
+            new Enemy("Chosen Knights/Chaos/4/5/3/5/4/1/5/2/8/1/")
             {
-                Armybook = "Chaos",
                 Type = UnitType.Core,
                 Size = 8,
 
-                Mount = new Enemy("Chaos Steed/8/3/0/4/3/1/3/1/5//")
+                Mount = new Enemy("Chaos Steed//8/3/0/4/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
                     Size = 8,
@@ -413,73 +383,66 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesSpecialUnits = new List<Enemy>
         {
-            new Enemy("Tree Kin/5/4/4/4/5/3/3/3/8/4/")
+            new Enemy("Tree Kin/Wood Elves/5/4/4/4/5/3/3/3/8/4/")
             {
-                Armybook = "Wood Elves",
                 Type = UnitType.Special,
                 Size = 5,
                 Fear = true,
             },
 
-            new Enemy("Pegasus Knights/4/4/3/3/4/2/4/1/8/3/")
+            new Enemy("Pegasus Knights/Bretonnia/4/4/3/3/4/2/4/1/8/3/")
             {
-                Armybook = "Bretonnia",
                 Type = UnitType.Special,
                 Size = 8,
                 Lance = true,
 
-                Mount = new Enemy("Pegasus/8/3/0/4/4/1/4/2/7//")
+                Mount = new Enemy("Pegasus//8/3/0/4/4/1/4/2/7//")
                 {
                     Type = UnitType.Mount,
                     Size = 8,
                 }
             },
 
-            new Enemy("Chaos Ogre/6/3/2/4/4/3/2/3/7/6/")
+            new Enemy("Chaos Ogre/Beastmen/6/3/2/4/4/3/2/3/7/6/")
             {
-                Armybook = "Beastmen",
                 Type = UnitType.Special,
                 Size = 5,
                 Fear = true,
             },
 
-             new Enemy("Plague Monks/5/3/3/3/4/1/3/3/5//")
+             new Enemy("Plague Monks/Skaven/5/3/3/3/4/1/3/3/5//")
             {
-                Armybook = "Skaven",
                 Type = UnitType.Special,
                 Size = 20,
                 Frenzy = true,
                 StrengthInNumbers = true,
             },
 
-            new Enemy("Tomb Guard/4/3/3/4/4/1/3/1/8/5/")
+            new Enemy("Tomb Guard/Tomb Kings/4/3/3/4/4/1/3/1/8/5/")
             {
-                Armybook = "Tomb Kings",
                 Type = UnitType.Special,
                 Size = 16,
                 KillingBlow = true,
                 Undead = true,
             },
 
-            new Enemy("Grave Guard/4/3/3/4/4/1/3/2/8/4/")
+            new Enemy("Grave Guard/Vampire Counts/4/3/3/4/4/1/3/2/8/4/")
             {
-                Armybook = "Vampire Counts",
                 Type = UnitType.Special,
                 Size = 16,
                 KillingBlow = true,
                 Undead = true,
             },
 
-            new Enemy("Greatswords/4/4/3/5/3/1/3/2/8/5/")
+            new Enemy("Greatswords/The Empire/4/4/3/5/3/1/3/2/8/5/")
             {
-                Armybook = "The Empire",
                 Type = UnitType.Special,
                 Size = 20,
                 HitLast = true,
                 Stubborn = true
             },
 
-            new Enemy("Black Orcs/4/4/3/5/4/1/2/1/8/5/")
+            new Enemy("Black Orcs/Orcs&Goblins/4/4/3/5/4/1/2/1/8/5/")
             {
                 Armybook = "Orcs&Goblins",
                 Type = UnitType.Special,
@@ -487,38 +450,35 @@ namespace WarhammerArmyAssembler
                 HitLast = true
             },
 
-            new Enemy("Orc Boar Boys/4/3/3/3/4/1/2/1/7/3/")
+            new Enemy("Orc Boar Boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/3/")
             {
-                Armybook = "Orcs&Goblins",
                 Type = UnitType.Special,
                 Size = 8,
 
-                Mount = new Enemy("Boar/7/3/0/3/4/1/3/1/3//")
+                Mount = new Enemy("Boar//7/3/0/3/4/1/3/1/3//")
                 {
                     Type = UnitType.Mount,
                     Size = 8,
                 }
             },
 
-            new Enemy("Cold One Knights/5/5/4/4/3/1/6/1/9/2/")
+            new Enemy("Cold One Knights/Dark Elves/5/5/4/4/3/1/6/1/9/2/")
             {
-                Armybook = "Dark Elves",
                 Type = UnitType.Special,
                 Size = 8,
                 Hate = true,
                 Fear = true,
                 Lance = true,
 
-                Mount = new Enemy("Cold One/7/3/0/4/4/1/2/1/3//")
+                Mount = new Enemy("Cold One//7/3/0/4/4/1/2/1/3//")
                 {
                     Type = UnitType.Mount,
                     Size = 8,
                 }
             },
 
-            new Enemy("Cold One Cavalry/4/4/0/4/4/1/2/2/8/2/")
+            new Enemy("Cold One Cavalry/Lizardmen/4/4/0/4/4/1/2/2/8/2/")
             {
-                Armybook = "Lizardmen",
                 Type = UnitType.Special,
                 Size = 8,
                 ColdBlooded = true,
