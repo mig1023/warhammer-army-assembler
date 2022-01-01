@@ -452,10 +452,10 @@ namespace WarhammerArmyAssembler
 
             bool optionalProfile = (name == "Armour") || (name == "Ward");
 
-            if (((paramValue == null) || (paramValue.Value <= 0)) && optionalProfile)
+            if (((paramValue == null) || (paramValue.Value < 0)) && optionalProfile)
                 return String.Empty;
 
-            else if ((paramValue == null) || (paramValue.Value <= 0))
+            else if ((paramValue == null) || (paramValue.Value < 0))
                 return "-";
 
             if (paramValue.Value > 100)
@@ -507,7 +507,13 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            if (reversParam && !paramValue.Null)
+            if (((paramValue == null) || (paramValue.Value <= 0)) && optionalProfile)
+                return String.Empty;
+
+            else if ((paramValue == null) || (paramValue.Value <= 0))
+                return "-";
+
+            if (reversParam)
                 paramModView += '+';
 
             return paramValue.Value.ToString() + paramModView;
