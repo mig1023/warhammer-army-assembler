@@ -506,7 +506,7 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="Points" Binding="{Binding Points.View}" Width="60" IsReadOnly="True">
+                        <DataGridTextColumn Header="Points" Binding="{Binding PointsView}" Width="60" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="HorizontalAlignment" Value="Center"/>
