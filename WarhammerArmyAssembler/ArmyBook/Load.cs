@@ -199,10 +199,10 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.NoCoreSlot = BoolParse(additionalParam["NoCoreSlot"]);
 
                 if (newUnit.Frenzy)
-                    xmlUnit.SelectSingleNode("Other").AppendChild(ArmyBook.Other.AddFrenzyAttack(xml));
+                    xmlUnit.SelectSingleNode("Equipments").AppendChild(ArmyBook.Other.AddFrenzyAttack(xml));
             }
 
-            foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Other/*"))
+            foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
                 newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
