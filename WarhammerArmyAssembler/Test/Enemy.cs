@@ -15,15 +15,15 @@ namespace WarhammerArmyAssembler
             this.Name = profile[0];
             this.Armybook = profile[1];
 
-            this.Movement = new Profile { Value = int.Parse(profile[2]) };
-            this.WeaponSkill = new Profile { Value = int.Parse(profile[3]) };
-            this.BallisticSkill = new Profile { Value = int.Parse(profile[4]) };
-            this.Strength = new Profile { Value = int.Parse(profile[5]) };
-            this.Toughness = new Profile { Value = int.Parse(profile[6]) };
-            this.Wounds = new Profile { Value = int.Parse(profile[7]) };
-            this.Initiative = new Profile { Value = int.Parse(profile[8]) };
-            this.Attacks = new Profile { Value = int.Parse(profile[9]) };
-            this.Leadership = new Profile { Value = int.Parse(profile[10]) };
+            this.Movement = NewProfile(profile[2]);
+            this.WeaponSkill = NewProfile(profile[3]);
+            this.BallisticSkill = NewProfile(profile[4]);
+            this.Strength = NewProfile(profile[5]);
+            this.Toughness = NewProfile(profile[6]);
+            this.Wounds = NewProfile(profile[7]);
+            this.Initiative = NewProfile(profile[8]);
+            this.Attacks = NewProfile(profile[9]);
+            this.Leadership = NewProfile(profile[10]);
 
             bool isArmour = int.TryParse(profile[11], out int armour);
 
@@ -35,6 +35,8 @@ namespace WarhammerArmyAssembler
             if (isWard)
                 this.Ward = new Profile { Value = ward };
         }
+
+        private Profile NewProfile(string line) => new Profile { Value = int.Parse(line) };
 
         public string Fullname()
         {
