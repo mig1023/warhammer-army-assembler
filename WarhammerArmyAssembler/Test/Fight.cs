@@ -968,7 +968,7 @@ namespace WarhammerArmyAssembler.Test
 
         private static bool NotWard(ref Unit unit, Unit enemy)
         {
-            int ward = (((enemy.Ward == null) || enemy.Ward.Null) ? 0 : enemy.Ward.Value);
+            int ward = ((enemy.Ward == null) ? 0 : enemy.Ward.Value);
 
             if ((enemy.WardForFirstWound > 0) && (enemy.Wounds.Value == enemy.OriginalWounds))
             {
