@@ -470,16 +470,12 @@ namespace WarhammerArmyAssembler
                 if (OptionTypeAlreadyUsed(option, ref alreadyArmour, ref alreadyShield))
                     continue;
 
-                PropertyInfo optionToParam = typeof(Option).GetProperty(String.Format("{0}To", name));
-                if (optionToParam != null)
-                {
-                    int optionToValue = (int)optionToParam.GetValue(option);
+                int optionToValue = PropertByName(String.Format("{0}To", name), option);
 
-                    if (optionToValue > 0)
-                        return optionToValue.ToString() + (reversParam ? "+" : "*");
-                }
+                if (optionToValue > 0)
+                    return optionToValue.ToString() + (reversParam ? "+" : "*");
 
-                int optionValue = (int)typeof(Option).GetProperty(String.Format("AddTo{0}", name)).GetValue(option);
+                int optionValue = PropertByName(String.Format("AddTo{0}", name), option);
 
                 if (optionValue != 0 && reversParam)
                 {
@@ -514,6 +510,16 @@ namespace WarhammerArmyAssembler
                 paramModView += '+';
 
             return paramValue.Value.ToString() + paramModView;
+        }
+
+        private int PropertByName(string name, Option option)
+        {
+            PropertyInfo optionToParam = typeof(Option).GetProperty(name);
+
+            if (optionToParam == null)
+                return 0;
+            else
+                return (int)optionToParam.GetValue(option);
         }
 
         private void SetUnitParamByOption(string paramName, bool directModification = false)
