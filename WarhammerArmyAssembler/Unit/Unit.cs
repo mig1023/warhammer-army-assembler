@@ -503,7 +503,7 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            if ((paramValue.Null) && reversParam)
+            if ((newValue == null) && reversParam)
                 return String.Empty;
 
             if ((newValue == 0) && !reversParam)
@@ -582,6 +582,8 @@ namespace WarhammerArmyAssembler
 
                     if (cleanParamLine.Contains("-") && (name != "Armour"))
                         cleanParamLine = "0";
+
+                    param.Value = int.Parse(cleanParamLine);
                 }
             }
 
