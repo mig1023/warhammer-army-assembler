@@ -466,7 +466,10 @@ namespace WarhammerArmyAssembler
                 allOption.AddRange(Army.Data.Units[MountOn].Options);
 
             bool alreadyArmour = false, alreadyShield = false;
-            int newValue = (int)paramValue.Value;
+            int? newValue = null;
+
+            if (!paramValue.Null)
+                newValue = paramValue.Value;
 
             foreach (Option option in allOption.Where(x => x.IsActual()))
             {
@@ -480,7 +483,7 @@ namespace WarhammerArmyAssembler
 
                 int optionValue = PropertyByName(String.Format("AddTo{0}", name), option);
 
-                if (optionValue != 0 && reversParam)
+                if ((optionValue != 0) && reversParam)
                 {
                     if (newValue == null)
                         newValue = 7;
@@ -496,8 +499,7 @@ namespace WarhammerArmyAssembler
                 else if (optionValue != 0)
                 {
                     paramModView += '*';
-                    newValue += optionValue;
-                    newValue = ParamNormalization(paramValue.Null ? 0 : paramValue.Value);
+                    newValue = ParamNormalization((int)newValue + optionValue);
                 }
             }
 
