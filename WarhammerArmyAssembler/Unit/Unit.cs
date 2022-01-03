@@ -444,13 +444,11 @@ namespace WarhammerArmyAssembler
             return String.Format("{0}D{1}{2}", param[0], param[1], addToDice);
         }
 
-        private string AddFromAnyOption(string name, bool reversParam = false,
-            bool mountParam = false, bool doNotCombine = false)
+        private string AddFromAnyOption(ref Unit unit, string name, bool reversParam = false,
+            bool mountParam = false, bool doNotCombine = false, bool direct = false)
         {
 
-            Profile paramValue = (Profile)typeof(Unit).GetProperty(name).GetValue(this);
-
-            bool optionalProfile = (name == "Armour") || (name == "Ward");
+            Profile paramValue = (Profile)typeof(Unit).GetProperty(name).GetValue(unit);
 
             if (paramValue == null)
                 return String.Empty;
@@ -506,7 +504,7 @@ namespace WarhammerArmyAssembler
                 }
             }
 
-            if (((paramValue == null) || (paramValue.Null)) && optionalProfile)
+            if (((paramValue == null) || (paramValue.Null)) && reversParam)
                 return String.Empty;
 
             else if (paramValue == null)
@@ -556,7 +554,8 @@ namespace WarhammerArmyAssembler
                 bool mount = (name == "Armour");
                 bool combine = (name == "Ward");
 
-                string newParamLine = AddFromAnyOption(name, reversParam: reverse, mountParam: mount, doNotCombine: combine);
+                string newParamLine = AddFromAnyOption(ref unit, name, reversParam: reverse, mountParam: mount,
+                    doNotCombine: combine, direct: directModification);
 
                 Profile param = (Profile)typeof(Unit).GetProperty(name).GetValue(unit);
 

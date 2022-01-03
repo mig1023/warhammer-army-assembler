@@ -860,7 +860,7 @@ namespace WarhammerArmyAssembler.Test
                 return true;
             }
 
-            if ((enemy.Armour != null) && !unit.NoArmour)
+            if ((enemy.Armour != null) && !enemy.Armour.Null && !unit.NoArmour)
                 Test.Data.Console(Test.Data.text, " --> AS ");
 
             return false;

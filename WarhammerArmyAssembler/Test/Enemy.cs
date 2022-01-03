@@ -29,11 +29,15 @@ namespace WarhammerArmyAssembler
 
             if (isArmour)
                 this.Armour = new Profile { Value = armour };
+            else
+                this.Armour = new Profile { Null = true };
 
             bool isWard = int.TryParse(profile[12], out int ward);
 
             if (isWard)
                 this.Ward = new Profile { Value = ward };
+            else
+                this.Ward = new Profile { Null = true };
         }
 
         private Profile NewProfile(string line) => new Profile { Value = int.Parse(line) };
