@@ -29,9 +29,8 @@ namespace WarhammerArmyAssembler.Interface
                 {
                     foreach (FrameworkElement f in mountRow[unitGrid.Name])
                     {
-                        Panel p = (f as Panel);
-                        p.Children.Clear();
-                        unitGrid.Children.Remove(p);
+                        (f as Panel).Children.Clear();
+                        unitGrid.Children.Remove(f as Panel);
                     }
 
                     mountRow[unitGrid.Name].Clear();

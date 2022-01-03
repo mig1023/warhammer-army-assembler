@@ -573,9 +573,6 @@ namespace WarhammerArmyAssembler
 
                     if (cleanParamLine.Contains("-") && (name != "Armour"))
                         cleanParamLine = "0";
-
-                    if (!cleanParamLine.Contains("D"))
-                        param.View = cleanParamLine;
                 }
             }
 
