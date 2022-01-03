@@ -445,13 +445,15 @@ namespace WarhammerArmyAssembler
         }
 
         private string AddFromAnyOption(ref Unit unit, string name, bool reversParam = false,
-            bool mountParam = false, bool doNotCombine = false, bool direct = false)
+            bool mountParam = false, bool doNotCombine = false)
         {
 
             Profile paramValue = (Profile)typeof(Unit).GetProperty(name).GetValue(unit);
 
-            if (paramValue == null)
+            if ((paramValue == null) && reversParam)
                 return String.Empty;
+            else if (paramValue == null)
+                return "-";
 
             if (paramValue.Value > 100)
                 return GetRandomAttacksLine(paramValue.Value);
@@ -464,55 +466,54 @@ namespace WarhammerArmyAssembler
                 allOption.AddRange(Army.Data.Units[MountOn].Options);
 
             bool alreadyArmour = false, alreadyShield = false;
+            int newValue = (int)paramValue.Value;
 
             foreach (Option option in allOption.Where(x => x.IsActual()))
             {
                 if (OptionTypeAlreadyUsed(option, ref alreadyArmour, ref alreadyShield))
                     continue;
 
-                int optionToValue = PropertByName(String.Format("{0}To", name), option);
+                int optionToValue = PropertyByName(String.Format("{0}To", name), option);
 
                 if (optionToValue > 0)
                     return optionToValue.ToString() + (reversParam ? "+" : "*");
 
-                int optionValue = PropertByName(String.Format("AddTo{0}", name), option);
+                int optionValue = PropertyByName(String.Format("AddTo{0}", name), option);
 
                 if (optionValue != 0 && reversParam)
                 {
-                    paramValue.Null = false;
-
-                    if (paramValue.Value <= 0)
-                        paramValue.Value = 7;
+                    if (newValue == null)
+                        newValue = 7;
 
                     if (doNotCombine)
                     {
-                        if (optionValue < paramValue.Value)
-                            paramValue.Value = optionValue;
+                        if (optionValue < newValue)
+                            newValue = optionValue;
                     }
                     else
-                        paramValue.Value -= (7 - optionValue);
+                        newValue -= (7 - optionValue);
                 }
                 else if (optionValue != 0)
                 {
                     paramModView += '*';
-                    paramValue.Value += optionValue;
-                    paramValue.Value = ParamNormalization(paramValue.Null ? 0 : paramValue.Value);
+                    newValue += optionValue;
+                    newValue = ParamNormalization(paramValue.Null ? 0 : paramValue.Value);
                 }
             }
 
-            if (((paramValue == null) || (paramValue.Null)) && reversParam)
+            if ((paramValue.Null) && reversParam)
                 return String.Empty;
 
-            else if (paramValue == null)
+            if ((newValue == 0) && !reversParam)
                 return "-";
 
             if (reversParam)
                 paramModView += '+';
 
-            return paramValue.Value.ToString() + paramModView;
+            return newValue.ToString() + paramModView;
         }
 
-        private int PropertByName(string name, Option option)
+        private int PropertyByName(string name, Option option)
         {
             PropertyInfo optionToParam = typeof(Option).GetProperty(name);
 
@@ -560,8 +561,8 @@ namespace WarhammerArmyAssembler
                 bool mount = (name == "Armour");
                 bool combine = (name == "Ward");
 
-                string newParamLine = AddFromAnyOption(ref unit, name, reversParam: reverse, mountParam: mount,
-                    doNotCombine: combine, direct: directModification);
+                string newParamLine = AddFromAnyOption(ref unit, name,
+                    reversParam: reverse, mountParam: mount, doNotCombine: combine);
 
                 Profile param = (Profile)typeof(Unit).GetProperty(name).GetValue(unit);
 
