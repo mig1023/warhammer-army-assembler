@@ -114,52 +114,15 @@ namespace WarhammerArmyAssembler
             }
             else if (thisIsUnit && whithImage)
             {
-                armyUnitName.Content = ArmyBook.Data.Units[id].Name.ToUpper();
-                armyUnitDescription.Text = ArmyBook.Data.Units[id].Description;
-                armyUnitSpecific.Text = ArmyBook.Data.Units[id].SelfDescription();
-
-                try
-                {
-                    armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.Directory + ArmyBook.Data.Units[id].Image));
-                }
-                catch
-                {
-                    armyUnitImage.Source = null;
-                }
-
-                armyUnitName.Foreground = Brushes.White;
-                armyUnitName.Background = (group ? Brushes.White : ArmyBook.Data.MainColor);
-                armyUnitName.FontWeight = FontWeights.Bold;
-
-                armybookDetailScroll.Visibility = Visibility.Visible;
-                armybookArtefactDetailScroll.Visibility = Visibility.Hidden;
+                SetContentDescriptionWithImage(ArmyBook.Data.Units[id]);
             }
             else if (thisIsUnit && !whithImage)
             {
-                armyArtefactName.Content = ArmyBook.Data.Units[id].Name.ToUpper();
-                armyArtefactDescription.Text = ArmyBook.Data.Units[id].Description;
-                armyArtefactSpecific.Text = ArmyBook.Data.Units[id].SelfDescription();
-
-                armyArtefactName.Foreground = Brushes.White;
-                armyArtefactName.Background = (group ? Brushes.White : ArmyBook.Data.MainColor);
-                armyArtefactName.FontWeight = FontWeights.Bold;
-
-                armybookArtefactDetailScroll.Visibility = Visibility.Visible;
-                armybookDetailScroll.Visibility = Visibility.Hidden;
-
+                SetContentDescription(ArmyBook.Data.Units[id]);
             }
             else if (thisIsArtefact)
             {
-                armyArtefactName.Content = ArmyBook.Data.Artefact[id].Name.ToUpper();
-                armyArtefactDescription.Text = ArmyBook.Data.Artefact[id].Description;
-                armyArtefactSpecific.Text = ArmyBook.Data.Artefact[id].SelfDescription();
-
-                armyArtefactName.Foreground = Brushes.White;
-                armyArtefactName.Background = (group ? Brushes.White : ArmyBook.Data.MainColor);
-                armyArtefactName.FontWeight = FontWeights.Bold;
-
-                armybookArtefactDetailScroll.Visibility = Visibility.Visible;
-                armybookDetailScroll.Visibility = Visibility.Hidden;
+                SetContentDescription(ArmyBook.Data.Artefact[id]);
             }
 
             UpdateLayout();
@@ -177,6 +140,56 @@ namespace WarhammerArmyAssembler
 
             armyArtefactSpecific.Margin = armyUnitSpecific.Margin;
             armyArtefactSpecific.Foreground = ArmyBook.Data.MainColor;
+        }
+
+        private void SetContentDescription(object obj)
+        {
+            if (obj is Unit)
+            {
+                Unit unit = obj as Unit;
+
+                armyArtefactName.Content = unit.Name.ToUpper();
+                armyArtefactDescription.Text = unit.Description;
+                armyArtefactSpecific.Text = unit.SelfDescription();
+            }
+            else
+            {
+                Option option = obj as Option;
+
+                armyArtefactName.Content = option.Name.ToUpper();
+                armyArtefactDescription.Text = option.Description;
+                armyArtefactSpecific.Text = option.SelfDescription();
+            }
+
+            armyArtefactName.Foreground = Brushes.White;
+            armyArtefactName.Background = ArmyBook.Data.MainColor;
+            armyArtefactName.FontWeight = FontWeights.Bold;
+
+            armybookArtefactDetailScroll.Visibility = Visibility.Visible;
+            armybookDetailScroll.Visibility = Visibility.Hidden;
+        }
+
+        private void SetContentDescriptionWithImage(Unit unit)
+        {
+            armyUnitName.Content = unit.Name.ToUpper();
+            armyUnitDescription.Text = unit.Description;
+            armyUnitSpecific.Text = unit.SelfDescription();
+
+            try
+            {
+                armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.Directory + unit.Image));
+            }
+            catch
+            {
+                armyUnitImage.Source = null;
+            }
+
+            armyUnitName.Foreground = Brushes.White;
+            armyUnitName.Background = ArmyBook.Data.MainColor;
+            armyUnitName.FontWeight = FontWeights.Bold;
+
+            armybookDetailScroll.Visibility = Visibility.Visible;
+            armybookArtefactDetailScroll.Visibility = Visibility.Hidden;
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
