@@ -19,16 +19,16 @@ namespace WarhammerArmyAssembler.Interface
                 Changes.main.armyMainLabel.Content = Army.Data.Name;
                 Changes.main.armyEditionLabel.Content = String.Format("{0}ed", Army.Data.ArmyEdition);
 
-                Changes.main.armyMainLabelPlace.Background = ArmyBook.Data.MainColor;
-                Changes.main.armyEditionLabel.Background = ArmyBook.Data.MainColor;
-                Changes.main.unitDetailHead.Background = ArmyBook.Data.MainColor;
+                Changes.main.armyMainLabelPlace.Background = ArmyBook.Data.FrontColor;
+                Changes.main.armyEditionLabel.Background = ArmyBook.Data.FrontColor;
+                Changes.main.unitDetailHead.Background = ArmyBook.Data.FrontColor;
 
                 Changes.main.armyMainMenu.Content = '\u2630';
                 Changes.main.armyMainMenu.Foreground = Brushes.White;
-                Changes.main.armyMainMenu.Background = ArmyBook.Data.AdditionalColor;
+                Changes.main.armyMainMenu.Background = ArmyBook.Data.BackColor;
 
                 Changes.main.armyMainLabel.Foreground = Brushes.White;
-                Changes.main.armyMainLabel.Background = ArmyBook.Data.MainColor;
+                Changes.main.armyMainLabel.Background = ArmyBook.Data.FrontColor;
             }
 
             List<Unit> categories = Army.Params.GetArmyCategories();
@@ -37,7 +37,7 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Unit unit = entry.Clone();
                 unit.PointsView = String.Format(" {0} pts", unit.Points);
-                unit.InterfaceColor = ArmyBook.Data.MainColor;
+                unit.InterfaceColor = ArmyBook.Data.FrontColor;
                 categories[(int)unit.Type].Items.Add(unit);
             }
 
@@ -76,7 +76,7 @@ namespace WarhammerArmyAssembler.Interface
                     }
                     
                     artefact.PointsView = PointsView(artefact);
-                    artefact.InterfaceColor = ArmyBook.Data.MainColor;
+                    artefact.InterfaceColor = ArmyBook.Data.FrontColor;
                     artefacts.Items.Add(artefact);
                 }
 

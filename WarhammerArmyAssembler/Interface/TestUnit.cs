@@ -165,8 +165,8 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (Label label in new List<Label> { main.startFullTest, main.startStatisticTest, main.startBattleRoyale })
             {
-                label.Foreground = ArmyBook.Data.MainColor;
-                label.BorderBrush = ArmyBook.Data.MainColor;
+                label.Foreground = ArmyBook.Data.FrontColor;
+                label.BorderBrush = ArmyBook.Data.FrontColor;
             }
 
             main.enemyGroup.Items.Clear();

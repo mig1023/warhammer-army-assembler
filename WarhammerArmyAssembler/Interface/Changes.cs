@@ -279,7 +279,7 @@ namespace WarhammerArmyAssembler.Interface
                     Height = 30,
                     Width = Double.NaN,
                     Foreground = Brushes.White,
-                    Background = (name == "Close" ? Brushes.DarkGray : ArmyBook.Data.MainColor),
+                    Background = (name == "Close" ? Brushes.DarkGray : ArmyBook.Data.FrontColor),
                     FontSize = 16,
                     FontWeight = FontWeights.Bold,
                 };
@@ -414,7 +414,7 @@ namespace WarhammerArmyAssembler.Interface
             changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", ArmyBook.Other.Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = Interface.Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Main"));
+            Brush mainColor = Interface.Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Front"));
 
             foreach (Label label in PointsButtons)
             {
@@ -683,7 +683,7 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             main.armyArtefactName.Foreground = Brushes.White;
-            main.armyArtefactName.Background = ArmyBook.Data.MainColor;
+            main.armyArtefactName.Background = ArmyBook.Data.FrontColor;
             main.armyArtefactName.FontWeight = FontWeights.Bold;
 
             main.armybookArtefactDetailScroll.Visibility = Visibility.Visible;
@@ -706,7 +706,7 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             main.armyUnitName.Foreground = Brushes.White;
-            main.armyUnitName.Background = ArmyBook.Data.MainColor;
+            main.armyUnitName.Background = ArmyBook.Data.FrontColor;
             main.armyUnitName.FontWeight = FontWeights.Bold;
 
             main.armybookDetailScroll.Visibility = Visibility.Visible;

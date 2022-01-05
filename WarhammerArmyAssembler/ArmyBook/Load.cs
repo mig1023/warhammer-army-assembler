@@ -48,15 +48,15 @@ namespace WarhammerArmyAssembler.ArmyBook
             Army.Data.ArmyEdition = LoadInt(xmlFile, "Edition");
             Army.Data.MagicPowers = LoadString(xmlFile, "MagicPowers");
 
-            Data.MainColor = LoadColor(xmlFile, "Main");
-            Data.AdditionalColor = LoadColor(xmlFile, "Additional");
-            Data.BackgroundColor = LoadColor(xmlFile, "Background");
+            Data.FrontColor = LoadColor(xmlFile, "Front");
+            Data.BackColor = LoadColor(xmlFile, "Back");
+            Data.GridColor = LoadColor(xmlFile, "Grid");
             Data.TooltipColor = LoadColor(xmlFile, "Tooltip");
             Data.Selected = LoadString(xmlFile, "Colors/Selected");
 
             Data.DemonicMortal = BoolParse(Other.Intro(xmlFile, "DemonicMortal"));
 
-            Interface.Mod.SetArmyGridAltColor(Data.BackgroundColor);
+            Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
             LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref Data.Units);
@@ -211,7 +211,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize));
             newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
 
-            newUnit.ArmyColor = (SolidColorBrush)ArmyBook.Data.MainColor;
+            newUnit.ArmyColor = (SolidColorBrush)ArmyBook.Data.FrontColor;
             newUnit.TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor;
 
             return newUnit;

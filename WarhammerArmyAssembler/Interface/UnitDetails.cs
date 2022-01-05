@@ -234,7 +234,7 @@ namespace WarhammerArmyAssembler.Interface
             Changes.main.unitName.Content = unit.Name.ToUpper();
 
             Changes.main.unitName.Foreground = Brushes.White;
-            Changes.main.unitName.Background = ArmyBook.Data.MainColor;
+            Changes.main.unitName.Background = ArmyBook.Data.FrontColor;
             Changes.main.unitName.FontWeight = FontWeights.Bold;
 
             Changes.main.UpdateLayout();
@@ -260,7 +260,7 @@ namespace WarhammerArmyAssembler.Interface
             if (!enabled)
                 newOption.Foreground = Brushes.Gray;
             else if (selected)
-                newOption.Foreground = ArmyBook.Data.AdditionalColor;
+                newOption.Foreground = ArmyBook.Data.BackColor;
 
             if (selected || bold)
                 newOption.FontWeight = FontWeights.Bold;
@@ -268,7 +268,7 @@ namespace WarhammerArmyAssembler.Interface
             if (bold)
             {
                 newOption.Foreground = Brushes.White;
-                newOption.Background = ArmyBook.Data.MainColor;
+                newOption.Background = ArmyBook.Data.FrontColor;
             }
 
             Changes.main.unitDetail.Children.Add(newOption);
@@ -285,7 +285,7 @@ namespace WarhammerArmyAssembler.Interface
                 Label optionPoints = new Label
                 {
                     Content = (pointsNeed ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine),
-                    Foreground = (!enabled || selected ? Brushes.Gray : ArmyBook.Data.MainColor),
+                    Foreground = (!enabled || selected ? Brushes.Gray : ArmyBook.Data.FrontColor),
                 };
 
                 optionPoints.Margin = Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
@@ -307,7 +307,7 @@ namespace WarhammerArmyAssembler.Interface
                 longOptionLine.Y2 = longOptionLine.Y1 + height * (captionLines.Length - 1);
 
                 longOptionLine.StrokeThickness = 2;
-                longOptionLine.Stroke = ArmyBook.Data.MainColor;
+                longOptionLine.Stroke = ArmyBook.Data.FrontColor;
 
                 Changes.main.unitDetail.Children.Add(longOptionLine);
             }
@@ -415,21 +415,21 @@ namespace WarhammerArmyAssembler.Interface
 
             if (option.IsMagicItem() || option.IsPowers())
             {
-                AddButtonPart("drop " + (option.IsPowers() ? "power" : "artefact"), margins, 0, id, ArmyBook.Data.MainColor, 154);
+                AddButtonPart("drop " + (option.IsPowers() ? "power" : "artefact"), margins, 0, id, ArmyBook.Data.FrontColor, 154);
                 return height;
             }
 
             if (option.Countable != null)
-                AddButtonsCountable(caption: option.Countable.Value.ToString(), backFirst: ArmyBook.Data.AdditionalColor,
-                    backSecond: ArmyBook.Data.MainColor, option: option, unit: unit, margins: margins, id: id, enabled: optionIsEnabled);
+                AddButtonsCountable(caption: option.Countable.Value.ToString(), backFirst: ArmyBook.Data.BackColor,
+                    backSecond: ArmyBook.Data.FrontColor, option: option, unit: unit, margins: margins, id: id, enabled: optionIsEnabled);
 
             else if (!optionIsEnabled)
                 AddButtonAllParts(captionFirst: String.Empty, captionSecond: String.Empty, backgroundFirst: Brushes.WhiteSmoke,
                     backgroundSecond: Brushes.Gainsboro, margins: margins, id: id, enabled: false);
 
             else if (option.Realised)
-                AddButtonAllParts(captionFirst: "drop", captionSecond: String.Empty, backgroundFirst: ArmyBook.Data.AdditionalColor,
-                    backgroundSecond: ArmyBook.Data.MainColor, margins: margins, id: id);
+                AddButtonAllParts(captionFirst: "drop", captionSecond: String.Empty, backgroundFirst: ArmyBook.Data.BackColor,
+                    backgroundSecond: ArmyBook.Data.FrontColor, margins: margins, id: id);
 
             else
                 AddButtonAllParts(captionFirst: String.Empty, captionSecond: "add", backgroundFirst: Brushes.LightGray,

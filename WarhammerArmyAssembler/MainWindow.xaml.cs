@@ -135,10 +135,10 @@ namespace WarhammerArmyAssembler
             armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20,
                 top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 35);
 
-            armyUnitSpecific.Foreground = ArmyBook.Data.MainColor;
+            armyUnitSpecific.Foreground = ArmyBook.Data.FrontColor;
 
             armyArtefactSpecific.Margin = armyUnitSpecific.Margin;
-            armyArtefactSpecific.Foreground = ArmyBook.Data.MainColor;
+            armyArtefactSpecific.Foreground = ArmyBook.Data.FrontColor;
         }
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)

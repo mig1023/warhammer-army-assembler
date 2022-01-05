@@ -12,9 +12,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static int MaxIDindex = 0;
 
-        public static Brush MainColor = null;
-        public static Brush AdditionalColor = null;
-        public static Brush BackgroundColor = null;
+        public static Brush FrontColor = null;
+        public static Brush BackColor = null;
+        public static Brush GridColor = null;
         public static Brush TooltipColor = null;
         public static string Selected = String.Empty;
 

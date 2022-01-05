@@ -13,6 +13,7 @@ namespace WarhammerArmyAssembler.Army
         public static string Directory { get; set; }
 
         public static int MaxPoints = 2000;
+
         public static int MaxIDindex = 0;
     }
 }
