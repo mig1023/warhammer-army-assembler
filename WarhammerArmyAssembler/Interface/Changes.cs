@@ -662,5 +662,55 @@ namespace WarhammerArmyAssembler.Interface
                 },
             }
         };
+
+        public static void SetContentDescription(object obj)
+        {
+            if (obj is Unit)
+            {
+                Unit unit = obj as Unit;
+
+                main.armyArtefactName.Content = unit.Name.ToUpper();
+                main.armyArtefactDescription.Text = unit.Description;
+                main.armyArtefactSpecific.Text = unit.SelfDescription();
+            }
+            else
+            {
+                Option option = obj as Option;
+
+                main.armyArtefactName.Content = option.Name.ToUpper();
+                main.armyArtefactDescription.Text = option.Description;
+                main.armyArtefactSpecific.Text = option.SelfDescription();
+            }
+
+            main.armyArtefactName.Foreground = Brushes.White;
+            main.armyArtefactName.Background = ArmyBook.Data.MainColor;
+            main.armyArtefactName.FontWeight = FontWeights.Bold;
+
+            main.armybookArtefactDetailScroll.Visibility = Visibility.Visible;
+            main.armybookDetailScroll.Visibility = Visibility.Hidden;
+        }
+
+        public static void SetContentDescriptionWithImage(Unit unit)
+        {
+            main.armyUnitName.Content = unit.Name.ToUpper();
+            main.armyUnitDescription.Text = unit.Description;
+            main.armyUnitSpecific.Text = unit.SelfDescription();
+
+            try
+            {
+                main.armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.Directory + unit.Image));
+            }
+            catch
+            {
+                main.armyUnitImage.Source = null;
+            }
+
+            main.armyUnitName.Foreground = Brushes.White;
+            main.armyUnitName.Background = ArmyBook.Data.MainColor;
+            main.armyUnitName.FontWeight = FontWeights.Bold;
+
+            main.armybookDetailScroll.Visibility = Visibility.Visible;
+            main.armybookArtefactDetailScroll.Visibility = Visibility.Hidden;
+        }
     }
 }
