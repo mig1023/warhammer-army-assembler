@@ -712,5 +712,99 @@ namespace WarhammerArmyAssembler.Interface
             main.armybookDetailScroll.Visibility = Visibility.Visible;
             main.armybookArtefactDetailScroll.Visibility = Visibility.Hidden;
         }
+
+        public static void armyUnitTest_Resize()
+        {
+            main.UpdateLayout();
+
+            double marginTop = Interface.Changes.ZeroFuse(main.unitGrid.ActualHeight - 66);
+
+            main.specialRulesTest.Margin = Interface.Changes.Thick(main.specialRulesTest, top: marginTop);
+
+            marginTop += main.specialRulesTest.ActualHeight;
+
+            List<FrameworkElement> elements = new List<FrameworkElement>
+            {
+                main.enemyForTestText,
+                main.enemyForTest,
+                main.enemyTestUnit,
+                main.enemyGridContainer,
+                main.enemyGroupText,
+                main.enemyGroup
+            };
+
+            foreach (FrameworkElement element in elements)
+                element.Margin = Interface.Changes.Thick(main.enemyForTestText, top: marginTop);
+
+            marginTop += Interface.Changes.ZeroFuse(main.enemyGrid.ActualHeight - 66);
+
+            elements = new List<FrameworkElement>
+            {
+                main.specialRulesEnemyTest,
+                main.startFullTest,
+                main.startStatisticTest,
+                main.startBattleRoyale,
+                main.testConsole,
+                main.currentTest,
+            };
+
+            foreach (FrameworkElement element in elements)
+                element.Margin = Interface.Changes.Thick(main.enemyForTestText, top: marginTop);
+
+            double unitTestHeight = (double)main.enemyForTest.GetValue(Canvas.TopProperty) +
+                main.enemyForTest.ActualHeight + 50;
+
+            double royalConsoleSize = 0;
+
+            if (main.enemyGridContainer.Visibility == Visibility.Visible)
+            {
+                double startButtonPosition = (double)main.startFullTest.GetValue(Canvas.TopProperty);
+                unitTestHeight = main.startFullTest.Margin.Top + main.startFullTest.ActualHeight + startButtonPosition + 20;
+
+                main.startBattleRoyale.Margin = Interface.Changes.Thick(main.enemyForTestText, top: marginTop + 154,
+                    left: main.startBattleRoyale.Margin.Left + 163);
+            }
+            else
+            {
+                main.testConsole.Margin = Interface.Changes.Thick(main.enemyForTestText, top: marginTop - 155);
+                royalConsoleSize = -70;
+            }
+
+            if (unitTestHeight + 140 < main.armyUnitTestScroll.ActualHeight)
+            {
+                main.testConsole.Height = Interface.Changes.ZeroFuse(
+                    main.armyUnitTestScroll.ActualHeight - unitTestHeight - 20) + royalConsoleSize;
+            }
+            else
+            {
+                unitTestHeight += 140;
+                main.testConsole.Height = 120 + royalConsoleSize;
+            }
+
+            main.waitingSpinner.Margin = Interface.Changes.Thick(main.testConsole,
+                top: main.testConsole.Margin.Top - Interface.Other.SPINNER_TOP_MARGIN,
+                left: main.testConsole.Margin.Left - Interface.Other.SPINNER_LEFT_MARGIN);
+
+            main.armyUnitTest.Height = unitTestHeight;
+        }
+
+        public static void armyUnitTest_SizeChanged(SizeChangedEventArgs e)
+        {
+            List<FrameworkElement> elements = new List<FrameworkElement>
+            {
+                main.unitGrid,
+                main.specialRulesTest,
+                main.enemyForTest,
+                main.enemyGrid,
+                main.specialRulesEnemyTest,
+                main.testConsole,
+                main.enemyGroup
+            };
+
+            foreach (FrameworkElement element in elements)
+                element.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 120);
+
+            armyUnitTest_Resize();
+        }
     }
 }

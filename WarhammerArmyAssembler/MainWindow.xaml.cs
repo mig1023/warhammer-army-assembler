@@ -5,7 +5,6 @@ using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
 
 namespace WarhammerArmyAssembler
 {
@@ -415,94 +414,8 @@ namespace WarhammerArmyAssembler
             Interface.Changes.Move(Interface.Changes.MovingType.ToRight);
         }
 
-        public void armyUnitTest_Resize()
-        {
-            UpdateLayout();
-
-            double marginTop = Interface.Changes.ZeroFuse(unitGrid.ActualHeight - 66);
-
-            specialRulesTest.Margin = Interface.Changes.Thick(specialRulesTest, top: marginTop);
-
-            marginTop += specialRulesTest.ActualHeight;
-
-            List<FrameworkElement> elements = new List<FrameworkElement>
-            {
-                enemyForTestText,
-                enemyForTest,
-                enemyTestUnit,
-                enemyGridContainer,
-                enemyGroupText,
-                enemyGroup
-            };
-
-            foreach (FrameworkElement element in elements)
-                element.Margin = Interface.Changes.Thick(enemyForTestText, top: marginTop);
-
-            marginTop += Interface.Changes.ZeroFuse(enemyGrid.ActualHeight - 66);
-
-            elements = new List<FrameworkElement>
-            {
-                specialRulesEnemyTest,
-                startFullTest,
-                startStatisticTest,
-                startBattleRoyale,
-                testConsole,
-                currentTest,
-            };
-
-            foreach (FrameworkElement element in elements)
-                element.Margin = Interface.Changes.Thick(enemyForTestText, top: marginTop);
-
-            double unitTestHeight = (double)enemyForTest.GetValue(Canvas.TopProperty) + enemyForTest.ActualHeight + 50;
-            double royalConsoleSize = 0;
-
-            if (enemyGridContainer.Visibility == Visibility.Visible)
-            {
-                double startButtonPosition = (double)startFullTest.GetValue(Canvas.TopProperty);
-                unitTestHeight = startFullTest.Margin.Top + startFullTest.ActualHeight + startButtonPosition + 20;
-
-                startBattleRoyale.Margin = Interface.Changes.Thick(enemyForTestText, top: marginTop + 154,
-                    left: startBattleRoyale.Margin.Left + 163);
-            }
-            else
-            {
-                testConsole.Margin = Interface.Changes.Thick(enemyForTestText, top: marginTop - 155);
-                royalConsoleSize = -70;
-            }
-            
-            if (unitTestHeight + 140 < armyUnitTestScroll.ActualHeight)
-                testConsole.Height = Interface.Changes.ZeroFuse(armyUnitTestScroll.ActualHeight - unitTestHeight - 20) + royalConsoleSize;
-            else
-            {
-                unitTestHeight += 140;
-                testConsole.Height = 120 + royalConsoleSize;
-            }
-
-            waitingSpinner.Margin = Interface.Changes.Thick(testConsole,
-                top: testConsole.Margin.Top - Interface.Other.SPINNER_TOP_MARGIN,
-                left: testConsole.Margin.Left - Interface.Other.SPINNER_LEFT_MARGIN);
-
-            armyUnitTest.Height = unitTestHeight;
-        }
-
-        private void armyUnitTest_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            List<FrameworkElement> elements = new List<FrameworkElement>
-            {
-                unitGrid,
-                specialRulesTest,
-                enemyForTest,
-                enemyGrid,
-                specialRulesEnemyTest,
-                testConsole,
-                enemyGroup
-            };
-
-            foreach (FrameworkElement element in elements)
-                element.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 120);
-
-            armyUnitTest_Resize();
-        }
+        private void armyUnitTest_SizeChanged(object sender, SizeChangedEventArgs e) =>
+            Interface.Changes.armyUnitTest_SizeChanged(e);
 
         private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -512,7 +425,7 @@ namespace WarhammerArmyAssembler
             waitingSpinner.Visibility = Visibility.Hidden;
             testConsole.Visibility = Visibility.Hidden;
 
-            armyUnitTest_Resize();
+            Interface.Changes.armyUnitTest_Resize();
         }
 
         private void enemyGroup_SelectionChanged(object sender, SelectionChangedEventArgs e) => Interface.TestUnit.LoadEnemyGroups();

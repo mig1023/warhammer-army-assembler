@@ -61,7 +61,7 @@ namespace WarhammerArmyAssembler.Interface
                 }
             }
 
-            Interface.Changes.main.armyUnitTest_Resize();
+            Interface.Changes.armyUnitTest_Resize();
         }
 
         private static string ParamView(string name, Unit unitForLoad)
@@ -78,7 +78,7 @@ namespace WarhammerArmyAssembler.Interface
         public static void startTest(Test.Data.TestTypes testType)
         {
             CleanConsole();
-            Interface.Changes.main.armyUnitTest_Resize();
+            Interface.Changes.armyUnitTest_Resize();
             
             Test.Fight.TestByName(testType);
         }
@@ -175,7 +175,7 @@ namespace WarhammerArmyAssembler.Interface
             foreach (string enemy in Enemy.GetEnemiesGroups())
                 main.enemyGroup.Items.Add(enemy);
 
-            main.armyUnitTest_Resize();
+            Interface.Changes.armyUnitTest_Resize();
         }
 
         public static void VisibilityTest(bool before = false)
@@ -210,7 +210,7 @@ namespace WarhammerArmyAssembler.Interface
                 elemetnsPostfix: "Enemy", unitGrid: Interface.Changes.main.enemyGrid);
             LoadSpecialRules(unitForLoad: Test.Data.enemy, target: Interface.Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
 
-            Interface.Changes.main.armyUnitTest_Resize();
+            Interface.Changes.armyUnitTest_Resize();
         }
 
         public static void LoadEnemyGroups()
