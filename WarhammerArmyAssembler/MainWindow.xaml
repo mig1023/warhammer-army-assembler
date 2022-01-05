@@ -401,7 +401,7 @@
                                 </Style>
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="Unit" Binding="{Binding Name}" Width="*" MinWidth="120" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Unit" Binding="{Binding NameInGrid}" Width="*" MinWidth="120" IsReadOnly="True"/>
                         <DataGridTemplateColumn Width="40">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>

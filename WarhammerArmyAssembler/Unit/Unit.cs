@@ -15,6 +15,12 @@ namespace WarhammerArmyAssembler
         public enum TestTypeTypes { Unit, Enemy }
 
         public string Name { get; set; }
+
+        public string NameInGrid
+        {
+            get => string.Format("{0}{1}", (this.Type == Unit.UnitType.Mount ? "↳ " : String.Empty), Name);
+        }
+
         string Group { get; set; }
         public int ID { get; set; }
         public string IDView { get; set; }

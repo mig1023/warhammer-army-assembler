@@ -12,7 +12,7 @@ namespace WarhammerArmyAssembler
 
         public SolidColorBrush Color { get; set; }
 
-        public bool Null { get; set;}
+        public bool Null { get; set; }
 
         public Profile Clone() => new Profile
         {
