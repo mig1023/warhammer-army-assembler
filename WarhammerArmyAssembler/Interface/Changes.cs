@@ -698,7 +698,7 @@ namespace WarhammerArmyAssembler.Interface
 
             try
             {
-                main.armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.Directory + unit.Image));
+                main.armyUnitImage.Source = new BitmapImage(new Uri(Army.Data.UnitsImagesDirectory + unit.Image));
             }
             catch
             {
