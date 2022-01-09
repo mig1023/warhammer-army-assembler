@@ -504,6 +504,7 @@ namespace WarhammerArmyAssembler.Interface
                 string head = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Name")).ToUpper();
                 string edition = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Edition"));
                 string description = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Description"));
+                int released = ArmyBook.Parsers.IntParse(ArmyBook.Other.Intro(xmlFile, "Released"));
                 string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Images/Illustration"));
 
                 if (String.IsNullOrEmpty(illustration))
@@ -520,7 +521,7 @@ namespace WarhammerArmyAssembler.Interface
                     Content = new Border
                     {
                         Padding = new Thickness(5),
-                        Child = TooltipBlock(head, armyEdition, description, illustration),
+                        Child = TooltipBlock(head, armyEdition, description, illustration, released),
                     }
                 };
 
@@ -637,7 +638,8 @@ namespace WarhammerArmyAssembler.Interface
 
         public static double ZeroFuse(double currentParam) => (currentParam < 0 ? 0 : currentParam);
 
-        private static StackPanel TooltipBlock(string head, int edition, string description, string image) => new StackPanel
+        private static StackPanel TooltipBlock(string head, int edition,
+            string description, string image, int released) => new StackPanel
         {
             Children =
             {
@@ -659,6 +661,11 @@ namespace WarhammerArmyAssembler.Interface
                     Text = String.Format("\n{0}", description),
                     TextWrapping = TextWrapping.Wrap,
                     FontSize = 9,
+                },
+                new TextBlock
+                {
+                    Text = String.Format("\nReleased: {0}", released),
+                    FontSize = 11,
                 },
             }
         };
