@@ -504,8 +504,12 @@ namespace WarhammerArmyAssembler.Interface
                 string head = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Name")).ToUpper();
                 string edition = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Edition"));
                 string description = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Description"));
+                string authors = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Authors"));
                 int released = ArmyBook.Parsers.IntParse(ArmyBook.Other.Intro(xmlFile, "Released"));
                 string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Images/Illustration"));
+
+                Brush backColor = Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Tooltip"));
+                Brush lineColor = Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Front"));
 
                 if (String.IsNullOrEmpty(illustration))
                     illustration = source;
@@ -517,11 +521,11 @@ namespace WarhammerArmyAssembler.Interface
                 newImage.ToolTip = new ToolTip
                 {
                     MaxWidth = 600,
-                    Background = Interface.Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Tooltip")),
+                    Background = backColor,
                     Content = new Border
                     {
                         Padding = new Thickness(5),
-                        Child = TooltipBlock(head, armyEdition, description, illustration, released),
+                        Child = TooltipBlock(head, armyEdition, description, illustration, released, authors, lineColor),
                     }
                 };
 
@@ -638,8 +642,8 @@ namespace WarhammerArmyAssembler.Interface
 
         public static double ZeroFuse(double currentParam) => (currentParam < 0 ? 0 : currentParam);
 
-        private static StackPanel TooltipBlock(string head, int edition,
-            string description, string image, int released) => new StackPanel
+        private static StackPanel TooltipBlock(string head, int edition, string description,
+            string image, int released, string authors, Brush lineColor) => new StackPanel
         {
             Children =
             {
@@ -658,13 +662,19 @@ namespace WarhammerArmyAssembler.Interface
                 },
                 new TextBlock
                 {
-                    Text = String.Format("\n{0}", description),
+                    Text = String.Format("\n{0}\n", description),
                     TextWrapping = TextWrapping.Wrap,
                     FontSize = 9,
                 },
+                new System.Windows.Shapes.Rectangle
+                {
+                    HorizontalAlignment = HorizontalAlignment.Stretch,
+                    Height = 1,
+                    Fill = lineColor,
+                },
                 new TextBlock
                 {
-                    Text = String.Format("\nReleased: {0}", released),
+                    Text = String.Format("\nReleased: {0}    Written by {1}    © Games Workshop", released, authors),
                     FontSize = 11,
                 },
             }
