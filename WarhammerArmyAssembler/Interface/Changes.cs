@@ -665,6 +665,7 @@ namespace WarhammerArmyAssembler.Interface
                     Text = String.Format("\n{0}\n", description),
                     TextWrapping = TextWrapping.Wrap,
                     FontSize = 9,
+                    TextAlignment = TextAlignment.Justify,
                 },
                 new System.Windows.Shapes.Rectangle
                 {
@@ -672,13 +673,40 @@ namespace WarhammerArmyAssembler.Interface
                     Height = 1,
                     Fill = lineColor,
                 },
-                new TextBlock
-                {
-                    Text = String.Format("\nReleased: {0}    Written by {1}    © Games Workshop", released, authors),
-                    FontSize = 11,
-                },
+                TooltipFooter(released, authors),
             }
         };
+
+        private static Grid TooltipFooter(int released, string authors)
+        {
+            Grid footer = new Grid { Margin = new Thickness(0, 3, 0, 0) };
+
+            footer.ColumnDefinitions.Add(new ColumnDefinition());
+            footer.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(370) });
+            footer.ColumnDefinitions.Add(new ColumnDefinition());
+
+            footer.RowDefinitions.Add(new RowDefinition());
+
+            footer.Children.Add(FooterElement(String.Format("Released: {0}", released), HorizontalAlignment.Left, 0));
+            footer.Children.Add(FooterElement(String.Format("Written by {0}", authors), HorizontalAlignment.Center, 1));
+            footer.Children.Add(FooterElement("© Games Workshop", HorizontalAlignment.Right, 2));
+
+            return footer;
+        }
+
+        private static TextBlock FooterElement(string text, HorizontalAlignment aligment, int column)
+        {
+            TextBlock element = new TextBlock();
+
+            element.Text = text;
+            element.HorizontalAlignment = aligment;
+            element.FontSize = 11;
+
+            Grid.SetColumn(element, column);
+            Grid.SetRow(element, 0);
+
+            return element;
+        }
 
         public static void SetContentDescription(object obj)
         {
