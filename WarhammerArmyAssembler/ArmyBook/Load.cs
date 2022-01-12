@@ -94,9 +94,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Name = StringParse(xmlUnit["Name"]),
                 Type = UnitTypeParse(xmlUnit["Type"]),
                 Points = DoubleParse(xmlUnit["Points"]),
-                Size = IntParse(xmlUnit["Min"]),
-                MinSize = IntParse(xmlUnit["Min"]),
-                MaxSize = IntParse(xmlUnit["Max"]),
                 UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]),
                 Wizard = IntParse(xmlUnit["Wizard"]),
                 MountOn = IntParse(xmlUnit["MountOn"]),
@@ -110,6 +107,19 @@ namespace WarhammerArmyAssembler.ArmyBook
                 WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]),
                 Chariot = IntParse(xmlUnit["Chariot"]),
             };
+
+            if (BoolParse(xmlUnit["SeparateModel"]))
+            {
+                newUnit.Size = 1;
+                newUnit.MinSize = 1;
+                newUnit.MaxSize = 1;
+            }
+            else
+            {
+                newUnit.Size = IntParse(xmlUnit["Min"]);
+                newUnit.MinSize = IntParse(xmlUnit["Min"]);
+                newUnit.MaxSize = IntParse(xmlUnit["Max"]);
+            }
 
             newUnit.Movement = new Profile { Value = IntParse(mainParam["Movement"]) };
             newUnit.WeaponSkill = new Profile { Value = IntParse(mainParam["WeaponSkill"]) };

@@ -37,7 +37,6 @@ namespace WarhammerArmyAssembler
         public bool UniqueUnits { get; set; }
 
         public double Points { get; set; }
-
         public string PointsView { get; set; }
 
         public string Description { get; set; }
