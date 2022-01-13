@@ -190,5 +190,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         }
 
         public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;
+
+        public static Profile ProfileParse(XmlNode xmlNode) => new Profile { Value = IntParse(xmlNode) };
     }
 }

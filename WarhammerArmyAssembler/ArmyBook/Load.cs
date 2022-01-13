@@ -121,15 +121,15 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.MaxSize = IntParse(xmlUnit["Max"]);
             }
 
-            newUnit.Movement = new Profile { Value = IntParse(mainParam["Movement"]) };
-            newUnit.WeaponSkill = new Profile { Value = IntParse(mainParam["WeaponSkill"]) };
-            newUnit.BallisticSkill = new Profile { Value = IntParse(mainParam["BallisticSkill"]) };
-            newUnit.Strength = new Profile { Value = IntParse(mainParam["Strength"]) };
-            newUnit.Toughness = new Profile { Value = IntParse(mainParam["Toughness"]) };
-            newUnit.Wounds = new Profile { Value = IntParse(mainParam["Wounds"]) };
-            newUnit.Initiative = new Profile { Value = IntParse(mainParam["Initiative"]) };
-            newUnit.Attacks = new Profile { Value = IntParse(mainParam["Attacks"]) };
-            newUnit.Leadership = new Profile { Value = IntParse(mainParam["Leadership"]) };
+            newUnit.Movement = ProfileParse(mainParam["Movement"]);
+            newUnit.WeaponSkill = ProfileParse(mainParam["WeaponSkill"]);
+            newUnit.BallisticSkill = ProfileParse(mainParam["BallisticSkill"]);
+            newUnit.Strength = ProfileParse(mainParam["Strength"]);
+            newUnit.Toughness = ProfileParse(mainParam["Toughness"]);
+            newUnit.Wounds = ProfileParse(mainParam["Wounds"]);
+            newUnit.Initiative = ProfileParse(mainParam["Initiative"]);
+            newUnit.Attacks = ProfileParse(mainParam["Attacks"]);
+            newUnit.Leadership = ProfileParse(mainParam["Leadership"]);
 
             newUnit.Armour = IntNullableParse(mainParam["Armour"]);
             newUnit.Ward = IntNullableParse(mainParam["Ward"]);
@@ -209,7 +209,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.NoCoreSlot = BoolParse(additionalParam["NoCoreSlot"]);
 
                 if (newUnit.Frenzy)
-                    xmlUnit.SelectSingleNode("Equipments").AppendChild(ArmyBook.Other.AddFrenzyAttack(xml));
+                    xmlUnit.SelectSingleNode("Equipments").AppendChild(Other.AddFrenzyAttack(xml));
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
@@ -221,8 +221,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize));
             newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
 
-            newUnit.ArmyColor = (SolidColorBrush)ArmyBook.Data.FrontColor;
-            newUnit.TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor;
+            newUnit.ArmyColor = (SolidColorBrush)Data.FrontColor;
+            newUnit.TooltipColor = (SolidColorBrush)Data.TooltipColor;
 
             return newUnit;
         }
@@ -355,7 +355,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Mount = BoolParse(xmlNode["Mount"]),
 
             ArtefactGroup = artefactGroup ?? String.Empty,
-            TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
+            TooltipColor = (SolidColorBrush)Data.TooltipColor,
         };
     }
 }
