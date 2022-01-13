@@ -240,24 +240,14 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void MainMenu()
         {
-            List<string> buttonName = new List<string>
+            Dictionary<string, MouseButtonEventHandler> buttons = new Dictionary<string, MouseButtonEventHandler>
             {
-                "Change Armybook",
-                "Export Army to PDF",
-                "Export Army to PDF (light)",
-                "Export Army to TXT",
-                "Exit",
-                "Close"
-            };
-
-            List<MouseButtonEventHandler> buttonAction = new List<MouseButtonEventHandler>
-            {
-                main.toNewArmy_MouseDown,
-                main.saveArmyToPDF_MouseDown,
-                main.saveArmyToPDF_light_MouseDown,
-                main.saveArmyToTXT_MouseDown,
-                main.closeWindow_MouseLeftButtonDown,
-                main.closeMainMenu_MouseDown,
+                ["Change Armybook"] = main.toNewArmy_MouseDown,
+                ["Export Army to PDF"] = main.saveArmyToPDF_MouseDown,
+                ["Export Army to PDF (light)"] = main.saveArmyToPDF_light_MouseDown,
+                ["Export Army to TXT"] = main.saveArmyToTXT_MouseDown,
+                ["Exit"] = main.closeWindow_MouseLeftButtonDown,
+                ["Close"] = main.closeMainMenu_MouseDown,
             };
 
             foreach (Label button in MainMenuButtons)
@@ -265,13 +255,10 @@ namespace WarhammerArmyAssembler.Interface
 
             MainMenuButtons.Clear();
 
-            int buttonIndex = 0;
             double buttonXPosition = 15;
             double buttonYPosition = 10;
 
-            buttonIndex = 0;
-
-            foreach (string name in buttonName)
+            foreach (string name in buttons.Keys)
             {
                 Label newButton = new Label
                 {
@@ -284,15 +271,13 @@ namespace WarhammerArmyAssembler.Interface
                     FontWeight = FontWeights.Bold,
                 };
 
-                newButton.MouseDown += buttonAction[buttonIndex];
+                newButton.MouseDown += buttons[name];
                 newButton.Margin = Thick(newButton, buttonXPosition, buttonYPosition);
 
                 main.mainMenu.Children.Add(newButton);
                 MainMenuButtons.Add(newButton);
 
                 main.UpdateLayout();
-
-                buttonIndex += 1;
 
                 buttonXPosition += newButton.ActualWidth + 10;
 
