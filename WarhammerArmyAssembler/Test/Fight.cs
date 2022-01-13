@@ -378,8 +378,8 @@ namespace WarhammerArmyAssembler.Test
             Unit enemy = units[0];
             Unit enemyMount = units[1];
 
-            int unitFullSize = (unit.Size * unit.OriginalWounds) + (unitMount != null ? unitMount.Size * unitMount.OriginalWounds : 0);
-            int enemyFullSize = (enemy.Size * enemy.OriginalWounds) + (enemyMount != null ? enemyMount.Size * enemyMount.OriginalWounds : 0);
+            int unitFullSize = (unit.Size * unit.Wounds.Original) + (unitMount != null ? unitMount.Size * unitMount.Wounds.Original : 0);
+            int enemyFullSize = (enemy.Size * enemy.Wounds.Original) + (enemyMount != null ? enemyMount.Size * enemyMount.Wounds.Original : 0);
 
             string unitSide = (((unitMount != null) && (unit.Wounds.Value <= 0)) ? unitMount.Name : unit.Name);
 
@@ -416,7 +416,7 @@ namespace WarhammerArmyAssembler.Test
                 if ((randomOpponent.TestType != unit.TestType) && (randomOpponent.Wounds.Value > 0))
                     canBeOpponent = true;
 
-                if ((randomOpponent.Type == Unit.UnitType.Mount) && (randomOpponent.OriginalWounds == 1))
+                if ((randomOpponent.Type == Unit.UnitType.Mount) && (randomOpponent.Wounds.Original == 1))
                     canBeOpponent = false;
             }
             while (!canBeOpponent);
@@ -663,8 +663,8 @@ namespace WarhammerArmyAssembler.Test
             bool unitMountFearOrTerror = ((unitFriend != null) && (unitFriend.Wounds.Value > 0) ? unitFriend.IsFearOrTerror() : false);
 
             bool thereAreMoreOfThem = (
-                (unit.OriginalWounds * unit.Size) + (unitFriend != null ? (unitFriend.OriginalWounds * unitFriend.Size) : 0) <
-                (enemy.OriginalWounds * enemy.Size) + (enemyFriend != null ? (enemyFriend.OriginalWounds * enemyFriend.Size) : 0));
+                (unit.Wounds.Original * unit.Size) + (unitFriend != null ? (unitFriend.Wounds.Original * unitFriend.Size) : 0) <
+                (enemy.Wounds.Original * enemy.Size) + (enemyFriend != null ? (enemyFriend.Wounds.Original * enemyFriend.Size) : 0));
 
             bool itNotFear = (unit.ImmuneToPsychology || unit.Stupidity || unit.Undead || unitFearOrTerror || unitMountFearOrTerror);
 
@@ -970,7 +970,7 @@ namespace WarhammerArmyAssembler.Test
         {
             int ward = ((enemy.Ward == null) ? 0 : enemy.Ward.Value);
 
-            if ((enemy.WardForFirstWound > 0) && (enemy.Wounds.Value == enemy.OriginalWounds))
+            if ((enemy.WardForFirstWound > 0) && (enemy.Wounds.Value == enemy.Wounds.Original))
             {
                 ward = enemy.WardForFirstWound;
                 enemy.WardForFirstWound = 0;

@@ -779,7 +779,7 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             foreach (FrameworkElement element in elements)
-                element.Margin = Interface.Changes.Thick(main.enemyForTestText, top: marginTop);
+                element.Margin = Changes.Thick(main.enemyForTestText, top: marginTop);
 
             double unitTestHeight = (double)main.enemyForTest.GetValue(Canvas.TopProperty) +
                 main.enemyForTest.ActualHeight + 50;

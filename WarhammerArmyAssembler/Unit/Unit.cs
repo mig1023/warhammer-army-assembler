@@ -55,9 +55,6 @@ namespace WarhammerArmyAssembler
 
         public int Wizard { get; set; }
 
-        public int OriginalWounds { get; set; }
-        public int OriginalAttacks { get; set; }
-
         public bool ImmuneToPsychology { get; set; }
         public bool ImmuneToPoison { get; set; }
         public bool Stubborn { get; set; }
@@ -283,9 +280,6 @@ namespace WarhammerArmyAssembler
                 Description = this.Description,
 
                 Wizard = this.Wizard,
-
-                OriginalWounds = this.OriginalWounds,
-                OriginalAttacks = this.OriginalAttacks,
 
                 NoKillingBlow = this.NoKillingBlow,
                 NoMultiWounds = this.NoMultiWounds,
@@ -608,7 +602,7 @@ namespace WarhammerArmyAssembler
             Unit unit = this.Clone(full: true);
 
             unit.Size = baseSize ?? unit.Size;
-            unit.OriginalWounds = unit.Wounds.Value;
+            unit.Wounds.Original = unit.Wounds.Value;
             unit.Wounds.Value *= unit.Size;
 
             return unit;
@@ -1226,9 +1220,9 @@ namespace WarhammerArmyAssembler
             return this;
         }
 
-        public bool IsSimpleMount() => (this.Type == Unit.UnitType.Mount) && (this.OriginalWounds == 1);
+        public bool IsSimpleMount() => (this.Type == Unit.UnitType.Mount) && (this.Wounds.Original == 1);
 
-        public bool IsNotSimpleMount() => (this.Type != Unit.UnitType.Mount) || (this.OriginalWounds != 1);
+        public bool IsNotSimpleMount() => (this.Type != Unit.UnitType.Mount) || (this.Wounds.Original != 1);
 
         public bool IsFearOrTerror() => (this.Terror || this.Fear || this.Undead);
 
