@@ -735,8 +735,11 @@ namespace WarhammerArmyAssembler.Interface
                 main.armyUnitImage.Source = null;
             }
 
+            main.UpdateLayout();
 
-            main.armyUnitImage.MaxWidth = (unit.IsHeroOrHisMount() ? 350 : double.PositiveInfinity);
+            bool portrait = main.armyUnitImage.ActualWidth < main.armyUnitImage.ActualHeight;
+            main.armyUnitImage.MaxWidth = (unit.IsHeroOrHisMount() && portrait ? 450 : double.PositiveInfinity);
+
             main.armyUnitName.Foreground = Brushes.White;
             main.armyUnitName.Background = ArmyBook.Data.FrontColor;
             main.armyUnitName.FontWeight = FontWeights.Bold;
