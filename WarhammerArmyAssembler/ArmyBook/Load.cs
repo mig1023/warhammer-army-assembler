@@ -52,7 +52,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.BackColor = LoadColor(xmlFile, "Back");
             Data.GridColor = LoadColor(xmlFile, "Grid");
             Data.TooltipColor = LoadColor(xmlFile, "Tooltip");
-            Data.Selected = LoadString(xmlFile, "Colors/Selected");
+            Data.Modified = LoadString(xmlFile, "Colors/Modified");
 
             Data.DemonicMortal = BoolParse(Other.Intro(xmlFile, "DemonicMortal"));
 
@@ -74,7 +74,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsImagesDirectory")) + "\\";
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
         }
 
         public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml)
