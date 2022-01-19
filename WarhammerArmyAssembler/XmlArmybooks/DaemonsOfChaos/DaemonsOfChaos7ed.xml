@@ -175,9 +175,9 @@
 					<Type>Option</Type>
 					<Points>35</Points>
 					<Dependencies>
-						<OnlyIfNot>Dedicate to Slaanesh</OnlyIfNot>
-						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
-						<OnlyIfNot>Dedicate to Nurgle</OnlyIfNot>
+						<IfNot>Dedicate to Slaanesh</IfNot>
+						<IfNot>Dedicate to Khorne</IfNot>
+						<IfNot>Dedicate to Nurgle</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -185,9 +185,9 @@
 					<Type>Option</Type>
 					<Points>35</Points>
 					<Dependencies>
-						<OnlyIfNot>Dedicate to Tzeentch</OnlyIfNot>
-						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
-						<OnlyIfNot>Dedicate to Nurgle</OnlyIfNot>
+						<IfNot>Dedicate to Tzeentch</IfNot>
+						<IfNot>Dedicate to Khorne</IfNot>
+						<IfNot>Dedicate to Nurgle</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -195,9 +195,9 @@
 					<Type>Option</Type>
 					<Points>35</Points>
 					<Dependencies>
-						<OnlyIfNot>Dedicate to Tzeentch</OnlyIfNot>
-						<OnlyIfNot>Dedicate to Slaanesh</OnlyIfNot>
-						<OnlyIfNot>Dedicate to Nurgle</OnlyIfNot>
+						<IfNot>Dedicate to Tzeentch</IfNot>
+						<IfNot>Dedicate to Slaanesh</IfNot>
+						<IfNot>Dedicate to Nurgle</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -205,9 +205,9 @@
 					<Type>Option</Type>
 					<Points>35</Points>
 					<Dependencies>
-						<OnlyIfNot>Dedicate to Tzeentch</OnlyIfNot>
-						<OnlyIfNot>Dedicate to Slaanesh</OnlyIfNot>
-						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
+						<IfNot>Dedicate to Tzeentch</IfNot>
+						<IfNot>Dedicate to Slaanesh</IfNot>
+						<IfNot>Dedicate to Khorne</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -218,8 +218,8 @@
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Dependencies>
-						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
-						<OnlyIfNot>Wizard level 2</OnlyIfNot>
+						<IfNot>Dedicate to Khorne</IfNot>
+						<IfNot>Wizard level 2</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -230,8 +230,8 @@
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Dependencies>
-						<OnlyIfNot>Dedicate to Khorne</OnlyIfNot>
-						<OnlyIfNot>Wizard level 1</OnlyIfNot>
+						<IfNot>Dedicate to Khorne</IfNot>
+						<IfNot>Wizard level 1</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -452,7 +452,7 @@
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Dependencies>
-						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+						<IfNot>Wizard level 4</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -463,7 +463,7 @@
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Dependencies>
-						<OnlyIfNot>Wizard level 3</OnlyIfNot>
+						<IfNot>Wizard level 3</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -585,8 +585,8 @@
 					<AddToWizard>1</AddToWizard>
 					<AddToCast>1</AddToCast>
 					<Dependencies>
-						<OnlyIfNot>Wizard level 3</OnlyIfNot>
-						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+						<IfNot>Wizard level 3</IfNot>
+						<IfNot>Wizard level 4</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -597,8 +597,8 @@
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Dependencies>
-						<OnlyIfNot>Wizard level 2</OnlyIfNot>
-						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+						<IfNot>Wizard level 2</IfNot>
+						<IfNot>Wizard level 4</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -609,8 +609,8 @@
 					<AddToCast>3</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Dependencies>
-						<OnlyIfNot>Wizard level 2</OnlyIfNot>
-						<OnlyIfNot>Wizard level 3</OnlyIfNot>
+						<IfNot>Wizard level 2</IfNot>
+						<IfNot>Wizard level 3</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -734,8 +734,8 @@
 					<AddToWizard>1</AddToWizard>
 					<AddToCast>1</AddToCast>
 					<Dependencies>
-						<OnlyIfNot>Wizard level 3</OnlyIfNot>
-						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+						<IfNot>Wizard level 3</IfNot>
+						<IfNot>Wizard level 4</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -746,8 +746,8 @@
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Dependencies>
-						<OnlyIfNot>Wizard level 2</OnlyIfNot>
-						<OnlyIfNot>Wizard level 4</OnlyIfNot>
+						<IfNot>Wizard level 2</IfNot>
+						<IfNot>Wizard level 4</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -758,8 +758,8 @@
 					<AddToCast>3</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Dependencies>
-						<OnlyIfNot>Wizard level 2</OnlyIfNot>
-						<OnlyIfNot>Wizard level 3</OnlyIfNot>
+						<IfNot>Wizard level 2</IfNot>
+						<IfNot>Wizard level 3</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1079,11 +1079,11 @@
 					<Type>Option</Type>
 					<Points>125</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<Stubborn/>
 					<SpecialRule>All Daemons within 12" are stubborn</SpecialRule>
@@ -1093,11 +1093,11 @@
 					<Type>Option</Type>
 					<Points>100</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<SpecialRule>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</SpecialRule>
 				</Option>
@@ -1106,11 +1106,11 @@
 					<Type>Option</Type>
 					<Points>75</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<SpecialRule>All enemy units within 12" suffer a -2 penalty to their Leadership</SpecialRule>
 				</Option>
@@ -1119,11 +1119,11 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<AddToCloseCombat>D3</AddToCloseCombat>
 				</Option>
@@ -1132,11 +1132,11 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
 					</Dependencies>
 					<SpecialRule>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</SpecialRule>
 				</Option>
@@ -1259,11 +1259,11 @@
 					<Type>Option</Type>
 					<Points>125</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<Stubborn/>
 					<SpecialRule>All Daemons within 12" are stubborn</SpecialRule>
@@ -1273,11 +1273,11 @@
 					<Type>Option</Type>
 					<Points>100</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<SpecialRule>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</SpecialRule>
 				</Option>
@@ -1286,11 +1286,11 @@
 					<Type>Option</Type>
 					<Points>75</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<SpecialRule>All enemy units within 12" suffer a -2 penalty to their Leadership</SpecialRule>
 				</Option>
@@ -1299,11 +1299,11 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<AddToCloseCombat>D3</AddToCloseCombat>
 				</Option>
@@ -1312,11 +1312,11 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
 					</Dependencies>
 					<SpecialRule>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</SpecialRule>
 				</Option>
@@ -1441,11 +1441,11 @@
 					<Type>Option</Type>
 					<Points>125</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<Stubborn/>
 					<SpecialRule>All Daemons within 12" are stubborn</SpecialRule>
@@ -1455,11 +1455,11 @@
 					<Type>Option</Type>
 					<Points>100</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<SpecialRule>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</SpecialRule>
 				</Option>
@@ -1468,11 +1468,11 @@
 					<Type>Option</Type>
 					<Points>75</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<SpecialRule>All enemy units within 12" suffer a -2 penalty to their Leadership</SpecialRule>
 				</Option>
@@ -1481,11 +1481,11 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<AddToCloseCombat>D3</AddToCloseCombat>
 				</Option>
@@ -1494,11 +1494,11 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
 					</Dependencies>
 					<SpecialRule>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</SpecialRule>
 				</Option>
@@ -1623,11 +1623,11 @@
 					<Type>Option</Type>
 					<Points>125</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<Stubborn/>
 					<SpecialRule>All Daemons within 12" are stubborn</SpecialRule>
@@ -1637,11 +1637,11 @@
 					<Type>Option</Type>
 					<Points>100</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<SpecialRule>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</SpecialRule>
 				</Option>
@@ -1650,11 +1650,11 @@
 					<Type>Option</Type>
 					<Points>75</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<SpecialRule>All enemy units within 12" suffer a -2 penalty to their Leadership</SpecialRule>
 				</Option>
@@ -1663,11 +1663,11 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Great Standard of Sundering</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Great Standard of Sundering</IfNot>
 					</Dependencies>
 					<AddToCloseCombat>D3</AddToCloseCombat>
 				</Option>
@@ -1676,11 +1676,11 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Battle Standard Bearer</OnlyIf>
-						<OnlyIfNot>Standard of Chaos Glory</OnlyIfNot>
-						<OnlyIfNot>Banner of Hellfire</OnlyIfNot>
-						<OnlyIfNot>Great Icon of Despair</OnlyIfNot>
-						<OnlyIfNot>Banner of Unholy Victory</OnlyIfNot>
+						<If>Battle Standard Bearer</If>
+						<IfNot>Standard of Chaos Glory</IfNot>
+						<IfNot>Banner of Hellfire</IfNot>
+						<IfNot>Great Icon of Despair</IfNot>
+						<IfNot>Banner of Unholy Victory</IfNot>
 					</Dependencies>
 					<SpecialRule>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</SpecialRule>
 				</Option>
@@ -1969,8 +1969,8 @@
 					<Name>Skull Totem</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Icon of Endless War</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Icon of Endless War</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<SpecialRule>May march even if enemy models are within 8"</SpecialRule>
@@ -1979,8 +1979,8 @@
 					<Name>Icon of Endless War</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Skull Totem</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Skull Totem</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<SpecialRule>Adds D6" to its first charge move</SpecialRule>
@@ -2031,7 +2031,7 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Dependencies>
-						<OnlyIfNot>Changeling</OnlyIfNot>
+						<IfNot>Changeling</IfNot>
 					</Dependencies>
 					<Points>12</Points>
 				</Option>
@@ -2040,7 +2040,7 @@
 					<Type>Option</Type>
 					<FullCommand/>
 					<Dependencies>
-						<OnlyIfNot>Iridescent Horrors</OnlyIfNot>
+						<IfNot>Iridescent Horrors</IfNot>
 					</Dependencies>
 					<OnlyOneInArmy/>
 					<Points>60</Points>
@@ -2056,8 +2056,8 @@
 					<Name>Banner of Change</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Icon of Sorcery</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Icon of Sorcery</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<SpecialRule>Bound Spell, Power Level 3: inflicts 3D6 Strength 3 hits on one enemy unit in base contact</SpecialRule>
@@ -2066,8 +2066,8 @@
 					<Name>Icon of Sorcery</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Banner of Change</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Banner of Change</IfNot>
 					</Dependencies>
 					<Points>15</Points>
 					<SpecialRule>+1 bonus for casting spells</SpecialRule>
@@ -2128,8 +2128,8 @@
 					<Name>Standard of Seeping Decay</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Icon of Eternal Virulence</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Icon of Eternal Virulence</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<Reroll>ToWound</Reroll>
@@ -2138,8 +2138,8 @@
 					<Name>Icon of Eternal Virulence</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Standard of Seeping Decay</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Standard of Seeping Decay</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<SpecialRule>Each unsaved wound caused by this unit's Poisoned Attacks rule adds an extra point of Combat Resolution</SpecialRule>
@@ -2200,8 +2200,8 @@
 					<Name>Banner of Ecstasy</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Siren Standard</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Siren Standard</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<Stubborn/>
@@ -2210,8 +2210,8 @@
 					<Name>Siren Standard</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Banner of Ecstasy</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Banner of Ecstasy</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<SpecialRule>Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee</SpecialRule>
@@ -2416,8 +2416,8 @@
 					<Name>Banner of Ecstasy</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Siren Standard</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Siren Standard</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<Stubborn/>
@@ -2426,8 +2426,8 @@
 					<Name>Siren Standard</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Banner of Ecstasy</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Banner of Ecstasy</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<SpecialRule>Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee</SpecialRule>
@@ -2491,8 +2491,8 @@
 					<Name>Skull Totem</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Icon of Endless War</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Icon of Endless War</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<SpecialRule>May march even if enemy models are within 8"</SpecialRule>
@@ -2501,8 +2501,8 @@
 					<Name>Icon of Endless War</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Standard bearer</OnlyIf>
-						<OnlyIfNot>Skull Totem</OnlyIfNot>
+						<If>Standard bearer</If>
+						<IfNot>Skull Totem</IfNot>
 					</Dependencies>
 					<Points>25</Points>
 					<SpecialRule>Adds D6" to its first charge move</SpecialRule>
