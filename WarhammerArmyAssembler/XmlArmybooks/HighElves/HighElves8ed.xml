@@ -1039,10 +1039,10 @@
 					<AddToAttacks>1</AddToAttacks>
 					<Points>3</Points>
 					<Dependencies>
-						<OnlyIfNot>Halberd</OnlyIfNot>
-						<OnlyIfNot>Lance</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Halberd</IfNot>
+						<IfNot>Lance</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1051,10 +1051,10 @@
 					<AddToStrength>1</AddToStrength>
 					<Points>3</Points>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Lance</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Lance</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1064,10 +1064,10 @@
 					<Points>7</Points>
 					<Lance/>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Halberd</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1075,10 +1075,10 @@
 					<Type>Option</Type>
 					<Points>3</Points>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
-						<OnlyIfNot>Lance</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Halberd</IfNot>
+						<IfNot>Lance</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1087,10 +1087,10 @@
 					<AddToStrength>2</AddToStrength>
 					<Points>6</Points>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
-						<OnlyIfNot>Lance</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Halberd</IfNot>
+						<IfNot>Lance</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1103,7 +1103,7 @@
 					<Type>Option</Type>
 					<Points>6</Points>
 					<Dependencies>
-						<OnlyIfNot>Dragon armour</OnlyIfNot>
+						<IfNot>Dragon armour</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -1112,8 +1112,8 @@
 					<Type>Option</Type>
 					<Points>20</Points>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
-						<OnlyIfNot>Lion cloak</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
+						<IfNot>Lion cloak</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
@@ -1129,7 +1129,7 @@
 					<Type>Option</Type>
 					<Points>3</Points>
 					<Dependencies>
-						<OnlyIfNot>Dragon armour</OnlyIfNot>
+						<IfNot>Dragon armour</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -1144,7 +1144,7 @@
 					<Type>Option</Type>
 					<Points>7</Points>
 					<Dependencies>
-						<OnlyIf>Elven Steed</OnlyIf>
+						<If>Elven Steed</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1158,7 +1158,7 @@
 					<Type>Option</Type>
 					<Points>10</Points>
 					<Dependencies>
-						<OnlyIf>Great Eagle</OnlyIf>
+						<If>Great Eagle</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1166,7 +1166,7 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<Dependencies>
-						<OnlyIf>Great Eagle</OnlyIf>
+						<If>Great Eagle</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1180,7 +1180,7 @@
 					<Type>Option</Type>
 					<Points>25</Points>
 					<Dependencies>
-						<OnlyIf>Giffon</OnlyIf>
+						<If>Giffon</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1188,7 +1188,7 @@
 					<Type>Option</Type>
 					<Points>20</Points>
 					<Dependencies>
-						<OnlyIf>Giffon</OnlyIf>
+						<If>Giffon</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1264,7 +1264,7 @@
 					<Type>Option</Type>
 					<Points>7</Points>
 					<Dependencies>
-						<OnlyIf>Elven Steed</OnlyIf>
+						<If>Elven Steed</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1278,7 +1278,7 @@
 					<Type>Option</Type>
 					<Points>10</Points>
 					<Dependencies>
-						<OnlyIf>Great Eagle</OnlyIf>
+						<If>Great Eagle</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1286,7 +1286,7 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<Dependencies>
-						<OnlyIf>Great Eagle</OnlyIf>
+						<If>Great Eagle</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1554,10 +1554,10 @@
 					<AddToAttacks>1</AddToAttacks>
 					<Points>2</Points>
 					<Dependencies>
-						<OnlyIfNot>Halberd</OnlyIfNot>
-						<OnlyIfNot>Lance</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Halberd</IfNot>
+						<IfNot>Lance</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1566,10 +1566,10 @@
 					<AddToStrength>1</AddToStrength>
 					<Points>2</Points>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Lance</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Lance</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1579,10 +1579,10 @@
 					<Points>6</Points>
 					<Lance/>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Halberd</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1590,10 +1590,10 @@
 					<Type>Option</Type>
 					<Points>2</Points>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
-						<OnlyIfNot>Lance</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Halberd</IfNot>
+						<IfNot>Lance</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1602,10 +1602,10 @@
 					<AddToStrength>2</AddToStrength>
 					<Points>4</Points>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
-						<OnlyIfNot>Lance</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Halberd</IfNot>
+						<IfNot>Lance</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1618,7 +1618,7 @@
 					<Type>Option</Type>
 					<Points>4</Points>
 					<Dependencies>
-						<OnlyIfNot>Dragon armour</OnlyIfNot>
+						<IfNot>Dragon armour</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -1627,8 +1627,8 @@
 					<Type>Option</Type>
 					<Points>10</Points>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
-						<OnlyIfNot>Lion cloak</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
+						<IfNot>Lion cloak</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
@@ -1644,7 +1644,7 @@
 					<Type>Option</Type>
 					<Points>4</Points>
 					<Dependencies>
-						<OnlyIfNot>Dragon armour</OnlyIfNot>
+						<IfNot>Dragon armour</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
 				</Option>
@@ -1659,7 +1659,7 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<Dependencies>
-						<OnlyIf>Elven Steed</OnlyIf>
+						<If>Elven Steed</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1673,7 +1673,7 @@
 					<Type>Option</Type>
 					<Points>10</Points>
 					<Dependencies>
-						<OnlyIf>Great Eagle</OnlyIf>
+						<If>Great Eagle</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1681,7 +1681,7 @@
 					<Type>Option</Type>
 					<Points>5</Points>
 					<Dependencies>
-						<OnlyIf>Great Eagle</OnlyIf>
+						<If>Great Eagle</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1695,7 +1695,7 @@
 					<Type>Option</Type>
 					<Points>25</Points>
 					<Dependencies>
-						<OnlyIf>Giffon</OnlyIf>
+						<If>Giffon</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1703,7 +1703,7 @@
 					<Type>Option</Type>
 					<Points>20</Points>
 					<Dependencies>
-						<OnlyIf>Giffon</OnlyIf>
+						<If>Giffon</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1768,7 +1768,7 @@
 					<Type>Option</Type>
 					<Points>7</Points>
 					<Dependencies>
-						<OnlyIf>Elven Steed</OnlyIf>
+						<If>Elven Steed</If>
 					</Dependencies>
 				</Option>
 			</Options>
@@ -2607,7 +2607,7 @@
 					<Points>3</Points>
 					<PerModel/>
 					<Dependencies>
-						<OnlyIfNot>Replace spears with bows</OnlyIfNot>
+						<IfNot>Replace spears with bows</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -2616,7 +2616,7 @@
 					<Points>1</Points>
 					<PerModel/>
 					<Dependencies>
-						<OnlyIfNot>Bows</OnlyIfNot>
+						<IfNot>Bows</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
