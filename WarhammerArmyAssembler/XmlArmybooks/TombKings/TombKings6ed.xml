@@ -492,8 +492,8 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Flail</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Flail</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -503,8 +503,8 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<Flail/>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>3</Points>
 				</Option>
@@ -512,8 +512,8 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Flail</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Flail</IfNot>
 					</Dependencies>
 					<Points>3</Points>
 				</Option>
@@ -620,8 +620,8 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Flail</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Flail</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -631,8 +631,8 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<Fail/>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 				</Option>
@@ -640,8 +640,8 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Flail</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Flail</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 				</Option>
@@ -869,7 +869,7 @@
 					<Points>0</Points>
 					<PerModel/>
 					<Dependencies>
-						<OnlyIfNot>Shields and spears</OnlyIfNot>
+						<IfNot>Shields and spears</IfNot>
 					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
@@ -879,7 +879,7 @@
 					<Points>1</Points>
 					<PerModel/>
 					<Dependencies>
-						<OnlyIfNot>Shields</OnlyIfNot>
+						<IfNot>Shields</IfNot>
 					</Dependencies>
 					<AddToArmour>6</AddToArmour>
 				</Option>
