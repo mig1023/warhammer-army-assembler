@@ -21,7 +21,7 @@ namespace WarhammerArmyAssembler.Export
 
         public static string SaveArmy(bool fullRules = false)
         {
-            string fileName = Export.Other.GetFileName("pdf");
+            string fileName = Export.Services.GetFileName("pdf");
 
             currentY = MARGIN_TOP;
 
@@ -35,8 +35,8 @@ namespace WarhammerArmyAssembler.Export
             cb = writer.DirectContent;
             cb.SetColorFill(BaseColor.BLACK);
 
-            AddText(Export.Other.AllArmyName(), fontSize: 20, lineHeight: 18, leftColumn: true);
-            AddText(Export.Other.AllArmyPointsAndEdition(), fontSize: 12, lineHeight: 22, leftColumn: true);
+            AddText(Export.Services.AllArmyName(), fontSize: 20, lineHeight: 18, leftColumn: true);
+            AddText(Export.Services.AllArmyPointsAndEdition(), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
@@ -44,8 +44,8 @@ namespace WarhammerArmyAssembler.Export
             foreach (Unit unitType in armyByCategories)
                 foreach (Unit unit in unitType.Items)
                 {
-                    AddText(String.Format("{0}", Export.Other.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
-                    AddText(String.Format("{0}{1}", unit.Name, Export.Other.UnitPointsLine(unit)), lineHeight: 10);
+                    AddText(String.Format("{0}", Export.Services.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
+                    AddText(String.Format("{0}{1}", unit.Name, Export.Services.UnitPointsLine(unit)), lineHeight: 10);
 
                     List<string> linesForEachUnit = new List<string> { unit.GetEquipmentLine() };
 
@@ -83,7 +83,7 @@ namespace WarhammerArmyAssembler.Export
 
             foreach (Unit entry in Army.Data.Units.Values)
             {
-                int unitSizeLen = Export.Other.UnitSizeIfNeed(entry).Length;
+                int unitSizeLen = Export.Services.UnitSizeIfNeed(entry).Length;
 
                 if (maxLength < unitSizeLen)
                     maxLength = unitSizeLen;

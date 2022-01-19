@@ -3,7 +3,7 @@ using System.IO;
 
 namespace WarhammerArmyAssembler.Export
 {
-    class Other
+    class Services
     {
         static string ARMYLIST_DIR = "ArmyLists";
 

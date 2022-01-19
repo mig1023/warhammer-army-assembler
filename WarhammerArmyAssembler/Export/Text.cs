@@ -9,10 +9,10 @@ namespace WarhammerArmyAssembler.Export
     {
         public static string SaveArmy()
         {
-            string fileName = Export.Other.GetFileName("txt");
+            string fileName = Export.Services.GetFileName("txt");
 
-            Add(fileName, Export.Other.AllArmyName());
-            Add(fileName, Export.Other.AllArmyPointsAndEdition());
+            Add(fileName, Export.Services.AllArmyName());
+            Add(fileName, Export.Services.AllArmyPointsAndEdition());
             Add(fileName);
 
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
@@ -23,7 +23,7 @@ namespace WarhammerArmyAssembler.Export
                     string equipmentLine = unit.GetEquipmentLine();
 
                     Add(fileName, String.Format("{0}{1}{2}{3}{4}",
-                        Export.Other.UnitSizeIfNeed(unit), unit.Name, Export.Other.UnitPointsLine(unit), 
+                        Export.Services.UnitSizeIfNeed(unit), unit.Name, Export.Services.UnitPointsLine(unit), 
                         (String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": "),
                         equipmentLine));
                 }
