@@ -1013,7 +1013,7 @@
 					<Name>Barding for Skeletal Steed</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Skeletal Steed</OnlyIf>
+						<If>Skeletal Steed</If>
 					</Dependencies>
 					<Points>5</Points>
 				</Option>
@@ -1385,7 +1385,7 @@
 					<Type>Option</Type>
 					<Points>25</Points>
 					<Dependencies>
-						<OnlyIfNot>Unholy Lodestone</OnlyIfNot>
+						<IfNot>Unholy Lodestone</IfNot>
 					</Dependencies>
 					<SpecialRule>For each Corpse Cart with Balefire within 24" enemy wizard suffer a -1 modifier to casting</SpecialRule>
 				</Option>
@@ -1394,7 +1394,7 @@
 					<Type>Option</Type>
 					<Points>25</Points>
 					<Dependencies>
-						<OnlyIfNot>Balefire</OnlyIfNot>
+						<IfNot>Balefire</IfNot>
 					</Dependencies>
 					<SpecialRule>If friendly unit within 6" is target by Invocation of Nehek, the unit gain an additional wound</SpecialRule>
 				</Option>
