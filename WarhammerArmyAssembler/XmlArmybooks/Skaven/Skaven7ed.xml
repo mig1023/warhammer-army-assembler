@@ -991,7 +991,7 @@
 					<AddToDispell>1</AddToDispell>
 					<AddToWizard>1</AddToWizard>
 					<Dependencies>
-						<OnlyIfNot>Level 2 Wizard</OnlyIfNot>
+						<IfNot>Level 2 Wizard</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1002,7 +1002,7 @@
 					<AddToDispell>1</AddToDispell>
 					<AddToWizard>2</AddToWizard>
 					<Dependencies>
-						<OnlyIfNot>Level 1 Wizard</OnlyIfNot>
+						<IfNot>Level 1 Wizard</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -2016,7 +2016,7 @@
 					<Type>Option</Type>
 					<Points>10</Points>
 					<Dependencies>
-						<OnlyIf>Deathrunner</OnlyIf>
+						<If>Deathrunner</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -2024,7 +2024,7 @@
 					<Type>Option</Type>
 					<Points>30</Points>
 					<Dependencies>
-						<OnlyIf>Deathrunner</OnlyIf>
+						<If>Deathrunner</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -2266,7 +2266,7 @@
 					<Type>Option</Type>
 					<Points>25</Points>
 					<Dependencies>
-						<OnlyIf>Bombardier</OnlyIf>
+						<If>Bombardier</If>
 					</Dependencies>
 				</Option>
 				<Option>
