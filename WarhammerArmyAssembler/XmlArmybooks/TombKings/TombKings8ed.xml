@@ -821,7 +821,7 @@
 					<Name>2 additional Skeletal Steeds</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Skeleton Chariot</OnlyIf>
+						<If>Skeleton Chariot</If>
 					</Dependencies>
 					<Points>15</Points>
 				</Option>
@@ -830,7 +830,7 @@
 					<Type>Option</Type>
 					<SpecialRule>Fly</SpecialRule>
 					<Dependencies>
-						<OnlyIf>Skeleton Chariot</OnlyIf>
+						<If>Skeleton Chariot</If>
 					</Dependencies>
 					<Points>30</Points>
 				</Option>
@@ -921,8 +921,8 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Flail</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Flail</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -932,8 +932,8 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<Flail/>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -941,8 +941,8 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Flail</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Flail</IfNot>
 					</Dependencies>
 					<Points>3</Points>
 				</Option>
@@ -1192,8 +1192,8 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Flail</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Flail</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1203,8 +1203,8 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<Fail/>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1212,8 +1212,8 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Flail</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Flail</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 				</Option>
@@ -1281,9 +1281,9 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Flail</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
+						<IfNot>Flail</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Halberd</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1291,9 +1291,9 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Flail</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Flail</IfNot>
+						<IfNot>Halberd</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 				</Option>
@@ -1302,9 +1302,9 @@
 					<Type>Option</Type>
 					<AddToStrength>1</AddToStrength>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Flail</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Flail</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 				</Option>
@@ -1314,9 +1314,9 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<Fail/>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Halberd</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Halberd</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1435,8 +1435,8 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Flail</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Flail</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -1446,8 +1446,8 @@
 					<OnlyFor>Infantry</OnlyFor>
 					<Fail/>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -1455,8 +1455,8 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Flail</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Flail</IfNot>
 					</Dependencies>
 					<Points>3</Points>
 				</Option>
@@ -2189,7 +2189,7 @@
 					<AddToStrength>-2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<IfNot>Additional hand weapon</IfNot>
 					</Dependencies>
 					<Points>0</Points>
 				</Option>
@@ -2199,7 +2199,7 @@
 					<AddToStrength>-2</AddToStrength>
 					<AddToAttacks>1</AddToAttacks>
 					<Dependencies>
-						<OnlyIfNot>Great bow</OnlyIfNot>
+						<IfNot>Great bow</IfNot>
 					</Dependencies>
 					<Points>0</Points>
 				</Option>
@@ -2397,8 +2397,8 @@
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Bow of the desert</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Bow of the desert</IfNot>
 					</Dependencies>
 					<Points>5</Points>
 				</Option>
@@ -2408,8 +2408,8 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
-						<OnlyIfNot>Bow of the desert</OnlyIfNot>
+						<IfNot>Additional hand weapon</IfNot>
+						<IfNot>Bow of the desert</IfNot>
 					</Dependencies>
 					<Points>10</Points>
 				</Option>
@@ -2417,8 +2417,8 @@
 					<Name>Bow of the desert</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Additional hand weapon</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Additional hand weapon</IfNot>
 					</Dependencies>
 					<Points>20</Points>
 				</Option>
