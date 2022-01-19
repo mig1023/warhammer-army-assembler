@@ -17,14 +17,14 @@ namespace WarhammerArmyAssembler.Interface
 
             string pointsMsg = String.Format("All points:\t\t{0} pts\n\nAlready used:\t\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%\n\n\n\n",
                 Army.Params.GetArmyMaxPoints(),
-                armyCurrentPoint, Interface.Other.CalcPercent(armyCurrentPoint, Army.Params.GetArmyMaxPoints()),
-                availablePoints, Interface.Other.CalcPercent(availablePoints, Army.Params.GetArmyMaxPoints()));
+                armyCurrentPoint, Interface.Services.CalcPercent(armyCurrentPoint, Army.Params.GetArmyMaxPoints()),
+                availablePoints, Interface.Services.CalcPercent(availablePoints, Army.Params.GetArmyMaxPoints()));
 
             foreach (KeyValuePair<Unit.UnitType, double> entry in Army.Checks.UnitsMaxPointsPercent())
                 pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t( {3} {4} pts / {5}% )\n\n",
                     entry.Key,
                     units[entry.Key],
-                    Interface.Other.CalcPercent(units[entry.Key], Army.Data.MaxPoints),
+                    Interface.Services.CalcPercent(units[entry.Key], Army.Data.MaxPoints),
                     (entry.Key == Unit.UnitType.Core ? "min" : "max"),
                     (int)(Army.Data.MaxPoints * entry.Value), entry.Value * 100
                 );

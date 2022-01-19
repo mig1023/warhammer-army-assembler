@@ -56,7 +56,7 @@ namespace WarhammerArmyAssembler.Export
                     }
 
                     foreach (string param in linesForEachUnit)
-                        foreach (string line in Interface.Other.WordSplit(param, partLength: 210).Where(x => !String.IsNullOrEmpty(x)))
+                        foreach (string line in Interface.Services.WordSplit(param, partLength: 210).Where(x => !String.IsNullOrEmpty(x)))
                             AddText(line, fontSize: 6, lineHeight: 8);
 
                     AddText(lineHeight: 16);

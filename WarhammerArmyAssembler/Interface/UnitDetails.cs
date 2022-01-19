@@ -28,7 +28,7 @@ namespace WarhammerArmyAssembler.Interface
 
         private static bool NotEnoughColumnForThis(string caption, double height, double[] margins)
         {
-            string[] captionLines = Other.WordSplit(caption);
+            string[] captionLines = Services.WordSplit(caption);
 
             if (captionLines.Length < 2)
                 return false;
@@ -203,14 +203,14 @@ namespace WarhammerArmyAssembler.Interface
 
             string[] id = id_tag.Split('|');
 
-            int optionID = Other.IntParse(id[1]);
-            int unitID = Other.IntParse(id[0]);
+            int optionID = Services.IntParse(id[1]);
+            int unitID = Services.IntParse(id[0]);
 
             Army.Data.Units[unitID].AddOption(optionID);
             Army.Data.Units[unitID].ThrowAwayIncompatibleOption();
 
             Reload.ReloadArmyData();
-            Mod.SetArtefactAlreadyUsed(Other.IntParse(id[1]), false);
+            Mod.SetArtefactAlreadyUsed(Services.IntParse(id[1]), false);
             UpdateUnitDescription(unitID, Army.Data.Units[unitID]);
         }
 
@@ -220,8 +220,8 @@ namespace WarhammerArmyAssembler.Interface
 
             string[] id = label.Tag.ToString().Split('|');
 
-            int optionID = Other.IntParse(id[1]);
-            int unitID = Other.IntParse(id[0]);
+            int optionID = Services.IntParse(id[1]);
+            int unitID = Services.IntParse(id[0]);
 
             Army.Data.Units[unitID].ChangeCountableOption(optionID, direction: label.Content.ToString());
 
@@ -248,7 +248,7 @@ namespace WarhammerArmyAssembler.Interface
         {
             Label newOption = new Label();
 
-            string[] captionLines = Other.WordSplit(caption);
+            string[] captionLines = Services.WordSplit(caption);
 
             newOption.Content = String.Empty;
 

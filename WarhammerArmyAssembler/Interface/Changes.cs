@@ -399,7 +399,7 @@ namespace WarhammerArmyAssembler.Interface
             changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", ArmyBook.Services.Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = Interface.Other.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
+            Brush mainColor = Interface.Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
 
             foreach (Label label in PointsButtons)
             {
@@ -493,8 +493,8 @@ namespace WarhammerArmyAssembler.Interface
                 int released = ArmyBook.Parsers.IntParse(ArmyBook.Services.Intro(xmlFile, "Released"));
                 string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Images/Illustration"));
 
-                Brush backColor = Other.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Tooltip"));
-                Brush lineColor = Other.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
+                Brush backColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Tooltip"));
+                Brush lineColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
 
                 if (String.IsNullOrEmpty(illustration))
                     illustration = source;
@@ -817,8 +817,8 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             main.waitingSpinner.Margin = Interface.Changes.Thick(main.testConsole,
-                top: main.testConsole.Margin.Top - Interface.Other.SPINNER_TOP_MARGIN,
-                left: main.testConsole.Margin.Left - Interface.Other.SPINNER_LEFT_MARGIN);
+                top: main.testConsole.Margin.Top - Interface.Services.SPINNER_TOP_MARGIN,
+                left: main.testConsole.Margin.Left - Interface.Services.SPINNER_LEFT_MARGIN);
 
             main.armyUnitTest.Height = unitTestHeight;
         }

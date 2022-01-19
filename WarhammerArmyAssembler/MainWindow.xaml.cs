@@ -27,7 +27,7 @@ namespace WarhammerArmyAssembler
             List<string> allXmlFiles = ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
 
             if (allXmlFiles.Count > 0)
-                Interface.Changes.CurrentSelectedArmy = allXmlFiles[Interface.Other.Rand.Next(allXmlFiles.Count)];
+                Interface.Changes.CurrentSelectedArmy = allXmlFiles[Interface.Services.Rand.Next(allXmlFiles.Count)];
 
             Interface.Changes.LoadAllArmy(allXmlFiles);
             Interface.Changes.PreviewArmyList();
@@ -67,7 +67,7 @@ namespace WarhammerArmyAssembler
                 return;
 
             FrameworkElement f = sender as FrameworkElement;
-            int id = Interface.Other.IntParse(f.Tag.ToString());
+            int id = Interface.Services.IntParse(f.Tag.ToString());
 
             ChangeArmyListDetail(id);
 
@@ -143,7 +143,7 @@ namespace WarhammerArmyAssembler
 
         private void ArmyGrid_Drop(object sender, DragEventArgs e)
         {
-            int id = Interface.Other.IntParse((string)e.Data.GetData(DataFormats.Text));
+            int id = Interface.Services.IntParse((string)e.Data.GetData(DataFormats.Text));
 
             if ((Interface.Changes.DragSender as FrameworkElement).Name == "ArmyGrid")
                 return;
@@ -236,7 +236,7 @@ namespace WarhammerArmyAssembler
                 ArmyGrid.ScrollIntoView(row.Item);
             }
 
-            int id = Interface.Other.IntParse((string)e.Data.GetData(DataFormats.Text));
+            int id = Interface.Services.IntParse((string)e.Data.GetData(DataFormats.Text));
 
             if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
@@ -282,7 +282,7 @@ namespace WarhammerArmyAssembler
 
         private void unitDelete_Drop(object sender, DragEventArgs e)
         {
-            int id = Interface.Other.IntParse((string)e.Data.GetData(DataFormats.Text));
+            int id = Interface.Services.IntParse((string)e.Data.GetData(DataFormats.Text));
             Interface.Changes.UnitDeleteDrop(id);
         }
 

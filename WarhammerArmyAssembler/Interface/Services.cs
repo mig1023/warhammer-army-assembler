@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace WarhammerArmyAssembler.Interface
 {
-    class Other
+    class Services
     {
         public static Random Rand = new Random();
 
