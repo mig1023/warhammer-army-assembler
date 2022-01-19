@@ -394,12 +394,12 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            XmlNode armyFile = ArmyBook.Other.Intro(xmlFile, "Images/Cover");
+            XmlNode armyFile = ArmyBook.Services.Intro(xmlFile, "Images/Cover");
             changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
-            changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", ArmyBook.Other.Intro(xmlFile, "Edition").InnerText);
+            changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", ArmyBook.Services.Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = Interface.Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Front"));
+            Brush mainColor = Interface.Other.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
 
             foreach (Label label in PointsButtons)
             {
@@ -475,7 +475,7 @@ namespace WarhammerArmyAssembler.Interface
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
 
-                XmlNode armyFile = ArmyBook.Other.Intro(xmlFile, "Images/Cover");
+                XmlNode armyFile = ArmyBook.Services.Intro(xmlFile, "Images/Cover");
                 string source = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
 
                 Image newImage = new Image()
@@ -486,15 +486,15 @@ namespace WarhammerArmyAssembler.Interface
                     Tag = String.Format("{0}|{1}", armyName, source),
                 };
 
-                string head = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Name")).ToUpper();
-                string edition = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Edition"));
-                string description = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Description"));
-                string authors = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Authors"));
-                int released = ArmyBook.Parsers.IntParse(ArmyBook.Other.Intro(xmlFile, "Released"));
-                string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Other.Intro(xmlFile, "Images/Illustration"));
+                string head = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Name")).ToUpper();
+                string edition = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Edition"));
+                string description = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Description"));
+                string authors = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Authors"));
+                int released = ArmyBook.Parsers.IntParse(ArmyBook.Services.Intro(xmlFile, "Released"));
+                string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Images/Illustration"));
 
-                Brush backColor = Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Tooltip"));
-                Brush lineColor = Other.BrushFromXml(ArmyBook.Other.Intro(xmlFile, "Colors/Front"));
+                Brush backColor = Other.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Tooltip"));
+                Brush lineColor = Other.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
 
                 if (String.IsNullOrEmpty(illustration))
                     illustration = source;

@@ -24,13 +24,13 @@ namespace WarhammerArmyAssembler.ArmyBook
         }
 
         private static string LoadString(XmlDocument xmlFile, string node) =>
-            StringParse(Other.Intro(xmlFile, node));
+            StringParse(Services.Intro(xmlFile, node));
 
         private static int LoadInt(XmlDocument xmlFile, string node) =>
-            IntParse(Other.Intro(xmlFile, node));
+            IntParse(Services.Intro(xmlFile, node));
 
         private static Brush LoadColor(XmlDocument xmlFile, string node) =>
-            Interface.Other.BrushFromXml(Other.Intro(xmlFile, String.Format("Colors/{0}", node)));
+            Interface.Other.BrushFromXml(Services.Intro(xmlFile, String.Format("Colors/{0}", node)));
 
         public static void LoadArmy(string xmlFileName)
         {
@@ -41,7 +41,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
-            XmlNode armyFile = Other.Intro(xmlFile, "Images/Symbol");
+            XmlNode armyFile = Services.Intro(xmlFile, "Images/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Name");
@@ -54,7 +54,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.TooltipColor = LoadColor(xmlFile, "Tooltip");
             Data.Modified = LoadString(xmlFile, "Colors/Modified");
 
-            Data.DemonicMortal = BoolParse(Other.Intro(xmlFile, "DemonicMortal"));
+            Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
 
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
@@ -209,7 +209,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.NoCoreSlot = BoolParse(additionalParam["NoCoreSlot"]);
 
                 if (newUnit.Frenzy)
-                    xmlUnit.SelectSingleNode("Equipments").AppendChild(Other.AddFrenzyAttack(xml));
+                    xmlUnit.SelectSingleNode("Equipments").AppendChild(Services.AddFrenzyAttack(xml));
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))

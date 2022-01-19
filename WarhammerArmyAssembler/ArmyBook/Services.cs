@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
-    class Other
+    class Services
     {
         public static XmlNode AddFrenzyAttack(XmlDocument xml)
         {
