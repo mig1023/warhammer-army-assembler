@@ -624,8 +624,8 @@
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
 					<Dependencies>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -633,8 +633,8 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 					<Points>3</Points>
 				</Option>
@@ -644,8 +644,8 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Additional weapon</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -672,11 +672,11 @@
 					<AddToWard>6</AddToWard>
 					<SpecialRule>Magic Resistance(1)</SpecialRule>
 					<Dependencies>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Scout</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -688,11 +688,11 @@
 					<AddToAttacks>1</AddToAttacks>
 					<ImmuneToPsychology/>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Scout</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -702,11 +702,11 @@
 					<SpecialRule>Lethal shot</SpecialRule>
 					<SpecialRule>Forest Stalker</SpecialRule>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Scout</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -718,11 +718,11 @@
 					<AddToAttacks>1</AddToAttacks>
 					<NotALeader/>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Scout</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -731,11 +731,11 @@
 					<Points>25</Points>
 					<SpecialRule>Scout</SpecialRule>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -744,11 +744,11 @@
 					<Points>10</Points>
 					<AddToArmour>5</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Scout</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -756,7 +756,7 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Wild Rider</OnlyIf>
+						<If>Wild Rider</If>
 					</Dependencies>			
 					<Mount/>
 				</Option>
@@ -827,7 +827,7 @@
 					<Type>Option</Type>
 					<Points>65</Points>
 					<Dependencies>
-						<OnlyIf>Glamourweave</OnlyIf>
+						<If>Glamourweave</If>
 					</Dependencies>			
 					<Mount/>
 				</Option>				
@@ -915,8 +915,8 @@
 					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
 					<Dependencies>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -924,8 +924,8 @@
 					<Name>Spear</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Great weapon</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 				</Option>
@@ -935,8 +935,8 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Dependencies>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Additional weapon</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -963,11 +963,11 @@
 					<AddToWard>6</AddToWard>
 					<SpecialRule>Magic Resistance(1)</SpecialRule>
 					<Dependencies>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Scout</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -979,11 +979,11 @@
 					<AddToAttacks>1</AddToAttacks>
 					<ImmuneToPsychology/>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Scout</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -993,11 +993,11 @@
 					<SpecialRule>Lethal shot</SpecialRule>
 					<SpecialRule>Forest Stalker</SpecialRule>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Scout</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1009,11 +1009,11 @@
 					<AddToAttacks>1</AddToAttacks>
 					<NotALeader/>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Scout</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1022,11 +1022,11 @@
 					<Points>15</Points>
 					<SpecialRule>Scout</SpecialRule>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Eternal</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Eternal</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1035,11 +1035,11 @@
 					<Points>5</Points>
 					<AddToArmour>5</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Wardancer</OnlyIfNot>
-						<OnlyIfNot>Wild Rider</OnlyIfNot>
-						<OnlyIfNot>Waywatcher</OnlyIfNot>
-						<OnlyIfNot>Alter</OnlyIfNot>
-						<OnlyIfNot>Scout</OnlyIfNot>
+						<IfNot>Wardancer</IfNot>
+						<IfNot>Wild Rider</IfNot>
+						<IfNot>Waywatcher</IfNot>
+						<IfNot>Alter</IfNot>
+						<IfNot>Scout</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1047,7 +1047,7 @@
 					<Type>Option</Type>
 					<Points>50</Points>
 					<Dependencies>
-						<OnlyIf>Wild Rider</OnlyIf>
+						<If>Wild Rider</If>
 					</Dependencies>			
 					<Mount/>
 				</Option>
@@ -1119,7 +1119,7 @@
 					<Type>Option</Type>
 					<Points>65</Points>
 					<Dependencies>
-						<OnlyIf>Glamourweave</OnlyIf>
+						<If>Glamourweave</If>
 					</Dependencies>			
 					<Mount/>
 				</Option>				
