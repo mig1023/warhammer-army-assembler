@@ -52,9 +52,7 @@ namespace WarhammerArmyAssembler
 
         private void StartArmybookOption(string armySize)
         {
-            bool successParse = int.TryParse(armySize, out int size);
-
-            if (successParse)
+            if (int.TryParse(armySize, out int size))
                 StartArmybook(size);
             else
                 MessageBox.Show("Wrong army points!");
@@ -66,6 +64,9 @@ namespace WarhammerArmyAssembler
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            if (e.LeftButton != MouseButtonState.Pressed)
+                return;
+
             if (Interface.Changes.changeArmybook.Visibility == Visibility.Visible)
                 this.DragMove();
         }
