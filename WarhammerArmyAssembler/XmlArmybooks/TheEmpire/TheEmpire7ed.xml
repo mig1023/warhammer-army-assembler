@@ -720,8 +720,8 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
-						<OnlyIfNot>Full plate armour</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
+						<IfNot>Full plate armour</IfNot>
 					</Dependencies>
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
@@ -730,8 +730,8 @@
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Light armour</OnlyIfNot>
-						<OnlyIfNot>Full plate armour</OnlyIfNot>
+						<IfNot>Light armour</IfNot>
+						<IfNot>Full plate armour</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
@@ -740,8 +740,8 @@
 					<Name>Full plate armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Light armour</OnlyIfNot>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<IfNot>Light armour</IfNot>
+						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 					<Points>12</Points>
 					<AddToArmour>4</AddToArmour>
@@ -865,7 +865,7 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
@@ -874,7 +874,7 @@
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Light armour</OnlyIfNot>
+						<IfNot>Light armour</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
@@ -896,7 +896,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Warhorse</OnlyIf>
+						<If>Warhorse</If>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -955,7 +955,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Warhorse</OnlyIf>
+						<If>Warhorse</If>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -1126,8 +1126,8 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
-						<OnlyIfNot>Full plate armour</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
+						<IfNot>Full plate armour</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
@@ -1136,8 +1136,8 @@
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Light armour</OnlyIfNot>
-						<OnlyIfNot>Full plate armour</OnlyIfNot>
+						<IfNot>Light armour</IfNot>
+						<IfNot>Full plate armour</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
@@ -1146,8 +1146,8 @@
 					<Name>Full plate armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Light armour</OnlyIfNot>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<IfNot>Light armour</IfNot>
+						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 					<Points>8</Points>
 					<AddToArmour>4</AddToArmour>
@@ -1169,7 +1169,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Warhorse</OnlyIf>
+						<If>Warhorse</If>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1244,7 +1244,7 @@
 					<Name>Light armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
@@ -1253,7 +1253,7 @@
 					<Name>Heavy armour</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIfNot>Light armour</OnlyIfNot>
+						<IfNot>Light armour</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
@@ -1275,7 +1275,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Warhorse</OnlyIf>
+						<If>Warhorse</If>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1334,7 +1334,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Warhorse</OnlyIf>
+						<If>Warhorse</If>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1379,7 +1379,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Warhorse</OnlyIf>
+						<If>Warhorse</If>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1882,9 +1882,9 @@
 					<Name>Hochland long rifle for Marksman</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Marksman</OnlyIf>
-						<OnlyIfNot>Repeater handgun for Marksman</OnlyIfNot>
-						<OnlyIfNot>Pistol for Marksman</OnlyIfNot>
+						<If>Marksman</If>
+						<IfNot>Repeater handgun for Marksman</IfNot>
+						<IfNot>Pistol for Marksman</IfNot>
 					</Dependencies>
 					<Points>20</Points>
 				</Option>
@@ -1892,9 +1892,9 @@
 					<Name>Repeater handgun for Marksman</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Marksman</OnlyIf>
-						<OnlyIfNot>Hochland long rifle for Marksman</OnlyIfNot>
-						<OnlyIfNot>Pistol for Marksman</OnlyIfNot>
+						<If>Marksman</If>
+						<IfNot>Hochland long rifle for Marksman</IfNot>
+						<IfNot>Pistol for Marksman</IfNot>
 					</Dependencies>
 					<Points>15</Points>
 				</Option>
@@ -1902,9 +1902,9 @@
 					<Name>Pistol for Marksman</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Marksman</OnlyIf>
-						<OnlyIfNot>Hochland long rifle for Marksman</OnlyIfNot>
-						<OnlyIfNot>Repeater handgun for Marksman</OnlyIfNot>
+						<If>Marksman</If>
+						<IfNot>Hochland long rifle for Marksman</IfNot>
+						<IfNot>Repeater handgun for Marksman</IfNot>
 					</Dependencies>
 					<Points>0</Points>
 				</Option>
@@ -2156,7 +2156,7 @@
 					<Name>Repeater pistol for Outrider</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Outrider</OnlyIf>
+						<If>Outrider</If>
 					</Dependencies>
 					<Points>10</Points>
 				</Option>
@@ -2220,9 +2220,9 @@
 					<Name>Repeater pistol and pistol</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Outrider Champion</OnlyIf>
-						<OnlyIfNot>Hochland long rifle</OnlyIfNot>
-						<OnlyIfNot>Grenade launching blunderbuss</OnlyIfNot>
+						<If>Outrider Champion</If>
+						<IfNot>Hochland long rifle</IfNot>
+						<IfNot>Grenade launching blunderbuss</IfNot>
 					</Dependencies>
 					<Points>0</Points>
 				</Option>
@@ -2230,9 +2230,9 @@
 					<Name>Grenade launching blunderbuss</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Outrider Champion</OnlyIf>
-						<OnlyIfNot>Hochland long rifle</OnlyIfNot>
-						<OnlyIfNot>Repeater pistol and pistol</OnlyIfNot>
+						<If>Outrider Champion</If>
+						<IfNot>Hochland long rifle</IfNot>
+						<IfNot>Repeater pistol and pistol</IfNot>
 					</Dependencies>
 					<Points>0</Points>
 				</Option>
@@ -2240,9 +2240,9 @@
 					<Name>Hochland long rifle</Name>
 					<Type>Option</Type>
 					<Dependencies>
-						<OnlyIf>Outrider Champion</OnlyIf>
-						<OnlyIfNot>Repeater pistol and pistol</OnlyIfNot>
-						<OnlyIfNot>Grenade launching blunderbuss</OnlyIfNot>
+						<If>Outrider Champion</If>
+						<IfNot>Repeater pistol and pistol</IfNot>
+						<IfNot>Grenade launching blunderbuss</IfNot>
 					</Dependencies>
 					<Points>5</Points>
 				</Option>
