@@ -425,7 +425,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
 				<Dependencies>
-					<OnlyIf>Barded Warhorse</OnlyIf>
+					<If>Barded Warhorse</If>
 				</Dependencies>
 				<SpecialRule>+1 Strength to the character's Warhorse and those of any unit he is with the first time they charge</SpecialRule>
 				<Description>Character on Warhorse only. The Mane confers +1 Strength to the character's Warhorse and those of any unit he is with the first time they charge.</Description>
@@ -740,7 +740,7 @@
 					<Type>Option</Type>
 					<Group>QuestingVow</Group>
 					<Dependencies>
-						<OnlyIfNot>Grail Vow</OnlyIfNot>
+						<IfNot>Grail Vow</IfNot>
 					</Dependencies>
 					<Points>12</Points>
 					<SpecialRule>May re-roll any failed Psychology tests</SpecialRule>
@@ -750,7 +750,7 @@
 					<Type>Option</Type>
 					<Group>GrailVow</Group>
 					<Dependencies>
-						<OnlyIfNot>Questing Vow</OnlyIfNot>
+						<IfNot>Questing Vow</IfNot>
 					</Dependencies>
 					<Points>28</Points>
 					<ImmuneToPsychology/>
@@ -768,7 +768,7 @@
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Dependencies>
-						<OnlyIfNot>Questing Vow</OnlyIfNot>
+						<IfNot>Questing Vow</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 					<Lance/>
@@ -778,7 +778,7 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Dependencies>
-						<OnlyIf>Questing Vow</OnlyIf>
+						<If>Questing Vow</If>
 					</Dependencies>
 					<HitLast/>
 					<Points>6</Points>
@@ -859,7 +859,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Horse</OnlyIf>
+						<If>Horse</If>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -909,7 +909,7 @@
 					<Type>Option</Type>
 					<Group>QuestingVow</Group>
 					<Dependencies>
-						<OnlyIfNot>Grail Vow</OnlyIfNot>
+						<IfNot>Grail Vow</IfNot>
 					</Dependencies>
 					<Points>8</Points>
 					<SpecialRule>May re-roll any failed Psychology tests</SpecialRule>
@@ -919,7 +919,7 @@
 					<Type>Option</Type>
 					<Group>GrailVow</Group>
 					<Dependencies>
-						<OnlyIfNot>Questing Vow</OnlyIfNot>
+						<IfNot>Questing Vow</IfNot>
 					</Dependencies>
 					<Points>21</Points>
 					<ImmuneToPsychology/>
@@ -937,7 +937,7 @@
 					<Type>Option</Type>
 					<OnlyFor>Mount</OnlyFor>
 					<Dependencies>
-						<OnlyIfNot>Questing Vow</OnlyIfNot>
+						<IfNot>Questing Vow</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 					<Lance/>
@@ -947,7 +947,7 @@
 					<Type>Option</Type>
 					<AddToStrength>2</AddToStrength>
 					<Dependencies>
-						<OnlyIf>Questing Vow</OnlyIf>
+						<If>Questing Vow</If>
 					</Dependencies>
 					<HitLast/>
 					<Points>4</Points>
@@ -1029,7 +1029,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Horse</OnlyIf>
+						<If>Horse</If>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
