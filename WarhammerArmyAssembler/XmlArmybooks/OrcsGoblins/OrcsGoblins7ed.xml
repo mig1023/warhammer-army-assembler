@@ -662,7 +662,7 @@
 					<HitLast/>
 					<Points>6</Points>
 					<Dependencies>
-						<OnlyIfNot>Black Orc</OnlyIfNot>
+						<IfNot>Black Orc</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -684,7 +684,7 @@
 					<Points>3</Points>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -693,8 +693,8 @@
 					<Points>6</Points>
 					<AddToArmour>5</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Black Orc</OnlyIf>
-						<OnlyIfNot>Light armour</OnlyIfNot>
+						<If>Black Orc</If>
+						<IfNot>Light armour</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -876,7 +876,7 @@
 					<Points>50</Points>
 					<Mount/>
 					<Dependencies>
-						<OnlyIf>Night Goblin</OnlyIf>
+						<If>Night Goblin</If>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -997,10 +997,10 @@
 					<OnlyOneInArmy/>
 					<Points>25</Points>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Shield</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Shield</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1010,8 +1010,8 @@
 					<HitLast/>
 					<Points>4</Points>
 					<Dependencies>
-						<OnlyIfNot>Black Orc</OnlyIfNot>
-						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
+						<IfNot>Black Orc</IfNot>
+						<IfNot>Battle Standard Bearer</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1021,7 +1021,7 @@
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 					<Dependencies>
-						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
+						<IfNot>Battle Standard Bearer</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1030,7 +1030,7 @@
 					<OnlyFor>Mount</OnlyFor>
 					<Points>2</Points>
 					<Dependencies>
-						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
+						<IfNot>Battle Standard Bearer</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1039,7 +1039,7 @@
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1048,8 +1048,8 @@
 					<Points>4</Points>
 					<AddToArmour>5</AddToArmour>
 					<Dependencies>
-						<OnlyIf>Black Orc</OnlyIf>
-						<OnlyIfNot>Light armour</OnlyIfNot>
+						<If>Black Orc</If>
+						<IfNot>Light armour</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1058,7 +1058,7 @@
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
+						<IfNot>Battle Standard Bearer</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1173,10 +1173,10 @@
 					<OnlyOneInArmy/>
 					<Points>25</Points>
 					<Dependencies>
-						<OnlyIfNot>Great weapon</OnlyIfNot>
-						<OnlyIfNot>Additional weapon</OnlyIfNot>
-						<OnlyIfNot>Spear</OnlyIfNot>
-						<OnlyIfNot>Shield</OnlyIfNot>
+						<IfNot>Great weapon</IfNot>
+						<IfNot>Additional weapon</IfNot>
+						<IfNot>Spear</IfNot>
+						<IfNot>Shield</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1186,7 +1186,7 @@
 					<HitLast/>
 					<Points>4</Points>
 					<Dependencies>
-						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
+						<IfNot>Battle Standard Bearer</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1196,7 +1196,7 @@
 					<AddToAttacks>1</AddToAttacks>
 					<Points>4</Points>
 					<Dependencies>
-						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
+						<IfNot>Battle Standard Bearer</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1205,7 +1205,7 @@
 					<OnlyFor>Mount</OnlyFor>
 					<Points>2</Points>
 					<Dependencies>
-						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
+						<IfNot>Battle Standard Bearer</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1220,7 +1220,7 @@
 					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Battle Standard Bearer</OnlyIfNot>
+						<IfNot>Battle Standard Bearer</IfNot>
 					</Dependencies>
 				</Option>
 				<Option>
@@ -1241,7 +1241,7 @@
 					<Points>50</Points>
 					<Mount/>
 					<Dependencies>
-						<OnlyIf>Night Goblin</OnlyIf>
+						<If>Night Goblin</If>
 					</Dependencies>
 				</Option>
 				<Option>
