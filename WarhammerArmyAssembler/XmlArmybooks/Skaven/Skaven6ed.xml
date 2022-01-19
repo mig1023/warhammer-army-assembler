@@ -556,7 +556,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 					<Points>3</Points>
 				</Option>
@@ -565,7 +565,7 @@
 					<Type>Option</Type>
 					<AddToArmour>5</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Light armour</OnlyIfNot>
+						<IfNot>Light armour</IfNot>
 					</Dependencies>
 					<Points>6</Points>
 				</Option>
@@ -669,7 +669,7 @@
 					<Type>Option</Type>
 					<AddToArmour>6</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Heavy armour</OnlyIfNot>
+						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 				</Option>
@@ -678,7 +678,7 @@
 					<Type>Option</Type>
 					<AddToArmour>5</AddToArmour>
 					<Dependencies>
-						<OnlyIfNot>Light armour</OnlyIfNot>
+						<IfNot>Light armour</IfNot>
 					</Dependencies>
 					<Points>4</Points>
 				</Option>
@@ -1334,7 +1334,7 @@
 					<Type>Option</Type>
 					<PerModel/>
 					<Dependencies>
-						<OnlyIfNot>Slings</OnlyIfNot>
+						<IfNot>Slings</IfNot>
 					</Dependencies>
 					<Points>1</Points>
 				</Option>
@@ -1343,7 +1343,7 @@
 					<Type>Option</Type>
 					<PerModel/>
 					<Dependencies>
-						<OnlyIfNot>Spear</OnlyIfNot>
+						<IfNot>Spear</IfNot>
 					</Dependencies>
 					<Points>2</Points>
 				</Option>
@@ -1450,7 +1450,7 @@
 					<Type>Option</Type>
 					<Points>1</Points>
 					<Dependencies>
-						<OnlyIf>Throwing stars</OnlyIf>
+						<If>Throwing stars</If>
 					</Dependencies>
 					<PerModel/>
 				</Option>
