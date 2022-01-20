@@ -12,14 +12,15 @@ namespace WarhammerArmyAssembler.ArmyBook
     {
         public static int GetNextIndex() => Data.MaxIDindex++;
 
-        private static void LoadUnitsFromXml(XmlDocument xmlFile, string path, ref Dictionary<int, Unit> dict)
+        private static void LoadUnitsFromXml(XmlDocument xmlFile, string path,
+            ref Dictionary<int, Unit> dict, string heroType)
         {
             XmlNodeList xmlNodes = xmlFile.SelectNodes(path);
 
             foreach (XmlNode xmlUnit in xmlNodes)
             {
                 int newID = GetNextIndex(); 
-                dict.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
+                dict.Add(newID, LoadUnit(newID, xmlUnit, xmlFile, heroType));
             }
         }
 
@@ -58,9 +59,10 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref Data.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref Data.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref Data.Mounts);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Lord", ref Data.Units, "Lord");
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref Data.Units, "Hero");
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref Data.Mounts, String.Empty);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref Data.Units, String.Empty);
 
             foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Artefacts/Group"))
             {
@@ -77,7 +79,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
         }
 
-        public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml)
+        public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml, string heroType)
         {
             string description = StringParse(xmlUnit["Description"]);
 
@@ -92,7 +94,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 IDView = id.ToString(),
 
                 Name = StringParse(xmlUnit["Name"]),
-                Type = UnitTypeParse(xmlUnit["Type"]),
+                Type = UnitTypeParse(heroType),
                 Points = DoubleParse(xmlUnit["Points"]),
                 UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]),
                 Wizard = IntParse(xmlUnit["Wizard"]),
