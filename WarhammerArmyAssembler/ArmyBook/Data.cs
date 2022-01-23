@@ -6,6 +6,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     public class Data
     {
+        public static SortedDictionary<string, int> Magic = new SortedDictionary<string, int>();
+
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
         public static Dictionary<int, Unit> Mounts = new Dictionary<int, Unit>();
         public static Dictionary<int, Option> Artefact = new Dictionary<int, Option>();

@@ -34,6 +34,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static void LoadArmy(string xmlFileName)
         {
+            Data.Magic.Clear();
             Data.Units.Clear();
             Data.Mounts.Clear();
             Data.Artefact.Clear();
@@ -71,6 +72,14 @@ namespace WarhammerArmyAssembler.ArmyBook
                     int newID = GetNextIndex();
                     Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
                 }
+            }
+
+            foreach (XmlNode spell in xmlFile.SelectNodes("ArmyBook/Magic/Spell"))
+            {
+                string spellName = spell.Attributes["Name"].Value;
+                int spellDifficulty = int.Parse(spell.Attributes["Difficulty"].Value);
+
+                Data.Magic.Add(spellName, spellDifficulty);
             }
 
             Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
