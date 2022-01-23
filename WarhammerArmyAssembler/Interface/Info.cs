@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler.Interface
 {
@@ -15,19 +13,22 @@ namespace WarhammerArmyAssembler.Interface
             double armyCurrentPoint = Army.Params.GetArmyPoints();
             double availablePoints = (Army.Params.GetArmyMaxPoints() - armyCurrentPoint);
 
-            string pointsMsg = String.Format("All points:\t\t{0} pts\n\nAlready used:\t\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%\n\n\n\n",
-                Army.Params.GetArmyMaxPoints(),
-                armyCurrentPoint, Interface.Services.CalcPercent(armyCurrentPoint, Army.Params.GetArmyMaxPoints()),
-                availablePoints, Interface.Services.CalcPercent(availablePoints, Army.Params.GetArmyMaxPoints()));
+            string headLine = "All points:\t\t{0} pts\n\nAlready used:\t\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%";
+            int currentPercent = Services.CalcPercent(armyCurrentPoint, Army.Params.GetArmyMaxPoints());
+            int availablePercent = Services.CalcPercent(availablePoints, Army.Params.GetArmyMaxPoints());
+
+            string pointsMsg = String.Format(headLine + "\n\n\n\n", Army.Params.GetArmyMaxPoints(),
+                armyCurrentPoint, currentPercent, availablePoints, availablePercent);
 
             foreach (KeyValuePair<Unit.UnitType, double> entry in Army.Checks.UnitsMaxPointsPercent())
+            {
+                int percent = Interface.Services.CalcPercent(units[entry.Key], Army.Data.MaxPoints);
+                string minMax = (entry.Key == Unit.UnitType.Core ? "min" : "max");
+                int maxPoints = (int)(Army.Data.MaxPoints * entry.Value);
+
                 pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t( {3} {4} pts / {5}% )\n\n",
-                    entry.Key,
-                    units[entry.Key],
-                    Interface.Services.CalcPercent(units[entry.Key], Army.Data.MaxPoints),
-                    (entry.Key == Unit.UnitType.Core ? "min" : "max"),
-                    (int)(Army.Data.MaxPoints * entry.Value), entry.Value * 100
-                );
+                    entry.Key, units[entry.Key], percent, minMax, maxPoints, entry.Value * 100);
+            }
 
             return pointsMsg;
         }
@@ -38,10 +39,16 @@ namespace WarhammerArmyAssembler.Interface
         public static string armyHeroes() => String.Format("LORDS:\n{0}\n\nHEROES:\n{1}",
             UnitsByType(Unit.UnitType.Lord), UnitsByType(Unit.UnitType.Hero));
 
-        public static string armyModels() => String.Format(
-            "Normal base:\t{0}\n\nCavalry base:\t{1}\n\nLarge base:\t{2}\n\nChariots:\t\t{3}",
-            UnitsByBase(Army.Params.BasesTypes.normal), UnitsByBase(Army.Params.BasesTypes.cavalry),
-            UnitsByBase(Army.Params.BasesTypes.large), UnitsByBase(Army.Params.BasesTypes.chariot));
+        public static string armyModels()
+        {
+            int normal = UnitsByBase(Army.Params.BasesTypes.normal);
+            int cavalry = UnitsByBase(Army.Params.BasesTypes.cavalry);
+            int large = UnitsByBase(Army.Params.BasesTypes.large);
+            int chariot = UnitsByBase(Army.Params.BasesTypes.chariot);
+
+            return String.Format("Normal base:\t{0}\n\nCavalry base:\t{1}\n\nLarge base:\t{2}\n\nChariots:\t\t{3}",
+                normal, cavalry, large, chariot);
+        }
 
         public static string armyCast()
         {
