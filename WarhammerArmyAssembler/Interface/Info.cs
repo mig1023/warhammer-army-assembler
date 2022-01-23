@@ -43,6 +43,15 @@ namespace WarhammerArmyAssembler.Interface
             UnitsByBase(Army.Params.BasesTypes.normal), UnitsByBase(Army.Params.BasesTypes.cavalry),
             UnitsByBase(Army.Params.BasesTypes.large), UnitsByBase(Army.Params.BasesTypes.chariot));
 
+        public static string armyCast()
+        {
+            if (ArmyBook.Data.Magic.Count == 0)
+                return "There is no traditional spell's magic model.";
+
+            var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x => String.Format("{0}\t\t{1}+", x.Key, x.Value));
+            return String.Join("\n\n", spellList);
+        }
+
         private static string UnitsByType(Unit.UnitType u) => Army.Params.GetUnitsListByType(u);
 
         private static int UnitsByBase(Army.Params.BasesTypes u) => Army.Params.GetUnitsNumberByBase(u);

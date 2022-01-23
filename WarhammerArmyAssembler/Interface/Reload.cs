@@ -131,7 +131,7 @@ namespace WarhammerArmyAssembler.Interface
 
             Changes.main.armyPoints.Text = String.Format("Points: {0} [ {1} ]", Army.Params.GetArmyPoints(), Army.Params.GetArmyMaxPoints());
             Changes.main.armySize.Text = String.Format("Models: {0}", Army.Params.GetArmySize());
-            Changes.main.armyCasting.Content = String.Format("Cast: {0}", Army.Params.GetArmyCast());
+            Changes.main.armyCasting.Text = String.Format("Cast: {0}", Army.Params.GetArmyCast());
             Changes.main.armyDispell.Content = String.Format("Dispell: {0}", Army.Params.GetArmyDispell());
         }
 
