@@ -55,19 +55,8 @@ namespace WarhammerArmyAssembler.Interface
             if (ArmyBook.Data.Magic.Count == 0)
                 return "There is no traditional spell's magic model.";
 
-            int max = ArmyBook.Data.Magic.Max(x => x.Key.Length);
-            var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x => SpellFormat(x.Key, x.Value, max));
+            var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x => String.Format("{0}+\t{1}", x.Value, x.Key));
             return String.Join("\n\n", spellList);
-        }
-
-        private static string SpellFormat(string name, int difficulty, int max)
-        {
-            int maxTabCount = (int)Math.Floor((double)max / 4); 
-            int current = (int)Math.Floor((double)name.Length / 4);
-            int diff = (maxTabCount - current);
-            name += new String('\t', (diff == 0 ? 1 : diff) + 1);
-
-            return String.Format("{0}{1}+", name, difficulty);
         }
 
         private static string UnitsByType(Unit.UnitType u) => Army.Params.GetUnitsListByType(u);
