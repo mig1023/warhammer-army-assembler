@@ -8,6 +8,8 @@ namespace WarhammerArmyAssembler.ArmyBook
     {
         public static Dictionary<string, int> Magic = new Dictionary<string, int>();
 
+        public static string MagicLoreName = String.Empty;
+
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
         public static Dictionary<int, Unit> Mounts = new Dictionary<int, Unit>();
         public static Dictionary<int, Option> Artefact = new Dictionary<int, Option>();

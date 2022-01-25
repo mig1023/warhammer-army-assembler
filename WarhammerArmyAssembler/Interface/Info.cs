@@ -56,7 +56,7 @@ namespace WarhammerArmyAssembler.Interface
                 return "There is no traditional spell's magic model.";
 
             var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x => String.Format("{0}+\t{1}", x.Value, x.Key));
-            return String.Join("\n\n", spellList);
+            return String.Format("{0}\n\n{1}", ArmyBook.Data.MagicLoreName.ToUpper(), String.Join("\n\n", spellList));
         }
 
         private static string UnitsByType(Unit.UnitType u) => Army.Params.GetUnitsListByType(u);
