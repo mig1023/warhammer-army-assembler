@@ -6,7 +6,7 @@ namespace WarhammerArmyAssembler.Interface
 {
     class Info
     {
-        public static string armyPoints()
+        public static string ArmyPoints()
         {
             Dictionary<Unit.UnitType, double> units = Army.Checks.UnitsPointsPercent();
 
@@ -33,13 +33,13 @@ namespace WarhammerArmyAssembler.Interface
             return pointsMsg;
         }
 
-        public static string armyUnits() => String.Format("CORE UNITS:\n{0}\n\nSPECIAL UNITS:\n{1}\n\nRARE UNITS:\n{2}",
+        public static string ArmyUnits() => String.Format("CORE UNITS:\n{0}\n\nSPECIAL UNITS:\n{1}\n\nRARE UNITS:\n{2}",
             UnitsByType(Unit.UnitType.Core), UnitsByType(Unit.UnitType.Special), UnitsByType(Unit.UnitType.Rare));
 
-        public static string armyHeroes() => String.Format("LORDS:\n{0}\n\nHEROES:\n{1}",
+        public static string ArmyHeroes() => String.Format("LORDS:\n{0}\n\nHEROES:\n{1}",
             UnitsByType(Unit.UnitType.Lord), UnitsByType(Unit.UnitType.Hero));
 
-        public static string armyModels()
+        public static string ArmyModels()
         {
             int normal = UnitsByBase(Army.Params.BasesTypes.normal);
             int cavalry = UnitsByBase(Army.Params.BasesTypes.cavalry);
@@ -50,13 +50,24 @@ namespace WarhammerArmyAssembler.Interface
                 normal, cavalry, large, chariot);
         }
 
-        public static string armyCast()
+        public static string ArmyCast()
         {
             if (ArmyBook.Data.Magic.Count == 0)
                 return "There is no traditional spell's magic model.";
 
-            var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x => String.Format("{0}\t\t{1}+", x.Key, x.Value));
+            int max = ArmyBook.Data.Magic.Max(x => x.Key.Length);
+            var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x => SpellFormat(x.Key, x.Value, max));
             return String.Join("\n\n", spellList);
+        }
+
+        private static string SpellFormat(string name, int difficulty, int max)
+        {
+            int maxTabCount = (int)Math.Floor((double)max / 4); 
+            int current = (int)Math.Floor((double)name.Length / 4);
+            int diff = (maxTabCount - current);
+            name += new String('\t', (diff == 0 ? 1 : diff) + 1);
+
+            return String.Format("{0}{1}+", name, difficulty);
         }
 
         private static string UnitsByType(Unit.UnitType u) => Army.Params.GetUnitsListByType(u);

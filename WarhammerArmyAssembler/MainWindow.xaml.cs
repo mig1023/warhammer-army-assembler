@@ -364,15 +364,15 @@ namespace WarhammerArmyAssembler
                 Interface.UnitDetails.UpdateUnitDescription(Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
         }
 
-        private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.armyPoints());
+        private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyPoints());
 
-        private void armyUnits_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.armyUnits());
+        private void armyUnits_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyUnits());
 
-        private void armyHeroes_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.armyHeroes());
+        private void armyHeroes_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyHeroes());
 
-        private void armyModels_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.armyModels());
+        private void armyModels_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyModels());
 
-        private void armyCast_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.armyCast());
+        private void armyCast_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyCast());
 
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e) =>
             Interface.Changes.CheckAndExportTo(toPDF: true, fullRules: true);
