@@ -55,8 +55,34 @@ namespace WarhammerArmyAssembler.Interface
             if (ArmyBook.Data.Magic.Count == 0)
                 return "There is no traditional spell's magic model.";
 
-            var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x => String.Format("{0}+\t{1}", x.Value, x.Key));
-            return String.Format("{0}\n\n{1}", ArmyBook.Data.MagicLoreName.ToUpper(), String.Join("\n\n", spellList));
+            var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x =>
+                String.Format("{0}+\t{1} ({2} spells)", x.Value, x.Key, CastingProbability(x.Value)));
+
+            return String.Format("{0}\n\n\n{1}", ArmyBook.Data.MagicLoreName.ToUpper(), String.Join("\n\n", spellList));
+        }
+
+        private static string CastingProbability(int difficulty)
+        {
+            int cast = Army.Params.GetArmyCast();
+
+            double possible = cast * 6;
+            double supposed = cast * 3.5;
+
+            if (possible < difficulty)
+                return "no";
+            else
+            {
+                int spellsMin = (int)Math.Ceiling(supposed / difficulty);
+                int spellsMax = (int)Math.Ceiling(possible / difficulty);
+
+                if (spellsMax > cast)
+                    spellsMax = cast;
+
+                if (spellsMax > spellsMin)
+                    return String.Format("~{0}-{1}", spellsMin, spellsMax);
+                else
+                    return String.Format("~{0}", spellsMin);
+            }
         }
 
         private static string UnitsByType(Unit.UnitType u) => Army.Params.GetUnitsListByType(u);
