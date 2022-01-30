@@ -65,15 +65,14 @@ namespace WarhammerArmyAssembler.Interface
         {
             int cast = Army.Params.GetArmyCast();
 
-            double possible = cast * 6;
-            double supposed = cast * 3.5;
+            double possible = cast * Services.DICE_SIZE;
 
             if (possible < difficulty)
                 return "no";
             else
             {
-                int spellsMin = (int)Math.Ceiling(supposed / difficulty);
-                int spellsMax = (int)Math.Ceiling(possible / difficulty);
+                int spellsMin = Ceiling((cast * Services.DICE_HALF), difficulty);
+                int spellsMax = Ceiling(possible, difficulty);
 
                 if (spellsMax > cast)
                     spellsMax = cast;
@@ -84,6 +83,8 @@ namespace WarhammerArmyAssembler.Interface
                     return String.Format("~{0}", spellsMin);
             }
         }
+
+        private static int Ceiling(double level, int difficulty) => (int)Math.Ceiling(level / difficulty);
 
         private static string UnitsByType(Unit.UnitType u) => Army.Params.GetUnitsListByType(u);
 

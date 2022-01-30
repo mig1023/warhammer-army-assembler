@@ -12,6 +12,9 @@ namespace WarhammerArmyAssembler.Interface
         public static readonly int SPINNER_TOP_MARGIN = 50;
         public static readonly int SPINNER_LEFT_MARGIN = 40;
 
+        public static readonly double DICE_SIZE = 6;
+        public static readonly double DICE_HALF = 3.5;
+
         public static int IntParse(string line)
         {
             bool success = Int32.TryParse(line, out int value);
