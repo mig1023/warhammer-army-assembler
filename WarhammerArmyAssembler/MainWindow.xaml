@@ -419,6 +419,7 @@
                         <DataGridTextColumn Header="" Binding="{Binding Size, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="45">
                             <DataGridTextColumn.CellStyle>
                                 <Style>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center"/>
                                     <Setter Property="UIElement.IsEnabled" Value="{Binding SizableType}" />
                                     <Setter Property="UIElement.Visibility" Value="{Binding VisibleType}" />
                                 </Style>
