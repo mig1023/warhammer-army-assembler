@@ -3,10 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WarhammerArmyAssembler"
         mc:Ignorable="d"
         WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
         Title="Warhammer Army Assembler (WAAgh)" Height="600" Width="1000" Closed="Window_Closed" Closing="Window_Closing">
+
+    <Window.Resources>
+        <ControlTemplate TargetType="Label" x:Key="statusLabel">
+            <TextBlock Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}">
+                <TextBlock.TextDecorations>
+                    <TextDecorationCollection>
+                        <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
+                            <TextDecoration.Pen>
+                                <Pen Thickness="1">
+                                    <Pen.Brush>
+                                        <SolidColorBrush Color="Gray"/>
+                                    </Pen.Brush>
+                                    <Pen.DashStyle>
+                                        <DashStyle Dashes="4,4"/>
+                                    </Pen.DashStyle>
+                                </Pen>
+                            </TextDecoration.Pen>
+                        </TextDecoration>
+                    </TextDecorationCollection>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+        </ControlTemplate>
+    </Window.Resources>
+    
     <Canvas x:Name="mainCanvas" SizeChanged="mainCanvas_SizeChanged">
         <Canvas x:Name="errorDetail" Background="#FF6C0101" Height="50" Width="Auto">
             <Label x:Name="closeErrorDetail" Content="Close" Height="30" Padding="0" Width="154" FontSize="20" HorizontalContentAlignment="Center" Foreground="White" Background="#FF930808" Margin="10,10" MouseDown="closeErrorDetail_Click"/>
@@ -561,110 +584,13 @@
                         <ColumnDefinition Width="70"/>
                     </Grid.ColumnDefinitions>
 
-                    <Label Grid.Row="0" Grid.Column="0" Height="30" Width="Auto" FontSize="12" Padding="10 7 0 0" MouseDown="armyHeroes_MouseDown">
-                        <TextBlock x:Name="armyHeroes">
-                            <TextBlock.TextDecorations>
-                                <TextDecorationCollection>
-                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
-                                        <TextDecoration.Pen>
-                                            <Pen Thickness="1">
-                                                <Pen.Brush>
-                                                    <SolidColorBrush Color="Gray"/>
-                                                </Pen.Brush>
-                                                <Pen.DashStyle>
-                                                    <DashStyle Dashes="4,4"/>
-                                                </Pen.DashStyle>
-                                            </Pen>
-                                        </TextDecoration.Pen>
-                                    </TextDecoration>
-                                </TextDecorationCollection>
-                            </TextBlock.TextDecorations>
-                        </TextBlock>
-                    </Label>
-
-                    <Label Grid.Row="0" Grid.Column="1" Height="30" Width="Auto" FontSize="12" Padding="0 7 0 0" MouseDown="armyUnits_MouseDown">
-                        <TextBlock x:Name="armyUnits">
-                            <TextBlock.TextDecorations>
-                                <TextDecorationCollection>
-                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
-                                        <TextDecoration.Pen>
-                                            <Pen Thickness="1">
-                                                <Pen.Brush>
-                                                    <SolidColorBrush Color="Gray"/>
-                                                </Pen.Brush>
-                                                <Pen.DashStyle>
-                                                    <DashStyle Dashes="4,4"/>
-                                                </Pen.DashStyle>
-                                            </Pen>
-                                        </TextDecoration.Pen>
-                                    </TextDecoration>
-                                </TextDecorationCollection>
-                            </TextBlock.TextDecorations>
-                        </TextBlock>
-                    </Label>
-
-                    <Label Grid.Row="0" Grid.Column="2" Height="30" Width="Auto" FontSize="12" Padding="0 7 0 0" MouseDown="armyPoints_MouseDown">
-                        <TextBlock x:Name="armyPoints">
-                            <TextBlock.TextDecorations>
-                                <TextDecorationCollection>
-                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
-                                        <TextDecoration.Pen>
-                                            <Pen Thickness="1">
-                                                <Pen.Brush>
-                                                    <SolidColorBrush Color="Gray"/>
-                                                </Pen.Brush>
-                                                <Pen.DashStyle>
-                                                    <DashStyle Dashes="4,4"/>
-                                                </Pen.DashStyle>
-                                            </Pen>
-                                        </TextDecoration.Pen>
-                                    </TextDecoration>
-                                </TextDecorationCollection>
-                            </TextBlock.TextDecorations>
-                        </TextBlock>
-                    </Label>
-                    <Label Grid.Row="0" Grid.Column="3" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12" MouseDown="armyModels_MouseDown">
-                        <TextBlock x:Name="armySize">
-                            <TextBlock.TextDecorations>
-                                <TextDecorationCollection>
-                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
-                                        <TextDecoration.Pen>
-                                            <Pen Thickness="1">
-                                                <Pen.Brush>
-                                                    <SolidColorBrush Color="Gray"/>
-                                                </Pen.Brush>
-                                                <Pen.DashStyle>
-                                                    <DashStyle Dashes="4,4"/>
-                                                </Pen.DashStyle>
-                                            </Pen>
-                                        </TextDecoration.Pen>
-                                    </TextDecoration>
-                                </TextDecorationCollection>
-                            </TextBlock.TextDecorations>
-                        </TextBlock>
-                    </Label>
-                    <Label Grid.Row="0" Grid.Column="4" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12" MouseDown="armyCast_MouseDown">
-                        <TextBlock x:Name="armyCasting">
-                            <TextBlock.TextDecorations>
-                                <TextDecorationCollection>
-                                    <TextDecoration PenThicknessUnit="FontRecommended" PenOffset="2">
-                                        <TextDecoration.Pen>
-                                            <Pen Thickness="1">
-                                                <Pen.Brush>
-                                                    <SolidColorBrush Color="Gray"/>
-                                                </Pen.Brush>
-                                                <Pen.DashStyle>
-                                                    <DashStyle Dashes="4,4"/>
-                                                </Pen.DashStyle>
-                                            </Pen>
-                                        </TextDecoration.Pen>
-                                    </TextDecoration>
-                                </TextDecorationCollection>
-                            </TextBlock.TextDecorations>
-                        </TextBlock>
-                    </Label>
-                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="" Height="30" Width="Auto" Padding="0 7 0 0" FontSize="12"/>
-                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" HorizontalContentAlignment="Center" Padding="0 7 0 0" Content="delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
+                    <Label x:Name="armyHeroes" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="0" Height="30" Width="Auto" FontSize="12" Margin="10 5 0 0" MouseDown="armyHeroes_MouseDown"/>
+                    <Label x:Name="armyUnits" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="1" Height="30" Width="Auto" FontSize="12" Margin="0 5 0 0" MouseDown="armyUnits_MouseDown"/>
+                    <Label x:Name="armyPoints" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="2" Height="30" Width="Auto" FontSize="12" Margin="0 5 0 0" MouseDown="armyPoints_MouseDown"/>
+                    <Label x:Name="armySize" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="3" Height="30" Width="Auto" Margin="0 5 0 0" FontSize="12" MouseDown="armyModels_MouseDown"/>
+                    <Label x:Name="armyCasting" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="4" Height="30" Width="Auto" Margin="0 5 0 0" FontSize="12" MouseDown="armyCast_MouseDown"/>
+                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="" Height="30" Width="Auto" Padding="0 5 0 0" FontSize="12"/>
+                    <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" HorizontalContentAlignment="Center" Padding="0 5 0 0" Content="Delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
                 </Grid>
             </Grid>
 

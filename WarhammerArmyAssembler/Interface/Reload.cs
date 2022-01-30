@@ -122,16 +122,16 @@ namespace WarhammerArmyAssembler.Interface
                     Changes.ArmyInInterface.Add(unit);
 
             Changes.main.ArmyGrid.ItemsSource = Changes.ArmyInInterface;
-            Changes.main.armyHeroes.Text = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
+            Changes.main.armyHeroes.Content = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
                 UnitsNumber(Unit.UnitType.Lord), UnitsNumber(Unit.UnitType.Hero), MaxUnits(Unit.UnitType.Lord), MaxUnits(Unit.UnitType.Hero));
 
-            Changes.main.armyUnits.Text = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
+            Changes.main.armyUnits.Content = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
                 UnitsNumber(Unit.UnitType.Core), UnitsNumber(Unit.UnitType.Special), UnitsNumber(Unit.UnitType.Rare),
                 MaxUnits(Unit.UnitType.Core), MaxUnits(Unit.UnitType.Special), MaxUnits(Unit.UnitType.Rare));
 
-            Changes.main.armyPoints.Text = String.Format("Points: {0} [ {1} ]", Army.Params.GetArmyPoints(), Army.Params.GetArmyMaxPoints());
-            Changes.main.armySize.Text = String.Format("Models: {0}", Army.Params.GetArmySize());
-            Changes.main.armyCasting.Text = String.Format("Cast: {0}", Army.Params.GetArmyCast());
+            Changes.main.armyPoints.Content = String.Format("Points: {0} [ {1} ]", Army.Params.GetArmyPoints(), Army.Params.GetArmyMaxPoints());
+            Changes.main.armySize.Content = String.Format("Models: {0}", Army.Params.GetArmySize());
+            Changes.main.armyCasting.Content = String.Format("Cast: {0}", Army.Params.GetArmyCast());
             Changes.main.armyDispell.Content = String.Format("Dispell: {0}", Army.Params.GetArmyDispell());
         }
 
