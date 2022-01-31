@@ -10,25 +10,26 @@ namespace WarhammerArmyAssembler.Interface
     {
         public static void LoadArmyList(bool fastReload = false)
         {
-            Changes.main.ArmyList.Items.Clear();
+            MainWindow main = Changes.main;
+            main.ArmyList.Items.Clear();
 
             if (!fastReload)
             {
                 Changes.AllUnitDelete();
 
-                Changes.main.armyMainLabel.Content = Army.Data.Name;
-                Changes.main.armyEditionLabel.Content = String.Format("{0}ed", Army.Data.ArmyEdition);
+                main.armyMainLabel.Content = Army.Data.Name;
+                main.armyEditionLabel.Content = String.Format("{0} Edition", Army.Data.ArmyEdition);
 
-                Changes.main.armyMainLabelPlace.Background = ArmyBook.Data.FrontColor;
-                Changes.main.armyEditionLabel.Background = ArmyBook.Data.FrontColor;
-                Changes.main.unitDetailHead.Background = ArmyBook.Data.FrontColor;
+                main.armyMainLabelPlace.Background = ArmyBook.Data.FrontColor;
+                main.armyEditionLabel.Background = ArmyBook.Data.FrontColor;
+                main.unitDetailHead.Background = ArmyBook.Data.FrontColor;
 
-                Changes.main.armyMainMenu.Content = '\u2630';
-                Changes.main.armyMainMenu.Foreground = Brushes.White;
-                Changes.main.armyMainMenu.Background = ArmyBook.Data.BackColor;
+                main.armyMainMenu.Content = '\u2630';
+                main.armyMainMenu.Foreground = Brushes.White;
+                main.armyMainMenu.Background = ArmyBook.Data.BackColor;
 
-                Changes.main.armyMainLabel.Foreground = Brushes.White;
-                Changes.main.armyMainLabel.Background = ArmyBook.Data.FrontColor;
+                main.armyMainLabel.Foreground = Brushes.White;
+                main.armyMainLabel.Background = ArmyBook.Data.FrontColor;
             }
 
             List<Unit> categories = Army.Params.GetArmyCategories();
@@ -45,7 +46,7 @@ namespace WarhammerArmyAssembler.Interface
             {
                 unitType.Name = Army.Mod.CategoryNameModification(unitType.Name);
                 unitType.GroopBold = true;
-                Changes.main.ArmyList.Items.Add(unitType);
+                main.ArmyList.Items.Add(unitType);
             }
 
             List<string> artefactsTypes = new List<string>();
@@ -82,10 +83,10 @@ namespace WarhammerArmyAssembler.Interface
 
                 artefacts.GroopBold = true;
                 artefacts.Artefacts = true;
-                Changes.main.ArmyList.Items.Add(artefacts);
+                main.ArmyList.Items.Add(artefacts);
             }
 
-            TreeViewItem item = Changes.main.ArmyList.ItemContainerGenerator.ContainerFromIndex(0) as TreeViewItem;
+            TreeViewItem item = main.ArmyList.ItemContainerGenerator.ContainerFromIndex(0) as TreeViewItem;
 
             if (item != null)
             {
@@ -94,21 +95,19 @@ namespace WarhammerArmyAssembler.Interface
             }
         }
 
-        private static string PointsView(Option artefact)
+        private static string PointsView(Option artefact) => 
+            String.Format(" {0} pts", (artefact.Runic > 0 ? RunicPoints(artefact) : artefact.Points.ToString()));
+
+        private static string RunicPoints(Option artefact)
         {
-            if (artefact.Runic > 0)
-            {
-                List<string> points = new List<string>();
+            List<string> points = new List<string>();
 
-                Dictionary<int, Option> runicVersions = artefact.AllRunicVersions();
+            Dictionary<int, Option> runicVersions = artefact.AllRunicVersions();
 
-                foreach (Option runic in runicVersions.Values)
-                    points.Add(runic.Points.ToString());
+            foreach (Option runic in runicVersions.Values)
+                points.Add(runic.Points.ToString());
 
-                return String.Format(" {0} pts", String.Join("/", points.ToArray()));
-            }
-            else 
-                return String.Format(" {0} pts", artefact.Points);
+            return String.Join("/", points.ToArray());
         }
 
         public static void ReloadArmyData()
@@ -122,14 +121,31 @@ namespace WarhammerArmyAssembler.Interface
                     Changes.ArmyInInterface.Add(unit);
 
             Changes.main.ArmyGrid.ItemsSource = Changes.ArmyInInterface;
+
+            int lord = UnitsNumber(Unit.UnitType.Lord);
+            int hero = UnitsNumber(Unit.UnitType.Hero);
+
+            int maxLord = MaxUnits(Unit.UnitType.Lord);
+            int maxHero = MaxUnits(Unit.UnitType.Hero);
+
             Changes.main.armyHeroes.Content = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
-                UnitsNumber(Unit.UnitType.Lord), UnitsNumber(Unit.UnitType.Hero), MaxUnits(Unit.UnitType.Lord), MaxUnits(Unit.UnitType.Hero));
+                lord, hero, maxLord, maxHero);
+
+            int core = UnitsNumber(Unit.UnitType.Core);
+            int special = UnitsNumber(Unit.UnitType.Special);
+            int rare = UnitsNumber(Unit.UnitType.Rare);
+            
+            int maxCore = MaxUnits(Unit.UnitType.Core);
+            int maxSpecial = MaxUnits(Unit.UnitType.Core);
+            int maxRare = MaxUnits(Unit.UnitType.Core);
 
             Changes.main.armyUnits.Content = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
-                UnitsNumber(Unit.UnitType.Core), UnitsNumber(Unit.UnitType.Special), UnitsNumber(Unit.UnitType.Rare),
-                MaxUnits(Unit.UnitType.Core), MaxUnits(Unit.UnitType.Special), MaxUnits(Unit.UnitType.Rare));
+                core, special, rare, maxCore, maxSpecial, maxRare);
 
-            Changes.main.armyPoints.Content = String.Format("Points: {0} [ {1} ]", Army.Params.GetArmyPoints(), Army.Params.GetArmyMaxPoints());
+            double points = Army.Params.GetArmyPoints();
+            int maxPoints = Army.Params.GetArmyMaxPoints();
+
+            Changes.main.armyPoints.Content = String.Format("Points: {0} [ {1} ]", points, maxPoints);
             Changes.main.armySize.Content = String.Format("Models: {0}", Army.Params.GetArmySize());
             Changes.main.armyCasting.Content = String.Format("Cast: {0}", Army.Params.GetArmyCast());
             Changes.main.armyDispell.Content = String.Format("Dispell: {0}", Army.Params.GetArmyDispell());
