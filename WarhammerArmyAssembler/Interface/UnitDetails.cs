@@ -415,7 +415,9 @@ namespace WarhammerArmyAssembler.Interface
 
             if (option.IsMagicItem() || option.IsPowers())
             {
-                AddButtonPart("drop " + (option.IsPowers() ? "power" : "artefact"), margins, 0, id, ArmyBook.Data.FrontColor, 154);
+                AddButtonPart(ArmyBook.Data.DropStyle + (option.IsPowers() ? "power" : "artefact"),
+                    margins, 0, id, ArmyBook.Data.FrontColor, 154);
+
                 return height;
             }
 
@@ -428,11 +430,12 @@ namespace WarhammerArmyAssembler.Interface
                     backgroundSecond: Brushes.Gainsboro, margins: margins, id: id, enabled: false);
 
             else if (option.Realised)
-                AddButtonAllParts(captionFirst: "drop", captionSecond: String.Empty, backgroundFirst: ArmyBook.Data.BackColor,
-                    backgroundSecond: ArmyBook.Data.FrontColor, margins: margins, id: id);
+                AddButtonAllParts(captionFirst: ArmyBook.Data.DropStyle, captionSecond: String.Empty,
+                    backgroundFirst: ArmyBook.Data.BackColor, backgroundSecond: ArmyBook.Data.FrontColor,
+                    margins: margins, id: id);
 
             else
-                AddButtonAllParts(captionFirst: String.Empty, captionSecond: "add", backgroundFirst: Brushes.LightGray,
+                AddButtonAllParts(captionFirst: String.Empty, captionSecond: ArmyBook.Data.AddStyle, backgroundFirst: Brushes.LightGray,
                     backgroundSecond: Brushes.Silver, margins: margins, id: id);
 
             return height;

@@ -75,9 +75,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             XmlNode loreBook = xmlFile.SelectSingleNode("ArmyBook/Magic");
-
-            if (loreBook.Attributes["Name"] != null)
-                Data.MagicLoreName = loreBook.Attributes["Name"].Value;
+            Data.MagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
 
             foreach (XmlNode spell in xmlFile.SelectNodes("ArmyBook/Magic/Spell"))
             {
@@ -86,6 +84,10 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 Data.Magic.Add(spellName, spellDifficulty);
             }
+
+            XmlNode styleBook = xmlFile.SelectSingleNode("ArmyBook/Style");
+            Data.AddStyle = styleBook?.Attributes["Add"]?.Value ?? "add";
+            Data.DropStyle = styleBook?.Attributes["Drop"]?.Value ?? "drop";
 
             Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
