@@ -114,10 +114,10 @@ namespace WarhammerArmyAssembler.Interface
             if (artefact.Virtue)
                 artefact.Points = Army.Params.GetVirtuePoints(id);
                 
-            if (!Interface.Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))
+            if (!Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))
                 Error("Not enough points add an item");
 
-            else if (!Interface.Checks.EnoughUnitPointsForAddArtefact(id, unit, pointsPenalty: prevRunicPointsPenalty))
+            else if (!Checks.EnoughUnitPointsForAddArtefact(id, unit, pointsPenalty: prevRunicPointsPenalty))
                 Error(String.Format("Not enough magic item {0} to add an item", (unit.MagicItemCount > 0 ? "slots" : "points")));
 
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, artefact.Points))
@@ -138,14 +138,14 @@ namespace WarhammerArmyAssembler.Interface
                     unit.Type = Unit.UnitType.Rare;
 
                 unit.AddAmmunition(id);
-                Interface.Reload.ReloadArmyData();
-                Interface.UnitDetails.UpdateUnitDescription(unitID, unit);
+                Reload.ReloadArmyData();
+                UnitDetails.UpdateUnitDescription(unitID, unit);
 
                 bool multiple = artefact.Multiple || artefact.Virtue || (artefact.Runic > 0);
                 bool honours = artefact.Honours && (artefact.Points > 0);
 
                 if (!multiple && !honours && (artefact.Type != Option.OptionType.Powers) && String.IsNullOrEmpty(artefact.RandomGroup))
-                    Interface.Mod.SetArtefactAlreadyUsed(id, true);
+                    Mod.SetArtefactAlreadyUsed(id, true);
 
                 Army.Mod.ChangeGeneralIfNeed();
             }
@@ -167,7 +167,7 @@ namespace WarhammerArmyAssembler.Interface
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)
                 Error(String.Format("The number of {0} of this type has been exhausted.", (unit.IsHero() ? "heroes" : "units")));
 
-            else if (!Interface.Checks.EnoughPointsForAddUnit(id))
+            else if (!Checks.EnoughPointsForAddUnit(id))
                 Error(String.Format("Not enough points to add a {0}", (unit.IsHero() ? "hero" : "unit")));
 
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, unit.Points))
@@ -182,13 +182,13 @@ namespace WarhammerArmyAssembler.Interface
             else
             {
                 CurrentSelectedUnit = Army.Mod.AddUnitByID(id);
-                Interface.Reload.ReloadArmyData();
+                Reload.ReloadArmyData();
             }
         }
 
         public static void ArmyGridDropMount(int id, double points, int unit)
         {
-            if (!Interface.Checks.EnoughUnitPointsForAddOption(points))
+            if (!Checks.EnoughUnitPointsForAddOption(points))
                 Error("Not enough points to add a mount");
 
             else if (Army.Data.Units[unit].MountOn > 0)
@@ -200,7 +200,7 @@ namespace WarhammerArmyAssembler.Interface
             else
             {
                 Army.Mod.AddMountByID(id, unit);
-                Interface.Reload.ReloadArmyData();
+                Reload.ReloadArmyData();
             }
         }
 
@@ -208,14 +208,14 @@ namespace WarhammerArmyAssembler.Interface
         {
             DetailResize(open: false);
             Army.Mod.DeleteUnitByID(id);
-            Interface.Reload.ReloadArmyData();
+            Reload.ReloadArmyData();
         }
 
         public static void AllUnitDelete()
         {
             DetailResize(open: false);
             Army.Mod.DeleteAllUnits();
-            Interface.Reload.ReloadArmyData();
+            Reload.ReloadArmyData();
         }
 
         public static void Error(string text)
@@ -324,20 +324,20 @@ namespace WarhammerArmyAssembler.Interface
             main.ResizeMode = (detail ? ResizeMode.NoResize : ResizeMode.CanResizeWithGrip);
 
             if (menu)
-                Interface.Mod.View(canvasToShow: main.mainMenu, top: true);
+                Mod.View(canvasToShow: main.mainMenu, top: true);
 
             if (err)
-                Interface.Mod.View(canvasToShow: main.errorDetail, top: true);
+                Mod.View(canvasToShow: main.errorDetail, top: true);
 
             if (moveTo == MovingType.ToLeft)
             {
-                Interface.Mod.View(left: true);
+                Mod.View(left: true);
                 newPosition = new Thickness(main.ActualWidth, 0, 0, 0);
             }
                 
             if (moveTo == MovingType.ToRight)
             {
-                Interface.Mod.View(right: true);
+                Mod.View(right: true);
                 newPosition = new Thickness((main.ActualWidth * -1), 0, 0, 0);
             }
 
@@ -348,7 +348,7 @@ namespace WarhammerArmyAssembler.Interface
                 newPosition = new Thickness(0, height, 0, 0);
 
             if ((moveTo == MovingType.ToMain) && unitTestIsOpen)
-                Interface.Mod.UnitTestClose();
+                Mod.UnitTestClose();
 
             bool mainCanvasMoving = (err || menu);
 
@@ -373,10 +373,13 @@ namespace WarhammerArmyAssembler.Interface
                 mainMenuIsOpen = false;
         }
 
+        private static BitmapImage GetImage(XmlNode imageName, string armyName) =>
+            new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + imageName.InnerText));
+
         public static void LoadArmyImage(XmlNode imageName, string armyName)
         {
             if (imageName != null)
-                main.armySymbol.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + imageName.InnerText));
+                main.armySymbol.Source = GetImage(imageName, armyName);
             else
                 main.armySymbol.Source = null;
         }
@@ -395,11 +398,11 @@ namespace WarhammerArmyAssembler.Interface
             xmlFile.Load(armyName);
 
             XmlNode armyFile = ArmyBook.Services.Intro(xmlFile, "Images/Cover");
-            changeArmybook.imageArmybook.Source = new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + armyFile.InnerText));
+            changeArmybook.imageArmybook.Source = GetImage(armyFile, armyName);
             changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", ArmyBook.Services.Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = Interface.Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
+            Brush mainColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
 
             foreach (Label label in PointsButtons)
             {
@@ -460,7 +463,6 @@ namespace WarhammerArmyAssembler.Interface
             SetArmySelected(allArmies[randomArmy]);
             PreviewArmy(randomArmy);
         }
-
 
         public static void LoadAllArmy(List<string> allXmlFiles, bool reload = false)
         {
@@ -752,9 +754,9 @@ namespace WarhammerArmyAssembler.Interface
         {
             main.UpdateLayout();
 
-            double marginTop = Interface.Changes.ZeroFuse(main.unitGrid.ActualHeight - 66);
+            double marginTop = Changes.ZeroFuse(main.unitGrid.ActualHeight - 66);
 
-            main.specialRulesTest.Margin = Interface.Changes.Thick(main.specialRulesTest, top: marginTop);
+            main.specialRulesTest.Margin = Changes.Thick(main.specialRulesTest, top: marginTop);
 
             marginTop += main.specialRulesTest.ActualHeight;
 
@@ -769,9 +771,9 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             foreach (FrameworkElement element in elements)
-                element.Margin = Interface.Changes.Thick(main.enemyForTestText, top: marginTop);
+                element.Margin = Changes.Thick(main.enemyForTestText, top: marginTop);
 
-            marginTop += Interface.Changes.ZeroFuse(main.enemyGrid.ActualHeight - 66);
+            marginTop += Changes.ZeroFuse(main.enemyGrid.ActualHeight - 66);
 
             elements = new List<FrameworkElement>
             {
@@ -796,18 +798,18 @@ namespace WarhammerArmyAssembler.Interface
                 double startButtonPosition = (double)main.startFullTest.GetValue(Canvas.TopProperty);
                 unitTestHeight = main.startFullTest.Margin.Top + main.startFullTest.ActualHeight + startButtonPosition + 20;
 
-                main.startBattleRoyale.Margin = Interface.Changes.Thick(main.enemyForTestText, top: marginTop + 154,
+                main.startBattleRoyale.Margin = Changes.Thick(main.enemyForTestText, top: marginTop + 154,
                     left: main.startBattleRoyale.Margin.Left + 163);
             }
             else
             {
-                main.testConsole.Margin = Interface.Changes.Thick(main.enemyForTestText, top: marginTop - 155);
+                main.testConsole.Margin = Changes.Thick(main.enemyForTestText, top: marginTop - 155);
                 royalConsoleSize = -70;
             }
 
             if (unitTestHeight + 140 < main.armyUnitTestScroll.ActualHeight)
             {
-                main.testConsole.Height = Interface.Changes.ZeroFuse(
+                main.testConsole.Height = Changes.ZeroFuse(
                     main.armyUnitTestScroll.ActualHeight - unitTestHeight - 20) + royalConsoleSize;
             }
             else
@@ -816,9 +818,9 @@ namespace WarhammerArmyAssembler.Interface
                 main.testConsole.Height = 120 + royalConsoleSize;
             }
 
-            main.waitingSpinner.Margin = Interface.Changes.Thick(main.testConsole,
-                top: main.testConsole.Margin.Top - Interface.Services.SPINNER_TOP_MARGIN,
-                left: main.testConsole.Margin.Left - Interface.Services.SPINNER_LEFT_MARGIN);
+            main.waitingSpinner.Margin = Changes.Thick(main.testConsole,
+                top: main.testConsole.Margin.Top - Services.SPINNER_TOP_MARGIN,
+                left: main.testConsole.Margin.Left - Services.SPINNER_LEFT_MARGIN);
 
             main.armyUnitTest.Height = unitTestHeight;
         }
@@ -837,7 +839,7 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             foreach (FrameworkElement element in elements)
-                element.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 120);
+                element.Width = Changes.ZeroFuse(e.NewSize.Width - 120);
 
             armyUnitTest_Resize();
         }
