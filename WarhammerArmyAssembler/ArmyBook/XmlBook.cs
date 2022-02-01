@@ -52,7 +52,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Empty;
         }
 
-        public static List<string> FindAllXmlFiles(string programDirectory) => FindAllXmlFilesInDirectories(programDirectory).Values.ToList();
+        public static List<string> FindAllXmlFiles(string programDirectory) =>
+            FindAllXmlFilesInDirectories(programDirectory).Values.ToList();
 
         private static SortedDictionary<string, string> FindAllXmlFilesInDirectories(string programDirectory)
         {
@@ -68,7 +69,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                     {
                         xmlFile.Load(file);
                     }
-                    catch (System.Xml.XmlException)
+                    catch (XmlException)
                     {
                         continue;
                     }
