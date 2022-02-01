@@ -6,7 +6,7 @@ namespace WarhammerArmyAssembler.Army
 {
     class Mod
     {
-        public static int GetNextIndex() => Army.Data.MaxIDindex += 1;
+        public static int GetNextIndex() => Data.MaxIDindex += 1;
 
         public static int AddUnitByID(int id)
         {
@@ -14,7 +14,7 @@ namespace WarhammerArmyAssembler.Army
 
             unit.ArmyID = GetNextIndex();
 
-            Army.Data.Units.Add(unit.ArmyID, unit);
+            Data.Units.Add(unit.ArmyID, unit);
 
             Unit mount = ArmyBook.Data.Mounts.Values.Where(x => x.Name == unit.MountInit).FirstOrDefault();
 
@@ -23,13 +23,13 @@ namespace WarhammerArmyAssembler.Army
 
             Unit newMount = mount.Clone();
 
-            if (Army.Data.Units[unit.ArmyID].Chariot > 0)
-                newMount.Size = Army.Data.Units[unit.ArmyID].Chariot;
+            if (Data.Units[unit.ArmyID].Chariot > 0)
+                newMount.Size = Data.Units[unit.ArmyID].Chariot;
 
             int newMountID = GetNextIndex();
-            Army.Data.Units[unit.ArmyID].MountOn = newMountID;
+            Data.Units[unit.ArmyID].MountOn = newMountID;
             newMount.ArmyID = newMountID;
-            Army.Data.Units.Add(newMountID, newMount);
+            Data.Units.Add(newMountID, newMount);
 
             return unit.ArmyID;
         }
@@ -39,11 +39,11 @@ namespace WarhammerArmyAssembler.Army
             Unit mount = ArmyBook.Data.Mounts[id].Clone();
 
             int newID = GetNextIndex();
-            Army.Data.Units[unit].MountOn = newID;
-            Army.Data.Units.Add(newID, mount);
+            Data.Units[unit].MountOn = newID;
+            Data.Units.Add(newID, mount);
         }
 
-        public static void DeleteAllUnits() => Army.Data.Units.Clear();
+        public static void DeleteAllUnits() => Data.Units.Clear();
 
         public static void DeleteUnitByID(int id)
         {
@@ -51,7 +51,7 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (KeyValuePair<int, Unit> entry in Army.Data.Units.Where(x => x.Value.MountOn == id))
             {
-                foreach (Option option in entry.Value.Options.Where(x => x.Name == Army.Data.Units[id].Name))
+                foreach (Option option in entry.Value.Options.Where(x => x.Name == Data.Units[id].Name))
                     option.Realised = false;
 
                 entry.Value.MountOn = 0;
@@ -60,13 +60,13 @@ namespace WarhammerArmyAssembler.Army
                     removeUnitAlso = entry.Key;
             }
 
-            foreach (Option option in Army.Data.Units[id].Options.Where(x => x.IsMagicItem()))
+            foreach (Option option in Data.Units[id].Options.Where(x => x.IsMagicItem()))
                 Interface.Mod.SetArtefactAlreadyUsed(option.ID, false);
 
             if (removeUnitAlso != null)
-                Army.Data.Units.Remove((int)removeUnitAlso);
+                Data.Units.Remove((int)removeUnitAlso);
 
-            Army.Data.Units.Remove(id);
+            Data.Units.Remove(id);
 
             ChangeGeneralIfNeed();
         }
@@ -76,7 +76,7 @@ namespace WarhammerArmyAssembler.Army
             int maxLeadership = 0;
             int maxLeadershipOwner = -1;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            foreach (KeyValuePair<int, Unit> entry in Data.Units)
             {
                 if (entry.Value.ArmyGeneral)
                     entry.Value.ArmyGeneral = false;
@@ -107,9 +107,9 @@ namespace WarhammerArmyAssembler.Army
 
             if (maxLeadershipOwner >= 0)
             {
-                Army.Data.Units[maxLeadershipOwner].ArmyGeneral = true;
+                Data.Units[maxLeadershipOwner].ArmyGeneral = true;
 
-                bool newGeneralIsDemon = (Army.Data.Units[maxLeadershipOwner].GetGroup() == "Demonic");
+                bool newGeneralIsDemon = (Data.Units[maxLeadershipOwner].GetGroup() == "Demonic");
                 bool generalIsDaemon = newGeneralIsDemon && !ArmyBook.Data.DemonicAlreadyReplaced;
                 bool generalIsNotDaemon = !newGeneralIsDemon && ArmyBook.Data.DemonicAlreadyReplaced;
 
@@ -153,7 +153,7 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (int i in new List<int> { 1, 2 })
             {
-                foreach (Unit entry in Army.Data.Units.Values)
+                foreach (Unit entry in Data.Units.Values)
                     entry.Type = ChangeUnitType(entry.Type);
 
                 foreach (Unit entry in ArmyBook.Data.Units.Values)
