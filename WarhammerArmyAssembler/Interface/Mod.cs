@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -13,11 +10,11 @@ namespace WarhammerArmyAssembler.Interface
     {
         public delegate void ShowSomething();
 
-        public static void SetArmyGridAltColor(Brush color) => Interface.Changes.main.ArmyGrid.AlternatingRowBackground = color;
+        public static void SetArmyGridAltColor(Brush color) => Changes.main.ArmyGrid.AlternatingRowBackground = color;
 
         public static void SetArtefactAlreadyUsed(int id, bool value)
         {
-            foreach (Object group in Interface.Changes.main.ArmyList.Items)
+            foreach (Object group in Changes.main.ArmyList.Items)
             {
                 if (!(group is Option))
                     continue;
@@ -37,9 +34,9 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void UnitTestClose()
         {
-            Interface.Changes.unitTestIsOpen = false;
-            Interface.Changes.main.UpdateLayout();
-            Interface.Changes.main.mainGrid.Width = Interface.Changes.main.ActualWidth;
+            Changes.unitTestIsOpen = false;
+            Changes.main.UpdateLayout();
+            Changes.main.mainGrid.Width = Changes.main.ActualWidth;
         }
 
         public static void View(Canvas canvasToShow = null, bool top = false, bool left = false, bool right = false)
@@ -50,8 +47,8 @@ namespace WarhammerArmyAssembler.Interface
 
                 List<Canvas> canvases = new List<Canvas>
                 {
-                    Interface.Changes.main.mainMenu,
-                    Interface.Changes.main.errorDetail,
+                    Changes.main.mainMenu,
+                    Changes.main.errorDetail,
                 };
 
                 foreach (Canvas canvas in canvases)
@@ -60,15 +57,15 @@ namespace WarhammerArmyAssembler.Interface
 
             if (left)
             {
-                Interface.Changes.main.armybookDetail.Visibility = Visibility.Visible;
-                Interface.Changes.main.armyUnitTestScroll.Visibility = Visibility.Hidden;
+                Changes.main.armybookDetail.Visibility = Visibility.Visible;
+                Changes.main.armyUnitTestScroll.Visibility = Visibility.Hidden;
             }
 
             if (right)
             {
-                Interface.Changes.unitTestIsOpen = true;
-                Interface.Changes.main.armybookDetail.Visibility = Visibility.Hidden;
-                Interface.Changes.main.armyUnitTestScroll.Visibility = Visibility.Visible;
+                Changes.unitTestIsOpen = true;
+                Changes.main.armybookDetail.Visibility = Visibility.Hidden;
+                Changes.main.armyUnitTestScroll.Visibility = Visibility.Visible;
             }
         }
     }
