@@ -74,28 +74,28 @@ namespace WarhammerArmyAssembler.Test
             bool roundFormat = ((context == ContextType.Hit) || (context == ContextType.Wound));
 
             string newLine = (testCount >= 1 ? "\n" : "\n\n");
-            Test.Data.Console(Test.Data.text, (roundFormat ? " --> " : newLine) + "{0} must pass {1} test ", unit.Name, param);
+            Data.Console(Data.text, (roundFormat ? " --> " : newLine) + "{0} must pass {1} test ", unit.Name, param);
 
             int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
             int diceNum = ((param == "Leadership") ? 2 : 1);
 
-            if (Test.Dice.Roll(unit, param, opponent, paramValue, diceNum, paramTest: true))
-                Test.Data.Console(Test.Data.goodText, " --> passed");
+            if (Dice.Roll(unit, param, opponent, paramValue, diceNum, paramTest: true))
+                Data.Console(Data.goodText, " --> passed");
             else
                 switch (test)
                 {
                     case TestType.Pass:
-                        Test.Data.Console(Test.Data.badText, " --> pass this round");
+                        Data.Console(Data.badText, " --> pass this round");
                         unit.PassThisRound = true;
                         break;
 
                     case TestType.Wound:
-                        Test.Data.Console(Test.Data.badText, " --> WOUND");
+                        Data.Console(Data.badText, " --> WOUND");
                         unit.Wounds.Value -= 1;
                         break;
 
                     case TestType.Death:
-                        Test.Data.Console(Test.Data.badText, " --> SLAIN");
+                        Data.Console(Data.badText, " --> SLAIN");
                         unit.Wounds.Value = 0;
                         unit.WoundedWithKillingBlow = true;
                         break;
