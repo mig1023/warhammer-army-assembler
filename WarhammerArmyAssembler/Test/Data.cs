@@ -33,23 +33,23 @@ namespace WarhammerArmyAssembler.Test
             {
                 int size = (Army.Data.Units[unit.ArmyID].Chariot > 0 ? Army.Data.Units[unit.ArmyID].Chariot : Data.unit.Size);
 
-                Test.Data.unitMount = Army.Data.Units[unit.MountOn]
+                Data.unitMount = Army.Data.Units[unit.MountOn]
                     .Clone()
                     .GetOptionRules(directModification: true)
                     .GetUnitMultiplier(size);
             }
             else
-                Test.Data.unitMount = null;
+                Data.unitMount = null;
         }
 
         public static void PrepareEnemy(string enemyName)
         {
-            Test.Data.enemy = Enemy.GetByName(enemyName).Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+            Data.enemy = Enemy.GetByName(enemyName).Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
             if (enemy.Mount != null)
-                Test.Data.enemyMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+                Data.enemyMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
             else
-                Test.Data.enemyMount = null;
+                Data.enemyMount = null;
         }
 
         public static void Console(Brush color, string line) => Interface.TestUnit.LineToConsole(line, color);
