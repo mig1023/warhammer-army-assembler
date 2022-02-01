@@ -9,10 +9,10 @@ namespace WarhammerArmyAssembler.Export
     {
         public static string SaveArmy()
         {
-            string fileName = Export.Services.GetFileName("txt");
+            string fileName = Services.GetFileName("txt");
 
-            Add(fileName, Export.Services.AllArmyName());
-            Add(fileName, Export.Services.AllArmyPointsAndEdition());
+            Add(fileName, Services.AllArmyName());
+            Add(fileName, Services.AllArmyPointsAndEdition());
             Add(fileName);
 
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
@@ -23,15 +23,20 @@ namespace WarhammerArmyAssembler.Export
                     string equipmentLine = unit.GetEquipmentLine();
 
                     Add(fileName, String.Format("{0}{1}{2}{3}{4}",
-                        Export.Services.UnitSizeIfNeed(unit), unit.Name, Export.Services.UnitPointsLine(unit), 
+                        Services.UnitSizeIfNeed(unit), unit.Name, Services.UnitPointsLine(unit), 
                         (String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": "),
                         equipmentLine));
                 }
 
             Add(fileName);
 
+            double points = Army.Params.GetArmyPoints();
+            int size = Army.Params.GetArmySize();
+            int cast = Army.Params.GetArmyCast();
+            int dispell = Army.Params.GetArmyDispell();
+
             Add(fileName, String.Format("Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
-                Army.Params.GetArmyPoints(), Army.Params.GetArmySize(), Army.Params.GetArmyCast(), Army.Params.GetArmyDispell()));
+                points, size, cast, dispell));
 
             System.Diagnostics.Process.Start(fileName);
 
