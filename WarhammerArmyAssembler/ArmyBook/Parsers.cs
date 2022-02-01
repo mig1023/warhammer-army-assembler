@@ -76,15 +76,16 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode["Countable"] == null)
                 return null;
 
-            Countable countable = new Countable();
-
-            countable.Min = IntParse(xmlNode["Min"]);
-            countable.Max = IntParse(xmlNode["Max"]);
-            countable.Value = IntParse(xmlNode["Value"]);
-            countable.Nullable = BoolParse(xmlNode["Nullable"]);
-            countable.ExportToUnitSize = BoolParse(xmlNode["ExportToUnitSize"]);
-            countable.ExportToWizardLevel = BoolParse(xmlNode["ExportToWizardLevel"]);
-
+            Countable countable = new Countable
+            {
+                Min = IntParse(xmlNode["Min"]),
+                Max = IntParse(xmlNode["Max"]),
+                Value = IntParse(xmlNode["Value"]),
+                Nullable = BoolParse(xmlNode["Nullable"]),
+                ExportToUnitSize = BoolParse(xmlNode["ExportToUnitSize"]),
+                ExportToWizardLevel = BoolParse(xmlNode["ExportToWizardLevel"]),
+            };
+            
             if (xmlNode["MaxDependency"] != null)
             {
                 if (xmlNode["MaxDependency"].Attributes["Dependency"] != null)
