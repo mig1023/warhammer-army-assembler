@@ -32,6 +32,9 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static Brush LoadColor(XmlDocument xmlFile, string node) =>
             Interface.Services.BrushFromXml(Services.Intro(xmlFile, String.Format("Colors/{0}", node)));
 
+        private static string LoadStyle(XmlDocument xmlFile, string node, string defaultValue) =>
+            xmlFile.SelectSingleNode(String.Format("ArmyBook/Style/{0}", node))?.InnerText ?? defaultValue;
+
         public static void LoadArmy(string xmlFileName)
         {
             Data.Magic.Clear();
@@ -85,9 +88,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Data.Magic.Add(spellName, spellDifficulty);
             }
 
-            XmlNode styleBook = xmlFile.SelectSingleNode("ArmyBook/Style");
-            Data.AddStyle = styleBook?.Attributes["Add"]?.Value ?? "add";
-            Data.DropStyle = styleBook?.Attributes["Drop"]?.Value ?? "drop";
+            Data.AddStyle = LoadStyle(xmlFile, "Add", defaultValue: "add");
+            Data.DropStyle = LoadStyle(xmlFile, "Drop", defaultValue: "drop");
 
             Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
