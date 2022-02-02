@@ -33,7 +33,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             Interface.Services.BrushFromXml(Services.Intro(xmlFile, String.Format("Colors/{0}", node)));
 
         private static string LoadStyle(XmlDocument xmlFile, string node, string defaultValue) =>
-            xmlFile.SelectSingleNode(String.Format("ArmyBook/Style/{0}", node))?.InnerText ?? defaultValue;
+            xmlFile.SelectSingleNode(String.Format(
+                "ArmyBook/Styles/Style[@Name='{0}']", node))?.Attributes["Value"].Value ?? defaultValue;
 
         public static void LoadArmy(string xmlFileName)
         {
