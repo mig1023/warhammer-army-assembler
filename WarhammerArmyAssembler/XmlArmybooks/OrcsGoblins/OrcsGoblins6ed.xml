@@ -16,11 +16,16 @@
 			<Tooltip>#dafbce</Tooltip>
 			<Modified>#a6bba6,#88a488,#799979</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="Add" Value="dis iz mine!"/>
+			<Style Name="Drop" Value="ta hell dis!"/>
+			<Style Name="MagicItems" Value="Shiny stuff"/>
+		</Styles>
 		<Description>The Greenskins are a highly primitive and warlike race of bestial humanoid barbarians and raiders that occupy much of the Eastern Hemisphere of the Warhammer World. The term "Greenskins" is a common collective description used by many civilised nations to refer to the forces of the Orcs and Goblins and other biologically related races. The broadest division is between the Orcs, who are strong, brutish, and savage warriors, and the Goblins, who are smaller and weaker, but cunning and conniving creatures.||The Greenskins are considered by many to be the scourge of all civilisation. These tribal warriors are extremely violent, raiding ceaselessly, carrying war and barbarism to all corners of the known world. Time and again, hordes of Greenskins would arise without warning and lay a great swath of destruction that has no direction or purpose other than simple violence. Indeed, the Greenskin race's single motive is violence, an ever increasing mass of warfare that has the potential to dominate and cover the entire world in a seething green tide.</Description>
 		<Released>2000</Released>
 		<Authors>Rick Priestly and Jake Thornton</Authors>
 	</Introduction>
-	<Magic Name = "Spells of the Big Waaagh!">
+	<Magic Name="Spells of the Big Waaagh!">
 		<Spell Name="Mork save us!" Difficulty="5"/>
 		<Spell Name="Gork'll fix it" Difficulty="6"/>
 		<Spell Name="Bash 'em ladz" Difficulty="7"/>
@@ -28,12 +33,8 @@
 		<Spell Name="Gork's warpath" Difficulty="10"/>
 		<Spell Name="Waaagh!" Difficulty="12"/>
 	</Magic>
-	<Styles>
-		<Style Name="Add" Value="dis iz mine!"/>
-		<Style Name="Drop" Value="ta hell dis!"/>
-	</Styles>
 	<Artefacts>
-		<Group Name = "Common magic items">
+		<Group Name="Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -105,7 +106,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic weapons">
+		<Group Name="Magic weapons">
 			<Artefact>
 				<Name>Battleaxe of the Last WAAAGH!</Name>
 				<Type>Weapon</Type>
@@ -187,7 +188,7 @@
 				<Description>Wollopa's One Hit Wunda provides it user with +3S... but it only works once in the game. The player can decide to use the weapon after hits have been scored but before rolling for wounds. The +3S bonus applies to one hit that has been scored by the bearer that turn. Any other hits scored by the bearer are at normal Strength.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic armour">
+		<Group Name="Magic armour">
 			<Artefact>
 				<Name>Armour of Protectyness</Name>
 				<Type>Armour</Type>
@@ -246,7 +247,7 @@
 				<Description>Gives the wearer a 6+ armour save and may be worn in addition to normal armour. Also gives the wearer a 6+ Ward save.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismans">
+		<Group Name="Talismans">
 			<Artefact>
 				<Name>Sizzla's Shiny Baubles</Name>
 				<Type>AdditionalArmour</Type>
@@ -283,7 +284,7 @@
 				<Description>Monsters and mounts of any size must pass a Leadership test (on their own Leadership characteristic) to attack the wearer. If they fail, they may choose to attack another model instead. Roll once each close combat round.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Arcane items">
+		<Group Name="Arcane items">
 			<Artefact>
 				<Name>Staff of Baduumm</Name>
 				<Type>Arcane</Type>
@@ -328,7 +329,7 @@
 				<Description>Once per battle, in a friendly Magic phase, the bearer may steal one dice from his opponent's Dispel pile and add it to his own Power dice pile (whatever colour the dice previously was, it now turns green).</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Enchanted itams">
+		<Group Name="Enchanted itams">
 			<Artefact>
 				<Name>Warboss Imbad's Iron Gnashas</Name>
 				<Type>Weapon</Type>
@@ -386,7 +387,7 @@
 				<Description>Bound spell, power level 3: the 'Itty Ring may cast its Bound spell once per Magic phase like an ordinary spell. The spell require no Power dice to cast, all the power required is provided by the ring itself. The 'Itty Ring contains the 'Eadbutt spell.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic standards">
+		<Group Name="Magic standards">
 			<Artefact>
 				<Name>Mork's Spirit-Totem</Name>
 				<Type>Banner</Type>
