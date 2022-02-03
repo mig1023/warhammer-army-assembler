@@ -16,11 +16,14 @@
 			<Tooltip>#c9dcba</Tooltip>
 			<Modified>#757b6f,#464f3f,#2f3927</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="MagicItems" Value="The Black Art"/>
+		</Styles>
 		<Description>The Vampire Counts are amongst the most legendary factions of Vampires to have ever terrorised the civilised lands of the Old World, all of whom are members of the unholy Von Carstein bloodline. From the Imperial government and the patriotic citizenry of the Empire, the Vampire Counts are considered by many to be fiends without equal. They seek only to topple the civilisations of the living and supplant them with an Undead Empire that will reign forever as Lords of the Night. The Vampire Counts are powerful necromancers as well as warriors, given supernatural enhancements to their strength, cunning, beauty, and ambition. However, these vampires, for all their power and cunning, are ultimately base, selfish creatures driven by the same motivations as the mortals they deem themselves superior to. They are remorseless in their advance, killing without thought of mercy or compassion, and whose motives are entirely based on their own selfish desires. For all their refinement, these vampires are nothing but rotting corpses held together by Dark Magic and the horrific consumption of mortal blood.</Description>
 		<Released>2001</Released>
 		<Authors>Alessio Cavatore</Authors>
 	</Introduction>
-	<Magic Name = "The Black Art">
+	<Magic Name="The Black Art">
 		<Spell Name="Invocation of Nehek" Difficulty="3"/>
 		<Spell Name="Hand of Dust" Difficulty="7"/>
 		<Spell Name="Hellish Vigour" Difficulty="7"/>
@@ -29,7 +32,7 @@
 		<Spell Name="Curse of Years" Difficulty="10"/>
 	</Magic>
 	<Artefacts>
-		<Group Name = "Von Carstein">
+		<Group Name="Von Carstein">
 			<Artefact>
 				<Name>Summon Bats</Name>
 				<Type>Weapon</Type>
@@ -91,7 +94,7 @@
 				<Description>The Movement of the Vampire is increased to 9 as long as he is moving on foot</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Blood Dragon">
+		<Group Name="Blood Dragon">
 			<Artefact>
 				<Name>Red Fury</Name>
 				<Type>Weapon</Type>
@@ -153,7 +156,7 @@
 				<Description>At the start of a challenge, the enemy character selected to take on the Vampire must take a Leadership test before any blows are struck (a character Immune to Psychology is also immune to this effect). If the test is failed, the enemy character will change his mind and hide in the rear ranks, refusing to fight the Vampire. Then the combat will proceed as normal, with no challenges fought that turn and the Vampire will be free to fight against any models he is in contact with.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Necrarch">
+		<Group Name="Necrarch">
 			<Artefact>
 				<Name>Nehekhara's Noble Blood</Name>
 				<Type>Weapon</Type>
@@ -217,7 +220,7 @@
 				<Description>The Vampire knows one more spell than he is normally allowed. This does not increase his Magic Level.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Strigoi">
+		<Group Name="Strigoi">
 			<Artefact>
 				<Name>Curse of the Revenant</Name>
 				<Type>Weapon</Type>
@@ -279,7 +282,7 @@
 				<Description>The Vampire has +1 Strength on his profile.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Lahmia">
+		<Group Name="Lahmia">
 			<Artefact>
 				<Name>Seduction</Name>
 				<Type>Weapon</Type>
@@ -341,7 +344,7 @@
 				<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack the Vampire in that the Close Combat phase.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Common magic items">
+		<Group Name="Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -413,7 +416,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic weapons">
+		<Group Name="Magic weapons">
 			<Artefact>
 				<Name>Frostblade</Name>
 				<Type>Weapon</Type>
@@ -474,7 +477,7 @@
 				<Description>This sword scores a Killing Blow on the result of a 5+.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic armour">
+		<Group Name="Magic armour">
 			<Artefact>
 				<Name>Wailing Helm</Name>
 				<Type>AdditionalArmour</Type>
@@ -514,7 +517,7 @@
 				<Description>Gives a 6+ armour save and may be combined with other equipment normally. One enemy in base contact (bearer's choice) lose 1 Attack. All Bretonnian Knights and Characters hate the model carrying the shield.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismans">
+		<Group Name="Talismans">
 			<Artefact>
 				<Name>The Carstein Ring</Name>
 				<Type>AdditionalArmour</Type>
@@ -566,7 +569,7 @@
 				<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Arcane items">	
+		<Group Name="Arcane items">	
 			<Artefact>
 				<Name>Power Familiar</Name>
 				<Type>Arcane</Type>
@@ -628,7 +631,7 @@
 				<Description>The familiar's owner knows one more spell than he is normally allowed. This does not increase his magic level.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Enchanted items">
+		<Group Name="Enchanted items">
 			<Artefact>
 				<Name>Rod of Flaming Death</Name>
 				<Type>Weapon</Type>
@@ -666,7 +669,7 @@
 				<Description>Bound spell, power level 4. One use only. The Casket may cast the spell once during the battle. The spell requires no Power dice to cast; all the power required is provided by the Casket itself. When the Casket's spell is cast, a model in base contact with the bearer (chosen by the bearer) suffers one wound. No armour save is allowed. If the wound is not saved, the victim must also take a Toughness test or die immediately, with no saves allowed whatsoever, not even Ward saves.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic standards">
+		<Group Name="Magic standards">
 			<Artefact>
 				<Name>Hell Banner</Name>
 				<Type>Banner</Type>
