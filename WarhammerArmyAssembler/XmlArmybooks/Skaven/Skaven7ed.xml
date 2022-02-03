@@ -16,11 +16,16 @@
 			<Tooltip>#eec79e</Tooltip>
 			<Modified>#b4916e,#9b6d3e,#8f5b26</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="Add" Value="add-add"/>
+			<Style Name="Drop" Value="drop-drop"/>
+			<Style Name="MagicItems" Value="Tools of Supremacy"/>
+		</Styles>
 		<Description>The Skaven, sometimes known as the Ratmen, the Ratkin or the Children of the Horned Rat, are a malevolent and diabolical race of large humanoid rat-creatures that inhabit a massive inter-continental underground empire known in their tongue simply as the Under-Empire, where at the very heart of Skavendom lies the horrific city of Skavenblight, the species capital city and the probable birthplace of the Skaven race. The Skaven as a whole are a cruel, treacherous, and highly numerous species that have since spread their loathsome corruption to the farthest corners of the Warhammer World. From deep below the earth, these scavengers have built a vast Empire, whose military power and incomprehensible numbers have the potential to smother the kingdoms of the Old World in a seething tide of violence and anarchy. It is believed by all of Skaven-kind that the world is destined to be theirs, for they consider themselves the Supreme Master Race, undeniably superior in every way to all the other races of the World.</Description>
 		<Released>2007</Released>
 		<Authors>Jeremy Vetock</Authors>
 	</Introduction>
-	<Magic Name = "Skaven Magic">
+	<Magic Name="Skaven Magic">
 		<Spell Name="Skitterleap" Difficulty="5"/>
 		<Spell Name="Warp Lightning" Difficulty="6"/>
 		<Spell Name="Howling Warpgale" Difficulty="7"/>
@@ -28,12 +33,8 @@
 		<Spell Name="Scorch" Difficulty="10"/>
 		<Spell Name="Cracks Call" Difficulty="11"/>
 	</Magic>
-	<Styles>
-		<Style Name="Add" Value="add-add"/>
-		<Style Name="Drop" Value="drop-drop"/>
-	</Styles>
 	<Artefacts>
-		<Group Name = "Common magic items">
+		<Group Name="Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -105,7 +106,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic weapons">
+		<Group Name="Magic weapons">
 			<Artefact>
 				<Name>The Fellblade</Name>
 				<Type>Weapon</Type>
@@ -165,7 +166,7 @@
 				<Description>Enemy lose 1 point of Toughness for each unsaved wound they suffer from this blade. Any model reduced to Toughness 0 is removed as a casualty.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic armour">
+		<Group Name="Magic armour">
 			<Artefact>
 				<Name>Warpstone Armour</Name>
 				<Type>Armour</Type>
@@ -191,7 +192,7 @@
 				<Description>Any models in base contact wishing to strike the bearer of this shield suffer -1 Attack, to a minimum of 1.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismans">
+		<Group Name="Talismans">
 			<Artefact>
 				<Name>Foul Pendant</Name>
 				<Type>AdditionalArmour</Type>
@@ -214,7 +215,7 @@
 				<Description>One use only. A Skaven model wearing a Rival Hide Talisman can make a single enemy model in base contact re-roll all its successful To Hit dice rolls.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Arcane items">
+		<Group Name="Arcane items">
 			<Artefact>
 				<Name>Warpstorm Scroll</Name>
 				<Type>Arcane</Type>
@@ -245,7 +246,7 @@
 				<Description>Multiple Grey Seers and Warlock Engineers may purchase as many Warpstone Tokens as are allowed within the limit of points they are able to spend on magic items. Warpstone Tokens do not count against the total Arcane items a model is allowed to bear.|A Grey Seer or Clan Skryre Warlock may choose to eat some warpstone to boost his powers. Before casting a spell announce which model is eating Warpstone Tokens. For each token consumed, a Wizard can add a single dice to his casting effort. These dice are added to the normal power dice, although this does allow users to roll more dice than is normally allowed by their level. A spell may be cast entirely with warpstone.|For any of the warpstone generated dice that rolls a one the Wizard suffers a wound with no armour saves allowed. The results of miscasts or irresistible force apply as normal. When using both normal power dice and Warpstone Token generated dice it is a good idea to roll separately or use dice of a different colour (green-tinged ones work best!).</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Enchanted itams">
+		<Group Name="Enchanted itams">
 			<Artefact>
 				<Name>Skavenbrew</Name>
 				<Type>Weapon</Type>
@@ -275,7 +276,7 @@
 				<Description>Any enemy unit in base contact with the model bearing Portents of Verminous Doom suffers a -1 penalty to its Leadership for as long as they remain in contact.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Clan Eshin tools of war">
+		<Group Name="Clan Eshin tools of war">
 			<Artefact>
 				<Name>Warpstone stars</Name>
 				<Type>Weapon</Type>
@@ -301,7 +302,7 @@
 				<Description>One use only. If a character equipped with Smoke-Bombs is forced to flee he can choose to smash the bombs underfoot to slow the victors as they pursue. Before any dice are rolled announce the Smoke Bombs are being detonated. All pursuing units in the combat must roll 1D6 less than normal.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Clan Skryre gear of war">
+		<Group Name="Clan Skryre gear of war">
 			<Artefact>
 				<Name>Brass Orb</Name>
 				<Type>Weapon</Type>
@@ -335,7 +336,7 @@
 				<Description>A Warlock Engineer equipped with Warlock Optics adds +1 to his Ballistic Skill. Additionally, a model so equipped can see partially see through objects and so suffers no penalty for shooting at targets in cover.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Clan Pestilens befouled items">
+		<Group Name="Clan Pestilens befouled items">
 			<Artefact>
 				<Name>Warp Scroll</Name>
 				<Type>Weapon</Type>
@@ -353,7 +354,7 @@
 				<Description>One use only. Once per game in any Close Combat phase the Plague Banner may be activated. For the remainder of the phase all Plague Monk models in the unit may re-roll failed To Hit rolls and failed To Wound rolls.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Clan Moulder beast-prods">
+		<Group Name="Clan Moulder beast-prods">
 			<Artefact>
 				<Name>Shock-Prod</Name>
 				<Type>Weapon</Type>
@@ -371,7 +372,7 @@
 				<Description>This weapon follows the rules for whips but confers D3 Attacks instead of the normal 1 when in base contact and from the rear ranks. Roll to determine the number of Attacks each combat.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic standards">
+		<Group Name="Magic standards">
 			<Artefact>
 				<Name>Sacred Banner of the Horned Rat</Name>
 				<Type>Banner</Type>
