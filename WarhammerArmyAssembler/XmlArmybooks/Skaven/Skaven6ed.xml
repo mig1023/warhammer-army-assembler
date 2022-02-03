@@ -16,11 +16,16 @@
 			<Tooltip>#fbdab8</Tooltip>
 			<Modified>#c19a72,#ad7843,#a3672c</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="Add" Value="add-add"/>
+			<Style Name="Drop" Value="drop-drop"/>
+			<Style Name="MagicItems" Value="Tools of Supremacy"/>
+		</Styles>
 		<Description>The Skaven, sometimes known as the Ratmen, the Ratkin or the Children of the Horned Rat, are a malevolent and diabolical race of large humanoid rat-creatures that inhabit a massive inter-continental underground empire known in their tongue simply as the Under-Empire, where at the very heart of Skavendom lies the horrific city of Skavenblight, the species capital city and the probable birthplace of the Skaven race. The Skaven as a whole are a cruel, treacherous, and highly numerous species that have since spread their loathsome corruption to the farthest corners of the Warhammer World. From deep below the earth, these scavengers have built a vast Empire, whose military power and incomprehensible numbers have the potential to smother the kingdoms of the Old World in a seething tide of violence and anarchy. It is believed by all of Skaven-kind that the world is destined to be theirs, for they consider themselves the Supreme Master Race, undeniably superior in every way to all the other races of the World.</Description>
 		<Released>2006</Released>
 		<Authors>Alessio Cavatore and Anthony Reynolds</Authors>
 	</Introduction>
-	<Magic Name = "Skaven Spell List">
+	<Magic Name="Skaven Spell List">
 		<Spell Name="Skitterleap" Difficulty="4"/>
 		<Spell Name="Warp Lightning" Difficulty="5"/>
 		<Spell Name="Vermintide" Difficulty="7"/>
@@ -28,12 +33,8 @@
 		<Spell Name="Death Frenzy" Difficulty="9"/>
 		<Spell Name="Plague" Difficulty="13"/>
 	</Magic>
-	<Styles>
-		<Style Name="Add" Value="add-add"/>
-		<Style Name="Drop" Value="drop-drop"/>
-	</Styles>
 	<Artefacts>
-		<Group Name = "Common magic items">
+		<Group Name="Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -105,7 +106,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic weapons">
+		<Group Name="Magic weapons">
 			<Artefact>
 				<Name>The Fellblade</Name>
 				<Type>Weapon</Type>
@@ -214,7 +215,7 @@
 				<Description>This weapon requires two hands to use and comers the Killing Blow special ability.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic armour">
+		<Group Name="Magic armour">
 			<Artefact>
 				<Name>Rust Armour</Name>
 				<Type>Armour</Type>
@@ -240,7 +241,7 @@
 				<Description>Gives a 6+ armour save rhat can he combined with other armour as normal. The bearer can force one model in base contact to lose 1 Attack (he can choose which Attack in the case of opponents with different Attacks, such as cavalry models).||In addition, the model can decide not to attack at all, but to wield the shield with jwo hands and concentrate on defence. If he decides to do this, the chosen enemy will lose 2 Attacks. The player must declare which way the shield will be used at the beginning of each Close Combat phase, before any side strikes blows.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismans">
+		<Group Name="Talismans">
 			<Artefact>
 				<Name>Twisted Crown of the Horned Rat</Name>
 				<Type>AdditionalArmour</Type>
@@ -279,7 +280,7 @@
 				<Description>The bearer and the unit he is with have Magic Resistance (1). Also, when a spell, magic item or any other scrying magic would force the Skaven player to reveal magic items or any other 'hidden' presence in the unit, the Skaven player must only reveal the presence of this ring. Everything else remains hidden.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Enchanted itams">
+		<Group Name="Enchanted itams">
 			<Artefact>
 				<Name>Cloak of Shadows</Name>
 				<Type>AdditionalArmour</Type>
@@ -335,7 +336,7 @@
 				<Description>This item allows its bearer to re-roll any single dice roll once during the game. This can even be used to effectively cancel a Miscast or cause Irresistible-Poire.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Arcane items">
+		<Group Name="Arcane items">
 			<Artefact>
 				<Name>Warpstorm Scroll</Name>
 				<Type>Arcane</Type>
@@ -372,7 +373,7 @@
 				<Description>In a similar way to scrolls, all Skaven wizards in the army can buy as many Warpstone tokens as they can afford within the limit of the points they can spend on magic items. Buying one or more tokens does not count taking Arcane item.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic standards">
+		<Group Name="Magic standards">
 			<Artefact>
 				<Name>Storm Banner</Name>
 				<Type>Banner</Type>
