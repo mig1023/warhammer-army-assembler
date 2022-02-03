@@ -34,7 +34,14 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static string LoadStyle(XmlDocument xmlFile, string node, string defaultValue) =>
             xmlFile.SelectSingleNode(String.Format(
-                "ArmyBook/Styles/Style[@Name='{0}']", node))?.Attributes["Value"].Value ?? defaultValue;
+                "ArmyBook/Introduction/Styles/Style[@Name='{0}']", node))?.Attributes["Value"].Value ?? defaultValue;
+
+        private static void LoadStyles(XmlDocument xmlFile)
+        {
+            Data.AddStyle = LoadStyle(xmlFile, "Add", defaultValue: "add");
+            Data.DropStyle = LoadStyle(xmlFile, "Drop", defaultValue: "drop");
+            Data.MagicItemsStyle = LoadStyle(xmlFile, "MagicItems", defaultValue: "MAGIC ITEMS").ToUpper();
+        }
 
         public static void LoadArmy(string xmlFileName)
         {
@@ -63,6 +70,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
+            LoadStyles(xmlFile);
+
             LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref Data.Mounts);
@@ -88,10 +97,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 Data.Magic.Add(spellName, spellDifficulty);
             }
-
-            Data.AddStyle = LoadStyle(xmlFile, "Add", defaultValue: "add");
-            Data.DropStyle = LoadStyle(xmlFile, "Drop", defaultValue: "drop");
-
+           
             Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
         }

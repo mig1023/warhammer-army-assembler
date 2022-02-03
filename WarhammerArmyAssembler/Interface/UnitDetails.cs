@@ -40,7 +40,7 @@ namespace WarhammerArmyAssembler.Interface
         {
             Unit unit = Army.Data.Units[unitID];
 
-            if (head == "MAGIC ITEMS")
+            if (head == ArmyBook.Data.MagicItemsStyle)
                 return String.Format("{0} / {1}", unit.MagicPointsAlreadyUsed(), unit.GetUnitMagicPoints());
 
             if ((head == Army.Params.MagicPowersName()) && (unit.MagicPowersCount > 0))
@@ -59,7 +59,8 @@ namespace WarhammerArmyAssembler.Interface
                 margins[1] += 10;
 
             margins = CheckColumn(margins, ref lastColumnMaxWidth, header: true, newColumn: notFirstColumn);
-            margins[1] += AddLabel(head, margins, 25, ref lastColumnMaxWidth, bold: true, addLine: GetMagicPointsString(unitID, head), fixPadding: 10);
+            margins[1] += AddLabel(head, margins, 25, ref lastColumnMaxWidth, bold: true, addLine:
+                GetMagicPointsString(unitID, head), fixPadding: 10);
 
             int mountAlreadyOn = (unit.MountOn > 0 ? unit.GetMountOption() : 0);
 
@@ -80,7 +81,7 @@ namespace WarhammerArmyAssembler.Interface
                 bool magicItemsPointsExists = unit.Options.Where(x => x.MagicItemsPoints).Count() > 0;
                 bool magicPowersDontExists = !unit.ExistsMagicPowers() && (head == Army.Params.MagicPowersName());
 
-                if ((!unit.ExistsMagicItems() && (head == "MAGIC ITEMS") && !magicItemsPointsExists) || magicPowersDontExists)
+                if ((!unit.ExistsMagicItems() && (head == ArmyBook.Data.MagicItemsStyle) && !magicItemsPointsExists) || magicPowersDontExists)
                 {
                     margins = CheckColumn(margins, ref lastColumnMaxWidth);
                     margins[1] += AddLabel("empty yet", margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
@@ -90,7 +91,7 @@ namespace WarhammerArmyAssembler.Interface
                 else
                     foreach (Option option in unit.Options)
                     {
-                        if (head == "OPTION" || head == "COMMAND" || head == "MAGIC ITEMS" || head == Army.Params.MagicPowersName())
+                        if (head == "OPTION" || head == "COMMAND" || head == ArmyBook.Data.MagicItemsStyle || head == Army.Params.MagicPowersName())
                         {
                             if (head == "OPTION" && (!option.IsOption() || option.FullCommand || option.MagicItemsPoints))
                                 continue;
@@ -98,7 +99,7 @@ namespace WarhammerArmyAssembler.Interface
                             if (head == "COMMAND" && !option.FullCommand)
                                 continue;
 
-                            if (head == "MAGIC ITEMS" && !option.MagicItemsPoints && (!option.IsMagicItem() || ((option.Points <= 0) && !option.Honours)))
+                            if (head == ArmyBook.Data.MagicItemsStyle && !option.MagicItemsPoints && (!option.IsMagicItem() || ((option.Points <= 0) && !option.Honours)))
                                 continue;
 
                             if (head == Army.Params.MagicPowersName() && !option.IsPowers())
@@ -180,7 +181,7 @@ namespace WarhammerArmyAssembler.Interface
                 margins = CreateColumn("COMMAND", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsMagicItems() || (Army.Data.Units[unitID].GetUnitMagicPoints() > 0))
-                margins = CreateColumn("MAGIC ITEMS", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+                margins = CreateColumn(ArmyBook.Data.MagicItemsStyle, margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if ((unit.GetUnitMagicPowersPoints() > 0) || (unit.GetMagicPowersCount() > 0))
                 margins = CreateColumn(Army.Params.MagicPowersName(), margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
@@ -293,7 +294,7 @@ namespace WarhammerArmyAssembler.Interface
                 Changes.main.unitDetail.Children.Add(optionPoints);
                 Changes.main.UpdateLayout();
 
-                actualWidth += optionPoints.ActualWidth - 5;
+                actualWidth += optionPoints.ActualWidth + 5;
             }
 
             if (captionLines.Length > 1)
