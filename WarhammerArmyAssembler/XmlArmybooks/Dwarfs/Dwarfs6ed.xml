@@ -16,13 +16,16 @@
 			<Tooltip>#fdf5e2</Tooltip>
 			<Modified>#ffeebd,#ffe28c,#ffda6b</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="MagicItems" Value="Runic Magic"/>
+		</Styles>
 		<Description>The Dwarfs, also called the "Elder Race" (or the Dawi as they call themselves) are one of the oldest and proudest intelligent races of the Warhammer World, with a great wealth of history and power that stretches back to time immemorial. They once held an empire which stretched from Norsca in the north to the jungles in the south, and from Mount Silverspear in the east to the Grey Mountains in the west. But the heart of the Dwarfen realm, the Karaz Ankor as they call it, will always lie within the domains of the Worlds Edge Mountains. The highest mountain range in the world, it is filled with the magnificent halls and holds of the Dwarfen people - a testament to the great feats of engineering and power once wielded by this ancient civilization.</Description>
 		<Released>2000</Released>
 		<Authors>Gav Thorpe and Alessio Cavatore</Authors>
 	</Introduction>
 	<Magic/>
 	<Artefacts>
-		<Group Name = "Weapons Runes">
+		<Group Name="Weapons Runes">
 			<Artefact>
 				<Name>Master Rune of Snorri Spangelhelm</Name>
 				<Type>Weapon</Type>
@@ -185,7 +188,7 @@
 				<Description>Flaming attacks. This can cause extra damage on some targets (such as Treemen, Mummies, etc).</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Armour Runes">
+		<Group Name="Armour Runes">
 			<Artefact>
 				<Name>Master Rune of Steel</Name>
 				<Type>AdditionalArmour</Type>
@@ -266,7 +269,7 @@
 				<Description>This rune adds +1 to the character's Armour save. The Rune of Stone is an exception to the normal Rule of Pride which forbids the same combination of runes to be used on several items, so a single Rune of Stone may be inscribed onto any character's armour. The Rune of Stone is also an exception in that it cannot be used more than once on the same item, so it is not possible to give two or three Runes of Stone to the same character.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Runic Standards">
+		<Group Name="Runic Standards">
 			<Artefact>
 				<Name>Master Rune of Valaya</Name>
 				<Type>Banner</Type>
@@ -363,7 +366,7 @@
 				<SpecialRule>+3 dice to any dispel attempt against enemy spells cast against the unit</SpecialRule>
 			</Artefact>
 		</Group>
-		<Group Name = "Engineering Runes">
+		<Group Name="Engineering Runes">
 			<Artefact>
 				<Name>Master Rune of Defence</Name>
 				<Type>AdditionalArmour</Type>
@@ -530,7 +533,7 @@
 				<Description>The war engine makes flaming attacks.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismanic Runes">
+		<Group Name="Talismanic Runes">
 			<Artefact>
 				<Name>Master Rune of Kingship</Name>
 				<Type>AdditionalArmour</Type>
