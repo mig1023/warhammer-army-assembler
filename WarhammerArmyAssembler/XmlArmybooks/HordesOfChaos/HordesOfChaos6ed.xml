@@ -18,11 +18,14 @@
 			<Tooltip>#d3d3d3</Tooltip>
 			<Modified>#a8a8a8,#939393,#696969</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="MagicItems" Value="Deamonic Gifts"/>
+		</Styles>
 		<Description>The Warriors of Chaos, also known as the Hordes of Chaos, the Followers of Chaos, Chaos Undivided, the Northern Barbarians or simply just the Northmen, are the names given to a race of savage, warlike tribes of Human Barbarians that occupy the harsh and unforgiving lands of the uppermost North, known in the lands of the Old World as the dreaded Northern Waste.||To all those that face them, the northern barbarians are considered by all to be the enemies of all the world, whose unwavering worship to an uncaring and sadistic pantheon of ancient and evil gods has given them a single driving motive to usher in the inevitable downfall of all mortal-kind into their hellish enslavement.||Out of all the many threats that the Old World must face, none strikes such fear and misery into the hearts of Men like the Followers of Chaos. Slaves to darkness all, they have given themselves wholly to the Ruinous Powers, some willingly, others because they felt they had no other choice.</Description>
 		<Released>2002</Released>
 		<Authors>Gav Thorpe, Rick Priestly, Anthony Reynolds and Alessio Cavatore</Authors>
 	</Introduction>
-	<Magic Name = "Lore of Nurgle">
+	<Magic Name="Lore of Nurgle">
 		<Spell Name="Magnificent Buboes" Difficulty="6"/>
 		<Spell Name="Favoured Poxes" Difficulty="7"/>
 		<Spell Name="Effulgent Boils" Difficulty="8"/>
@@ -31,7 +34,7 @@
 		<Spell Name="Sumptuous Pestilience" Difficulty="11"/>
 	</Magic>
 	<Artefacts>
-		<Group Name = "Common magic items">
+		<Group Name="Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -113,7 +116,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic weapons">	
+		<Group Name="Magic weapons">	
 			<Artefact>
 				<Name>Chaos Daemon Sword</Name>
 				<Type>Weapon</Type>
@@ -216,7 +219,7 @@
 				<Description>Confers on the bearer the Killing Blow ability.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic armour">
+		<Group Name="Magic armour">
 			<Artefact>
 				<Name>Spelleater Shield</Name>
 				<Type>Shield</Type>
@@ -272,7 +275,7 @@
 				<OnlyForGroup>Mortal</OnlyForGroup>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismans">	
+		<Group Name="Talismans">	
 			<Artefact>
 				<Name>The Beguiling Gem</Name>
 				<Type>AdditionalArmour</Type>
@@ -324,7 +327,7 @@
 				<Description>The model has Magic Resistance (2).</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Arcane items">	
+		<Group Name="Arcane items">	
 			<Artefact>
 				<Name>Staff of Change</Name>
 				<Type>Arcane</Type>
@@ -370,7 +373,7 @@
 				<Description>The Familiar's owner knows one more spell than is normal for his level. This does not increase his Magic Level.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Enchanted items">	
+		<Group Name="Enchanted items">	
 			<Artefact>
 				<Name>Rod of Corruption</Name>
 				<Type>AdditionalArmour</Type>
@@ -457,7 +460,7 @@
 				<Description>The bearer can pick any enemy unit on the battlefield at the beginning of each of his Magic phases. The opponent must reveal everything that is not apparent about the unit (magic items and their bearers, hidden Assassins and Fanatics, etc).</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic banner">
+		<Group Name="Magic banner">
 			<Artefact>
 				<Name>Banner of the Gods</Name>
 				<Type>Banner</Type>
@@ -519,7 +522,7 @@
 				<Description>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Demonic Gifts">
+		<Group Name="Demonic Gifts">
 			<Artefact>
 				<Name>Chaos Disruption</Name>
 				<Type>Weapon</Type>
@@ -577,7 +580,7 @@
 				<Description>If the Daemon is the army General, Mortal units count as Core choices and Daemonic units count as Special.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Khorne Gifts">
+		<Group Name="Khorne Gifts">
 			<Artefact>
 				<Name>Collar of Khorne</Name>
 				<Type>Weapon</Type>
@@ -623,7 +626,7 @@
 				<Description>The Daemon has +1 Strength on its profile.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Tzeentch Gifts">
+		<Group Name="Tzeentch Gifts">
 			<Artefact>
 				<Name>Tzeentch's Will</Name>
 				<Type>Weapon</Type>
@@ -669,7 +672,7 @@
 				<Description>At any point during the Chaos Magic phase, the Daemon may give up Wounds to generate Power dice (with no saves of any kind allowed, no Ward saves, no regeneration, etc). For each Wound sacrificed, the Daemon generates an extra D3 Power dice, that turn which only it may use.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Nurgle Gifts">
+		<Group Name="Nurgle Gifts">
 			<Artefact>
 				<Name>Cloud of Flies</Name>
 				<Type>AdditionalArmour</Type>
@@ -704,7 +707,7 @@
 				<Description>The Daemon's attacks count as poisoned attacks. This gift cannot be combined with a Blade of the Ether gift.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Slaanesh Gifts">
+		<Group Name="Slaanesh Gifts">
 			<Artefact>
 				<Name>Aura of Slaanesh</Name>
 				<Type>AdditionalArmour</Type>
