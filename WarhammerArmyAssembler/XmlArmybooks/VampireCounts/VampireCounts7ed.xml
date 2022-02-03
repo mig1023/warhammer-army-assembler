@@ -8,7 +8,7 @@
 			<Symbol>Images/VampireCounts.png</Symbol>
 			<Illustration>Images/VampireCounts7ed.jpg</Illustration>
 			<UnitsDirectory>Images/7edition</UnitsDirectory>
-		</Images>	
+		</Images>
 		<MagicPowers>Vampiric Powers</MagicPowers>
 		<Colors>
 			<Front>#000000</Front>
@@ -17,11 +17,14 @@
 			<Tooltip>#a2a2a2</Tooltip>
 			<Modified>#b1b1b1,#9e9e9e,#777777</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="MagicItems" Value="Artefacts of Death"/>
+		</Styles>
 		<Description>The Vampire Counts are amongst the most legendary factions of Vampires to have ever terrorised the civilised lands of the Old World, all of whom are members of the unholy Von Carstein bloodline. From the Imperial government and the patriotic citizenry of the Empire, the Vampire Counts are considered by many to be fiends without equal. They seek only to topple the civilisations of the living and supplant them with an Undead Empire that will reign forever as Lords of the Night. The Vampire Counts are powerful necromancers as well as warriors, given supernatural enhancements to their strength, cunning, beauty, and ambition. However, these vampires, for all their power and cunning, are ultimately base, selfish creatures driven by the same motivations as the mortals they deem themselves superior to. They are remorseless in their advance, killing without thought of mercy or compassion, and whose motives are entirely based on their own selfish desires. For all their refinement, these vampires are nothing but rotting corpses held together by Dark Magic and the horrific consumption of mortal blood.</Description>
 		<Released>2008</Released>
 		<Authors>Gav Thorpe</Authors>
 	</Introduction>
-	<Magic Name = "Lore of the Vampires">
+	<Magic Name="Lore of the Vampires">
 		<Spell Name="Invocation of Nehek" Difficulty="4"/>
 		<Spell Name="Raise Dead" Difficulty="5"/>
 		<Spell Name="Vanhel's Danse Macabre" Difficulty="7"/>
@@ -31,7 +34,7 @@
 		<Spell Name="Summon Undead Horde" Difficulty="12"/>
 	</Magic>
 	<Artefacts>
-		<Group Name = "Vampire Powers">
+		<Group Name="Vampire Powers">
 			<Artefact>
 				<Name>Spectral Form</Name>
 				<Type>Powers</Type>
@@ -163,7 +166,7 @@
 				<Description>The Vampire may use Invocation of Nehek to increase units of Crypt Ghouls beyond their starting size and adds +1 to his casting roll when casting Invocation of Nehek on these units.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Common magic items">
+		<Group Name="Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -235,7 +238,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic weapons">
+		<Group Name="Magic weapons">
 			<Artefact>
 				<Name>Frostblade</Name>
 				<Type>Weapon</Type>
@@ -300,7 +303,7 @@
 				<Description>Lanee. Attacks with the Balefire Spike are flaming.</Description>
 			</Artefact>
 		</Group>	
-		<Group Name = "Magic armour">
+		<Group Name="Magic armour">
 			<Artefact>
 				<Name>Walach's Bloody Hauberk</Name>
 				<Type>Armour</Type>
@@ -355,7 +358,7 @@
 				<Description>Heavy armour. Killing Blow and/or Poisoned Attacks have no additional effect against the wearer.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Enchanted items">
+		<Group Name="Enchanted items">
 			<Artefact>
 				<Name>The Hand of Dust</Name>
 				<Type>Weapon</Type>
@@ -401,7 +404,7 @@
 				<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismans">
+		<Group Name="Talismans">
 			<Artefact>
 				<Name>The Carstein Ring</Name>
 				<Type>AdditionalArmour</Type>
@@ -433,7 +436,7 @@
 				<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed.</Description>
 			</Artefact>
 		</Group>	
-		<Group Name = "Arcane items">	
+		<Group Name="Arcane items">	
 			<Artefact>
 				<Name>Skull Staff</Name>
 				<Type>Arcane</Type>
@@ -477,7 +480,7 @@
 				<Description>The Black Periapt allows the bearer to save one of his own unused power dice or one of the army's unused dispel dice at the end of any Magic phase, and then add it to his side's power or dispel dice pool in the next Magic phasee.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic standards">
+		<Group Name="Magic standards">
 			<Artefact>
 				<Name>The Drakenhof Banner</Name>
 				<Type>Banner</Type>
