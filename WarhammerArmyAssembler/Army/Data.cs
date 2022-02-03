@@ -9,7 +9,6 @@ namespace WarhammerArmyAssembler.Army
         public static string Name { get; set; }
         public static string AdditionalName { get; set; }
         public static int ArmyEdition { get; set; }
-        public static string MagicPowers { get; set; }
         public static string UnitsImagesDirectory { get; set; }
 
         public static int MaxPoints = 2000;

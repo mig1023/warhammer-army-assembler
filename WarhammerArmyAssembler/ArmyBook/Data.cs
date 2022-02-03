@@ -13,6 +13,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static string AddStyle = String.Empty;
         public static string DropStyle = String.Empty;
         public static string MagicItemsStyle = String.Empty;
+        public static string MagicPowersStyle = String.Empty;
 
         public static Dictionary<int, Unit> Units = new Dictionary<int, Unit>();
         public static Dictionary<int, Unit> Mounts = new Dictionary<int, Unit>();

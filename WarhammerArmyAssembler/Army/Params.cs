@@ -226,8 +226,5 @@ namespace WarhammerArmyAssembler.Army
             else
                 return ArmyBook.Data.Artefact[id].VirtueOriginalPoints * (count + 1 + (nextPricePreview ? 1 : 0));
         }
-
-        public static string MagicPowersName() =>
-            (String.IsNullOrEmpty(Data.MagicPowers) ? "MAGIC POWERS" : Data.MagicPowers.ToUpper());
     }
 }

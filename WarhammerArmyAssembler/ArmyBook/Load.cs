@@ -41,6 +41,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.AddStyle = LoadStyle(xmlFile, "Add", defaultValue: "add");
             Data.DropStyle = LoadStyle(xmlFile, "Drop", defaultValue: "drop");
             Data.MagicItemsStyle = LoadStyle(xmlFile, "MagicItems", defaultValue: "MAGIC ITEMS").ToUpper();
+            Data.MagicPowersStyle = LoadStyle(xmlFile, "MagicPowers", defaultValue: "MAGIC POWERS").ToUpper();
         }
 
         public static void LoadArmy(string xmlFileName)
@@ -58,7 +59,6 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Army.Data.Name = LoadString(xmlFile, "Name");
             Army.Data.ArmyEdition = LoadInt(xmlFile, "Edition");
-            Army.Data.MagicPowers = LoadString(xmlFile, "MagicPowers");
 
             Data.FrontColor = LoadColor(xmlFile, "Front");
             Data.BackColor = LoadColor(xmlFile, "Back");

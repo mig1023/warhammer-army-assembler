@@ -43,10 +43,10 @@ namespace WarhammerArmyAssembler.Interface
             if (head == ArmyBook.Data.MagicItemsStyle)
                 return String.Format("{0} / {1}", unit.MagicPointsAlreadyUsed(), unit.GetUnitMagicPoints());
 
-            if ((head == Army.Params.MagicPowersName()) && (unit.MagicPowersCount > 0))
+            if ((head == ArmyBook.Data.MagicPowersStyle) && (unit.MagicPowersCount > 0))
                 return String.Format("{0} / {1}", unit.MagicPowersCountAlreadyUsed(), unit.GetMagicPowersCount());
 
-            else if (head == Army.Params.MagicPowersName())
+            else if (head == ArmyBook.Data.MagicPowersStyle)
                 return String.Format("{0} / {1}", unit.MagicPowersPointsAlreadyUsed(), unit.GetUnitMagicPowersPoints());
 
             return String.Empty;
@@ -79,7 +79,7 @@ namespace WarhammerArmyAssembler.Interface
             else
             {
                 bool magicItemsPointsExists = unit.Options.Where(x => x.MagicItemsPoints).Count() > 0;
-                bool magicPowersDontExists = !unit.ExistsMagicPowers() && (head == Army.Params.MagicPowersName());
+                bool magicPowersDontExists = !unit.ExistsMagicPowers() && (head == ArmyBook.Data.MagicPowersStyle);
 
                 if ((!unit.ExistsMagicItems() && (head == ArmyBook.Data.MagicItemsStyle) && !magicItemsPointsExists) || magicPowersDontExists)
                 {
@@ -91,7 +91,7 @@ namespace WarhammerArmyAssembler.Interface
                 else
                     foreach (Option option in unit.Options)
                     {
-                        if (head == "OPTION" || head == "COMMAND" || head == ArmyBook.Data.MagicItemsStyle || head == Army.Params.MagicPowersName())
+                        if (head == "OPTION" || head == "COMMAND" || head == ArmyBook.Data.MagicItemsStyle || head == ArmyBook.Data.MagicPowersStyle)
                         {
                             if (head == "OPTION" && (!option.IsOption() || option.FullCommand || option.MagicItemsPoints))
                                 continue;
@@ -102,7 +102,7 @@ namespace WarhammerArmyAssembler.Interface
                             if (head == ArmyBook.Data.MagicItemsStyle && !option.MagicItemsPoints && (!option.IsMagicItem() || ((option.Points <= 0) && !option.Honours)))
                                 continue;
 
-                            if (head == Army.Params.MagicPowersName() && !option.IsPowers())
+                            if ((head == ArmyBook.Data.MagicPowersStyle) && !option.IsPowers())
                                 continue;
 
                             margins = CheckColumn(margins, ref lastColumnMaxWidth);
@@ -184,7 +184,7 @@ namespace WarhammerArmyAssembler.Interface
                 margins = CreateColumn(ArmyBook.Data.MagicItemsStyle, margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if ((unit.GetUnitMagicPowersPoints() > 0) || (unit.GetMagicPowersCount() > 0))
-                margins = CreateColumn(Army.Params.MagicPowersName(), margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+                margins = CreateColumn(ArmyBook.Data.MagicPowersStyle, margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.ExistsOrdinaryItems())
                 margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
