@@ -16,11 +16,14 @@
 			<Tooltip>#b0bae2</Tooltip>
 			<Modified>#c67469,#b34637,#aa2f1e</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="MagicItems" Value="Blessed Heirlooms"/>
+		</Styles>
 		<Description>The Kingdom of Bretonnia, also known as the Land of Chivalry, is a highly martial feudal kingdom that lies between the lands of the Grey Mountains and the Great Ocean. Bretonnia is second only in size to that of the Empire, both their chief rival and closest ally, having a culture and society that revolves around the ideals of nobility, social birthright, and the upholding of a strictly enforced code of chivalry.||Ruled by a Royarch, the nation of Bretonnia has been known throughout the kingdoms of man for having the greatest Knights in the entire Old World, even surpassing that of the Knightly Orders of the Empire. A proud and honourable kingdom, the armies of Bretonnia are comprised mostly of knights and noblemen, who ride into battle with lance, horse, and sword, seeking glory and rooting out injustice wherever they go. The Knights of Bretonnia are trained to fight from childhood, and even the lowliest Knights Errant are considered superior to ordinary warriors. Their skills are further enhanced through constant training, battles and tournaments. It is not only Bretonnia's knights who are famed, however, for the kingdom also boasts the finest human sailors in the World. With their great sails billowing in the wind, Bretonnia's mighty fleets are a majestic sight on the high seas. Due to this regime, the combined military might of Bretonnia has surpassed that of even the greatest armies in history.</Description>
 		<Released>2003</Released>
 		<Authors>Anthony Reynolds</Authors>
 	</Introduction>
-	<Magic Name = "The Lore of Light">
+	<Magic Name="The Lore of Light">
 		<Spell Name="Pha's Illumination" Difficulty="5"/>
 		<Spell Name="Burning Gaze" Difficulty="5"/>
 		<Spell Name="Dazzling Brightness" Difficulty="6"/>
@@ -29,7 +32,7 @@
 		<Spell Name="Blinding Light" Difficulty="9"/>
 	</Magic>
 	<Artefacts>
-		<Group Name = "Virtues of the Chivalric Knight">
+		<Group Name="Virtues of the Chivalric Knight">
 			<Artefact>
 				<Name>Virtue of the Penitent</Name>
 				<Type>Weapon</Type>
@@ -146,7 +149,7 @@
 				<Description>The Knight may be fielded on foot. In addition, if he is not the army's General, Peasant units within 12" of him may use his Leadership, rather than the normal distance of 6".</Description>
 			</Artefact>
 		</Group>	
-		<Group Name = "Common magic items">
+		<Group Name="Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -218,7 +221,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic Weapons">	
+		<Group Name="Magic Weapons">	
 			<Artefact>
 				<Name>The Silver Lance of the Blessed</Name>
 				<Type>Weapon</Type>
@@ -300,7 +303,7 @@
 				<Description>The bearer has +2 Strength on the charge when mounted. In addition, once per game, the model wielding the Wyrmlance may make a breath attack from the tip of the lance at Strength 3 provided he is not in close combat. Furthermore, all attacks made by the Wyrmlance count as flaming attacks.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic Armour">
+		<Group Name="Magic Armour">
 			<Artefact>
 				<Name>Gilded Cuirass</Name>
 				<Type>Armour</Type>
@@ -360,7 +363,7 @@
 				<Description>Gives a 6+ Armour save and may be combined with other armour as normal. Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismans">
+		<Group Name="Talismans">
 			<Artefact>
 				<Name>Sirienne's Locket</Name>
 				<Type>AdditionalArmour</Type>
@@ -406,7 +409,7 @@
 				<Description>Poisoned attacks do not wound automatically against a character with the Mantle. In addition, the special rules for Killing Blow-have no effect on the character.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Enchanted Items">
+		<Group Name="Enchanted Items">
 			<Artefact>
 				<Name>Falcon-horn of Fredemund</Name>
 				<Type>AdditionalArmour</Type>
@@ -460,7 +463,7 @@
 				<Description>Any challenge issued by the bearer of the Gauntlet of the Duel cannot be refused.</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Arcane Items">
+		<Group Name="Arcane Items">
 			<Artefact>
 				<Name>The Silver Mirror</Name>
 				<Type>Arcane</Type>
@@ -505,7 +508,7 @@
 				<Description>One use only. This is used before rolling the dice to cast or dispel a spell. After the dice are rolled, the player may add +1 to the result of one dice. This may cause Irresistible Force or prevent a Miscast.</Description>
 			</Artefact>
 		</Group>	
-		<Group Name = "Magic Banners">
+		<Group Name="Magic Banners">
 			<Artefact>
 				<Name>Banner of the Lady</Name>
 				<Type>Banner</Type>
