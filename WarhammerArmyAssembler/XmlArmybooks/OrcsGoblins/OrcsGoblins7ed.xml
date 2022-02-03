@@ -16,11 +16,16 @@
 			<Tooltip>#bfeab0</Tooltip>
 			<Modified>#b7dbb7,#a3d1a3,#89b789</Modified>
 		</Colors>
+		<Styles>
+			<Style Name="Add" Value="dis iz mine!"/>
+			<Style Name="Drop" Value="ta hell dis!"/>
+			<Style Name="MagicItems" Value="Shiny stuff"/>
+		</Styles>
 		<Description>The Greenskins are a highly primitive and warlike race of bestial humanoid barbarians and raiders that occupy much of the Eastern Hemisphere of the Warhammer World. The term "Greenskins" is a common collective description used by many civilised nations to refer to the forces of the Orcs and Goblins and other biologically related races. The broadest division is between the Orcs, who are strong, brutish, and savage warriors, and the Goblins, who are smaller and weaker, but cunning and conniving creatures.||The Greenskins are considered by many to be the scourge of all civilisation. These tribal warriors are extremely violent, raiding ceaselessly, carrying war and barbarism to all corners of the known world. Time and again, hordes of Greenskins would arise without warning and lay a great swath of destruction that has no direction or purpose other than simple violence. Indeed, the Greenskin race's single motive is violence, an ever increasing mass of warfare that has the potential to dominate and cover the entire world in a seething green tide.</Description>
 		<Released>2006</Released>
 		<Authors>Matthew Ward</Authors>
 	</Introduction>
-	<Magic Name = "Spells of the Big Waaagh!">
+	<Magic Name="Spells of the Big Waaagh!">
 		<Spell Name="Gaze of Mork" Difficulty="5"/>
 		<Spell Name="'Eadbutt" Difficulty="6"/>
 		<Spell Name="Bash 'em ladz" Difficulty="6"/>
@@ -28,12 +33,8 @@
 		<Spell Name="Gork's warpath" Difficulty="10"/>
 		<Spell Name="Waaagh!" Difficulty="12"/>
 	</Magic>
-	<Styles>
-		<Style Name="Add" Value="dis iz mine!"/>
-		<Style Name="Drop" Value="ta hell dis!"/>
-	</Styles>
 	<Artefacts>
-		<Group Name = "Common magic items">
+		<Group Name="Common magic items">
 			<Artefact>
 				<Name>Sword of Striking</Name>
 				<Type>Weapon</Type>
@@ -105,7 +106,7 @@
 				<Description>+1 Combat Resolution</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic weapons">
+		<Group Name="Magic weapons">
 			<Artefact>
 				<Name>WAAAGH! Cleava</Name>
 				<Type>Weapon</Type>
@@ -207,7 +208,7 @@
 				<Description>If the bearer strikes an enemy character carrying one or more magic item, his hits at +1 Strength for each magic item</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic armour">
+		<Group Name="Magic armour">
 			<Artefact>
 				<Name>Armour of Gork</Name>
 				<Type>Armour</Type>
@@ -225,7 +226,7 @@
 				<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Talismans">
+		<Group Name="Talismans">
 			<Artefact>
 				<Name>Effigy of Mork</Name>
 				<Type>AdditionalArmour</Type>
@@ -255,7 +256,7 @@
 				<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6S to hit the bearer</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Arcane items">
+		<Group Name="Arcane items">
 			<Artefact>
 				<Name>Idol of Mork</Name>
 				<Type>Arcane</Type>
@@ -297,7 +298,7 @@
 				<Description>+D6 to casting roll, one use only. If Mushroom dice is an 1 then the spell is miscast</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Enchanted itams">
+		<Group Name="Enchanted itams">
 			<Artefact>
 				<Name>The Horn of Urgok</Name>
 				<Type>Weapon</Type>
@@ -374,7 +375,7 @@
 				<Description>The character with the brew is assumed to have 'bolstered' himself before battle - roll a dice and consult the following table to determine the effects upon the drinker:|1-2 - Subject to Stupidity for remainder of the game|3-4 - Hatred of all enemies for the remainder of the game|5-6 - Hatred of all enemies and Frenzy for the remainder of the game</Description>
 			</Artefact>
 		</Group>
-		<Group Name = "Magic standards">
+		<Group Name="Magic standards">
 			<Artefact>
 				<Name>Mork's Spirit-Totem</Name>
 				<Type>Banner</Type>
