@@ -9,6 +9,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static Dictionary<string, int> Magic = new Dictionary<string, int>();
 
         public static string MagicLoreName = String.Empty;
+        public static string MagicAlternative = String.Empty;
 
         public static string AddStyle = String.Empty;
         public static string DropStyle = String.Empty;

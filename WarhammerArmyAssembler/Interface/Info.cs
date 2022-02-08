@@ -58,7 +58,13 @@ namespace WarhammerArmyAssembler.Interface
             var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x =>
                 String.Format("{0}+\t{1} ({2} spells)", x.Value, x.Key, CastingProbability(x.Value)));
 
-            return String.Format("{0}\n\n\n{1}", ArmyBook.Data.MagicLoreName.ToUpper(), String.Join("\n\n", spellList));
+            string loreName = ArmyBook.Data.MagicLoreName.ToUpper();
+            string footer = String.Empty;
+                
+            if (!String.IsNullOrEmpty(ArmyBook.Data.MagicAlternative))
+                footer = String.Format("\n\n\nAlternative:\n{0}", ArmyBook.Data.MagicAlternative);
+
+            return String.Format("{0}\n\n\n{1}{2}", loreName, String.Join("\n\n", spellList), footer);
         }
 
         private static string CastingProbability(int difficulty)

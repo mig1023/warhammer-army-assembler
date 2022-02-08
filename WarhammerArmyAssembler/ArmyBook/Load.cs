@@ -89,6 +89,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             XmlNode loreBook = xmlFile.SelectSingleNode("ArmyBook/Introduction/Magic");
             Data.MagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
+            Data.MagicAlternative = loreBook.Attributes["Alternative"]?.Value ?? String.Empty;
 
             foreach (XmlNode spell in xmlFile.SelectNodes("ArmyBook/Introduction/Magic/Spell"))
             {
