@@ -39,12 +39,15 @@ namespace WarhammerArmyAssembler
         public void armyEditionLabel_PositionCorrect()
         {
             UpdateLayout();
-            armyEditionLabel.Margin = Interface.Changes.Thick(armyEditionLabel, left: armyMainLabel.Margin.Left + armyMainLabel.ActualWidth - 5);
+
+            double left = armyMainLabel.Margin.Left + armyMainLabel.ActualWidth - 5;
+            armyEditionLabel.Margin = Interface.Changes.Thick(armyEditionLabel, left: left);
         }
 
         private void armyMainLabelPlace_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            armyMainMenu.Margin = Interface.Changes.Thick(armyMainMenu, left: (e.NewSize.Width - armyMainMenu.ActualWidth));
+            double left = e.NewSize.Width - armyMainMenu.ActualWidth;
+            armyMainMenu.Margin = Interface.Changes.Thick(armyMainMenu, left: left);
             armyEditionLabel_PositionCorrect();
         }
 
@@ -126,14 +129,14 @@ namespace WarhammerArmyAssembler
 
             UpdateLayout();
 
-            armybookDetail.Height = armyUnitDescription.Margin.Top +
-                (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20) +
-                (armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20) + 20;
+            double descrHeight = (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20);
+            double specHeight = (armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20);
+            armybookDetail.Height = armyUnitDescription.Margin.Top + descrHeight + specHeight + 20;
 
             armybookArtefactDetail.Height = armybookDetail.Height;
 
-            armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20,
-                top: armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 35);
+            double top = armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 35;
+            armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
 
             armyUnitSpecific.Foreground = ArmyBook.Data.FrontColor;
 
@@ -159,7 +162,8 @@ namespace WarhammerArmyAssembler
             if ((sender is ScrollViewer) && Army.Checks.ThisIsAftefact(id))
                 Interface.Changes.ArmyGridDropArtefact(id, Interface.Changes.CurrentSelectedUnit);
             else
-                Interface.UnitDetails.UpdateUnitDescription(Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
+                Interface.UnitDetails.UpdateUnitDescription(
+                    Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
 
             HideStartArmyHelpText();
         }
@@ -216,7 +220,8 @@ namespace WarhammerArmyAssembler
             Interface.UnitDetails.UpdateUnitDescription(u.ID, Army.Data.Units[u.ID]);
         }
 
-        private void ArmyGrid_LoadingRow(object sender, DataGridRowEventArgs e) => e.Row.DragOver += new DragEventHandler(ArmyGridRow_DragOver);
+        private void ArmyGrid_LoadingRow(object sender, DataGridRowEventArgs e) =>
+            e.Row.DragOver += new DragEventHandler(ArmyGridRow_DragOver);
 
         private void ArmyGridRow_DragOver(object sender, DragEventArgs e)
         {
@@ -240,7 +245,8 @@ namespace WarhammerArmyAssembler
 
             if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
-                bool enabled = unit.IsOptionEnabled(ArmyBook.Data.Artefact[id], unit.GetMountOn(), unit.GetMountTypeAlreadyFixed());
+                Option.OnlyForType onlyForType = unit.GetMountTypeAlreadyFixed();
+                bool enabled = unit.IsOptionEnabled(ArmyBook.Data.Artefact[id], unit.GetMountOn(), onlyForType);
                 bool usable = ArmyBook.Data.Artefact[id].IsUsableByUnit(unit, dragOverCheck: true);
                 e.Effects = (usable && enabled ? DragDropEffects.Copy : DragDropEffects.None);
             }
@@ -295,8 +301,15 @@ namespace WarhammerArmyAssembler
 
             if (!Interface.Changes.unitTestIsOpen)
                 mainGrid.Width = e.NewSize.Width;
-            
-            foreach (ScrollViewer scroll in new List<ScrollViewer> { armybookDetailScroll, armyUnitTestScroll, armybookArtefactDetailScroll })
+
+            List<ScrollViewer> scrolls = new List<ScrollViewer>
+            {
+                armybookDetailScroll,
+                armyUnitTestScroll,
+                armybookArtefactDetailScroll
+            };
+
+            foreach (ScrollViewer scroll in scrolls)
             {
                 scroll.Height = e.NewSize.Height;
                 scroll.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 25);
@@ -305,9 +318,18 @@ namespace WarhammerArmyAssembler
             foreach (Canvas canvas in new List<Canvas> { errorDetail, mainMenu, mainPlaceCanvas, armyUnitTest })
                 canvas.Width = e.NewSize.Width;
 
-            closeErrorDetail.Margin = new Thickness(Interface.Changes.ZeroFuse(e.NewSize.Width - closeErrorDetail.Width - 10), 10, 0, 0);
+            double margin = e.NewSize.Width - closeErrorDetail.Width - 10;
+            closeErrorDetail.Margin = new Thickness(Interface.Changes.ZeroFuse(margin), 10, 0, 0);
 
-            foreach (TextBlock text in new List<TextBlock> { armyUnitDescription, armyUnitSpecific, armyArtefactDescription, armyArtefactSpecific })
+            List<TextBlock> texts = new List<TextBlock>
+            {
+                armyUnitDescription,
+                armyUnitSpecific,
+                armyArtefactDescription,
+                armyArtefactSpecific
+            };
+
+            foreach (TextBlock text in texts)
                 text.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 75);
 
             if (Interface.Changes.mainMenuIsOpen)
@@ -330,11 +352,11 @@ namespace WarhammerArmyAssembler
 
         private void unitDelete_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2 && Interface.Changes.ConfirmedDataCleaning())
-            {
-                Interface.Changes.DetailResize(open: false);
-                Interface.Changes.AllUnitDelete();
-            }
+            if ((e.LeftButton != MouseButtonState.Pressed) || (e.ClickCount != 2) || !Interface.Changes.ConfirmedDataCleaning())
+                return;
+
+            Interface.Changes.DetailResize(open: false);
+            Interface.Changes.AllUnitDelete();
         }
 
         private void armyMainLabel_MouseDown(object sender, MouseButtonEventArgs e)
@@ -361,25 +383,33 @@ namespace WarhammerArmyAssembler
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (Army.Checks.IsUnitExistInArmy(Interface.Changes.CurrentSelectedUnit))
-                Interface.UnitDetails.UpdateUnitDescription(Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
+                Interface.UnitDetails.UpdateUnitDescription(
+                    Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
         }
 
-        private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyPoints());
+        private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e) =>
+            MessageBox.Show(Interface.Info.ArmyPoints());
 
-        private void armyUnits_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyUnits());
+        private void armyUnits_MouseDown(object sender, MouseButtonEventArgs e) =>
+            MessageBox.Show(Interface.Info.ArmyUnits());
 
-        private void armyHeroes_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyHeroes());
+        private void armyHeroes_MouseDown(object sender, MouseButtonEventArgs e) =>
+            MessageBox.Show(Interface.Info.ArmyHeroes());
 
-        private void armyModels_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyModels());
+        private void armyModels_MouseDown(object sender, MouseButtonEventArgs e) =>
+            MessageBox.Show(Interface.Info.ArmyModels());
 
-        private void armyCast_MouseDown(object sender, MouseButtonEventArgs e) => MessageBox.Show(Interface.Info.ArmyCast());
+        private void armyCast_MouseDown(object sender, MouseButtonEventArgs e) =>
+            MessageBox.Show(Interface.Info.ArmyCast());
 
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e) =>
             Interface.Changes.CheckAndExportTo(toPDF: true, fullRules: true);
 
-        public void saveArmyToPDF_light_MouseDown(object sender, MouseButtonEventArgs e) => Interface.Changes.CheckAndExportTo(toPDF: true);
+        public void saveArmyToPDF_light_MouseDown(object sender, MouseButtonEventArgs e) =>
+            Interface.Changes.CheckAndExportTo(toPDF: true);
 
-        public void saveArmyToTXT_MouseDown(object sender, MouseButtonEventArgs e) => Interface.Changes.CheckAndExportTo(toPDF: false);
+        public void saveArmyToTXT_MouseDown(object sender, MouseButtonEventArgs e) =>
+            Interface.Changes.CheckAndExportTo(toPDF: false);
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -397,11 +427,11 @@ namespace WarhammerArmyAssembler
 
         private void ArmyGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (startArmyHelpText.Visibility == Visibility.Visible)
-            {
-                startArmyHelpText.Width = Interface.Changes.ZeroFuse(ArmyGrid.ActualWidth - 45);
-                startArmyHelpText.Height = Interface.Changes.ZeroFuse(ArmyGrid.ActualHeight - 50);
-            }
+            if (startArmyHelpText.Visibility != Visibility.Visible)
+                return;
+
+            startArmyHelpText.Width = Interface.Changes.ZeroFuse(ArmyGrid.ActualWidth - 45);
+            startArmyHelpText.Height = Interface.Changes.ZeroFuse(ArmyGrid.ActualHeight - 50);
         }
 
         private void Test_Click(object sender, RoutedEventArgs e)
@@ -412,7 +442,6 @@ namespace WarhammerArmyAssembler
                 return;
 
             Interface.TestUnit.TestCanvasPrepare(container.DataContext as Unit);
-
             Interface.Changes.Move(Interface.Changes.MovingType.ToRight);
         }
 
@@ -430,9 +459,11 @@ namespace WarhammerArmyAssembler
             Interface.Changes.armyUnitTest_Resize();
         }
 
-        private void enemyGroup_SelectionChanged(object sender, SelectionChangedEventArgs e) => Interface.TestUnit.LoadEnemyGroups();
+        private void enemyGroup_SelectionChanged(object sender, SelectionChangedEventArgs e) =>
+            Interface.TestUnit.LoadEnemyGroups();
 
-        private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e) => Interface.TestUnit.startTest(Test.Data.TestTypes.fullTest);
+        private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e) =>
+            Interface.TestUnit.startTest(Test.Data.TestTypes.fullTest);
 
         private void startStatisticTest_MouseDown(object sender, MouseButtonEventArgs e) =>
             Interface.TestUnit.startTest(Test.Data.TestTypes.statisticTest);
@@ -471,7 +502,8 @@ namespace WarhammerArmyAssembler
             maximizeWindow.Content = String.Format("  {0}  |", newButtonCaption);
         }
 
-        private void minimizeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.WindowState = WindowState.Minimized;
+        private void minimizeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) =>
+            this.WindowState = WindowState.Minimized;
 
         private void ArmyGrid_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {

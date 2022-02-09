@@ -35,14 +35,15 @@ namespace WarhammerArmyAssembler
             armybookListScroll.Width = armybookCanvas.Width - 360;
         }
 
-        private void prev_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(prev: true, reset: true);
+        private void prev_Click(object sender, RoutedEventArgs e) =>
+            Interface.Changes.PreviewArmyList(prev: true, reset: true);
 
-        private void next_Click(object sender, RoutedEventArgs e) => Interface.Changes.PreviewArmyList(next: true, reset: true);
+        private void next_Click(object sender, RoutedEventArgs e) =>
+            Interface.Changes.PreviewArmyList(next: true, reset: true);
 
         private void StartArmybook(int points)
         {
             Interface.Reload.LoadArmySize(points, armyAdditionalName.Text);
-
             Interface.Changes.main.armyEditionLabel_PositionCorrect();
 
             this.Hide();
@@ -58,9 +59,11 @@ namespace WarhammerArmyAssembler
                 MessageBox.Show("Wrong army points!");
         }
 
-        public void buttonPoints_Click(object sender, RoutedEventArgs e) => StartArmybookOption((sender as Label).Content.ToString().Split()[0]);
+        public void buttonPoints_Click(object sender, RoutedEventArgs e) =>
+            StartArmybookOption((sender as Label).Content.ToString().Split()[0]);
 
-        private void buttonArmybook_Click(object sender, RoutedEventArgs e) => StartArmybookOption(listArmybookPoints.Text);
+        private void buttonArmybook_Click(object sender, RoutedEventArgs e) =>
+            StartArmybookOption(listArmybookPoints.Text);
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -77,6 +80,7 @@ namespace WarhammerArmyAssembler
         {
             if (e.Key == Key.Left)
                 Interface.Changes.PreviewArmyList(prev: true);
+
             else if (e.Key == Key.Right)
                 Interface.Changes.PreviewArmyList(next: true);
         }
@@ -87,9 +91,11 @@ namespace WarhammerArmyAssembler
             armyAdditionalName.Visibility = Visibility.Visible;
         }
 
-        private void randomArmy_MouseDown(object sender, MouseButtonEventArgs e) => Interface.Changes.RandomArmy();
+        private void randomArmy_MouseDown(object sender, MouseButtonEventArgs e) =>
+            Interface.Changes.RandomArmy();
 
-        private void resetSelection_MouseDown(object sender, MouseButtonEventArgs e) => Interface.Changes.SetArmySelected(String.Empty);
+        private void resetSelection_MouseDown(object sender, MouseButtonEventArgs e) =>
+            Interface.Changes.SetArmySelected(String.Empty);
 
         private void sortedBy_MouseDown(object sender, MouseButtonEventArgs e)
         {
