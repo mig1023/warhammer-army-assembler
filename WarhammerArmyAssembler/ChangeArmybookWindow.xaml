@@ -9,13 +9,13 @@
         WindowStyle="None" AllowsTransparency="True" ResizeMode="CanResizeWithGrip"
         Closed="Window_Closed" SizeChanged="changeArmybook_SizeChanged"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" PreviewKeyDown="Window_PreviewKeyDown">
-    
+
     <Window.Resources>
         <Style TargetType="Image">
             <Setter Property="ToolTipService.InitialShowDelay" Value="1200"/>
         </Style>
     </Window.Resources>
-    
+
     <Canvas x:Name="armybookCanvas" Margin="0,0,0,0">
         <ScrollViewer x:Name="menuArmybookScroll" Width="320" Height="660" VerticalScrollBarVisibility="Auto" Canvas.Top="0" Canvas.Left="40">
             <ScrollViewer.Resources>
@@ -24,7 +24,7 @@
             <Canvas x:Name="menuArmybookPlace" Width="320" Height="660" VerticalAlignment="Top" Background="White" MouseLeftButtonDown="Window_MouseLeftButtonDown">
                 <Label x:Name="randomArmy" Content="Random army" Canvas.Left="42" Canvas.Top="12" Width="63" MouseDown="randomArmy_MouseDown" FontSize="8"/>
                 <Label x:Name="resetSelection" Content="Reset selection" Canvas.Left="108" Canvas.Top="12" Width="63" FontSize="8" MouseDown="resetSelection_MouseDown"/>
-                <Label x:Name="sortedBy" Content="Sorted by army name" Canvas.Left="177" Canvas.Top="12" Width="91" FontSize="8" MouseDown="sortedBy_MouseDown" />
+                <Label x:Name="sortedBy" Content="Sorted by army name" Canvas.Left="177" Canvas.Top="12" Width="91" FontSize="8" MouseDown="sortedBy_MouseDown"/>
                 <Image x:Name="imageArmybook" Height="284" Width="212" Canvas.Left="47" Canvas.Top="36"/>
                 <Label x:Name="listArmybookVer" Height="32" FontSize="16" Content="редакция Х" Width="103" Canvas.Top="333" Canvas.Left="99" Foreground="White" HorizontalContentAlignment="Center"/>
                 <Label x:Name="buttonArmybook" Content="points" Height="34" Width="134" Canvas.Left="157" Canvas.Top="580" Padding="0" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" MouseDown="buttonArmybook_Click"/>
@@ -38,9 +38,94 @@
                         <RotateTransform Angle="-90"/>
                     </Label.LayoutTransform>
                 </Label>
-                <TextBox x:Name="listArmybookPoints" Height="34" Padding="5,2,0,0" Canvas.Left="20" Text="4000" Canvas.Top="580" Width="132" FontSize="20"/>
+                <Slider x:Name="ArmySize" Canvas.Left="17" Canvas.Top="438" Height="28" Width="138" Minimum="1" Maximum="16" Value="10" TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" ValueChanged="armySize_Changed">
+                    <Slider.LayoutTransform>
+                        <ScaleTransform ScaleY="2" ScaleX="2" CenterX="15" CenterY="15"/>
+                    </Slider.LayoutTransform>
+                </Slider>
+                <TextBox x:Name="listArmybookPoints" Height="34" Padding="5,2,0,0" Canvas.Left="20" Text="2000" Canvas.Top="580" Width="132" FontSize="20"/>
                 <Label x:Name="showArmyAdditionalName" Content="+ add army name if you wish" Canvas.Left="17" Canvas.Top="617" Width="288" MouseDown="showArmyAdditionalName_MouseDown"/>
                 <TextBox x:Name="armyAdditionalName" Height="28" Visibility="Hidden" Padding="5,2,0,0" Canvas.Left="20" Text="" Canvas.Top="625" Width="271" FontSize="16"/>
+                <Label x:Name="pts200" Content="200" Height="20" Canvas.Left="16" Canvas.Top="493" Width="28" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts500" Content="500" Height="20" Canvas.Left="34" Canvas.Top="493" Width="28" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts600" Content="600" Height="20" Canvas.Left="50" Canvas.Top="493" Width="28" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts750" Content="750" Height="20" Canvas.Left="68" Canvas.Top="493" Width="28" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts1000" Content="1000" Height="20" Canvas.Left="85" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts1250" Content="1250" Height="20" Canvas.Left="102" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts1500" Content="1500" Height="20" Canvas.Left="119" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts1750" Content="1750" Height="20" Canvas.Left="136" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts1850" Content="1850" Height="20" Canvas.Left="153" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts2000" Content="2000" Height="20" Canvas.Left="170" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts2250" Content="2250" Height="20" Canvas.Left="187" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts2400" Content="2400" Height="20" Canvas.Left="204" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts2500" Content="2500" Height="20" Canvas.Left="221" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts2700" Content="2700" Height="20" Canvas.Left="238" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="pts3000" Content="3000" Height="20" Canvas.Left="255" Canvas.Top="494" Width="35" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
+                <Label x:Name="ptsOther" Content="other" Height="20" Canvas.Left="270" Canvas.Top="493" Width="40" FontSize="16" Padding="0">
+                    <Label.LayoutTransform>
+                        <RotateTransform Angle="-90"/>
+                    </Label.LayoutTransform>
+                </Label>
             </Canvas>
         </ScrollViewer>
         <Canvas x:Name="armybookDetailScrollHead" Width="25" Height="600" VerticalAlignment="Top" Background="White">
