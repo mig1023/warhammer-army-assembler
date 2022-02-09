@@ -19,7 +19,7 @@ namespace WarhammerArmyAssembler
             this.DataContext = this;
 
             Interface.Changes.main = this;
-            //Interface.Changes.CreatePointsButtons();
+            Interface.Changes.CreatePointsButtons();
             Interface.Changes.changeArmybook.Show();
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;

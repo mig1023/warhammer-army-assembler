@@ -118,33 +118,5 @@ namespace WarhammerArmyAssembler
             Interface.Changes.LoadAllArmy(ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory), reload: true);
             Interface.Changes.PreviewArmyList();
         }
-
-        private void armySize_Changed(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (listArmybookPoints == null)
-                return;
-
-            Dictionary<int, int> armybookPoints = new Dictionary<int, int>
-            {
-                [1] = 200,
-                [2] = 500,
-                [3] = 600,
-                [4] = 750,
-                [5] = 1000,
-                [6] = 1250,
-                [7] = 1500,
-                [8] = 1750,
-                [9] = 1850,
-                [10] = 2000,
-                [11] = 2250,
-                [12] = 2400,
-                [13] = 2500,
-                [14] = 2700,
-                [15] = 3000,
-                [16] = 0,
-            };
-
-            listArmybookPoints.Text = armybookPoints[(int)e.NewValue].ToString();
-        }
     }
 }
