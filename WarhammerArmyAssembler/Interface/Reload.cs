@@ -123,21 +123,22 @@ namespace WarhammerArmyAssembler.Interface
             Changes.main.ArmyGrid.ItemsSource = Changes.ArmyInInterface;
 
             int lord = UnitsNumber(Unit.UnitType.Lord);
-            int hero = UnitsNumber(Unit.UnitType.Hero);
-
             int maxLord = MaxUnits(Unit.UnitType.Lord);
+
+            int hero = UnitsNumber(Unit.UnitType.Hero);
             int maxHero = MaxUnits(Unit.UnitType.Hero);
 
             Changes.main.armyHeroes.Content = String.Format("Heroes: {0}/{1} [ {2}/{3} ]",
                 lord, hero, maxLord, maxHero);
 
             int core = UnitsNumber(Unit.UnitType.Core);
-            int special = UnitsNumber(Unit.UnitType.Special);
-            int rare = UnitsNumber(Unit.UnitType.Rare);
-            
             int maxCore = MaxUnits(Unit.UnitType.Core);
-            int maxSpecial = MaxUnits(Unit.UnitType.Core);
-            int maxRare = MaxUnits(Unit.UnitType.Core);
+
+            int special = UnitsNumber(Unit.UnitType.Special);
+            int maxSpecial = MaxUnits(Unit.UnitType.Special);
+
+            int rare = UnitsNumber(Unit.UnitType.Rare);
+            int maxRare = MaxUnits(Unit.UnitType.Rare);
 
             Changes.main.armyUnits.Content = String.Format("Units: {0}/{1}/{2} [ {3}+/{4}/{5} ]",
                 core, special, rare, maxCore, maxSpecial, maxRare);
