@@ -490,7 +490,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 string head = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Name")).ToUpper();
                 string edition = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Edition"));
-                string description = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Description"));
+                string description = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Annotation"));
                 string authors = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Authors"));
                 int released = ArmyBook.Parsers.IntParse(ArmyBook.Services.Intro(xmlFile, "Released"));
                 string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Images/Illustration"));
