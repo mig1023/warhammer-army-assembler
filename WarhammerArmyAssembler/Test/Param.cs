@@ -76,10 +76,10 @@ namespace WarhammerArmyAssembler.Test
             string newLine = (testCount >= 1 ? "\n" : "\n\n");
             Data.Console(Data.text, (roundFormat ? " --> " : newLine) + "{0} must pass {1} test ", unit.Name, param);
 
-            int paramValue = (int)typeof(Unit).GetProperty(param).GetValue(unit);
+            Profile paramProfile = (Profile)typeof(Unit).GetProperty(param).GetValue(unit);
             int diceNum = ((param == "Leadership") ? 2 : 1);
 
-            if (Dice.Roll(unit, param, opponent, paramValue, diceNum, paramTest: true))
+            if (Dice.Roll(unit, param, opponent, paramProfile.Value, diceNum, paramTest: true))
                 Data.Console(Data.goodText, " --> passed");
             else
                 switch (test)
