@@ -423,55 +423,41 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesRareUnits = new List<Enemy>
         {
-            new Enemy("Snotling Pump Wagon/Orcs&Goblins/6/2/0/2/4/3/3/5/4/6/")
+            new Enemy("1/Snotling Pump Wagon/Orcs&Goblins/6/2/0/2/4/3/3/5/4/6/")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Unbreakable = true,
             },
 
-            new Enemy("Flagellants/The Empire/4/2/2/3/3/1/3/1/10//")
+            new Enemy("24/Flagellants/The Empire/4/2/2/3/3/1/3/1/10//")
             {
-                Type = UnitType.Rare,
-                Size = 24,
                 Unbreakable = true,
                 Frenzy = true,
                 Flail = true,
             },
 
-            new Enemy("Waywathers/Wood Elves/5/4/5/3/3/1/5/2/8//")
+            new Enemy("16/Waywathers/Wood Elves/5/4/5/3/3/1/5/2/8//")
             {
-                Type = UnitType.Rare,
-                Size = 16,
                 HitFirst = true,
             },
 
-            new Enemy("White Lions/High Elves/5/5/4/6/3/1/5/1/8/6/")
+            new Enemy("16/White Lions/High Elves/5/5/4/6/3/1/5/1/8/6/")
             {
-                Type = UnitType.Rare,
-                Size = 16,
                 HitFirst = true
             },
 
-            new Enemy("Black Guard/Dark Elves/5/5/4/4/3/1/6/1/9/5/")
+            new Enemy("16/Black Guard/Dark Elves/5/5/4/4/3/1/6/1/9/5/")
             {
-                Type = UnitType.Rare,
-                Size = 16,
                 Hate = true,
                 Stubborn = true,
             },
 
-            new Enemy("Troll Slayers/Dwarfs/3/4/3/5/4/1/2/1/10//")
+            new Enemy("16/Troll Slayers/Dwarfs/3/4/3/5/4/1/2/1/10//")
             {
-                Type = UnitType.Rare,
-                Size = 16,
                 Unbreakable = true,
             },
 
-            new Enemy("Grail Knights/Bretonnia/4/5/3/4/3/1/5/2/8/2/5")
+            new Enemy("12/Grail Knights/Bretonnia/4/5/3/4/3/1/5/2/8/2/5")
             {
-                Type = UnitType.Rare,
-                Size = 12,
                 Lance = true,
 
                 Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5//")
@@ -481,10 +467,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Blood Knights/Vampire Counts/4/5/3/5/4/1/4/2/7/2/5")
+            new Enemy("6/Blood Knights/Vampire Counts/4/5/3/5/4/1/4/2/7/2/5")
             {
-                Type = UnitType.Rare,
-                Size = 6,
                 Frenzy = true,
                 Undead = true,
                 Lance = true,
@@ -496,11 +480,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Skullcrushers/Chaos/4/5/3/4/4/1/5/2/8/1/")
+            new Enemy("6/Skullcrushers/Chaos/4/5/3/4/4/1/5/2/8/1/")
             {
-                Armybook = "Chaos",
-                Type = UnitType.Rare,
-                Size = 6,
                 Fear = true,
 
                 Mount = new Enemy("Juggernaut//7/5/0/5/4/3/2/3/7//")
