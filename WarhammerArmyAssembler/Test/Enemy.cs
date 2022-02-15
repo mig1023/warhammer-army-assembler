@@ -114,40 +114,32 @@ namespace WarhammerArmyAssembler
 
             new Enemy("1/Gyrobomber/Dwarfs/1/4/3/4/5/3/2/2/9/4/")
             {
-                Size = 1,
                 LargeBase = true,
             },
 
             new Enemy("1/Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7//")
             {
-                Size = 1,
                 Fear = true,
                 ColdBlooded = true,
                 LargeBase = true,
             },
 
-            new Enemy("Tomb Scorpion/Tomb Kings/7/4/0/5/5/3/3/4/8//")
+            new Enemy("1/Tomb Scorpion/Tomb Kings/7/4/0/5/5/3/3/4/8//")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Undead = true,
                 KillingBlow = true,
                 PoisonAttack = true,
                 LargeBase = true,
             },
 
-            new Enemy("Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8//")
+            new Enemy("1/Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8//")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Griffon/The Empire/6/5/0/5/5/4/5/4/7//")
+            new Enemy("1/Griffon/The Empire/6/5/0/5/5/4/5/4/7//")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
