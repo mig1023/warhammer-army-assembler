@@ -354,35 +354,25 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            new Enemy("Grave Guard/Vampire Counts/4/3/3/4/4/1/3/2/8/4/")
+            new Enemy("16/Grave Guard/Vampire Counts/4/3/3/4/4/1/3/2/8/4/")
             {
-                Type = UnitType.Special,
-                Size = 16,
                 KillingBlow = true,
                 Undead = true,
             },
 
-            new Enemy("Greatswords/The Empire/4/4/3/5/3/1/3/2/8/5/")
+            new Enemy("20/Greatswords/The Empire/4/4/3/5/3/1/3/2/8/5/")
             {
-                Type = UnitType.Special,
-                Size = 20,
                 HitLast = true,
                 Stubborn = true
             },
 
-            new Enemy("Black Orcs/Orcs&Goblins/4/4/3/5/4/1/2/1/8/5/")
+            new Enemy("16/Black Orcs/Orcs&Goblins/4/4/3/5/4/1/2/1/8/5/")
             {
-                Armybook = "Orcs&Goblins",
-                Type = UnitType.Special,
-                Size = 16,
                 HitLast = true
             },
 
-            new Enemy("Orc Boar Boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/3/")
+            new Enemy("8/Orc Boar Boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/3/")
             {
-                Type = UnitType.Special,
-                Size = 8,
-
                 Mount = new Enemy("Boar//7/3/0/3/4/1/3/1/3//")
                 {
                     Type = UnitType.Mount,
@@ -390,10 +380,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Cold One Knights/Dark Elves/5/5/4/4/3/1/6/1/9/2/")
+            new Enemy("8/Cold One Knights/Dark Elves/5/5/4/4/3/1/6/1/9/2/")
             {
-                Type = UnitType.Special,
-                Size = 8,
                 Hate = true,
                 Fear = true,
                 Lance = true,
