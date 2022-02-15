@@ -204,20 +204,16 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10//")
+            new Enemy("1/Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10//")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 Stubborn = true,
                 LargeBase = true,
                 Giant = true,
             },
 
-            new Enemy("Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10//")
+            new Enemy("1/Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10//")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Regeneration = true,
                 Terror = true,
                 Stubborn = true,
@@ -225,28 +221,22 @@ namespace WarhammerArmyAssembler
                 HellPitAbomination = true,
             },
 
-            new Enemy("Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3/")
+            new Enemy("1/Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3/")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 LargeBase = true,
                 HeroicKillingBlow = true,
                 Undead = true,
             },
 
-            new Enemy("Star Dragon/High Elves/6/7/0/7/6/7/2/6/9/3/")
+            new Enemy("1/Star Dragon/High Elves/6/7/0/7/6/7/2/6/9/3/")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Steam Tank/The Empire/0/0/4/6/6/10/0/0/10/1/")
+            new Enemy("1/Steam Tank/The Empire/0/0/4/6/6/10/0/0/10/1/")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Unbreakable = true,
                 Terror = true,
                 LargeBase = true,
