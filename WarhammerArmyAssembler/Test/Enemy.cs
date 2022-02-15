@@ -12,27 +12,28 @@ namespace WarhammerArmyAssembler
         {
             string[] profile = enemyName.Split('/');
 
-            this.Name = profile[0];
-            this.Armybook = profile[1];
+            this.Size = int.Parse(profile[0]);
+            this.Name = profile[1];
+            this.Armybook = profile[2];
 
-            this.Movement = NewProfile(profile[2]);
-            this.WeaponSkill = NewProfile(profile[3]);
-            this.BallisticSkill = NewProfile(profile[4]);
-            this.Strength = NewProfile(profile[5]);
-            this.Toughness = NewProfile(profile[6]);
-            this.Wounds = NewProfile(profile[7]);
-            this.Initiative = NewProfile(profile[8]);
-            this.Attacks = NewProfile(profile[9]);
-            this.Leadership = NewProfile(profile[10]);
+            this.Movement = NewProfile(profile[3]);
+            this.WeaponSkill = NewProfile(profile[4]);
+            this.BallisticSkill = NewProfile(profile[5]);
+            this.Strength = NewProfile(profile[6]);
+            this.Toughness = NewProfile(profile[7]);
+            this.Wounds = NewProfile(profile[8]);
+            this.Initiative = NewProfile(profile[9]);
+            this.Attacks = NewProfile(profile[10]);
+            this.Leadership = NewProfile(profile[11]);
 
-            bool isArmour = int.TryParse(profile[11], out int armour);
+            bool isArmour = int.TryParse(profile[12], out int armour);
 
             if (isArmour)
                 this.Armour = new Profile { Value = armour };
             else
                 this.Armour = new Profile { Null = true };
 
-            bool isWard = int.TryParse(profile[12], out int ward);
+            bool isWard = int.TryParse(profile[13], out int ward);
 
             if (isWard)
                 this.Ward = new Profile { Value = ward };
@@ -103,26 +104,22 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
-            new Enemy("Troll/Orcs&Goblins/6/3/1/5/4/3/1/3/4//")
+            new Enemy("1/Troll/Orcs&Goblins/6/3/1/5/4/3/1/3/4//")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Fear = true,
                 Regeneration = true,
                 Stupidity = true,
                 LargeBase = true,
             },
 
-            new Enemy("Gyrobomber/Dwarfs/1/4/3/4/5/3/2/2/9/4/")
+            new Enemy("1/Gyrobomber/Dwarfs/1/4/3/4/5/3/2/2/9/4/")
             {
-                Type = UnitType.Rare,
                 Size = 1,
                 LargeBase = true,
             },
 
-            new Enemy("Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7//")
+            new Enemy("1/Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7//")
             {
-                Type = UnitType.Rare,
                 Size = 1,
                 Fear = true,
                 ColdBlooded = true,
