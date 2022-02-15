@@ -393,10 +393,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Cold One Cavalry/Lizardmen/4/4/0/4/4/1/2/2/8/2/")
+            new Enemy("8/Cold One Cavalry/Lizardmen/4/4/0/4/4/1/2/2/8/2/")
             {
-                Type = UnitType.Special,
-                Size = 8,
                 ColdBlooded = true,
                 Fear = true,
 
@@ -407,24 +405,18 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Bloodletters/Chaos/4/5/0/5/3/1/4/2/8/6/")
+            new Enemy("20/Bloodletters/Chaos/4/5/0/5/3/1/4/2/8/6/")
             {
-                Type = UnitType.Special,
-                Size = 20,
                 Frenzy = true
             },
 
-            new Enemy("Sword Masters/High Elves/5/6/4/5/3/1/5/2/8/5/")
+            new Enemy("16/Sword Masters/High Elves/5/6/4/5/3/1/5/2/8/5/")
             {
-                Type = UnitType.Special,
-                Size = 16,
                 HitFirst = true
             },
 
-            new Enemy("Hammerers/Dwarfs/3/5/3/6/4/1/2/1/9/5/")
+            new Enemy("16/Hammerers/Dwarfs/3/5/3/6/4/1/2/1/9/5/")
             {
-                Type = UnitType.Special,
-                Size = 16,
                 Stubborn = true,
             },
         };
