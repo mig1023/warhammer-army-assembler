@@ -288,10 +288,8 @@ namespace WarhammerArmyAssembler
                 HitLast = true,
             },
 
-            new Enemy("Knights of the Realms/Bretonnia/4/4/3/3/3/1/3/1/8/2/")
+            new Enemy("8/Knights of the Realms/Bretonnia/4/4/3/3/3/1/3/1/8/2/")
             {
-                Type = UnitType.Core,
-                Size = 8,
                 Lance = true,
 
                 Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5//")
@@ -301,25 +299,18 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Longbeards/Dwarfs/3/5/3/4/4/1/2/1/9/4/")
+            new Enemy("20/Longbeards/Dwarfs/3/5/3/4/4/1/2/1/9/4/")
             {
-                Type = UnitType.Core,
-                Size = 20,
                 ImmuneToPsychology = true
             },
 
-            new Enemy("Temple Guard/Lizardmen/4/4/0/5/4/1/2/2/8/4/")
+            new Enemy("20/Temple Guard/Lizardmen/4/4/0/5/4/1/2/2/8/4/")
             {
-                Type = UnitType.Core,
-                Size = 20,
                 ColdBlooded = true
             },
 
-            new Enemy("Chosen Knights/Chaos/4/5/3/5/4/1/5/2/8/1/")
+            new Enemy("8/Chosen Knights/Chaos/4/5/3/5/4/1/5/2/8/1/")
             {
-                Type = UnitType.Core,
-                Size = 8,
-
                 Mount = new Enemy("Chaos Steed//8/3/0/4/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
