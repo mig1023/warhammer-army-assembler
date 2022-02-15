@@ -495,19 +495,17 @@ namespace WarhammerArmyAssembler
 
             new Enemy("1/Gitilla/Orcs&Goblins/4/4/4/4/4/2/4/3/7/3/")
             {
-                Mount = new Enemy("Ulda the Great Wolf//9/3/0/3/3/1/3/2/3//")
+                Mount = new Enemy("1/Ulda the Great Wolf//9/3/0/3/3/1/3/2/3//")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                 }
             },
 
             new Enemy("1/Moonclaw/Beastmen/5/3/3/4/4/2/3/3/7//5")
             {
-                Mount = new Enemy("Umbralok//7/3/0/4/4/1/2/3/6//")
+                Mount = new Enemy("1/Umbralok//7/3/0/4/4/1/2/3/6//")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                 }
             },
 
@@ -516,10 +514,9 @@ namespace WarhammerArmyAssembler
                 KillingBlow = true,
                 Reroll = "ToWound",
 
-                Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5//")
+                Mount = new Enemy("1/Warhorse//8/3/0/3/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                 }
             },
 
@@ -571,10 +568,9 @@ namespace WarhammerArmyAssembler
                 Reroll = "ToWound",
                 NoArmour = true,
 
-                Mount = new Enemy("Spite//7/3/0/4/4/1/2/2/4/5/")
+                Mount = new Enemy("1/Spite//7/3/0/4/4/1/2/2/4/5/")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                     Fear = true,
                 }
             },
@@ -602,10 +598,9 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 Undead = true,
 
-                Mount = new Enemy("Shadow Steed//8/4/0/4/3/1/4/1/5/5/")
+                Mount = new Enemy("1/Shadow Steed//8/4/0/4/3/1/4/1/5/5/")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                 }
             },
 
@@ -625,10 +620,9 @@ namespace WarhammerArmyAssembler
                 Regeneration = true,
                 Reroll = "ToHit;ToWound",
 
-                Mount = new Enemy("Beaquis//8/5/0/5/5/4/6/4/9/5/")
+                Mount = new Enemy("1/Beaquis//8/5/0/5/5/4/6/4/9/5/")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                     Terror = true,
                 }
             },
@@ -640,10 +634,9 @@ namespace WarhammerArmyAssembler
                 AutoWound = true,
                 NoArmour = true,
 
-                Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5//")
+                Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
-                    Size = 8,
                 }
             },
 
@@ -651,10 +644,9 @@ namespace WarhammerArmyAssembler
             {
                 Undead = true,
 
-                Mount = new Enemy("Zombie Dragon//6/3/0/6/6/6/1/4/4/5/")
+                Mount = new Enemy("1/Zombie Dragon//6/3/0/6/6/6/1/4/4/5/")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                     Terror = true,
                     Undead = true,
                 }
@@ -666,10 +658,9 @@ namespace WarhammerArmyAssembler
                 NoArmour = true,
                 MultiWounds = "D3",
 
-                Mount = new Enemy("Deathclaw//6/6/0/5/5/4/5/4/8//")
+                Mount = new Enemy("1/Deathclaw//6/6/0/5/5/4/5/4/8//")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                     Terror = true,
                 }
             },
@@ -679,10 +670,9 @@ namespace WarhammerArmyAssembler
                 HitFirst = true,
                 Regeneration = true,
 
-                Mount = new Enemy("Malhandir//10/4/0/4/3/1/5/2/7//")
+                Mount = new Enemy("1/Malhandir//10/4/0/4/3/1/5/2/7//")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                 }
             },
 
@@ -692,10 +682,9 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
                 Stubborn = true,
 
-                Mount = new Enemy("Thronebearers//3/5/3/4/0/1/3/4/0//")
+                Mount = new Enemy("1/Thronebearers//3/5/3/4/0/1/3/4/0//")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                 }
             },
 
@@ -706,10 +695,9 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 Unbreakable = true,
 
-                Mount = new Enemy("Hound of Orion//9/4/0/4/4/1/4/1/6//")
+                Mount = new Enemy("2/Hound of Orion//9/4/0/4/4/1/4/1/6//")
                 {
                     Type = UnitType.Hero,
-                    Size = 2,
                     Frenzy = true,
                     Unbreakable = true,
                 }
@@ -735,10 +723,9 @@ namespace WarhammerArmyAssembler
             {
                 NoArmour = true,
 
-                Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3/")
+                Mount = new Enemy("1/Seraphon//6/6/0/6/6/6/4/5/8/3/")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                     Terror = true,
                     LargeBase = true,
                 }
@@ -749,10 +736,9 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = true,
                 MultiWounds = "2",
 
-                Mount = new Enemy("Grymloq//7/3/0/7/5/5/2/5/5/4/")
+                Mount = new Enemy("1/Grymloq//7/3/0/7/5/5/2/5/5/4/")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                     Terror = true,
                     ColdBlooded = true,
                     MultiWounds = "D3",
@@ -766,10 +752,9 @@ namespace WarhammerArmyAssembler
                 NoArmour = true,
                 Terror = true,
 
-                Mount = new Enemy("Dorghar//8/4/0/5/5/3/3/3/9/4/")
+                Mount = new Enemy("1/Dorghar//8/4/0/5/5/3/3/3/9/4/")
                 {
                     Type = UnitType.Mount,
-                    Size = 1,
                     LargeBase = true,
                 }
             },
