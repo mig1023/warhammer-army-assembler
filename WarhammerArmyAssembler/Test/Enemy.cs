@@ -543,34 +543,26 @@ namespace WarhammerArmyAssembler
                 Reroll = "ToHit;OpponentToWound",
             },
 
-            new Enemy("Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4")
+            new Enemy("1/Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4")
             {
-                Type = UnitType.Hero,
-                Size = 1,
                 ImmuneToPsychology = true,
             },
 
-            new Enemy("Drycha/Wood Elves/5/7/4/5/4/3/8/5/8//")
+            new Enemy("1/Drycha/Wood Elves/5/7/4/5/4/3/8/5/8//")
             {
-                Type = UnitType.Hero,
-                Size = 1,
                 Terror = true,
                 Reroll = "ToHit",
             },
 
-            new Enemy("Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4")
+            new Enemy("1/Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4")
             {
-                Type = UnitType.Hero,
-                Size = 1,
                 Fear = true,
                 HitFirst = true,
                 MultiWounds = "D3",
             },
 
-            new Enemy("Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5")
+            new Enemy("1/Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5")
             {
-                Type = UnitType.Hero,
-                Size = 1,
                 Fear = true,
                 HitFirst = true,
                 Reroll = "ToHit",
@@ -578,10 +570,8 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            new Enemy("Throgg/Chaos/6/5/2/6/5/4/2/5/8//")
+            new Enemy("1/Throgg/Chaos/6/5/2/6/5/4/2/5/8//")
             {
-                Type = UnitType.Hero,
-                Size = 1,
                 Fear = true,
                 Regeneration = true,
                 LargeBase = true,
