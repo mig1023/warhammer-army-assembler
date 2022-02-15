@@ -246,24 +246,14 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
         {
-            new Enemy("Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2//")
+            new Enemy("20/Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2//")
             {
-                Type = UnitType.Core,
-                Size = 20,
                 StrengthInNumbers = true,
             },
 
-            new Enemy("Men-at-arms/Bretonnia/4/2/2/3/3/1/3/1/5/5/")
-            {
-                Type = UnitType.Core,
-                Size = 20,
-            },
+            new Enemy("20/Men-at-arms/Bretonnia/4/2/2/3/3/1/3/1/5/5/"),
 
-            new Enemy("Empire swordmens/The Empire/4/3/3/3/3/1/3/1/7/6/")
-            {
-                Type = UnitType.Core,
-                Size = 20,
-            },
+            new Enemy("20/Empire swordmens/The Empire/4/3/3/3/3/1/3/1/7/6/"),
 
             new Enemy("Orc boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/5/")
             {
