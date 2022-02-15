@@ -144,19 +144,15 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Manticore/Chaos/6/5/0/5/5/4/5/4/5//")
+            new Enemy("1/Manticore/Chaos/6/5/0/5/5/4/5/4/5//")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 KillingBlow = true,
                 LargeBase = true,
             },
 
-            new Enemy("Varghulf/Vampire/8/5/0/5/5/4/2/5/4//")
+            new Enemy("1/Varghulf/Vampire/8/5/0/5/5/4/2/5/4//")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 Undead = true,
                 Regeneration = true,
@@ -164,10 +160,8 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4/")
+            new Enemy("1/War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4/")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 LargeBase = true,
 
@@ -179,19 +173,15 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4/")
+            new Enemy("1/Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4/")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 ImmuneToPsychology = true,
                 LargeBase = true,
             },
 
-            new Enemy("Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4/")
+            new Enemy("1/Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4/")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 LargeBase = true,
                 ColdBlooded = true,
                 Terror = true,
@@ -208,10 +198,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3/")
+            new Enemy("1/Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3/")
             {
-                Type = UnitType.Rare,
-                Size = 1,
                 Terror = true,
                 LargeBase = true,
             },
