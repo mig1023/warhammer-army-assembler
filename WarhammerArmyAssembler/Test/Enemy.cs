@@ -165,10 +165,9 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 LargeBase = true,
 
-                Mount = new Enemy("Apparentice//5/4/4/3/3/2/3/2/8//")
+                Mount = new Enemy("2/Apparentice//5/4/4/3/3/2/3/2/8//")
                 {
                     Type = UnitType.Mount,
-                    Size = 2,
                     NoKillingBlow = true,
                 }
             },
@@ -188,10 +187,9 @@ namespace WarhammerArmyAssembler
                 Stubborn = true,
                 ImmuneToPsychology = true,
 
-                Mount = new Enemy("Skink Crew//6/2/3/3/2/4/4/4/5/4/")
+                Mount = new Enemy("5/Skink Crew//6/2/3/3/2/4/4/4/5/4/")
                 {
                     Type = UnitType.Mount,
-                    Size = 5,
                     ColdBlooded = true,
                     PoisonAttack = true,
                     NoKillingBlow = true,
@@ -292,10 +290,9 @@ namespace WarhammerArmyAssembler
             {
                 Lance = true,
 
-                Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5//")
+                Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
-                    Size = 8,
                 }
             },
 
@@ -311,10 +308,9 @@ namespace WarhammerArmyAssembler
 
             new Enemy("8/Chosen Knights/Chaos/4/5/3/5/4/1/5/2/8/1/")
             {
-                Mount = new Enemy("Chaos Steed//8/3/0/4/3/1/3/1/5//")
+                Mount = new Enemy("8/Chaos Steed//8/3/0/4/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
-                    Size = 8,
                 }
             },
         };
@@ -330,10 +326,9 @@ namespace WarhammerArmyAssembler
             {
                 Lance = true,
 
-                Mount = new Enemy("Pegasus//8/3/0/4/4/1/4/2/7//")
+                Mount = new Enemy("8/Pegasus//8/3/0/4/4/1/4/2/7//")
                 {
                     Type = UnitType.Mount,
-                    Size = 8,
                 }
             },
 
@@ -373,10 +368,9 @@ namespace WarhammerArmyAssembler
 
             new Enemy("8/Orc Boar Boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/3/")
             {
-                Mount = new Enemy("Boar//7/3/0/3/4/1/3/1/3//")
+                Mount = new Enemy("8/Boar//7/3/0/3/4/1/3/1/3//")
                 {
                     Type = UnitType.Mount,
-                    Size = 8,
                 }
             },
 
@@ -386,10 +380,9 @@ namespace WarhammerArmyAssembler
                 Fear = true,
                 Lance = true,
 
-                Mount = new Enemy("Cold One//7/3/0/4/4/1/2/1/3//")
+                Mount = new Enemy("8/Cold One//7/3/0/4/4/1/2/1/3//")
                 {
                     Type = UnitType.Mount,
-                    Size = 8,
                 }
             },
 
@@ -398,10 +391,9 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = true,
                 Fear = true,
 
-                Mount = new Enemy("Cold One//7/3/0/4/4/1/2/1/3//")
+                Mount = new Enemy("8/Cold One//7/3/0/4/4/1/2/1/3//")
                 {
                     Type = UnitType.Mount,
-                    Size = 8,
                 }
             },
 
@@ -460,10 +452,9 @@ namespace WarhammerArmyAssembler
             {
                 Lance = true,
 
-                Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5//")
+                Mount = new Enemy("12/Warhorse//8/3/0/3/3/1/3/1/5//")
                 {
                     Type = UnitType.Mount,
-                    Size = 12,
                 }
             },
 
@@ -473,10 +464,9 @@ namespace WarhammerArmyAssembler
                 Undead = true,
                 Lance = true,
 
-                Mount = new Enemy("Nightmare//8/3/0/4/4/1/2/1/3//")
+                Mount = new Enemy("6/Nightmare//8/3/0/4/4/1/2/1/3//")
                 {
                     Type = UnitType.Mount,
-                    Size = 6,
                 }
             },
 
@@ -484,10 +474,9 @@ namespace WarhammerArmyAssembler
             {
                 Fear = true,
 
-                Mount = new Enemy("Juggernaut//7/5/0/5/4/3/2/3/7//")
+                Mount = new Enemy("6/Juggernaut//7/5/0/5/4/3/2/3/7//")
                 {
                     Type = UnitType.Mount,
-                    Size = 6,
                 }
             },
         };
@@ -755,10 +744,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5")
+            new Enemy("1/Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 ColdBlooded = true,
                 MultiWounds = "2",
 
@@ -773,10 +760,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3")
+            new Enemy("1/Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 ImmuneToPsychology = true,
                 NoArmour = true,
                 Terror = true,
@@ -789,19 +774,15 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Grimgor Ironhide/Orcs&Goblins/4/8/1/7/5/3/5/7/9/1/5")
+            new Enemy("1/Grimgor Ironhide/Orcs&Goblins/4/8/1/7/5/3/5/7/9/1/5")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 Hate = true,
                 HitFirst = true,
                 ImmuneToPsychology = true,
             },
 
-            new Enemy("Bloodthister/Chaos/6/10/0/7/6/7/10/7/9/4/5")
+            new Enemy("1/Bloodthister/Chaos/6/10/0/7/6/7/10/7/9/4/5")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 Terror = true,
                 KillingBlow = true,
                 LargeBase = true,
