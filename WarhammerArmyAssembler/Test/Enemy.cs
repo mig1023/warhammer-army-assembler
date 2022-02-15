@@ -273,24 +273,18 @@ namespace WarhammerArmyAssembler
                 PoisonAttack = true,
             },
 
-            new Enemy("Back Ark Corsairs/Dark Elves/5/4/4/3/3/1/5/2/8/5/")
+            new Enemy("20/Back Ark Corsairs/Dark Elves/5/4/4/3/3/1/5/2/8/5/")
             {
-                Type = UnitType.Core,
-                Size = 20,
                 Hate = true,
             },
 
-            new Enemy("Dryads/Wood Elves/5/4/0/4/4/1/6/2/8//")
+            new Enemy("20/Dryads/Wood Elves/5/4/0/4/4/1/6/2/8//")
             {
-                Type = UnitType.Core,
-                Size = 20,
                 Fear = true,
             },
 
-            new Enemy("Bestigor/Beastmen/5/4/3/6/4/1/3/1/7/5/")
+            new Enemy("20/Bestigor/Beastmen/5/4/3/6/4/1/3/1/7/5/")
             {
-                Type = UnitType.Core,
-                Size = 20,
                 HitLast = true,
             },
 
