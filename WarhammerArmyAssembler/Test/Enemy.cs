@@ -321,17 +321,13 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesSpecialUnits = new List<Enemy>
         {
-            new Enemy("Tree Kin/Wood Elves/5/4/4/4/5/3/3/3/8/4/")
+            new Enemy("5/Tree Kin/Wood Elves/5/4/4/4/5/3/3/3/8/4/")
             {
-                Type = UnitType.Special,
-                Size = 5,
                 Fear = true,
             },
 
-            new Enemy("Pegasus Knights/Bretonnia/4/4/3/3/4/2/4/1/8/3/")
+            new Enemy("8/Pegasus Knights/Bretonnia/4/4/3/3/4/2/4/1/8/3/")
             {
-                Type = UnitType.Special,
-                Size = 8,
                 Lance = true,
 
                 Mount = new Enemy("Pegasus//8/3/0/4/4/1/4/2/7//")
@@ -341,25 +337,19 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Chaos Ogre/Beastmen/6/3/2/4/4/3/2/3/7/6/")
+            new Enemy("5/Chaos Ogre/Beastmen/6/3/2/4/4/3/2/3/7/6/")
             {
-                Type = UnitType.Special,
-                Size = 5,
                 Fear = true,
             },
 
-             new Enemy("Plague Monks/Skaven/5/3/3/3/4/1/3/3/5//")
+            new Enemy("20/Plague Monks/Skaven/5/3/3/3/4/1/3/3/5//")
             {
-                Type = UnitType.Special,
-                Size = 20,
                 Frenzy = true,
                 StrengthInNumbers = true,
             },
 
-            new Enemy("Tomb Guard/Tomb Kings/4/3/3/4/4/1/3/1/8/5/")
+            new Enemy("16/Tomb Guard/Tomb Kings/4/3/3/4/4/1/3/1/8/5/")
             {
-                Type = UnitType.Special,
-                Size = 16,
                 KillingBlow = true,
                 Undead = true,
             },
