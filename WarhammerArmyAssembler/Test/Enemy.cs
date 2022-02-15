@@ -577,10 +577,8 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3/")
+            new Enemy("1/Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3/")
             {
-                Type = UnitType.Hero,
-                Size = 1,
                 Reroll = "ToWound",
                 NoArmour = true,
 
@@ -592,19 +590,15 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4")
+            new Enemy("1/Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4")
             {
-                Type = UnitType.Hero,
-                Size = 1,
                 HitFirst = true,
                 ArmourPiercing = 2,
                 MultiWounds = "D3",
             },
 
-            new Enemy("Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5")
+            new Enemy("1/Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5")
             {
-                Type = UnitType.Hero,
-                Size = 1,
                 Unbreakable = true,
                 HitFirst = true,
                 Reroll = "ToHit",
@@ -613,10 +607,8 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
         {
-            new Enemy("Green Knight/Bretonnia/6/7/3/6/4/3/6/4/9//4")
+            new Enemy("1/Green Knight/Bretonnia/6/7/3/6/4/3/6/4/9//4")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 ImmuneToPsychology = true,
                 Terror = true,
                 Undead = true,
@@ -628,25 +620,17 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2/")
-            {
-                Type = UnitType.Lord,
-                Size = 1,
-            },
+            new Enemy("1/Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2/"),
 
-            new Enemy("Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10//")
+            new Enemy("1/Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10//")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 HitFirst = true,
                 Undead = true,
                 PoisonAttack = true,
             },
 
-            new Enemy("Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5")
+            new Enemy("1/Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 Lance = true,
                 ImmuneToPsychology = true,
                 Regeneration = true,
@@ -660,10 +644,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2/")
+            new Enemy("1/Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2/")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 Stubborn = true,
                 ImmuneToPsychology = true,
                 AutoWound = true,
@@ -676,10 +658,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4")
+            new Enemy("1/Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 Undead = true,
 
                 Mount = new Enemy("Zombie Dragon//6/3/0/6/6/6/1/4/4/5/")
@@ -691,10 +671,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4")
+            new Enemy("1/Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 AutoWound = true,
                 NoArmour = true,
                 MultiWounds = "D3",
@@ -707,10 +685,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4")
+            new Enemy("1/Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 HitFirst = true,
                 Regeneration = true,
 
@@ -721,10 +697,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Torgrim Grudgebearer/Dwarfs/3/7/6/4/5/7/4/4/10/2/4")
+            new Enemy("1/Torgrim Grudgebearer/Dwarfs/3/7/6/4/5/7/4/4/10/2/4")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 HitFirst = true,
                 ImmuneToPsychology = true,
                 Stubborn = true,
@@ -736,10 +710,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5")
+            new Enemy("1/Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 HitFirst = true,
                 Frenzy = true,
                 Terror = true,
@@ -754,10 +726,8 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Durthu/Wood Elves/5/7/7/6/6/6/2/6/10/3/6")
+            new Enemy("1/Durthu/Wood Elves/5/7/7/6/6/6/2/6/10/3/6")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 LargeBase = true,
                 Frenzy = true,
                 Terror = true,
@@ -765,19 +735,15 @@ namespace WarhammerArmyAssembler
                 Stubborn = true,
             },
 
-            new Enemy("Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5")
+            new Enemy("1/Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 ImmuneToPsychology = true,
                 Terror = true,
                 MultiWounds = "D3",
             },
 
-            new Enemy("Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2")
+            new Enemy("1/Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2")
             {
-                Type = UnitType.Lord,
-                Size = 1,
                 NoArmour = true,
 
                 Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3/")
