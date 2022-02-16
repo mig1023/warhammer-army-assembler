@@ -393,6 +393,12 @@ namespace WarhammerArmyAssembler.Interface
             return MessageBox.Show("All army data will be lost.\nContinue?", String.Empty, MessageBoxButton.OKCancel) == MessageBoxResult.OK;
         }
 
+        private static void ArmyChangesColors(Label label)
+        {
+            label.MouseEnter += (sender, e) => label.Background = CurrentSelectedArmyBackColor;
+            label.MouseLeave += (sender, e) => label.Background = Brushes.White;
+        }
+
         private static void PreviewLoadCurrentSelectedArmy(string armyName)
         {
             XmlDocument xmlFile = new XmlDocument();
@@ -406,6 +412,8 @@ namespace WarhammerArmyAssembler.Interface
             Brush mainColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
 
             CurrentSelectedArmyBackColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Grid"));
+            ArmyChangesColors(changeArmybook.prev);
+            ArmyChangesColors(changeArmybook.next);
 
             foreach (Label label in PointsButtons)
             {
