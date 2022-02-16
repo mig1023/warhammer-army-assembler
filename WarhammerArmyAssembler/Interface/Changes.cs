@@ -800,6 +800,8 @@ namespace WarhammerArmyAssembler.Interface
 
                 main.startBattleRoyale.Margin = Changes.Thick(main.enemyForTestText, top: marginTop + 154,
                     left: main.startBattleRoyale.Margin.Left + 163);
+
+                main.currentTest.Margin = Changes.Thick(main.startBattleRoyale);
             }
             else
             {
