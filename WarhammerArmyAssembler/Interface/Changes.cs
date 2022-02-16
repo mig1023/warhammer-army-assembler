@@ -22,6 +22,7 @@ namespace WarhammerArmyAssembler.Interface
         public static object DragSender = null;
         public static string CurrentSelectedArmy = null;
         public static int CurrentSelectedUnit = -1;
+        public static Brush CurrentSelectedArmyBackColor = null;
 
         public static Image lastImage = null;
         public static string lastArmy = String.Empty;
@@ -404,6 +405,8 @@ namespace WarhammerArmyAssembler.Interface
 
             Brush mainColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
 
+            CurrentSelectedArmyBackColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Grid"));
+
             foreach (Label label in PointsButtons)
             {
                 label.BorderBrush = mainColor;
@@ -613,6 +616,8 @@ namespace WarhammerArmyAssembler.Interface
 
                 newPointsBotton.Margin = Thick(newPointsBotton, xButtons[xIndex], yButtons[yIndex]);
                 newPointsBotton.MouseDown += changeArmybook.buttonPoints_Click;
+                newPointsBotton.MouseEnter += (sender, e) => newPointsBotton.Background = CurrentSelectedArmyBackColor;
+                newPointsBotton.MouseLeave += (sender, e) => newPointsBotton.Background = Brushes.White;
 
                 changeArmybook.menuArmybookPlace.Children.Add(newPointsBotton);
                 PointsButtons.Add(newPointsBotton);
