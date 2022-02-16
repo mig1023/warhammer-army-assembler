@@ -399,6 +399,23 @@ namespace WarhammerArmyAssembler.Interface
             label.MouseLeave += (sender, e) => label.Background = Brushes.White;
         }
 
+        private static void InputPountsColors(Control button, Brush mainColor)
+        {
+            button.MouseEnter += (sender, e) =>
+            {
+                button.BorderBrush = mainColor;
+                button.Foreground = mainColor;
+                button.Background = Brushes.White;
+            };
+
+            button.MouseLeave += (sender, e) =>
+            {
+                button.BorderBrush = mainColor;
+                button.Foreground = Brushes.White;
+                button.Background = mainColor;
+            };
+        }
+
         private static void PreviewLoadCurrentSelectedArmy(string armyName)
         {
             XmlDocument xmlFile = new XmlDocument();
@@ -448,6 +465,9 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (Control label in labels)
                 label.Background = mainColor;
+
+            InputPountsColors(changeArmybook.buttonArmybook, mainColor);
+            changeArmybook.buttonArmybook.BorderBrush = mainColor;
 
             main.mainWindowHeader.Background = mainColor;
             changeArmybook.gridCloseArmybook.Background = mainColor;
