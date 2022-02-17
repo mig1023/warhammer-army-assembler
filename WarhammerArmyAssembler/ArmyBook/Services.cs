@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Media.Imaging;
 using System.Xml;
 
 namespace WarhammerArmyAssembler.ArmyBook
@@ -17,5 +18,21 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static XmlNode Intro(XmlDocument xmlFile, string name) =>
             xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", name));
+
+        public static BitmapImage GetUnitImage(string path)
+        {
+            BitmapImage image = null;
+
+            try
+            {
+                image = new BitmapImage(new Uri(path));
+            }
+            catch
+            {
+                return null;
+            }
+
+            return image;
+        }
     }
 }

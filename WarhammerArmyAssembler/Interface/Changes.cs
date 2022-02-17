@@ -755,27 +755,11 @@ namespace WarhammerArmyAssembler.Interface
             main.armybookDetailScroll.Visibility = Visibility.Hidden;
         }
 
-        private static BitmapImage GetUnitImage(string path)
-        {
-            BitmapImage image = null;
-
-            try
-            {
-                image = new BitmapImage(new Uri(path));
-            }
-            catch
-            {
-                return null;
-            }
-
-            return image;
-        }
-
-        private static BitmapImage TryHomologueImage(Unit unit)
+        public static BitmapImage TryHomologueImage(Unit unit)
         {
             foreach (string homologueImage in ArmyBook.XmlBook.GetHomologue(Army.Data.Name, unit.Name, unit.IsHero()))
             {
-                BitmapImage image = GetUnitImage(homologueImage);
+                BitmapImage image = ArmyBook.Services.GetUnitImage(homologueImage);
 
                 if (image != null)
                     return image;
@@ -789,10 +773,6 @@ namespace WarhammerArmyAssembler.Interface
             main.armyUnitName.Content = unit.Name.ToUpper();
             main.armyUnitDescription.Text = unit.Description;
             main.armyUnitSpecific.Text = unit.SelfDescription();
-            main.armyUnitImage.Source = GetUnitImage(Army.Data.UnitsImagesDirectory + unit.Image);
-
-            if (main.armyUnitImage.Source == null)
-                main.armyUnitImage.Source = TryHomologueImage(unit);
 
             main.UpdateLayout();
 

@@ -105,8 +105,20 @@ namespace WarhammerArmyAssembler
             armyUnitImage.Source = null;
 
             bool thisIsUnit = ArmyBook.Data.Units.ContainsKey(id);
-            bool whithImage = thisIsUnit; // && !String.IsNullOrEmpty(ArmyBook.Data.Units[id].Image);
+            bool whithImage = false;
             bool thisIsArtefact = ArmyBook.Data.Artefact.ContainsKey(id);
+
+            if (thisIsUnit)
+            {
+                Unit unit = ArmyBook.Data.Units[id];
+
+                armyUnitImage.Source = ArmyBook.Services.GetUnitImage(Army.Data.UnitsImagesDirectory + unit.Image);
+
+                if (armyUnitImage.Source == null)
+                    armyUnitImage.Source = Interface.Changes.TryHomologueImage(unit);
+
+                whithImage = (armyUnitImage.Source != null);
+            }
 
             if (group)
             {
