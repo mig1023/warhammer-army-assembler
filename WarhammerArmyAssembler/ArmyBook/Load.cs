@@ -44,6 +44,34 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.MagicPowersStyle = LoadStyle(xmlFile, "MagicPowers", defaultValue: "MAGIC POWERS").ToUpper();
         }
 
+        public static string LoadArmyUnitImageOnly(string xmlFileName, string unitName, bool isHero)
+        {
+            XmlDocument xmlFile = new XmlDocument();
+
+            xmlFile.Load(xmlFileName);
+
+            string imagePath = Path.GetDirectoryName(xmlFileName) + "\\" +
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
+
+            string unitType = (isHero ? "Heroes/Hero" : "Units/Unit");
+            XmlNodeList xmlNodes =  xmlFile.SelectNodes("ArmyBook/" + unitType);
+
+            foreach (XmlNode xmlUnit in xmlNodes)
+            {
+                string xmlUnitName = StringParse(xmlUnit["Name"]);
+
+                if (xmlUnitName != unitName)
+                    continue;
+
+                string image = StringParse(xmlUnit["Image"]);
+
+                if (!String.IsNullOrEmpty(image))
+                    return imagePath + image;
+            }
+
+            return String.Empty;
+        }
+
         public static void LoadArmy(string xmlFileName)
         {
             Data.Magic.Clear();

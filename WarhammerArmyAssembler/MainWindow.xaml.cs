@@ -105,7 +105,7 @@ namespace WarhammerArmyAssembler
             armyUnitImage.Source = null;
 
             bool thisIsUnit = ArmyBook.Data.Units.ContainsKey(id);
-            bool whithImage = thisIsUnit && !String.IsNullOrEmpty(ArmyBook.Data.Units[id].Image);
+            bool whithImage = thisIsUnit; // && !String.IsNullOrEmpty(ArmyBook.Data.Units[id].Image);
             bool thisIsArtefact = ArmyBook.Data.Artefact.ContainsKey(id);
 
             if (group)

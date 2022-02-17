@@ -8,6 +8,31 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     class XmlBook
     {
+        private static Dictionary<string, List<string>> HomologousSeries = new Dictionary<string, List<string>>();
+
+        private static void AddHomologue(string head, string file)
+        {
+            if (HomologousSeries.ContainsKey(head))
+                HomologousSeries[head].Add(file);
+            else
+                HomologousSeries.Add(head, new List<string> { file });
+        }
+
+        public static List<string> GetHomologue(string army, string unit, bool isHero)
+        {
+            List<string> images = new List<string>();
+
+            foreach (string homologue in HomologousSeries[army])
+            {
+                string homologueImage = Load.LoadArmyUnitImageOnly(homologue, unit, isHero);
+
+                if (!String.IsNullOrEmpty(homologueImage))
+                    images.Add(homologueImage);
+            }
+
+            return images;
+        }
+
         public static string GetXmlArmyBooks(bool next = false, bool prev = false)
         {
             List<string> allXmlFiles = FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
@@ -90,6 +115,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                         armyOrderName += armyEdition.InnerText;
 
                     files.Add(armyOrderName, file);
+                    AddHomologue(armyName.InnerText, file);
                 }
 
                 foreach (string directory in Directory.GetDirectories(programDirectory))
