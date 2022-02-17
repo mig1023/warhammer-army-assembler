@@ -104,6 +104,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                     if (armyName == null)
                         continue;
 
+                    XmlNode armyInnerName = Services.Intro(xmlFile, "InnerName");
                     XmlNode armyEdition = Services.Intro(xmlFile, "Edition");
                     XmlNode orderName = Services.Intro(xmlFile, "OrderName");
 
@@ -115,7 +116,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                         armyOrderName += armyEdition.InnerText;
 
                     files.Add(armyOrderName, file);
-                    AddHomologue(armyName.InnerText, file);
+                    AddHomologue(armyInnerName.InnerText, file);
                 }
 
                 foreach (string directory in Directory.GetDirectories(programDirectory))

@@ -757,7 +757,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static BitmapImage TryHomologueImage(Unit unit)
         {
-            foreach (string homologueImage in ArmyBook.XmlBook.GetHomologue(Army.Data.Name, unit.Name, unit.IsHero()))
+            foreach (string homologueImage in ArmyBook.XmlBook.GetHomologue(Army.Data.InnerName, unit.Name, unit.IsHero()))
             {
                 BitmapImage image = ArmyBook.Services.GetUnitImage(homologueImage);
 
