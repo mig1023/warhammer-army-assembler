@@ -106,9 +106,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                     XmlNode armyInnerName = Services.Intro(xmlFile, "InnerName");
                     XmlNode armyEdition = Services.Intro(xmlFile, "Edition");
-                    XmlNode orderName = Services.Intro(xmlFile, "OrderName");
-
-                    string armyOrderName = (orderName == null ? armyName.InnerText : orderName.InnerText);
+                    string armyOrderName = armyInnerName.InnerText;
 
                     if (ChangeArmybookWindow.sortedByEditions)
                         armyOrderName = armyEdition.InnerText + armyOrderName;
