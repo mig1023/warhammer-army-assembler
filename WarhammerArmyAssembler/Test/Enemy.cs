@@ -526,6 +526,11 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
+            new Enemy("Karanak/Daemons/8/7/0/5/5/3/6/4/8/6/")
+            {
+                Hate = true,
+            },
+
             new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3/")
             {
                 Reroll = "ToWound",
