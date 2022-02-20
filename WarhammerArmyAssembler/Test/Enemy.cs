@@ -705,6 +705,14 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
             },
 
+            new Enemy("Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9//")
+            {
+                Terror = true,
+                PoisonAttack = true,
+                Hate = true,
+                LargeBase = true,
+            },
+
             new Enemy("Bloodthister/Chaos/6/10/0/7/6/7/10/7/9/4/5")
             {
                 Terror = true,
