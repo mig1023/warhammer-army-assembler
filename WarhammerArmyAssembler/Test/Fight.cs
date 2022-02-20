@@ -60,8 +60,10 @@ namespace WarhammerArmyAssembler.Test
                     if (currentEnemy.Mount != null)
                         currentMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
-                    if (current < Enemy.GetEnemiesCount())
-                        progress.Report(String.Format("{0}/{1} {2}", current, Enemy.GetEnemiesCount(), enemy.Name));
+                    int enemyCount = Enemy.GetEnemiesCount();
+
+                    if (current < enemyCount)
+                        progress.Report(String.Format("{0}/{1} {2}", current, enemyCount, enemy.Name));
                     else
                         progress.Report("Preparing a report... please wait");
 
