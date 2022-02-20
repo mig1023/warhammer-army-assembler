@@ -11,6 +11,9 @@ using System.Windows.Media.Imaging;
 using System.Xml;
 using System.Linq;
 
+using static WarhammerArmyAssembler.ArmyBook.Parsers;
+using static WarhammerArmyAssembler.ArmyBook.Services;
+
 namespace WarhammerArmyAssembler.Interface
 {
     class Changes
@@ -421,14 +424,14 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            XmlNode armyFile = ArmyBook.Services.Intro(xmlFile, "Images/Cover");
+            XmlNode armyFile = Intro(xmlFile, "Images/Cover");
             changeArmybook.imageArmybook.Source = GetImage(armyFile, armyName);
-            changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", ArmyBook.Services.Intro(xmlFile, "Edition").InnerText);
+            changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
+            Brush mainColor = Services.BrushFromXml(Intro(xmlFile, "Colors/Front"));
 
-            CurrentSelectedArmyBackColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Grid"));
+            CurrentSelectedArmyBackColor = Services.BrushFromXml(Intro(xmlFile, "Colors/Grid"));
             ArmyChangesColors(changeArmybook.prev);
             ArmyChangesColors(changeArmybook.next);
 
@@ -508,7 +511,7 @@ namespace WarhammerArmyAssembler.Interface
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
 
-                XmlNode armyFile = ArmyBook.Services.Intro(xmlFile, "Images/Cover");
+                XmlNode armyFile = Intro(xmlFile, "Images/Cover");
                 string source = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
 
                 Image newImage = new Image()
@@ -516,18 +519,17 @@ namespace WarhammerArmyAssembler.Interface
                     Source = new BitmapImage(new Uri(source)),
                     Margin = new Thickness(2),
                     Stretch = Stretch.UniformToFill,
-                    Tag = String.Format("{0}|{1}", armyName, source),
                 };
 
-                string head = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Name")).ToUpper();
-                string edition = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Edition"));
-                string description = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Annotation"));
-                string authors = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Authors"));
-                int released = ArmyBook.Parsers.IntParse(ArmyBook.Services.Intro(xmlFile, "Released"));
-                string illustration = ArmyBook.Parsers.StringParse(ArmyBook.Services.Intro(xmlFile, "Images/Illustration"));
+                string head = StringParse(Intro(xmlFile, "Name")).ToUpper();
+                string edition = StringParse(Intro(xmlFile, "Edition"));
+                string description = StringParse(Intro(xmlFile, "Annotation"));
+                string authors = StringParse(Intro(xmlFile, "Authors"));
+                int released = IntParse(Intro(xmlFile, "Released"));
+                string illustration = StringParse(Intro(xmlFile, "Images/Illustration"));
 
-                Brush backColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Tooltip"));
-                Brush lineColor = Services.BrushFromXml(ArmyBook.Services.Intro(xmlFile, "Colors/Front"));
+                Brush backColor = Services.BrushFromXml(Intro(xmlFile, "Colors/Tooltip"));
+                Brush lineColor = Services.BrushFromXml(Intro(xmlFile, "Colors/Front"));
 
                 if (String.IsNullOrEmpty(illustration))
                     illustration = source;
@@ -570,7 +572,7 @@ namespace WarhammerArmyAssembler.Interface
                 newImage.SetValue(Grid.RowProperty, top);
                 newImage.SetValue(Grid.ColumnProperty, left);
 
-                newImage.MouseDown += Armybook_Click;
+                newImage.MouseDown += (sender, e) => Armybook_Click(armyName, source);
 
                 changeArmybook.armybookList.Children.Add(newImage);
                 allImages.Add(newImage, source);
@@ -584,13 +586,10 @@ namespace WarhammerArmyAssembler.Interface
             Grid.SetRow(changeArmybook.armybookList, (int)lastImage.ActualHeight);           
         }
 
-        private static void Armybook_Click(object sender, RoutedEventArgs e)
+        private static void Armybook_Click(string armyName, string source)
         {
-            Image image = (sender as Image);
-            string[] armyData = image.Tag.ToString().Split('|');
-
-            PreviewArmy(armyData[0]);
-            SetArmySelected(armyData[1]);
+            PreviewArmy(armyName);
+            SetArmySelected(source);
         }
 
         public static void SetArmySelected(string armySource)
@@ -759,7 +758,7 @@ namespace WarhammerArmyAssembler.Interface
         {
             foreach (string homologueImage in ArmyBook.XmlBook.GetHomologue(Army.Data.InnerName, unit.Name, unit.IsHero()))
             {
-                BitmapImage image = ArmyBook.Services.GetUnitImage(homologueImage);
+                BitmapImage image = GetUnitImage(homologueImage);
 
                 if (image != null)
                     return image;
