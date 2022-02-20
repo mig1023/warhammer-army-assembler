@@ -14,18 +14,27 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return byDefault ?? 0;
 
-            if (xmlNode.InnerText.StartsWith("D6"))
-                xmlNode.InnerText = "1" + xmlNode.InnerText;
+            return IntParse(xmlNode.InnerText, byDefault);
+        }
 
-            if (xmlNode.InnerText.EndsWith("D6"))
-                xmlNode.InnerText += "0";
+        public static Profile ProfileParse(XmlNode xmlNode) => new Profile { Value = IntParse(xmlNode) };
 
-            string text = xmlNode.InnerText.Replace("D", String.Empty).Replace("+", String.Empty);
+        public static int IntParse(string xmlNode, int? byDefault = null)
+        {
+            if (xmlNode.StartsWith("D6"))
+                xmlNode = "1" + xmlNode;
+
+            if (xmlNode.EndsWith("D6"))
+                xmlNode += "0";
+
+            string text = xmlNode.Replace("D", String.Empty).Replace("+", String.Empty);
 
             bool success = int.TryParse(text, out int value);
 
             return (success ? value : (byDefault ?? 0));
         }
+
+        public static Profile ProfileParse(string xmlNode) => new Profile { Value = IntParse(xmlNode) };
 
         public static Profile IntNullableParse(XmlNode xmlNode)
         {
@@ -190,8 +199,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             return (success ? value : Option.OnlyForType.All);
         }
 
-        public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;
-
-        public static Profile ProfileParse(XmlNode xmlNode) => new Profile { Value = IntParse(xmlNode) };
+        public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;        
     }
 }

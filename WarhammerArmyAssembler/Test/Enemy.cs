@@ -50,7 +50,7 @@ namespace WarhammerArmyAssembler
                 this.Ward = new Profile { Null = true };
         }
 
-        private Profile NewProfile(string line) => new Profile { Value = int.Parse(line) };
+        private Profile NewProfile(string line) => ArmyBook.Parsers.ProfileParse(line);
 
         public string Fullname()
         {
@@ -408,6 +408,13 @@ namespace WarhammerArmyAssembler
             new Enemy("16/Waywathers/Wood Elves/5/4/5/3/3/1/5/2/8//")
             {
                 HitFirst = true,
+            },
+
+            new Enemy("Doomwheel/Skaven/2D6/3/3/6/6/5/4/2D6/7/4/")
+            {
+                ImmuneToPsychology = true,
+                LargeBase = true,
+                Terror = true,
             },
 
             new Enemy("16/White Lions/High Elves/5/5/4/6/3/1/5/1/8/6/")
