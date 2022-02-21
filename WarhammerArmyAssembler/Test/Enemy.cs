@@ -351,6 +351,12 @@ namespace WarhammerArmyAssembler
                 Stubborn = true
             },
 
+            new Enemy("3/Beasts of Nurgle/Daemons/6/3/0/4/5/4/2/D6+1/7//")
+            {
+                PoisonAttack = true,
+                Regeneration = true
+            },
+
             new Enemy("16/Black Orcs/Orcs&Goblins/4/4/3/5/4/1/2/1/8/5/")
             {
                 HitLast = true
