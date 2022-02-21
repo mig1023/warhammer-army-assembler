@@ -260,6 +260,11 @@ namespace WarhammerArmyAssembler
 
             new Enemy("20/Demonettes/Daemons/6/5/4/3/3/1/5/2/7//"),
 
+            new Enemy("5/Ogres/Ogre Kingdoms/6/3/2/4/4/3/2/3/7/6/")
+            {
+                Fear = true,
+            },
+
             new Enemy("20/Orc boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/5/"),
 
             new Enemy("20/Skeleton Warriors/Tomb Kings/4/2/2/3/3/1/2/1/5/5/")
