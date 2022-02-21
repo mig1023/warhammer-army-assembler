@@ -172,6 +172,13 @@ namespace WarhammerArmyAssembler
                 }
             },
 
+            new Enemy("Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4/")
+            {
+                Frenzy = true,
+                Terror = true,
+                LargeBase = true,
+            },
+
             new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4/")
             {
                 Terror = true,
