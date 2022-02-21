@@ -37,6 +37,16 @@ namespace WarhammerArmyAssembler.Test
             Interface.TestUnit.VisibilityTest();
         }
 
+        private static void EnemiesGroupBox(string name, int current)
+        {
+            int len = name.Length + 6;
+            string firestLineFix = (current == 0 ? "\n" : String.Empty);
+
+            Data.Console(Data.supplText, String.Format("\n\t{0}\n{1}", new String('/', len), firestLineFix));
+            Data.Console(Data.supplText, "\t// {0} //\n", name.ToUpper());
+            Data.Console(Data.supplText, String.Format("\t{0}\n\n\n", new String('/', len)));
+        }
+
         public static void BattleRoyaleTest(Unit unit, Unit unitMount, IProgress<string> progress)
         {
             int current = 0; 
@@ -45,10 +55,7 @@ namespace WarhammerArmyAssembler.Test
             {
                 string currentText = Interface.TestUnit.GetFullConsoleText();
 
-                Data.Console(Data.supplText, "{0}\n\n", enemyGroupName.ToUpper());
-
-                if (currentText == String.Empty)
-                    Data.Console(Data.text, "\n");
+                EnemiesGroupBox(enemyGroupName, current);
 
                 foreach (Enemy enemy in Enemy.GetEnemiesByGroup(enemyGroupName))
                 {
