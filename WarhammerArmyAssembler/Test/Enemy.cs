@@ -338,6 +338,13 @@ namespace WarhammerArmyAssembler
                 Fear = true,
             },
 
+            new Enemy("4/Mournfang Cavalry/Ogre Kingdoms/6/3/2/4/4/3/2/3/7/6/")
+            {
+                Fear = true,
+                LargeBase = true,
+                Mount = new Enemy("4/Mournfang//8/3/0/5/4/3/2/4/5/5/"),
+            },
+
             new Enemy("20/Plague Monks/Skaven/5/3/3/3/4/1/3/3/5//")
             {
                 Frenzy = true,
