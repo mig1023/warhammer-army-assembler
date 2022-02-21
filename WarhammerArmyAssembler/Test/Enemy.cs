@@ -415,7 +415,7 @@ namespace WarhammerArmyAssembler
             new Enemy("3/Plague Drones/Daemons/4/3/3/4/4/1/2/1/7//")
             {
                 PoisonAttack = true,
-                Mount = new Enemy("3/Rot Fly/1/3/3/5/5/3/2/3/7//"),
+                Mount = new Enemy("3/Rot Fly//1/3/3/5/5/3/2/3/7//"),
             },
 
             new Enemy("24/Flagellants/The Empire/4/2/2/3/3/1/3/1/10//")
@@ -616,6 +616,13 @@ namespace WarhammerArmyAssembler
                 AutoWound = true,
                 NoArmour = true,
                 Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5//"),
+            },
+
+            new Enemy("Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4")
+            {
+                Fear = true,
+                ImmuneToPsychology = true,
+                MultiWounds = "D3",
             },
 
             new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4")
