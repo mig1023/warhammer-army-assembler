@@ -209,6 +209,12 @@ namespace WarhammerArmyAssembler
                 Giant = true,
             },
 
+            new Enemy("Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4/")
+            {
+                Terror = true,
+                LargeBase = true,
+            },
+
             new Enemy("Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10//")
             {
                 Regeneration = true,
