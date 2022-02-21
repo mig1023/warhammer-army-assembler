@@ -582,7 +582,7 @@ namespace WarhammerArmyAssembler
                     if (cleanParamLine.Contains("-") && (name != "Armour"))
                         cleanParamLine = "0";
 
-                    param.Value = int.Parse(cleanParamLine);
+                    param.Value = ArmyBook.Parsers.IntParse(cleanParamLine);
                 }
             }
 
