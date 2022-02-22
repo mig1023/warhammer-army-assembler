@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml;
 using WarhammerArmyAssembler.Test;
+using System.Text.RegularExpressions;
 using static WarhammerArmyAssembler.Option;
 using static WarhammerArmyAssembler.Unit;
 
@@ -61,7 +62,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return String.Empty;
 
-            return xmlNode.InnerText.Replace("|", "\n");
+            return Regex.Unescape(xmlNode.InnerText);
         }
 
         public static List<string> SlotsParse(XmlNode xmlNode)
