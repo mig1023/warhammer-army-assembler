@@ -1049,19 +1049,26 @@ namespace WarhammerArmyAssembler
             return rules;
         }
 
-        public bool IsHero() => (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero);
+        public bool IsHero() =>
+            (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero);
 
-        public bool IsHeroOrHisMount() => (LargeBase || Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount);
+        public bool IsHeroOrHisMount() =>
+            (LargeBase || Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount);
 
-        public bool IsUnit() => (this.Type == Unit.UnitType.Core || this.Type == Unit.UnitType.Special || this.Type == Unit.UnitType.Rare);
+        public bool IsUnit() =>
+            (this.Type == Unit.UnitType.Core || this.Type == Unit.UnitType.Special || this.Type == Unit.UnitType.Rare);
 
-        public bool ExistsOptions() => Options.Where(x => x.IsOption() && !x.FullCommand).FirstOrDefault() != null;
+        public bool ExistsOptions() =>
+            Options.Where(x => x.IsOption() && !x.MagicItemsPoints && !x.FullCommand).FirstOrDefault() != null;
 
-        public bool ExistsCommand() => Options.Where(x => x.FullCommand).FirstOrDefault() != null;
+        public bool ExistsCommand() =>
+            Options.Where(x => x.FullCommand).FirstOrDefault() != null;
 
-        public bool ExistsMagicItems() => Options.Where(x => x.IsMagicItem() && ((x.Points > 0) || x.Honours)).FirstOrDefault() != null;
+        public bool ExistsMagicItems() =>
+            Options.Where(x => x.IsMagicItem() && ((x.Points > 0) || x.Honours)).FirstOrDefault() != null;
 
-        public bool ExistsMagicPowers() => Options.Where(x => x.Type == Option.OptionType.Powers).FirstOrDefault() != null; 
+        public bool ExistsMagicPowers() =>
+            Options.Where(x => x.Type == Option.OptionType.Powers).FirstOrDefault() != null; 
 
         public bool ExistsRunicCombinationInUnit(Dictionary<string, int> runicItems)
         {
