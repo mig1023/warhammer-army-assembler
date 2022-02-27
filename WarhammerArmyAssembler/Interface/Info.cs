@@ -50,13 +50,30 @@ namespace WarhammerArmyAssembler.Interface
                 normal, cavalry, large, chariot);
         }
 
+        public static string ArmyDispell()
+        {
+            if (ArmyBook.Data.EnemyMagic.Count == 0)
+                return String.Empty;
+
+            var spellList = ArmyBook.Data.EnemyMagic.
+                OrderBy(x => x.Value).
+                Select(x => String.Format("{0}+\t{1} ({2} dispells)",
+                    x.Value + 1, x.Key, CastingProbability(x.Value + 1, Army.Params.GetArmyDispell())));
+
+            string loreName = ArmyBook.Data.EnemyMagicLoreName.ToUpper();
+
+            return String.Format("{0}\n\n\n{1}", loreName, String.Join("\n\n", spellList));
+        }
+
         public static string ArmyCast()
         {
             if (ArmyBook.Data.Magic.Count == 0)
                 return "There is no traditional spell's magic model.";
 
-            var spellList = ArmyBook.Data.Magic.OrderBy(x => x.Value).Select(x =>
-                String.Format("{0}+\t{1} ({2} spells)", x.Value, x.Key, CastingProbability(x.Value)));
+            var spellList = ArmyBook.Data.Magic.
+                OrderBy(x => x.Value).
+                Select(x => String.Format("{0}+\t{1} ({2} spells)",
+                x.Value, x.Key, CastingProbability(x.Value, Army.Params.GetArmyCast())));
 
             string loreName = ArmyBook.Data.MagicLoreName.ToUpper();
             string footer = String.Empty;
@@ -67,10 +84,8 @@ namespace WarhammerArmyAssembler.Interface
             return String.Format("{0}\n\n\n{1}{2}", loreName, String.Join("\n\n", spellList), footer);
         }
 
-        private static string CastingProbability(int difficulty)
+        private static string CastingProbability(int difficulty, int cast)
         {
-            int cast = Army.Params.GetArmyCast();
-
             double possible = cast * Services.DICE_SIZE;
 
             if (possible < difficulty)

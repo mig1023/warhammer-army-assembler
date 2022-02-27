@@ -590,7 +590,7 @@
                     <Label x:Name="armyPoints" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="2" Height="30" Width="Auto" FontSize="12" Margin="0 5 0 0" MouseDown="armyPoints_MouseDown"/>
                     <Label x:Name="armySize" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="3" Height="30" Width="Auto" Margin="0 5 0 0" FontSize="12" MouseDown="armyModels_MouseDown"/>
                     <Label x:Name="armyCasting" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="4" Height="30" Width="Auto" Margin="0 5 0 0" FontSize="12" MouseDown="armyCast_MouseDown"/>
-                    <Label x:Name="armyDispell" Grid.Row="0" Grid.Column="5" Content="" Height="30" Width="Auto" Padding="0 5 0 0" FontSize="12"/>
+                    <Label x:Name="armyDispell" Template="{StaticResource statusLabel}" Grid.Row="0" Grid.Column="5" Height="30" Width="Auto" Margin="0 5 0 0" FontSize="12" MouseDown="armyDispell_MouseDown"/>
                     <Label x:Name="unitDelete" Grid.Row="0" Grid.Column="6" HorizontalContentAlignment="Center" Padding="0 5 0 0" Content="Delete" Background="#FFFF7676" Height="30" Width="Auto" FontSize="12" AllowDrop="True" Drop="unitDelete_Drop" MouseDown="unitDelete_MouseDown"/>
                 </Grid>
             </Grid>

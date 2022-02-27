@@ -116,20 +116,38 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
             }
 
-            XmlNode loreBook = xmlFile.SelectSingleNode("ArmyBook/Introduction/Magic");
-            Data.MagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
-            Data.MagicAlternative = loreBook.Attributes["Alternative"]?.Value ?? String.Empty;
+            LoadMagic(xmlFile, "Magic");
+            LoadMagic(xmlFile, "EnemyMagic", enemy: true);
 
-            foreach (XmlNode spell in xmlFile.SelectNodes("ArmyBook/Introduction/Magic/Spell"))
+            Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
+        }
+
+        private static void LoadMagic(XmlDocument xmlFile, string magic, bool enemy = false)
+        {
+            XmlNode loreBook = xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", magic));
+
+            if (loreBook == null)
+                return;
+
+            if (!enemy)
+            {
+                Data.MagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
+                Data.MagicAlternative = loreBook.Attributes["Alternative"]?.Value ?? String.Empty;
+            }
+            else
+                Data.EnemyMagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
+
+            foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/{0}/Spell", magic)))
             {
                 string spellName = spell.Attributes["Name"].Value;
                 int spellDifficulty = int.Parse(spell.Attributes["Difficulty"].Value);
 
-                Data.Magic.Add(spellName, spellDifficulty);
+                if (!enemy)
+                    Data.Magic.Add(spellName, spellDifficulty);
+                else
+                    Data.EnemyMagic.Add(spellName, spellDifficulty);
             }
-           
-            Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
         }
 
         public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml)

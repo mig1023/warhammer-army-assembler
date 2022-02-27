@@ -414,6 +414,9 @@ namespace WarhammerArmyAssembler
         private void armyCast_MouseDown(object sender, MouseButtonEventArgs e) =>
             MessageBox.Show(Interface.Info.ArmyCast());
 
+        private void armyDispell_MouseDown(object sender, MouseButtonEventArgs e) =>
+            MessageBox.Show(Interface.Info.ArmyDispell());
+
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e) =>
             Interface.Changes.CheckAndExportTo(toPDF: true, fullRules: true);
 
