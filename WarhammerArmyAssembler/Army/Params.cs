@@ -215,11 +215,7 @@ namespace WarhammerArmyAssembler.Army
 
         public static double GetVirtuePoints(int id, bool nextPricePreview = false)
         {
-            int count = 0;
-
-            foreach (Unit entry in Data.Units.Values)
-                foreach (Option option in entry.Options.Where(x => x.Name == ArmyBook.Data.Artefact[id].Name))
-                    count += 1;
+            int count = Data.Units.Values.Sum(x => x.Options.Where(y => y.Name == ArmyBook.Data.Artefact[id].Name).Count());
 
             if (count == 0)
                 return ArmyBook.Data.Artefact[id].VirtueOriginalPoints;

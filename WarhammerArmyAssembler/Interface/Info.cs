@@ -65,7 +65,7 @@ namespace WarhammerArmyAssembler.Interface
             int dispScrolls = Army.Params.GetArmyDispellScroll();
             string footer = (dispScrolls > 0 ? String.Format("\n\n+ {0} Dispell Scrolls", dispScrolls) : String.Empty);
 
-            return String.Format("{0}\n\n\n{1}{2}", loreName, String.Join("\n\n", spellList), footer);
+            return String.Format("VERSUS {0}\n\n\n{1}{2}", loreName, String.Join("\n\n", spellList), footer);
         }
 
         public static string ArmyCast()
