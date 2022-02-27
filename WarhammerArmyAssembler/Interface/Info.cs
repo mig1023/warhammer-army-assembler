@@ -62,7 +62,10 @@ namespace WarhammerArmyAssembler.Interface
 
             string loreName = ArmyBook.Data.EnemyMagicLoreName.ToUpper();
 
-            return String.Format("{0}\n\n\n{1}", loreName, String.Join("\n\n", spellList));
+            int dispScrolls = Army.Params.GetArmyDispellScroll();
+            string footer = (dispScrolls > 0 ? String.Format("\n\n+ {0} Dispell Scrolls", dispScrolls) : String.Empty);
+
+            return String.Format("{0}\n\n\n{1}{2}", loreName, String.Join("\n\n", spellList), footer);
         }
 
         public static string ArmyCast()

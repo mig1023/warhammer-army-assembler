@@ -226,5 +226,8 @@ namespace WarhammerArmyAssembler.Army
             else
                 return ArmyBook.Data.Artefact[id].VirtueOriginalPoints * (count + 1 + (nextPricePreview ? 1 : 0));
         }
+
+        public static int GetArmyDispellScroll() =>
+            Data.Units.Values.Sum(x => x.Options.Where(y => y.Name == "Dispell Scroll").Count());
     }
 }
