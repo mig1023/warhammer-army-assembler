@@ -75,6 +75,8 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static void LoadArmy(string xmlFileName)
         {
             Data.Magic.Clear();
+            Data.EnemyMagic.Clear();
+
             Data.Units.Clear();
             Data.Mounts.Clear();
             Data.Artefact.Clear();
