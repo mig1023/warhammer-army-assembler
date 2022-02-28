@@ -58,7 +58,7 @@ namespace WarhammerArmyAssembler.Interface
             var spellList = ArmyBook.Data.EnemyMagic.
                 OrderBy(x => x.Value).
                 Select(x => String.Format("{0}+\t{1} ({2} dispells)",
-                    x.Value + 1, x.Key, CastingProbability(x.Value + 1, Army.Params.GetArmyDispell())));
+                    x.Value, x.Key, CastingProbability(x.Value, Army.Params.GetArmyDispell())));
 
             string loreName = ArmyBook.Data.EnemyMagicLoreName.ToUpper();
 
