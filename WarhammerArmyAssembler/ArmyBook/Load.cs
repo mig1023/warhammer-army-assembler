@@ -140,10 +140,12 @@ namespace WarhammerArmyAssembler.ArmyBook
             else
                 Data.EnemyMagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
 
+            string difficulty = (enemy ? "AverageCasting" : "Difficulty");
+
             foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/{0}/Spell", magic)))
             {
                 string spellName = spell.Attributes["Name"].Value;
-                int spellDifficulty = int.Parse(spell.Attributes["Difficulty"].Value);
+                int spellDifficulty = int.Parse(spell.Attributes[difficulty].Value);
 
                 if (!enemy)
                     Data.Magic.Add(spellName, spellDifficulty);
