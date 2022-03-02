@@ -625,19 +625,19 @@ namespace WarhammerArmyAssembler
                 Regeneration = true,
                 Reroll = "ToHit;ToWound",
 
-                Mount = new Enemy("Beaquis//8/5/0/5/5/4/6/4/9/5/")
+                Mount = new Enemy("Beaquis//8/5/0/5/5/4/6/4/9/5")
                 {
                     Terror = true,
                 }
             },
 
-            new Enemy("Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2/")
+            new Enemy("Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2")
             {
                 Stubborn = true,
                 ImmuneToPsychology = true,
                 AutoWound = true,
                 NoArmour = true,
-                Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5//"),
+                Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5"),
             },
 
             new Enemy("Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4")
@@ -651,7 +651,7 @@ namespace WarhammerArmyAssembler
             {
                 Undead = true,
 
-                Mount = new Enemy("Zombie Dragon//6/3/0/6/6/6/1/4/4/5/")
+                Mount = new Enemy("Zombie Dragon//6/3/0/6/6/6/1/4/4/5")
                 {
                     Terror = true,
                     Undead = true,
@@ -664,7 +664,7 @@ namespace WarhammerArmyAssembler
                 NoArmour = true,
                 MultiWounds = "D3",
 
-                Mount = new Enemy("Deathclaw//6/6/0/5/5/4/5/4/8//")
+                Mount = new Enemy("Deathclaw//6/6/0/5/5/4/5/4/8")
                 {
                     Terror = true,
                 }
@@ -674,7 +674,7 @@ namespace WarhammerArmyAssembler
             {
                 HitFirst = true,
                 Regeneration = true,
-                Mount = new Enemy("Malhandir//10/4/0/4/3/1/5/2/7//"),
+                Mount = new Enemy("Malhandir//10/4/0/4/3/1/5/2/7"),
             },
 
             new Enemy("Torgrim Grudgebearer/Dwarfs/3/7/6/4/5/7/4/4/10/2/4")
@@ -682,7 +682,7 @@ namespace WarhammerArmyAssembler
                 HitFirst = true,
                 ImmuneToPsychology = true,
                 Stubborn = true,
-                Mount = new Enemy("Thronebearers//3/5/3/4/0/1/3/4/0//"),
+                Mount = new Enemy("Thronebearers//3/5/3/4/0/1/3/4/0"),
             },
 
             new Enemy("Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5")
@@ -692,7 +692,7 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 Unbreakable = true,
 
-                Mount = new Enemy("2/Hound of Orion//9/4/0/4/4/1/4/1/6//")
+                Mount = new Enemy("2/Hound of Orion//9/4/0/4/4/1/4/1/6")
                 {
                     Frenzy = true,
                     Unbreakable = true,
