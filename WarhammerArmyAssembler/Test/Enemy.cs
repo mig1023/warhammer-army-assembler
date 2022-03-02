@@ -198,13 +198,13 @@ namespace WarhammerArmyAssembler
                 }
             },
 
-            new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3/")
+            new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3")
             {
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10//")
+            new Enemy("Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10")
             {
                 Terror = true,
                 Stubborn = true,
@@ -212,13 +212,13 @@ namespace WarhammerArmyAssembler
                 Giant = true,
             },
 
-            new Enemy("Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4/")
+            new Enemy("Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4")
             {
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10//")
+            new Enemy("Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10")
             {
                 Regeneration = true,
                 Terror = true,
@@ -227,7 +227,7 @@ namespace WarhammerArmyAssembler
                 HellPitAbomination = true,
             },
 
-            new Enemy("Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3/")
+            new Enemy("Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3")
             {
                 Terror = true,
                 LargeBase = true,
@@ -235,13 +235,13 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            new Enemy("Star Dragon/High Elves/6/7/0/7/6/7/2/6/9/3/")
+            new Enemy("Star Dragon/High Elves/6/7/0/7/6/7/2/6/9/3")
             {
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Steam Tank/The Empire/0/0/4/6/6/10/0/0/10/1/")
+            new Enemy("Steam Tank/The Empire/0/0/4/6/6/10/0/0/10/1")
             {
                 Unbreakable = true,
                 Terror = true,
@@ -252,7 +252,7 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
         {
-            new Enemy("20/Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2//")
+            new Enemy("20/Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2")
             {
                 StrengthInNumbers = true,
             },
