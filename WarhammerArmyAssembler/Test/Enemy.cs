@@ -101,7 +101,7 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
-            new Enemy("Troll/Orcs&Goblins/6/3/1/5/4/3/1/3/4//")
+            new Enemy("Troll/Orcs&Goblins/6/3/1/5/4/3/1/3/4")
             {
                 Fear = true,
                 Regeneration = true,
