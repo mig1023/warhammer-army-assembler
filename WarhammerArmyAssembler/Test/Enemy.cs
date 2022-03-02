@@ -719,7 +719,7 @@ namespace WarhammerArmyAssembler
             {
                 NoArmour = true,
 
-                Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3/")
+                Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3")
                 {
                     Terror = true,
                     LargeBase = true,
@@ -731,7 +731,7 @@ namespace WarhammerArmyAssembler
                 ColdBlooded = true,
                 MultiWounds = "2",
 
-                Mount = new Enemy("Grymloq//7/3/0/7/5/5/2/5/5/4/")
+                Mount = new Enemy("Grymloq//7/3/0/7/5/5/2/5/5/4")
                 {
                     Terror = true,
                     ColdBlooded = true,
@@ -746,7 +746,7 @@ namespace WarhammerArmyAssembler
                 NoArmour = true,
                 Terror = true,
 
-                Mount = new Enemy("Dorghar//8/4/0/5/5/3/3/3/9/4/")
+                Mount = new Enemy("Dorghar//8/4/0/5/5/3/3/3/9/4")
                 {
                     LargeBase = true,
                 }
@@ -759,7 +759,7 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
             },
 
-            new Enemy("Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9//")
+            new Enemy("Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9")
             {
                 Terror = true,
                 PoisonAttack = true,
