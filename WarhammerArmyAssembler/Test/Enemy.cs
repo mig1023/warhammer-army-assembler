@@ -501,24 +501,24 @@ namespace WarhammerArmyAssembler
                 MultiWounds = "2",
             },
 
-            new Enemy("Gitilla/Orcs&Goblins/4/4/4/4/4/2/4/3/7/3/")
+            new Enemy("Gitilla/Orcs&Goblins/4/4/4/4/4/2/4/3/7/3")
             {
-                Mount = new Enemy("Ulda the Great Wolf//9/3/0/3/3/1/3/2/3//"),
+                Mount = new Enemy("Ulda the Great Wolf//9/3/0/3/3/1/3/2/3"),
             },
 
             new Enemy("Moonclaw/Beastmen/5/3/3/4/4/2/3/3/7//5")
             {
-                Mount = new Enemy("Umbralok//7/3/0/4/4/1/2/3/6//"),
+                Mount = new Enemy("Umbralok//7/3/0/4/4/1/2/3/6"),
             },
 
-            new Enemy("Ludwig Schwarzhelm/The Empire/4/6/5/4/4/2/5/3/8/2/")
+            new Enemy("Ludwig Schwarzhelm/The Empire/4/6/5/4/4/2/5/3/8/2")
             {
                 KillingBlow = true,
                 Reroll = "ToWound",
-                Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5//"),
+                Mount = new Enemy("Warhorse//8/3/0/3/3/1/3/1/5"),
             },
 
-            new Enemy("Gor-Rok/Lizardmen/4/5/0/5/5/2/3/4/8/3/")
+            new Enemy("Gor-Rok/Lizardmen/4/5/0/5/5/2/3/4/8/3")
             {
                 ColdBlooded = true,
                 Stubborn = true,
@@ -532,7 +532,7 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
             },
 
-            new Enemy("Drycha/Wood Elves/5/7/4/5/4/3/8/5/8//")
+            new Enemy("Drycha/Wood Elves/5/7/4/5/4/3/8/5/8")
             {
                 Terror = true,
                 Reroll = "ToHit",
@@ -554,31 +554,31 @@ namespace WarhammerArmyAssembler
                 Undead = true,
             },
 
-            new Enemy("Bragg The Gutsman/Ogre Kingdoms/6/5/3/6/5/4/3/4/8/6/")
+            new Enemy("Bragg The Gutsman/Ogre Kingdoms/6/5/3/6/5/4/3/4/8/6")
             {
                 Fear = true,
                 HeroicKillingBlow = true,
                 LargeBase = true,
             },
 
-            new Enemy("Throgg/Chaos/6/5/2/6/5/4/2/5/8//")
+            new Enemy("Throgg/Chaos/6/5/2/6/5/4/2/5/8")
             {
                 Fear = true,
                 Regeneration = true,
                 LargeBase = true,
             },
 
-            new Enemy("Karanak/Daemons/8/7/0/5/5/3/6/4/8/6/")
+            new Enemy("Karanak/Daemons/8/7/0/5/5/3/6/4/8/6")
             {
                 Hate = true,
             },
 
-            new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3/")
+            new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3")
             {
                 Reroll = "ToWound",
                 NoArmour = true,
 
-                Mount = new Enemy("Spite//7/3/0/4/4/1/2/2/4/5/")
+                Mount = new Enemy("Spite//7/3/0/4/4/1/2/2/4/5")
                 {
                     Fear = true,
                 }
@@ -606,12 +606,12 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
                 Terror = true,
                 Undead = true,
-                Mount = new Enemy("Shadow Steed//8/4/0/4/3/1/4/1/5/5/"),
+                Mount = new Enemy("Shadow Steed//8/4/0/4/3/1/4/1/5/5"),
             },
 
-            new Enemy("Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2/"),
+            new Enemy("Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2"),
 
-            new Enemy("Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10//")
+            new Enemy("Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10")
             {
                 HitFirst = true,
                 Undead = true,
