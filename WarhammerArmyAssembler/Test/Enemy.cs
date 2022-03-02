@@ -157,32 +157,32 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4/")
+            new Enemy("War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4")
             {
                 Terror = true,
                 LargeBase = true,
 
-                Mount = new Enemy("2/Apparentice//5/4/4/3/3/2/3/2/8//")
+                Mount = new Enemy("2/Apparentice//5/4/4/3/3/2/3/2/8")
                 {
                     NoKillingBlow = true,
                 }
             },
 
-            new Enemy("Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4/")
+            new Enemy("Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4")
             {
                 Frenzy = true,
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4/")
+            new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4")
             {
                 Terror = true,
                 ImmuneToPsychology = true,
                 LargeBase = true,
             },
 
-            new Enemy("Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4/")
+            new Enemy("Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4")
             {
                 LargeBase = true,
                 ColdBlooded = true,
@@ -190,7 +190,7 @@ namespace WarhammerArmyAssembler
                 Stubborn = true,
                 ImmuneToPsychology = true,
 
-                Mount = new Enemy("5/Skink Crew//6/2/3/3/2/4/4/4/5/4/")
+                Mount = new Enemy("5/Skink Crew//6/2/3/3/2/4/4/4/5/4")
                 {
                     ColdBlooded = true,
                     PoisonAttack = true,
