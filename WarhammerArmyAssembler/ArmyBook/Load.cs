@@ -140,7 +140,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             else
                 Data.EnemyMagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
 
-            string difficulty = (enemy ? "AverageCasting" : "Difficulty");
+            string difficulty = (enemy ? "Average" : "Difficulty");
 
             foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/{0}/Spell", magic)))
             {
