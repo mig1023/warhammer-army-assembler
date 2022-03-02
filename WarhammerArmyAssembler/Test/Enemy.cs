@@ -129,26 +129,26 @@ namespace WarhammerArmyAssembler
                 LargeBase = true,
             },
 
-            new Enemy("Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8//")
+            new Enemy("Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8")
             {
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Griffon/The Empire/6/5/0/5/5/4/5/4/7//")
+            new Enemy("Griffon/The Empire/6/5/0/5/5/4/5/4/7")
             {
                 Terror = true,
                 LargeBase = true,
             },
 
-            new Enemy("Manticore/Chaos/6/5/0/5/5/4/5/4/5//")
+            new Enemy("Manticore/Chaos/6/5/0/5/5/4/5/4/5")
             {
                 Terror = true,
                 KillingBlow = true,
                 LargeBase = true,
             },
 
-            new Enemy("Varghulf/Vampire/8/5/0/5/5/4/2/5/4//")
+            new Enemy("Varghulf/Vampire/8/5/0/5/5/4/2/5/4")
             {
                 Terror = true,
                 Undead = true,
