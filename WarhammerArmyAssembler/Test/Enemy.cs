@@ -35,16 +35,12 @@ namespace WarhammerArmyAssembler
             this.Attacks = NewProfile(profile[10]);
             this.Leadership = NewProfile(profile[11]);
 
-            bool isArmour = int.TryParse(profile[12], out int armour);
-
-            if (isArmour)
+            if ((profile.Count > 12) && int.TryParse(profile[12], out int armour))
                 this.Armour = new Profile { Value = armour };
             else
                 this.Armour = new Profile { Null = true };
 
-            bool isWard = int.TryParse(profile[13], out int ward);
-
-            if (isWard)
+            if ((profile.Count > 13) && int.TryParse(profile[13], out int ward))
                 this.Ward = new Profile { Value = ward };
             else
                 this.Ward = new Profile { Null = true };
