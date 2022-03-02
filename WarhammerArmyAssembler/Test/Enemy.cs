@@ -422,48 +422,48 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesRareUnits = new List<Enemy>
         {
-            new Enemy("Snotling Pump Wagon/Orcs&Goblins/6/2/0/2/4/3/3/5/4/6/")
+            new Enemy("Snotling Pump Wagon/Orcs&Goblins/6/2/0/2/4/3/3/5/4/6")
             {
                 Unbreakable = true,
             },
 
-            new Enemy("3/Plague Drones/Daemons/4/3/3/4/4/1/2/1/7//")
+            new Enemy("3/Plague Drones/Daemons/4/3/3/4/4/1/2/1/7")
             {
                 PoisonAttack = true,
-                Mount = new Enemy("3/Rot Fly//1/3/3/5/5/3/2/3/7//"),
+                Mount = new Enemy("3/Rot Fly//1/3/3/5/5/3/2/3/7"),
             },
 
-            new Enemy("24/Flagellants/The Empire/4/2/2/3/3/1/3/1/10//")
+            new Enemy("24/Flagellants/The Empire/4/2/2/3/3/1/3/1/10")
             {
                 Unbreakable = true,
                 Frenzy = true,
                 Flail = true,
             },
 
-            new Enemy("16/Waywathers/Wood Elves/5/4/5/3/3/1/5/2/8//")
+            new Enemy("16/Waywathers/Wood Elves/5/4/5/3/3/1/5/2/8")
             {
                 HitFirst = true,
             },
 
-            new Enemy("Doomwheel/Skaven/2D6/3/3/6/6/5/4/2D6/7/4/")
+            new Enemy("Doomwheel/Skaven/2D6/3/3/6/6/5/4/2D6/7/4")
             {
                 ImmuneToPsychology = true,
                 LargeBase = true,
                 Terror = true,
             },
 
-            new Enemy("16/White Lions/High Elves/5/5/4/6/3/1/5/1/8/6/")
+            new Enemy("16/White Lions/High Elves/5/5/4/6/3/1/5/1/8/6")
             {
                 HitFirst = true
             },
 
-            new Enemy("16/Black Guard/Dark Elves/5/5/4/4/3/1/6/1/9/5/")
+            new Enemy("16/Black Guard/Dark Elves/5/5/4/4/3/1/6/1/9/5")
             {
                 Hate = true,
                 Stubborn = true,
             },
 
-            new Enemy("16/Troll Slayers/Dwarfs/3/4/3/5/4/1/2/1/10//")
+            new Enemy("16/Troll Slayers/Dwarfs/3/4/3/5/4/1/2/1/10")
             {
                 Unbreakable = true,
             },
@@ -471,7 +471,7 @@ namespace WarhammerArmyAssembler
             new Enemy("12/Grail Knights/Bretonnia/4/5/3/4/3/1/5/2/8/2/5")
             {
                 Lance = true,
-                Mount = new Enemy("12/Warhorse//8/3/0/3/3/1/3/1/5//"),
+                Mount = new Enemy("12/Warhorse//8/3/0/3/3/1/3/1/5"),
             },
 
             new Enemy("6/Blood Knights/Vampire Counts/4/5/3/5/4/1/4/2/7/2/5")
@@ -479,13 +479,13 @@ namespace WarhammerArmyAssembler
                 Frenzy = true,
                 Undead = true,
                 Lance = true,
-                Mount = new Enemy("6/Nightmare//8/3/0/4/4/1/2/1/3//"),
+                Mount = new Enemy("6/Nightmare//8/3/0/4/4/1/2/1/3"),
             },
 
-            new Enemy("6/Skullcrushers/Chaos/4/5/3/4/4/1/5/2/8/1/")
+            new Enemy("6/Skullcrushers/Chaos/4/5/3/4/4/1/5/2/8/1")
             {
                 Fear = true,
-                Mount = new Enemy("6/Juggernaut//7/5/0/5/4/3/2/3/7//"),
+                Mount = new Enemy("6/Juggernaut//7/5/0/5/4/3/2/3/7"),
             },
         };
 
