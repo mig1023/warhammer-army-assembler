@@ -138,7 +138,10 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Data.MagicAlternative = loreBook.Attributes["Alternative"]?.Value ?? String.Empty;
             }
             else
+            {
                 Data.EnemyMagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
+                Data.EnemyMagicName = loreBook.Attributes["Enemy"]?.Value ?? String.Empty;
+            }
 
             string difficulty = (enemy ? "Average" : "Difficulty");
 

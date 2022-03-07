@@ -60,12 +60,13 @@ namespace WarhammerArmyAssembler.Interface
                 Select(x => String.Format("~ {0}+\t{1} ({2} dispells)",
                     x.Value, x.Key, CastingProbability(x.Value, Army.Params.GetArmyDispell())));
 
-            string loreName = ArmyBook.Data.EnemyMagicLoreName.ToUpper();
+            string lore = ArmyBook.Data.EnemyMagicLoreName;
+            string enemy = ArmyBook.Data.EnemyMagicName;
 
             int dispScrolls = Army.Params.GetArmyDispellScroll();
             string footer = (dispScrolls > 0 ? String.Format("\n\n+ {0} Dispell Scrolls", dispScrolls) : String.Empty);
 
-            return String.Format("VERSUS {0}\n\n\n{1}{2}", loreName, String.Join("\n\n", spellList), footer);
+            return String.Format("ENEMY MAGIC:\n\n{0}\nby {1}\n\n{2}{3}", lore, enemy, String.Join("\n\n", spellList), footer);
         }
 
         public static string ArmyCast()
