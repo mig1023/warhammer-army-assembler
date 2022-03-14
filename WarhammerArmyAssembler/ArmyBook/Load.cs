@@ -51,7 +51,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlFile.Load(xmlFileName);
 
             string imagePath = Path.GetDirectoryName(xmlFileName) + "\\" +
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")) + "\\";
 
             string unitType = (isHero ? "Heroes/Hero" : "Units/Unit");
             XmlNodeList xmlNodes =  xmlFile.SelectNodes("ArmyBook/" + unitType);
@@ -122,7 +122,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             LoadMagic(xmlFile, "EnemyMagic", enemy: true);
 
             Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsDirectory")) + "\\";
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")) + "\\";
         }
 
         private static void LoadMagic(XmlDocument xmlFile, string magic, bool enemy = false)
