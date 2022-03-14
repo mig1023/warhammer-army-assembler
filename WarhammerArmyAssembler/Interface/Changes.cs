@@ -672,8 +672,11 @@ namespace WarhammerArmyAssembler.Interface
                 },
                 new TextBlock
                 {
-                    Text = String.Format("\n{0}", head),
-                    FontWeight = FontWeights.Bold,
+                    Text = head,
+                    FontFamily = new FontFamily("Impact"),
+                    FontSize = 24,
+                    Margin = new Thickness(0, 4, 0, 0),
+                    Foreground = lineColor,
                 },
                 new TextBlock
                 {
@@ -692,11 +695,11 @@ namespace WarhammerArmyAssembler.Interface
                     Height = 1,
                     Fill = lineColor,
                 },
-                TooltipFooter(released, authors),
+                TooltipFooter(released, authors, lineColor),
             }
         };
 
-        private static Grid TooltipFooter(int released, string authors)
+        private static Grid TooltipFooter(int released, string authors, Brush lineColor)
         {
             Grid footer = new Grid { Margin = new Thickness(0, 3, 0, 0) };
 
@@ -706,20 +709,21 @@ namespace WarhammerArmyAssembler.Interface
 
             footer.RowDefinitions.Add(new RowDefinition());
 
-            footer.Children.Add(FooterElement(String.Format("Released: {0}", released), HorizontalAlignment.Left, 0));
-            footer.Children.Add(FooterElement(String.Format("Written by {0}", authors), HorizontalAlignment.Center, 1));
-            footer.Children.Add(FooterElement("© Games Workshop", HorizontalAlignment.Right, 2));
+            footer.Children.Add(FooterElement(String.Format("Released: {0}", released), HorizontalAlignment.Left, 0, lineColor));
+            footer.Children.Add(FooterElement(String.Format("Written by {0}", authors), HorizontalAlignment.Center, 1, lineColor));
+            footer.Children.Add(FooterElement("© Games Workshop", HorizontalAlignment.Right, 2, lineColor));
 
             return footer;
         }
 
-        private static TextBlock FooterElement(string text, HorizontalAlignment aligment, int column)
+        private static TextBlock FooterElement(string text, HorizontalAlignment aligment, int column, Brush lineColor)
         {
             TextBlock element = new TextBlock();
 
             element.Text = text;
             element.HorizontalAlignment = aligment;
             element.FontSize = 11;
+            element.Foreground = lineColor;
 
             Grid.SetColumn(element, column);
             Grid.SetRow(element, 0);
