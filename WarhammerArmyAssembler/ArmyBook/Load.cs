@@ -30,7 +30,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             IntParse(Services.Intro(xmlFile, node));
 
         private static Brush LoadColor(XmlDocument xmlFile, string node) =>
-            Interface.Services.BrushFromXml(Services.Intro(xmlFile, String.Format("Styles/Colors/{0}", node)));
+            Interface.Services.BrushFromXml(Services.Intro(xmlFile, String.Format("Styles/Style[@Name='Color']/{0}", node)));
 
         private static string LoadStyle(XmlDocument xmlFile, string node, string defaultValue) =>
             xmlFile.SelectSingleNode(String.Format(
@@ -95,7 +95,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.BackColor = LoadColor(xmlFile, "Back");
             Data.GridColor = LoadColor(xmlFile, "Grid");
             Data.TooltipColor = LoadColor(xmlFile, "Tooltip");
-            Data.Modified = LoadString(xmlFile, "Styles/Colors/Modified");
+            Data.Modified = Services.StyleColor(xmlFile, "Modified").InnerText;
 
             Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
 

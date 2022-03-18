@@ -19,6 +19,9 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static XmlNode Intro(XmlDocument xmlFile, string name) =>
             xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", name));
 
+        public static XmlNode StyleColor(XmlDocument xmlFile, string name) =>
+            xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/Styles/Style[@Name='Color']/{0}", name));
+
         public static BitmapImage GetUnitImage(string path)
         {
             BitmapImage image = null;

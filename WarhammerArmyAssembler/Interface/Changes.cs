@@ -429,9 +429,9 @@ namespace WarhammerArmyAssembler.Interface
             changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
 
-            Brush mainColor = Services.BrushFromXml(Intro(xmlFile, "Styles/Colors/Front"));
+            Brush mainColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
 
-            CurrentSelectedArmyBackColor = Services.BrushFromXml(Intro(xmlFile, "Styles/Colors/Grid"));
+            CurrentSelectedArmyBackColor = Services.BrushFromXml(StyleColor(xmlFile, "Grid"));
             ArmyChangesColors(changeArmybook.prev);
             ArmyChangesColors(changeArmybook.next);
 
@@ -528,8 +528,8 @@ namespace WarhammerArmyAssembler.Interface
                 int released = IntParse(Intro(xmlFile, "Released"));
                 string illustration = StringParse(Intro(xmlFile, "Images/Illustration"));
 
-                Brush backColor = Services.BrushFromXml(Intro(xmlFile, "Styles/Colors/Tooltip"));
-                Brush lineColor = Services.BrushFromXml(Intro(xmlFile, "Styles/Colors/Front"));
+                Brush backColor = Services.BrushFromXml(StyleColor(xmlFile, "Tooltip"));
+                Brush lineColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
 
                 if (String.IsNullOrEmpty(illustration))
                     illustration = source;
