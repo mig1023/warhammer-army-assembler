@@ -322,7 +322,8 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
-            string id, Brush background, double? partWidth = null, bool enabled = true, bool countable = false, bool withoutBorder = false)
+            string id, Brush background, double? partWidth = null, bool enabled = true, bool countable = false,
+            bool withoutBorder = false, bool disabledBorder = false)
         {
             Label newPart = new Label
             {
@@ -341,12 +342,12 @@ namespace WarhammerArmyAssembler.Interface
             else if (!countable && enabled)
                 newPart.MouseDown += AddOption_Click;
 
-            if (!String.IsNullOrEmpty(caption) && !withoutBorder)
+            if ((!String.IsNullOrEmpty(caption) || disabledBorder) && !withoutBorder)
             {
                 Border border = new Border
                 {
                     BorderThickness = new Thickness(1),
-                    BorderBrush = Brushes.Black,
+                    BorderBrush = (disabledBorder ? Brushes.LightGray : Brushes.Black),
                     Background = background,
                     Child = newPart,
                 };
@@ -367,10 +368,10 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         private static void AddButtonAllParts(string captionFirst, string captionSecond, Brush backgroundFirst, 
-            Brush backgroundSecond, double[] margins, string id,  double? partWidth = null, bool enabled = true)
+            Brush backgroundSecond, double[] margins, string id, bool enabled = true)
         {
             double actualWidth = AddButtonPart(captionFirst, margins, 0, id, backgroundFirst, enabled: enabled);
-            AddButtonPart(captionSecond, margins, actualWidth, id, backgroundSecond, enabled: enabled);
+            AddButtonPart(captionSecond, margins, actualWidth, id, backgroundSecond, enabled: enabled, disabledBorder: !enabled);
         }
 
         private static void AddButtonsCountable(string caption, Brush backFirst, Brush backSecond,
