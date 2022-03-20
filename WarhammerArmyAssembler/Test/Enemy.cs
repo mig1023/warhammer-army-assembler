@@ -34,19 +34,19 @@ namespace WarhammerArmyAssembler
             this.Initiative = NewProfile(profile[9]);
             this.Attacks = NewProfile(profile[10]);
             this.Leadership = NewProfile(profile[11]);
-
-            if ((profile.Count > 12) && int.TryParse(profile[12], out int armour))
-                this.Armour = new Profile { Value = armour };
-            else
-                this.Armour = new Profile { Null = true };
-
-            if ((profile.Count > 13) && int.TryParse(profile[13], out int ward))
-                this.Ward = new Profile { Value = ward };
-            else
-                this.Ward = new Profile { Null = true };
+            this.Armour = SetProfile(profile, 12);
+            this.Ward = SetProfile(profile, 13);
         }
 
         private Profile NewProfile(string line) => ArmyBook.Parsers.ProfileParse(line);
+
+        private Profile SetProfile(List<string> profile, int index)
+        {
+            if ((profile.Count > index) && int.TryParse(profile[index], out int value))
+                return new Profile { Value = value };
+            else
+                return new Profile { Null = true };
+        }
 
         public string Fullname()
         {
