@@ -69,12 +69,8 @@ namespace WarhammerArmyAssembler
         public static Enemy GetByName(string enemyName)
         {
             List<List<Enemy>> enemies = new List<List<Enemy>> {
-                EnemiesMonsters,
-                EnemiesHeroes,
-                EnemiesLords,
-                EnemiesCoreUnits,
-                EnemiesSpecialUnits,
-                EnemiesRareUnits
+                EnemiesMonsters, EnemiesHeroes, EnemiesLords,
+                EnemiesCoreUnits, EnemiesSpecialUnits, EnemiesRareUnits
             };
 
             foreach (List<Enemy> enemyList in enemies)
@@ -86,9 +82,7 @@ namespace WarhammerArmyAssembler
 
         private Enemy SetID()
         {
-            MaxIDindex -= 1;
-
-            this.ID = MaxIDindex;
+            this.ID = --MaxIDindex;
 
             return this;
         }
@@ -161,7 +155,6 @@ namespace WarhammerArmyAssembler
             {
                 Terror = true,
                 LargeBase = true,
-
                 Mount = new Enemy("2/Apparentice//5/4/4/3/3/2/3/2/8")
                 {
                     NoKillingBlow = true,
@@ -189,7 +182,6 @@ namespace WarhammerArmyAssembler
                 Terror = true,
                 Stubborn = true,
                 ImmuneToPsychology = true,
-
                 Mount = new Enemy("5/Skink Crew//6/2/3/3/2/4/4/4/5/4")
                 {
                     ColdBlooded = true,
@@ -400,7 +392,6 @@ namespace WarhammerArmyAssembler
             {
                 ColdBlooded = true,
                 Fear = true,
-
                 Mount = new Enemy("8/Cold One//7/3/0/4/4/1/2/1/3"),
             },
 
@@ -577,7 +568,6 @@ namespace WarhammerArmyAssembler
             {
                 Reroll = "ToWound",
                 NoArmour = true,
-
                 Mount = new Enemy("Spite//7/3/0/4/4/1/2/2/4/5")
                 {
                     Fear = true,
@@ -624,7 +614,6 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
                 Regeneration = true,
                 Reroll = "ToHit;ToWound",
-
                 Mount = new Enemy("Beaquis//8/5/0/5/5/4/6/4/9/5")
                 {
                     Terror = true,
@@ -650,7 +639,6 @@ namespace WarhammerArmyAssembler
             new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4")
             {
                 Undead = true,
-
                 Mount = new Enemy("Zombie Dragon//6/3/0/6/6/6/1/4/4/5")
                 {
                     Terror = true,
@@ -663,7 +651,6 @@ namespace WarhammerArmyAssembler
                 AutoWound = true,
                 NoArmour = true,
                 MultiWounds = "D3",
-
                 Mount = new Enemy("Deathclaw//6/6/0/5/5/4/5/4/8")
                 {
                     Terror = true,
@@ -691,7 +678,6 @@ namespace WarhammerArmyAssembler
                 Frenzy = true,
                 Terror = true,
                 Unbreakable = true,
-
                 Mount = new Enemy("2/Hound of Orion//9/4/0/4/4/1/4/1/6")
                 {
                     Frenzy = true,
@@ -718,7 +704,6 @@ namespace WarhammerArmyAssembler
             new Enemy("Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2")
             {
                 NoArmour = true,
-
                 Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3")
                 {
                     Terror = true,
@@ -745,7 +730,6 @@ namespace WarhammerArmyAssembler
                 ImmuneToPsychology = true,
                 NoArmour = true,
                 Terror = true,
-
                 Mount = new Enemy("Dorghar//8/4/0/5/5/3/3/3/9/4")
                 {
                     LargeBase = true,
