@@ -119,7 +119,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             LoadMagic(xmlFile, "Magic");
-            LoadMagic(xmlFile, "EnemyMagic", enemy: true);
+            LoadMagic(xmlFile, "Dispell", enemy: true);
 
             Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\" +
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")) + "\\";
