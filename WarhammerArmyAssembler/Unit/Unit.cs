@@ -678,105 +678,96 @@ namespace WarhammerArmyAssembler
 
         public void ChangeCountableOption(int optionID, string direction)
         {
-            for (int i = 0; i < this.Options.Count; i++)
+            Option option = this.Options.Where(x => x.ID == optionID).FirstOrDefault();
+
+            if (option == null)
+                return;
+
+            if (direction == "-")
             {
-                Option option = this.Options[i];
+                if ((option.Countable.Value == option.Countable.Min) && option.Countable.Nullable)
+                    option.Countable.Value = 0;
+                else 
+                    option.Countable.Value -= 1;
+            }
+            else
+            {
+                if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
+                    Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
 
-                if (option.ID == optionID)
-                {
-                    if (direction == "-")
-                    {
-                        if ((option.Countable.Value == option.Countable.Min) && option.Countable.Nullable)
-                            option.Countable.Value = 0;
-                        else 
-                            option.Countable.Value -= 1;
-                    }
-                    else
-                    {
-                        if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
-                            Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
+                else if (!Interface.Checks.EnoughUnitPointsForAddOption(option.Points))
+                    Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
 
-                        else if (!Interface.Checks.EnoughUnitPointsForAddOption(option.Points))
-                            Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
+                else if (option.Countable.Nullable && (option.Countable.Value == 0) && (option.Countable.Min > 1))
+                    option.Countable.Value = option.Countable.Min;
 
-                        else if (option.Countable.Nullable && (option.Countable.Value == 0) && (option.Countable.Min > 1))
-                            option.Countable.Value = option.Countable.Min;
-
-                        else
-                            option.Countable.Value += 1;
-                    }
-
-                    return;
-                }
+                else
+                    option.Countable.Value += 1;
             }
         }
 
         public void AddOption(int optionID)
         {
-            for(int i = 0; i < this.Options.Count; i++)
+            Option option = this.Options.Where(x => x.ID == optionID).FirstOrDefault();
+
+            if (option == null)
+                return;
+
+            bool realise = false;
+
+            if (option.IsMagicItem() || option.IsPowers())
             {
-                Option option = this.Options[i];
+                this.Options.Remove(option);
 
-                if (option.ID == optionID)
+                Option artefact = ArmyBook.Data.Artefact[option.ID];
+
+                if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Special))
+                    this.Type = Unit.UnitType.Core;
+
+                else if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Rare))
+                    this.Type = Unit.UnitType.Special;
+
+                if (option.Virtue)
                 {
-                    bool realise = false;
-
-                    if (option.IsMagicItem() || option.IsPowers())
-                    {
-                        this.Options.Remove(option);
-
-                        Option artefact = ArmyBook.Data.Artefact[option.ID];
-
-                        if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Special))
-                            this.Type = Unit.UnitType.Core;
-
-                        else if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Rare))
-                            this.Type = Unit.UnitType.Special;
-
-                        if (option.Virtue)
-                        {
-                            ArmyBook.Data.Artefact[option.ID].Points = Army.Params.GetVirtuePoints(option.ID);
-                            Interface.Reload.LoadArmyList(fastReload: true);
-                        }
-                    }
-                    else
-                    {
-                        if (option.Realised)
-                            option.Realised = false;
-                        else
-                        {
-                            double optionPoints = (option.PerModel ? option.Points * this.Size : option.Points);
-
-                            if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
-                            {
-                                Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
-                                return;
-                            }
-                            else if (!Interface.Checks.EnoughUnitPointsForAddOption(optionPoints))
-                            {
-                                Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
-                                return;
-                            }
-                            else
-                                realise = true;
-                        }
-                    }
-
-                    if (option.Mount && realise)
-                    {
-                        foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts.Where(x => x.Value.Name == option.Name))
-                            Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: ArmyID);
-                    }
-                    else if (option.Mount && !realise)
-                    {
-                        Army.Mod.DeleteUnitByID(this.MountOn);
-                        this.MountOn = 0;
-                    }
-
-                    option.Realised = realise;
-                    return;
+                    ArmyBook.Data.Artefact[option.ID].Points = Army.Params.GetVirtuePoints(option.ID);
+                    Interface.Reload.LoadArmyList(fastReload: true);
                 }
             }
+            else
+            {
+                if (option.Realised)
+                    option.Realised = false;
+                else
+                {
+                    double optionPoints = (option.PerModel ? option.Points * this.Size : option.Points);
+
+                    if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
+                    {
+                        Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
+                        return;
+                    }
+                    else if (!Interface.Checks.EnoughUnitPointsForAddOption(optionPoints))
+                    {
+                        Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
+                        return;
+                    }
+                    else
+                        realise = true;
+                }
+            }
+
+            if (option.Mount && realise)
+            {
+                foreach (KeyValuePair<int, Unit> mount in ArmyBook.Data.Mounts.Where(x => x.Value.Name == option.Name))
+                    Interface.Changes.ArmyGridDrop(mount.Key, points: option.Points, unit: ArmyID);
+            }
+            else if (option.Mount && !realise)
+            {
+                Army.Mod.DeleteUnitByID(this.MountOn);
+                this.MountOn = 0;
+            }
+
+            option.Realised = realise;
         }
 
         public string GetSpecialRulesLine(bool withCommandData = false, bool onlyUnitParam = false, bool noNeedToDoubleBSB = false)
@@ -942,6 +933,7 @@ namespace WarhammerArmyAssembler
             bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out string lineParamValue, out int intParamValue);
 
             if (!onlyUnitParam)
+            {
                 foreach (Option option in Options.Where(x => (!x.IsOption() || x.Realised)))
                 {
                     PropertyInfo optionField = typeof(Option).GetProperty(name);
@@ -961,7 +953,7 @@ namespace WarhammerArmyAssembler
                     {
                         string[] allRerolls = lineOptionValue.Split(';');
 
-                        foreach(string reroll in allRerolls)
+                        foreach (string reroll in allRerolls)
                         {
                             string secondElement = (String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ");
                             string[] rerollsParams = reroll.Split('(');
@@ -977,6 +969,7 @@ namespace WarhammerArmyAssembler
                     if (fromParamValue && (intOptionValue > 0))
                         intParamValue = intOptionValue;
                 }
+            }
 
             additionalParam = lineParamValue;
             intValue = intParamValue;
@@ -1077,11 +1070,13 @@ namespace WarhammerArmyAssembler
                 bool exist = false;
 
                 foreach (Option option in Options)
+                {
                     if ((item.Key == option.Name) && (item.Value == option.Runic))
                     {
                         exist = true;
                         break;
                     }
+                }
 
                 if (!exist)
                     return false;
