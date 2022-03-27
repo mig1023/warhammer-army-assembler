@@ -12,7 +12,7 @@ namespace WarhammerArmyAssembler.Army
         public static int ArmyEdition { get; set; }
         public static string UnitsImagesDirectory { get; set; }
 
-        public static int MaxPoints = 2000;
+        public static int MaxPoints = ArmyBook.Constants.BaseArmySize;
 
         public static int MaxIDindex = 0;
     }

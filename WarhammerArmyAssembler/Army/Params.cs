@@ -63,19 +63,19 @@ namespace WarhammerArmyAssembler.Army
             switch (type)
             {
                 case Unit.UnitType.Lord:
-                    return (Data.MaxPoints < 2000 ? 0 : 1 + ((Data.MaxPoints - 2000) / 1000));
+                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 0 : 1 + ((Data.MaxPoints - 2000) / 1000));
 
                 case Unit.UnitType.Hero:
-                    return (Data.MaxPoints < 2000 ? 3 : (Data.MaxPoints / 1000) * 2);
+                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 3 : (Data.MaxPoints / 1000) * 2);
 
                 case Unit.UnitType.Core:
-                    return (Data.MaxPoints < 2000 ? 2 : 1 + (Data.MaxPoints / 1000));
+                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 2 : 1 + (Data.MaxPoints / 1000));
 
                 case Unit.UnitType.Special:
-                    return (Data.MaxPoints < 2000 ? 3 : 2 + (Data.MaxPoints / 1000));
+                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 3 : 2 + (Data.MaxPoints / 1000));
 
                 case Unit.UnitType.Rare:
-                    return (Data.MaxPoints < 2000 ? 1 : (Data.MaxPoints / 1000));
+                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 1 : (Data.MaxPoints / 1000));
 
                 default:
                     return 0;

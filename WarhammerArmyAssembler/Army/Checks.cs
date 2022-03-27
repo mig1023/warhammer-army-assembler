@@ -54,18 +54,18 @@ namespace WarhammerArmyAssembler.Army
 
         public static Dictionary<Unit.UnitType, double> UnitsMaxPointsPercent() => new Dictionary<Unit.UnitType, double>
         {
-            [Unit.UnitType.Lord] = 0.25,
-            [Unit.UnitType.Hero] = 0.25,
-            [Unit.UnitType.Core] = 0.25,
-            [Unit.UnitType.Special] = 0.50,
-            [Unit.UnitType.Rare] = 0.25,
+            [Unit.UnitType.Lord] = ArmyBook.Constants.Quarter,
+            [Unit.UnitType.Hero] = ArmyBook.Constants.Quarter,
+            [Unit.UnitType.Core] = ArmyBook.Constants.Quarter,
+            [Unit.UnitType.Special] = ArmyBook.Constants.Hulf,
+            [Unit.UnitType.Rare] = ArmyBook.Constants.Quarter,
         };
 
         public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points)
         {
             Dictionary<Unit.UnitType, double> units = UnitsPointsPercent();
 
-            int twentyFivePercent = (int)(Data.MaxPoints * 0.25);
+            int twentyFivePercent = (int)(Data.MaxPoints * ArmyBook.Constants.Quarter);
 
             if (type == Unit.UnitType.Lord || type == Unit.UnitType.Hero || type == Unit.UnitType.Rare)
                 return (units[type] + points <= twentyFivePercent);
@@ -83,10 +83,10 @@ namespace WarhammerArmyAssembler.Army
             int limitForArmy = -1;
 
             if (unit.Type == Unit.UnitType.Special)
-                limitForArmy = (Data.MaxPoints >= 3000 ? 6 : 3);
+                limitForArmy = (Data.MaxPoints >= ArmyBook.Constants.LargeArmySize ? 6 : 3);
 
             else if (unit.Type == Unit.UnitType.Rare)
-                limitForArmy = (Data.MaxPoints >= 3000 ? 4 : 2);
+                limitForArmy = (Data.MaxPoints >= ArmyBook.Constants.LargeArmySize ? 4 : 2);
 
             return (limitForArmy < 0 ? true : (alreadyInArmy < limitForArmy));
         }
