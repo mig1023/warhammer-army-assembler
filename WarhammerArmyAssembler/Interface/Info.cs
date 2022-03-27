@@ -64,9 +64,9 @@ namespace WarhammerArmyAssembler.Interface
             string enemy = ArmyBook.Data.EnemyMagicName;
 
             int dispScrolls = Army.Params.GetArmyDispellScroll();
-            string footer = (dispScrolls > 0 ? String.Format("\n\n+ {0} Dispell Scrolls", dispScrolls) : String.Empty);
+            string footer = (dispScrolls > 0 ? String.Format("\n\n\n+ {0} Dispell Scrolls", dispScrolls) : String.Empty);
 
-            return String.Format("ENEMY MAGIC:\n\n{0}\nby {1}\n\n{2}{3}", lore, enemy, String.Join("\n\n", spellList), footer);
+            return String.Format("ENEMY MAGIC:\n\n{0}\nby {1}\n\n\n{2}{3}", lore, enemy, String.Join("\n\n", spellList), footer);
         }
 
         public static string ArmyCast()
