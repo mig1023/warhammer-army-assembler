@@ -94,7 +94,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                     {
                         xmlFile.Load(file);
                     }
-                    catch (XmlException e)
+                    catch (XmlException)
                     {
                         continue;
                     }

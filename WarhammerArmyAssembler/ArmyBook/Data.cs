@@ -12,7 +12,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static string EnemyMagicLoreName = String.Empty;
         public static string EnemyMagicName = String.Empty;
-        public static Dictionary<string, int> EnemyMagic = new Dictionary<string, int>();
+        public static Dictionary<string, int> Dispell = new Dictionary<string, int>();
 
         public static string AddStyle = String.Empty;
         public static string DropStyle = String.Empty;

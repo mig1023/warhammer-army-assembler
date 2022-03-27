@@ -52,10 +52,10 @@ namespace WarhammerArmyAssembler.Interface
 
         public static string ArmyDispell()
         {
-            if (ArmyBook.Data.EnemyMagic.Count == 0)
+            if (ArmyBook.Data.Dispell.Count == 0)
                 return String.Empty;
 
-            var spellList = ArmyBook.Data.EnemyMagic.
+            var spellList = ArmyBook.Data.Dispell.
                 OrderBy(x => x.Value).
                 Select(x => String.Format("~ {0}+\t{1} ({2} dispells)",
                     x.Value, x.Key, CastingProbability(x.Value, Army.Params.GetArmyDispell())));
