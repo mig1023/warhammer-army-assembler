@@ -33,11 +33,8 @@ namespace WarhammerArmyAssembler.Army
                     currentCombination.Add(option.Name, option.Runic);
             }
 
-            foreach (Unit entry in Data.Units.Values)
-            {
-                if (entry.ExistsRunicCombinationInUnit(currentCombination))
-                    return true;
-            }
+            if (Data.Units.Values.Where(x => x.ExistsRunicCombinationInUnit(currentCombination)).Count() > 0)
+                return true;
 
             return false;
         }
