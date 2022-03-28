@@ -29,7 +29,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static Brush BackColor = null;
         public static Brush GridColor = null;
         public static Brush TooltipColor = null;
-        public static string Modified = String.Empty;
+        public static string Upgraded = String.Empty;
 
         public static bool DemonicMortal = false;
         public static bool DemonicAlreadyReplaced = false;

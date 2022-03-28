@@ -543,7 +543,7 @@ namespace WarhammerArmyAssembler
 
         private SolidColorBrush ColorByMods(string newParamLine)
         {
-            string[] colors = ArmyBook.Data.Modified.Split(',');
+            string[] colors = ArmyBook.Data.Upgraded.Split(',');
             int count = newParamLine.Count(x => x == '*') - 1;
 
             if (count > 2)

@@ -95,7 +95,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.BackColor = LoadColor(xmlFile, "Back");
             Data.GridColor = LoadColor(xmlFile, "Grid");
             Data.TooltipColor = LoadColor(xmlFile, "Tooltip");
-            Data.Modified = Services.StyleColor(xmlFile, "Modified").InnerText;
+
+            Data.Upgraded = Services.StyleColor(xmlFile, "Upgraded").InnerText;
 
             Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
 
