@@ -88,7 +88,7 @@
 				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRule>+1 to dispell</SpecialRule>
+				<Rule>+1 to dispell</Rule>
 				<Description>+1 to dispell</Description>
 			</Artefact>
 			<Artefact>
@@ -119,7 +119,7 @@
 				<Type>Weapon</Type>
 				<OnlyFor>Infantry</OnlyFor>
 				<Points>80</Points>
-				<SpecialRule>Strength double that of his target's Toughness</SpecialRule>
+				<Rule>Strength double that of his target's Toughness</Rule>
 				<WoundOn>2</WoundOn>
 				<HitLast/>
 				<Description>When rolling to wound in close combat and for armour save modifier purposes, the wielder counts as having a Strength double that of his target's Toughness. However, the Executioner's Axe is two-handed and the wielder always strikes last except in the turn he the turn he charges.</Description>
@@ -128,7 +128,7 @@
 				<Name>Venom Sword</Name>
 				<Type>Weapon</Type>
 				<Points>75</Points>
-				<SpecialRule>Any model which loses a wound to the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or is automatically slain</SpecialRule>
+				<Rule>Any model which loses a wound to the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or is automatically slain</Rule>
 				<Description>Any model which loses a wound to the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or is automatically slain.</Description>
 			</Artefact>
 			<Artefact>
@@ -142,7 +142,7 @@
 				<Name>Hydra Blade</Name>
 				<Type>Weapon</Type>
 				<Points>50</Points>
-				<SpecialRule>D3 additional attacks</SpecialRule>
+				<Rule>D3 additional attacks</Rule>
 				<Description>A character wielding the Hydra Blade gains D3 additional attacks (roll each Close Combat phase the Hydra Blade is used).</Description>
 			</Artefact>
 			<Artefact>
@@ -156,14 +156,14 @@
 				<Name>Lifetaker</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<SpecialRule>Crossbow hits on a 2+, may re-roll to wound</SpecialRule>
+				<Rule>Crossbow hits on a 2+, may re-roll to wound</Rule>
 				<Description>Lifetaker is treated like an ordinary repeater crossbow, with the following additional  rules. Lifetaker always hits on 2+, regardless of To Hit modifiers. You may re-roll failed rolls to wound with Lifetaker. Remember that a dice can never be re-rolled more than once.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Web of Shadows</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRule>Enemy automatically takes 2D6 Strength 3 hits, one use only</SpecialRule>
+				<Rule>Enemy automatically takes 2D6 Strength 3 hits, one use only</Rule>
 				<Description>One use only. The character uses the Web of Shadows instead of making any normal attacks that round. When used, one model in base contact with the character automatically takes 2D6 Strength 3 hits. A character with a Web of Shadows may also take an ordinary close combat weapon (but not another magic weapon).</Description>
 			</Artefact>
 			<Artefact>
@@ -177,14 +177,14 @@
 				<Name>Chill Blade</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRule>Any model wounded may not attack for the rest of that combat round</SpecialRule>
+				<Rule>Any model wounded may not attack for the rest of that combat round</Rule>
 				<Description>Any model wounded by a Chill Blade (after saves, etc) may not attack for the rest of that combat round.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Dark sword</Name>
 				<Type>Weapon</Type>
 				<Points>15</Points>
-				<SpecialRule>Any model losing one or more wounds becomes subject to the rules for stupidity for the remainder of the battle</SpecialRule>
+				<Rule>Any model losing one or more wounds becomes subject to the rules for stupidity for the remainder of the battle</Rule>
 				<Description>Any model losing one or more wounds (after saves, etc) to the Dark Sword becomes subject to the rules for stupidity for the remainder of the battle.</Description>
 			</Artefact>
 		</Group>
@@ -211,7 +211,7 @@
 				<Type>Shield</Type>
 				<Points>30</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>All hits the character suffers will be resolved with -1 Strength</SpecialRule>
+				<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
 				<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength.</Description>
 			</Artefact>
 			<Artefact>
@@ -226,7 +226,7 @@
 				<Type>Armour</Type>
 				<Points>20</Points>
 				<AddToArmour>5</AddToArmour>
-				<SpecialRule>For every inflicted wound in close combat, armour save is improved by one point</SpecialRule>
+				<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
 				<Description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improuved by 1 (to 4+ then 3+, etc) up to maximum of 1+.</Description>
 			</Artefact>
 		</Group>
@@ -236,7 +236,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
 				<AddToWard>5</AddToWard>
-				<SpecialRule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</SpecialRule>
+				<Rule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</Rule>
 				<Description>The wearer has a 5+ Ward save against close combat hits. If the wearer of the Black Amulet passes his Ward save then the attacking model suffers 1 wound instead (with no armour save allowed).</Description>
 			</Artefact>
 			<Artefact>
@@ -251,7 +251,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
 				<AddToWard>5</AddToWard>
-				<SpecialRule>Completely immune to the effects of Light Magic and High Magic</SpecialRule>
+				<Rule>Completely immune to the effects of Light Magic and High Magic</Rule>
 				<Description>The character has a 5+ Ward save. In addition to this, the wearer is completely immune to the effects of Light Magic and High Magic spells. Note that this is not a Dispel and thus other models (excluding the character's mount) may be affected by High Magic and Light Magic. </Description>
 			</Artefact>
 			<Artefact>
@@ -265,7 +265,7 @@
 				<Name>Ring of Hotek</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRule>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double</SpecialRule>
+				<Rule>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double</Rule>
 				<Description>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double. If they roll a double 6 they cast the spell (with Irresistible Force) and then suffer a Miscast.</Description>
 			</Artefact>
 		</Group>
@@ -275,21 +275,21 @@
 				<Type>Weapon</Type>
 				<Points>50</Points>
 				<OnlyFor>Infantry</OnlyFor>
-				<SpecialRule>Bound spell, power level 3, one use only: all enemy models in base contact must roll equal to or under their Strength on a D6 or be slain</SpecialRule>
+				<Rule>Bound spell, power level 3, one use only: all enemy models in base contact must roll equal to or under their Strength on a D6 or be slain</Rule>
 				<Description>One use only. Bound spell, power level 5. All enemy models in base contact with the bearer must roll equal to or under their Strength on a D6 (6 always fails) or be sucked into the dimension of Eternal Nightmares (and count as slain!).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Ring of Darkness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>45</Points>
-				<SpecialRule>Bound spell, power level 4, remains in play: attacks in close combat against the wearer require a 6 to hit</SpecialRule>
+				<Rule>Bound spell, power level 4, remains in play: attacks in close combat against the wearer require a 6 to hit</Rule>
 				<Description>Attacks in close combat against the wearer require a 6 to hit regardless of Weapon Skills and modifiers. Remains in play.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Crystal of Midnight</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRule>Bound spell, power level 3, one use only: enemy Wizard must pass a Leadership test on 3D6 otherwise they forget one randomly spell</SpecialRule>
+				<Rule>Bound spell, power level 3, one use only: enemy Wizard must pass a Leadership test on 3D6 otherwise they forget one randomly spell</Rule>
 				<Description>One use only. Nominate a Wizard anywhere on the table. The Wizard must pass a Leadership test on 3D6 otherwise he forgets one randomly determined spell for the rest of the battle.</Description>
 			</Artefact>
 		</Group>
@@ -298,14 +298,14 @@
 				<Name>Soulstone</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRule>Immune to the effects of her first Miscast</SpecialRule>
+				<Rule>Immune to the effects of her first Miscast</Rule>
 				<Description>A Soulstone makes the Sorceress immune to the effects of her first Miscast. Note that a Miscast spell still fails regardless of the actual dice score rolled.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Black Staff</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<SpecialRule>There is no maximum number of Power dice to attempt a spell</SpecialRule>
+				<Rule>There is no maximum number of Power dice to attempt a spell</Rule>
 				<Description>There is no maximum number of Power dice the wielder can use to attempt a spell.</Description>
 			</Artefact>
 			<Artefact>
@@ -319,7 +319,7 @@
 				<Name>Tome of Furion</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRule>1 additional spell</SpecialRule>
+				<Rule>1 additional spell</Rule>
 				<Description>The Tome of Furion grants its bearer one additional spell.</Description>
 			</Artefact>
 		</Group>
@@ -350,7 +350,7 @@
 				<Name>Banner of Murder</Name>
 				<Type>Banner</Type>
 				<Points>45</Points>
-				<SpecialRule>+D6" into its charge moves</SpecialRule>
+				<Rule>+D6" into its charge moves</Rule>
 				<Description>The unit adds +D6" into its charge moves. Declare charges first and then roll. If the charge is failed the unit will move forward its normal failed charge distance.</Description>
 			</Artefact>
 			<Artefact>
@@ -367,7 +367,7 @@
 				<Type>Weapon</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
-				<SpecialRule>Counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6</SpecialRule>
+				<Rule>Counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6</Rule>
 				<Description>A character with a weapon coated with Manbane always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6. In effect, this means that they almost always wound opponents on a roll of 3+. This modified Strength is also used to calculate armour save modifiers.</Description>
 			</Artefact>
 			<Artefact>
@@ -375,7 +375,7 @@
 				<Type>Weapon</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
-				<SpecialRule>For every Wound suffers a enemy model (after saves, etc) also lose 1 point from all of their other characteristics except Movement</SpecialRule>
+				<Rule>For every Wound suffers a enemy model (after saves, etc) also lose 1 point from all of their other characteristics except Movement</Rule>
 				<Description>For every Wound a model suffers from a weapon poisoned with Black Lotus (after saves, etc) they also lose 1 point from all of their other characteristics except Movement. This lasts for the rest of the battle.</Description>
 			</Artefact>
 			<Artefact>
@@ -408,7 +408,7 @@
 				<Points>25</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
 				<AddToAttacks>1</AddToAttacks>
-				<SpecialRule>Must always pursue fleeing enemies</SpecialRule>
+				<Rule>Must always pursue fleeing enemies</Rule>
 				<Description>The Rune of Khaine grants +1 Attack to its bearer. A model marked with the Rune of Khaine must always pursue fleeing enemies.</Description>
 			</Artefact>
 			<Artefact>
@@ -416,7 +416,7 @@
 				<Type>Weapon</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
-				<SpecialRule>Any one model in base contact will lose one Attack</SpecialRule>
+				<Rule>Any one model in base contact will lose one Attack</Rule>
 				<Description>Any one model (chosen by a Dark Elf player) in base contact will lose one Attack. Against mounted models, the Dark Elf player must choose either the mount/monster or the rider. If the model has several types of attack (an extra bite, for example) the Dark Elf player chooses which type of attack is lost. Models which are immune to psychology are not affected by the Hand of Khaine.</Description>
 			</Artefact>
 			<Artefact>
@@ -424,7 +424,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
-				<SpecialRule>Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground</SpecialRule>
+				<Rule>Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground</Rule>
 				<Description>Hags only. The Hag and her unit drink the Witchbrew before the battle. Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground.</Description>
 			</Artefact>
 			<Artefact>
@@ -432,7 +432,7 @@
 				<Type>Weapon</Type>
 				<Points>10</Points>
 				<OnlyForGroup>Khainite</OnlyForGroup>
-				<SpecialRule>A unit charged character must pass a Leadership test or reduce their Weapon Skill by -1 for the duration of that Close Combat phase</SpecialRule>
+				<Rule>A unit charged character must pass a Leadership test or reduce their Weapon Skill by -1 for the duration of that Close Combat phase</Rule>
 				<Description>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by -1 (to a minimum of 1) for the duration of that Close Combat phase.</Description>
 			</Artefact>
 		</Group>
@@ -466,13 +466,13 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Use Dark Magic</SpecialRule>
-					<SpecialRule>If your army is led by Malekith, Black Guard are no longer a 0-1 choice - you may include as many units as you have Rare choices</SpecialRule>
-					<SpecialRule>May re-roll missed close combat attacks against High Elves in any round of combat, not just the first round</SpecialRule>
+					<Rule>Use Dark Magic</Rule>
+					<Rule>If your army is led by Malekith, Black Guard are no longer a 0-1 choice - you may include as many units as you have Rare choices</Rule>
+					<Rule>May re-roll missed close combat attacks against High Elves in any round of combat, not just the first round</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Destroyer</Name>
-					<SpecialRule>If Malekith hits an opponent with a magic weapon or with magic armour, instead of rolling to wound you may choose to destroy one item (opponent's choice)</SpecialRule>
+					<Rule>If Malekith hits an opponent with a magic weapon or with magic armour, instead of rolling to wound you may choose to destroy one item (opponent's choice)</Rule>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Hand of Khaine</Name>
@@ -484,7 +484,7 @@
 					<AddToArmour>5</AddToArmour>
 					<AddToWard>2</AddToWard>
 					<NoMultiWounds/>
-					<SpecialRule>2+ Ward save against non-magical attacks</SpecialRule>
+					<Rule>2+ Ward save against non-magical attacks</Rule>
 				</Armour>
 			</Equipments>
 		</Hero>
@@ -516,18 +516,18 @@
 					<AddToStrength>2</AddToStrength>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Always use Dark Magic, you may choose which four spells she has at the start of the battle</SpecialRule>
-					<SpecialRule>Adds +2 to all of her casting rolls</SpecialRule>
-					<SpecialRule>Any Witch Elves within 12" may use her Leadership value, as if she was their army General</SpecialRule>
+					<Rule>Always use Dark Magic, you may choose which four spells she has at the start of the battle</Rule>
+					<Rule>Adds +2 to all of her casting rolls</Rule>
+					<Rule>Any Witch Elves within 12" may use her Leadership value, as if she was their army General</Rule>
 				</Special>
 				<Arcane>
 					<Name>Thousand and One Dark Blessing</Name>
 					<AddToWard>4</AddToWard>
-					<SpecialRule>Magic Resistance(1)</SpecialRule>
+					<Rule>Magic Resistance(1)</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>Enchanting Beauty</Name>
-					<SpecialRule>Any enemy model in base contact with Morathi at the start of round of combat must pass a Leadership test or have their WS reduced to 1 for the duration of that round</SpecialRule>
+					<Rule>Any enemy model in base contact with Morathi at the start of round of combat must pass a Leadership test or have their WS reduced to 1 for the duration of that round</Rule>
 				</Arcane>
 			</Equipments>
 		</Hero>
@@ -571,7 +571,7 @@
 					<AddToStrength>1</AddToStrength>
 					<AddToToughness>2</AddToToughness>
 					<AddToInitiative>2</AddToInitiative>
-					<SpecialRule>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6: on a 4+ Tz'arkan's murderous rage drives Malus to attack his allies</SpecialRule>
+					<Rule>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6: on a 4+ Tz'arkan's murderous rage drives Malus to attack his allies</Rule>
 				</Demon>
 			</Equipments>
 		</Hero>
@@ -695,7 +695,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
+					<Rule>Hate High Elves</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -760,8 +760,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Sect Enmity</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Sect Enmity</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -873,7 +873,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
+					<Rule>Hate High Elves</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -926,8 +926,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Sect Enmity</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Sect Enmity</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -985,8 +985,8 @@
 					<Name>Whip</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Beastmaster</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Beastmaster</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -1027,8 +1027,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Hidden</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Hidden</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -1125,7 +1125,7 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1150,7 +1150,7 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1177,9 +1177,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Uncontrollable</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Uncontrollable</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1210,9 +1210,9 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Noxious breath</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Noxious breath</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1243,9 +1243,9 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Noxious breath</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Noxious breath</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1280,7 +1280,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
+					<Rule>Hate High Elves</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1348,7 +1348,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
+					<Rule>Hate High Elves</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1404,8 +1404,8 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Fast Cavalry</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Fast Cavalry</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1460,9 +1460,9 @@
 					<Name>Repeater crossbow</Name>
 				</RangeWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Skirmishers</SpecialRule>
-					<SpecialRule>Scouts</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Skirmishers</Rule>
+					<Rule>Scouts</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1508,8 +1508,8 @@
 					<AddToAttacks>1</AddToAttacks>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Devotees of Khaine</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Devotees of Khaine</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1568,8 +1568,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Chariot</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Chariot</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1626,8 +1626,8 @@
 				</Armour>
 				<Special>
 					<Special>
-						<SpecialRule>Hate High Elves</SpecialRule>
-						<SpecialRule>Thick-skinned</SpecialRule>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Thick-skinned</Rule>
 					</Special>
 				</Special>
 			</Equipments>
@@ -1688,7 +1688,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
+					<Rule>Hate High Elves</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1739,8 +1739,8 @@
 					<AddToAttacks>1</AddToAttacks>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Flying Unit</SpecialRule>
-					<SpecialRule>Beasts</SpecialRule>
+					<Rule>Flying Unit</Rule>
+					<Rule>Beasts</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
@@ -1768,9 +1768,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Hate High Elves</SpecialRule>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Breathe Fire</SpecialRule>
+					<Rule>Hate High Elves</Rule>
+					<Rule>Large target</Rule>
+					<Rule>Breathe Fire</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
