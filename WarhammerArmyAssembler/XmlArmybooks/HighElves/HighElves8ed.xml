@@ -51,7 +51,7 @@
 				<Type>Weapon</Type>
 				<Points>70</Points>
 				<AddToAttacks>3</AddToAttacks>
-				<SpecialRule>Any roll of 6 To Wound ignores armour saves</SpecialRule>
+				<Rule>Any roll of 6 To Wound ignores armour saves</Rule>
 				<Description>The Blade of Leaping Gold grants the wielder +3 Attacks. In addition, any roll of 6 To Wound made with the Blade of Leaping Gold ignores armour saves.</Description>
 			</Artefact>
 			<Artefact>
@@ -60,14 +60,14 @@
 				<OnlyFor>Mount</OnlyFor>
 				<Points>30</Points>
 				<ChargeStrengthBonus>3</ChargeStrengthBonus>
-				<SpecialRule>Armour saves cannot be taken on the turn he charges</SpecialRule>
+				<Rule>Armour saves cannot be taken on the turn he charges</Rule>
 				<Description>Mounted character only. The Star Lance can only be used in a turn in which the bearer makes a successful charge. Attacks with the Star Lance are resolved at +3 Strength, and armour saves cannot be taken against Wounds caused by the Star Lance. If the bearer did not make a successful charge this turn, or if his mount has been slain, he must instead fight using another weapon.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Reaver bow</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRule>Longbow with range 30", +1 Strength, Volley Fire and Multiple Shots(3)</SpecialRule>
+				<Rule>Longbow with range 30", +1 Strength, Volley Fire and Multiple Shots(3)</Rule>
 				<Description>Longbow with range 30", +1 Strength, Volley Fire and Multiple Shots(3).</Description>
 			</Artefact>
 			<Artefact>
@@ -76,7 +76,7 @@
 				<Points>25</Points>
 				<ArmourTo>2</ArmourTo>
 				<AddToWard>6</AddToWard>
-				<SpecialRule>Fireborn</SpecialRule>
+				<Rule>Fireborn</Rule>
 				<Description>The Armour of Caledor grants the wearer a 2+ Armour save that cannot be improved by any means. In addition, the Armour of Caledor grants the bearer a 6+ Ward save and the Fireborn special ride.</Description>
 			</Artefact>
 			<Artefact>
@@ -85,8 +85,8 @@
 				<Points>25</Points>
 				<OnlyFor>Infantry</OnlyFor>
 				<AddToArmour>5</AddToArmour>
-				<SpecialRule>Scout</SpecialRule>
-				<SpecialRule>Strider</SpecialRule>
+				<Rule>Scout</Rule>
+				<Rule>Strider</Rule>
 				<Description>Model on foot only. The wearer of the Shadow Armour has a 5+ Armour save. In addition, the wearer has both the Scouts and Strider special rules.</Description>
 			</Artefact>
 			<Artefact>
@@ -94,7 +94,7 @@
 				<Type>Shield</Type>
 				<Points>15</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>Parry save of 4+</SpecialRule>
+				<Rule>Parry save of 4+</Rule>
 				<Description>Shield. Unless he is fighting with a weapon that has the Requires Two Hands special rule, the bearer of the Shield of the Merwyrm has a parry save of 4+ (even if he's fighting with a magic weapon).</Description>
 			</Artefact>
 			<Artefact>
@@ -109,21 +109,21 @@
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
 				<OnlyFor>Infantry</OnlyFor>
-				<SpecialRule>Ambushers</SpecialRule>
+				<Rule>Ambushers</Rule>
 				<Description>Model on foot only. The bearer of Moranion's Wayshard has the Ambushers special rule. He can also give the Ambushers special rule to a friendly Archers or Spearmen unit, up to 30 models in size and chosen from Warhammer: High Elves, immediately before deployment. If he does so, he immediately joins the unit and cannot leave it until the turn after the one in which the combined unit has deployed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Khaine's Ring of Fury</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRule>Bound spell, Power level 3: Soul Quench spell</SpecialRule>
+				<Rule>Bound spell, Power level 3: Soul Quench spell</Rule>
 				<Description>Bound spell (power level 3). Khaine's Ring of Fury contains the Soul Quench spell (see the Lore of High Magic).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Gem Ofsunfire</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRule>Once per battle, all of the bearer's spells, shooting attacks and close combat attacks have a +1 bonus To Wound and Flaming Attacks special rule</SpecialRule>
+				<Rule>Once per battle, all of the bearer's spells, shooting attacks and close combat attacks have a +1 bonus To Wound and Flaming Attacks special rule</Rule>
 				<Description>One use only. During the turn in which the Gem of Sunfire is used, all of the bearer's spells, shooting attacks and close combat attacks (and his mount's, if he has one) have a +1 bonus To Wound (rolls of 1 still fail) provided that they also have the Flaming Attacks special rule.</Description>
 			</Artefact>
 			<Artefact>
@@ -131,23 +131,23 @@
 				<Type>AdditionalArmour</Type>
 				<Points>10</Points>
 				<Fear/>
-				<SpecialRule>Against Dwarfs causes Terror</SpecialRule>
-				<SpecialRule>All Dwarfs gain the Hatred special rule while attacking the model</SpecialRule>
+				<Rule>Against Dwarfs causes Terror</Rule>
+				<Rule>All Dwarfs gain the Hatred special rule while attacking the model</Rule>
 				<Description>The wearer of the Cloak of Beards causes Fear. Against models chosen from Warhammer: Dwarfs, the wearer causes Terror instead. However, all models from Warhammer: Dwarfs gain the Hatred special rule while attacking the wearer. In addition, at the start of each Close Combat phase, roll a D6 for each magic item carried by each model from Warhammer: Dwarfs that is in base contact with the bearer. On a roll of 4+, that magic item is destroyed and cannot be used for the rest of the batde. Note that this has no effect on magic items that are mounts, magic items that contain bound spells that have already miscast during the game, and any magic items labelled as 'one use only' that have already been used during the game — do not roll to see if these magic items are destroyed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Book of Hoeth</Name>
 				<Type>Arcane</Type>
 				<Points>55</Points>
-				<SpecialRule>May re-roll a single dice from each of his casting or dispel attempts</SpecialRule>
+				<Rule>May re-roll a single dice from each of his casting or dispel attempts</Rule>
 				<Description>The Book of Hoeth allows the bearer to re-roll a single dice from each of his casting or dispel attempts. Results of 6 cannot be re-rolled.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Banner of the World Dragon</Name>
 				<Type>Banner</Type>
 				<Points>50</Points>
-				<SpecialRule>2+ Ward save against all Wounds caused by spells, magic weapons and magical attacks</SpecialRule>
-				<SpecialRule>All Dragons within 12" have the Stubborn special rule</SpecialRule>
+				<Rule>2+ Ward save against all Wounds caused by spells, magic weapons and magical attacks</Rule>
+				<Rule>All Dragons within 12" have the Stubborn special rule</Rule>
 				<Description>All models in a unit that carries the Banner of the World Dragon have a 2+ Ward save against all Wounds caused by spells, magic weapons and magical attacks. Furthermore, all Dragons (friend or foe) within 12" of the Banner of the World Dragon have the Stubborn special rule.</Description>
 			</Artefact>
 		</Group>
@@ -198,14 +198,14 @@
 				<Name>Sword of Anti-Heroes</Name>
 				<Type>Weapon</Type>
 				<Points>30</Points>
-				<SpecialRule>+1 Strength and +1 Attack for every enemy character in base contact</SpecialRule>
+				<Rule>+1 Strength and +1 Attack for every enemy character in base contact</Rule>
 				<Description>The bearer has +1 Strength and +1 Attack for every enemy character in base contact with him or his unit. These bonuses are calculated at the start of each round ol close combat and last until its end.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Spellthieving Sword</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRule>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells</SpecialRule>
+				<Rule>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells</Rule>
 				<Description>A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound.</Description>
 			</Artefact>
 			<Artefact>
@@ -275,14 +275,14 @@
 				<Name>Tormentor Sword</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRule>A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game</SpecialRule>
+				<Rule>A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game</Rule>
 				<Description>A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Warrior Bane</Name>
 				<Type>Weapon</Type>
 				<Points>5</Points>
-				<SpecialRule>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound</SpecialRule>
+				<Rule>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound</Rule>
 				<Description>A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1).</Description>
 			</Artefact>
 		</Group>
@@ -339,7 +339,7 @@
 				<Type>Shield</Type>
 				<Points>25</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>1+ armour save against shooting attacks</SpecialRule>
+				<Rule>1+ armour save against shooting attacks</Rule>
 				<Description>Shield. The bearer has a 1+ armour save against shooting attacks.</Description>
 			</Artefact>
 			<Artefact>
@@ -347,7 +347,7 @@
 				<Type>Shield</Type>
 				<Points>20</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>Magic Resistance(1)</SpecialRule>
+				<Rule>Magic Resistance(1)</Rule>
 				<Description>Shield. The bearer gains Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -363,7 +363,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>10</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>2+ Ward save against flaming attacks</SpecialRule>
+				<Rule>2+ Ward save against flaming attacks</Rule>
 				<Description>The wearer counts his armour save as being one point higher than normal. The wearer has a 2+ ward save against flaming attacks.</Description>
 			</Artefact>
 			<Artefact>
@@ -378,7 +378,7 @@
 				<Type>Shield</Type>
 				<Points>5</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>First hit suffered is discounted on a roll of 2+</SpecialRule>
+				<Rule>First hit suffered is discounted on a roll of 2+</Rule>
 				<Description>Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is discounted on a roll of 2+.</Description>
 			</Artefact>
 		</Group>
@@ -394,7 +394,7 @@
 				<Name>Obsidian Lodestone</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
-				<SpecialRule>Magic Resistance(3)</SpecialRule>
+				<Rule>Magic Resistance(3)</Rule>
 				<Description>The Obsidian Lodestone grants Magic Resistance (3).</Description>
 			</Artefact>
 			<Artefact>
@@ -422,7 +422,7 @@
 				<Name>Obsidian Trinket</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
-				<SpecialRule>Magic Resistance(1)</SpecialRule>
+				<Rule>Magic Resistance(1)</Rule>
 				<Description>The Obsidian Trinket grants Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -443,21 +443,21 @@
 				<Name>Dragonbane Gem</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRule>2+ Ward save against flaming attacks</SpecialRule>
+				<Rule>2+ Ward save against flaming attacks</Rule>
 				<Description>The bearer of the Dragonbane Gem has a 2+ Ward save against flaming attacks.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Pidgeon Plucker Pendant</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRule>5+ Ward save against wounds caused in close combat by models that have the Fly special rule</SpecialRule>
+				<Rule>5+ Ward save against wounds caused in close combat by models that have the Fly special rule</Rule>
 				<Description>This item grants the bearer a 5+ Ward save against wounds caused in close combat by models that have the Fly special rule.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Luckstone</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRule>May re-roll single failed armour save</SpecialRule>
+				<Rule>May re-roll single failed armour save</Rule>
 				<Description>The Luckstone allows the bearer to re-roll single failed armour save.</Description>
 			</Artefact>
 		</Group>
@@ -466,7 +466,7 @@
 				<Name>Rampager's Standard</Name>
 				<Type>Banner</Type>
 				<Points>55</Points>
-				<SpecialRule>May re-roll charge distance dice</SpecialRule>
+				<Rule>May re-roll charge distance dice</Rule>
 				<Description>A unit with this magic standard can re-roll its charge distance dice.</Description>
 			</Artefact>
 			<Artefact>
@@ -480,7 +480,7 @@
 				<Name>Ranger's Standard</Name>
 				<Type>Banner</Type>
 				<Points>50</Points>
-				<SpecialRule>Strider</SpecialRule>
+				<Rule>Strider</Rule>
 				<Description>A unit with the Ranger's Standard has the Strider special rule.</Description>
 			</Artefact>
 			<Artefact>
@@ -508,7 +508,7 @@
 				<Name>Lichebone Pennant</Name>
 				<Type>Banner</Type>
 				<Points>15</Points>
-				<SpecialRule>Magic Resistance(1)</SpecialRule>
+				<Rule>Magic Resistance(1)</Rule>
 				<Description>Models in a unit with the Lichebone Pennant have Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -522,21 +522,21 @@
 				<Name>Banner of Eternal Flame</Name>
 				<Type>Banner</Type>
 				<Points>10</Points>
-				<SpecialRule>Flaming Attacks</SpecialRule>
+				<Rule>Flaming Attacks</Rule>
 				<Description>Models in a unit with the Banner of Eternal Flame have Flaming Attacks.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Gleaming Pennant</Name>
 				<Type>Banner</Type>
 				<Points>5</Points>
-				<SpecialRule>Сan re-roll first failed Leadership test</SpecialRule>
+				<Rule>Сan re-roll first failed Leadership test</Rule>
 				<Description>One use only. A unit with the Gleaming Pennant can re-roll its first failed Leadership test.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scarecrow Banner</Name>
 				<Type>Banner</Type>
 				<Points>5</Points>
-				<SpecialRule>Сauses Fear in models with the Fly special rule</SpecialRule>
+				<Rule>Сauses Fear in models with the Fly special rule</Rule>
 				<Description>A unit with the Scarecrow Banner causes Fear in models with the Fly special rule.</Description>
 			</Artefact>
 		</Group>
@@ -545,63 +545,63 @@
 				<Name>Book of Ashur</Name>
 				<Type>Arcane</Type>
 				<Points>70</Points>
-				<SpecialRule>+1 bonus on attempts to cast and dispel</SpecialRule>
+				<Rule>+1 bonus on attempts to cast and dispel</Rule>
 				<Description>The bearer receives a +1 bonus on attempts to cast and dispel.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Feedback Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRule>Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed</SpecialRule>
+				<Rule>Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed</Rule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Feedback Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, roll a dice for every dice used to cast the spell. The casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scroll of Leeching</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRule>Once per game, after the enemy spell has been resolved, add a number of dispel dice to your pool equal to the number of dice used to cast the spell</SpecialRule>
+				<Rule>Once per game, after the enemy spell has been resolved, add a number of dispel dice to your pool equal to the number of dice used to cast the spell</Rule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Leeching can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, the bearer of the scroll adds a number of dispel dice to his pool equal to the number of dice used to cast the spell (remember that your dispel pool cannot exceed 12 dice).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sivejir's Hex Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRule>Once per game, after the enemy spell has been resolved, the enemy wizard must roll equal to or under his wizard level on a D6, if he fails he becomes a small, slimy toad</SpecialRule>
+				<Rule>Once per game, after the enemy spell has been resolved, the enemy wizard must roll equal to or under his wizard level on a D6, if he fails he becomes a small, slimy toad</Rule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Hex Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but a portion of the spell's energy is transformed and redirected at the caster. The enemy wizard can resist the spell's effects by rolling equal to or under his wizard level on a D6. If he fails, an amphibian transformation takes hold and he becomes a small, slimy toad! Whilst transformed, the wizard cannot channel or cast spells, all of his magic items and mundane equipment (armour, weapons, etc.) temporarily stop working and all of his characteristics are reduced to 1 (except for his wounds, which are unaffected). His controlling player can roll a D6 at the start of each of his subsequent magic phases; the spell dissipates on a roll of 4+ and the wizard returns to his normal form (but still attempts to eat flies for several days afterward).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Power Scroll</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRule>Once per game, during one casting attempt any roll of a double will cause Irresistible Force (and a Miscast)</SpecialRule>
+				<Rule>Once per game, during one casting attempt any roll of a double will cause Irresistible Force (and a Miscast)</Rule>
 				<Description>One use only. A Power Scroll can be used when the Wizard makes a casting attempt. During that casting attempt, any roll of a double will cause irresistible force (and a miscast).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Wand of Jet</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRule>Once per game, can increase one of his casting results by an additional +D6, after other casting dice have been rolled</SpecialRule>
+				<Rule>Once per game, can increase one of his casting results by an additional +D6, after other casting dice have been rolled</Rule>
 				<Description>One use only. The bearer can increase one of his casting results by an additional +D6, after other casting dice have been rolled. This extra power dice can contribute to casting a spell with Irresistible Force (and a Miscast).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Forbidden Rod</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRule>Once per game, adds +D6 dice in the power pool and inflicts D3 wounds</SpecialRule>
+				<Rule>Once per game, adds +D6 dice in the power pool and inflicts D3 wounds</Rule>
 				<Description>One use only. The forbidden rod adds +D6 dice in the power pool at the start of the caster's own magic phase, but also inflicts D3 wounds on the bearer (with no armour saves allowed).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Trickster's Shard</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRule>Once per game, declare you are using Shard at the start of one of your magic phases, for the duration of the phase, when one of spells is dispelled by an enemy wizard, on a 5+, that wizard surfers a wound with no armour saves allowed</SpecialRule>
+				<Rule>Once per game, declare you are using Shard at the start of one of your magic phases, for the duration of the phase, when one of spells is dispelled by an enemy wizard, on a 5+, that wizard surfers a wound with no armour saves allowed</Rule>
 				<Description>One use only. Declare you are using this item at the start of one of your magic phases. For the duration of the phase, when one of the bearer's spells is dispelled by an enemy wizard, roll a D6. On a 5+, that wizard surfers a wound with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Earthing Rod</Name>
 				<Type>Arcane</Type>
 				<Points>25</Points>
-				<SpecialRule>Once per game, can re-roll the Miscast</SpecialRule>
+				<Rule>Once per game, can re-roll the Miscast</Rule>
 				<Description>One use only. If the wizard rolls on the miscast table he can re-roll the result.</Description>
 			</Artefact>
 			<Artefact>
@@ -622,21 +622,21 @@
 				<Name>Sceptre of Stability</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRule>Once per game, can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled</SpecialRule>
+				<Rule>Once per game, can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled</Rule>
 				<Description>One use only. The bearer can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled. This extra dispel dice can contribute to dispelling with Irresistible Force.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Channelling Staff</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRule>+1 to all of his channeling attempts</SpecialRule>
+				<Rule>+1 to all of his channeling attempts</Rule>
 				<Description>The Wizard adds +1 to all of his channeling attempts.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scroll of Shielding</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRule>Once per game, after the enemy spell has been resolved, the target of the spell is granted a 4+ Ward save against any wounds caused by the spell</SpecialRule>
+				<Rule>Once per game, after the enemy spell has been resolved, the target of the spell is granted a 4+ Ward save against any wounds caused by the spell</Rule>
 				<Description>One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted a 4+ Ward save against any wounds caused by the spell.</Description>
 			</Artefact>
 		</Group>
@@ -655,7 +655,7 @@
 				<Name>Fozzrik's Folding Fortress</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>100</Points>
-				<SpecialRule>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress</SpecialRule>
+				<Rule>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress</Rule>
 				<Description>After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building (or scratch-built structure of a similar size) in your deployment zone to represent rhe Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik's Folding Fortress.</Description>
 			</Artefact>
 			<Artefact>
@@ -663,7 +663,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
 				<OnlyFor>Infantry</OnlyFor>
-				<SpecialRule>Fly</SpecialRule>
+				<Rule>Fly</Rule>
 				<Description>Infantry or monstrous infantry models on foot only. The owner of this magical carpet has the Fly special rule. However, he cannot join units.</Description>
 			</Artefact>
 			<Artefact>
@@ -677,21 +677,21 @@
 				<Name>Healing Potion</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
-				<SpecialRule>Once per battle recovers D6 Wounds lost in the battle</SpecialRule>
+				<Rule>Once per battle recovers D6 Wounds lost in the battle</Rule>
 				<Description>One use only. The Healing Potion can be drunk at the start of the controlling player's turn. The imbiber immediately recovers D6 Wounds lost in the battle.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Featherfoe Torc</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
-				<SpecialRule>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat</SpecialRule>
+				<Rule>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat</Rule>
 				<Description>Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Ruby Ring of Ruin</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRule>Bound spell, Power level 3: Fireball spell from Lore of Fire</SpecialRule>
+				<Rule>Bound spell, Power level 3: Fireball spell from Lore of Fire</Rule>
 				<Description>Bound spell (power level 3). The Ruby Ring of Ruin contains the Fireball spell (see the Lore of Fire).</Description>
 			</Artefact>
 			<Artefact>
@@ -706,14 +706,14 @@
 				<Name>Potion of Strength</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRule>Once per battle at the start of any player's turn has +3 Strength until the end of the turn</SpecialRule>
+				<Rule>Once per battle at the start of any player's turn has +3 Strength until the end of the turn</Rule>
 				<Description>One use only. The Potion of Strength can be drunk at the start of any player's turn. The imbiber has +3 Strength until the end of the turn.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Toughness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRule>Once per battle at the start of any player's turn has +3 Toughness until the end of the turn</SpecialRule>
+				<Rule>Once per battle at the start of any player's turn has +3 Toughness until the end of the turn</Rule>
 				<Description>One use only. The Potion of Toughness can be drunk at the start of any player's turn. The imbiber has +3 Toughness until the end of the turn.</Description>
 			</Artefact>
 			<Artefact>
@@ -727,21 +727,21 @@
 				<Name>Ironcurse Icon</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRule>The character (and any unit he is with) have 6+ Ward save against war machine weapons</SpecialRule>
+				<Rule>The character (and any unit he is with) have 6+ Ward save against war machine weapons</Rule>
 				<Description>The character (and any unit he is with) gain a 6+ ward save against war machine weapons.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Foolhardiness</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRule>Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn</SpecialRule>
+				<Rule>Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn</Rule>
 				<Description>One use only. The Potion of Foolhardiness can be drunk at the start of any player's turn. The imbiber has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Potion of Speed</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRule>Once per battle at the start of any player's turn has +3 Initiative until the end of the turn</SpecialRule>
+				<Rule>Once per battle at the start of any player's turn has +3 Initiative until the end of the turn</Rule>
 				<Description>One use only. The Potion of Speed can be drunk at the start of any player's turn. The imbiber has +3 Initiative until the end of the turn.</Description>
 			</Artefact>
 		</Group>
@@ -772,15 +772,15 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
-					<SpecialRule>Inspiring Presence has range of 18"</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
+					<Rule>Inspiring Presence has range of 18"</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Sunfang</Name>
 					<AddToStrength>3</AddToStrength>
-					<SpecialRule>Flaming Attacks</SpecialRule>
-					<SpecialRule>Once per battle, Tyrion can make a Strength 4 Breath Weapon attack with Flaming Attacks special rule</SpecialRule>
+					<Rule>Flaming Attacks</Rule>
+					<Rule>Once per battle, Tyrion can make a Strength 4 Breath Weapon attack with Flaming Attacks special rule</Rule>
 				</HandWeapon>
 				<Armour>
 					<Name>Dragon Armour of Aenarion</Name>
@@ -789,7 +789,7 @@
 				</Armour>
 				<Armour>
 					<Name>Heart of Avelorn</Name>
-					<SpecialRule>Magic Resistance (2)</SpecialRule>
+					<Rule>Magic Resistance (2)</Rule>
 					<WardForLastWound>2</WardForLastWound>
 				</Armour>
 			</Equipments>
@@ -819,9 +819,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
-					<SpecialRule>+1 to all attempts to cast spells from the Lore of High Magic</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
+					<Rule>+1 to all attempts to cast spells from the Lore of High Magic</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Sword of Teclis</Name>
@@ -830,7 +830,7 @@
 				</HandWeapon>
 				<Arcane>
 					<Name>The Moon Staff of Lileath</Name>
-					<SpecialRule>Onece per battle, for one Magic phases Teclis bonus power dice is added to every casting attempt or if Teclis suffers a miscast result of the miscast is ignored</SpecialRule>
+					<Rule>Onece per battle, for one Magic phases Teclis bonus power dice is added to every casting attempt or if Teclis suffers a miscast result of the miscast is ignored</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>The War Crown</Name>
@@ -840,7 +840,7 @@
 				</Arcane>
 				<Arcane>
 					<Name>Scroll of Hoeth</Name>
-					<SpecialRule>One use only, same as Dispel scroll, in addition, both Teclis and the caster roll a D6: if Teclis scores higher, the spell cannot be reused by caster</SpecialRule>
+					<Rule>One use only, same as Dispel scroll, in addition, both Teclis and the caster roll a D6: if Teclis scores higher, the spell cannot be reused by caster</Rule>
 				</Arcane>
 			</Equipments>
 		</Hero>
@@ -877,10 +877,10 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Hates all Goblins</SpecialRule>
-					<SpecialRule>Blood Oath</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Hates all Goblins</Rule>
+					<Rule>Blood Oath</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Fangsword of Eltharion</Name>
@@ -901,7 +901,7 @@
 				</Armour>
 				<Arcane>
 					<Name>Talisman of Hoeth</Name>
-					<SpecialRule>Magic Resitance(1)</SpecialRule>
+					<Rule>Magic Resitance(1)</Rule>
 					<AddToWizard>2</AddToWizard>
 					<AddToCast>2</AddToCast>
 					<AddToDispell>1</AddToDispell>
@@ -932,18 +932,18 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Scout</SpecialRule>
-					<SpecialRule>Hate Dark Elves</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Scout</Rule>
+					<Rule>Hate Dark Elves</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<RangeWeapon>
 					<Name>Moonbow</Name>
-					<SpecialRule>Moonbow shoot for 36" with Strength 7, Multiple Wounds (D3), no Armour saves permitted and Quick to Fire secial rule</SpecialRule>
-					<SpecialRule>Any unit of Dark Elves that suffers one or more casualties from the Moonbow also suffers a -1 penalty to their Leadership until the end of the phase</SpecialRule>
+					<Rule>Moonbow shoot for 36" with Strength 7, Multiple Wounds (D3), no Armour saves permitted and Quick to Fire secial rule</Rule>
+					<Rule>Any unit of Dark Elves that suffers one or more casualties from the Moonbow also suffers a -1 penalty to their Leadership until the end of the phase</Rule>
 				</RangeWeapon>
 				<Armour>
 					<Name>Light armour</Name>
@@ -951,12 +951,12 @@
 				</Armour>
 				<Arcane>
 					<Name>Shadow Crown</Name>
-					<SpecialRule>Swiftstride</SpecialRule>
+					<Rule>Swiftstride</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>Stone of Midnight</Name>
 					<AddToWard>4</AddToWard>
-					<SpecialRule>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</SpecialRule>
+					<Rule>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</Rule>
 				</Arcane>
 			</Equipments>
 		</Hero>
@@ -987,11 +987,11 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Boon of Isha</SpecialRule>
-					<SpecialRule>+1 to all attempts to cast spells from the Lore of High Magic</SpecialRule>
-					<SpecialRule>At the start of each of Alarielle's Magic phases, every unit with the Daemonic special rule within 12" suffers D6 Strength 4 hits, distributed as for shooting attacks.</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Boon of Isha</Rule>
+					<Rule>+1 to all attempts to cast spells from the Lore of High Magic</Rule>
+					<Rule>At the start of each of Alarielle's Magic phases, every unit with the Daemonic special rule within 12" suffers D6 Strength 4 hits, distributed as for shooting attacks.</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1002,19 +1002,19 @@
 				</Armour>
 				<Arcane>
 					<Name>Star of Avelorn</Name>
-					<SpecialRule>At the start of your Movement phase, nominate a single friendly character within 12" — that model immediately regains a single Wound lost earlier in the battie</SpecialRule>
+					<Rule>At the start of your Movement phase, nominate a single friendly character within 12" — that model immediately regains a single Wound lost earlier in the battie</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>Stave of Avelorn</Name>
-					<SpecialRule>Once per battle, can cast a spell she has already cast that phase, even if the casting attempt failed, or was miscast</SpecialRule>
+					<Rule>Once per battle, can cast a spell she has already cast that phase, even if the casting attempt failed, or was miscast</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>Horn of Isha</Name>
-					<SpecialRule>Once per battle, all models in unit receive a +1 To Hit bonus on all shooting and close combat attacks</SpecialRule>
+					<Rule>Once per battle, all models in unit receive a +1 To Hit bonus on all shooting and close combat attacks</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>Banner of Avelorn</Name>
-					<SpecialRule>Spells from the Lore of Light and the Lore of Life cast by a friendly Wizard that target a unit receive a +4 bonus to cast</SpecialRule>
+					<Rule>Spells from the Lore of Light and the Lore of Life cast by a friendly Wizard that target a unit receive a +4 bonus to cast</Rule>
 				</Arcane>
 			</Equipments>
 		</Hero>
@@ -1043,8 +1043,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1140,7 +1140,7 @@
 						<IfNot>Lion cloak</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
+					<Rule>Immune to all breath and all Flaming attacks</Rule>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
@@ -1261,9 +1261,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>+1 to all attempts to cast spells from the Lore of High Magic</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>+1 to all attempts to cast spells from the Lore of High Magic</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1361,9 +1361,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Magic Resistance(2)</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Magic Resistance(2)</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Halberd</Name>
@@ -1415,9 +1415,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>6+ Ward save against non-magical shooting attacks</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>6+ Ward save against non-magical shooting attacks</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Great weapon</Name>
@@ -1454,9 +1454,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Forest Strider</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Forest Strider</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1474,7 +1474,7 @@
 					<Name>Pelt of Charandis</Name>
 					<AddToArmour>6</AddToArmour>
 					<ImmuneToPoison/>
-					<SpecialRule>3+ Armour save against shooting attacks</SpecialRule>
+					<Rule>3+ Armour save against shooting attacks</Rule>
 				</Armour>
 			</Equipments>
 		</Hero>
@@ -1505,15 +1505,15 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Magic Resistance(1)</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Magic Resistance(1)</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>The Phoenix Blade</Name>
 					<AddToStrength>1</AddToStrength>
 					<MultiWounds>D3</MultiWounds>
-					<SpecialRule>Flaming attacks</SpecialRule>
+					<Rule>Flaming attacks</Rule>
 				</HandWeapon>
 				<Armour>
 					<Name>Heavy armour</Name>
@@ -1521,7 +1521,7 @@
 				</Armour>
 				<Arcane>
 					<Name>Mark of Asuryan</Name>
-					<SpecialRule>If Caradryan is killed in close combat, the model that killed Caradryan immediately suffers D6 wounds, with no armour save allowed</SpecialRule>
+					<Rule>If Caradryan is killed in close combat, the model that killed Caradryan immediately suffers D6 wounds, with no armour save allowed</Rule>
 				</Arcane>
 			</Equipments>
 			<Options>
@@ -1558,8 +1558,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1655,7 +1655,7 @@
 						<IfNot>Lion cloak</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
+					<Rule>Immune to all breath and all Flaming attacks</Rule>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
@@ -1733,7 +1733,7 @@
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
-					<SpecialRule>BSB</SpecialRule>
+					<Rule>BSB</Rule>
 					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
@@ -1765,9 +1765,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>+1 to all attempts to cast spells from the Lore of High Magic</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>+1 to all attempts to cast spells from the Lore of High Magic</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1823,10 +1823,10 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
-					<SpecialRule>Reckless</SpecialRule>
-					<SpecialRule>Warrior Mage</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
+					<Rule>Reckless</Rule>
+					<Rule>Warrior Mage</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1845,7 +1845,7 @@
 					<Type>Option</Type>
 					<Points>10</Points>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
+					<Rule>Immune to all breath and all Flaming attacks</Rule>
 				</Option>
 			</Options>
 		</Hero>
@@ -1874,10 +1874,10 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Naval Discipline</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
-					<SpecialRule>Windrider</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Naval Discipline</Rule>
+					<Rule>Valour of Age</Rule>
+					<Rule>Windrider</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Spear</Name>
@@ -1930,9 +1930,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Quicksilver Shot</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Quicksilver Shot</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Spear</Name>
@@ -2056,8 +2056,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Large Target</Rule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2082,7 +2082,7 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2108,8 +2108,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Large Target</Rule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2139,9 +2139,9 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Dragon Fire</SpecialRule>
+					<Rule>Large Target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Dragon Fire</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2171,9 +2171,9 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Dragon Fire</SpecialRule>
+					<Rule>Large Target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Dragon Fire</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2204,9 +2204,9 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Dragon Fire</SpecialRule>
+					<Rule>Large Target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Dragon Fire</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2233,12 +2233,12 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Flaming Attacks</SpecialRule>
-					<SpecialRule>2+ Ward save against Flaming Attacks</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Phoenix Reborn</SpecialRule>
-					<SpecialRule>Wake of Fire</SpecialRule>
+					<Rule>Flaming Attacks</Rule>
+					<Rule>2+ Ward save against Flaming Attacks</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Large Target</Rule>
+					<Rule>Phoenix Reborn</Rule>
+					<Rule>Wake of Fire</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2266,10 +2266,10 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Magical attacks</SpecialRule>
-					<SpecialRule>Any enemy unit in base contact has the Always Strikes Last special rule and suffers -1 to its Strength</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Large Target</SpecialRule>
+					<Rule>Magical attacks</Rule>
+					<Rule>Any enemy unit in base contact has the Always Strikes Last special rule and suffers -1 to its Strength</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Large Target</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2297,10 +2297,10 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Magical attacks</SpecialRule>
-					<SpecialRule>Any enemy unit in base contact has the Always Strikes Last special rule and suffers -1 to its Strength</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Large Target</SpecialRule>
+					<Rule>Magical attacks</Rule>
+					<Rule>Any enemy unit in base contact has the Always Strikes Last special rule and suffers -1 to its Strength</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Large Target</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2326,8 +2326,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Fly</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -2355,8 +2355,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Spear</Name>
@@ -2415,8 +2415,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2475,8 +2475,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Spear</Name>
@@ -2539,8 +2539,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2609,9 +2609,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fast Cavalry</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Fast Cavalry</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2691,8 +2691,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Chariot</SpecialRule>
-					<SpecialRule>Valour of Ages</SpecialRule>
+					<Rule>Chariot</Rule>
+					<Rule>Valour of Ages</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Great weapon</Name>
@@ -2723,9 +2723,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Forest Strider</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Forest Strider</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Great weapon</Name>
@@ -2787,8 +2787,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Great weapon</Name>
@@ -2846,11 +2846,11 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Scout</SpecialRule>
-					<SpecialRule>Skirmish</SpecialRule>
-					<SpecialRule>Hate Dark Elves</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Scout</Rule>
+					<Rule>Skirmish</Rule>
+					<Rule>Hate Dark Elves</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -2898,8 +2898,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Halberd</Name>
@@ -2959,8 +2959,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Lance</Name>
@@ -2972,7 +2972,7 @@
 				<Armour>
 					<Name>Dragon armour</Name>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRule>Immune to all Flaming attacks</SpecialRule>
+					<Rule>Immune to all Flaming attacks</Rule>
 				</Armour>
 				<Armour>
 					<Name>Shields</Name>
@@ -3031,8 +3031,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Fly</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -3078,8 +3078,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Chariot</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Chariot</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -3114,9 +3114,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Repeater Bolt Thrower</SpecialRule>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Repeater Bolt Thrower</Rule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -3148,7 +3148,7 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -3189,12 +3189,12 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Flaming Attacks</SpecialRule>
-					<SpecialRule>2+ Ward save against Flaming Attacks</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Phoenix Reborn</SpecialRule>
-					<SpecialRule>Wake of Fire</SpecialRule>
+					<Rule>Flaming Attacks</Rule>
+					<Rule>2+ Ward save against Flaming Attacks</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Large Target</Rule>
+					<Rule>Phoenix Reborn</Rule>
+					<Rule>Wake of Fire</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
@@ -3222,10 +3222,10 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Magical attacks</SpecialRule>
-					<SpecialRule>Any enemy unit in base contact has the Always Strikes Last special rule and suffers -1 to its Strength</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Large Target</SpecialRule>
+					<Rule>Magical attacks</Rule>
+					<Rule>Any enemy unit in base contact has the Always Strikes Last special rule and suffers -1 to its Strength</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Large Target</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
@@ -3251,8 +3251,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Martial Prowess</SpecialRule>
-					<SpecialRule>Valour of Age</SpecialRule>
+					<Rule>Martial Prowess</Rule>
+					<Rule>Valour of Age</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand Weapon</Name>
