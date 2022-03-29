@@ -102,7 +102,7 @@
 				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRule>+1 to dispell</SpecialRule>
+				<Rule>+1 to dispell</Rule>
 				<Description>+1 to dispell</Description>
 			</Artefact>
 			<Artefact>
@@ -158,7 +158,7 @@
 				<Type>Arcane</Type>
 				<Points>30</Points>
 				<Honours/>
-				<SpecialRule>May choose his spells instead of rolling for them</SpecialRule>
+				<Rule>May choose his spells instead of rolling for them</Rule>
 				<Description>Mage only. May choose his spells instead of rolling for them.</Description>
 			</Artefact>
 			<Artefact>
@@ -166,7 +166,7 @@
 				<Type>Arcane</Type>
 				<Points>10</Points>
 				<Honours/>
-				<SpecialRule>May cast with a maximum of +1 more Power dice than normal</SpecialRule>
+				<Rule>May cast with a maximum of +1 more Power dice than normal</Rule>
 				<Description>Mage only. May cast with a maximum of +1 more Power dice than normal. For example, a Level 3 Mage may use up to five Power dice in an attempt to cast a spell (instead of the usual four).</Description>
 			</Artefact>
 		</Group>	
@@ -182,7 +182,7 @@
 				<Name>Bow of the Seafarer</Name>
 				<Type>Weapon</Type>
 				<Points>60</Points>
-				<SpecialRule>Resolve each bow hit like a single bolt from a Bolt Thrower</SpecialRule>
+				<Rule>Resolve each bow hit like a single bolt from a Bolt Thrower</Rule>
 				<Description>Treat the Bow of the Seafarer as a normal longbow with the following exception. Resolve a hit from this like a single bolt from a Bolt Thrower. Note that you may stand and shoot with the Bow of the Seafarer.</Description>
 			</Artefact>
 			<Artefact>
@@ -204,7 +204,7 @@
 				<Name>Reaver bow</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
-				<SpecialRule>Longbow with Strength 5, multiple shot x3</SpecialRule>
+				<Rule>Longbow with Strength 5, multiple shot x3</Rule>
 				<Description>Treat the Reaver Bow as a normal longbow with the following exceptions: the bearer may shoot three times at the same target in each ot his Shooting phases and any hits are resolved at Strength 5.</Description>
 			</Artefact>
 			<Artefact>
@@ -218,7 +218,7 @@
 				<Name>Foe Bane</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRule>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+</SpecialRule>
+				<Rule>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+</Rule>
 				<Description>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+. Armour saves are modified by the Strength of the bearer.</Description>
 			</Artefact>
 		</Group>
@@ -245,7 +245,7 @@
 				<OnlyFor>Infantry</OnlyFor>
 				<Points>30</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>After any unsaved wound model is instantly teleported 3D6" in a random direction</SpecialRule>
+				<Rule>After any unsaved wound model is instantly teleported 3D6" in a random direction</Rule>
 				<Description>May only be worn by a model on foot. Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound then one of the gems will burst into brilliant white light as he is instantly teleported 3D6" in a random direction.\n\nNote that this means that he can only suffer 1 unsaved wound in a round of close combat as he will be teleported away before the second can strike him. However, if he was struck by a Killing Blow or a weapon that does multiple wounds per hit (such as a cannon ball) then he would still suffer the instant death or multiplied wounds as normal before teleporting away.\n\nIf the model is teleported into another model or impassable terrain then simply carry on moving it along in the same direction until it is 1" beyond. If the model teleports off the table then treat it as having pursued off.</Description>
 			</Artefact>
 			<Artefact>
@@ -261,7 +261,7 @@
 				<Type>Armour</Type>
 				<Points>25</Points>
 				<AddToArmour>5</AddToArmour>
-				<SpecialRule>Scout</SpecialRule>
+				<Rule>Scout</Rule>
 				<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors).</Description>
 			</Artefact>
 			<Artefact>
@@ -301,21 +301,21 @@
 				<Name>Loremaster's Cloak</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>40</Points>
-				<SpecialRule>2+ Ward save against wounds caused by spells</SpecialRule>
+				<Rule>2+ Ward save against wounds caused by spells</Rule>
 				<Description>Gives the wearer and the unit he is with a 2+ Ward save against wounds caused by spells. It has no effect against shooting or close combat attacks.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Talisman of Saphery</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
-				<SpecialRule>The magical weapons of enemy models will have no special effects whilst they are in base contact</SpecialRule>
+				<Rule>The magical weapons of enemy models will have no special effects whilst they are in base contact</Rule>
 				<Description>The magical weapons of enemy models will have no special effects whilst they are in base contact with the bearer of the talisman. Treat the magic weapon as a normal one of its type, eg, a Sword of Battle would count as a hand weapon, Porko's Pigstikka would count as a spear, etc.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sacred Incense</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
-				<SpecialRule>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty</SpecialRule>
+				<Rule>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty</Rule>
 				<Description>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty.</Description>
 			</Artefact>
 			<Artefact>
@@ -329,8 +329,8 @@
 				<Name>Amulet of Fire</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRule>Magic Resistance (1)</SpecialRule>
-				<SpecialRule>Cannot be harmed by Flaming Attacks</SpecialRule>
+				<Rule>Magic Resistance (1)</Rule>
+				<Rule>Cannot be harmed by Flaming Attacks</Rule>
 				<Description>Gives the wearer Magic Resistance (1). In addition, the wearer cannot be harmed by fire-based attacks, eg, Skaven Watpfire Throwers, Dwarf Flame Cannons, or fire balls, etc.</Description>
 			</Artefact>
 		</Group>
@@ -339,35 +339,35 @@
 				<Name>Book of Hoeth</Name>
 				<Type>Arcane</Type>
 				<Points>100</Points>
-				<SpecialRule>Irresistible Force on any successful casting roll which includes any double, except a Miscast</SpecialRule>
+				<Rule>Irresistible Force on any successful casting roll which includes any double, except a Miscast</Rule>
 				<Description>Any spell cast by the mage with this book will be cast with Irresistible Force on any successful casting roll which includes any double, except a Miscast.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Annulian Crystal</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRule>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile</SpecialRule>
+				<Rule>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile</Rule>
 				<Description>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Starwood Staff</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRule>+1 to all casting attempts</SpecialRule>
+				<Rule>+1 to all casting attempts</Rule>
 				<Description>Gives +1 to all casting attempts made by the wizard carrying it.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Sigil of Asuryan</Name>
 				<Type>Arcane</Type>
 				<Points>40</Points>
-				<SpecialRule>Automatically dispels one enemy spell, in addition, roll a D6: on a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle, one use only</SpecialRule>
+				<Rule>Automatically dispels one enemy spell, in addition, roll a D6: on a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle, one use only</Rule>
 				<Description>Automatically dispels one enemy spell. In addition, roll a D6. On a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle. One use only.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Staff of Solidity</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<SpecialRule>Mage immune to the effects of his first Miscast</SpecialRule>
+				<Rule>Mage immune to the effects of his first Miscast</Rule>
 				<Description>This staff makes the Mage immune to the effects of his first Miscast. Note that a miscast spell still fails regardless of the actual dice score rolled.</Description>
 			</Artefact>
 			<Artefact>
@@ -381,7 +381,7 @@
 				<Name>Silver Wand</Name>
 				<Type>Arcane</Type>
 				<Points>10</Points>
-				<SpecialRule>One more spell than is normal for level</SpecialRule>
+				<Rule>One more spell than is normal for level</Rule>
 				<Description>The wearer knows one more spell than is normal for his level.</Description>
 			</Artefact>
 		</Group>
@@ -390,14 +390,14 @@
 				<Name>Null Stone</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>100</Points>
-				<SpecialRule>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work</SpecialRule>
+				<Rule>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work</Rule>
 				<Description>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work. Treat them as normal weapons, banners, etc, of the appropriate type. Note that this applies to all friendly wizards and magic items as well as enemy ones.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Healing Potion</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
-				<SpecialRule>May immediately restores all wounds lost at the start of any phase in either player's turn, one use only</SpecialRule>
+				<Rule>May immediately restores all wounds lost at the start of any phase in either player's turn, one use only</Rule>
 				<Description>The character or any character in base contact may drink this at the start of any phase in either player's turn. It immediately restores all wounds lost by the character during the battle so far. Obviously, if the character is dead at the start of the phase then he can't drink the potion. One use only.</Description>
 			</Artefact>
 			<Artefact>
@@ -413,36 +413,36 @@
 				<Name>Cloak of Beards</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>35</Points>
-				<SpecialRule>Dwarfs both Hate and Fear the wearer of the Cloak</SpecialRule>
-				<SpecialRule>Eeach model in base contact with the wearer loses all the runes from one of their runic items</SpecialRule>
+				<Rule>Dwarfs both Hate and Fear the wearer of the Cloak</Rule>
+				<Rule>Eeach model in base contact with the wearer loses all the runes from one of their runic items</Rule>
 				<Description>Dwarfs both Hate and Fear the wearer of the Cloak. In addition, for the duration of each Close Combat phase, each model in base contact with the wearer loses all the runes from one of their runic items (determined randomly). Treat the item as a normal one of its kind.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Ring of Corin</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRule>Bound spell, Power level 4, one use only: Vaul's Unmaking spell</SpecialRule>
+				<Rule>Bound spell, Power level 4, one use only: Vaul's Unmaking spell</Rule>
 				<Description>Bound spell (Power level 4). One use only. The Ring of Corin may cast its Bound spell in the Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Corin contains the Vaul's Unmaking spell.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Ring of Fury</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
-				<SpecialRule>Bound spell, Power level 3: contains the Fury of Khaine spell</SpecialRule>
+				<Rule>Bound spell, Power level 3: contains the Fury of Khaine spell</Rule>
 				<Description>Bound spell (Power level 3). This ring may cast its Bound Spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Fury contains the Fury of Khaine spell. After each use, even if it was dispelled, roll a D6. On a roll of a 1 the power of the Ring has been exhausted and it may not be used for the rest of the battle.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Blessed tome</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRule>All High Elf units within 6" get +1 Leadership</SpecialRule>
+				<Rule>All High Elf units within 6" get +1 Leadership</Rule>
 				<Description>The character with the tome recites the stirring words of heroes of old as battle is joined. All High Elf units within 6" of the bearer get +1 Leadership (up to a maximum of 10).</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Amulet of the Purifying Flame</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
-				<SpecialRule>Spells that target the character or the unit he is with subtract -3 from their casting roll</SpecialRule>
+				<Rule>Spells that target the character or the unit he is with subtract -3 from their casting roll</Rule>
 				<Description>Spells that target the character or the unit he is with subtract -3 from their casting roll. It has no effect on spells cast with Irresistible Force.</Description>
 			</Artefact>
 		</Group>
@@ -458,14 +458,14 @@
 				<Name>Banner of the World Dragon</Name>
 				<Type>Banner</Type>
 				<Points>60</Points>
-				<SpecialRule>The unit is completely immune to all spell effects, whatever their source</SpecialRule>
+				<Rule>The unit is completely immune to all spell effects, whatever their source</Rule>
 				<Description>The unit is completely immune to all spell effects, whatever their source. This includes friendly spells, bound items, and spells with areas of effect that were cast on nearby units, etc. Spells which are cast on another unit, such as the Flaming Sword of Rhuin, will work as normal, as will all magic weapons used to attack them.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Banner of Sorcery</Name>
 				<Type>Banner</Type>
 				<Points>50</Points>
-				<SpecialRule>+D3 Power dice to pile in each Magic phases</SpecialRule>
+				<Rule>+D3 Power dice to pile in each Magic phases</Rule>
 				<Description>The banner adds +D3 Power dice to pile in each of your own Magic phases.</Description>
 			</Artefact>
 			<Artefact>
@@ -479,22 +479,22 @@
 				<Name>Banner of Arcane Protection</Name>
 				<Type>Banner</Type>
 				<Points>40</Points>
-				<SpecialRule>Magic Resistance (2)</SpecialRule>
-				<SpecialRule>Any Undead or Daemon model touching the unit will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases</SpecialRule>
+				<Rule>Magic Resistance (2)</Rule>
+				<Rule>Any Undead or Daemon model touching the unit will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases</Rule>
 				<Description>The unit gets Magic Resistance (2). In addition, any Undead or Daemon model touching the unit carrying the banner will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases. Note that this does not count as a close combat attack.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Lion Standard</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRule>Immune to fear and terror</SpecialRule>
+				<Rule>Immune to fear and terror</Rule>
 				<Description>The unit is immune to fear and terror.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Banner of Ellyrion</Name>
 				<Type>Banner</Type>
 				<Points>15</Points>
-				<SpecialRule>The unit treats difficult ground as open ground for purposes of movement</SpecialRule>
+				<Rule>The unit treats difficult ground as open ground for purposes of movement</Rule>
 				<Description>The unit treats difficult ground as open ground for purposes of movement.</Description>
 			</Artefact>
 		</Group>
@@ -526,21 +526,21 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>No Dragons will fight Imrik, if they are in base contact with other models (and not in a challenge) then they light them instead, otherwise they may do nothing</SpecialRule>
+					<Rule>No Dragons will fight Imrik, if they are in base contact with other models (and not in a challenge) then they light them instead, otherwise they may do nothing</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Star Lance</Name>
 					<ChargeStrengthBonus>3</ChargeStrengthBonus>
-					<SpecialRule>On the turn he charges, Imrik gets +3 Strength with no armour saves allowed</SpecialRule>
+					<Rule>On the turn he charges, Imrik gets +3 Strength with no armour saves allowed</Rule>
 				</HandWeapon>
 				<Armour>
 					<Name>Armour of Caledor</Name>
 					<ArmourTo>2</ArmourTo>
-					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
+					<Rule>Immune to all breath and all Flaming attacks</Rule>
 				</Armour>
 				<Armour>
 					<Name>Dragonhorn</Name>
-					<SpecialRule>Once per battle, at the start of any of his own turns, Imrik may sound the Dragonhorn: until the start of his next turn, all friendly High Elf units may re-roll any Leadership-based tests</SpecialRule>
+					<Rule>Once per battle, at the start of any of his own turns, Imrik may sound the Dragonhorn: until the start of his next turn, all friendly High Elf units may re-roll any Leadership-based tests</Rule>
 				</Armour>
 			</Equipments>
 		</Hero>
@@ -569,23 +569,23 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Parries the first enemy hit against him per Close Combat phase and it has no effect</SpecialRule>
-					<SpecialRule>May re-roll any failed rolls to hit on the first turn of each close combat</SpecialRule>
+					<Rule>Parries the first enemy hit against him per Close Combat phase and it has no effect</Rule>
+					<Rule>May re-roll any failed rolls to hit on the first turn of each close combat</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Sunfang</Name>
 					<AddToStrength>3</AddToStrength>
-					<SpecialRule>Once per battle in his own Magic phase, Tyrion may use Sunfang to cast the bound spell Fury of Khaine (power level 6), the spell requires no Power dice to cast, all the power required is provided by Sunfang itself</SpecialRule>
+					<Rule>Once per battle in his own Magic phase, Tyrion may use Sunfang to cast the bound spell Fury of Khaine (power level 6), the spell requires no Power dice to cast, all the power required is provided by Sunfang itself</Rule>
 				</HandWeapon>
 				<Armour>
 					<Name>Dragon Armour of Aenarion</Name>
-					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
+					<Rule>Immune to all breath and all Flaming attacks</Rule>
 					<ArmourTo>1</ArmourTo>
 					<AddToWard>4</AddToWard>
 				</Armour>
 				<Armour>
 					<Name>Heart of Avelorn</Name>
-					<SpecialRule>If Tyrion is slain, Heart of Avelorn returns Tyrion to life with 1 Wound, obviously it will only work once</SpecialRule>
+					<Rule>If Tyrion is slain, Heart of Avelorn returns Tyrion to life with 1 Wound, obviously it will only work once</Rule>
 				</Armour>
 				<Armour>
 					<Name>Curse of Aenarion</Name>
@@ -617,9 +617,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Any spell cast by Teclis will be cast with Irresistible Force on any successful casting roll which includes a double, except a Miscast</SpecialRule>
-					<SpecialRule>Use High Magic know all six spells, regardless ot his current level</SpecialRule>
-					<SpecialRule>May re-roll all dice for spell effects</SpecialRule>
+					<Rule>Any spell cast by Teclis will be cast with Irresistible Force on any successful casting roll which includes a double, except a Miscast</Rule>
+					<Rule>Use High Magic know all six spells, regardless ot his current level</Rule>
+					<Rule>May re-roll all dice for spell effects</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Sword of Teclis</Name>
@@ -641,15 +641,15 @@
 				<Arcane>
 					<Name>The Moon Staff of Lileath</Name>
 					<AddToCast>1</AddToCast>
-					<SpecialRule>Once per battle, Moon Staff may granted D6 extra dice to cast, but no more additional dice for the rest of the battle</SpecialRule>
+					<Rule>Once per battle, Moon Staff may granted D6 extra dice to cast, but no more additional dice for the rest of the battle</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>Scroll of Hoeth</Name>
-					<SpecialRule>One use only, same as Dispel scroll, in addition, both Teclis and the caster roll a D6: if Teclis scores higher, the spell cannot be reused by caster</SpecialRule>
+					<Rule>One use only, same as Dispel scroll, in addition, both Teclis and the caster roll a D6: if Teclis scores higher, the spell cannot be reused by caster</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>The War Crown</Name>
-					<SpecialRule>Any spell which is normally limited to a specific range in inches is now of unlimited range</SpecialRule>
+					<Rule>Any spell which is normally limited to a specific range in inches is now of unlimited range</Rule>
 				</Arcane>
 			</Equipments>
 		</Hero>
@@ -742,7 +742,7 @@
 						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
+					<Rule>Immune to all breath and all Flaming attacks</Rule>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
@@ -931,7 +931,7 @@
 						<IfNot>Heavy armour</IfNot>
 					</Dependencies>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
+					<Rule>Immune to all breath and all Flaming attacks</Rule>
 				</Option>
 				<Option>
 					<Name>Shield</Name>
@@ -1089,7 +1089,7 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1115,8 +1115,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1147,9 +1147,9 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Breathe Fire</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Breathe Fire</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1179,10 +1179,10 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Breathe Fire</SpecialRule>
-					<SpecialRule>If Imrik is slain, will become subject to the rules for frenzy, but will otherwise remain under the control of the High Elf player</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Breathe Fire</Rule>
+					<Rule>If Imrik is slain, will become subject to the rules for frenzy, but will otherwise remain under the control of the High Elf player</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1274,7 +1274,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Fight in three ranks with spears</SpecialRule>
+					<Rule>Fight in three ranks with spears</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1331,7 +1331,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Fight in three ranks with spears</SpecialRule>
+					<Rule>Fight in three ranks with spears</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1451,7 +1451,7 @@
 			</Profile>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fast Cavalry</SpecialRule>
+					<Rule>Fast Cavalry</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1534,7 +1534,7 @@
 				<Armour>
 					<Name>Dragon armour</Name>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRule>Immune to all breath and all Flaming attacks</SpecialRule>
+					<Rule>Immune to all breath and all Flaming attacks</Rule>
 				</Armour>
 				<Armour>
 					<Name>Shields</Name>
@@ -1597,7 +1597,7 @@
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Swordmasters</SpecialRule>
+					<Rule>Swordmasters</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1645,9 +1645,9 @@
 			</Profile>
 			<Equipments>
 				<Special>
-					<SpecialRule>Scouts</SpecialRule>
-					<SpecialRule>Skirmish</SpecialRule>
-					<SpecialRule>Hate Dark Elves</SpecialRule>
+					<Rule>Scouts</Rule>
+					<Rule>Skirmish</Rule>
+					<Rule>Hate Dark Elves</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1695,7 +1695,7 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Chariot</SpecialRule>
+					<Rule>Chariot</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1786,7 +1786,7 @@
 			</Profile>
 			<Equipments>
 				<Special>
-					<SpecialRule>Repeater Bolt Thrower</SpecialRule>
+					<Rule>Repeater Bolt Thrower</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1834,7 +1834,7 @@
 					<Name>Lion cloak</Name>
 				</AdditionalArmour>
 				<Special>
-					<SpecialRule>Woodsmen</SpecialRule>
+					<Rule>Woodsmen</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1884,7 +1884,7 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
+					<Rule>Fly</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
