@@ -88,7 +88,7 @@
 				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRule>+1 to dispell</SpecialRule>
+				<Rule>+1 to dispell</Rule>
 				<Description>+1 to dispell</Description>
 			</Artefact>
 			<Artefact>
@@ -136,7 +136,7 @@
 				<Type>Weapon</Type>
 				<Points>55</Points>
 				<WoundOn>2</WoundOn>
-				<SpecialRule>Against Castles, Empire Steam Tanks and in other situations where a roll to wound is not taken, the wielder counts as having double its Strength characteristic, to a maximum of 10</SpecialRule>
+				<Rule>Against Castles, Empire Steam Tanks and in other situations where a roll to wound is not taken, the wielder counts as having double its Strength characteristic, to a maximum of 10</Rule>
 				<Description>The Mace always wounds on a 2+. Armour saves are taken using the wielder's normal Strength. Against Castles, Empire Steam Tanks and in other situations where a roll to wound is not taken, the wielder counts as having double its Strength characteristic, to a maximum of 10.</Description>
 			</Artefact>
 			<Artefact>
@@ -153,14 +153,14 @@
 				<Points>40</Points>
 				<AddToStrength>2</AddToStrength>
 				<HitLast/>
-				<SpecialRule>For each wound inflicted to enemy, roll a D6 immediately: hach roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total)</SpecialRule>
+				<Rule>For each wound inflicted to enemy, roll a D6 immediately: hach roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total)</Rule>
 				<Description>The Slaughterer's Blade counts as a great weapon in all respects. In addition, for each wound inflicted with the Slaughterer's Blade, roll a D6 immediately. Hach roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total). Wounds regained in this way do not count towards combat resolution.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Scimitar of Skultar</Name>
 				<Type>Weapon</Type>
 				<Points>15</Points>
-				<SpecialRule>Rolls of 6 to wound allow no Armour saves</SpecialRule>
+				<Rule>Rolls of 6 to wound allow no Armour saves</Rule>
 				<Description>Rolls of 6 to wound with this weapon allow no Armour saves.</Description>
 			</Artefact>
 		</Group>
@@ -170,7 +170,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>Magic Resistance (1)</SpecialRule>
+				<Rule>Magic Resistance (1)</Rule>
 				<Description>The Pelt confers a 6+ Scaly Skin save that can be combined with normal armour. It also gives the bearer and any unit he joins Magic Resistance (1).</Description>
 			</Artefact>
 			<Artefact>
@@ -185,7 +185,7 @@
 				<Name>The Fur of Sharrgu</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>15</Points>
-				<SpecialRule>+2 Armour save against missile fire (including magic missiles)</SpecialRule>
+				<Rule>+2 Armour save against missile fire (including magic missiles)</Rule>
 				<Description>Adds +2 to the bearer's Armour save against missile fire (including magic missiles), up to a maximum Armour save of 1+.</Description>
 			</Artefact>
 			<Artefact>
@@ -202,7 +202,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
 				<AddToWard>5</AddToWard>
-				<SpecialRule>+1 to any attempts to rally to a unit</SpecialRule>
+				<Rule>+1 to any attempts to rally to a unit</Rule>
 				<Description>The bearer benefits from a 5+ Ward save and confers +1 to any attempts to rally to a unit he has joined, in addition to other modifiers.</Description>
 			</Artefact>
 			<Artefact>
@@ -210,7 +210,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
 				<AddToWard>5</AddToWard>
-				<SpecialRule>Ridden monsters, lone monsters, the steeds pulling chariots, cavalry mounts and swarms may never direct their attacks at a model bearing the Rune of the True Beast, although their riders may attack as normal</SpecialRule>
+				<Rule>Ridden monsters, lone monsters, the steeds pulling chariots, cavalry mounts and swarms may never direct their attacks at a model bearing the Rune of the True Beast, although their riders may attack as normal</Rule>
 				<Description>Ridden monsters, lone monsters, the steeds pulling chariots, cavalry mounts and swarms may never direct their attacks at a model bearing the Rune of the True Beast, although their riders may attack as normal.</Description>
 			</Artefact>
 			<Artefact>
@@ -218,21 +218,21 @@
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
 				<MustBeGeneral/>
-				<SpecialRule>When sounding an ambush, all ambushing units may add +1 to their Leadership test for arriving on the battlefield</SpecialRule>
+				<Rule>When sounding an ambush, all ambushing units may add +1 to their Leadership test for arriving on the battlefield</Rule>
 				<Description>May only be given to the army General. When sounding an ambush, all ambushing units may add +1 to their Leadership test for arriving on the battlefield.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Bloodhunt Horn</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>30</Points>
-				<SpecialRule>Once per battle, can force a fleeing enemy unit within 12" to automatically fail their Rally test</SpecialRule>
+				<Rule>Once per battle, can force a fleeing enemy unit within 12" to automatically fail their Rally test</Rule>
 				<Description>Once per battle, the bearer can force a fleeing enemy unit within 12" to automatically fail their Rally test. This must be declared before the test is made.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>The Dark Heart</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRule>The character and any unit led by him adds +D3" to their charge move</SpecialRule>
+				<Rule>The character and any unit led by him adds +D3" to their charge move</Rule>
 				<Description>The character and any unit led by him adds +D3" to their charge move. Roll after declaring charges - if the charge is failed, the models move their normal failed charge distance.</Description>
 			</Artefact>
 		</Group>
@@ -244,7 +244,7 @@
 				<Dependencies>
 					<If>Mark of Nurgle</If>
 				</Dependencies>
-				<SpecialRule>May drink from the Chalice at the start of his Magic phase, suffers an immediate Strength 4 hit that ignores Armour and Ward saves, for the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast</SpecialRule>
+				<Rule>May drink from the Chalice at the start of his Magic phase, suffers an immediate Strength 4 hit that ignores Armour and Ward saves, for the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast</Rule>
 				<Description>Mark of Nurgle only. The Shaman may drink from the Chalice at the start of his Magic phase. He suffers an immediate Strength 4 hit that ignores Armour and Ward saves (Regeneration may be taken as normal). For the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast.</Description>
 			</Artefact>
 			<Artefact>
@@ -252,9 +252,9 @@
 				<Type>Arcane</Type>
 				<Points>25</Points>
 				<Hate/>
-				<SpecialRule>Replace one of his randomly rolled spells with The Bear's Anger</SpecialRule>
-				<SpecialRule>Can never make Overrun</SpecialRule>
-				<SpecialRule>Pursue 3D6", rather than 2D6"</SpecialRule>
+				<Rule>Replace one of his randomly rolled spells with The Bear's Anger</Rule>
+				<Rule>Can never make Overrun</Rule>
+				<Rule>Pursue 3D6", rather than 2D6"</Rule>
 				<Description>The Goretooth confers hatred and the Bloodgreed special rules to the bearer. The bearer must replace one of his randomly rolled spells with The Bear's Anger, regardless of the lore he has chosen.</Description>
 			</Artefact>
 			<Artefact>
@@ -263,7 +263,7 @@
 				<Points>25</Points>
 				<AddToStrength>2</AddToStrength>
 				<HitLast/>
-				<SpecialRule>Shaman knows spell The Wild Call</SpecialRule>
+				<Rule>Shaman knows spell The Wild Call</Rule>
 				<Description>Counts as a braystaff. Also, the Shaman knows following spell in addition to his other spells:\n\nThe Wild Call (9+ to cast)\nCast on a Beast Herd, Bestigor or Warhounds unit within 12" of the caster and within its normal charge range of an enemy. The unit may declare and make a normal charge move immediately, though the charged unit may only stand as a reaction.</Description>
 			</Artefact>
 		</Group>
@@ -279,7 +279,7 @@
 				<Name>The Flesh Banner</Name>
 				<Type>Banner</Type>
 				<Points>50</Points>
-				<SpecialRule>At the end of each of your Magic phases, any enemy unit in base contact  suffers D6 Strength 4 hits, distributed as shooting hits</SpecialRule>
+				<Rule>At the end of each of your Magic phases, any enemy unit in base contact  suffers D6 Strength 4 hits, distributed as shooting hits</Rule>
 				<Description>At the end of each of your Magic phases, any enemy unit in base contact with the bearer of the banner suffers D6 Strength 4 hits, distributed as shooting hits.</Description>
 			</Artefact>
 			<Artefact>
@@ -293,14 +293,14 @@
 				<Name>The Gore Banner</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRule>May re-roll failed Panic tests</SpecialRule>
+				<Rule>May re-roll failed Panic tests</Rule>
 				<Description>A unit with this banner may re-roll failed Panic tests.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Preyseeker</Name>
 				<Type>Banner</Type>
 				<Points>25</Points>
-				<SpecialRule>When using the Ambush special rule, may re-roll its Leadership test for arriving on the battlefield if it is failed</SpecialRule>
+				<Rule>When using the Ambush special rule, may re-roll its Leadership test for arriving on the battlefield if it is failed</Rule>
 				<Description>When using the Ambush special rule, the unit is able to re-roll its Leadership test for arriving on the battlefield if it is failed. The second roll stands.</Description>
 			</Artefact>
 		</Group>	
@@ -334,19 +334,19 @@
 				<HandWeapon>
 					<Name>Scourge</Name>
 					<AddToAttacks>1</AddToAttacks>
-					<SpecialRule>Khazrak makes one attack with Scourge in each Close Combat phase, in addition to his four normal hand weapon attacks, if you successfully roll to wound with Scourge, Khazrak may immediately roll to wound again, and so on until he fails to make the required score</SpecialRule>
+					<Rule>Khazrak makes one attack with Scourge in each Close Combat phase, in addition to his four normal hand weapon attacks, if you successfully roll to wound with Scourge, Khazrak may immediately roll to wound again, and so on until he fails to make the required score</Rule>
 				</HandWeapon>
 				<Armour>
 					<Name>The Dark Mail</Name>
-					<SpecialRule>Magic Resistance(1)</SpecialRule>
-					<SpecialRule>If he or the unit he is with is the target of a spell that is successfully cast, Khazrak gains +1 Strength (to a maximum of 10) for the remainder of the battle</SpecialRule>
+					<Rule>Magic Resistance(1)</Rule>
+					<Rule>If he or the unit he is with is the target of a spell that is successfully cast, Khazrak gains +1 Strength (to a maximum of 10) for the remainder of the battle</Rule>
 					<AddToArmour>2</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Raiders</SpecialRule>
-					<SpecialRule>Ambush</SpecialRule>
-					<SpecialRule>Any Warhounds in Khazrak's army have a Leadership characteristic of 6, rather than the usual 5</SpecialRule>
-					<SpecialRule>In Khazrak's army, all units with Ambush may use their ability, rather than just half</SpecialRule>
+					<Rule>Raiders</Rule>
+					<Rule>Ambush</Rule>
+					<Rule>Any Warhounds in Khazrak's army have a Leadership characteristic of 6, rather than the usual 5</Rule>
+					<Rule>In Khazrak's army, all units with Ambush may use their ability, rather than just half</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -380,7 +380,7 @@
 			<Equipments>
 				<HandWeapon>
 					<Name>Impaler</Name>
-					<SpecialRule>If any hit rolls are doubles, triples or quadruples, each of those attacks will wound automatically</SpecialRule>
+					<Rule>If any hit rolls are doubles, triples or quadruples, each of those attacks will wound automatically</Rule>
 				</HandWeapon>
 				<Armour>
 					<Name>Skull of Mugrar</Name>
@@ -388,14 +388,14 @@
 				</Armour>
 				<Armour>
 					<Name>Cloak of the Beastlord</Name>
-					<SpecialRule>Magic Resistance(1)</SpecialRule>
-					<SpecialRule>This talisman gives Gorthor a Ward save equal to the Strength of the attack that hit him (a Strength 3 hit would grant a 3+ Ward save, a Strength 5 hit would grant a 5+ Ward save)</SpecialRule>
+					<Rule>Magic Resistance(1)</Rule>
+					<Rule>This talisman gives Gorthor a Ward save equal to the Strength of the attack that hit him (a Strength 3 hit would grant a 3+ Ward save, a Strength 5 hit would grant a 5+ Ward save)</Rule>
 				</Armour>
 				<Special>
-					<SpecialRule>Raiders</SpecialRule>
-					<SpecialRule>Ambush</SpecialRule>
-					<SpecialRule>Counts as having the Mark of all four Chaos gods lor the purposes of army composition</SpecialRule>
-					<SpecialRule>At the start of each Magic phase roll a D6 on the Lore of Death magic table. Gorthor may use the spell rolled during this Chaos Magic phase as a Bound spell, with a Power Level equal to the casting value of the spell</SpecialRule>
+					<Rule>Raiders</Rule>
+					<Rule>Ambush</Rule>
+					<Rule>Counts as having the Mark of all four Chaos gods lor the purposes of army composition</Rule>
+					<Rule>At the start of each Magic phase roll a D6 on the Lore of Death magic table. Gorthor may use the spell rolled during this Chaos Magic phase as a Bound spell, with a Power Level equal to the casting value of the spell</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -429,7 +429,7 @@
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<AddToDispell>2</AddToDispell>
-					<SpecialRule>If a Wizard (friend or enemy) rolls a double when rolling on the Miscast table, then the unfortunate Wizard is instantly turned into a Chaos Spawn under the control of the Beastmen player</SpecialRule>
+					<Rule>If a Wizard (friend or enemy) rolls a double when rolling on the Miscast table, then the unfortunate Wizard is instantly turned into a Chaos Spawn under the control of the Beastmen player</Rule>
 				</HandWeapon>
 				<Armour>
 					<Name>Skull-Weave</Name>
@@ -437,12 +437,12 @@
 					<SubOpponentToHit>1</SubOpponentToHit>
 				</Armour>	
 				<Special>				
-					<SpecialRule>An army that contains Morghur has no General</SpecialRule>
-					<SpecialRule>The enemy must take Fear tests to enter or move though a forest or wood - if this is failed, they stop at the edge of the forest</SpecialRule>
-					<SpecialRule>Morghur moves and will engage enemies in exactly the same fashion as Spawn of Chaos</SpecialRule>
-					<SpecialRule>In the Beastmen Shooting phase, any unit (including friends) within 8" of Morghur take a Leadership test: if failed, the unit suffers D6 Strength 4 hits with no Armour saves allowed, if one or more wounds are caused, then a Spawn of Chaos is created under the control of the Beastmen player, the Spawn has a starting number of Wounds equal to the number of Wounds that were caused</SpecialRule>
-					<SpecialRule>Any model, friend or foe, in base contact with Morghur at the start of any Close Combat phase suffers an immediate Strength 4 hit with no Armour save allowed</SpecialRule>
-					<SpecialRule>Any missile attack or spell targeted at Morghur will never effect him unless the shooting unit or spellcaster is within 12" of him</SpecialRule>
+					<Rule>An army that contains Morghur has no General</Rule>
+					<Rule>The enemy must take Fear tests to enter or move though a forest or wood - if this is failed, they stop at the edge of the forest</Rule>
+					<Rule>Morghur moves and will engage enemies in exactly the same fashion as Spawn of Chaos</Rule>
+					<Rule>In the Beastmen Shooting phase, any unit (including friends) within 8" of Morghur take a Leadership test: if failed, the unit suffers D6 Strength 4 hits with no Armour saves allowed, if one or more wounds are caused, then a Spawn of Chaos is created under the control of the Beastmen player, the Spawn has a starting number of Wounds equal to the number of Wounds that were caused</Rule>
+					<Rule>Any model, friend or foe, in base contact with Morghur at the start of any Close Combat phase suffers an immediate Strength 4 hit with no Armour save allowed</Rule>
+					<Rule>Any missile attack or spell targeted at Morghur will never effect him unless the shooting unit or spellcaster is within 12" of him</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -572,8 +572,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Raiders</SpecialRule>
-					<SpecialRule>Ambush</SpecialRule>
+					<Rule>Raiders</Rule>
+					<Rule>Ambush</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -697,8 +697,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Can never make Overrun</SpecialRule>
-					<SpecialRule>Pursue 3D6", rather than 2D6"</SpecialRule>
+					<Rule>Can never make Overrun</Rule>
+					<Rule>Pursue 3D6", rather than 2D6"</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -783,9 +783,9 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Can use Lore of Beasts, Shadow or Death, or the Lores of Slaanesh or Nurgle if given the appropriate Mark</SpecialRule>
-					<SpecialRule>Raiders</SpecialRule>
-					<SpecialRule>Ambush</SpecialRule>
+					<Rule>Can use Lore of Beasts, Shadow or Death, or the Lores of Slaanesh or Nurgle if given the appropriate Mark</Rule>
+					<Rule>Raiders</Rule>
+					<Rule>Ambush</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -909,8 +909,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Raiders</SpecialRule>
-					<SpecialRule>Ambush</SpecialRule>
+					<Rule>Raiders</Rule>
+					<Rule>Ambush</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -989,9 +989,9 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Can use Lore of Beasts, Shadow or Death, or the Lores of Slaanesh or Nurgle if given the appropriate Mark</SpecialRule>
-					<SpecialRule>Raiders</SpecialRule>
-					<SpecialRule>Ambush</SpecialRule>
+					<Rule>Can use Lore of Beasts, Shadow or Death, or the Lores of Slaanesh or Nurgle if given the appropriate Mark</Rule>
+					<Rule>Raiders</Rule>
+					<Rule>Ambush</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -1042,8 +1042,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Chariot</SpecialRule>
-					<SpecialRule>Tuskgor Charge</SpecialRule>
+					<Rule>Chariot</Rule>
+					<Rule>Tuskgor Charge</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1080,9 +1080,9 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Raiders</SpecialRule>
-					<SpecialRule>Ambush</SpecialRule>
-					<SpecialRule>Unruly</SpecialRule>
+					<Rule>Raiders</Rule>
+					<Rule>Ambush</Rule>
+					<Rule>Unruly</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1178,7 +1178,7 @@
 						<IfNot>Mark of Khorne</IfNot>
 						<IfNot>Mark of Nurgle</IfNot>
 					</Dependencies>
-					<SpecialRule>May re-roll failed Psychology tests</SpecialRule>
+					<Rule>May re-roll failed Psychology tests</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -1256,8 +1256,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Chariot</SpecialRule>
-					<SpecialRule>Tuskgor Charge</SpecialRule>
+					<Rule>Chariot</Rule>
+					<Rule>Tuskgor Charge</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
@@ -1309,7 +1309,7 @@
 					<Name>Claws, fangs, club and potentially lethal halitosis!</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Troll Vomit</SpecialRule>
+					<Rule>Troll Vomit</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
@@ -1427,9 +1427,9 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRule>Drunken</SpecialRule>
-					<SpecialRule>Move Through Woods</SpecialRule>
-					<SpecialRule>Trample</SpecialRule>
+					<Rule>Drunken</Rule>
+					<Rule>Move Through Woods</Rule>
+					<Rule>Trample</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1491,8 +1491,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Can never make Overrun</SpecialRule>
-					<SpecialRule>Pursue 3D6", rather than 2D6"</SpecialRule>
+					<Rule>Can never make Overrun</Rule>
+					<Rule>Pursue 3D6", rather than 2D6"</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1545,7 +1545,7 @@
 						<IfNot>Mark of Khorne</IfNot>
 						<IfNot>Mark of Nurgle</IfNot>
 					</Dependencies>
-					<SpecialRule>May re-roll failed Psychology tests</SpecialRule>
+					<Rule>May re-roll failed Psychology tests</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -1624,8 +1624,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Immune to all lightning-based attacks</SpecialRule>
-					<SpecialRule>If Dracon Ogres are targeted by a lightning-based attack, they become Frenzy</SpecialRule>
+					<Rule>Immune to all lightning-based attacks</Rule>
+					<Rule>If Dracon Ogres are targeted by a lightning-based attack, they become Frenzy</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1687,9 +1687,9 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Immune to all lightning-based attacks</SpecialRule>
-					<SpecialRule>If Dracon Ogres Shaggoth are targeted by a lightning-based attack, they become Frenzy</SpecialRule>
-					<SpecialRule>May re-roll failed Psychology tests</SpecialRule>
+					<Rule>Immune to all lightning-based attacks</Rule>
+					<Rule>If Dracon Ogres Shaggoth are targeted by a lightning-based attack, they become Frenzy</Rule>
+					<Rule>May re-roll failed Psychology tests</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1797,9 +1797,9 @@
 					<Name>Big club, rock or dead animal</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Ignore Little 'Un Panic</SpecialRule>
-					<SpecialRule>Fall</SpecialRule>
-					<SpecialRule>Giant Special Attacks</SpecialRule>
+					<Rule>Ignore Little 'Un Panic</Rule>
+					<Rule>Fall</Rule>
+					<Rule>Giant Special Attacks</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1851,7 +1851,7 @@
 						<IfNot>Bloodbeast of Khorne</IfNot>
 						<IfNot>Firewyrm of Tzeentch</IfNot>
 					</Dependencies>
-					<SpecialRule>Movement 3D6</SpecialRule>
+					<Rule>Movement 3D6</Rule>
 					<Points>15</Points>
 				</Option>
 				<Option>
@@ -1873,7 +1873,7 @@
 						<IfNot>Fiend of Slaanesh</IfNot>
 						<IfNot>Bloodbeast of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>Strength 3 breath weapon</SpecialRule>
+					<Rule>Strength 3 breath weapon</Rule>
 					<Points>15</Points>
 				</Option>
 			</Options>
