@@ -102,7 +102,7 @@
 				<Name>Staff of Sorcery</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRule>+1 to dispell</SpecialRule>
+				<Rule>+1 to dispell</Rule>
 				<Description>+1 to dispell</Description>
 			</Artefact>
 			<Artefact>
@@ -118,7 +118,7 @@
 				<Name>Chaos Daemonsword</Name>
 				<Type>Weapon</Type>
 				<Points>75</Points>
-				<SpecialRule>+D3 to Strength and +D6 Attacks, to a maximum of 10 (roll separately for these values at the start of each round)</SpecialRule>
+				<Rule>+D3 to Strength and +D6 Attacks, to a maximum of 10 (roll separately for these values at the start of each round)</Rule>
 				<Description>A character with the Daemonsword adds D3 to his Strength and has an extra D6 Attacks, to a maximum of 10 (roll separately for these values at the start of each round). However, every roll of a 1 to hit in close combat is resolved against the bearer instead of the enemy. Furthermore, the character can never re-roll a to-hit roll of a '1' in close combat.</Description>
 			</Artefact>
 			<Artefact>
@@ -126,7 +126,7 @@
 				<Type>Weapon</Type>
 				<Points>75</Points>
 				<MultiWounds>D3+1</MultiWounds>
-				<SpecialRule>Flaming attacks</SpecialRule>
+				<Rule>Flaming attacks</Rule>
 				<Description>Flaming attacks. Each unsaved wound caused by the Hellfire Sword causes not one but D3+1 wounds.</Description>
 			</Artefact>
 			<Artefact>
@@ -134,7 +134,7 @@
 				<Type>Weapon</Type>
 				<Points>65</Points>
 				<AddToStrength>1</AddToStrength>
-				<SpecialRule>Every time an enemy character or monster takes an unsaved wound it must take a Toughness test: if the test is failed, the victim becomes a repulsive Spawn-thing, all enemy models in base contact with the victim take a S4 hit, the victim is then removed from play</SpecialRule>
+				<Rule>Every time an enemy character or monster takes an unsaved wound it must take a Toughness test: if the test is failed, the victim becomes a repulsive Spawn-thing, all enemy models in base contact with the victim take a S4 hit, the victim is then removed from play</Rule>
 				<Description>Confers +1 Strength. Every time an enemy character or monster takes an unsaved wound from the Sword of Change it must take a Toughness test. If the test is failed, the victim becomes a repulsive Spawn-thing. All enemy models in base contact with the victim take a S4 hit as the Spawn-thing flails wildly in its death throes (unsaved wounds will count towards combat resolution). The victim is then removed from play.</Description>
 			</Artefact>
 			<Artefact>
@@ -151,7 +151,7 @@
 				<Type>Weapon</Type>
 				<Points>50</Points>
 				<OnlyFor>Infantry</OnlyFor>
-				<SpecialRule>Number of extra Attacks equal to the number of enemy models in base contact</SpecialRule>
+				<Rule>Number of extra Attacks equal to the number of enemy models in base contact</Rule>
 				<Description>The Berserker Sword confers a number of extra Attacks equal to the number of enemy models in base contact.</Description>
 			</Artefact>
 			<Artefact>
@@ -172,7 +172,7 @@
 				<Name>The Father of Blades</Name>
 				<Type>Weapon</Type>
 				<Points>40</Points>
-				<SpecialRule>Any 'to hit' rolls directed against the model that result in the roll of a '1' instead hit the attacking model</SpecialRule>
+				<Rule>Any 'to hit' rolls directed against the model that result in the roll of a '1' instead hit the attacking model</Rule>
 				<Description>Any 'to hit' rolls directed against the bearer that result in the roll of a '1' instead hit the attacking model.</Description>
 			</Artefact>
 			<Artefact>
@@ -202,14 +202,14 @@
 				<Name>Whip of Subversion</Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRule>If an enemy character or monster takes an unsaved wound and that model has not yet made its attacks for that round, then the Chaos player may force it to allocate its attacks upon other models from its own side</SpecialRule>
+				<Rule>If an enemy character or monster takes an unsaved wound and that model has not yet made its attacks for that round, then the Chaos player may force it to allocate its attacks upon other models from its own side</Rule>
 				<Description>If an enemy character or monster takes an unsaved wound from the Whip of Subversion and that model has not yet made its attacks for that round, then the Chaos player may force it to allocate its attacks upon other models from its own side. Wounds caused count towards the owning model's combat resolution.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Glaive of Putrefaction </Name>
 				<Type>Weapon</Type>
 				<Points>25</Points>
-				<SpecialRule>Any model that suffers an unsaved wound from this weapon has its Strength and Toughness reduced to 2 for the rest of the game</SpecialRule>
+				<Rule>Any model that suffers an unsaved wound from this weapon has its Strength and Toughness reduced to 2 for the rest of the game</Rule>
 				<Description>Any model that suffers an unsaved wound from this weapon has its Strength and Toughness reduced to 2 at the end of that combat phase. This penalty is effective for the rest of the game.</Description>
 			</Artefact>
 		</Group>
@@ -227,7 +227,7 @@
 				<Type>Shield</Type>
 				<Points>50</Points>
 				<AddToArmour>6</AddToArmour>
-				<SpecialRule>Negates the power of any magic or runic weapons carried by models in base contact</SpecialRule>
+				<Rule>Negates the power of any magic or runic weapons carried by models in base contact</Rule>
 				<Description>Shield. Negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type.</Description>
 			</Artefact>
 			<Artefact>
@@ -286,7 +286,7 @@
 				<Name>The Black Tongue</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>50</Points>
-				<SpecialRule>Once per battle can be used to automatically convert an unsuccessful spellcasting roll into a Miscast</SpecialRule>
+				<Rule>Once per battle can be used to automatically convert an unsuccessful spellcasting roll into a Miscast</Rule>
 				<Description>One use only. The Black Tongue can be used to automatically convert an unsuccessful spellcasting roll into a Miscast. The owning character then takes a wound that may not be saved by any means.</Description>
 			</Artefact>
 			<Artefact>
@@ -301,14 +301,14 @@
 				<Type>Weapon</Type>
 				<Points>25</Points>
 				<AddToWard>6</AddToWard>
-				<SpecialRule>Magic Resistance(2)</SpecialRule>
+				<Rule>Magic Resistance(2)</Rule>
 				<Description>The model with the Collar of Khorne has Magic Resistance(2) and a 6+ Ward save.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Golden Eye of Tzeentch</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>25</Points>
-				<SpecialRule>Ward save of 4+ against all normal and magical missiles</SpecialRule>
+				<Rule>Ward save of 4+ against all normal and magical missiles</Rule>
 				<Description>The model has a 4+ Ward save against all normal and magical missiles. This does not apply to his mount.</Description>
 			</Artefact>
 			<Artefact>
@@ -316,8 +316,8 @@
 				<Type>AdditionalArmour</Type>
 				<Points>10</Points>
 				<ImmuneToPoison/>
-				<SpecialRule>Immune to the effects of spells from the Lores of Death and Nurgle</SpecialRule>
-				<SpecialRule>Automatically passes all characteristic tests (except Leadership tests)</SpecialRule>
+				<Rule>Immune to the effects of spells from the Lores of Death and Nurgle</Rule>
+				<Rule>Automatically passes all characteristic tests (except Leadership tests)</Rule>
 				<Description>The model carrying the phylactery is immune to Poisoned Attacks, which must roll to Wound as normal. He is also immune to the effects of spells from the Lores of Death and Nurgle. Lastly, the bearer automatically passes all characteristic tests (except Leadership tests).</Description>
 			</Artefact>
 		</Group>
@@ -326,21 +326,21 @@
 				<Name>Skull of Katam</Name>
 				<Type>Arcane</Type>
 				<Points>50</Points>
-				<SpecialRule>The character and any other Wizards within 3" (friend or foe) add +1 to their casting rolls</SpecialRule>
+				<Rule>The character and any other Wizards within 3" (friend or foe) add +1 to their casting rolls</Rule>
 				<Description>The bearer and any other Wizards within 3" (friend or foe) add +1 to their casting rolls.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Infernal Puppet</Name>
 				<Type>Arcane</Type>
 				<Points>35</Points>
-				<SpecialRule>May opt to modify any rolls on the Miscast table made by any Wizard on the battlefield by up to D3</SpecialRule>
+				<Rule>May opt to modify any rolls on the Miscast table made by any Wizard on the battlefield by up to D3</Rule>
 				<Description>A Sorcerer with an Infernal Puppet may opt to modify any rolls on the Miscast table made by any Wizard on the battlefield by up to D3. For instance, an enemy Wizard miscasts, and the Puppet's owner rolls a 2 on his D3, allowing the Chaos player to add or subtract up to 2 from the miscast result the enemy Wizard rolled.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Blood of Tzeentch</Name>
 				<Type>Arcane</Type>
 				<Points>30</Points>
-				<SpecialRule>May re-roll one casting dice per turn, provided it was not originally a roll of a 1</SpecialRule>
+				<Rule>May re-roll one casting dice per turn, provided it was not originally a roll of a 1</Rule>
 				<Description>A model with the Blood of Tzeentch may re-roll one casting dice per turn, provided it was not originally a roll of a 1.</Description>
 			</Artefact>
 			<Artefact>
@@ -354,14 +354,14 @@
 				<Name>Warrior Familiar</Name>
 				<Type>Arcane</Type>
 				<Points>20</Points>
-				<SpecialRule>Strength 5 hit on a single model in base contact</SpecialRule>
+				<Rule>Strength 5 hit on a single model in base contact</Rule>
 				<Description>At the beginning of each Close Combat round, before blows are struck, the familiar inflicts one S5 hit on a single model in base contact with the Sorcerer, chosen by the owning player.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Spell Familiar</Name>
 				<Type>Arcane</Type>
 				<Points>15</Points>
-				<SpecialRule>One more spell</SpecialRule>
+				<Rule>One more spell</Rule>
 				<Description>The Familiar's owner knows one more spell than is normal for his level. This does not increase his Magic Level.</Description>
 			</Artefact>
 		</Group>
@@ -370,7 +370,7 @@
 				<Name>Rod of Torment</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>45</Points>
-				<SpecialRule>Bound spell, power level 4: magic missile that has a range of 18" and causes 2D6 Strength 3 hits</SpecialRule>
+				<Rule>Bound spell, power level 4: magic missile that has a range of 18" and causes 2D6 Strength 3 hits</Rule>
 				<Description>Bound Spell, power level 3. The Rod of Torment holds a magic missile that has a range of 18" and causes 2D6 Strength 3 hits.</Description>
 			</Artefact>
 			<Artefact>
@@ -378,7 +378,7 @@
 				<Type>AdditionalArmour</Type>
 				<Points>45</Points>
 				<OnlyFor>Infantry</OnlyFor>
-				<SpecialRule>Instead of making his normal attacks for that round, may choose to inflict a S8 hit on every enemy model in base contact, whith Killing Blow special rule</SpecialRule>
+				<Rule>Instead of making his normal attacks for that round, may choose to inflict a S8 hit on every enemy model in base contact, whith Killing Blow special rule</Rule>
 				<Description>Instead of making his normal attacks for that round, the wielder of the Bloodskull Pendant may choose to inflict a S8 hit on every enemy model in base contact. These hits have the Killing Blow special rule.</Description>
 			</Artefact>
 				<Artefact>
@@ -389,8 +389,8 @@
 					<IfNot>Mark of Khorne</IfNot>
 				</Dependencies>
 				<AddToCast>1</AddToCast>
-				<SpecialRule>Knows a random spell from the Lore of Fire, Shadow or Death (player's choice)</SpecialRule>
-				<SpecialRule>Roll 1D6+1 instead of 2D6 on the Miscast table</SpecialRule>
+				<Rule>Knows a random spell from the Lore of Fire, Shadow or Death (player's choice)</Rule>
+				<Rule>Roll 1D6+1 instead of 2D6 on the Miscast table</Rule>
 				<Description>The bearer knows a random spell from the Lore of Fire, Shadow or Death (player's choice) and generates a single extra power dice, though he does not generate extra dispel dice. If the bearer ever miscasts, roll 1D6+1 instead of 2D6 on the Miscast table.</Description>
 			</Artefact>
 			<Artefact>
@@ -405,21 +405,21 @@
 				<Name>Pendant of Slaanesh</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRule>For each unsaved wound suffers he gains +1 Attack for the rest of the battle</SpecialRule>
+				<Rule>For each unsaved wound suffers he gains +1 Attack for the rest of the battle</Rule>
 				<Description>For each unsaved wound the character suffers he gains +1 Attack for the rest of the battle.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Death's Head</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>20</Points>
-				<SpecialRule>One use only. Thrown weapon with a range of 12", hit on a 2+, wounds with no armour by Toughness test</SpecialRule>
+				<Rule>One use only. Thrown weapon with a range of 12", hit on a 2+, wounds with no armour by Toughness test</Rule>
 				<Description>One use only. The Death's Head is a thrown weapon with a range of 12". The Death's Head always hits on a 2+. Any unit hit by the Death's Head must take D6 Toughness tests, distributed as for shooting. For each failed test the model(s) that failed that test will take a wound with no armour saves allowed.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Favour of the Gods</Name>
 				<Type>AdditionalArmour</Type>
 				<Points>5</Points>
-				<SpecialRule>After rolling on the Eye of the Gods table may add or subtract one from his roll, this may not affect the roll of a natural 2.</SpecialRule>
+				<Rule>After rolling on the Eye of the Gods table may add or subtract one from his roll, this may not affect the roll of a natural 2.</Rule>
 				<Description>After rolling on the Eye of the Gods table the bearer may add or subtract one from his roll. This may not affect the roll of a natural 2.</Description>
 			</Artefact>
 		</Group>
@@ -429,7 +429,7 @@
 				<Type>Banner</Type>
 				<Points>125</Points>
 				<Stubborn/>
-				<SpecialRule>All friendly units within 6" become Stubborn</SpecialRule>
+				<Rule>All friendly units within 6" become Stubborn</Rule>
 				<Terror/>
 				<Description>The model bearing the Banner of the Gods causes Terror. All friendly units within 6" of the banner become Stubborn.</Description>
 			</Artefact>
@@ -437,21 +437,21 @@
 				<Name>Doom Totem</Name>
 				<Type>Banner</Type>
 				<Points>75</Points>
-				<SpecialRule>All enemy units with line of sight are at -1 Leadership</SpecialRule>
+				<Rule>All enemy units with line of sight are at -1 Leadership</Rule>
 				<Description>All enemy units with line of sight to the Doom Totem are at -1 Leadership.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Banner of Wrath</Name>
 				<Type>Banner</Type>
 				<Points>45</Points>
-				<SpecialRule>Bound spell, power level 4: magic missile with range 24", causing D6 Strength 4 hits</SpecialRule>
+				<Rule>Bound spell, power level 4: magic missile with range 24", causing D6 Strength 4 hits</Rule>
 				<Description>Bound spell, power level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits.</Description>
 			</Artefact>
 			<Artefact>
 				<Name>Blasted Standard</Name>
 				<Type>Banner</Type>
 				<Points>40</Points>
-				<SpecialRule>5+ Ward save against all attacks made in the Shooting phase</SpecialRule>
+				<Rule>5+ Ward save against all attacks made in the Shooting phase</Rule>
 				<Description>The unit with the Blasted Standard has a 5+ Ward save against all attacks made in the Shooting phase.</Description>
 			</Artefact>
 			<Artefact>
@@ -459,7 +459,7 @@
 				<Type>Banner</Type>
 				<Points>35</Points>
 				<Frenzy/>
-				<SpecialRule>Will never lose their Frenzy, even if beaten in close combat</SpecialRule>
+				<Rule>Will never lose their Frenzy, even if beaten in close combat</Rule>
 				<Description>The unit with this banner has the Frenzy special rule. They will never lose their Frenzy, even if beaten in close combat.</Description>
 			</Artefact>
 			<Artefact>
@@ -473,7 +473,7 @@
 				<Name>Rapturous Standard</Name>
 				<Type>Banner</Type>
 				<Points>20</Points>
-				<SpecialRule>Any time a unit with the Rapturous Standard takes a Break test that includes a double or the roll of a 1, that roll is counted as an 'Insane Courage' result</SpecialRule>
+				<Rule>Any time a unit with the Rapturous Standard takes a Break test that includes a double or the roll of a 1, that roll is counted as an 'Insane Courage' result</Rule>
 			</Artefact>
 		</Group>
 	</Artefacts>
@@ -508,29 +508,29 @@
 				<HandWeapon>
 					<Name>The Slayer of Kings</Name>
 					<NoArmour/>
-					<SpecialRule>Greater Daemon U'zuhl</SpecialRule>
+					<Rule>Greater Daemon U'zuhl</Rule>
 				</HandWeapon>
 				<Armour>
 					<Name>The Armour of Morkar</Name>
 					<ArmourTo>1</ArmourTo>
-					<SpecialRule>No attack against him may ever have a better chance to wound him than a 3+ roll</SpecialRule>
+					<Rule>No attack against him may ever have a better chance to wound him than a 3+ roll</Rule>
 				</Armour>
 				<Armour>
 					<Name>The Crown of Domination</Name>
 					<Terror/>
-					<SpecialRule>Any friendly unit within 12" of Archaon may re-roll failed Break tests</SpecialRule>
+					<Rule>Any friendly unit within 12" of Archaon may re-roll failed Break tests</Rule>
 				</Armour>
 				<Armour>
 					<Name>The Eye of Sheerian</Name>
 					<AddToWard>3</AddToWard>
 				</Armour>
 				<Special>
-					<SpecialRule>Eye of the Gods</SpecialRule>
-					<SpecialRule>+1 to cast all spells</SpecialRule>
-					<SpecialRule>Troops within 18" may use his Leadership instead of the normal 12"</SpecialRule>
-					<SpecialRule>Magic Resistance(2)</SpecialRule>
-					<SpecialRule>Archaon's army must include at least one unit of Knights of Chaos</SpecialRule>
-					<SpecialRule>Treats dangerous terrain as open ground, though any unit he is with suffers the normal penalties</SpecialRule>
+					<Rule>Eye of the Gods</Rule>
+					<Rule>+1 to cast all spells</Rule>
+					<Rule>Troops within 18" may use his Leadership instead of the normal 12"</Rule>
+					<Rule>Magic Resistance(2)</Rule>
+					<Rule>Archaon's army must include at least one unit of Knights of Chaos</Rule>
+					<Rule>Treats dangerous terrain as open ground, though any unit he is with suffers the normal penalties</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -565,13 +565,13 @@
 					<AddToWard>6</AddToWard>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Knows all six spells from the Lore of Tzeentch</SpecialRule>
-					<SpecialRule>Can use either of the normal Chaos Dragon breath attacks</SpecialRule>
-					<SpecialRule>Once per battle, can use the Breath of Change: models hit by the Breath must pass a Toughness test or be overwhelmed by horrible mutations - remove such models from play</SpecialRule>
-					<SpecialRule>At the beginning of each turn, Galrauch must take a Leadership test: if the test is passed, Galrauch will be controlled as normal, but if the test is failed, Galrauch will not move, cast spells or use his breath weapons, in the Close Combat phase he will direct half of his attacks against himself.</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Large Target</Rule>
+					<Rule>Knows all six spells from the Lore of Tzeentch</Rule>
+					<Rule>Can use either of the normal Chaos Dragon breath attacks</Rule>
+					<Rule>Once per battle, can use the Breath of Change: models hit by the Breath must pass a Toughness test or be overwhelmed by horrible mutations - remove such models from play</Rule>
+					<Rule>At the beginning of each turn, Galrauch must take a Leadership test: if the test is passed, Galrauch will be controlled as normal, but if the test is failed, Galrauch will not move, cast spells or use his breath weapons, in the Close Combat phase he will direct half of his attacks against himself.</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -618,9 +618,9 @@
 					<ImmuneToPsychology/>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
-					<SpecialRule>May always march, and treats dangerous terrain as open ground</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
+					<Rule>May always march, and treats dangerous terrain as open ground</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -656,14 +656,14 @@
 				<Armour>
 					<Name>Armour of the Storm</Name>
 					<AddToArmour>5</AddToArmour>
-					<SpecialRule>If any lightning-based spell targets a unit within 12" of Kholek, the spell's effects are redirected toward Kholek instead</SpecialRule>
+					<Rule>If any lightning-based spell targets a unit within 12" of Kholek, the spell's effects are redirected toward Kholek instead</Rule>
 				</Armour>
 				<Special>
-					<SpecialRule>Large Target</SpecialRule>
-					<SpecialRule>Immune to all lightning-based attacks</SpecialRule>
-					<SpecialRule>If targeted by a lightning-based attack, they become Frenzy</SpecialRule>
-					<SpecialRule>May never join units</SpecialRule>		
-					<SpecialRule>During the Shooting phase, choose an unengaged enemy unit within Kholek's line of sight and roll a dice: on a roll of a 2-6 a bolt of lightning hits the unit, inflicting D6 Strenght 6 hits, on the roll of a 1, the lightning hits Kholek</SpecialRule>
+					<Rule>Large Target</Rule>
+					<Rule>Immune to all lightning-based attacks</Rule>
+					<Rule>If targeted by a lightning-based attack, they become Frenzy</Rule>
+					<Rule>May never join units</Rule>		
+					<Rule>During the Shooting phase, choose an unengaged enemy unit within Kholek's line of sight and roll a dice: on a roll of a 2-6 a bolt of lightning hits the unit, inflicting D6 Strenght 6 hits, on the roll of a 1, the lightning hits Kholek</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -695,18 +695,18 @@
 				<Armour>
 					<Name>The Scarlet Armour</Name>
 					<AddToArmour>3</AddToArmour>
-					<SpecialRule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</SpecialRule>
+					<Rule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</Rule>
 				</Armour>
 				<Armour>
 					<Name>Daemonshield</Name>
-					<SpecialRule>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</SpecialRule>
+					<Rule>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</Rule>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
-					<SpecialRule>Consort of Khorne</SpecialRule>
-					<SpecialRule>Any friendly unit within 12" of Valkia may re-roll failed Break tests</SpecialRule>
-					<SpecialRule>As long as she is on the table, any results rolled on the 'Eye of the Gods' table may be re-rolled</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
+					<Rule>Consort of Khorne</Rule>
+					<Rule>Any friendly unit within 12" of Valkia may re-roll failed Break tests</Rule>
+					<Rule>As long as she is on the table, any results rolled on the 'Eye of the Gods' table may be re-rolled</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -740,7 +740,7 @@
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Vessel of Chaos</Name>
-					<SpecialRule>When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch may utilise later that phase; conversely, should the enemy make a failed dispel attempt to counter one of Vilitch's spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase</SpecialRule>
+					<Rule>When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch may utilise later that phase; conversely, should the enemy make a failed dispel attempt to counter one of Vilitch's spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase</Rule>
 				</HandWeapon>
 				<Armour>
 					<Type>Armour</Type>
@@ -752,9 +752,9 @@
 					<AddToWard>6</AddToWard>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
-					<SpecialRule>Knows all six spells from the Lore of Tzeentch</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
+					<Rule>Knows all six spells from the Lore of Tzeentch</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -791,8 +791,8 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -867,7 +867,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -987,8 +987,8 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1007,7 +1007,7 @@
 						<IfNot>Mark of Tzeentch</IfNot>
 						<IfNot>Mark of Slaanesh</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -1018,7 +1018,7 @@
 						<IfNot>Mark of Nurgle</IfNot>
 					</Dependencies>
 					<AddToWard>6</AddToWard>
-					<SpecialRule>+1 on attempts to cast spell</SpecialRule>
+					<Rule>+1 on attempts to cast spell</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -1111,9 +1111,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Scion of Chaos</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Scion of Chaos</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1137,7 +1137,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -1149,7 +1149,7 @@
 						<IfNot>Mark of Nurgle</IfNot>
 					</Dependencies>
 					<AddToWard>5</AddToWard>
-					<SpecialRule>+1 on attempts to cast spell</SpecialRule>
+					<Rule>+1 on attempts to cast spell</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -1190,17 +1190,17 @@
 				<HandWeapon>
 					<Name>Pestilent Potions</Name>
 					<PoisonAttack/>
-					<SpecialRule>Any unit joined gains the Regenerate ability, though Wounds are only regenerated on the roll of a 5+ rather than the usual 4+</SpecialRule>
-					<SpecialRule>Any unit joined gains the Poisoned Attacks ability</SpecialRule>
+					<Rule>Any unit joined gains the Regenerate ability, though Wounds are only regenerated on the roll of a 5+ rather than the usual 4+</Rule>
+					<Rule>Any unit joined gains the Poisoned Attacks ability</Rule>
 				</HandWeapon>			
 				<Armour>
 					<Name>Mark of Nurgle</Name>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
-					<SpecialRule>When making a pursuit move, Festus and any unit he is with will only pursue 1D6" as they begin to bind their captives; enemy units caught by Festus or his unit are worth double victory points</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
+					<Rule>When making a pursuit move, Festus and any unit he is with will only pursue 1D6" as they begin to bind their captives; enemy units caught by Festus or his unit are worth double victory points</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -1228,11 +1228,11 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
-					<SpecialRule>Trolls count as Core choices</SpecialRule>
-					<SpecialRule>Trolls, Ogres, Dragon Ogres, Warhounds, and monsters in the same army as Throgg may use his Leadership as if he were the army General and, if they are within 12" of him, may re-roll failed Break tests</SpecialRule>
-					<SpecialRule>Instead of attacking normally, can inflict D6 Strength 5 hits with no armour saves allowed, this attack is magical; once per game, Throgg can use his vomit as a breath weapon that inflicts S5 hits with no armour saves allowed</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
+					<Rule>Trolls count as Core choices</Rule>
+					<Rule>Trolls, Ogres, Dragon Ogres, Warhounds, and monsters in the same army as Throgg may use his Leadership as if he were the army General and, if they are within 12" of him, may re-roll failed Break tests</Rule>
+					<Rule>Instead of attacking normally, can inflict D6 Strength 5 hits with no armour saves allowed, this attack is magical; once per game, Throgg can use his vomit as a breath weapon that inflicts S5 hits with no armour saves allowed</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -1258,7 +1258,7 @@
 			<Equipments>
 				<HandWeapon>
 					<Name>Seafang</Name>
-					<SpecialRule>Wulfrik and a single unit of Marauders may choose not to deploy as normal but to enter play from any table edge, exactly as if he and his unit had pursued an enemy off that edge in the previous turn: if this option is chosen, roll to see when Wulfrik and his unit enter play</SpecialRule>
+					<Rule>Wulfrik and a single unit of Marauders may choose not to deploy as normal but to enter play from any table edge, exactly as if he and his unit had pursued an enemy off that edge in the previous turn: if this option is chosen, roll to see when Wulfrik and his unit enter play</Rule>
 				</HandWeapon>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -1273,10 +1273,10 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
-					<SpecialRule>May force an enemy character to automatically accept his challenge, provided the chosen character could legally accept</SpecialRule>
-					<SpecialRule>Must nominate a single enemy model at the beginning of the game: when allocating his attacks towards the nominated model, gains +2 Strength and may re-roll all rolls to hit</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
+					<Rule>May force an enemy character to automatically accept his challenge, provided the chosen character could legally accept</Rule>
+					<Rule>Must nominate a single enemy model at the beginning of the game: when allocating his attacks towards the nominated model, gains +2 Strength and may re-roll all rolls to hit</Rule>
 				</Special>
 			</Equipments>
 		</Hero>
@@ -1314,8 +1314,8 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1334,7 +1334,7 @@
 						<IfNot>Mark of Tzeentch</IfNot>
 						<IfNot>Mark of Slaanesh</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -1345,7 +1345,7 @@
 						<IfNot>Mark of Nurgle</IfNot>
 					</Dependencies>
 					<AddToWard>6</AddToWard>
-					<SpecialRule>+1 on attempts to cast spell</SpecialRule>
+					<Rule>+1 on attempts to cast spell</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Slaanesh</Name>
@@ -1431,8 +1431,8 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Eye of the Gods</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Eye of the Gods</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1507,7 +1507,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -1582,7 +1582,7 @@
 				<Option>
 					<Name>Battle Standard Bearer</Name>
 					<Type>Option</Type>
-					<SpecialRule>BSB</SpecialRule>
+					<Rule>BSB</Rule>
 					<OnlyOneInArmy/>
 					<Points>25</Points>
 				</Option>
@@ -1651,9 +1651,9 @@
 					<AddToArmour>3</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Breath Weapon</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Breath Weapon</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1680,9 +1680,9 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Uncontrollable</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Fly</Rule>
+					<Rule>Uncontrollable</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1728,7 +1728,7 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fast Cavalry</SpecialRule>
+					<Rule>Fast Cavalry</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1775,8 +1775,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Magic Resistance(1)</SpecialRule>
-					<SpecialRule>Breath Behemoth</SpecialRule>
+					<Rule>Magic Resistance(1)</Rule>
+					<Rule>Breath Behemoth</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1801,8 +1801,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Fly</SpecialRule>
-					<SpecialRule>Flaming Attacks</SpecialRule>
+					<Rule>Fly</Rule>
+					<Rule>Flaming Attacks</Rule>
 				</Special>
 			</Equipments>
 		</Mount>
@@ -1851,7 +1851,7 @@
 					<AddToArmour>4</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1875,7 +1875,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -1972,7 +1972,7 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -1996,7 +1996,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2110,7 +2110,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2187,9 +2187,9 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Fast Cavalry</SpecialRule>
-					<SpecialRule>Horselords</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Fast Cavalry</Rule>
+					<Rule>Horselords</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -2213,7 +2213,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2322,8 +2322,8 @@
 					<AddToArmour>4</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Chosen of the Dark Gods</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Chosen of the Dark Gods</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -2347,7 +2347,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2452,8 +2452,8 @@
 					<AddToArmour>5</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Berserk Rage</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Berserk Rage</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
@@ -2478,8 +2478,8 @@
 			</Profile>
 			<Equipments>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Chariot</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Chariot</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -2503,7 +2503,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2559,7 +2559,7 @@
 					<NativeArmour/>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -2583,7 +2583,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2679,8 +2679,8 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Storm Rage</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Storm Rage</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -2734,8 +2734,8 @@
 					<Name>Hand weapon</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Troll Vomit</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Troll Vomit</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
@@ -2775,7 +2775,7 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -2799,7 +2799,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2875,8 +2875,8 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Lurching Horror</SpecialRule>
-					<SpecialRule>Flailing Appendages</SpecialRule>
+					<Rule>Lurching Horror</Rule>
+					<Rule>Flailing Appendages</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -2901,7 +2901,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -2949,8 +2949,8 @@
 			</Profile>
 			<Equipments>
 				<Special>
-					<SpecialRule>Hero's Fate</SpecialRule>
-					<SpecialRule>Chaos Spawn</SpecialRule>
+					<Rule>Hero's Fate</Rule>
+					<Rule>Chaos Spawn</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Brass Collar of Khorne</Name>
@@ -2977,8 +2977,8 @@
 			</Profile>
 			<Equipments>
 				<Special>
-					<SpecialRule>The Will of Chaos</SpecialRule>
-					<SpecialRule>Giver of Glory</SpecialRule>
+					<Rule>The Will of Chaos</Rule>
+					<Rule>Giver of Glory</Rule>
 				</Special>
 				<HandWeapon>
 					<Name>Hand weapon</Name>
@@ -3005,7 +3005,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
@@ -3056,10 +3056,10 @@
 			</SpecialRules>
 			<Equipments>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Rampage</SpecialRule>
-					<SpecialRule>Doomfire</SpecialRule>
-					<SpecialRule>Bound Daemon</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Rampage</Rule>
+					<Rule>Doomfire</Rule>
+					<Rule>Bound Daemon</Rule>
 				</Special>
 			</Equipments>
 		</Unit>
@@ -3095,9 +3095,9 @@
 					<AddToArmour>6</AddToArmour>
 				</Armour>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Immune to all lightning-based attacks</SpecialRule>
-					<SpecialRule>If Dracon Ogres Shaggoth are targeted by a lightning-based attack, they become Frenzy</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Immune to all lightning-based attacks</Rule>
+					<Rule>If Dracon Ogres Shaggoth are targeted by a lightning-based attack, they become Frenzy</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -3153,10 +3153,10 @@
 					<Name>Big rock, club or dead animal</Name>
 				</HandWeapon>
 				<Special>
-					<SpecialRule>Large target</SpecialRule>
-					<SpecialRule>Longshanks</SpecialRule>
-					<SpecialRule>Fall Over</SpecialRule>
-					<SpecialRule>Giant Special Attacks</SpecialRule>
+					<Rule>Large target</Rule>
+					<Rule>Longshanks</Rule>
+					<Rule>Fall Over</Rule>
+					<Rule>Giant Special Attacks</Rule>
 				</Special>
 			</Equipments>
 			<Options>
@@ -3181,7 +3181,7 @@
 						<IfNot>Mark of Slaanesh</IfNot>
 						<IfNot>Mark of Khorne</IfNot>
 					</Dependencies>
-					<SpecialRule>-1 to hit shooting and -1 WS in close combat</SpecialRule>
+					<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 				</Option>
 				<Option>
 					<Name>Mark of Tzeentch</Name>
