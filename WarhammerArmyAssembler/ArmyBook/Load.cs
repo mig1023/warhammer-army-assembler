@@ -189,7 +189,10 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Chariot = IntParse(xmlUnit["Chariot"]),
             };
 
-            if (BoolParse(xmlUnit["SeparateModel"]))
+            int min = IntParse(xmlUnit["Min"]);
+            int max = IntParse(xmlUnit["Max"]);
+
+            if ((min == 0) && (max == 0))
             {
                 newUnit.Size = 1;
                 newUnit.MinSize = 1;
@@ -197,9 +200,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
             else
             {
-                newUnit.Size = IntParse(xmlUnit["Min"]);
-                newUnit.MinSize = IntParse(xmlUnit["Min"]);
-                newUnit.MaxSize = IntParse(xmlUnit["Max"]);
+                newUnit.Size = min;
+                newUnit.MinSize = min;
+                newUnit.MaxSize = max;
             }
 
             newUnit.Movement = ProfileParse(mainParam["Movement"]);
