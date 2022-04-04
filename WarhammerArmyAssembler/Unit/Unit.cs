@@ -118,7 +118,7 @@ namespace WarhammerArmyAssembler
         public List<string> SlotOf { get; set; }
         public bool NoCoreSlot { get; set; }
 
-        public int MagicItems { get; set; }
+        public int MagicItemsPoints { get; set; }
         public int MagicItemCount { get; set; }
         public MagicItemsTypes MagicItemsType { get; set; }
         public int MagicPowers { get; set; }
@@ -205,7 +205,7 @@ namespace WarhammerArmyAssembler
 
         public int GetUnitMagicPoints()
         {
-            int unitAllMagicPoints = MagicItems;
+            int unitAllMagicPoints = MagicItemsPoints;
 
             if (MagicItemCount > 0)
                 return MagicItemCount;
@@ -342,7 +342,7 @@ namespace WarhammerArmyAssembler
 
                 NoCoreSlot = this.NoCoreSlot,
 
-                MagicItems = this.MagicItems,
+                MagicItemsPoints = this.MagicItemsPoints,
                 MagicItemCount = this.MagicItemCount,
                 MagicItemsType = this.MagicItemsType,
                 MagicPowers = this.MagicPowers,
@@ -1174,7 +1174,7 @@ namespace WarhammerArmyAssembler
 
             double alreadyRealised = Options.Where(x => x.MagicItemsPoints && x.Realised).Sum(x => x.Points) + (postCheck ? 0 : option.Points);
 
-            if (option.MagicItemsPoints && !option.Realised && (alreadyRealised > MagicItems))
+            if (option.MagicItemsPoints && !option.Realised && (alreadyRealised > MagicItemsPoints))
                 return false;
 
             return true;

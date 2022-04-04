@@ -396,7 +396,7 @@ namespace WarhammerArmyAssembler
             if ((Type == OptionType.Powers) && (unit.GetMagicPowersCount() > unit.MagicPowersCountAlreadyUsed()))
                 return true;
 
-            if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItems, unit.MagicItemCount))
+            if (TypeAndPointsSatisfy(unit.MagicItemsType, unit.MagicItemsPoints, unit.MagicItemCount))
                 return true;
 
             foreach (Option option in unit.Options.Where(x => x.IsActual()))

@@ -255,7 +255,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.NoArmour = BoolParse(additionalParam["NoArmour"]);
                 newUnit.NoWard = BoolParse(additionalParam["NoWard"]);
                 newUnit.ArmourPiercing = IntParse(additionalParam["ArmourPiercing"]);
-                newUnit.MagicItems = IntParse(additionalParam["MagicItems"]);
+                newUnit.MagicItemsPoints = IntParse(additionalParam["MagicItemsPoints"]);
                 newUnit.MagicItemCount = IntParse(additionalParam["MagicItemCount"]);
                 newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
                 newUnit.MagicPowers = IntParse(additionalParam["MagicPowers"]);
