@@ -255,9 +255,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.NoArmour = BoolParse(additionalParam["NoArmour"]);
                 newUnit.NoWard = BoolParse(additionalParam["NoWard"]);
                 newUnit.ArmourPiercing = IntParse(additionalParam["ArmourPiercing"]);
-                newUnit.MagicItemsPoints = IntParse(additionalParam["MagicItemsPoints"]);
-                newUnit.MagicItemCount = IntParse(additionalParam["MagicItemCount"]);
-                newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItemsType"]);
                 newUnit.MagicPowers = IntParse(additionalParam["MagicPowers"]);
                 newUnit.MagicPowersCount = IntParse(additionalParam["MagicPowersCount"]);
                 newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
@@ -287,6 +284,13 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.WardForLastWound = IntParse(additionalParam["WardForLastWound"]);
                 newUnit.FirstWoundDiscount = BoolParse(additionalParam["FirstWoundDiscount"]);
 
+                if (additionalParam["MagicItems"] != null)
+                {
+                    newUnit.MagicItemsPoints = IntParse(additionalParam["MagicItems"].Attributes["Points"]);
+                    newUnit.MagicItemCount = IntParse(additionalParam["MagicItems"].Attributes["Count"]);
+                    newUnit.MagicItemsType = MagicItemsTypeParse(additionalParam["MagicItems"].Attributes["Type"]);
+                }
+
                 newUnit.ParamTests = ParamParse(additionalParam);
 
                 newUnit.SlotOf = SlotsParse(additionalParam);
@@ -311,135 +315,146 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newUnit;
         }
 
-        public static Option LoadOption(int id, XmlNode xmlNode, string artefactGroup = null) => new Option
+        public static Option LoadOption(int id, XmlNode xmlNode, string artefactGroup = null)
         {
-            ID = id,
-            IDView = id.ToString(),
+            Option newOption = new Option
+            {
+                ID = id,
+                IDView = id.ToString(),
 
-            Name = StringParse(xmlNode["Name"]),
-            Description = StringParse(xmlNode["Description"]),
-            Type = OptionTypeParse(xmlNode["Type"]),
-            OnlyFor = OnlyForParse(xmlNode["OnlyFor"]),
-            ServiceDependencies = AllStringParse(xmlNode["Dependencies"], "If"),
-            ServiceInverseDependencies = AllStringParse(xmlNode["Dependencies"], "IfNot"),
-            OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]),
-            OnlyOneForSuchUnits = BoolParse(xmlNode["OnlyOneForSuchUnits"]),
-            OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]),
-            Realised = BoolParse(xmlNode["RealisedByDefault"]),
-            Multiple = BoolParse(xmlNode["Multiple"]),
-            Virtue = BoolParse(xmlNode["Virtue"]),
-            Honours = BoolParse(xmlNode["Honours"]),
+                Name = StringParse(xmlNode["Name"]),
+                Description = StringParse(xmlNode["Description"]),
+                Type = OptionTypeParse(xmlNode["Type"]),
+                OnlyFor = OnlyForParse(xmlNode["OnlyFor"]),
+                ServiceDependencies = AllStringParse(xmlNode["Dependencies"], "If"),
+                ServiceInverseDependencies = AllStringParse(xmlNode["Dependencies"], "IfNot"),
+                OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]),
+                OnlyOneForSuchUnits = BoolParse(xmlNode["OnlyOneForSuchUnits"]),
+                OnlyForGroup = StringParse(xmlNode["OnlyForGroup"]),
+                Realised = BoolParse(xmlNode["RealisedByDefault"]),
+                Multiple = BoolParse(xmlNode["Multiple"]),
+                Virtue = BoolParse(xmlNode["Virtue"]),
+                Honours = BoolParse(xmlNode["Honours"]),
 
-            Countable = CountableParse(xmlNode),
+                Countable = CountableParse(xmlNode),
 
-            SpecialRuleDescription = AllStringParse(xmlNode, "Rule"),
+                SpecialRuleDescription = AllStringParse(xmlNode, "Rule"),
 
-            NativeArmour = BoolParse(xmlNode["NativeArmour"]),
-            Group = StringParse(xmlNode["Group"]),
-            AutoHit = BoolParse(xmlNode["AutoHit"]),
-            AutoWound = BoolParse(xmlNode["AutoWound"]),
-            AutoDeath = BoolParse(xmlNode["AutoDeath"]),
-            HitFirst = BoolParse(xmlNode["HitFirst"]),
-            HitLast = BoolParse(xmlNode["HitLast"]),
-            KillingBlow = BoolParse(xmlNode["KillingBlow"]),
-            ExtendedKillingBlow = IntParse(xmlNode["ExtendedKillingBlow"]),
-            HeroicKillingBlow = BoolParse(xmlNode["HeroicKillingBlow"]),
-            PoisonAttack = BoolParse(xmlNode["PoisonAttack"]),
-            MultiWounds = StringParse(xmlNode["MultiWounds"]),
-            NoArmour = BoolParse(xmlNode["NoArmour"]),
-            NoWard = BoolParse(xmlNode["NoWard"]),
-            NoMultiWounds = BoolParse(xmlNode["NoMultiWounds"]),
-            NoKillingBlow = BoolParse(xmlNode["NoKillingBlow"]),
-            ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]),
+                NativeArmour = BoolParse(xmlNode["NativeArmour"]),
+                Group = StringParse(xmlNode["Group"]),
+                AutoHit = BoolParse(xmlNode["AutoHit"]),
+                AutoWound = BoolParse(xmlNode["AutoWound"]),
+                AutoDeath = BoolParse(xmlNode["AutoDeath"]),
+                HitFirst = BoolParse(xmlNode["HitFirst"]),
+                HitLast = BoolParse(xmlNode["HitLast"]),
+                KillingBlow = BoolParse(xmlNode["KillingBlow"]),
+                ExtendedKillingBlow = IntParse(xmlNode["ExtendedKillingBlow"]),
+                HeroicKillingBlow = BoolParse(xmlNode["HeroicKillingBlow"]),
+                PoisonAttack = BoolParse(xmlNode["PoisonAttack"]),
+                MultiWounds = StringParse(xmlNode["MultiWounds"]),
+                NoArmour = BoolParse(xmlNode["NoArmour"]),
+                NoWard = BoolParse(xmlNode["NoWard"]),
+                NoMultiWounds = BoolParse(xmlNode["NoMultiWounds"]),
+                NoKillingBlow = BoolParse(xmlNode["NoKillingBlow"]),
+                ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]),
 
-            Regeneration = BoolParse(xmlNode["Regeneration"]),
-            ExtendedRegeneration = IntParse(xmlNode["ExtendedRegeneration"]),
-            ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]),
-            ImmuneToPoison = BoolParse(xmlNode["ImmuneToPoison"]),
-            Stubborn = BoolParse(xmlNode["Stubborn"]),
-            Hate = BoolParse(xmlNode["Hate"]),
-            Fear = BoolParse(xmlNode["Fear"]),
-            Terror = BoolParse(xmlNode["Terror"]),
-            Frenzy = BoolParse(xmlNode["Frenzy"]),
-            BloodFrenzy = BoolParse(xmlNode["BloodFrenzy"]),
-            Unbreakable = BoolParse(xmlNode["Unbreakable"]),
-            ColdBlooded = BoolParse(xmlNode["ColdBlooded"]),
-            Reroll = StringParse(xmlNode["Reroll"]),
-            Stupidity = BoolParse(xmlNode["Stupidity"]),
-            Undead = BoolParse(xmlNode["Undead"]),
-            StrengthInNumbers = BoolParse(xmlNode["StrengthInNumbers"]),
-            ImpactHit = StringParse(xmlNode["ImpactHit"]),
-            ImpactHitByFront = (BoolParse(xmlNode["ImpactHitByFront"]) ? 1 : 0),
-            SteamTank = BoolParse(xmlNode["SteamTank"]),
-            Lance = BoolParse(xmlNode["Lance"]),
-            Flail = BoolParse(xmlNode["Flail"]),
-            ChargeStrengthBonus = IntParse(xmlNode["ChargeStrengthBonus"]),
-            Resolute = BoolParse(xmlNode["Resolute"]),
-            PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]),
-            MurderousProwess = BoolParse(xmlNode["MurderousProwess"]),
-            AddToCloseCombat = StringParse(xmlNode["AddToCloseCombat"]),
-            Bloodroar = BoolParse(xmlNode["Bloodroar"]),
-            AddToHit = IntParse(xmlNode["AddToHit"]),
-            SubOpponentToHit = IntParse(xmlNode["SubOpponentToHit"]),
-            AddToWound = IntParse(xmlNode["AddToWound"]),
-            SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]),
-            HitOn = IntParse(xmlNode["HitOn"]),
-            OpponentHitOn = IntParse(xmlNode["OpponentHitOn"]),
-            WoundOn = IntParse(xmlNode["WoundOn"]),
-            Runic = IntParse(xmlNode["Runic"]),
-            MasterRunic = BoolParse(xmlNode["MasterRunic"]),
-            RandomGroup = StringParse(xmlNode["RandomGroup"]),
-            TypeUnitIncrese = BoolParse(xmlNode["TypeUnitIncrese"]),
-            WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]),
-            WardForLastWound = IntParse(xmlNode["WardForLastWound"]),
-            FirstWoundDiscount = BoolParse(xmlNode["FirstWoundDiscount"]),
-            NotALeader = BoolParse(xmlNode["NotALeader"]),
+                Regeneration = BoolParse(xmlNode["Regeneration"]),
+                ExtendedRegeneration = IntParse(xmlNode["ExtendedRegeneration"]),
+                ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]),
+                ImmuneToPoison = BoolParse(xmlNode["ImmuneToPoison"]),
+                Stubborn = BoolParse(xmlNode["Stubborn"]),
+                Hate = BoolParse(xmlNode["Hate"]),
+                Fear = BoolParse(xmlNode["Fear"]),
+                Terror = BoolParse(xmlNode["Terror"]),
+                Frenzy = BoolParse(xmlNode["Frenzy"]),
+                BloodFrenzy = BoolParse(xmlNode["BloodFrenzy"]),
+                Unbreakable = BoolParse(xmlNode["Unbreakable"]),
+                ColdBlooded = BoolParse(xmlNode["ColdBlooded"]),
+                Reroll = StringParse(xmlNode["Reroll"]),
+                Stupidity = BoolParse(xmlNode["Stupidity"]),
+                Undead = BoolParse(xmlNode["Undead"]),
+                StrengthInNumbers = BoolParse(xmlNode["StrengthInNumbers"]),
+                ImpactHit = StringParse(xmlNode["ImpactHit"]),
+                ImpactHitByFront = (BoolParse(xmlNode["ImpactHitByFront"]) ? 1 : 0),
+                SteamTank = BoolParse(xmlNode["SteamTank"]),
+                Lance = BoolParse(xmlNode["Lance"]),
+                Flail = BoolParse(xmlNode["Flail"]),
+                ChargeStrengthBonus = IntParse(xmlNode["ChargeStrengthBonus"]),
+                Resolute = BoolParse(xmlNode["Resolute"]),
+                PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]),
+                MurderousProwess = BoolParse(xmlNode["MurderousProwess"]),
+                AddToCloseCombat = StringParse(xmlNode["AddToCloseCombat"]),
+                Bloodroar = BoolParse(xmlNode["Bloodroar"]),
+                AddToHit = IntParse(xmlNode["AddToHit"]),
+                SubOpponentToHit = IntParse(xmlNode["SubOpponentToHit"]),
+                AddToWound = IntParse(xmlNode["AddToWound"]),
+                SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]),
+                HitOn = IntParse(xmlNode["HitOn"]),
+                OpponentHitOn = IntParse(xmlNode["OpponentHitOn"]),
+                WoundOn = IntParse(xmlNode["WoundOn"]),
+                Runic = IntParse(xmlNode["Runic"]),
+                MasterRunic = BoolParse(xmlNode["MasterRunic"]),
+                RandomGroup = StringParse(xmlNode["RandomGroup"]),
+                TypeUnitIncrese = BoolParse(xmlNode["TypeUnitIncrese"]),
+                WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]),
+                WardForLastWound = IntParse(xmlNode["WardForLastWound"]),
+                FirstWoundDiscount = BoolParse(xmlNode["FirstWoundDiscount"]),
+                NotALeader = BoolParse(xmlNode["NotALeader"]),
 
-            ParamTests = ParamParse(xmlNode),
+                ParamTests = ParamParse(xmlNode),
 
-            Points = DoubleParse(xmlNode["Points"]),
-            PerModel = BoolParse(xmlNode["PerModel"]),
-            VirtueOriginalPoints = DoubleParse(xmlNode["Points"]),
-            MagicItemsPoints = BoolParse(xmlNode["MagicItemsPoints"]),
+                Points = DoubleParse(xmlNode["Points"]),
+                PerModel = BoolParse(xmlNode["PerModel"]),
+                VirtueOriginalPoints = DoubleParse(xmlNode["Points"]),
+                MagicItemsPoints = BoolParse(xmlNode["MagicItemsPoints"]),
 
-            AddToMovement = IntParse(xmlNode["AddToMovement"]),
-            AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]),
-            AddToBallisticSkill = IntParse(xmlNode["AddToBallisticSkill"]),
-            AddToStrength = IntParse(xmlNode["AddToStrength"]),
-            AddToToughness = IntParse(xmlNode["AddToToughness"]),
-            AddToWounds = IntParse(xmlNode["AddToWounds"]),
-            AddToInitiative = IntParse(xmlNode["AddToInitiative"]),
-            AddToAttacks = IntParse(xmlNode["AddToAttacks"]),
-            AddToLeadership = IntParse(xmlNode["AddToLeadership"]),
-            AddToArmour = IntParse(xmlNode["AddToArmour"]),
-            AddToWard = IntParse(xmlNode["AddToWard"]),
-            AddToCast = IntParse(xmlNode["AddToCast"]),
-            AddToDispell = IntParse(xmlNode["AddToDispell"]),
-            AddToWizard = IntParse(xmlNode["AddToWizard"]),
-            AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]),
+                AddToMovement = IntParse(xmlNode["AddToMovement"]),
+                AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]),
+                AddToBallisticSkill = IntParse(xmlNode["AddToBallisticSkill"]),
+                AddToStrength = IntParse(xmlNode["AddToStrength"]),
+                AddToToughness = IntParse(xmlNode["AddToToughness"]),
+                AddToWounds = IntParse(xmlNode["AddToWounds"]),
+                AddToInitiative = IntParse(xmlNode["AddToInitiative"]),
+                AddToAttacks = IntParse(xmlNode["AddToAttacks"]),
+                AddToLeadership = IntParse(xmlNode["AddToLeadership"]),
+                AddToArmour = IntParse(xmlNode["AddToArmour"]),
+                AddToWard = IntParse(xmlNode["AddToWard"]),
+                AddToCast = IntParse(xmlNode["AddToCast"]),
+                AddToDispell = IntParse(xmlNode["AddToDispell"]),
+                AddToWizard = IntParse(xmlNode["AddToWizard"]),
+                AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]),
 
-            MovementTo = IntParse(xmlNode["MovementTo"]),
-            WeaponSkillTo = IntParse(xmlNode["WeaponSkillTo"]),
-            BallisticSkillTo = IntParse(xmlNode["BallisticSkillTo"]),
-            StrengthTo = IntParse(xmlNode["StrengthTo"]),
-            ToughnessTo = IntParse(xmlNode["ToughnessTo"]),
-            WoundsTo = IntParse(xmlNode["WoundsTo"]),
-            InitiativeTo = IntParse(xmlNode["InitiativeTo"]),
-            AttacksTo = IntParse(xmlNode["AttacksTo"]),
-            LeadershipTo = IntParse(xmlNode["LeadershipTo"]),
-            ArmourTo = IntParse(xmlNode["ArmourTo"]),
-            WizardTo = IntParse(xmlNode["WizardTo"]),
+                MovementTo = IntParse(xmlNode["MovementTo"]),
+                WeaponSkillTo = IntParse(xmlNode["WeaponSkillTo"]),
+                BallisticSkillTo = IntParse(xmlNode["BallisticSkillTo"]),
+                StrengthTo = IntParse(xmlNode["StrengthTo"]),
+                ToughnessTo = IntParse(xmlNode["ToughnessTo"]),
+                WoundsTo = IntParse(xmlNode["WoundsTo"]),
+                InitiativeTo = IntParse(xmlNode["InitiativeTo"]),
+                AttacksTo = IntParse(xmlNode["AttacksTo"]),
+                LeadershipTo = IntParse(xmlNode["LeadershipTo"]),
+                ArmourTo = IntParse(xmlNode["ArmourTo"]),
+                WizardTo = IntParse(xmlNode["WizardTo"]),
 
-            MagicItems = IntParse(xmlNode["MagicItems"]),
-            MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]),
+                MagicItems = IntParse(xmlNode["MagicItems"]),
+                MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]),
 
-            FullCommand = BoolParse(xmlNode["FullCommand"]),
-            PersonifiedCommander = BoolParse(xmlNode["PersonifiedCommander"]),
+                FullCommand = BoolParse(xmlNode["FullCommand"]),
+                PersonifiedCommander = BoolParse(xmlNode["PersonifiedCommander"]),
 
-            Mount = BoolParse(xmlNode["Mount"]),
+                Mount = BoolParse(xmlNode["Mount"]),
 
-            ArtefactGroup = artefactGroup ?? String.Empty,
-            TooltipColor = (SolidColorBrush)Data.TooltipColor,
-        };
+                ArtefactGroup = artefactGroup ?? String.Empty,
+                TooltipColor = (SolidColorBrush)Data.TooltipColor,
+            };
+
+            if (xmlNode["MagicItems"] != null)
+            {
+                newOption.MagicItems = IntParse(xmlNode["MagicItems"].Attributes["Points"]);
+                newOption.MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItems"].Attributes["Type"]);
+            }
+
+            return newOption;
+        }
     }
 }
