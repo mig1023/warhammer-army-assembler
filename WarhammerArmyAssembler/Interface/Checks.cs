@@ -36,6 +36,10 @@ namespace WarhammerArmyAssembler.Interface
                 double alreadyUsedPoints = (addOption ? unit.MagicPowersPointsAlreadyUsed() + newArtefactPoints : 0);
                 enoughUnitPoints = alreadyUsedPoints < unit.GetUnitMagicPowersPoints();
             }
+            else if (unit.MagicItemCount > 0)
+            {
+                enoughUnitPoints = unit.MagicItemSlotsAlreadyUsed() < unit.MagicItemCount;
+            }
             else
             {
                 double alreadyUsedPoints = (addOption ? unit.MagicPointsAlreadyUsed() : 0);

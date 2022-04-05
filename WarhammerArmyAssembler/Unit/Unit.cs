@@ -242,6 +242,8 @@ namespace WarhammerArmyAssembler
         public double GetMagicPowersCount() => MagicPowersCount;
 
         public double MagicPowersCountAlreadyUsed() => Options.Where(x => x.IsPowers()).Count();
+            
+        public double MagicItemSlotsAlreadyUsed() => Options.Where(x => x.IsMagicItem() && (x.Points > 0)).Count();
 
         public int GetUnitWizard()
         {
