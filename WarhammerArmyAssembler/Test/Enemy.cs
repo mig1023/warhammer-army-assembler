@@ -244,16 +244,12 @@ namespace WarhammerArmyAssembler
             new Enemy("Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4/ImmuneToPsychology"),
             new Enemy("Drycha/Wood Elves/5/7/4/5/4/3/8/5/8///Terror")
             {
-                Terror = true,
                 Reroll = "ToHit",
             },
-            new Enemy("Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4")
+            new Enemy("Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4/Fear, HitFirst")
             {
-                Fear = true,
-                HitFirst = true,
                 MultiWounds = "D3",
             },
-
             new Enemy("Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5")
             {
                 Fear = true,
