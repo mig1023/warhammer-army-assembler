@@ -131,17 +131,10 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
         {
-            new Enemy("20/Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2")
-            {
-                StrengthInNumbers = true,
-            },
-
+            new Enemy("20/Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2///StrengthInNumbers"),
             new Enemy("20/Men-at-arms/Bretonnia/4/2/2/3/3/1/3/1/5/5"),
-
             new Enemy("20/Empire swordmens/The Empire/4/3/3/3/3/1/3/1/7/6"),
-
             new Enemy("20/Demonettes/Daemons/6/5/4/3/3/1/5/2/7"),
-
             new Enemy("5/Ogres/Ogre Kingdoms/6/3/2/4/4/3/2/3/7/6")
             {
                 Fear = true,
