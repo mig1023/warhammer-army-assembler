@@ -114,13 +114,7 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("2/Apparentice//5/4/4/3/3/2/3/2/8///NoKillingBlow")
             },
-            new Enemy("Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4")
-            {
-                Frenzy = true,
-                Terror = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4//Frenzy, Terror, LargeBase"),
             new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4")
             {
                 Terror = true,
