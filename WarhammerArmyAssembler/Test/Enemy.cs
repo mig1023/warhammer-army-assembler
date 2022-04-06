@@ -172,16 +172,11 @@ namespace WarhammerArmyAssembler
             new Enemy("16/Grave Guard/Vampire Counts/4/3/3/4/4/1/3/2/8/4//KillingBlow, Undead"),
             new Enemy("20/Greatswords/The Empire/4/4/3/5/3/1/3/2/8/5//HitLast, Stubborn"),
             new Enemy("3/Beasts of Nurgle/Daemons/6/3/0/4/5/4/2/D6+1/7///PoisonAttack, Regeneration"),
-            new Enemy("16/Black Orcs/Orcs&Goblins/4/4/3/5/4/1/2/1/8/5/")
-            {
-                HitLast = true
-            },
-
+            new Enemy("16/Black Orcs/Orcs&Goblins/4/4/3/5/4/1/2/1/8/5//HitLast"),
             new Enemy("8/Orc Boar Boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/3")
             {
                 Mount = new Enemy("8/Boar//7/3/0/3/4/1/3/1/3"),
             },
-
             new Enemy("8/Cold One Knights/Dark Elves/5/5/4/4/3/1/6/1/9/2")
             {
                 Hate = true,
