@@ -122,12 +122,7 @@ namespace WarhammerArmyAssembler
             },
             new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3//Terror, LargeBase"),
             new Enemy("Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10///Terror, Stubborn, LargeBase, Giant"),
-            new Enemy("Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4")
-            {
-                Terror = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4//Terror, LargeBase"),
             new Enemy("Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10")
             {
                 Regeneration = true,
