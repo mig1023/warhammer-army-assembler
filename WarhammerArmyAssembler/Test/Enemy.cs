@@ -162,11 +162,7 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("8/Pegasus//8/3/0/4/4/1/4/2/7"),
             },
-            new Enemy("5/Chaos Ogre/Beastmen/6/3/2/4/4/3/2/3/7/6")
-            {
-                Fear = true,
-            },
-
+            new Enemy("5/Chaos Ogre/Beastmen/6/3/2/4/4/3/2/3/7/6//Fear"),
             new Enemy("4/Mournfang Cavalry/Ogre Kingdoms/6/3/2/4/4/3/2/3/7/6")
             {
                 Fear = true,
