@@ -263,14 +263,11 @@ namespace WarhammerArmyAssembler
                 Reroll = "ToWound",
                 Mount = new Enemy("Spite//7/3/0/4/4/1/2/2/4/5//Fear"),
             },
-
-            new Enemy("Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4")
+            new Enemy("Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4/HitFirst")
             {
-                HitFirst = true,
                 ArmourPiercing = 2,
                 MultiWounds = "D3",
             },
-
             new Enemy("Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5")
             {
                 Unbreakable = true,
