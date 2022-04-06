@@ -108,13 +108,7 @@ namespace WarhammerArmyAssembler
             new Enemy("Tomb Scorpion/Tomb Kings/7/4/0/5/5/3/3/4/8///Undead, KillingBlow, PoisonAttack, LargeBase"),
             new Enemy("Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8///Terror, LargeBase"),
             new Enemy("Griffon/The Empire/6/5/0/5/5/4/5/4/7///Terror, LargeBase"),
-            new Enemy("Manticore/Chaos/6/5/0/5/5/4/5/4/5")
-            {
-                Terror = true,
-                KillingBlow = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Manticore/Chaos/6/5/0/5/5/4/5/4/5///Terror, KillingBlow, LargeBase"),
             new Enemy("Varghulf/Vampire/8/5/0/5/5/4/2/5/4")
             {
                 Terror = true,
