@@ -198,11 +198,7 @@ namespace WarhammerArmyAssembler
                 Mount = new Enemy("3/Rot Fly//1/3/3/5/5/3/2/3/7"),
             },
             new Enemy("24/Flagellants/The Empire/4/2/2/3/3/1/3/1/10///Unbreakable, Frenzy, Flail"),
-            new Enemy("16/Waywathers/Wood Elves/5/4/5/3/3/1/5/2/8")
-            {
-                HitFirst = true,
-            },
-
+            new Enemy("16/Waywathers/Wood Elves/5/4/5/3/3/1/5/2/8///HitFirst"),
             new Enemy("Doomwheel/Skaven/2D6/3/3/6/6/5/4/2D6/7/4")
             {
                 ImmuneToPsychology = true,
