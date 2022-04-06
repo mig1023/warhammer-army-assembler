@@ -193,12 +193,10 @@ namespace WarhammerArmyAssembler
         private static List<Enemy> EnemiesRareUnits = new List<Enemy>
         {
             new Enemy("Snotling Pump Wagon/Orcs&Goblins/6/2/0/2/4/3/3/5/4/6//Unbreakable"),
-            new Enemy("3/Plague Drones/Daemons/4/3/3/4/4/1/2/1/7")
+            new Enemy("3/Plague Drones/Daemons/4/3/3/4/4/1/2/1/7///PoisonAttack")
             {
-                PoisonAttack = true,
                 Mount = new Enemy("3/Rot Fly//1/3/3/5/5/3/2/3/7"),
             },
-
             new Enemy("24/Flagellants/The Empire/4/2/2/3/3/1/3/1/10")
             {
                 Unbreakable = true,
