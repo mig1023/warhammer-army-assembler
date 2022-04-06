@@ -241,11 +241,7 @@ namespace WarhammerArmyAssembler
             {
                 Reroll = "ToHit;OpponentToWound",
             },
-            new Enemy("Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4")
-            {
-                ImmuneToPsychology = true,
-            },
-
+            new Enemy("Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4/ImmuneToPsychology")
             new Enemy("Drycha/Wood Elves/5/7/4/5/4/3/8/5/8")
             {
                 Terror = true,
