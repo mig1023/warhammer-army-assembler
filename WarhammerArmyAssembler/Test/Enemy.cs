@@ -257,11 +257,7 @@ namespace WarhammerArmyAssembler
             },
             new Enemy("Bragg The Gutsman/Ogre Kingdoms/6/5/3/6/5/4/3/4/8/6//Fear, HeroicKillingBlow, LargeBase"),
             new Enemy("Throgg/Chaos/6/5/2/6/5/4/2/5/8///Fear, Regeneration, LargeBase"),
-            new Enemy("Karanak/Daemons/8/7/0/5/5/3/6/4/8/6")
-            {
-                Hate = true,
-            },
-
+            new Enemy("Karanak/Daemons/8/7/0/5/5/3/6/4/8/6//Hate"),
             new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3")
             {
                 Reroll = "ToWound",
