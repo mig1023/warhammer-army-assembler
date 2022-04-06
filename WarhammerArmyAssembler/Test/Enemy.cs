@@ -250,15 +250,11 @@ namespace WarhammerArmyAssembler
             {
                 MultiWounds = "D3",
             },
-            new Enemy("Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5")
+            new Enemy("Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5/Fear, HitFirst, Undead")
             {
-                Fear = true,
-                HitFirst = true,
                 Reroll = "ToHit",
                 MultiWounds = "2",
-                Undead = true,
             },
-
             new Enemy("Bragg The Gutsman/Ogre Kingdoms/6/5/3/6/5/4/3/4/8/6")
             {
                 Fear = true,
