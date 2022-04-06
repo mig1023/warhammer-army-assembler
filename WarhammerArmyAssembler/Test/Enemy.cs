@@ -140,11 +140,7 @@ namespace WarhammerArmyAssembler
             new Enemy("20/Skeleton Warriors/Tomb Kings/4/2/2/3/3/1/2/1/5/5//Undead"),
             new Enemy("20/Lothern Sea Guard/High Elves/5/4/4/3/3/1/5/1/8/6//HitFirst"),
             new Enemy("20/Crypt Ghouls/Vampire Counts/4/3/0/3/4/1/3/2/5///Undead, PoisonAttack"),
-            new Enemy("20/Back Ark Corsairs/Dark Elves/5/4/4/3/3/1/5/2/8/5")
-            {
-                Hate = true,
-            },
-
+            new Enemy("20/Back Ark Corsairs/Dark Elves/5/4/4/3/3/1/5/2/8/5//Hate"),
             new Enemy("20/Dryads/Wood Elves/5/4/0/4/4/1/6/2/8")
             {
                 Fear = true,
