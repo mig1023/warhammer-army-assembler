@@ -177,14 +177,10 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("8/Boar//7/3/0/3/4/1/3/1/3"),
             },
-            new Enemy("8/Cold One Knights/Dark Elves/5/5/4/4/3/1/6/1/9/2")
+            new Enemy("8/Cold One Knights/Dark Elves/5/5/4/4/3/1/6/1/9/2//Hate, Fear, Lance")
             {
-                Hate = true,
-                Fear = true,
-                Lance = true,
                 Mount = new Enemy("8/Cold One//7/3/0/4/4/1/2/1/3"),
             },
-
             new Enemy("8/Cold One Cavalry/Lizardmen/4/4/0/4/4/1/2/2/8/2")
             {
                 ColdBlooded = true,
