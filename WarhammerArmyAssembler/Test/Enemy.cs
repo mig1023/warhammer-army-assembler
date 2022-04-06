@@ -147,11 +147,7 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5"),
             },
-            new Enemy("20/Longbeards/Dwarfs/3/5/3/4/4/1/2/1/9/4/")
-            {
-                ImmuneToPsychology = true
-            },
-
+            new Enemy("20/Longbeards/Dwarfs/3/5/3/4/4/1/2/1/9/4//ImmuneToPsychology"),
             new Enemy("20/Temple Guard/Lizardmen/4/4/0/5/4/1/2/2/8/4")
             {
                 ColdBlooded = true
