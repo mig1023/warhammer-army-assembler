@@ -268,10 +268,8 @@ namespace WarhammerArmyAssembler
                 ArmourPiercing = 2,
                 MultiWounds = "D3",
             },
-            new Enemy("Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5")
+            new Enemy("Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5/Unbreakable, HitFirst")
             {
-                Unbreakable = true,
-                HitFirst = true,
                 Reroll = "ToHit",
             },
         };
