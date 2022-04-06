@@ -168,12 +168,7 @@ namespace WarhammerArmyAssembler
                 Mount = new Enemy("4/Mournfang//8/3/0/5/4/3/2/4/5/5"),
             },
             new Enemy("20/Plague Monks/Skaven/5/3/3/3/4/1/3/3/5///Frenzy, StrengthInNumbers"),
-            new Enemy("16/Tomb Guard/Tomb Kings/4/3/3/4/4/1/3/1/8/5")
-            {
-                KillingBlow = true,
-                Undead = true,
-            },
-
+            new Enemy("16/Tomb Guard/Tomb Kings/4/3/3/4/4/1/3/1/8/5//KillingBlow, Undead"),
             new Enemy("16/Grave Guard/Vampire Counts/4/3/3/4/4/1/3/2/8/4")
             {
                 KillingBlow = true,
