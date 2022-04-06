@@ -34,8 +34,15 @@ namespace WarhammerArmyAssembler
             this.Initiative = NewProfile(profile[9]);
             this.Attacks = NewProfile(profile[10]);
             this.Leadership = NewProfile(profile[11]);
+
             this.Armour = SetProfile(profile, 12);
             this.Ward = SetProfile(profile, 13);
+
+            if ((profile.Count < 15) || String.IsNullOrEmpty(profile[14]))
+                return;
+
+            foreach (string specialRule in profile[14].Split(','))
+                this.GetType().GetProperty(specialRule.Trim()).SetValue(this, true);
         }
 
         private Profile NewProfile(string line) => ArmyBook.Parsers.ProfileParse(line);
@@ -95,14 +102,7 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters = new List<Enemy>
         {
-            new Enemy("Troll/Orcs&Goblins/6/3/1/5/4/3/1/3/4")
-            {
-                Fear = true,
-                Regeneration = true,
-                Stupidity = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Troll/Orcs&Goblins/6/3/1/5/4/3/1/3/4///Fear, Regeneration, Stupidity, LargeBase"),
             new Enemy("Gyrobomber/Dwarfs/1/4/3/4/5/3/2/2/9/4")
             {
                 LargeBase = true,
