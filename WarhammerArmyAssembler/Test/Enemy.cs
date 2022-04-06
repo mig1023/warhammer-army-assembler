@@ -187,10 +187,7 @@ namespace WarhammerArmyAssembler
             },
             new Enemy("20/Bloodletters/Chaos/4/5/0/5/3/1/4/2/8/6//Frenzy"),
             new Enemy("16/Sword Masters/High Elves/5/6/4/5/3/1/5/2/8/5//HitFirst"),
-            new Enemy("16/Hammerers/Dwarfs/3/5/3/6/4/1/2/1/9/5")
-            {
-                Stubborn = true,
-            },
+            new Enemy("16/Hammerers/Dwarfs/3/5/3/6/4/1/2/1/9/5//Stubborn"),
         };
 
         private static List<Enemy> EnemiesRareUnits = new List<Enemy>
