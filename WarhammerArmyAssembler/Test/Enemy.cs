@@ -115,26 +115,10 @@ namespace WarhammerArmyAssembler
                 Mount = new Enemy("2/Apparentice//5/4/4/3/3/2/3/2/8///NoKillingBlow")
             },
             new Enemy("Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4//Frenzy, Terror, LargeBase"),
-            new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4")
+            new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4//Terror, ImmuneToPsychology, LargeBase"),
+            new Enemy("Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4//LargeBase, ColdBlooded, Terror, Stubborn, ImmuneToPsychology")
             {
-                Terror = true,
-                ImmuneToPsychology = true,
-                LargeBase = true,
-            },
-
-            new Enemy("Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4")
-            {
-                LargeBase = true,
-                ColdBlooded = true,
-                Terror = true,
-                Stubborn = true,
-                ImmuneToPsychology = true,
-                Mount = new Enemy("5/Skink Crew//6/2/3/3/2/4/4/4/5/4")
-                {
-                    ColdBlooded = true,
-                    PoisonAttack = true,
-                    NoKillingBlow = true,
-                }
+                Mount = new Enemy("5/Skink Crew//6/2/3/3/2/4/4/4/5/4//ColdBlooded, PoisonAttack, NoKillingBlow")
             },
 
             new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3")
