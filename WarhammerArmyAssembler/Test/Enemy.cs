@@ -120,13 +120,7 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("5/Skink Crew//6/2/3/3/2/4/4/4/5/4//ColdBlooded, PoisonAttack, NoKillingBlow")
             },
-
-            new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3")
-            {
-                Terror = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3//Terror, LargeBase"),
             new Enemy("Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10")
             {
                 Terror = true,
