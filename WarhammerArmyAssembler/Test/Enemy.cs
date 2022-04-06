@@ -202,11 +202,7 @@ namespace WarhammerArmyAssembler
             new Enemy("Doomwheel/Skaven/2D6/3/3/6/6/5/4/2D6/7/4//ImmuneToPsychology, LargeBase, Terror"),
             new Enemy("16/White Lions/High Elves/5/5/4/6/3/1/5/1/8/6//HitFirst"),
             new Enemy("16/Black Guard/Dark Elves/5/5/4/4/3/1/6/1/9/5//Hate, Stubborn"),
-            new Enemy("16/Troll Slayers/Dwarfs/3/4/3/5/4/1/2/1/10")
-            {
-                Unbreakable = true,
-            },
-
+            new Enemy("16/Troll Slayers/Dwarfs/3/4/3/5/4/1/2/1/10///Unbreakable"),
             new Enemy("12/Grail Knights/Bretonnia/4/5/3/4/3/1/5/2/8/2/5")
             {
                 Lance = true,
