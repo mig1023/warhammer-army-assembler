@@ -220,15 +220,10 @@ namespace WarhammerArmyAssembler
         private static List<Enemy> EnemiesHeroes = new List<Enemy>
         {
             new Enemy("Tretch Craventail/Skaven/5/5/4/4/4/2/6/4/6/5/4"),
-
-            new Enemy("The Herald Nekaph/Tomb Kings/4/5/3/4/4/2/3/3/8//5")
+            new Enemy("The Herald Nekaph/Tomb Kings/4/5/3/4/4/2/3/3/8//5/KillingBlow, Undead, Flail")
             {
-                KillingBlow = true,
-                Undead = true,
-                Flail = true,
                 MultiWounds = "2",
             },
-
             new Enemy("Gitilla/Orcs&Goblins/4/4/4/4/4/2/4/3/7/3")
             {
                 Mount = new Enemy("Ulda the Great Wolf//9/3/0/3/3/1/3/2/3"),
