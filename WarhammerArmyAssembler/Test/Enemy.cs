@@ -124,14 +124,7 @@ namespace WarhammerArmyAssembler
             new Enemy("Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10///Terror, Stubborn, LargeBase, Giant"),
             new Enemy("Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4//Terror, LargeBase"),
             new Enemy("Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10///Regeneration, Terror, Stubborn, LargeBase, HellPitAbomination"),
-            new Enemy("Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3")
-            {
-                Terror = true,
-                LargeBase = true,
-                HeroicKillingBlow = true,
-                Undead = true,
-            },
-
+            new Enemy("Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3//Terror, LargeBase, HeroicKillingBlow, Undead"),
             new Enemy("Star Dragon/High Elves/6/7/0/7/6/7/2/6/9/3")
             {
                 Terror = true,
