@@ -104,13 +104,7 @@ namespace WarhammerArmyAssembler
         {
             new Enemy("Troll/Orcs&Goblins/6/3/1/5/4/3/1/3/4///Fear, Regeneration, Stupidity, LargeBase"),
             new Enemy("Gyrobomber/Dwarfs/1/4/3/4/5/3/2/2/9/4//LargeBase"),
-            new Enemy("Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7")
-            {
-                Fear = true,
-                ColdBlooded = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7///Fear, ColdBlooded, LargeBase"),
             new Enemy("Tomb Scorpion/Tomb Kings/7/4/0/5/5/3/3/4/8")
             {
                 Undead = true,
