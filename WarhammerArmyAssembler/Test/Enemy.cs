@@ -107,12 +107,7 @@ namespace WarhammerArmyAssembler
             new Enemy("Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7///Fear, ColdBlooded, LargeBase"),
             new Enemy("Tomb Scorpion/Tomb Kings/7/4/0/5/5/3/3/4/8///Undead, KillingBlow, PoisonAttack, LargeBase"),
             new Enemy("Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8///Terror, LargeBase"),
-            new Enemy("Griffon/The Empire/6/5/0/5/5/4/5/4/7")
-            {
-                Terror = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Griffon/The Empire/6/5/0/5/5/4/5/4/7///Terror, LargeBase"),
             new Enemy("Manticore/Chaos/6/5/0/5/5/4/5/4/5")
             {
                 Terror = true,
