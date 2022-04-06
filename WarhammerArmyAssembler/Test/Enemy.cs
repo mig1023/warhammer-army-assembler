@@ -211,9 +211,8 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("6/Nightmare//8/3/0/4/4/1/2/1/3"),
             },
-            new Enemy("6/Skullcrushers/Chaos/4/5/3/4/4/1/5/2/8/1")
+            new Enemy("6/Skullcrushers/Chaos/4/5/3/4/4/1/5/2/8/1//Fear")
             {
-                Fear = true,
                 Mount = new Enemy("6/Juggernaut//7/5/0/5/4/3/2/3/7"),
             },
         };
