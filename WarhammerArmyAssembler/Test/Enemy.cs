@@ -207,14 +207,10 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("12/Warhorse//8/3/0/3/3/1/3/1/5"),
             },
-            new Enemy("6/Blood Knights/Vampire Counts/4/5/3/5/4/1/4/2/7/2/5")
+            new Enemy("6/Blood Knights/Vampire Counts/4/5/3/5/4/1/4/2/7/2/5/Frenzy, Undead, Lance")
             {
-                Frenzy = true,
-                Undead = true,
-                Lance = true,
                 Mount = new Enemy("6/Nightmare//8/3/0/4/4/1/2/1/3"),
             },
-
             new Enemy("6/Skullcrushers/Chaos/4/5/3/4/4/1/5/2/8/1")
             {
                 Fear = true,
