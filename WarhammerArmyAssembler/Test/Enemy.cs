@@ -109,15 +109,7 @@ namespace WarhammerArmyAssembler
             new Enemy("Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8///Terror, LargeBase"),
             new Enemy("Griffon/The Empire/6/5/0/5/5/4/5/4/7///Terror, LargeBase"),
             new Enemy("Manticore/Chaos/6/5/0/5/5/4/5/4/5///Terror, KillingBlow, LargeBase"),
-            new Enemy("Varghulf/Vampire/8/5/0/5/5/4/2/5/4")
-            {
-                Terror = true,
-                Undead = true,
-                Regeneration = true,
-                Hate = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Varghulf/Vampire/8/5/0/5/5/4/2/5/4///Terror, Undead, Regeneration, Hate, LargeBase"),
             new Enemy("War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4")
             {
                 Terror = true,
