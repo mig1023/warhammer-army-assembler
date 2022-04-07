@@ -162,10 +162,7 @@ namespace WarhammerArmyAssembler
             new Enemy("16/Black Orcs/Orcs&Goblins/4/4/3/5/4/1/2/1/8/5//HitLast"),
             new Enemy("8/Orc Boar Boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/3 + 8/Boar//7/3/0/3/4/1/3/1/3"),
             new Enemy("8/Cold One Knights/Dark Elves/5/5/4/4/3/1/6/1/9/2//Hate, Fear, Lance + 8/Cold One//7/3/0/4/4/1/2/1/3"),
-            new Enemy("8/Cold One Cavalry/Lizardmen/4/4/0/4/4/1/2/2/8/2//ColdBlooded, Fear")
-            {
-                Mount = new Enemy("8/Cold One//7/3/0/4/4/1/2/1/3"),
-            },
+            new Enemy("8/Cold One Cavalry/Lizardmen/4/4/0/4/4/1/2/2/8/2//ColdBlooded, Fear + 8/Cold One//7/3/0/4/4/1/2/1/3"),
             new Enemy("20/Bloodletters/Chaos/4/5/0/5/3/1/4/2/8/6//Frenzy"),
             new Enemy("16/Sword Masters/High Elves/5/6/4/5/3/1/5/2/8/5//HitFirst"),
             new Enemy("16/Hammerers/Dwarfs/3/5/3/6/4/1/2/1/9/5//Stubborn"),
