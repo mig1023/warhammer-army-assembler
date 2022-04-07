@@ -318,13 +318,10 @@ namespace WarhammerArmyAssembler
                 Mount = new Enemy("2/Hound of Orion//9/4/0/4/4/1/4/1/6///Frenzy, Unbreakable")
             },
             new Enemy("Durthu/Wood Elves/5/7/7/6/6/6/2/6/10/3/6/LargeBase, Frenzy, Terror, Hate, Stubborn"),
-            new Enemy("Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5")
+            new Enemy("Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5/ImmuneToPsychology, Terror")
             {
-                ImmuneToPsychology = true,
-                Terror = true,
                 MultiWounds = "D3",
             },
-
             new Enemy("Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2")
             {
                 NoArmour = true,
