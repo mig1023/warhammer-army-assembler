@@ -339,14 +339,7 @@ namespace WarhammerArmyAssembler
                 Mount = new Enemy("Dorghar//8/4/0/5/5/3/3/3/9/4//LargeBase")
             },
             new Enemy("Grimgor Ironhide/Orcs&Goblins/4/8/1/7/5/3/5/7/9/1/5/Hate, HitFirst, ImmuneToPsychology"),
-            new Enemy("Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9")
-            {
-                Terror = true,
-                PoisonAttack = true,
-                Hate = true,
-                LargeBase = true,
-            },
-
+            new Enemy("Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9///Terror, PoisonAttack, Hate, LargeBase"),
             new Enemy("Bloodthister/Chaos/6/10/0/7/6/7/10/7/9/4/5")
             {
                 Terror = true,
