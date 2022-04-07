@@ -248,10 +248,7 @@ namespace WarhammerArmyAssembler
             {
                 MultiWounds = "D3",
             },
-            new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4/Undead + Zombie Dragon//6/3/0/6/6/6/1/4/4/5//Terror, Undead")
-            {
-                Undead = true,
-            },
+            new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4/Undead + Zombie Dragon//6/3/0/6/6/6/1/4/4/5//Terror, Undead"),
             new Enemy("Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4/AutoWound, NoArmour + Deathclaw//6/6/0/5/5/4/5/4/8///Terror")
             {
                 MultiWounds = "D3",
@@ -266,10 +263,7 @@ namespace WarhammerArmyAssembler
             {
                 MultiWounds = "D3",
             },
-            new Enemy("Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2/NoArmour")
-            {
-                Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3//Terror, LargeBase")
-            },
+            new Enemy("Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2/NoArmour + Seraphon//6/6/0/6/6/6/4/5/8/3//Terror, LargeBase"),
             new Enemy("Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5/ColdBlooded")
             {
                 MultiWounds = "2",
@@ -278,10 +272,7 @@ namespace WarhammerArmyAssembler
                     MultiWounds = "D3",
                 }
             },
-            new Enemy("Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3/ImmuneToPsychology, NoArmour, Terror")
-            {
-                Mount = new Enemy("Dorghar//8/4/0/5/5/3/3/3/9/4//LargeBase")
-            },
+            new Enemy("Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3/ImmuneToPsychology, NoArmour, Terror + Dorghar//8/4/0/5/5/3/3/3/9/4//LargeBase"),
             new Enemy("Grimgor Ironhide/Orcs&Goblins/4/8/1/7/5/3/5/7/9/1/5/Hate, HitFirst, ImmuneToPsychology"),
             new Enemy("Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9///Terror, PoisonAttack, Hate, LargeBase"),
             new Enemy("Bloodthister/Chaos/6/10/0/7/6/7/10/7/9/4/5/Terror, KillingBlow, LargeBase"),
