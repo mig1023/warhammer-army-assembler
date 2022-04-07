@@ -191,10 +191,7 @@ namespace WarhammerArmyAssembler
                 MultiWounds = "2",
             },
             new Enemy("Gitilla/Orcs&Goblins/4/4/4/4/4/2/4/3/7/3 + Ulda the Great Wolf//9/3/0/3/3/1/3/2/3"),
-            new Enemy("Moonclaw/Beastmen/5/3/3/4/4/2/3/3/7//5")
-            {
-                Mount = new Enemy("Umbralok//7/3/0/4/4/1/2/3/6"),
-            },
+            new Enemy("Moonclaw/Beastmen/5/3/3/4/4/2/3/3/7//5 + Umbralok//7/3/0/4/4/1/2/3/6"),
             new Enemy("Ludwig Schwarzhelm/The Empire/4/6/5/4/4/2/5/3/8/2//KillingBlow")
             {
                 Reroll = "ToWound",
