@@ -291,13 +291,10 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5"),
             },
-            new Enemy("Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4")
+            new Enemy("Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4/Fear, ImmuneToPsychology")
             {
-                Fear = true,
-                ImmuneToPsychology = true,
                 MultiWounds = "D3",
             },
-
             new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4")
             {
                 Undead = true,
