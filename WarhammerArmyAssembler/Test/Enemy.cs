@@ -248,10 +248,9 @@ namespace WarhammerArmyAssembler
             {
                 MultiWounds = "D3",
             },
-            new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4/Undead")
+            new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4/Undead + Zombie Dragon//6/3/0/6/6/6/1/4/4/5//Terror, Undead")
             {
                 Undead = true,
-                Mount = new Enemy("Zombie Dragon//6/3/0/6/6/6/1/4/4/5//Terror, Undead"),
             },
             new Enemy("Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4/AutoWound, NoArmour")
             {
