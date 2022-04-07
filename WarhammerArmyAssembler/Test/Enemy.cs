@@ -305,13 +305,10 @@ namespace WarhammerArmyAssembler
                 MultiWounds = "D3",
                 Mount = new Enemy("Deathclaw//6/6/0/5/5/4/5/4/8///Terror"),
             },
-            new Enemy("Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4")
+            new Enemy("Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4/HitFirst, Regeneration")
             {
-                HitFirst = true,
-                Regeneration = true,
                 Mount = new Enemy("Malhandir//10/4/0/4/3/1/5/2/7"),
             },
-
             new Enemy("Torgrim Grudgebearer/Dwarfs/3/7/6/4/5/7/4/4/10/2/4")
             {
                 HitFirst = true,
