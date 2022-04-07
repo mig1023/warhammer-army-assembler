@@ -178,10 +178,7 @@ namespace WarhammerArmyAssembler
             new Enemy("16/White Lions/High Elves/5/5/4/6/3/1/5/1/8/6//HitFirst"),
             new Enemy("16/Black Guard/Dark Elves/5/5/4/4/3/1/6/1/9/5//Hate, Stubborn"),
             new Enemy("16/Troll Slayers/Dwarfs/3/4/3/5/4/1/2/1/10///Unbreakable"),
-            new Enemy("12/Grail Knights/Bretonnia/4/5/3/4/3/1/5/2/8/2/5/Lance")
-            {
-                Mount = new Enemy("12/Warhorse//8/3/0/3/3/1/3/1/5"),
-            },
+            new Enemy("12/Grail Knights/Bretonnia/4/5/3/4/3/1/5/2/8/2/5/Lance + 12/Warhorse//8/3/0/3/3/1/3/1/5"),
             new Enemy("6/Blood Knights/Vampire Counts/4/5/3/5/4/1/4/2/7/2/5/Frenzy, Undead, Lance")
             {
                 Mount = new Enemy("6/Nightmare//8/3/0/4/4/1/2/1/3"),
