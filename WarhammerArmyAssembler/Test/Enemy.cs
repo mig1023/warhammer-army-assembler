@@ -234,10 +234,7 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
         {
-            new Enemy("Green Knight/Bretonnia/6/7/3/6/4/3/6/4/9//4/ImmuneToPsychology, Terror, Undead")
-            {
-                Mount = new Enemy("Shadow Steed//8/4/0/4/3/1/4/1/5/5"),
-            },
+            new Enemy("Green Knight/Bretonnia/6/7/3/6/4/3/6/4/9//4/ImmuneToPsychology, Terror, Undead + Shadow Steed//8/4/0/4/3/1/4/1/5/5"),
             new Enemy("Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2"),
             new Enemy("Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10///HitFirst, Undead, PoisonAttack"),
             new Enemy("Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5/Lance, ImmuneToPsychology, Regeneration")
