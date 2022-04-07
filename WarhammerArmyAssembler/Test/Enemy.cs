@@ -313,19 +313,10 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("Thronebearers//3/5/3/4/0/1/3/4/0"),
             },
-            new Enemy("Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5")
+            new Enemy("Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5/HitFirst, Frenzy, Terror, Unbreakable")
             {
-                HitFirst = true,
-                Frenzy = true,
-                Terror = true,
-                Unbreakable = true,
-                Mount = new Enemy("2/Hound of Orion//9/4/0/4/4/1/4/1/6")
-                {
-                    Frenzy = true,
-                    Unbreakable = true,
-                }
+                Mount = new Enemy("2/Hound of Orion//9/4/0/4/4/1/4/1/6///Frenzy, Unbreakable")
             },
-
             new Enemy("Durthu/Wood Elves/5/7/7/6/6/6/2/6/10/3/6")
             {
                 LargeBase = true,
