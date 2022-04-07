@@ -259,10 +259,8 @@ namespace WarhammerArmyAssembler
             new Enemy("Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4/HitFirst, Regeneration + Malhandir//10/4/0/4/3/1/5/2/7"),
             new Enemy("Torgrim Grudgebearer/Dwarfs/3/7/6/4/5/7/4/4/10/2/4/HitFirst, ImmuneToPsychology, Stubborn " +
                 "+ Thronebearers//3/5/3/4/0/1/3/4/0"),
-            new Enemy("Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5/HitFirst, Frenzy, Terror, Unbreakable")
-            {
-                Mount = new Enemy("2/Hound of Orion//9/4/0/4/4/1/4/1/6///Frenzy, Unbreakable")
-            },
+            new Enemy("Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5/HitFirst, Frenzy, Terror, Unbreakable " +
+                "+ 2/Hound of Orion//9/4/0/4/4/1/4/1/6///Frenzy, Unbreakable"),
             new Enemy("Durthu/Wood Elves/5/7/7/6/6/6/2/6/10/3/6/LargeBase, Frenzy, Terror, Hate, Stubborn"),
             new Enemy("Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5/ImmuneToPsychology, Terror")
             {
