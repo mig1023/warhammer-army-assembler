@@ -252,10 +252,9 @@ namespace WarhammerArmyAssembler
             {
                 Undead = true,
             },
-            new Enemy("Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4/AutoWound, NoArmour")
+            new Enemy("Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4/AutoWound, NoArmour + Deathclaw//6/6/0/5/5/4/5/4/8///Terror")
             {
                 MultiWounds = "D3",
-                Mount = new Enemy("Deathclaw//6/6/0/5/5/4/5/4/8///Terror"),
             },
             new Enemy("Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4/HitFirst, Regeneration")
             {
