@@ -242,10 +242,8 @@ namespace WarhammerArmyAssembler
             {
                 Reroll = "ToHit;ToWound",
             },
-            new Enemy("Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2//Stubborn, ImmuneToPsychology, AutoWound, NoArmour")
-            {
-                Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5"),
-            },
+            new Enemy("Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2//Stubborn, ImmuneToPsychology, AutoWound, NoArmour " +
+                "+ Warhorse//8/3/0/3/3/1/3/1/5"),
             new Enemy("Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4/Fear, ImmuneToPsychology")
             {
                 MultiWounds = "D3",
