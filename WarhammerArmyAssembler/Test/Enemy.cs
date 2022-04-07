@@ -322,16 +322,10 @@ namespace WarhammerArmyAssembler
             {
                 MultiWounds = "D3",
             },
-            new Enemy("Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2")
+            new Enemy("Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2/NoArmour")
             {
-                NoArmour = true,
-                Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3")
-                {
-                    Terror = true,
-                    LargeBase = true,
-                }
+                Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3//Terror, LargeBase")
             },
-
             new Enemy("Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5")
             {
                 ColdBlooded = true,
