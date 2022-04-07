@@ -153,10 +153,7 @@ namespace WarhammerArmyAssembler
             new Enemy("5/Tree Kin/Wood Elves/5/4/4/4/5/3/3/3/8/4//Fear"),
             new Enemy("8/Pegasus Knights/Bretonnia/4/4/3/3/4/2/4/1/8/3//Lance + 8/Pegasus//8/3/0/4/4/1/4/2/7"),
             new Enemy("5/Chaos Ogre/Beastmen/6/3/2/4/4/3/2/3/7/6//Fear"),
-            new Enemy("4/Mournfang Cavalry/Ogre Kingdoms/6/3/2/4/4/3/2/3/7/6//Fear, LargeBase")
-            {
-                Mount = new Enemy("4/Mournfang//8/3/0/5/4/3/2/4/5/5"),
-            },
+            new Enemy("4/Mournfang Cavalry/Ogre Kingdoms/6/3/2/4/4/3/2/3/7/6//Fear, LargeBase + 4/Mournfang//8/3/0/5/4/3/2/4/5/5"),
             new Enemy("20/Plague Monks/Skaven/5/3/3/3/4/1/3/3/5///Frenzy, StrengthInNumbers"),
             new Enemy("16/Tomb Guard/Tomb Kings/4/3/3/4/4/1/3/1/8/5//KillingBlow, Undead"),
             new Enemy("16/Grave Guard/Vampire Counts/4/3/3/4/4/1/3/2/8/4//KillingBlow, Undead"),
