@@ -145,10 +145,7 @@ namespace WarhammerArmyAssembler
             new Enemy("8/Knights of the Realms/Bretonnia/4/4/3/3/3/1/3/1/8/2//Lance + 8/Warhorse//8/3/0/3/3/1/3/1/5"),
             new Enemy("20/Longbeards/Dwarfs/3/5/3/4/4/1/2/1/9/4//ImmuneToPsychology"),
             new Enemy("20/Temple Guard/Lizardmen/4/4/0/5/4/1/2/2/8/4//ColdBlooded"),
-            new Enemy("8/Chosen Knights/Chaos/4/5/3/5/4/1/5/2/8/1")
-            {
-                Mount = new Enemy("8/Chaos Steed//8/3/0/4/3/1/3/1/5"),
-            },
+            new Enemy("8/Chosen Knights/Chaos/4/5/3/5/4/1/5/2/8/1 + 8/Chaos Steed//8/3/0/4/3/1/3/1/5"),
         };
 
         private static List<Enemy> EnemiesSpecialUnits = new List<Enemy>
