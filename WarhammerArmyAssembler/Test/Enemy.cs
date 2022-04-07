@@ -117,10 +117,8 @@ namespace WarhammerArmyAssembler
             new Enemy("War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4//Terror, LargeBase + 2/Apparentice//5/4/4/3/3/2/3/2/8///NoKillingBlow"),
             new Enemy("Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4//Frenzy, Terror, LargeBase"),
             new Enemy("Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4//Terror, ImmuneToPsychology, LargeBase"),
-            new Enemy("Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4//LargeBase, ColdBlooded, Terror, Stubborn, ImmuneToPsychology")
-            {
-                Mount = new Enemy("5/Skink Crew//6/2/3/3/2/4/4/4/5/4//ColdBlooded, PoisonAttack, NoKillingBlow")
-            },
+            new Enemy("Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4//LargeBase, ColdBlooded, Terror, Stubborn, ImmuneToPsychology " +
+                "+ 5/Skink Crew//6/2/3/3/2/4/4/4/5/4//ColdBlooded, PoisonAttack, NoKillingBlow"),
             new Enemy("Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3//Terror, LargeBase"),
             new Enemy("Giant/Orcs&Goblins/6/3/3/6/5/6/3/0/10///Terror, Stubborn, LargeBase, Giant"),
             new Enemy("Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4//Terror, LargeBase"),
@@ -144,10 +142,7 @@ namespace WarhammerArmyAssembler
             new Enemy("20/Back Ark Corsairs/Dark Elves/5/4/4/3/3/1/5/2/8/5//Hate"),
             new Enemy("20/Dryads/Wood Elves/5/4/0/4/4/1/6/2/8///Fear"),
             new Enemy("20/Bestigor/Beastmen/5/4/3/6/4/1/3/1/7/5//HitLast"),
-            new Enemy("8/Knights of the Realms/Bretonnia/4/4/3/3/3/1/3/1/8/2//Lance")
-            {
-                Mount = new Enemy("8/Warhorse//8/3/0/3/3/1/3/1/5"),
-            },
+            new Enemy("8/Knights of the Realms/Bretonnia/4/4/3/3/3/1/3/1/8/2//Lance + 8/Warhorse//8/3/0/3/3/1/3/1/5"),
             new Enemy("20/Longbeards/Dwarfs/3/5/3/4/4/1/2/1/9/4//ImmuneToPsychology"),
             new Enemy("20/Temple Guard/Lizardmen/4/4/0/5/4/1/2/2/8/4//ColdBlooded"),
             new Enemy("8/Chosen Knights/Chaos/4/5/3/5/4/1/5/2/8/1")
