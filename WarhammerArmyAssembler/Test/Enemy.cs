@@ -326,20 +326,14 @@ namespace WarhammerArmyAssembler
             {
                 Mount = new Enemy("Seraphon//6/6/0/6/6/6/4/5/8/3//Terror, LargeBase")
             },
-            new Enemy("Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5")
+            new Enemy("Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5/ColdBlooded")
             {
-                ColdBlooded = true,
                 MultiWounds = "2",
-
-                Mount = new Enemy("Grymloq//7/3/0/7/5/5/2/5/5/4")
+                Mount = new Enemy("Grymloq//7/3/0/7/5/5/2/5/5/4//Terror, ColdBlooded, LargeBase")
                 {
-                    Terror = true,
-                    ColdBlooded = true,
                     MultiWounds = "D3",
-                    LargeBase = true,
                 }
             },
-
             new Enemy("Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3")
             {
                 ImmuneToPsychology = true,
