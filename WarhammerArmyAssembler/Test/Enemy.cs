@@ -282,18 +282,11 @@ namespace WarhammerArmyAssembler
             },
             new Enemy("Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2"),
             new Enemy("Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10///HitFirst, Undead, PoisonAttack"),
-            new Enemy("Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5")
+            new Enemy("Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5/Lance, ImmuneToPsychology, Regeneration")
             {
-                Lance = true,
-                ImmuneToPsychology = true,
-                Regeneration = true,
                 Reroll = "ToHit;ToWound",
-                Mount = new Enemy("Beaquis//8/5/0/5/5/4/6/4/9/5")
-                {
-                    Terror = true,
-                }
+                Mount = new Enemy("Beaquis//8/5/0/5/5/4/6/4/9/5//Terror"),
             },
-
             new Enemy("Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2")
             {
                 Stubborn = true,
