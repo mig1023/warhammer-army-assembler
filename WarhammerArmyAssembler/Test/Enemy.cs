@@ -334,17 +334,10 @@ namespace WarhammerArmyAssembler
                     MultiWounds = "D3",
                 }
             },
-            new Enemy("Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3")
+            new Enemy("Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3/ImmuneToPsychology, NoArmour, Terror")
             {
-                ImmuneToPsychology = true,
-                NoArmour = true,
-                Terror = true,
-                Mount = new Enemy("Dorghar//8/4/0/5/5/3/3/3/9/4")
-                {
-                    LargeBase = true,
-                }
+                Mount = new Enemy("Dorghar//8/4/0/5/5/3/3/3/9/4//LargeBase")
             },
-
             new Enemy("Grimgor Ironhide/Orcs&Goblins/4/8/1/7/5/3/5/7/9/1/5")
             {
                 Hate = true,
