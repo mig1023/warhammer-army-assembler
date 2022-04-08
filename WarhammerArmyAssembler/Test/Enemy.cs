@@ -64,11 +64,11 @@ namespace WarhammerArmyAssembler
 
         private bool SpecialProperty(string specialRule, ref Enemy enemy)
         {
-            if (specialRule == "MultiWounds2")
-                enemy.MultiWounds = "2";
+            if (specialRule.StartsWith("MultiWounds"))
+                enemy.MultiWounds = specialRule.Split(':')[1].Trim();
 
-            else if (specialRule == "MultiWoundsD3")
-                enemy.MultiWounds = "D3";
+            else if (specialRule.StartsWith("Reroll"))
+                enemy.Reroll = specialRule.Split(':')[1].Trim();
 
             else
                 return false;
@@ -203,42 +203,24 @@ namespace WarhammerArmyAssembler
         private static List<Enemy> EnemiesHeroes = new List<Enemy>
         {
             new Enemy("Tretch Craventail/Skaven/5/5/4/4/4/2/6/4/6/5/4"),
-            new Enemy("The Herald Nekaph/Tomb Kings/4/5/3/4/4/2/3/3/8//5/KillingBlow, Undead, Flail, MultiWounds2"),
+            new Enemy("The Herald Nekaph/Tomb Kings/4/5/3/4/4/2/3/3/8//5/KillingBlow, Undead, Flail, MultiWounds:2"),
             new Enemy("Gitilla/Orcs&Goblins/4/4/4/4/4/2/4/3/7/3 + Ulda the Great Wolf//9/3/0/3/3/1/3/2/3"),
             new Enemy("Moonclaw/Beastmen/5/3/3/4/4/2/3/3/7//5 + Umbralok//7/3/0/4/4/1/2/3/6"),
-            new Enemy("Ludwig Schwarzhelm/The Empire/4/6/5/4/4/2/5/3/8/2//KillingBlow + Warhorse//8/3/0/3/3/1/3/1/5")
-            {
-                Reroll = "ToWound",
-            },
-            new Enemy("Gor-Rok/Lizardmen/4/5/0/5/5/2/3/4/8/3//ColdBlooded, Stubborn, NoKillingBlow, NoMultiWounds")
-            {
-                Reroll = "ToHit;OpponentToWound",
-            },
+            new Enemy("Ludwig Schwarzhelm/The Empire/4/6/5/4/4/2/5/3/8/2//KillingBlow, Reroll:ToWound + Warhorse//8/3/0/3/3/1/3/1/5"),
+            new Enemy("Gor-Rok/Lizardmen/4/5/0/5/5/2/3/4/8/3//ColdBlooded, Stubborn, NoKillingBlow, NoMultiWounds, Reroll:ToHit;OpponentToWound"),
             new Enemy("Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4/ImmuneToPsychology"),
-            new Enemy("Drycha/Wood Elves/5/7/4/5/4/3/8/5/8///Terror")
-            {
-                Reroll = "ToHit",
-            },
-            new Enemy("Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4/Fear, HitFirst, MultiWoundsD3"),
-            new Enemy("Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5/Fear, HitFirst, Undead, MultiWounds2")
-            {
-                Reroll = "ToHit",
-            },
+            new Enemy("Drycha/Wood Elves/5/7/4/5/4/3/8/5/8///Terror, Reroll:ToHit"),
+            new Enemy("Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4/Fear, HitFirst, MultiWounds:D3"),
+            new Enemy("Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5/Fear, HitFirst, Undead, MultiWounds:2, Reroll:ToHit"),
             new Enemy("Bragg The Gutsman/Ogre Kingdoms/6/5/3/6/5/4/3/4/8/6//Fear, HeroicKillingBlow, LargeBase"),
             new Enemy("Throgg/Chaos/6/5/2/6/5/4/2/5/8///Fear, Regeneration, LargeBase"),
             new Enemy("Karanak/Daemons/8/7/0/5/5/3/6/4/8/6//Hate"),
-            new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3//NoArmour + Spite//7/3/0/4/4/1/2/2/4/5//Fear")
-            {
-                Reroll = "ToWound",
-            },
-            new Enemy("Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4/HitFirst, MultiWoundsD3")
+            new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3//NoArmour, Reroll:ToWound + Spite//7/3/0/4/4/1/2/2/4/5//Fear"),
+            new Enemy("Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4/HitFirst, MultiWounds:D3")
             {
                 ArmourPiercing = 2,
             },
-            new Enemy("Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5/Unbreakable, HitFirst")
-            {
-                Reroll = "ToHit",
-            },
+            new Enemy("Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5/Unbreakable, HitFirst, Reroll:ToHit"),
         };
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
@@ -246,26 +228,23 @@ namespace WarhammerArmyAssembler
             new Enemy("Green Knight/Bretonnia/6/7/3/6/4/3/6/4/9//4/ImmuneToPsychology, Terror, Undead + Shadow Steed//8/4/0/4/3/1/4/1/5/5"),
             new Enemy("Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2"),
             new Enemy("Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10///HitFirst, Undead, PoisonAttack"),
-            new Enemy("Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5/Lance, ImmuneToPsychology, Regeneration " +
-                "+ Beaquis//8/5/0/5/5/4/6/4/9/5//Terror")
-            {
-                Reroll = "ToHit;ToWound",
-            },
+            new Enemy("Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5/Lance, ImmuneToPsychology, Regeneration, Reroll:ToHit;ToWound " +
+                "+ Beaquis//8/5/0/5/5/4/6/4/9/5//Terror"),
             new Enemy("Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2//Stubborn, ImmuneToPsychology, AutoWound, NoArmour " +
                 "+ Warhorse//8/3/0/3/3/1/3/1/5"),
-            new Enemy("Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4/Fear, ImmuneToPsychology, MultiWoundsD3"),
+            new Enemy("Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4/Fear, ImmuneToPsychology, MultiWounds:D3"),
             new Enemy("Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4/Undead + Zombie Dragon//6/3/0/6/6/6/1/4/4/5//Terror, Undead"),
-            new Enemy("Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4/AutoWound, NoArmour + Deathclaw//6/6/0/5/5/4/5/4/8///Terror, MultiWoundsD3"),
+            new Enemy("Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4/AutoWound, NoArmour + Deathclaw//6/6/0/5/5/4/5/4/8///Terror, MultiWounds:D3"),
             new Enemy("Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4/HitFirst, Regeneration + Malhandir//10/4/0/4/3/1/5/2/7"),
             new Enemy("Torgrim Grudgebearer/Dwarfs/3/7/6/4/5/7/4/4/10/2/4/HitFirst, ImmuneToPsychology, Stubborn " +
                 "+ Thronebearers//3/5/3/4/0/1/3/4/0"),
             new Enemy("Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5/HitFirst, Frenzy, Terror, Unbreakable " +
                 "+ 2/Hound of Orion//9/4/0/4/4/1/4/1/6///Frenzy, Unbreakable"),
             new Enemy("Durthu/Wood Elves/5/7/7/6/6/6/2/6/10/3/6/LargeBase, Frenzy, Terror, Hate, Stubborn"),
-            new Enemy("Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5/ImmuneToPsychology, Terror, MultiWoundsD3"),
+            new Enemy("Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5/ImmuneToPsychology, Terror, MultiWounds:D3"),
             new Enemy("Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2/NoArmour + Seraphon//6/6/0/6/6/6/4/5/8/3//Terror, LargeBase"),
-            new Enemy("Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5/ColdBlooded, MultiWounds2 " +
-                "+ Grymloq//7/3/0/7/5/5/2/5/5/4//Terror, ColdBlooded, LargeBase, MultiWoundsD3"),
+            new Enemy("Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5/ColdBlooded, MultiWounds:2 " +
+                "+ Grymloq//7/3/0/7/5/5/2/5/5/4//Terror, ColdBlooded, LargeBase, MultiWounds:D3"),
             new Enemy("Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3/ImmuneToPsychology, NoArmour, Terror + Dorghar//8/4/0/5/5/3/3/3/9/4//LargeBase"),
             new Enemy("Grimgor Ironhide/Orcs&Goblins/4/8/1/7/5/3/5/7/9/1/5/Hate, HitFirst, ImmuneToPsychology"),
             new Enemy("Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9///Terror, PoisonAttack, Hate, LargeBase"),
