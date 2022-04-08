@@ -70,6 +70,9 @@ namespace WarhammerArmyAssembler
             else if (specialRule.StartsWith("Reroll"))
                 enemy.Reroll = specialRule.Split(':')[1].Trim();
 
+            else if (specialRule.StartsWith("ArmourPiercing"))
+                enemy.ArmourPiercing = int.Parse(specialRule.Split(':')[1]);
+
             else
                 return false;
 
@@ -216,10 +219,7 @@ namespace WarhammerArmyAssembler
             new Enemy("Throgg/Chaos/6/5/2/6/5/4/2/5/8///Fear, Regeneration, LargeBase"),
             new Enemy("Karanak/Daemons/8/7/0/5/5/3/6/4/8/6//Hate"),
             new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3//NoArmour, Reroll:ToWound + Spite//7/3/0/4/4/1/2/2/4/5//Fear"),
-            new Enemy("Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4/HitFirst, MultiWounds:D3")
-            {
-                ArmourPiercing = 2,
-            },
+            new Enemy("Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4/HitFirst, MultiWounds:D3, ArmourPiercing:2"),
             new Enemy("Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5/Unbreakable, HitFirst, Reroll:ToHit"),
         };
 
