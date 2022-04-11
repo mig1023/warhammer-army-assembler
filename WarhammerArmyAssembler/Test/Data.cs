@@ -45,11 +45,7 @@ namespace WarhammerArmyAssembler.Test
         public static void PrepareEnemy(string enemyName)
         {
             Data.enemy = Enemy.GetByName(enemyName).Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
-
-            if (enemy.Mount != null)
-                Data.enemyMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
-            else
-                Data.enemyMount = null;
+            Data.enemyMount = enemy.Mount?.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
         }
 
         public static void Console(Brush color, string line) => Interface.TestUnit.LineToConsole(line, color);

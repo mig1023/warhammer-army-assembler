@@ -62,10 +62,7 @@ namespace WarhammerArmyAssembler.Test
                     current += 1;
 
                     Unit currentEnemy = enemy.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
-                    Unit currentMount = null;
-
-                    if (currentEnemy.Mount != null)
-                        currentMount = enemy.Mount.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+                    Unit currentMount = enemy.Mount?.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
                     int enemyCount = Enemy.GetEnemiesCount();
 
@@ -177,12 +174,8 @@ namespace WarhammerArmyAssembler.Test
             Unit enemy = originalEnemy.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
 
             List<Unit> participants = new List<Unit>() { unit, enemy };
-
-            if (originalUnitMount != null)
-                unit.Mount = originalUnitMount.Clone().SetTestType(Unit.TestTypeTypes.Unit);
-
-            if (originalEnemyMount != null)
-                enemy.Mount = originalEnemyMount.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
+            unit.Mount = originalUnitMount?.Clone().SetTestType(Unit.TestTypeTypes.Unit);
+            enemy.Mount = originalEnemyMount?.Clone().SetTestType(Unit.TestTypeTypes.Enemy);
 
             Dictionary<Unit, List<Unit>> BreakTestOrder = new Dictionary<Unit, List<Unit>>
             {
@@ -510,7 +503,7 @@ namespace WarhammerArmyAssembler.Test
         private static Unit CheckTerror(Unit unit, Unit friend, Unit enemy, Unit enemyFriend)
         {
             bool friendTerrorOrFear = (friend != null ? (friend.Terror || friend.Fear) : false);
-            bool enemyFriendTerror = (enemyFriend != null ? enemyFriend.Terror : false);
+            bool enemyFriendTerror = enemyFriend?.Terror ?? false;
 
             if (unit.IsSimpleMount())
                 return unit;

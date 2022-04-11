@@ -195,7 +195,7 @@ namespace WarhammerArmyAssembler
                 Option change = Options.Where(x => (!x.IsOption() || (x.IsOption() && x.Realised)) &&
                     !String.IsNullOrEmpty(x.Group)).FirstOrDefault();
 
-                return (change != null ? change.Group : Group);
+                return change?.Group ?? Group;
             }
             else
                 return option.Group;
@@ -379,17 +379,12 @@ namespace WarhammerArmyAssembler
             newUnit.Attacks = this.Attacks.Clone();
             newUnit.Leadership = this.Leadership.Clone();
 
-            if (this.Armour != null)
-                newUnit.Armour = this.Armour.Clone();
-
-            if (this.Ward != null)
-                newUnit.Ward = this.Ward.Clone();
+            newUnit.Armour = this.Armour?.Clone();
+            newUnit.Ward = this.Ward?.Clone();
+            newUnit.Mount = this.Mount?.Clone();
 
             if (this.SlotOf != null)
                 newUnit.SlotOf = new List<string>(this.SlotOf);
-
-            if (this.Mount != null)
-                newUnit.Mount = this.Mount.Clone();
 
             foreach (Option option in this.Options)
                 newUnit.Options.Add(option.Clone());

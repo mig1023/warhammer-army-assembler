@@ -261,7 +261,7 @@ namespace WarhammerArmyAssembler.Test
         {
             int maxRoll = 0, minRoll = 6, result = 0;
 
-            bool bloodroar = ((enemy != null) && enemy.Bloodroar);
+            bool bloodroar = enemy?.Bloodroar ?? false;
 
             if ((diceType == Types.LD) && (unit.ColdBlooded || bloodroar))
             {

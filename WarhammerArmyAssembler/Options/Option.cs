@@ -288,7 +288,7 @@ namespace WarhammerArmyAssembler
             Mount = this.Mount,
 
             InterfaceColor = this.InterfaceColor,
-            Countable = (this.Countable != null ? this.Countable.Clone() : null),
+            Countable = this.Countable?.Clone(),
         };
 
         public Dictionary<int, Option> AllRunicVersions() =>
