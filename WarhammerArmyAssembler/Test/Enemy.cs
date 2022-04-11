@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace WarhammerArmyAssembler
 {
@@ -64,17 +65,16 @@ namespace WarhammerArmyAssembler
 
         private bool SpecialProperty(string specialRule, ref Enemy enemy)
         {
-            if (specialRule.StartsWith("MultiWounds"))
-                enemy.MultiWounds = specialRule.Split(':')[1].Trim();
-
-            else if (specialRule.StartsWith("Reroll"))
-                enemy.Reroll = specialRule.Split(':')[1].Trim();
-
-            else if (specialRule.StartsWith("ArmourPiercing"))
-                enemy.ArmourPiercing = int.Parse(specialRule.Split(':')[1]);
-
-            else
+            if (!specialRule.Contains(':'))
                 return false;
+
+            List<string> rule = specialRule.Split(':').Select(x => x.Trim()).ToList();
+            PropertyInfo property = enemy.GetType().GetProperty(rule[0]);
+
+            if (property.PropertyType == typeof(int))
+                property.SetValue(enemy, int.Parse(rule[1]));
+            else
+                property.SetValue(enemy, rule[1]);
 
             return true;
         }
