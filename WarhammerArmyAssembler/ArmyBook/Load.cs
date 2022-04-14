@@ -31,7 +31,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             IntParse(Services.Intro(xmlFile, node));
 
         private static Brush LoadColor(XmlDocument xmlFile, string node) =>
-            Interface.Services.BrushFromXml(Services.Intro(xmlFile, String.Format("Styles/Style[@Name='Color']/{0}", node)));
+            Interface.Services.BrushFromXml(Services.Intro(xmlFile, String.Format("Styles/Colors/{0}", node)));
 
         private static string LoadStyle(XmlDocument xmlFile, string node, string defaultValue) =>
             xmlFile.SelectSingleNode(String.Format(
