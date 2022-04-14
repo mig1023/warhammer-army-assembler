@@ -157,9 +157,7 @@ namespace WarhammerArmyAssembler.Interface
                 Changes.main.unitDetail.Children.Remove(element);
 
             bool notFirstColumn = false;
-
             double lastColumnMaxWidth = 0;
-
             int wizard = unit.GetUnitWizard();
 
             if (wizard > 0)

@@ -24,22 +24,18 @@ namespace WarhammerArmyAssembler.Interface
 
         public static Brush BrushFromXml(XmlNode path) => (SolidColorBrush)new BrushConverter().ConvertFromString(path.InnerText);
 
-        public static int CalcPercent(double x, double y) => (int)System.Math.Round((x * 100) / y);
+        public static int CalcPercent(double x, double y) => (int)Math.Round((x * 100) / y);
 
         public static string[] WordSplit(string caption, int partLength = 35)
         {
             if (caption.Length <= partLength)
                 return new string[] { caption };
 
-            string[] words = caption.Split(' ');
-
             List<string> parts = new List<string>();
-
             string part = string.Empty;
-
             int partCounter = 0;
 
-            foreach (string word in words)
+            foreach (string word in caption.Split(' '))
             {
                 if ((part.Length + word.Length) < partLength)
                     part += (String.IsNullOrEmpty(part) ? word : " " + word);

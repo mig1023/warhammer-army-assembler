@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Xml;
-using static WarhammerArmyAssembler.Unit;
-using static WarhammerArmyAssembler.ArmyBook.Parsers;
 using System.Windows.Media;
 using System.IO;
 using System.Text.RegularExpressions;
+using static WarhammerArmyAssembler.Unit;
+using static WarhammerArmyAssembler.ArmyBook.Parsers;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {

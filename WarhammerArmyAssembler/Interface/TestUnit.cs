@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -27,10 +26,10 @@ namespace WarhammerArmyAssembler.Interface
 
                 if (mountRow.ContainsKey(unitGrid.Name))
                 {
-                    foreach (FrameworkElement f in mountRow[unitGrid.Name])
+                    foreach (Panel row in mountRow[unitGrid.Name])
                     {
-                        (f as Panel).Children.Clear();
-                        unitGrid.Children.Remove(f as Panel);
+                        row.Children.Clear();
+                        unitGrid.Children.Remove(row);
                     }
 
                     mountRow[unitGrid.Name].Clear();
@@ -51,7 +50,7 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (string name in unitParam)
             {
-                Label testUnitElement = (Label)Interface.Changes.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
+                Label testUnitElement = (Label)Changes.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
                 testUnitElement.Content = ParamView(name, unitForLoad);
 
                 if (mountForLoad != null)
@@ -61,7 +60,7 @@ namespace WarhammerArmyAssembler.Interface
                 }
             }
 
-            Interface.Changes.armyUnitTest_Resize();
+            Changes.armyUnitTest_Resize();
         }
 
         private static string ParamView(string name, Unit unitForLoad)
@@ -78,13 +77,13 @@ namespace WarhammerArmyAssembler.Interface
         public static void startTest(Test.Data.TestTypes testType)
         {
             CleanConsole();
-            Interface.Changes.armyUnitTest_Resize();
+            Changes.armyUnitTest_Resize();
             
             Test.Fight.TestByName(testType);
         }
 
-        public static string GetFullConsoleText() => new TextRange(Interface.Changes.main.testConsole.Document.ContentStart,
-            Interface.Changes.main.testConsole.Document.ContentEnd).Text;
+        public static string GetFullConsoleText() => new TextRange(Changes.main.testConsole.Document.ContentStart,
+            Changes.main.testConsole.Document.ContentEnd).Text;
 
         private static void AddMountUnitParam(string param, int gridIndex, Grid unitGrid)
         {
@@ -122,7 +121,7 @@ namespace WarhammerArmyAssembler.Interface
             if (String.IsNullOrEmpty(SelectedEnemy()))
                 return;
 
-            MainWindow main = Interface.Changes.main;
+            MainWindow main = Changes.main;
 
             List<FrameworkElement> elements = new List<FrameworkElement>
             {
@@ -135,14 +134,14 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             foreach (FrameworkElement element in elements)
-                element.Visibility = System.Windows.Visibility.Visible;
+                element.Visibility = Visibility.Visible;
         }
 
         public static void TestCanvasPrepare(Unit unit)
         {
             Test.Data.PrepareUnit(unit);
 
-            MainWindow main = Interface.Changes.main;
+            MainWindow main = Changes.main;
 
             List<FrameworkElement> elements = new List<FrameworkElement>
             {
@@ -160,7 +159,7 @@ namespace WarhammerArmyAssembler.Interface
             main.startBattleRoyale.Visibility = Visibility.Visible;
 
             main.armyTestUnit.Content = Test.Data.unit.Name;
-            LoadUnitParamInInterface(unitForLoad: Test.Data.unit, mountForLoad: Test.Data.unitMount, elemetnsPostfix: "Test", unitGrid: Interface.Changes.main.unitGrid);
+            LoadUnitParamInInterface(unitForLoad: Test.Data.unit, mountForLoad: Test.Data.unitMount, elemetnsPostfix: "Test", unitGrid: Changes.main.unitGrid);
             LoadSpecialRules(unitForLoad: Test.Data.unit, target: main.specialRulesTest, onlyUnitRules: true);
 
             foreach (Label label in new List<Label> { main.startFullTest, main.startStatisticTest, main.startBattleRoyale })
@@ -175,7 +174,7 @@ namespace WarhammerArmyAssembler.Interface
             foreach (string enemy in Enemy.GetEnemiesGroups())
                 main.enemyGroup.Items.Add(enemy);
 
-            Interface.Changes.armyUnitTest_Resize();
+            Changes.armyUnitTest_Resize();
         }
 
         public static void VisibilityTest(bool before = false)
@@ -194,9 +193,9 @@ namespace WarhammerArmyAssembler.Interface
             }
         }
 
-        private static string SelectedEnemy() => (string)Interface.Changes.main.enemyForTest.SelectedItem;
+        private static string SelectedEnemy() => (string)Changes.main.enemyForTest.SelectedItem;
 
-        private static string SelectedGroup() => (string)Interface.Changes.main.enemyGroup.SelectedItem;
+        private static string SelectedGroup() => (string)Changes.main.enemyGroup.SelectedItem;
 
         public static void TestEnemyPrepare()
         {
@@ -205,12 +204,12 @@ namespace WarhammerArmyAssembler.Interface
 
             Test.Data.PrepareEnemy(SelectedEnemy());
 
-            Interface.Changes.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
+            Changes.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
             LoadUnitParamInInterface(unitForLoad: Test.Data.enemy, mountForLoad: Test.Data.enemyMount,
-                elemetnsPostfix: "Enemy", unitGrid: Interface.Changes.main.enemyGrid);
-            LoadSpecialRules(unitForLoad: Test.Data.enemy, target: Interface.Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
+                elemetnsPostfix: "Enemy", unitGrid: Changes.main.enemyGrid);
+            LoadSpecialRules(unitForLoad: Test.Data.enemy, target: Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
 
-            Interface.Changes.armyUnitTest_Resize();
+            Changes.armyUnitTest_Resize();
         }
 
         public static void LoadEnemyGroups()
@@ -218,13 +217,13 @@ namespace WarhammerArmyAssembler.Interface
             if (String.IsNullOrEmpty(SelectedGroup()))
                 return;
 
-            Interface.Changes.main.enemyForTest.Items.Clear();
+            Changes.main.enemyForTest.Items.Clear();
 
             foreach (Enemy enemy in Enemy.GetEnemiesByGroup(SelectedGroup()))
-                Interface.Changes.main.enemyForTest.Items.Add(enemy.Fullname());
+                Changes.main.enemyForTest.Items.Add(enemy.Fullname());
         }
 
-        public static void CleanConsole() => Interface.Changes.main.testConsole.Document.Blocks.Clear();
+        public static void CleanConsole() => Changes.main.testConsole.Document.Blocks.Clear();
 
         public static void LineToConsole(string line, Brush color = null)
         {
@@ -236,7 +235,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void FromConsoleToOutput(string line, Brush color = null)
         {
-            RichTextBox box = Interface.Changes.main.testConsole;
+            RichTextBox box = Changes.main.testConsole;
 
             TextRange text = new TextRange(box.Document.ContentEnd, box.Document.ContentEnd);
             text.Text = line;
