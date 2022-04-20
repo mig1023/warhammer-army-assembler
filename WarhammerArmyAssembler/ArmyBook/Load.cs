@@ -54,7 +54,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")) + "\\";
 
             string unitType = (isHero ? "Heroes/Hero" : "Units/Unit");
-            XmlNodeList xmlNodes =  xmlFile.SelectNodes("ArmyBook/" + unitType);
+            XmlNodeList xmlNodes =  xmlFile.SelectNodes("ArmyBook/Content/" + unitType);
 
             foreach (XmlNode xmlUnit in xmlNodes)
             {
@@ -104,11 +104,11 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             LoadStyles(xmlFile);
 
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Units/Unit", ref Data.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Heroes/Hero", ref Data.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Mounts/Mount", ref Data.Mounts);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Units/Unit", ref Data.Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Heroes/Hero", ref Data.Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Mounts/Mount", ref Data.Mounts);
 
-            foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Artefacts/Group"))
+            foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/Group"))
             {
                 string groupName = xmlArtefactGroup.Attributes["Name"].Value;
 
