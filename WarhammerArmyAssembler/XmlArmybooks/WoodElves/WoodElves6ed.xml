@@ -40,1772 +40,1774 @@
 		<Released>2005</Released>
 		<Authors>Anthony Reynolds and Matthew Ward</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strenght</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>10</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ Ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<Rule>+1 to dispell</Rule>
-				<Description>+1 to dispell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Spites of Athel Loren">
-			<Artefact>
-				<Name>A Blight of Terrors</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Terror/>
-				<Description>A model with a Blight of Terror causes terror.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>A Befuddlement of Mischiefs</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Bound spell, Power level 3: Magic Missile with a range of 18", it causes the targeted unit to become subject to Stupidity in its next turn</Rule>
-				<Description>Bound spell, Power level 3. The Mischiefs are treated like a Magic Missile spell that has a range of 18". It causes the targeted unit to become subject to Stupidity in its next turn. Those units that are Immune to Psychology are immune to the effects of this spell.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>A Murder of Spites</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>+D6 attacks with Initiative of 4, Strength of 2 and Poisoned Attacks special rules</Rule>
-				<Description>The model gains +D6 attacks in close combat. These are worked out at the bearer's WS, and have an Initiative of 4 and a Strength of 2. In addition, these attacks count as magical, and are Poisoned Attacks.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>A Muster of Malevolents</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Additional ranged weapon with range of 6", and unleashes D6 Strength 2 shots, always hit on a 4+ and count as magical and Poisoned Attacks special rules</Rule>
-				<Description>A muster counts as a ranged weapon that may be used in addition to any ranged weapon that the model carries. It has a range of 6", and unleashes D6 Strength 2 shots. The model counts as being a single unit Strength 1 model on foot for line of sight for this attack, and it may target a different unit than any other ranged attack made by the character. These shots always hit on a 4+ and count as magical and Poisoned Attacks. A model with Malevolents may stand and shoot with them (in addition to any other ranged weapon the model may have), even if the charging unit is outside the model's line of sightfer. it would not normally be allowed to stand and shoot because the enemy is within half its' charge range. So long as the model has a chance to be contacted by the enemy unit, the character may still stand and shoot.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>An Annoyance of Netlings</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OpponentHitOn>6</OpponentHitOn>
-				<Description>In a challenge, any enemy attempting to strike a character with an Annoyance of Netlings will only hit on 6+.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>A Resplendence of Luminescents</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Magical attacks</Rule>
-				<Description>All attacks made by a character with a Resplendence of Luminescents are magical, as are those of any unit that they join.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>A Lamentation of Despairs</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Bound spell, Power level 3: Once per game any model on the board must pass a Leadership test, or else suffer D3 automatic wounds that cannot be saved by armour or Ward Saves and cannot be regenerated</Rule>
-				<Description>Bound spell, Power level 3. One use only. Any model on the board may be targeted. The targeted model must pass a Leadership test, or else suffer D3 automatic wounds that cannot be saved by armour or Ward Saves and cannot be regenerated.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>A Cluster of Radiants</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Treemen</OnlyForGroup>
-				<AddToDispell>1</AddToDispell>
-				<Description>Treemen Ancients and Branchwraiths only. A character with Radiants may add one extra dice to their Dispel pool in their opponent's Magic phase.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>A Pageant of Shrikes</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Additional shooting attack with Strength 4, range of 18" and always hits on a 3+</Rule>
-				<Description>In addition to any shooting attacks the model has, Shrikes confer an additional shooting attack. A Pageant of Shrikes may target a different unit than any other ranged attack made by the character, though it may only be used against a target that the character can see. A Pageant ot Shrikes is a Strength 4 ranged attack that has a range of 18" and always hits on a 3+. This shooting attack is not subject to the usual targeting restrictions apart from line of sight - it can even be used to pick out an individual character within a unit. A model may not stand and shoot with a Pageant of Shrikes.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic weapons">
-			<Artefact>
-				<Name>The Spirit Sword</Name>
-				<Type>Weapon</Type>
-				<Points>55</Points>
-				<AutoWound/>
-				<Rule>Enemy that suffers one or more unsaved wounds must roll a D6 and add their Leadership, the character does the same: for each point the character wins by, his opponent loses an additional wound, with no Armour Saves or Ward Saves allowed, for each point his opponent wins by, the character loses a wound, with no Armour Saves or Ward Saves allowed</Rule>
-				<Description>Hits by the Spirit Sword wound automatically. Any enemy that suffers one or more unsaved wounds from the Spirit Sword must roll a D6 and add their Leadership - the wielder does the same. For each point the wielder wins by, his opponent loses an additional wound, with no Armour Saves or Ward Saves allowed. For each point his opponent wins by, the wielder loses a wound, with no Armour Saves or Ward Saves allowed.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Daith's Reaper</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Reroll>ToHit;OpponentToArmour</Reroll>
-				<Description>The wielder of this weapon may re-roll any failed hits in close combat. In addition, any foe wounded by this blade must re-roll any successful Armour Saves.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Bow of Loren</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<Rule>As many shoot as character have Attacks on their profile</Rule>
-				<Rule>No suffer -1 for multiple shots</Rule>
-				<Description>This longbow allows the bearer to shoot as many times as they have Attacks on their profile. The bearer does nor suffer -1 for multiple shots.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blades of Loec</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<OnlyForGroup>Wardancer</OnlyForGroup>
-				<Reroll>ToWound</Reroll>
-				<Description>Wardancer Weapons. The wielder can re-roll any failed rolls to wound. May be used in conjuction with the Shadow Dances of Loec.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Dawnspear</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<Rule>Then character causes an unsaved wound on an enemy, then that model and any other models in the unit that have not yet attacked suffer -1 to hit for that Combat phase</Rule>
-				<Description>Counts as a spear. If the wielder causes an unsaved wound on an enemy, then that model and any other models in the unit that have not yet attacked suffer -1 to hit for that Combat phase.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Spear of Twilight</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<KillingBlow/>
-				<Description>This spear confers the Killing Blow ability on the wielder.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Callach's Claw</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Any unit suffering one or more unsaved wounds suffer an additional -1 penalty to their Leadership for the remainder of the Combat phase</Rule>
-				<Description>Any unit suffering one or more unsaved wounds from this blade suffer an additional -1 penalty to their Leadership for the remainder of the Combat phase.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Hunter's Talon</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>May target any model it can see (including a character in a unit), but if this special ability is used, will suffer an additional -1 to hit penalty</Rule>
-				<Description>If firing non-magical arrows the wielder of this longbow may target any model it can see (including a character that could normally not be targeted because it is in a unit or not the closest target), but if this special ability is used, will suffer an additional -1 to hit penalty. Note that the normal -1 penalty for shooting at a single man-sized model does not apply and the target cannot benefit from the "Look out, sir!" rule. The shooter may always choose a different target to the unit he is with.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Sword of a Thousand Winters</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<Rule>Characters and Monsters must take a Toughness test for each unsaved wound - their Strength, Initiative and Attacks are reduced by 1 for each test they fail</Rule>
-				<Description>Characters and Monsters must take a Toughness test for each unsaved wound they suffer from this blade - their Strength, Initiative and Attacks are reduced by 1 (to a minimum or 1) for each test they fail.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rageth's Wildfire Blades</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Rule>Flaming attacks</Rule>
-				<Description>Counts as two hand weapons. Any attacks made with these weapons count as Flaming.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Asyendi's Bane</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<Rule>May re-roll all missed shooting attacks, if after this re-roll the shot still misses, then the bearer suffers a Strength 3 hit</Rule>
-				<Description>The wielder of this longbow may re-roll all missed shooting attacks. However, if after this re-roll the shot still misses, then the bearer suffers a Strength 3 hit.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>The Oaken Armour</Name>
-				<Type>Armour</Type>
-				<Points>50</Points>
-				<AddToArmour>6</AddToArmour>
-				<Regeneration/>
-				<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. The Oaken Armour gives the wearer the Regeneration ability.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Railarian's Mantle</Name>
-				<Type>Armour</Type>
-				<Points>50</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>4+ Ward Save within 6" of a Wood</Rule>
-				<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. If the wearer is within 6" of a Wood he receives a 4+ Ward Save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of the Fey</Name>
-				<Type>Armour</Type>
-				<Points>35</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>4+ Ward Save against any magical close combat attacks</Rule>
-				<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Against any magical close combat attacks, the wearer receives a 4+ Ward Save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Helm of the Hunt</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>+1 Attack and +1 Weapon Skill in charge</Rule>
-				<Description>This helm confers a 6+ Armour Save that can be combined with other equipment as normal (including normal armour and a shield). When the character charges he receives +1 Attack and +1 Weapon Skill for that round of combat.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Briarsheath</Name>
-				<Type>Armour</Type>
-				<Points>20</Points>
-				<OnlyFor>Infantry</OnlyFor>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Enemies wishing to target the model with a shooting attack suffer an additional -1 to hit penalty</Rule>
-				<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Enemies wishing to target the model wearing the Briarsheath with a shooting attack suffer an additional -1 to hit penalty. This is increased to -2 if the wearer is within a wood.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>The Rhymer's Harp</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>75</Points>
-				<AddToWard>5</AddToWard>
-				<Rule>May move through all kinds of difficult terrain without penalty</Rule>
-				<Description>This item bestows a 5+ Ward Save on the bearer, their mount, and any unit they join. In addition, the bearer, their mount, and any unit they join may move through all kinds of difficult terrain without penalty.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Amaranthine Brooch</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<AddToWard>3</AddToWard>
-				<Rule>Ward Save cannot be used against magical attacks</Rule>
-				<Description>Grants the bearer a 3+ Ward Save that cannot be used against magical attacks.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Amber Pendant</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<HitFirst/>
-				<Rule>Enemy models in base contact automatically strike last</Rule>
-				<Description>Any enemy models in base contact with the bearer of the Amber Pendant automatically strike last - even if they charged or have an ability that would allow them to normally strike first.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Stone of the Crystal Mere</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<AddToWard>3</AddToWard>
-				<Rule>If Ward Save is ever failed, then the Ward Save is lost for the rest of the game</Rule>
-				<Description>The bearer of the stone gains a 3+ Ward Save, as does any creature ridden by the bearer. However, if this Ward Save is ever failed, then the stone shatters and the Ward Save is lost for the rest of the game.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Glamourweave</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>4+ Ward Save against shooting attacks and magic missiles</Rule>
-				<Rule>Any model attempting to strike the model in close combat must first pass a Leadership test: if they fail, they require 6+ to hit the bearer during that Combat phase</Rule>
-				<Description>The Glamourweave conveys a 4+ Ward Save against shooting attacks and magic missiles. In addition, any model attempting to strike the bearer in close combat must first pass a Leadership test. If they fail, they require 6+ to hit the bearer during that Combat phase.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Stone of Rebirth</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<WardForLastWound>2</WardForLastWound>
-				<Description>When the wearer is reduced to one Wound this item bestows a 2+ Ward Save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Fimbulwinter Shard</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<SubOpponentToHit>1</SubOpponentToHit>
-				<Rule>Any creatures with the Forest Spirit special rule suffer from Stupidity while the bearer is within 6"</Rule>
-				<Description>Opponents suffer a -1 to hit the bearer and his mount in close combat. Any creatures with the Forest Spirit special rule suffer from Stupidity while the bearer is within 6".</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Merciw's Locus</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<Rule>Any model wishing to strike the model receives no Strength bonuses from magical or non-magical weapons</Rule>
-				<Description>The bearer of this magic item receives no Strength bonuses from magical or non-magical weapons. However, any model wishing to strike the model that bears Merciw's Locus also receives no Strength bonuses from magical or non-magical weapons.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Wraithstone</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Rule>All enemy units within 6" suffer a -1 penalty to their Leadership</Rule>
-				<Description>All enemy units within 6" of the bearer of this stone suffer a -1 penalty to their Leadership.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hagbane Arrows</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<Rule>Magic arrows: a model that loses one or more wounds from Hagbane arrows must take a Toughness test, if the test is failed, the target is slain, ignoring Armour Saves and Ward Saves</Rule>
-				<Description>Magic arrows. A model that loses one or more wounds from Hagbane arrows in any Shooting phase must take a Toughness test at the end of the phase. If the test is failed, the target is slain regardless of how many wounds it has left, ignoring Armour Saves and Ward Saves.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Moonstone of the Hidden Ways</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<Rule>Once per game, if the character and any unit they have joined is wholly within a wood at the end of the Move phase, the character and unit may be removed from the table and replaced anywhere that is also wholly within a wood, facing in any direction and in any formation</Rule>
-				<Description>One use only. If the character and any unit they have joined is wholly within a wood at the end of the Move phase, the character and unit may be removed from the table and replaced anywhere that is also wholly within a wood, facing in any direction and in any formation.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hail of Doom Arrow</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<Rule>Once per game, the arrow splits into 3D6 magical Strength 4 arrows</Rule>
-				<Description>One use only. Magic arrow. When fired, the arrow splits into 3D6 magical Strength 4 arrows. Roll to hit for each arrow. If this is used with a magic bow, then any effects of the magic bow are ignored for this shot.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Starfire Arrows</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Any unit that suffers one or more casualties from model shooting must take a Panic test, regardless of the number of casualties caused</Rule>
-				<Description>Magic arrows. Any unit that suffers one or more casualties from Starfire Arrows must take a Panic test, regardless of the number of casualties caused.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Horn of the Asrai</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>One per game, at the beginning of any enemy turn, all enemies able to charge the bearer of this item must take a Leadership test, if they fail, they must charge the bearer</Rule>
-				<Description>One use only. Can be used at the beginning of any enemy turn. When used, all enemies able to charge the bearer of this item must take a Leadership test. If they fail, they must charge the bearer (charge reactions. Psychology tests etc. are taken as normal).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Arcane Bodkins</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Magic arrows with no Armour Saves are allowed</Rule>
-				<Description>Magic arrows. No Armour Saves are allowed against Arcane Bodkins.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Elynett's Brooch</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<Reroll>ToLeadership</Reroll>
-				<Description>The wearer, and any unit they join, may re-roll failed Psychology tests.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dragontooth Arrows</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<Rule>Any model wounded by Dragontooth Arrows suffers from the rules for Stupidity for the rest ot the game</Rule>
-				<Description>Any model wounded by Dragontooth Arrows suffers from the rules for Stupidity for the rest ot the game - even if they are normally Immune to Psychology.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gwytherc's Horn</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<Rule>Once perl game, the character and any unit joined become Immune to Psychology until the beginning of the next turn</Rule>
-				<Description>One use only. At the start of any of the bearer's turns the horn may be blown. The bearer and any unit joined are Immune to Psychology until the beginning of the bearer's next turn.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane items">
-			<Artefact>
-				<Name>Wand of Wych Elm</Name>
-				<Type>Arcane</Type>
-				<Points>55</Points>
-				<Rule>Any Dispel attempt can be re-rolled</Rule>
-				<Description>This staff allows any Dispel attempt to be re-rolled.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Calaingor's Stave</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Rule>May add 1" to the distance they may move a forest if they successfully cast the spell Tree Singing</Rule>
-				<Description>If the bearer has the spell Tree Singing, then they may add 1" to the distance they may move a forest if they successfully cast the spell (so, if successfully cast, they may move a forest D3 + 2"). In addition, they may cast (and attempt to cast) the spell more than once per Magic phase.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Divination Orb</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Rule>If an opponent uses more than three dice when casting any spell, the character may add an extra free Dispel dice into the attempt to dispel that spell</Rule>
-				<Description>If an opponent uses more than three dice when casting any spell, the bearer of the Divination Orb may add an extra free Dispel dice into the attempt to dispel that spell.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Deepwood Sphere</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Rule>May re-roll the dice when determining the effects of the Tree Singing spell</Rule>
-				<Rule>All enemy models wholly or partly within the same wood as the bearer take a single Strength 5 hit at the start of each Wood Elf Magic phase</Rule>
-				<Description>This item allows the mage to re-roll the dice when determining the effects of the Tree Singing spell (whether he is using it to move a wood or to inflict damage on an enemy within a wood). In addition, all enemy models wholly or partly within the same wood as the bearer take a single Strength 5 hit at the start of each Wood Elf Magic phase.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ranu's Heartstone</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Rule>Once per game may re-roll one of the dice when casting a spell or making a Dispel attempt</Rule>
-				<Description>Once per game, the bearer of this item may re-roll one of the dice when casting a spell or making a Dispel attempt. This can be used to prevent a miscast or cause a spell to be cast with Irresistible Force.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic Standards">
-			<Artefact>
-				<Name>The Royal Standard of Ariel</Name>
-				<Type>Banner</Type>
-				<Points>100</Points>
-				<Fear/>
-				<Rule>Any friendly unit within 12" of this banner receives Magic Resistance (1)</Rule>
-				<Description>The enchantment that Ariel has woven into this banner causes the bearer, and any unit he joins, to cause fear. In addition, any friendly unit within 12" of this banner receives Magic Resistance (1).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gaemrath - the Banner of Midwinter</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<Rule>Once per game declare the banner's use at the beginning of the Movement phase, before declaring charges, the unit may not move or march but becomes Unbreakable until the start of the next player turn</Rule>
-				<Description>One use only. Declare the banner's use at the beginning of the Movement phase, before declaring charges. The unit may not move or march but becomes Unbreakable until the start of the next player turn. This ability may be used if the unit is already engaged in close combat, but cannot be used if the unit is fleeing or skirmishing.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Faoghir - the Banner of Dwindling</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<Rule>Enemies that flee from the unit having been beaten in close combat roll one dice less than normal to determine the distance they flee</Rule>
-				<Description>Enemies that flee from the unit having been beaten in close combat roll one dice less than normal to determine the distance they flee.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Saemrath - the Banner of the Zenith</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<Rule>The distance at which enemy models are prevented from marching by this unit is increased from 8" to 12"</Rule>
-				<Description>The distance at which enemy models are prevented from marching by this unit is increased from 8" to 12".</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Aech - the Banner of Springtide</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<Rule>The unit may make a stand and shoot charge reaction even if the enemy charging them do so from within half their charge range</Rule>
-				<Description>The unit may make a stand and shoot charge reaction even if the enemy charging them do so from within half their charge range.</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Orion</Name>
-			<Points>575</Points>
-			<Personified/>
-			<Description>Orion, The King in the Woods</Description>
-			<Image>Orion.jpg</Image>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>8</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>9</Initiative>
-				<Attacks>6</Attacks>
-				<Leadership>10</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<Unbreakable/>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Spear of Kurnous</Name>
-					<Lance/>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Hawk's Talon</Name>
-					<Rule>A missile weapon with the Strength 6 and can penetrate ranks as a bolt thrower, each unsaved wound become D3 wounds</Rule>
-				</RangeWeapon>
-				<Armour>
-					<Name>Cloak of Isha</Name>
-					<AddToDispell>2</AddToDispell>
-				</Armour>
-				<Armour>
-					<Name>Horn of the Wild Hunt</Name>
-					<AddToWard>5</AddToWard>
-					<Rule>Then Orion declare a first charge in game, all enemies within 18" must take a Panic test</Rule>
-				</Armour>
-				<Special>
-					<Rule>The Wild Hunt</Rule>
-					<Rule>Does not suffer a -1 to hit penalty for moving and shooting</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Hounds</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-					<PerModel/>
-					<Countable/>
-					<Max>2</Max>
-					<ExportToUnitSize/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Drycha</Name>
-			<Points>355</Points>
-			<Wizard>2</Wizard>
-			<Personified/>
-			<Description>Drycha</Description>
-			<Image>Drycha.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>7</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-				<Terror/>
-				<MustBeGeneral/>
-				<Reroll>ToHit</Reroll>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<AddToDispell>2</AddToDispell>
-					<Rule>Spirit-walker</Rule>
-					<Rule>For each wounds suffers, she gains an additional attack for remainder of the game</Rule>
-					<Rule>Drycha's army</Rule>
-					<Rule>May cast the Tree Singing spell twince each turn</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Wood Elf Highborn</Name>
-			<Points>145</Points>
-			<Description>Wood Elf Highborn</Description>
-			<Image>Highborn.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>6</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>8</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Spear</IfNot>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Spear</IfNot>
-						<IfNot>Additional weapon</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Wardancer</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<AddToStrength>1</AddToStrength>
-					<AddToAttacks>1</AddToAttacks>
-					<Rule>Shadow dances of Loec</Rule>
-					<ImmuneToPsychology/>
-					<AddToWard>6</AddToWard>
-					<Rule>Magic Resistance (1)</Rule>
-					<Dependencies>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Scout</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Wild Rider</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<AddToWard>5</AddToWard>
-					<Rule>Magic Resistance (1)</Rule>
-					<AddToAttacks>1</AddToAttacks>
-					<ImmuneToPsychology/>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Scout</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Waywatcher</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Rule>Lethal shot</Rule>
-					<Rule>Forest Stalker</Rule>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Scout</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Alter</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<MovementTo>9</MovementTo>
-					<InitiativeTo>9</InitiativeTo>
-					<AddToAttacks>1</AddToAttacks>
-					<NotALeader/>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Scout</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Scout</Name>
-					<Type>Option</Type>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
 					<Points>25</Points>
-					<Rule>Scout</Rule>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Eternal</Name>
-					<Type>Option</Type>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<AddToStrength>1</AddToStrength>
+					<Description>+1 Strenght</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
 					<Points>10</Points>
 					<AddToArmour>5</AddToArmour>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Scout</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Great Stag</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Dependencies>
-						<If>Wild Rider</If>
-					</Dependencies>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Great Eagle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Forest Dragon</Name>
-					<Type>Option</Type>
-					<Points>320</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<RangeWeapon>
-					<Name>Longbow</Name>
-				</RangeWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Spellweaver</Name>
-			<Points>215</Points>
-			<Wizard>3</Wizard>
-			<Description>Spellweaver</Description>
-			<Image>Spellweaver.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 4</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Glamourweave</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<AddToWard>5</AddToWard>
-				</Option>
-				<Option>
-					<Name>Unicorn</Name>
-					<Type>Option</Type>
-					<Points>65</Points>
-					<Dependencies>
-						<If>Glamourweave</If>
-					</Dependencies>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Great Eagle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Longbow</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Treeman Ancient</Name>
-			<Points>325</Points>
-			<Group>Treemen</Group>
-			<Image>TreemanAncient.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>9</Leadership>
-				<Armour>3</Armour>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-				<LargeBase/>
-				<Terror/>
-				<Stubborn/>
-				<SlotOf>Rare</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Flammable</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Strangle-roots</Rule>
-					<Rule>Tree Singing</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Wood Elf Noble</Name>
-			<Points>75</Points>
-			<Description>Wood Elf Noble</Description>
-			<Image>Noble.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>6</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>7</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Spear</IfNot>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>2</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Spear</IfNot>
-						<IfNot>Additional weapon</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Wardancer</Name>
-					<Type>Option</Type>
-					<Points>30</Points>
-					<AddToStrength>1</AddToStrength>
-					<AddToAttacks>1</AddToAttacks>
-					<Rule>Shadow dances of Loec</Rule>
-					<ImmuneToPsychology/>
-					<AddToWard>6</AddToWard>
-					<Rule>Magic Resistance (1)</Rule>
-					<Dependencies>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Scout</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Wild Rider</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToWard>5</AddToWard>
-					<Rule>Magic Resistance (1)</Rule>
-					<AddToAttacks>1</AddToAttacks>
-					<ImmuneToPsychology/>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Scout</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Waywatcher</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<Rule>Lethal shot</Rule>
-					<Rule>Forest Stalker</Rule>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Scout</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Alter</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-					<MovementTo>9</MovementTo>
-					<InitiativeTo>9</InitiativeTo>
-					<AddToAttacks>1</AddToAttacks>
-					<NotALeader/>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Scout</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Scout</Name>
-					<Type>Option</Type>
+					<Description>5+ Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
-					<Rule>Scout</Rule>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Eternal</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Eternal</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<AddToArmour>5</AddToArmour>
-					<Dependencies>
-						<IfNot>Wardancer</IfNot>
-						<IfNot>Wild Rider</IfNot>
-						<IfNot>Waywatcher</IfNot>
-						<IfNot>Alter</IfNot>
-						<IfNot>Scout</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Great Stag</Name>
-					<Type>Option</Type>
+					<AddToWard>6</AddToWard>
+					<Description>6+ Ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
 					<Points>50</Points>
-					<Dependencies>
-						<If>Wild Rider</If>
-					</Dependencies>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Great Eagle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<Rule>BSB</Rule>
-					<OnlyOneInArmy/>
+					<Rule>+1 to dispell</Rule>
+					<Description>+1 to dispell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
 					<Points>25</Points>
-				</Option>
-			</Options>
-			<Equipments>
-				<RangeWeapon>
-					<Name>Longbow</Name>
-				</RangeWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Spellsinger</Name>
-			<Points>90</Points>
-			<Wizard>1</Wizard>
-			<Description>Spellsinger</Description>
-			<Image>Spellsinger.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Glamourweave</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<AddToWard>5</AddToWard>
-				</Option>
-				<Option>
-					<Name>Unicorn</Name>
-					<Type>Option</Type>
-					<Points>65</Points>
-					<Dependencies>
-						<If>Glamourweave</If>
-					</Dependencies>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Longbow</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Branchwraith</Name>
-			<Points>65</Points>
-			<Group>Treemen</Group>
-			<Image>Branchwraith.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>8</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>8</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-				<LargeBase/>
-				<Fear/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 1</Name>
-					<Type>Option</Type>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Spites of Athel Loren">
+				<Artefact>
+					<Name>A Blight of Terrors</Name>
+					<Type>Weapon</Type>
 					<Points>50</Points>
-					<AddToCast>1</AddToCast>
+					<Terror/>
+					<Description>A model with a Blight of Terror causes terror.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>A Befuddlement of Mischiefs</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Bound spell, Power level 3: Magic Missile with a range of 18", it causes the targeted unit to become subject to Stupidity in its next turn</Rule>
+					<Description>Bound spell, Power level 3. The Mischiefs are treated like a Magic Missile spell that has a range of 18". It causes the targeted unit to become subject to Stupidity in its next turn. Those units that are Immune to Psychology are immune to the effects of this spell.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>A Murder of Spites</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>+D6 attacks with Initiative of 4, Strength of 2 and Poisoned Attacks special rules</Rule>
+					<Description>The model gains +D6 attacks in close combat. These are worked out at the bearer's WS, and have an Initiative of 4 and a Strength of 2. In addition, these attacks count as magical, and are Poisoned Attacks.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>A Muster of Malevolents</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Additional ranged weapon with range of 6", and unleashes D6 Strength 2 shots, always hit on a 4+ and count as magical and Poisoned Attacks special rules</Rule>
+					<Description>A muster counts as a ranged weapon that may be used in addition to any ranged weapon that the model carries. It has a range of 6", and unleashes D6 Strength 2 shots. The model counts as being a single unit Strength 1 model on foot for line of sight for this attack, and it may target a different unit than any other ranged attack made by the character. These shots always hit on a 4+ and count as magical and Poisoned Attacks. A model with Malevolents may stand and shoot with them (in addition to any other ranged weapon the model may have), even if the charging unit is outside the model's line of sightfer. it would not normally be allowed to stand and shoot because the enemy is within half its' charge range. So long as the model has a chance to be contacted by the enemy unit, the character may still stand and shoot.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>An Annoyance of Netlings</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OpponentHitOn>6</OpponentHitOn>
+					<Description>In a challenge, any enemy attempting to strike a character with an Annoyance of Netlings will only hit on 6+.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>A Resplendence of Luminescents</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Magical attacks</Rule>
+					<Description>All attacks made by a character with a Resplendence of Luminescents are magical, as are those of any unit that they join.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>A Lamentation of Despairs</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Bound spell, Power level 3: Once per game any model on the board must pass a Leadership test, or else suffer D3 automatic wounds that cannot be saved by armour or Ward Saves and cannot be regenerated</Rule>
+					<Description>Bound spell, Power level 3. One use only. Any model on the board may be targeted. The targeted model must pass a Leadership test, or else suffer D3 automatic wounds that cannot be saved by armour or Ward Saves and cannot be regenerated.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>A Cluster of Radiants</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Treemen</OnlyForGroup>
 					<AddToDispell>1</AddToDispell>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-			</Options>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Elven Steed</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Great Stag</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-			</SpecialRules>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Great Eagle</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>2</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Warhawk</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>1</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds></Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Unicorn</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>10</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Impale</Rule>
-					<Rule>Magic Resistance (2)</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Forest Dragon</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>3</Armour>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-					<Rule>Large Target</Rule>
-					<Rule>Poison Breath</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Glade Guard</Name>
-			<Points>12</Points>
-			<Min>10</Min>
-			<Image>GlabeGuard.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<HitFirst/>
-			</SpecialRules>
-			<Equipments>
-				<RangeWeapon>
-					<Name>Longbow</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>Glade Guard Longbow</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Scouts</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<PerModel/>
-					<Rule>Skirmish</Rule>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard Bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="25" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Lord's Bowman</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Glade Riders</Name>
-			<Points>24</Points>
-			<Min>5</Min>
-			<Max>10</Max>
-			<Mount>Elven Steed</Mount>
-			<Image>GladeRiders.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Longbow</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>Fast Cavalry</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>9</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>18</Points>
-				</Option>
-				<Option>
-					<Name>Horsemaster</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>9</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Eternal Guard</Name>
-			<Points>12</Points>
-			<Min>10</Min>
-			<Image>EternalGuard.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Eternal Guard weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Eternal Guard armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Bodyguard</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Eternal Warden</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Dryads</Name>
-			<Points>12</Points>
-			<Min>8</Min>
-			<Max>20</Max>
-			<Image>Dryads.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<ImmuneToPsychology/>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Razor sharp talons</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Skirmish</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Branch Nymph</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Wardancers Troupe</Name>
-			<Points>18</Points>
-			<Min>5</Min>
-			<Max>15</Max>
-			<Image>Wardancers.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-				<Ward>6</Ward>
-			</Profile>
-			<SpecialRules>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Wardancers weapons</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Magic Resistance (1)</Rule>
-					<Rule>Shadow Dances of Loec</Rule>
-					<Rule>Skirmishers</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Bladesinger</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Warhawk Riders</Name>
-			<Points>40</Points>
-			<Min>3</Min>
-			<Max>12</Max>
-			<Mount>Warhawk</Mount>
-			<Image>WarhawkRiders.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Longbow</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>Hit-and-Run</Rule>
-					<Rule>Flying Cavalry</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Wind Rider</Name>
-					<Type>Option</Type>
-					<FullCommand/>
+					<Description>Treemen Ancients and Branchwraiths only. A character with Radiants may add one extra dice to their Dispel pool in their opponent's Magic phase.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>A Pageant of Shrikes</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Additional shooting attack with Strength 4, range of 18" and always hits on a 3+</Rule>
+					<Description>In addition to any shooting attacks the model has, Shrikes confer an additional shooting attack. A Pageant of Shrikes may target a different unit than any other ranged attack made by the character, though it may only be used against a target that the character can see. A Pageant ot Shrikes is a Strength 4 ranged attack that has a range of 18" and always hits on a 3+. This shooting attack is not subject to the usual targeting restrictions apart from line of sight - it can even be used to pick out an individual character within a unit. A model may not stand and shoot with a Pageant of Shrikes.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic weapons">
+				<Artefact>
+					<Name>The Spirit Sword</Name>
+					<Type>Weapon</Type>
+					<Points>55</Points>
+					<AutoWound/>
+					<Rule>Enemy that suffers one or more unsaved wounds must roll a D6 and add their Leadership, the character does the same: for each point the character wins by, his opponent loses an additional wound, with no Armour Saves or Ward Saves allowed, for each point his opponent wins by, the character loses a wound, with no Armour Saves or Ward Saves allowed</Rule>
+					<Description>Hits by the Spirit Sword wound automatically. Any enemy that suffers one or more unsaved wounds from the Spirit Sword must roll a D6 and add their Leadership - the wielder does the same. For each point the wielder wins by, his opponent loses an additional wound, with no Armour Saves or Ward Saves allowed. For each point his opponent wins by, the wielder loses a wound, with no Armour Saves or Ward Saves allowed.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Daith's Reaper</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Reroll>ToHit;OpponentToArmour</Reroll>
+					<Description>The wielder of this weapon may re-roll any failed hits in close combat. In addition, any foe wounded by this blade must re-roll any successful Armour Saves.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Bow of Loren</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<Rule>As many shoot as character have Attacks on their profile</Rule>
+					<Rule>No suffer -1 for multiple shots</Rule>
+					<Description>This longbow allows the bearer to shoot as many times as they have Attacks on their profile. The bearer does nor suffer -1 for multiple shots.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blades of Loec</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<OnlyForGroup>Wardancer</OnlyForGroup>
+					<Reroll>ToWound</Reroll>
+					<Description>Wardancer Weapons. The wielder can re-roll any failed rolls to wound. May be used in conjuction with the Shadow Dances of Loec.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Dawnspear</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<Rule>Then character causes an unsaved wound on an enemy, then that model and any other models in the unit that have not yet attacked suffer -1 to hit for that Combat phase</Rule>
+					<Description>Counts as a spear. If the wielder causes an unsaved wound on an enemy, then that model and any other models in the unit that have not yet attacked suffer -1 to hit for that Combat phase.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Spear of Twilight</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<KillingBlow/>
+					<Description>This spear confers the Killing Blow ability on the wielder.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Callach's Claw</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Any unit suffering one or more unsaved wounds suffer an additional -1 penalty to their Leadership for the remainder of the Combat phase</Rule>
+					<Description>Any unit suffering one or more unsaved wounds from this blade suffer an additional -1 penalty to their Leadership for the remainder of the Combat phase.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Hunter's Talon</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>May target any model it can see (including a character in a unit), but if this special ability is used, will suffer an additional -1 to hit penalty</Rule>
+					<Description>If firing non-magical arrows the wielder of this longbow may target any model it can see (including a character that could normally not be targeted because it is in a unit or not the closest target), but if this special ability is used, will suffer an additional -1 to hit penalty. Note that the normal -1 penalty for shooting at a single man-sized model does not apply and the target cannot benefit from the "Look out, sir!" rule. The shooter may always choose a different target to the unit he is with.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Sword of a Thousand Winters</Name>
+					<Type>Weapon</Type>
 					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Wild Riders of Kurnous</Name>
-			<Points>26</Points>
-			<Min>5</Min>
-			<Mount>Elven Steed</Mount>
-			<Image>WildRiders.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<HitFirst/>
-				<Fear/>
-				<Frenzy/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>The Wild Hunt</Rule>
-					<Rule>The Fury of Kurnous</Rule>
-					<Rule>Fast Cavalry</Rule>
-					<Rule>Magic Resistance (1)</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>0</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>18</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Wild Hunter</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>18</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Tree Kin</Name>
-			<Points>65</Points>
-			<Min>3</Min>
-			<Image>TreeKin.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>4</Armour>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Branchlike limbs</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Flammable</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Tree Kin Elder</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Waywatchers</Name>
-			<Points>24</Points>
-			<Min>5</Min>
-			<Max>10</Max>
-			<Image>Waywatchers.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-				<Ward>6</Ward>
-			</Profile>
-			<SpecialRules>
-				<HitFirst/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Two hand weapons</Name>
+					<Rule>Characters and Monsters must take a Toughness test for each unsaved wound - their Strength, Initiative and Attacks are reduced by 1 for each test they fail</Rule>
+					<Description>Characters and Monsters must take a Toughness test for each unsaved wound they suffer from this blade - their Strength, Initiative and Attacks are reduced by 1 (to a minimum or 1) for each test they fail.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rageth's Wildfire Blades</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
 					<AddToAttacks>1</AddToAttacks>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Longbow</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>Forest Stalker</Rule>
-					<Rule>Lethal Shot</Rule>
-					<Rule>Skirmishers</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shadow Sentiel</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Treeman</Name>
-			<Points>285</Points>
-			<Image>Treeman.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>3</Armour>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-				<Terror/>
-				<Stubborn/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Gnarled fists</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Flammable</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Strangle-roots</Rule>
-					<Rule>Tree Singing</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Great Eagles</Name>
-			<Points>50</Points>
-			<Min>1</Min>
-			<Profile>
-				<Movement>2</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Powerful talon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-	</Units>
+					<Rule>Flaming attacks</Rule>
+					<Description>Counts as two hand weapons. Any attacks made with these weapons count as Flaming.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Asyendi's Bane</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<Rule>May re-roll all missed shooting attacks, if after this re-roll the shot still misses, then the bearer suffers a Strength 3 hit</Rule>
+					<Description>The wielder of this longbow may re-roll all missed shooting attacks. However, if after this re-roll the shot still misses, then the bearer suffers a Strength 3 hit.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>The Oaken Armour</Name>
+					<Type>Armour</Type>
+					<Points>50</Points>
+					<AddToArmour>6</AddToArmour>
+					<Regeneration/>
+					<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. The Oaken Armour gives the wearer the Regeneration ability.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Railarian's Mantle</Name>
+					<Type>Armour</Type>
+					<Points>50</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>4+ Ward Save within 6" of a Wood</Rule>
+					<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. If the wearer is within 6" of a Wood he receives a 4+ Ward Save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of the Fey</Name>
+					<Type>Armour</Type>
+					<Points>35</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>4+ Ward Save against any magical close combat attacks</Rule>
+					<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Against any magical close combat attacks, the wearer receives a 4+ Ward Save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Helm of the Hunt</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>+1 Attack and +1 Weapon Skill in charge</Rule>
+					<Description>This helm confers a 6+ Armour Save that can be combined with other equipment as normal (including normal armour and a shield). When the character charges he receives +1 Attack and +1 Weapon Skill for that round of combat.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Briarsheath</Name>
+					<Type>Armour</Type>
+					<Points>20</Points>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Enemies wishing to target the model with a shooting attack suffer an additional -1 to hit penalty</Rule>
+					<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Enemies wishing to target the model wearing the Briarsheath with a shooting attack suffer an additional -1 to hit penalty. This is increased to -2 if the wearer is within a wood.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>The Rhymer's Harp</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>75</Points>
+					<AddToWard>5</AddToWard>
+					<Rule>May move through all kinds of difficult terrain without penalty</Rule>
+					<Description>This item bestows a 5+ Ward Save on the bearer, their mount, and any unit they join. In addition, the bearer, their mount, and any unit they join may move through all kinds of difficult terrain without penalty.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Amaranthine Brooch</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<AddToWard>3</AddToWard>
+					<Rule>Ward Save cannot be used against magical attacks</Rule>
+					<Description>Grants the bearer a 3+ Ward Save that cannot be used against magical attacks.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Amber Pendant</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<HitFirst/>
+					<Rule>Enemy models in base contact automatically strike last</Rule>
+					<Description>Any enemy models in base contact with the bearer of the Amber Pendant automatically strike last - even if they charged or have an ability that would allow them to normally strike first.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Stone of the Crystal Mere</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<AddToWard>3</AddToWard>
+					<Rule>If Ward Save is ever failed, then the Ward Save is lost for the rest of the game</Rule>
+					<Description>The bearer of the stone gains a 3+ Ward Save, as does any creature ridden by the bearer. However, if this Ward Save is ever failed, then the stone shatters and the Ward Save is lost for the rest of the game.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Glamourweave</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>4+ Ward Save against shooting attacks and magic missiles</Rule>
+					<Rule>Any model attempting to strike the model in close combat must first pass a Leadership test: if they fail, they require 6+ to hit the bearer during that Combat phase</Rule>
+					<Description>The Glamourweave conveys a 4+ Ward Save against shooting attacks and magic missiles. In addition, any model attempting to strike the bearer in close combat must first pass a Leadership test. If they fail, they require 6+ to hit the bearer during that Combat phase.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Stone of Rebirth</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<WardForLastWound>2</WardForLastWound>
+					<Description>When the wearer is reduced to one Wound this item bestows a 2+ Ward Save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Fimbulwinter Shard</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<Rule>Any creatures with the Forest Spirit special rule suffer from Stupidity while the bearer is within 6"</Rule>
+					<Description>Opponents suffer a -1 to hit the bearer and his mount in close combat. Any creatures with the Forest Spirit special rule suffer from Stupidity while the bearer is within 6".</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Merciw's Locus</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<Rule>Any model wishing to strike the model receives no Strength bonuses from magical or non-magical weapons</Rule>
+					<Description>The bearer of this magic item receives no Strength bonuses from magical or non-magical weapons. However, any model wishing to strike the model that bears Merciw's Locus also receives no Strength bonuses from magical or non-magical weapons.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Wraithstone</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Rule>All enemy units within 6" suffer a -1 penalty to their Leadership</Rule>
+					<Description>All enemy units within 6" of the bearer of this stone suffer a -1 penalty to their Leadership.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hagbane Arrows</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<Rule>Magic arrows: a model that loses one or more wounds from Hagbane arrows must take a Toughness test, if the test is failed, the target is slain, ignoring Armour Saves and Ward Saves</Rule>
+					<Description>Magic arrows. A model that loses one or more wounds from Hagbane arrows in any Shooting phase must take a Toughness test at the end of the phase. If the test is failed, the target is slain regardless of how many wounds it has left, ignoring Armour Saves and Ward Saves.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Moonstone of the Hidden Ways</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<Rule>Once per game, if the character and any unit they have joined is wholly within a wood at the end of the Move phase, the character and unit may be removed from the table and replaced anywhere that is also wholly within a wood, facing in any direction and in any formation</Rule>
+					<Description>One use only. If the character and any unit they have joined is wholly within a wood at the end of the Move phase, the character and unit may be removed from the table and replaced anywhere that is also wholly within a wood, facing in any direction and in any formation.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hail of Doom Arrow</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<Rule>Once per game, the arrow splits into 3D6 magical Strength 4 arrows</Rule>
+					<Description>One use only. Magic arrow. When fired, the arrow splits into 3D6 magical Strength 4 arrows. Roll to hit for each arrow. If this is used with a magic bow, then any effects of the magic bow are ignored for this shot.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Starfire Arrows</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Any unit that suffers one or more casualties from model shooting must take a Panic test, regardless of the number of casualties caused</Rule>
+					<Description>Magic arrows. Any unit that suffers one or more casualties from Starfire Arrows must take a Panic test, regardless of the number of casualties caused.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Horn of the Asrai</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>One per game, at the beginning of any enemy turn, all enemies able to charge the bearer of this item must take a Leadership test, if they fail, they must charge the bearer</Rule>
+					<Description>One use only. Can be used at the beginning of any enemy turn. When used, all enemies able to charge the bearer of this item must take a Leadership test. If they fail, they must charge the bearer (charge reactions. Psychology tests etc. are taken as normal).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Arcane Bodkins</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Magic arrows with no Armour Saves are allowed</Rule>
+					<Description>Magic arrows. No Armour Saves are allowed against Arcane Bodkins.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Elynett's Brooch</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<Reroll>ToLeadership</Reroll>
+					<Description>The wearer, and any unit they join, may re-roll failed Psychology tests.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dragontooth Arrows</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<Rule>Any model wounded by Dragontooth Arrows suffers from the rules for Stupidity for the rest ot the game</Rule>
+					<Description>Any model wounded by Dragontooth Arrows suffers from the rules for Stupidity for the rest ot the game - even if they are normally Immune to Psychology.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gwytherc's Horn</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<Rule>Once perl game, the character and any unit joined become Immune to Psychology until the beginning of the next turn</Rule>
+					<Description>One use only. At the start of any of the bearer's turns the horn may be blown. The bearer and any unit joined are Immune to Psychology until the beginning of the bearer's next turn.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane items">
+				<Artefact>
+					<Name>Wand of Wych Elm</Name>
+					<Type>Arcane</Type>
+					<Points>55</Points>
+					<Rule>Any Dispel attempt can be re-rolled</Rule>
+					<Description>This staff allows any Dispel attempt to be re-rolled.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Calaingor's Stave</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Rule>May add 1" to the distance they may move a forest if they successfully cast the spell Tree Singing</Rule>
+					<Description>If the bearer has the spell Tree Singing, then they may add 1" to the distance they may move a forest if they successfully cast the spell (so, if successfully cast, they may move a forest D3 + 2"). In addition, they may cast (and attempt to cast) the spell more than once per Magic phase.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Divination Orb</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Rule>If an opponent uses more than three dice when casting any spell, the character may add an extra free Dispel dice into the attempt to dispel that spell</Rule>
+					<Description>If an opponent uses more than three dice when casting any spell, the bearer of the Divination Orb may add an extra free Dispel dice into the attempt to dispel that spell.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Deepwood Sphere</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Rule>May re-roll the dice when determining the effects of the Tree Singing spell</Rule>
+					<Rule>All enemy models wholly or partly within the same wood as the bearer take a single Strength 5 hit at the start of each Wood Elf Magic phase</Rule>
+					<Description>This item allows the mage to re-roll the dice when determining the effects of the Tree Singing spell (whether he is using it to move a wood or to inflict damage on an enemy within a wood). In addition, all enemy models wholly or partly within the same wood as the bearer take a single Strength 5 hit at the start of each Wood Elf Magic phase.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ranu's Heartstone</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Rule>Once per game may re-roll one of the dice when casting a spell or making a Dispel attempt</Rule>
+					<Description>Once per game, the bearer of this item may re-roll one of the dice when casting a spell or making a Dispel attempt. This can be used to prevent a miscast or cause a spell to be cast with Irresistible Force.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic Standards">
+				<Artefact>
+					<Name>The Royal Standard of Ariel</Name>
+					<Type>Banner</Type>
+					<Points>100</Points>
+					<Fear/>
+					<Rule>Any friendly unit within 12" of this banner receives Magic Resistance (1)</Rule>
+					<Description>The enchantment that Ariel has woven into this banner causes the bearer, and any unit he joins, to cause fear. In addition, any friendly unit within 12" of this banner receives Magic Resistance (1).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gaemrath - the Banner of Midwinter</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<Rule>Once per game declare the banner's use at the beginning of the Movement phase, before declaring charges, the unit may not move or march but becomes Unbreakable until the start of the next player turn</Rule>
+					<Description>One use only. Declare the banner's use at the beginning of the Movement phase, before declaring charges. The unit may not move or march but becomes Unbreakable until the start of the next player turn. This ability may be used if the unit is already engaged in close combat, but cannot be used if the unit is fleeing or skirmishing.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Faoghir - the Banner of Dwindling</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<Rule>Enemies that flee from the unit having been beaten in close combat roll one dice less than normal to determine the distance they flee</Rule>
+					<Description>Enemies that flee from the unit having been beaten in close combat roll one dice less than normal to determine the distance they flee.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Saemrath - the Banner of the Zenith</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<Rule>The distance at which enemy models are prevented from marching by this unit is increased from 8" to 12"</Rule>
+					<Description>The distance at which enemy models are prevented from marching by this unit is increased from 8" to 12".</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Aech - the Banner of Springtide</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<Rule>The unit may make a stand and shoot charge reaction even if the enemy charging them do so from within half their charge range</Rule>
+					<Description>The unit may make a stand and shoot charge reaction even if the enemy charging them do so from within half their charge range.</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Orion</Name>
+				<Points>575</Points>
+				<Personified/>
+				<Description>Orion, The King in the Woods</Description>
+				<Image>Orion.jpg</Image>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>8</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>9</Initiative>
+					<Attacks>6</Attacks>
+					<Leadership>10</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<Unbreakable/>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Spear of Kurnous</Name>
+						<Lance/>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Hawk's Talon</Name>
+						<Rule>A missile weapon with the Strength 6 and can penetrate ranks as a bolt thrower, each unsaved wound become D3 wounds</Rule>
+					</RangeWeapon>
+					<Armour>
+						<Name>Cloak of Isha</Name>
+						<AddToDispell>2</AddToDispell>
+					</Armour>
+					<Armour>
+						<Name>Horn of the Wild Hunt</Name>
+						<AddToWard>5</AddToWard>
+						<Rule>Then Orion declare a first charge in game, all enemies within 18" must take a Panic test</Rule>
+					</Armour>
+					<Special>
+						<Rule>The Wild Hunt</Rule>
+						<Rule>Does not suffer a -1 to hit penalty for moving and shooting</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Hounds</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+						<PerModel/>
+						<Countable/>
+						<Max>2</Max>
+						<ExportToUnitSize/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Drycha</Name>
+				<Points>355</Points>
+				<Wizard>2</Wizard>
+				<Personified/>
+				<Description>Drycha</Description>
+				<Image>Drycha.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>7</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+					<Terror/>
+					<MustBeGeneral/>
+					<Reroll>ToHit</Reroll>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<AddToDispell>2</AddToDispell>
+						<Rule>Spirit-walker</Rule>
+						<Rule>For each wounds suffers, she gains an additional attack for remainder of the game</Rule>
+						<Rule>Drycha's army</Rule>
+						<Rule>May cast the Tree Singing spell twince each turn</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Wood Elf Highborn</Name>
+				<Points>145</Points>
+				<Description>Wood Elf Highborn</Description>
+				<Image>Highborn.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>6</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>8</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Spear</IfNot>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Spear</IfNot>
+							<IfNot>Additional weapon</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Wardancer</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<AddToStrength>1</AddToStrength>
+						<AddToAttacks>1</AddToAttacks>
+						<Rule>Shadow dances of Loec</Rule>
+						<ImmuneToPsychology/>
+						<AddToWard>6</AddToWard>
+						<Rule>Magic Resistance (1)</Rule>
+						<Dependencies>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Scout</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Wild Rider</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<AddToWard>5</AddToWard>
+						<Rule>Magic Resistance (1)</Rule>
+						<AddToAttacks>1</AddToAttacks>
+						<ImmuneToPsychology/>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Scout</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Waywatcher</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Rule>Lethal shot</Rule>
+						<Rule>Forest Stalker</Rule>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Scout</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Alter</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<MovementTo>9</MovementTo>
+						<InitiativeTo>9</InitiativeTo>
+						<AddToAttacks>1</AddToAttacks>
+						<NotALeader/>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Scout</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Scout</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+						<Rule>Scout</Rule>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Eternal</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+						<AddToArmour>5</AddToArmour>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Scout</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Great Stag</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Dependencies>
+							<If>Wild Rider</If>
+						</Dependencies>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Great Eagle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Forest Dragon</Name>
+						<Type>Option</Type>
+						<Points>320</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<RangeWeapon>
+						<Name>Longbow</Name>
+					</RangeWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Spellweaver</Name>
+				<Points>215</Points>
+				<Wizard>3</Wizard>
+				<Description>Spellweaver</Description>
+				<Image>Spellweaver.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 4</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Glamourweave</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<AddToWard>5</AddToWard>
+					</Option>
+					<Option>
+						<Name>Unicorn</Name>
+						<Type>Option</Type>
+						<Points>65</Points>
+						<Dependencies>
+							<If>Glamourweave</If>
+						</Dependencies>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Great Eagle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Longbow</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Treeman Ancient</Name>
+				<Points>325</Points>
+				<Group>Treemen</Group>
+				<Image>TreemanAncient.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>9</Leadership>
+					<Armour>3</Armour>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+					<LargeBase/>
+					<Terror/>
+					<Stubborn/>
+					<SlotOf>Rare</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Flammable</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Strangle-roots</Rule>
+						<Rule>Tree Singing</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Wood Elf Noble</Name>
+				<Points>75</Points>
+				<Description>Wood Elf Noble</Description>
+				<Image>Noble.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>6</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>7</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Spear</IfNot>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>2</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Spear</IfNot>
+							<IfNot>Additional weapon</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Wardancer</Name>
+						<Type>Option</Type>
+						<Points>30</Points>
+						<AddToStrength>1</AddToStrength>
+						<AddToAttacks>1</AddToAttacks>
+						<Rule>Shadow dances of Loec</Rule>
+						<ImmuneToPsychology/>
+						<AddToWard>6</AddToWard>
+						<Rule>Magic Resistance (1)</Rule>
+						<Dependencies>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Scout</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Wild Rider</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToWard>5</AddToWard>
+						<Rule>Magic Resistance (1)</Rule>
+						<AddToAttacks>1</AddToAttacks>
+						<ImmuneToPsychology/>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Scout</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Waywatcher</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<Rule>Lethal shot</Rule>
+						<Rule>Forest Stalker</Rule>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Scout</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Alter</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+						<MovementTo>9</MovementTo>
+						<InitiativeTo>9</InitiativeTo>
+						<AddToAttacks>1</AddToAttacks>
+						<NotALeader/>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Scout</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Scout</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+						<Rule>Scout</Rule>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Eternal</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Eternal</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<AddToArmour>5</AddToArmour>
+						<Dependencies>
+							<IfNot>Wardancer</IfNot>
+							<IfNot>Wild Rider</IfNot>
+							<IfNot>Waywatcher</IfNot>
+							<IfNot>Alter</IfNot>
+							<IfNot>Scout</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Great Stag</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Dependencies>
+							<If>Wild Rider</If>
+						</Dependencies>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Great Eagle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<Rule>BSB</Rule>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<RangeWeapon>
+						<Name>Longbow</Name>
+					</RangeWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Spellsinger</Name>
+				<Points>90</Points>
+				<Wizard>1</Wizard>
+				<Description>Spellsinger</Description>
+				<Image>Spellsinger.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Glamourweave</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<AddToWard>5</AddToWard>
+					</Option>
+					<Option>
+						<Name>Unicorn</Name>
+						<Type>Option</Type>
+						<Points>65</Points>
+						<Dependencies>
+							<If>Glamourweave</If>
+						</Dependencies>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Longbow</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Branchwraith</Name>
+				<Points>65</Points>
+				<Group>Treemen</Group>
+				<Image>Branchwraith.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>8</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>8</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+					<LargeBase/>
+					<Fear/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 1</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<AddToCast>1</AddToCast>
+						<AddToDispell>1</AddToDispell>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+				</Options>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Elven Steed</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Great Stag</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+				</SpecialRules>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Great Eagle</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>2</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Warhawk</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>1</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds></Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Unicorn</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>10</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Impale</Rule>
+						<Rule>Magic Resistance (2)</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Forest Dragon</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>3</Armour>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+						<Rule>Large Target</Rule>
+						<Rule>Poison Breath</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Glade Guard</Name>
+				<Points>12</Points>
+				<Min>10</Min>
+				<Image>GlabeGuard.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<HitFirst/>
+				</SpecialRules>
+				<Equipments>
+					<RangeWeapon>
+						<Name>Longbow</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>Glade Guard Longbow</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Scouts</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<PerModel/>
+						<Rule>Skirmish</Rule>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard Bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="25" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Lord's Bowman</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Glade Riders</Name>
+				<Points>24</Points>
+				<Min>5</Min>
+				<Max>10</Max>
+				<Mount>Elven Steed</Mount>
+				<Image>GladeRiders.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Longbow</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>Fast Cavalry</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>9</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>18</Points>
+					</Option>
+					<Option>
+						<Name>Horsemaster</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>9</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Eternal Guard</Name>
+				<Points>12</Points>
+				<Min>10</Min>
+				<Image>EternalGuard.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Eternal Guard weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Eternal Guard armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Bodyguard</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Eternal Warden</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Dryads</Name>
+				<Points>12</Points>
+				<Min>8</Min>
+				<Max>20</Max>
+				<Image>Dryads.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<ImmuneToPsychology/>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Razor sharp talons</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Skirmish</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Branch Nymph</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Wardancers Troupe</Name>
+				<Points>18</Points>
+				<Min>5</Min>
+				<Max>15</Max>
+				<Image>Wardancers.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+					<Ward>6</Ward>
+				</Profile>
+				<SpecialRules>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Wardancers weapons</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Magic Resistance (1)</Rule>
+						<Rule>Shadow Dances of Loec</Rule>
+						<Rule>Skirmishers</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Bladesinger</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Warhawk Riders</Name>
+				<Points>40</Points>
+				<Min>3</Min>
+				<Max>12</Max>
+				<Mount>Warhawk</Mount>
+				<Image>WarhawkRiders.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Longbow</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>Hit-and-Run</Rule>
+						<Rule>Flying Cavalry</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Wind Rider</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Wild Riders of Kurnous</Name>
+				<Points>26</Points>
+				<Min>5</Min>
+				<Mount>Elven Steed</Mount>
+				<Image>WildRiders.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<HitFirst/>
+					<Fear/>
+					<Frenzy/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>The Wild Hunt</Rule>
+						<Rule>The Fury of Kurnous</Rule>
+						<Rule>Fast Cavalry</Rule>
+						<Rule>Magic Resistance (1)</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>0</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>18</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Wild Hunter</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>18</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Tree Kin</Name>
+				<Points>65</Points>
+				<Min>3</Min>
+				<Image>TreeKin.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>4</Armour>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Branchlike limbs</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Flammable</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Tree Kin Elder</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Waywatchers</Name>
+				<Points>24</Points>
+				<Min>5</Min>
+				<Max>10</Max>
+				<Image>Waywatchers.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+					<Ward>6</Ward>
+				</Profile>
+				<SpecialRules>
+					<HitFirst/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Two hand weapons</Name>
+						<AddToAttacks>1</AddToAttacks>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Longbow</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>Forest Stalker</Rule>
+						<Rule>Lethal Shot</Rule>
+						<Rule>Skirmishers</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shadow Sentiel</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Treeman</Name>
+				<Points>285</Points>
+				<Image>Treeman.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>3</Armour>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+					<Terror/>
+					<Stubborn/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Gnarled fists</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Flammable</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Strangle-roots</Rule>
+						<Rule>Tree Singing</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Great Eagles</Name>
+				<Points>50</Points>
+				<Min>1</Min>
+				<Profile>
+					<Movement>2</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Powerful talon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
