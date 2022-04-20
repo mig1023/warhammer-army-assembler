@@ -40,1824 +40,1826 @@
 		<Released>2001</Released>
 		<Authors>Jake Thornton and Space McQuirk</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strenght</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>10</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>10</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>+1 to dispell</Rule>
-				<Description>+1 to dispell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>20</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Honours">
-			<Artefact>
-				<Name>Pure of Heart</Name>
-				<Type>Weapon</Type>
-				<ImmuneToPsychology/>
-				<Points>0</Points>
-				<Honours/>
-				<Description>This Honour MUST be given to exactly one high Elf character. It costs no points.\n\nThe character, and any unit he joins, is Immune to Panic. If the Pure of Heart character is killed, the High Elf player loses 100 Victory points from his total at the end of the battle. If the scenario does not use Victory points then the demise of the Pure of Heart character has no effect.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Lion Guard</Name>
-				<Type>Weapon</Type>
-				<Stubborn/>
-				<Points>45</Points>
-				<Honours/>
-				<Description>The character comes equipped with a lion cloak. The character and any unit he leads is Stubborn. If you have a character with Lion Guard, then White Lions become a Special Choice for your army (but remain 0-1).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Loremaster</Name>
-				<Type>Weapon</Type>
-				<WizardTo>1</WizardTo>
-				<AddToCast>1</AddToCast>
-				<AddToDispell>1</AddToDispell>
-				<Points>40</Points>
-				<Honours/>
-				<Description>The character is a Level 1 Wizard. Note that he may not cast spells if he is wearing armour (remember that barding for his steed will not affect his spell casting).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Swordmaster</Name>
-				<Type>Weapon</Type>
-				<WizardTo>1</WizardTo>
-				<KillingBlow/>
-				<AddToStrength>2</AddToStrength>
-				<Dependencies>
-					<IfNot>Great weapon</IfNot>
-				</Dependencies>
-				<Points>40</Points>
-				<Honours/>
-				<Description>The character is equipped with a Great weapon and may not take a magic weapon. Instead of striking last in any turn he does not charge, the character will strike in initiative order. The character also has the killing blow special rule.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Seer</Name>
-				<Type>Arcane</Type>
-				<Points>30</Points>
-				<Honours/>
-				<Rule>May choose his spells instead of rolling for them</Rule>
-				<Description>Mage only. May choose his spells instead of rolling for them.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Channeller</Name>
-				<Type>Arcane</Type>
-				<Points>10</Points>
-				<Honours/>
-				<Rule>May cast with a maximum of +1 more Power dice than normal</Rule>
-				<Description>Mage only. May cast with a maximum of +1 more Power dice than normal. For example, a Level 3 Mage may use up to five Power dice in an attempt to cast a spell (instead of the usual four).</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic weapons">
-			<Artefact>
-				<Name>Blade of Leaping Gold</Name>
-				<Type>Weapon</Type>
-				<AddToAttacks>3</AddToAttacks>
-				<Points>60</Points>
-				<Description>The blade confers +3 Attacks on the character wielding it.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bow of the Seafarer</Name>
-				<Type>Weapon</Type>
-				<Points>60</Points>
-				<Rule>Resolve each bow hit like a single bolt from a Bolt Thrower</Rule>
-				<Description>Treat the Bow of the Seafarer as a normal longbow with the following exception. Resolve a hit from this like a single bolt from a Bolt Thrower. Note that you may stand and shoot with the Bow of the Seafarer.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Hoeth</Name>
-				<Type>Weapon</Type>
-				<Points>60</Points>
-				<AutoHit/>
-				<Description>All hits wound automatically. Armour saves are modified by the Strength of the bearer.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blade of Darting Steel</Name>
-				<Type>Weapon</Type>
-				<Points>45</Points>
-				<HitFirst/>
-				<AddToHit>1</AddToHit>
-				<Description>The wielder always strikes first, even if his opponent charged that turn. If both models have this ability, roll off to see who strikes first in each Close Combat phase. In addition, the wielder adds +1 to his rolls to hit.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Reaver bow</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<Rule>Longbow with Strength 5, multiple shot x3</Rule>
-				<Description>Treat the Reaver Bow as a normal longbow with the following exceptions: the bearer may shoot three times at the same target in each ot his Shooting phases and any hits are resolved at Strength 5.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blade of Sea Gold</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<NoArmour/>
-				<Description>No armour saves may be taken against wounds caused by the Blade of Sea Gold.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Foe Bane</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+</Rule>
-				<Description>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+. Armour saves are modified by the Strength of the bearer.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>Armour of Protection</Name>
-				<Type>Armour</Type>
-				<Points>45</Points>
-				<AddToArmour>6</AddToArmour>
-				<AddToWard>4</AddToWard>
-				<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save he may make a 4+ Ward save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Golden Shield</Name>
-				<Type>Shield</Type>
-				<Points>35</Points>
-				<AddToArmour>6</AddToArmour>
-				<SubOpponentToHit>1</SubOpponentToHit>
-				<Description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all attempts to hit the bearer in close combat suffer a penalty of -1.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Stars</Name>
-				<Type>Armour</Type>
-				<OnlyFor>Infantry</OnlyFor>
-				<Points>30</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>After any unsaved wound model is instantly teleported 3D6" in a random direction</Rule>
-				<Description>May only be worn by a model on foot. Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound then one of the gems will burst into brilliant white light as he is instantly teleported 3D6" in a random direction.\n\nNote that this means that he can only suffer 1 unsaved wound in a round of close combat as he will be teleported away before the second can strike him. However, if he was struck by a Killing Blow or a weapon that does multiple wounds per hit (such as a cannon ball) then he would still suffer the instant death or multiplied wounds as normal before teleporting away.\n\nIf the model is teleported into another model or impassable terrain then simply carry on moving it along in the same direction until it is 1" beyond. If the model teleports off the table then treat it as having pursued off.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Heroes</Name>
-				<Type>Armour</Type>
-				<Points>25</Points>
-				<AddToArmour>5</AddToArmour>
-				<Test Bet="Pass" Context="Round">Leadership</Test>
-				<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may attack another model in base contact instead. Models who are Immune to Psychology are immune to this effect also.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Shadow Armour</Name>
-				<Type>Armour</Type>
-				<Points>25</Points>
-				<AddToArmour>5</AddToArmour>
-				<Rule>Scout</Rule>
-				<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Helm of Fortune</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<AddToArmour>6</AddToArmour>
-				<Reroll>ToArmour</Reroll>
-				<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dragonscale Shield</Name>
-				<Type>Shield</Type>
-				<Points>20</Points>
-				<AddToArmour>5</AddToArmour>
-				<AddToWard>6</AddToWard>
-				<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>Vambraces of Defence</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>55</Points>
-				<AddToWard>4</AddToWard>
-				<Reroll>ToArmour</Reroll>
-				<Description>Gives the wearer a 4+ Ward save. In addition, the wearer may re-roll failed armour saves.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Golden Crown of Atrazar</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<FirstWoundDiscount/>
-				<Description>Discount the first wound suffered. One use only.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Loremaster's Cloak</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<Rule>2+ Ward save against wounds caused by spells</Rule>
-				<Description>Gives the wearer and the unit he is with a 2+ Ward save against wounds caused by spells. It has no effect against shooting or close combat attacks.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Saphery</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Rule>The magical weapons of enemy models will have no special effects whilst they are in base contact</Rule>
-				<Description>The magical weapons of enemy models will have no special effects whilst they are in base contact with the bearer of the talisman. Treat the magic weapon as a normal one of its type, eg, a Sword of Battle would count as a hand weapon, Porko's Pigstikka would count as a spear, etc.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sacred Incense</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty</Rule>
-				<Description>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Guardian Phoenix</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<AddToWard>5</AddToWard>
-				<Description>Gives the wearer a 5+ Ward save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Amulet of Fire</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<Rule>Magic Resistance (1)</Rule>
-				<Rule>Cannot be harmed by Flaming Attacks</Rule>
-				<Description>Gives the wearer Magic Resistance (1). In addition, the wearer cannot be harmed by fire-based attacks, eg, Skaven Watpfire Throwers, Dwarf Flame Cannons, or fire balls, etc.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane items">
-			<Artefact>
-				<Name>Book of Hoeth</Name>
-				<Type>Arcane</Type>
-				<Points>100</Points>
-				<Rule>Irresistible Force on any successful casting roll which includes any double, except a Miscast</Rule>
-				<Description>Any spell cast by the mage with this book will be cast with Irresistible Force on any successful casting roll which includes any double, except a Miscast.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Annulian Crystal</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile</Rule>
-				<Description>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Starwood Staff</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>+1 to all casting attempts</Rule>
-				<Description>Gives +1 to all casting attempts made by the wizard carrying it.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sigil of Asuryan</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>Automatically dispels one enemy spell, in addition, roll a D6: on a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle, one use only</Rule>
-				<Description>Automatically dispels one enemy spell. In addition, roll a D6. On a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle. One use only.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Solidity</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Rule>Mage immune to the effects of his first Miscast</Rule>
-				<Description>This staff makes the Mage immune to the effects of his first Miscast. Note that a miscast spell still fails regardless of the actual dice score rolled.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Jewel of the Dusk</Name>
-				<Type>Arcane</Type>
-				<Points>15</Points>
-				<AddToCast>1</AddToCast>
-				<Description>The jewel gives the Mage +1 Power dice in each of his own Magic phases. Only he may use this dice.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Silver Wand</Name>
-				<Type>Arcane</Type>
-				<Points>10</Points>
-				<Rule>One more spell than is normal for level</Rule>
-				<Description>The wearer knows one more spell than is normal for his level.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Null Stone</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>100</Points>
-				<Rule>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work</Rule>
-				<Description>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work. Treat them as normal weapons, banners, etc, of the appropriate type. Note that this applies to all friendly wizards and magic items as well as enemy ones.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Healing Potion</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>50</Points>
-				<Rule>May immediately restores all wounds lost at the start of any phase in either player's turn, one use only</Rule>
-				<Description>The character or any character in base contact may drink this at the start of any phase in either player's turn. It immediately restores all wounds lost by the character during the battle so far. Obviously, if the character is dead at the start of the phase then he can't drink the potion. One use only.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Radiant Gem of Hoeth</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>45</Points>
-				<WizardTo>1</WizardTo>
-				<AddToCast>1</AddToCast>
-				<AddToDispell>1</AddToDispell>
-				<Description>The wearer counts as a Level 1 High Elf Mage. However, the wearer may still cast spells whilst wearing armour. This has no effect on characters who are already Wizards.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Cloak of Beards</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Rule>Dwarfs both Hate and Fear the wearer of the Cloak</Rule>
-				<Rule>Eeach model in base contact with the wearer loses all the runes from one of their runic items</Rule>
-				<Description>Dwarfs both Hate and Fear the wearer of the Cloak. In addition, for the duration of each Close Combat phase, each model in base contact with the wearer loses all the runes from one of their runic items (determined randomly). Treat the item as a normal one of its kind.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ring of Corin</Name>
-				<Type>Arcane</Type>
-				<Points>35</Points>
-				<Rule>Bound spell, Power level 4, one use only: Vaul's Unmaking spell</Rule>
-				<Description>Bound spell (Power level 4). One use only. The Ring of Corin may cast its Bound spell in the Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Corin contains the Vaul's Unmaking spell.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ring of Fury</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>Bound spell, Power level 3: contains the Fury of Khaine spell</Rule>
-				<Description>Bound spell (Power level 3). This ring may cast its Bound Spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Fury contains the Fury of Khaine spell. After each use, even if it was dispelled, roll a D6. On a roll of a 1 the power of the Ring has been exhausted and it may not be used for the rest of the battle.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed tome</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<Rule>All High Elf units within 6" get +1 Leadership</Rule>
-				<Description>The character with the tome recites the stirring words of heroes of old as battle is joined. All High Elf units within 6" of the bearer get +1 Leadership (up to a maximum of 10).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Amulet of the Purifying Flame</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<Rule>Spells that target the character or the unit he is with subtract -3 from their casting roll</Rule>
-				<Description>Spells that target the character or the unit he is with subtract -3 from their casting roll. It has no effect on spells cast with Irresistible Force.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic banner">
-			<Artefact>
-				<Name>Battle Banner</Name>
-				<Type>Banner</Type>
-				<Points>80</Points>
-				<AddToCloseCombat>D6</AddToCloseCombat>
-				<Description>The unit may add +D6 to the combat resolution of any close combat in which it is involved.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of the World Dragon</Name>
-				<Type>Banner</Type>
-				<Points>60</Points>
-				<Rule>The unit is completely immune to all spell effects, whatever their source</Rule>
-				<Description>The unit is completely immune to all spell effects, whatever their source. This includes friendly spells, bound items, and spells with areas of effect that were cast on nearby units, etc. Spells which are cast on another unit, such as the Flaming Sword of Rhuin, will work as normal, as will all magic weapons used to attack them.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Sorcery</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<Rule>+D3 Power dice to pile in each Magic phases</Rule>
-				<Description>The banner adds +D3 Power dice to pile in each of your own Magic phases.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Standard of Balance</Name>
-				<Type>Banner</Type>
-				<Points>45</Points>
-				<ImmuneToPsychology/>
-				<Description>The unit carrying the Standard of Balance, and any enemy unit in base contact with it, is completely immune to all Psychology. Note that troops with frenzy lose it, just as if they had lost a round of combat.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Arcane Protection</Name>
-				<Type>Banner</Type>
-				<Points>40</Points>
-				<Rule>Magic Resistance (2)</Rule>
-				<Rule>Any Undead or Daemon model touching the unit will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases</Rule>
-				<Description>The unit gets Magic Resistance (2). In addition, any Undead or Daemon model touching the unit carrying the banner will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases. Note that this does not count as a close combat attack.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Lion Standard</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<Rule>Immune to fear and terror</Rule>
-				<Description>The unit is immune to fear and terror.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Ellyrion</Name>
-				<Type>Banner</Type>
-				<Points>15</Points>
-				<Rule>The unit treats difficult ground as open ground for purposes of movement</Rule>
-				<Description>The unit treats difficult ground as open ground for purposes of movement.</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Imrik</Name>
-			<Points>675</Points>
-			<Mount>Minaithnir</Mount>
-			<Personified/>
-			<Description>Imrik, Dragon Prince of Caledor</Description>
-			<Image>Imrik.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>8</WeaponSkill>
-				<BallisticSkill>6</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>9</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<SlotOf>Hero</SlotOf>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>No Dragons will fight Imrik, if they are in base contact with other models (and not in a challenge) then they light them instead, otherwise they may do nothing</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Star Lance</Name>
-					<ChargeStrengthBonus>3</ChargeStrengthBonus>
-					<Rule>On the turn he charges, Imrik gets +3 Strength with no armour saves allowed</Rule>
-				</HandWeapon>
-				<Armour>
-					<Name>Armour of Caledor</Name>
-					<ArmourTo>2</ArmourTo>
-					<Rule>Immune to all breath and all Flaming attacks</Rule>
-				</Armour>
-				<Armour>
-					<Name>Dragonhorn</Name>
-					<Rule>Once per battle, at the start of any of his own turns, Imrik may sound the Dragonhorn: until the start of his next turn, all friendly High Elf units may re-roll any Leadership-based tests</Rule>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Tyrion</Name>
-			<Points>585</Points>
-			<Mount>Malhandir</Mount>
-			<Personified/>
-			<Description>Tyrion, Defender of Ulthuan</Description>
-			<Image>Tyrion.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>9</WeaponSkill>
-				<BallisticSkill>7</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>10</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MustBeGeneral/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Parries the first enemy hit against him per Close Combat phase and it has no effect</Rule>
-					<Rule>May re-roll any failed rolls to hit on the first turn of each close combat</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Sunfang</Name>
-					<AddToStrength>3</AddToStrength>
-					<Rule>Once per battle in his own Magic phase, Tyrion may use Sunfang to cast the bound spell Fury of Khaine (power level 6), the spell requires no Power dice to cast, all the power required is provided by Sunfang itself</Rule>
-				</HandWeapon>
-				<Armour>
-					<Name>Dragon Armour of Aenarion</Name>
-					<Rule>Immune to all breath and all Flaming attacks</Rule>
-					<ArmourTo>1</ArmourTo>
-					<AddToWard>4</AddToWard>
-				</Armour>
-				<Armour>
-					<Name>Heart of Avelorn</Name>
-					<Rule>If Tyrion is slain, Heart of Avelorn returns Tyrion to life with 1 Wound, obviously it will only work once</Rule>
-				</Armour>
-				<Armour>
-					<Name>Curse of Aenarion</Name>
-					<WardForLastWound>2</WardForLastWound>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Teclis</Name>
-			<Points>630</Points>
-			<Wizard>4</Wizard>
-			<Personified/>
-			<Description>Teclis, High Loremaster of the White Tower</Description>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>2</Strength>
-				<Toughness>2</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Any spell cast by Teclis will be cast with Irresistible Force on any successful casting roll which includes a double, except a Miscast</Rule>
-					<Rule>Use High Magic know all six spells, regardless ot his current level</Rule>
-					<Rule>May re-roll all dice for spell effects</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Sword of Teclis</Name>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<AddToStrength>1</AddToStrength>
+					<Description>+1 Strenght</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
+					<Points>10</Points>
+					<AddToArmour>5</AddToArmour>
+					<Description>5+ Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>10</Points>
+					<AddToWard>6</AddToWard>
+					<Description>6+ ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>+1 to dispell</Rule>
+					<Description>+1 to dispell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>20</Points>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Honours">
+				<Artefact>
+					<Name>Pure of Heart</Name>
+					<Type>Weapon</Type>
+					<ImmuneToPsychology/>
+					<Points>0</Points>
+					<Honours/>
+					<Description>This Honour MUST be given to exactly one high Elf character. It costs no points.\n\nThe character, and any unit he joins, is Immune to Panic. If the Pure of Heart character is killed, the High Elf player loses 100 Victory points from his total at the end of the battle. If the scenario does not use Victory points then the demise of the Pure of Heart character has no effect.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Lion Guard</Name>
+					<Type>Weapon</Type>
+					<Stubborn/>
+					<Points>45</Points>
+					<Honours/>
+					<Description>The character comes equipped with a lion cloak. The character and any unit he leads is Stubborn. If you have a character with Lion Guard, then White Lions become a Special Choice for your army (but remain 0-1).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Loremaster</Name>
+					<Type>Weapon</Type>
+					<WizardTo>1</WizardTo>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<Points>40</Points>
+					<Honours/>
+					<Description>The character is a Level 1 Wizard. Note that he may not cast spells if he is wearing armour (remember that barding for his steed will not affect his spell casting).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Swordmaster</Name>
+					<Type>Weapon</Type>
+					<WizardTo>1</WizardTo>
+					<KillingBlow/>
+					<AddToStrength>2</AddToStrength>
+					<Dependencies>
+						<IfNot>Great weapon</IfNot>
+					</Dependencies>
+					<Points>40</Points>
+					<Honours/>
+					<Description>The character is equipped with a Great weapon and may not take a magic weapon. Instead of striking last in any turn he does not charge, the character will strike in initiative order. The character also has the killing blow special rule.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Seer</Name>
+					<Type>Arcane</Type>
+					<Points>30</Points>
+					<Honours/>
+					<Rule>May choose his spells instead of rolling for them</Rule>
+					<Description>Mage only. May choose his spells instead of rolling for them.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Channeller</Name>
+					<Type>Arcane</Type>
+					<Points>10</Points>
+					<Honours/>
+					<Rule>May cast with a maximum of +1 more Power dice than normal</Rule>
+					<Description>Mage only. May cast with a maximum of +1 more Power dice than normal. For example, a Level 3 Mage may use up to five Power dice in an attempt to cast a spell (instead of the usual four).</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic weapons">
+				<Artefact>
+					<Name>Blade of Leaping Gold</Name>
+					<Type>Weapon</Type>
+					<AddToAttacks>3</AddToAttacks>
+					<Points>60</Points>
+					<Description>The blade confers +3 Attacks on the character wielding it.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bow of the Seafarer</Name>
+					<Type>Weapon</Type>
+					<Points>60</Points>
+					<Rule>Resolve each bow hit like a single bolt from a Bolt Thrower</Rule>
+					<Description>Treat the Bow of the Seafarer as a normal longbow with the following exception. Resolve a hit from this like a single bolt from a Bolt Thrower. Note that you may stand and shoot with the Bow of the Seafarer.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Hoeth</Name>
+					<Type>Weapon</Type>
+					<Points>60</Points>
+					<AutoHit/>
+					<Description>All hits wound automatically. Armour saves are modified by the Strength of the bearer.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blade of Darting Steel</Name>
+					<Type>Weapon</Type>
+					<Points>45</Points>
+					<HitFirst/>
+					<AddToHit>1</AddToHit>
+					<Description>The wielder always strikes first, even if his opponent charged that turn. If both models have this ability, roll off to see who strikes first in each Close Combat phase. In addition, the wielder adds +1 to his rolls to hit.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Reaver bow</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
+					<Rule>Longbow with Strength 5, multiple shot x3</Rule>
+					<Description>Treat the Reaver Bow as a normal longbow with the following exceptions: the bearer may shoot three times at the same target in each ot his Shooting phases and any hits are resolved at Strength 5.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blade of Sea Gold</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
 					<NoArmour/>
-					<WoundOn>2</WoundOn>
-				</HandWeapon>
-				<Armour>
-					<Name>Curse of Aenarion</Name>
-					<WardForLastWound>2</WardForLastWound>
-				</Armour>
-				<Arcane>
-					<Name>Potions of Inner Strength</Name>
-					<WeaponSkillTo>6</WeaponSkillTo>
-					<BallisticSkillTo>4</BallisticSkillTo>
-					<StrengthTo>3</StrengthTo>
-					<InitiativeTo>6</InitiativeTo>
-					<AttacksTo>3</AttacksTo>
-				</Arcane>
-				<Arcane>
-					<Name>The Moon Staff of Lileath</Name>
-					<AddToCast>1</AddToCast>
-					<Rule>Once per battle, Moon Staff may granted D6 extra dice to cast, but no more additional dice for the rest of the battle</Rule>
-				</Arcane>
-				<Arcane>
-					<Name>Scroll of Hoeth</Name>
-					<Rule>One use only, same as Dispel scroll, in addition, both Teclis and the caster roll a D6: if Teclis scores higher, the spell cannot be reused by caster</Rule>
-				</Arcane>
-				<Arcane>
-					<Name>The War Crown</Name>
-					<Rule>Any spell which is normally limited to a specific range in inches is now of unlimited range</Rule>
-				</Arcane>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Prince</Name>
-			<Points>125</Points>
-			<Description>Prince</Description>
-			<Image>Prince.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>6</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>8</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Lance</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>6</Points>
-					<Lance/>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Longbow</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-						<IfNot>Dragon armour</IfNot>
-					</Dependencies>
+					<Description>No armour saves may be taken against wounds caused by the Blade of Sea Gold.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Foe Bane</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+</Rule>
+					<Description>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+. Armour saves are modified by the Strength of the bearer.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>Armour of Protection</Name>
+					<Type>Armour</Type>
+					<Points>45</Points>
 					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-						<IfNot>Dragon armour</IfNot>
-					</Dependencies>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Dragon armour</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<AddToArmour>5</AddToArmour>
-					<Rule>Immune to all breath and all Flaming attacks</Rule>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barded Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Great Eagle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Giffon</Name>
-					<Type>Option</Type>
-					<Points>200</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Dragon</Name>
-					<Type>Option</Type>
-					<Points>320</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Archmage</Name>
-			<Points>220</Points>
-			<Wizard>3</Wizard>
-			<Description>Archmage</Description>
-			<Image>Archmage.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 4</Name>
-					<Type>Option</Type>
+					<AddToWard>4</AddToWard>
+					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save he may make a 4+ Ward save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Golden Shield</Name>
+					<Type>Shield</Type>
 					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barded Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>26</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Great Eagle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Commander</Name>
-			<Points>70</Points>
-			<Description>Commander</Description>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>6</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>7</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Lance</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>4</Points>
-					<Lance/>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<Description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all attempts to hit the bearer in close combat suffer a penalty of -1.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Stars</Name>
+					<Type>Armour</Type>
 					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Longbow</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-						<IfNot>Dragon armour</IfNot>
-					</Dependencies>
+					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-						<IfNot>Dragon armour</IfNot>
-					</Dependencies>
+					<Rule>After any unsaved wound model is instantly teleported 3D6" in a random direction</Rule>
+					<Description>May only be worn by a model on foot. Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound then one of the gems will burst into brilliant white light as he is instantly teleported 3D6" in a random direction.\n\nNote that this means that he can only suffer 1 unsaved wound in a round of close combat as he will be teleported away before the second can strike him. However, if he was struck by a Killing Blow or a weapon that does multiple wounds per hit (such as a cannon ball) then he would still suffer the instant death or multiplied wounds as normal before teleporting away.\n\nIf the model is teleported into another model or impassable terrain then simply carry on moving it along in the same direction until it is 1" beyond. If the model teleports off the table then treat it as having pursued off.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Heroes</Name>
+					<Type>Armour</Type>
+					<Points>25</Points>
 					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Dragon armour</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
+					<Test Bet="Pass" Context="Round">Leadership</Test>
+					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may attack another model in base contact instead. Models who are Immune to Psychology are immune to this effect also.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Shadow Armour</Name>
+					<Type>Armour</Type>
+					<Points>25</Points>
 					<AddToArmour>5</AddToArmour>
-					<Rule>Immune to all breath and all Flaming attacks</Rule>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
+					<Rule>Scout</Rule>
+					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Helm of Fortune</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barded Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Great Eagle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Mage</Name>
-			<Points>95</Points>
-			<Wizard>1</Wizard>
-			<Description>Mage</Description>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
+					<Reroll>ToArmour</Reroll>
+					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dragonscale Shield</Name>
+					<Type>Shield</Type>
+					<Points>20</Points>
+					<AddToArmour>5</AddToArmour>
+					<AddToWard>6</AddToWard>
+					<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>Vambraces of Defence</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>55</Points>
+					<AddToWard>4</AddToWard>
+					<Reroll>ToArmour</Reroll>
+					<Description>Gives the wearer a 4+ Ward save. In addition, the wearer may re-roll failed armour saves.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Golden Crown of Atrazar</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<FirstWoundDiscount/>
+					<Description>Discount the first wound suffered. One use only.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Loremaster's Cloak</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<Rule>2+ Ward save against wounds caused by spells</Rule>
+					<Description>Gives the wearer and the unit he is with a 2+ Ward save against wounds caused by spells. It has no effect against shooting or close combat attacks.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Saphery</Name>
+					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
+					<Rule>The magical weapons of enemy models will have no special effects whilst they are in base contact</Rule>
+					<Description>The magical weapons of enemy models will have no special effects whilst they are in base contact with the bearer of the talisman. Treat the magic weapon as a normal one of its type, eg, a Sword of Battle would count as a hand weapon, Porko's Pigstikka would count as a spear, etc.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sacred Incense</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty</Rule>
+					<Description>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Guardian Phoenix</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<AddToWard>5</AddToWard>
+					<Description>Gives the wearer a 5+ Ward save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Amulet of Fire</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<Rule>Magic Resistance (1)</Rule>
+					<Rule>Cannot be harmed by Flaming Attacks</Rule>
+					<Description>Gives the wearer Magic Resistance (1). In addition, the wearer cannot be harmed by fire-based attacks, eg, Skaven Watpfire Throwers, Dwarf Flame Cannons, or fire balls, etc.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane items">
+				<Artefact>
+					<Name>Book of Hoeth</Name>
+					<Type>Arcane</Type>
+					<Points>100</Points>
+					<Rule>Irresistible Force on any successful casting roll which includes any double, except a Miscast</Rule>
+					<Description>Any spell cast by the mage with this book will be cast with Irresistible Force on any successful casting roll which includes any double, except a Miscast.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Annulian Crystal</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile</Rule>
+					<Description>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Starwood Staff</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>+1 to all casting attempts</Rule>
+					<Description>Gives +1 to all casting attempts made by the wizard carrying it.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sigil of Asuryan</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>Automatically dispels one enemy spell, in addition, roll a D6: on a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle, one use only</Rule>
+					<Description>Automatically dispels one enemy spell. In addition, roll a D6. On a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle. One use only.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Solidity</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Rule>Mage immune to the effects of his first Miscast</Rule>
+					<Description>This staff makes the Mage immune to the effects of his first Miscast. Note that a miscast spell still fails regardless of the actual dice score rolled.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Jewel of the Dusk</Name>
+					<Type>Arcane</Type>
+					<Points>15</Points>
 					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barded Elven Steed</Name>
-					<Type>Option</Type>
-					<Points>17</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Elven Steed</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Barded Elven Steed</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-				<Armour>6</Armour>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Malhandir</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>10</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Great Eagle</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>2</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Giffon</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Dragon</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<SlotOf>Hero</SlotOf>
-				<Terror/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Scaly skin</Name>
-					<AddToArmour>3</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Breathe Fire</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Minaithnir</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>7</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Scaly skin</Name>
-					<AddToArmour>3</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Breathe Fire</Rule>
-					<Rule>If Imrik is slain, will become subject to the rules for frenzy, but will otherwise remain under the control of the High Elf player</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Archers</Name>
-			<Points>12</Points>
-			<Min>10</Min>
-			<Image>Archers.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Longbow</Name>
-				</RangeWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Spearman</Name>
-			<Points>11</Points>
-			<Min>10</Min>
-			<Image>Spearman.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Fight in three ranks with spears</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Lothern Sea Guard</Name>
-			<Points>15</Points>
-			<Min>10</Min>
-			<UniqueUnits/>
-			<Image>SeaGuard.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Bow</Name>
-				</RangeWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Fight in three ranks with spears</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Silver Helms</Name>
-			<Points>19</Points>
-			<Min>5</Min>
-			<Mount>Barded Elven Steed</Mount>
-			<Image>SilverHelms.jpg</Image>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Lance</Name>
-					<Lance/>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Ellyrian Reavers</Name>
-			<Points>18</Points>
-			<Min>5</Min>
-			<Mount>Elven Steed</Mount>
-			<Image>EllyrianReavers.jpg</Image>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>6</Armour>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Fast Cavalry</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Bow</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<PerModel/>
-					<Dependencies>
-						<IfNot>Swap spear for bow</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Swap spear for bow</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<Dependencies>
-						<IfNot>Bow</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Harbinger</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Dragon Princes of Caledor</Name>
-			<Points>26</Points>
-			<Min>5</Min>
-			<UniqueUnits/>
-			<Mount>Barded Elven Steed</Mount>
-			<Image>DragonPrinces.jpg</Image>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Lance</Name>
-					<Lance/>
-				</HandWeapon>
-				<Armour>
-					<Name>Dragon armour</Name>
-					<AddToArmour>5</AddToArmour>
-					<Rule>Immune to all breath and all Flaming attacks</Rule>
-				</Armour>
-				<Armour>
-					<Name>Shields</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>9</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>18</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Drakemaster</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>18</Points>
-					<MagicItems Points="25" Type="Hero"/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Swordmasters of Hoeth</Name>
-			<Points>13</Points>
-			<Min>5</Min>
-			<UniqueUnits/>
-			<Image>Swordmasters.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great weapon</Name>
-					<AddToStrength>2</AddToStrength>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Swordmasters</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Bladelord</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="25" Type="Hero"/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Shadow Warriors</Name>
-			<Points>15</Points>
-			<Min>5</Min>
-			<Max>15</Max>
-			<Image>ShadowWarriors.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Scouts</Rule>
-					<Rule>Skirmish</Rule>
-					<Rule>Hate Dark Elves</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Longbow</Name>
-				</RangeWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shadow-walker</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Tiranoc Chariot</Name>
-			<Points>85</Points>
-			<Chariot>2</Chariot>
-			<Mount>Barded Elven Steed</Mount>
-			<Image>TiranocChariot.jpg</Image>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-				<ImpactHit>D6</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Chariot</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Bow</Name>
-				</RangeWeapon>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Phoenix Guard</Name>
-			<Points>15</Points>
-			<Min>10</Min>
-			<UniqueUnits/>
-			<Image>PhoenixGuard.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Halberd</Name>
-					<AddToStrength>1</AddToStrength>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Keeper of the Flame</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="25" Type="Hero"/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Repeater Bolt Thrower</Name>
-			<Points>100</Points>
-			<Image>RepeaterBoltThrower.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Repeater Bolt Thrower</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>White Lions</Name>
-			<Points>13</Points>
-			<Min>10</Min>
-			<UniqueUnits/>
-			<Image>WhiteLions.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Stubborn/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great axes</Name>
-					<AddToStrength>2</AddToStrength>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<AdditionalArmour>
-					<Name>Lion cloak</Name>
-				</AdditionalArmour>
-				<Special>
-					<Rule>Woodsmen</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Guardian</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-					<MagicItems Points="25" Type="Hero"/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Great Eagle</Name>
-			<Points>50</Points>
-			<Image>GreatEagle.jpg</Image>
-			<Profile>
-				<Movement>2</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-	</Units>
+					<Description>The jewel gives the Mage +1 Power dice in each of his own Magic phases. Only he may use this dice.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Silver Wand</Name>
+					<Type>Arcane</Type>
+					<Points>10</Points>
+					<Rule>One more spell than is normal for level</Rule>
+					<Description>The wearer knows one more spell than is normal for his level.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Null Stone</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>100</Points>
+					<Rule>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work</Rule>
+					<Description>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work. Treat them as normal weapons, banners, etc, of the appropriate type. Note that this applies to all friendly wizards and magic items as well as enemy ones.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Healing Potion</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>50</Points>
+					<Rule>May immediately restores all wounds lost at the start of any phase in either player's turn, one use only</Rule>
+					<Description>The character or any character in base contact may drink this at the start of any phase in either player's turn. It immediately restores all wounds lost by the character during the battle so far. Obviously, if the character is dead at the start of the phase then he can't drink the potion. One use only.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Radiant Gem of Hoeth</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>45</Points>
+					<WizardTo>1</WizardTo>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<Description>The wearer counts as a Level 1 High Elf Mage. However, the wearer may still cast spells whilst wearing armour. This has no effect on characters who are already Wizards.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Cloak of Beards</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<Rule>Dwarfs both Hate and Fear the wearer of the Cloak</Rule>
+					<Rule>Eeach model in base contact with the wearer loses all the runes from one of their runic items</Rule>
+					<Description>Dwarfs both Hate and Fear the wearer of the Cloak. In addition, for the duration of each Close Combat phase, each model in base contact with the wearer loses all the runes from one of their runic items (determined randomly). Treat the item as a normal one of its kind.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ring of Corin</Name>
+					<Type>Arcane</Type>
+					<Points>35</Points>
+					<Rule>Bound spell, Power level 4, one use only: Vaul's Unmaking spell</Rule>
+					<Description>Bound spell (Power level 4). One use only. The Ring of Corin may cast its Bound spell in the Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Corin contains the Vaul's Unmaking spell.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ring of Fury</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>Bound spell, Power level 3: contains the Fury of Khaine spell</Rule>
+					<Description>Bound spell (Power level 3). This ring may cast its Bound Spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Fury contains the Fury of Khaine spell. After each use, even if it was dispelled, roll a D6. On a roll of a 1 the power of the Ring has been exhausted and it may not be used for the rest of the battle.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed tome</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<Rule>All High Elf units within 6" get +1 Leadership</Rule>
+					<Description>The character with the tome recites the stirring words of heroes of old as battle is joined. All High Elf units within 6" of the bearer get +1 Leadership (up to a maximum of 10).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Amulet of the Purifying Flame</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<Rule>Spells that target the character or the unit he is with subtract -3 from their casting roll</Rule>
+					<Description>Spells that target the character or the unit he is with subtract -3 from their casting roll. It has no effect on spells cast with Irresistible Force.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic banner">
+				<Artefact>
+					<Name>Battle Banner</Name>
+					<Type>Banner</Type>
+					<Points>80</Points>
+					<AddToCloseCombat>D6</AddToCloseCombat>
+					<Description>The unit may add +D6 to the combat resolution of any close combat in which it is involved.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of the World Dragon</Name>
+					<Type>Banner</Type>
+					<Points>60</Points>
+					<Rule>The unit is completely immune to all spell effects, whatever their source</Rule>
+					<Description>The unit is completely immune to all spell effects, whatever their source. This includes friendly spells, bound items, and spells with areas of effect that were cast on nearby units, etc. Spells which are cast on another unit, such as the Flaming Sword of Rhuin, will work as normal, as will all magic weapons used to attack them.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Sorcery</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<Rule>+D3 Power dice to pile in each Magic phases</Rule>
+					<Description>The banner adds +D3 Power dice to pile in each of your own Magic phases.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Standard of Balance</Name>
+					<Type>Banner</Type>
+					<Points>45</Points>
+					<ImmuneToPsychology/>
+					<Description>The unit carrying the Standard of Balance, and any enemy unit in base contact with it, is completely immune to all Psychology. Note that troops with frenzy lose it, just as if they had lost a round of combat.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Arcane Protection</Name>
+					<Type>Banner</Type>
+					<Points>40</Points>
+					<Rule>Magic Resistance (2)</Rule>
+					<Rule>Any Undead or Daemon model touching the unit will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases</Rule>
+					<Description>The unit gets Magic Resistance (2). In addition, any Undead or Daemon model touching the unit carrying the banner will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases. Note that this does not count as a close combat attack.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Lion Standard</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<Rule>Immune to fear and terror</Rule>
+					<Description>The unit is immune to fear and terror.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Ellyrion</Name>
+					<Type>Banner</Type>
+					<Points>15</Points>
+					<Rule>The unit treats difficult ground as open ground for purposes of movement</Rule>
+					<Description>The unit treats difficult ground as open ground for purposes of movement.</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Imrik</Name>
+				<Points>675</Points>
+				<Mount>Minaithnir</Mount>
+				<Personified/>
+				<Description>Imrik, Dragon Prince of Caledor</Description>
+				<Image>Imrik.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>8</WeaponSkill>
+					<BallisticSkill>6</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>9</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<SlotOf>Hero</SlotOf>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>No Dragons will fight Imrik, if they are in base contact with other models (and not in a challenge) then they light them instead, otherwise they may do nothing</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Star Lance</Name>
+						<ChargeStrengthBonus>3</ChargeStrengthBonus>
+						<Rule>On the turn he charges, Imrik gets +3 Strength with no armour saves allowed</Rule>
+					</HandWeapon>
+					<Armour>
+						<Name>Armour of Caledor</Name>
+						<ArmourTo>2</ArmourTo>
+						<Rule>Immune to all breath and all Flaming attacks</Rule>
+					</Armour>
+					<Armour>
+						<Name>Dragonhorn</Name>
+						<Rule>Once per battle, at the start of any of his own turns, Imrik may sound the Dragonhorn: until the start of his next turn, all friendly High Elf units may re-roll any Leadership-based tests</Rule>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Tyrion</Name>
+				<Points>585</Points>
+				<Mount>Malhandir</Mount>
+				<Personified/>
+				<Description>Tyrion, Defender of Ulthuan</Description>
+				<Image>Tyrion.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>9</WeaponSkill>
+					<BallisticSkill>7</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>10</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MustBeGeneral/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Parries the first enemy hit against him per Close Combat phase and it has no effect</Rule>
+						<Rule>May re-roll any failed rolls to hit on the first turn of each close combat</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Sunfang</Name>
+						<AddToStrength>3</AddToStrength>
+						<Rule>Once per battle in his own Magic phase, Tyrion may use Sunfang to cast the bound spell Fury of Khaine (power level 6), the spell requires no Power dice to cast, all the power required is provided by Sunfang itself</Rule>
+					</HandWeapon>
+					<Armour>
+						<Name>Dragon Armour of Aenarion</Name>
+						<Rule>Immune to all breath and all Flaming attacks</Rule>
+						<ArmourTo>1</ArmourTo>
+						<AddToWard>4</AddToWard>
+					</Armour>
+					<Armour>
+						<Name>Heart of Avelorn</Name>
+						<Rule>If Tyrion is slain, Heart of Avelorn returns Tyrion to life with 1 Wound, obviously it will only work once</Rule>
+					</Armour>
+					<Armour>
+						<Name>Curse of Aenarion</Name>
+						<WardForLastWound>2</WardForLastWound>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Teclis</Name>
+				<Points>630</Points>
+				<Wizard>4</Wizard>
+				<Personified/>
+				<Description>Teclis, High Loremaster of the White Tower</Description>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>2</Strength>
+					<Toughness>2</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Any spell cast by Teclis will be cast with Irresistible Force on any successful casting roll which includes a double, except a Miscast</Rule>
+						<Rule>Use High Magic know all six spells, regardless ot his current level</Rule>
+						<Rule>May re-roll all dice for spell effects</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Sword of Teclis</Name>
+						<NoArmour/>
+						<WoundOn>2</WoundOn>
+					</HandWeapon>
+					<Armour>
+						<Name>Curse of Aenarion</Name>
+						<WardForLastWound>2</WardForLastWound>
+					</Armour>
+					<Arcane>
+						<Name>Potions of Inner Strength</Name>
+						<WeaponSkillTo>6</WeaponSkillTo>
+						<BallisticSkillTo>4</BallisticSkillTo>
+						<StrengthTo>3</StrengthTo>
+						<InitiativeTo>6</InitiativeTo>
+						<AttacksTo>3</AttacksTo>
+					</Arcane>
+					<Arcane>
+						<Name>The Moon Staff of Lileath</Name>
+						<AddToCast>1</AddToCast>
+						<Rule>Once per battle, Moon Staff may granted D6 extra dice to cast, but no more additional dice for the rest of the battle</Rule>
+					</Arcane>
+					<Arcane>
+						<Name>Scroll of Hoeth</Name>
+						<Rule>One use only, same as Dispel scroll, in addition, both Teclis and the caster roll a D6: if Teclis scores higher, the spell cannot be reused by caster</Rule>
+					</Arcane>
+					<Arcane>
+						<Name>The War Crown</Name>
+						<Rule>Any spell which is normally limited to a specific range in inches is now of unlimited range</Rule>
+					</Arcane>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Prince</Name>
+				<Points>125</Points>
+				<Description>Prince</Description>
+				<Image>Prince.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>6</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>8</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Lance</Name>
+						<Type>Option</Type>
+						<OnlyFor>Mount</OnlyFor>
+						<Points>6</Points>
+						<Lance/>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Longbow</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+							<IfNot>Dragon armour</IfNot>
+						</Dependencies>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+							<IfNot>Dragon armour</IfNot>
+						</Dependencies>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Dragon armour</Name>
+						<Type>Option</Type>
+						<Points>8</Points>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<AddToArmour>5</AddToArmour>
+						<Rule>Immune to all breath and all Flaming attacks</Rule>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barded Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>24</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Great Eagle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Giffon</Name>
+						<Type>Option</Type>
+						<Points>200</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Dragon</Name>
+						<Type>Option</Type>
+						<Points>320</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Archmage</Name>
+				<Points>220</Points>
+				<Wizard>3</Wizard>
+				<Description>Archmage</Description>
+				<Image>Archmage.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 4</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barded Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>26</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Great Eagle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Commander</Name>
+				<Points>70</Points>
+				<Description>Commander</Description>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>6</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>7</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Lance</Name>
+						<Type>Option</Type>
+						<OnlyFor>Mount</OnlyFor>
+						<Points>4</Points>
+						<Lance/>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Longbow</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+							<IfNot>Dragon armour</IfNot>
+						</Dependencies>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+							<IfNot>Dragon armour</IfNot>
+						</Dependencies>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Dragon armour</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<AddToArmour>5</AddToArmour>
+						<Rule>Immune to all breath and all Flaming attacks</Rule>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barded Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Great Eagle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Mage</Name>
+				<Points>95</Points>
+				<Wizard>1</Wizard>
+				<Description>Mage</Description>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barded Elven Steed</Name>
+						<Type>Option</Type>
+						<Points>17</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Elven Steed</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Barded Elven Steed</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+					<Armour>6</Armour>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Malhandir</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>10</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Great Eagle</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>2</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Giffon</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Dragon</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<SlotOf>Hero</SlotOf>
+					<Terror/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Scaly skin</Name>
+						<AddToArmour>3</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Breathe Fire</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Minaithnir</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>7</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Scaly skin</Name>
+						<AddToArmour>3</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Breathe Fire</Rule>
+						<Rule>If Imrik is slain, will become subject to the rules for frenzy, but will otherwise remain under the control of the High Elf player</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Archers</Name>
+				<Points>12</Points>
+				<Min>10</Min>
+				<Image>Archers.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Longbow</Name>
+					</RangeWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Spearman</Name>
+				<Points>11</Points>
+				<Min>10</Min>
+				<Image>Spearman.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Fight in three ranks with spears</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Lothern Sea Guard</Name>
+				<Points>15</Points>
+				<Min>10</Min>
+				<UniqueUnits/>
+				<Image>SeaGuard.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Bow</Name>
+					</RangeWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Fight in three ranks with spears</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Silver Helms</Name>
+				<Points>19</Points>
+				<Min>5</Min>
+				<Mount>Barded Elven Steed</Mount>
+				<Image>SilverHelms.jpg</Image>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Lance</Name>
+						<Lance/>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Ellyrian Reavers</Name>
+				<Points>18</Points>
+				<Min>5</Min>
+				<Mount>Elven Steed</Mount>
+				<Image>EllyrianReavers.jpg</Image>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>6</Armour>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Fast Cavalry</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Bow</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<PerModel/>
+						<Dependencies>
+							<IfNot>Swap spear for bow</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Swap spear for bow</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<Dependencies>
+							<IfNot>Bow</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Harbinger</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Dragon Princes of Caledor</Name>
+				<Points>26</Points>
+				<Min>5</Min>
+				<UniqueUnits/>
+				<Mount>Barded Elven Steed</Mount>
+				<Image>DragonPrinces.jpg</Image>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Lance</Name>
+						<Lance/>
+					</HandWeapon>
+					<Armour>
+						<Name>Dragon armour</Name>
+						<AddToArmour>5</AddToArmour>
+						<Rule>Immune to all breath and all Flaming attacks</Rule>
+					</Armour>
+					<Armour>
+						<Name>Shields</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>9</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>18</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Drakemaster</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>18</Points>
+						<MagicItems Points="25" Type="Hero"/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Swordmasters of Hoeth</Name>
+				<Points>13</Points>
+				<Min>5</Min>
+				<UniqueUnits/>
+				<Image>Swordmasters.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great weapon</Name>
+						<AddToStrength>2</AddToStrength>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Swordmasters</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Bladelord</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="25" Type="Hero"/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Shadow Warriors</Name>
+				<Points>15</Points>
+				<Min>5</Min>
+				<Max>15</Max>
+				<Image>ShadowWarriors.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Scouts</Rule>
+						<Rule>Skirmish</Rule>
+						<Rule>Hate Dark Elves</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Longbow</Name>
+					</RangeWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shadow-walker</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Tiranoc Chariot</Name>
+				<Points>85</Points>
+				<Chariot>2</Chariot>
+				<Mount>Barded Elven Steed</Mount>
+				<Image>TiranocChariot.jpg</Image>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+					<ImpactHit>D6</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Chariot</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Bow</Name>
+					</RangeWeapon>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Phoenix Guard</Name>
+				<Points>15</Points>
+				<Min>10</Min>
+				<UniqueUnits/>
+				<Image>PhoenixGuard.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Halberd</Name>
+						<AddToStrength>1</AddToStrength>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Keeper of the Flame</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="25" Type="Hero"/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Repeater Bolt Thrower</Name>
+				<Points>100</Points>
+				<Image>RepeaterBoltThrower.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Repeater Bolt Thrower</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>White Lions</Name>
+				<Points>13</Points>
+				<Min>10</Min>
+				<UniqueUnits/>
+				<Image>WhiteLions.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Stubborn/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great axes</Name>
+						<AddToStrength>2</AddToStrength>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<AdditionalArmour>
+						<Name>Lion cloak</Name>
+					</AdditionalArmour>
+					<Special>
+						<Rule>Woodsmen</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Guardian</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+						<MagicItems Points="25" Type="Hero"/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Great Eagle</Name>
+				<Points>50</Points>
+				<Image>GreatEagle.jpg</Image>
+				<Profile>
+					<Movement>2</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
