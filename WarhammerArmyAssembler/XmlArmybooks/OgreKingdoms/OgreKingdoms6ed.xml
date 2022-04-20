@@ -40,1249 +40,1251 @@
 		<Released>2004</Released>
 		<Authors>Phil Kelly</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strenght</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ Ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<Rule>+1 to dispell</Rule>
-				<Description>+1 to dispell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic Weapons">
-			<Artefact>
-				<Name>Thundermace</Name>
-				<Type>Weapon</Type>
-				<Points>55</Points>
-				<NoArmour/>
-				<MultiWounds>D6</MultiWounds>
-				<StrenghtTo>8</StrenghtTo>
-				<Rule>Thundermace single attack</Rule>
-				<Description>The Thundermace is a two-handed weapon that follows all the rules for great weapons. A Tyrant with the Thundermace may opt to make only one attack per Close Combat phase. On a successful hit (use the highest Weapon Skill amongst the enemy models in base contact to determine whether the Tyrant hits), place the small template anywhere so that it is touching but not overlapping the 'tyrant's base (it may touch friendly models should you so wish, though it does not affect them). Determine casualties exactly as if the unit had suffered a direct hit by a Strength 4(8) stone thrower. In a challenge, a Tyrant choosing to use this special attack does not use a template but instead strikes at Strength 8, doing D6 wounds and ignoring normal Armour Saves.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Tenderiser</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<AddToStrength>2</AddToStrength>
-				<HitLast/>
-				<MultiWounds>D3</MultiWounds>
-				<Description>The Tenderiser is a two-handed weapon that follows all the rules for great weapons. A model wounded by the Tenderiser (after saves, etc) loses not one but D3 wound.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Siegebreaker</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<AddToStrength>3</AddToStrength>
-				<HitLast/>
-				<MultiWounds>D6</MultiWounds>
-				<Rule>When rolling to hit, compare the Ogre's Weapon Skill with the enemy's Initiative value instead his Weapon Skill</Rule>
-				<Description>Siegebreakeris a two-handed weapon that follows all the rules for great weapons, but adds +3 Strength instead of +2. When rolling to hit, compare the Ogre's Weapon Skill with the enemy's Initiative value instead his Weapon Skill - it is impossible to deflect a blow from the Siegebreaker. Targets without an Initiative character will be hit automatically, and will take D6 wound instead of the usual 1.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Skullplucker</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<KillingBlow/>
-				<Description>The Ogre with this weapon has Killing Blow.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bloodcleaver</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Every time a Butcher causes an unsaved wound, he may regain one wound he lost earlier in the battle</Rule>
-				<Description>Butchers only. Every time a Butcher causes an unsaved wound with the Bloodcleaver, he may regain one wound he lost earlier in the battle.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>Mastodon Armour</Name>
-				<Type>Armour</Type>
-				<Points>50</Points>
-				<AddToArmour>5</AddToArmour>
-				<Rule>If character is killed by an attack that is not made in close combat, then rolls a dice: on the roll of a 2+ he is return to life with 1 wound at the end of the phase</Rule>
-				<Description>The Mastodon Armour is heavy armour (5+ Armour Save). If at any point the wielder is killed by an attack that is not made in close combat, then rolls a dice. On the roll of a 2+ he is return to life with 1 wound at the end of the phase.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Greatskull</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Any spellcaster that targets the character or the unit he is with, will miscast on any roll of a double 2 or a double 3 as well as on the roll of a double 1</Rule>
-				<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. Any spellcaster that targets the character with the Greatskull, or the unit he is with, will miscast on any roll of a double 2 or a double 3 as well as on the roll of a double 1.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bullgut</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Unit Strength as 6</Rule>
-				<Rule>Impact hits caused by the Ogre's Bull Charge are considered to be Armour Piercing</Rule>
-				<Description>The Bullgut confers a 6+ Armour Save that can be combined with other equipment normally. On any turn the bearer charges, he counts his Unit Strength as 6, and any impact hits caused by the Ogre's Bull Charge are considered to be Armour Piercing.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gut Maw</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>If character kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent, if character is already at full Wounds, then he may add +1 Wound to his profile</Rule>
-				<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. If an Ogre wearing the Gut Maw kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent. If the owner of the Gut Maw is already at full Wounds, then he may add +1 Wound to his profile.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>Cathayan Jet</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>3+ Ward Save against all wounds caused on him by spells or bound spells</Rule>
-				<Description>The character gains a 3+ Ward Save against all wounds caused on him by spells or bound spells, apart from spells chosen from the High and Dark Magic spell lists and wounds incurred from Gut Magic.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Spangleshard</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>For each individual wound the bearer suffers, roll a D6. If this roll is higher than the result of the To Wound roll, that wound is discounted</Rule>
-				<Description>For each individual wound the bearer suffers, roll a D6. If this roll is higher than the result of the To Wound roll, that wound is discounted. For instance, if the bearer takes a Strength 10 hit and the resultant To Wound roll is a 3, the bearer would have to roll a 4+ to nullify it. This roll is taken before any multiple wounds are caused, and cannot affect automatic wounds.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Wyrdstone necklace</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<AddToWard>5</AddToWard>
-				<Rule>Roll a D6 after deployment, if the result is a 1 the bearer suffers a wound with no saves allowed</Rule>
-				<Rule>For each individual wound the bearer suffers, roll a D6. If this roll is higher than the result of the To Wound roll, that wound is discounted</Rule>
-				<Description>The Ogre with this item gains a 5+ Ward Save. Roll a D6 after deployment, if the result is a 1 the bearer suffers a wound with no saves allowed.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gnoblar Thiefstone</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<Runic>1</Runic>
-				<Rule>Magic Resistance (1)</Rule>
-				<Description>Due to the magical flux generated by this item, the wearer and the unit he is with benefits from Magic Resistance (1). A character may take more than one Thiefstone (to a maximum of three) at 15 points per stone, each additional Thiefstone adds +1 to his Magic Resistance.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gnoblar Thiefstone</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Runic>2</Runic>
-				<Rule>Magic Resistance (2)</Rule>
-			</Artefact>
-			<Artefact>
-				<Name>Gnoblar Thiefstone</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>45</Points>
-				<Runic>3</Runic>
-				<Rule>Magic Resistance (3)</Rule>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane Items">
-			<Artefact>
-				<Name>Hellheart</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<Rule>One use only: character immediately taking an automatic Strength 3 hit, for the remainder of the phase, any Casting roll that includes a double will result in a Miscast, not just a double 1, any wizard suffering a Miscast must roll on the Gut Magic Miscast table</Rule>
-				<Description>One use only. The Butcher may use this item at the start of his opponent's Magic phase, immediately taking an automatic Strength 3 hit. For the remainder of the phase, any Casting roll that includes a double will result in a Miscast, not just a double 1. Any wizard suffering a Miscast must roll on the Gut Magic Miscast table instead of his own (he is counted as a Butcher). If a spell is cast with Irresistible Force, resolve the spell as usual and then roll on the Gut Magic Miscast table.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Grut's Sickle</Name>
-				<Type>Arcane</Type>
-				<Points>35</Points>
-				<Rule>After rolling Casting dice for a Gut Magic spell may choose to cause a wound on a unit he has joined in order to gain another Casting dice, which may exceed his normal limit</Rule>
-				<Description>After rolling Casting dice for a Gut Magic spell, a Butcher with the Sickle may choose to cause a wound on a unit he has joined in order to gain another Casting dice, which may exceed his normal limit. This extra dice is rolled immediately and added to the casting total. This may cause Irresistible Force or a Miscast as usual, and may only be done once per phase wounds caused by the Sickle may not be allocated to characters, and may not be saved or Regenerated in any way.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Halfling Cookbook</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Rule>May re-roll the To Wound dice when he suffers a wound from a successful Bonecruncher or Toothcracker spell, and only suffers a wound from the Trollguts spell on the roll of a 4+</Rule>
-				<Description>A Butcher with the Halfling Cookbook may re-roll the To Wound dice when he suffers a wound from a successful Bonecruncher or Toothcracker spell, and only suffers a wound from the Trollguts spell on the roll of a 4+.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bangstick</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Rule>Bound spell, Power level 3: Magic missile with a 24" range, causing D6 S4 hits, line of sight may be freely drawn through friendly unengaged Gnoblar units, which will also sustain D6 S4 hits in exactly the same manner as the target</Rule>
-				<Description>Bound Spell - Power Level 3. The Bangstick may be used once per turn to cast a magic missile with a 24" range, causing D6 S4 hits. Line of sight may be freely drawn through friendly unengaged Gnoblar units, which will also sustain D6 S4 hits in exactly the same manner as the target.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Skullmantle</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Rule>Any enemy unit forced to take any Leadership tests due to the character or a unit he has joined, suffers a -1 penalty to their Leadership</Rule>
-				<Description>Any enemy unit forced to take any Leadership tests (including Psychology and Break tests) due to the Butcher wearing the Skull mantle, or a unit he has joined, suffers a -1 penalty to their Leadership.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted Items">
-			<Artefact>
-				<Name>Brahmir Statue</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Rule>All Psychology tests caused by the character (or the unit is with) upon Chaos or Skaven units are at -3 Leadership</Rule>
-				<Description>All Psychology tests caused by the bearer (or the unit is with) upon Chaos or Skaven units are at -3 Leadership.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Daemon-Killer Scars</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Terror/>
-				<Description>Ogre Tyrant only. The Tyrant cause terror.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Greyback Pelt</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Rule>May move difficult terrain as if it were open ground</Rule>
-				<SubOpponentToHit>1</SubOpponentToHit>
-				<Description>Hunters and Tyrants only. A character with the Greyback Pelt (and any Sabretusks that accompany that character) may move difficult terrain as if it were open ground. Enemies suffer a -1 to hit the wearer in close combat. No Yhetees may be used in an army that includes a character with the Greyback Pelt.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Jade Lion</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>Character and any unit he is with may re-roll any failed Psychology tests, once the unit flees for any reason, this benefit is lost</Rule>
-				<Description>The bearer, and any unit he is with, may re-roll any failed Psychology tests. Once the unit flees for any reason, this benefit is lost.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rock Eye</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<Rule>Pick a unit that is in line of sight of the character: the opposing player must announce the presence of any hidden models within that unit, and announce what magic items are within that unit</Rule>
-				<Description>At the beginning of the owning player's turn, pick a unit that is in line of sight of the character with this item. The opposing player must announce the presence of any hidden models (Fanatics, assassins and the like) within that unit, and announce what magic items are within that unit. He need not describe who carries them, however.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Fistful of Laurels</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<Rule>A character with this item or the unit he is with may re-roll a failed Break test once per game</Rule>
-				<Description>A character with this item or the unit he is with may re-roll a failed Break test once per game, just as if a Battle standard was within 12".</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic Standards">
-			<Artefact>
-				<Name>Bull Standard</Name>
-				<Type>Banner</Type>
-				<Points>20</Points>
-				<Rule>Can re-roll any failed To Wound rolls caused by the impact hits of their Bull Charge</Rule>
-				<Description>Ogres in a unit with the Bull Standard can re-roll any failed To Wound rolls caused by the impact hits of their Bull Charge.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rune Maw</Name>
-				<Type>Banner</Type>
-				<Points>20</Points>
-				<Rule>When a spell is successfully cast by an enemy spellcaster against the unit, roll a D6: on the roll of a 2+, the player may redirect the spell against any other friendly unit within 6" of the unit with the standard</Rule>
-				<Description>When a spell is successfully cast by an enemy spellcaster against the unit bearing the Rune Maw, roll a D6. On the roll of a 2+, the controlling player may redirect the spell against any other friendly unit within 6" of the unit with the standard, regardless of whether it was originally a valid target or not.</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Skrag the Slaughterer</Name>
-			<Points>400</Points>
-			<Description>Prophet of the Great Maw</Description>
-			<Personified/>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MustBeGeneral/>
-				<Terror/>
-				<Frenzy/>
-				<KillingBlow/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Two hand weapons</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>The Blessing of the Great Maw</Rule>
-					<Rule>Army of the Slaughterer</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Greasus Goldtooth</Name>
-			<Points>565</Points>
-			<Description>Overtyrant of the Ogre Kingdom</Description>
-			<Personified/>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Sceptre of the Titans</Name>
-					<StrengthTo>10</StrengthTo>
-					<MultiWounds>D3</MultiWounds>
-				</HandWeapon>
-				<Armour>
-					<Name>Overtyrant's Crown</Name>
-					<Rule>4+ Ward against all non-magical massles</Rule>
-					<ImmuneToPsychology/>
-				</Armour>
-				<Special>
-					<Rule>Too Rich to Walk</Rule>
-					<Rule>Everyone Has Their Price</Rule>
-					<Rule>The Goldtooth Tribe</Rule>
-					<Rule>All freely units within line of sight receive a +1 bonus to their combat resolution</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Tyrant</Name>
-			<Points>200</Points>
-			<Description>Tyrant</Description>
-			<Image>Tyrant.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHitByFront/>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Ogre club</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Ironfists</IfNot>
-						<IfNot>Cathalayan longsword</IfNot>
-						<IfNot>Brace of handguns</IfNot>
-					</Dependencies>
-					<Points>14</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Ironfists</IfNot>
-						<IfNot>Cathalayan longsword</IfNot>
-						<IfNot>Brace of handguns</IfNot>
-					</Dependencies>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Ironfists</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Cathalayan longsword</IfNot>
-						<IfNot>Brace of handguns</IfNot>
-					</Dependencies>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Cathalayan longsword</Name>
-					<Type>Option</Type>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToInitiative>1</AddToInitiative>
-					<ArmourPiercing>1</ArmourPiercing>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Ironfists</IfNot>
-						<IfNot>Brace of handguns</IfNot>
-					</Dependencies>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Brace of handguns</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Ironfists</IfNot>
-						<IfNot>Cathalayan longsword</IfNot>
-					</Dependencies>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Sword-Gnoblars</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<Countable/>
-					<Min>0</Min>
-					<Max>2</Max>
-					<Value>0</Value>
-					<ExportToUnitSize/>
-				</Option>
-				<Option>
-					<Name>Luck-Gnoblar</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Slaughtermaster</Name>
-			<Points>200</Points>
-			<Description>Slaughtermaster</Description>
-			<Wizard>4</Wizard>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHitByFront/>
-				<ImmuneToPoison/>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Use Gut Magic</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Tooth-Gnoblars</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<Countable/>
-					<Min>0</Min>
-					<Max>3</Max>
-					<Value>0</Value>
-					<ExportToUnitSize/>
-				</Option>
-				<Option>
-					<Name>Luck-Gnoblar</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Bruiser</Name>
-			<Points>130</Points>
-			<Description>Bruiser</Description>
-			<Image>Bruiser.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHitByFront/>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Ogre club</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Ironfists</IfNot>
-						<IfNot>Ogre pistol</IfNot>
-						<IfNot>Brace of Ogre pistol</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Ironfists</IfNot>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Ogre pistol</IfNot>
-						<IfNot>Brace of Ogre pistol</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Ironfists</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Ogre pistol</IfNot>
-						<IfNot>Brace of Ogre pistol</IfNot>
-					</Dependencies>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Cathalayan longsword</Name>
-					<Type>Option</Type>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToInitiative>1</AddToInitiative>
-					<ArmourPiercing>1</ArmourPiercing>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Ironfists</IfNot>
-						<IfNot>Brace of handguns</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Brace of handguns</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Ironfists</IfNot>
-						<IfNot>Cathalayan longsword</IfNot>
-					</Dependencies>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Sword-Gnoblars</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<Countable/>
-					<Min>0</Min>
-					<Max>2</Max>
-					<Value>0</Value>
-					<ExportToUnitSize/>
-				</Option>
-				<Option>
-					<Name>Luck-Gnoblar</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<Rule>BSB</Rule>
-					<OnlyOneInArmy/>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
 					<Points>25</Points>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Hunter</Name>
-			<Points>145</Points>
-			<Description>Hunter</Description>
-			<Image>Hunter.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHitByFront/>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Harpoon crossbow</Name>
-				</RangeWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Sic'em boys</Rule>
-					<Rule>Loner</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Sabretusks</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Countable/>
-					<Min>0</Min>
-					<Max>2</Max>
-					<Value>0</Value>
-					<ExportToUnitSize/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Butcher</Name>
-			<Points>130</Points>
-			<Description>Butcher</Description>
-			<Wizard>1</Wizard>
-			<Image>Butcher.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHitByFront/>
-				<ImmuneToPoison/>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Use Gut Magic</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Tooth-Gnoblars</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<Countable/>
-					<Min>0</Min>
-					<Max>2</Max>
-					<Value>0</Value>
-					<ExportToUnitSize/>
-				</Option>
-				<Option>
-					<Name>Luck-Gnoblar</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Hero>
-	</Heroes>
-	<Mounts/>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Bulls</Name>
-			<Points>35</Points>
-			<Min>3</Min>
-			<Image>Bulls.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHitByFront/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Ogre club</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Dogs of War</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
 					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Ironfists</IfNot>
-					</Dependencies>
-					<PerModel/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Ironfists</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-					</Dependencies>
-					<PerModel/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<PerModel/>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Crusher</Name>
-					<Type>Option</Type>
-					<FullCommand/>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
 					<Points>20</Points>
-				</Option>
-				<Option>
-					<Name>Bellower</Name>
-					<Type>Option</Type>
-					<FullCommand/>
+					<AddToStrength>1</AddToStrength>
+					<Description>+1 Strenght</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
 					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-				<Option>
-					<Name>Look-out Gnoblar</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Standard bearer</If>
-					</Dependencies>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Ironguts</Name>
-			<Points>48</Points>
-			<Min>3</Min>
-			<Max>16</Max>
-			<Image>Ironguts.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHitByFront/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great weapon</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Dogs of War</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Gutlord</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Look-out Gnoblar</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Standard bearer</If>
-					</Dependencies>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Gnoblar Fighters</Name>
-			<Points>2</Points>
-			<Min>20</Min>
-			<Image>GnoblarFighters.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>2</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon, sharp stuff</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Largely Insignificant</Rule>
-					<Rule>Bicker</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Groinbiter</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>2</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Gnoblar Trappers</Name>
-			<Points>6</Points>
-			<Min>8</Min>
-			<UniqueUnits/>
-			<Image>GnoblarTrappers.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>2</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon, sharp stuff</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Largely Insignificant</Rule>
-					<Rule>Bicker</Rule>
-					<Rule>Skirmishers</Rule>
-					<Rule>Scouts</Rule>
-					<Rule>Entourage</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Snarefinger</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>4</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Leadbelchers</Name>
-			<Points>55</Points>
-			<Min>2</Min>
-			<Max>5</Max>
-			<Image>Leadbelchers.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHitByFront/>
-			</SpecialRules>
-			<Equipments>
-				<RangeWeapon>
-					<Name>Leadbelcher gun</Name>
-				</RangeWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Dogs of War</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Thunderfist</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Bellower</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Yhetees</Name>
-			<Points>65</Points>
-			<Min>3</Min>
-			<Image>Yhetees.jpg</Image>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Aura of Frost</Rule>
-					<Rule>Flammable</Rule>
-					<Rule>Scale Terrain</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Greyback</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Gnoblar Scraplauncher</Name>
-			<Points>165</Points>
-			<Min>3</Min>
-			<Image>GnoblarScraplauncher.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>6</Attacks>
-				<Leadership>5</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Chariot</Rule>
-					<Rule>Stone Thrower</Rule>
-					<Rule>Bad Tempered</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Maneaters</Name>
-			<Points>80</Points>
-			<Min>1</Min>
-			<Image>Maneaters.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImmuneToPsychology/>
-				<Stubborn/>
-				<ImpactHitByFront/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Ogre club</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-				<Special>
-					<Rule>Dogs of War</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<AddToArmour>5</AddToArmour>
-					<PerModel/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Cathalayan longsword</Name>
-					<Type>Option</Type>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToInitiative>1</AddToInitiative>
 					<ArmourPiercing>1</ArmourPiercing>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Brace of handguns</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
+					<Description>-1 Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<AddToWard>6</AddToWard>
+					<Description>6+ Ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<Rule>+1 to dispell</Rule>
+					<Description>+1 to dispell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic Weapons">
+				<Artefact>
+					<Name>Thundermace</Name>
+					<Type>Weapon</Type>
+					<Points>55</Points>
+					<NoArmour/>
+					<MultiWounds>D6</MultiWounds>
+					<StrenghtTo>8</StrenghtTo>
+					<Rule>Thundermace single attack</Rule>
+					<Description>The Thundermace is a two-handed weapon that follows all the rules for great weapons. A Tyrant with the Thundermace may opt to make only one attack per Close Combat phase. On a successful hit (use the highest Weapon Skill amongst the enemy models in base contact to determine whether the Tyrant hits), place the small template anywhere so that it is touching but not overlapping the 'tyrant's base (it may touch friendly models should you so wish, though it does not affect them). Determine casualties exactly as if the unit had suffered a direct hit by a Strength 4(8) stone thrower. In a challenge, a Tyrant choosing to use this special attack does not use a template but instead strikes at Strength 8, doing D6 wounds and ignoring normal Armour Saves.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Tenderiser</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
-					<Dependencies>
-						<IfNot>Cathalayan longsword</IfNot>
-						<IfNot>Brace of handguns</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Brace of handguns</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Cathalayan longsword</IfNot>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Slavegiant</Name>
-			<Points>175</Points>
-			<Image>Giant.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>0</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-				<Giant/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Manacles, chains and bad attitude</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Ignore Little 'un Panic</Rule>
-					<Rule>Fall Over</Rule>
-					<Rule>Move Over Obstacles</Rule>
-					<Rule>Broken</Rule>
-					<Rule>Giant Special Attacks</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Gorger</Name>
-			<Points>75</Points>
-			<Image>Gorger.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<KillingBlow/>
-				<Fear/>
-				<Unbreakable/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Gaping maw and crusted talon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Bloodscent</Rule>
-					<Rule>Ravenous</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-	</Units>
+					<MultiWounds>D3</MultiWounds>
+					<Description>The Tenderiser is a two-handed weapon that follows all the rules for great weapons. A model wounded by the Tenderiser (after saves, etc) loses not one but D3 wound.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Siegebreaker</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<AddToStrength>3</AddToStrength>
+					<HitLast/>
+					<MultiWounds>D6</MultiWounds>
+					<Rule>When rolling to hit, compare the Ogre's Weapon Skill with the enemy's Initiative value instead his Weapon Skill</Rule>
+					<Description>Siegebreakeris a two-handed weapon that follows all the rules for great weapons, but adds +3 Strength instead of +2. When rolling to hit, compare the Ogre's Weapon Skill with the enemy's Initiative value instead his Weapon Skill - it is impossible to deflect a blow from the Siegebreaker. Targets without an Initiative character will be hit automatically, and will take D6 wound instead of the usual 1.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Skullplucker</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<KillingBlow/>
+					<Description>The Ogre with this weapon has Killing Blow.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bloodcleaver</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Every time a Butcher causes an unsaved wound, he may regain one wound he lost earlier in the battle</Rule>
+					<Description>Butchers only. Every time a Butcher causes an unsaved wound with the Bloodcleaver, he may regain one wound he lost earlier in the battle.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>Mastodon Armour</Name>
+					<Type>Armour</Type>
+					<Points>50</Points>
+					<AddToArmour>5</AddToArmour>
+					<Rule>If character is killed by an attack that is not made in close combat, then rolls a dice: on the roll of a 2+ he is return to life with 1 wound at the end of the phase</Rule>
+					<Description>The Mastodon Armour is heavy armour (5+ Armour Save). If at any point the wielder is killed by an attack that is not made in close combat, then rolls a dice. On the roll of a 2+ he is return to life with 1 wound at the end of the phase.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Greatskull</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Any spellcaster that targets the character or the unit he is with, will miscast on any roll of a double 2 or a double 3 as well as on the roll of a double 1</Rule>
+					<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. Any spellcaster that targets the character with the Greatskull, or the unit he is with, will miscast on any roll of a double 2 or a double 3 as well as on the roll of a double 1.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bullgut</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Unit Strength as 6</Rule>
+					<Rule>Impact hits caused by the Ogre's Bull Charge are considered to be Armour Piercing</Rule>
+					<Description>The Bullgut confers a 6+ Armour Save that can be combined with other equipment normally. On any turn the bearer charges, he counts his Unit Strength as 6, and any impact hits caused by the Ogre's Bull Charge are considered to be Armour Piercing.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gut Maw</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>If character kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent, if character is already at full Wounds, then he may add +1 Wound to his profile</Rule>
+					<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. If an Ogre wearing the Gut Maw kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent. If the owner of the Gut Maw is already at full Wounds, then he may add +1 Wound to his profile.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>Cathayan Jet</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>3+ Ward Save against all wounds caused on him by spells or bound spells</Rule>
+					<Description>The character gains a 3+ Ward Save against all wounds caused on him by spells or bound spells, apart from spells chosen from the High and Dark Magic spell lists and wounds incurred from Gut Magic.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Spangleshard</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>For each individual wound the bearer suffers, roll a D6. If this roll is higher than the result of the To Wound roll, that wound is discounted</Rule>
+					<Description>For each individual wound the bearer suffers, roll a D6. If this roll is higher than the result of the To Wound roll, that wound is discounted. For instance, if the bearer takes a Strength 10 hit and the resultant To Wound roll is a 3, the bearer would have to roll a 4+ to nullify it. This roll is taken before any multiple wounds are caused, and cannot affect automatic wounds.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Wyrdstone necklace</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<AddToWard>5</AddToWard>
+					<Rule>Roll a D6 after deployment, if the result is a 1 the bearer suffers a wound with no saves allowed</Rule>
+					<Rule>For each individual wound the bearer suffers, roll a D6. If this roll is higher than the result of the To Wound roll, that wound is discounted</Rule>
+					<Description>The Ogre with this item gains a 5+ Ward Save. Roll a D6 after deployment, if the result is a 1 the bearer suffers a wound with no saves allowed.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gnoblar Thiefstone</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<Runic>1</Runic>
+					<Rule>Magic Resistance (1)</Rule>
+					<Description>Due to the magical flux generated by this item, the wearer and the unit he is with benefits from Magic Resistance (1). A character may take more than one Thiefstone (to a maximum of three) at 15 points per stone, each additional Thiefstone adds +1 to his Magic Resistance.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gnoblar Thiefstone</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Runic>2</Runic>
+					<Rule>Magic Resistance (2)</Rule>
+				</Artefact>
+				<Artefact>
+					<Name>Gnoblar Thiefstone</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>45</Points>
+					<Runic>3</Runic>
+					<Rule>Magic Resistance (3)</Rule>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane Items">
+				<Artefact>
+					<Name>Hellheart</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<Rule>One use only: character immediately taking an automatic Strength 3 hit, for the remainder of the phase, any Casting roll that includes a double will result in a Miscast, not just a double 1, any wizard suffering a Miscast must roll on the Gut Magic Miscast table</Rule>
+					<Description>One use only. The Butcher may use this item at the start of his opponent's Magic phase, immediately taking an automatic Strength 3 hit. For the remainder of the phase, any Casting roll that includes a double will result in a Miscast, not just a double 1. Any wizard suffering a Miscast must roll on the Gut Magic Miscast table instead of his own (he is counted as a Butcher). If a spell is cast with Irresistible Force, resolve the spell as usual and then roll on the Gut Magic Miscast table.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Grut's Sickle</Name>
+					<Type>Arcane</Type>
+					<Points>35</Points>
+					<Rule>After rolling Casting dice for a Gut Magic spell may choose to cause a wound on a unit he has joined in order to gain another Casting dice, which may exceed his normal limit</Rule>
+					<Description>After rolling Casting dice for a Gut Magic spell, a Butcher with the Sickle may choose to cause a wound on a unit he has joined in order to gain another Casting dice, which may exceed his normal limit. This extra dice is rolled immediately and added to the casting total. This may cause Irresistible Force or a Miscast as usual, and may only be done once per phase wounds caused by the Sickle may not be allocated to characters, and may not be saved or Regenerated in any way.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Halfling Cookbook</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Rule>May re-roll the To Wound dice when he suffers a wound from a successful Bonecruncher or Toothcracker spell, and only suffers a wound from the Trollguts spell on the roll of a 4+</Rule>
+					<Description>A Butcher with the Halfling Cookbook may re-roll the To Wound dice when he suffers a wound from a successful Bonecruncher or Toothcracker spell, and only suffers a wound from the Trollguts spell on the roll of a 4+.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bangstick</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Rule>Bound spell, Power level 3: Magic missile with a 24" range, causing D6 S4 hits, line of sight may be freely drawn through friendly unengaged Gnoblar units, which will also sustain D6 S4 hits in exactly the same manner as the target</Rule>
+					<Description>Bound Spell - Power Level 3. The Bangstick may be used once per turn to cast a magic missile with a 24" range, causing D6 S4 hits. Line of sight may be freely drawn through friendly unengaged Gnoblar units, which will also sustain D6 S4 hits in exactly the same manner as the target.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Skullmantle</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Rule>Any enemy unit forced to take any Leadership tests due to the character or a unit he has joined, suffers a -1 penalty to their Leadership</Rule>
+					<Description>Any enemy unit forced to take any Leadership tests (including Psychology and Break tests) due to the Butcher wearing the Skull mantle, or a unit he has joined, suffers a -1 penalty to their Leadership.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted Items">
+				<Artefact>
+					<Name>Brahmir Statue</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<Rule>All Psychology tests caused by the character (or the unit is with) upon Chaos or Skaven units are at -3 Leadership</Rule>
+					<Description>All Psychology tests caused by the bearer (or the unit is with) upon Chaos or Skaven units are at -3 Leadership.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Daemon-Killer Scars</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<Terror/>
+					<Description>Ogre Tyrant only. The Tyrant cause terror.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Greyback Pelt</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<Rule>May move difficult terrain as if it were open ground</Rule>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<Description>Hunters and Tyrants only. A character with the Greyback Pelt (and any Sabretusks that accompany that character) may move difficult terrain as if it were open ground. Enemies suffer a -1 to hit the wearer in close combat. No Yhetees may be used in an army that includes a character with the Greyback Pelt.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Jade Lion</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>Character and any unit he is with may re-roll any failed Psychology tests, once the unit flees for any reason, this benefit is lost</Rule>
+					<Description>The bearer, and any unit he is with, may re-roll any failed Psychology tests. Once the unit flees for any reason, this benefit is lost.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rock Eye</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<Rule>Pick a unit that is in line of sight of the character: the opposing player must announce the presence of any hidden models within that unit, and announce what magic items are within that unit</Rule>
+					<Description>At the beginning of the owning player's turn, pick a unit that is in line of sight of the character with this item. The opposing player must announce the presence of any hidden models (Fanatics, assassins and the like) within that unit, and announce what magic items are within that unit. He need not describe who carries them, however.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Fistful of Laurels</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<Rule>A character with this item or the unit he is with may re-roll a failed Break test once per game</Rule>
+					<Description>A character with this item or the unit he is with may re-roll a failed Break test once per game, just as if a Battle standard was within 12".</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic Standards">
+				<Artefact>
+					<Name>Bull Standard</Name>
+					<Type>Banner</Type>
+					<Points>20</Points>
+					<Rule>Can re-roll any failed To Wound rolls caused by the impact hits of their Bull Charge</Rule>
+					<Description>Ogres in a unit with the Bull Standard can re-roll any failed To Wound rolls caused by the impact hits of their Bull Charge.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rune Maw</Name>
+					<Type>Banner</Type>
+					<Points>20</Points>
+					<Rule>When a spell is successfully cast by an enemy spellcaster against the unit, roll a D6: on the roll of a 2+, the player may redirect the spell against any other friendly unit within 6" of the unit with the standard</Rule>
+					<Description>When a spell is successfully cast by an enemy spellcaster against the unit bearing the Rune Maw, roll a D6. On the roll of a 2+, the controlling player may redirect the spell against any other friendly unit within 6" of the unit with the standard, regardless of whether it was originally a valid target or not.</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Skrag the Slaughterer</Name>
+				<Points>400</Points>
+				<Description>Prophet of the Great Maw</Description>
+				<Personified/>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MustBeGeneral/>
+					<Terror/>
+					<Frenzy/>
+					<KillingBlow/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Two hand weapons</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>The Blessing of the Great Maw</Rule>
+						<Rule>Army of the Slaughterer</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Greasus Goldtooth</Name>
+				<Points>565</Points>
+				<Description>Overtyrant of the Ogre Kingdom</Description>
+				<Personified/>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Sceptre of the Titans</Name>
+						<StrengthTo>10</StrengthTo>
+						<MultiWounds>D3</MultiWounds>
+					</HandWeapon>
+					<Armour>
+						<Name>Overtyrant's Crown</Name>
+						<Rule>4+ Ward against all non-magical massles</Rule>
+						<ImmuneToPsychology/>
+					</Armour>
+					<Special>
+						<Rule>Too Rich to Walk</Rule>
+						<Rule>Everyone Has Their Price</Rule>
+						<Rule>The Goldtooth Tribe</Rule>
+						<Rule>All freely units within line of sight receive a +1 bonus to their combat resolution</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Tyrant</Name>
+				<Points>200</Points>
+				<Description>Tyrant</Description>
+				<Image>Tyrant.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHitByFront/>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Ogre club</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Ironfists</IfNot>
+							<IfNot>Cathalayan longsword</IfNot>
+							<IfNot>Brace of handguns</IfNot>
+						</Dependencies>
+						<Points>14</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Ironfists</IfNot>
+							<IfNot>Cathalayan longsword</IfNot>
+							<IfNot>Brace of handguns</IfNot>
+						</Dependencies>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Ironfists</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Cathalayan longsword</IfNot>
+							<IfNot>Brace of handguns</IfNot>
+						</Dependencies>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Cathalayan longsword</Name>
+						<Type>Option</Type>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToInitiative>1</AddToInitiative>
+						<ArmourPiercing>1</ArmourPiercing>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Ironfists</IfNot>
+							<IfNot>Brace of handguns</IfNot>
+						</Dependencies>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Brace of handguns</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Ironfists</IfNot>
+							<IfNot>Cathalayan longsword</IfNot>
+						</Dependencies>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Sword-Gnoblars</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<Countable/>
+						<Min>0</Min>
+						<Max>2</Max>
+						<Value>0</Value>
+						<ExportToUnitSize/>
+					</Option>
+					<Option>
+						<Name>Luck-Gnoblar</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Slaughtermaster</Name>
+				<Points>200</Points>
+				<Description>Slaughtermaster</Description>
+				<Wizard>4</Wizard>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHitByFront/>
+					<ImmuneToPoison/>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Use Gut Magic</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Tooth-Gnoblars</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<Countable/>
+						<Min>0</Min>
+						<Max>3</Max>
+						<Value>0</Value>
+						<ExportToUnitSize/>
+					</Option>
+					<Option>
+						<Name>Luck-Gnoblar</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Bruiser</Name>
+				<Points>130</Points>
+				<Description>Bruiser</Description>
+				<Image>Bruiser.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHitByFront/>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Ogre club</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Ironfists</IfNot>
+							<IfNot>Ogre pistol</IfNot>
+							<IfNot>Brace of Ogre pistol</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Ironfists</IfNot>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Ogre pistol</IfNot>
+							<IfNot>Brace of Ogre pistol</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Ironfists</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Ogre pistol</IfNot>
+							<IfNot>Brace of Ogre pistol</IfNot>
+						</Dependencies>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Cathalayan longsword</Name>
+						<Type>Option</Type>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToInitiative>1</AddToInitiative>
+						<ArmourPiercing>1</ArmourPiercing>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Ironfists</IfNot>
+							<IfNot>Brace of handguns</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Brace of handguns</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Ironfists</IfNot>
+							<IfNot>Cathalayan longsword</IfNot>
+						</Dependencies>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Sword-Gnoblars</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<Countable/>
+						<Min>0</Min>
+						<Max>2</Max>
+						<Value>0</Value>
+						<ExportToUnitSize/>
+					</Option>
+					<Option>
+						<Name>Luck-Gnoblar</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<Rule>BSB</Rule>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Hunter</Name>
+				<Points>145</Points>
+				<Description>Hunter</Description>
+				<Image>Hunter.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHitByFront/>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Harpoon crossbow</Name>
+					</RangeWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Sic'em boys</Rule>
+						<Rule>Loner</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Sabretusks</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Countable/>
+						<Min>0</Min>
+						<Max>2</Max>
+						<Value>0</Value>
+						<ExportToUnitSize/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Butcher</Name>
+				<Points>130</Points>
+				<Description>Butcher</Description>
+				<Wizard>1</Wizard>
+				<Image>Butcher.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHitByFront/>
+					<ImmuneToPoison/>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Use Gut Magic</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Tooth-Gnoblars</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<Countable/>
+						<Min>0</Min>
+						<Max>2</Max>
+						<Value>0</Value>
+						<ExportToUnitSize/>
+					</Option>
+					<Option>
+						<Name>Luck-Gnoblar</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Hero>
+		</Heroes>
+		<Mounts/>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Bulls</Name>
+				<Points>35</Points>
+				<Min>3</Min>
+				<Image>Bulls.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHitByFront/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Ogre club</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Dogs of War</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Ironfists</IfNot>
+						</Dependencies>
+						<PerModel/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Ironfists</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+						</Dependencies>
+						<PerModel/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<PerModel/>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Crusher</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+					<Option>
+						<Name>Bellower</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+					<Option>
+						<Name>Look-out Gnoblar</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Standard bearer</If>
+						</Dependencies>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Ironguts</Name>
+				<Points>48</Points>
+				<Min>3</Min>
+				<Max>16</Max>
+				<Image>Ironguts.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHitByFront/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great weapon</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Dogs of War</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Gutlord</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Look-out Gnoblar</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Standard bearer</If>
+						</Dependencies>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Gnoblar Fighters</Name>
+				<Points>2</Points>
+				<Min>20</Min>
+				<Image>GnoblarFighters.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>2</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon, sharp stuff</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Largely Insignificant</Rule>
+						<Rule>Bicker</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Groinbiter</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>2</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Gnoblar Trappers</Name>
+				<Points>6</Points>
+				<Min>8</Min>
+				<UniqueUnits/>
+				<Image>GnoblarTrappers.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>2</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon, sharp stuff</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Largely Insignificant</Rule>
+						<Rule>Bicker</Rule>
+						<Rule>Skirmishers</Rule>
+						<Rule>Scouts</Rule>
+						<Rule>Entourage</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Snarefinger</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>4</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Leadbelchers</Name>
+				<Points>55</Points>
+				<Min>2</Min>
+				<Max>5</Max>
+				<Image>Leadbelchers.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHitByFront/>
+				</SpecialRules>
+				<Equipments>
+					<RangeWeapon>
+						<Name>Leadbelcher gun</Name>
+					</RangeWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Dogs of War</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Thunderfist</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Bellower</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Yhetees</Name>
+				<Points>65</Points>
+				<Min>3</Min>
+				<Image>Yhetees.jpg</Image>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Aura of Frost</Rule>
+						<Rule>Flammable</Rule>
+						<Rule>Scale Terrain</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Greyback</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Gnoblar Scraplauncher</Name>
+				<Points>165</Points>
+				<Min>3</Min>
+				<Image>GnoblarScraplauncher.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill></BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>6</Attacks>
+					<Leadership>5</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Chariot</Rule>
+						<Rule>Stone Thrower</Rule>
+						<Rule>Bad Tempered</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Maneaters</Name>
+				<Points>80</Points>
+				<Min>1</Min>
+				<Image>Maneaters.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImmuneToPsychology/>
+					<Stubborn/>
+					<ImpactHitByFront/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Ogre club</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+					<Special>
+						<Rule>Dogs of War</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<AddToArmour>5</AddToArmour>
+						<PerModel/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Cathalayan longsword</Name>
+						<Type>Option</Type>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToInitiative>1</AddToInitiative>
+						<ArmourPiercing>1</ArmourPiercing>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Brace of handguns</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Cathalayan longsword</IfNot>
+							<IfNot>Brace of handguns</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Brace of handguns</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Cathalayan longsword</IfNot>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Slavegiant</Name>
+				<Points>175</Points>
+				<Image>Giant.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>0</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+					<Giant/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Manacles, chains and bad attitude</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Ignore Little 'un Panic</Rule>
+						<Rule>Fall Over</Rule>
+						<Rule>Move Over Obstacles</Rule>
+						<Rule>Broken</Rule>
+						<Rule>Giant Special Attacks</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Gorger</Name>
+				<Points>75</Points>
+				<Image>Gorger.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<KillingBlow/>
+					<Fear/>
+					<Unbreakable/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Gaping maw and crusted talon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Bloodscent</Rule>
+						<Rule>Ravenous</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
