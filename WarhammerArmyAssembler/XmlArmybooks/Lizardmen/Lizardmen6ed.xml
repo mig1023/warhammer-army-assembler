@@ -41,1403 +41,1405 @@
 		<Released>2003</Released>
 		<Authors>Anthony Reynolds</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Sacred spawnings">
-			<Artefact>
-				<Name>Blessed Spawning of Tzunki</Name>
-				<Type>Powers</Type>
-				<Points>5</Points>
-				<TypeUnitIncrese/>
-				<AddToInitiative>1</AddToInitiative>
-				<Rule>Aquatic</Rule>
-				<Description>Aquatic, +1 Initiative.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed Spawning of Sotek</Name>
-				<Type>Powers</Type>
-				<Points>20</Points>
-				<TypeUnitIncrese/>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>When the unit/character charges, they get +1 Attack for that round of combat.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed Spawning of Quetzl</Name>
-				<Type>Powers</Type>
-				<Points>15</Points>
-				<TypeUnitIncrese/>
-				<AddToArmour>1</AddToArmour>
-				<Description>Scaly Skin save increased by +1.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed Spawning of Tlazcotl</Name>
-				<Type>Powers</Type>
-				<Points>20</Points>
-				<TypeUnitIncrese/>
-				<ImmuneToPsychology/>
-				<Description>Immune to Psychology (note that a Carnosaur ridden by a Saurus Oldblood with the Blessed Spawning of Tlazcotl is still subject to Blood-Frenzy, and Cold Ones will still be subject to stupidity).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed Spawning of Chotec</Name>
-				<Type>Powers</Type>
-				<Points>15</Points>
-				<TypeUnitIncrese/>
-				<Rule>Roll an extra dice when pursuing and choose the highest two (or three if mounted)</Rule>
-				<Description>Roll an extra dice when pursuing and choose the highest two (or three if mounted).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed Spawning of Huanchi</Name>
-				<Type>Powers</Type>
-				<Points>20</Points>
-				<TypeUnitIncrese/>
-				<Rule>May move through jungle, woods and forest as if it were open ground, suffering no penalties for movement</Rule>
-				<Description>The unit may move through jungle, woods and forest as if it were open ground, suffering no penalties for movement.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed Spawning of Tepok</Name>
-				<Type>Powers</Type>
-				<Points>20</Points>
-				<TypeUnitIncrese/>
-				<AddToDispell>1</AddToDispell>
-				<Description>The presence of the unit or character on the battlefield adds one dice to the player's Dispel dice pool.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed Spawning of Itzl</Name>
-				<Type>Powers</Type>
-				<Points>5</Points>
-				<TypeUnitIncrese/>
-				<Description>Characters must take the Blessed Spawning of Itzl if they wish to ride a Cold One or a Carnosaur.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blessed Mark of the Old Ones</Name>
-				<Type>Powers</Type>
-				<Points>35</Points>
-				<TypeUnitIncrese/>
-				<Rule>May re-roll a total of D3 single D6's per game</Rule>
-				<Description>The character may re-roll a total of D3 (roll at the start of the game) single D6's per game. Each re-roll entitles the player to take a single D6 of his own that directly effects the character (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. This can potentially cause Irresistible Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strenght</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>10</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<Rule>+1 to dispell</Rule>
-				<Description>+1 to dispell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Sacred Plaques">
-			<Artefact>
-				<Name>Cupped Hands of the Old Ones</Name>
-				<Type>Arcane</Type>
-				<OnlyForGroup>Slann</OnlyForGroup>
-				<Points>50</Points>
-				<AddToWard>5</AddToWard>
-				<Description>The entire unit that is accompanying the Slann gains a 5+ Ward save. Note, however, that the unit does not get this increase against models that are attacking it in close combat, for they are slightiy inside the mystical shield.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Divine Plaque of Protection</Name>
-				<Type>Arcane</Type>
-				<OnlyForGroup>Slann</OnlyForGroup>
-				<Points>50</Points>
-				<Rule>Ward save 2+, but not for close combat</Rule>
-				<Description>Increases the Ward save that the Slann gets from 4+ to 2+. Note however, that the Slann does not get this increase against models that are attacking it in close combat, for they are slighdy inside the mystical shield. In close combat, the Slann still only gets a 4+ Ward save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Plaque of Dominion</Name>
-				<Type>Arcane</Type>
-				<OnlyForGroup>Slann</OnlyForGroup>
-				<Points>50</Points>
-				<AddToCast>1</AddToCast>
-				<AddToDispell>1</AddToDispell>
-				<Description>Adds an extra +1 dice to the Lizsmdmen player's Power dice and Dispel pools.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Plaque of Tepok</Name>
-				<Type>Arcane</Type>
-				<OnlyForGroup>Slann</OnlyForGroup>
-				<Points>50</Points>
-				<Rule>Knows one more spell than he is normally allowed</Rule>
-				<Description>The Slann knows one more spell than he is normally allowed.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic weapons">
-			<Artefact>
-				<Name>Blade of Revered Tzanuki</Name>
-				<Type>Weapon</Type>
-				<Points>65</Points>
-				<AddToStrength>1</AddToStrength>
-				<NoArmour/>
-				<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Scimitar of the Sun Resplendent</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<AddToAttacks>2</AddToAttacks>
-				<Description>The wielder of this blade has +2 Attacks</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of the Lost Sun</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<Rule>3 shots, Strength of 5</Rule>
-				<Description>The staff is treated as a short bow that has a Strenght of 5, and 3x Multiple Shots</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Piranha Blade</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<MultiWounds>2</MultiWounds>
-				<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blade of Realities</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<NoWard/>
-				<Rule>Any wound inflicted on Daemons is multiplied into two wounds</Rule>
-				<Description>No Ward saves are allowed against the Blade of Realities, although Armour saves and Regeneration may be taken as normal. In addition, any wound inflicted on Daemons is multiplied into two wounds (after Armour saves, etc)</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dagger of Sotek</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Skink</OnlyForGroup>
-				<Points>25</Points>
-				<KillingBlow/>
-				<Fear/>
-				<Description>Confers on the bearer the killing blow ability. In addition, the bearer causes Fear in Skaven</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of the Hornet</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<HitFirst/>
-				<Description>The bearer of this sword has the 'Always Strikes First' rule. If an opponent also has the ability to always strike first then resolve their attacks in normal Initiative order.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Burning Blade of Chotec</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<ArmourPiercing>2</ArmourPiercing>
-				<Rule>Flaming attacks</Rule>
-				<Description>Targets struck by the Burning Blade of Chotec suffer a -2 penalty to their Armour save in addition to any modifiers from the user's Strength. All attacks made with this weapon count as flaming attacks.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>Sacred Stegadon Helm</Name>
-				<Type>AdditionalArmour</Type>
-				<OnlyForGroup>Skink</OnlyForGroup>
-				<Points>40</Points>
-				<AddToArmour>6</AddToArmour>
-				<AddToLeadership>1</AddToLeadership>
-				<Description>Confers +1 to the model's Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Shield of the Mirrored Pool</Name>
-				<Type>Shield</Type>
-				<Points>30</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Magic missile reflected on 2+</Rule>
-				<Description>The shield confers a +1 Armour save like a normal shield. In addition, any magic missile that strikes the bearer or any unit he is with is deflected on the roll of 4+ on a D6. If the spell is deflected, the results of the magic missile is resolved against the caster of the spell or the unit the character is with (following the normal targeting rules). This in turn cannot be dispelled.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Mainming Shield</Name>
-				<Type>Shield</Type>
-				<Points>30</Points>
-				<AddToArmour>6</AddToArmour>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>The shield confers a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Gleaming Pendant of Chotec</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Rule>For one turn, enemy unit that is in contact with the model using the pendant will strike last in combat, one use only</Rule>
-				<Description>One use only. The pendant may be used at the start of any Lizardmen player's Close Combat phase. For that turn only, any enemy unit that is in contact with the model using the pendant will strike last in combat - even striking after great weapons and Zombies! If an enemy has the ability to always strike first, then on the roll of a 4+ they get to attack first; if they roll a 1-3, then they too will strike last.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blood Statuette of Spite</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Test Bet="Wound" Context="Round" Repeat="Once">Toughness</Test>
-				<Description>Bounded Spell. Power Level 5. One use only. Once per game, the user may cast the spell bound within the statuette. The spell may be cast on any enemy character. That character must immediately take Toughness test. If this test is failed, then the model loses a Wound with no armour saves allowed. If the model takes a wound, it must immediately take another Toughness test, losing another wound if it fails again. This continues until either the model passes a Toughness test or is slain</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Cloak of Feathers</Name>
-				<Type>AdditionalArmour</Type>
-				<OnlyFor>Infantry</OnlyFor>
-				<OnlyForGroup>Skink</OnlyForGroup>
-				<Points>30</Points>
-				<Rule>May fly</Rule>
-				<Description>The wearer of the cloack may fly</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Charm of the Jaguar Warrior</Name>
-				<Type>AdditionalArmour</Type>
-				<OnlyFor>Infantry</OnlyFor>
-				<Points>20</Points>
-				<MovementTo>9</MovementTo>
-				<Description>The model's Movement is increased to 9.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Curse-Charm of Tepok</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Rule>Enemy mage re-rolls Miscast, one use only</Rule>
-				<Description>After the enemy rolls on the Miscast Table for the first time in the game, the bearer of the Curse-Charm of Tepok may force their opponent to re-roll the result. This second result stands.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bane Head</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<Rule>Unsaved wounds doubled for nominated target</Rule>
-				<Description>Nominate an enemy character at the start of the battle. All unsaved wounds caused by the bearer on the nominated target are doubled</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dragonfly of Quicksilver</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<Rule>+1 to Scout deploys</Rule>
-				<Description>If both players have models with the Scout ability, the Lizardmen player adds 1 to his dice roll when rolling to see eho deploys their Scouts first</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Venom of the Firefly Frog</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<PoisonAttack/>
-				<Description>All mundane weapons used by the model with the Venom of the Firefly Frog (both close combat weapons and ranged weapons) are coated with this venom. All attacks made with these weapons count as Poisoned Attacks and are magical.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane items">
-			<Artefact>
-				<Name>Rode of the Storm</Name>
-				<Type>Arcane</Type>
-				<Points>35</Points>
-				<Rule>Bound spell, Power Level 5: magic missile that inflicts 2D6 automatic Strength 3 hits (Strength 4 if the target has an Armour save of 4+ or better) on one enemy unit within 18", one use only</Rule>
-				<Description>Bound Spell. Power Level 5. One use only. May be targeted against an enemy unit during the Magic phase. It is a magic missile that inflicts 2D6 automatic Strength 3 hits (Strength 4 if the target has an Armour save of 4+ or better) on one enemy unit within 18". In addition, any unit that suffers wounds from the rod must take an immediate Panic test.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Cube of Darkness</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>One spell dispell, all Ramains in Play spells are dispelled, magic phase ends immediately on the roll of a 4+, one use only</Rule>
-				<Rule>On 4+ </Rule>
-				<Description>One use only. This may be used with the exact same effects as a Dispel Scroll. In addition, all Remains in Play spells are automaticaUy removed from play. Finally, roll a D6. The Magic phase ends immediately on the roll of a 4+.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Diadem of power</Name>
-				<Type>Arcane</Type>
-				<Points>35</Points>
-				<Rule>Two power dice save for dispel</Rule>
-				<Description>The diadem allows the bearer to save up to two of his own unused Power dice or Dispel dice at the end of any Magic phase and store them, to add to his side's dice pool in the next Magic phase.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>Amulet of Itza</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<WardForFirstWound>2</WardForFirstWound>
-				<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Aura of Quetzl</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>4+ Ward save against attacks with Strength 5 or more</Rule>
-				<Description>The bearer of this item has a 4+ Ward save against attacks with Strength 5 or more.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Glyph Necklace</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<AddToWard>5</AddToWard>
-				<Description>The character wearing this gains a 5+ ward save</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic banner">
-			<Artefact>
-				<Name>Totem of Prophecy</Name>
-				<Type>Banner</Type>
-				<Points>75</Points>
-				<Fear/>
-				<Description>The unit causes Fear</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sun Standart of Chotec</Name>
-				<Type>Banner</Type>
-				<Points>40</Points>
-				<Rule>Missles fired at the unit suffer -1 to Hit</Rule>
-				<Description>Missles fired at the unit suffer -1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Huanchi's Blessed Totem</Name>
-				<Type>Banner</Type>
-				<Points>40</Points>
-				<Rule>Once +D6" to charge</Rule>
-				<Description>One use only. The unit may use this banner once per game, at the start of any Lizardmen Magic phase. The unit moves direcdy forwards yp to D6". If it runs into an enemy unit, it counts as charging in the next Close Combat phase. The enemy may not make any charge reaction.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Jaguar Standard</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<Rule>Pursues an extra D6"</Rule>
-				<Description>The unit pursues an extra D6"</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Lord Kroak</Name>
-			<Group>Slann</Group>
-			<Wizard>4</Wizard>
-			<Points>1225</Points>
-			<Description>Lord Kroak</Description>
-			<Personified/>
-			<Image>Kroak.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>1</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>8</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>0</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ColdBlooded/>
-				<LargeBase/>
-				<SlotOf>Hero</SlotOf>
-				<SlotOf>Rare</SlotOf>
-				<AddToCast>1</AddToCast>
-				<AddToDispell>1</AddToDispell>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>The Spirit of venerable Lord Kroak</Rule>
-					<Rule>No Miscast roll</Rule>
-					<Rule>Ward save 2+, but not in close combat</Rule>
-					<Rule>Drain Magic spell</Rule>
-					<Rule>Extra dice for any spell cast, this dice not come from Power poll and is in affect a 'free' dice</Rule>
-					<Rule>+2 to all attempts to cast and dispell</Rule>
-					<Rule>The Ruination of cities (cast on 14+)</Rule>
-					<Rule>Magic Resistance (2)</Rule>
-				</Special>
-				<Armour>
-					<Name>Golden Death Mask</Name>
-					<SubOpponentToHit>1</SubOpponentToHit>
-				</Armour>
-				<Armour>
-					<Name>Shield of the Old Ones</Name>
-					<AddToWard>3</AddToWard>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Kroq-Gar Ancient</Name>
-			<Group>Saurus</Group>
-			<Points>576</Points>
-			<Description>Kroq-Gar Ancient</Description>
-			<Mount>Grymloq</Mount>
-			<Personified/>
-			<Image>KroqGar.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>4</Armour>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<ColdBlooded/>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Strength 5 hit for any wound inflicted</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Revered Spear of Tlanxla</Name>
+	<Content>
+		<Artefacts>
+			<Group Name="Sacred spawnings">
+				<Artefact>
+					<Name>Blessed Spawning of Tzunki</Name>
+					<Type>Powers</Type>
+					<Points>5</Points>
+					<TypeUnitIncrese/>
+					<AddToInitiative>1</AddToInitiative>
+					<Rule>Aquatic</Rule>
+					<Description>Aquatic, +1 Initiative.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed Spawning of Sotek</Name>
+					<Type>Powers</Type>
+					<Points>20</Points>
+					<TypeUnitIncrese/>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>When the unit/character charges, they get +1 Attack for that round of combat.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed Spawning of Quetzl</Name>
+					<Type>Powers</Type>
+					<Points>15</Points>
+					<TypeUnitIncrese/>
+					<AddToArmour>1</AddToArmour>
+					<Description>Scaly Skin save increased by +1.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed Spawning of Tlazcotl</Name>
+					<Type>Powers</Type>
+					<Points>20</Points>
+					<TypeUnitIncrese/>
+					<ImmuneToPsychology/>
+					<Description>Immune to Psychology (note that a Carnosaur ridden by a Saurus Oldblood with the Blessed Spawning of Tlazcotl is still subject to Blood-Frenzy, and Cold Ones will still be subject to stupidity).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed Spawning of Chotec</Name>
+					<Type>Powers</Type>
+					<Points>15</Points>
+					<TypeUnitIncrese/>
+					<Rule>Roll an extra dice when pursuing and choose the highest two (or three if mounted)</Rule>
+					<Description>Roll an extra dice when pursuing and choose the highest two (or three if mounted).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed Spawning of Huanchi</Name>
+					<Type>Powers</Type>
+					<Points>20</Points>
+					<TypeUnitIncrese/>
+					<Rule>May move through jungle, woods and forest as if it were open ground, suffering no penalties for movement</Rule>
+					<Description>The unit may move through jungle, woods and forest as if it were open ground, suffering no penalties for movement.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed Spawning of Tepok</Name>
+					<Type>Powers</Type>
+					<Points>20</Points>
+					<TypeUnitIncrese/>
+					<AddToDispell>1</AddToDispell>
+					<Description>The presence of the unit or character on the battlefield adds one dice to the player's Dispel dice pool.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed Spawning of Itzl</Name>
+					<Type>Powers</Type>
+					<Points>5</Points>
+					<TypeUnitIncrese/>
+					<Description>Characters must take the Blessed Spawning of Itzl if they wish to ride a Cold One or a Carnosaur.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blessed Mark of the Old Ones</Name>
+					<Type>Powers</Type>
+					<Points>35</Points>
+					<TypeUnitIncrese/>
+					<Rule>May re-roll a total of D3 single D6's per game</Rule>
+					<Description>The character may re-roll a total of D3 (roll at the start of the game) single D6's per game. Each re-roll entitles the player to take a single D6 of his own that directly effects the character (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. This can potentially cause Irresistible Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
 					<AddToStrength>1</AddToStrength>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Hands of Gods</Name>
-					<Rule>D6 Strength 4 hits within 8", no Armour saves allowed</Rule>
-				</RangeWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Slann Mage-Priest</Name>
-			<Group>Slann</Group>
-			<Wizard>4</Wizard>
-			<Points>325</Points>
-			<Description>Slann Mage-Priest</Description>
-			<Image>Slann.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-				<ColdBlooded/>
-				<LargeBase/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Fourth Generation</Name>
-					<Type>Option</Type>
+					<Description>+1 Strenght</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
+					<Points>10</Points>
+					<AddToArmour>5</AddToArmour>
+					<Description>5+ Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<AddToWard>6</AddToWard>
+					<Description>6+ ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<Rule>+1 to dispell</Rule>
+					<Description>+1 to dispell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Sacred Plaques">
+				<Artefact>
+					<Name>Cupped Hands of the Old Ones</Name>
+					<Type>Arcane</Type>
+					<OnlyForGroup>Slann</OnlyForGroup>
+					<Points>50</Points>
+					<AddToWard>5</AddToWard>
+					<Description>The entire unit that is accompanying the Slann gains a 5+ Ward save. Note, however, that the unit does not get this increase against models that are attacking it in close combat, for they are slightiy inside the mystical shield.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Divine Plaque of Protection</Name>
+					<Type>Arcane</Type>
+					<OnlyForGroup>Slann</OnlyForGroup>
+					<Points>50</Points>
+					<Rule>Ward save 2+, but not for close combat</Rule>
+					<Description>Increases the Ward save that the Slann gets from 4+ to 2+. Note however, that the Slann does not get this increase against models that are attacking it in close combat, for they are slighdy inside the mystical shield. In close combat, the Slann still only gets a 4+ Ward save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Plaque of Dominion</Name>
+					<Type>Arcane</Type>
+					<OnlyForGroup>Slann</OnlyForGroup>
+					<Points>50</Points>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<Description>Adds an extra +1 dice to the Lizsmdmen player's Power dice and Dispel pools.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Plaque of Tepok</Name>
+					<Type>Arcane</Type>
+					<OnlyForGroup>Slann</OnlyForGroup>
+					<Points>50</Points>
+					<Rule>Knows one more spell than he is normally allowed</Rule>
+					<Description>The Slann knows one more spell than he is normally allowed.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic weapons">
+				<Artefact>
+					<Name>Blade of Revered Tzanuki</Name>
+					<Type>Weapon</Type>
+					<Points>65</Points>
+					<AddToStrength>1</AddToStrength>
+					<NoArmour/>
+					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Scimitar of the Sun Resplendent</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<AddToAttacks>2</AddToAttacks>
+					<Description>The wielder of this blade has +2 Attacks</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of the Lost Sun</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<Rule>3 shots, Strength of 5</Rule>
+					<Description>The staff is treated as a short bow that has a Strenght of 5, and 3x Multiple Shots</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Piranha Blade</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<MultiWounds>2</MultiWounds>
+					<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blade of Realities</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<NoWard/>
+					<Rule>Any wound inflicted on Daemons is multiplied into two wounds</Rule>
+					<Description>No Ward saves are allowed against the Blade of Realities, although Armour saves and Regeneration may be taken as normal. In addition, any wound inflicted on Daemons is multiplied into two wounds (after Armour saves, etc)</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dagger of Sotek</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Skink</OnlyForGroup>
+					<Points>25</Points>
+					<KillingBlow/>
+					<Fear/>
+					<Description>Confers on the bearer the killing blow ability. In addition, the bearer causes Fear in Skaven</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of the Hornet</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<HitFirst/>
+					<Description>The bearer of this sword has the 'Always Strikes First' rule. If an opponent also has the ability to always strike first then resolve their attacks in normal Initiative order.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Burning Blade of Chotec</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<ArmourPiercing>2</ArmourPiercing>
+					<Rule>Flaming attacks</Rule>
+					<Description>Targets struck by the Burning Blade of Chotec suffer a -2 penalty to their Armour save in addition to any modifiers from the user's Strength. All attacks made with this weapon count as flaming attacks.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>Sacred Stegadon Helm</Name>
+					<Type>AdditionalArmour</Type>
+					<OnlyForGroup>Skink</OnlyForGroup>
 					<Points>40</Points>
-					<Dependencies>
-						<IfNot>Third Generation</IfNot>
-						<IfNot>Second Generation</IfNot>
-					</Dependencies>
-					<Rule>No roll on the Miscast Table</Rule>
-				</Option>
-				<Option>
-					<Name>Third Generation</Name>
-					<Type>Option</Type>
-					<SlotOf>Hero</SlotOf>
-					<AddToWounds>1</AddToWounds>
-					<Points>85</Points>
-					<Dependencies>
-						<IfNot>Fourth Generation</IfNot>
-						<IfNot>Second Generation</IfNot>
-					</Dependencies>
-					<Rule>No roll on the Miscast Table</Rule>
-					<Rule>Drain Magic spell</Rule>
-				</Option>
-				<Option>
-					<Name>Second Generation</Name>
-					<Type>Option</Type>
+					<AddToArmour>6</AddToArmour>
+					<AddToLeadership>1</AddToLeadership>
+					<Description>Confers +1 to the model's Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Shield of the Mirrored Pool</Name>
+					<Type>Shield</Type>
+					<Points>30</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Magic missile reflected on 2+</Rule>
+					<Description>The shield confers a +1 Armour save like a normal shield. In addition, any magic missile that strikes the bearer or any unit he is with is deflected on the roll of 4+ on a D6. If the spell is deflected, the results of the magic missile is resolved against the caster of the spell or the unit the character is with (following the normal targeting rules). This in turn cannot be dispelled.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Mainming Shield</Name>
+					<Type>Shield</Type>
+					<Points>30</Points>
+					<AddToArmour>6</AddToArmour>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>The shield confers a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Gleaming Pendant of Chotec</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<Rule>For one turn, enemy unit that is in contact with the model using the pendant will strike last in combat, one use only</Rule>
+					<Description>One use only. The pendant may be used at the start of any Lizardmen player's Close Combat phase. For that turn only, any enemy unit that is in contact with the model using the pendant will strike last in combat - even striking after great weapons and Zombies! If an enemy has the ability to always strike first, then on the roll of a 4+ they get to attack first; if they roll a 1-3, then they too will strike last.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blood Statuette of Spite</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Test Bet="Wound" Context="Round" Repeat="Once">Toughness</Test>
+					<Description>Bounded Spell. Power Level 5. One use only. Once per game, the user may cast the spell bound within the statuette. The spell may be cast on any enemy character. That character must immediately take Toughness test. If this test is failed, then the model loses a Wound with no armour saves allowed. If the model takes a wound, it must immediately take another Toughness test, losing another wound if it fails again. This continues until either the model passes a Toughness test or is slain</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Cloak of Feathers</Name>
+					<Type>AdditionalArmour</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<OnlyForGroup>Skink</OnlyForGroup>
+					<Points>30</Points>
+					<Rule>May fly</Rule>
+					<Description>The wearer of the cloack may fly</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Charm of the Jaguar Warrior</Name>
+					<Type>AdditionalArmour</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<Points>20</Points>
+					<MovementTo>9</MovementTo>
+					<Description>The model's Movement is increased to 9.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Curse-Charm of Tepok</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Rule>Enemy mage re-rolls Miscast, one use only</Rule>
+					<Description>After the enemy rolls on the Miscast Table for the first time in the game, the bearer of the Curse-Charm of Tepok may force their opponent to re-roll the result. This second result stands.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bane Head</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<Rule>Unsaved wounds doubled for nominated target</Rule>
+					<Description>Nominate an enemy character at the start of the battle. All unsaved wounds caused by the bearer on the nominated target are doubled</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dragonfly of Quicksilver</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<Rule>+1 to Scout deploys</Rule>
+					<Description>If both players have models with the Scout ability, the Lizardmen player adds 1 to his dice roll when rolling to see eho deploys their Scouts first</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Venom of the Firefly Frog</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<PoisonAttack/>
+					<Description>All mundane weapons used by the model with the Venom of the Firefly Frog (both close combat weapons and ranged weapons) are coated with this venom. All attacks made with these weapons count as Poisoned Attacks and are magical.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane items">
+				<Artefact>
+					<Name>Rode of the Storm</Name>
+					<Type>Arcane</Type>
+					<Points>35</Points>
+					<Rule>Bound spell, Power Level 5: magic missile that inflicts 2D6 automatic Strength 3 hits (Strength 4 if the target has an Armour save of 4+ or better) on one enemy unit within 18", one use only</Rule>
+					<Description>Bound Spell. Power Level 5. One use only. May be targeted against an enemy unit during the Magic phase. It is a magic missile that inflicts 2D6 automatic Strength 3 hits (Strength 4 if the target has an Armour save of 4+ or better) on one enemy unit within 18". In addition, any unit that suffers wounds from the rod must take an immediate Panic test.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Cube of Darkness</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>One spell dispell, all Ramains in Play spells are dispelled, magic phase ends immediately on the roll of a 4+, one use only</Rule>
+					<Rule>On 4+ </Rule>
+					<Description>One use only. This may be used with the exact same effects as a Dispel Scroll. In addition, all Remains in Play spells are automaticaUy removed from play. Finally, roll a D6. The Magic phase ends immediately on the roll of a 4+.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Diadem of power</Name>
+					<Type>Arcane</Type>
+					<Points>35</Points>
+					<Rule>Two power dice save for dispel</Rule>
+					<Description>The diadem allows the bearer to save up to two of his own unused Power dice or Dispel dice at the end of any Magic phase and store them, to add to his side's dice pool in the next Magic phase.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>Amulet of Itza</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<WardForFirstWound>2</WardForFirstWound>
+					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Aura of Quetzl</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>4+ Ward save against attacks with Strength 5 or more</Rule>
+					<Description>The bearer of this item has a 4+ Ward save against attacks with Strength 5 or more.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Glyph Necklace</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<AddToWard>5</AddToWard>
+					<Description>The character wearing this gains a 5+ ward save</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic banner">
+				<Artefact>
+					<Name>Totem of Prophecy</Name>
+					<Type>Banner</Type>
+					<Points>75</Points>
+					<Fear/>
+					<Description>The unit causes Fear</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sun Standart of Chotec</Name>
+					<Type>Banner</Type>
+					<Points>40</Points>
+					<Rule>Missles fired at the unit suffer -1 to Hit</Rule>
+					<Description>Missles fired at the unit suffer -1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Huanchi's Blessed Totem</Name>
+					<Type>Banner</Type>
+					<Points>40</Points>
+					<Rule>Once +D6" to charge</Rule>
+					<Description>One use only. The unit may use this banner once per game, at the start of any Lizardmen Magic phase. The unit moves direcdy forwards yp to D6". If it runs into an enemy unit, it counts as charging in the next Close Combat phase. The enemy may not make any charge reaction.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Jaguar Standard</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<Rule>Pursues an extra D6"</Rule>
+					<Description>The unit pursues an extra D6"</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Lord Kroak</Name>
+				<Group>Slann</Group>
+				<Wizard>4</Wizard>
+				<Points>1225</Points>
+				<Description>Lord Kroak</Description>
+				<Personified/>
+				<Image>Kroak.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>1</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>8</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>0</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ColdBlooded/>
+					<LargeBase/>
 					<SlotOf>Hero</SlotOf>
 					<SlotOf>Rare</SlotOf>
-					<AddToWounds>2</AddToWounds>
-					<Points>135</Points>
-					<Dependencies>
-						<IfNot>Fourth Generation</IfNot>
-						<IfNot>Third Generation</IfNot>
-					</Dependencies>
-					<Rule>No roll on the Miscast Table</Rule>
-					<Rule>Drain Magic spell</Rule>
-					<Rule>Extra dice for any spell cast, this dice not come from Power poll and is in affect a 'free' dice</Rule>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<OnlyOneInArmy/>
-					<Points>25</Points>
-				</Option>
-			</Options>
-			<Equipments>
-				<Special>
-					<Rule>Unit Strength 5</Rule>
-					<Rule>Telepathy</Rule>
-					<Rule>+1 to cast or dispell</Rule>
-				</Special>
-				<Armour>
-					<Name>Shield of the Old Ones</Name>
-					<AddToWard>4</AddToWard>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Saurus Oldblood</Name>
-			<Group>Saurus</Group>
-			<Points>145</Points>
-			<Description>Saurus Oldblood</Description>
-			<Image>Oldblood.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-				<MagicPowersCount>3</MagicPowersCount>
-				<ColdBlooded/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Blessed Spawning of Itzl</If>
-					</Dependencies>
-					<Points>37</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Carnosaur</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Blessed Spawning of Itzl</If>
-					</Dependencies>
-					<Points>210</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Saurus Scar-Veteran</Name>
-			<Group>Saurus</Group>
-			<Points>85</Points>
-			<Description>Saurus Scar-Veteran</Description>
-			<Image>ScarVeteran.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-				<MagicPowersCount>2</MagicPowersCount>
-				<ColdBlooded/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Helberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Blessed Spawning of Itzl</If>
-					</Dependencies>
-					<Points>23</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<OnlyOneInArmy/>
-					<Points>25</Points>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Skink Chief</Name>
-			<Group>Skink</Group>
-			<Points>55</Points>
-			<Description>Skink Chief</Description>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-				<MagicPowersCount>1</MagicPowersCount>
-				<ColdBlooded/>
-				<PoisonAttack/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Spear</IfNot>
-					</Dependencies>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Blowpipe</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Javelins</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Javelins</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Blowpipe</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Scout</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-			</Options>
-			<Equipments>
-				<Special>
-					<Rule>Aquatic</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Skink Priest</Name>
-			<Group>Skink</Group>
-			<Points>65</Points>
-			<Wizard>1</Wizard>
-			<Description>Skink Priest</Description>
-			<Image>SkinkPriest.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>2</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-				<MagicPowersCount>1</MagicPowersCount>
-				<ColdBlooded/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
 					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Scout</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-			</Options>
-			<Equipments>
-				<Special>
-					<Rule>Aquatic</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Cold One</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>3</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<Stupidity/>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Thick-skinned</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Carnosaur</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>5</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<ColdBlooded/>
-				<MultiWounds>D3</MultiWounds>
-				<LargeBase/>
-				<BloodFrenzy/>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Blood-frenzy</Rule>
-					<Rule>Ultimate Predator</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Saurus Warrior</Name>
-			<Points>12</Points>
-			<Min>10</Min>
-			<Image>SaurusWarrior.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>6</Armour>
-			</Profile>
-			<SpecialRules>
-				<MagicPowersCount>2</MagicPowersCount>
-				<ColdBlooded/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard Bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Skink Skirmishers</Name>
-			<Points>6</Points>
-			<Min>10</Min>
-			<Max>25</Max>
-			<Image>SkinkSkirmishers.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>2</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ColdBlooded/>
-				<PoisonAttack/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Aquatic</Rule>
-					<Rule>Skirmishers</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Blowpipe</Name>
-				</RangeWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Javelin and shield</Name>
-					<Type>Option</Type>
-					<Points>0</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Scouts</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Brave</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Jungle swarm</Name>
-			<Points>60</Points>
-			<Min>1</Min>
-			<Max>6</Max>
-			<UniqueUnits/>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>2</Strength>
-				<Toughness>2</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<PoisonAttack/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Swarm</Rule>
-					<Rule>Skirmishers</Rule>
-					<Rule>Small</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Temple Guard</Name>
-			<Points>17</Points>
-			<Min>10</Min>
-			<Image>TempleGuard.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<ColdBlooded/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Sacred Duty</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Helberd</Name>
-					<AddToStrength>1</AddToStrength>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musicain</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard Bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Revered Guardian</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Saurus Cavalry</Name>
-			<Points>35</Points>
-			<Min>5</Min>
-			<Mount>Cold One</Mount>
-			<Image>SaurusCavalry.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<ColdBlooded/>
-				<Stupidity/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musicain</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Standard Bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Kroxigor</Name>
-			<Points>58</Points>
-			<Min>3</Min>
-			<Image>Kroxigor.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<ColdBlooded/>
-				<Fear/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great weapon</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</HandWeapon>
-				<Special>
-					<Rule>Aquatic</Rule>
-					<Rule>Skirmish Screen</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Ancient</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Chameleon Skinks</Name>
-			<Points>15</Points>
-			<Min>5</Min>
-			<Max>10</Max>
-			<UniqueUnits/>
-			<Image>Chameleon.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>2</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ColdBlooded/>
-				<PoisonAttack/>
-				<SubOpponentToHit>1</SubOpponentToHit>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Aquatic</Rule>
-					<Rule>Skirmishers</Rule>
-					<Rule>Expert Hunters</Rule>
-					<Rule>Scouts</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Blowpipe</Name>
-				</RangeWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Stalker</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Terradons</Name>
-			<Points>35</Points>
-			<Min>3</Min>
-			<Max>10</Max>
-			<Mount>Terradons</Mount>
-			<Image>Terradons.jpg</Image>
-			<Profile>
-				<Movement>2</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ColdBlooded/>
-				<PoisonAttack/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Flying cavalry</Rule>
-					<Rule>Hit and Run Attack</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Javelin</Name>
-				</RangeWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Brave</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Stegadon</Name>
-			<Points>235</Points>
-			<Image>Stegadon.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>5</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<ColdBlooded/>
-				<Stubborn/>
-				<PoisonAttack/>
-				<ImmuneToPsychology/>
-				<LargeBase/>
-				<ImpactHit>D6+1</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Unit Strength 8</Rule>
-				</Special>
-				<RangeWeapon>
-					<Name>Giant Bow</Name>
-				</RangeWeapon>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Salamander Hunting Pack</Name>
-			<Points>65</Points>
-			<Min>1</Min>
-			<Max>3</Max>
-			<ModelsInPack>4</ModelsInPack>
-			<Image>Salamander.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>5</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ColdBlooded/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Aquatic</Rule>
-					<Rule>Skirmishers</Rule>
-					<Rule>Hunting Pack</Rule>
-					<Rule>Spout Flame</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-	</Units>
+					<AddToDispell>1</AddToDispell>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>The Spirit of venerable Lord Kroak</Rule>
+						<Rule>No Miscast roll</Rule>
+						<Rule>Ward save 2+, but not in close combat</Rule>
+						<Rule>Drain Magic spell</Rule>
+						<Rule>Extra dice for any spell cast, this dice not come from Power poll and is in affect a 'free' dice</Rule>
+						<Rule>+2 to all attempts to cast and dispell</Rule>
+						<Rule>The Ruination of cities (cast on 14+)</Rule>
+						<Rule>Magic Resistance (2)</Rule>
+					</Special>
+					<Armour>
+						<Name>Golden Death Mask</Name>
+						<SubOpponentToHit>1</SubOpponentToHit>
+					</Armour>
+					<Armour>
+						<Name>Shield of the Old Ones</Name>
+						<AddToWard>3</AddToWard>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Kroq-Gar Ancient</Name>
+				<Group>Saurus</Group>
+				<Points>576</Points>
+				<Description>Kroq-Gar Ancient</Description>
+				<Mount>Grymloq</Mount>
+				<Personified/>
+				<Image>KroqGar.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>4</Armour>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<ColdBlooded/>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Strength 5 hit for any wound inflicted</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Revered Spear of Tlanxla</Name>
+						<AddToStrength>1</AddToStrength>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Hands of Gods</Name>
+						<Rule>D6 Strength 4 hits within 8", no Armour saves allowed</Rule>
+					</RangeWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Slann Mage-Priest</Name>
+				<Group>Slann</Group>
+				<Wizard>4</Wizard>
+				<Points>325</Points>
+				<Description>Slann Mage-Priest</Description>
+				<Image>Slann.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+					<ColdBlooded/>
+					<LargeBase/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Fourth Generation</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Dependencies>
+							<IfNot>Third Generation</IfNot>
+							<IfNot>Second Generation</IfNot>
+						</Dependencies>
+						<Rule>No roll on the Miscast Table</Rule>
+					</Option>
+					<Option>
+						<Name>Third Generation</Name>
+						<Type>Option</Type>
+						<SlotOf>Hero</SlotOf>
+						<AddToWounds>1</AddToWounds>
+						<Points>85</Points>
+						<Dependencies>
+							<IfNot>Fourth Generation</IfNot>
+							<IfNot>Second Generation</IfNot>
+						</Dependencies>
+						<Rule>No roll on the Miscast Table</Rule>
+						<Rule>Drain Magic spell</Rule>
+					</Option>
+					<Option>
+						<Name>Second Generation</Name>
+						<Type>Option</Type>
+						<SlotOf>Hero</SlotOf>
+						<SlotOf>Rare</SlotOf>
+						<AddToWounds>2</AddToWounds>
+						<Points>135</Points>
+						<Dependencies>
+							<IfNot>Fourth Generation</IfNot>
+							<IfNot>Third Generation</IfNot>
+						</Dependencies>
+						<Rule>No roll on the Miscast Table</Rule>
+						<Rule>Drain Magic spell</Rule>
+						<Rule>Extra dice for any spell cast, this dice not come from Power poll and is in affect a 'free' dice</Rule>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<Special>
+						<Rule>Unit Strength 5</Rule>
+						<Rule>Telepathy</Rule>
+						<Rule>+1 to cast or dispell</Rule>
+					</Special>
+					<Armour>
+						<Name>Shield of the Old Ones</Name>
+						<AddToWard>4</AddToWard>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Saurus Oldblood</Name>
+				<Group>Saurus</Group>
+				<Points>145</Points>
+				<Description>Saurus Oldblood</Description>
+				<Image>Oldblood.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+					<MagicPowersCount>3</MagicPowersCount>
+					<ColdBlooded/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Cold One</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Blessed Spawning of Itzl</If>
+						</Dependencies>
+						<Points>37</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Carnosaur</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Blessed Spawning of Itzl</If>
+						</Dependencies>
+						<Points>210</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Saurus Scar-Veteran</Name>
+				<Group>Saurus</Group>
+				<Points>85</Points>
+				<Description>Saurus Scar-Veteran</Description>
+				<Image>ScarVeteran.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+					<MagicPowersCount>2</MagicPowersCount>
+					<ColdBlooded/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Helberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Cold One</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Blessed Spawning of Itzl</If>
+						</Dependencies>
+						<Points>23</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Skink Chief</Name>
+				<Group>Skink</Group>
+				<Points>55</Points>
+				<Description>Skink Chief</Description>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+					<MagicPowersCount>1</MagicPowersCount>
+					<ColdBlooded/>
+					<PoisonAttack/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Spear</IfNot>
+						</Dependencies>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Blowpipe</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Javelins</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Javelins</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Blowpipe</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Scout</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<Special>
+						<Rule>Aquatic</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Skink Priest</Name>
+				<Group>Skink</Group>
+				<Points>65</Points>
+				<Wizard>1</Wizard>
+				<Description>Skink Priest</Description>
+				<Image>SkinkPriest.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>2</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+					<MagicPowersCount>1</MagicPowersCount>
+					<ColdBlooded/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Scout</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<Special>
+						<Rule>Aquatic</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Cold One</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>3</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<Stupidity/>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Thick-skinned</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Carnosaur</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>5</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<ColdBlooded/>
+					<MultiWounds>D3</MultiWounds>
+					<LargeBase/>
+					<BloodFrenzy/>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Blood-frenzy</Rule>
+						<Rule>Ultimate Predator</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Saurus Warrior</Name>
+				<Points>12</Points>
+				<Min>10</Min>
+				<Image>SaurusWarrior.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>6</Armour>
+				</Profile>
+				<SpecialRules>
+					<MagicPowersCount>2</MagicPowersCount>
+					<ColdBlooded/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard Bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Skink Skirmishers</Name>
+				<Points>6</Points>
+				<Min>10</Min>
+				<Max>25</Max>
+				<Image>SkinkSkirmishers.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>2</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ColdBlooded/>
+					<PoisonAttack/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Aquatic</Rule>
+						<Rule>Skirmishers</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Blowpipe</Name>
+					</RangeWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Javelin and shield</Name>
+						<Type>Option</Type>
+						<Points>0</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Scouts</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Brave</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Jungle swarm</Name>
+				<Points>60</Points>
+				<Min>1</Min>
+				<Max>6</Max>
+				<UniqueUnits/>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>2</Strength>
+					<Toughness>2</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<PoisonAttack/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Swarm</Rule>
+						<Rule>Skirmishers</Rule>
+						<Rule>Small</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Temple Guard</Name>
+				<Points>17</Points>
+				<Min>10</Min>
+				<Image>TempleGuard.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<ColdBlooded/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Sacred Duty</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Helberd</Name>
+						<AddToStrength>1</AddToStrength>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musicain</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard Bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Revered Guardian</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Saurus Cavalry</Name>
+				<Points>35</Points>
+				<Min>5</Min>
+				<Mount>Cold One</Mount>
+				<Image>SaurusCavalry.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<ColdBlooded/>
+					<Stupidity/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musicain</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Standard Bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Kroxigor</Name>
+				<Points>58</Points>
+				<Min>3</Min>
+				<Image>Kroxigor.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<ColdBlooded/>
+					<Fear/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great weapon</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</HandWeapon>
+					<Special>
+						<Rule>Aquatic</Rule>
+						<Rule>Skirmish Screen</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Ancient</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Chameleon Skinks</Name>
+				<Points>15</Points>
+				<Min>5</Min>
+				<Max>10</Max>
+				<UniqueUnits/>
+				<Image>Chameleon.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>2</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ColdBlooded/>
+					<PoisonAttack/>
+					<SubOpponentToHit>1</SubOpponentToHit>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Aquatic</Rule>
+						<Rule>Skirmishers</Rule>
+						<Rule>Expert Hunters</Rule>
+						<Rule>Scouts</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Blowpipe</Name>
+					</RangeWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Stalker</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Terradons</Name>
+				<Points>35</Points>
+				<Min>3</Min>
+				<Max>10</Max>
+				<Mount>Terradons</Mount>
+				<Image>Terradons.jpg</Image>
+				<Profile>
+					<Movement>2</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ColdBlooded/>
+					<PoisonAttack/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Flying cavalry</Rule>
+						<Rule>Hit and Run Attack</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Javelin</Name>
+					</RangeWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Brave</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Stegadon</Name>
+				<Points>235</Points>
+				<Image>Stegadon.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>5</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<ColdBlooded/>
+					<Stubborn/>
+					<PoisonAttack/>
+					<ImmuneToPsychology/>
+					<LargeBase/>
+					<ImpactHit>D6+1</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Unit Strength 8</Rule>
+					</Special>
+					<RangeWeapon>
+						<Name>Giant Bow</Name>
+					</RangeWeapon>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Salamander Hunting Pack</Name>
+				<Points>65</Points>
+				<Min>1</Min>
+				<Max>3</Max>
+				<ModelsInPack>4</ModelsInPack>
+				<Image>Salamander.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>5</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ColdBlooded/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Aquatic</Rule>
+						<Rule>Skirmishers</Rule>
+						<Rule>Hunting Pack</Rule>
+						<Rule>Spout Flame</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
