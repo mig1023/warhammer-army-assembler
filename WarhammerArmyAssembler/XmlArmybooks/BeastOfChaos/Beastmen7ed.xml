@@ -42,1943 +42,1945 @@
 		<Released>2010</Released>
 		<Authors>Andy Hoare and Phil Kelly</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strenght</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>15</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ Ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>+1 to dispell</Rule>
-				<Description>+1 to dispell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Gifts of Chaos">
-			<Artefact>
-				<Name>Crown of Horns</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>75</Points>
-				<Stubborn/>
-				<Description>The model and any unit he is with are Stubborn.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Slug-Skin</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>Enemy models in base contact with the model at the start of any round of close combat suffer a Strength 3 hit before any blows are struck</Rule>
-				<Description>Enemy models in base contact with the model at the start of any round of close combat suffer a Strength 3 hit before any blows are struck.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Many-Limbed Fiend</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>The model may make a bonus attack in addition to his normal attacks. This bonus attack is always at the model's basic Strength and is never augmented by equipment or magic weapons.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gouge-Tusks</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>All of the model's close combat attacks are armour piercing.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gnarled Hide</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>The model has a scaly skin save of 5+, which is cumulative with other armour as normal.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rune of The True Beast</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<SubOpponentToHit>1</SubOpponentToHit>
-				<Description>Ridden monsters, monsters, the steeds pulling chariots, cavalry mounts and swarms suffer -1 To Hit the model bearing the Rune of the True Beast in close combat, although their riders may attack as normal.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Uncanny Senses</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>10</Points>
-				<AddToInitiative>1</AddToInitiative>
-				<Description>The model has +1 Initiative.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Shadow-Hide</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>5</Points>
-				<Rule>When at least partially in cover, a further -1 To Hit modifier is applied when enemies shoot at the character</Rule>
-				<Description>When at least partially in cover, a further -1 To Hit modifier is applied when enemies shoot at the character.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic Weapons">
-			<Artefact>
-				<Name>Primeval Club</Name>
-				<Type>Weapon</Type>
-				<Points>100</Points>
-				<Rule>When rolling To Wound, the character's Strength is treated as equal to the unmodified Leadership value of the target model</Rule>
-				<Description>When rolling To Wound, the owner's Strength is treated as equal to the unmodified Leadership value of the target model.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Axe of Men</Name>
-				<Type>Weapon</Type>
-				<Points>75</Points>
-				<KillingBlow/>
-				<Terror/>
-				<Unbreakable/>
-				<Description>This weapon has the Killing Blow special rule. In addition, if the bearer kills an enemy character in a challenge, he and any unit he leads are Unbreakable and cause Terror so long as he leads them.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Stonecrusher Mace</Name>
-				<Type>Weapon</Type>
-				<Points>65</Points>
-				<AddToStrength>3</AddToStrength>
-				<Rule>When rolling To Wound against war machines and chariots or buildings, the character's Strength is increased to 10</Rule>
-				<Description>Stonecrusher Mace confers +3 Strength. When rolling To Wound against war machines and chariots (including War Altars, War Shrines, Steam Tanks and Corpse Carts, and so on) or buildings, the character's Strength is increased to 10.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Mangelder</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Terror/>
-				<Rule>Any model wounded by this character loses 1 point of Leadership for each Wound it suffers</Rule>
-				<Description>The bearer causes Terror. In addition, any model wounded by this weapon loses 1 point of Leadership for each Wound it suffers.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hunting Spear</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Terror/>
-				<Rule>Spear can be thrown with a range of 24", resolve each hit like a single bolt from a bolt thrower</Rule>
-				<Description>The Hunting Spear counts as a spear in close combat. It can be thrown with a range of 24". Resolve each hit like a single bolt from a bolt thrower (see the main rule book). Note that you may shoot after moving (but not marching) and 'stand and shoot' with the Hunting Spear.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Axes of Khorgor</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<Terror/>
-				<AddToAttacks>1</AddToAttacks>
-				<Reroll>ToHit</Reroll>
-				<Description>Requires two hands. The bearer gains +1 Attack and may re-roll any missed To Hit rolls in close combat.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Steel-Claws</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<Rule>Extra D3 Attacks (roll at the beginning of each round of close combat)</Rule>
-				<Description>Requires two hands. The Steel-Claws confer an extra D3 Attacks to the wielder (roll at the beginning of each round of close combat). If a 6 is rolled when determining the number of attacks, all the bearer's attacks that round will ignore armour saves.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Brass Cleaver</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<Rule>Bonus attack against each of the models in base contact with the bearer</Rule>
-				<Description>The Brass Cleaver confers a single bonus attack against each of the models in base contact with the bearer. In a challenge it confers one bonus attack and no more.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Everbleed</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Every time an enemy model suffers an unsaved wound from this weapon, roll a D6: on the result of a 6, the enemy loses an additional wound, with no saves of any kind allowed, and you must roll again</Rule>
-				<Description>Every time an enemy model suffers an unsaved wound from this weapon, roll a D6. On the result of a 6, the enemy loses an additional wound, with no saves of any kind allowed, and you must roll again. Keep on rolling as long as the result is a 6.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>Blade-Blunter Armour</Name>
-				<Type>Armour</Type>
-				<Points>50</Points>
-				<AddToArmour>5</AddToArmour>
-				<Rule>At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour: on the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon</Rule>
-				<Description>Heavy armour. At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour. On the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon. Instead it will count as a normal weapon of its type for the remainder of the battle.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Trollhide</Name>
-				<Type>Armour</Type>
-				<Points>50</Points>
-				<AddToArmour>6</AddToArmour>
-				<Regeneration/>
-				<Description>Light armour. The wearer gains the Regeneration rule.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Pelt of The Shadowgave</Name>
-				<Type>Armour</Type>
-				<Points>45</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>All shooting attacks directed at the character or his unit are at -1 To Hit</Rule>
-				<Rule>Spells that target the character or his unit deduct 2 from the casting roll</Rule>
-				<Description>Light armour. All shooting attacks directed at the bearer or his unit are at -1 To Hit. Spells that target the bearer or his unit deduct 2 from the casting roll.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blackened Plate</Name>
-				<Type>Armour</Type>
-				<Points>20</Points>
-				<AddToArmour>5</AddToArmour>
-				<Rule>2+ Ward save against all flaming attacks</Rule>
-				<Rule>Models in any unit that he is with have a 4+ Ward save against flaming attacks</Rule>
-				<Description>Heavy armour. The wearer of the Blackened Plate has a 2+ Ward save against all flaming attacks. Models in any unit that he is with have a 4+ Ward save against such attacks.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ramhorn Helm</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>For every armour save he passes, the character may immediately make a bonus attack at his basic Strength</Rule>
-				<Description>6+ armour save. This may be combined with other armour as normal. For every armour save he passes, the bearer may immediately make a bonus attack at his basic Strength.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Shard of The Herdstone</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Rule>After deployment zones have been agreed, but before the armies have been deployed, place an appropriate terrain piece to represent the herdstone in your deployment zone: at the start of your Magic phase each friendly Wizard within 6" of the herdstone generates an additional power dice</Rule>
-				<Description>After deployment zones have been agreed, but before the armies have been deployed, place an appropriate terrain piece to represent the herdstone in your deployment zone. At the start of your Magic phase each friendly Wizard within 6" of the herdstone generates an additional power dice.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Horn of The Great Hunt</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Rule>Bound Spell, Power Level 3: it counts as the Bestial Surge spell, except that every friendly Beastman unit within 36" is affected</Rule>
-				<Description>Bound Spell. Power Level 3. It counts as the Bestial Surge spell, except that every friendly Beastman unit within 36" is affected.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Horn of The First Beast</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Rule>All Beastmen units within 36" can re-roll failed Primal Fury tests</Rule>
-				<Description>All Beastmen units within 36" can re-roll failed Primal Fury tests.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Stone of Spite</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Bound spell, Power Level 5, one use only: every Arcane Item within 18" immediately explodes in the hands of its bearer (friend and foe), each bearer of an Arcane Item within range suffers D6 Strength 4 hits per item</Rule>
-				<Description>One use only. Bound spell. Power Level 5. Every Arcane Item within 18" immediately explodes in the hands of its bearer (friend and foe). Each bearer of an Arcane Item within range suffers D6 Strength 4 hits per item. The items are immediately destroyed.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Skin of Man</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<Rule>Scout</Rule>
-				<Description>The bearer of the Skin of Man has the Scout ability.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Cacophonous Dirge</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<Rule>Enemy musicians fighting in the same combat as the character have no effect.</Rule>
-				<Description>Enemy musicians fighting in the same combat as the bearer have no effect.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>Eye of Night</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>45</Points>
-				<Rule>Magic Resistance (2)</Rule>
-				<Rule>If an enemy Wizard within 24" attempts to cast a spell from the Lore of Life, the Lore of Heavens or the Lore of Light and suffers a miscast, you may force them to re-roll the result on the Miscast table</Rule>
-				<Description>The Eye of Night grants the bearer Magic Resistance (2). In addition, if an enemy Wizard within 24" attempts to cast a spell from the Lore of Life, the Lore of Heavens or the Lore of Light and suffers a miscast, you may force them to re-roll the result on the Miscast table.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Chalice of Dark Rain</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<Rule>Once per game, for the rest of the phase, all enemy missile units are at -1 To Hit, weapons or attacks that do not use Ballistic Skill may only fire on the roll of a 4+</Rule>
-				<Description>One use only. At the beginning of the enemy Shooting phase, the bearer can summon a storm of mud and worms with which to blind his enemies. For the rest of the phase, all enemy missile units are at -1 To Hit. Weapons or attacks that do not use Ballistic Skill may only fire on the roll of a 4+.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane items">
-			<Artefact>
-				<Name>Skull of Rarkos</Name>
-				<Type>Arcane</Type>
-				<Points>60</Points>
-				<Rule>All friendly Beastman Wizards within 6" (including the character himself) add 1 to their casting results</Rule>
-				<Description>All friendly Beastman Wizards within 6" (including the bearer himself) add 1 to their casting results.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Darkoth</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<Rule>Bound spell, Power Level 3: Viletide spell</Rule>
-				<Description>Bound spell. Power Level 3. This item casts the Viletide spell.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hagtree Fetish</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Rule>Choose an enemy unit within 24" at the start of each Magic phase: any failed To Wound rolls made during the Magic phase against that unit may be re-rolled</Rule>
-				<Description>Choose an enemy unit within 24" at the start of each Magic phase. Any failed To Wound rolls made during the Magic phase against that unit may be re-rolled.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Jagged Dagger</Name>
-				<Type>Arcane</Type>
-				<Points>10</Points>
-				<Rule>Each model kept to the side in such a manner may be 'expended' in the Magic phase to allow the character to roll an additional power dice</Rule>
-				<Description>Each model kept to the side in such a manner may be 'expended' in the Magic phase to allow the bearer to roll an additional power dice.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic banner">
-			<Artefact>
-				<Name>The Beast Banner</Name>
-				<Type>Banner</Type>
-				<Points>75</Points>
-				<AddToStrength>1</AddToStrength>
-				<Rule>Unit have a +1 bonus to Strength</Rule>
-				<Description>The bearer and any unit he has joined have a +1 bonus to their Strength.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Totem of Rust</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<Rule>All units in base contact with the unit, including the unit itself, treat their armour saves as two worse than it actually is instead</Rule>
-				<Description>All units in base contact with the unit carrying the totem, including the unit itself, treat their armour saves as two worse than it actually is instead. This does not affect Scaly Skin saves!</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Manbane Standard</Name>
-				<Type>Banner</Type>
-				<Points>20</Points>
-				<Rule>All enemy units within 6" suffer -1 to their Leadership characteristic</Rule>
-				<Description>All enemy units within 6" of the Manbane Standard suffer -1 to their Leadership characteristic.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Banner of Outrage</Name>
-				<Type>Banner</Type>
-				<Points>20</Points>
-				<Rule>Automatically passes Primal Fury tests</Rule>
-				<Rule>Enemy units Hate the unit</Rule>
-				<Description>The bearer's unit automatically passes Primal Fury tests (there is no need to roll). Enemy units Hate the bearer's unit.</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Khazrak</Name>
-			<Points>270</Points>
-			<Personified/>
-			<Description>Khazrak the One-eye</Description>
-			<Image>Khazrak.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>1</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Scourge</Name>
-					<Rule>Instead of making normal attacks, Khazrak may choose to use his whip: in this case he has a number of attacks equal to the number of models in the front rank of one enemy unit that Khazrak is in base contact with, these attacks are distributed as per shooting</Rule>
-				</HandWeapon>
-				<Armour>
-					<Name>The Dark Mail</Name>
-					<AddToArmour>2</AddToArmour>
-					<Rule>The Dark Mail negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Rule>
-				</Armour>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>All units using the Beastman Ambush special rule in the same army as Khazrak may choose to re-roll the dice to see how and when they enter play</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Gorthor</Name>
-			<Points>350</Points>
-			<Personified/>
-			<Mount>Tuskgor Chariot</Mount>
-			<Description>Gorthor the Beastlord</Description>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>9</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Impaler</Name>
-					<KillingBlow/>
-				</HandWeapon>
-				<Armour>
-					<Name>Skull of Mugrar</Name>
-					<Rule>When rolling for the chariot's impact hits, the Skull of Mugrar allows an extra dice to be rolled, and the highest result to be chosen</Rule>
-				</Armour>
-				<Armour>
-					<Name>Cloak of the Beastlord</Name>
-					<Rule>If Gorthor is the Army General, the range at which friendly units may use his Leadership characteristic is 18"</Rule>
-				</Armour>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Man-bane</Rule>
-					<Rule>Chariot</Rule>
-					<Rule>At the start of each friendly Magic phase randomly generate a spell from the Lore of Death: Gorthor may use this spell during this Magic phase as a Bound Spell, with a Power Level equal to half the casting value of the spell, rounding up</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Razorgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>65</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Malagor</Name>
-			<Points>200</Points>
-			<Wizard>4</Wizard>
-			<Personified/>
-			<Description>Malagor, The Dark Omen</Description>
-			<Image>Malagor.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Icons of Vilification</Name>
-					<Rule>When making their Primal Fury tests, all friendly units within 6" of Malagor will become Frenzied on any roll of a double, as long as they have passed the test</Rule>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Enemy units within 6" of Malagor may not use their General's Leadership, unless he is actually in the unit</Rule>
-					<Rule>For every spell Malagor casts that is not dispelled he gets a cumulative +1 on subsequent casting attempts for the rest of the Magic phase</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Taurox</Name>
-			<Points>335</Points>
-			<Personified/>
-			<Description>Taurox, The Brass Bull</Description>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>6</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>1</Armour>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<Frenzy/>
-				<ImpactHit>D3+1</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Rune-tortured Axes</Name>
-					<NoArmour/>
-					<Rule>Flaming Attacks</Rule>
-				</HandWeapon>
-				<Special>
-					<Rule>Bloodgreed</Rule>
-					<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
-					<Rule>If an enemy attack rolls a '6' To Hit and then a '6' To Wound then Taurox will be slain outright if he fails his saving throw</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Beastlord</Name>
-			<Points>145</Points>
-			<Description>Beastlord</Description>
-			<Image>Beastlord.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-					</Dependencies>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
 					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Tuskgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Razorgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>145</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Man-bane</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Doombull</Name>
-			<Points>235</Points>
-			<Description>Doombull</Description>
-			<Image>Doombull.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<Frenzy/>
-				<ImpactHit>D3</ImpactHit>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-					</Dependencies>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
 					<Points>15</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-					<Points>12</Points>
+					<AddToStrength>1</AddToStrength>
+					<Description>+1 Strenght</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
+					<Points>15</Points>
 					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Bloodgreed</Rule>
-					<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Great Bray-shaman</Name>
-			<Points>200</Points>
-			<Wizard>3</Wizard>
-			<Description>Great Bray-shaman</Description>
-			<Image>GreatBrayShaman.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 4</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Tuskgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Razorgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>145</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Braystaff</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Morghur</Name>
-			<Points>280</Points>
-			<Personified/>
-			<Description>Morghur, Master of skulls</Description>
-			<Image>Morghur.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Unbreakable/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Cannot be harmed in any way by missile attacks or spells, unless the model which is the source of the attack is within 12" of him</Rule>
-					<Rule>At the beginning of each round of close combat, all enemy models in base contact take a S3 hit with no armour save allowed</Rule>
-					<Rule>At the beginning of your Magic phase, you must remove a friendly model within 12" from play, then roll a D6: on the roll of a 3+ you may place a Chaos Spawn within 3" of the spot vacated, provided there is space, and you have the appropriate model available</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Slugtongue</Name>
-			<Points>190</Points>
-			<Wizard>2</Wizard>
-			<Personified/>
-			<Description>Lord of the Black Harvest</Description>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Regeneration/>
-				<PoisonAttack/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Braystaff</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Immediately after deployment, each enemy unit within 36" must roll once on the table of Curse of the Famine-fiend</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Moonclaw</Name>
-			<Points>200</Points>
-			<Wizard>1</Wizard>
-			<Personified/>
-			<Description>Son of Morrslieb</Description>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<Options>
-				<Option>
-					<Name>Umbralok</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Braystaff</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Every unit, friend or foe, within 12" of Moonclaw at the start of their turn must take a Stupidity test</Rule>
-					<Rule>At the beginning of the game, secretly roll a D3 and record the number, in the turn that corresponds to this number, Morrslieb is full: for the entire duration of that turn Moonclaw has a +2 bonus to his casting rolls, he may make D3 shooting attacks resolved as if he were a stone thrower for that turn only, any results of a misfire cause a single wound upon Moonclaw that cannot be saved by any means</Rule>
-					<Rule>Magic Resistance (2)</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Wargor</Name>
-			<Points>85</Points>
-			<Description>Wargor</Description>
-			<Image>Wargor.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<OnlyOneInArmy/>
+					<Description>5+ Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<AddToWard>6</AddToWard>
+					<Description>6+ Ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>+1 to dispell</Rule>
+					<Description>+1 to dispell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
 					<Points>25</Points>
-				</Option>
-				<Option>
-					<Name>Tuskgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Razorgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>145</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Man-bane</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Gorebull</Name>
-			<Points>160</Points>
-			<Description>Gorebull</Description>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<Frenzy/>
-				<ImpactHit>D3</ImpactHit>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Additional weapon</IfNot>
-					</Dependencies>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<OnlyOneInArmy/>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
 					<Points>25</Points>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Bloodgreed</Rule>
-					<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Bray-shaman</Name>
-			<Points>75</Points>
-			<Wizard>1</Wizard>
-			<Description>Bray-shaman</Description>
-			<Image>BrayShaman.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>2</Points>
-				</Option>
-				<Option>
-					<Name>Tuskgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Razorgor Chariot</Name>
-					<Type>Option</Type>
-					<Points>145</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Braystaff</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Tuskgor</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>0</Toughness>
-				<Wounds>0</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>0</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Flail/>
-			</SpecialRules>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Umbralok</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Flail/>
-			</SpecialRules>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Tuskgor Chariot</Name>
-			<Points>0</Points>
-			<Chariot>2</Chariot>
-			<Mount>Tuskgor</Mount>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<ImpactHit>D6+1</ImpactHit>
-			</SpecialRules>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Razorgor</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>0</Toughness>
-				<Wounds>0</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>0</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-			</SpecialRules>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Razorgor Chariot</Name>
-			<Points>0</Points>
-			<Chariot>2</Chariot>
-			<Mount>Razorgor</Mount>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHit>D6+1</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Thunderous Charge</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Gor herd</Name>
-			<Points>7</Points>
-			<Min>10</Min>
-			<Image>GorHerd.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Beastman Ambush</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<AddToArmour>1</AddToArmour>
-					<Dependencies>
-						<IfNot>Additional hand weapon</IfNot>
-					</Dependencies>
-					<PerModel/>
-					<Points>1</Points>
-				</Option>
-				<Option>
-					<Name>Additional hand weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Shield</IfNot>
-					</Dependencies>
-					<PerModel/>
-					<Points>1</Points>
-				</Option>
-				<Option>
-					<Name>Foe-render</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Ungor herd</Name>
-			<Points>5</Points>
-			<Min>10</Min>
-			<Image>UngorHerd.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>1</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Beastman Ambush</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<PerModel/>
-					<Points>1</Points>
-				</Option>
-				<Option>
-					<Name>Halfhorn</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Ungrol Four-Horn</IfNot>
-					</Dependencies>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Ungrol Four-Horn</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Halfhorn</IfNot>
-					</Dependencies>
-					<FullCommand/>
-					<OnlyOneInArmy/>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Gifts of Chaos">
+				<Artefact>
+					<Name>Crown of Horns</Name>
+					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Ungor raiders</Name>
-			<Points>6</Points>
-			<Min>5</Min>
-			<Max>10</Max>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangWeapon>
-					<Name>Short bow</Name>
-				</RangWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Beastman Ambush</Rule>
-					<Rule>Skirmishers</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Halfhorn</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>3</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Tuskgor Chariot</Name>
-			<Points>80</Points>
-			<Chariot>2</Chariot>
-			<Mount>Tuskgor</Mount>
-			<Image>TuskgorChariot.jpg</Image>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<ImpactHit>D6+1</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great weapon</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Chariot</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Chaos Warhounds</Name>
-			<Points>6</Points>
-			<Min>5</Min>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<NoCoreSlot/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Poisoned Attacks</Name>
-					<Type>Option</Type>
-					<PoisonAttack/>
-					<PerModel/>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Scaly Skin</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<PerModel/>
-					<Points>1</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Minotaurs</Name>
-			<Points>55</Points>
-			<Min>3</Min>
-			<Image>Minotaurs.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHit>1</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Bloodgreed</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<AddToArmour>1</AddToArmour>
-					<Dependencies>
-						<IfNot>Additional hand weapon</IfNot>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<PerModel/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Additional hand weapon</Name>
-					<Type>Option</Type>
+					<Stubborn/>
+					<Description>The model and any unit he is with are Stubborn.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Slug-Skin</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>Enemy models in base contact with the model at the start of any round of close combat suffer a Strength 3 hit before any blows are struck</Rule>
+					<Description>Enemy models in base contact with the model at the start of any round of close combat suffer a Strength 3 hit before any blows are struck.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Many-Limbed Fiend</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
 					<AddToAttacks>1</AddToAttacks>
-					<Dependencies>
-						<IfNot>Shield</IfNot>
-						<IfNot>Great weapon</IfNot>
-					</Dependencies>
-					<PerModel/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Shield</IfNot>
-						<IfNot>Additional hand weapon</IfNot>
-					</Dependencies>
-					<PerModel/>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Bloodkine</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-					<MagicItems Points="25" Type="Hero"/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Centigor</Name>
-			<Points>25</Points>
-			<Min>5</Min>
-			<Image>Centigor.jpg</Image>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Drunken</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Throwing axes</Name>
-					<Type>Option</Type>
-					<PerModel/>
-					<Points>2</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<AddToArmour>-1</AddToArmour>
-					<HitLast/>
-					<PerModel/>
-					<Points>2</Points>
-				</Option>
-				<Option>
-					<Name>Gorehoof</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Ghorros Warhoof</IfNot>
-					</Dependencies>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-				<Option>
-					<Name>Ghorros Warhoof</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Gorehoof</IfNot>
-					</Dependencies>
-					<FullCommand/>
-					<OnlyOneInArmy/>
-					<Points>155</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Harpies</Name>
-			<Points>11</Points>
-			<Min>5</Min>
-			<Max>10</Max>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Claws</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Flying Unit</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Scout</Name>
-					<Type>Option</Type>
-					<PerModel/>
-					<Points>3</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Bestigor herd</Name>
-			<Points>12</Points>
-			<Min>10</Min>
-			<Image>BestigorHerd.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great weapon</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
+					<Description>The model may make a bonus attack in addition to his normal attacks. This bonus attack is always at the model's basic Strength and is never augmented by equipment or magic weapons.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gouge-Tusks</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>All of the model's close combat attacks are armour piercing.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gnarled Hide</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
 					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Despoilers</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Gouge-horn</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="25" Type="Hero"/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Razorgor Chariot</Name>
-			<Points>145</Points>
-			<Chariot>2</Chariot>
-			<Mount>Razorgor</Mount>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<ImpactHit>D6+1</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great weapon</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Primal Fury</Rule>
-					<Rule>Chariot</Rule>
-					<Rule>Thunderous Charge</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Razorgor herd</Name>
-			<Points>55</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Tusks, hooves and a bad attitude</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Thunderous Charge</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Cygor</Name>
-			<Points>275</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>1</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-				<Stubborn/>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Massively over-sized claws and horns</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Large target</Rule>
+					<Description>The model has a scaly skin save of 5+, which is cumulative with other armour as normal.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rune of The True Beast</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<Description>Ridden monsters, monsters, the steeds pulling chariots, cavalry mounts and swarms suffer -1 To Hit the model bearing the Rune of the True Beast in close combat, although their riders may attack as normal.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Uncanny Senses</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>10</Points>
+					<AddToInitiative>1</AddToInitiative>
+					<Description>The model has +1 Initiative.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Shadow-Hide</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>5</Points>
+					<Rule>When at least partially in cover, a further -1 To Hit modifier is applied when enemies shoot at the character</Rule>
+					<Description>When at least partially in cover, a further -1 To Hit modifier is applied when enemies shoot at the character.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic Weapons">
+				<Artefact>
+					<Name>Primeval Club</Name>
+					<Type>Weapon</Type>
+					<Points>100</Points>
+					<Rule>When rolling To Wound, the character's Strength is treated as equal to the unmodified Leadership value of the target model</Rule>
+					<Description>When rolling To Wound, the owner's Strength is treated as equal to the unmodified Leadership value of the target model.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Axe of Men</Name>
+					<Type>Weapon</Type>
+					<Points>75</Points>
+					<KillingBlow/>
+					<Terror/>
+					<Unbreakable/>
+					<Description>This weapon has the Killing Blow special rule. In addition, if the bearer kills an enemy character in a challenge, he and any unit he leads are Unbreakable and cause Terror so long as he leads them.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Stonecrusher Mace</Name>
+					<Type>Weapon</Type>
+					<Points>65</Points>
+					<AddToStrength>3</AddToStrength>
+					<Rule>When rolling To Wound against war machines and chariots or buildings, the character's Strength is increased to 10</Rule>
+					<Description>Stonecrusher Mace confers +3 Strength. When rolling To Wound against war machines and chariots (including War Altars, War Shrines, Steam Tanks and Corpse Carts, and so on) or buildings, the character's Strength is increased to 10.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Mangelder</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Terror/>
+					<Rule>Any model wounded by this character loses 1 point of Leadership for each Wound it suffers</Rule>
+					<Description>The bearer causes Terror. In addition, any model wounded by this weapon loses 1 point of Leadership for each Wound it suffers.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hunting Spear</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Terror/>
+					<Rule>Spear can be thrown with a range of 24", resolve each hit like a single bolt from a bolt thrower</Rule>
+					<Description>The Hunting Spear counts as a spear in close combat. It can be thrown with a range of 24". Resolve each hit like a single bolt from a bolt thrower (see the main rule book). Note that you may shoot after moving (but not marching) and 'stand and shoot' with the Hunting Spear.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Axes of Khorgor</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
+					<Terror/>
+					<AddToAttacks>1</AddToAttacks>
+					<Reroll>ToHit</Reroll>
+					<Description>Requires two hands. The bearer gains +1 Attack and may re-roll any missed To Hit rolls in close combat.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Steel-Claws</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<Rule>Extra D3 Attacks (roll at the beginning of each round of close combat)</Rule>
+					<Description>Requires two hands. The Steel-Claws confer an extra D3 Attacks to the wielder (roll at the beginning of each round of close combat). If a 6 is rolled when determining the number of attacks, all the bearer's attacks that round will ignore armour saves.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Brass Cleaver</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<Rule>Bonus attack against each of the models in base contact with the bearer</Rule>
+					<Description>The Brass Cleaver confers a single bonus attack against each of the models in base contact with the bearer. In a challenge it confers one bonus attack and no more.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Everbleed</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Every time an enemy model suffers an unsaved wound from this weapon, roll a D6: on the result of a 6, the enemy loses an additional wound, with no saves of any kind allowed, and you must roll again</Rule>
+					<Description>Every time an enemy model suffers an unsaved wound from this weapon, roll a D6. On the result of a 6, the enemy loses an additional wound, with no saves of any kind allowed, and you must roll again. Keep on rolling as long as the result is a 6.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>Blade-Blunter Armour</Name>
+					<Type>Armour</Type>
+					<Points>50</Points>
+					<AddToArmour>5</AddToArmour>
+					<Rule>At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour: on the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon</Rule>
+					<Description>Heavy armour. At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour. On the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon. Instead it will count as a normal weapon of its type for the remainder of the battle.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Trollhide</Name>
+					<Type>Armour</Type>
+					<Points>50</Points>
+					<AddToArmour>6</AddToArmour>
+					<Regeneration/>
+					<Description>Light armour. The wearer gains the Regeneration rule.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Pelt of The Shadowgave</Name>
+					<Type>Armour</Type>
+					<Points>45</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>All shooting attacks directed at the character or his unit are at -1 To Hit</Rule>
+					<Rule>Spells that target the character or his unit deduct 2 from the casting roll</Rule>
+					<Description>Light armour. All shooting attacks directed at the bearer or his unit are at -1 To Hit. Spells that target the bearer or his unit deduct 2 from the casting roll.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blackened Plate</Name>
+					<Type>Armour</Type>
+					<Points>20</Points>
+					<AddToArmour>5</AddToArmour>
+					<Rule>2+ Ward save against all flaming attacks</Rule>
+					<Rule>Models in any unit that he is with have a 4+ Ward save against flaming attacks</Rule>
+					<Description>Heavy armour. The wearer of the Blackened Plate has a 2+ Ward save against all flaming attacks. Models in any unit that he is with have a 4+ Ward save against such attacks.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ramhorn Helm</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>For every armour save he passes, the character may immediately make a bonus attack at his basic Strength</Rule>
+					<Description>6+ armour save. This may be combined with other armour as normal. For every armour save he passes, the bearer may immediately make a bonus attack at his basic Strength.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Shard of The Herdstone</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Rule>After deployment zones have been agreed, but before the armies have been deployed, place an appropriate terrain piece to represent the herdstone in your deployment zone: at the start of your Magic phase each friendly Wizard within 6" of the herdstone generates an additional power dice</Rule>
+					<Description>After deployment zones have been agreed, but before the armies have been deployed, place an appropriate terrain piece to represent the herdstone in your deployment zone. At the start of your Magic phase each friendly Wizard within 6" of the herdstone generates an additional power dice.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Horn of The Great Hunt</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Rule>Bound Spell, Power Level 3: it counts as the Bestial Surge spell, except that every friendly Beastman unit within 36" is affected</Rule>
+					<Description>Bound Spell. Power Level 3. It counts as the Bestial Surge spell, except that every friendly Beastman unit within 36" is affected.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Horn of The First Beast</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Rule>All Beastmen units within 36" can re-roll failed Primal Fury tests</Rule>
+					<Description>All Beastmen units within 36" can re-roll failed Primal Fury tests.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Stone of Spite</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Bound spell, Power Level 5, one use only: every Arcane Item within 18" immediately explodes in the hands of its bearer (friend and foe), each bearer of an Arcane Item within range suffers D6 Strength 4 hits per item</Rule>
+					<Description>One use only. Bound spell. Power Level 5. Every Arcane Item within 18" immediately explodes in the hands of its bearer (friend and foe). Each bearer of an Arcane Item within range suffers D6 Strength 4 hits per item. The items are immediately destroyed.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Skin of Man</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<Rule>Scout</Rule>
+					<Description>The bearer of the Skin of Man has the Scout ability.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Cacophonous Dirge</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<Rule>Enemy musicians fighting in the same combat as the character have no effect.</Rule>
+					<Description>Enemy musicians fighting in the same combat as the bearer have no effect.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>Eye of Night</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>45</Points>
 					<Rule>Magic Resistance (2)</Rule>
-					<Rule>When fighting enemy Wizards, models with any sort of magic item or magical attacks, Undead, or creatures with a ward save, the Cygor may re-roll any failed To Hit rolls</Rule>
-					<Rule>Hurl Attack</Rule>
-					<Rule>Enemy Wizards within 24" of one or more Cygors must take a Leadership test at the beginning of the Magic phase, if the test is failed any spell he fails to cast this Magic phase will result in a miscast</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Chorgon</Name>
-			<Points>275</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>6</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-				<Frenzy/>
-				<ImmuneToPsychology/>
-				<Stubborn/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Cleaver-limbs</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Bloodgreed</Rule>
-					<Rule>May forego all of its normal attacks and instead make a single special attack at an Initiative of 1: this attack has the Killing Blow ability, but To Wound rolls of a 4, 5 or 6 act as Killing Blow attacks, instead of just rolls of 6</Rule>
-					<Rule>Each time a Ghorgon causes a Killing Blow with its Swallow Whole ability, it regains D3 Wounds that it has lost earlier in the battle</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Chaos Spawn</Name>
-			<Points>55</Points>
-			<Profile>
-				<Movement>2D6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>D6+1</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<Unbreakable/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Tentacles, claws and teeth</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Flailing Appendages</Rule>
-					<Rule>Lurching Horror</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Giant</Name>
-			<Points>225</Points>
-			<Image>Giant.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks></Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<Stubborn/>
-				<LargeBase/>
-				<Giant/>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Large club and bad breath</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Fall Over</Rule>
-					<Rule>Giant Special Attacks</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Longshanks</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Jabberslythe</Name>
-			<Points>275</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<PoisonAttack/>
-				<LargeBase/>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Biting jaw and catching claw</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Each enemy unit within 12" of one or more Jabberslythes at the beginning of the Beastmen Magic phase must take a Leadership test: for every point by which a unit fails its test, it suffers a wound with no armour saves allowed - some of its members have gone irrevocably insane!</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Slythey Tongue</Rule>
-					<Rule>For every wound caused on a Jabberslythe in close combat, the attacking unit immediately suffers a S5 hit, randomised as shooting</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-	</Units>
+					<Rule>If an enemy Wizard within 24" attempts to cast a spell from the Lore of Life, the Lore of Heavens or the Lore of Light and suffers a miscast, you may force them to re-roll the result on the Miscast table</Rule>
+					<Description>The Eye of Night grants the bearer Magic Resistance (2). In addition, if an enemy Wizard within 24" attempts to cast a spell from the Lore of Life, the Lore of Heavens or the Lore of Light and suffers a miscast, you may force them to re-roll the result on the Miscast table.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Chalice of Dark Rain</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<Rule>Once per game, for the rest of the phase, all enemy missile units are at -1 To Hit, weapons or attacks that do not use Ballistic Skill may only fire on the roll of a 4+</Rule>
+					<Description>One use only. At the beginning of the enemy Shooting phase, the bearer can summon a storm of mud and worms with which to blind his enemies. For the rest of the phase, all enemy missile units are at -1 To Hit. Weapons or attacks that do not use Ballistic Skill may only fire on the roll of a 4+.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane items">
+				<Artefact>
+					<Name>Skull of Rarkos</Name>
+					<Type>Arcane</Type>
+					<Points>60</Points>
+					<Rule>All friendly Beastman Wizards within 6" (including the character himself) add 1 to their casting results</Rule>
+					<Description>All friendly Beastman Wizards within 6" (including the bearer himself) add 1 to their casting results.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Darkoth</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<Rule>Bound spell, Power Level 3: Viletide spell</Rule>
+					<Description>Bound spell. Power Level 3. This item casts the Viletide spell.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hagtree Fetish</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Rule>Choose an enemy unit within 24" at the start of each Magic phase: any failed To Wound rolls made during the Magic phase against that unit may be re-rolled</Rule>
+					<Description>Choose an enemy unit within 24" at the start of each Magic phase. Any failed To Wound rolls made during the Magic phase against that unit may be re-rolled.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Jagged Dagger</Name>
+					<Type>Arcane</Type>
+					<Points>10</Points>
+					<Rule>Each model kept to the side in such a manner may be 'expended' in the Magic phase to allow the character to roll an additional power dice</Rule>
+					<Description>Each model kept to the side in such a manner may be 'expended' in the Magic phase to allow the bearer to roll an additional power dice.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic banner">
+				<Artefact>
+					<Name>The Beast Banner</Name>
+					<Type>Banner</Type>
+					<Points>75</Points>
+					<AddToStrength>1</AddToStrength>
+					<Rule>Unit have a +1 bonus to Strength</Rule>
+					<Description>The bearer and any unit he has joined have a +1 bonus to their Strength.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Totem of Rust</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<Rule>All units in base contact with the unit, including the unit itself, treat their armour saves as two worse than it actually is instead</Rule>
+					<Description>All units in base contact with the unit carrying the totem, including the unit itself, treat their armour saves as two worse than it actually is instead. This does not affect Scaly Skin saves!</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Manbane Standard</Name>
+					<Type>Banner</Type>
+					<Points>20</Points>
+					<Rule>All enemy units within 6" suffer -1 to their Leadership characteristic</Rule>
+					<Description>All enemy units within 6" of the Manbane Standard suffer -1 to their Leadership characteristic.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Banner of Outrage</Name>
+					<Type>Banner</Type>
+					<Points>20</Points>
+					<Rule>Automatically passes Primal Fury tests</Rule>
+					<Rule>Enemy units Hate the unit</Rule>
+					<Description>The bearer's unit automatically passes Primal Fury tests (there is no need to roll). Enemy units Hate the bearer's unit.</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Khazrak</Name>
+				<Points>270</Points>
+				<Personified/>
+				<Description>Khazrak the One-eye</Description>
+				<Image>Khazrak.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>1</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Scourge</Name>
+						<Rule>Instead of making normal attacks, Khazrak may choose to use his whip: in this case he has a number of attacks equal to the number of models in the front rank of one enemy unit that Khazrak is in base contact with, these attacks are distributed as per shooting</Rule>
+					</HandWeapon>
+					<Armour>
+						<Name>The Dark Mail</Name>
+						<AddToArmour>2</AddToArmour>
+						<Rule>The Dark Mail negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Rule>
+					</Armour>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>All units using the Beastman Ambush special rule in the same army as Khazrak may choose to re-roll the dice to see how and when they enter play</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Gorthor</Name>
+				<Points>350</Points>
+				<Personified/>
+				<Mount>Tuskgor Chariot</Mount>
+				<Description>Gorthor the Beastlord</Description>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>9</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Impaler</Name>
+						<KillingBlow/>
+					</HandWeapon>
+					<Armour>
+						<Name>Skull of Mugrar</Name>
+						<Rule>When rolling for the chariot's impact hits, the Skull of Mugrar allows an extra dice to be rolled, and the highest result to be chosen</Rule>
+					</Armour>
+					<Armour>
+						<Name>Cloak of the Beastlord</Name>
+						<Rule>If Gorthor is the Army General, the range at which friendly units may use his Leadership characteristic is 18"</Rule>
+					</Armour>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Man-bane</Rule>
+						<Rule>Chariot</Rule>
+						<Rule>At the start of each friendly Magic phase randomly generate a spell from the Lore of Death: Gorthor may use this spell during this Magic phase as a Bound Spell, with a Power Level equal to half the casting value of the spell, rounding up</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Razorgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>65</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Malagor</Name>
+				<Points>200</Points>
+				<Wizard>4</Wizard>
+				<Personified/>
+				<Description>Malagor, The Dark Omen</Description>
+				<Image>Malagor.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Icons of Vilification</Name>
+						<Rule>When making their Primal Fury tests, all friendly units within 6" of Malagor will become Frenzied on any roll of a double, as long as they have passed the test</Rule>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Enemy units within 6" of Malagor may not use their General's Leadership, unless he is actually in the unit</Rule>
+						<Rule>For every spell Malagor casts that is not dispelled he gets a cumulative +1 on subsequent casting attempts for the rest of the Magic phase</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Taurox</Name>
+				<Points>335</Points>
+				<Personified/>
+				<Description>Taurox, The Brass Bull</Description>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>6</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>1</Armour>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<Frenzy/>
+					<ImpactHit>D3+1</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Rune-tortured Axes</Name>
+						<NoArmour/>
+						<Rule>Flaming Attacks</Rule>
+					</HandWeapon>
+					<Special>
+						<Rule>Bloodgreed</Rule>
+						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
+						<Rule>If an enemy attack rolls a '6' To Hit and then a '6' To Wound then Taurox will be slain outright if he fails his saving throw</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Beastlord</Name>
+				<Points>145</Points>
+				<Description>Beastlord</Description>
+				<Image>Beastlord.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+						</Dependencies>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Tuskgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>80</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Razorgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>145</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Man-bane</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Doombull</Name>
+				<Points>235</Points>
+				<Description>Doombull</Description>
+				<Image>Doombull.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<Frenzy/>
+					<ImpactHit>D3</ImpactHit>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+						</Dependencies>
+						<Points>15</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+						<Points>12</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Bloodgreed</Rule>
+						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Great Bray-shaman</Name>
+				<Points>200</Points>
+				<Wizard>3</Wizard>
+				<Description>Great Bray-shaman</Description>
+				<Image>GreatBrayShaman.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 4</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Tuskgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>80</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Razorgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>145</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Braystaff</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Morghur</Name>
+				<Points>280</Points>
+				<Personified/>
+				<Description>Morghur, Master of skulls</Description>
+				<Image>Morghur.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Unbreakable/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Cannot be harmed in any way by missile attacks or spells, unless the model which is the source of the attack is within 12" of him</Rule>
+						<Rule>At the beginning of each round of close combat, all enemy models in base contact take a S3 hit with no armour save allowed</Rule>
+						<Rule>At the beginning of your Magic phase, you must remove a friendly model within 12" from play, then roll a D6: on the roll of a 3+ you may place a Chaos Spawn within 3" of the spot vacated, provided there is space, and you have the appropriate model available</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Slugtongue</Name>
+				<Points>190</Points>
+				<Wizard>2</Wizard>
+				<Personified/>
+				<Description>Lord of the Black Harvest</Description>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Regeneration/>
+					<PoisonAttack/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Braystaff</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Immediately after deployment, each enemy unit within 36" must roll once on the table of Curse of the Famine-fiend</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Moonclaw</Name>
+				<Points>200</Points>
+				<Wizard>1</Wizard>
+				<Personified/>
+				<Description>Son of Morrslieb</Description>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<Options>
+					<Option>
+						<Name>Umbralok</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Braystaff</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Every unit, friend or foe, within 12" of Moonclaw at the start of their turn must take a Stupidity test</Rule>
+						<Rule>At the beginning of the game, secretly roll a D3 and record the number, in the turn that corresponds to this number, Morrslieb is full: for the entire duration of that turn Moonclaw has a +2 bonus to his casting rolls, he may make D3 shooting attacks resolved as if he were a stone thrower for that turn only, any results of a misfire cause a single wound upon Moonclaw that cannot be saved by any means</Rule>
+						<Rule>Magic Resistance (2)</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Wargor</Name>
+				<Points>85</Points>
+				<Description>Wargor</Description>
+				<Image>Wargor.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+					</Option>
+					<Option>
+						<Name>Tuskgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>80</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Razorgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>145</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Man-bane</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Gorebull</Name>
+				<Points>160</Points>
+				<Description>Gorebull</Description>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<Frenzy/>
+					<ImpactHit>D3</ImpactHit>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Additional weapon</IfNot>
+						</Dependencies>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Bloodgreed</Rule>
+						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Bray-shaman</Name>
+				<Points>75</Points>
+				<Wizard>1</Wizard>
+				<Description>Bray-shaman</Description>
+				<Image>BrayShaman.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>2</Points>
+					</Option>
+					<Option>
+						<Name>Tuskgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>80</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Razorgor Chariot</Name>
+						<Type>Option</Type>
+						<Points>145</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Braystaff</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Tuskgor</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>0</Toughness>
+					<Wounds>0</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>0</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Flail/>
+				</SpecialRules>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Umbralok</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Flail/>
+				</SpecialRules>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Tuskgor Chariot</Name>
+				<Points>0</Points>
+				<Chariot>2</Chariot>
+				<Mount>Tuskgor</Mount>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<ImpactHit>D6+1</ImpactHit>
+				</SpecialRules>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Razorgor</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>0</Toughness>
+					<Wounds>0</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>0</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+				</SpecialRules>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Razorgor Chariot</Name>
+				<Points>0</Points>
+				<Chariot>2</Chariot>
+				<Mount>Razorgor</Mount>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHit>D6+1</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Thunderous Charge</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Gor herd</Name>
+				<Points>7</Points>
+				<Min>10</Min>
+				<Image>GorHerd.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Beastman Ambush</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<AddToArmour>1</AddToArmour>
+						<Dependencies>
+							<IfNot>Additional hand weapon</IfNot>
+						</Dependencies>
+						<PerModel/>
+						<Points>1</Points>
+					</Option>
+					<Option>
+						<Name>Additional hand weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Shield</IfNot>
+						</Dependencies>
+						<PerModel/>
+						<Points>1</Points>
+					</Option>
+					<Option>
+						<Name>Foe-render</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Ungor herd</Name>
+				<Points>5</Points>
+				<Min>10</Min>
+				<Image>UngorHerd.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>1</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Beastman Ambush</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<PerModel/>
+						<Points>1</Points>
+					</Option>
+					<Option>
+						<Name>Halfhorn</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Ungrol Four-Horn</IfNot>
+						</Dependencies>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Ungrol Four-Horn</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Halfhorn</IfNot>
+						</Dependencies>
+						<FullCommand/>
+						<OnlyOneInArmy/>
+						<Points>75</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Ungor raiders</Name>
+				<Points>6</Points>
+				<Min>5</Min>
+				<Max>10</Max>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangWeapon>
+						<Name>Short bow</Name>
+					</RangWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Beastman Ambush</Rule>
+						<Rule>Skirmishers</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Halfhorn</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>3</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Tuskgor Chariot</Name>
+				<Points>80</Points>
+				<Chariot>2</Chariot>
+				<Mount>Tuskgor</Mount>
+				<Image>TuskgorChariot.jpg</Image>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<ImpactHit>D6+1</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great weapon</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Chariot</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Chaos Warhounds</Name>
+				<Points>6</Points>
+				<Min>5</Min>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<NoCoreSlot/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Poisoned Attacks</Name>
+						<Type>Option</Type>
+						<PoisonAttack/>
+						<PerModel/>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Scaly Skin</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<PerModel/>
+						<Points>1</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Minotaurs</Name>
+				<Points>55</Points>
+				<Min>3</Min>
+				<Image>Minotaurs.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHit>1</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Bloodgreed</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<AddToArmour>1</AddToArmour>
+						<Dependencies>
+							<IfNot>Additional hand weapon</IfNot>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<PerModel/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Additional hand weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Dependencies>
+							<IfNot>Shield</IfNot>
+							<IfNot>Great weapon</IfNot>
+						</Dependencies>
+						<PerModel/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Shield</IfNot>
+							<IfNot>Additional hand weapon</IfNot>
+						</Dependencies>
+						<PerModel/>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Bloodkine</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+						<MagicItems Points="25" Type="Hero"/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Centigor</Name>
+				<Points>25</Points>
+				<Min>5</Min>
+				<Image>Centigor.jpg</Image>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Drunken</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Throwing axes</Name>
+						<Type>Option</Type>
+						<PerModel/>
+						<Points>2</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<AddToArmour>-1</AddToArmour>
+						<HitLast/>
+						<PerModel/>
+						<Points>2</Points>
+					</Option>
+					<Option>
+						<Name>Gorehoof</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Ghorros Warhoof</IfNot>
+						</Dependencies>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+					<Option>
+						<Name>Ghorros Warhoof</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Gorehoof</IfNot>
+						</Dependencies>
+						<FullCommand/>
+						<OnlyOneInArmy/>
+						<Points>155</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Harpies</Name>
+				<Points>11</Points>
+				<Min>5</Min>
+				<Max>10</Max>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Claws</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Flying Unit</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Scout</Name>
+						<Type>Option</Type>
+						<PerModel/>
+						<Points>3</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Bestigor herd</Name>
+				<Points>12</Points>
+				<Min>10</Min>
+				<Image>BestigorHerd.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great weapon</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Despoilers</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Gouge-horn</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="25" Type="Hero"/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Razorgor Chariot</Name>
+				<Points>145</Points>
+				<Chariot>2</Chariot>
+				<Mount>Razorgor</Mount>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<ImpactHit>D6+1</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great weapon</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Primal Fury</Rule>
+						<Rule>Chariot</Rule>
+						<Rule>Thunderous Charge</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Razorgor herd</Name>
+				<Points>55</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Tusks, hooves and a bad attitude</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Thunderous Charge</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Cygor</Name>
+				<Points>275</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>1</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+					<Stubborn/>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Massively over-sized claws and horns</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Magic Resistance (2)</Rule>
+						<Rule>When fighting enemy Wizards, models with any sort of magic item or magical attacks, Undead, or creatures with a ward save, the Cygor may re-roll any failed To Hit rolls</Rule>
+						<Rule>Hurl Attack</Rule>
+						<Rule>Enemy Wizards within 24" of one or more Cygors must take a Leadership test at the beginning of the Magic phase, if the test is failed any spell he fails to cast this Magic phase will result in a miscast</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Chorgon</Name>
+				<Points>275</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>6</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+					<Frenzy/>
+					<ImmuneToPsychology/>
+					<Stubborn/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Cleaver-limbs</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Bloodgreed</Rule>
+						<Rule>May forego all of its normal attacks and instead make a single special attack at an Initiative of 1: this attack has the Killing Blow ability, but To Wound rolls of a 4, 5 or 6 act as Killing Blow attacks, instead of just rolls of 6</Rule>
+						<Rule>Each time a Ghorgon causes a Killing Blow with its Swallow Whole ability, it regains D3 Wounds that it has lost earlier in the battle</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Chaos Spawn</Name>
+				<Points>55</Points>
+				<Profile>
+					<Movement>2D6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>D6+1</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<Unbreakable/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Tentacles, claws and teeth</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Flailing Appendages</Rule>
+						<Rule>Lurching Horror</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Giant</Name>
+				<Points>225</Points>
+				<Image>Giant.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks></Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<Stubborn/>
+					<LargeBase/>
+					<Giant/>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Large club and bad breath</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Fall Over</Rule>
+						<Rule>Giant Special Attacks</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Longshanks</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Jabberslythe</Name>
+				<Points>275</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<PoisonAttack/>
+					<LargeBase/>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Biting jaw and catching claw</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Each enemy unit within 12" of one or more Jabberslythes at the beginning of the Beastmen Magic phase must take a Leadership test: for every point by which a unit fails its test, it suffers a wound with no armour saves allowed - some of its members have gone irrevocably insane!</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Slythey Tongue</Rule>
+						<Rule>For every wound caused on a Jabberslythe in close combat, the attacking unit immediately suffers a S5 hit, randomised as shooting</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
