@@ -42,2595 +42,2597 @@
 		<Released>2006</Released>
 		<Authors>Matthew Ward</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strength</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>5</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>15</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ Ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>30</Points>
-				<Rule>+1 to dispel</Rule>
-				<Description>+1 to dispel</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic weapons">
-			<Artefact>
-				<Name>WAAAGH! Cleava</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Orc</OnlyForGroup>
-				<Points>100</Points>
-				<AutoWound/>
-				<NoArmour/>
-				<Description>All hits from this weapons wound automatically and allow no armour saves</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Battleaxe of the Last WAAAGH!</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Orc</OnlyForGroup>
-				<Points>100</Points>
-				<Rule>Attacks and Strength bonus equal rank bonus</Rule>
-				<Description>The wielder of this weapon receives a bonus equal to his unit's rank bonus to both his Attacks and Strength - calculate this when the wielder makes his attacks</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Basha's Bloodaxe</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Orc</OnlyForGroup>
-				<Points>50</Points>
-				<Flail>1</Flail>
-				<Frenzy/>
-				<Description>Grants +1 Strength in the first round of combat. The wielder of this weapon is subject to Frenzy (D6 extra attacks). The wielder can never lose his Frenzy</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Shaga's Screamin' sword</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Rule>+1 Strength and +1 Attack for each enemy character within 12"</Rule>
-				<Description>The wielder receives +1 Strength and +1 Attack for each enemy character within 12"</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Skull wand of Kaloth</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Test Bet="Death" Context="Hit">Leadership</Test>
-				<Description>For each successful hit inflicted by this weapon, the victim must pass a Leadership test or be slain instantly. No armour, ward or regeneration saves are allowed against this special attack. If the tests are passed, roll to Wound and save as normal. Only for shamans</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Porko's Pigstikka</Name>
-				<Type>Weapon</Type>
-				<OnlyFor>Mount</OnlyFor>
-				<Points>40</Points>
-				<Rule>Additional attack for each pointt of rank bonus</Rule>
-				<Description>Spear. On the turn the wielder charges, he receives an additional attack for each point of rank bonus that the unit hi is attacking has (up to a maximum of +3)</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ulag's Akrit axe</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToStrength>1</AddToStrength>
-				<Reroll>ToHit</Reroll>
-				<Flail/>
-				<Description>The wielder may re-roll any missed to hit rolls. It also grants +1 Strength in the first round of combat</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Backstabber's blade</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>25</Points>
-				<PoisonAttack/>
-				<Rule>+1 Strength flank attack bonus</Rule>
-				<Rule>+2 Strength rear attack bonus</Rule>
-				<Description>Grants poisoned attacks. Grants the wielder +1 Strength if he is attacking the enemy in the flank and +2 Strength if he is attacking them in the rear</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Wollopa's One Hit Wunda</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>15</Points>
-				<Rule>Strength 10 for one combat phase</Rule>
-				<Description>Once per game, this weapon grants the wielder Strength 10 for duration of the combat phase. One use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Mortog's best Basha</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<AddToWeaponSkill>1</AddToWeaponSkill>
-				<AddToStrength>1</AddToStrength>
-				<AddToInitiative>1</AddToInitiative>
-				<Description>The wielder of this blafe gains +1 Wepon Skill, +1 Strength and +1 Initiative</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sneaky Skewerer</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>10</Points>
-				<ArmourPiercing>3</ArmourPiercing>
-				<Description>Wounds caused by this weapon suffer an additional -3 armour save modifier</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Lucky's Dirk</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>5</Points>
-				<Rule>+1 Strength for each enemy magic item</Rule>
-				<Description>If the bearer strikes an enemy character carrying one or more magic item, his hits at +1 Strength for each magic item</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>Armour of Gork</Name>
-				<Type>Armour</Type>
-				<Points>50</Points>
-				<AddToArmour>6</AddToArmour>
-				<AddToToughness>1</AddToToughness>
-				<Description>Light armour. The wearer has +1 Toughness</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Spliteful shield</Name>
-				<Type>Shield</Type>
-				<Points>25</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Strength 5 hit for each 1 on a enemy roll to Hit</Rule>
-				<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>Effigy of Mork</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<SubOpponentToHit>1</SubOpponentToHit>
-				<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Warboss Umm's Best Boss 'at</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<AddToWard>5</AddToWard>
-				<Description>Grants the rearer a 5+ Ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Amulet of Protectyness</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<Rule>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Rule>
-				<Description>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Collar of Zorga</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>5</Points>
-				<Rule>Steeds and monsters require Strength 6 to hit the bearer</Rule>
-				<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6S to hit the bearer</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane items">
-			<Artefact>
-				<Name>Idol of Mork</Name>
-				<Type>Arcane</Type>
-				<OnlyForGroup>Orc</OnlyForGroup>
-				<Points>50</Points>
-				<Rule>+1 Power dice for each Orc unit within 24"</Rule>
-				<Rule>-1 Power dice for each fleeing frendly unit within 24"</Rule>
-				<Description>+1 Power dice for each Orc unit within 24"\n-1 Power dice for each fleeing frendly unit within 24" </Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sneaky Stealin'</Name>
-				<Type>Arcane</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>50</Points>
-				<Rule>Steals 1 Power dice from the enemy to dispel</Rule>
-				<Description>At the start of each of your opponent's magic phases, you may take one dice from you opponent's power poll and add it to your dispel poll</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Baduumm</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>+1 to any casting attempts</Rule>
-				<Description>Adds +1 to any casting attempts made by the bearer</Description>
-			</Artefact>
-			<Artefact>
-				<Name>WAAAGH! paints</Name>
-				<Type>Arcane</Type>
-				<OnlyForGroup>Orc</OnlyForGroup>
-				<Points>10</Points>
-				<Rule>+2 to any casting attemts in close combat</Rule>
-				<Description>If the Shaman is in combat at the start of the Orcs and Goblins magic phase, he receives +2 to any casting attempts</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Magic mushrooms</Name>
-				<Type>Arcane</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>10</Points>
-				<Rule>+D6 to casting roll, one use only</Rule>
-				<Description>+D6 to casting roll, one use only. If Mushroom dice is an 1 then the spell is miscast</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted itams">
-			<Artefact>
-				<Name>The Horn of Urgok</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<Rule>Bound item, Power Level 5: +1 Leadership for all friendly units, -1 Leadership for all enemy units</Rule>
-				<Description>Bound item, Power Level 5. +1 Leadership for all friendly units, -1 Leadership for all enemy units. Roll a D6 after each use. On the roll of a 1, the bearer suffer a Strength 5 hit with no armour save allowed</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Pipes of Doom</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>35</Points>
-				<Rule>Panic test for enemy cavalry, one use only</Rule>
-				<Description>The pipes can be played at the start of the shooting phase. Each enemy cavalry unit, monster (ridden or unridden) and chariot within 24" must take a Panic test</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ironback Boar</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Orc</OnlyForGroup>
-				<Points>35</Points>
-				<ImpactHit>D3</ImpactHit>
-				<Description>Boar. When charging, this steed does D3 Strength 5 impact hits in addition to its norman attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Warboss Imbad's iron gnashas</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<KillingBlow/>
-				<Description>The character wearing the Gnashas gains the Killing Blow special ability in close combat. Chomp!</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bigged's Kickin' boots</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>Grants the wearer +1 Atack on his profile</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Maad's map</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Scout deploy by D6 roll</Rule>
-				<Description>Before deploymnet begins roll a D6. On 2-6 the bearer of the map may be deployed as a scout. On a roll of a 1, he got lost and must be deployed as normal</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Brimstone bauble</Name>
-				<Type>AdditionalArmour</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>25</Points>
-				<Rule>D6 Strength 6 hits when bearer is slain</Rule>
-				<Description>When bearer is slain, all units (friend or foe) in base contact suffer D6 Strength 6 hits, distributed as for shooting</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Nibbla's Titty ring</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<Rule>Bound spell 'Eadbutt Power Level 3</Rule>
-				<Description>Bound spell 'Eadbutt Power Level 3. Roll a D6 after each use. On the roll of a 1, the bearer suffers a Strength 5 hit with no armour saves allowed</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Mad Cap mushrooms</Name>
-				<Type>Weapon</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>20</Points>
-				<Rule>Fanatics may re-roll the number of Hits caused</Rule>
-				<Description>Fanatics may re-roll the number of Hits caused</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Guzzla's Battle Brew</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<Hate/>
-				<Frenzy/>
-				<Description>The character with the brew is assumed to have 'bolstered' himself before battle - roll a dice and consult the following table to determine the effects upon the drinker:\n1-2 - Subject to Stupidity for remainder of the game\n3-4 - Hatred of all enemies for the remainder of the game\n5-6 - Hatred of all enemies and Frenzy for the remainder of the game</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic standards">
-			<Artefact>
-				<Name>Mork's Spirit-Totem</Name>
-				<Type>Banner</Type>
-				<OnlyForGroup>Orc</OnlyForGroup>
-				<Points>50</Points>
-				<Rule>Adds a number of dispel dice equal rank bonus</Rule>
-				<Description>This magical banner adds a number of dispel dice to the pool equal to the unit's rank bonus</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
-				<Type>Banner</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>50</Points>
-				<Rule>All Goblins within 12" may re-roll Panic test</Rule>
-				<Description>All Goblins within 12" of the banner may re-roll failed Panic test</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bad Moon on a stick</Name>
-				<Type>Banner</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>50</Points>
-				<Stubborn/>
-				<Description>All Night Goblin in this unit are Stubborn</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Spider banner</Name>
-				<Type>Banner</Type>
-				<OnlyForGroup>Goblin</OnlyForGroup>
-				<Points>50</Points>
-				<PoisonAttack/>
-				<Description>All Goblin in the unit have poisoned attacks (shooting and combat)</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gork's WAAAGH! banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<Rule>D6" to charge move, only one use</Rule>
-				<Description>The unit adds D6" to its charge move. Declare charges first and then roll</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Nogg's banner of Buthery</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<Rule>+1 Attack, only one use</Rule>
-				<Description>All model in the unit have +1 Attack in the turn the banner is used. In the case of mounted models, only the rider gets the bonus, not the mount</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Gorbad Ironclaw</Name>
-			<Group>Orc</Group>
-			<Points>310</Points>
-			<Description>Gorbad Ironclaw</Description>
-			<Mount>Gnarla</Mount>
-			<Personified/>
-			<Image>Gorbad.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Morglor The Mangler</Name>
-					<HitFirst/>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<AddToStrength>1</AddToStrength>
+					<Description>+1 Strength</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>5</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
+					<Points>15</Points>
+					<AddToArmour>5</AddToArmour>
+					<Description>5+ armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<AddToWard>6</AddToWard>
+					<Description>6+ Ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>30</Points>
+					<Rule>+1 to dispel</Rule>
+					<Description>+1 to dispel</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic weapons">
+				<Artefact>
+					<Name>WAAAGH! Cleava</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Orc</OnlyForGroup>
+					<Points>100</Points>
+					<AutoWound/>
 					<NoArmour/>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Da boss 'as a Plan!</Rule>
-					<Rule>Orcs are Da Best!</Rule>
-					<Rule>Thick-skinned</Rule>
-					<AddToArmour>5</AddToArmour>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Azhag The Slaughterer</Name>
-			<Group>Orc</Group>
-			<Wizard>2</Wizard>
-			<Points>450</Points>
-			<Description>Azhag The Slaughterer</Description>
-			<Mount>Wyvern</Mount>
-			<Personified/>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Stupidity/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Slagga's Slashas</Name>
-					<AddToAttacks>1</AddToAttacks>
+					<Description>All hits from this weapons wound automatically and allow no armour saves</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Battleaxe of the Last WAAAGH!</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Orc</OnlyForGroup>
+					<Points>100</Points>
+					<Rule>Attacks and Strength bonus equal rank bonus</Rule>
+					<Description>The wielder of this weapon receives a bonus equal to his unit's rank bonus to both his Attacks and Strength - calculate this when the wielder makes his attacks</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Basha's Bloodaxe</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Orc</OnlyForGroup>
+					<Points>50</Points>
+					<Flail>1</Flail>
+					<Frenzy/>
+					<Description>Grants +1 Strength in the first round of combat. The wielder of this weapon is subject to Frenzy (D6 extra attacks). The wielder can never lose his Frenzy</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Shaga's Screamin' sword</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Rule>+1 Strength and +1 Attack for each enemy character within 12"</Rule>
+					<Description>The wielder receives +1 Strength and +1 Attack for each enemy character within 12"</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Skull wand of Kaloth</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Test Bet="Death" Context="Hit">Leadership</Test>
+					<Description>For each successful hit inflicted by this weapon, the victim must pass a Leadership test or be slain instantly. No armour, ward or regeneration saves are allowed against this special attack. If the tests are passed, roll to Wound and save as normal. Only for shamans</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Porko's Pigstikka</Name>
+					<Type>Weapon</Type>
+					<OnlyFor>Mount</OnlyFor>
+					<Points>40</Points>
+					<Rule>Additional attack for each pointt of rank bonus</Rule>
+					<Description>Spear. On the turn the wielder charges, he receives an additional attack for each point of rank bonus that the unit hi is attacking has (up to a maximum of +3)</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ulag's Akrit axe</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<AddToStrength>1</AddToStrength>
 					<Reroll>ToHit</Reroll>
-				</HandWeapon>
-				<Armour>
-					<Name>Azhag's 'ard Amour</Name>
-					<AddToArmour>5</AddToArmour>
-					<AddToWard>5</AddToWard>
-				</Armour>
-				<Crown>
-					<Name>The Crown of Sorcery</Name>
-					<Rule>Wizard Level 2</Rule>
-				</Crown>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Grimgor Ironhide</Name>
-			<Group>Orc</Group>
-			<Points>375</Points>
-			<Personified/>
-			<Description>Grimgor Ironhide</Description>
-			<Image>Grimgor.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>8</WeaponSkill>
-				<BallisticSkill>1</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>7</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Hate/>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Gitsnik</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitFirst/>
-				</HandWeapon>
-				<Armour>
-					<Name>Blood-forged Armour</Name>
-					<AddToArmour>1</AddToArmour>
-					<AddToWard>5</AddToWard>
-				</Armour>
-				<Special>
-					<Rule>Da Immortulz</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Grom The Paunch</Name>
-			<Group>Goblin</Group>
-			<Points>255</Points>
-			<Description>Grom The Paunch of Misty Mountain</Description>
-			<Mount>Goblin Wolf Chariot</Mount>
-			<Personified/>
-			<Image>Grom.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Regeneration/>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>The Axe of Grom</Name>
-					<AddToStrength>2</AddToStrength>
-					<ExtendedKillingBlow>5</ExtendedKillingBlow>
-				</HandWeapon>
-				<Armour>
-					<Name>Lucky banner</Name>
-					<AddToWard>5</AddToWard>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Skarsnik</Name>
-			<Group>Goblin</Group>
-			<Points>205</Points>
-			<Description>Skarsnik. Warlord of the Eight Peaks</Description>
-			<Mount>Gobbla</Mount>
-			<Personified/>
-			<Image>Skarsnik.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Hate/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Skarsnik's Prodder</Name>
-					<Rule>Bound spell Strength 5, hit Strength 6 with a range of 24"</Rule>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<KillingBlow/>
-					<Rule>Down in One</Rule>
-					<Rule>Tricksy Traps</Rule>
-					<Rule>Sneaky Schemes</Rule>
-					<Rule>Fear Elves</Rule>
-					<Rule>Hate Dwarfs</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Orc Warboss</Name>
-			<Group>Orc</Group>
-			<Points>115</Points>
-			<Description></Description>
-			<Image>OrcWarboss.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Savage Orc</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<AddToAttacks>1</AddToAttacks>
-					<Frenzy/>
-					<Rule>Warprint</Rule>
-				</Option>
-				<Option>
-					<Name>Black Orc</Name>
-					<Type>Option</Type>
+					<Flail/>
+					<Description>The wielder may re-roll any missed to hit rolls. It also grants +1 Strength in the first round of combat</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Backstabber's blade</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
 					<Points>25</Points>
+					<PoisonAttack/>
+					<Rule>+1 Strength flank attack bonus</Rule>
+					<Rule>+2 Strength rear attack bonus</Rule>
+					<Description>Grants poisoned attacks. Grants the wielder +1 Strength if he is attacking the enemy in the flank and +2 Strength if he is attacking them in the rear</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Wollopa's One Hit Wunda</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>15</Points>
+					<Rule>Strength 10 for one combat phase</Rule>
+					<Description>Once per game, this weapon grants the wielder Strength 10 for duration of the combat phase. One use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Mortog's best Basha</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>6</Points>
-					<Dependencies>
-						<IfNot>Black Orc</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<AddToArmour>5</AddToArmour>
-					<Dependencies>
-						<If>Black Orc</If>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Boar</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Wyvern</Name>
-					<Type>Option</Type>
-					<Points>200</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Orc Boar Chariot</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Orc Great Shaman</Name>
-			<Group>Orc</Group>
-			<Wizard>3</Wizard>
-			<Points>180</Points>
-			<Image>OrcGreatShaman.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Wizard Level 4</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Savage Orc</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Frenzy/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Boar</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Wyvern</Name>
-					<Type>Option</Type>
-					<Points>200</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Orc Boar Chariot</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Goblin Warboss</Name>
-			<Group>Goblin</Group>
-			<Points>65</Points>
-			<Description></Description>
-			<Image>GoblinWarboss.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Fear Elves</Rule>
-					<Rule>Hate Dwarfs</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Night Goblin</Name>
-					<Type>Option</Type>
-					<Points>-10</Points>
+					<AddToStrength>1</AddToStrength>
 					<AddToInitiative>1</AddToInitiative>
-					<AddToLeadership>-1</AddToLeadership>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Wolf</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Gigantic spider</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Great squig</Name>
-					<Type>Option</Type>
+					<Description>The wielder of this blafe gains +1 Wepon Skill, +1 Strength and +1 Initiative</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sneaky Skewerer</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>10</Points>
+					<ArmourPiercing>3</ArmourPiercing>
+					<Description>Wounds caused by this weapon suffer an additional -3 armour save modifier</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Lucky's Dirk</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>5</Points>
+					<Rule>+1 Strength for each enemy magic item</Rule>
+					<Description>If the bearer strikes an enemy character carrying one or more magic item, his hits at +1 Strength for each magic item</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>Armour of Gork</Name>
+					<Type>Armour</Type>
 					<Points>50</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Night Goblin</If>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Goblin Wolf Chariot</Name>
-					<Type>Option</Type>
-					<Points>60</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Goblin Great Shaman</Name>
-			<Group>Goblin</Group>
-			<Wizard>3</Wizard>
-			<Points>155</Points>
-			<Image>GoblinGreatShaman.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Fear Elves</Rule>
-					<Rule>Hate Dwarfs</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Night Goblin</Name>
-					<Type>Option</Type>
-					<Points>-5</Points>
-					<AddToInitiative>1</AddToInitiative>
-					<AddToLeadership>-1</AddToLeadership>
-				</Option>
-				<Option>
-					<Name>Wizard Level 4</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Wolf</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Goblin Wolf Chariot</Name>
-					<Type>Option</Type>
-					<Points>60</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Orc Big Boss</Name>
-			<Group>Orc</Group>
-			<Points>70</Points>
-			<Image>OrcBigBoss.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Savage Orc</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<AddToAttacks>1</AddToAttacks>
-					<Frenzy/>
-					<Rule>Warprint</Rule>
-				</Option>
-				<Option>
-					<Name>Black Orc</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<Rule>BSB</Rule>
-					<OnlyOneInArmy/>
+					<AddToArmour>6</AddToArmour>
+					<AddToToughness>1</AddToToughness>
+					<Description>Light armour. The wearer has +1 Toughness</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Spliteful shield</Name>
+					<Type>Shield</Type>
 					<Points>25</Points>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Spear</IfNot>
-						<IfNot>Shield</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>4</Points>
-					<Dependencies>
-						<IfNot>Black Orc</IfNot>
-						<IfNot>Battle Standard Bearer</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-					<Dependencies>
-						<IfNot>Battle Standard Bearer</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>2</Points>
-					<Dependencies>
-						<IfNot>Battle Standard Bearer</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
 					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<AddToArmour>5</AddToArmour>
-					<Dependencies>
-						<If>Black Orc</If>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<IfNot>Battle Standard Bearer</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Boar</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Orc Boar Chariot</Name>
-					<Type>Option</Type>
-					<Points>80</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Orс Shaman</Name>
-			<Group>Orc</Group>
-			<Wizard>1</Wizard>
-			<Points>60</Points>
-			<Image>OrcShaman.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Savage Orc</Name>
-					<Type>Option</Type>
-					<Points>5</Points>
-					<AddToAttacks>1</AddToAttacks>
-					<Frenzy/>
-					<Rule>Warprint</Rule>
-				</Option>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
+					<Rule>Strength 5 hit for each 1 on a enemy roll to Hit</Rule>
+					<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>Effigy of Mork</Name>
+					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Boar</Name>
-					<Type>Option</Type>
-					<Points>16</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Goblin Big Boss</Name>
-			<Group>Goblin</Group>
-			<Points>35</Points>
-			<Image>GoblinBigBoss.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Fear Elves</Rule>
-					<Rule>Hate Dwarfs</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Night Goblin</Name>
-					<Type>Option</Type>
-					<Points>-5</Points>
-					<AddToInitiative>1</AddToInitiative>
-					<AddToLeadership>-1</AddToLeadership>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<Rule>BSB</Rule>
-					<OnlyOneInArmy/>
-					<Points>25</Points>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Additional weapon</IfNot>
-						<IfNot>Spear</IfNot>
-						<IfNot>Shield</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>4</Points>
-					<Dependencies>
-						<IfNot>Battle Standard Bearer</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-					<Dependencies>
-						<IfNot>Battle Standard Bearer</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>2</Points>
-					<Dependencies>
-						<IfNot>Battle Standard Bearer</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<IfNot>Battle Standard Bearer</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Wolf</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Gigantic spider</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Great squig</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Night Goblin</If>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Goblin Wolf chariot</Name>
-					<Type>Option</Type>
-					<Points>60</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Goblin Shaman</Name>
-			<Group>Goblin</Group>
-			<Wizard>1</Wizard>
-			<Points>55</Points>
-			<Image>GoblinShaman.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Fear Elves</Rule>
-					<Rule>Hate Dwarfs</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Night Goblin</Name>
-					<Type>Option</Type>
-					<Points>-5</Points>
-					<AddToInitiative>1</AddToInitiative>
-					<AddToLeadership>-1</AddToLeadership>
-				</Option>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Wolf</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Goblin Wolf chariot</Name>
-					<Type>Option</Type>
-					<Points>60</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Wyvern</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<PoisonAttack/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Scaly skin</Name>
-					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Boar</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>3</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Thick-skinned</Rule>
-					<Rule>Tusker Charge</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Wolf</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>3</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Giantic Spider</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Spider</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>2</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Great squig</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>3</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Hate Dwarfs</Rule>
-					<Rule>May not join unit</Rule>
-					<Rule>Boiiing!</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Gnarla</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>3</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Gobbla</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement></Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness></Toughness>
-				<Wounds></Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership></Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Goblin Wolf Chariot</Name>
-			<Points>0</Points>
-			<Chariot>2</Chariot>
-			<Mount>Wolf</Mount>
-			<ModelsInPack>5</ModelsInPack>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership></Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<Equipments>
-				<RangedWeapon>
-					<Name>Short bows</Name>
-				</RangedWeapon>
-				<Special>
-					<Rule>Scythed wheel</Rule>
-					<Rule>Fear Elves</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Orc Boar Chariot</Name>
-			<Points>0</Points>
-			<Chariot>2</Chariot>
-			<Mount>Boar</Mount>
-			<ModelsInPack>4</ModelsInPack>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership></Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<ImpactHit>D6</ImpactHit>
-			</SpecialRules> 
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spears</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Tusker Charge</Rule>
-					<Rule>Scythed wheel</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Orc Boyz</Name>
-			<Points>5</Points>
-			<Min>10</Min>
-			<Image>OrcBoyz.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Big'Uns</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<PerModel/>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy/>
-				</Option>
-				<Option>
-					<Name>Additional choppa</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToAttacks>1</AddToAttacks>
-				</Option>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-					<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>15</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Orc Arrer Boys</Name>
-			<Points>6</Points>
-			<Min>10</Min>
-			<Image>OrcArrerBoys.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<RangedWeapon>
-					<Name>Bows</Name>
-				</RangedWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-					<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>15</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Savage Orc Boys</Name>
-			<Points>8</Points>
-			<Min>10</Min>
-			<Image>SavageOrc.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Frenzy/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Warprint</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Big'Uns</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<PerModel/>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy/>
-				</Option>
-				<Option>
-					<Name>Additional choppa</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToAttacks>1</AddToAttacks>
-				</Option>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Bows</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-					<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>15</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Goblins</Name>
-			<Points>3</Points>
-			<Min>20</Min>
-			<Image>Goblins.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Fear Elves</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Bows</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Goblin Wolf Riders</Name>
-			<Points>12</Points>
-			<Min>5</Min>
-			<Mount>Wolf</Mount>
-			<Image>GoblinWolfRiders.jpg</Image>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Fear Elves</Rule>
-					<Rule>Fast Cavalry</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Short bows</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-					<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Forest Goblin Spider Riders</Name>
-			<Points>13</Points>
-			<Min>5</Min>
-			<Mount>Spider</Mount>
-			<Image>SpiderRiders.jpg</Image>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<PoisonAttack/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spears</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Shields</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Fear Elves</Rule>
-					<Rule>Fast cavalry</Rule>
-					<Rule>Wall-crawlers</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Short bows</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-					<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Night Goblins</Name>
-			<Points>3</Points>
-			<Min>20</Min>
-			<Image>NightGoblins.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapons</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Shields</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Fear Elves</Rule>
-					<Rule>Hate Dwarfs</Rule>
-					<Rule>Netters</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Nets</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-				</Option>
-				<Option>
-					<Name>Fanatic</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-					<Countable/>
-					<Min>0</Min>
-					<Max>3</Max>
-					<Value>0</Value>
-					<ExportToUnitSize/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-					<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Snotlings</Name>
-			<Points>20</Points>
-			<Min>2</Min>
-			<Max>20</Max>
-			<Image>Snotlings.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>2</Strength>
-				<Toughness>2</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>4</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ImmuneToPsychology/>
-				<Stubborn/>
-			</SpecialRules>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Black Orcs</Name>
-			<Points>13</Points>
-			<Min>5</Min>
-			<Image>BlackOrc.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Armed to da Teef</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-					<Option>
-					<Name>Back Orc Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Orc Boar Boyz</Name>
-			<Points>22</Points>
-			<Min>5</Min>
-			<Mount>Boar</Mount>
-			<Image>OrcBoarBoyz.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Unit"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shields</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Thick-skinned</Rule>
-					<AddToArmour>5</AddToArmour>
-				</Special>
-				<Special>
-					<Rule>Tusker Charge</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Big'Uns</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-					<PerModel/>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-					<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>17</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Savage Orc Boar Boys</Name>
-			<Points>21</Points>
-			<Min>5</Min>
-			<Mount>Boar</Mount>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Frenzy/>
-				<MagicItems Points="50" Type="Unit"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Thick-skinned</Rule>
-					<AddToArmour>5</AddToArmour>
-				</Special>
-				<Special>
-					<Rule>Tusker Charge</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Big'Uns</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-					<PerModel/>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<OnlyOneInArmy/>
-				</Option>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Musicain</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-					<Option>
-					<Name>Boss</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>17</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Orc Boar Chariot</Name>
-			<Points>80</Points>
-			<Chariot>2</Chariot>
-			<Mount>Boar</Mount>
-			<ModelsInPack>4</ModelsInPack>
-			<Image>OrcChariot.jpg</Image>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ImpactHit>D6</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Choppa</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spears</Name>
-				</HandWeapon>
-				<Special>
-					<AddToArmour>4</AddToArmour>
-					<Rule>Tusker Charge</Rule>
-					<Rule>Scythed wheel</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Extra Orc</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Night Goblic Squig Hoppers</Name>
-			<Points>15</Points>
-			<Min>5</Min>
-			<Max>5</Max>
-			<Image>SquigHerdHoppers.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Skirmish</Rule>
-					<Rule>Fear Elves</Rule>
-					<Rule>Hate Dwarfs</Rule>
-					<Rule>Boiiing!</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Night Goblin Squig Herd</Name>
-			<Points>15</Points>
-			<Min>1</Min>
-			<ModelsInPack>5</ModelsInPack>
-			<Image>SquigHerd.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Squig</Rule>
-					<Rule>Squig Herds</Rule>
-					<Rule>Hate Dwarfs</Rule>
-					<Rule>Boiiing!</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Goblin Wolf Chariot</Name>
-			<Points>60</Points>
-			<Chariot>2</Chariot>
-			<Mount>Wolf</Mount>
-			<ModelsInPack>5</ModelsInPack>
-			<Image>GoblinChariot.jpg</Image>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill></BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ImpactHit>D6</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spears</Name>
-				</HandWeapon>
-				<RangedWeapon>
-					<Name>Short bows</Name>
-				</RangedWeapon>
-				<Special>
-					<AddToArmour>5</AddToArmour>
-					<Rule>Scythed wheel</Rule>
-					<Rule>Fear Elves</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Extra Goblin</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Extra Wolf</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>3</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Goblin Rock Lobber</Name>
-			<Points>70</Points>
-			<ModelsInPack>3</ModelsInPack>
-			<Image>RockLobber.jpg</Image>
-			<Profile>
-				<Movement></Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Rock Lobber</Rule>
-					<Rule>Fear Elves</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Orc Bully</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Goblin Spear Chukka</Name>
-			<Points>35</Points>
-			<ModelsInPack>3</ModelsInPack>
-			<Image>SpearChukka.jpg</Image>
-			<Profile>
-				<Movement></Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Spear Chukka</Rule>
-					<Rule>Fear Elves</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Orc Bully</Name>
-					<Type>Option</Type>
-					<AddToModelsInPack>1</AddToModelsInPack>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Trolls</Name>
-			<Points>40</Points>
-			<Min>1</Min>
-			<Image>StoneTrolls.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>1</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>4</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Stupidity/>
-				<Fear/>
-				<Regeneration/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Troll Vomit</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Stone troll</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<PerModel/>
-					<AddToArmour>5</AddToArmour>
-					<AddToStrength>1</AddToStrength>
-					<Rule>Magic Resistance (2)</Rule>
-				</Option>
-				<Option>
-					<Name>River troll</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<PerModel/>
 					<SubOpponentToHit>1</SubOpponentToHit>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Goblin Doom Diver Catapult</Name>
-			<Points>80</Points>
-			<ModelsInPack>3</ModelsInPack>
-			<Image>DoomDiverCatapult.jpg</Image>
-			<Profile>
-				<Movement></Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Doom Diver Catapult</Rule>
-					<Rule>Fear Elves</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Snotling Pump Wagon</Name>
-			<Points>40</Points>
-			<Image>SnotlingPumpWagon.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>4</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ImmuneToPsychology/>
-				<Stubborn/>
-				<LargeBase/>
-				<ImpactHit>D6</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Chariot</Rule>
-					<Rule>Pedal Faster</Rule>
-					<Rule>Crunch!</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Giant</Name>
-			<Points>205</Points>
-			<Image>Giant.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks></Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<Stubborn/>
-				<LargeBase/>
-				<Giant/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand wepon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Longshanks</Rule>
-					<Rule>Fall Over</Rule>
-					<Rule>Giant Special Attacks</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-	</Units>
+					<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Warboss Umm's Best Boss 'at</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<AddToWard>5</AddToWard>
+					<Description>Grants the rearer a 5+ Ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Amulet of Protectyness</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<Rule>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Rule>
+					<Description>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Collar of Zorga</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>5</Points>
+					<Rule>Steeds and monsters require Strength 6 to hit the bearer</Rule>
+					<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6S to hit the bearer</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane items">
+				<Artefact>
+					<Name>Idol of Mork</Name>
+					<Type>Arcane</Type>
+					<OnlyForGroup>Orc</OnlyForGroup>
+					<Points>50</Points>
+					<Rule>+1 Power dice for each Orc unit within 24"</Rule>
+					<Rule>-1 Power dice for each fleeing frendly unit within 24"</Rule>
+					<Description>+1 Power dice for each Orc unit within 24"\n-1 Power dice for each fleeing frendly unit within 24" </Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sneaky Stealin'</Name>
+					<Type>Arcane</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>50</Points>
+					<Rule>Steals 1 Power dice from the enemy to dispel</Rule>
+					<Description>At the start of each of your opponent's magic phases, you may take one dice from you opponent's power poll and add it to your dispel poll</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Baduumm</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>+1 to any casting attempts</Rule>
+					<Description>Adds +1 to any casting attempts made by the bearer</Description>
+				</Artefact>
+				<Artefact>
+					<Name>WAAAGH! paints</Name>
+					<Type>Arcane</Type>
+					<OnlyForGroup>Orc</OnlyForGroup>
+					<Points>10</Points>
+					<Rule>+2 to any casting attemts in close combat</Rule>
+					<Description>If the Shaman is in combat at the start of the Orcs and Goblins magic phase, he receives +2 to any casting attempts</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Magic mushrooms</Name>
+					<Type>Arcane</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>10</Points>
+					<Rule>+D6 to casting roll, one use only</Rule>
+					<Description>+D6 to casting roll, one use only. If Mushroom dice is an 1 then the spell is miscast</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted itams">
+				<Artefact>
+					<Name>The Horn of Urgok</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
+					<Rule>Bound item, Power Level 5: +1 Leadership for all friendly units, -1 Leadership for all enemy units</Rule>
+					<Description>Bound item, Power Level 5. +1 Leadership for all friendly units, -1 Leadership for all enemy units. Roll a D6 after each use. On the roll of a 1, the bearer suffer a Strength 5 hit with no armour save allowed</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Pipes of Doom</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>35</Points>
+					<Rule>Panic test for enemy cavalry, one use only</Rule>
+					<Description>The pipes can be played at the start of the shooting phase. Each enemy cavalry unit, monster (ridden or unridden) and chariot within 24" must take a Panic test</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ironback Boar</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Orc</OnlyForGroup>
+					<Points>35</Points>
+					<ImpactHit>D3</ImpactHit>
+					<Description>Boar. When charging, this steed does D3 Strength 5 impact hits in addition to its norman attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Warboss Imbad's iron gnashas</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<KillingBlow/>
+					<Description>The character wearing the Gnashas gains the Killing Blow special ability in close combat. Chomp!</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bigged's Kickin' boots</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>Grants the wearer +1 Atack on his profile</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Maad's map</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Scout deploy by D6 roll</Rule>
+					<Description>Before deploymnet begins roll a D6. On 2-6 the bearer of the map may be deployed as a scout. On a roll of a 1, he got lost and must be deployed as normal</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Brimstone bauble</Name>
+					<Type>AdditionalArmour</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>25</Points>
+					<Rule>D6 Strength 6 hits when bearer is slain</Rule>
+					<Description>When bearer is slain, all units (friend or foe) in base contact suffer D6 Strength 6 hits, distributed as for shooting</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Nibbla's Titty ring</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<Rule>Bound spell 'Eadbutt Power Level 3</Rule>
+					<Description>Bound spell 'Eadbutt Power Level 3. Roll a D6 after each use. On the roll of a 1, the bearer suffers a Strength 5 hit with no armour saves allowed</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Mad Cap mushrooms</Name>
+					<Type>Weapon</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>20</Points>
+					<Rule>Fanatics may re-roll the number of Hits caused</Rule>
+					<Description>Fanatics may re-roll the number of Hits caused</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Guzzla's Battle Brew</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<Hate/>
+					<Frenzy/>
+					<Description>The character with the brew is assumed to have 'bolstered' himself before battle - roll a dice and consult the following table to determine the effects upon the drinker:\n1-2 - Subject to Stupidity for remainder of the game\n3-4 - Hatred of all enemies for the remainder of the game\n5-6 - Hatred of all enemies and Frenzy for the remainder of the game</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic standards">
+				<Artefact>
+					<Name>Mork's Spirit-Totem</Name>
+					<Type>Banner</Type>
+					<OnlyForGroup>Orc</OnlyForGroup>
+					<Points>50</Points>
+					<Rule>Adds a number of dispel dice equal rank bonus</Rule>
+					<Description>This magical banner adds a number of dispel dice to the pool equal to the unit's rank bonus</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
+					<Type>Banner</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>50</Points>
+					<Rule>All Goblins within 12" may re-roll Panic test</Rule>
+					<Description>All Goblins within 12" of the banner may re-roll failed Panic test</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bad Moon on a stick</Name>
+					<Type>Banner</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>50</Points>
+					<Stubborn/>
+					<Description>All Night Goblin in this unit are Stubborn</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Spider banner</Name>
+					<Type>Banner</Type>
+					<OnlyForGroup>Goblin</OnlyForGroup>
+					<Points>50</Points>
+					<PoisonAttack/>
+					<Description>All Goblin in the unit have poisoned attacks (shooting and combat)</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gork's WAAAGH! banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<Rule>D6" to charge move, only one use</Rule>
+					<Description>The unit adds D6" to its charge move. Declare charges first and then roll</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Nogg's banner of Buthery</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<Rule>+1 Attack, only one use</Rule>
+					<Description>All model in the unit have +1 Attack in the turn the banner is used. In the case of mounted models, only the rider gets the bonus, not the mount</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Gorbad Ironclaw</Name>
+				<Group>Orc</Group>
+				<Points>310</Points>
+				<Description>Gorbad Ironclaw</Description>
+				<Mount>Gnarla</Mount>
+				<Personified/>
+				<Image>Gorbad.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Morglor The Mangler</Name>
+						<HitFirst/>
+						<NoArmour/>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Da boss 'as a Plan!</Rule>
+						<Rule>Orcs are Da Best!</Rule>
+						<Rule>Thick-skinned</Rule>
+						<AddToArmour>5</AddToArmour>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Azhag The Slaughterer</Name>
+				<Group>Orc</Group>
+				<Wizard>2</Wizard>
+				<Points>450</Points>
+				<Description>Azhag The Slaughterer</Description>
+				<Mount>Wyvern</Mount>
+				<Personified/>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Stupidity/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Slagga's Slashas</Name>
+						<AddToAttacks>1</AddToAttacks>
+						<Reroll>ToHit</Reroll>
+					</HandWeapon>
+					<Armour>
+						<Name>Azhag's 'ard Amour</Name>
+						<AddToArmour>5</AddToArmour>
+						<AddToWard>5</AddToWard>
+					</Armour>
+					<Crown>
+						<Name>The Crown of Sorcery</Name>
+						<Rule>Wizard Level 2</Rule>
+					</Crown>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Grimgor Ironhide</Name>
+				<Group>Orc</Group>
+				<Points>375</Points>
+				<Personified/>
+				<Description>Grimgor Ironhide</Description>
+				<Image>Grimgor.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>8</WeaponSkill>
+					<BallisticSkill>1</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>7</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Hate/>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Gitsnik</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitFirst/>
+					</HandWeapon>
+					<Armour>
+						<Name>Blood-forged Armour</Name>
+						<AddToArmour>1</AddToArmour>
+						<AddToWard>5</AddToWard>
+					</Armour>
+					<Special>
+						<Rule>Da Immortulz</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Grom The Paunch</Name>
+				<Group>Goblin</Group>
+				<Points>255</Points>
+				<Description>Grom The Paunch of Misty Mountain</Description>
+				<Mount>Goblin Wolf Chariot</Mount>
+				<Personified/>
+				<Image>Grom.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Regeneration/>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>The Axe of Grom</Name>
+						<AddToStrength>2</AddToStrength>
+						<ExtendedKillingBlow>5</ExtendedKillingBlow>
+					</HandWeapon>
+					<Armour>
+						<Name>Lucky banner</Name>
+						<AddToWard>5</AddToWard>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Skarsnik</Name>
+				<Group>Goblin</Group>
+				<Points>205</Points>
+				<Description>Skarsnik. Warlord of the Eight Peaks</Description>
+				<Mount>Gobbla</Mount>
+				<Personified/>
+				<Image>Skarsnik.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Hate/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Skarsnik's Prodder</Name>
+						<Rule>Bound spell Strength 5, hit Strength 6 with a range of 24"</Rule>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<KillingBlow/>
+						<Rule>Down in One</Rule>
+						<Rule>Tricksy Traps</Rule>
+						<Rule>Sneaky Schemes</Rule>
+						<Rule>Fear Elves</Rule>
+						<Rule>Hate Dwarfs</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Orc Warboss</Name>
+				<Group>Orc</Group>
+				<Points>115</Points>
+				<Description></Description>
+				<Image>OrcWarboss.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Savage Orc</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<AddToAttacks>1</AddToAttacks>
+						<Frenzy/>
+						<Rule>Warprint</Rule>
+					</Option>
+					<Option>
+						<Name>Black Orc</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>6</Points>
+						<Dependencies>
+							<IfNot>Black Orc</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<OnlyFor>Mount</OnlyFor>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<AddToArmour>5</AddToArmour>
+						<Dependencies>
+							<If>Black Orc</If>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Boar</Name>
+						<Type>Option</Type>
+						<Points>24</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Wyvern</Name>
+						<Type>Option</Type>
+						<Points>200</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Orc Boar Chariot</Name>
+						<Type>Option</Type>
+						<Points>80</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Orc Great Shaman</Name>
+				<Group>Orc</Group>
+				<Wizard>3</Wizard>
+				<Points>180</Points>
+				<Image>OrcGreatShaman.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Wizard Level 4</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Savage Orc</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Frenzy/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Boar</Name>
+						<Type>Option</Type>
+						<Points>24</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Wyvern</Name>
+						<Type>Option</Type>
+						<Points>200</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Orc Boar Chariot</Name>
+						<Type>Option</Type>
+						<Points>80</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Goblin Warboss</Name>
+				<Group>Goblin</Group>
+				<Points>65</Points>
+				<Description></Description>
+				<Image>GoblinWarboss.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Fear Elves</Rule>
+						<Rule>Hate Dwarfs</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Night Goblin</Name>
+						<Type>Option</Type>
+						<Points>-10</Points>
+						<AddToInitiative>1</AddToInitiative>
+						<AddToLeadership>-1</AddToLeadership>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<OnlyFor>Mount</OnlyFor>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Wolf</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Gigantic spider</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Great squig</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Night Goblin</If>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Goblin Wolf Chariot</Name>
+						<Type>Option</Type>
+						<Points>60</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Goblin Great Shaman</Name>
+				<Group>Goblin</Group>
+				<Wizard>3</Wizard>
+				<Points>155</Points>
+				<Image>GoblinGreatShaman.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Fear Elves</Rule>
+						<Rule>Hate Dwarfs</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Night Goblin</Name>
+						<Type>Option</Type>
+						<Points>-5</Points>
+						<AddToInitiative>1</AddToInitiative>
+						<AddToLeadership>-1</AddToLeadership>
+					</Option>
+					<Option>
+						<Name>Wizard Level 4</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Wolf</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Goblin Wolf Chariot</Name>
+						<Type>Option</Type>
+						<Points>60</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Orc Big Boss</Name>
+				<Group>Orc</Group>
+				<Points>70</Points>
+				<Image>OrcBigBoss.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Savage Orc</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<AddToAttacks>1</AddToAttacks>
+						<Frenzy/>
+						<Rule>Warprint</Rule>
+					</Option>
+					<Option>
+						<Name>Black Orc</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<Rule>BSB</Rule>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Spear</IfNot>
+							<IfNot>Shield</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+						<Dependencies>
+							<IfNot>Black Orc</IfNot>
+							<IfNot>Battle Standard Bearer</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+						<Dependencies>
+							<IfNot>Battle Standard Bearer</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<OnlyFor>Mount</OnlyFor>
+						<Points>2</Points>
+						<Dependencies>
+							<IfNot>Battle Standard Bearer</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<AddToArmour>5</AddToArmour>
+						<Dependencies>
+							<If>Black Orc</If>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<IfNot>Battle Standard Bearer</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Boar</Name>
+						<Type>Option</Type>
+						<Points>24</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Orc Boar Chariot</Name>
+						<Type>Option</Type>
+						<Points>80</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Orс Shaman</Name>
+				<Group>Orc</Group>
+				<Wizard>1</Wizard>
+				<Points>60</Points>
+				<Image>OrcShaman.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Savage Orc</Name>
+						<Type>Option</Type>
+						<Points>5</Points>
+						<AddToAttacks>1</AddToAttacks>
+						<Frenzy/>
+						<Rule>Warprint</Rule>
+					</Option>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Boar</Name>
+						<Type>Option</Type>
+						<Points>16</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Goblin Big Boss</Name>
+				<Group>Goblin</Group>
+				<Points>35</Points>
+				<Image>GoblinBigBoss.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Fear Elves</Rule>
+						<Rule>Hate Dwarfs</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Night Goblin</Name>
+						<Type>Option</Type>
+						<Points>-5</Points>
+						<AddToInitiative>1</AddToInitiative>
+						<AddToLeadership>-1</AddToLeadership>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<Rule>BSB</Rule>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Additional weapon</IfNot>
+							<IfNot>Spear</IfNot>
+							<IfNot>Shield</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+						<Dependencies>
+							<IfNot>Battle Standard Bearer</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+						<Dependencies>
+							<IfNot>Battle Standard Bearer</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<OnlyFor>Mount</OnlyFor>
+						<Points>2</Points>
+						<Dependencies>
+							<IfNot>Battle Standard Bearer</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<IfNot>Battle Standard Bearer</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Wolf</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Gigantic spider</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Great squig</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Night Goblin</If>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Goblin Wolf chariot</Name>
+						<Type>Option</Type>
+						<Points>60</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Goblin Shaman</Name>
+				<Group>Goblin</Group>
+				<Wizard>1</Wizard>
+				<Points>55</Points>
+				<Image>GoblinShaman.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Fear Elves</Rule>
+						<Rule>Hate Dwarfs</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Night Goblin</Name>
+						<Type>Option</Type>
+						<Points>-5</Points>
+						<AddToInitiative>1</AddToInitiative>
+						<AddToLeadership>-1</AddToLeadership>
+					</Option>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Wolf</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Goblin Wolf chariot</Name>
+						<Type>Option</Type>
+						<Points>60</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Wyvern</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<PoisonAttack/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Scaly skin</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Boar</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>3</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Thick-skinned</Rule>
+						<Rule>Tusker Charge</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Wolf</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>3</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Giantic Spider</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Spider</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>2</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Great squig</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>3</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Hate Dwarfs</Rule>
+						<Rule>May not join unit</Rule>
+						<Rule>Boiiing!</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Gnarla</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>3</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Gobbla</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement></Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill></BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness></Toughness>
+					<Wounds></Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership></Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Goblin Wolf Chariot</Name>
+				<Points>0</Points>
+				<Chariot>2</Chariot>
+				<Mount>Wolf</Mount>
+				<ModelsInPack>5</ModelsInPack>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership></Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<Equipments>
+					<RangedWeapon>
+						<Name>Short bows</Name>
+					</RangedWeapon>
+					<Special>
+						<Rule>Scythed wheel</Rule>
+						<Rule>Fear Elves</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Orc Boar Chariot</Name>
+				<Points>0</Points>
+				<Chariot>2</Chariot>
+				<Mount>Boar</Mount>
+				<ModelsInPack>4</ModelsInPack>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill></BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership></Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<ImpactHit>D6</ImpactHit>
+				</SpecialRules> 
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spears</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Tusker Charge</Rule>
+						<Rule>Scythed wheel</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Orc Boyz</Name>
+				<Points>5</Points>
+				<Min>10</Min>
+				<Image>OrcBoyz.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Big'Uns</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<PerModel/>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToStrength>1</AddToStrength>
+						<OnlyOneInArmy/>
+					</Option>
+					<Option>
+						<Name>Additional choppa</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToAttacks>1</AddToAttacks>
+					</Option>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+						<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>15</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Orc Arrer Boys</Name>
+				<Points>6</Points>
+				<Min>10</Min>
+				<Image>OrcArrerBoys.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<RangedWeapon>
+						<Name>Bows</Name>
+					</RangedWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+						<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>15</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Savage Orc Boys</Name>
+				<Points>8</Points>
+				<Min>10</Min>
+				<Image>SavageOrc.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Frenzy/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Warprint</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Big'Uns</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<PerModel/>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToStrength>1</AddToStrength>
+						<OnlyOneInArmy/>
+					</Option>
+					<Option>
+						<Name>Additional choppa</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToAttacks>1</AddToAttacks>
+					</Option>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Bows</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+						<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>15</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Goblins</Name>
+				<Points>3</Points>
+				<Min>20</Min>
+				<Image>Goblins.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Fear Elves</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Bows</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Goblin Wolf Riders</Name>
+				<Points>12</Points>
+				<Min>5</Min>
+				<Mount>Wolf</Mount>
+				<Image>GoblinWolfRiders.jpg</Image>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Fear Elves</Rule>
+						<Rule>Fast Cavalry</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Short bows</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+						<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Forest Goblin Spider Riders</Name>
+				<Points>13</Points>
+				<Min>5</Min>
+				<Mount>Spider</Mount>
+				<Image>SpiderRiders.jpg</Image>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<PoisonAttack/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spears</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Shields</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Fear Elves</Rule>
+						<Rule>Fast cavalry</Rule>
+						<Rule>Wall-crawlers</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Short bows</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+						<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Night Goblins</Name>
+				<Points>3</Points>
+				<Min>20</Min>
+				<Image>NightGoblins.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapons</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Shields</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Fear Elves</Rule>
+						<Rule>Hate Dwarfs</Rule>
+						<Rule>Netters</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Nets</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+					</Option>
+					<Option>
+						<Name>Fanatic</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+						<Countable/>
+						<Min>0</Min>
+						<Max>3</Max>
+						<Value>0</Value>
+						<ExportToUnitSize/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+						<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Snotlings</Name>
+				<Points>20</Points>
+				<Min>2</Min>
+				<Max>20</Max>
+				<Image>Snotlings.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>2</Strength>
+					<Toughness>2</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>4</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ImmuneToPsychology/>
+					<Stubborn/>
+				</SpecialRules>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Black Orcs</Name>
+				<Points>13</Points>
+				<Min>5</Min>
+				<Image>BlackOrc.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Armed to da Teef</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+						<Option>
+						<Name>Back Orc Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Orc Boar Boyz</Name>
+				<Points>22</Points>
+				<Min>5</Min>
+				<Mount>Boar</Mount>
+				<Image>OrcBoarBoyz.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Unit"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shields</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Thick-skinned</Rule>
+						<AddToArmour>5</AddToArmour>
+					</Special>
+					<Special>
+						<Rule>Tusker Charge</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Big'Uns</Name>
+						<Type>Option</Type>
+						<Points>8</Points>
+						<PerModel/>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToStrength>1</AddToStrength>
+						<OnlyOneInArmy/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+						<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>17</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Savage Orc Boar Boys</Name>
+				<Points>21</Points>
+				<Min>5</Min>
+				<Mount>Boar</Mount>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Frenzy/>
+					<MagicItems Points="50" Type="Unit"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Thick-skinned</Rule>
+						<AddToArmour>5</AddToArmour>
+					</Special>
+					<Special>
+						<Rule>Tusker Charge</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Big'Uns</Name>
+						<Type>Option</Type>
+						<Points>8</Points>
+						<PerModel/>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToStrength>1</AddToStrength>
+						<OnlyOneInArmy/>
+					</Option>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Musicain</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+						<Option>
+						<Name>Boss</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>17</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Orc Boar Chariot</Name>
+				<Points>80</Points>
+				<Chariot>2</Chariot>
+				<Mount>Boar</Mount>
+				<ModelsInPack>4</ModelsInPack>
+				<Image>OrcChariot.jpg</Image>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill></BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ImpactHit>D6</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Choppa</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spears</Name>
+					</HandWeapon>
+					<Special>
+						<AddToArmour>4</AddToArmour>
+						<Rule>Tusker Charge</Rule>
+						<Rule>Scythed wheel</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Extra Orc</Name>
+						<Type>Option</Type>
+						<AddToModelsInPack>1</AddToModelsInPack>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Night Goblic Squig Hoppers</Name>
+				<Points>15</Points>
+				<Min>5</Min>
+				<Max>5</Max>
+				<Image>SquigHerdHoppers.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Skirmish</Rule>
+						<Rule>Fear Elves</Rule>
+						<Rule>Hate Dwarfs</Rule>
+						<Rule>Boiiing!</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Night Goblin Squig Herd</Name>
+				<Points>15</Points>
+				<Min>1</Min>
+				<ModelsInPack>5</ModelsInPack>
+				<Image>SquigHerd.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Squig</Rule>
+						<Rule>Squig Herds</Rule>
+						<Rule>Hate Dwarfs</Rule>
+						<Rule>Boiiing!</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Goblin Wolf Chariot</Name>
+				<Points>60</Points>
+				<Chariot>2</Chariot>
+				<Mount>Wolf</Mount>
+				<ModelsInPack>5</ModelsInPack>
+				<Image>GoblinChariot.jpg</Image>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill></BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ImpactHit>D6</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spears</Name>
+					</HandWeapon>
+					<RangedWeapon>
+						<Name>Short bows</Name>
+					</RangedWeapon>
+					<Special>
+						<AddToArmour>5</AddToArmour>
+						<Rule>Scythed wheel</Rule>
+						<Rule>Fear Elves</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Extra Goblin</Name>
+						<Type>Option</Type>
+						<AddToModelsInPack>1</AddToModelsInPack>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Extra Wolf</Name>
+						<Type>Option</Type>
+						<AddToModelsInPack>1</AddToModelsInPack>
+						<Points>3</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Goblin Rock Lobber</Name>
+				<Points>70</Points>
+				<ModelsInPack>3</ModelsInPack>
+				<Image>RockLobber.jpg</Image>
+				<Profile>
+					<Movement></Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Rock Lobber</Rule>
+						<Rule>Fear Elves</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Orc Bully</Name>
+						<Type>Option</Type>
+						<AddToModelsInPack>1</AddToModelsInPack>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Goblin Spear Chukka</Name>
+				<Points>35</Points>
+				<ModelsInPack>3</ModelsInPack>
+				<Image>SpearChukka.jpg</Image>
+				<Profile>
+					<Movement></Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Spear Chukka</Rule>
+						<Rule>Fear Elves</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Orc Bully</Name>
+						<Type>Option</Type>
+						<AddToModelsInPack>1</AddToModelsInPack>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Trolls</Name>
+				<Points>40</Points>
+				<Min>1</Min>
+				<Image>StoneTrolls.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>1</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>4</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Stupidity/>
+					<Fear/>
+					<Regeneration/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Troll Vomit</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Stone troll</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<PerModel/>
+						<AddToArmour>5</AddToArmour>
+						<AddToStrength>1</AddToStrength>
+						<Rule>Magic Resistance (2)</Rule>
+					</Option>
+					<Option>
+						<Name>River troll</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<PerModel/>
+						<SubOpponentToHit>1</SubOpponentToHit>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Goblin Doom Diver Catapult</Name>
+				<Points>80</Points>
+				<ModelsInPack>3</ModelsInPack>
+				<Image>DoomDiverCatapult.jpg</Image>
+				<Profile>
+					<Movement></Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Doom Diver Catapult</Rule>
+						<Rule>Fear Elves</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Snotling Pump Wagon</Name>
+				<Points>40</Points>
+				<Image>SnotlingPumpWagon.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>4</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ImmuneToPsychology/>
+					<Stubborn/>
+					<LargeBase/>
+					<ImpactHit>D6</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Chariot</Rule>
+						<Rule>Pedal Faster</Rule>
+						<Rule>Crunch!</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Giant</Name>
+				<Points>205</Points>
+				<Image>Giant.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks></Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<Stubborn/>
+					<LargeBase/>
+					<Giant/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand wepon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Longshanks</Rule>
+						<Rule>Fall Over</Rule>
+						<Rule>Giant Special Attacks</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
