@@ -40,2368 +40,2370 @@
 		<Released>2006</Released>
 		<Authors>Graham McNeill</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strength</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>5</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>10</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>35</Points>
-				<Rule>+1 to dispel</Rule>
-				<Description>+1 to dispel</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic Weapons">
-			<Artefact>
-				<Name>Runefang</Name>
-				<Type>Weapon</Type>
-				<Points>100</Points>
-				<NoArmour/>
-				<AutoWound/>
-				<Description>All hits from a Runefang wound automatically and allow no armour saves.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Mace of Helsturm</Name>
-				<Type>Weapon</Type>
-				<Points>60</Points>
-				<StrengthTo>10</StrengthTo>
-				<AttacksTo>1</AttacksTo>
-				<MultiWounds>D6</MultiWounds>
-				<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Sigismund</Name>
-				<Type>Weapon</Type>
-				<Points>45</Points>
-				<AddToStrength>1</AddToStrength>
-				<HitFirst/>
-				<Description>The wielder of this sword strikes with +1 Strength and benefits from the 'always strikes first' special rule in close combat.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Fate</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<Rule>At the beginning of the battle, nominate one enemy character or monster. The sword counts as a magic sword with no particular bonuses against any other opponent, but attacks directed against the designated target will wound it on a 2+ and cause D3 wounds, with no armour saves allowed</Rule>
-				<Description>At the beginning of the battle, nominate one enemy character or monster. The sword counts as a magic sword with no particular bonuses against any other opponent, but attacks directed against the designated target will wound it on a 2+ and cause D3 wounds, with no armour saves allowed.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Power</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<AddToStrength>2</AddToStrength>
-				<Description>The sword confers +2 Strength to all close combat attacks made by the character.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Righteous Steel</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<HitOn>2</HitOn>
-				<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hammer of Judgement</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Test Bet="Wound" Context="Hit">Toughness</Test>
-				<Description>Models hit by this hammer must take a Toughness test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dragon Bow</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>The Dragon Bow has a range of 36" and Strength 6. Any hits from this bow count as being from a magical weapon</Rule>
-				<Description>The Dragon Bow has a range of 36" and Strength 6. Any hits from this bow count as being from a magical weapon.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Justice</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<Reroll>ToWound</Reroll>
-				<Description>The bearer can re-roll failed rolls to wound.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Wyrmslayer Sword</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<WoundOn>4</WoundOn>
-				<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but large targets lose their armour save due to the scaly skin special rule against hits from this sword.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic Armour">
-			<Artefact>
-				<Name>The Gilded Armour</Name>
-				<Type>Armour</Type>
-				<Points>40</Points>
-				<AddToArmour>5</AddToArmour>
-				<Test Bet="Pass" Context="ArmourSave">Strength</Test>
-				<Description>Heavy armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dawn Armour</Name>
-				<Type>Armour</Type>
-				<Points>35</Points>
-				<AddToArmour>4</AddToArmour>
-				<Reroll>ToArmour</Reroll>
-				<Description>Full plate armour (armour save 4+). The model can re-roll any failed armour save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Tarnus</Name>
-				<Type>Armour</Type>
-				<Points>35</Points>
-				<AddToArmour>6</AddToArmour>
-				<AddToWard>5</AddToWard>
-				<Description>Light armour. The Armour of Tarnus confers a 5+ ward save to the wearer.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Meteoric Iron</Name>
-				<Type>Armour</Type>
-				<Points>25</Points>
-				<ArmourTo>1</ArmourTo>
-				<Description>This armour gives the bearer a 1+ armour save that cannot be improved by any means.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Helm of the Ratslayer</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Causes Fear in all models in a Skaven army</Rule>
-				<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Shield of the Gorgon</Name>
-				<Type>Shield</Type>
-				<Points>25</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Can force one model in base contact to lose one Attack</Rule>
-				<Description>Shield. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bronze Shield</Name>
-				<Type>Shield</Type>
-				<Points>20</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
-				<Description>Shield. The bearer ignores the first hit in the battle from shooting or close combat.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>Shroud of Magnus</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>50</Points>
-				<AddToWard>5</AddToWard>
-				<Rule>Magic Resistance (2)</Rule>
-				<Description>This item gives the bearer a 5+ Ward save and magic resistance (2).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Holy Relic</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>45</Points>
-				<AddToWard>4</AddToWard>
-				<Description>The Holy Relic gives its bearer a 4+ Ward save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Jade Amulet</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<FirstWoundDiscount/>
-				<Description>The model may ignore the first wound it suffers.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The White Cloak</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<AddToWard>5</AddToWard>
-				<Rule>2+ Ward save against Flaming Attacks</Rule>
-				<Description>This item gives a 5+ ward save, which is increased to 2+ against Flaming Attacks.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Crimson Amulet</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<AddToWard>6</AddToWard>
-				<Rule>Automatically passes any characteristic tests he has to take (except Leadership tests)</Rule>
-				<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sigil of Sigmar</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<Rule>Magic Resistance (1)</Rule>
-				<Description>The Sigil of Sigmar confers magic resistance (1).</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane Items">
-			<Artefact>
-				<Name>Seal of Destruction</Name>
-				<Type>Arcane</Type>
-				<Points>45</Points>
-				<Rule>Once automatically dispel an enemy spell, on a 4+ the spell is removed from the caster's mind and he can no longer cast it</Rule>
-				<Description>One use only. The seal has the same effect as a Dispel Scroll. In addition, roll a D6. On a result of 4+ the spell is removed from the caster's mind and he can no longer cast it. Spells cast from a bound item will only be removed on the result of a 6.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Grey Wand</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>+1 to the casting attempts</Rule>
-				<Description>Gives +1 to the casting attempts made by the Wizard.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rod of Power</Name>
-				<Type>Arcane</Type>
-				<Points>30</Points>
-				<Rule>Can save up to three unused power/dispel dice from the pool and store them, at the beginning of each successive magic phase roll a dice, if the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool</Rule>
-				<Description>At the end of each magic phase (yours and enemy's), you can save up to three unused power/dispel dice from the pool and store them in the rod. At the beginning of each successive magic phase (yours and enemy's), roll a dice. If the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool, if the result is lower than the number of dice stored, they are lost.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Luckstone</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Rule>Once per battle, can re-roll all of the dice rolled to cast or dispel</Rule>
-				<Description>One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause irresistible force or a miscast.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Crystal Ball</Name>
-				<Type>Arcane</Type>
-				<Points>15</Points>
-				<Rule>The enemy must always reveal all the 'secrets' involving all units that are within 24" of the Wizard at any time</Rule>
-				<Description>The enemy must always reveal all the 'secrets' involving all units that are within 24" of the Wizard at any time. This includes which magic items are in the unit and who is carrying them, the presence of disguised, hidden or otherwise 'invisible' models and everything else that the player is not normally obliged to disclose to his opponent.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Wizard's Staff</Name>
-				<Type>Arcane</Type>
-				<Points>10</Points>
-				<Rule>Use one more dice than he is normally allowed to when casting a spell</Rule>
-				<Description>The Wizard's Staff allows the bearer to use one more dice than he is normally allowed to when casting a spell (eg, a Wizard that can normally use up to two dice to cast spells will be able to use up to three dice).</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted Items">
-			<Artefact>
-				<Name>Laurels of Victory</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>55</Points>
-				<Rule>Each wound caused by a model wearing the Laurels of Victory will count as 2 Wounds when working out combat resolution</Rule>
-				<Description>Each wound caused by a model wearing the Laurels of Victory (but not those caused by his mount) will count as 2 Wounds when working out combat resolution. Note that you do not actually cause double wounds on your victim!</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rod of Command</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>50</Points>
-				<Rule>Once per battle, instead rolling the dice for Break test, the player can declare he is using Rod of Command and the character (and his unit) automatically passing Break test</Rule>
-				<Description>One use only. Whenever the character (and the unit he is with) have to take a Break test, instead of rolling the dice, the player can declare he is using this item. If the player decides to do so, the character (and his unit) automatically roll double Is (Insane Courage!) for the test, automatically passing it regardless of modifiers. This item cannot be used by a character in a turn he refused a challenge or if he is hiding at the back of the unit (nobody would pay heed to such a coward!)</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Aldred's Casket of Sorcery</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Rule>Bound spell, power level variable: at the end of each of his movement phases, the bearer may remove and capture one randomly determined spell from an enemy Wizard within 12" of him on a roll of 4+, the bearer can then cast the captured spell in any of his own following magic phases</Rule>
-				<Description>Bound spell, power level variable. At the end of each of his movement phases, the bearer may remove and capture one randomly determined spell from an enemy Wizard within 12" of him on a roll of 4+. The bearer can then cast the captured spell in any of his own following magic phases by releasing it from the casket just like from a bound item, whereupon the spell is then removed from the game. Any number of spells may be captured by the casket, and the bearer can cast each one once, either over several magic phases or all at the same time if he prefers. The power level of the spell cast by the casket will be equivalent to the normal casting value of the spell.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Silver Horn</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Rule>Bound spell, power level 5: if successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left</Rule>
-				<Description>Bound spell, power level 5. If successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Orb of Thunder</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>Bound spell, power level 4: when the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate, remains in play</Rule>
-				<Description>Bound spell, power level 4. Remains in play. When the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Doomfire Ring</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>Bound spell, power level 3: casts the Burning Head spell from the Lore of Fire</Rule>
-				<Description>Bound Spell: Power Level 3. The Doomfire Ring casts the Burning Head spell from the Lore of Fire.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Van Horstmann's Speculum</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Rule>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy</Rule>
-				<Description>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy. He can choose not to use the mirror, but if he does he must swap all these characteristics for the duration of the challenge. So, the wearer fights with his enemy's WS, S, T, I and A whilst his enemy fights with the wearer's WS, S, T, I and A.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Icon of Magnus</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<Rule>The character and the unit he is with are immune to Fear; when faced with an enemy that causes Terror, the character and the unit he is with only suffer Fear, not Terror</Rule>
-				<Description>The character and the unit he is with are immune to Fear. When faced with an enemy that causes Terror, the character and the unit he is with only suffer Fear, not Terror.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ring of Volans</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<Rule>Bound spell: power level variable, one use only: choose any one of the eight magic lores in the Warhammer rulebook and randomly select one spell from that lore to be bound within the Ring of Volans</Rule>
-				<Description>One use only. Bound Spell: Power Level variable. Choose any one of the eight magic lores in the Warhammer rulebook and randomly select one spell from that lore to be bound within the Ring of Volans. The power level of the spell cast by the ring will be equivalent to the normal casting value of the spell.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic Standards">
-			<Artefact>
-				<Name>Imperial Banner</Name>
-				<Type>Banner</Type>
-				<Points>100</Points>
-				<Rule>All units within 12" can re-roll any failed Terror, Fear, Panic or Rally test as well as tests to avoid pursuing a fleeing enemy</Rule>
-				<Description>All units with at least one model within 12" of the Imperial Banner can re-roll any failed Terror, Fear, Panic or Rally test as well as tests to avoid pursuing a fleeing enemy.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Sigismund</Name>
-				<Type>Banner</Type>
-				<Points>60</Points>
-				<Stubborn/>
-				<Description>The standard bearer and all models in his unit are Stubborn. Note that this bonus is also conferred to other characters within the unit.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Griffon Standard</Name>
-				<Type>Banner</Type>
-				<Points>55</Points>
-				<Rule>A unit counts double its rank bonus when it comes to working out combat results</Rule>
-				<Description>A unit joined by a Battle Standard Bearer carrying the Griffon Standard counts double its rank bonus when it comes to working out combat results. If the unit is in two ranks it receives +2, in three ranks +4, and in four ranks (the maximum bonus) +6. The unit will never pursue a fleeing enemy, but will always hold its ground, even if affected by a special rule that means it must normally do so.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of the Daemonslayer</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<Fear/>
-				<OnlyForGroup>Knights</OnlyForGroup>
-				<Description>During the turn when it charges into combat, the unit causes Fear (from the moment it is found to be in charge range to the end of that turn).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Valour</Name>
-				<Type>Banner</Type>
-				<Points>30</Points>
-				<ImmuneToPsychology/>
-				<Description>The unit is Immune to Panic.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Standard of Arcane Warding</Name>
-				<Type>Banner</Type>
-				<Points>30</Points>
-				<Rule>Magic Resistance (2)</Rule>
-				<Description>This banner confers Magic Resistance (2) on the unit that carries it.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Steel Standard</Name>
-				<Type>Banner</Type>
-				<Points>20</Points>
-				<OnlyForGroup>Knights</OnlyForGroup>
-				<Rule>The unit can add D3" to its charge move. If the charge is failed, the unit will move forward 7" as normal</Rule>
-				<Description>The unit can add D3" to its charge move. If the charge is failed, the unit will move forward 7" as normal.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Duty</Name>
-				<Type>Banner</Type>
-				<Points>10</Points>
-				<Rule>The unit can re-roll any failed Rally test</Rule>
-				<Description>The unit can re-roll any failed Rally test.</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>The Emperor Karl Franz</Name>
-			<Points>350</Points>
-			<Personified/>
-			<Description>The Emperor Karl Franz</Description>
-			<Image>KarlFranz.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<Undead/>
-				<Reroll>ToWound</Reroll>
-				<AddToCloseCombat>1</AddToCloseCombat>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Runefang</Name>
-					<NoArmour/>
-					<AutoWound/>
-				</HandWeapon>
-				<Armour>
-					<Name>Full plate armour</Name>
-					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>The Silver Seal</Name>
-					<AddToWard>4</AddToWard>
-					<Rule>Magic Resistance (3)</Rule>
-				</Armour>
-				<Special>
-					<Rule>Leader of Men</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Ghal Maraz</Name>
-					<Type>Option</Type>
-					<AutoWound/>
-					<MultiWounds>D3</MultiWounds>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
 					<Points>30</Points>
-				</Option>
-				<Option>
-					<Name>Deathclaw</Name>
-					<Type>Option</Type>
-					<Points>225</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>The Imperial Dragon</Name>
-					<Type>Option</Type>
-					<Points>320</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Imperial Pegasus</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Warhorse</Name>
-					<Type>Option</Type>
-					<Points>21</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Kurt Helborg</Name>
-			<Points>325</Points>
-			<Mount>Warhorse</Mount>
-			<Personified/>
-			<Description>Kurt Helborg</Description>
-			<Image>KurtHelborg.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<Stubborn/>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<AddToStrength>1</AddToStrength>
+					<Description>+1 Strength</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>5</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
+					<Points>10</Points>
+					<AddToArmour>5</AddToArmour>
+					<Description>5+ armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<AddToWard>6</AddToWard>
+					<Description>6+ ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>35</Points>
+					<Rule>+1 to dispel</Rule>
+					<Description>+1 to dispel</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic Weapons">
+				<Artefact>
 					<Name>Runefang</Name>
+					<Type>Weapon</Type>
+					<Points>100</Points>
 					<NoArmour/>
 					<AutoWound/>
-				</HandWeapon>
-				<Armour>
-					<Name>Full plate armour</Name>
-					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>The Emperor's Chosen</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Grand Theogonist Volkmar</Name>
-			<Points>360</Points>
-			<Mount>The War Altar</Mount>
-			<Personified/>
-			<Description>Grand Theogonist Volkmar</Description>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>9</Leadership>
-				<Ward>4</Ward>
-			</Profile>
-			<SpecialRules>
-				<Frenzy/>
-				<Unbreakable/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>The Staff of Command</Name>
+					<Description>All hits from a Runefang wound automatically and allow no armour saves.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Mace of Helsturm</Name>
+					<Type>Weapon</Type>
+					<Points>60</Points>
+					<StrengthTo>10</StrengthTo>
+					<AttacksTo>1</AttacksTo>
+					<MultiWounds>D6</MultiWounds>
+					<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Sigismund</Name>
+					<Type>Weapon</Type>
+					<Points>45</Points>
+					<AddToStrength>1</AddToStrength>
+					<HitFirst/>
+					<Description>The wielder of this sword strikes with +1 Strength and benefits from the 'always strikes first' special rule in close combat.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Fate</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
+					<Rule>At the beginning of the battle, nominate one enemy character or monster. The sword counts as a magic sword with no particular bonuses against any other opponent, but attacks directed against the designated target will wound it on a 2+ and cause D3 wounds, with no armour saves allowed</Rule>
+					<Description>At the beginning of the battle, nominate one enemy character or monster. The sword counts as a magic sword with no particular bonuses against any other opponent, but attacks directed against the designated target will wound it on a 2+ and cause D3 wounds, with no armour saves allowed.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Power</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
 					<AddToStrength>2</AddToStrength>
-				</HandWeapon>
-				<Armour>
-					<Name>The Jade Griffon</Name>
-					<Regeneration/>
-				</Armour>
-				<Armour>
-					<Name>The Horn of Sigismound</Name>
-					<Terror/>
-				</Armour>
-				<Special>
-					<Rule>Grand Theogonist</Rule>
-					<Rule>Aura of Righteouness</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Balthasar Gelt</Name>
-			<Points>400</Points>
-			<Wizard>4</Wizard>
-			<Mount>Imperial Pegasus</Mount>
-			<Personified/>
-			<Description>Balthasar Gelt</Description>
-			<Image>Balthasar.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>The Staff of Volans</Name>
-					<Rule>+2 to the casting</Rule>
-					<Rule>Ignore first miscast</Rule>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Al-kahest</Name>
-					<Rule>Attack with range of 6", wounding any target on a 4+, no armour save</Rule>
-				</RangeWeapon>
-				<Armour>
-					<Name>The Cloak of Molten Metal</Name>
-					<Rule>3+ ward save against any missle attack</Rule>
-				</Armour>
-				<Armour>
-					<Name>Amulet of Sea Gold</Name>
-					<Rule>Magic Resistance (1)</Rule>
-				</Armour>
-				<Special>
-					<Rule>Knows all six spell from Lore of metal list</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>General of the Empire</Name>
-			<Points>80</Points>
-			<Description>General of the Empire</Description>
-			<Image>General.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Ancestral Heirloomn</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Lance</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>6</Points>
-					<Lance/>
-				</Option>
-				<Option>
-					<Name>Pistol</Name>
-					<Type>Option</Type>
-					<Points>9</Points>
-				</Option>
-				<Option>
-					<Name>Longbow</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Handgun</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-						<IfNot>Full plate armour</IfNot>
-					</Dependencies>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-						<IfNot>Full plate armour</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Full plate armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<Points>12</Points>
-					<AddToArmour>4</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Warhorse</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Imperial Pegasus</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Griffon</Name>
-					<Type>Option</Type>
-					<Points>200</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Templar Grand Master</Name>
-			<Group>Knights</Group>
-			<Points>400</Points>
-			<Mount>Warhorse</Mount>
-			<Description>Templar Grand Master</Description>
-			<Image>GrandMaster.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>9</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Lance</Name>
-					<Lance/>
-				</HandWeapon>
-				<Armour>
-					<Name>Full plate armour</Name>
-					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Arch Lector of Sigmar</Name>
-			<Points>125</Points>
-			<Description>Arch Lector of Sigmar</Description>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-				<Hate/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Warhammer</Name>
-				</HandWeapon>
-				<Special>
-					<AddToDispell>2</AddToDispell>
-					<Rule>Prayers of Sigmar</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Two-handed warhammer</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Second warhammer</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Warhorse</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barding for Warhorse</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<If>Warhorse</If>
-					</Dependencies>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>The War Altar</Name>
-					<Type>Option</Type>
-					<Points>100</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Wizard Lord</Name>
-			<Points>175</Points>
-			<Wizard>3</Wizard>
-			<Description>Wizard Lord</Description>
-			<Image>WizardLord.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Wizard Level 4</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Warhorse</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barding for Warhorse</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<If>Warhorse</If>
-					</Dependencies>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Imperial Pegasus</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Ludwig Schwarzhelm</Name>
-			<Points>220</Points>
-			<Mount>Warhorse</Mount>
-			<Personified/>
-			<Description>Ludwig Schwarzhelm</Description>
-			<Image>Schwarzhelm.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<KillingBlow/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
+					<Description>The sword confers +2 Strength to all close combat attacks made by the character.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Righteous Steel</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<HitOn>2</HitOn>
+					<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hammer of Judgement</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Test Bet="Wound" Context="Hit">Toughness</Test>
+					<Description>Models hit by this hammer must take a Toughness test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dragon Bow</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>The Dragon Bow has a range of 36" and Strength 6. Any hits from this bow count as being from a magical weapon</Rule>
+					<Description>The Dragon Bow has a range of 36" and Strength 6. Any hits from this bow count as being from a magical weapon.</Description>
+				</Artefact>
+				<Artefact>
 					<Name>Sword of Justice</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
 					<Reroll>ToWound</Reroll>
-				</HandWeapon>
-				<Armour>
-					<Name>Full plate armour</Name>
-					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Standart>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Banner</Type>
-					<Rule>BSB</Rule>
-					<OnlyOneInArmy/>
-				</Standart>
-				<Special>
-					<Rule>Bodyguard</Rule>
-					<Rule>The Emperor's Standart</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Luthor Huss</Name>
-			<Points>180</Points>
-			<Mount>Warhorse</Mount>
-			<Personified/>
-			<Description>Luthor Huss</Description>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-				<Ward>4</Ward>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<Hate/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Two-handed warhammer</Name>
-					<AddToStrength>2</AddToStrength>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
+					<Description>The bearer can re-roll failed rolls to wound.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Wyrmslayer Sword</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<WoundOn>4</WoundOn>
+					<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but large targets lose their armour save due to the scaly skin special rule against hits from this sword.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic Armour">
+				<Artefact>
+					<Name>The Gilded Armour</Name>
+					<Type>Armour</Type>
+					<Points>40</Points>
 					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<AddToDispell>1</AddToDispell>
-					<Rule>Prayers of Sigmar</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Captain of the Empire</Name>
-			<Points>50</Points>
-			<Description>Captain of the Empire</Description>
-			<Image>Captain.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Lance</Name>
-					<Type>Option</Type>
-					<OnlyFor>Mount</OnlyFor>
-					<Points>4</Points>
-					<Lance/>
-				</Option>
-				<Option>
-					<Name>Pistol</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Longbow</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Handgun</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-						<IfNot>Full plate armour</IfNot>
-					</Dependencies>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-						<IfNot>Full plate armour</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Full plate armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<Points>8</Points>
-					<AddToArmour>4</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Warhorse</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barding for Warhorse</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<If>Warhorse</If>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Imperial Pegasus</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Griffon</Name>
-					<Type>Option</Type>
-					<Points>200</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<Rule>BSB</Rule>
-					<OnlyOneInArmy/>
-					<Points>25</Points>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Warrior Priest</Name>
-			<Points>90</Points>
-			<Description>Warrior Priest</Description>
-			<Image>WarriorPriest.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Hate/>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Warhammer</Name>
-				</HandWeapon>
-				<Special>
-					<AddToDispell>1</AddToDispell>
-					<Rule>Prayers of Sigmar</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Two-handed warhammer</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Second warhammer</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Warhorse</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barding for Warhorse</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<If>Warhorse</If>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Battle Wizard</Name>
-			<Points>65</Points>
-			<Wizard>1</Wizard>
-			<Description>Battle Wizard</Description>
-			<Image>BattleWizard.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
+					<Test Bet="Pass" Context="ArmourSave">Strength</Test>
+					<Description>Heavy armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dawn Armour</Name>
+					<Type>Armour</Type>
 					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Warhorse</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barding for Warhorse</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<If>Warhorse</If>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Master Engineer</Name>
-			<Points>65</Points>
-			<Description>Master Engineer</Description>
-			<Image>Engineer.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Master of Ballistics</Rule>
-					<Rule>Extra Crewman</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Warhorse</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Barding for Warhorse</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Dependencies>
-						<If>Warhorse</If>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Mechanical Steed</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-					<Mount/>
-					<AddToArmour>5</AddToArmour>
-					<Rule>Impact Hit (D3)</Rule>
-				</Option>
-				<Option>
-					<Name>Repeater pistol</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Hochland long rifle</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-				</Option>
-				<Option>
-					<Name>Grenade launching blunderbuss</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Repeater handgun</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-				</Option>
-				<Option>
-					<Name>Pigeon bombs</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-				</Option>
-			</Options>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Warhorse</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Mechanical Steed</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>1</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>0</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ImpactHit>D3</ImpactHit>
-			</SpecialRules>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Deathclaw</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-					<Rule>Large target</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Griffon</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-					<Rule>Large target</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>The Imperial Dragon</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>3</Armour>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-					<Rule>Large target</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Imperial Pegasus</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>The War Altar</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>0</Movement>
-				<WeaponSkill>0</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>0</Initiative>
-				<Attacks>0</Attacks>
-				<Leadership>0</Leadership>
-			</Profile>
-			<SpecialRules>
-				<LargeBase/>
-				<Unbreakable/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Golden Griffon</Rule>
-					<Rule>The Power of Sigmar</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Magic Resistance (3)</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Halberdiers</Name>
-			<Points>5</Points>
-			<Min>10</Min>
-			<Image>Halberdiers.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Halberd</Name>
-					<AddToStrength>1</AddToStrength>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>State Troops</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Sergeant</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Spearmen</Name>
-			<Points>5</Points>
-			<Min>10</Min>
-			<Image>Spearmen.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>State Troops</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Sergeant</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Swordmen</Name>
-			<Points>6</Points>
-			<Min>10</Min>
-			<Image>Swordman.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>State Troops</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Duellist</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Knightly Orders</Name>
-			<Group>Knights</Group>
-			<Points>23</Points>
-			<Min>5</Min>
-			<Mount>Warhorse</Mount>
-			<Image>ReiksguardKnights.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Lance</Name>
-					<Lance/>
-				</HandWeapon>
-				<Armour>
-					<Name>Full plate armour</Name>
 					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shield</Name>
+					<Reroll>ToArmour</Reroll>
+					<Description>Full plate armour (armour save 4+). The model can re-roll any failed armour save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Tarnus</Name>
+					<Type>Armour</Type>
+					<Points>35</Points>
 					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Knights of the Inner Circle</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<PerModel/>
-					<AddToStrength>1</AddToStrength>
-				</Option>
-				<Option>
-					<Name>Preceptor</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>16</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>16</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Handgunners</Name>
-			<Points>8</Points>
-			<Min>10</Min>
-			<Image>Handgunners.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Handgun</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>State Troops</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Marksman</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Hochland long rifle for Marksman</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Marksman</If>
-						<IfNot>Repeater handgun for Marksman</IfNot>
-						<IfNot>Pistol for Marksman</IfNot>
-					</Dependencies>
+					<AddToWard>5</AddToWard>
+					<Description>Light armour. The Armour of Tarnus confers a 5+ ward save to the wearer.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Meteoric Iron</Name>
+					<Type>Armour</Type>
+					<Points>25</Points>
+					<ArmourTo>1</ArmourTo>
+					<Description>This armour gives the bearer a 1+ armour save that cannot be improved by any means.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Helm of the Ratslayer</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Causes Fear in all models in a Skaven army</Rule>
+					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Shield of the Gorgon</Name>
+					<Type>Shield</Type>
+					<Points>25</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Can force one model in base contact to lose one Attack</Rule>
+					<Description>Shield. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bronze Shield</Name>
+					<Type>Shield</Type>
 					<Points>20</Points>
-				</Option>
-				<Option>
-					<Name>Repeater handgun for Marksman</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Marksman</If>
-						<IfNot>Hochland long rifle for Marksman</IfNot>
-						<IfNot>Pistol for Marksman</IfNot>
-					</Dependencies>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
+					<Description>Shield. The bearer ignores the first hit in the battle from shooting or close combat.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>Shroud of Magnus</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>50</Points>
+					<AddToWard>5</AddToWard>
+					<Rule>Magic Resistance (2)</Rule>
+					<Description>This item gives the bearer a 5+ Ward save and magic resistance (2).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Holy Relic</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>45</Points>
+					<AddToWard>4</AddToWard>
+					<Description>The Holy Relic gives its bearer a 4+ Ward save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Jade Amulet</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<FirstWoundDiscount/>
+					<Description>The model may ignore the first wound it suffers.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The White Cloak</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<AddToWard>5</AddToWard>
+					<Rule>2+ Ward save against Flaming Attacks</Rule>
+					<Description>This item gives a 5+ ward save, which is increased to 2+ against Flaming Attacks.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Crimson Amulet</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<AddToWard>6</AddToWard>
+					<Rule>Automatically passes any characteristic tests he has to take (except Leadership tests)</Rule>
+					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sigil of Sigmar</Name>
+					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
-				</Option>
-				<Option>
-					<Name>Pistol for Marksman</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Marksman</If>
-						<IfNot>Hochland long rifle for Marksman</IfNot>
-						<IfNot>Repeater handgun for Marksman</IfNot>
-					</Dependencies>
-					<Points>0</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Crossbowmen</Name>
-			<Points>8</Points>
-			<Min>10</Min>
-			<Image>Crossbowmen.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Crossbow</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>State Troops</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Marksman</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
+					<Rule>Magic Resistance (1)</Rule>
+					<Description>The Sigil of Sigmar confers magic resistance (1).</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane Items">
+				<Artefact>
+					<Name>Seal of Destruction</Name>
+					<Type>Arcane</Type>
+					<Points>45</Points>
+					<Rule>Once automatically dispel an enemy spell, on a 4+ the spell is removed from the caster's mind and he can no longer cast it</Rule>
+					<Description>One use only. The seal has the same effect as a Dispel Scroll. In addition, roll a D6. On a result of 4+ the spell is removed from the caster's mind and he can no longer cast it. Spells cast from a bound item will only be removed on the result of a 6.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Grey Wand</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>+1 to the casting attempts</Rule>
+					<Description>Gives +1 to the casting attempts made by the Wizard.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rod of Power</Name>
+					<Type>Arcane</Type>
+					<Points>30</Points>
+					<Rule>Can save up to three unused power/dispel dice from the pool and store them, at the beginning of each successive magic phase roll a dice, if the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool</Rule>
+					<Description>At the end of each magic phase (yours and enemy's), you can save up to three unused power/dispel dice from the pool and store them in the rod. At the beginning of each successive magic phase (yours and enemy's), roll a dice. If the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool, if the result is lower than the number of dice stored, they are lost.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Luckstone</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Rule>Once per battle, can re-roll all of the dice rolled to cast or dispel</Rule>
+					<Description>One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause irresistible force or a miscast.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Crystal Ball</Name>
+					<Type>Arcane</Type>
+					<Points>15</Points>
+					<Rule>The enemy must always reveal all the 'secrets' involving all units that are within 24" of the Wizard at any time</Rule>
+					<Description>The enemy must always reveal all the 'secrets' involving all units that are within 24" of the Wizard at any time. This includes which magic items are in the unit and who is carrying them, the presence of disguised, hidden or otherwise 'invisible' models and everything else that the player is not normally obliged to disclose to his opponent.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Wizard's Staff</Name>
+					<Type>Arcane</Type>
 					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Archers</Name>
-			<Points>8</Points>
-			<Min>10</Min>
-			<Max>20</Max>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Bow</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>Militia</Rule>
-					<Rule>Skirmishers</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Hunters</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<Rule>Scouts</Rule>
-					<OnlyOneInArmy/>
-				</Option>
-				<Option>
-					<Name>Marksman</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Free Company</Name>
-			<Points>5</Points>
-			<Min>10</Min>
-			<Image>FreeCompany.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Militia</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Sergeant</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Greatswords</Name>
-			<Points>10</Points>
-			<Min>5</Min>
-			<Image>Greatswords.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Stubborn/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great weapon</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Full plate armour</Name>
-					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>State Troops</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Count's Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Pistoliers</Name>
-			<Points>18</Points>
-			<Min>5</Min>
-			<Mount>Warhorse</Mount>
-			<Image>Pistoliers.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Brace of pistols</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Fast Cavalry</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Outrider</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Repeater pistol for Outrider</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Outrider</If>
-					</Dependencies>
+					<Rule>Use one more dice than he is normally allowed to when casting a spell</Rule>
+					<Description>The Wizard's Staff allows the bearer to use one more dice than he is normally allowed to when casting a spell (eg, a Wizard that can normally use up to two dice to cast spells will be able to use up to three dice).</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted Items">
+				<Artefact>
+					<Name>Laurels of Victory</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>55</Points>
+					<Rule>Each wound caused by a model wearing the Laurels of Victory will count as 2 Wounds when working out combat resolution</Rule>
+					<Description>Each wound caused by a model wearing the Laurels of Victory (but not those caused by his mount) will count as 2 Wounds when working out combat resolution. Note that you do not actually cause double wounds on your victim!</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rod of Command</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>50</Points>
+					<Rule>Once per battle, instead rolling the dice for Break test, the player can declare he is using Rod of Command and the character (and his unit) automatically passing Break test</Rule>
+					<Description>One use only. Whenever the character (and the unit he is with) have to take a Break test, instead of rolling the dice, the player can declare he is using this item. If the player decides to do so, the character (and his unit) automatically roll double Is (Insane Courage!) for the test, automatically passing it regardless of modifiers. This item cannot be used by a character in a turn he refused a challenge or if he is hiding at the back of the unit (nobody would pay heed to such a coward!)</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Aldred's Casket of Sorcery</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<Rule>Bound spell, power level variable: at the end of each of his movement phases, the bearer may remove and capture one randomly determined spell from an enemy Wizard within 12" of him on a roll of 4+, the bearer can then cast the captured spell in any of his own following magic phases</Rule>
+					<Description>Bound spell, power level variable. At the end of each of his movement phases, the bearer may remove and capture one randomly determined spell from an enemy Wizard within 12" of him on a roll of 4+. The bearer can then cast the captured spell in any of his own following magic phases by releasing it from the casket just like from a bound item, whereupon the spell is then removed from the game. Any number of spells may be captured by the casket, and the bearer can cast each one once, either over several magic phases or all at the same time if he prefers. The power level of the spell cast by the casket will be equivalent to the normal casting value of the spell.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Silver Horn</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<Rule>Bound spell, power level 5: if successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left</Rule>
+					<Description>Bound spell, power level 5. If successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Orb of Thunder</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>Bound spell, power level 4: when the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate, remains in play</Rule>
+					<Description>Bound spell, power level 4. Remains in play. When the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Doomfire Ring</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>Bound spell, power level 3: casts the Burning Head spell from the Lore of Fire</Rule>
+					<Description>Bound Spell: Power Level 3. The Doomfire Ring casts the Burning Head spell from the Lore of Fire.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Van Horstmann's Speculum</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Rule>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy</Rule>
+					<Description>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy. He can choose not to use the mirror, but if he does he must swap all these characteristics for the duration of the challenge. So, the wearer fights with his enemy's WS, S, T, I and A whilst his enemy fights with the wearer's WS, S, T, I and A.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Icon of Magnus</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<Rule>The character and the unit he is with are immune to Fear; when faced with an enemy that causes Terror, the character and the unit he is with only suffer Fear, not Terror</Rule>
+					<Description>The character and the unit he is with are immune to Fear. When faced with an enemy that causes Terror, the character and the unit he is with only suffer Fear, not Terror.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ring of Volans</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<Rule>Bound spell: power level variable, one use only: choose any one of the eight magic lores in the Warhammer rulebook and randomly select one spell from that lore to be bound within the Ring of Volans</Rule>
+					<Description>One use only. Bound Spell: Power Level variable. Choose any one of the eight magic lores in the Warhammer rulebook and randomly select one spell from that lore to be bound within the Ring of Volans. The power level of the spell cast by the ring will be equivalent to the normal casting value of the spell.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic Standards">
+				<Artefact>
+					<Name>Imperial Banner</Name>
+					<Type>Banner</Type>
+					<Points>100</Points>
+					<Rule>All units within 12" can re-roll any failed Terror, Fear, Panic or Rally test as well as tests to avoid pursuing a fleeing enemy</Rule>
+					<Description>All units with at least one model within 12" of the Imperial Banner can re-roll any failed Terror, Fear, Panic or Rally test as well as tests to avoid pursuing a fleeing enemy.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Sigismund</Name>
+					<Type>Banner</Type>
+					<Points>60</Points>
+					<Stubborn/>
+					<Description>The standard bearer and all models in his unit are Stubborn. Note that this bonus is also conferred to other characters within the unit.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Griffon Standard</Name>
+					<Type>Banner</Type>
+					<Points>55</Points>
+					<Rule>A unit counts double its rank bonus when it comes to working out combat results</Rule>
+					<Description>A unit joined by a Battle Standard Bearer carrying the Griffon Standard counts double its rank bonus when it comes to working out combat results. If the unit is in two ranks it receives +2, in three ranks +4, and in four ranks (the maximum bonus) +6. The unit will never pursue a fleeing enemy, but will always hold its ground, even if affected by a special rule that means it must normally do so.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of the Daemonslayer</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<Fear/>
+					<OnlyForGroup>Knights</OnlyForGroup>
+					<Description>During the turn when it charges into combat, the unit causes Fear (from the moment it is found to be in charge range to the end of that turn).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Valour</Name>
+					<Type>Banner</Type>
+					<Points>30</Points>
+					<ImmuneToPsychology/>
+					<Description>The unit is Immune to Panic.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Standard of Arcane Warding</Name>
+					<Type>Banner</Type>
+					<Points>30</Points>
+					<Rule>Magic Resistance (2)</Rule>
+					<Description>This banner confers Magic Resistance (2) on the unit that carries it.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Steel Standard</Name>
+					<Type>Banner</Type>
+					<Points>20</Points>
+					<OnlyForGroup>Knights</OnlyForGroup>
+					<Rule>The unit can add D3" to its charge move. If the charge is failed, the unit will move forward 7" as normal</Rule>
+					<Description>The unit can add D3" to its charge move. If the charge is failed, the unit will move forward 7" as normal.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Duty</Name>
+					<Type>Banner</Type>
 					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Outriders</Name>
-			<Points>21</Points>
-			<Min>5</Min>
-			<Mount>Warhorse</Mount>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>6</Armour>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Repeater handgun</Name>
-				</RangeWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Fast Cavalry</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Outrider Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>16</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>8</Points>
-				</Option>
-				<Option>
-					<Name>Barding for Warhorse</Name>
-					<Type>Option</Type>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-					<Rule>No longer Fast Cavalry</Rule>
-					<Points>2</Points>
-				</Option>
-				<Option>
-					<Name>Repeater pistol and pistol</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Outrider Champion</If>
-						<IfNot>Hochland long rifle</IfNot>
-						<IfNot>Grenade launching blunderbuss</IfNot>
-					</Dependencies>
-					<Points>0</Points>
-				</Option>
-				<Option>
-					<Name>Grenade launching blunderbuss</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Outrider Champion</If>
-						<IfNot>Hochland long rifle</IfNot>
-						<IfNot>Repeater pistol and pistol</IfNot>
-					</Dependencies>
-					<Points>0</Points>
-				</Option>
-				<Option>
-					<Name>Hochland long rifle</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<If>Outrider Champion</If>
-						<IfNot>Repeater pistol and pistol</IfNot>
-						<IfNot>Grenade launching blunderbuss</IfNot>
-					</Dependencies>
-					<Points>5</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Great Cannon</Name>
-			<Points>100</Points>
-			<Image>GreatCannon.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Cannon</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Mortar</Name>
-			<Points>100</Points>
-			<Image>Mortar.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Mortar</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Flagellant Warband</Name>
-			<Points>10</Points>
-			<Min>5</Min>
-			<Max>30</Max>
-			<Image>Flagellants.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Unbreakable/>
-				<Frenzy/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Flail</Name>
-					<Flail/>
-				</HandWeapon>
-				<Special>
-					<Rule>Crazed!</Rule>
-					<Rule>The End is Night!</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Prophet of Doom</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Helblaster Volley Gun</Name>
-			<Points>110</Points>
-			<Image>Helblaster.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Helblaster</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Helstorm Rocket Battary</Name>
-			<Points>115</Points>
-			<Image>RocketBattary.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Helblaster</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Steam Tank</Name>
-			<Points>300</Points>
-			<Image>SteamTank.jpg</Image>
-			<Profile>
-				<Movement>0</Movement>
-				<WeaponSkill>0</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>10</Wounds>
-				<Initiative>0</Initiative>
-				<Attacks>0</Attacks>
-				<Leadership>10</Leadership>
-				<Armour>1</Armour>
-			</Profile>
-			<SpecialRules>
-				<Unbreakable/>
-				<Terror/>
-				<LargeBase/>
-				<SteamTank/>
-			</SpecialRules>
-			<Equipments>
-				<RangeWeapon>
-					<Name>Main cannon</Name>
-				</RangeWeapon>
-				<RangeWeapon>
-					<Name>Steam cannon</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>Large Target</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-	</Units>
+					<Rule>The unit can re-roll any failed Rally test</Rule>
+					<Description>The unit can re-roll any failed Rally test.</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>The Emperor Karl Franz</Name>
+				<Points>350</Points>
+				<Personified/>
+				<Description>The Emperor Karl Franz</Description>
+				<Image>KarlFranz.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<Undead/>
+					<Reroll>ToWound</Reroll>
+					<AddToCloseCombat>1</AddToCloseCombat>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Runefang</Name>
+						<NoArmour/>
+						<AutoWound/>
+					</HandWeapon>
+					<Armour>
+						<Name>Full plate armour</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>The Silver Seal</Name>
+						<AddToWard>4</AddToWard>
+						<Rule>Magic Resistance (3)</Rule>
+					</Armour>
+					<Special>
+						<Rule>Leader of Men</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Ghal Maraz</Name>
+						<Type>Option</Type>
+						<AutoWound/>
+						<MultiWounds>D3</MultiWounds>
+						<Points>30</Points>
+					</Option>
+					<Option>
+						<Name>Deathclaw</Name>
+						<Type>Option</Type>
+						<Points>225</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>The Imperial Dragon</Name>
+						<Type>Option</Type>
+						<Points>320</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Imperial Pegasus</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Warhorse</Name>
+						<Type>Option</Type>
+						<Points>21</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Kurt Helborg</Name>
+				<Points>325</Points>
+				<Mount>Warhorse</Mount>
+				<Personified/>
+				<Description>Kurt Helborg</Description>
+				<Image>KurtHelborg.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<Stubborn/>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Runefang</Name>
+						<NoArmour/>
+						<AutoWound/>
+					</HandWeapon>
+					<Armour>
+						<Name>Full plate armour</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>The Emperor's Chosen</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Grand Theogonist Volkmar</Name>
+				<Points>360</Points>
+				<Mount>The War Altar</Mount>
+				<Personified/>
+				<Description>Grand Theogonist Volkmar</Description>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>9</Leadership>
+					<Ward>4</Ward>
+				</Profile>
+				<SpecialRules>
+					<Frenzy/>
+					<Unbreakable/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>The Staff of Command</Name>
+						<AddToStrength>2</AddToStrength>
+					</HandWeapon>
+					<Armour>
+						<Name>The Jade Griffon</Name>
+						<Regeneration/>
+					</Armour>
+					<Armour>
+						<Name>The Horn of Sigismound</Name>
+						<Terror/>
+					</Armour>
+					<Special>
+						<Rule>Grand Theogonist</Rule>
+						<Rule>Aura of Righteouness</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Balthasar Gelt</Name>
+				<Points>400</Points>
+				<Wizard>4</Wizard>
+				<Mount>Imperial Pegasus</Mount>
+				<Personified/>
+				<Description>Balthasar Gelt</Description>
+				<Image>Balthasar.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>The Staff of Volans</Name>
+						<Rule>+2 to the casting</Rule>
+						<Rule>Ignore first miscast</Rule>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Al-kahest</Name>
+						<Rule>Attack with range of 6", wounding any target on a 4+, no armour save</Rule>
+					</RangeWeapon>
+					<Armour>
+						<Name>The Cloak of Molten Metal</Name>
+						<Rule>3+ ward save against any missle attack</Rule>
+					</Armour>
+					<Armour>
+						<Name>Amulet of Sea Gold</Name>
+						<Rule>Magic Resistance (1)</Rule>
+					</Armour>
+					<Special>
+						<Rule>Knows all six spell from Lore of metal list</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>General of the Empire</Name>
+				<Points>80</Points>
+				<Description>General of the Empire</Description>
+				<Image>General.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Ancestral Heirloomn</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Lance</Name>
+						<Type>Option</Type>
+						<OnlyFor>Mount</OnlyFor>
+						<Points>6</Points>
+						<Lance/>
+					</Option>
+					<Option>
+						<Name>Pistol</Name>
+						<Type>Option</Type>
+						<Points>9</Points>
+					</Option>
+					<Option>
+						<Name>Longbow</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Handgun</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+							<IfNot>Full plate armour</IfNot>
+						</Dependencies>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+							<IfNot>Full plate armour</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Full plate armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<Points>12</Points>
+						<AddToArmour>4</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Warhorse</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Imperial Pegasus</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Griffon</Name>
+						<Type>Option</Type>
+						<Points>200</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Templar Grand Master</Name>
+				<Group>Knights</Group>
+				<Points>400</Points>
+				<Mount>Warhorse</Mount>
+				<Description>Templar Grand Master</Description>
+				<Image>GrandMaster.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>9</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Lance</Name>
+						<Lance/>
+					</HandWeapon>
+					<Armour>
+						<Name>Full plate armour</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Arch Lector of Sigmar</Name>
+				<Points>125</Points>
+				<Description>Arch Lector of Sigmar</Description>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+					<Hate/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Warhammer</Name>
+					</HandWeapon>
+					<Special>
+						<AddToDispell>2</AddToDispell>
+						<Rule>Prayers of Sigmar</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Two-handed warhammer</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Second warhammer</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Warhorse</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barding for Warhorse</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<If>Warhorse</If>
+						</Dependencies>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>The War Altar</Name>
+						<Type>Option</Type>
+						<Points>100</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Wizard Lord</Name>
+				<Points>175</Points>
+				<Wizard>3</Wizard>
+				<Description>Wizard Lord</Description>
+				<Image>WizardLord.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Wizard Level 4</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Warhorse</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barding for Warhorse</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<If>Warhorse</If>
+						</Dependencies>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Imperial Pegasus</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Ludwig Schwarzhelm</Name>
+				<Points>220</Points>
+				<Mount>Warhorse</Mount>
+				<Personified/>
+				<Description>Ludwig Schwarzhelm</Description>
+				<Image>Schwarzhelm.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<KillingBlow/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Sword of Justice</Name>
+						<Reroll>ToWound</Reroll>
+					</HandWeapon>
+					<Armour>
+						<Name>Full plate armour</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+					<Standart>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Banner</Type>
+						<Rule>BSB</Rule>
+						<OnlyOneInArmy/>
+					</Standart>
+					<Special>
+						<Rule>Bodyguard</Rule>
+						<Rule>The Emperor's Standart</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Luthor Huss</Name>
+				<Points>180</Points>
+				<Mount>Warhorse</Mount>
+				<Personified/>
+				<Description>Luthor Huss</Description>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+					<Ward>4</Ward>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<Hate/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Two-handed warhammer</Name>
+						<AddToStrength>2</AddToStrength>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Special>
+						<AddToDispell>1</AddToDispell>
+						<Rule>Prayers of Sigmar</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Captain of the Empire</Name>
+				<Points>50</Points>
+				<Description>Captain of the Empire</Description>
+				<Image>Captain.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Lance</Name>
+						<Type>Option</Type>
+						<OnlyFor>Mount</OnlyFor>
+						<Points>4</Points>
+						<Lance/>
+					</Option>
+					<Option>
+						<Name>Pistol</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Longbow</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Handgun</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+							<IfNot>Full plate armour</IfNot>
+						</Dependencies>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+							<IfNot>Full plate armour</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Full plate armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<Points>8</Points>
+						<AddToArmour>4</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Warhorse</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barding for Warhorse</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<If>Warhorse</If>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Imperial Pegasus</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Griffon</Name>
+						<Type>Option</Type>
+						<Points>200</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<Rule>BSB</Rule>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Warrior Priest</Name>
+				<Points>90</Points>
+				<Description>Warrior Priest</Description>
+				<Image>WarriorPriest.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Hate/>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Warhammer</Name>
+					</HandWeapon>
+					<Special>
+						<AddToDispell>1</AddToDispell>
+						<Rule>Prayers of Sigmar</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Two-handed warhammer</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Second warhammer</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Warhorse</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barding for Warhorse</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<If>Warhorse</If>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Battle Wizard</Name>
+				<Points>65</Points>
+				<Wizard>1</Wizard>
+				<Description>Battle Wizard</Description>
+				<Image>BattleWizard.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Warhorse</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barding for Warhorse</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<If>Warhorse</If>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Master Engineer</Name>
+				<Points>65</Points>
+				<Description>Master Engineer</Description>
+				<Image>Engineer.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Master of Ballistics</Rule>
+						<Rule>Extra Crewman</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Warhorse</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Barding for Warhorse</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Dependencies>
+							<If>Warhorse</If>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Mechanical Steed</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+						<Mount/>
+						<AddToArmour>5</AddToArmour>
+						<Rule>Impact Hit (D3)</Rule>
+					</Option>
+					<Option>
+						<Name>Repeater pistol</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Hochland long rifle</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+					</Option>
+					<Option>
+						<Name>Grenade launching blunderbuss</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Repeater handgun</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+					</Option>
+					<Option>
+						<Name>Pigeon bombs</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+					</Option>
+				</Options>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Warhorse</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Mechanical Steed</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>1</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>0</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ImpactHit>D3</ImpactHit>
+				</SpecialRules>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Deathclaw</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+						<Rule>Large target</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Griffon</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+						<Rule>Large target</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>The Imperial Dragon</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>3</Armour>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+						<Rule>Large target</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Imperial Pegasus</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>The War Altar</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>0</Movement>
+					<WeaponSkill>0</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>0</Initiative>
+					<Attacks>0</Attacks>
+					<Leadership>0</Leadership>
+				</Profile>
+				<SpecialRules>
+					<LargeBase/>
+					<Unbreakable/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Golden Griffon</Rule>
+						<Rule>The Power of Sigmar</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Magic Resistance (3)</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Halberdiers</Name>
+				<Points>5</Points>
+				<Min>10</Min>
+				<Image>Halberdiers.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Halberd</Name>
+						<AddToStrength>1</AddToStrength>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>State Troops</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Sergeant</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Spearmen</Name>
+				<Points>5</Points>
+				<Min>10</Min>
+				<Image>Spearmen.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>State Troops</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Sergeant</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Swordmen</Name>
+				<Points>6</Points>
+				<Min>10</Min>
+				<Image>Swordman.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>State Troops</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Duellist</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Knightly Orders</Name>
+				<Group>Knights</Group>
+				<Points>23</Points>
+				<Min>5</Min>
+				<Mount>Warhorse</Mount>
+				<Image>ReiksguardKnights.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Lance</Name>
+						<Lance/>
+					</HandWeapon>
+					<Armour>
+						<Name>Full plate armour</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Knights of the Inner Circle</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<PerModel/>
+						<AddToStrength>1</AddToStrength>
+					</Option>
+					<Option>
+						<Name>Preceptor</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>16</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>16</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Handgunners</Name>
+				<Points>8</Points>
+				<Min>10</Min>
+				<Image>Handgunners.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Handgun</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>State Troops</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Marksman</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Hochland long rifle for Marksman</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Marksman</If>
+							<IfNot>Repeater handgun for Marksman</IfNot>
+							<IfNot>Pistol for Marksman</IfNot>
+						</Dependencies>
+						<Points>20</Points>
+					</Option>
+					<Option>
+						<Name>Repeater handgun for Marksman</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Marksman</If>
+							<IfNot>Hochland long rifle for Marksman</IfNot>
+							<IfNot>Pistol for Marksman</IfNot>
+						</Dependencies>
+						<Points>15</Points>
+					</Option>
+					<Option>
+						<Name>Pistol for Marksman</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Marksman</If>
+							<IfNot>Hochland long rifle for Marksman</IfNot>
+							<IfNot>Repeater handgun for Marksman</IfNot>
+						</Dependencies>
+						<Points>0</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Crossbowmen</Name>
+				<Points>8</Points>
+				<Min>10</Min>
+				<Image>Crossbowmen.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Crossbow</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>State Troops</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Marksman</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Archers</Name>
+				<Points>8</Points>
+				<Min>10</Min>
+				<Max>20</Max>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Bow</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>Militia</Rule>
+						<Rule>Skirmishers</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Hunters</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<Rule>Scouts</Rule>
+						<OnlyOneInArmy/>
+					</Option>
+					<Option>
+						<Name>Marksman</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Free Company</Name>
+				<Points>5</Points>
+				<Min>10</Min>
+				<Image>FreeCompany.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Militia</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Sergeant</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Greatswords</Name>
+				<Points>10</Points>
+				<Min>5</Min>
+				<Image>Greatswords.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Stubborn/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great weapon</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Full plate armour</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>State Troops</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Count's Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Pistoliers</Name>
+				<Points>18</Points>
+				<Min>5</Min>
+				<Mount>Warhorse</Mount>
+				<Image>Pistoliers.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Brace of pistols</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Fast Cavalry</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Outrider</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Repeater pistol for Outrider</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Outrider</If>
+						</Dependencies>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Outriders</Name>
+				<Points>21</Points>
+				<Min>5</Min>
+				<Mount>Warhorse</Mount>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>6</Armour>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Repeater handgun</Name>
+					</RangeWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Fast Cavalry</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Outrider Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>16</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>8</Points>
+					</Option>
+					<Option>
+						<Name>Barding for Warhorse</Name>
+						<Type>Option</Type>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+						<Rule>No longer Fast Cavalry</Rule>
+						<Points>2</Points>
+					</Option>
+					<Option>
+						<Name>Repeater pistol and pistol</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Outrider Champion</If>
+							<IfNot>Hochland long rifle</IfNot>
+							<IfNot>Grenade launching blunderbuss</IfNot>
+						</Dependencies>
+						<Points>0</Points>
+					</Option>
+					<Option>
+						<Name>Grenade launching blunderbuss</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Outrider Champion</If>
+							<IfNot>Hochland long rifle</IfNot>
+							<IfNot>Repeater pistol and pistol</IfNot>
+						</Dependencies>
+						<Points>0</Points>
+					</Option>
+					<Option>
+						<Name>Hochland long rifle</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<If>Outrider Champion</If>
+							<IfNot>Repeater pistol and pistol</IfNot>
+							<IfNot>Grenade launching blunderbuss</IfNot>
+						</Dependencies>
+						<Points>5</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Great Cannon</Name>
+				<Points>100</Points>
+				<Image>GreatCannon.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Cannon</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Mortar</Name>
+				<Points>100</Points>
+				<Image>Mortar.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Mortar</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Flagellant Warband</Name>
+				<Points>10</Points>
+				<Min>5</Min>
+				<Max>30</Max>
+				<Image>Flagellants.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Unbreakable/>
+					<Frenzy/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Flail</Name>
+						<Flail/>
+					</HandWeapon>
+					<Special>
+						<Rule>Crazed!</Rule>
+						<Rule>The End is Night!</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Prophet of Doom</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Helblaster Volley Gun</Name>
+				<Points>110</Points>
+				<Image>Helblaster.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Helblaster</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Helstorm Rocket Battary</Name>
+				<Points>115</Points>
+				<Image>RocketBattary.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Helblaster</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Steam Tank</Name>
+				<Points>300</Points>
+				<Image>SteamTank.jpg</Image>
+				<Profile>
+					<Movement>0</Movement>
+					<WeaponSkill>0</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>10</Wounds>
+					<Initiative>0</Initiative>
+					<Attacks>0</Attacks>
+					<Leadership>10</Leadership>
+					<Armour>1</Armour>
+				</Profile>
+				<SpecialRules>
+					<Unbreakable/>
+					<Terror/>
+					<LargeBase/>
+					<SteamTank/>
+				</SpecialRules>
+				<Equipments>
+					<RangeWeapon>
+						<Name>Main cannon</Name>
+					</RangeWeapon>
+					<RangeWeapon>
+						<Name>Steam cannon</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>Large Target</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
