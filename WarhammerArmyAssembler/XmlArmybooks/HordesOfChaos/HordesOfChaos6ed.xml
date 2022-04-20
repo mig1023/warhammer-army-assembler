@@ -41,2643 +41,2645 @@
 		<Released>2002</Released>
 		<Authors>Gav Thorpe, Rick Priestly, Anthony Reynolds and Alessio Cavatore</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strenght</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>10</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToWard>6</AddToWard>
-				<Description>6+ ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>+1 to dispell</Rule>
-				<Description>+1 to dispell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic weapons">
-			<Artefact>
-				<Name>Chaos Daemon Sword</Name>
-				<Type>Weapon</Type>
-				<Points>85</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>The wielder has WS, S, I and A as the Greater Daemon of their patron god. With a Mark of Chaos only (except the Mark of Chaos Undivided)</Rule>
-				<Description>A character with a Daemon Sword has the same WS, S, I and A as the Greater Daemon of their patron god (eg, a Champion of Khorne would have Weapon Skill 10, Strength 7, Initiative 10 and Attacks 7). However, every roll of a 1 to hit in close combat means that the attack is resolved against the character instead of the enemy. Furthermore, the character can never re-roll an unmodified 1 to hit in close combat, regardless of the source of the re-roll.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Change</Name>
-				<Type>Weapon</Type>
-				<Points>75</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a 4+ the model is turned into a Chaos Spawn (with only D3 Wounds) controlled by the Chaos player</Rule>
-				<Description>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a roll of 1, 2 or 3 nothing happens. On a roll of 4 or more, the model is turned into a Chaos Spawn controlled by the Chaos player! Replace the model with a Chaos Spawn model. If you do not have a spare Chaos Spawn model the model is slain, but the sword has no additional effect. If the enemy is in a unit, dien the Spawn model is placed in contact with the unit on one of its free sides (bearer's choice) and will fight as normal in subsequent combat rounds. The Chaos Spawn starts with only D3 Wounds.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hellfire sword</Name>
-				<Type>Weapon</Type>
-				<Points>75</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<MultiWounds>D6</MultiWounds>
-				<NoArmour/>
-				<Rule>flaming</Rule>
-				<Description>Flaming attacks, D6 additional wounds with no armour saves</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Chaos Runesword</Name>
-				<Type>Weapon</Type>
-				<Points>70</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToWeaponSkill>1</AddToWeaponSkill>
-				<AddToStrength>1</AddToStrength>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Whip of Pleasure</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<HitFirst/>
-				<AddToAttacks>1</AddToAttacks>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Slaanesh</If>
-				</Dependencies>
-				<Description>The wielder gains + 1 Attack, but he cannot carry a shield or banner. In addition, the wielder always strikes first in close combat. If any of the wielder's opponents also always strike first, revert to normal Initiative.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Berserker sword</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>Half the Unit Strength of all enemy models in base contact as additional Attacks</Rule>
-				<Description>The wielder of the Berserker Sword may make additional attacks in every Close Combat phase. The number of additional attacks is equal to half the Unit Strength of all enemy models in base contact (rounding up). For example, a character in contact with two Ogres (combined Unit Strength of 6) would get 3 additional Attacks. If the bearer is involved in a challenge, only the Unit Strength of the opponent is counted.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rending sword</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<MultiWounds>D3</MultiWounds>
-				<Rule>Wounded model loses not one but D3 wounds</Rule>
-				<Description>A model wounded by the Rending Sword (after saves, etc) loses not one but D3 wounds.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blade of Blood</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>For each unsaved wound which the Blade of Blood causes, the wielder gains +1 Wound by Strength test</Rule>
-				<Description>For each unsaved wound which the Blade of Blood causes, the wielder may take a Strength test. If the test is passed, the wielder gains +1 Wound. This may not increase his Wounds value above double its normal number of Wounds. If the test is tailed, the wielder loses one Wound.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Filth Mace</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Terror/>
-				<PoisonAttack/>
-				<Description>All attacks with the Filth Mace count as poisoned attacks. In addition, if the bearer of the mace kills an enemy character in close combat, he will cause terror for the rest of the game.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Soul Cleaver</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Test Bet="Wound" Context="Wound">Toughness</Test>
-				<Description>Any model wounded by the Soul Cleaver (after saves, etc) must pass a Toughness test or suffer an additional wound (with no saves allowed).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Axe of Khorn</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Dependencies>
-					<If>Mark of Khorne</If>
-				</Dependencies>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<KillingBlow/>
-				<Description>Confers on the bearer the Killing Blow ability.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>Spelleater Shield</Name>
-				<Type>Shield</Type>
-				<Points>75</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Magic Resistance (2)</Rule>
-				<Rule>Roll a D6 each time a spell is dispelled. On a roll of 4+ the spell is destroyed and the enemy Wizard may not cast it for the rest of the battle.</Rule>
-				<Description>The Spelleater Shield is treated like a normal shield. In addition, it grants Magic Resistance (2) to the character and any unit he is with. Roll a D6 each time a spell is cast at the bearer of the Spelleater Shield and is dispelled. On a roll of 4 or more, the spell is destroyed and the enemy Wizard mav not cast it for the rest of the battle.</Description>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-			</Artefact>
-			<Artefact>
-				<Name>Chaos Runeshield</Name>
-				<Type>Shield</Type>
-				<Points>50</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Runeshiel negates the power of any magic weapons carried by models in base contac.</Rule>
-				<Description>The Chaos Runeshield is treated like a normal shield. It also negates the power of any magic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type.</Description>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Tortured Souls</Name>
-				<Type>Armour</Type>
-				<Points>40</Points>
-				<AddToArmour>4</AddToArmour>
-				<AddToToughness>1</AddToToughness>
-				<Description>The Armour of Tortured Souls is a suit of Chaos armour. The wearer counts as having +1 Toughness against mundane attacks (not against spells, magic items, etc).</Description>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Damnation</Name>
-				<Type>Armour</Type>
-				<Points>30</Points>
-				<AddToArmour>4</AddToArmour>
-				<Reroll>OpponentToHit</Reroll>
-				<Description>The Armour of Damnation is a suit of Chaos armour. In addition, any model attacking the wearer in close combat must re-roll successful rolls to hit.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bone Shield</Name>
-				<Type>Shield</Type>
-				<Points>30</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>Strength 4 hit for each successful armour save</Rule>
-				<Description>The Bane Shield is treated like a normal shield. In addition, for each successful armour save in close combat, the shield inflicts a Strength 4 hit on the model that struck the blow.</Description>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-			</Artefact>
-			<Artefact>
-				<Name>Crimson Armour of Dargan</Name>
-				<Type>Armour</Type>
-				<Points>20</Points>
-				<AddToArmour>4</AddToArmour>
-				<Test Bet="Pass" Context="Round">Leadership</Test>
-				<Description>The Crimson Armour is a suit of Chaos armour. In addition, any model wishing to attack the wearer in close combat must first pass a Leadership test or they may not attack that combat round.</Description>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>The Beguiling Gem</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>75</Points>
-				<Dependencies>
-					<If>Mark of Slaanesh</If>
-				</Dependencies>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Test Bet="Pass" Context="Round">Leadership</Test>
-				<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take a Leadership test at the start of every Close Combat phase. Any model which fails is transfixed and may not make any attacks that round, and any attacks made against it by the bearer will hit automatically.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Amulet of Chaos</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>45</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Test Bet="Wound" Context="Round">Strength</Test>
-				<Description>At the start of every Chaos Magic phase, any enemy models in contact with the wearer must pass a Strength test or lose one wound, with no armour saves allowed.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>GoldenEye of Tzeentch</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<Dependencies>
-					<If>Mark of Tzeentch</If>
-				</Dependencies>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>Ward save of 3+ against all normal and magical missiles</Rule>
-				<Description>The model and his mount have a Ward save of 3+ against all normal and magical missiles.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gaze of the Gods</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToWard>3</AddToWard>
-				<Rule>If the model is fleeing at the start of a Chaos Magic phase he is turned into a Chaos Spawn</Rule>
-				<Description>The model gains a 4+ Ward save. If the model is fleeing at the start of a Chaos Magic phase, for any reason, the wrath of the Chaos gods is immediately visited upon him and he is turned into a Chaos Spawn, with the same number of wounds remaining as the character had. If you do not have a Spawn model to replace the character then he simply counts as slain. For Victory points purposes, the character is not counted as slain or below half Wounds unless the Spawn he has turned into is slain or is below half Wounds.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Collar of Khorne</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<Dependencies>
-					<If>Mark of Khorne</If>
-				</Dependencies>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>Magic Resistance (2)</Rule>
-				<Description>The model has Magic Resistance (2).</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane items">
-			<Artefact>
-				<Name>Staff of Change</Name>
-				<Type>Arcane</Type>
-				<Points>65</Points>
-				<Dependencies>
-					<If>Mark of Tzeentch</If>
-				</Dependencies>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>The bearer can re-roll any number of the dice rolled to cast or dispel</Rule>
-				<Description>The bearer can re-roll any number of the dice rolled to cast or dispel a spell The second result(s) stand. This can effectively negate the effects of a Miscast and cause an Irresistible Force (and the equivalent results when dispelling). If the bearer casts a spell with Irresistible Force using the staff's re-roll ability, the staff will exhaust its power and cease working for the rest of the battle.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Skull of Katam</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>The bearer adds +1 to all Casting rolls</Rule>
-				<Description>The bearer adds +1 to all Casting rolls.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Familiar</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<AddToCast>1</AddToCast>
-				<AddToDispell>1</AddToDispell>
-				<Description>The Familiar adds one dice to both the Power dice and Dispel dice pool of the bearer's side.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Warrior Familiar</Name>
-				<Type>Arcane</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>Strength 5 hit on a single model in base contact</Rule>
-				<Description>At the beginning of the Close Combat phase, before blows are struck, the Familiar inflicts one Strength 5 hit on a single model chosen by the Sorcerer from amongst those in base contact. Wounds inflicted do count towards combat resolution.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Spell Familiar</Name>
-				<Type>Arcane</Type>
-				<Points>15</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>One more spell</Rule>
-				<Description>The Familiar's owner knows one more spell than is normal for his level. This does not increase his Magic Level.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Rod of Corruption</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>75</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Nurgle</If>
-				</Dependencies>
-				<Rule>Bound spell. Power Level 4. One use only. D6 Strength 2 hits at the start of the Magic phase, 2D6 Strength 2 next Magic phase, etc</Rule>
-				<Description>Bound spell. Power Level 4. One use only. Target any enemy unit on the tabletop. This unit becomes infected with Nurgle's Rot and suffers D6 Strength 2 hits, distributed as shooting hits amongst the models in the unit. At the start of the caster's next Magic phase, the unit takes 2D6 Strength 2 hits. At the start of the caster's Magic phase after that it takes 3D6 Strength 2 hits, and so on. Once cast, Nurgle's Rot cannot be stopped.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Bindings of Slaanesh</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Slaanesh</If>
-				</Dependencies>
-				<Rule>Enemy cannot refuse challenge</Rule>
-				<Description>Whenever the bearer issues a challenge, the enemy cannot refuse it and the Chaos player may choose who will accept the challenge. The model forced to accept the challenge may be anywhere within the enemy unit, and even characters that would normally be in a position that would disallow them from accepting challenges (by not being in the fighting rank, for instance) may be forced into accepting the challenge. In the first round an enemy is ensnared, the bearer always strike last, regardless of any other factor, magic item or spell.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Book of Secrets</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Khorne</If>
-				</Dependencies>
-				<AddToWizard>1</AddToWizard>
-				<AddToCast>1</AddToCast>
-				<AddToDispell>1</AddToDispell>
-				<Description>The bearer is a Level 1 Sorcerer and knows a random spell from the Lore of Fire, Shadow or Death (Chaos player's choice). If the bearer miscasts, roll twice on the Miscast table and apply both results.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Chalice of Chaos</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Group>Daemonic</Group>
-				<Rule>Daemonic</Rule>
-				<Description>The bearer becomes daemonic and follows all of the rules outlined in the Bestiary section. If the bearer is the army's General, he must lead a daemonic army. Remember, a daemonic character cannot join non-daemonic units. At the start of the battle he must take a Toughness test (remember that rolls of 6 always fail). If the test is failed, the bearer reduces his Wounds and Toughness by -1.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Death's Head</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Nurgle</If>
-				</Dependencies>
-				<Rule>One use only. D6 hits with D3 wounds with no armour by Toughness test for a range of 12"</Rule>
-				<Description>One use only. The model may throw the Death's Head in the Shooting phase. It is treated as a thrown weapon with a range of 12". If the Death's Head hits, the enemy unit takes D6 hits, and affected models must pass a Toughness test or lose D3 wounds, with no armour saves allowed. Units taking any casualties from a Death's Head must take a Panic test.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sceptre of Domination</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Slaanesh</If>
-				</Dependencies>
-				<Rule>Bound spell Delectable Torture. Power Level 6. One use only.</Rule>
-				<Description>Bound spell. Power Level 6. One use only. The Sceptre of Domination contains the bound Slaanesh spell Delectable Torture.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Helm of Many Eyes</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<HitFirst/>
-				<Description>The wearer always strikes first in close combat, even if charged or armed with a weapon that normally strikes last. If any of the wearer's opponents also strike first, revert to normal Initiative. The character is also subject to stupidity (even if immune to psychology) due to the random and conflicting images that confront him.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Mirror of Knowledge</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Tzeentch</If>
-				</Dependencies>
-				<Rule>Opponent must reveal everything that is not apparent about the unit</Rule>
-				<Description>The bearer can pick any enemy unit on the battlefield at the beginning of each of his Magic phases. The opponent must reveal everything that is not apparent about the unit (magic items and their bearers, hidden Assassins and Fanatics, etc).</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic banner">
-			<Artefact>
-				<Name>Banner of the Gods</Name>
-				<Type>Banner</Type>
-				<Points>125</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>All non-daemonic friendly units within 6" of the banner become stubborn</Rule>
-				<Description>All non-daemonic friendly units within 6" of the banner become stubborn (even if normally immune to psychology).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Rage</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Khorne</If>
-				</Dependencies>
-				<Rule>Model and unit may re-roll failed Break tests and will not lose their frenzy</Rule>
-				<Description>The model and any unit he is with may re-roll failed Break tests and will not lose their frenzy if beaten in close combat.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Plague Banner</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Nurgle</If>
-				</Dependencies>
-				<Test Bet="Wound" Context="Round">Toughness</Test>
-				<Description>Any enemy model in contact with the banner bearer at the start of the Chaos Magic phase must pass a Toughness test or suffer a wound Armour saves are not allowed. This banner has no effect on models with the Mark of Nurgle or Clan Pestilens Skaven</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blasted Standard</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Tzeentch</If>
-				</Dependencies>
-				<Rule>The banner contains the bound Tzeentch spell Yellow Fire of Transformation</Rule>
-				<Description>The banner contains the bound Tzeentch spell Yellow Fire of Transformation.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Wrath</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Rule>Bound spell. Power Level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits</Rule>
-				<Description>Bound spell. Power Level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rapturous Standard</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Mortal</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Slaanesh</If>
-				</Dependencies>
-				<Rule>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk</Rule>
-				<Description>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Demonic Gifts">
-			<Artefact>
-				<Name>Chaos Disruption</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Rule>Any shooting at the Daemon or the unit it is with suffers an additional -1 to hit penalty</Rule>
-				<Description>Any shooting at the Daemon or the unit it is with suffers an additional -1 to hit penalty.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blade of The Ether</Name>
-				<Type>Weapon</Type>
-				<Points>45</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<NoArmour/>
-				<Description>Daemon ignore armour saves in close combat</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Radiance of Dark Glory</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Rule>The Daemon and any other Daemon unit within 6" suffers one less wound when defeated in combat</Rule>
-				<Description>The Daemon and any other Daemon unit within 6" suffers one less wound when defeated in combat. For example, if the Daemon fails its Instability test by 2, flien it would only lose one wound.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Soul Hunger</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Rule>The Daemon may re-roll missed close combat attacks in the first round of any combat</Rule>
-				<Description>The Daemon may re-roll missed close combat attacks in the first round of any combat.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Spell Breaker</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Rule>Once per battle, the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force</Rule>
-				<Description>Once per battle, the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Diabolic Splendour</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Rule>Daemonic Aura becomes a normal Ward save and so can be used against magical attacks</Rule>
-				<Description>Daemonic Aura becomes a normal Ward save and so can be used against magical attacks. This is also conferred to any Daemon unit which he joins.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Master of Mortals</Name>
-				<Type>Weapon</Type>
-				<Points>5</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Group>Mortal</Group>
-				<Description>If the Daemon is the army General, Mortal units count as Core choices and Daemonic units count as Special.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Khorne Gifts">
-			<Artefact>
-				<Name>Collar of Khorne</Name>
-				<Type>Weapon</Type>
-				<Points>40</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Khorne</If>
-				</Dependencies>
-				<Rule>Magic Resistance (2)</Rule>
-				<Description>The model has Magic Resistance (2).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Axe of Khorne</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Khorne</If>
-				</Dependencies>
-				<KillingBlow/>
-				<Description>Daemon with an Axe gains the Killing Blow ability</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Khorne</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Khorne</If>
-				</Dependencies>
-				<ArmourTo>4</ArmourTo>
-				<Description>The Daemon has an armour save of 4+ in addition to its Daemonic aura.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Khorne</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Khorne</If>
-				</Dependencies>
-				<AddToStrength>1</AddToStrength>
-				<Description>The Daemon has +1 Strength on its profile.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Tzeentch Gifts">
-			<Artefact>
-				<Name>Tzeentch's Will</Name>
-				<Type>Weapon</Type>
-				<Points>75</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Tzeentch</If>
-				</Dependencies>
-				<Rule>The Daemon may re-roll a single D6 once per turn</Rule>
-				<Description>The Daemon may re-roll a single D6 once per turn. The re-roll endtles the player to take a single D6 (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. Any D6 can be re-rolled and can potentially cause Irresistible-Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Spell Destroyer</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>50</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Tzeentch</If>
-				</Dependencies>
-				<Rule>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</Rule>
-				<Description>Once per battle the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force. In addition, roll a D6. On a roll of 4+, the enemy Wizard loses knowledge of that spell and may not cast it for the rest of the battle.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Master of Sorcery</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Tzeentch</If>
-				</Dependencies>
-				<Rule>The Daemon has great magical knowledge and knows one more spell from the Lore of Tzeentch than it is normally allowed</Rule>
-				<Description>The Daemon has great magical knowledge and knows one more spell from the Lore of Tzeentch than it is normally allowed.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Vortex</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Tzeentch</If>
-				</Dependencies>
-				<Rule>Daemon may give up Wounds to generate D3 Power dice</Rule>
-				<Description>At any point during the Chaos Magic phase, the Daemon may give up Wounds to generate Power dice (with no saves of any kind allowed, no Ward saves, no regeneration, etc). For each Wound sacrificed, the Daemon generates an extra D3 Power dice, that turn which only it may use.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Nurgle Gifts">
-			<Artefact>
-				<Name>Cloud of Flies</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Nurgle</If>
-				</Dependencies>
-				<SubOpponentToHit>1</SubOpponentToHit>
-				<Description>Any unit in close combat with one or more models with a Cloud of Flies suffers a -1 modifier on its rolls to hit.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Stream of Corruption</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Nurgle</If>
-				</Dependencies>
-				<Rule>Breath attack with Strength 3, with a -2 armour saving</Rule>
-				<Description>The Daemon spews forth a noxious stream of disease and filth. In any of the Chaos player's Shooting phases that the Daemon is not in combat, it may unleash its Stream of Corruption. This is a breath attack. The attack is resolved at Strength 3, with a -2 armour saving throw modifier.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Stream of Corruption</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Nurgle</If>
-				</Dependencies>
-				<PoisonAttack/>
-				<Description>The Daemon's attacks count as poisoned attacks. This gift cannot be combined with a Blade of the Ether gift.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Slaanesh Gifts">
-			<Artefact>
-				<Name>Aura of Slaanesh</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Slaanesh</If>
-				</Dependencies>
-				<Rule>Enemy unit in base contact reduces Ld by -1 to minimum Ld value of 2</Rule>
-				<Description>Any enemy unit in base contact with one or more models with the Aura of Slaanesh reduces its Leadership by -1, to a minimum Leadership value of 2.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Soporific Musk</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Slaanesh</If>
-				</Dependencies>
-				<Rule>Any model in base contact halve WS and Initiative (rounding up)</Rule>
-				<Description>Any models in base contact with one or more Daemons with Soporific Musk halve their WS and 1 (rounding up).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Gaze of Acquiescence</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<OnlyForGroup>Demonic</OnlyForGroup>
-				<Dependencies>
-					<If>Mark of Slaanesh</If>
-				</Dependencies>
-				<Test Bet="Pass" Context="Round">Leadership</Test>
-				<Description>At the beginning of the Close Combat phase, select one model in base contact with the Daemon. The target must pass a Leadership test or may not make any attacks in that Close Combat phase. Models immune to psychology cannot be affected.</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Archaon, Lord of the End Times</Name>
-			<Group>Mortal</Group>
-			<Points>855</Points>
-			<Mount>Dorghar</Mount>
-			<Personified/>
-			<Wizard>2</Wizard>
-			<Description>Archaon, Lord of the End Times</Description>
-			<Image>Archaon.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>9</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>7</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ImmuneToPsychology/>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Magic Resistance (2)</Rule>
-					<Rule>Archaon's army must include at least one unit of Knights of Chaos, and they must be upgraded to Chosen status</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>The Slayer of Kings</Name>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToStrength>1</AddToStrength>
+					<Description>+1 Strenght</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
+					<Points>10</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToArmour>5</AddToArmour>
+					<Description>5+ Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToWard>6</AddToWard>
+					<Description>6+ ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>+1 to dispell</Rule>
+					<Description>+1 to dispell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic weapons">
+				<Artefact>
+					<Name>Chaos Daemon Sword</Name>
+					<Type>Weapon</Type>
+					<Points>85</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>The wielder has WS, S, I and A as the Greater Daemon of their patron god. With a Mark of Chaos only (except the Mark of Chaos Undivided)</Rule>
+					<Description>A character with a Daemon Sword has the same WS, S, I and A as the Greater Daemon of their patron god (eg, a Champion of Khorne would have Weapon Skill 10, Strength 7, Initiative 10 and Attacks 7). However, every roll of a 1 to hit in close combat means that the attack is resolved against the character instead of the enemy. Furthermore, the character can never re-roll an unmodified 1 to hit in close combat, regardless of the source of the re-roll.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Change</Name>
+					<Type>Weapon</Type>
+					<Points>75</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a 4+ the model is turned into a Chaos Spawn (with only D3 Wounds) controlled by the Chaos player</Rule>
+					<Description>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a roll of 1, 2 or 3 nothing happens. On a roll of 4 or more, the model is turned into a Chaos Spawn controlled by the Chaos player! Replace the model with a Chaos Spawn model. If you do not have a spare Chaos Spawn model the model is slain, but the sword has no additional effect. If the enemy is in a unit, dien the Spawn model is placed in contact with the unit on one of its free sides (bearer's choice) and will fight as normal in subsequent combat rounds. The Chaos Spawn starts with only D3 Wounds.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hellfire sword</Name>
+					<Type>Weapon</Type>
+					<Points>75</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<MultiWounds>D6</MultiWounds>
 					<NoArmour/>
-					<AddToAttacks>5</AddToAttacks>
-				</HandWeapon>
-				<Armour>
-					<Name>The Armour of Morkar</Name>
-					<ArmourTo>1</ArmourTo>
-				</Armour>
-				<Armour>
-					<Name>The Crown of Domination</Name>
+					<Rule>flaming</Rule>
+					<Description>Flaming attacks, D6 additional wounds with no armour saves</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Chaos Runesword</Name>
+					<Type>Weapon</Type>
+					<Points>70</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<AddToAttacks>1</AddToAttacks>
+					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Whip of Pleasure</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<HitFirst/>
+					<AddToAttacks>1</AddToAttacks>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Slaanesh</If>
+					</Dependencies>
+					<Description>The wielder gains + 1 Attack, but he cannot carry a shield or banner. In addition, the wielder always strikes first in close combat. If any of the wielder's opponents also always strike first, revert to normal Initiative.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Berserker sword</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>Half the Unit Strength of all enemy models in base contact as additional Attacks</Rule>
+					<Description>The wielder of the Berserker Sword may make additional attacks in every Close Combat phase. The number of additional attacks is equal to half the Unit Strength of all enemy models in base contact (rounding up). For example, a character in contact with two Ogres (combined Unit Strength of 6) would get 3 additional Attacks. If the bearer is involved in a challenge, only the Unit Strength of the opponent is counted.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rending sword</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<MultiWounds>D3</MultiWounds>
+					<Rule>Wounded model loses not one but D3 wounds</Rule>
+					<Description>A model wounded by the Rending Sword (after saves, etc) loses not one but D3 wounds.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blade of Blood</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>For each unsaved wound which the Blade of Blood causes, the wielder gains +1 Wound by Strength test</Rule>
+					<Description>For each unsaved wound which the Blade of Blood causes, the wielder may take a Strength test. If the test is passed, the wielder gains +1 Wound. This may not increase his Wounds value above double its normal number of Wounds. If the test is tailed, the wielder loses one Wound.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Filth Mace</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Terror/>
-				</Armour>
-				<Armour>
-					<Name>The Eye of Sheerian</Name>
-					<AddToWard>3</AddToWard>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Galrauch, First of the Chaos Dragons</Name>
-			<Group>Demonic</Group>
-			<Points>696</Points>
-			<Wizard>4</Wizard>
-			<Personified/>
-			<Description>Galrauch, First of the Chaos Dragons</Description>
-			<Image>Galrauch.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>6</Attacks>
-				<Leadership>10</Leadership>
-				<Armour>3</Armour>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<SlotOf>Hero</SlotOf>
-				<SlotOf>Rare</SlotOf>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Demonic</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Breath Attacks</Rule>
-					<Rule>Spirit of Galrauch</Rule>
-					<Rule>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</Rule>
-					<Rule>May re-roll a single D6 once per turn</Rule>
-					<Rule>Knows one more spell from the Lore of Tzeentch than it is normally allowed</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Bloodthirster</Name>
-			<Group>Demonic</Group>
-			<Points>650</Points>
-			<Description>Bloodthirster</Description>
-			<Image>Bloodthirster.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>10</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>7</Wounds>
-				<Initiative>10</Initiative>
-				<Attacks>7</Attacks>
-				<Leadership>9</Leadership>
-				<Ward>5</Ward>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<Frenzy/>
-				<ImmuneToPsychology/>
-				<SlotOf>Hero</SlotOf>
-				<SlotOf>Rare</SlotOf>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Demonic</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Magic Resistance (2)</Rule>
-					<Rule>Ward save cannot be used against magical attacks</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Axe of Khorne</Name>
+					<PoisonAttack/>
+					<Description>All attacks with the Filth Mace count as poisoned attacks. In addition, if the bearer of the mace kills an enemy character in close combat, he will cause terror for the rest of the game.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Soul Cleaver</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Test Bet="Wound" Context="Wound">Toughness</Test>
+					<Description>Any model wounded by the Soul Cleaver (after saves, etc) must pass a Toughness test or suffer an additional wound (with no saves allowed).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Axe of Khorn</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Dependencies>
+						<If>Mark of Khorne</If>
+					</Dependencies>
+					<OnlyForGroup>Mortal</OnlyForGroup>
 					<KillingBlow/>
-				</HandWeapon>
-				<Armour>
-					<Name>Armour of Khorne</Name>
-					<AddToArmour>4</AddToArmour>
-				</Armour>
-				<Arcane>
-					<Name>Might of Khorne</Name>
-					<AddToStrength>1</AddToStrength>
-				</Arcane>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Keeper of Secrets</Name>
-			<Group>Demonic</Group>
-			<Points>625</Points>
-			<Wizard>4</Wizard>
-			<Description>Keeper of Secrets</Description>
-			<Image>KeeperOfSecrets.jpg</Image>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>9</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>10</Initiative>
-				<Attacks>6</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<SlotOf>Hero</SlotOf>
-				<SlotOf>Rare</SlotOf>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Demonic</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Enemy unit in base contact reduces Ld by -1 to minimum Ld value of 2</Rule>
-					<Rule>Any model in base contact halve WS and Initiative (rounding up)</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Lord of Change</Name>
-			<Group>Demonic</Group>
-			<Points>665</Points>
-			<Wizard>4</Wizard>
-			<Description>Lord of Change</Description>
-			<Image>LordOfChange.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>10</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<SlotOf>Hero</SlotOf>
-				<SlotOf>Rare</SlotOf>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Demonic</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Large target</Rule>
-					<Rule>May re-roll one dice per turn except one that has already been re-rolled</Rule>
-					<Rule>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</Rule>
-					<Rule>Knows one more lore of Tzeentch spell than normally allowed</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Great Unclean One</Name>
-			<Group>Demonic</Group>
-			<Points>600</Points>
-			<Wizard>4</Wizard>
-			<Description>Great Unclean One</Description>
-			<Image>GreatUncleanOne.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>8</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>10</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>6</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<SlotOf>Hero</SlotOf>
-				<SlotOf>Rare</SlotOf>
-				<LargeBase/>
-				<SubOpponentToHit>1</SubOpponentToHit>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Demonic</Rule>
-					<Rule>Large target</Rule>
-					<Rule>In Chaos player's Shooting phase if Daemon is not in combat it may unleash Stream of Corruption - Breath attack, Strength 3 with -2 armour saving throw modifier</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Lord of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>210</Points>
-			<Description>Lord of Chaos</Description>
-			<Image>LordOfChaos.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>8</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>8</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Flail</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<Flail/>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
+					<Description>Confers on the bearer the Killing Blow ability.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>Spelleater Shield</Name>
+					<Type>Shield</Type>
+					<Points>75</Points>
 					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Mark of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>140</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<AddToWizard>4</AddToWizard>
-					<AddToCast>4</AddToCast>
-					<AddToDispell>2</AddToDispell>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<Frenzy/>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-					</Dependencies>
-					<AddToWounds>1</AddToWounds>
-				</Option>
-				<Option>
-					<Name>Dragon of Chaos</Name>
-					<Type>Option</Type>
-					<Points>360</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Demonic mount</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Chaos Steed</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Disc of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Mark of Tzeentch</If>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Juggernaut of Khorne</Name>
-					<Type>Option</Type>
-					<Points>55</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Mark of Khorne</If>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Steed of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Mark of Slaanesh</If>
-					</Dependencies>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Type>Armour</Type>
-					<Name>Chaos armour</Name>
-					<AddToArmour>4</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Exalted Sorceserer of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>238</Points>
-			<Wizard>3</Wizard>
-			<Description>Exalted Sorceserer of Chaos</Description>
-			<Image>ExaltedSorceserer.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 4</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-					<Dependencies>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-					</Dependencies>
-					<AddToWounds>1</AddToWounds>
-				</Option>
-				<Option>
-					<Name>Demonic mount</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Chaos Steed</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Steed of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Mark of Slaanesh</If>
-					</Dependencies>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Type>Armour</Type>
-					<Name>Chaos armour</Name>
-					<AddToArmour>4</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Daemon Prince</Name>
-			<Group>Demonic</Group>
-			<Points>300</Points>
-			<Description>Daemon Prince</Description>
-			<Image>DaemonPrince.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>8</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>8</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<SlotOf>Hero</SlotOf>
-				<MagicItems Points="100" Type="Hero"/>
-				<LargeBase/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Mark of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>150</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<AddToWizard>4</AddToWizard>
-					<AddToCast>4</AddToCast>
-					<AddToDispell>2</AddToDispell>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>25</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<Frenzy/>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-					</Dependencies>
-					<AddToWounds>1</AddToWounds>
-				</Option>
-			</Options>
-			<Equipments>
-				<Special>
-					<Rule>Daemonic</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Two Breath Weapon</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Exalted Champion of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>100</Points>
-			<Description>Exalted Champion of Chaos</Description>
-			<Image>Champion.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>7</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Flail</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<Flail/>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Mark of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>70</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<AddToWizard>2</AddToWizard>
-					<AddToCast>2</AddToCast>
-					<AddToDispell>1</AddToDispell>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<Frenzy/>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-					</Dependencies>
-					<AddToWounds>1</AddToWounds>
-				</Option>
-				<Option>
-					<Name>Demonic mount</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Chaos Steed</Name>
-					<Type>Option</Type>
-					<Points>16</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Disc of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Mark of Tzeentch</If>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Juggernaut of Khorne</Name>
-					<Type>Option</Type>
-					<Points>55</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Mark of Khorne</If>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Steed of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Mark of Slaanesh</If>
-					</Dependencies>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Type>Armour</Type>
-					<Name>Chaos armour</Name>
-					<AddToArmour>4</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Exalted Daemon</Name>
-			<Group>Demonic</Group>
-			<Points>230</Points>
-			<Description>Exalted Daemon</Description>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>7</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<SlotOf>Hero</SlotOf>
-				<MagicItems Points="100" Type="Hero"/>
-				<LargeBase/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Level 2 Sorcerer</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<AddToCast>2</AddToCast>
-					<AddToDispell>1</AddToDispell>
-					<AddToWizard>2</AddToWizard>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-					</Dependencies>
-				</Option>
-				<Option>
-					<Name>Mark of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>70</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-						<IfNot>Level 2 Sorcerer</IfNot>
-					</Dependencies>
-					<AddToWizard>2</AddToWizard>
-					<AddToCast>2</AddToCast>
-					<AddToDispell>1</AddToDispell>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<Frenzy/>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-					</Dependencies>
-					<AddToWounds>1</AddToWounds>
-				</Option>
-			</Options>
-			<Equipments>
-				<Special>
-					<Rule>Daemonic</Rule>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Aspiring Champion of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>80</Points>
-			<Description>Aspiring Champion of Chaos</Description>
-			<Image>AspiringChampion.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Flail</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<Flail/>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Mark of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>70</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<AddToWizard>2</AddToWizard>
-					<AddToCast>2</AddToCast>
-					<AddToDispell>1</AddToDispell>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<Frenzy/>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-					</Dependencies>
-					<AddToWounds>1</AddToWounds>
-				</Option>
-				<Option>
-					<Name>Chaos Steed</Name>
-					<Type>Option</Type>
-					<Points>16</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Battle Standard Bearer</Name>
-					<Type>Option</Type>
-					<Rule>BSB</Rule>
-					<OnlyOneInArmy/>
-					<Points>25</Points>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Type>Armour</Type>
-					<Name>Chaos armour</Name>
-					<AddToArmour>4</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Sorceserer of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>85</Points>
-			<Wizard>1</Wizard>
-			<Description>Sorceserer of Chaos</Description>
-			<Image>Sorcerer.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
-					<Points>35</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-					</Dependencies>
-					<AddToWounds>1</AddToWounds>
-				</Option>
-				<Option>
-					<Name>Demonic mount</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Chaos Steed</Name>
-					<Type>Option</Type>
-					<Points>24</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Steed of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<Mount/>
-					<Dependencies>
-						<If>Mark of Slaanesh</If>
-					</Dependencies>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Type>Armour</Type>
-					<Name>Chaos armour</Name>
-					<AddToArmour>4</AddToArmour>
-					<NativeArmour/>
-				</Armour>
-			</Equipments>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Dorghar</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Chaos Steed</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Dragon of Chaos</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>6</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<SlotOf>Hero</SlotOf>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Scaly skin</Name>
-					<AddToArmour>3</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Two Breath Weapon</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Demonic mount</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Demonic</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Steed of Slaanesh</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>10</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Demonic</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Juggernaut of Khorne</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Demonic</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Disc of Tzeentch</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>1</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-					<Rule>Demonic</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Warriors of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>14</Points>
-			<Min>10</Min>
-			<Image>ChaosWarriors.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Chosen</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-					<AddToAttacks>1</AddToAttacks>
-					<OnlyOneForSuchUnits/>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToStrength>1</AddToStrength>
-				</Option>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<PerModel/>
-					<AddToAttacks>1</AddToAttacks>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</Option>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Mark of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<AddToCast>1</AddToCast>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<Frenzy/>
-					<AddToDispell>1</AddToDispell>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-					</Dependencies>
-					<Fear/>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Marauders of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>5</Points>
-			<Min>10</Min>
-			<Image>Marauders.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</Option>
-				<Option>
-					<Name>Flail</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<Flail/>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Chieftain</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Marauder Horsemen</Name>
-			<Group>Mortal</Group>
-			<Points>13</Points>
-			<Min>5</Min>
-			<Mount>Chaos Steed</Mount>
-			<Image>MarauderHorseman.jpg</Image>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>7</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Rule>Fast Cavalry</Rule>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Flail</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<Flail/>
-				</Option>
-				<Option>
-					<Name>Throwing axes</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Throwing spears</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Chieftain</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Knights of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>33</Points>
-			<Min>4</Min>
-			<Mount>Chaos Steed</Mount>
-			<Image>ChaosKnights.jpg</Image>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shields</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Chosen</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-					<AddToAttacks>1</AddToAttacks>
-					<OnlyOneForSuchUnits/>
-				</Option>
-				<Option>
-					<Name>Mark of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<AddToCast>1</AddToCast>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<Frenzy/>
-					<AddToDispell>1</AddToDispell>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-					</Dependencies>
-					<Fear/>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Chariots of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>140</Points>
-			<Chariot>2</Chariot>
-			<Mount>Chaos Steed</Mount>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>3</Armour>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Chariot</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Mark of Tzeentch</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<AddToCast>1</AddToCast>
-				</Option>
-				<Option>
-					<Name>Mark of Slaanesh</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<ImmuneToPsychology/>
-				</Option>
-				<Option>
-					<Name>Mark of Khorne</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Nurgle</IfNot>
-					</Dependencies>
-					<Frenzy/>
-					<AddToDispell>1</AddToDispell>
-				</Option>
-				<Option>
-					<Name>Mark of Nurgle</Name>
-					<Type>Option</Type>
-					<Points>50</Points>
-					<Dependencies>
-						<IfNot>Mark of Tzeentch</IfNot>
-						<IfNot>Mark of Slaanesh</IfNot>
-						<IfNot>Mark of Khorne</IfNot>
-					</Dependencies>
-					<Fear/>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Warhounds of Chaos</Name>
-			<Group>Mortal</Group>
-			<Points>6</Points>
-			<Min>5</Min>
-			<Image>Warhound.jpg</Image>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<NoCoreSlot/>
-			</SpecialRules>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Bloodletters</Name>
-			<Group>Demonic</Group>
-			<Points>16</Points>
-			<Min>10</Min>
-			<Image>Bloodletters.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Frenzy/>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Magic Resistance (1)</Rule>
-				</Special>
-				<Mark>
-					<Name>Mark of Khorne</Name>
-				</Mark>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Bloodhowler</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Flesh Hounds of Khorne</Name>
-			<Group>Demonic</Group>
-			<Points>16</Points>
-			<Min>5</Min>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Frenzy/>
-				<NoCoreSlot/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
 					<Rule>Magic Resistance (2)</Rule>
+					<Rule>Roll a D6 each time a spell is dispelled. On a roll of 4+ the spell is destroyed and the enemy Wizard may not cast it for the rest of the battle.</Rule>
+					<Description>The Spelleater Shield is treated like a normal shield. In addition, it grants Magic Resistance (2) to the character and any unit he is with. Roll a D6 each time a spell is cast at the bearer of the Spelleater Shield and is dispelled. On a roll of 4 or more, the spell is destroyed and the enemy Wizard mav not cast it for the rest of the battle.</Description>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+				</Artefact>
+				<Artefact>
+					<Name>Chaos Runeshield</Name>
+					<Type>Shield</Type>
+					<Points>50</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Runeshiel negates the power of any magic weapons carried by models in base contac.</Rule>
+					<Description>The Chaos Runeshield is treated like a normal shield. It also negates the power of any magic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type.</Description>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Tortured Souls</Name>
+					<Type>Armour</Type>
+					<Points>40</Points>
+					<AddToArmour>4</AddToArmour>
+					<AddToToughness>1</AddToToughness>
+					<Description>The Armour of Tortured Souls is a suit of Chaos armour. The wearer counts as having +1 Toughness against mundane attacks (not against spells, magic items, etc).</Description>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Damnation</Name>
+					<Type>Armour</Type>
+					<Points>30</Points>
+					<AddToArmour>4</AddToArmour>
+					<Reroll>OpponentToHit</Reroll>
+					<Description>The Armour of Damnation is a suit of Chaos armour. In addition, any model attacking the wearer in close combat must re-roll successful rolls to hit.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bone Shield</Name>
+					<Type>Shield</Type>
+					<Points>30</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>Strength 4 hit for each successful armour save</Rule>
+					<Description>The Bane Shield is treated like a normal shield. In addition, for each successful armour save in close combat, the shield inflicts a Strength 4 hit on the model that struck the blow.</Description>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+				</Artefact>
+				<Artefact>
+					<Name>Crimson Armour of Dargan</Name>
+					<Type>Armour</Type>
+					<Points>20</Points>
+					<AddToArmour>4</AddToArmour>
+					<Test Bet="Pass" Context="Round">Leadership</Test>
+					<Description>The Crimson Armour is a suit of Chaos armour. In addition, any model wishing to attack the wearer in close combat must first pass a Leadership test or they may not attack that combat round.</Description>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>The Beguiling Gem</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>75</Points>
+					<Dependencies>
+						<If>Mark of Slaanesh</If>
+					</Dependencies>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Test Bet="Pass" Context="Round">Leadership</Test>
+					<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take a Leadership test at the start of every Close Combat phase. Any model which fails is transfixed and may not make any attacks that round, and any attacks made against it by the bearer will hit automatically.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Amulet of Chaos</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>45</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Test Bet="Wound" Context="Round">Strength</Test>
+					<Description>At the start of every Chaos Magic phase, any enemy models in contact with the wearer must pass a Strength test or lose one wound, with no armour saves allowed.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>GoldenEye of Tzeentch</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<Dependencies>
+						<If>Mark of Tzeentch</If>
+					</Dependencies>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>Ward save of 3+ against all normal and magical missiles</Rule>
+					<Description>The model and his mount have a Ward save of 3+ against all normal and magical missiles.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gaze of the Gods</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToWard>3</AddToWard>
+					<Rule>If the model is fleeing at the start of a Chaos Magic phase he is turned into a Chaos Spawn</Rule>
+					<Description>The model gains a 4+ Ward save. If the model is fleeing at the start of a Chaos Magic phase, for any reason, the wrath of the Chaos gods is immediately visited upon him and he is turned into a Chaos Spawn, with the same number of wounds remaining as the character had. If you do not have a Spawn model to replace the character then he simply counts as slain. For Victory points purposes, the character is not counted as slain or below half Wounds unless the Spawn he has turned into is slain or is below half Wounds.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Collar of Khorne</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<Dependencies>
+						<If>Mark of Khorne</If>
+					</Dependencies>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>Magic Resistance (2)</Rule>
+					<Description>The model has Magic Resistance (2).</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane items">
+				<Artefact>
+					<Name>Staff of Change</Name>
+					<Type>Arcane</Type>
+					<Points>65</Points>
+					<Dependencies>
+						<If>Mark of Tzeentch</If>
+					</Dependencies>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>The bearer can re-roll any number of the dice rolled to cast or dispel</Rule>
+					<Description>The bearer can re-roll any number of the dice rolled to cast or dispel a spell The second result(s) stand. This can effectively negate the effects of a Miscast and cause an Irresistible Force (and the equivalent results when dispelling). If the bearer casts a spell with Irresistible Force using the staff's re-roll ability, the staff will exhaust its power and cease working for the rest of the battle.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Skull of Katam</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>The bearer adds +1 to all Casting rolls</Rule>
+					<Description>The bearer adds +1 to all Casting rolls.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Familiar</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<Description>The Familiar adds one dice to both the Power dice and Dispel dice pool of the bearer's side.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Warrior Familiar</Name>
+					<Type>Arcane</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>Strength 5 hit on a single model in base contact</Rule>
+					<Description>At the beginning of the Close Combat phase, before blows are struck, the Familiar inflicts one Strength 5 hit on a single model chosen by the Sorcerer from amongst those in base contact. Wounds inflicted do count towards combat resolution.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Spell Familiar</Name>
+					<Type>Arcane</Type>
+					<Points>15</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>One more spell</Rule>
+					<Description>The Familiar's owner knows one more spell than is normal for his level. This does not increase his Magic Level.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Rod of Corruption</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>75</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Nurgle</If>
+					</Dependencies>
+					<Rule>Bound spell. Power Level 4. One use only. D6 Strength 2 hits at the start of the Magic phase, 2D6 Strength 2 next Magic phase, etc</Rule>
+					<Description>Bound spell. Power Level 4. One use only. Target any enemy unit on the tabletop. This unit becomes infected with Nurgle's Rot and suffers D6 Strength 2 hits, distributed as shooting hits amongst the models in the unit. At the start of the caster's next Magic phase, the unit takes 2D6 Strength 2 hits. At the start of the caster's Magic phase after that it takes 3D6 Strength 2 hits, and so on. Once cast, Nurgle's Rot cannot be stopped.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Bindings of Slaanesh</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Slaanesh</If>
+					</Dependencies>
+					<Rule>Enemy cannot refuse challenge</Rule>
+					<Description>Whenever the bearer issues a challenge, the enemy cannot refuse it and the Chaos player may choose who will accept the challenge. The model forced to accept the challenge may be anywhere within the enemy unit, and even characters that would normally be in a position that would disallow them from accepting challenges (by not being in the fighting rank, for instance) may be forced into accepting the challenge. In the first round an enemy is ensnared, the bearer always strike last, regardless of any other factor, magic item or spell.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Book of Secrets</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Khorne</If>
+					</Dependencies>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<Description>The bearer is a Level 1 Sorcerer and knows a random spell from the Lore of Fire, Shadow or Death (Chaos player's choice). If the bearer miscasts, roll twice on the Miscast table and apply both results.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Chalice of Chaos</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Group>Daemonic</Group>
+					<Rule>Daemonic</Rule>
+					<Description>The bearer becomes daemonic and follows all of the rules outlined in the Bestiary section. If the bearer is the army's General, he must lead a daemonic army. Remember, a daemonic character cannot join non-daemonic units. At the start of the battle he must take a Toughness test (remember that rolls of 6 always fail). If the test is failed, the bearer reduces his Wounds and Toughness by -1.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Death's Head</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Nurgle</If>
+					</Dependencies>
+					<Rule>One use only. D6 hits with D3 wounds with no armour by Toughness test for a range of 12"</Rule>
+					<Description>One use only. The model may throw the Death's Head in the Shooting phase. It is treated as a thrown weapon with a range of 12". If the Death's Head hits, the enemy unit takes D6 hits, and affected models must pass a Toughness test or lose D3 wounds, with no armour saves allowed. Units taking any casualties from a Death's Head must take a Panic test.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sceptre of Domination</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Slaanesh</If>
+					</Dependencies>
+					<Rule>Bound spell Delectable Torture. Power Level 6. One use only.</Rule>
+					<Description>Bound spell. Power Level 6. One use only. The Sceptre of Domination contains the bound Slaanesh spell Delectable Torture.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Helm of Many Eyes</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<HitFirst/>
+					<Description>The wearer always strikes first in close combat, even if charged or armed with a weapon that normally strikes last. If any of the wearer's opponents also strike first, revert to normal Initiative. The character is also subject to stupidity (even if immune to psychology) due to the random and conflicting images that confront him.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Mirror of Knowledge</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Tzeentch</If>
+					</Dependencies>
+					<Rule>Opponent must reveal everything that is not apparent about the unit</Rule>
+					<Description>The bearer can pick any enemy unit on the battlefield at the beginning of each of his Magic phases. The opponent must reveal everything that is not apparent about the unit (magic items and their bearers, hidden Assassins and Fanatics, etc).</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic banner">
+				<Artefact>
+					<Name>Banner of the Gods</Name>
+					<Type>Banner</Type>
+					<Points>125</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>All non-daemonic friendly units within 6" of the banner become stubborn</Rule>
+					<Description>All non-daemonic friendly units within 6" of the banner become stubborn (even if normally immune to psychology).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Rage</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Khorne</If>
+					</Dependencies>
+					<Rule>Model and unit may re-roll failed Break tests and will not lose their frenzy</Rule>
+					<Description>The model and any unit he is with may re-roll failed Break tests and will not lose their frenzy if beaten in close combat.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Plague Banner</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Nurgle</If>
+					</Dependencies>
+					<Test Bet="Wound" Context="Round">Toughness</Test>
+					<Description>Any enemy model in contact with the banner bearer at the start of the Chaos Magic phase must pass a Toughness test or suffer a wound Armour saves are not allowed. This banner has no effect on models with the Mark of Nurgle or Clan Pestilens Skaven</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blasted Standard</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Tzeentch</If>
+					</Dependencies>
+					<Rule>The banner contains the bound Tzeentch spell Yellow Fire of Transformation</Rule>
+					<Description>The banner contains the bound Tzeentch spell Yellow Fire of Transformation.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Wrath</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Rule>Bound spell. Power Level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits</Rule>
+					<Description>Bound spell. Power Level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rapturous Standard</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Mortal</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Slaanesh</If>
+					</Dependencies>
+					<Rule>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk</Rule>
+					<Description>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Demonic Gifts">
+				<Artefact>
+					<Name>Chaos Disruption</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Rule>Any shooting at the Daemon or the unit it is with suffers an additional -1 to hit penalty</Rule>
+					<Description>Any shooting at the Daemon or the unit it is with suffers an additional -1 to hit penalty.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blade of The Ether</Name>
+					<Type>Weapon</Type>
+					<Points>45</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<NoArmour/>
+					<Description>Daemon ignore armour saves in close combat</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Radiance of Dark Glory</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Rule>The Daemon and any other Daemon unit within 6" suffers one less wound when defeated in combat</Rule>
+					<Description>The Daemon and any other Daemon unit within 6" suffers one less wound when defeated in combat. For example, if the Daemon fails its Instability test by 2, flien it would only lose one wound.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Soul Hunger</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Rule>The Daemon may re-roll missed close combat attacks in the first round of any combat</Rule>
+					<Description>The Daemon may re-roll missed close combat attacks in the first round of any combat.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Spell Breaker</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Rule>Once per battle, the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force</Rule>
+					<Description>Once per battle, the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Diabolic Splendour</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Rule>Daemonic Aura becomes a normal Ward save and so can be used against magical attacks</Rule>
+					<Description>Daemonic Aura becomes a normal Ward save and so can be used against magical attacks. This is also conferred to any Daemon unit which he joins.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Master of Mortals</Name>
+					<Type>Weapon</Type>
+					<Points>5</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Group>Mortal</Group>
+					<Description>If the Daemon is the army General, Mortal units count as Core choices and Daemonic units count as Special.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Khorne Gifts">
+				<Artefact>
+					<Name>Collar of Khorne</Name>
+					<Type>Weapon</Type>
+					<Points>40</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Khorne</If>
+					</Dependencies>
+					<Rule>Magic Resistance (2)</Rule>
+					<Description>The model has Magic Resistance (2).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Axe of Khorne</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Khorne</If>
+					</Dependencies>
+					<KillingBlow/>
+					<Description>Daemon with an Axe gains the Killing Blow ability</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Khorne</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Khorne</If>
+					</Dependencies>
+					<ArmourTo>4</ArmourTo>
+					<Description>The Daemon has an armour save of 4+ in addition to its Daemonic aura.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Khorne</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Khorne</If>
+					</Dependencies>
+					<AddToStrength>1</AddToStrength>
+					<Description>The Daemon has +1 Strength on its profile.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Tzeentch Gifts">
+				<Artefact>
+					<Name>Tzeentch's Will</Name>
+					<Type>Weapon</Type>
+					<Points>75</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Tzeentch</If>
+					</Dependencies>
+					<Rule>The Daemon may re-roll a single D6 once per turn</Rule>
+					<Description>The Daemon may re-roll a single D6 once per turn. The re-roll endtles the player to take a single D6 (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. Any D6 can be re-rolled and can potentially cause Irresistible-Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Spell Destroyer</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>50</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Tzeentch</If>
+					</Dependencies>
+					<Rule>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</Rule>
+					<Description>Once per battle the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force. In addition, roll a D6. On a roll of 4+, the enemy Wizard loses knowledge of that spell and may not cast it for the rest of the battle.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Master of Sorcery</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Tzeentch</If>
+					</Dependencies>
+					<Rule>The Daemon has great magical knowledge and knows one more spell from the Lore of Tzeentch than it is normally allowed</Rule>
+					<Description>The Daemon has great magical knowledge and knows one more spell from the Lore of Tzeentch than it is normally allowed.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Vortex</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Tzeentch</If>
+					</Dependencies>
+					<Rule>Daemon may give up Wounds to generate D3 Power dice</Rule>
+					<Description>At any point during the Chaos Magic phase, the Daemon may give up Wounds to generate Power dice (with no saves of any kind allowed, no Ward saves, no regeneration, etc). For each Wound sacrificed, the Daemon generates an extra D3 Power dice, that turn which only it may use.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Nurgle Gifts">
+				<Artefact>
+					<Name>Cloud of Flies</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Nurgle</If>
+					</Dependencies>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<Description>Any unit in close combat with one or more models with a Cloud of Flies suffers a -1 modifier on its rolls to hit.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Stream of Corruption</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Nurgle</If>
+					</Dependencies>
+					<Rule>Breath attack with Strength 3, with a -2 armour saving</Rule>
+					<Description>The Daemon spews forth a noxious stream of disease and filth. In any of the Chaos player's Shooting phases that the Daemon is not in combat, it may unleash its Stream of Corruption. This is a breath attack. The attack is resolved at Strength 3, with a -2 armour saving throw modifier.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Stream of Corruption</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Nurgle</If>
+					</Dependencies>
+					<PoisonAttack/>
+					<Description>The Daemon's attacks count as poisoned attacks. This gift cannot be combined with a Blade of the Ether gift.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Slaanesh Gifts">
+				<Artefact>
+					<Name>Aura of Slaanesh</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Slaanesh</If>
+					</Dependencies>
+					<Rule>Enemy unit in base contact reduces Ld by -1 to minimum Ld value of 2</Rule>
+					<Description>Any enemy unit in base contact with one or more models with the Aura of Slaanesh reduces its Leadership by -1, to a minimum Leadership value of 2.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Soporific Musk</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Slaanesh</If>
+					</Dependencies>
+					<Rule>Any model in base contact halve WS and Initiative (rounding up)</Rule>
+					<Description>Any models in base contact with one or more Daemons with Soporific Musk halve their WS and 1 (rounding up).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Gaze of Acquiescence</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<OnlyForGroup>Demonic</OnlyForGroup>
+					<Dependencies>
+						<If>Mark of Slaanesh</If>
+					</Dependencies>
+					<Test Bet="Pass" Context="Round">Leadership</Test>
+					<Description>At the beginning of the Close Combat phase, select one model in base contact with the Daemon. The target must pass a Leadership test or may not make any attacks in that Close Combat phase. Models immune to psychology cannot be affected.</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Archaon, Lord of the End Times</Name>
+				<Group>Mortal</Group>
+				<Points>855</Points>
+				<Mount>Dorghar</Mount>
+				<Personified/>
+				<Wizard>2</Wizard>
+				<Description>Archaon, Lord of the End Times</Description>
+				<Image>Archaon.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>9</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>7</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ImmuneToPsychology/>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Magic Resistance (2)</Rule>
+						<Rule>Archaon's army must include at least one unit of Knights of Chaos, and they must be upgraded to Chosen status</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>The Slayer of Kings</Name>
+						<NoArmour/>
+						<AddToAttacks>5</AddToAttacks>
+					</HandWeapon>
+					<Armour>
+						<Name>The Armour of Morkar</Name>
+						<ArmourTo>1</ArmourTo>
+					</Armour>
+					<Armour>
+						<Name>The Crown of Domination</Name>
+						<Terror/>
+					</Armour>
+					<Armour>
+						<Name>The Eye of Sheerian</Name>
+						<AddToWard>3</AddToWard>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Galrauch, First of the Chaos Dragons</Name>
+				<Group>Demonic</Group>
+				<Points>696</Points>
+				<Wizard>4</Wizard>
+				<Personified/>
+				<Description>Galrauch, First of the Chaos Dragons</Description>
+				<Image>Galrauch.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>6</Attacks>
+					<Leadership>10</Leadership>
+					<Armour>3</Armour>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<SlotOf>Hero</SlotOf>
+					<SlotOf>Rare</SlotOf>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Demonic</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Breath Attacks</Rule>
+						<Rule>Spirit of Galrauch</Rule>
+						<Rule>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</Rule>
+						<Rule>May re-roll a single D6 once per turn</Rule>
+						<Rule>Knows one more spell from the Lore of Tzeentch than it is normally allowed</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Bloodthirster</Name>
+				<Group>Demonic</Group>
+				<Points>650</Points>
+				<Description>Bloodthirster</Description>
+				<Image>Bloodthirster.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>10</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>7</Wounds>
+					<Initiative>10</Initiative>
+					<Attacks>7</Attacks>
+					<Leadership>9</Leadership>
+					<Ward>5</Ward>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<Frenzy/>
+					<ImmuneToPsychology/>
+					<SlotOf>Hero</SlotOf>
+					<SlotOf>Rare</SlotOf>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Demonic</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Magic Resistance (2)</Rule>
+						<Rule>Ward save cannot be used against magical attacks</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Axe of Khorne</Name>
+						<KillingBlow/>
+					</HandWeapon>
+					<Armour>
+						<Name>Armour of Khorne</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+					<Arcane>
+						<Name>Might of Khorne</Name>
+						<AddToStrength>1</AddToStrength>
+					</Arcane>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Keeper of Secrets</Name>
+				<Group>Demonic</Group>
+				<Points>625</Points>
+				<Wizard>4</Wizard>
+				<Description>Keeper of Secrets</Description>
+				<Image>KeeperOfSecrets.jpg</Image>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>9</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>10</Initiative>
+					<Attacks>6</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<SlotOf>Hero</SlotOf>
+					<SlotOf>Rare</SlotOf>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Demonic</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Enemy unit in base contact reduces Ld by -1 to minimum Ld value of 2</Rule>
+						<Rule>Any model in base contact halve WS and Initiative (rounding up)</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Lord of Change</Name>
+				<Group>Demonic</Group>
+				<Points>665</Points>
+				<Wizard>4</Wizard>
+				<Description>Lord of Change</Description>
+				<Image>LordOfChange.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>10</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<SlotOf>Hero</SlotOf>
+					<SlotOf>Rare</SlotOf>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Demonic</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Large target</Rule>
+						<Rule>May re-roll one dice per turn except one that has already been re-rolled</Rule>
+						<Rule>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</Rule>
+						<Rule>Knows one more lore of Tzeentch spell than normally allowed</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Great Unclean One</Name>
+				<Group>Demonic</Group>
+				<Points>600</Points>
+				<Wizard>4</Wizard>
+				<Description>Great Unclean One</Description>
+				<Image>GreatUncleanOne.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>8</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>10</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>6</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<SlotOf>Hero</SlotOf>
+					<SlotOf>Rare</SlotOf>
+					<LargeBase/>
+					<SubOpponentToHit>1</SubOpponentToHit>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Demonic</Rule>
+						<Rule>Large target</Rule>
+						<Rule>In Chaos player's Shooting phase if Daemon is not in combat it may unleash Stream of Corruption - Breath attack, Strength 3 with -2 armour saving throw modifier</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Lord of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>210</Points>
+				<Description>Lord of Chaos</Description>
+				<Image>LordOfChaos.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>8</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>8</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Flail</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<Flail/>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Mark of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>140</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<AddToWizard>4</AddToWizard>
+						<AddToCast>4</AddToCast>
+						<AddToDispell>2</AddToDispell>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Khorne</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<Frenzy/>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+						</Dependencies>
+						<AddToWounds>1</AddToWounds>
+					</Option>
+					<Option>
+						<Name>Dragon of Chaos</Name>
+						<Type>Option</Type>
+						<Points>360</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Demonic mount</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Chaos Steed</Name>
+						<Type>Option</Type>
+						<Points>24</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Disc of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Mark of Tzeentch</If>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Juggernaut of Khorne</Name>
+						<Type>Option</Type>
+						<Points>55</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Mark of Khorne</If>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Steed of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Mark of Slaanesh</If>
+						</Dependencies>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Type>Armour</Type>
+						<Name>Chaos armour</Name>
+						<AddToArmour>4</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Exalted Sorceserer of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>238</Points>
+				<Wizard>3</Wizard>
+				<Description>Exalted Sorceserer of Chaos</Description>
+				<Image>ExaltedSorceserer.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 4</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+						<Dependencies>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+						</Dependencies>
+						<AddToWounds>1</AddToWounds>
+					</Option>
+					<Option>
+						<Name>Demonic mount</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Chaos Steed</Name>
+						<Type>Option</Type>
+						<Points>24</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Steed of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Mark of Slaanesh</If>
+						</Dependencies>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Type>Armour</Type>
+						<Name>Chaos armour</Name>
+						<AddToArmour>4</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Daemon Prince</Name>
+				<Group>Demonic</Group>
+				<Points>300</Points>
+				<Description>Daemon Prince</Description>
+				<Image>DaemonPrince.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>8</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>8</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<SlotOf>Hero</SlotOf>
+					<MagicItems Points="100" Type="Hero"/>
+					<LargeBase/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Mark of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>150</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<AddToWizard>4</AddToWizard>
+						<AddToCast>4</AddToCast>
+						<AddToDispell>2</AddToDispell>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>25</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Khorne</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<Frenzy/>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+						</Dependencies>
+						<AddToWounds>1</AddToWounds>
+					</Option>
+				</Options>
+				<Equipments>
+					<Special>
+						<Rule>Daemonic</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Two Breath Weapon</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Exalted Champion of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>100</Points>
+				<Description>Exalted Champion of Chaos</Description>
+				<Image>Champion.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>7</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Flail</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<Flail/>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Mark of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>70</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<AddToWizard>2</AddToWizard>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Khorne</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<Frenzy/>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+						</Dependencies>
+						<AddToWounds>1</AddToWounds>
+					</Option>
+					<Option>
+						<Name>Demonic mount</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Chaos Steed</Name>
+						<Type>Option</Type>
+						<Points>16</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Disc of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Mark of Tzeentch</If>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Juggernaut of Khorne</Name>
+						<Type>Option</Type>
+						<Points>55</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Mark of Khorne</If>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Steed of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Mark of Slaanesh</If>
+						</Dependencies>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Type>Armour</Type>
+						<Name>Chaos armour</Name>
+						<AddToArmour>4</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Exalted Daemon</Name>
+				<Group>Demonic</Group>
+				<Points>230</Points>
+				<Description>Exalted Daemon</Description>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>7</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<SlotOf>Hero</SlotOf>
+					<MagicItems Points="100" Type="Hero"/>
+					<LargeBase/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Level 2 Sorcerer</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
+						<AddToWizard>2</AddToWizard>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+						</Dependencies>
+					</Option>
+					<Option>
+						<Name>Mark of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>70</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+							<IfNot>Level 2 Sorcerer</IfNot>
+						</Dependencies>
+						<AddToWizard>2</AddToWizard>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Khorne</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<Frenzy/>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+						</Dependencies>
+						<AddToWounds>1</AddToWounds>
+					</Option>
+				</Options>
+				<Equipments>
+					<Special>
+						<Rule>Daemonic</Rule>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Aspiring Champion of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>80</Points>
+				<Description>Aspiring Champion of Chaos</Description>
+				<Image>AspiringChampion.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Flail</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<Flail/>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Mark of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>70</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<AddToWizard>2</AddToWizard>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Khorne</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<Frenzy/>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+						</Dependencies>
+						<AddToWounds>1</AddToWounds>
+					</Option>
+					<Option>
+						<Name>Chaos Steed</Name>
+						<Type>Option</Type>
+						<Points>16</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Battle Standard Bearer</Name>
+						<Type>Option</Type>
+						<Rule>BSB</Rule>
+						<OnlyOneInArmy/>
+						<Points>25</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Type>Armour</Type>
+						<Name>Chaos armour</Name>
+						<AddToArmour>4</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Sorceserer of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>85</Points>
+				<Wizard>1</Wizard>
+				<Description>Sorceserer of Chaos</Description>
+				<Image>Sorcerer.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>35</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+						</Dependencies>
+						<AddToWounds>1</AddToWounds>
+					</Option>
+					<Option>
+						<Name>Demonic mount</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Chaos Steed</Name>
+						<Type>Option</Type>
+						<Points>24</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Steed of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<Mount/>
+						<Dependencies>
+							<If>Mark of Slaanesh</If>
+						</Dependencies>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Type>Armour</Type>
+						<Name>Chaos armour</Name>
+						<AddToArmour>4</AddToArmour>
+						<NativeArmour/>
+					</Armour>
+				</Equipments>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Dorghar</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Chaos Steed</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Dragon of Chaos</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>6</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<SlotOf>Hero</SlotOf>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Scaly skin</Name>
+						<AddToArmour>3</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Two Breath Weapon</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Demonic mount</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Demonic</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Steed of Slaanesh</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>10</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Demonic</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Juggernaut of Khorne</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Demonic</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Disc of Tzeentch</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>1</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+						<Rule>Demonic</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Warriors of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>14</Points>
+				<Min>10</Min>
+				<Image>ChaosWarriors.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Chosen</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+						<AddToAttacks>1</AddToAttacks>
+						<OnlyOneForSuchUnits/>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToStrength>1</AddToStrength>
+					</Option>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<PerModel/>
+						<AddToAttacks>1</AddToAttacks>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</Option>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Mark of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<AddToCast>1</AddToCast>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Khorne</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<Frenzy/>
+						<AddToDispell>1</AddToDispell>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+						</Dependencies>
+						<Fear/>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Marauders of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>5</Points>
+				<Min>10</Min>
+				<Image>Marauders.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</Option>
+					<Option>
+						<Name>Flail</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<Flail/>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Chieftain</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Marauder Horsemen</Name>
+				<Group>Mortal</Group>
+				<Points>13</Points>
+				<Min>5</Min>
+				<Mount>Chaos Steed</Mount>
+				<Image>MarauderHorseman.jpg</Image>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>7</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
 					<Rule>Fast Cavalry</Rule>
-				</Special>
-				<Mark>
-					<Name>Mark of Khorne</Name>
-				</Mark>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Plaguebearer</Name>
-			<Group>Demonic</Group>
-			<Points>16</Points>
-			<Min>10</Min>
-			<Image>Plaguebearer.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<SubOpponentToHit>1</SubOpponentToHit>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Breath attack Strength 3 with a -2 armour modifier</Rule>
-				</Special>
-				<Mark>
-					<Name>Mark of Nurgle</Name>
-				</Mark>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Nurglings</Name>
-			<Group>Demonic</Group>
-			<Points>40</Points>
-			<Min>1</Min>
-			<Max>5</Max>
-			<UniqueUnits/>
-			<Image>Nurglings.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<SubOpponentToHit>1</SubOpponentToHit>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Swarn</Rule>
-				</Special>
-				<Mark>
-					<Name>Mark of Nurgle</Name>
-				</Mark>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Demonettes</Name>
-			<Group>Demonic</Group>
-			<Points>15</Points>
-			<Min>10</Min>
-			<Image>Demonettes.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>-1 Leadership modifier</Rule>
-				</Special>
-				<Mark>
-					<Name>Mark of Slaanesh</Name>
-				</Mark>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Horrors</Name>
-			<Group>Demonic</Group>
-			<Points>15</Points>
-			<Min>10</Min>
-			<Image>Horrors.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Spellcasters</Rule>
-				</Special>
-				<Mark>
-					<Name>Mark of Tzeentch</Name>
-				</Mark>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Screamers of Tzeentch</Name>
-			<Group>Demonic</Group>
-			<Points>33</Points>
-			<Min>3</Min>
-			<Max>20</Max>
-			<UniqueUnits/>
-			<Image>Screamers.jpg</Image>
-			<Profile>
-				<Movement>1</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Flying Unit</Rule>
-					<Rule>Slashing Attack</Rule>
-				</Special>
-				<Mark>
-					<Name>Mark of Tzeentch</Name>
-				</Mark>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Chaos Fury</Name>
-			<Group>Demonic</Group>
-			<Points>15</Points>
-			<Min>5</Min>
-			<Max>20</Max>
-			<UniqueUnits/>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<Special>
-					<Rule>Flying Unit</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Spawn of Chaos</Name>
-			<Group>Demonic</Group>
-			<Points>60</Points>
-			<Image>ChaosSpawn.jpg</Image>
-			<Profile>
-				<Movement>2D6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>D6</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<Unbreakable/>
-			</SpecialRules>
-		</Unit>
-	</Units>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Flail</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<Flail/>
+					</Option>
+					<Option>
+						<Name>Throwing axes</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Throwing spears</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Chieftain</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Knights of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>33</Points>
+				<Min>4</Min>
+				<Mount>Chaos Steed</Mount>
+				<Image>ChaosKnights.jpg</Image>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shields</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Chosen</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+						<AddToAttacks>1</AddToAttacks>
+						<OnlyOneForSuchUnits/>
+					</Option>
+					<Option>
+						<Name>Mark of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<AddToCast>1</AddToCast>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Khorne</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<Frenzy/>
+						<AddToDispell>1</AddToDispell>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+						</Dependencies>
+						<Fear/>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Chariots of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>140</Points>
+				<Chariot>2</Chariot>
+				<Mount>Chaos Steed</Mount>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>3</Armour>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Chariot</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Mark of Tzeentch</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<AddToCast>1</AddToCast>
+					</Option>
+					<Option>
+						<Name>Mark of Slaanesh</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<ImmuneToPsychology/>
+					</Option>
+					<Option>
+						<Name>Mark of Khorne</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Nurgle</IfNot>
+						</Dependencies>
+						<Frenzy/>
+						<AddToDispell>1</AddToDispell>
+					</Option>
+					<Option>
+						<Name>Mark of Nurgle</Name>
+						<Type>Option</Type>
+						<Points>50</Points>
+						<Dependencies>
+							<IfNot>Mark of Tzeentch</IfNot>
+							<IfNot>Mark of Slaanesh</IfNot>
+							<IfNot>Mark of Khorne</IfNot>
+						</Dependencies>
+						<Fear/>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Warhounds of Chaos</Name>
+				<Group>Mortal</Group>
+				<Points>6</Points>
+				<Min>5</Min>
+				<Image>Warhound.jpg</Image>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<NoCoreSlot/>
+				</SpecialRules>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Bloodletters</Name>
+				<Group>Demonic</Group>
+				<Points>16</Points>
+				<Min>10</Min>
+				<Image>Bloodletters.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Frenzy/>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Magic Resistance (1)</Rule>
+					</Special>
+					<Mark>
+						<Name>Mark of Khorne</Name>
+					</Mark>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Bloodhowler</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Flesh Hounds of Khorne</Name>
+				<Group>Demonic</Group>
+				<Points>16</Points>
+				<Min>5</Min>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Frenzy/>
+					<NoCoreSlot/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Magic Resistance (2)</Rule>
+						<Rule>Fast Cavalry</Rule>
+					</Special>
+					<Mark>
+						<Name>Mark of Khorne</Name>
+					</Mark>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Plaguebearer</Name>
+				<Group>Demonic</Group>
+				<Points>16</Points>
+				<Min>10</Min>
+				<Image>Plaguebearer.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<SubOpponentToHit>1</SubOpponentToHit>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Breath attack Strength 3 with a -2 armour modifier</Rule>
+					</Special>
+					<Mark>
+						<Name>Mark of Nurgle</Name>
+					</Mark>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Nurglings</Name>
+				<Group>Demonic</Group>
+				<Points>40</Points>
+				<Min>1</Min>
+				<Max>5</Max>
+				<UniqueUnits/>
+				<Image>Nurglings.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<SubOpponentToHit>1</SubOpponentToHit>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Swarn</Rule>
+					</Special>
+					<Mark>
+						<Name>Mark of Nurgle</Name>
+					</Mark>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Demonettes</Name>
+				<Group>Demonic</Group>
+				<Points>15</Points>
+				<Min>10</Min>
+				<Image>Demonettes.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>-1 Leadership modifier</Rule>
+					</Special>
+					<Mark>
+						<Name>Mark of Slaanesh</Name>
+					</Mark>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Horrors</Name>
+				<Group>Demonic</Group>
+				<Points>15</Points>
+				<Min>10</Min>
+				<Image>Horrors.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Spellcasters</Rule>
+					</Special>
+					<Mark>
+						<Name>Mark of Tzeentch</Name>
+					</Mark>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Screamers of Tzeentch</Name>
+				<Group>Demonic</Group>
+				<Points>33</Points>
+				<Min>3</Min>
+				<Max>20</Max>
+				<UniqueUnits/>
+				<Image>Screamers.jpg</Image>
+				<Profile>
+					<Movement>1</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Flying Unit</Rule>
+						<Rule>Slashing Attack</Rule>
+					</Special>
+					<Mark>
+						<Name>Mark of Tzeentch</Name>
+					</Mark>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Chaos Fury</Name>
+				<Group>Demonic</Group>
+				<Points>15</Points>
+				<Min>5</Min>
+				<Max>20</Max>
+				<UniqueUnits/>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<Special>
+						<Rule>Flying Unit</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Spawn of Chaos</Name>
+				<Group>Demonic</Group>
+				<Points>60</Points>
+				<Image>ChaosSpawn.jpg</Image>
+				<Profile>
+					<Movement>2D6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>D6</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<Unbreakable/>
+				</SpecialRules>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
