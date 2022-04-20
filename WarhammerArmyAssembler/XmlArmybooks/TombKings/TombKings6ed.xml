@@ -33,1310 +33,1312 @@
 		<Released>2002</Released>
 		<Authors>Alessio Cavatore</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strenght</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>10</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ Ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<Rule>+1 to dispell</Rule>
-				<Description>+1 to dispell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic weapons">
-			<Artefact>
-				<Name>Destroyer of Eternities</Name>
-				<Type>Weapon</Type>
-				<Points>70</Points>
-				<OnlyFor>Infantry</OnlyFor>
-				<AddToStrength>2</AddToStrength>
-				<KillingBlow/>
-				<Description>Counts as a great weapon and has the Killing Blow special ability. The player may choose to attack normally with the Destroyer of Kternities or make a special attack. If the special attack is chosen, all enemy models that are touching the Tomb King take two automatic hits. These hits do benefit from the special rules for great weapons and Killing blow. If a target is riding a monster or a chariot, then both take two automatic hits. In a challenge, only the model engaged in the challenge counts as being in contact with the Tomb King.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Crook and Flail of Radiance</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<HitFirst/>
-				<Description>+ 1 Attack. Always strikes first. If another character has this ability, then resolve the order of attacks in Initiative order. Requires two hands.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blade of Setep</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<NoArmour/>
-				<Rule>If an enemy model hit by this character wears magical armour, then the first hit is automatically discounted but the magical armour is destroyed for the remainder of the battle</Rule>
-				<Description>Normal armour cannot save against the Blade of Setep. If an enemy model hit by this sword wears magical armour, then the first hit is automatically discounted (do not roll to wound) but the magical armour is destroyed for the remainder of the battle. Resolve any further hits as normal.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>The Blade of Mourning</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Rule>If a unit suffers at least one wound from the character and loses the combat, any negative modifiers to the unit's Leadership for the subsequent Break test are doubled</Rule>
-				<Description>If a unit suffers at least one wound from the Blade and loses the combat, any negative modifiers to the unit's Leadership for the subsequent Break test are doubled.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Flail of Skulls</Name>
-				<Type>Weapon</Type>
-				<Points>45</Points>
-				<Flail/>
-				<MultiWounds>2</MultiWounds>
-				<Description>Counts as a flail. Each unsaved wound becomes two wounds.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Spear of Antarhak</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<Rule>For every unsaved wound inflicted by the character, his chariot or a unit he is accompanying - immediately regains 1 Wound</Rule>
-				<Description>Follows all of the normal rules for a spear. In addition, for every unsaved wound inflicted by the Spear of Antarhak, either the character, his chariot or a unit he is accompanying immediately regains 1 Wound as if Djedra's Incantation of Summoning has been cast on them. Note that wounds inflicted by the enemy and subsequently healed by the Spear still count for combat resolution.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Serpent Staff</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Liches</OnlyForGroup>
-				<PoisonAttack/>
-				<Reroll>ToWound</Reroll>
-				<Description>Attacks with the Serpent Staff count as Poisoned Attacks. In addition, the model may re-roll any failed rolls to wound in close combat.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>Armour of Eternity</Name>
-				<Type>Armour</Type>
-				<Points>70</Points>
-				<AddToArmour>6</AddToArmour>
-				<Reroll>OpponentToWound</Reroll>
-				<Description>Enemy models must re-roll successful rolls to wound against the character. Counts as light armour.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Scorpion Armour</Name>
-				<Type>Armour</Type>
-				<Points>40</Points>
-				<AddToArmour>5</AddToArmour>
-				<Rule>The character can never suffer more than one wound due to combat resolution</Rule>
-				<Description>The character can never suffer more than one wound due to combat resolution (after any modifiers for being within 12" of the Battle Standard, etc). If the wearer is with a unit, no more than half the wounds suffered due to combat resolution can be allocated against the character. For example, if the unit suffers four wounds, two wounds are lost by the unit and two wounds are allocated to the character of which one is ignored. Counts as heavy armour.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of the Ages</Name>
-				<Type>Armour</Type>
-				<Points>35</Points>
-				<AddToArmour>5</AddToArmour>
-				<AddToWounds>1</AddToWounds>
-				<Description>Counts as heavy armour. The bearer gains +1 Wound.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Shield of Ptra</Name>
-				<Type>Shield</Type>
-				<Points>15</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>If the character makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Rule>
-				<Description>Counts as a shield. If the bearer makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>Golden Ankhra</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>45</Points>
-				<AddToWard>4</AddToWard>
-				<Description>The model has a 4+ Ward save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Crown of Kings</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<OnlyForGroup>TombKings</OnlyForGroup>
-				<Rule>May roll two D6 for his "My Will Be Done!" incantations and to choose the highest score</Rule>
-				<Description>Tomb King only. The Crown of Kings enables the Tomb King to roll two D6 for his "My Will Be Done!" incantations and to choose the highest score.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Amulet of Pha-Stah</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<Rule>Any Arcane items, Enchanted items, Talismans or Runic Talismans belonging to enemy models in base contact with the wearer cease to function while they are in base contact</Rule>
-				<Description>Any Arcane items, Enchanted items, Talismans or Runic Talismans belonging to enemy models in base contact with the wearer cease to function while they are in base contact. A character with this item cannot take any other magic items.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Collar of Shapesh</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<Rule>For each wound that the bearer suffers roll a D6: on a 4+ the wound is transferred to any friendly model within 4" of the bearer's choosing</Rule>
-				<Description>For each wound that the bearer suffers (after saves, etc. but before any multiple wounds are calculated) roll a D6. On a 4+ the wound is transferred to any friendly model within 4" of the bearer's choosing. If inflicted in combat, these wounds will still count for combat resolution. This second model may not make any Armour save or Ward save to avoid this automatic wound. If there is no friendly model within range, then the Collar of Shapcsh has no effect.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Golden Eye of Rah-Nutt</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<Rule>The chariot itself gains a Ward save of 5+, which only works against hits struck against the chariot, and will not apply to the character</Rule>
-				<Rule>Hits of Strength 7 or more that would normally destroy the chariot automatically do normal damage instead</Rule>
-				<Description>Character in chariot only. The chariot itself gains a Ward save of 5+, which only works against hits struck against the chariot, and will not apply to the character. In addition, wounding hits of Strength 7 or more that would normally destroy the chariot automatically do normal damage instead.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Blue Khepra</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>40</Points>
-				<Rule>Magic Resistance (2)</Rule>
-				<Description>The bearer and the unit he joins have Magic Resistance (2).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Death Mask of Kharnut</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<Terror/>
-				<Description>The model wearing this mask causes terror.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Brooch of the Great Desert</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<Rule>Once per game may automatically dispel an enemy spell</Rule>
-				<Description>One use only. As soon as an enemy spell is cast, the Brooch of the Great Desert may be used to automatically dispel it, just like a Dispel Scroll. Note that as with Dispel Scrolls the Brooch cannot be used to dispel a spell that is cast with Irresistible Force.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Chariot of Fire</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<ImpactHit>D6+1</ImpactHit>
-				<Rule>Flaming Impact Hits attacks</Rule>
-				<Description>Character in chariot only. The character's chariot does D6+1 impacts hits rather than D3. Impact hits from the Chariot of Fire count as both magical attacks and flaming attacks.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Cloak of the Dunes</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<OnlyFor>Infantry</OnlyFor>
-				<Rule>Fly</Rule>
-				<Rule>Pursues 3D6"</Rule>
-				<Description>The character can move as if flying, but may not charge whilst using this special movement. He pursues 3D6".</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Icon of Rulership</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<Rule>+1 Unit Strength</Rule>
-				<Description>Character in chariot only. May be taken in addition to another item in the Enchanted Items list The character's chariot has +1 Unit Strength (so will be worth a total Unit Strength of 5).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Vambraces of the Sun</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<Rule>One model in base contact loses 1 Attack</Rule>
-				<Description>One model in base contact, chosen by the bearer, loses 1 Attack. Against mounted models, the Tomb Kings player must choose either the mount monster or the rider. If the model has several types of attack, the Tomb Kings player chooses which type of attack is lost. This has no effect against foes which do not use their Attacks value in combat, such as Giants.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Staff of Ravening</Name>
-				<Type>Arcane</Type>
-				<Points>45</Points>
-				<Rule>Bound spell, Power level 4: a magic missile with 18" range, the targeted unit suffers 3D6 Strength 2 hits</Rule>
-				<Description>Bound spell, Power level 4. This spell is a magic missile with 18" range. The targeted unit suffers 3D6 Strength 2 hits.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Neferras Plaques of Mighty Incantations</Name>
-				<Type>Arcane</Type>
-				<Points>30</Points>
-				<Rule>Bound spell, Power level 4: a magic missile with 18" range, the targeted unit suffers 3D6 Strength 2 hits</Rule>
-				<Description>The Priest may re-roll the dice rolled for any Incantation he's cast. Either all of the dice must be re-rolled or none.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Mastery</Name>
-				<Type>Arcane</Type>
-				<Points>40</Points>
-				<Rule>+1 to the total rolled to determine the Power level of incantations</Rule>
-				<Description>The bearer adds +1 to the total rolled to determine the Power level of his incantations.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hieratic Jar</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Rule>Once per battle may use an extra incantation that Magic phase</Rule>
-				<Description>One use only. The Liche Priest may release the energy of the Hieratic Jar during any Magic phase, just after he has cast his normal incantation(s). The Jar allows him to use an extra incantation that phase.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enkhil's Kanopi</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Rule>Bound spell, Power level 4: all Remains in Play spells on the tabletop are automatically dispelled</Rule>
-				<Description>Bound spell, Power Level 4. If activated successfully, all Remains in Play spells on the tabletop are automatically dispelled.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Standard of the Sands</Name>
-				<Type>Banner</Type>
-				<Points>75</Points>
-				<Rule>Once per battle, opponent may not make any march moves during the Movement phase</Rule>
-				<Description>One use only. At the start of any of your opponent's turns, the Standard of the Sands may be activated. The opponent may not make any march moves (even Dwarfs!) during the Movement phase of that turn, although skirmishers and man-sized single models on foot may move as normal. In addition, all units attempting to rally suffer -1 to their Leadership for that player's turn only.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of the Hidden Dead</Name>
-				<Type>Banner</Type>
-				<Points>60</Points>
-				<Rule>At the beginning of the game, nominate one unit within your army that is to be hidden beneath the ground, this unit is not deployed at the beginning of the game: the banner may be used to unearth the unit during the remaining moves part of any Tomb Kings Movement phase</Rule>
-				<Description>One use only. At the beginning of the game, nominate one unit within your army that is to be hidden beneath the ground. This unit must be a Core Unit choice, and cannot cost more than 100 points. This unit is not deployed at the beginning of the game. The banner may be used to unearth the unit during the remaining moves part of any Tomb Kings Movement phase. The entire unit must be placed within 18" of the Banner and at least 1" away from any enemy models. It may move normally on the turn it appears.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Icon of the Sacred Eye</Name>
-				<Type>Banner</Type>
-				<Points>50</Points>
-				<Rule>In the first round of every combat, all models in the unit (including steeds) get +1 to hit</Rule>
-				<Description>In the first round of every combat, all models in the unit (including steeds) get +1 to hit.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Mirage Standard</Name>
-				<Type>Banner</Type>
-				<Points>40</Points>
-				<Rule>Any missile weapons that roll to hit must re-roll all successful rolls to hit when firing against a unit; against missile weapons that do not require a roll to hit, all models in the unit gain a 5+ Ward save</Rule>
-				<Description>Any missile weapons that roll to hit must re-roll all successful rolls to hit when firing against a unit that contains the Mirage Standard. Against missile weapons that do not require a roll to hit (such as cannons and stone throwers), all models in the unit containing the Mirage Standard gain a 5+ Ward save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Icon of Rakaph</Name>
-				<Type>Banner</Type>
-				<Points>40</Points>
-				<Rule>Unit may make a free reform move at the start of its Movement phase</Rule>
-				<Description>Tomb Guard or Skeleton Warriors only. A unit of Tomb Guard or Skeleton Warriors containing this banner may make a free reform move at the start of its Movement phase. This is done before charges are declared, so that a unit with the Icon of Rakaph may charge on the turn it reforms.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Standard of the Cursing Word</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<Rule>Each enemy model in base contact with the Standard Bearer at the start of the Tomb Kings' Magic phase must pass a Leadership test or lose a wound with no Armour save allowed</Rule>
-				<Description>Each enemy model in base contact with the Standard Bearer at the start of the Tomb Kings' Magic phase must pass a Leadership test (on their own unmodified Ld) or lose a wound (with no Armour save allowed).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of the Undying Legion</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<Rule>Bound spell, Power level 3: casts Djedra's incantation of Summoning</Rule>
-				<Description>Bound spell, Power Level 3. Casts Djedra's incantation of Summoning. May only be cast on the unit containing the banner</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Settra the Imperishable</Name>
-			<Points>625</Points>
-			<Description>Settra the Imperishable</Description>
-			<Wizard>1</Wizard>
-			<Mount>Chariot</Mount>
-			<Personified/>
-			<Image>Settra.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<SlotOf>Lord</SlotOf>
-				<Undead/>
-				<MustBeGeneral/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>The Blessed Blade of Ptra</Name>
-					<HitFirst/>
-					<Rule>Keep track of the number of hits Settra scores with his weapon: after his attacks have been resolved, any enemv unit in base contact with Settra must take a Leadership test, with a negative modifier equal to the number ol hits caused by Settra, if the test is passed, the enemy avert their gaze and suffer no ill effects, if the enemy fail the test then they are reduced to Weapon Skill 1 for the remainder of that combat round, if they roll double or more than their modified Leadership value then in addition to being reduced to Weapon Skill 1, the unit suffrs D6 Strength 4 hits</Rule>
-				</HandWeapon>
-				<Armour>
-					<Name>The Armour of Golden Magnificence</Name>
-					<AddToArmour>2</AddToArmour>
-					<Rule>Armour saving is nerev modified to worse than a 4+, even of hit by attack that normally allows no Armour save</Rule>
-				</Armour>
-				<Armour>
-					<Name>The Crown of Nehekhara</Name>
-					<AddToWard>4</AddToWard>
-					<Terror/>
-				</Armour>
-				<Special>
-					<Rule>Flammable</Rule>
-					<Rule>Settra's Army</Rule>
-					<Rule>The Will of Settra</Rule>
-					<Rule>If a model removed from play, then the enemy within 2D6" suffer 2D6 Strength 2 hits</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>High Queen Khalida</Name>
-			<Points>420</Points>
-			<Description>High Queen Khalida</Description>
-			<Personified/>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>9</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<HitFirst/>
-				<PoisonAttack/>
-				<Terror/>
-				<Regeneration/>
-				<ImmuneToPoison/>
-			</SpecialRules>
-			<Equipments>
-				<RangeWeapon>
-					<Name>The Venom Staff</Name>
-					<Rule>Bound spell (power level 5): a magic missile with a range of 24", the target takes 2D6 Strength 4 hits, if unit takes any wounds, it may not move in its next Movement phase</Rule>
-				</RangeWeapon>
-				<Special>
-					<Rule>Flammable</Rule>
-					<Rule>Any model or unit responsible for the death of Queen Khalida is affected by her curse on the dice roll of 4+: if affected, then roll a D6 for each model/unit, and on the dice roll of a 6, the model loses a wound that cannot be saved in any way (including Ward saves) nor Regenerated, roll again at the start of each of your Opponent's turns for the rest of the game, and they take a further wound on a roll of 6.</Rule>
-					<Rule>Any attacks that count as poisoned will inflict D3 wounds</Rule>
-					<Rule>May cast Horekhah's Incantation of Righteous Smiting once per Magic phase: it is automatically cast, and cannot be dispelled</Rule>
-					<Rule>Army of the Queen</Rule>
-					<Rule>Units of Skeletal Bowmen, Skeletal Light Horsemen and Chariots in an army that includes Queen Khalida may he given the Blessing of the Asp at the cost of +2 points per model, all shooting by these units count as Poisoned Attacks</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Tomb King</Name>
-			<Points>170</Points>
-			<Description>Tomb King</Description>
-			<Image>TombKing.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Embalmed</Rule>
-					<Rule>The Curse</Rule>
-					<Rule>"My Will Be Done!"</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Flail</IfNot>
-						<IfNot>Spear</IfNot>
-					</Dependencies>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Flail</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<Flail/>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Spear</IfNot>
-					</Dependencies>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Flail</IfNot>
-					</Dependencies>
-					<Points>3</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Chariot</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Liche High Priest</Name>
-			<Points>245</Points>
-			<Description>Liche High Priest</Description>
-			<Wizard>4</Wizard>
-			<Image>LicheHighPriest.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Skeletal Steed</Name>
-					<Type>Option</Type>
-					<Points>15</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Casket of Soul</Name>
-					<Type>Option</Type>
-					<Points>165</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Tomb Prince</Name>
-			<Points>100</Points>
-			<Description>Tomb Prince</Description>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Embalmed</Rule>
-					<Rule>The Curse</Rule>
-					<Rule>"My Will Be Done!"</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Dependencies>
-						<IfNot>Flail</IfNot>
-						<IfNot>Spear</IfNot>
-					</Dependencies>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Flail</Name>
-					<Type>Option</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<Fail/>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Spear</IfNot>
-					</Dependencies>
-					<Points>2</Points>
-				</Option>
-				<Option>
-					<Name>Spear</Name>
-					<Type>Option</Type>
-					<Dependencies>
-						<IfNot>Great weapon</IfNot>
-						<IfNot>Flail</IfNot>
-					</Dependencies>
-					<Points>2</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Chariot</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Icon Bearer</Name>
-			<Points>65</Points>
-			<Description>Icon Bearer</Description>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<KillingBlow/>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Skeletal Steed</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Chariot</Name>
-					<Type>Option</Type>
-					<Points>45</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Liche Priest</Name>
-			<Points>115</Points>
-			<Description>Liche Priest</Description>
-			<Wizard>1</Wizard>
-			<Image>LichePriest.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Skeletal Steed</Name>
-					<Type>Option</Type>
-					<Points>8</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Casket of Soul</Name>
-					<Type>Option</Type>
-					<Points>165</Points>
-					<Mount/>
-				</Option>
-			</Options>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Skeletal Steed</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Chariot</Name>
-			<Points>0</Points>
-			<Chariot>2</Chariot>
-			<ModelsInPack>3</ModelsInPack>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<ImpactHit>D6+1</ImpactHit>
-				<Undead/>
-			</SpecialRules>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Casket of Soul</Name>
-			<Points>0</Points>
-			<Chariot>1</Chariot>
-			<ModelsInPack>3</ModelsInPack>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<Undead/>
-				<KillingBlow/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Light of Death</Rule>
-					<Rule>Spirit-Souls</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Skeleton Warriors</Name>
-			<Points>8</Points>
-			<Min>10</Min>
-			<Max>40</Max>
-			<Image>SkeletonWarriors.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>3</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangWeapon>
-					<Name>Bow</Name>
-				</RangWeapon>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>0</Points>
-					<PerModel/>
-					<Dependencies>
-						<IfNot>Shields and spears</IfNot>
-					</Dependencies>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shields and spears</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<Dependencies>
-						<IfNot>Shields</IfNot>
-					</Dependencies>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<AddToArmour>6</AddToArmour>
-					<Points>1</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Skeleton Light Horsemen</Name>
-			<Points>14</Points>
-			<Min>5</Min>
-			<Max>16</Max>
-			<Mount>Skeletal Steed</Mount>
-			<Image>LightHorsemen.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangWeapon>
-					<Name>Bow</Name>
-				</RangWeapon>
-				<Special>
-					<Rule>Fast Cavalry</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Tomb Swarm</Name>
-			<Points>45</Points>
-			<Min>1</Min>
-			<Max>5</Max>
-			<UniqueUnits/>
-			<Image>Swarms.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>2</Strength>
-				<Toughness>2</Toughness>
-				<Wounds>5</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<PoisonAttack/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Swarm</Rule>
-					<Rule>Skirmishers</Rule>
-					<Rule>"It Came From Below..."</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Skeleton Heavy Horsemen</Name>
-			<Points>16</Points>
-			<Min>5</Min>
-			<Max>16</Max>
-			<Mount>Skeletal Steed</Mount>
-			<Image>HeavyHorsemen.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-					<MagicItems Points="25" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Chariots</Name>
-			<Points>40</Points>
-			<Min>3</Min>
-			<Max>12</Max>
-			<Chariot>2</Chariot>
-			<Mount>Skeletal Steed</Mount>
-			<ModelsInPack>4</ModelsInPack>
-			<Image>Chariots.jpg</Image>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>7</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<ImpactHit>D6+1</ImpactHit>
-				<Undead/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spears</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Bow</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>Light Chariots</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Tomb Guard</Name>
-			<Points>12</Points>
-			<Min>10</Min>
-			<Max>25</Max>
-			<Image>TombGuards.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<KillingBlow/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shield</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Champion</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Ushabti</Name>
-			<Points>65</Points>
-			<Min>3</Min>
-			<Image>Ushabti.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>10</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Huge ritual blades</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</HandWeapon>
-				<Special>
-					<Rule>Undead Constructs</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Carrion</Name>
-			<Points>24</Points>
-			<Min>3</Min>
-			<Max>10</Max>
-			<Image>Carrion.jpg</Image>
-			<Profile>
-				<Movement>2</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>4</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Flying unit</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Tomb Scorpion</Name>
-			<Points>85</Points>
-			<Image>Scorpions.jpg</Image>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<KillingBlow/>
-				<PoisonAttack/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Stinging tail and wicked claws</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Magic Resistance (1)</Rule>
-					<Rule>"It Came From Below..."</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Screaming Skull Catapult</Name>
-			<Points>90</Points>
-			<ModelsInPack>4</ModelsInPack>
-			<Image>ScreamingSkullCatapult.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>2</WeaponSkill>
-				<BallisticSkill>2</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>7</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Stone Thrower</Rule>
-					<Rule>Screaming Skulls</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Skulls of the Foe</Name>
-					<Type>Option</Type>
-					<Points>20</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Bone Giant</Name>
-			<Points>220</Points>
-			<Image>Giant.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>1</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<Undead/>
-				<LargeBase/>
-				<Terror/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Two hand weapons</Name>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
 					<AddToAttacks>1</AddToAttacks>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
+					<AddToStrength>1</AddToStrength>
+					<Description>+1 Strenght</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
+					<Points>10</Points>
 					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Unstoppable Assault</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-	</Units>
+					<Description>5+ Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<AddToWard>6</AddToWard>
+					<Description>6+ Ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<Rule>+1 to dispell</Rule>
+					<Description>+1 to dispell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic weapons">
+				<Artefact>
+					<Name>Destroyer of Eternities</Name>
+					<Type>Weapon</Type>
+					<Points>70</Points>
+					<OnlyFor>Infantry</OnlyFor>
+					<AddToStrength>2</AddToStrength>
+					<KillingBlow/>
+					<Description>Counts as a great weapon and has the Killing Blow special ability. The player may choose to attack normally with the Destroyer of Kternities or make a special attack. If the special attack is chosen, all enemy models that are touching the Tomb King take two automatic hits. These hits do benefit from the special rules for great weapons and Killing blow. If a target is riding a monster or a chariot, then both take two automatic hits. In a challenge, only the model engaged in the challenge counts as being in contact with the Tomb King.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Crook and Flail of Radiance</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<HitFirst/>
+					<Description>+ 1 Attack. Always strikes first. If another character has this ability, then resolve the order of attacks in Initiative order. Requires two hands.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blade of Setep</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<NoArmour/>
+					<Rule>If an enemy model hit by this character wears magical armour, then the first hit is automatically discounted but the magical armour is destroyed for the remainder of the battle</Rule>
+					<Description>Normal armour cannot save against the Blade of Setep. If an enemy model hit by this sword wears magical armour, then the first hit is automatically discounted (do not roll to wound) but the magical armour is destroyed for the remainder of the battle. Resolve any further hits as normal.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>The Blade of Mourning</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Rule>If a unit suffers at least one wound from the character and loses the combat, any negative modifiers to the unit's Leadership for the subsequent Break test are doubled</Rule>
+					<Description>If a unit suffers at least one wound from the Blade and loses the combat, any negative modifiers to the unit's Leadership for the subsequent Break test are doubled.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Flail of Skulls</Name>
+					<Type>Weapon</Type>
+					<Points>45</Points>
+					<Flail/>
+					<MultiWounds>2</MultiWounds>
+					<Description>Counts as a flail. Each unsaved wound becomes two wounds.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Spear of Antarhak</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<Rule>For every unsaved wound inflicted by the character, his chariot or a unit he is accompanying - immediately regains 1 Wound</Rule>
+					<Description>Follows all of the normal rules for a spear. In addition, for every unsaved wound inflicted by the Spear of Antarhak, either the character, his chariot or a unit he is accompanying immediately regains 1 Wound as if Djedra's Incantation of Summoning has been cast on them. Note that wounds inflicted by the enemy and subsequently healed by the Spear still count for combat resolution.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Serpent Staff</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Liches</OnlyForGroup>
+					<PoisonAttack/>
+					<Reroll>ToWound</Reroll>
+					<Description>Attacks with the Serpent Staff count as Poisoned Attacks. In addition, the model may re-roll any failed rolls to wound in close combat.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>Armour of Eternity</Name>
+					<Type>Armour</Type>
+					<Points>70</Points>
+					<AddToArmour>6</AddToArmour>
+					<Reroll>OpponentToWound</Reroll>
+					<Description>Enemy models must re-roll successful rolls to wound against the character. Counts as light armour.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Scorpion Armour</Name>
+					<Type>Armour</Type>
+					<Points>40</Points>
+					<AddToArmour>5</AddToArmour>
+					<Rule>The character can never suffer more than one wound due to combat resolution</Rule>
+					<Description>The character can never suffer more than one wound due to combat resolution (after any modifiers for being within 12" of the Battle Standard, etc). If the wearer is with a unit, no more than half the wounds suffered due to combat resolution can be allocated against the character. For example, if the unit suffers four wounds, two wounds are lost by the unit and two wounds are allocated to the character of which one is ignored. Counts as heavy armour.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of the Ages</Name>
+					<Type>Armour</Type>
+					<Points>35</Points>
+					<AddToArmour>5</AddToArmour>
+					<AddToWounds>1</AddToWounds>
+					<Description>Counts as heavy armour. The bearer gains +1 Wound.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Shield of Ptra</Name>
+					<Type>Shield</Type>
+					<Points>15</Points>
+					<AddToArmour>6</AddToArmour>
+					<Rule>If the character makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Rule>
+					<Description>Counts as a shield. If the bearer makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>Golden Ankhra</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>45</Points>
+					<AddToWard>4</AddToWard>
+					<Description>The model has a 4+ Ward save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Crown of Kings</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<OnlyForGroup>TombKings</OnlyForGroup>
+					<Rule>May roll two D6 for his "My Will Be Done!" incantations and to choose the highest score</Rule>
+					<Description>Tomb King only. The Crown of Kings enables the Tomb King to roll two D6 for his "My Will Be Done!" incantations and to choose the highest score.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Amulet of Pha-Stah</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<Rule>Any Arcane items, Enchanted items, Talismans or Runic Talismans belonging to enemy models in base contact with the wearer cease to function while they are in base contact</Rule>
+					<Description>Any Arcane items, Enchanted items, Talismans or Runic Talismans belonging to enemy models in base contact with the wearer cease to function while they are in base contact. A character with this item cannot take any other magic items.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Collar of Shapesh</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<Rule>For each wound that the bearer suffers roll a D6: on a 4+ the wound is transferred to any friendly model within 4" of the bearer's choosing</Rule>
+					<Description>For each wound that the bearer suffers (after saves, etc. but before any multiple wounds are calculated) roll a D6. On a 4+ the wound is transferred to any friendly model within 4" of the bearer's choosing. If inflicted in combat, these wounds will still count for combat resolution. This second model may not make any Armour save or Ward save to avoid this automatic wound. If there is no friendly model within range, then the Collar of Shapcsh has no effect.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Golden Eye of Rah-Nutt</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<Rule>The chariot itself gains a Ward save of 5+, which only works against hits struck against the chariot, and will not apply to the character</Rule>
+					<Rule>Hits of Strength 7 or more that would normally destroy the chariot automatically do normal damage instead</Rule>
+					<Description>Character in chariot only. The chariot itself gains a Ward save of 5+, which only works against hits struck against the chariot, and will not apply to the character. In addition, wounding hits of Strength 7 or more that would normally destroy the chariot automatically do normal damage instead.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Blue Khepra</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>40</Points>
+					<Rule>Magic Resistance (2)</Rule>
+					<Description>The bearer and the unit he joins have Magic Resistance (2).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Death Mask of Kharnut</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<Terror/>
+					<Description>The model wearing this mask causes terror.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Brooch of the Great Desert</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<Rule>Once per game may automatically dispel an enemy spell</Rule>
+					<Description>One use only. As soon as an enemy spell is cast, the Brooch of the Great Desert may be used to automatically dispel it, just like a Dispel Scroll. Note that as with Dispel Scrolls the Brooch cannot be used to dispel a spell that is cast with Irresistible Force.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Chariot of Fire</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<ImpactHit>D6+1</ImpactHit>
+					<Rule>Flaming Impact Hits attacks</Rule>
+					<Description>Character in chariot only. The character's chariot does D6+1 impacts hits rather than D3. Impact hits from the Chariot of Fire count as both magical attacks and flaming attacks.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Cloak of the Dunes</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<OnlyFor>Infantry</OnlyFor>
+					<Rule>Fly</Rule>
+					<Rule>Pursues 3D6"</Rule>
+					<Description>The character can move as if flying, but may not charge whilst using this special movement. He pursues 3D6".</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Icon of Rulership</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<Rule>+1 Unit Strength</Rule>
+					<Description>Character in chariot only. May be taken in addition to another item in the Enchanted Items list The character's chariot has +1 Unit Strength (so will be worth a total Unit Strength of 5).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Vambraces of the Sun</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>15</Points>
+					<Rule>One model in base contact loses 1 Attack</Rule>
+					<Description>One model in base contact, chosen by the bearer, loses 1 Attack. Against mounted models, the Tomb Kings player must choose either the mount monster or the rider. If the model has several types of attack, the Tomb Kings player chooses which type of attack is lost. This has no effect against foes which do not use their Attacks value in combat, such as Giants.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Staff of Ravening</Name>
+					<Type>Arcane</Type>
+					<Points>45</Points>
+					<Rule>Bound spell, Power level 4: a magic missile with 18" range, the targeted unit suffers 3D6 Strength 2 hits</Rule>
+					<Description>Bound spell, Power level 4. This spell is a magic missile with 18" range. The targeted unit suffers 3D6 Strength 2 hits.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Neferras Plaques of Mighty Incantations</Name>
+					<Type>Arcane</Type>
+					<Points>30</Points>
+					<Rule>Bound spell, Power level 4: a magic missile with 18" range, the targeted unit suffers 3D6 Strength 2 hits</Rule>
+					<Description>The Priest may re-roll the dice rolled for any Incantation he's cast. Either all of the dice must be re-rolled or none.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Mastery</Name>
+					<Type>Arcane</Type>
+					<Points>40</Points>
+					<Rule>+1 to the total rolled to determine the Power level of incantations</Rule>
+					<Description>The bearer adds +1 to the total rolled to determine the Power level of his incantations.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hieratic Jar</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Rule>Once per battle may use an extra incantation that Magic phase</Rule>
+					<Description>One use only. The Liche Priest may release the energy of the Hieratic Jar during any Magic phase, just after he has cast his normal incantation(s). The Jar allows him to use an extra incantation that phase.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enkhil's Kanopi</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Rule>Bound spell, Power level 4: all Remains in Play spells on the tabletop are automatically dispelled</Rule>
+					<Description>Bound spell, Power Level 4. If activated successfully, all Remains in Play spells on the tabletop are automatically dispelled.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Standard of the Sands</Name>
+					<Type>Banner</Type>
+					<Points>75</Points>
+					<Rule>Once per battle, opponent may not make any march moves during the Movement phase</Rule>
+					<Description>One use only. At the start of any of your opponent's turns, the Standard of the Sands may be activated. The opponent may not make any march moves (even Dwarfs!) during the Movement phase of that turn, although skirmishers and man-sized single models on foot may move as normal. In addition, all units attempting to rally suffer -1 to their Leadership for that player's turn only.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of the Hidden Dead</Name>
+					<Type>Banner</Type>
+					<Points>60</Points>
+					<Rule>At the beginning of the game, nominate one unit within your army that is to be hidden beneath the ground, this unit is not deployed at the beginning of the game: the banner may be used to unearth the unit during the remaining moves part of any Tomb Kings Movement phase</Rule>
+					<Description>One use only. At the beginning of the game, nominate one unit within your army that is to be hidden beneath the ground. This unit must be a Core Unit choice, and cannot cost more than 100 points. This unit is not deployed at the beginning of the game. The banner may be used to unearth the unit during the remaining moves part of any Tomb Kings Movement phase. The entire unit must be placed within 18" of the Banner and at least 1" away from any enemy models. It may move normally on the turn it appears.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Icon of the Sacred Eye</Name>
+					<Type>Banner</Type>
+					<Points>50</Points>
+					<Rule>In the first round of every combat, all models in the unit (including steeds) get +1 to hit</Rule>
+					<Description>In the first round of every combat, all models in the unit (including steeds) get +1 to hit.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Mirage Standard</Name>
+					<Type>Banner</Type>
+					<Points>40</Points>
+					<Rule>Any missile weapons that roll to hit must re-roll all successful rolls to hit when firing against a unit; against missile weapons that do not require a roll to hit, all models in the unit gain a 5+ Ward save</Rule>
+					<Description>Any missile weapons that roll to hit must re-roll all successful rolls to hit when firing against a unit that contains the Mirage Standard. Against missile weapons that do not require a roll to hit (such as cannons and stone throwers), all models in the unit containing the Mirage Standard gain a 5+ Ward save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Icon of Rakaph</Name>
+					<Type>Banner</Type>
+					<Points>40</Points>
+					<Rule>Unit may make a free reform move at the start of its Movement phase</Rule>
+					<Description>Tomb Guard or Skeleton Warriors only. A unit of Tomb Guard or Skeleton Warriors containing this banner may make a free reform move at the start of its Movement phase. This is done before charges are declared, so that a unit with the Icon of Rakaph may charge on the turn it reforms.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Standard of the Cursing Word</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<Rule>Each enemy model in base contact with the Standard Bearer at the start of the Tomb Kings' Magic phase must pass a Leadership test or lose a wound with no Armour save allowed</Rule>
+					<Description>Each enemy model in base contact with the Standard Bearer at the start of the Tomb Kings' Magic phase must pass a Leadership test (on their own unmodified Ld) or lose a wound (with no Armour save allowed).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of the Undying Legion</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<Rule>Bound spell, Power level 3: casts Djedra's incantation of Summoning</Rule>
+					<Description>Bound spell, Power Level 3. Casts Djedra's incantation of Summoning. May only be cast on the unit containing the banner</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Settra the Imperishable</Name>
+				<Points>625</Points>
+				<Description>Settra the Imperishable</Description>
+				<Wizard>1</Wizard>
+				<Mount>Chariot</Mount>
+				<Personified/>
+				<Image>Settra.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<SlotOf>Lord</SlotOf>
+					<Undead/>
+					<MustBeGeneral/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>The Blessed Blade of Ptra</Name>
+						<HitFirst/>
+						<Rule>Keep track of the number of hits Settra scores with his weapon: after his attacks have been resolved, any enemv unit in base contact with Settra must take a Leadership test, with a negative modifier equal to the number ol hits caused by Settra, if the test is passed, the enemy avert their gaze and suffer no ill effects, if the enemy fail the test then they are reduced to Weapon Skill 1 for the remainder of that combat round, if they roll double or more than their modified Leadership value then in addition to being reduced to Weapon Skill 1, the unit suffrs D6 Strength 4 hits</Rule>
+					</HandWeapon>
+					<Armour>
+						<Name>The Armour of Golden Magnificence</Name>
+						<AddToArmour>2</AddToArmour>
+						<Rule>Armour saving is nerev modified to worse than a 4+, even of hit by attack that normally allows no Armour save</Rule>
+					</Armour>
+					<Armour>
+						<Name>The Crown of Nehekhara</Name>
+						<AddToWard>4</AddToWard>
+						<Terror/>
+					</Armour>
+					<Special>
+						<Rule>Flammable</Rule>
+						<Rule>Settra's Army</Rule>
+						<Rule>The Will of Settra</Rule>
+						<Rule>If a model removed from play, then the enemy within 2D6" suffer 2D6 Strength 2 hits</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>High Queen Khalida</Name>
+				<Points>420</Points>
+				<Description>High Queen Khalida</Description>
+				<Personified/>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>9</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<HitFirst/>
+					<PoisonAttack/>
+					<Terror/>
+					<Regeneration/>
+					<ImmuneToPoison/>
+				</SpecialRules>
+				<Equipments>
+					<RangeWeapon>
+						<Name>The Venom Staff</Name>
+						<Rule>Bound spell (power level 5): a magic missile with a range of 24", the target takes 2D6 Strength 4 hits, if unit takes any wounds, it may not move in its next Movement phase</Rule>
+					</RangeWeapon>
+					<Special>
+						<Rule>Flammable</Rule>
+						<Rule>Any model or unit responsible for the death of Queen Khalida is affected by her curse on the dice roll of 4+: if affected, then roll a D6 for each model/unit, and on the dice roll of a 6, the model loses a wound that cannot be saved in any way (including Ward saves) nor Regenerated, roll again at the start of each of your Opponent's turns for the rest of the game, and they take a further wound on a roll of 6.</Rule>
+						<Rule>Any attacks that count as poisoned will inflict D3 wounds</Rule>
+						<Rule>May cast Horekhah's Incantation of Righteous Smiting once per Magic phase: it is automatically cast, and cannot be dispelled</Rule>
+						<Rule>Army of the Queen</Rule>
+						<Rule>Units of Skeletal Bowmen, Skeletal Light Horsemen and Chariots in an army that includes Queen Khalida may he given the Blessing of the Asp at the cost of +2 points per model, all shooting by these units count as Poisoned Attacks</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Tomb King</Name>
+				<Points>170</Points>
+				<Description>Tomb King</Description>
+				<Image>TombKing.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Embalmed</Rule>
+						<Rule>The Curse</Rule>
+						<Rule>"My Will Be Done!"</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Flail</IfNot>
+							<IfNot>Spear</IfNot>
+						</Dependencies>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Flail</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<Flail/>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Spear</IfNot>
+						</Dependencies>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Flail</IfNot>
+						</Dependencies>
+						<Points>3</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Chariot</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Liche High Priest</Name>
+				<Points>245</Points>
+				<Description>Liche High Priest</Description>
+				<Wizard>4</Wizard>
+				<Image>LicheHighPriest.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Skeletal Steed</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Casket of Soul</Name>
+						<Type>Option</Type>
+						<Points>165</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Tomb Prince</Name>
+				<Points>100</Points>
+				<Description>Tomb Prince</Description>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Embalmed</Rule>
+						<Rule>The Curse</Rule>
+						<Rule>"My Will Be Done!"</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Dependencies>
+							<IfNot>Flail</IfNot>
+							<IfNot>Spear</IfNot>
+						</Dependencies>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Flail</Name>
+						<Type>Option</Type>
+						<OnlyFor>Infantry</OnlyFor>
+						<Fail/>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Spear</IfNot>
+						</Dependencies>
+						<Points>2</Points>
+					</Option>
+					<Option>
+						<Name>Spear</Name>
+						<Type>Option</Type>
+						<Dependencies>
+							<IfNot>Great weapon</IfNot>
+							<IfNot>Flail</IfNot>
+						</Dependencies>
+						<Points>2</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Chariot</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Icon Bearer</Name>
+				<Points>65</Points>
+				<Description>Icon Bearer</Description>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<KillingBlow/>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Skeletal Steed</Name>
+						<Type>Option</Type>
+						<Points>8</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Chariot</Name>
+						<Type>Option</Type>
+						<Points>45</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Liche Priest</Name>
+				<Points>115</Points>
+				<Description>Liche Priest</Description>
+				<Wizard>1</Wizard>
+				<Image>LichePriest.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Skeletal Steed</Name>
+						<Type>Option</Type>
+						<Points>8</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Casket of Soul</Name>
+						<Type>Option</Type>
+						<Points>165</Points>
+						<Mount/>
+					</Option>
+				</Options>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Skeletal Steed</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Chariot</Name>
+				<Points>0</Points>
+				<Chariot>2</Chariot>
+				<ModelsInPack>3</ModelsInPack>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<ImpactHit>D6+1</ImpactHit>
+					<Undead/>
+				</SpecialRules>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Casket of Soul</Name>
+				<Points>0</Points>
+				<Chariot>1</Chariot>
+				<ModelsInPack>3</ModelsInPack>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<Undead/>
+					<KillingBlow/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Light of Death</Rule>
+						<Rule>Spirit-Souls</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Skeleton Warriors</Name>
+				<Points>8</Points>
+				<Min>10</Min>
+				<Max>40</Max>
+				<Image>SkeletonWarriors.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>3</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangWeapon>
+						<Name>Bow</Name>
+					</RangWeapon>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>0</Points>
+						<PerModel/>
+						<Dependencies>
+							<IfNot>Shields and spears</IfNot>
+						</Dependencies>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shields and spears</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<Dependencies>
+							<IfNot>Shields</IfNot>
+						</Dependencies>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<AddToArmour>6</AddToArmour>
+						<Points>1</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Skeleton Light Horsemen</Name>
+				<Points>14</Points>
+				<Min>5</Min>
+				<Max>16</Max>
+				<Mount>Skeletal Steed</Mount>
+				<Image>LightHorsemen.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangWeapon>
+						<Name>Bow</Name>
+					</RangWeapon>
+					<Special>
+						<Rule>Fast Cavalry</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Tomb Swarm</Name>
+				<Points>45</Points>
+				<Min>1</Min>
+				<Max>5</Max>
+				<UniqueUnits/>
+				<Image>Swarms.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>2</Strength>
+					<Toughness>2</Toughness>
+					<Wounds>5</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<PoisonAttack/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Swarm</Rule>
+						<Rule>Skirmishers</Rule>
+						<Rule>"It Came From Below..."</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Skeleton Heavy Horsemen</Name>
+				<Points>16</Points>
+				<Min>5</Min>
+				<Max>16</Max>
+				<Mount>Skeletal Steed</Mount>
+				<Image>HeavyHorsemen.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+						<MagicItems Points="25" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Chariots</Name>
+				<Points>40</Points>
+				<Min>3</Min>
+				<Max>12</Max>
+				<Chariot>2</Chariot>
+				<Mount>Skeletal Steed</Mount>
+				<ModelsInPack>4</ModelsInPack>
+				<Image>Chariots.jpg</Image>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>7</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<ImpactHit>D6+1</ImpactHit>
+					<Undead/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spears</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Bow</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>Light Chariots</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Tomb Guard</Name>
+				<Points>12</Points>
+				<Min>10</Min>
+				<Max>25</Max>
+				<Image>TombGuards.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<KillingBlow/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shield</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Champion</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Ushabti</Name>
+				<Points>65</Points>
+				<Min>3</Min>
+				<Image>Ushabti.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>10</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Huge ritual blades</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</HandWeapon>
+					<Special>
+						<Rule>Undead Constructs</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Carrion</Name>
+				<Points>24</Points>
+				<Min>3</Min>
+				<Max>10</Max>
+				<Image>Carrion.jpg</Image>
+				<Profile>
+					<Movement>2</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>4</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Flying unit</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Tomb Scorpion</Name>
+				<Points>85</Points>
+				<Image>Scorpions.jpg</Image>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<KillingBlow/>
+					<PoisonAttack/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Stinging tail and wicked claws</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Magic Resistance (1)</Rule>
+						<Rule>"It Came From Below..."</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Screaming Skull Catapult</Name>
+				<Points>90</Points>
+				<ModelsInPack>4</ModelsInPack>
+				<Image>ScreamingSkullCatapult.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>2</WeaponSkill>
+					<BallisticSkill>2</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>7</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Stone Thrower</Rule>
+						<Rule>Screaming Skulls</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Skulls of the Foe</Name>
+						<Type>Option</Type>
+						<Points>20</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Bone Giant</Name>
+				<Points>220</Points>
+				<Image>Giant.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>1</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<Undead/>
+					<LargeBase/>
+					<Terror/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Two hand weapons</Name>
+						<AddToAttacks>1</AddToAttacks>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Unstoppable Assault</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
