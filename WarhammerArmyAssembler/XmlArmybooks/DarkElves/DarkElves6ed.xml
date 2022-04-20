@@ -40,1763 +40,1765 @@
 		<Released>2001</Released>
 		<Authors>Gav Thorpe, Space McQuirk and Tuomas Pirinen</Authors>
 	</Introduction>
-	<Artefacts>
-		<Group Name="Common magic items">
-			<Artefact>
-				<Name>Sword of Striking</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<AddToHit>1</AddToHit>
-				<Description>+1 to Hit</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Battle</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>+1 Attack</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Sword of Might</Name>
-				<Type>Weapon</Type>
-				<Points>20</Points>
-				<AddToStrength>1</AddToStrength>
-				<Description>+1 Strenght</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Biting Blade</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<ArmourPiercing>1</ArmourPiercing>
-				<Description>-1 Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Enchanted shield</Name>
-				<Type>Shield</Type>
-				<Points>10</Points>
-				<AddToArmour>5</AddToArmour>
-				<Description>5+ Armour save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Talisman of Protection</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>15</Points>
-				<AddToWard>6</AddToWard>
-				<Description>6+ ward save</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Staff of Sorcery</Name>
-				<Type>Arcane</Type>
-				<Points>50</Points>
-				<Rule>+1 to dispell</Rule>
-				<Description>+1 to dispell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dispell Scroll</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>Automatically dispel an enemy spell, one use only</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Power Stone</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Multiple/>
-				<Description>+2 dice to cast a spell</Description>
-			</Artefact>
-			<Artefact>
-				<Name>War Banner</Name>
-				<Type>Banner</Type>
-				<Points>25</Points>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>+1 Combat Resolution</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic weapons">
-			<Artefact>
-				<Name>Executioner's Axe</Name>
-				<Type>Weapon</Type>
-				<OnlyFor>Infantry</OnlyFor>
-				<Points>80</Points>
-				<Rule>Strength double that of his target's Toughness</Rule>
-				<WoundOn>2</WoundOn>
-				<HitLast/>
-				<Description>When rolling to wound in close combat and for armour save modifier purposes, the wielder counts as having a Strength double that of his target's Toughness. However, the Executioner's Axe is two-handed and the wielder always strikes last except in the turn he the turn he charges.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Venom Sword</Name>
-				<Type>Weapon</Type>
-				<Points>75</Points>
-				<Rule>Any model which loses a wound to the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or is automatically slain</Rule>
-				<Description>Any model which loses a wound to the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or is automatically slain.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blade of Ruin</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<NoArmour/>
-				<Description>No armour saves may be taken against hits from the Sword of Ruin. Ward saves may be taken as normal.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hydra Blade</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<Rule>D3 additional attacks</Rule>
-				<Description>A character wielding the Hydra Blade gains D3 additional attacks (roll each Close Combat phase the Hydra Blade is used).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Crimson Death</Name>
-				<Type>Weapon</Type>
-				<Points>35</Points>
-				<StrengthTo>6</StrengthTo>
-				<Description>A model wielding Crimson Death always strikes with Strength 6. No other modifiers will ever reduce this. Requires two hands to use.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Lifetaker</Name>
-				<Type>Weapon</Type>
-				<Points>30</Points>
-				<Rule>Crossbow hits on a 2+, may re-roll to wound</Rule>
-				<Description>Lifetaker is treated like an ordinary repeater crossbow, with the following additional  rules. Lifetaker always hits on 2+, regardless of To Hit modifiers. You may re-roll failed rolls to wound with Lifetaker. Remember that a dice can never be re-rolled more than once.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Web of Shadows</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Enemy automatically takes 2D6 Strength 3 hits, one use only</Rule>
-				<Description>One use only. The character uses the Web of Shadows instead of making any normal attacks that round. When used, one model in base contact with the character automatically takes 2D6 Strength 3 hits. A character with a Web of Shadows may also take an ordinary close combat weapon (but not another magic weapon).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Heartseeker</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Reroll>ToHit</Reroll>
-				<Description>The character may re-roll all missed attacks with Heartseeker. Remember a dice can never be re-rolled more than once.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Chill Blade</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<Rule>Any model wounded may not attack for the rest of that combat round</Rule>
-				<Description>Any model wounded by a Chill Blade (after saves, etc) may not attack for the rest of that combat round.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dark sword</Name>
-				<Type>Weapon</Type>
-				<Points>15</Points>
-				<Rule>Any model losing one or more wounds becomes subject to the rules for stupidity for the remainder of the battle</Rule>
-				<Description>Any model losing one or more wounds (after saves, etc) to the Dark Sword becomes subject to the rules for stupidity for the remainder of the battle.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic armour">
-			<Artefact>
-				<Name>Armour of Living Death</Name>
-				<Type>Armour</Type>
-				<Points>100</Points>
-				<AddToArmour>5</AddToArmour>
-				<AddToToughness>1</AddToToughness>
-				<AddToWounds>1</AddToWounds>
-				<Description>The Armour of Living Death counts as heavy armour, giving a 5+ armour save, which can be combined with other armour as normal. In addition, the model has +1 Toughness and +1 Wound.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Eternal Servitude</Name>
-				<Type>Armour</Type>
-				<Points>60</Points>
-				<AddToArmour>6</AddToArmour>
-				<Regeneration/>
-				<Description>This light armour gives a basic 6+ save, which can be combined with other armour as normal. In addition, the wearer can regenerate.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Shield of Ghrond</Name>
-				<Type>Shield</Type>
-				<Points>30</Points>
-				<AddToArmour>6</AddToArmour>
-				<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
-				<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Armour of Darkness</Name>
-				<Type>Armour</Type>
-				<Points>25</Points>
-				<ArmourTo>2</ArmourTo>
-				<Description>This armour includers a shield and gives a save of 2+ which cannot be improved in any way.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Blood Armour</Name>
-				<Type>Armour</Type>
-				<Points>20</Points>
-				<AddToArmour>5</AddToArmour>
-				<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
-				<Description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improuved by 1 (to 4+ then 3+, etc) up to maximum of 1+.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Talismans">
-			<Artefact>
-				<Name>Black Amulet</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>50</Points>
-				<AddToWard>5</AddToWard>
-				<Rule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</Rule>
-				<Description>The wearer has a 5+ Ward save against close combat hits. If the wearer of the Black Amulet passes his Ward save then the attacking model suffers 1 wound instead (with no armour save allowed).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Deathmask</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>50</Points>
-				<Terror/>
-				<Description>The wearer of mask causes terror</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Crown of Black Iron</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>35</Points>
-				<AddToWard>5</AddToWard>
-				<Rule>Completely immune to the effects of Light Magic and High Magic</Rule>
-				<Description>The character has a 5+ Ward save. In addition to this, the wearer is completely immune to the effects of Light Magic and High Magic spells. Note that this is not a Dispel and thus other models (excluding the character's mount) may be affected by High Magic and Light Magic. </Description>
-			</Artefact>
-			<Artefact>
-				<Name>Seal of Ghrond</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<AddToDispell>1</AddToDispell>
-				<Description>The seal of Ghrond adds one dice to the Dispel dice pool of the army.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ring of Hotek</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>20</Points>
-				<Rule>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double</Rule>
-				<Description>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double. If they roll a double 6 they cast the spell (with Irresistible Force) and then suffer a Miscast.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Enchanted items">
-			<Artefact>
-				<Name>Rubric of Dark Dimensions</Name>
-				<Type>Weapon</Type>
-				<Points>50</Points>
-				<OnlyFor>Infantry</OnlyFor>
-				<Rule>Bound spell, power level 3, one use only: all enemy models in base contact must roll equal to or under their Strength on a D6 or be slain</Rule>
-				<Description>One use only. Bound spell, power level 5. All enemy models in base contact with the bearer must roll equal to or under their Strength on a D6 (6 always fails) or be sucked into the dimension of Eternal Nightmares (and count as slain!).</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Ring of Darkness</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>45</Points>
-				<Rule>Bound spell, power level 4, remains in play: attacks in close combat against the wearer require a 6 to hit</Rule>
-				<Description>Attacks in close combat against the wearer require a 6 to hit regardless of Weapon Skills and modifiers. Remains in play.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Crystal of Midnight</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<Rule>Bound spell, power level 3, one use only: enemy Wizard must pass a Leadership test on 3D6 otherwise they forget one randomly spell</Rule>
-				<Description>One use only. Nominate a Wizard anywhere on the table. The Wizard must pass a Leadership test on 3D6 otherwise he forgets one randomly determined spell for the rest of the battle.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Arcane items">
-			<Artefact>
-				<Name>Soulstone</Name>
-				<Type>Arcane</Type>
-				<Points>25</Points>
-				<Rule>Immune to the effects of her first Miscast</Rule>
-				<Description>A Soulstone makes the Sorceress immune to the effects of her first Miscast. Note that a Miscast spell still fails regardless of the actual dice score rolled.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Black Staff</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<Rule>There is no maximum number of Power dice to attempt a spell</Rule>
-				<Description>There is no maximum number of Power dice the wielder can use to attempt a spell.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Darkstar Cloak</Name>
-				<Type>Arcane</Type>
-				<Points>20</Points>
-				<AddToCast>1</AddToCast>
-				<Description>The cloak gives the Sorceress +1 power dice in each of her own Magic phase. Only she may use this extra dice.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Tome of Furion</Name>
-				<Type>Arcane</Type>
-				<Points>15</Points>
-				<Rule>1 additional spell</Rule>
-				<Description>The Tome of Furion grants its bearer one additional spell.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Magic banner">
-			<Artefact>
-				<Name>Banner of Nagarythe</Name>
-				<Type>Banner</Type>
-				<Points>150</Points>
-				<Unbreakable/>
-				<AddToCloseCombat>1</AddToCloseCombat>
-				<Description>This standard adds +1 to the combat resolution of all units withn 6" and the unit carrying the banner is Unbreakable</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hydra Banner</Name>
-				<Type>Banner</Type>
-				<Points>80</Points>
-				<AddToAttacks>1</AddToAttacks>
-				<Description>All models in the unit (including mounts) gain +1 Attack in the first round of any hand-to-hand combat</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dread Banner</Name>
-				<Type>Banner</Type>
-				<Points>75</Points>
-				<Fear/>
-				<Description>The unit carrying this standard causes fear</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Banner of Murder</Name>
-				<Type>Banner</Type>
-				<Points>45</Points>
-				<Rule>+D6" into its charge moves</Rule>
-				<Description>The unit adds +D6" into its charge moves. Declare charges first and then roll. If the charge is failed the unit will move forward its normal failed charge distance.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Standard of Slaughter</Name>
-				<Type>Banner</Type>
-				<Points>35</Points>
-				<AddToCloseCombat>D3</AddToCloseCombat>
-				<Description>The unit gains +D3 to its combat resolution the first time it charges.</Description>
-			</Artefact>
-		</Group>
-		<Group Name="Gifts of Khaine">
-			<Artefact>
-				<Name>Manbane</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<Rule>Counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6</Rule>
-				<Description>A character with a weapon coated with Manbane always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6. In effect, this means that they almost always wound opponents on a roll of 3+. This modified Strength is also used to calculate armour save modifiers.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Black Lotus</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<Rule>For every Wound suffers a enemy model (after saves, etc) also lose 1 point from all of their other characteristics except Movement</Rule>
-				<Description>For every Wound a model suffers from a weapon poisoned with Black Lotus (after saves, etc) they also lose 1 point from all of their other characteristics except Movement. This lasts for the rest of the battle.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dark Venom</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<PoisonAttack/>
-				<Description>The model is considered to have Poisoned Attacks.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Dance of Doom</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<AddToWard>5</AddToWard>
-				<Description>The model has a 5+ Ward save.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Touch of Death</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>30</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<KillingBlow/>
-				<Description>The model has the Killing Blow special ability</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Rune of Khaine</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<AddToAttacks>1</AddToAttacks>
-				<Rule>Must always pursue fleeing enemies</Rule>
-				<Description>The Rune of Khaine grants +1 Attack to its bearer. A model marked with the Rune of Khaine must always pursue fleeing enemies.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Hand of Khaine</Name>
-				<Type>Weapon</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<Rule>Any one model in base contact will lose one Attack</Rule>
-				<Description>Any one model (chosen by a Dark Elf player) in base contact will lose one Attack. Against mounted models, the Dark Elf player must choose either the mount/monster or the rider. If the model has several types of attack (an extra bite, for example) the Dark Elf player chooses which type of attack is lost. Models which are immune to psychology are not affected by the Hand of Khaine.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Witchbrew</Name>
-				<Type>AdditionalArmour</Type>
-				<Points>25</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<Rule>Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground</Rule>
-				<Description>Hags only. The Hag and her unit drink the Witchbrew before the battle. Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground.</Description>
-			</Artefact>
-			<Artefact>
-				<Name>Cry of War</Name>
-				<Type>Weapon</Type>
-				<Points>10</Points>
-				<OnlyForGroup>Khainite</OnlyForGroup>
-				<Rule>A unit charged character must pass a Leadership test or reduce their Weapon Skill by -1 for the duration of that Close Combat phase</Rule>
-				<Description>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by -1 (to a minimum of 1) for the duration of that Close Combat phase.</Description>
-			</Artefact>
-		</Group>
-	</Artefacts>
-	<Heroes>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Malekith</Name>
-			<Points>945</Points>
-			<Wizard>4</Wizard>
-			<Personified/>
-			<Mount>Seraphon</Mount>
-			<Description>Malekith, the Witch King of Naggaroth</Description>
-			<Image>Malekith.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>8</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>8</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<SlotOf>Hero</SlotOf>
-				<MustBeGeneral/>
-				<ImmuneToPsychology/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Use Dark Magic</Rule>
-					<Rule>If your army is led by Malekith, Black Guard are no longer a 0-1 choice - you may include as many units as you have Rare choices</Rule>
-					<Rule>May re-roll missed close combat attacks against High Elves in any round of combat, not just the first round</Rule>
-				</Special>
-				<HandWeapon>
-					<Name>Destroyer</Name>
-					<Rule>If Malekith hits an opponent with a magic weapon or with magic armour, instead of rolling to wound you may choose to destroy one item (opponent's choice)</Rule>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand of Khaine</Name>
-					<StrenghtTo>6</StrenghtTo>
-					<NoArmour/>
-				</HandWeapon>
-				<Armour>
-					<Name>Armour of Midnight</Name>
-					<AddToArmour>5</AddToArmour>
-					<AddToWard>2</AddToWard>
-					<NoMultiWounds/>
-					<Rule>2+ Ward save against non-magical attacks</Rule>
-				</Armour>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Morathi</Name>
-			<Points>470</Points>
-			<Wizard>4</Wizard>
-			<Mount>Dark Pegasus Sulephet</Mount>
-			<Personified/>
-			<Description>Morathi, the Hag Sorceress</Description>
-			<Image>Morathi.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Heartrender</Name>
-					<KillingBlow/>
-					<AddToStrength>2</AddToStrength>
-				</HandWeapon>
-				<Special>
-					<Rule>Always use Dark Magic, you may choose which four spells she has at the start of the battle</Rule>
-					<Rule>Adds +2 to all of her casting rolls</Rule>
-					<Rule>Any Witch Elves within 12" may use her Leadership value, as if she was their army General</Rule>
-				</Special>
-				<Arcane>
-					<Name>Thousand and One Dark Blessing</Name>
-					<AddToWard>4</AddToWard>
-					<Rule>Magic Resistance (1)</Rule>
-				</Arcane>
-				<Arcane>
-					<Name>Enchanting Beauty</Name>
-					<Rule>Any enemy model in base contact with Morathi at the start of round of combat must pass a Leadership test or have their WS reduced to 1 for the duration of that round</Rule>
-				</Arcane>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Malus Darkblade</Name>
-			<Points>350</Points>
-			<Mount>Spite</Mount>
-			<Personified/>
-			<Description>Malus Darkblade, Scion of Hag Graef</Description>
-			<Image>Malus.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>5</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>8</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<SlotOf>Hero</SlotOf>
-				<Frenzy/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Warpsword of Khaine</Name>
-					<NoArmour/>
-					<Reroll>ToWound</Reroll>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Demon>
-					<Name>Tz'arkan</Name>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<AddToToughness>2</AddToToughness>
-					<AddToInitiative>2</AddToInitiative>
-					<Rule>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6: on a 4+ Tz'arkan's murderous rage drives Malus to attack his allies</Rule>
-				</Demon>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>Dark Elf Highborn</Name>
-			<Points>125</Points>
-			<Description>Dark Elf Highborn</Description>
-			<Image>Highborn.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>7</WeaponSkill>
-				<BallisticSkill>6</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>8</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
+	<Content>
+		<Artefacts>
+			<Group Name="Common magic items">
+				<Artefact>
+					<Name>Sword of Striking</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<AddToHit>1</AddToHit>
+					<Description>+1 to Hit</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Battle</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
 					<AddToAttacks>1</AddToAttacks>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
+					<Description>+1 Attack</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Sword of Might</Name>
+					<Type>Weapon</Type>
+					<Points>20</Points>
 					<AddToStrength>1</AddToStrength>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Lance</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<OnlyFor>Mount</OnlyFor>
-					<Lance/>
-				</Option>
-				<Option>
-					<Name>Repeater Crossbow</Name>
-					<Type>Option</Type>
+					<Description>+1 Strenght</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Biting Blade</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<ArmourPiercing>1</ArmourPiercing>
+					<Description>-1 Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Enchanted shield</Name>
+					<Type>Shield</Type>
+					<Points>10</Points>
+					<AddToArmour>5</AddToArmour>
+					<Description>5+ Armour save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Talisman of Protection</Name>
+					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
-					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Sea Dragon Cloak</Name>
-					<Type>Option</Type>
-					<Points>9</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>3</Points>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Points>39</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Dark Steed</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Dark Pegasus</Name>
-					<Type>Option</Type>
-					<Points>55</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Manticore</Name>
-					<Type>Option</Type>
-					<Points>190</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Black Dragon</Name>
-					<Type>Option</Type>
-					<Points>320</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Lord</Type>
-			<Name>High Sorceress</Name>
-			<Points>225</Points>
-			<Wizard>3</Wizard>
-			<Description>High Sorceress</Description>
-			<Image>HighSorceress.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="100" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 4</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Dark Steed</Name>
-					<Type>Option</Type>
-					<Points>18</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Points>39</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Dark Pegasus</Name>
-					<Type>Option</Type>
-					<Points>55</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Manticore</Name>
-					<Type>Option</Type>
-					<Points>190</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Sect Enmity</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Dark Elf Noble</Name>
-			<Points>70</Points>
-			<Description>Dark Elf Noble</Description>
-			<Image>Noble.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>6</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>7</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Great weapon</Name>
-					<Type>Option</Type>
-					<AddToStrength>2</AddToStrength>
+					<AddToWard>6</AddToWard>
+					<Description>6+ ward save</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Staff of Sorcery</Name>
+					<Type>Arcane</Type>
+					<Points>50</Points>
+					<Rule>+1 to dispell</Rule>
+					<Description>+1 to dispell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dispell Scroll</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>Automatically dispel an enemy spell, one use only</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Power Stone</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Multiple/>
+					<Description>+2 dice to cast a spell</Description>
+				</Artefact>
+				<Artefact>
+					<Name>War Banner</Name>
+					<Type>Banner</Type>
+					<Points>25</Points>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>+1 Combat Resolution</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic weapons">
+				<Artefact>
+					<Name>Executioner's Axe</Name>
+					<Type>Weapon</Type>
+					<OnlyFor>Infantry</OnlyFor>
+					<Points>80</Points>
+					<Rule>Strength double that of his target's Toughness</Rule>
+					<WoundOn>2</WoundOn>
 					<HitLast/>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Halberd</Name>
-					<Type>Option</Type>
-					<AddToStrength>1</AddToStrength>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Lance</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<OnlyFor>Mount</OnlyFor>
-					<Lance/>
-				</Option>
-				<Option>
-					<Name>Repeater Crossbow</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-					<Dependencies>
-						<IfNot>Heavy armour</IfNot>
-					</Dependencies>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Heavy armour</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<Dependencies>
-						<IfNot>Light armour</IfNot>
-					</Dependencies>
+					<Description>When rolling to wound in close combat and for armour save modifier purposes, the wielder counts as having a Strength double that of his target's Toughness. However, the Executioner's Axe is two-handed and the wielder always strikes last except in the turn he the turn he charges.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Venom Sword</Name>
+					<Type>Weapon</Type>
+					<Points>75</Points>
+					<Rule>Any model which loses a wound to the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or is automatically slain</Rule>
+					<Description>Any model which loses a wound to the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or is automatically slain.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blade of Ruin</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<NoArmour/>
+					<Description>No armour saves may be taken against hits from the Sword of Ruin. Ward saves may be taken as normal.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hydra Blade</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<Rule>D3 additional attacks</Rule>
+					<Description>A character wielding the Hydra Blade gains D3 additional attacks (roll each Close Combat phase the Hydra Blade is used).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Crimson Death</Name>
+					<Type>Weapon</Type>
+					<Points>35</Points>
+					<StrengthTo>6</StrengthTo>
+					<Description>A model wielding Crimson Death always strikes with Strength 6. No other modifiers will ever reduce this. Requires two hands to use.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Lifetaker</Name>
+					<Type>Weapon</Type>
+					<Points>30</Points>
+					<Rule>Crossbow hits on a 2+, may re-roll to wound</Rule>
+					<Description>Lifetaker is treated like an ordinary repeater crossbow, with the following additional  rules. Lifetaker always hits on 2+, regardless of To Hit modifiers. You may re-roll failed rolls to wound with Lifetaker. Remember that a dice can never be re-rolled more than once.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Web of Shadows</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Enemy automatically takes 2D6 Strength 3 hits, one use only</Rule>
+					<Description>One use only. The character uses the Web of Shadows instead of making any normal attacks that round. When used, one model in base contact with the character automatically takes 2D6 Strength 3 hits. A character with a Web of Shadows may also take an ordinary close combat weapon (but not another magic weapon).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Heartseeker</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Reroll>ToHit</Reroll>
+					<Description>The character may re-roll all missed attacks with Heartseeker. Remember a dice can never be re-rolled more than once.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Chill Blade</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<Rule>Any model wounded may not attack for the rest of that combat round</Rule>
+					<Description>Any model wounded by a Chill Blade (after saves, etc) may not attack for the rest of that combat round.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dark sword</Name>
+					<Type>Weapon</Type>
+					<Points>15</Points>
+					<Rule>Any model losing one or more wounds becomes subject to the rules for stupidity for the remainder of the battle</Rule>
+					<Description>Any model losing one or more wounds (after saves, etc) to the Dark Sword becomes subject to the rules for stupidity for the remainder of the battle.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic armour">
+				<Artefact>
+					<Name>Armour of Living Death</Name>
+					<Type>Armour</Type>
+					<Points>100</Points>
 					<AddToArmour>5</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Sea Dragon Cloak</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
+					<AddToToughness>1</AddToToughness>
+					<AddToWounds>1</AddToWounds>
+					<Description>The Armour of Living Death counts as heavy armour, giving a 5+ armour save, which can be combined with other armour as normal. In addition, the model has +1 Toughness and +1 Wound.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Eternal Servitude</Name>
+					<Type>Armour</Type>
+					<Points>60</Points>
 					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Shield</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
+					<Regeneration/>
+					<Description>This light armour gives a basic 6+ save, which can be combined with other armour as normal. In addition, the wearer can regenerate.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Shield of Ghrond</Name>
+					<Type>Shield</Type>
+					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Dark Steed</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Points>26</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Dark Pegasus</Name>
-					<Type>Option</Type>
-					<Points>55</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Sorceress</Name>
-			<Points>90</Points>
-			<Wizard>3</Wizard>
-			<Description>Sorceress</Description>
-			<Image>Sorceress.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="50" Type="Wizard"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Wizard Level 2</Name>
-					<Type>Option</Type>
-					<Points>40</Points>
+					<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
+					<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Armour of Darkness</Name>
+					<Type>Armour</Type>
+					<Points>25</Points>
+					<ArmourTo>2</ArmourTo>
+					<Description>This armour includers a shield and gives a save of 2+ which cannot be improved in any way.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Blood Armour</Name>
+					<Type>Armour</Type>
+					<Points>20</Points>
+					<AddToArmour>5</AddToArmour>
+					<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
+					<Description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improuved by 1 (to 4+ then 3+, etc) up to maximum of 1+.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Talismans">
+				<Artefact>
+					<Name>Black Amulet</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>50</Points>
+					<AddToWard>5</AddToWard>
+					<Rule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</Rule>
+					<Description>The wearer has a 5+ Ward save against close combat hits. If the wearer of the Black Amulet passes his Ward save then the attacking model suffers 1 wound instead (with no armour save allowed).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Deathmask</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>50</Points>
+					<Terror/>
+					<Description>The wearer of mask causes terror</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Crown of Black Iron</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>35</Points>
+					<AddToWard>5</AddToWard>
+					<Rule>Completely immune to the effects of Light Magic and High Magic</Rule>
+					<Description>The character has a 5+ Ward save. In addition to this, the wearer is completely immune to the effects of Light Magic and High Magic spells. Note that this is not a Dispel and thus other models (excluding the character's mount) may be affected by High Magic and Light Magic. </Description>
+				</Artefact>
+				<Artefact>
+					<Name>Seal of Ghrond</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<AddToDispell>1</AddToDispell>
+					<Description>The seal of Ghrond adds one dice to the Dispel dice pool of the army.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ring of Hotek</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>20</Points>
+					<Rule>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double</Rule>
+					<Description>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double. If they roll a double 6 they cast the spell (with Irresistible Force) and then suffer a Miscast.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Enchanted items">
+				<Artefact>
+					<Name>Rubric of Dark Dimensions</Name>
+					<Type>Weapon</Type>
+					<Points>50</Points>
+					<OnlyFor>Infantry</OnlyFor>
+					<Rule>Bound spell, power level 3, one use only: all enemy models in base contact must roll equal to or under their Strength on a D6 or be slain</Rule>
+					<Description>One use only. Bound spell, power level 5. All enemy models in base contact with the bearer must roll equal to or under their Strength on a D6 (6 always fails) or be sucked into the dimension of Eternal Nightmares (and count as slain!).</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Ring of Darkness</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>45</Points>
+					<Rule>Bound spell, power level 4, remains in play: attacks in close combat against the wearer require a 6 to hit</Rule>
+					<Description>Attacks in close combat against the wearer require a 6 to hit regardless of Weapon Skills and modifiers. Remains in play.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Crystal of Midnight</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<Rule>Bound spell, power level 3, one use only: enemy Wizard must pass a Leadership test on 3D6 otherwise they forget one randomly spell</Rule>
+					<Description>One use only. Nominate a Wizard anywhere on the table. The Wizard must pass a Leadership test on 3D6 otherwise he forgets one randomly determined spell for the rest of the battle.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Arcane items">
+				<Artefact>
+					<Name>Soulstone</Name>
+					<Type>Arcane</Type>
+					<Points>25</Points>
+					<Rule>Immune to the effects of her first Miscast</Rule>
+					<Description>A Soulstone makes the Sorceress immune to the effects of her first Miscast. Note that a Miscast spell still fails regardless of the actual dice score rolled.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Black Staff</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
+					<Rule>There is no maximum number of Power dice to attempt a spell</Rule>
+					<Description>There is no maximum number of Power dice the wielder can use to attempt a spell.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Darkstar Cloak</Name>
+					<Type>Arcane</Type>
+					<Points>20</Points>
 					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
-				</Option>
-				<Option>
-					<Name>Dark Steed</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Points>26</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Sect Enmity</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Beastmaster</Name>
-			<Points>40</Points>
-			<Description>Beastmaster</Description>
-			<Image>Beastmaster.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<MagicItems Points="25" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
+					<Description>The cloak gives the Sorceress +1 power dice in each of her own Magic phase. Only she may use this extra dice.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Tome of Furion</Name>
+					<Type>Arcane</Type>
+					<Points>15</Points>
+					<Rule>1 additional spell</Rule>
+					<Description>The Tome of Furion grants its bearer one additional spell.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Magic banner">
+				<Artefact>
+					<Name>Banner of Nagarythe</Name>
+					<Type>Banner</Type>
+					<Points>150</Points>
+					<Unbreakable/>
+					<AddToCloseCombat>1</AddToCloseCombat>
+					<Description>This standard adds +1 to the combat resolution of all units withn 6" and the unit carrying the banner is Unbreakable</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hydra Banner</Name>
+					<Type>Banner</Type>
+					<Points>80</Points>
 					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-				<Option>
-					<Name>Dark Pegasus</Name>
-					<Type>Option</Type>
-					<Points>55</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Cold One</Name>
-					<Type>Option</Type>
-					<Points>26</Points>
-					<Mount/>
-				</Option>
-				<Option>
-					<Name>Manticore</Name>
-					<Type>Option</Type>
+					<Description>All models in the unit (including mounts) gain +1 Attack in the first round of any hand-to-hand combat</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dread Banner</Name>
+					<Type>Banner</Type>
+					<Points>75</Points>
+					<Fear/>
+					<Description>The unit carrying this standard causes fear</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Banner of Murder</Name>
+					<Type>Banner</Type>
+					<Points>45</Points>
+					<Rule>+D6" into its charge moves</Rule>
+					<Description>The unit adds +D6" into its charge moves. Declare charges first and then roll. If the charge is failed the unit will move forward its normal failed charge distance.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Standard of Slaughter</Name>
+					<Type>Banner</Type>
+					<Points>35</Points>
+					<AddToCloseCombat>D3</AddToCloseCombat>
+					<Description>The unit gains +D3 to its combat resolution the first time it charges.</Description>
+				</Artefact>
+			</Group>
+			<Group Name="Gifts of Khaine">
+				<Artefact>
+					<Name>Manbane</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<Rule>Counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6</Rule>
+					<Description>A character with a weapon coated with Manbane always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6. In effect, this means that they almost always wound opponents on a roll of 3+. This modified Strength is also used to calculate armour save modifiers.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Black Lotus</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<Rule>For every Wound suffers a enemy model (after saves, etc) also lose 1 point from all of their other characteristics except Movement</Rule>
+					<Description>For every Wound a model suffers from a weapon poisoned with Black Lotus (after saves, etc) they also lose 1 point from all of their other characteristics except Movement. This lasts for the rest of the battle.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dark Venom</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<PoisonAttack/>
+					<Description>The model is considered to have Poisoned Attacks.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Dance of Doom</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<AddToWard>5</AddToWard>
+					<Description>The model has a 5+ Ward save.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Touch of Death</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>30</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<KillingBlow/>
+					<Description>The model has the Killing Blow special ability</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Rune of Khaine</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<AddToAttacks>1</AddToAttacks>
+					<Rule>Must always pursue fleeing enemies</Rule>
+					<Description>The Rune of Khaine grants +1 Attack to its bearer. A model marked with the Rune of Khaine must always pursue fleeing enemies.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Hand of Khaine</Name>
+					<Type>Weapon</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<Rule>Any one model in base contact will lose one Attack</Rule>
+					<Description>Any one model (chosen by a Dark Elf player) in base contact will lose one Attack. Against mounted models, the Dark Elf player must choose either the mount/monster or the rider. If the model has several types of attack (an extra bite, for example) the Dark Elf player chooses which type of attack is lost. Models which are immune to psychology are not affected by the Hand of Khaine.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Witchbrew</Name>
+					<Type>AdditionalArmour</Type>
+					<Points>25</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<Rule>Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground</Rule>
+					<Description>Hags only. The Hag and her unit drink the Witchbrew before the battle. Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground.</Description>
+				</Artefact>
+				<Artefact>
+					<Name>Cry of War</Name>
+					<Type>Weapon</Type>
+					<Points>10</Points>
+					<OnlyForGroup>Khainite</OnlyForGroup>
+					<Rule>A unit charged character must pass a Leadership test or reduce their Weapon Skill by -1 for the duration of that Close Combat phase</Rule>
+					<Description>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by -1 (to a minimum of 1) for the duration of that Close Combat phase.</Description>
+				</Artefact>
+			</Group>
+		</Artefacts>
+		<Heroes>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Malekith</Name>
+				<Points>945</Points>
+				<Wizard>4</Wizard>
+				<Personified/>
+				<Mount>Seraphon</Mount>
+				<Description>Malekith, the Witch King of Naggaroth</Description>
+				<Image>Malekith.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>8</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>8</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
 					<SlotOf>Hero</SlotOf>
-					<Points>190</Points>
-					<Mount/>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Whip</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Beastmaster</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-		<Hero>
-			<Type>Hero</Type>
-			<Name>Assassin</Name>
-			<Points>125</Points>
-			<Group>Khainite</Group>
-			<Description>Assassin</Description>
-			<Image>Assassin.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>9</WeaponSkill>
-				<BallisticSkill>9</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>2</Wounds>
-				<Initiative>10</Initiative>
-				<Attacks>3</Attacks>
-				<Leadership>10</Leadership>
-			</Profile>
-			<SpecialRules>
-				<NotALeader/>
-				<MagicItems Points="50" Type="Hero"/>
-			</SpecialRules>
-			<Options>
-				<Option>
-					<Name>Additional weapon</Name>
-					<Type>Option</Type>
-					<AddToAttacks>1</AddToAttacks>
-					<Points>4</Points>
-				</Option>
-			</Options>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Hidden</Rule>
-				</Special>
-			</Equipments>
-		</Hero>
-	</Heroes>
-	<Mounts>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Dark Steed</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Cold One</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>3</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-				<Stupidity/>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Thick-skinned</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Spite</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>3</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Thick-skinned</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Dark Pegasus</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ChargeStrengthBonus>1</ChargeStrengthBonus>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Dark Pegasus Sulephet</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>8</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>4</Toughness>
-				<Wounds>3</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>2</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<SpecialRules>
-				<ChargeStrengthBonus>1</ChargeStrengthBonus>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Fly</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Manticore</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>4</Attacks>
-				<Leadership>5</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<KillingBlow/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Uncontrollable</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Black Dragon</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>3</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Scaly skin</Name>
-					<AddToArmour>3</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Noxious breath</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-		<Mount>
-			<Type>Mount</Type>
-			<Name>Seraphon</Name>
-			<Points>0</Points>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>6</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>6</Strength>
-				<Toughness>6</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>5</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-				<SlotOf>Hero</SlotOf>
-			</SpecialRules>
-			<Equipments>
-				<Armour>
-					<Name>Scaly skin</Name>
-					<AddToArmour>3</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Large target</Rule>
-					<Rule>Fly</Rule>
-					<Rule>Noxious breath</Rule>
-				</Special>
-			</Equipments>
-		</Mount>
-	</Mounts>
-	<Units>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Dark Elf Warriors</Name>
-			<Points>9</Points>
-			<Min>10</Min>
-			<Image>Warriors.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Shields</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Crossbows</Name>
-					<Type>Option</Type>
-					<Points>4</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Lordling</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Corsairs</Name>
-			<Points>10</Points>
-			<Min>10</Min>
-			<Image>Corsairs.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Two hand weapons</Name>
-					<AddToAttacks>1</AddToAttacks>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Sea Dragon cloak</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>5</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-					<MagicItems Points="50" Type="Unit"/>
-				</Option>
-				<Option>
-					<Name>Reaver</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>10</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Core</Type>
-			<Name>Dark Riders</Name>
-			<Points>18</Points>
-			<Min>5</Min>
-			<Mount>Dark Steed</Mount>
-			<Image>DarkRider.jpg</Image>
-			<Profile>
-				<Movement>9</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Spear</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Fast Cavalry</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Crossbows</Name>
-					<Type>Option</Type>
-					<Points>6</Points>
-					<PerModel/>
-				</Option>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-				<Option>
-					<Name>Herald</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Shades</Name>
-			<Points>14</Points>
-			<Min>5</Min>
-			<Image>Shade.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<RangeWeapon>
-					<Name>Repeater crossbow</Name>
-				</RangeWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Skirmishers</Rule>
-					<Rule>Scouts</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Light armour</Name>
-					<Type>Option</Type>
-					<Points>1</Points>
-					<PerModel/>
-					<AddToArmour>6</AddToArmour>
-				</Option>
-				<Option>
-					<Name>Bloodshadde</Name>
-					<Type>Option</Type>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Witch Elves of Khaine</Name>
-			<Group>Khainite</Group>
-			<Points>13</Points>
-			<Min>10</Min>
-			<Image>WitchElves.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Frenzy/>
-				<PoisonAttack/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Two hand weapons</Name>
-					<AddToAttacks>1</AddToAttacks>
-				</HandWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Devotees of Khaine</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<MagicItems Points="50" Type="Unit"/>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Hag</Name>
-					<Type>Option</Type>
-					<MagicItems Points="25" Type="Hero"/>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Cold One Chariot</Name>
-			<Points>95</Points>
-			<Chariot>2</Chariot>
-			<Mount>Cold One</Mount>
-			<Image>ColdOneChariot.jpg</Image>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>4</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>4</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<Stupidity/>
-				<Fear/>
-				<LargeBase/>
-				<ImpactHit>D6</ImpactHit>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Chariot</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Crossbows</Name>
-					<Type>Option</Type>
-					<Points>10</Points>
-				</Option>
-				<Option>
-					<Name>Spears</Name>
-					<Type>Option</Type>
-					<Points>2</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Cold One Knights</Name>
-			<Points>29</Points>
-			<Min>5</Min>
-			<Mount>Cold One</Mount>
-			<Image>ColdOneKnight.jpg</Image>
-			<Profile>
-				<Movement>7</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-				<Armour>5</Armour>
-			</Profile>
-			<SpecialRules>
-				<Stupidity/>
-				<Fear/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Lance</Name>
-					<Lance/>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-				<Armour>
-					<Name>Shields</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
+					<MustBeGeneral/>
+					<ImmuneToPsychology/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Use Dark Magic</Rule>
+						<Rule>If your army is led by Malekith, Black Guard are no longer a 0-1 choice - you may include as many units as you have Rare choices</Rule>
+						<Rule>May re-roll missed close combat attacks against High Elves in any round of combat, not just the first round</Rule>
+					</Special>
+					<HandWeapon>
+						<Name>Destroyer</Name>
+						<Rule>If Malekith hits an opponent with a magic weapon or with magic armour, instead of rolling to wound you may choose to destroy one item (opponent's choice)</Rule>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand of Khaine</Name>
+						<StrenghtTo>6</StrenghtTo>
+						<NoArmour/>
+					</HandWeapon>
+					<Armour>
+						<Name>Armour of Midnight</Name>
+						<AddToArmour>5</AddToArmour>
+						<AddToWard>2</AddToWard>
+						<NoMultiWounds/>
+						<Rule>2+ Ward save against non-magical attacks</Rule>
+					</Armour>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Morathi</Name>
+				<Points>470</Points>
+				<Wizard>4</Wizard>
+				<Mount>Dark Pegasus Sulephet</Mount>
+				<Personified/>
+				<Description>Morathi, the Hag Sorceress</Description>
+				<Image>Morathi.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Heartrender</Name>
+						<KillingBlow/>
+						<AddToStrength>2</AddToStrength>
+					</HandWeapon>
+					<Special>
+						<Rule>Always use Dark Magic, you may choose which four spells she has at the start of the battle</Rule>
+						<Rule>Adds +2 to all of her casting rolls</Rule>
+						<Rule>Any Witch Elves within 12" may use her Leadership value, as if she was their army General</Rule>
+					</Special>
+					<Arcane>
+						<Name>Thousand and One Dark Blessing</Name>
+						<AddToWard>4</AddToWard>
+						<Rule>Magic Resistance (1)</Rule>
+					</Arcane>
+					<Arcane>
+						<Name>Enchanting Beauty</Name>
+						<Rule>Any enemy model in base contact with Morathi at the start of round of combat must pass a Leadership test or have their WS reduced to 1 for the duration of that round</Rule>
+					</Arcane>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Malus Darkblade</Name>
+				<Points>350</Points>
+				<Mount>Spite</Mount>
+				<Personified/>
+				<Description>Malus Darkblade, Scion of Hag Graef</Description>
+				<Image>Malus.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>5</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>8</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<SlotOf>Hero</SlotOf>
+					<Frenzy/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Warpsword of Khaine</Name>
+						<NoArmour/>
+						<Reroll>ToWound</Reroll>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Demon>
+						<Name>Tz'arkan</Name>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToStrength>1</AddToStrength>
+						<AddToToughness>2</AddToToughness>
+						<AddToInitiative>2</AddToInitiative>
+						<Rule>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6: on a 4+ Tz'arkan's murderous rage drives Malus to attack his allies</Rule>
+					</Demon>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>Dark Elf Highborn</Name>
+				<Points>125</Points>
+				<Description>Dark Elf Highborn</Description>
+				<Image>Highborn.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>7</WeaponSkill>
+					<BallisticSkill>6</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>8</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Lance</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<OnlyFor>Mount</OnlyFor>
+						<Lance/>
+					</Option>
+					<Option>
+						<Name>Repeater Crossbow</Name>
+						<Type>Option</Type>
+						<Points>15</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Sea Dragon Cloak</Name>
+						<Type>Option</Type>
+						<Points>9</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>3</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Cold One</Name>
+						<Type>Option</Type>
+						<Points>39</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Dark Steed</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Dark Pegasus</Name>
+						<Type>Option</Type>
+						<Points>55</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Manticore</Name>
+						<Type>Option</Type>
+						<Points>190</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Black Dragon</Name>
+						<Type>Option</Type>
+						<Points>320</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
 					<Special>
 						<Rule>Hate High Elves</Rule>
-						<Rule>Thick-skinned</Rule>
 					</Special>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>9</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<MagicItems Points="50" Type="Unit"/>
-					<FullCommand/>
-					<Points>18</Points>
-				</Option>
-				<Option>
-					<Name>Dread Knight</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>18</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Executioners</Name>
-			<Points>11</Points>
-			<Min>10</Min>
-			<Image>Executioners.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>5</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>8</Leadership>
-			</Profile>
-			<SpecialRules>
-				<KillingBlow/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Great weapon</Name>
-					<AddToStrength>2</AddToStrength>
-					<HitLast/>
-				</HandWeapon>
-				<HandWeapon>
-					<Name>Hand weapon</Name>
-				</HandWeapon>
-				<Armour>
-					<Name>Light armour</Name>
-					<AddToArmour>6</AddToArmour>
-				</Armour>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-				</Special>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>6</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<MagicItems Points="50" Type="Unit"/>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-				<Option>
-					<Name>Draich-master</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>12</Points>
-				</Option>
-			</Options>
-		</Unit>
-		<Unit>
-			<Type>Special</Type>
-			<Name>Harpies</Name>
-			<Points>13</Points>
-			<Min>5</Min>
-			<Max>20</Max>
-			<UniqueUnits/>
-			<Image>Harpies.jpg</Image>
-			<Profile>
-				<Movement>4</Movement>
-				<WeaponSkill>3</WeaponSkill>
-				<BallisticSkill>3</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>4</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>6</Leadership>
-			</Profile>
-			<Equipments>
-				<HandWeapon>
-					<Name>Vicious claws and temperament</Name>
-					<AddToAttacks>1</AddToAttacks>
-				</HandWeapon>
-				<Special>
-					<Rule>Flying Unit</Rule>
-					<Rule>Beasts</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>War Hydra</Name>
-			<Points>220</Points>
-			<Image>WarHydra.jpg</Image>
-			<Profile>
-				<Movement>6</Movement>
-				<WeaponSkill>4</WeaponSkill>
-				<BallisticSkill>0</BallisticSkill>
-				<Strength>5</Strength>
-				<Toughness>5</Toughness>
-				<Wounds>6</Wounds>
-				<Initiative>2</Initiative>
-				<Attacks>7</Attacks>
-				<Leadership>6</Leadership>
-				<Armour>4</Armour>
-			</Profile>
-			<SpecialRules>
-				<Terror/>
-				<LargeBase/>
-			</SpecialRules>
-			<Equipments>
-				<Special>
-					<Rule>Hate High Elves</Rule>
-					<Rule>Large target</Rule>
-					<Rule>Breathe Fire</Rule>
-				</Special>
-			</Equipments>
-		</Unit>
-		<Unit>
-			<Type>Rare</Type>
-			<Name>Black Guard</Name>
-			<Points>16</Points>
-			<Min>10</Min>
-			<UniqueUnits/>
-			<Image>BlackGuard.jpg</Image>
-			<Profile>
-				<Movement>5</Movement>
-				<WeaponSkill>5</WeaponSkill>
-				<BallisticSkill>4</BallisticSkill>
-				<Strength>3</Strength>
-				<Toughness>3</Toughness>
-				<Wounds>1</Wounds>
-				<Initiative>6</Initiative>
-				<Attacks>1</Attacks>
-				<Leadership>9</Leadership>
-			</Profile>
-			<SpecialRules>
-				<Stubborn/>
-				<Hate/>
-			</SpecialRules>
-			<Equipments>
-				<HandWeapon>
-					<Name>Halberd</Name>
-					<AddToStrength>1</AddToStrength>
-				</HandWeapon>
-				<Armour>
-					<Name>Heavy armour</Name>
-					<AddToArmour>5</AddToArmour>
-				</Armour>
-			</Equipments>
-			<Options>
-				<Option>
-					<Name>Musician</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>7</Points>
-				</Option>
-				<Option>
-					<Name>Standard bearer</Name>
-					<Type>Option</Type>
-					<MagicItems Points="75" Type="Unit"/>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-				<Option>
-					<Name>Master</Name>
-					<Type>Option</Type>
-					<FullCommand/>
-					<Points>14</Points>
-				</Option>
-			</Options>
-		</Unit>
-	</Units>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Lord</Type>
+				<Name>High Sorceress</Name>
+				<Points>225</Points>
+				<Wizard>3</Wizard>
+				<Description>High Sorceress</Description>
+				<Image>HighSorceress.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 4</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Dark Steed</Name>
+						<Type>Option</Type>
+						<Points>18</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Cold One</Name>
+						<Type>Option</Type>
+						<Points>39</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Dark Pegasus</Name>
+						<Type>Option</Type>
+						<Points>55</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Manticore</Name>
+						<Type>Option</Type>
+						<Points>190</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Sect Enmity</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Dark Elf Noble</Name>
+				<Points>70</Points>
+				<Description>Dark Elf Noble</Description>
+				<Image>Noble.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>6</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>7</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Great weapon</Name>
+						<Type>Option</Type>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Halberd</Name>
+						<Type>Option</Type>
+						<AddToStrength>1</AddToStrength>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Lance</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<OnlyFor>Mount</OnlyFor>
+						<Lance/>
+					</Option>
+					<Option>
+						<Name>Repeater Crossbow</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<Dependencies>
+							<IfNot>Heavy armour</IfNot>
+						</Dependencies>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Heavy armour</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<Dependencies>
+							<IfNot>Light armour</IfNot>
+						</Dependencies>
+						<AddToArmour>5</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Sea Dragon Cloak</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Shield</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Dark Steed</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Cold One</Name>
+						<Type>Option</Type>
+						<Points>26</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Dark Pegasus</Name>
+						<Type>Option</Type>
+						<Points>55</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Sorceress</Name>
+				<Points>90</Points>
+				<Wizard>3</Wizard>
+				<Description>Sorceress</Description>
+				<Image>Sorceress.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Wizard Level 2</Name>
+						<Type>Option</Type>
+						<Points>40</Points>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
+					</Option>
+					<Option>
+						<Name>Dark Steed</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Cold One</Name>
+						<Type>Option</Type>
+						<Points>26</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Sect Enmity</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Beastmaster</Name>
+				<Points>40</Points>
+				<Description>Beastmaster</Description>
+				<Image>Beastmaster.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<MagicItems Points="25" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+					<Option>
+						<Name>Dark Pegasus</Name>
+						<Type>Option</Type>
+						<Points>55</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Cold One</Name>
+						<Type>Option</Type>
+						<Points>26</Points>
+						<Mount/>
+					</Option>
+					<Option>
+						<Name>Manticore</Name>
+						<Type>Option</Type>
+						<SlotOf>Hero</SlotOf>
+						<Points>190</Points>
+						<Mount/>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Whip</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Beastmaster</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+			<Hero>
+				<Type>Hero</Type>
+				<Name>Assassin</Name>
+				<Points>125</Points>
+				<Group>Khainite</Group>
+				<Description>Assassin</Description>
+				<Image>Assassin.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>9</WeaponSkill>
+					<BallisticSkill>9</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>2</Wounds>
+					<Initiative>10</Initiative>
+					<Attacks>3</Attacks>
+					<Leadership>10</Leadership>
+				</Profile>
+				<SpecialRules>
+					<NotALeader/>
+					<MagicItems Points="50" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Option>
+						<Name>Additional weapon</Name>
+						<Type>Option</Type>
+						<AddToAttacks>1</AddToAttacks>
+						<Points>4</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Hidden</Rule>
+					</Special>
+				</Equipments>
+			</Hero>
+		</Heroes>
+		<Mounts>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Dark Steed</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Cold One</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>3</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+					<Stupidity/>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Thick-skinned</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Spite</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>3</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Thick-skinned</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Dark Pegasus</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ChargeStrengthBonus>1</ChargeStrengthBonus>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Dark Pegasus Sulephet</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>8</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>4</Toughness>
+					<Wounds>3</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>2</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<SpecialRules>
+					<ChargeStrengthBonus>1</ChargeStrengthBonus>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Fly</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Manticore</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>4</Attacks>
+					<Leadership>5</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<KillingBlow/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Uncontrollable</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Black Dragon</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>3</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Scaly skin</Name>
+						<AddToArmour>3</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Noxious breath</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Type>Mount</Type>
+				<Name>Seraphon</Name>
+				<Points>0</Points>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>6</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>6</Strength>
+					<Toughness>6</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>5</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+					<SlotOf>Hero</SlotOf>
+				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Scaly skin</Name>
+						<AddToArmour>3</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Large target</Rule>
+						<Rule>Fly</Rule>
+						<Rule>Noxious breath</Rule>
+					</Special>
+				</Equipments>
+			</Mount>
+		</Mounts>
+		<Units>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Dark Elf Warriors</Name>
+				<Points>9</Points>
+				<Min>10</Min>
+				<Image>Warriors.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Shields</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Crossbows</Name>
+						<Type>Option</Type>
+						<Points>4</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Lordling</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Corsairs</Name>
+				<Points>10</Points>
+				<Min>10</Min>
+				<Image>Corsairs.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Two hand weapons</Name>
+						<AddToAttacks>1</AddToAttacks>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Sea Dragon cloak</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>5</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+						<MagicItems Points="50" Type="Unit"/>
+					</Option>
+					<Option>
+						<Name>Reaver</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>10</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Core</Type>
+				<Name>Dark Riders</Name>
+				<Points>18</Points>
+				<Min>5</Min>
+				<Mount>Dark Steed</Mount>
+				<Image>DarkRider.jpg</Image>
+				<Profile>
+					<Movement>9</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Spear</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Fast Cavalry</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Crossbows</Name>
+						<Type>Option</Type>
+						<Points>6</Points>
+						<PerModel/>
+					</Option>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+					<Option>
+						<Name>Herald</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Shades</Name>
+				<Points>14</Points>
+				<Min>5</Min>
+				<Image>Shade.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<RangeWeapon>
+						<Name>Repeater crossbow</Name>
+					</RangeWeapon>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Skirmishers</Rule>
+						<Rule>Scouts</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Light armour</Name>
+						<Type>Option</Type>
+						<Points>1</Points>
+						<PerModel/>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+					<Option>
+						<Name>Bloodshadde</Name>
+						<Type>Option</Type>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Witch Elves of Khaine</Name>
+				<Group>Khainite</Group>
+				<Points>13</Points>
+				<Min>10</Min>
+				<Image>WitchElves.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Frenzy/>
+					<PoisonAttack/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Two hand weapons</Name>
+						<AddToAttacks>1</AddToAttacks>
+					</HandWeapon>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Devotees of Khaine</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<MagicItems Points="50" Type="Unit"/>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Hag</Name>
+						<Type>Option</Type>
+						<MagicItems Points="25" Type="Hero"/>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Cold One Chariot</Name>
+				<Points>95</Points>
+				<Chariot>2</Chariot>
+				<Mount>Cold One</Mount>
+				<Image>ColdOneChariot.jpg</Image>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>4</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>4</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<Stupidity/>
+					<Fear/>
+					<LargeBase/>
+					<ImpactHit>D6</ImpactHit>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Chariot</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Crossbows</Name>
+						<Type>Option</Type>
+						<Points>10</Points>
+					</Option>
+					<Option>
+						<Name>Spears</Name>
+						<Type>Option</Type>
+						<Points>2</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Cold One Knights</Name>
+				<Points>29</Points>
+				<Min>5</Min>
+				<Mount>Cold One</Mount>
+				<Image>ColdOneKnight.jpg</Image>
+				<Profile>
+					<Movement>7</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+					<Armour>5</Armour>
+				</Profile>
+				<SpecialRules>
+					<Stupidity/>
+					<Fear/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Lance</Name>
+						<Lance/>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+					<Armour>
+						<Name>Shields</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Special>
+							<Rule>Hate High Elves</Rule>
+							<Rule>Thick-skinned</Rule>
+						</Special>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>9</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<MagicItems Points="50" Type="Unit"/>
+						<FullCommand/>
+						<Points>18</Points>
+					</Option>
+					<Option>
+						<Name>Dread Knight</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>18</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Executioners</Name>
+				<Points>11</Points>
+				<Min>10</Min>
+				<Image>Executioners.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>5</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>8</Leadership>
+				</Profile>
+				<SpecialRules>
+					<KillingBlow/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Great weapon</Name>
+						<AddToStrength>2</AddToStrength>
+						<HitLast/>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>Hand weapon</Name>
+					</HandWeapon>
+					<Armour>
+						<Name>Light armour</Name>
+						<AddToArmour>6</AddToArmour>
+					</Armour>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+					</Special>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>6</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<MagicItems Points="50" Type="Unit"/>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+					<Option>
+						<Name>Draich-master</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>12</Points>
+					</Option>
+				</Options>
+			</Unit>
+			<Unit>
+				<Type>Special</Type>
+				<Name>Harpies</Name>
+				<Points>13</Points>
+				<Min>5</Min>
+				<Max>20</Max>
+				<UniqueUnits/>
+				<Image>Harpies.jpg</Image>
+				<Profile>
+					<Movement>4</Movement>
+					<WeaponSkill>3</WeaponSkill>
+					<BallisticSkill>3</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>4</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>6</Leadership>
+				</Profile>
+				<Equipments>
+					<HandWeapon>
+						<Name>Vicious claws and temperament</Name>
+						<AddToAttacks>1</AddToAttacks>
+					</HandWeapon>
+					<Special>
+						<Rule>Flying Unit</Rule>
+						<Rule>Beasts</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>War Hydra</Name>
+				<Points>220</Points>
+				<Image>WarHydra.jpg</Image>
+				<Profile>
+					<Movement>6</Movement>
+					<WeaponSkill>4</WeaponSkill>
+					<BallisticSkill>0</BallisticSkill>
+					<Strength>5</Strength>
+					<Toughness>5</Toughness>
+					<Wounds>6</Wounds>
+					<Initiative>2</Initiative>
+					<Attacks>7</Attacks>
+					<Leadership>6</Leadership>
+					<Armour>4</Armour>
+				</Profile>
+				<SpecialRules>
+					<Terror/>
+					<LargeBase/>
+				</SpecialRules>
+				<Equipments>
+					<Special>
+						<Rule>Hate High Elves</Rule>
+						<Rule>Large target</Rule>
+						<Rule>Breathe Fire</Rule>
+					</Special>
+				</Equipments>
+			</Unit>
+			<Unit>
+				<Type>Rare</Type>
+				<Name>Black Guard</Name>
+				<Points>16</Points>
+				<Min>10</Min>
+				<UniqueUnits/>
+				<Image>BlackGuard.jpg</Image>
+				<Profile>
+					<Movement>5</Movement>
+					<WeaponSkill>5</WeaponSkill>
+					<BallisticSkill>4</BallisticSkill>
+					<Strength>3</Strength>
+					<Toughness>3</Toughness>
+					<Wounds>1</Wounds>
+					<Initiative>6</Initiative>
+					<Attacks>1</Attacks>
+					<Leadership>9</Leadership>
+				</Profile>
+				<SpecialRules>
+					<Stubborn/>
+					<Hate/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Halberd</Name>
+						<AddToStrength>1</AddToStrength>
+					</HandWeapon>
+					<Armour>
+						<Name>Heavy armour</Name>
+						<AddToArmour>5</AddToArmour>
+					</Armour>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Musician</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>7</Points>
+					</Option>
+					<Option>
+						<Name>Standard bearer</Name>
+						<Type>Option</Type>
+						<MagicItems Points="75" Type="Unit"/>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+					<Option>
+						<Name>Master</Name>
+						<Type>Option</Type>
+						<FullCommand/>
+						<Points>14</Points>
+					</Option>
+				</Options>
+			</Unit>
+		</Units>
+	</Content>
 </ArmyBook>
