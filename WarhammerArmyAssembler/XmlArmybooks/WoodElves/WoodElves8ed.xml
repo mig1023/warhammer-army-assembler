@@ -876,8 +876,8 @@
 						<Name>Asrai spear</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Additional weapon</IfNot>
-							<IfNot>Great weapon</IfNot>
+							<Off>Additional weapon</Off>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<Points>3</Points>
 					</Option>
@@ -887,8 +887,8 @@
 						<OnlyFor>Infantry</OnlyFor>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
-							<IfNot>Asrai spear</IfNot>
-							<IfNot>Great weapon</IfNot>
+							<Off>Asrai spear</Off>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<Points>3</Points>
 					</Option>
@@ -898,8 +898,8 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
-							<IfNot>Asrai spear</IfNot>
-							<IfNot>Additional weapon</IfNot>
+							<Off>Asrai spear</Off>
+							<Off>Additional weapon</Off>
 						</Dependencies>
 						<Points>6</Points>
 					</Option>
@@ -914,11 +914,11 @@
 						<Type>Option</Type>
 						<Points>3</Points>
 						<Dependencies>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -926,11 +926,11 @@
 						<Type>Option</Type>
 						<Points>3</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -938,11 +938,11 @@
 						<Type>Option</Type>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -950,11 +950,11 @@
 						<Type>Option</Type>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -962,11 +962,11 @@
 						<Type>Option</Type>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -974,11 +974,11 @@
 						<Type>Option</Type>
 						<Points>5</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1127,7 +1127,7 @@
 						<Type>Option</Type>
 						<Points>35</Points>
 						<Dependencies>
-							<IfNot>Wizard Level 4</IfNot>
+							<Off>Wizard Level 4</Off>
 						</Dependencies>
 						<AddToCast>1</AddToCast>
 						<AddToDispell>1</AddToDispell>
@@ -1138,7 +1138,7 @@
 						<Type>Option</Type>
 						<Points>70</Points>
 						<Dependencies>
-							<IfNot>Wizard Level 3</IfNot>
+							<Off>Wizard Level 3</Off>
 						</Dependencies>
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
@@ -1216,8 +1216,8 @@
 						<Name>Asrai spear</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Additional weapon</IfNot>
-							<IfNot>Great weapon</IfNot>
+							<Off>Additional weapon</Off>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<Points>2</Points>
 					</Option>
@@ -1227,8 +1227,8 @@
 						<OnlyFor>Infantry</OnlyFor>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
-							<IfNot>Asrai spear</IfNot>
-							<IfNot>Great weapon</IfNot>
+							<Off>Asrai spear</Off>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<Points>2</Points>
 					</Option>
@@ -1238,8 +1238,8 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
-							<IfNot>Asrai spear</IfNot>
-							<IfNot>Additional weapon</IfNot>
+							<Off>Asrai spear</Off>
+							<Off>Additional weapon</Off>
 						</Dependencies>
 						<Points>4</Points>
 					</Option>
@@ -1254,11 +1254,11 @@
 						<Type>Option</Type>
 						<Points>3</Points>
 						<Dependencies>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1266,11 +1266,11 @@
 						<Type>Option</Type>
 						<Points>3</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1278,11 +1278,11 @@
 						<Type>Option</Type>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1290,11 +1290,11 @@
 						<Type>Option</Type>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1302,11 +1302,11 @@
 						<Type>Option</Type>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1314,11 +1314,11 @@
 						<Type>Option</Type>
 						<Points>5</Points>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1808,11 +1808,11 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1821,11 +1821,11 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1834,11 +1834,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1847,11 +1847,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1860,11 +1860,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1873,11 +1873,11 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1981,11 +1981,11 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1994,11 +1994,11 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2007,11 +2007,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2020,11 +2020,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2033,11 +2033,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2046,11 +2046,11 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2327,11 +2327,11 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2340,11 +2340,11 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2353,11 +2353,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2366,11 +2366,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Swiftshiver shards</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2379,11 +2379,11 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Arcane bodkins</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Arcane bodkins</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2392,11 +2392,11 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Hagbane tips</IfNot>
-							<IfNot>Trueflight arrows</IfNot>
-							<IfNot>Moontire shot</IfNot>
-							<IfNot>Starfire shafts</IfNot>
-							<IfNot>Swiftshiver shards</IfNot>
+							<Off>Hagbane tips</Off>
+							<Off>Trueflight arrows</Off>
+							<Off>Moontire shot</Off>
+							<Off>Starfire shafts</Off>
+							<Off>Swiftshiver shards</Off>
 						</Dependencies>
 					</Option>
 					<Option>
