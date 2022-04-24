@@ -968,8 +968,8 @@
 						<HitLast/>
 						<Points>6</Points>
 						<Dependencies>
-							<IfNot>Dwarf crossbow</IfNot>
-							<IfNot>Dwarf handgun</IfNot>
+							<Off>Dwarf crossbow</Off>
+							<Off>Dwarf handgun</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -977,8 +977,8 @@
 						<Type>Option</Type>
 						<Points>12</Points>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
-							<IfNot>Dwarf handgun</IfNot>
+							<Off>Great weapon</Off>
+							<Off>Dwarf handgun</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -986,8 +986,8 @@
 						<Type>Option</Type>
 						<Points>12</Points>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
-							<IfNot>Dwarf crossbow</IfNot>
+							<Off>Great weapon</Off>
+							<Off>Dwarf crossbow</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1009,7 +1009,7 @@
 						<AddToWounds>2</AddToWounds>
 						<Mount/>
 						<Dependencies>
-							<IfNot>Oath Stone</IfNot>
+							<Off>Oath Stone</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1017,7 +1017,7 @@
 						<Type>Option</Type>
 						<Points>25</Points>
 						<Dependencies>
-							<IfNot>Shieldbearers</IfNot>
+							<Off>Shieldbearers</Off>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -1270,8 +1270,8 @@
 						<HitLast/>
 						<Points>6</Points>
 						<Dependencies>
-							<IfNot>Dwarf crossbow</IfNot>
-							<IfNot>Dwarf handgun</IfNot>
+							<Off>Dwarf crossbow</Off>
+							<Off>Dwarf handgun</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1279,8 +1279,8 @@
 						<Type>Option</Type>
 						<Points>12</Points>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
-							<IfNot>Dwarf handgun</IfNot>
+							<Off>Great weapon</Off>
+							<Off>Dwarf handgun</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1288,8 +1288,8 @@
 						<Type>Option</Type>
 						<Points>12</Points>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
-							<IfNot>Dwarf crossbow</IfNot>
+							<Off>Great weapon</Off>
+							<Off>Dwarf crossbow</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1419,7 +1419,7 @@
 						<Type>Option</Type>
 						<Points>6</Points>
 						<Dependencies>
-							<IfNot>Brace of Dwarf pistols</IfNot>
+							<Off>Brace of Dwarf pistols</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1427,7 +1427,7 @@
 						<Type>Option</Type>
 						<Points>10</Points>
 						<Dependencies>
-							<IfNot>Dwarf pistol</IfNot>
+							<Off>Dwarf pistol</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1742,7 +1742,7 @@
 						<Type>Option</Type>
 						<Points>0</Points>
 						<Dependencies>
-							<If>Veteran</If>
+							<On>Veteran</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1953,7 +1953,7 @@
 						<Type>Option</Type>
 						<Points>0</Points>
 						<Dependencies>
-							<If>Ironbeard</If>
+							<On>Ironbeard</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1961,7 +1961,7 @@
 						<Type>Option</Type>
 						<Points>15</Points>
 						<Dependencies>
-							<If>Ironbeard</If>
+							<On>Ironbeard</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2038,7 +2038,7 @@
 						<Points>25</Points>
 						<Rule>Can re-roll a failed arrival for its Ambushers special rule</Rule>
 						<Dependencies>
-							<If>Prospector</If>
+							<On>Prospector</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2470,7 +2470,7 @@
 						<Type>Option</Type>
 						<Points>15</Points>
 						<Dependencies>
-							<If>Ironwarden</If>
+							<On>Ironwarden</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2478,8 +2478,8 @@
 						<Type>Option</Type>
 						<Points>0</Points>
 						<Dependencies>
-							<If>Ironwarden</If>
-							<IfNot>Trollhammer torpedo</IfNot>
+							<On>Ironwarden</On>
+							<Off>Trollhammer torpedo</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2487,8 +2487,8 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<If>Ironwarden</If>
-							<IfNot>Brace of Drakefire pistols</IfNot>
+							<On>Ironwarden</On>
+							<Off>Brace of Drakefire pistols</Off>
 						</Dependencies>
 					</Option>
 					<Option>
