@@ -573,8 +573,8 @@
 						<Type>Option</Type>
 						<Points>40</Points>
 						<Dependencies>
-							<IfNot>Third Generation</IfNot>
-							<IfNot>Second Generation</IfNot>
+							<Off>Third Generation</Off>
+							<Off>Second Generation</Off>
 						</Dependencies>
 						<Rule>No roll on the Miscast Table</Rule>
 					</Option>
@@ -585,8 +585,8 @@
 						<AddToWounds>1</AddToWounds>
 						<Points>85</Points>
 						<Dependencies>
-							<IfNot>Fourth Generation</IfNot>
-							<IfNot>Second Generation</IfNot>
+							<Off>Fourth Generation</Off>
+							<Off>Second Generation</Off>
 						</Dependencies>
 						<Rule>No roll on the Miscast Table</Rule>
 						<Rule>Drain Magic spell</Rule>
@@ -599,8 +599,8 @@
 						<AddToWounds>2</AddToWounds>
 						<Points>135</Points>
 						<Dependencies>
-							<IfNot>Fourth Generation</IfNot>
-							<IfNot>Third Generation</IfNot>
+							<Off>Fourth Generation</Off>
+							<Off>Third Generation</Off>
 						</Dependencies>
 						<Rule>No roll on the Miscast Table</Rule>
 						<Rule>Drain Magic spell</Rule>
@@ -684,7 +684,7 @@
 						<Name>Cold One</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<If>Blessed Spawning of Itzl</If>
+							<On>Blessed Spawning of Itzl</On>
 						</Dependencies>
 						<Points>37</Points>
 						<Mount/>
@@ -693,7 +693,7 @@
 						<Name>Carnosaur</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<If>Blessed Spawning of Itzl</If>
+							<On>Blessed Spawning of Itzl</On>
 						</Dependencies>
 						<Points>210</Points>
 						<Mount/>
@@ -764,7 +764,7 @@
 						<Name>Cold One</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<If>Blessed Spawning of Itzl</If>
+							<On>Blessed Spawning of Itzl</On>
 						</Dependencies>
 						<Points>23</Points>
 						<Mount/>
@@ -810,7 +810,7 @@
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Spear</IfNot>
+							<Off>Spear</Off>
 						</Dependencies>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
@@ -819,7 +819,7 @@
 						<Name>Spear</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Additional weapon</IfNot>
+							<Off>Additional weapon</Off>
 						</Dependencies>
 						<Points>4</Points>
 					</Option>
@@ -827,7 +827,7 @@
 						<Name>Blowpipe</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Javelins</IfNot>
+							<Off>Javelins</Off>
 						</Dependencies>
 						<Points>8</Points>
 					</Option>
@@ -835,7 +835,7 @@
 						<Name>Javelins</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Blowpipe</IfNot>
+							<Off>Blowpipe</Off>
 						</Dependencies>
 						<Points>8</Points>
 					</Option>
