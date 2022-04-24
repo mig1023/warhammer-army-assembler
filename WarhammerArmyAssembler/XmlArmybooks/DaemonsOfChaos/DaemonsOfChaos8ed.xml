@@ -943,7 +943,7 @@
 						<AddToCast>1</AddToCast>
 						<AddToDispell>1</AddToDispell>
 						<Dependencies>
-							<IfNot>Wizard level 4</IfNot>
+							<Off>Wizard level 4</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -954,7 +954,7 @@
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
 						<Dependencies>
-							<IfNot>Wizard level 3</IfNot>
+							<Off>Wizard level 3</Off>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -1098,9 +1098,9 @@
 						<Rule>Re-roll Ward save results of 1</Rule>
 						<Rule>Re-roll Channelling results of 1</Rule>
 						<Dependencies>
-							<IfNot>Daemon of Slaanesh</IfNot>
-							<IfNot>Daemon of Khorne</IfNot>
-							<IfNot>Daemon of Nurgle</IfNot>
+							<Off>Daemon of Slaanesh</Off>
+							<Off>Daemon of Khorne</Off>
+							<Off>Daemon of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1109,9 +1109,9 @@
 						<Points>0</Points>
 						<ArmourPiercing>1</ArmourPiercing>
 						<Dependencies>
-							<IfNot>Daemon of Tzeentch</IfNot>
-							<IfNot>Daemon of Khorne</IfNot>
-							<IfNot>Daemon of Nurgle</IfNot>
+							<Off>Daemon of Tzeentch</Off>
+							<Off>Daemon of Khorne</Off>
+							<Off>Daemon of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1120,9 +1120,9 @@
 						<Points>5</Points>
 						<Rule>On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</Rule>
 						<Dependencies>
-							<IfNot>Daemon of Tzeentch</IfNot>
-							<IfNot>Daemon of Slaanesh</IfNot>
-							<IfNot>Daemon of Nurgle</IfNot>
+							<Off>Daemon of Tzeentch</Off>
+							<Off>Daemon of Slaanesh</Off>
+							<Off>Daemon of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1131,9 +1131,9 @@
 						<Points>5</Points>
 						<SubOpponentToHit>1</SubOpponentToHit>
 						<Dependencies>
-							<IfNot>Daemon of Tzeentch</IfNot>
-							<IfNot>Daemon of Slaanesh</IfNot>
-							<IfNot>Daemon of Khorne</IfNot>
+							<Off>Daemon of Tzeentch</Off>
+							<Off>Daemon of Slaanesh</Off>
+							<Off>Daemon of Khorne</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1414,8 +1414,8 @@
 						<Points>30</Points>
 						<Rule>+1 Magic Resistance</Rule>
 						<Dependencies>
-							<IfNot>Greater Locus of Fury</IfNot>
-							<IfNot>Exalted Locus of Wrath</IfNot>
+							<Off>Greater Locus of Fury</Off>
+							<Off>Exalted Locus of Wrath</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1424,8 +1424,8 @@
 						<Points>60</Points>
 						<Frenzy/>
 						<Dependencies>
-							<IfNot>Lesser Locus of Abjuration</IfNot>
-							<IfNot>Exalted Locus of Wrath</IfNot>
+							<Off>Lesser Locus of Abjuration</Off>
+							<Off>Exalted Locus of Wrath</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1434,8 +1434,8 @@
 						<Points>75</Points>
 						<Hate/>
 						<Dependencies>
-							<IfNot>Lesser Locus of Abjuration</IfNot>
-							<IfNot>Greater Locus of Fury</IfNot>
+							<Off>Lesser Locus of Abjuration</Off>
+							<Off>Greater Locus of Fury</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1505,8 +1505,8 @@
 						<Points>25</Points>
 						<Rule>When a model is slain, place D3+1 Blue Horror</Rule>
 						<Dependencies>
-							<IfNot>Greater Locus of Change</IfNot>
-							<IfNot>Exalted Locus of Conjuration</IfNot>
+							<Off>Greater Locus of Change</Off>
+							<Off>Exalted Locus of Conjuration</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1515,8 +1515,8 @@
 						<Points>35</Points>
 						<Rule>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</Rule>
 						<Dependencies>
-							<IfNot>Lesser Locus of Transmogrification</IfNot>
-							<IfNot>Exalted Locus of Conjuration</IfNot>
+							<Off>Lesser Locus of Transmogrification</Off>
+							<Off>Exalted Locus of Conjuration</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1525,8 +1525,8 @@
 						<Points>50</Points>
 						<Rule>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</Rule>
 						<Dependencies>
-							<IfNot>Lesser Locus of Transmogrification</IfNot>
-							<IfNot>Greater Locus of Chang</IfNot>
+							<Off>Lesser Locus of Transmogrification</Off>
+							<Off>Greater Locus of Chang</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1598,8 +1598,8 @@
 						<Points>40</Points>
 						<Rule>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</Rule>
 						<Dependencies>
-							<IfNot>Greater Locus of Fecundity</IfNot>
-							<IfNot>Exalted Locus of Contagion</IfNot>
+							<Off>Greater Locus of Fecundity</Off>
+							<Off>Exalted Locus of Contagion</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1608,8 +1608,8 @@
 						<Points>45</Points>
 						<Regeneration/>
 						<Dependencies>
-							<IfNot>Lesser Locus of Virulence</IfNot>
-							<IfNot>Exalted Locus of Contagion</IfNot>
+							<Off>Lesser Locus of Virulence</Off>
+							<Off>Exalted Locus of Contagion</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1618,8 +1618,8 @@
 						<Points>50</Points>
 						<Rule>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</Rule>
 						<Dependencies>
-							<IfNot>Lesser Locus of Virulence</IfNot>
-							<IfNot>Greater Locus of Fecundity</IfNot>
+							<Off>Lesser Locus of Virulence</Off>
+							<Off>Greater Locus of Fecundity</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1682,8 +1682,8 @@
 						<Points>5</Points>
 						<Rule>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</Rule>
 						<Dependencies>
-							<IfNot>Greater Locus of Swiftness</IfNot>
-							<IfNot>Exalted Locus of Beguilement</IfNot>
+							<Off>Greater Locus of Swiftness</Off>
+							<Off>Exalted Locus of Beguilement</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1692,8 +1692,8 @@
 						<Points>50</Points>
 						<Rule>This model, and all models in her unit, have the Always Strikes First special rule</Rule>
 						<Dependencies>
-							<IfNot>Lesser Locus of Grace</IfNot>
-							<IfNot>Exalted Locus of Beguilement</IfNot>
+							<Off>Lesser Locus of Grace</Off>
+							<Off>Exalted Locus of Beguilement</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1702,8 +1702,8 @@
 						<Points>60</Points>
 						<Rule>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</Rule>
 						<Dependencies>
-							<IfNot>Lesser Locus of Grace</IfNot>
-							<IfNot>Greater Locus of Swiftness</IfNot>
+							<Off>Lesser Locus of Grace</Off>
+							<Off>Greater Locus of Swiftness</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1958,7 +1958,7 @@
 						<Type>Option</Type>
 						<Points>5</Points>
 						<Dependencies>
-							<IfNot>Venom Sting</IfNot>
+							<Off>Venom Sting</Off>
 						</Dependencies>
 						<PoisonAttack/>
 					</Option>
@@ -1967,7 +1967,7 @@
 						<Type>Option</Type>
 						<Points>10</Points>
 						<Dependencies>
-							<IfNot>Plague Proboscis</IfNot>
+							<Off>Plague Proboscis</Off>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -2536,9 +2536,9 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Daemons of Slaanesh</IfNot>
-							<IfNot>Daemons of Khorne</IfNot>
-							<IfNot>Daemons of Nurgle</IfNot>
+							<Off>Daemons of Slaanesh</Off>
+							<Off>Daemons of Khorne</Off>
+							<Off>Daemons of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2547,9 +2547,9 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Daemons of Tzeentch</IfNot>
-							<IfNot>Daemons of Khorne</IfNot>
-							<IfNot>Daemons of Nurgle</IfNot>
+							<Off>Daemons of Tzeentch</Off>
+							<Off>Daemons of Khorne</Off>
+							<Off>Daemons of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2558,9 +2558,9 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Daemons of Tzeentch</IfNot>
-							<IfNot>Daemons of Slaanesh</IfNot>
-							<IfNot>Daemons of Nurgle</IfNot>
+							<Off>Daemons of Tzeentch</Off>
+							<Off>Daemons of Slaanesh</Off>
+							<Off>Daemons of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2569,9 +2569,9 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Daemons of Tzeentch</IfNot>
-							<IfNot>Daemons of Slaanesh</IfNot>
-							<IfNot>Daemons of Khorne</IfNot>
+							<Off>Daemons of Tzeentch</Off>
+							<Off>Daemons of Slaanesh</Off>
+							<Off>Daemons of Khorne</Off>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -2689,9 +2689,9 @@
 						<Rule>Re-roll Ward save results of 1</Rule>
 						<Rule>Re-roll Channelling results of 1</Rule>
 						<Dependencies>
-							<IfNot>Daemon of Slaanesh</IfNot>
-							<IfNot>Daemon of Khorne</IfNot>
-							<IfNot>Daemon of Nurgle</IfNot>
+							<Off>Daemon of Slaanesh</Off>
+							<Off>Daemon of Khorne</Off>
+							<Off>Daemon of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2700,9 +2700,9 @@
 						<Points>0</Points>
 						<ArmourPiercing>1</ArmourPiercing>
 						<Dependencies>
-							<IfNot>Daemon of Tzeentch</IfNot>
-							<IfNot>Daemon of Khorne</IfNot>
-							<IfNot>Daemon of Nurgle</IfNot>
+							<Off>Daemon of Tzeentch</Off>
+							<Off>Daemon of Khorne</Off>
+							<Off>Daemon of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2711,9 +2711,9 @@
 						<Points>5</Points>
 						<Rule>On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</Rule>
 						<Dependencies>
-							<IfNot>Daemon of Tzeentch</IfNot>
-							<IfNot>Daemon of Slaanesh</IfNot>
-							<IfNot>Daemon of Nurgle</IfNot>
+							<Off>Daemon of Tzeentch</Off>
+							<Off>Daemon of Slaanesh</Off>
+							<Off>Daemon of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2722,9 +2722,9 @@
 						<Points>5</Points>
 						<SubOpponentToHit>1</SubOpponentToHit>
 						<Dependencies>
-							<IfNot>Daemon of Tzeentch</IfNot>
-							<IfNot>Daemon of Slaanesh</IfNot>
-							<IfNot>Daemon of Khorne</IfNot>
+							<Off>Daemon of Tzeentch</Off>
+							<Off>Daemon of Slaanesh</Off>
+							<Off>Daemon of Khorne</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2737,8 +2737,8 @@
 						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
-							<IfNot>Phlegm Bombardment</IfNot>
-							<IfNot>Warp Gaze</IfNot>
+							<Off>Phlegm Bombardment</Off>
+							<Off>Warp Gaze</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2746,8 +2746,8 @@
 						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
-							<IfNot>Baleful Torrent</IfNot>
-							<IfNot>Warp Gaze</IfNot>
+							<Off>Baleful Torrent</Off>
+							<Off>Warp Gaze</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2755,8 +2755,8 @@
 						<Type>Option</Type>
 						<Points>55</Points>
 						<Dependencies>
-							<IfNot>Baleful Torrent</IfNot>
-							<IfNot>Phlegm Bombardment</IfNot>
+							<Off>Baleful Torrent</Off>
+							<Off>Phlegm Bombardment</Off>
 						</Dependencies>
 					</Option>
 				</Options>
