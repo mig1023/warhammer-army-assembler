@@ -592,7 +592,7 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
-							<IfNot>Additional weapon</IfNot>
+							<Off>Additional weapon</Off>
 						</Dependencies>
 						<Points>12</Points>
 					</Option>
@@ -601,7 +601,7 @@
 						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<Points>8</Points>
 					</Option>
@@ -609,7 +609,7 @@
 						<Name>Light armour</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Heavy armour</IfNot>
+							<Off>Heavy armour</Off>
 						</Dependencies>
 						<Points>3</Points>
 						<AddToArmour>6</AddToArmour>
@@ -618,7 +618,7 @@
 						<Name>Heavy armour</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
+							<Off>Light armour</Off>
 						</Dependencies>
 						<Points>6</Points>
 						<AddToArmour>5</AddToArmour>
@@ -682,7 +682,7 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
-							<IfNot>Additional weapon</IfNot>
+							<Off>Additional weapon</Off>
 						</Dependencies>
 						<Points>15</Points>
 					</Option>
@@ -691,7 +691,7 @@
 						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<Points>8</Points>
 					</Option>
@@ -699,7 +699,7 @@
 						<Name>Light armour</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Heavy armour</IfNot>
+							<Off>Heavy armour</Off>
 						</Dependencies>
 						<Points>6</Points>
 						<AddToArmour>6</AddToArmour>
@@ -708,7 +708,7 @@
 						<Name>Heavy armour</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
+							<Off>Light armour</Off>
 						</Dependencies>
 						<Points>12</Points>
 						<AddToArmour>5</AddToArmour>
@@ -918,7 +918,7 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
-							<IfNot>Additional weapon</IfNot>
+							<Off>Additional weapon</Off>
 						</Dependencies>
 						<Points>4</Points>
 					</Option>
@@ -927,7 +927,7 @@
 						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<Points>4</Points>
 					</Option>
@@ -935,7 +935,7 @@
 						<Name>Light armour</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Heavy armour</IfNot>
+							<Off>Heavy armour</Off>
 						</Dependencies>
 						<Points>2</Points>
 						<AddToArmour>6</AddToArmour>
@@ -944,7 +944,7 @@
 						<Name>Heavy armour</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
+							<Off>Light armour</Off>
 						</Dependencies>
 						<Points>4</Points>
 						<AddToArmour>5</AddToArmour>
@@ -1013,7 +1013,7 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
-							<IfNot>Additional weapon</IfNot>
+							<Off>Additional weapon</Off>
 						</Dependencies>
 						<Points>10</Points>
 					</Option>
@@ -1022,7 +1022,7 @@
 						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<Points>5</Points>
 					</Option>
@@ -1030,7 +1030,7 @@
 						<Name>Light armour</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Heavy armour</IfNot>
+							<Off>Heavy armour</Off>
 						</Dependencies>
 						<Points>4</Points>
 						<AddToArmour>6</AddToArmour>
@@ -1039,7 +1039,7 @@
 						<Name>Heavy armour</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
+							<Off>Light armour</Off>
 						</Dependencies>
 						<Points>8</Points>
 						<AddToArmour>5</AddToArmour>
@@ -1267,7 +1267,7 @@
 						<Type>Option</Type>
 						<AddToArmour>1</AddToArmour>
 						<Dependencies>
-							<IfNot>Additional hand weapon</IfNot>
+							<Off>Additional hand weapon</Off>
 						</Dependencies>
 						<PerModel/>
 						<Points>1</Points>
@@ -1277,7 +1277,7 @@
 						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
-							<IfNot>Shield</IfNot>
+							<Off>Shield</Off>
 						</Dependencies>
 						<PerModel/>
 						<Points>1</Points>
@@ -1343,7 +1343,7 @@
 						<Name>Halfhorn</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Ungrol Four-Horn</IfNot>
+							<Off>Ungrol Four-Horn</Off>
 						</Dependencies>
 						<FullCommand/>
 						<Points>6</Points>
@@ -1352,7 +1352,7 @@
 						<Name>Ungrol Four-Horn</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Halfhorn</IfNot>
+							<Off>Halfhorn</Off>
 						</Dependencies>
 						<FullCommand/>
 						<OnlyOneInArmy/>
@@ -1529,8 +1529,8 @@
 						<Type>Option</Type>
 						<AddToArmour>1</AddToArmour>
 						<Dependencies>
-							<IfNot>Additional hand weapon</IfNot>
-							<IfNot>Great weapon</IfNot>
+							<Off>Additional hand weapon</Off>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<PerModel/>
 						<Points>4</Points>
@@ -1540,8 +1540,8 @@
 						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
-							<IfNot>Shield</IfNot>
-							<IfNot>Great weapon</IfNot>
+							<Off>Shield</Off>
+							<Off>Great weapon</Off>
 						</Dependencies>
 						<PerModel/>
 						<Points>4</Points>
@@ -1552,8 +1552,8 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
-							<IfNot>Shield</IfNot>
-							<IfNot>Additional hand weapon</IfNot>
+							<Off>Shield</Off>
+							<Off>Additional hand weapon</Off>
 						</Dependencies>
 						<PerModel/>
 						<Points>8</Points>
@@ -1633,7 +1633,7 @@
 						<Name>Gorehoof</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Ghorros Warhoof</IfNot>
+							<Off>Ghorros Warhoof</Off>
 						</Dependencies>
 						<FullCommand/>
 						<Points>14</Points>
@@ -1642,7 +1642,7 @@
 						<Name>Ghorros Warhoof</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Gorehoof</IfNot>
+							<Off>Gorehoof</Off>
 						</Dependencies>
 						<FullCommand/>
 						<OnlyOneInArmy/>
