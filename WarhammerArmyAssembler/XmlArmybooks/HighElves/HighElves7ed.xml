@@ -792,8 +792,8 @@
 						<Type>Option</Type>
 						<Points>3</Points>
 						<Dependencies>
-							<IfNot>Heavy armour</IfNot>
-							<IfNot>Dragon armour</IfNot>
+							<Off>Heavy armour</Off>
+							<Off>Dragon armour</Off>
 						</Dependencies>
 						<AddToArmour>6</AddToArmour>
 					</Option>
@@ -802,8 +802,8 @@
 						<Type>Option</Type>
 						<Points>6</Points>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
-							<IfNot>Dragon armour</IfNot>
+							<Off>Light armour</Off>
+							<Off>Dragon armour</Off>
 						</Dependencies>
 						<AddToArmour>5</AddToArmour>
 					</Option>
@@ -812,8 +812,8 @@
 						<Type>Option</Type>
 						<Points>9</Points>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
-							<IfNot>Heavy armour</IfNot>
+							<Off>Light armour</Off>
+							<Off>Heavy armour</Off>
 						</Dependencies>
 						<AddToArmour>5</AddToArmour>
 						<Rule>Immune to all breath and all Flaming attacks</Rule>
@@ -1114,8 +1114,8 @@
 						<Type>Option</Type>
 						<Points>2</Points>
 						<Dependencies>
-							<IfNot>Heavy armour</IfNot>
-							<IfNot>Dragon armour</IfNot>
+							<Off>Heavy armour</Off>
+							<Off>Dragon armour</Off>
 						</Dependencies>
 						<AddToArmour>6</AddToArmour>
 					</Option>
@@ -1124,8 +1124,8 @@
 						<Type>Option</Type>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
-							<IfNot>Dragon armour</IfNot>
+							<Off>Light armour</Off>
+							<Off>Dragon armour</Off>
 						</Dependencies>
 						<AddToArmour>5</AddToArmour>
 					</Option>
@@ -1134,8 +1134,8 @@
 						<Type>Option</Type>
 						<Points>6</Points>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
-							<IfNot>Heavy armour</IfNot>
+							<Off>Light armour</Off>
+							<Off>Heavy armour</Off>
 						</Dependencies>
 						<AddToArmour>5</AddToArmour>
 						<Rule>Immune to all breath and all Flaming attacks</Rule>
@@ -2124,7 +2124,7 @@
 						<Points>6</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Swap spear for bow</IfNot>
+							<Off>Swap spear for bow</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2133,7 +2133,7 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Bow</IfNot>
+							<Off>Bow</Off>
 						</Dependencies>
 					</Option>
 					<Option>
