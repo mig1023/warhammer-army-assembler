@@ -1018,8 +1018,8 @@
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Lance</IfNot>
-							<IfNot>Great weapon</IfNot>
+							<Off>Lance</Off>
+							<Off>Great weapon</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1029,8 +1029,8 @@
 						<HitLast/>
 						<Points>6</Points>
 						<Dependencies>
-							<IfNot>Lance</IfNot>
-							<IfNot>Additional hand weapon</IfNot>
+							<Off>Lance</Off>
+							<Off>Additional hand weapon</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1039,8 +1039,8 @@
 						<OnlyFor>Mount</OnlyFor>
 						<Points>6</Points>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
-							<IfNot>Additional hand weapon</IfNot>
+							<Off>Great weapon</Off>
+							<Off>Additional hand weapon</Off>
 						</Dependencies>
 						<Lance/>
 					</Option>
@@ -1486,8 +1486,8 @@
 						<AddToAttacks>1</AddToAttacks>
 						<Points>3</Points>
 						<Dependencies>
-							<IfNot>Lance</IfNot>
-							<IfNot>Great weapon</IfNot>
+							<Off>Lance</Off>
+							<Off>Great weapon</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1497,8 +1497,8 @@
 						<HitLast/>
 						<Points>8</Points>
 						<Dependencies>
-							<IfNot>Lance</IfNot>
-							<IfNot>Additional hand weapon</IfNot>
+							<Off>Lance</Off>
+							<Off>Additional hand weapon</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1507,8 +1507,8 @@
 						<OnlyFor>Mount</OnlyFor>
 						<Points>8</Points>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
-							<IfNot>Additional hand weapon</IfNot>
+							<Off>Great weapon</Off>
+							<Off>Additional hand weapon</Off>
 						</Dependencies>
 						<Lance/>
 					</Option>
@@ -1621,7 +1621,7 @@
 						<Name>Barding for Skeletal Steed</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<If>Skeletal Steed</If>
+							<On>Skeletal Steed</On>
 						</Dependencies>
 						<Points>8</Points>
 					</Option>
@@ -1901,7 +1901,7 @@
 						<Type>Option</Type>
 						<Points>15</Points>
 						<Dependencies>
-							<IfNot>Unholy Lodestone</IfNot>
+							<Off>Unholy Lodestone</Off>
 						</Dependencies>
 						<Rule>Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"</Rule>
 					</Option>
@@ -1910,7 +1910,7 @@
 						<Type>Option</Type>
 						<Points>30</Points>
 						<Dependencies>
-							<IfNot>Balefire</IfNot>
+							<Off>Balefire</Off>
 						</Dependencies>
 						<Rule>When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored</Rule>
 					</Option>
@@ -1950,7 +1950,7 @@
 						<Type>Option</Type>
 						<Points>15</Points>
 						<Dependencies>
-							<IfNot>Infested</IfNot>
+							<Off>Infested</Off>
 						</Dependencies>
 						<PoisonAttack/>
 					</Option>
@@ -1959,7 +1959,7 @@
 						<Type>Option</Type>
 						<Points>10</Points>
 						<Dependencies>
-							<IfNot>Rancid Maw</IfNot>
+							<Off>Rancid Maw</Off>
 						</Dependencies>
 						<Rule>When Terrorgheist removed as casualty, all units in base contact (friend or foe) take 3D6 Strength 2 hits</Rule>
 					</Option>
@@ -2172,7 +2172,7 @@
 						<Type>Option</Type>
 						<Points>15</Points>
 						<Dependencies>
-							<IfNot>Unholy Lodestone</IfNot>
+							<Off>Unholy Lodestone</Off>
 						</Dependencies>
 						<Rule>Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"</Rule>
 					</Option>
@@ -2181,7 +2181,7 @@
 						<Type>Option</Type>
 						<Points>30</Points>
 						<Dependencies>
-							<IfNot>Balefire</IfNot>
+							<Off>Balefire</Off>
 						</Dependencies>
 						<Rule>When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored</Rule>
 					</Option>
@@ -2733,7 +2733,7 @@
 						<Type>Option</Type>
 						<Points>15</Points>
 						<Dependencies>
-							<IfNot>Infested</IfNot>
+							<Off>Infested</Off>
 						</Dependencies>
 						<PoisonAttack/>
 					</Option>
@@ -2742,7 +2742,7 @@
 						<Type>Option</Type>
 						<Points>10</Points>
 						<Dependencies>
-							<IfNot>Rancid Maw</IfNot>
+							<Off>Rancid Maw</Off>
 						</Dependencies>
 						<Rule>When Terrorgheist removed as casualty, all units in base contact (friend or foe) take 3D6 Strength 2 hits</Rule>
 					</Option>
