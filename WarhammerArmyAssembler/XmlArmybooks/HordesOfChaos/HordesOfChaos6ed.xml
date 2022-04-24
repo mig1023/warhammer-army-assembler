@@ -170,7 +170,7 @@
 					<AddToAttacks>1</AddToAttacks>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Slaanesh</If>
+						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<Description>The wielder gains + 1 Attack, but he cannot carry a shield or banner. In addition, the wielder always strikes first in close combat. If any of the wielder's opponents also always strike first, revert to normal Initiative.</Description>
 				</Artefact>
@@ -221,7 +221,7 @@
 					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
-						<If>Mark of Khorne</If>
+						<On>Mark of Khorne</On>
 					</Dependencies>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<KillingBlow/>
@@ -290,7 +290,7 @@
 					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
 					<Dependencies>
-						<If>Mark of Slaanesh</If>
+						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
@@ -309,7 +309,7 @@
 					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<Dependencies>
-						<If>Mark of Tzeentch</If>
+						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Rule>Ward save of 3+ against all normal and magical missiles</Rule>
@@ -329,7 +329,7 @@
 					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Dependencies>
-						<If>Mark of Khorne</If>
+						<On>Mark of Khorne</On>
 					</Dependencies>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Rule>Magic Resistance (2)</Rule>
@@ -342,7 +342,7 @@
 					<Type>Arcane</Type>
 					<Points>65</Points>
 					<Dependencies>
-						<If>Mark of Tzeentch</If>
+						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Rule>The bearer can re-roll any number of the dice rolled to cast or dispel</Rule>
@@ -389,7 +389,7 @@
 					<Points>75</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Nurgle</If>
+						<On>Mark of Nurgle</On>
 					</Dependencies>
 					<Rule>Bound spell. Power Level 4. One use only. D6 Strength 2 hits at the start of the Magic phase, 2D6 Strength 2 next Magic phase, etc</Rule>
 					<Description>Bound spell. Power Level 4. One use only. Target any enemy unit on the tabletop. This unit becomes infected with Nurgle's Rot and suffers D6 Strength 2 hits, distributed as shooting hits amongst the models in the unit. At the start of the caster's next Magic phase, the unit takes 2D6 Strength 2 hits. At the start of the caster's Magic phase after that it takes 3D6 Strength 2 hits, and so on. Once cast, Nurgle's Rot cannot be stopped.</Description>
@@ -400,7 +400,7 @@
 					<Points>50</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Slaanesh</If>
+						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<Rule>Enemy cannot refuse challenge</Rule>
 					<Description>Whenever the bearer issues a challenge, the enemy cannot refuse it and the Chaos player may choose who will accept the challenge. The model forced to accept the challenge may be anywhere within the enemy unit, and even characters that would normally be in a position that would disallow them from accepting challenges (by not being in the fighting rank, for instance) may be forced into accepting the challenge. In the first round an enemy is ensnared, the bearer always strike last, regardless of any other factor, magic item or spell.</Description>
@@ -411,7 +411,7 @@
 					<Points>40</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Khorne</If>
+						<On>Mark of Khorne</On>
 					</Dependencies>
 					<AddToWizard>1</AddToWizard>
 					<AddToCast>1</AddToCast>
@@ -433,7 +433,7 @@
 					<Points>30</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Nurgle</If>
+						<On>Mark of Nurgle</On>
 					</Dependencies>
 					<Rule>One use only. D6 hits with D3 wounds with no armour by Toughness test for a range of 12"</Rule>
 					<Description>One use only. The model may throw the Death's Head in the Shooting phase. It is treated as a thrown weapon with a range of 12". If the Death's Head hits, the enemy unit takes D6 hits, and affected models must pass a Toughness test or lose D3 wounds, with no armour saves allowed. Units taking any casualties from a Death's Head must take a Panic test.</Description>
@@ -444,7 +444,7 @@
 					<Points>25</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Slaanesh</If>
+						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<Rule>Bound spell Delectable Torture. Power Level 6. One use only.</Rule>
 					<Description>Bound spell. Power Level 6. One use only. The Sceptre of Domination contains the bound Slaanesh spell Delectable Torture.</Description>
@@ -463,7 +463,7 @@
 					<Points>20</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Tzeentch</If>
+						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<Rule>Opponent must reveal everything that is not apparent about the unit</Rule>
 					<Description>The bearer can pick any enemy unit on the battlefield at the beginning of each of his Magic phases. The opponent must reveal everything that is not apparent about the unit (magic items and their bearers, hidden Assassins and Fanatics, etc).</Description>
@@ -484,7 +484,7 @@
 					<Points>50</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Khorne</If>
+						<On>Mark of Khorne</On>
 					</Dependencies>
 					<Rule>Model and unit may re-roll failed Break tests and will not lose their frenzy</Rule>
 					<Description>The model and any unit he is with may re-roll failed Break tests and will not lose their frenzy if beaten in close combat.</Description>
@@ -495,7 +495,7 @@
 					<Points>50</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Nurgle</If>
+						<On>Mark of Nurgle</On>
 					</Dependencies>
 					<Test Bet="Wound" Context="Round">Toughness</Test>
 					<Description>Any enemy model in contact with the banner bearer at the start of the Chaos Magic phase must pass a Toughness test or suffer a wound Armour saves are not allowed. This banner has no effect on models with the Mark of Nurgle or Clan Pestilens Skaven</Description>
@@ -506,7 +506,7 @@
 					<Points>50</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Tzeentch</If>
+						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<Rule>The banner contains the bound Tzeentch spell Yellow Fire of Transformation</Rule>
 					<Description>The banner contains the bound Tzeentch spell Yellow Fire of Transformation.</Description>
@@ -525,7 +525,7 @@
 					<Points>50</Points>
 					<OnlyForGroup>Mortal</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Slaanesh</If>
+						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<Rule>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk</Rule>
 					<Description>The model and any unit he is with count as having the Daemonic Gift - Soporific Musk.</Description>
@@ -596,7 +596,7 @@
 					<Points>40</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Khorne</If>
+						<On>Mark of Khorne</On>
 					</Dependencies>
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>The model has Magic Resistance (2).</Description>
@@ -607,7 +607,7 @@
 					<Points>25</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Khorne</If>
+						<On>Mark of Khorne</On>
 					</Dependencies>
 					<KillingBlow/>
 					<Description>Daemon with an Axe gains the Killing Blow ability</Description>
@@ -618,7 +618,7 @@
 					<Points>25</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Khorne</If>
+						<On>Mark of Khorne</On>
 					</Dependencies>
 					<ArmourTo>4</ArmourTo>
 					<Description>The Daemon has an armour save of 4+ in addition to its Daemonic aura.</Description>
@@ -629,7 +629,7 @@
 					<Points>20</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Khorne</If>
+						<On>Mark of Khorne</On>
 					</Dependencies>
 					<AddToStrength>1</AddToStrength>
 					<Description>The Daemon has +1 Strength on its profile.</Description>
@@ -642,7 +642,7 @@
 					<Points>75</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Tzeentch</If>
+						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<Rule>The Daemon may re-roll a single D6 once per turn</Rule>
 					<Description>The Daemon may re-roll a single D6 once per turn. The re-roll endtles the player to take a single D6 (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. Any D6 can be re-rolled and can potentially cause Irresistible-Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
@@ -653,7 +653,7 @@
 					<Points>50</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Tzeentch</If>
+						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<Rule>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</Rule>
 					<Description>Once per battle the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force. In addition, roll a D6. On a roll of 4+, the enemy Wizard loses knowledge of that spell and may not cast it for the rest of the battle.</Description>
@@ -664,7 +664,7 @@
 					<Points>15</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Tzeentch</If>
+						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<Rule>The Daemon has great magical knowledge and knows one more spell from the Lore of Tzeentch than it is normally allowed</Rule>
 					<Description>The Daemon has great magical knowledge and knows one more spell from the Lore of Tzeentch than it is normally allowed.</Description>
@@ -675,7 +675,7 @@
 					<Points>10</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Tzeentch</If>
+						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<Rule>Daemon may give up Wounds to generate D3 Power dice</Rule>
 					<Description>At any point during the Chaos Magic phase, the Daemon may give up Wounds to generate Power dice (with no saves of any kind allowed, no Ward saves, no regeneration, etc). For each Wound sacrificed, the Daemon generates an extra D3 Power dice, that turn which only it may use.</Description>
@@ -688,7 +688,7 @@
 					<Points>40</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Nurgle</If>
+						<On>Mark of Nurgle</On>
 					</Dependencies>
 					<SubOpponentToHit>1</SubOpponentToHit>
 					<Description>Any unit in close combat with one or more models with a Cloud of Flies suffers a -1 modifier on its rolls to hit.</Description>
@@ -699,7 +699,7 @@
 					<Points>30</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Nurgle</If>
+						<On>Mark of Nurgle</On>
 					</Dependencies>
 					<Rule>Breath attack with Strength 3, with a -2 armour saving</Rule>
 					<Description>The Daemon spews forth a noxious stream of disease and filth. In any of the Chaos player's Shooting phases that the Daemon is not in combat, it may unleash its Stream of Corruption. This is a breath attack. The attack is resolved at Strength 3, with a -2 armour saving throw modifier.</Description>
@@ -710,7 +710,7 @@
 					<Points>15</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Nurgle</If>
+						<On>Mark of Nurgle</On>
 					</Dependencies>
 					<PoisonAttack/>
 					<Description>The Daemon's attacks count as poisoned attacks. This gift cannot be combined with a Blade of the Ether gift.</Description>
@@ -723,7 +723,7 @@
 					<Points>30</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Slaanesh</If>
+						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<Rule>Enemy unit in base contact reduces Ld by -1 to minimum Ld value of 2</Rule>
 					<Description>Any enemy unit in base contact with one or more models with the Aura of Slaanesh reduces its Leadership by -1, to a minimum Leadership value of 2.</Description>
@@ -734,7 +734,7 @@
 					<Points>30</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Slaanesh</If>
+						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<Rule>Any model in base contact halve WS and Initiative (rounding up)</Rule>
 					<Description>Any models in base contact with one or more Daemons with Soporific Musk halve their WS and 1 (rounding up).</Description>
@@ -745,7 +745,7 @@
 					<Points>20</Points>
 					<OnlyForGroup>Demonic</OnlyForGroup>
 					<Dependencies>
-						<If>Mark of Slaanesh</If>
+						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>At the beginning of the Close Combat phase, select one model in base contact with the Daemon. The target must pass a Leadership test or may not make any attacks in that Close Combat phase. Models immune to psychology cannot be affected.</Description>
@@ -1053,9 +1053,9 @@
 						<Type>Option</Type>
 						<Points>140</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWizard>4</AddToWizard>
 						<AddToCast>4</AddToCast>
@@ -1066,9 +1066,9 @@
 						<Type>Option</Type>
 						<Points>25</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1077,9 +1077,9 @@
 						<Type>Option</Type>
 						<Points>40</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1088,9 +1088,9 @@
 						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
 						</Dependencies>
 						<AddToWounds>1</AddToWounds>
 					</Option>
@@ -1118,7 +1118,7 @@
 						<Points>45</Points>
 						<Mount/>
 						<Dependencies>
-							<If>Mark of Tzeentch</If>
+							<On>Mark of Tzeentch</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1127,7 +1127,7 @@
 						<Points>55</Points>
 						<Mount/>
 						<Dependencies>
-							<If>Mark of Khorne</If>
+							<On>Mark of Khorne</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1136,7 +1136,7 @@
 						<Points>40</Points>
 						<Mount/>
 						<Dependencies>
-							<If>Mark of Slaanesh</If>
+							<On>Mark of Slaanesh</On>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -1187,7 +1187,7 @@
 						<Type>Option</Type>
 						<Points>25</Points>
 						<Dependencies>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1196,7 +1196,7 @@
 						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
+							<Off>Mark of Slaanesh</Off>
 						</Dependencies>
 						<AddToWounds>1</AddToWounds>
 					</Option>
@@ -1218,7 +1218,7 @@
 						<Points>40</Points>
 						<Mount/>
 						<Dependencies>
-							<If>Mark of Slaanesh</If>
+							<On>Mark of Slaanesh</On>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -1264,9 +1264,9 @@
 						<Type>Option</Type>
 						<Points>150</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWizard>4</AddToWizard>
 						<AddToCast>4</AddToCast>
@@ -1277,9 +1277,9 @@
 						<Type>Option</Type>
 						<Points>25</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1288,9 +1288,9 @@
 						<Type>Option</Type>
 						<Points>35</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1299,9 +1299,9 @@
 						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
 						</Dependencies>
 						<AddToWounds>1</AddToWounds>
 					</Option>
@@ -1372,9 +1372,9 @@
 						<Type>Option</Type>
 						<Points>70</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWizard>2</AddToWizard>
 						<AddToCast>2</AddToCast>
@@ -1385,9 +1385,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1396,9 +1396,9 @@
 						<Type>Option</Type>
 						<Points>35</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1407,9 +1407,9 @@
 						<Type>Option</Type>
 						<Points>40</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
 						</Dependencies>
 						<AddToWounds>1</AddToWounds>
 					</Option>
@@ -1431,7 +1431,7 @@
 						<Points>45</Points>
 						<Mount/>
 						<Dependencies>
-							<If>Mark of Tzeentch</If>
+							<On>Mark of Tzeentch</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1440,7 +1440,7 @@
 						<Points>55</Points>
 						<Mount/>
 						<Dependencies>
-							<If>Mark of Khorne</If>
+							<On>Mark of Khorne</On>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1449,7 +1449,7 @@
 						<Points>40</Points>
 						<Mount/>
 						<Dependencies>
-							<If>Mark of Slaanesh</If>
+							<On>Mark of Slaanesh</On>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -1497,7 +1497,7 @@
 						<AddToDispell>1</AddToDispell>
 						<AddToWizard>2</AddToWizard>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
+							<Off>Mark of Tzeentch</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1505,10 +1505,10 @@
 						<Type>Option</Type>
 						<Points>70</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
-							<IfNot>Level 2 Sorcerer</IfNot>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
+							<Off>Level 2 Sorcerer</Off>
 						</Dependencies>
 						<AddToWizard>2</AddToWizard>
 						<AddToCast>2</AddToCast>
@@ -1519,9 +1519,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1530,9 +1530,9 @@
 						<Type>Option</Type>
 						<Points>35</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1541,9 +1541,9 @@
 						<Type>Option</Type>
 						<Points>40</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
 						</Dependencies>
 						<AddToWounds>1</AddToWounds>
 					</Option>
@@ -1613,9 +1613,9 @@
 						<Type>Option</Type>
 						<Points>70</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWizard>2</AddToWizard>
 						<AddToCast>2</AddToCast>
@@ -1626,9 +1626,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1637,9 +1637,9 @@
 						<Type>Option</Type>
 						<Points>35</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1648,9 +1648,9 @@
 						<Type>Option</Type>
 						<Points>40</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
 						</Dependencies>
 						<AddToWounds>1</AddToWounds>
 					</Option>
@@ -1715,7 +1715,7 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1724,7 +1724,7 @@
 						<Type>Option</Type>
 						<Points>40</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
+							<Off>Mark of Slaanesh</Off>
 						</Dependencies>
 						<AddToWounds>1</AddToWounds>
 					</Option>
@@ -1746,7 +1746,7 @@
 						<Points>40</Points>
 						<Mount/>
 						<Dependencies>
-							<If>Mark of Slaanesh</If>
+							<On>Mark of Slaanesh</On>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -1987,9 +1987,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToCast>1</AddToCast>
 					</Option>
@@ -1998,9 +1998,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -2009,9 +2009,9 @@
 						<Type>Option</Type>
 						<Points>45</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 						<AddToDispell>1</AddToDispell>
@@ -2021,9 +2021,9 @@
 						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
 						</Dependencies>
 						<Fear/>
 					</Option>
@@ -2247,9 +2247,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToCast>1</AddToCast>
 					</Option>
@@ -2258,9 +2258,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -2269,9 +2269,9 @@
 						<Type>Option</Type>
 						<Points>45</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 						<AddToDispell>1</AddToDispell>
@@ -2281,9 +2281,9 @@
 						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
 						</Dependencies>
 						<Fear/>
 					</Option>
@@ -2338,9 +2338,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToCast>1</AddToCast>
 					</Option>
@@ -2349,9 +2349,9 @@
 						<Type>Option</Type>
 						<Points>20</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Khorne</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -2360,9 +2360,9 @@
 						<Type>Option</Type>
 						<Points>45</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Nurgle</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 						<AddToDispell>1</AddToDispell>
@@ -2372,9 +2372,9 @@
 						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
-							<IfNot>Mark of Tzeentch</IfNot>
-							<IfNot>Mark of Slaanesh</IfNot>
-							<IfNot>Mark of Khorne</IfNot>
+							<Off>Mark of Tzeentch</Off>
+							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Khorne</Off>
 						</Dependencies>
 						<Fear/>
 					</Option>
