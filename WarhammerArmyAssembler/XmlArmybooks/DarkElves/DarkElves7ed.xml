@@ -668,7 +668,7 @@
 						<Points>45</Points>
 						<KillingBlow/>
 						<Dependencies>
-							<IfNot>The Darksword</IfNot>
+							<Off>The Darksword</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -677,7 +677,7 @@
 						<Points>25</Points>
 						<Rule>Each wound inflicted on an enemy character or champion (after saves, etc) also deducts 1 from the model's S, A and T for the remainder of the game</Rule>
 						<Dependencies>
-							<IfNot>Heartrender</IfNot>
+							<Off>Heartrender</Off>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -823,7 +823,7 @@
 						<Type>Option</Type>
 						<Points>3</Points>
 						<Dependencies>
-							<IfNot>Heavy armour</IfNot>
+							<Off>Heavy armour</Off>
 						</Dependencies>
 						<AddToArmour>6</AddToArmour>
 					</Option>
@@ -832,7 +832,7 @@
 						<Type>Option</Type>
 						<Points>6</Points>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
+							<Off>Light armour</Off>
 						</Dependencies>
 						<AddToArmour>5</AddToArmour>
 					</Option>
@@ -1228,7 +1228,7 @@
 						<Type>Option</Type>
 						<Points>2</Points>
 						<Dependencies>
-							<IfNot>Heavy armour</IfNot>
+							<Off>Heavy armour</Off>
 						</Dependencies>
 						<AddToArmour>6</AddToArmour>
 					</Option>
@@ -1237,7 +1237,7 @@
 						<Type>Option</Type>
 						<Points>4</Points>
 						<Dependencies>
-							<IfNot>Light armour</IfNot>
+							<Off>Light armour</Off>
 						</Dependencies>
 						<AddToArmour>5</AddToArmour>
 					</Option>
@@ -1854,7 +1854,7 @@
 						<Name>Pair of handbow to Reaver</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<If>Reaver</If>
+							<On>Reaver</On>
 						</Dependencies>
 						<Points>3</Points>
 					</Option>
@@ -2084,7 +2084,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Additional weapon</IfNot>
+							<Off>Additional weapon</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -2095,7 +2095,7 @@
 						<Points>1</Points>
 						<PerModel/>
 						<Dependencies>
-							<IfNot>Great weapon</IfNot>
+							<Off>Great weapon</Off>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -2149,7 +2149,7 @@
 						<Name>Draich-master</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Tullaris</IfNot>
+							<Off>Tullaris</Off>
 						</Dependencies>
 						<FullCommand/>
 						<Points>12</Points>
@@ -2158,7 +2158,7 @@
 						<Name>Tullaris</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Draich-master</IfNot>
+							<Off>Draich-master</Off>
 						</Dependencies>
 						<OnlyOneInArmy/>
 						<PersonifiedCommander/>
@@ -2353,7 +2353,7 @@
 						<Name>Tower Master</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Kouran</IfNot>
+							<Off>Kouran</Off>
 						</Dependencies>
 						<MagicItems Points="25" Type="Hero"/>
 						<FullCommand/>
@@ -2363,7 +2363,7 @@
 						<Name>Kouran</Name>
 						<Type>Option</Type>
 						<Dependencies>
-							<IfNot>Tower Master</IfNot>
+							<Off>Tower Master</Off>
 						</Dependencies>
 						<OnlyOneInArmy/>
 						<PersonifiedCommander/>
