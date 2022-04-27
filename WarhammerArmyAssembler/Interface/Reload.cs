@@ -158,7 +158,7 @@ namespace WarhammerArmyAssembler.Interface
         public static void LoadArmySize(int points, string armyName)
         {
             Army.Data.MaxPoints = points;
-            Army.Data.AdditionalName = armyName;
+            Army.Data.RosterName = armyName;
 
             Changes.main.dragWindowBottom.Content = "Warhammer Army Assembler (WAAgh)" +
                 (String.IsNullOrWhiteSpace(armyName) ? String.Empty : String.Format(" // {0}", armyName));

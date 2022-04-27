@@ -8,7 +8,7 @@ namespace WarhammerArmyAssembler.Army
 
         public static string Name { get; set; }
         public static string InternalName { get; set; }
-        public static string AdditionalName { get; set; }
+        public static string RosterName { get; set; }
         public static int ArmyEdition { get; set; }
         public static string UnitsImagesDirectory { get; set; }
 
