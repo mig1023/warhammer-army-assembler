@@ -88,7 +88,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Name");
-            Army.Data.InnerName = LoadString(xmlFile, "InnerName");
+            Army.Data.InternalName = LoadString(xmlFile, "InternalName");
             Army.Data.ArmyEdition = LoadInt(xmlFile, "Edition");
 
             Data.FrontColor = LoadColor(xmlFile, "Front");

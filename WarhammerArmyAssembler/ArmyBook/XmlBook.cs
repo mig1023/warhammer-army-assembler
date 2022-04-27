@@ -104,9 +104,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                     if (armyName == null)
                         continue;
 
-                    XmlNode armyInnerName = Services.Intro(xmlFile, "InnerName");
+                    XmlNode armyInternalName = Services.Intro(xmlFile, "InternalName");
                     XmlNode armyEdition = Services.Intro(xmlFile, "Edition");
-                    string armyOrderName = armyInnerName.InnerText;
+                    string armyOrderName = armyInternalName.InnerText;
 
                     if (ChangeArmybookWindow.sortedByEditions)
                         armyOrderName = armyEdition.InnerText + armyOrderName;
@@ -114,7 +114,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                         armyOrderName += armyEdition.InnerText;
 
                     files.Add(armyOrderName, file);
-                    AddHomologue(armyInnerName.InnerText, file);
+                    AddHomologue(armyInternalName.InnerText, file);
                 }
 
                 foreach (string directory in Directory.GetDirectories(programDirectory))
