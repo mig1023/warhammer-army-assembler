@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace WarhammerArmyAssembler.Interface
 {
-    class TestUnit
+    class Test
     {
         private static bool showLinesToConsole = true;
 
@@ -74,12 +74,12 @@ namespace WarhammerArmyAssembler.Interface
                 return typeof(Unit).GetProperty(name).GetValue(unitForLoad).ToString();
         }
 
-        public static void startTest(Test.Data.TestTypes testType)
+        public static void startTest(WarhammerArmyAssembler.Test.Data.TestTypes testType)
         {
             CleanConsole();
             Changes.armyUnitTest_Resize();
-            
-            Test.Fight.TestByName(testType);
+
+            WarhammerArmyAssembler.Test.Fight.TestByName(testType);
         }
 
         public static string GetFullConsoleText() => new TextRange(Changes.main.testConsole.Document.ContentStart,
@@ -139,7 +139,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void TestCanvasPrepare(Unit unit)
         {
-            Test.Data.PrepareUnit(unit);
+            WarhammerArmyAssembler.Test.Data.PrepareUnit(unit);
 
             MainWindow main = Changes.main;
 
@@ -158,9 +158,9 @@ namespace WarhammerArmyAssembler.Interface
 
             main.startBattleRoyale.Visibility = Visibility.Visible;
 
-            main.armyTestUnit.Content = Test.Data.unit.Name;
-            LoadUnitParamInInterface(unitForLoad: Test.Data.unit, mountForLoad: Test.Data.unitMount, elemetnsPostfix: "Test", unitGrid: Changes.main.unitGrid);
-            LoadSpecialRules(unitForLoad: Test.Data.unit, target: main.specialRulesTest, onlyUnitRules: true);
+            main.armyTestUnit.Content = WarhammerArmyAssembler.Test.Data.unit.Name;
+            LoadUnitParamInInterface(unitForLoad: WarhammerArmyAssembler.Test.Data.unit, mountForLoad: WarhammerArmyAssembler.Test.Data.unitMount, elemetnsPostfix: "Test", unitGrid: Changes.main.unitGrid);
+            LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.unit, target: main.specialRulesTest, onlyUnitRules: true);
 
             foreach (Label label in new List<Label> { main.startFullTest, main.startStatisticTest, main.startBattleRoyale })
             {
@@ -202,12 +202,12 @@ namespace WarhammerArmyAssembler.Interface
             if (String.IsNullOrEmpty(SelectedEnemy()))
                 return;
 
-            Test.Data.PrepareEnemy(SelectedEnemy());
+            WarhammerArmyAssembler.Test.Data.PrepareEnemy(SelectedEnemy());
 
             Changes.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
-            LoadUnitParamInInterface(unitForLoad: Test.Data.enemy, mountForLoad: Test.Data.enemyMount,
+            LoadUnitParamInInterface(unitForLoad: WarhammerArmyAssembler.Test.Data.enemy, mountForLoad: WarhammerArmyAssembler.Test.Data.enemyMount,
                 elemetnsPostfix: "Enemy", unitGrid: Changes.main.enemyGrid);
-            LoadSpecialRules(unitForLoad: Test.Data.enemy, target: Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
+            LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.enemy, target: Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
 
             Changes.armyUnitTest_Resize();
         }
@@ -230,7 +230,7 @@ namespace WarhammerArmyAssembler.Interface
             if (!showLinesToConsole)
                 return;
 
-            Test.Data.testConsole.Add(new Text { Content = line, Color = color });
+            WarhammerArmyAssembler.Test.Data.testConsole.Add(new Text { Content = line, Color = color });
         }
 
         public static void FromConsoleToOutput(string line, Brush color = null)

@@ -174,7 +174,7 @@ namespace WarhammerArmyAssembler
             if ((sender is ScrollViewer) && Army.Checks.ThisIsAftefact(id))
                 Interface.Changes.ArmyGridDropArtefact(id, Interface.Changes.CurrentSelectedUnit);
             else
-                Interface.UnitDetails.UpdateUnitDescription(
+                Interface.Details.UpdateUnitDescription(
                     Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
 
             HideStartArmyHelpText();
@@ -229,7 +229,7 @@ namespace WarhammerArmyAssembler
                 Army.Data.Units[u.ID].Size = u.Size;
 
             Interface.Reload.ReloadArmyData();
-            Interface.UnitDetails.UpdateUnitDescription(u.ID, Army.Data.Units[u.ID]);
+            Interface.Details.UpdateUnitDescription(u.ID, Army.Data.Units[u.ID]);
         }
 
         private void ArmyGrid_LoadingRow(object sender, DataGridRowEventArgs e) =>
@@ -286,7 +286,7 @@ namespace WarhammerArmyAssembler
                 
             Unit unit = container.DataContext as Unit;
 
-            Interface.UnitDetails.UpdateUnitDescription(unit.ID, unit);
+            Interface.Details.UpdateUnitDescription(unit.ID, unit);
 
             if (e.LeftButton == MouseButtonState.Pressed && e.ClickCount == 2)
                 Interface.Changes.DetailResize(open: true);
@@ -395,7 +395,7 @@ namespace WarhammerArmyAssembler
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (Army.Checks.IsUnitExistInArmy(Interface.Changes.CurrentSelectedUnit))
-                Interface.UnitDetails.UpdateUnitDescription(
+                Interface.Details.UpdateUnitDescription(
                     Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
         }
 
@@ -456,7 +456,7 @@ namespace WarhammerArmyAssembler
             if (container == null)
                 return;
 
-            Interface.TestUnit.TestCanvasPrepare(container.DataContext as Unit);
+            Interface.Test.TestCanvasPrepare(container.DataContext as Unit);
             Interface.Changes.Move(Interface.Changes.MovingType.ToRight);
         }
 
@@ -465,8 +465,8 @@ namespace WarhammerArmyAssembler
 
         private void enemyForTest_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Interface.TestUnit.TestEnemyPrepare();
-            Interface.TestUnit.TestCanvasShow();
+            Interface.Test.TestEnemyPrepare();
+            Interface.Test.TestCanvasShow();
 
             waitingSpinner.Visibility = Visibility.Hidden;
             testConsole.Visibility = Visibility.Hidden;
@@ -475,16 +475,16 @@ namespace WarhammerArmyAssembler
         }
 
         private void enemyGroup_SelectionChanged(object sender, SelectionChangedEventArgs e) =>
-            Interface.TestUnit.LoadEnemyGroups();
+            Interface.Test.LoadEnemyGroups();
 
         private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e) =>
-            Interface.TestUnit.startTest(Test.Data.TestTypes.fullTest);
+            Interface.Test.startTest(Test.Data.TestTypes.fullTest);
 
         private void startStatisticTest_MouseDown(object sender, MouseButtonEventArgs e) =>
-            Interface.TestUnit.startTest(Test.Data.TestTypes.statisticTest);
+            Interface.Test.startTest(Test.Data.TestTypes.statisticTest);
 
         private void startBattleRoyale_MouseDown(object sender, MouseButtonEventArgs e) =>
-            Interface.TestUnit.startTest(Test.Data.TestTypes.battleRoyale);
+            Interface.Test.startTest(Test.Data.TestTypes.battleRoyale);
 
 
         private void dragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();

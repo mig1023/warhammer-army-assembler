@@ -88,7 +88,7 @@ namespace WarhammerArmyAssembler.Interface
             {
                 List<Option> group = artefact.AllRandomByGroup();
 
-                do id = group[Test.Data.rand.Next(0, group.Count)].ID;
+                do id = group[WarhammerArmyAssembler.Test.Data.rand.Next(0, group.Count)].ID;
                 while (Army.Data.Units[unitID].Options.Where(x => x.ID == id).Count() > 0);
             }
             else if (artefact.Runic > 0)
@@ -143,7 +143,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 unit.AddAmmunition(id);
                 Reload.ReloadArmyData();
-                UnitDetails.UpdateUnitDescription(unitID, unit);
+                Details.UpdateUnitDescription(unitID, unit);
 
                 bool multiple = artefact.Multiple || artefact.Virtue || (artefact.Runic > 0);
                 bool honours = artefact.Honours && (artefact.Points > 0);
@@ -492,7 +492,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void RandomArmy()
         {
-            string randomArmy = allArmies.ElementAt(Test.Data.rand.Next(0, allArmies.Count)).Key;
+            string randomArmy = allArmies.ElementAt(WarhammerArmyAssembler.Test.Data.rand.Next(0, allArmies.Count)).Key;
 
             SetArmySelected(allArmies[randomArmy]);
             PreviewArmy(randomArmy);

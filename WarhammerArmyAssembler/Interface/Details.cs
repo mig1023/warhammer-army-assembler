@@ -9,7 +9,7 @@ using System.Windows.Shapes;
 
 namespace WarhammerArmyAssembler.Interface
 {
-    class UnitDetails
+    class Details
     {
         private static double GetDetailHeight() =>
             (Changes.main.unitDetail.ActualHeight > 0 ? Changes.main.unitDetail.ActualHeight : 250);

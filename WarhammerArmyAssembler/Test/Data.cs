@@ -48,7 +48,7 @@ namespace WarhammerArmyAssembler.Test
             Data.enemyMount = enemy.Mount?.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
         }
 
-        public static void Console(Brush color, string line) => Interface.TestUnit.LineToConsole(line, color);
+        public static void Console(Brush color, string line) => Interface.Test.LineToConsole(line, color);
 
         public static void Console(Brush color, string line, params object[] p) => Console(color, String.Format(line, p));
     }

@@ -108,13 +108,13 @@ namespace WarhammerArmyAssembler.Test
             if (conditionParam == null)
                 return false;
 
-            bool restoreConsoleOutput = (hiddenDice && Interface.TestUnit.PreventConsoleOutputStatus());
+            bool restoreConsoleOutput = (hiddenDice && Interface.Test.PreventConsoleOutputStatus());
 
             Unit unitTestPassed = ((diceType == Types.LD) || paramTest ? unit : enemy);
             Unit hisOpponent = ((diceType == Types.LD) || paramTest ? enemy : unit);
 
             if (hiddenDice)
-                Interface.TestUnit.PreventConsoleOutput(prevent: true);
+                Interface.Test.PreventConsoleOutput(prevent: true);
 
             int condition = conditionParam ?? 0;
 
@@ -188,7 +188,7 @@ namespace WarhammerArmyAssembler.Test
             Data.Console(Data.supplText, ")");
 
             if (restoreConsoleOutput)
-                Interface.TestUnit.PreventConsoleOutput(prevent: false);
+                Interface.Test.PreventConsoleOutput(prevent: false);
 
             return testPassed;
         }

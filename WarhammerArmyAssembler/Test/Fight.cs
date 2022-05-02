@@ -20,7 +20,7 @@ namespace WarhammerArmyAssembler.Test
             Progress<string> current = new Progress<string>();
             current.ProgressChanged += (sender, args) => Interface.Changes.main.currentTest.Content = args.ToString();
 
-            Interface.TestUnit.VisibilityTest(before: true);
+            Interface.Test.VisibilityTest(before: true);
 
             if (testType == Data.TestTypes.battleRoyale)
                 await Task.Run(() => Fight.BattleRoyaleTest(Data.unit, Data.unitMount, current));
@@ -32,9 +32,9 @@ namespace WarhammerArmyAssembler.Test
                 await Task.Run(() => Fight.FullTest(Data.unit, Data.unitMount, Data.enemy, Data.enemyMount));
 
             foreach (Interface.Text line in Data.testConsole)
-                Interface.TestUnit.FromConsoleToOutput(line.Content, line.Color);
+                Interface.Test.FromConsoleToOutput(line.Content, line.Color);
 
-            Interface.TestUnit.VisibilityTest();
+            Interface.Test.VisibilityTest();
         }
 
         private static void EnemiesGroupBox(string name, int current)
@@ -53,7 +53,7 @@ namespace WarhammerArmyAssembler.Test
 
             foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
             {
-                string currentText = Interface.TestUnit.GetFullConsoleText();
+                string currentText = Interface.Test.GetFullConsoleText();
 
                 EnemiesGroupBox(enemyGroupName, current);
 
@@ -81,12 +81,12 @@ namespace WarhammerArmyAssembler.Test
         {
             int[] result = new int[3];
 
-            Interface.TestUnit.PreventConsoleOutput(prevent: true);
+            Interface.Test.PreventConsoleOutput(prevent: true);
 
             for (int i = 0; i < 1000; i++)
                 result[FullTest(unit, unitMount, enemy, enemyMount)] += 1;
 
-            Interface.TestUnit.PreventConsoleOutput(prevent: false);
+            Interface.Test.PreventConsoleOutput(prevent: false);
 
             if (royalNotation)
                 Data.Console(Data.text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n",
