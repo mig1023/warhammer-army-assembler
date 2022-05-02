@@ -278,6 +278,7 @@ namespace WarhammerArmyAssembler
             Unit newUnit = new Unit
             {
                 Name = this.Name,
+                Personification = this.Personification,
                 Group = this.Group,
                 ID = this.ID,
                 IDView = this.IDView,
