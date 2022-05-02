@@ -173,7 +173,8 @@ namespace WarhammerArmyAssembler.Interface
                     lastColumnMaxWidth: ref lastColumnMaxWidth);
             }
 
-            CreatePersonificationField(lastColumnMaxWidth, unitID);
+            if (!unit.Personified)
+                CreatePersonificationField(lastColumnMaxWidth, unitID);
 
             if (unit.ExistsOptions())
                 margins = CreateColumn("OPTION", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
