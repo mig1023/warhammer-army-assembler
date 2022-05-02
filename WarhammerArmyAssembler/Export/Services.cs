@@ -33,6 +33,9 @@ namespace WarhammerArmyAssembler.Export
             return newFileName;
         }
 
+        public static string GetUnitName(Unit unit) =>
+            (String.IsNullOrEmpty(unit.Personification) ? unit.Name : string.Format("{0} / {1}", unit.Personification, unit.Name));
+
         private static void ExportDirectory()
         {
             if (!Directory.Exists(ARMYLIST_DIR))

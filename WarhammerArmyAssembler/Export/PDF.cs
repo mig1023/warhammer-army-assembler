@@ -45,7 +45,7 @@ namespace WarhammerArmyAssembler.Export
                 foreach (Unit unit in unitType.Items)
                 {
                     AddText(String.Format("{0}", Services.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
-                    AddText(String.Format("{0}{1}", unit.Name, Services.UnitPointsLine(unit)), lineHeight: 10);
+                    AddText(String.Format("{0}{1}", Services.GetUnitName(unit), Services.UnitPointsLine(unit)), lineHeight: 10);
 
                     List<string> linesForEachUnit = new List<string> { unit.GetEquipmentLine() };
 

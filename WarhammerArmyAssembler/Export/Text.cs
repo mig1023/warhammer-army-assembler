@@ -23,7 +23,7 @@ namespace WarhammerArmyAssembler.Export
                     string equipmentLine = unit.GetEquipmentLine();
 
                     Add(fileName, String.Format("{0}{1}{2}{3}{4}",
-                        Services.UnitSizeIfNeed(unit), unit.Name, Services.UnitPointsLine(unit), 
+                        Services.UnitSizeIfNeed(unit), Services.GetUnitName(unit), Services.UnitPointsLine(unit), 
                         (String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": "),
                         equipmentLine));
                 }
