@@ -16,9 +16,21 @@ namespace WarhammerArmyAssembler
 
         public string Name { get; set; }
 
+        public string Personification { get; set; }
+
         public string NameInGrid
         {
-            get => string.Format("{0}{1}", (this.Type == Unit.UnitType.Mount ? "↳ " : String.Empty), Name);
+            get
+            {
+                if (this.Type == Unit.UnitType.Mount)
+                    return string.Format("↳ {0}", Name);
+
+                else if (!String.IsNullOrEmpty(this.Personification))
+                    return string.Format("{0} ({1})", this.Personification, Name);
+
+                else
+                    return Name;
+            }
         }
 
         string Group { get; set; }

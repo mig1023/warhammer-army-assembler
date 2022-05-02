@@ -11,7 +11,8 @@ namespace WarhammerArmyAssembler.Interface
 {
     class UnitDetails
     {
-        private static double GetDetailHeight() => (Changes.main.unitDetail.ActualHeight > 0 ? Changes.main.unitDetail.ActualHeight : 250);
+        private static double GetDetailHeight() =>
+            (Changes.main.unitDetail.ActualHeight > 0 ? Changes.main.unitDetail.ActualHeight : 250);
 
         private static double[] CheckColumn(double[] margins, ref double lastColumnMaxWidth,
             bool header = false, bool newColumn = false, bool sizeCollapse = false)
@@ -171,7 +172,44 @@ namespace WarhammerArmyAssembler.Interface
                 AddLabel(caption: String.Format("Wizard Level {0}", wizard), margins: wizardMargins, height: 25,
                     lastColumnMaxWidth: ref lastColumnMaxWidth);
             }
+
+            /////////////////////////////////////////////////////
+
+                double personificationWidth = Changes.main.unitName.Margin.Left + Changes.main.unitName.ActualWidth + 5;
+
+                if (lastColumnMaxWidth > 0)
+                    personificationWidth += lastColumnMaxWidth;
+
+                Label newOption = new Label
+                {
+                    Content = "Personification",
+                    Foreground = ArmyBook.Data.FrontColor,
+                };
+                newOption.Margin = Changes.Thick(newOption, personificationWidth, Changes.main.unitName.Margin.Top);
+                Changes.main.unitDetail.Children.Add(newOption);
+                Changes.main.UpdateLayout();
+
+                TextBox personificationName = new TextBox { Width = 150 };
+
+                if (String.IsNullOrEmpty(Army.Data.Units[unitID].Personification))
+                    personificationName.Visibility = Visibility.Hidden;
+                else
+                    personificationName.Text = Army.Data.Units[unitID].Personification;
+
+                personificationName.Margin = Changes.Thick(personificationName, personificationWidth, Changes.main.unitName.Margin.Top + 4);
+                personificationName.KeyUp += (sender, e) =>
+                {
+                    Army.Data.Units[unitID].Personification = (sender as TextBox).Text;
                 
+                    Reload.ReloadArmyData();
+                    Changes.main.UpdateLayout();
+                };
+                Changes.main.unitDetail.Children.Add(personificationName);
+
+                newOption.MouseDown += (sender, e) => personificationName.Visibility = Visibility.Visible;
+
+            /////////////////////////////////////////////////////
+
             if (unit.ExistsOptions())
                 margins = CreateColumn("OPTION", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
