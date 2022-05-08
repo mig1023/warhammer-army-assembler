@@ -437,7 +437,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 MagicItems = IntParse(xmlNode["MagicItems"]),
                 MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]),
 
-                FullCommand = BoolParse(xmlNode["FullCommand"]),
+                CommandGroup = BoolParse(xmlNode["CommandGroup"]),
                 PersonifiedCommander = BoolParse(xmlNode["PersonifiedCommander"]),
 
                 Mount = BoolParse(xmlNode["Mount"]),

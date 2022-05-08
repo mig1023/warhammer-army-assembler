@@ -94,10 +94,10 @@ namespace WarhammerArmyAssembler.Interface
                     {
                         if (head == "OPTION" || head == "COMMAND" || head == ArmyBook.Data.MagicItemsStyle || head == ArmyBook.Data.MagicPowersStyle)
                         {
-                            if (head == "OPTION" && (!option.IsOption() || option.FullCommand || option.MagicItemsPoints))
+                            if (head == "OPTION" && (!option.IsOption() || option.CommandGroup || option.MagicItemsPoints))
                                 continue;
 
-                            if (head == "COMMAND" && !option.FullCommand)
+                            if (head == "COMMAND" && !option.CommandGroup)
                                 continue;
 
                             if (head == ArmyBook.Data.MagicItemsStyle && !option.MagicItemsPoints && (!option.IsMagicItem() || ((option.Points <= 0) && !option.Honours)))
@@ -125,7 +125,7 @@ namespace WarhammerArmyAssembler.Interface
                                 option.Honours || String.IsNullOrEmpty(option.Name);
 
                             bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount &&
-                                !option.FullCommand && option.SpecialRuleDescription.Length == 0;
+                                !option.CommandGroup && option.SpecialRuleDescription.Length == 0;
 
                             if (head == "WEAPONS & ARMOUR" && thisIsStandartEquipment && !thisIsSpecialRuleOrMount)
                                 continue;
