@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Xml;
 using System.Windows.Media;
 using System.IO;
-using System.Text.RegularExpressions;
 using static WarhammerArmyAssembler.Unit;
 using static WarhammerArmyAssembler.ArmyBook.Parsers;
 
@@ -144,9 +143,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Data.EnemyMagicName = loreBook.Attributes["Enemy"]?.Value ?? String.Empty;
             }
 
-            foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/{0}/*", magic)))
+            foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/{0}/Spell", magic)))
             {
-                string spellName = String.Join(" ", Regex.Split(spell.Name, "(?=\\p{Lu})"));
+                string spellName = spell.Attributes["Name"].Value;
                 int spellDifficulty = int.Parse(spell.InnerText);
 
                 if (!enemy)
