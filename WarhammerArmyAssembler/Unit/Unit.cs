@@ -939,8 +939,8 @@ namespace WarhammerArmyAssembler
         public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue,
             bool onlyUnitParam = false, bool directModification = false)
         {
-            PropertyInfo unitField = typeof(Unit).GetProperty(name);
-            bool anyIsTrue = GetUnitValueTrueOrFalse(unitField.GetValue(this), out string lineParamValue, out int intParamValue);
+            object property = typeof(Unit).GetProperty(name).GetValue(this);
+            bool anyIsTrue = GetUnitValueTrueOrFalse(property, out string lineParamValue, out int intParamValue);
 
             if (!onlyUnitParam)
             {
@@ -953,7 +953,7 @@ namespace WarhammerArmyAssembler
 
                     anyIsTrue = (fromParamValue ? true : anyIsTrue);
 
-                    if ((name == "ImpactHitByFront") && (((int)unitField.GetValue(this) > 0) || option.ImpactHitByFront > 0))
+                    if ((name == "ImpactHitByFront") && (((int)property > 0) || option.ImpactHitByFront > 0))
                     {
                         intParamValue = GetFront();
                         anyIsTrue = true;
@@ -1037,7 +1037,8 @@ namespace WarhammerArmyAssembler
 
             foreach (KeyValuePair<string, string> specialRule in SpecialRules.All) 
                 if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam: onlyUnitParam))
-                    rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
+                    if (!SpecialRules.IncompatibleRules(specialRule.Key, this))
+                        rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
 
             Test.Param.Describe(ParamTests, ref rules);
 

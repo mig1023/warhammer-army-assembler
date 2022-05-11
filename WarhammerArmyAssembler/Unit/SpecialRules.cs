@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler
 {
@@ -93,5 +90,20 @@ namespace WarhammerArmyAssembler
             ["ToWard"] = "all failed rolls To Ward",
             ["All"] = "all failed rolls",
         };
+
+        private static Dictionary<string, string> IncompatibleRulesList = new Dictionary<string, string>
+        {
+            ["HitLast"] = "HitFirst",
+        };
+
+        public static bool IncompatibleRules(string name, Unit unit)
+        {
+            if (!IncompatibleRulesList.ContainsKey(name))
+                return false;
+
+            List<string> rulesList = IncompatibleRulesList[name].Split(',').Select(x => x.Trim()).ToList();
+
+            return rulesList.Where(x => unit.RuleFromAnyOption(x, out string _, out int _)).Count() > 0;
+        }
     }
 }
