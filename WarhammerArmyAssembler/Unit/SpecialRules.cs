@@ -94,6 +94,8 @@ namespace WarhammerArmyAssembler
         private static Dictionary<string, string> IncompatibleRulesList = new Dictionary<string, string>
         {
             ["HitLast"] = "HitFirst",
+            ["Frenzy"] = "ImmuneToPsychology",
+            ["Stubborn"] = "ImmuneToPsychology",
         };
 
         public static bool IncompatibleRules(string name, Unit unit)
