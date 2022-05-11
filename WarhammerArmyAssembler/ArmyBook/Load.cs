@@ -114,7 +114,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("Artefact"))
                 {
                     int newID = GetNextIndex();
-                    Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, groupName));
+                    Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, xmlFile, groupName));
                 }
             }
 
@@ -298,10 +298,10 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
-                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
+                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml));
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
-                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition));
+                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml));
 
             newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize));
             newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
@@ -312,8 +312,15 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newUnit;
         }
 
-        public static Option LoadOption(int id, XmlNode xmlNode, string artefactGroup = null)
+        public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
         {
+            if ((xmlNode.Name == "HandWeapon") && (xmlNode["Name"] == null))
+            {
+                XmlNode handWeapon = xmlDocument.CreateElement("Name");
+                handWeapon.InnerText = "Hand weapon";
+                xmlNode.AppendChild(handWeapon);
+            }
+
             Option newOption = new Option
             {
                 ID = id,
