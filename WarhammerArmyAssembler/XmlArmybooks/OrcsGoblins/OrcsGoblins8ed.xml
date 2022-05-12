@@ -77,7 +77,7 @@
 					<Name>Lucky Shrunken Head</Name>
 					<Type>Arcane</Type>
 					<Points>50</Points>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<AddToWard>5</AddToWard>
 					<Description>The Lucky Shrunken Head can only be taken by a Savage Ore Shaman or Great Shaman. It increases the Warpaint save of the bearer and any unit he joins from 6+ to 5+ . If Wurrzag is in the unit, his Warpaint save is increased to 4+.</Description>
 				</Artefact>
@@ -93,7 +93,7 @@
 					<Name>Spider Banner</Name>
 					<Type>Banner</Type>
 					<Points>85</Points>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<PoisonAttack/>
 					<Description>This Standard may only be taken by a Goblin Battle Standard Bearer (not a Night Goblin). Models in a unit with the Spider Banner, including the bearer, have Poisoned Attacks. Models that already have Poisoned Attacks will automatically wound on To Hit rolls of 5 or 6.</Description>
 				</Artefact>
@@ -101,7 +101,7 @@
 					<Name>The Bad Moon Banner</Name>
 					<Type>Banner</Type>
 					<Points>50</Points>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Stubborn/>
 					<Rule>The banner shrouds the unit in darkness. The bearer and any unit he joins count as being in soft cover, and any enemy model that charges into base contact with the bearer or the unit must take a Dangerous Terrain test.</Rule>
 					<Description>This Standard may only be taken by a Night Goblin Battle Standard Bearer. Night Goblin models in a unit with the Bad Moon banner are Stubborn. In addition, the banner shrouds the unit in darkness. The bearer and any unit he joins count as being in soft cover, and any enemy model that charges into base contact with the bearer or the unit must take a Dangerous Terrain test.</Description>
@@ -626,7 +626,7 @@
 					<Name>Arabyan Carpet</Name>
 					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Rule>Fly</Rule>
 					<Description>Infantry or monstrous infantry models on foot only. The owner of this magical carpet has the Fly special rule. However, he cannot join units.</Description>
 				</Artefact>
@@ -1003,7 +1003,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -1014,7 +1014,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -1099,7 +1099,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -1110,7 +1110,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -1244,7 +1244,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -1255,7 +1255,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -1343,7 +1343,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -1354,7 +1354,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -1714,7 +1714,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -1725,7 +1725,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -1810,7 +1810,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -1821,7 +1821,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -1957,7 +1957,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -1969,7 +1969,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -1980,7 +1980,7 @@
 					<Option>
 						<Name>Short bow</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -2077,7 +2077,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -2089,7 +2089,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
@@ -2100,7 +2100,7 @@
 					<Option>
 						<Name>Short bow</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
 							<Off>Additional hand weapon</Off>
