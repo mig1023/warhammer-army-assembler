@@ -65,7 +65,7 @@ namespace WarhammerArmyAssembler.Interface
 
             int mountAlreadyOn = (unit.MountOn > 0 ? unit.GetMountOption() : 0);
 
-            Option.OnlyForType mountTypeAlreadyFixed = unit.GetMountTypeAlreadyFixed();
+            Option.OnlyType mountTypeAlreadyFixed = unit.GetMountTypeAlreadyFixed();
 
             if (head == "SPECIAL RULES")
             {
@@ -110,8 +110,8 @@ namespace WarhammerArmyAssembler.Interface
 
                             bool canBeUsed = true;
 
-                            if (option.OnlyOneInArmy || option.OnlyOneForSuchUnits)
-                                canBeUsed = (Army.Checks.IsOptionAlreadyUsed(option.Name, unitID, unit.Name, option.OnlyOneForSuchUnits) == 0);
+                            if (option.OnlyOneInArmy || option.OnlyOneSuchUnits)
+                                canBeUsed = (Army.Checks.IsOptionAlreadyUsed(option.Name, unitID, unit.Name, option.OnlyOneSuchUnits) == 0);
 
                             margins[1] += AddButton(option.FullName(), margins, 25, ref lastColumnMaxWidth,
                                 String.Format("{0}|{1}", unitID, option.ID), option, mountAlreadyOn: mountAlreadyOn,
@@ -446,7 +446,7 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
-            string id, Option option, int mountAlreadyOn = 0, Option.OnlyForType mountTypeAlreadyFixed = Option.OnlyForType.All,
+            string id, Option option, int mountAlreadyOn = 0, Option.OnlyType mountTypeAlreadyFixed = Option.OnlyType.All,
             Unit unit = null, bool mustBeEnabled = true)
         {
             bool optionIsEnabled = unit.IsOptionEnabled(option, mountAlreadyOn, mountTypeAlreadyFixed);

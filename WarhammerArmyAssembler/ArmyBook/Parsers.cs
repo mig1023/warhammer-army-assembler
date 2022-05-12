@@ -190,14 +190,14 @@ namespace WarhammerArmyAssembler.ArmyBook
             return (success ? value : Option.OptionType.Option);
         }
 
-        public static OnlyForType OnlyForParse(XmlNode xmlNode)
+        public static OnlyType OnlyForParse(XmlNode xmlNode)
         {
             if (xmlNode == null)
                 return 0;
 
-            bool success = Enum.TryParse(xmlNode.InnerText, out OnlyForType value);
+            bool success = Enum.TryParse(xmlNode.InnerText, out OnlyType value);
 
-            return (success ? value : Option.OnlyForType.All);
+            return (success ? value : Option.OnlyType.All);
         }
 
         public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;        

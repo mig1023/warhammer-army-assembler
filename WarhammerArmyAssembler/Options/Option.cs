@@ -11,18 +11,18 @@ namespace WarhammerArmyAssembler
     {
         public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption, Powers }
 
-        public enum OnlyForType { All, Infantry, Mount }
+        public enum OnlyType { All, Infantry, Mount }
 
         public string Name { get; set; }
         public int ID { get; set; }
         public string IDView { get; set; }
         public OptionType Type { get; set; }
-        public OnlyForType OnlyFor { get; set; }
+        public OnlyType Only { get; set; }
         public string[] ServiceDependencies { get; set; }
         public string[] ServiceInverseDependencies { get; set; }
         public bool OnlyOneInArmy { get; set; }
-        public bool OnlyOneForSuchUnits { get; set; }
-        public string OnlyForGroup { get; set; }
+        public bool OnlyOneSuchUnits { get; set; }
+        public string OnlyGroup { get; set; }
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
         public bool Virtue { get; set; }
@@ -181,11 +181,11 @@ namespace WarhammerArmyAssembler
             Virtue = this.Virtue,
             Honours = this.Honours,
             OnlyOneInArmy = this.OnlyOneInArmy,
-            OnlyOneForSuchUnits = this.OnlyOneForSuchUnits,
-            OnlyFor = this.OnlyFor,
+            OnlyOneSuchUnits = this.OnlyOneSuchUnits,
+            Only = this.Only,
             ServiceDependencies = this.ServiceDependencies,
             ServiceInverseDependencies = this.ServiceInverseDependencies,
-            OnlyForGroup = this.OnlyForGroup,
+            OnlyGroup = this.OnlyGroup,
             Group = this.Group,
             AutoHit = this.AutoHit,
             AutoWound = this.AutoWound,
@@ -305,16 +305,16 @@ namespace WarhammerArmyAssembler
         {
             string describe = String.Empty;
 
-            if (OnlyFor != OnlyForType.All)
-                describe += String.Format("\nOnly for models: {0}", OnlyFor);
+            if (Only != OnlyType.All)
+                describe += String.Format("\nOnly for models: {0}", Only);
 
-            if (!String.IsNullOrEmpty(OnlyForGroup))
-                describe += String.Format("\nOnly for: {0}", OnlyForGroup);
+            if (!String.IsNullOrEmpty(OnlyGroup))
+                describe += String.Format("\nOnly for: {0}", OnlyGroup);
 
             if (OnlyOneInArmy)
                 describe += "\nOnly one in army";
 
-            if (OnlyOneForSuchUnits)
+            if (OnlyOneSuchUnits)
                 describe += "\nOnly one for each type units";
 
             return describe;
@@ -355,7 +355,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsUsableByUnit(Unit unit, bool addOption = true, bool dragOverCheck = false)
         {
-            if (!String.IsNullOrEmpty(OnlyForGroup) && (OnlyForGroup != unit.GetGroup()))
+            if (!String.IsNullOrEmpty(OnlyGroup) && (OnlyGroup != unit.GetGroup()))
                 return false;
 
             if ((Runic > 0) && dragOverCheck)
