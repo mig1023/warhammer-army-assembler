@@ -439,7 +439,7 @@
 					<Name>Blood Drinker</Name>
 					<Type>Weapon</Type>
 					<Points>50</Points>
-					<OnlyForGroup>Vampire</OnlyForGroup>
+					<OnlyGroup>Vampire</OnlyGroup>
 					<Rule>For every model killed in close comhat the wearer immediately regenerates one lost Wound</Rule>
 					<Description>For every model killed in close comhat the wearer immediately regenerates one lost Wound. This cannot take the character's Wounds characteristic above its initial value.</Description>
 				</Artefact>
@@ -482,7 +482,7 @@
 					<Name>Sword of Kings</Name>
 					<Type>Weapon</Type>
 					<Points>25</Points>
-					<OnlyForGroup>Wight Lord</OnlyForGroup>
+					<OnlyGroup>Wight Lord</OnlyGroup>
 					<ExtendedKillingBlow>5</ExtendedKillingBlow>
 					<Description>This sword scores a Killing Blow on the result of a 5+.</Description>
 				</Artefact>
@@ -499,7 +499,7 @@
 				<Artefact>
 					<Name>Armour of Bone</Name>
 					<Type>Armour</Type>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Points>50</Points>
 					<AddToArmour>5</AddToArmour>
 					<FirstWoundDiscount/>
@@ -531,7 +531,7 @@
 				<Artefact>
 					<Name>The Carstein Ring</Name>
 					<Type>AdditionalArmour</Type>
-					<OnlyForGroup>Vampire</OnlyForGroup>
+					<OnlyGroup>Vampire</OnlyGroup>
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
@@ -660,7 +660,7 @@
 					<Name>Cloak of Mist and Shadows</Name>
 					<Type>Weapon</Type>
 					<Points>45</Points>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Rule>Ethereal</Rule>
 					<Description>This item can be used only by models on foot. The wearer is Ethereal for the entire game. He may cast spells in this form, but cannot use missile weapons nor strike blows in close combat, except against other Ethereal creatures.</Description>
 				</Artefact>
@@ -698,7 +698,7 @@
 					<Name>Banner of the Barrows</Name>
 					<Type>Banner</Type>
 					<Points>45</Points>
-					<OnlyForGroup>Wights</OnlyForGroup>
+					<OnlyGroup>Wights</OnlyGroup>
 					<HitOn>3</HitOn>
 					<Description>All Wights (Grave Guard, Black Knight and Wight lords) in the unit carrying the Banner will hit the enemy on a 3+ regardless of relative Weapon Skills or any other modifier.</Description>
 				</Artefact>
@@ -941,7 +941,7 @@
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<On>Von Carstein</On>
 							<On>Blood Dragon</On>
@@ -1126,7 +1126,7 @@
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<On>Von Carstein</On>
 							<On>Blood Dragon</On>
@@ -1359,7 +1359,7 @@
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<On>Von Carstein</On>
 							<On>Blood Dragon</On>
@@ -1470,7 +1470,7 @@
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Points>4</Points>
 						<Lance/>
 					</Option>
