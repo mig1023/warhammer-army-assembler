@@ -140,8 +140,8 @@
 				<Artefact>
 					<Name>Stegadon War-spear</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Skink</OnlyForGroup>
-					<OnlyFor>Mount</OnlyFor>
+					<OnlyGroup>Skink</OnlyGroup>
+					<Only>Mount</Only>
 					<Points>50</Points>
 					<ImpactHit>2D6+1</ImpactHit>
 					<Lance/>
@@ -164,7 +164,7 @@
 				<Artefact>
 					<Name>Dagger of Sotek</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Skink</OnlyForGroup>
+					<OnlyGroup>Skink</OnlyGroup>
 					<Points>25</Points>
 					<KillingBlow/>
 					<Fear/>
@@ -190,7 +190,7 @@
 				<Artefact>
 					<Name>Hide of the Cold Ones</Name>
 					<Type>Armour</Type>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Points>50</Points>
 					<AddToArmour>5</AddToArmour>
 					<AddToToughness>1</AddToToughness>
@@ -201,7 +201,7 @@
 				<Artefact>
 					<Name>Sacred Stegadon Helm</Name>
 					<Type>AdditionalArmour</Type>
-					<OnlyForGroup>Skink</OnlyForGroup>
+					<OnlyGroup>Skink</OnlyGroup>
 					<Points>50</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToLeadership>1</AddToLeadership>
@@ -243,7 +243,7 @@
 				<Artefact>
 					<Name>Divine Plaque of Protection</Name>
 					<Type>Arcane</Type>
-					<OnlyForGroup>Slann</OnlyForGroup>
+					<OnlyGroup>Slann</OnlyGroup>
 					<Points>30</Points>
 					<AddToWard>2</AddToWard>
 					<Description>The Slann's Shield of the Old Ones ward save in increased from 4+ to 2+ against the ranged attacks</Description>
@@ -266,7 +266,7 @@
 				<Artefact>
 					<Name>Charm of the Jaguar Warrior</Name>
 					<Type>AdditionalArmour</Type>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Points>25</Points>
 					<Rule>Steed of Shadows spell</Rule>
 					<Description>Bound Spell. Power Level 5. The Charm of th Jaguar Warrior contains the bound spell Steed of Shadows, as detailed in the Lore of Shadow in the Warhammer rulebook. The spell may only be cast on the bearer himself</Description>
@@ -274,8 +274,8 @@
 				<Artefact>
 					<Name>Cloak of Feathers</Name>
 					<Type>AdditionalArmour</Type>
-					<OnlyFor>Infantry</OnlyFor>
-					<OnlyForGroup>Skink</OnlyForGroup>
+					<Only>Infantry</Only>
+					<OnlyGroup>Skink</OnlyGroup>
 					<Points>25</Points>
 					<Rule>Fly</Rule>
 					<Description>The wearer of the cloack may fly</Description>
@@ -417,7 +417,7 @@
 				<Artefact>
 					<Name>Skavenpelt Banner</Name>
 					<Type>Banner</Type>
-					<OnlyForGroup>Skink</OnlyForGroup>
+					<OnlyGroup>Skink</OnlyGroup>
 					<Points>25</Points>
 					<Franzy/>
 					<Hate/>
@@ -742,7 +742,7 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>8</Points>
 					</Option>
@@ -1032,7 +1032,7 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
 					</Option>
@@ -1152,7 +1152,7 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
 					</Option>
