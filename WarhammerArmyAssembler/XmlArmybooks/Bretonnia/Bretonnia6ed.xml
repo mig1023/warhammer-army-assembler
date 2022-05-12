@@ -236,7 +236,7 @@
 					<Name>The Silver Lance of the Blessed</Name>
 					<Type>Weapon</Type>
 					<Points>65</Points>
-					<OnlyFor>Mount</OnlyFor>
+					<Only>Mount</Only>
 					<Lance/>
 					<Rule>If the model has the Blessing of the Lady, then all attacks with the Silver Lance Of the Blessed automatically hit</Rule>
 					<Description>The bearer has +2 Strength on the charge when mounted. If the model has the Blessing of the Lady, then all attacks with the Silver Lance Of the Blessed automatically hit.</Description>
@@ -245,7 +245,7 @@
 					<Name>Sword of the Quest</Name>
 					<Type>Weapon</Type>
 					<Points>50</Points>
-					<OnlyForGroup>QuestingVow</OnlyForGroup>
+					<OnlyGroup>QuestingVow</OnlyGroup>
 					<NoArmour/>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
@@ -256,7 +256,7 @@
 					<Name>Sword of the Lady's Champion</Name>
 					<Type>Weapon</Type>
 					<Points>40</Points>
-					<OnlyForGroup>GrailVow</OnlyForGroup>
+					<OnlyGroup>GrailVow</OnlyGroup>
 					<NoArmour/>
 					<WoundOn>3</WoundOn>
 					<Description>The character always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this. In effect this means that they will always wound opponents on at least a 3+. This modified Strength is also used to calculate Armour save modifiers.</Description>
@@ -272,7 +272,7 @@
 					<Name>The Heartwood Lance</Name>
 					<Type>Weapon</Type>
 					<Points>35</Points>
-					<OnlyFor>Mount</OnlyFor>
+					<Only>Mount</Only>
 					<Lance/>
 					<Reroll>ToWound</Reroll>
 					<Description>The bearer has +2 Strength on the charge when mounted. The Heartwood Lance allows the bearer to re-roll all failed rolls to wound.</Description>
@@ -297,7 +297,7 @@
 					<Name>The Lance of Artois</Name>
 					<Type>Weapon</Type>
 					<Points>25</Points>
-					<OnlyFor>Mount</OnlyFor>
+					<Only>Mount</Only>
 					<Lance/>
 					<KillingBlow/>
 					<Description>The bearer has +2 Strength on the charge when mounted. In addition, the lance confers the Killing Blow special rule onto the bearer, but only on turns during which the character charges.</Description>
@@ -306,7 +306,7 @@
 					<Name>The Wyrmlance</Name>
 					<Type>Weapon</Type>
 					<Points>20</Points>
-					<OnlyFor>Mount</OnlyFor>
+					<Only>Mount</Only>
 					<Lance/>
 					<Rule>Flaming attacks</Rule>
 					<Rule>Once per game, may make a breath attack from the tip of the lance at Strength 3 provided he is not in close combat</Rule>
@@ -318,7 +318,7 @@
 					<Name>Gilded Cuirass</Name>
 					<Type>Armour</Type>
 					<Points>55</Points>
-					<OnlyForGroup>GrailVow</OnlyForGroup>
+					<OnlyGroup>GrailVow</OnlyGroup>
 					<Regeneration/>
 					<AddToArmour>5</AddToArmour>
 					<Description>Character with the Grail Vow only. This armour replaces the Knight's heavy armour, and gives a 5+ Armour save that can be combined with other equipment as normal. In addition, the wearer has Regeneration.</Description>
@@ -335,7 +335,7 @@
 					<Name>The Grail Shield</Name>
 					<Type>Shield</Type>
 					<Points>35</Points>
-					<OnlyForGroup>GrailVow</OnlyForGroup>
+					<OnlyGroup>GrailVow</OnlyGroup>
 					<AddToArmour>6</AddToArmour>
 					<AddToWard>4</AddToWard>
 					<Description>The shield provides a 6+ Armour save which may be combined with other armour as normal. The bearer's Ward save gained from the Blessing of the Lady is increased to 4+ against attacks of any Strength. If the model loses the Blessing, they lose this Ward save as normal.</Description>
@@ -392,7 +392,7 @@
 					<Name>Insignia of the Quest</Name>
 					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
-					<OnlyForGroup>QuestingVow</OnlyForGroup>
+					<OnlyGroup>QuestingVow</OnlyGroup>
 					<WardForLastWound>3</WardForLastWound>
 					<Description>If the hearer is ever reduced to 1 Wound, then the Knight instantly gains a 3+ Ward save. If the character suffers multiple wounds that would kill him hefore he has gained this Ward save (eg, if he has more than one wound left and is hit by a cannon ball), he will be reduced to 1 Wound, then may attempt his 3+ Ward save to stay alive and nullify any further wounds caused by the same hit.</Description>
 				</Artefact>
@@ -780,7 +780,7 @@
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Questing Vow</Off>
 						</Dependencies>
@@ -941,7 +941,7 @@
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Questing Vow</Off>
 						</Dependencies>
