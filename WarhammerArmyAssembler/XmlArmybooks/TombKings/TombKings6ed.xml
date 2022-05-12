@@ -105,7 +105,7 @@
 					<Name>Destroyer of Eternities</Name>
 					<Type>Weapon</Type>
 					<Points>70</Points>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<AddToStrength>2</AddToStrength>
 					<KillingBlow/>
 					<Description>Counts as a great weapon and has the Killing Blow special ability. The player may choose to attack normally with the Destroyer of Kternities or make a special attack. If the special attack is chosen, all enemy models that are touching the Tomb King take two automatic hits. These hits do benefit from the special rules for great weapons and Killing blow. If a target is riding a monster or a chariot, then both take two automatic hits. In a challenge, only the model engaged in the challenge counts as being in contact with the Tomb King.</Description>
@@ -152,7 +152,7 @@
 					<Name>Serpent Staff</Name>
 					<Type>Weapon</Type>
 					<Points>25</Points>
-					<OnlyForGroup>Liches</OnlyForGroup>
+					<OnlyGroup>Liches</OnlyGroup>
 					<PoisonAttack/>
 					<Reroll>ToWound</Reroll>
 					<Description>Attacks with the Serpent Staff count as Poisoned Attacks. In addition, the model may re-roll any failed rolls to wound in close combat.</Description>
@@ -204,7 +204,7 @@
 					<Name>Crown of Kings</Name>
 					<Type>AdditionalArmour</Type>
 					<Points>40</Points>
-					<OnlyForGroup>TombKings</OnlyForGroup>
+					<OnlyGroup>TombKings</OnlyGroup>
 					<Rule>May roll two D6 for his "My Will Be Done!" incantations and to choose the highest score</Rule>
 					<Description>Tomb King only. The Crown of Kings enables the Tomb King to roll two D6 for his "My Will Be Done!" incantations and to choose the highest score.</Description>
 				</Artefact>
@@ -265,7 +265,7 @@
 					<Name>Cloak of the Dunes</Name>
 					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Rule>Fly</Rule>
 					<Rule>Pursues 3D6"</Rule>
 					<Description>The character can move as if flying, but may not charge whilst using this special movement. He pursues 3D6".</Description>
@@ -508,7 +508,7 @@
 					<Option>
 						<Name>Flail</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<Flail/>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -628,7 +628,7 @@
 					<Option>
 						<Name>Flail</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<Fail/>
 						<Dependencies>
 							<Off>Great weapon</Off>
