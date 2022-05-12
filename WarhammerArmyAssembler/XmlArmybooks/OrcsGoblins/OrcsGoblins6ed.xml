@@ -169,7 +169,7 @@
 				<Artefact>
 					<Name>Porko's Pigstikka</Name>
 					<Type>Weapon</Type>
-					<OnlyFor>Mount</OnlyFor>
+					<Only>Mount</Only>
 					<Points>40</Points>
 					<ChargeStrengthBonus>1</ChargeStrengthBonus>
 					<Rule>+1 Strength extra Attack per rank in the enemy unit (up to a maximum of +3)</Rule>
@@ -192,7 +192,7 @@
 				<Artefact>
 					<Name>Wollopa's One Hit Wunda</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>15</Points>
 					<Rule>+3 Strengthr once in the game</Rule>
 					<Description>Wollopa's One Hit Wunda provides it user with +3S... but it only works once in the game. The player can decide to use the weapon after hits have been scored but before rolling for wounds. The +3S bonus applies to one hit that has been scored by the bearer that turn. Any other hits scored by the bearer are at normal Strength.</Description>
@@ -243,7 +243,7 @@
 					<Name>Drog's Dead 'Ard Armour</Name>
 					<Type>Armour</Type>
 					<Points>30</Points>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<ArmourTo>6</ArmourTo>
 					<Description>Gives the wearer a 1+ armour save that cannot be improved.</Description>
 				</Artefact>
@@ -251,7 +251,7 @@
 					<Name>Nobbla's 'Elmet</Name>
 					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<AddToArmour>6</AddToArmour>
 					<AddToWard>6</AddToWard>
 					<Description>Gives the wearer a 6+ armour save and may be worn in addition to normal armour. Also gives the wearer a 6+ Ward save.</Description>
@@ -333,7 +333,7 @@
 				<Artefact>
 					<Name>Staff of Sneaky Stealin'</Name>
 					<Type>Arcane</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>25</Points>
 					<Rule>Once per battle, in a friendly Magic phase, may steal one dice from his opponent's Dispel pile and add it to his own Power dice pile</Rule>
 					<Description>Once per battle, in a friendly Magic phase, the bearer may steal one dice from his opponent's Dispel pile and add it to his own Power dice pile (whatever colour the dice previously was, it now turns green).</Description>
@@ -343,7 +343,7 @@
 				<Artefact>
 					<Name>Warboss Imbad's Iron Gnashas</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>50</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<KillingBlow/>
@@ -352,7 +352,7 @@
 				<Artefact>
 					<Name>Effigy of Mork</Name>
 					<Type>AdditionalArmour</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>40</Points>
 					<SubOpponentToHit>1</SubOpponentToHit>
 					<Description>Savage Orcs only. All close combat attacks that are made against the bearer are at -1 to hit</Description>
@@ -374,7 +374,7 @@
 				<Artefact>
 					<Name>Mad Cap Mushrooms</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>30</Points>
 					<Rule>If Fanatics hit a unit (from either side) on the turn they are released it suffers 2D6 hits instead of the usual 1D6</Rule>
 					<Description>Night Goblins only. If the character is with a unit of Ntght Goblins when their Fanatics are released he may give them each a Mad Cap Mushrooms before they go whirling off. If they hit a unit (from either side) on the turn they are released it suffers 2D6 hits instead of the usual 1D6. Subsequent units encountered by each Fanatic are struck by 1D6 hits as usual.</Description>
@@ -382,7 +382,7 @@
 				<Artefact>
 					<Name>'Edbuttin' 'At</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>25</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Rule>One extra Attack with the Killing Blow special ability</Rule>
@@ -391,7 +391,7 @@
 				<Artefact>
 					<Name>Nibbla's 'Itty Ring</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>25</Points>
 					<Rule>Bound spell, power level 3: 'Eadbutt spell</Rule>
 					<Description>Bound spell, power level 3: the 'Itty Ring may cast its Bound spell once per Magic phase like an ordinary spell. The spell require no Power dice to cast, all the power required is provided by the ring itself. The 'Itty Ring contains the 'Eadbutt spell.</Description>
@@ -410,7 +410,7 @@
 				<Artefact>
 					<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
 					<Type>Banner</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>75</Points>
 					<AddToLeadership>1</AddToLeadership>
 					<Description>Common Goblins (including characters) in a unit with Rowdy Grott's Big Red Raggedy Banner get a +1 Leadership bonus up to a maximum value of 9</Description>
@@ -418,7 +418,7 @@
 				<Artefact>
 					<Name>Bad Moon Banner</Name>
 					<Type>Banner</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>60</Points>
 					<Stubborn/>
 					<Description>The unit is stubborn.</Description>
@@ -613,7 +613,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great axe</Off>
@@ -712,7 +712,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great axe</Off>
@@ -800,7 +800,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great axe</Off>
@@ -973,7 +973,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great axe</Off>
@@ -1199,7 +1199,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great axe</Off>
@@ -1304,7 +1304,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great axe</Off>
@@ -1399,7 +1399,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great axe</Off>
@@ -1590,7 +1590,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great axe</Off>
