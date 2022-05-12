@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WarhammerArmyAssembler.Army
 {
@@ -96,9 +94,9 @@ namespace WarhammerArmyAssembler.Army
 
         public static int IsOptionAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
         {
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units)
+            foreach (KeyValuePair<int, Unit> entry in Data.Units)
             {
-                if ((entry.Key == requestFromUnit) || byUnitType || (entry.Value.Name != unitName))
+                if ((entry.Key == requestFromUnit) || (byUnitType && (entry.Value.Name != unitName)))
                     continue;
 
                 foreach (Option option in entry.Value.Options)
