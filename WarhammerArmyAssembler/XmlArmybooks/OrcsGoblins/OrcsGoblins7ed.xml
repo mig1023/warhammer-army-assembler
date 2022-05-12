@@ -120,7 +120,7 @@
 				<Artefact>
 					<Name>WAAAGH! Cleava</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>100</Points>
 					<AutoWound/>
 					<NoArmour/>
@@ -129,7 +129,7 @@
 				<Artefact>
 					<Name>Battleaxe of the Last WAAAGH!</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>100</Points>
 					<Rule>Attacks and Strength bonus equal rank bonus</Rule>
 					<Description>The wielder of this weapon receives a bonus equal to his unit's rank bonus to both his Attacks and Strength - calculate this when the wielder makes his attacks</Description>
@@ -137,7 +137,7 @@
 				<Artefact>
 					<Name>Basha's Bloodaxe</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>50</Points>
 					<Flail>1</Flail>
 					<Frenzy/>
@@ -160,7 +160,7 @@
 				<Artefact>
 					<Name>Porko's Pigstikka</Name>
 					<Type>Weapon</Type>
-					<OnlyFor>Mount</OnlyFor>
+					<Only>Mount</Only>
 					<Points>40</Points>
 					<Rule>Additional attack for each pointt of rank bonus</Rule>
 					<Description>Spear. On the turn the wielder charges, he receives an additional attack for each point of rank bonus that the unit hi is attacking has (up to a maximum of +3)</Description>
@@ -177,7 +177,7 @@
 				<Artefact>
 					<Name>Backstabber's blade</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>25</Points>
 					<PoisonAttack/>
 					<Rule>+1 Strength flank attack bonus</Rule>
@@ -187,7 +187,7 @@
 				<Artefact>
 					<Name>Wollopa's One Hit Wunda</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>15</Points>
 					<Rule>Strength 10 for one combat phase</Rule>
 					<Description>Once per game, this weapon grants the wielder Strength 10 for duration of the combat phase. One use only</Description>
@@ -204,7 +204,7 @@
 				<Artefact>
 					<Name>Sneaky Skewerer</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>10</Points>
 					<ArmourPiercing>3</ArmourPiercing>
 					<Description>Wounds caused by this weapon suffer an additional -3 armour save modifier</Description>
@@ -212,7 +212,7 @@
 				<Artefact>
 					<Name>Lucky's Dirk</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>5</Points>
 					<Rule>+1 Strength for each enemy magic item</Rule>
 					<Description>If the bearer strikes an enemy character carrying one or more magic item, his hits at +1 Strength for each magic item</Description>
@@ -270,7 +270,7 @@
 				<Artefact>
 					<Name>Idol of Mork</Name>
 					<Type>Arcane</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>50</Points>
 					<Rule>+1 Power dice for each Orc unit within 24"</Rule>
 					<Rule>-1 Power dice for each fleeing frendly unit within 24"</Rule>
@@ -279,7 +279,7 @@
 				<Artefact>
 					<Name>Staff of Sneaky Stealin'</Name>
 					<Type>Arcane</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>50</Points>
 					<Rule>Steals 1 Power dice from the enemy to dispel</Rule>
 					<Description>At the start of each of your opponent's magic phases, you may take one dice from you opponent's power poll and add it to your dispel poll</Description>
@@ -294,7 +294,7 @@
 				<Artefact>
 					<Name>WAAAGH! paints</Name>
 					<Type>Arcane</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>10</Points>
 					<Rule>+2 to any casting attemts in close combat</Rule>
 					<Description>If the Shaman is in combat at the start of the Orcs and Goblins magic phase, he receives +2 to any casting attempts</Description>
@@ -302,7 +302,7 @@
 				<Artefact>
 					<Name>Magic mushrooms</Name>
 					<Type>Arcane</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>10</Points>
 					<Rule>+D6 to casting roll, one use only</Rule>
 					<Description>+D6 to casting roll, one use only. If Mushroom dice is an 1 then the spell is miscast</Description>
@@ -319,7 +319,7 @@
 				<Artefact>
 					<Name>The Pipes of Doom</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>35</Points>
 					<Rule>Panic test for enemy cavalry, one use only</Rule>
 					<Description>The pipes can be played at the start of the shooting phase. Each enemy cavalry unit, monster (ridden or unridden) and chariot within 24" must take a Panic test</Description>
@@ -327,7 +327,7 @@
 				<Artefact>
 					<Name>Ironback Boar</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>35</Points>
 					<ImpactHit>D3</ImpactHit>
 					<Description>Boar. When charging, this steed does D3 Strength 5 impact hits in addition to its norman attack</Description>
@@ -356,7 +356,7 @@
 				<Artefact>
 					<Name>Brimstone bauble</Name>
 					<Type>AdditionalArmour</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>25</Points>
 					<Rule>D6 Strength 6 hits when bearer is slain</Rule>
 					<Description>When bearer is slain, all units (friend or foe) in base contact suffer D6 Strength 6 hits, distributed as for shooting</Description>
@@ -371,7 +371,7 @@
 				<Artefact>
 					<Name>Mad Cap mushrooms</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>20</Points>
 					<Rule>Fanatics may re-roll the number of Hits caused</Rule>
 					<Description>Fanatics may re-roll the number of Hits caused</Description>
@@ -389,7 +389,7 @@
 				<Artefact>
 					<Name>Mork's Spirit-Totem</Name>
 					<Type>Banner</Type>
-					<OnlyForGroup>Orc</OnlyForGroup>
+					<OnlyGroup>Orc</OnlyGroup>
 					<Points>50</Points>
 					<Rule>Adds a number of dispel dice equal rank bonus</Rule>
 					<Description>This magical banner adds a number of dispel dice to the pool equal to the unit's rank bonus</Description>
@@ -397,7 +397,7 @@
 				<Artefact>
 					<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
 					<Type>Banner</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>50</Points>
 					<Rule>All Goblins within 12" may re-roll Panic test</Rule>
 					<Description>All Goblins within 12" of the banner may re-roll failed Panic test</Description>
@@ -405,7 +405,7 @@
 				<Artefact>
 					<Name>Bad Moon on a stick</Name>
 					<Type>Banner</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>50</Points>
 					<Stubborn/>
 					<Description>All Night Goblin in this unit are Stubborn</Description>
@@ -413,7 +413,7 @@
 				<Artefact>
 					<Name>The Spider banner</Name>
 					<Type>Banner</Type>
-					<OnlyForGroup>Goblin</OnlyForGroup>
+					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>50</Points>
 					<PoisonAttack/>
 					<Description>All Goblin in the unit have poisoned attacks (shooting and combat)</Description>
@@ -684,14 +684,14 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>6</Points>
 					</Option>
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Points>3</Points>
 					</Option>
 					<Option>
@@ -846,14 +846,14 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>6</Points>
 					</Option>
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Points>3</Points>
 					</Option>
 					<Option>
@@ -1021,7 +1021,7 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
 						<Dependencies>
@@ -1031,7 +1031,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Points>2</Points>
 						<Dependencies>
 							<Off>Battle Standard Bearer</Off>
@@ -1190,7 +1190,7 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
 						<Dependencies>
@@ -1200,7 +1200,7 @@
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Points>2</Points>
 						<Dependencies>
 							<Off>Battle Standard Bearer</Off>
