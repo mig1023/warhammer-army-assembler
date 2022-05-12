@@ -257,7 +257,7 @@ namespace WarhammerArmyAssembler
 
             if (ArmyBook.Data.Artefact.ContainsKey(id))
             {
-                Option.OnlyForType onlyForType = unit.GetMountTypeAlreadyFixed();
+                Option.OnlyType onlyForType = unit.GetMountTypeAlreadyFixed();
                 bool enabled = unit.IsOptionEnabled(ArmyBook.Data.Artefact[id], unit.GetMountOn(), onlyForType);
                 bool usable = ArmyBook.Data.Artefact[id].IsUsableByUnit(unit, dragOverCheck: true);
                 e.Effects = (usable && enabled ? DragDropEffects.Copy : DragDropEffects.None);
