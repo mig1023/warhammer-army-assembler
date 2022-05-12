@@ -118,7 +118,7 @@
 				<Artefact>
 					<Name>Executioner's Axe</Name>
 					<Type>Weapon</Type>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Points>80</Points>
 					<Rule>Strength double that of his target's Toughness</Rule>
 					<WoundOn>2</WoundOn>
@@ -275,7 +275,7 @@
 					<Name>Rubric of Dark Dimensions</Name>
 					<Type>Weapon</Type>
 					<Points>50</Points>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Rule>Bound spell, power level 3, one use only: all enemy models in base contact must roll equal to or under their Strength on a D6 or be slain</Rule>
 					<Description>One use only. Bound spell, power level 5. All enemy models in base contact with the bearer must roll equal to or under their Strength on a D6 (6 always fails) or be sucked into the dimension of Eternal Nightmares (and count as slain!).</Description>
 				</Artefact>
@@ -367,7 +367,7 @@
 					<Name>Manbane</Name>
 					<Type>Weapon</Type>
 					<Points>25</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<Rule>Counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6</Rule>
 					<Description>A character with a weapon coated with Manbane always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6. In effect, this means that they almost always wound opponents on a roll of 3+. This modified Strength is also used to calculate armour save modifiers.</Description>
 				</Artefact>
@@ -375,7 +375,7 @@
 					<Name>Black Lotus</Name>
 					<Type>Weapon</Type>
 					<Points>25</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<Rule>For every Wound suffers a enemy model (after saves, etc) also lose 1 point from all of their other characteristics except Movement</Rule>
 					<Description>For every Wound a model suffers from a weapon poisoned with Black Lotus (after saves, etc) they also lose 1 point from all of their other characteristics except Movement. This lasts for the rest of the battle.</Description>
 				</Artefact>
@@ -383,7 +383,7 @@
 					<Name>Dark Venom</Name>
 					<Type>Weapon</Type>
 					<Points>10</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<PoisonAttack/>
 					<Description>The model is considered to have Poisoned Attacks.</Description>
 				</Artefact>
@@ -391,7 +391,7 @@
 					<Name>Dance of Doom</Name>
 					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<AddToWard>5</AddToWard>
 					<Description>The model has a 5+ Ward save.</Description>
 				</Artefact>
@@ -399,7 +399,7 @@
 					<Name>Touch of Death</Name>
 					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<KillingBlow/>
 					<Description>The model has the Killing Blow special ability</Description>
 				</Artefact>
@@ -407,7 +407,7 @@
 					<Name>Rune of Khaine</Name>
 					<Type>Weapon</Type>
 					<Points>25</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<AddToAttacks>1</AddToAttacks>
 					<Rule>Must always pursue fleeing enemies</Rule>
 					<Description>The Rune of Khaine grants +1 Attack to its bearer. A model marked with the Rune of Khaine must always pursue fleeing enemies.</Description>
@@ -416,7 +416,7 @@
 					<Name>Hand of Khaine</Name>
 					<Type>Weapon</Type>
 					<Points>25</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<Rule>Any one model in base contact will lose one Attack</Rule>
 					<Description>Any one model (chosen by a Dark Elf player) in base contact will lose one Attack. Against mounted models, the Dark Elf player must choose either the mount/monster or the rider. If the model has several types of attack (an extra bite, for example) the Dark Elf player chooses which type of attack is lost. Models which are immune to psychology are not affected by the Hand of Khaine.</Description>
 				</Artefact>
@@ -424,7 +424,7 @@
 					<Name>Witchbrew</Name>
 					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<Rule>Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground</Rule>
 					<Description>Hags only. The Hag and her unit drink the Witchbrew before the battle. Enemy units cannot claim the +1 combat resolution bonuses for outnumbering, flank and rear attacks or higher ground.</Description>
 				</Artefact>
@@ -432,7 +432,7 @@
 					<Name>Cry of War</Name>
 					<Type>Weapon</Type>
 					<Points>10</Points>
-					<OnlyForGroup>Khainite</OnlyForGroup>
+					<OnlyGroup>Khainite</OnlyGroup>
 					<Rule>A unit charged character must pass a Leadership test or reduce their Weapon Skill by -1 for the duration of that Close Combat phase</Rule>
 					<Description>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by -1 (to a minimum of 1) for the duration of that Close Combat phase.</Description>
 				</Artefact>
@@ -617,7 +617,7 @@
 						<Name>Lance</Name>
 						<Type>Option</Type>
 						<Points>6</Points>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Lance/>
 					</Option>
 					<Option>
@@ -799,7 +799,7 @@
 						<Name>Lance</Name>
 						<Type>Option</Type>
 						<Points>4</Points>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Lance/>
 					</Option>
 					<Option>
