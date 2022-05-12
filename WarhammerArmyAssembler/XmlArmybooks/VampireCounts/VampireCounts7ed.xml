@@ -107,7 +107,7 @@
 					<Type>Powers</Type>
 					<Points>25</Points>
 					<Rule>Scout</Rule>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Description>If on foot, the Vampire has the Scout special rule.</Description>
 				</Artefact>
 				<Artefact>
@@ -268,7 +268,7 @@
 					<Name>The Black Axe of Krell</Name>
 					<Type>Weapon</Type>
 					<Points>50</Points>
-					<OnlyForGroup>Wight King</OnlyForGroup>
+					<OnlyGroup>Wight King</OnlyGroup>
 					<AddToStrength>2</AddToStrength>
 					<MultiWounds>D3</MultiWounds>
 					<HitLast/>
@@ -279,7 +279,7 @@
 					<Name>Blood Drinker</Name>
 					<Type>Weapon</Type>
 					<Points>40</Points>
-					<OnlyForGroup>Vampire</OnlyForGroup>
+					<OnlyGroup>Vampire</OnlyGroup>
 					<Rule>For each unsaved wound inflicted by the Blood Drinker, the wielder (or unit he is with) immediately regains a single Wound suffered earlier in the battle, as if Invocation of Nehek had been cast on them</Rule>
 					<Description>For each unsaved wound inflicted by the Blood Drinker, the wielder (or unit he is with) immediately regains a single Wound suffered earlier in the battle, as if Invocation of Nehek had been cast on them.</Description>
 				</Artefact>
@@ -342,7 +342,7 @@
 				<Artefact>
 					<Name>Armour of Night</Name>
 					<Type>Armour</Type>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Points>25</Points>
 					<AddToArmour>5</AddToArmour>
 					<Rule>Enemies suffer a -2 to hit penalty</Rule>
@@ -351,7 +351,7 @@
 				<Artefact>
 					<Name>Nightshroud</Name>
 					<Type>Armour</Type>
-					<OnlyFor>Infantry</OnlyFor>
+					<Only>Infantry</Only>
 					<Points>20</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Enemy models lose all charging bonuses, lose the Always Strikes First rule</Rule>
@@ -360,7 +360,7 @@
 				<Artefact>
 					<Name>The Cadaverous Cuirass</Name>
 					<Type>Armour</Type>
-					<OnlyForGroup>Vampire</OnlyForGroup>
+					<OnlyGroup>Vampire</OnlyGroup>
 					<Points>15</Points>
 					<AddToArmour>5</AddToArmour>
 					<NoKillingBlow/>
@@ -400,7 +400,7 @@
 				<Artefact>
 					<Name>Talisman of the Lycni</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Vampire</OnlyForGroup>
+					<OnlyGroup>Vampire</OnlyGroup>
 					<Points>10</Points>
 					<MovementTo>9</MovementTo>
 					<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9.</Description>
@@ -408,7 +408,7 @@
 				<Artefact>
 					<Name>Talisman of the Lycni</Name>
 					<Type>Weapon</Type>
-					<OnlyForGroup>Vampire</OnlyForGroup>
+					<OnlyGroup>Vampire</OnlyGroup>
 					<Points>10</Points>
 					<MovementTo>9</MovementTo>
 					<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9.</Description>
@@ -418,7 +418,7 @@
 				<Artefact>
 					<Name>The Carstein Ring</Name>
 					<Type>AdditionalArmour</Type>
-					<OnlyForGroup>Vampire</OnlyForGroup>
+					<OnlyGroup>Vampire</OnlyGroup>
 					<Points>75</Points>
 					<Rule>The first time the wearer of this ring is slain roll a D6 at the end of the phase. On a score of 2+ the vampire is immediately returned to 'life' with a single Wound</Rule>
 					<Description>The first time the wearer of this ring is slain roll a D6 at the end of the phase. On a score of 2+ the vampire is immediately returned to 'life' with a single Wound. The returning model must be placed in the front rank of a friendly unit anywhere on the battlefield (even one in close combat). If there is no unit for the Vampire to join, it is removed as a casualty.</Description>
@@ -989,14 +989,14 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Type>Option</Type>
-						<OnlyFor>Infantry</OnlyFor>
+						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>8</Points>
 					</Option>
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
-						<OnlyFor>Mount</OnlyFor>
+						<Only>Mount</Only>
 						<Points>12</Points>
 						<Lance/>
 					</Option>
