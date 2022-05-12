@@ -72,7 +72,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             List<string> allSlots = new List<string>();
 
-            foreach (XmlNode xmlSlot in xmlNode.SelectNodes("SlotOf"))
+            foreach (XmlNode xmlSlot in xmlNode.SelectNodes("Slots"))
                 allSlots.Add(xmlSlot.InnerText);
 
             return allSlots;

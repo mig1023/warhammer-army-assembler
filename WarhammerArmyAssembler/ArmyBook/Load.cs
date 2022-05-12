@@ -290,7 +290,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 newUnit.ParamTests = ParamParse(additionalParam);
 
-                newUnit.SlotOf = SlotsParse(additionalParam);
+                newUnit.Slots = SlotsParse(additionalParam);
                 newUnit.NoCoreSlot = BoolParse(additionalParam["NoCoreSlot"]);
 
                 if (newUnit.Frenzy)

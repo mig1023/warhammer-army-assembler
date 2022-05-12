@@ -46,9 +46,9 @@ namespace WarhammerArmyAssembler.Army
                 if ((entry.Type != Unit.UnitType.Core) || !entry.NoCoreSlot)
                     units[entry.Type] += 1;
 
-                if (entry.SlotOf != null)
+                if (entry.Slots != null)
                 {
-                    foreach (string slot in entry.SlotOf)
+                    foreach (string slot in entry.Slots)
                         units[(Unit.UnitType)Enum.Parse(typeof(Unit.UnitType), slot)] += 1;
                 }
             }

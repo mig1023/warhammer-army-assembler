@@ -127,7 +127,7 @@ namespace WarhammerArmyAssembler
 
         public List<Test.Param> ParamTests { get; set; }
 
-        public List<string> SlotOf { get; set; }
+        public List<string> Slots { get; set; }
         public bool NoCoreSlot { get; set; }
 
         public int MagicItemsPoints { get; set; }
@@ -396,8 +396,8 @@ namespace WarhammerArmyAssembler
             newUnit.Ward = this.Ward?.Clone();
             newUnit.Mount = this.Mount?.Clone();
 
-            if (this.SlotOf != null)
-                newUnit.SlotOf = new List<string>(this.SlotOf);
+            if (this.Slots != null)
+                newUnit.Slots = new List<string>(this.Slots);
 
             foreach (Option option in this.Options)
                 newUnit.Options.Add(option.Clone());
