@@ -147,12 +147,13 @@ namespace WarhammerArmyAssembler
 
             armybookArtefactDetail.Height = armybookDetail.Height;
 
-            double top = armybookDetail.Margin.Top + armyUnitDescription.ActualHeight + 35;
+            double top = armyUnitDescription.Margin.Top + armyUnitDescription.ActualHeight + 15;
             armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
 
             armyUnitSpecific.Foreground = ArmyBook.Data.FrontColor;
 
-            armyArtefactSpecific.Margin = armyUnitSpecific.Margin;
+            top = armyArtefactDescription.Margin.Top + armyArtefactDescription.ActualHeight + 15;
+            armyArtefactSpecific.Margin = Interface.Changes.Thick(armyArtefactSpecific, left: 20, top: top);
             armyArtefactSpecific.Foreground = ArmyBook.Data.FrontColor;
         }
 
@@ -333,15 +334,10 @@ namespace WarhammerArmyAssembler
             double margin = e.NewSize.Width - closeErrorDetail.Width - 10;
             closeErrorDetail.Margin = new Thickness(Interface.Changes.ZeroFuse(margin), 10, 0, 0);
 
-            List<TextBlock> texts = new List<TextBlock>
-            {
-                armyUnitDescription,
-                armyUnitSpecific,
-                armyArtefactDescription,
-                armyArtefactSpecific
-            };
+            foreach (TextBlock text in new List<TextBlock> { armyUnitDescription, armyUnitSpecific })
+                text.Width = Interface.Changes.ZeroFuse((e.NewSize.Width/2) - 75);
 
-            foreach (TextBlock text in texts)
+            foreach (TextBlock text in new List<TextBlock> { armyArtefactDescription, armyArtefactSpecific })
                 text.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 75);
 
             if (Interface.Changes.mainMenuIsOpen)

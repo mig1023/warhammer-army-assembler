@@ -47,8 +47,8 @@
 
             <ScrollViewer x:Name="armybookArtefactDetailScroll" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
                 <Canvas x:Name="armybookArtefactDetail" Height="300" VerticalAlignment="Center" Margin="0,20" Background="White">
-                    <Label x:Name="armyArtefactName" Content="" FontSize="28" Width="Auto" Margin="18,5"/>
-                    <TextBlock x:Name="armyArtefactDescription" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,75"/>
+                    <Label x:Name="armyArtefactName" Content="" FontSize="34" Width="Auto" Margin="18,5"/>
+                    <TextBlock x:Name="armyArtefactDescription" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,85"/>
                     <TextBlock x:Name="armyArtefactSpecific" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap"/>
                 </Canvas>
             </ScrollViewer>
@@ -63,10 +63,10 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Image x:Name="armyUnitImage" Grid.Row="0" Grid.Column="0" Margin="30" Stretch="Uniform" />
-                    <Canvas x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Height="300" VerticalAlignment="Center" Margin="0,20" Background="White">
-                        <Label x:Name="armyUnitName" Content="" Width="Auto" Margin="18,5"/>
-                        <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,45"/>
-                        <TextBlock x:Name="armyUnitSpecific" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,65"/>
+                    <Canvas x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Height="300" VerticalAlignment="Center" Background="White">
+                        <Label x:Name="armyUnitName" FontSize="28" Content="" Width="Auto" Margin="18,5"/>
+                        <TextBlock x:Name="armyUnitDescription" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,85"/>
+                        <TextBlock x:Name="armyUnitSpecific" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,105"/>
                     </Canvas>
                 </Grid>
             </ScrollViewer>
