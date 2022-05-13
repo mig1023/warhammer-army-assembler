@@ -5,6 +5,7 @@ using System.Windows.Media;
 using System.IO;
 using static WarhammerArmyAssembler.Unit;
 using static WarhammerArmyAssembler.ArmyBook.Parsers;
+using System.Linq;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
@@ -312,20 +313,41 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newUnit;
         }
 
-        private static XmlNode CreateOption(string name, string attributes, XmlDocument xmlDocument)
+        private static void AddOption(string name, string value, XmlDocument xmlDocument, ref XmlNode xmlNode)
         {
-            XmlNode option = xmlDocument.CreateElement("Name");
-            option.InnerText = name;
-            return option;
+            XmlNode option = xmlDocument.CreateElement(name);
+            option.InnerText = value;
+            xmlNode.AppendChild(option);
+        }
+
+
+        private static void CreateOption(string name, string attributes, XmlDocument xmlDocument, ref XmlNode xmlNode)
+        {
+            if (xmlNode["Name"] != null)
+                return;
+
+            AddOption("Name", name, xmlDocument, ref xmlNode);
+
+            if (String.IsNullOrEmpty(attributes))
+                return;
+
+            foreach (string attributeLine in attributes.Split(',').Select(x => x.Trim()))
+            {
+                List<string> attribute = attributeLine.Split(':').Select(x => x.Trim()).ToList();
+                AddOption(attribute[0], attribute[1], xmlDocument, ref xmlNode);
+            }
         }
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
         {
-            if ((xmlNode.Name == "HandWeapon") && (xmlNode["Name"] == null))
-                xmlNode.AppendChild(CreateOption("Hand weapon", String.Empty, xmlDocument));
+            if (xmlNode.Name == "HandWeapon")
+                CreateOption("Hand weapon", String.Empty, xmlDocument, ref xmlNode);
 
-            if ((xmlNode.Name == "Spear") && (xmlNode["Name"] == null))
-                xmlNode.AppendChild(CreateOption("Spear", String.Empty, xmlDocument));
+            if (xmlNode.Name == "Spear")
+                CreateOption("Spear", String.Empty, xmlDocument, ref xmlNode);
+
+            if (xmlNode.Name == "LightArmour")
+                CreateOption("Light armour", "AddToArmour: 6", xmlDocument, ref xmlNode);
 
             Option newOption = new Option
             {
