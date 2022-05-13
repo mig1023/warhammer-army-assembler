@@ -312,14 +312,20 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newUnit;
         }
 
+        private static XmlNode CreateOption(string name, string attributes, XmlDocument xmlDocument)
+        {
+            XmlNode option = xmlDocument.CreateElement("Name");
+            option.InnerText = name;
+            return option;
+        }
+
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
         {
             if ((xmlNode.Name == "HandWeapon") && (xmlNode["Name"] == null))
-            {
-                XmlNode handWeapon = xmlDocument.CreateElement("Name");
-                handWeapon.InnerText = "Hand weapon";
-                xmlNode.AppendChild(handWeapon);
-            }
+                xmlNode.AppendChild(CreateOption("Hand weapon", String.Empty, xmlDocument));
+
+            if ((xmlNode.Name == "Spear") && (xmlNode["Name"] == null))
+                xmlNode.AppendChild(CreateOption("Spear", String.Empty, xmlDocument));
 
             Option newOption = new Option
             {
