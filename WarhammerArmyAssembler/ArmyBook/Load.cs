@@ -320,7 +320,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlNode.AppendChild(option);
         }
 
-
         private static void CreateOption(string name, string attributes, XmlDocument xmlDocument, ref XmlNode xmlNode)
         {
             if (xmlNode["Name"] != null)
@@ -340,14 +339,14 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
         {
-            if (xmlNode.Name == "HandWeapon")
-                CreateOption("Hand weapon", String.Empty, xmlDocument, ref xmlNode);
+            foreach (KeyValuePair<string, string> banalXmlOption in Constants.BanalXmlOption)
+            {
+                if (xmlNode.Name != banalXmlOption.Key)
+                    continue;
 
-            if (xmlNode.Name == "Spear")
-                CreateOption("Spear", String.Empty, xmlDocument, ref xmlNode);
-
-            if (xmlNode.Name == "LightArmour")
-                CreateOption("Light armour", "AddToArmour: 6", xmlDocument, ref xmlNode);
+                List<string> xmlOption = banalXmlOption.Value.Split('|').ToList();
+                CreateOption(xmlOption[0], xmlOption[1], xmlDocument, ref xmlNode);
+            }
 
             Option newOption = new Option
             {
