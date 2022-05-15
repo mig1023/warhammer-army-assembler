@@ -15,6 +15,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["Spear"] = "Spear|",
             ["LightArmour"] = "Light armour|AddToArmour: 6",
             ["HeavyArmour"] = "Heavy armour|AddToArmour: 5",
+            ["Shield"] = "Shield|AddToArmour: 6",
         };
     }
 }
