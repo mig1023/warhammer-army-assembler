@@ -313,10 +313,13 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newUnit;
         }
 
-        private static void AddOption(string name, string value, XmlDocument xmlDocument, ref XmlNode xmlNode)
+        private static void AddToOption(XmlDocument xmlDocument, ref XmlNode xmlNode, string name, string value = "")
         {
             XmlNode option = xmlDocument.CreateElement(name);
-            option.InnerText = value;
+
+            if (!String.IsNullOrEmpty(value))
+                option.InnerText = value;
+
             xmlNode.AppendChild(option);
         }
 
@@ -325,15 +328,20 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode["Name"] != null)
                 return;
 
-            AddOption("Name", name, xmlDocument, ref xmlNode);
+            AddToOption(xmlDocument, ref xmlNode, "Name", name);
 
             if (String.IsNullOrEmpty(attributes))
                 return;
 
             foreach (string attributeLine in attributes.Split(',').Select(x => x.Trim()))
             {
-                List<string> attribute = attributeLine.Split(':').Select(x => x.Trim()).ToList();
-                AddOption(attribute[0], attribute[1], xmlDocument, ref xmlNode);
+                if (attributeLine.Contains(":"))
+                {
+                    List<string> attribute = attributeLine.Split(':').Select(x => x.Trim()).ToList();
+                    AddToOption(xmlDocument, ref xmlNode, attribute[0], attribute[1]);
+                }
+                else
+                    AddToOption(xmlDocument, ref xmlNode, attributeLine);
             }
         }
 
