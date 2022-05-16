@@ -19,6 +19,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["LongBow"] = "Longbow|",
             ["Bow"] = "Bow|",
             ["ShortBow"] = "Short bow|",
+            ["GreatWeapon"] = "Great weapon|AddToStrength: 2, HitLast",
         };
     }
 }
