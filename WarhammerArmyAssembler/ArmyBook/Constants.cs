@@ -16,6 +16,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["LightArmour"] = "Light armour|AddToArmour: 6",
             ["HeavyArmour"] = "Heavy armour|AddToArmour: 5",
             ["Shield"] = "Shield|AddToArmour: 6",
+            ["LongBow"] = "Longbow|",
+            ["Bow"] = "Bow|",
+            ["ShortBow"] = "Short bow|",
         };
     }
 }
