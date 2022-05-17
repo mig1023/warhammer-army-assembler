@@ -16,6 +16,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["GreatWeapon"] = "Great weapon|AddToStrength: 2, HitLast",
             ["Halberd"] = "Halberd|AddToStrength: 1",
             ["Flail"] = "Flail|Flail",
+            ["TwoHandsWeapon"] = "Two hands weapons|AddToAttacks: 1",
             ["Spear"] = "Spear|",
             ["Lance"] = "Lance|Lance",
             ["LightArmour"] = "Light armour|AddToArmour: 6",
