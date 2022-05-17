@@ -13,6 +13,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             ["HandWeapon"] = "Hand weapon|",
             ["Spear"] = "Spear|",
+            ["Lance"] = "Lance|Lance",
             ["LightArmour"] = "Light armour|AddToArmour: 6",
             ["HeavyArmour"] = "Heavy armour|AddToArmour: 5",
             ["Shield"] = "Shield|AddToArmour: 6",
