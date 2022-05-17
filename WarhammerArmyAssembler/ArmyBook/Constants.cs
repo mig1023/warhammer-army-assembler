@@ -20,6 +20,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["Lance"] = "Lance|Lance",
             ["LightArmour"] = "Light armour|AddToArmour: 6",
             ["HeavyArmour"] = "Heavy armour|AddToArmour: 5",
+            ["FullPlateArmour"] = "Full plate armour|AddToArmour: 4",
             ["Shield"] = "Shield|AddToArmour: 6",
             ["LongBow"] = "Longbow|",
             ["Bow"] = "Bow|",
