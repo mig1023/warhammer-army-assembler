@@ -12,6 +12,9 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static Dictionary<string, string> BanalXmlOption = new Dictionary<string, string>
         {
             ["HandWeapon"] = "Hand weapon|",
+            ["GreatWeapon"] = "Great weapon|AddToStrength: 2, HitLast",
+            ["Halberd"] = "Halberd|AddToStrength: 1",
+            ["Flail"] = "Flail|Flail",
             ["Spear"] = "Spear|",
             ["Lance"] = "Lance|Lance",
             ["LightArmour"] = "Light armour|AddToArmour: 6",
@@ -20,8 +23,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["LongBow"] = "Longbow|",
             ["Bow"] = "Bow|",
             ["ShortBow"] = "Short bow|",
-            ["GreatWeapon"] = "Great weapon|AddToStrength: 2, HitLast",
-            ["Halberd"] = "Halberd|AddToStrength: 1",
         };
     }
 }
