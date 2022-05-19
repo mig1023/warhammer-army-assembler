@@ -343,6 +343,12 @@ namespace WarhammerArmyAssembler.ArmyBook
                 else
                     AddToOption(xmlDocument, ref xmlNode, attributeLine);
             }
+
+            if (xmlNode.Attributes["Points"] != null)
+            {
+                AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
+                AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"].InnerText);
+            }
         }
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
