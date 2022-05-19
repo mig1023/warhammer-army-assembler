@@ -2293,11 +2293,12 @@
 						<Name>Fanatic</Name>
 						<Type>Option</Type>
 						<Points>25</Points>
-						<Countable/>
-						<Min>0</Min>
-						<Max>3</Max>
-						<Value>0</Value>
-						<ExportToUnitSize/>
+						<Countable>
+							<Min>0</Min>
+							<Max>3</Max>
+							<Value>0</Value>
+							<ExportToUnitSize/>
+						</Countable>
 					</Option>
 					<Option>
 						<Name>Musician</Name>
@@ -2594,9 +2595,10 @@
 						<Type>Option</Type>
 						<Points>18</Points>
 						<PerModel/>
-						<Countable/>
-						<MaxDependency Dependency="Size" Ratio="3"/>
-						<ExportToUnitSize/>
+						<Countable>
+							<MaxDependency Dependency="Size" Ratio="3"/>
+							<ExportToUnitSize/>
+						</Countable>
 					</Option>
 				</Options>
 			</Unit>
