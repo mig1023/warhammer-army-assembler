@@ -375,7 +375,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Virtue = BoolParse(xmlNode["Virtue"]),
                 Honours = BoolParse(xmlNode["Honours"]),
 
-                Countable = CountableParse(xmlNode),
+                Countable = CountableParse(xmlNode["Countable"]),
 
                 SpecialRuleDescription = AllStringParse(xmlNode, "Rule"),
 

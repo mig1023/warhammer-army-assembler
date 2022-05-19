@@ -83,9 +83,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return null;
 
-            if (xmlNode["Countable"] == null)
-                return null;
-
             Countable countable = new Countable
             {
                 Min = IntParse(xmlNode["Min"]),
