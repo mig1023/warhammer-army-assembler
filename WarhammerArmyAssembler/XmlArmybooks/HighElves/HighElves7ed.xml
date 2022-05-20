@@ -757,13 +757,7 @@
 						<Type>Option</Type>
 						<Points>3</Points>
 					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>12</Points>
-					</Option>
+					<GreatWeapon Points="12"/>
 					<Halberd Points="6"/>
 					<Option>
 						<Name>Additional weapon</Name>
@@ -1062,13 +1056,7 @@
 						<Type>Option</Type>
 						<Points>2</Points>
 					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>8</Points>
-					</Option>
+					<GreatWeapon Points="8"/>
 					<Halberd Points="4"/>
 					<Option>
 						<Name>Additional weapon</Name>
@@ -1728,10 +1716,7 @@
 					<HitFirst/>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
-					</HandWeapon>
+					<GreatWeapon/>
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
