@@ -1939,13 +1939,7 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Halberd</Name>
-						<Type>Option</Type>
-						<AddToStrength>1</AddToStrength>
-						<Points>2</Points>
-						<PerModel/>
-					</Option>
+					<Halberd PointsPerModel="2"/>
 					<Option>
 						<Name>Tomb Captain</Name>
 						<Type>Option</Type>
@@ -2246,10 +2240,7 @@
 					<LargeBase/>
 				</SpecialRules>
 				<Equipments>
-					<HeadWeapon>
-						<Name>Halberd</Name>
-						<AddToStrength>1</AddToStrength>
-					</HeadWeapon>
+					<Halberd/>
 					<Special>
 						<Rule>Entombed Beneath the Send</Rule>
 						<Rule>Transmogrifying Gaze: This is a shooting attack with range 8" and Strength 1. Does not require a roll To Hit. Instead, when the unit shoots, roll an artillery dice for each Sepulchral Stalker in the unit and add the results together. The target suffers a number of automatic hits equal to the result. When rolling To Wound with these hits, substitute the target's Toughness with its Initiative value. If the target has several Initiative values, always use the highest. Targets with no Initiative value are immune to this attack. No armour saves are allowed against a Transmogrifying Gaze. Finally, for each Misfire result rolled, the Sepulchral Stalkers suffer D3 automatic Wounds with no armour saves allowed, as they catch glimpses of their own reflection in their foe's sword blades or polished shields</Rule>
