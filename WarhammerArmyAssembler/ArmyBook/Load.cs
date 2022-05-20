@@ -344,10 +344,18 @@ namespace WarhammerArmyAssembler.ArmyBook
                     AddToOption(xmlDocument, ref xmlNode, attributeLine);
             }
 
-            if (xmlNode.Attributes["Points"] != null)
+            string points = 
+                xmlNode.Attributes["PointsPerModel"]?.InnerText ??
+                xmlNode.Attributes["Points"]?.InnerText ??
+                String.Empty;
+
+            if (!String.IsNullOrEmpty(points))
             {
                 AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
-                AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"].InnerText);
+                AddToOption(xmlDocument, ref xmlNode, "Points", points);
+
+                if (xmlNode.Attributes["PointsPerModel"] != null)
+                    AddToOption(xmlDocument, ref xmlNode, "PerModel", "True");
             }
         }
 
