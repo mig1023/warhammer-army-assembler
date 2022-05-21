@@ -1226,24 +1226,9 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Sergeant</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Sergeant" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1270,24 +1255,9 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Sergeant</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Sergeant" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1315,24 +1285,9 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Duellist</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Duellist" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1359,24 +1314,9 @@
 					</RangeWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Marksman</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Marksman" Points="5"/>
 					<Option>
 						<Name>Hochland long rifle for Marksman</Name>
 						<Type>Option</Type>
@@ -1437,24 +1377,9 @@
 						<PerModel/>
 						<AddToArmour>6</AddToArmour>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Sergeant</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Sergeant" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1492,12 +1417,7 @@
 						<Rule>Longbow</Rule>
 						<OnlyOneInArmy/>
 					</Option>
-					<Option>
-						<Name>Marksman</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
+					<CommandGroup Position="Marksman" Points="5"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1524,24 +1444,9 @@
 					</RangeWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Marksman</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Marksman" Points="5"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1579,12 +1484,7 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>8</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="8"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1592,12 +1492,7 @@
 						<Points>16</Points>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>First Knight</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>16</Points>
-					</Option>
+					<CommandGroup Position="First Knight" Points="16"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1636,12 +1531,7 @@
 						<PerModel/>
 						<AddToStrength>1</AddToStrength>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>8</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="8"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1649,12 +1539,7 @@
 						<Points>16</Points>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>First Knight</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>16</Points>
-					</Option>
+					<CommandGroup Position="First Knight" Points="16"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1684,12 +1569,7 @@
 					<FullPlateArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>6</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="6"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1697,12 +1577,7 @@
 						<Points>12</Points>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>Count's Champion</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-					</Option>
+					<CommandGroup Position="Count's Champion" Points="12"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1736,12 +1611,7 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Marksman</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>7</Points>
-					</Option>
+					<CommandGroup Position="Marksman" Points="7"/>
 					<Option>
 						<Name>Repeater handgun for Marksman</Name>
 						<Type>Option</Type>
@@ -1858,12 +1728,7 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Prophet of Doom</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-					</Option>
+					<CommandGroup Position="Prophet of Doom" Points="12"/>
 				</Options>
 			</Unit>
 		</Units>
