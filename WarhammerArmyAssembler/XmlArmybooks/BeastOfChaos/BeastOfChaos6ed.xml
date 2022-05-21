@@ -1047,24 +1047,9 @@
 							<ExportToUnitSize/>
 						</Countable>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Foe-render</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Foe-render" Points="20"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1090,12 +1075,7 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>6</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="6"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1103,12 +1083,7 @@
 						<Points>12</Points>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>Gouge-horn</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-					</Option>
+					<CommandGroup Position="Gouge-horn" Points="12"/>
 					<Option>
 						<Name>Mark of Chaos Undivided</Name>
 						<Type>Option</Type>
@@ -1310,24 +1285,9 @@
 						<AddToArmour>5</AddToArmour>
 					</Option>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-					</Option>
-					<Option>
-						<Name>Big Chaos Ogre</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="10"/>
+					<CommandGroup Position="Standard bearer" Points="20"/>
+					<CommandGroup Position="Big Chaos Ogre" Points="20"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1369,24 +1329,9 @@
 						<Points>3</Points>
 					</Option>
 					<Shield PointsPerModel="2"/>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>7</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>14</Points>
-					</Option>
-					<Option>
-						<Name>Gorehoof</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>14</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="7"/>
+					<CommandGroup Position="Standard bearer" Points="14"/>
+					<CommandGroup Position="Gorehoof" Points="14"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1444,18 +1389,8 @@
 						<Points>3</Points>
 						<AddToArmour>6</AddToArmour>
 					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-					</Option>
-					<Option>
-						<Name>Bloodkine</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="20"/>
+					<CommandGroup Position="Bloodkine" Points="20"/>
 					<Option>
 						<Name>Mark of Chaos Undivided</Name>
 						<Type>Option</Type>
