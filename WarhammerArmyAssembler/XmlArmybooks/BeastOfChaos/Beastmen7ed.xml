@@ -1250,24 +1250,9 @@
 						<PerModel/>
 						<Points>1</Points>
 					</Option>
-					<Option>
-						<Name>Foe-render</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Foe-render" Points="10"/>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1316,18 +1301,8 @@
 						<OnlyOneInArmy/>
 						<Points>75</Points>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>3</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>6</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="3"/>
+					<CommandGroup Position="Standard bearer" Points="6"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1357,18 +1332,8 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Halfhorn</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>3</Points>
-					</Option>
+					<CommandGroup Position="Halfhorn" Points="6"/>
+					<CommandGroup Position="Musician" Points="3"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1508,18 +1473,8 @@
 						<Points>20</Points>
 						<MagicItems Points="25" Type="Hero"/>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="10"/>
+					<CommandGroup Position="Standard bearer" Points="20"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1583,18 +1538,8 @@
 						<OnlyOneInArmy/>
 						<Points>155</Points>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>7</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>14</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="7"/>
+					<CommandGroup Position="Standard bearer" Points="14"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1664,12 +1609,7 @@
 						<Points>12</Points>
 						<MagicItems Points="25" Type="Hero"/>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>6</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="6"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
