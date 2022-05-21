@@ -1002,24 +1002,9 @@
 						<Type>Option</Type>
 						<Points>55</Points>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Clawleader</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Clawleader" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1062,12 +1047,7 @@
 						<Type>Option</Type>
 						<Points>60</Points>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1075,12 +1055,7 @@
 						<Points>10</Points>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>Fangleader</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Fangleader" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1197,12 +1172,7 @@
 						<PerModel/>
 						<Points>2</Points>
 					</Option>
-					<Option>
-						<Name>Nightleader</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Nightleader" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1251,18 +1221,8 @@
 						</Dependencies>
 						<Points>2</Points>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Pawleader</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>8</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="4"/>
+					<CommandGroup Position="Pawleader" Points="8"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1360,12 +1320,7 @@
 						<Rule>Tunnelling rule</Rule>
 						<Points>3</Points>
 					</Option>
-					<Option>
-						<Name>Black Skaven</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-					</Option>
+					<CommandGroup Position="Black Skaven" Points="12"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1400,12 +1355,7 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Sharpshooter</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Sharpshooter" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1440,12 +1390,7 @@
 						<AddToAttacks>1</AddToAttacks>
 						<Points>2</Points>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1453,12 +1398,7 @@
 						<Points>10</Points>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>Deacon</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Deacon" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
