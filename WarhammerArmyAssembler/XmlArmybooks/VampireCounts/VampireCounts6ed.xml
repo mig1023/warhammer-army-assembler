@@ -1712,24 +1712,9 @@
 						<AddToArmour>6</AddToArmour>
 					</Option>
 					<Spear PointsPerModel="1"/>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Skeleton Captain</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Position="Skeleton Captain" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1760,18 +1745,8 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="5"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1803,12 +1778,7 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Chast</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Chast" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1871,12 +1841,7 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Doom Wolf</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Doom Wolf" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1917,12 +1882,7 @@
 						<PerModel/>
 					</Option>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>6</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="6"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1930,12 +1890,7 @@
 						<Points>12</Points>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>Crypt Keeper</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-					</Option>
+					<CommandGroup Position="Crypt Keeper" Points="12"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1979,12 +1934,7 @@
 						<Points>2</Points>
 						<PerModel/>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>8</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="8"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1992,12 +1942,7 @@
 						<Points>16</Points>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>Hell Knight</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>16</Points>
-					</Option>
+					<CommandGroup Position="Hell Knight" Points="16"/>
 				</Options>
 			</Unit>
 			<Unit>
