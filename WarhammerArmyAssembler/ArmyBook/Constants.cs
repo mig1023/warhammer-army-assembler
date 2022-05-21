@@ -26,6 +26,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["LongBow"] = "Longbow|",
             ["Bow"] = "Bow|",
             ["ShortBow"] = "Short bow|",
+            ["CommandGroup"] = "Command|CommandGroup",
         };
     }
 }

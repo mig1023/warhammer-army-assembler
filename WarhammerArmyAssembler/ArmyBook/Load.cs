@@ -328,6 +328,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode["Name"] != null)
                 return;
 
+            if (name == "Command")
+                name = xmlNode.Attributes["Position"].InnerText;
+
             AddToOption(xmlDocument, ref xmlNode, "Name", name);
 
             if (String.IsNullOrEmpty(attributes))
