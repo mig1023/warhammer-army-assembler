@@ -576,12 +576,7 @@
 						</Dependencies>
 						<Points>6</Points>
 					</Option>
-					<Option>
-						<Name>Shield</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<Shield Points="3"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -670,12 +665,7 @@
 						</Dependencies>
 						<Points>4</Points>
 					</Option>
-					<Option>
-						<Name>Shield</Name>
-						<Type>Option</Type>
-						<AddToArmour>6</AddToArmour>
-						<Points>2</Points>
-					</Option>
+					<Shield Points="2"/>
 					<Option>
 						<Name>Battle Standard Bearer</Name>
 						<Type>Option</Type>
@@ -1059,13 +1049,7 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Shield</Name>
-						<Type>Option</Type>
-						<Points>1</Points>
-						<PerModel/>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<Shield PointsPerModel="1"/>
 					<Option>
 						<Name>Warpfire Thrower</Name>
 						<Mount/>
@@ -1248,13 +1232,7 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Shield</Name>
-						<Type>Option</Type>
-						<PerModel/>
-						<AddToArmour>6</AddToArmour>
-						<Points>1</Points>
-					</Option>
+					<Shield PointsPerModel="1"/>
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
