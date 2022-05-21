@@ -1527,24 +1527,9 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<GreatWeapon PointsPerModel="2"/>
-					<Option>
-						<Name>Veteran</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Veteran" Points="10"/>
+					<CommandGroup Position="Musician" Points="10"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1581,24 +1566,9 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<GreatWeapon PointsPerModel="2"/>
-					<Option>
-						<Name>Veteran</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Veteran" Points="10"/>
+					<CommandGroup Position="Musician" Points="10"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1636,12 +1606,7 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<GreatWeapon PointsPerModel="2"/>
-					<Option>
-						<Name>Veteran</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Veteran" Points="10"/>
 					<Option>
 						<Name>Dwarf pistols</Name>
 						<Type>Option</Type>
@@ -1650,18 +1615,8 @@
 							<On>Veteran</On>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="10"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1698,18 +1653,8 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<GreatWeapon PointsPerModel="2"/>
-					<Option>
-						<Name>Old Guard</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Old Guard" Points="10"/>
+					<CommandGroup Position="Musician" Points="10"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1760,12 +1705,7 @@
 						<Points>10</Points>
 						<MagicItems Points="25" Type="Hero"/>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="10"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1809,12 +1749,7 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Ironbeard</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Ironbeard" Points="10"/>
 					<Option>
 						<Name>A brace of drakefire pistols</Name>
 						<Type>Option</Type>
@@ -1831,12 +1766,7 @@
 							<On>Ironbeard</On>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="10"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -1884,12 +1814,7 @@
 						<PerModel/>
 						<Rule>Missile weapons with one use only rule and range attack with range 4", Strength 4 and Armour Piercing, Flaming Attacks special rules</Rule>
 					</Option>
-					<Option>
-						<Name>Prospector</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Prospector" Points="10"/>
 					<Option>
 						<Name>Steam drill</Name>
 						<Type>Option</Type>
@@ -1899,18 +1824,8 @@
 							<On>Prospector</On>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="10"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1955,12 +1870,7 @@
 						<Points>10</Points>
 						<MagicItems Points="25" Type="Hero"/>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="10"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
@@ -2209,24 +2119,9 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Ol'Deadeye</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Ol'Deadeye" Points="10"/>
+					<CommandGroup Position="Musician" Points="10"/>
+					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -2267,12 +2162,7 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Ironwarden</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Ironwarden" Points="10"/>
 					<Option>
 						<Name>Cinderblast Bomb</Name>
 						<Type>Option</Type>
@@ -2299,12 +2189,7 @@
 							<Off>Brace of Drakefire pistols</Off>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Musician</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-					</Option>
+					<CommandGroup Position="Musician" Points="10"/>
 					<Option>
 						<Name>Standard bearer</Name>
 						<Type>Option</Type>
