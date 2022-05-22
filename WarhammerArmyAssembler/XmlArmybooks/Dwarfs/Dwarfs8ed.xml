@@ -1655,13 +1655,7 @@
 					<GreatWeapon PointsPerModel="2"/>
 					<CommandGroup Position="Old Guard" Points="10"/>
 					<CommandGroup Position="Musician" Points="10"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1698,21 +1692,9 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Keeper of the Gate</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="25" Type="Hero"/>
-					</Option>
+					<CommandGroup Position="Keeper of the Gate" Points="10" Magic="Type:Hero, Points:25"/>
 					<CommandGroup Position="Musician" Points="10"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="75" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:75"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1767,13 +1749,7 @@
 						</Dependencies>
 					</Option>
 					<CommandGroup Position="Musician" Points="10"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1863,21 +1839,9 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Giant Slayers</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="25" Type="Hero"/>
-					</Option>
+					<CommandGroup Position="Giant Slayers" Points="10" Magic="Type:Hero, Points:25"/>
 					<CommandGroup Position="Musician" Points="10"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -2190,13 +2154,7 @@
 						</Dependencies>
 					</Option>
 					<CommandGroup Position="Musician" Points="10"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Unit>
 			<Unit>
