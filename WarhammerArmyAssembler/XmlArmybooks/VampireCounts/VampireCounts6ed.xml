@@ -1883,13 +1883,7 @@
 					</Option>
 					<Shield PointsPerModel="1"/>
 					<CommandGroup Position="Musician" Points="6"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Crypt Keeper" Points="12"/>
 				</Options>
 			</Unit>
@@ -1935,13 +1929,7 @@
 						<PerModel/>
 					</Option>
 					<CommandGroup Position="Musician" Points="8"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>16</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="16" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Hell Knight" Points="16"/>
 				</Options>
 			</Unit>
