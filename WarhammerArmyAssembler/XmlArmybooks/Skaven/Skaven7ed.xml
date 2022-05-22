@@ -1553,13 +1553,7 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<CommandGroup Position="Musician" Points="5"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 						<CommandGroup Position="Fangleader" Points="15"/>
 					<Option>
 						<Name>Poisoned Wind Mortar</Name>
@@ -1890,13 +1884,7 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="5"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Bringer-of-the-Word" Points="10"/>
 				</Options>
 			</Unit>
