@@ -1048,13 +1048,7 @@
 						<Points>60</Points>
 					</Option>
 					<CommandGroup Position="Musician" Points="5"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="100" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Fangleader" Points="10"/>
 				</Options>
 			</Unit>
@@ -1391,13 +1385,7 @@
 						<Points>2</Points>
 					</Option>
 					<CommandGroup Position="Musician" Points="5"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Deacon" Points="10"/>
 				</Options>
 			</Unit>
