@@ -1871,13 +1871,7 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<CommandGroup Position="Musician" Points="6"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 						<CommandGroup Position="Back Orc Boss" Points="20"/>
 				</Options>
 			</Unit>
