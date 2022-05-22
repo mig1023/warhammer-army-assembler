@@ -900,13 +900,7 @@
 				<Options>
 					<CommandGroup Position="Gutlord" Points="20"/>
 					<CommandGroup Position="Musician" Points="10"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
 					<Option>
 						<Name>Look-out Gnoblar</Name>
 						<Type>Option</Type>
