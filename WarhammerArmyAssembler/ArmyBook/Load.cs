@@ -313,12 +313,22 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newUnit;
         }
 
-        private static void AddToOption(XmlDocument xmlDocument, ref XmlNode xmlNode, string name, string value = "")
+        private static void AddToOption(XmlDocument xmlDocument, ref XmlNode xmlNode,
+            string name, string value = "", string attributes = "")
         {
-            XmlNode option = xmlDocument.CreateElement(name);
+            XmlElement option = xmlDocument.CreateElement(name);
 
             if (!String.IsNullOrEmpty(value))
                 option.InnerText = value;
+
+            if (!String.IsNullOrEmpty(attributes))
+            {
+                foreach (string attributeLine in attributes.Split(',').Select(x => x.Trim()))
+                {
+                    List<string> attribute = attributeLine.Split(':').Select(x => x.Trim()).ToList();
+                    option.SetAttribute(attribute[0], attribute[1]);
+                }
+            }
 
             xmlNode.AppendChild(option);
         }
@@ -360,6 +370,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 if (xmlNode.Attributes["PointsPerModel"] != null)
                     AddToOption(xmlDocument, ref xmlNode, "PerModel", "True");
             }
+
+            if (xmlNode.Attributes["Magic"] != null)
+                AddToOption(xmlDocument, ref xmlNode, "MagicItems", attributes: xmlNode.Attributes["Magic"].InnerText);
         }
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
