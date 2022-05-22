@@ -1466,13 +1466,7 @@
 						<PerModel/>
 						<Points>8</Points>
 					</Option>
-					<Option>
-						<Name>Bloodkine</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-						<MagicItems Points="25" Type="Hero"/>
-					</Option>
+					<CommandGroup Position="Bloodkine" Points="20" Magic="Type:Hero, Points:25"/>
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="20"/>
 				</Options>
@@ -1602,21 +1596,9 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Gouge-horn</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-						<MagicItems Points="25" Type="Hero"/>
-					</Option>
+					<CommandGroup Position="Gouge-horn" Points="12" Magic="Type:Hero, Points:25"/>
 					<CommandGroup Position="Musician" Points="6"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Unit>
 			<Unit>
