@@ -1332,13 +1332,7 @@
 						<Rule>Skirmish</Rule>
 					</Option>
 					<CommandGroup Position="Musician" Points="6"/>
-					<Option>
-						<Name>Standard Bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-						<MagicItems Points="25" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard Bearer" Points="12" Magic="Type:Unit, Points:25"/>
 					<CommandGroup Position="Lord's Bowman" Points="6"/>
 				</Options>
 			</Unit>
@@ -1405,13 +1399,7 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="6"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>12</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Eternal Warden" Points="12"/>
 				</Options>
 			</Unit>
@@ -1554,13 +1542,7 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="0"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>18</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="18" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Wild Hunter" Points="18"/>
 				</Options>
 			</Unit>
