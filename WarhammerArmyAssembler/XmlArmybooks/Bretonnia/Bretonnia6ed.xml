@@ -1194,13 +1194,7 @@
 				<Options>
 					<CommandGroup Position="Cavalier" Points="0"/>
 					<CommandGroup Position="Musician" Points="7"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>14</Points>
-						<MagicItems Points="25" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="14" Magic="Type:Unit, Points:25"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1233,13 +1227,7 @@
 				<Options>
 					<CommandGroup Position="Gallant" Points="0"/>
 					<CommandGroup Position="Musician" Points="8"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>16</Points>
-						<MagicItems Points="25" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="16" Magic="Type:Unit, Points:25"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1367,13 +1355,7 @@
 				<Options>
 					<CommandGroup Position="Paragon" Points="0"/>
 					<CommandGroup Position="Musician" Points="9"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>18</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="18" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1491,13 +1473,7 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="10"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>20</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1523,12 +1499,11 @@
 						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
 					</Special>
 				</Equipments>
-				<Option>
-					<Name>Yeoman Craftsman</Name>
-					<Type>Option</Type>
-					<CommandGroup/>
-					<Points>10</Points>
-				</Option>
+				<Options>
+					<Option>
+						<CommandGroup Position="Yeoman Craftsman" Points="10"/>
+					</Option>
+				</Options>
 			</Unit>
 		</Units>
 	</Content>
