@@ -1252,13 +1252,7 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="5"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<CommandGroup/>
-						<Points>10</Points>
-						<MagicItems Points="50" Type="Unit"/>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Reaver" Points="10"/>
 				</Options>
 			</Unit>
@@ -1375,20 +1369,8 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="6"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<MagicItems Points="50" Type="Unit"/>
-						<CommandGroup/>
-						<Points>12</Points>
-					</Option>
-					<Option>
-						<Name>Hag</Name>
-						<Type>Option</Type>
-						<MagicItems Points="25" Type="Hero"/>
-						<CommandGroup/>
-						<Points>12</Points>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
+					<CommandGroup Position="Hag" Points="12" Magic="Type:Hero, Points:25"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1473,13 +1455,7 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="9"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<MagicItems Points="50" Type="Unit"/>
-						<CommandGroup/>
-						<Points>18</Points>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="18" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Dread Knight" Points="18"/>
 				</Options>
 			</Unit>
@@ -1513,13 +1489,7 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="6"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<MagicItems Points="50" Type="Unit"/>
-						<CommandGroup/>
-						<Points>12</Points>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Draich-master" Points="12"/>
 				</Options>
 			</Unit>
@@ -1610,13 +1580,7 @@
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="7"/>
-					<Option>
-						<Name>Standard bearer</Name>
-						<Type>Option</Type>
-						<MagicItems Points="75" Type="Unit"/>
-						<CommandGroup/>
-						<Points>14</Points>
-					</Option>
+					<CommandGroup Position="Standard bearer" Points="14" Magic="Type:Unit, Points:75"/>
 					<CommandGroup Position="Master" Points="14"/>
 				</Options>
 			</Unit>
