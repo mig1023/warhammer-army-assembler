@@ -546,12 +546,7 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="6"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6"/>
 					<Halberd Points="6"/>
 					<Option>
 						<Name>Warplock pistol</Name>
@@ -640,12 +635,7 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="4"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>2</Points>
-					</Option>
+					<AdditionalWeapon Points="2"/>
 					<Halberd Points="4"/>
 					<Option>
 						<Name>Light armour</Name>
@@ -1142,13 +1132,7 @@
 					</Special>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<PerModel/>
-						<Points>2</Points>
-					</Option>
+					<AdditionalWeapon PointsPerModel="2"/>
 					<Option>
 						<Name>Slings</Name>
 						<Type>Option</Type>
@@ -1373,12 +1357,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>2</Points>
-					</Option>
+					<AdditionalWeapon Points="2"/>
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Deacon" Points="10"/>
