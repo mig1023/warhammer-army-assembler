@@ -12,6 +12,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static Dictionary<string, string> BanalXmlOption = new Dictionary<string, string>
         {
             ["HandWeapon"] = "Hand weapon|",
+            ["AdditionalWeapon"] = "Additional weapon|AddToAttacks: 1",
             ["Choppa"] = "Choppa|",
             ["GreatWeapon"] = "Great weapon|AddToStrength: 2, HitLast",
             ["Halberd"] = "Halberd|AddToStrength: 1",

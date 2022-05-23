@@ -373,6 +373,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (xmlNode.Attributes["Magic"] != null)
                 AddToOption(xmlDocument, ref xmlNode, "MagicItems", attributes: xmlNode.Attributes["Magic"].InnerText);
+
+            if (xmlNode.Attributes["Only"] != null)
+                AddToOption(xmlDocument, ref xmlNode, "Only", xmlNode.Attributes["Only"].InnerText);
         }
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
