@@ -1064,12 +1064,7 @@
 							<OnlyIfMot>Handgun</OnlyIfMot>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<LightArmour Points="2"/>
 					<Option>
 						<Name>Warhorse</Name>
 						<Type>Option</Type>
@@ -1370,13 +1365,7 @@
 					<TwoHandsWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>1</Points>
-						<PerModel/>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<LightArmour PointsPerModel="1"/>
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<CommandGroup Position="Sergeant" Points="10"/>
