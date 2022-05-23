@@ -688,13 +688,7 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="6"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6"/>
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
@@ -1042,13 +1036,7 @@
 				<Options>
 					<GreatWeapon Points="4"/>
 					<Halberd Points="4"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Only="Infantry"/>
 					<Option>
 						<Name>Lance</Name>
 						<Type>Option</Type>
