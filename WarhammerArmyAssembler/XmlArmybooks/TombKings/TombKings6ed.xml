@@ -525,12 +525,7 @@
 						</Dependencies>
 						<Points>3</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<LightArmour Points="3"/>
 					<Shield Points="3"/>
 					<Option>
 						<Name>Chariot</Name>
@@ -640,12 +635,7 @@
 						</Dependencies>
 						<Points>2</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Option>
 						<Name>Chariot</Name>
@@ -680,12 +670,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<LightArmour Points="2"/>
 					<Option>
 						<Name>Skeletal Steed</Name>
 						<Type>Option</Type>
@@ -858,13 +843,7 @@
 						</Dependencies>
 						<AddToArmour>6</AddToArmour>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<AddToArmour>6</AddToArmour>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
+					<LightArmour PointsPerModel="1"/>
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<CommandGroup Position="Champion" Points="10"/>
