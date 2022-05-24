@@ -333,6 +333,14 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlNode.AppendChild(option);
         }
 
+        private static void CreateMountOption(XmlDocument xmlDocument, ref XmlNode xmlNode)
+        {
+            AddToOption(xmlDocument, ref xmlNode, "Name", xmlNode.Attributes["Name"].InnerText);
+            AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"].InnerText);
+            AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
+            AddToOption(xmlDocument, ref xmlNode, "Mount", "True");
+        }
+
         private static void CreateOption(string name, string attributes, XmlDocument xmlDocument, ref XmlNode xmlNode)
         {
             if (xmlNode["Name"] != null)
@@ -388,6 +396,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 List<string> xmlOption = banalXmlOption.Value.Split('|').ToList();
                 CreateOption(xmlOption[0], xmlOption[1], xmlDocument, ref xmlNode);
             }
+
+            if (xmlNode.Name == "Mount")
+                CreateMountOption(xmlDocument, ref xmlNode);
 
             Option newOption = new Option
             {
