@@ -28,10 +28,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["Bow"] = "Bow|",
             ["ShortBow"] = "Short bow|",
             ["CommandGroup"] = "Command|CommandGroup",
-            ["Wizard1Lvl"] = "Wizard Level 1|AddToCast: 1, AddToDispell: 1, AddToWizard: 1",
-            ["Wizard2Lvl"] = "Wizard Level 2|AddToCast: 1, AddToWizard: 1",
-            ["Wizard3Lvl"] = "Wizard Level 3|AddToCast: 1, AddToDispell: 1, AddToWizard: 1",
-            ["Wizard4Lvl"] = "Wizard Level 4|AddToCast: 1, AddToWizard: 1",
         };
     }
 }

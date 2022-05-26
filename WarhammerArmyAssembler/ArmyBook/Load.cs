@@ -341,6 +341,21 @@ namespace WarhammerArmyAssembler.ArmyBook
             AddToOption(xmlDocument, ref xmlNode, "Mount", "True");
         }
 
+        private static void CreateWizardOption(XmlDocument xmlDocument, ref XmlNode xmlNode)
+        {
+            AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"].InnerText);
+            AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
+
+            int level = int.Parse(xmlNode.Attributes["Level"].InnerText);
+
+            AddToOption(xmlDocument, ref xmlNode, "Name", String.Format("Wizard Level {0}", level));
+            AddToOption(xmlDocument, ref xmlNode, "AddToCast", "1");
+            AddToOption(xmlDocument, ref xmlNode, "AddToWizard", "1");
+
+            if ((level == 1) || (level == 3))
+                AddToOption(xmlDocument, ref xmlNode, "AddToDispell", "1");
+        }
+
         private static void CreateOption(string name, string attributes, XmlDocument xmlDocument, ref XmlNode xmlNode)
         {
             if (xmlNode["Name"] != null)
@@ -399,6 +414,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (xmlNode.Name == "Mount")
                 CreateMountOption(xmlDocument, ref xmlNode);
+
+            if (xmlNode.Name == "Wizard")
+                CreateWizardOption(xmlDocument, ref xmlNode);
 
             Option newOption = new Option
             {
