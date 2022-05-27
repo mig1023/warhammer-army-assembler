@@ -189,14 +189,12 @@ namespace WarhammerArmyAssembler.Test
             if (originalUnitMount != null)
             {
                 participants.Add(unit.Mount);
-                unit.Mount = unit.Mount;
                 BreakTestOrder[unit.Mount] = new List<Unit> { unit.Mount, unit, enemy, enemy.Mount };
             }
 
             if (originalEnemyMount != null)
             {
                 participants.Add(enemy.Mount);
-                enemy.Mount = enemy.Mount;
                 BreakTestOrder[enemy.Mount] = new List<Unit> { enemy.Mount, enemy, unit, unit.Mount };
 
                 if ((unit.Mount != null) && (unit.Mount.Name == enemy.Mount.Name))
@@ -605,13 +603,13 @@ namespace WarhammerArmyAssembler.Test
 
         public static bool CheckInitiative(Unit unit, Unit enemy)
         {
-            Unit.TestTypeTypes unitType = Unit.TestTypeTypes.Unit;
-            Unit.TestTypeTypes enemyType = Unit.TestTypeTypes.Enemy;
+            bool unitIsUnit = (unit.TestType == Unit.TestTypeTypes.Unit);
+            bool enemyIsEnemy = (enemy.TestType == Unit.TestTypeTypes.Enemy);
 
-            if ((round == 1) && (unit.TestType == unitType) && (enemy.TestType == enemyType) && (!enemy.HitFirst))
+            if ((round == 1) && unitIsUnit && enemyIsEnemy && (!enemy.HitFirst))
                 return true;
 
-            else if ((round == 1) && (unit.TestType == enemyType) && (enemy.TestType == unitType) && (!unit.HitFirst))
+            else if ((round == 1) && !unitIsUnit && !enemyIsEnemy && (!unit.HitFirst))
                 return true;
 
             else if (unit.HitFirst && !enemy.HitFirst)
