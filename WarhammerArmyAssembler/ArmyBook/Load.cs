@@ -296,6 +296,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 if (newUnit.Frenzy)
                     xmlUnit.SelectSingleNode("Equipments").AppendChild(Services.AddFrenzyAttack(xml));
+
+                if (additionalParam["Individual"] != null)
+                    newUnit.Options.Add(LoadOption(GetNextIndex(), additionalParam["Individual"], xml));
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
