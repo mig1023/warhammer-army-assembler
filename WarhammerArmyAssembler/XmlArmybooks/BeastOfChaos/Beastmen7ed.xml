@@ -552,6 +552,11 @@
 					<Fear/>
 					<Frenzy/>
 					<ImpactHit>D3+1</ImpactHit>
+					<Individual>
+						<Rule>Bloodgreed</Rule>
+						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
+						<Rule>If an enemy attack rolls a '6' To Hit and then a '6' To Wound then Taurox will be slain outright if he fails his saving throw</Rule>
+					</Individual>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -559,11 +564,6 @@
 						<NoArmour/>
 						<Rule>Flaming Attacks</Rule>
 					</HandWeapon>
-					<Special>
-						<Rule>Bloodgreed</Rule>
-						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
-						<Rule>If an enemy attack rolls a '6' To Hit and then a '6' To Wound then Taurox will be slain outright if he fails his saving throw</Rule>
-					</Special>
 				</Equipments>
 			</Hero>
 			<Hero>
