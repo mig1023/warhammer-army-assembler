@@ -1126,14 +1126,16 @@
 					<Leadership>7</Leadership>
 					<Armour>5</Armour>
 				</Profile>
+				<SpecialRules>
+					<Individual>
+						<Rule>After charges have been declared, if unit did not declare a charge but are within charge range of an enemy, then they must take a Leadership test to restrain themselves from charging; if this test is failed, they are forced to charge; if the test is passed, they may move normally; in addition, so reckless are the Knights Errant, that whenever they charge, the unit and any characters that have joined them are Immune to Psychology for the rest of that turn</Rule>
+					</Individual>
+				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
 					<Lance/>
 					<HeavyArmour/>
 					<Shield/>
-					<Special>
-						<Rule>After charges have been declared, if unit did not declare a charge but are within charge range of an enemy, then they must take a Leadership test to restrain themselves from charging; if this test is failed, they are forced to charge; if the test is passed, they may move normally; in addition, so reckless are the Knights Errant, that whenever they charge, the unit and any characters that have joined them are Immune to Psychology for the rest of that turn</Rule>
-					</Special>
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Cavalier" Points="0"/>
