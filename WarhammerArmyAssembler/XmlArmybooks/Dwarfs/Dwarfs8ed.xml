@@ -1824,19 +1824,19 @@
 				<SpecialRules>
 					<Resolute/>
 					<Unbreakable/>
-				</SpecialRules>
-				<Equipments>
-					<HandWeapon>
-						<Name>Array of axes</Name>
-					</HandWeapon>
-					<Special>
+					<Individual>
 						<Rule>Dwarfs always have the Hatred Orcs, Goblins and Skaven</Rule>
 						<Rule>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</Rule>
 						<Rule>If a model is reduced to 0 Wounds by close combat Attacks or Stomps (but not Impact Hits), he can immediately make a single Deathblow attack before he is removed as a casualty</Rule>
 						<Rule>Slavers ignore penalties to Strength and always cause a Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slaver's Strength characteristic to determine the armour save</Rule>
 						<Rule>At the start of each combat, a Slayer unit must choose to fight with either a great axe (great weapon) or a pair of axes (additional hand weapon)</Rule>
 						<Rule>Only models with the Slayer special rule are allowed to join units of Slayers</Rule>
-					</Special>
+					</Individual>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon>
+						<Name>Array of axes</Name>
+					</HandWeapon>
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Giant Slayers" Points="10" Magic="Type:Hero, Points:25"/>
