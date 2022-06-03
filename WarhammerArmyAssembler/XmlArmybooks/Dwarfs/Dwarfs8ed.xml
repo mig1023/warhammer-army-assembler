@@ -1242,6 +1242,11 @@
 				<SpecialRules>
 					<MagicItems Points="75" Type="Hero"/>
 					<Resolute/>
+					<Individual>
+						<Rule>Dwarfs always have the Hatred Orcs, Goblins and Skaven</Rule>
+						<Rule>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</Rule>
+						<Rule>+1 bonus to any Parry save in a turn in which unit is charged</Rule>
+					</Individual>
 				</SpecialRules>
 				<Options>
 					<Option>
@@ -1292,11 +1297,6 @@
 					</Option>
 				</Options>
 				<Equipments>
-					<Special>
-						<Rule>Dwarfs always have the Hatred Orcs, Goblins and Skaven</Rule>
-						<Rule>Do not need to pass a Leadership test in order to march, regardless of the proximity of enemy</Rule>
-						<Rule>+1 bonus to any Parry save in a turn in which unit is charged</Rule>
-					</Special>
 					<HandWeapon>
 						<Name>Hand weapon</Name>
 						<HitFirst/>
