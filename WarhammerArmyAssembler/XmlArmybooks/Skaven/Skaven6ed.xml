@@ -1356,13 +1356,11 @@
 					<Fear/>
 					<LargeBase/>
 					<StrengthInNumbers/>
-				</SpecialRules>
-				<Equipments>
-					<Special>
+					<Individual>
 						<Rule>Mixed Unit</Rule>
 						<Rule>Loss of Packmaster</Rule>
-					</Special>
-				</Equipments>
+					</Individual>
+				</SpecialRules>
 			</Unit>
 			<Unit>
 				<Type>Rare</Type>
@@ -1386,6 +1384,10 @@
 					<Frenzy/>
 					<Hate/>
 					<StrengthInNumbers/>
+					<Individual>
+						<Rule>Disciples</Rule>
+						<Rule>Skirmishers</Rule>
+					</Individual>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -1393,10 +1395,6 @@
 						<Flail/>
 						<Test Bet="Wound" Context="Round">Toughness</Test>
 					</HandWeapon>
-					<Special>
-						<Rule>Disciples</Rule>
-						<Rule>Skirmishers</Rule>
-					</Special>
 				</Equipments>
 			</Unit>
 			<Unit>
