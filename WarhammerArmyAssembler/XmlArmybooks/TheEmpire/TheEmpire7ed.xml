@@ -1605,7 +1605,6 @@
 					<RangeWeapon>
 						<Name>Crossbow</Name>
 					</RangeWeapon>
-					
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Marksman" Points="5"/>
@@ -1630,13 +1629,15 @@
 					<Attacks>1</Attacks>
 					<Leadership>7</Leadership>
 				</Profile>
+				<SpecialRules>
+					<Individual>
+						<Rule>Militia</Rule>
+						<Rule>Skirmishers</Rule>
+					</Individual>
+				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
 					<Bow/>
-					<Special>
-						<Rule>Militia</Rule>
-						<Rule>Skirmishers</Rule>
-					</Special>
 				</Equipments>
 				<Options>
 					<Option>
