@@ -2003,16 +2003,18 @@
 					<Leadership>7</Leadership>
 					<Armour>5</Armour>
 				</Profile>
-				<Equipments>
-					<Arcane>
-						<AddToWard>6</AddToWard>
-						<Rule>All friendly units within 6" have a 6+ Ward save</Rule>
-					</Arcane>
-					<Special>
+				<SpecialRules>
+					<Individual>
 						<Rule>Large Target</Rule>
 						<Rule>Locus of Hysh</Rule>
 						<Rule>Solheim's Bolt of Illumination</Rule>
-					</Special>
+					</Individual>
+				</SpecialRules>
+				<Equipments>
+					<Arcane>
+						<Rule>All friendly units within 6" have a 6+ Ward save</Rule>
+						<AddToWard>6</AddToWard>
+					</Arcane>
 				</Equipments>
 			</Mount>
 			<Mount>
