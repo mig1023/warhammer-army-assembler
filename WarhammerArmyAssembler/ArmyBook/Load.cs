@@ -163,8 +163,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (String.IsNullOrEmpty(description))
                 description = StringParse(xmlUnit["Name"]);
 
-            XmlNode mainParam = xmlUnit["Profile"];
-
             Unit newUnit = new Unit
             {
                 ID = id,
@@ -203,18 +201,20 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newUnit.MaxSize = max;
             }
 
-            newUnit.Movement = ProfileParse(mainParam["Movement"]);
-            newUnit.WeaponSkill = ProfileParse(mainParam["WeaponSkill"]);
-            newUnit.BallisticSkill = ProfileParse(mainParam["BallisticSkill"]);
-            newUnit.Strength = ProfileParse(mainParam["Strength"]);
-            newUnit.Toughness = ProfileParse(mainParam["Toughness"]);
-            newUnit.Wounds = ProfileParse(mainParam["Wounds"]);
-            newUnit.Initiative = ProfileParse(mainParam["Initiative"]);
-            newUnit.Attacks = ProfileParse(mainParam["Attacks"]);
-            newUnit.Leadership = ProfileParse(mainParam["Leadership"]);
+            XmlNode profile = xmlUnit["Profile"];
 
-            newUnit.Armour = IntNullableParse(mainParam["Armour"]);
-            newUnit.Ward = IntNullableParse(mainParam["Ward"]);
+            newUnit.Movement = ProfileParse(profile.Attributes["M"]);
+            newUnit.WeaponSkill = ProfileParse(profile.Attributes["WS"]);
+            newUnit.BallisticSkill = ProfileParse(profile.Attributes["BS"]);
+            newUnit.Strength = ProfileParse(profile.Attributes["S"]);
+            newUnit.Toughness = ProfileParse(profile.Attributes["T"]);
+            newUnit.Wounds = ProfileParse(profile.Attributes["W"]);
+            newUnit.Initiative = ProfileParse(profile.Attributes["I"]);
+            newUnit.Attacks = ProfileParse(profile.Attributes["A"]);
+            newUnit.Leadership = ProfileParse(profile.Attributes["Ld"]);
+
+            newUnit.Armour = IntNullableParse(profile.Attributes["AS"]);
+            newUnit.Ward = IntNullableParse(profile.Attributes["Ward"]);
 
             XmlNode additionalParam = xmlUnit["SpecialRules"];
 
