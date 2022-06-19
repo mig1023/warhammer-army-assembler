@@ -579,19 +579,7 @@
 				<Mount>The Shadow Steed</Mount>
 				<Description>The Green Knight, the champion of the Lady of the Lake</Description>
 				<Image>GreenKnight.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>7</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>4</Toughness>
-					<Wounds>3</Wounds>
-					<Initiative>6</Initiative>
-					<Attacks>4</Attacks>
-					<Leadership>9</Leadership>
-					<Ward>5</Ward>
-					<Armour>5</Armour>
-				</Profile>
+				<Profile M="4" WS="7" BS="3" S="4" T="4" W="3" I="6" A="4" Ld="9" AS="5" Ward="5"/>
 				<SpecialRules>
 					<Terror/>
 					<Undead/>
@@ -618,17 +606,7 @@
 				<Mount>Silvaron</Mount>
 				<Description>Fay Enchantress</Description>
 				<Image>FayEnchantress.jpg</Image>
-				<Profile>
-					<Movement>5</Movement>
-					<WeaponSkill>5</WeaponSkill>
-					<BallisticSkill>4</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>3</Wounds>
-					<Initiative>5</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>9</Leadership>
-				</Profile>
+				<Profile M="5" WS="5" BS="4" S="3" T="3" W="3" I="5" A="1" Ld="9"/>
 				<SpecialRules>
 					<Slots>Hero</Slots>
 					<Fear/>
@@ -668,18 +646,7 @@
 				<Mount>Beaquis</Mount>
 				<Description>King Louen Leoncoeur</Description>
 				<Image>KingLouen.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>7</WeaponSkill>
-					<BallisticSkill>5</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>4</Toughness>
-					<Wounds>3</Wounds>
-					<Initiative>7</Initiative>
-					<Attacks>5</Attacks>
-					<Leadership>9</Leadership>
-					<Ward>5</Ward>
-				</Profile>
+				<Profile M="4" WS="7" BS="5" S="4" T="4" W="3" I="7" A="5" Ld="9" Ward="5"/>
 				<SpecialRules>
 					<Slots>Hero</Slots>
 					<ImmuneToPsychology/>
@@ -714,17 +681,7 @@
 				<Points>110</Points>
 				<Description>Bretonnian Lord</Description>
 				<Image>BretonnianLord.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>6</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>4</Toughness>
-					<Wounds>3</Wounds>
-					<Initiative>6</Initiative>
-					<Attacks>4</Attacks>
-					<Leadership>9</Leadership>
-				</Profile>
+				<Profile M="4" WS="6" BS="3" S="4" T="4" W="3" I="6" A="4" Ld="9"/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Hero"/>
 				</SpecialRules>
@@ -798,17 +755,7 @@
 				<Wizard>3</Wizard>
 				<Description>Prophetess of the Lady</Description>
 				<Image>Prophetess.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>3</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>3</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>8</Leadership>
-				</Profile>
+				<Profile M="4" WS="3" BS="3" S="3" T="3" W="3" I="3" A="1" Ld="8"/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Wizard"/>
 					<Individual>
@@ -839,17 +786,7 @@
 				<Points>60</Points>
 				<Description>Paladin</Description>
 				<Image>Paladin.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>5</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>4</Toughness>
-					<Wounds>2</Wounds>
-					<Initiative>5</Initiative>
-					<Attacks>3</Attacks>
-					<Leadership>8</Leadership>
-				</Profile>
+				<Profile M="4" WS="5" BS="3" S="4" T="4" W="2" I="5" A="3" Ld="8"/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
 				</SpecialRules>
@@ -929,17 +866,7 @@
 				<Wizard>1</Wizard>
 				<Description>Damsel of the Lady</Description>
 				<Image>Damsel.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>3</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>2</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>7</Leadership>
-				</Profile>
+				<Profile M="4" WS="3" BS="3" S="3" T="3" W="2" I="3" A="1" Ld="7"/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Wizard"/>
 					<Individual>
@@ -969,66 +896,25 @@
 				<Type>Mount</Type>
 				<Name>Horse</Name>
 				<Points>0</Points>
-				<Profile>
-					<Movement>8</Movement>
-					<WeaponSkill>3</WeaponSkill>
-					<BallisticSkill>0</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>5</Leadership>
-				</Profile>
+				<Profile M="8" WS="3" BS="0" S="3" T="3" W="1" I="3" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
 				<Type>Mount</Type>
 				<Name>Barded Warhorse</Name>
 				<Points>0</Points>
-				<Profile>
-					<Movement>8</Movement>
-					<WeaponSkill>3</WeaponSkill>
-					<BallisticSkill>0</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>5</Leadership>
-				</Profile>
+				<Profile M="8" WS="3" BS="0" S="3" T="3" W="1" I="3" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
 				<Type>Mount</Type>
 				<Name>The Shadow Steed</Name>
 				<Points>0</Points>
-				<Profile>
-					<Movement>8</Movement>
-					<WeaponSkill>4</WeaponSkill>
-					<BallisticSkill>0</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>4</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>5</Leadership>
-				</Profile>
+				<Profile M="8" WS="4" BS="0" S="4" T="3" W="1" I="4" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
 				<Type>Mount</Type>
 				<Name>Silvaron</Name>
 				<Points>0</Points>
-				<Profile>
-					<Movement>10</Movement>
-					<WeaponSkill>5</WeaponSkill>
-					<BallisticSkill>0</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>4</Toughness>
-					<Wounds>3</Wounds>
-					<Initiative>5</Initiative>
-					<Attacks>2</Attacks>
-					<Leadership>8</Leadership>
-					<Ward>5</Ward>
-				</Profile>
+				<Profile M="10" WS="5" BS="0" S="4" T="4" W="3" I="5" A="2" Ld="8" Ward="5"/>
 				<SpecialRules>
 					<ChargeStrengthBonus>2</ChargeStrengthBonus>
 					<Fear/>
@@ -1038,17 +924,7 @@
 				<Type>Mount</Type>
 				<Name>Royal Pegasus</Name>
 				<Points>0</Points>
-				<Profile>
-					<Movement>8</Movement>
-					<WeaponSkill>3</WeaponSkill>
-					<BallisticSkill>0</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>4</Toughness>
-					<Wounds>3</Wounds>
-					<Initiative>4</Initiative>
-					<Attacks>2</Attacks>
-					<Leadership>7</Leadership>
-				</Profile>
+				<Profile M="8" WS="3" BS="0" S="4" T="4" W="3" I="4" A="2" Ld="7"/>
 				<SpecialRules>
 					<Individual>
 						<Rule>Fly</Rule>
@@ -1059,17 +935,7 @@
 				<Type>Mount</Type>
 				<Name>Beaquis</Name>
 				<Points>0</Points>
-				<Profile>
-					<Movement>8</Movement>
-					<WeaponSkill>5</WeaponSkill>
-					<BallisticSkill>0</BallisticSkill>
-					<Strength>5</Strength>
-					<Toughness>5</Toughness>
-					<Wounds>4</Wounds>
-					<Initiative>6</Initiative>
-					<Attacks>4</Attacks>
-					<Leadership>9</Leadership>
-				</Profile>
+				<Profile M="8" WS="5" BS="0" S="5" T="5" W="4" I="6" A="4" Ld="9"/>
 				<SpecialRules>
 					<Terror/>
 					<LargeBase/>
@@ -1083,17 +949,7 @@
 				<Type>Mount</Type>
 				<Name>Hippogryph</Name>
 				<Points>0</Points>
-				<Profile>
-					<Movement>8</Movement>
-					<WeaponSkill>4</WeaponSkill>
-					<BallisticSkill>0</BallisticSkill>
-					<Strength>5</Strength>
-					<Toughness>5</Toughness>
-					<Wounds>4</Wounds>
-					<Initiative>4</Initiative>
-					<Attacks>4</Attacks>
-					<Leadership>7</Leadership>
-				</Profile>
+				<Profile M="8" WS="4" BS="0" S="5" T="5" W="4" I="4" A="4" Ld="7"/>
 				<SpecialRules>
 					<Terror/>
 					<LargeBase/>
@@ -1114,18 +970,7 @@
 				<Max>15</Max>
 				<Mount>Barded Warhorse</Mount>
 				<Image>KnightsErrant.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>3</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>7</Leadership>
-					<Armour>5</Armour>
-				</Profile>
+				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7" AS="5"/>
 				<SpecialRules>
 					<Individual>
 						<Rule>After charges have been declared, if unit did not declare a charge but are within charge range of an enemy, then they must take a Leadership test to restrain themselves from charging; if this test is failed, they are forced to charge; if the test is passed, they may move normally; in addition, so reckless are the Knights Errant, that whenever they charge, the unit and any characters that have joined them are Immune to Psychology for the rest of that turn</Rule>
@@ -1152,18 +997,7 @@
 				<Max>15</Max>
 				<Mount>Barded Warhorse</Mount>
 				<Image>KnightsRealm.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>4</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>8</Leadership>
-					<Armour>5</Armour>
-				</Profile>
+				<Profile M="4" WS="4" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="8" AS="5"/>
 				<Equipments>
 					<HandWeapon/>
 					<Lance/>
@@ -1182,17 +1016,7 @@
 				<Points>5</Points>
 				<Min>10</Min>
 				<Image>MenAtArms.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>2</WeaponSkill>
-					<BallisticSkill>2</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>5</Leadership>
-				</Profile>
+				<Profile M="4" WS="2" BS="2" S="3" T="3" W="1" I="3" A="1" Ld="5"/>
 				<SpecialRules>
 					<Individual>
 						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
@@ -1224,17 +1048,7 @@
 				<Points>6</Points>
 				<Min>10</Min>
 				<Image>Bowman.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>2</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>5</Leadership>
-				</Profile>
+				<Profile M="4" WS="2" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="5"/>
 				<SpecialRules>
 					<Individual>
 						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
@@ -1281,18 +1095,7 @@
 				<Max>12</Max>
 				<Mount>Barded Warhorse</Mount>
 				<Image>QuestingKnights.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>4</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>4</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>8</Leadership>
-					<Armour>5</Armour>
-				</Profile>
+				<Profile M="4" WS="4" BS="3" S="4" T="3" W="1" I="4" A="1" Ld="8" AS="5"/>
 				<SpecialRules>
 					<Individual>
 						<Rule>May re-roll any failed Psychology tests</Rule>
@@ -1320,18 +1123,7 @@
 				<UniqueUnits/>
 				<Mount>Royal Pegasus</Mount>
 				<Image>PegasusKnights.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>4</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>4</Toughness>
-					<Wounds>2</Wounds>
-					<Initiative>4</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>8</Leadership>
-					<Armour>6</Armour>
-				</Profile>
+				<Profile M="4" WS="4" BS="3" S="3" T="4" W="2" I="4" A="1" Ld="8" AS="6"/>
 				<SpecialRules>
 					<Individual>
 						<Rule>Flying cavalry</Rule>
@@ -1356,17 +1148,7 @@
 				<Min>5</Min>
 				<Mount>Horse</Mount>
 				<Image>MountedYeomen.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>3</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>6</Leadership>
-				</Profile>
+				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="6"/>
 				<SpecialRules>
 					<Individual>
 						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
@@ -1395,19 +1177,7 @@
 				<UniqueUnits/>
 				<Mount>Barded Warhorse</Mount>
 				<Image>GrailKnights.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>5</WeaponSkill>
-					<BallisticSkill>3</BallisticSkill>
-					<Strength>4</Strength>
-					<Toughness>3</Toughness>
-					<Wounds>1</Wounds>
-					<Initiative>5</Initiative>
-					<Attacks>2</Attacks>
-					<Leadership>8</Leadership>
-					<Armour>5</Armour>
-					<Ward>6</Ward>
-				</Profile>
+				<Profile M="4" WS="5" BS="3" S="4" T="3" W="1" I="5" A="2" Ld="8" AS="5" Ward="6"/>
 				<SpecialRules>
 					<ImmuneToPsychology/>
 					<Individual>
@@ -1432,17 +1202,7 @@
 				<Points>90</Points>
 				<Mount>Peasant</Mount>
 				<Image>Trebuchet.jpg</Image>
-				<Profile>
-					<Movement>4</Movement>
-					<WeaponSkill>2</WeaponSkill>
-					<BallisticSkill>2</BallisticSkill>
-					<Strength>3</Strength>
-					<Toughness>7</Toughness>
-					<Wounds>4</Wounds>
-					<Initiative>3</Initiative>
-					<Attacks>1</Attacks>
-					<Leadership>5</Leadership>
-				</Profile>
+				<Profile M="4" WS="2" BS="2" S="3" T="7" W="4" I="3" A="1" Ld="5"/>
 				<SpecialRules>
 					<Individual>
 						<Rule>Field Trebuchet</Rule>
