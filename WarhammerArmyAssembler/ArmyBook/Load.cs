@@ -112,7 +112,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             {
                 string groupName = xmlArtefactGroup.Attributes["Name"].Value;
 
-                foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("Artefact"))
+                foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("*"))
                 {
                     int newID = GetNextIndex();
                     Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, xmlFile, groupName));
@@ -377,12 +377,17 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (String.IsNullOrEmpty(attributes))
                 return;
 
+            bool typesIncluded = false;
+
             foreach (string attributeLine in attributes.Split(',').Select(x => x.Trim()))
             {
                 if (attributeLine.Contains(":"))
                 {
                     List<string> attribute = attributeLine.Split(':').Select(x => x.Trim()).ToList();
                     AddToOption(xmlDocument, ref xmlNode, attribute[0], attribute[1]);
+
+                    if (attribute[0] == "Type")
+                        typesIncluded = true;
                 }
                 else
                     AddToOption(xmlDocument, ref xmlNode, attributeLine);
@@ -395,7 +400,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (!String.IsNullOrEmpty(points))
             {
-                AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
+                if (!typesIncluded)
+                    AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
+
                 AddToOption(xmlDocument, ref xmlNode, "Points", points);
 
                 if (xmlNode.Attributes["PointsPerModel"] != null)
