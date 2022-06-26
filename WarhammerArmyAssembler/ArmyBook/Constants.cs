@@ -28,6 +28,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["Bow"] = "Bow|",
             ["ShortBow"] = "Short bow|",
             ["CommandGroup"] = "Command|CommandGroup",
+
+            // 6th edition common magic items
+            ["SwordOfStriking"] = "Sword of Striking|Type: Weapon, AddToHit: 1, Description: +1 to Hit",
         };
     }
 }
