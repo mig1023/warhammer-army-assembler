@@ -35,6 +35,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["SwordOfMight"] = "Sword of Might|Type: Weapon, AddToStrength: 1, Description: +1 Strenght",
             ["BitingBlade"] = "Biting Blade|Type: Weapon, ArmourPiercing: 1, Description: -1 Armour save",
             ["EnchantedShield"] = "Enchanted shield|Type: Shield, AddToArmour: 5, Description: 5+ Armour save",
+            ["TalismanOfProtection"] = "Talisman of Protection|Type: AdditionalArmour, AddToWard: 5, Description: 6+ Ward save",
         };
     }
 }
