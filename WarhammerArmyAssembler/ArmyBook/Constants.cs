@@ -36,6 +36,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["BitingBlade"] = "Biting Blade|Type: Weapon, ArmourPiercing: 1, Description: -1 Armour save",
             ["EnchantedShield"] = "Enchanted shield|Type: Shield, AddToArmour: 5, Description: 5+ Armour save",
             ["TalismanOfProtection"] = "Talisman of Protection|Type: AdditionalArmour, AddToWard: 5, Description: 6+ Ward save",
+            ["StaffOfSorcery"] = "Staff of Sorcery|Type: Arcane, AddToWard: 5, Rule: +1 to dispell, Description: +1 to dispell",
         };
     }
 }
