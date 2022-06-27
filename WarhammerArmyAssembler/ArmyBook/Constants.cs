@@ -32,6 +32,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             // 6th edition common magic items
             ["SwordOfStriking"] = "Sword of Striking|Type: Weapon, AddToHit: 1, Description: +1 to Hit",
             ["SwordOfBattle"] = "Sword of Battle|Type: Weapon, AddToAttacks: 1, Description: +1 Attack",
+            ["SwordOfMight"] = "Sword of Might|Type: Weapon, AddToStrength: 1, Description: +1 Strenght",
         };
     }
 }
