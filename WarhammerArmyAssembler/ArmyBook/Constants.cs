@@ -45,6 +45,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["GiantBlade"] = "Giant Blade|Type: Weapon, AddToStrength: 3, Description: " +
                 "Close combat attacks made with this sword are resolved at +3 Strength",
             ["SwordOfBloodshed"] = "Sword of Bloodshed|Type: Weapon, AddToAttacks: 3, Description: The wielder has +3 Attacks",
+            ["ObsidianBlade"] = "Obsidian Blade|Type: Weapon, NoArmour, Description: " +
+                "Armour saves cannot be taken against wounds caused by the Obsidian Blade",
         };
     }
 }
