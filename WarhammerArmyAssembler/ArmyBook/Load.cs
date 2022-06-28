@@ -414,6 +414,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (xmlNode.Attributes["Only"] != null)
                 AddToOption(xmlDocument, ref xmlNode, "Only", xmlNode.Attributes["Only"].InnerText);
+
+            if (xmlNode.Attributes["OnlyGroup"] != null)
+                AddToOption(xmlDocument, ref xmlNode, "OnlyGroup", xmlNode.Attributes["OnlyGroup"].InnerText);
         }
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
