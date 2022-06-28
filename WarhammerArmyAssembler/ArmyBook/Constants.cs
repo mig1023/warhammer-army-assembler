@@ -29,7 +29,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["ShortBow"] = "Short bow|",
             ["CommandGroup"] = "Command|CommandGroup",
 
-            // 6th edition common magic items
+            // 6th/7th edition common magic items
             ["SwordOfStriking"] = "Sword of Striking|Type: Weapon, AddToHit: 1, Description: +1 to Hit",
             ["SwordOfBattle"] = "Sword of Battle|Type: Weapon, AddToAttacks: 1, Description: +1 Attack",
             ["SwordOfMight"] = "Sword of Might|Type: Weapon, AddToStrength: 1, Description: +1 Strenght",
@@ -40,6 +40,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["DispellScroll"] = "Dispell Scroll|Type: Arcane, Multiple, Description: Automatically dispel an enemy spell; one use only",
             ["PowerStone"] = "Power Stone|Type: Arcane, Multiple, Description: +2 dice to cast a spell",
             ["WarBanner"] = "War Banner|Type: Banner, AddToCloseCombat: 1, Description: +1 Combat Resolution",
+
+            // 8th edition common magic items
+            ["GiantBlade"] = "Giant Blade|Type: Weapon, AddToStrength: 3, Description: Close combat attacks made with this sword are resolved at +3 Strength",
         };
     }
 }
