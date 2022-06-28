@@ -44,86 +44,16 @@
 	<Content>
 		<Artefacts>
 			<Group Name="Common magic items">
-				<Artefact>
-					<Name>Sword of Striking</Name>
-					<Type>Weapon</Type>
-					<Points>30</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<AddToHit>1</AddToHit>
-					<Description>+1 to Hit</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Sword of Battle</Name>
-					<Type>Weapon</Type>
-					<Points>25</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<AddToAttacks>1</AddToAttacks>
-					<Description>+1 Attack</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Sword of Might</Name>
-					<Type>Weapon</Type>
-					<Points>20</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<AddToStrength>1</AddToStrength>
-					<Description>+1 Strenght</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Biting Blade</Name>
-					<Type>Weapon</Type>
-					<Points>10</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<ArmourPiercing>1</ArmourPiercing>
-					<Description>-1 Armour save</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Enchanted shield</Name>
-					<Type>Shield</Type>
-					<Points>10</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<AddToArmour>5</AddToArmour>
-					<Description>5+ Armour save</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Talisman of Protection</Name>
-					<Type>AdditionalArmour</Type>
-					<Points>15</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<AddToWard>6</AddToWard>
-					<Description>6+ ward save</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Dispell Scroll</Name>
-					<Type>Arcane</Type>
-					<Points>25</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<Multiple/>
-					<Description>Automatically dispel an enemy spell, one use only</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Power Stone</Name>
-					<Type>Arcane</Type>
-					<Points>25</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<Multiple/>
-					<Description>+2 dice to cast a spell</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Staff of Sorcery</Name>
-					<Type>Arcane</Type>
-					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<Rule>+1 to dispell</Rule>
-					<Description>+1 to dispell</Description>
-				</Artefact>
-				<Artefact>
-					<Name>War Banner</Name>
-					<Type>Banner</Type>
-					<Points>25</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
-					<AddToCloseCombat>1</AddToCloseCombat>
-					<Description>+1 Combat Resolution</Description>
-				</Artefact>
+				<SwordOfStriking Points="30" OnlyGroup="Mortal"/>
+				<SwordOfBattle Points="25" OnlyGroup="Mortal"/>
+				<SwordOfMight Points="20" OnlyGroup="Mortal"/>
+				<BitingBlade Points="10" OnlyGroup="Mortal"/>
+				<EnchantedShield Points="10" OnlyGroup="Mortal"/>
+				<TalismanOfProtection Points="15" OnlyGroup="Mortal"/>
+				<StaffOfSorcery Points="50" OnlyGroup="Mortal"/>
+				<DispellScroll Points="25" OnlyGroup="Mortal"/>
+				<PowerStone Points="25" OnlyGroup="Mortal"/>
+				<WarBanner Points="25" OnlyGroup="Mortal"/>
 			</Group>
 			<Group Name="Magic weapons">
 				<Artefact>
