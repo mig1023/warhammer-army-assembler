@@ -38,6 +38,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["TalismanOfProtection"] = "Talisman of Protection|Type: AdditionalArmour, AddToWard: 5, Description: 6+ Ward save",
             ["StaffOfSorcery"] = "Staff of Sorcery|Type: Arcane, AddToWard: 5, Rule: +1 to dispell, Description: +1 to dispell",
             ["DispellScroll"] = "Dispell Scroll|Type: Arcane, Multiple, Description: Automatically dispel an enemy spell, one use only",
+            ["PowerStone"] = "Power Stone|Type: Arcane, Multiple, Description: +2 dice to cast a spell",
         };
     }
 }
