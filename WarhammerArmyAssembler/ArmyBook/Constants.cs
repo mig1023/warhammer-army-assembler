@@ -37,7 +37,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["EnchantedShield"] = "Enchanted shield|Type: Shield, AddToArmour: 5, Description: 5+ Armour save",
             ["TalismanOfProtection"] = "Talisman of Protection|Type: AdditionalArmour, AddToWard: 5, Description: 6+ Ward save",
             ["StaffOfSorcery"] = "Staff of Sorcery|Type: Arcane, AddToWard: 5, Rule: +1 to dispell, Description: +1 to dispell",
-            ["DispellScroll"] = "Dispell Scroll|Type: Arcane, Multiple, Description: Automatically dispel an enemy spell, one use only",
+            ["DispellScroll"] = "Dispell Scroll|Type: Arcane, Multiple, Description: Automatically dispel an enemy spell; one use only",
             ["PowerStone"] = "Power Stone|Type: Arcane, Multiple, Description: +2 dice to cast a spell",
             ["WarBanner"] = "War Banner|Type: Banner, AddToCloseCombat: 1, Description: +1 Combat Resolution",
         };
