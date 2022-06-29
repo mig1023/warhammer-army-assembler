@@ -52,6 +52,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 "Close combat attacks made with this sword are resolved at +2 Strength",
             ["SwordOfStrife"] = "Sword of Strife|Type: Weapon, AddToAttacks: 2, Description: " +
                 "This wieider of the Sword of Strife has +2 Attacks",
+            ["FencersBlades"] = "Fencer's Blades|Type: Weapon, WeaponSkillTo: 10, Description: " +
+                "Paired weapons; the bearer has Weapon Skill 10",
         };
     }
 }
