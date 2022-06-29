@@ -155,20 +155,8 @@
 			<Group Name="Common magic weapons">
 				<GiantBlade Points="60"/>
 				<SwordOfBloodshed Points="60"/>
-				<Artefact>
-					<Name>Obsidian Blade</Name>
-					<Type>Weapon</Type>
-					<Points>50</Points>
-					<NoArmour/>
-					<Description>Armour saves cannot be taken against wounds caused by the Obsidian Blade.</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Ogre Blade</Name>
-					<Type>Weapon</Type>
-					<Points>40</Points>
-					<AddToStrength>2</AddToStrength>
-					<Description>Close combat attacks made with this sword are resolved at +2 Strength.</Description>
-				</Artefact>
+				<ObsidianBlade Points="50"/>
+				<OgreBlade Points="40"/>
 				<Artefact>
 					<Name>Sword of Strife</Name>
 					<Type>Weapon</Type>
@@ -2238,4 +2226,13 @@
 					<HandWeapon/>
 					<RangeWeapon>
 						<Name>Bow of Avelorn</Name>
-					</RangeW
+					</RangeWeapon>
+					<LightArmour/>
+				</Equipments>
+				<Options>
+					<CommandGroup Position="High Sister" Points="10" Magic="Type:Hero, Points:25"/>
+				</Options>
+			</Unit>
+		</Units>
+	</Content>
+</ArmyBook>
