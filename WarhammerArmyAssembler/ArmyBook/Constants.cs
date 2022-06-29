@@ -50,6 +50,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 "Armour saves cannot be taken against wounds caused by the Obsidian Blade",
             ["OgreBlade"] = "Ogre Blade|Type: Weapon, AddToStrength: 2, Description: " +
                 "Close combat attacks made with this sword are resolved at +2 Strength",
+            ["SwordOfStrife"] = "Sword of Strife|Type: Weapon, AddToAttacks: 2, Description: " +
+                "This wieider of the Sword of Strife has +2 Attacks",
         };
     }
 }
