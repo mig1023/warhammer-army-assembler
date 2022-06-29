@@ -127,20 +127,8 @@
 			<Group Name="Common magic weapons">
 				<GiantBlade Points="60"/>
 				<SwordOfBloodshed Points="60"/>
-				<Artefact>
-					<Name>Obsidian Blade</Name>
-					<Type>Weapon</Type>
-					<Points>50</Points>
-					<NoArmour/>
-					<Description>Armour saves cannot be taken against wounds caused by the Obsidian Blade.</Description>
-				</Artefact>
-				<Artefact>
-					<Name>Ogre Blade</Name>
-					<Type>Weapon</Type>
-					<Points>40</Points>
-					<AddToStrength>2</AddToStrength>
-					<Description>Close combat attacks made with this sword are resolved at +2 Strength.</Description>
-				</Artefact>
+				<ObsidianBlade Points="50"/>
+				<OgreBlade Points="40"/>
 				<Artefact>
 					<Name>Sword of Strife</Name>
 					<Type>Weapon</Type>
@@ -2202,4 +2190,10 @@
 					<Individual>
 						<Rule>Large target</Rule>
 						<Rule>Enemy units that are in base contact with one or more Kharibdyss models must re-roll successful Leadership tests. A unit is immune to the effects of Abyssal Howl if the majority of its models have one or more of the following special rules: Fear, Terror and Immune to Psychology</Rule>
-						<Rule>If the Kharibdyss directs all of its close combat Attacks agai
+						<Rule>If the Kharibdyss directs all of its close combat Attacks against the same model, and all of those Attacks hit, then the target model suffers an additional D6 Strength 7 hits</Rule>
+					</Individual>
+				</SpecialRules>
+			</Unit>
+		</Units>
+	</Content>
+</ArmyBook>
