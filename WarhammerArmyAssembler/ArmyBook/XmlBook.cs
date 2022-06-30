@@ -86,7 +86,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             try
             {
-                foreach (string file in Directory.GetFiles(programDirectory).Where(x => x.EndsWith("ed.xml")))
+                foreach (string file in Directory.GetFiles(programDirectory, "*ed.xml", SearchOption.AllDirectories))
                 {
                     XmlDocument xmlFile = new XmlDocument();
 
@@ -116,10 +116,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                     files.Add(armyOrderName, file);
                     AddHomologue(armyInternalName.InnerText, file);
                 }
-
-                foreach (string directory in Directory.GetDirectories(programDirectory))
-                    foreach (KeyValuePair<string, string> file in FindAllXmlFilesInDirectories(directory))
-                        files.Add(file.Key, file.Value);
             }
             catch
             {
