@@ -72,6 +72,20 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Empty;
         }
 
+        public static void LoadBanalXmlOption()
+        {
+            if (String.IsNullOrEmpty(Constants.BanalXmlOptionPath))
+                return;
+
+            Constants.BanalXmlOption = new Dictionary<string, string>();
+
+            XmlDocument xmlFile = new XmlDocument();
+            xmlFile.Load(Constants.BanalXmlOptionPath);
+
+            foreach (XmlNode xmlOption in xmlFile.SelectNodes("Options/Option"))
+                Constants.BanalXmlOption.Add(xmlOption["Key"].InnerText, xmlOption["Value"].InnerText);
+        }
+
         public static void LoadArmy(string xmlFileName)
         {
             Data.Magic.Clear();
@@ -80,6 +94,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.Units.Clear();
             Data.Mounts.Clear();
             Data.Artefact.Clear();
+
+            LoadBanalXmlOption();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
