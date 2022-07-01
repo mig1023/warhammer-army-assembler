@@ -82,8 +82,11 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(Constants.BanalXmlOptionPath);
 
-            foreach (XmlNode xmlOption in xmlFile.SelectNodes("Options/Option"))
-                Constants.BanalXmlOption.Add(xmlOption.Attributes["Name"].InnerText, xmlOption.InnerText);
+            foreach (XmlNode option in xmlFile.SelectNodes("Options/Option"))
+            {
+                string value = String.Format("{0}|{1}", option.Attributes["Title"].InnerText, option.InnerText);
+                Constants.BanalXmlOption.Add(option.Attributes["Name"].InnerText, value);
+            }
         }
 
         public static void LoadArmy(string xmlFileName)
