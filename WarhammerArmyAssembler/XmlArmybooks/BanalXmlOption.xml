@@ -1,45 +1,51 @@
 <Options>
-	<Option Name="HandWeapon" Title="Hand weapon"/>
-	<Option Name="AdditionalWeapon" Title="Additional weapon">AddToAttacks: 1</Option>
-	<Option Name="Choppa" Title="Choppa"/>
-	<Option Name="GreatWeapon" Title="Great weapon">AddToStrength: 2, HitLast</Option>
-	<Option Name="Halberd" Title="Halberd">AddToStrength: 1</Option>
-	<Option Name="Flail" Title="Flail">Flail</Option>
-	<Option Name="TwoHandsWeapon" Title="Two hands weapons">AddoAttacks: 1</Option>
-	<Option Name="Spear" Title="Spear"/>
-	<Option Name="Lance" Title="Lance">Lance</Option>
-	<Option Name="LightArmour" Title="Light armour">AddToArmour: 6</Option>
-	<Option Name="HeavyArmour" Title="Heavy armour">AddToArmour: 5</Option>
-	<Option Name="FullPlateArmour" Title="Full plate armour">AddToArmour: 4</Option>
-	<Option Name="Shield" Title="Shield">AddToArmour: 6</Option>
-	<Option Name="LongBow" Title="Longbow"/>
-	<Option Name="Bow" Title="Bow"/>
-	<Option Name="ShortBow" Title="Short bow"/>
-	<Option Name="CommandGroup" Title="Command">CommandGroup</Option>
-	<Option Name="SwordOfStriking" Title="Sword of Striking">Type: Weapon, AddToHit: 1, Description: +1 to Hit</Option>
-	<Option Name="SwordOfBattle" Title="Sword of Battle">Type: Weapon, AddToAttacks: 1, Description: +1 Attack</Option>
-	<Option Name="SwordOfMight" Title="Sword of Might">Type: Weapon, AddToStrength: 1, Description: +1 Strenght</Option>
-	<Option Name="BitingBlade" Title="Biting Blade">Type: Weapon, ArmourPiercing: 1, Description: -1 Armour save</Option>
-	<Option Name="EnchantedShield" Title="Enchanted shield">Type: Shield, AddToArmour: 5, Description: 5+ Armour save</Option>
-	<Option Name="TalismanOfProtection" Title="Talisman of Protection">Type: AdditionalArmour, AddToWard: 5, Description: 6+ Ward save</Option>
-	<Option Name="StaffOfSorcery" Title="Staff of Sorcery">Type: Arcane, AddToWard: 5, Rule: +1 to dispell, Description: +1 to dispell</Option>
-	<Option Name="DispellScroll" Title="Dispell Scroll">Type: Arcane, Multiple, Description: Automatically dispel an enemy spell; one use only</Option>
-	<Option Name="PowerStone" Title="Power Stone">Type: Arcane, Multiple, Description: +2 dice to cast a spell</Option>
-	<Option Name="WarBanner" Title="War Banner">Type: Banner, AddToCloseCombat: 1, Description: +1 Combat Resolution</Option>
-	<Option Name="GiantBlade" Title="Giant Blade">Type: Weapon, AddToStrength: 3, Description: Close combat attacks made with this sword are resolved at +3 Strength</Option>
-	<Option Name="SwordOfBloodshed" Title="Sword of Bloodshed">Type: Weapon, AddToAttacks: 3, Description: The wielder has +3 Attacks</Option>
-	<Option Name="ObsidianBlade" Title="Obsidian Blade">Type: Weapon, NoArmour, Description: Armour saves cannot be taken against wounds caused by the Obsidian Blade</Option>
-	<Option Name="OgreBlade" Title="Ogre Blade">Type: Weapon, AddToStrength: 2, Description: Close combat attacks made with this sword are resolved at +2 Strength</Option>
-	<Option Name="SwordOfStrife" Title="Sword of Strife">Type: Weapon, AddToAttacks: 2, Description: This wieider of the Sword of Strife has +2 Attacks</Option>
-	<Option Name="FencersBlades" Title="Fencer's Blades">Type: Weapon, WeaponSkillTo: 10, Description: Paired weapons; the bearer has Weapon Skill 10</Option>
-	<Option Name="SwordOfAntiHeroes" Title="Sword of Anti-Heroes">Type: Weapon, Rule: +1 Strength and +1 Attack for every enemy character in base contact, Description: The bearer has +1 Strength and +1 Attack for every enemy character in base contact with him or his unit. These bonuses are calculated at the start of each round ol close combat and last until its end</Option>
-	<Option Name="SpellthievingSword" Title="Spellthieving Sword">Type: Weapon, Rule: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells, Description: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound</Option>
-	<Option Name="SwordOfSwiftSlaying" Title="Sword of Swift Slaying">Type: Weapon, HitFirst, Description: The wieider of the Sword of Swift Slaying has the Always Strikes First special rule</Option>
-	<Option Name="BerserkerSword" Title="Berserker Sword">Type: Weapon, Frenzy, Description: The bearer has the Frenzy special rule and can never lose his Frenzy</Option>
-	<Option Name="GoldSigilSword" Title="Gold Sigil Sword">Type: Weapon, InitiativeTo: 10, Description: Attacks from the Gold Sigil Sword are made at Initiative 10</Option>
-	<Option Name="RelicSword" Title="Relic Sword">Type: Weapon, WoundOn: 5, Description: Attacks made with the Relic Sword will always wound on a 5+, unless they would normally need a lower result</Option>
-	<Option Name="ShriekingBlade" Title="Shrieking Blade">Type: Weapon, Fear, Description: The bearer causes Fear</Option>
-	<Option Name="TormentorSword" Title="Tormentor Sword">Type: Weapon, Rule: A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game, Description: A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game</Option>
-	<Option Name="WarriorBane" Title="Warrior Bane">Type: Weapon, Rule: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound, Description: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1)</Option>
-	<Option Name="ArmourOfDestiny" Title="Armour of Destiny">Type: Armour, AddToArmour: 5, AddToWard: 4, Description: Heavy armour. The Armour of Destiny grants the wearer a 4+ ward save</Option>
+	<Group Name="Options">
+		<Option Name="HandWeapon" Title="Hand weapon"/>
+		<Option Name="AdditionalWeapon" Title="Additional weapon">AddToAttacks: 1</Option>
+		<Option Name="Choppa" Title="Choppa"/>
+		<Option Name="GreatWeapon" Title="Great weapon">AddToStrength: 2, HitLast</Option>
+		<Option Name="Halberd" Title="Halberd">AddToStrength: 1</Option>
+		<Option Name="Flail" Title="Flail">Flail</Option>
+		<Option Name="TwoHandsWeapon" Title="Two hands weapons">AddoAttacks: 1</Option>
+		<Option Name="Spear" Title="Spear"/>
+		<Option Name="Lance" Title="Lance">Lance</Option>
+		<Option Name="LightArmour" Title="Light armour">AddToArmour: 6</Option>
+		<Option Name="HeavyArmour" Title="Heavy armour">AddToArmour: 5</Option>
+		<Option Name="FullPlateArmour" Title="Full plate armour">AddToArmour: 4</Option>
+		<Option Name="Shield" Title="Shield">AddToArmour: 6</Option>
+		<Option Name="LongBow" Title="Longbow"/>
+		<Option Name="Bow" Title="Bow"/>
+		<Option Name="ShortBow" Title="Short bow"/>
+		<Option Name="CommandGroup" Title="Command">CommandGroup</Option>
+	</Group>
+	<Group Name="6ed/7ed common magic items">
+		<Option Name="SwordOfStriking" Title="Sword of Striking">Type: Weapon, AddToHit: 1, Description: +1 to Hit</Option>
+		<Option Name="SwordOfBattle" Title="Sword of Battle">Type: Weapon, AddToAttacks: 1, Description: +1 Attack</Option>
+		<Option Name="SwordOfMight" Title="Sword of Might">Type: Weapon, AddToStrength: 1, Description: +1 Strenght</Option>
+		<Option Name="BitingBlade" Title="Biting Blade">Type: Weapon, ArmourPiercing: 1, Description: -1 Armour save</Option>
+		<Option Name="EnchantedShield" Title="Enchanted shield">Type: Shield, AddToArmour: 5, Description: 5+ Armour save</Option>
+		<Option Name="TalismanOfProtection" Title="Talisman of Protection">Type: AdditionalArmour, AddToWard: 5, Description: 6+ Ward save</Option>
+		<Option Name="StaffOfSorcery" Title="Staff of Sorcery">Type: Arcane, AddToWard: 5, Rule: +1 to dispell, Description: +1 to dispell</Option>
+		<Option Name="DispellScroll" Title="Dispell Scroll">Type: Arcane, Multiple, Description: Automatically dispel an enemy spell; one use only</Option>
+		<Option Name="PowerStone" Title="Power Stone">Type: Arcane, Multiple, Description: +2 dice to cast a spell</Option>
+		<Option Name="WarBanner" Title="War Banner">Type: Banner, AddToCloseCombat: 1, Description: +1 Combat Resolution</Option>
+	</Group>
+	<Group Name="8ed common magic items">
+		<Option Name="GiantBlade" Title="Giant Blade">Type: Weapon, AddToStrength: 3, Description: Close combat attacks made with this sword are resolved at +3 Strength</Option>
+		<Option Name="SwordOfBloodshed" Title="Sword of Bloodshed">Type: Weapon, AddToAttacks: 3, Description: The wielder has +3 Attacks</Option>
+		<Option Name="ObsidianBlade" Title="Obsidian Blade">Type: Weapon, NoArmour, Description: Armour saves cannot be taken against wounds caused by the Obsidian Blade</Option>
+		<Option Name="OgreBlade" Title="Ogre Blade">Type: Weapon, AddToStrength: 2, Description: Close combat attacks made with this sword are resolved at +2 Strength</Option>
+		<Option Name="SwordOfStrife" Title="Sword of Strife">Type: Weapon, AddToAttacks: 2, Description: This wieider of the Sword of Strife has +2 Attacks</Option>
+		<Option Name="FencersBlades" Title="Fencer's Blades">Type: Weapon, WeaponSkillTo: 10, Description: Paired weapons; the bearer has Weapon Skill 10</Option>
+		<Option Name="SwordOfAntiHeroes" Title="Sword of Anti-Heroes">Type: Weapon, Rule: +1 Strength and +1 Attack for every enemy character in base contact, Description: The bearer has +1 Strength and +1 Attack for every enemy character in base contact with him or his unit. These bonuses are calculated at the start of each round ol close combat and last until its end</Option>
+		<Option Name="SpellthievingSword" Title="Spellthieving Sword">Type: Weapon, Rule: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells, Description: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound</Option>
+		<Option Name="SwordOfSwiftSlaying" Title="Sword of Swift Slaying">Type: Weapon, HitFirst, Description: The wieider of the Sword of Swift Slaying has the Always Strikes First special rule</Option>
+		<Option Name="BerserkerSword" Title="Berserker Sword">Type: Weapon, Frenzy, Description: The bearer has the Frenzy special rule and can never lose his Frenzy</Option>
+		<Option Name="GoldSigilSword" Title="Gold Sigil Sword">Type: Weapon, InitiativeTo: 10, Description: Attacks from the Gold Sigil Sword are made at Initiative 10</Option>
+		<Option Name="RelicSword" Title="Relic Sword">Type: Weapon, WoundOn: 5, Description: Attacks made with the Relic Sword will always wound on a 5+ unless they would normally need a lower result</Option>
+		<Option Name="ShriekingBlade" Title="Shrieking Blade">Type: Weapon, Fear, Description: The bearer causes Fear</Option>
+		<Option Name="TormentorSword" Title="Tormentor Sword">Type: Weapon, Rule: A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game, Description: A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game</Option>
+		<Option Name="WarriorBane" Title="Warrior Bane">Type: Weapon, Rule: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound, Description: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1)</Option>
+		<Option Name="ArmourOfDestiny" Title="Armour of Destiny">Type: Armour, AddToArmour: 5, AddToWard: 4, Description: Heavy armour. The Armour of Destiny grants the wearer a 4+ ward save</Option>
+	</Group>
 </Options>
