@@ -30,7 +30,7 @@
 		<Option Name="PowerStone" Title="Power Stone">Type: Arcane, Multiple, Description: +2 dice to cast a spell</Option>
 		<Option Name="WarBanner" Title="War Banner">Type: Banner, AddToCloseCombat: 1, Description: +1 Combat Resolution</Option>
 	</Group>
-	<Group Name="8ed common magic items">
+	<Group Name="8ed common magic weapons">
 		<Option Name="GiantBlade" Title="Giant Blade">Type: Weapon, AddToStrength: 3, Description: Close combat attacks made with this sword are resolved at +3 Strength</Option>
 		<Option Name="SwordOfBloodshed" Title="Sword of Bloodshed">Type: Weapon, AddToAttacks: 3, Description: The wielder has +3 Attacks</Option>
 		<Option Name="ObsidianBlade" Title="Obsidian Blade">Type: Weapon, NoArmour, Description: Armour saves cannot be taken against wounds caused by the Obsidian Blade</Option>
@@ -46,6 +46,10 @@
 		<Option Name="ShriekingBlade" Title="Shrieking Blade">Type: Weapon, Fear, Description: The bearer causes Fear</Option>
 		<Option Name="TormentorSword" Title="Tormentor Sword">Type: Weapon, Rule: A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game, Description: A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game</Option>
 		<Option Name="WarriorBane" Title="Warrior Bane">Type: Weapon, Rule: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound, Description: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1)</Option>
+	</Group>
+	<Group Name="8ed common magic armours">
 		<Option Name="ArmourOfDestiny" Title="Armour of Destiny">Type: Armour, AddToArmour: 5, AddToWard: 4, Description: Heavy armour. The Armour of Destiny grants the wearer a 4+ ward save</Option>
+		<Option Name="TrickstersHelm" Title="Trickster's Helm">Type: AdditionalArmour, AddToArmour: 6, Reroll: OpponentToWound, Description: The wearer counts his armour save as being one point higher than normal. Any successful roll to wound made against the wearer of the Trickster's Helm must be re-rolled</Option>
+		
 	</Group>
 </Options>
