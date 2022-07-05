@@ -9,7 +9,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static int BaseArmySize = 2000;
         public static int LargeArmySize = 3000;
 
-        public static string BanalXmlOptionPath { get; set; }
-        public static Dictionary<string, string> BanalXmlOption { get; set; }
+        public static string CommonXmlOptionPath { get; set; }
+        public static Dictionary<string, string> CommonXmlOption { get; set; }
     }
 }

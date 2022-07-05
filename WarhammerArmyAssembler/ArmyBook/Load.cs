@@ -72,20 +72,20 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Empty;
         }
 
-        public static void LoadBanalXmlOption()
+        public static void LoadCommonXmlOption()
         {
-            if (String.IsNullOrEmpty(Constants.BanalXmlOptionPath))
+            if (String.IsNullOrEmpty(Constants.CommonXmlOptionPath))
                 return;
 
-            Constants.BanalXmlOption = new Dictionary<string, string>();
+            Constants.CommonXmlOption = new Dictionary<string, string>();
 
             XmlDocument xmlFile = new XmlDocument();
-            xmlFile.Load(Constants.BanalXmlOptionPath);
+            xmlFile.Load(Constants.CommonXmlOptionPath);
 
             foreach (XmlNode option in xmlFile.SelectNodes("Options/*/Option"))
             {
                 string value = String.Format("{0}|{1}", option.Attributes["Title"].InnerText, option.InnerText);
-                Constants.BanalXmlOption.Add(option.Attributes["Name"].InnerText, value);
+                Constants.CommonXmlOption.Add(option.Attributes["Name"].InnerText, value);
             }
         }
 
@@ -98,7 +98,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.Mounts.Clear();
             Data.Artefact.Clear();
 
-            LoadBanalXmlOption();
+            LoadCommonXmlOption();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
@@ -440,12 +440,12 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
         {
-            foreach (KeyValuePair<string, string> banalXmlOption in Constants.BanalXmlOption)
+            foreach (KeyValuePair<string, string> commonXmlOption in Constants.CommonXmlOption)
             {
-                if (xmlNode.Name != banalXmlOption.Key)
+                if (xmlNode.Name != commonXmlOption.Key)
                     continue;
 
-                List<string> xmlOption = banalXmlOption.Value.Split('|').ToList();
+                List<string> xmlOption = commonXmlOption.Value.Split('|').ToList();
                 CreateOption(xmlOption[0], xmlOption[1], xmlDocument, ref xmlNode);
             }
 

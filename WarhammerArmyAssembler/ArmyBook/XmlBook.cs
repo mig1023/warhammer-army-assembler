@@ -82,8 +82,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static SortedDictionary<string, string> FindAllXmlFilesInDirectories(string programDirectory)
         {
-            Constants.BanalXmlOptionPath = Directory
-                .GetFiles(programDirectory, "BanalXmlOption.xml", SearchOption.AllDirectories)
+            Constants.CommonXmlOptionPath = Directory
+                .GetFiles(programDirectory, "CommonXmlOption.xml", SearchOption.AllDirectories)
                 .ToList()
                 .FirstOrDefault();
 
