@@ -398,7 +398,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             bool typesIncluded = false;
 
-            foreach (string attributeLine in attributes.Split(',').Select(x => x.Trim('\n').Trim()))
+            foreach (string attributeLine in attributes.Split(';').Select(x => x.Trim('\n').Trim()))
             {
                 if (attributeLine.Contains(":"))
                 {
