@@ -153,26 +153,7 @@ namespace WarhammerArmyAssembler
             GetEnemiesListType(type).Add(new Enemy(enemy));
 
         private static List<Enemy> EnemiesMonsters { get; set; }
-
-        private static List<Enemy> EnemiesCoreUnits = new List<Enemy>
-        {
-            new Enemy("20/Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2///StrengthInNumbers"),
-            new Enemy("20/Men-at-arms/Bretonnia/4/2/2/3/3/1/3/1/5/5"),
-            new Enemy("20/Empire swordmens/The Empire/4/3/3/3/3/1/3/1/7/6"),
-            new Enemy("20/Demonettes/Daemons/6/5/4/3/3/1/5/2/7"),
-            new Enemy("5/Ogres/Ogre Kingdoms/6/3/2/4/4/3/2/3/7/6//Fear"),
-            new Enemy("20/Orc boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/5"),
-            new Enemy("20/Skeleton Warriors/Tomb Kings/4/2/2/3/3/1/2/1/5/5//Undead"),
-            new Enemy("20/Lothern Sea Guard/High Elves/5/4/4/3/3/1/5/1/8/6//HitFirst"),
-            new Enemy("20/Crypt Ghouls/Vampire Counts/4/3/0/3/4/1/3/2/5///Undead, PoisonAttack"),
-            new Enemy("20/Back Ark Corsairs/Dark Elves/5/4/4/3/3/1/5/2/8/5//Hate"),
-            new Enemy("20/Dryads/Wood Elves/5/4/0/4/4/1/6/2/8///Fear"),
-            new Enemy("20/Bestigor/Beastmen/5/4/3/6/4/1/3/1/7/5//HitLast"),
-            new Enemy("8/Knights of the Realms/Bretonnia/4/4/3/3/3/1/3/1/8/2//Lance + 8/Warhorse//8/3/0/3/3/1/3/1/5"),
-            new Enemy("20/Longbeards/Dwarfs/3/5/3/4/4/1/2/1/9/4//ImmuneToPsychology"),
-            new Enemy("20/Temple Guard/Lizardmen/4/4/0/5/4/1/2/2/8/4//ColdBlooded"),
-            new Enemy("8/Chosen Knights/Chaos/4/5/3/5/4/1/5/2/8/1 + 8/Chaos Steed//8/3/0/4/3/1/3/1/5"),
-        };
+        private static List<Enemy> EnemiesCoreUnits { get; set; }
 
         private static List<Enemy> EnemiesSpecialUnits = new List<Enemy>
         {
