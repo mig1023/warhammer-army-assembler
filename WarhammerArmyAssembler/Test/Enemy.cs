@@ -156,29 +156,7 @@ namespace WarhammerArmyAssembler
         private static List<Enemy> EnemiesCoreUnits { get; set; }
         private static List<Enemy> EnemiesSpecialUnits { get; set; }
         private static List<Enemy> EnemiesRareUnits { get; set; }
-
-        private static List<Enemy> EnemiesHeroes = new List<Enemy>
-        {
-            new Enemy("Tretch Craventail/Skaven/5/5/4/4/4/2/6/4/6/5/4"),
-            new Enemy("The Herald Nekaph/Tomb Kings/4/5/3/4/4/2/3/3/8//5/KillingBlow, Undead, Flail, MultiWounds:2"),
-            new Enemy("Gitilla/Orcs&Goblins/4/4/4/4/4/2/4/3/7/3 + Ulda the Great Wolf//9/3/0/3/3/1/3/2/3"),
-            new Enemy("Moonclaw/Beastmen/5/3/3/4/4/2/3/3/7//5 + Umbralok//7/3/0/4/4/1/2/3/6"),
-            new Enemy("Ludwig Schwarzhelm/The Empire/4/6/5/4/4/2/5/3/8/2//KillingBlow, Reroll:ToWound " +
-                "+ Warhorse//8/3/0/3/3/1/3/1/5"),
-            new Enemy("Gor-Rok/Lizardmen/4/5/0/5/5/2/3/4/8/3//ColdBlooded, Stubborn, " +
-                "NoKillingBlow, NoMultiWounds, Reroll:ToHit;OpponentToWound"),
-            new Enemy("Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4/ImmuneToPsychology"),
-            new Enemy("Drycha/Wood Elves/5/7/4/5/4/3/8/5/8///Terror, Reroll:ToHit"),
-            new Enemy("Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4/Fear, HitFirst, MultiWounds:D3"),
-            new Enemy("Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5/Fear, HitFirst, Undead, MultiWounds:2, Reroll:ToHit"),
-            new Enemy("Bragg The Gutsman/Ogre Kingdoms/6/5/3/6/5/4/3/4/8/6//Fear, HeroicKillingBlow, LargeBase"),
-            new Enemy("Throgg/Chaos/6/5/2/6/5/4/2/5/8///Fear, Regeneration, LargeBase"),
-            new Enemy("Karanak/Daemons/8/7/0/5/5/3/6/4/8/6//Hate"),
-            new Enemy("Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3//NoArmour, Reroll:ToWound " +
-                "+ Spite//7/3/0/4/4/1/2/2/4/5//Fear"),
-            new Enemy("Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4/HitFirst, MultiWounds:D3, ArmourPiercing:2"),
-            new Enemy("Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5/Unbreakable, HitFirst, Reroll:ToHit"),
-        };
+        private static List<Enemy> EnemiesHeroes { get; set; }
 
         private static List<Enemy> EnemiesLords = new List<Enemy>
         {
