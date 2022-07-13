@@ -154,26 +154,7 @@ namespace WarhammerArmyAssembler
 
         private static List<Enemy> EnemiesMonsters { get; set; }
         private static List<Enemy> EnemiesCoreUnits { get; set; }
-
-        private static List<Enemy> EnemiesSpecialUnits = new List<Enemy>
-        {
-            new Enemy("5/Tree Kin/Wood Elves/5/4/4/4/5/3/3/3/8/4//Fear"),
-            new Enemy("8/Pegasus Knights/Bretonnia/4/4/3/3/4/2/4/1/8/3//Lance + 8/Pegasus//8/3/0/4/4/1/4/2/7"),
-            new Enemy("5/Chaos Ogre/Beastmen/6/3/2/4/4/3/2/3/7/6//Fear"),
-            new Enemy("4/Mournfang Cavalry/Ogre Kingdoms/6/3/2/4/4/3/2/3/7/6//Fear, LargeBase + 4/Mournfang//8/3/0/5/4/3/2/4/5/5"),
-            new Enemy("20/Plague Monks/Skaven/5/3/3/3/4/1/3/3/5///Frenzy, StrengthInNumbers"),
-            new Enemy("16/Tomb Guard/Tomb Kings/4/3/3/4/4/1/3/1/8/5//KillingBlow, Undead"),
-            new Enemy("16/Grave Guard/Vampire Counts/4/3/3/4/4/1/3/2/8/4//KillingBlow, Undead"),
-            new Enemy("20/Greatswords/The Empire/4/4/3/5/3/1/3/2/8/5//HitLast, Stubborn"),
-            new Enemy("3/Beasts of Nurgle/Daemons/6/3/0/4/5/4/2/D6+1/7///PoisonAttack, Regeneration"),
-            new Enemy("16/Black Orcs/Orcs&Goblins/4/4/3/5/4/1/2/1/8/5//HitLast"),
-            new Enemy("8/Orc Boar Boys/Orcs&Goblins/4/3/3/3/4/1/2/1/7/3 + 8/Boar//7/3/0/3/4/1/3/1/3"),
-            new Enemy("8/Cold One Knights/Dark Elves/5/5/4/4/3/1/6/1/9/2//Hate, Fear, Lance + 8/Cold One//7/3/0/4/4/1/2/1/3"),
-            new Enemy("8/Cold One Cavalry/Lizardmen/4/4/0/4/4/1/2/2/8/2//ColdBlooded, Fear + 8/Cold One//7/3/0/4/4/1/2/1/3"),
-            new Enemy("20/Bloodletters/Chaos/4/5/0/5/3/1/4/2/8/6//Frenzy"),
-            new Enemy("16/Sword Masters/High Elves/5/6/4/5/3/1/5/2/8/5//HitFirst"),
-            new Enemy("16/Hammerers/Dwarfs/3/5/3/6/4/1/2/1/9/5//Stubborn"),
-        };
+        private static List<Enemy> EnemiesSpecialUnits { get; set; }
 
         private static List<Enemy> EnemiesRareUnits = new List<Enemy>
         {
