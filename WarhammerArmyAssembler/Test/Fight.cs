@@ -222,8 +222,8 @@ namespace WarhammerArmyAssembler.Test
 
                 participants.Sort((a, b) => a.CompareTo(b));
 
-                if (round == 1)
-                    participants.Sort((a, b) => a.CompareTo(b));
+                //if (round == 1)
+                //    participants.Sort((a, b) => a.CompareTo(b));
 
                 ShowRoundOrder(participants);
 
