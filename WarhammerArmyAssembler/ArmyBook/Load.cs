@@ -89,6 +89,21 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
         }
 
+        public static void LoadEnemies()
+        {
+            if (String.IsNullOrEmpty(Constants.EnemiesOptionPath))
+                return;
+
+            Enemy.CleanEnemies();
+
+            XmlDocument xmlFile = new XmlDocument();
+            xmlFile.Load(Constants.EnemiesOptionPath);
+
+            foreach (XmlNode group in xmlFile.SelectNodes("Enemies/Group"))
+                foreach (XmlNode enemy in group.SelectNodes("Enemy"))
+                    Enemy.AddEnemies(group.Attributes["List"].InnerText, enemy.InnerText);
+        }
+
         public static void LoadArmy(string xmlFileName)
         {
             Data.Magic.Clear();
@@ -99,6 +114,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.Artefact.Clear();
 
             LoadCommonXmlOption();
+            LoadEnemies();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);

@@ -80,12 +80,18 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static List<string> FindAllXmlFiles(string programDirectory) =>
             FindAllXmlFilesInDirectories(programDirectory).Values.ToList();
 
-        private static SortedDictionary<string, string> FindAllXmlFilesInDirectories(string programDirectory)
+        public static string FindXmlFileByName(string directory, string name)
         {
-            Constants.CommonXmlOptionPath = Directory
-                .GetFiles(programDirectory, "CommonXmlOption.xml", SearchOption.AllDirectories)
+            return Directory
+                .GetFiles(directory, name, SearchOption.AllDirectories)
                 .ToList()
                 .FirstOrDefault();
+        }
+
+        private static SortedDictionary<string, string> FindAllXmlFilesInDirectories(string programDirectory)
+        {
+            Constants.CommonXmlOptionPath = FindXmlFileByName(programDirectory, "CommonXmlOption.xml");
+            Constants.EnemiesOptionPath = FindXmlFileByName(programDirectory, "Enemies.xml");
 
             SortedDictionary<string, string> files = new SortedDictionary<string, string>();
 
