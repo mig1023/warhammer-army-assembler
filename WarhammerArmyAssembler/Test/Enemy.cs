@@ -9,6 +9,8 @@ namespace WarhammerArmyAssembler
     {
         public static int MaxIDindex = -10;
 
+        private static Dictionary<string, List<Enemy>> EnemiesDirectories = new Dictionary<string, List<Enemy>>();
+
         public Enemy(string enemyName)
         {
             List<string> multiplesProfile = enemyName.Split(new string[] { " + " }, StringSplitOptions.RemoveEmptyEntries).ToList();
@@ -87,24 +89,9 @@ namespace WarhammerArmyAssembler
                 return String.Format("{0} ({1})", this.Name, this.Armybook);
         }
 
-        private static Dictionary<string, List<Enemy>> GetEnemiesDictionary() => new Dictionary<string, List<Enemy>>
-        {
-            ["Lords"] = new List<Enemy>(EnemiesLords),
-            ["Heroes"] = new List<Enemy>(EnemiesHeroes),
-            ["Core Units"] = new List<Enemy>(EnemiesCoreUnits),
-            ["Special Units"] = new List<Enemy>(EnemiesSpecialUnits),
-            ["Rare Units"] = new List<Enemy>(EnemiesRareUnits),
-            ["Monsters"] = new List<Enemy>(EnemiesMonsters),
-        };
-
         public static Enemy GetByName(string enemyName)
         {
-            List<List<Enemy>> enemies = new List<List<Enemy>> {
-                EnemiesMonsters, EnemiesHeroes, EnemiesLords,
-                EnemiesCoreUnits, EnemiesSpecialUnits, EnemiesRareUnits
-            };
-
-            foreach (List<Enemy> enemyList in enemies)
+            foreach (List<Enemy> enemyList in EnemiesDirectories.Values)
                 foreach (Enemy enemy in enemyList.Where(x => x.Fullname() == enemyName))
                     return enemy.SetID();
 
@@ -118,45 +105,23 @@ namespace WarhammerArmyAssembler
             return this;
         }
 
-        public static List<string> GetEnemiesGroups() => GetEnemiesDictionary().Keys.ToList<string>();
-
-        public static List<Enemy> GetEnemiesByGroup(string groupName) => GetEnemiesDictionary()[groupName];
+        public static List<string> GetEnemiesGroups() => EnemiesDirectories.Keys.ToList<string>();
+            
+        public static List<Enemy> GetEnemiesByGroup(string groupName) => EnemiesDirectories[groupName];
 
         public static int GetEnemiesCount() => GetEnemiesGroups().Sum(x => GetEnemiesByGroup(x).Count());
 
-        private static List<Enemy> GetEnemiesListType(string type)
-        {
-            switch (type)
-            {
-                case "EnemiesMonsters": return EnemiesMonsters;
-                case "EnemiesCoreUnits": return EnemiesCoreUnits;
-                case "EnemiesSpecialUnits": return EnemiesSpecialUnits;
-                case "EnemiesRareUnits": return EnemiesRareUnits;
-                case "EnemiesHeroes": return EnemiesHeroes;
-                case "EnemiesLords": return EnemiesLords;
-            }
-
-            return null;
-        }
-
         public static void CleanEnemies()
         {
-            EnemiesMonsters = new List<Enemy>();
-            EnemiesCoreUnits = new List<Enemy>();
-            EnemiesSpecialUnits = new List<Enemy>();
-            EnemiesRareUnits = new List<Enemy>();
-            EnemiesHeroes = new List<Enemy>();
-            EnemiesLords = new List<Enemy>();
+            EnemiesDirectories["Lords"] = new List<Enemy>();
+            EnemiesDirectories["Heroes"] = new List<Enemy>();
+            EnemiesDirectories["Core Units"] = new List<Enemy>();
+            EnemiesDirectories["Special Units"] = new List<Enemy>();
+            EnemiesDirectories["Rare Units"] = new List<Enemy>();
+            EnemiesDirectories["Monsters"] = new List<Enemy>();
         }
 
         public static void AddEnemies(string type, string enemy) =>
-            GetEnemiesListType(type).Add(new Enemy(enemy));
-
-        private static List<Enemy> EnemiesMonsters { get; set; }
-        private static List<Enemy> EnemiesCoreUnits { get; set; }
-        private static List<Enemy> EnemiesSpecialUnits { get; set; }
-        private static List<Enemy> EnemiesRareUnits { get; set; }
-        private static List<Enemy> EnemiesHeroes { get; set; }
-        private static List<Enemy> EnemiesLords { get; set; }
+            EnemiesDirectories[type].Add(new Enemy(enemy));
     }
 }
