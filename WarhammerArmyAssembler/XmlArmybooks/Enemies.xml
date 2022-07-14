@@ -1,24 +1,42 @@
 <Enemies>
-	<Group List="Monsters">
-		<Enemy>Troll/Orcs&amp;Goblins/6/3/1/5/4/3/1/3/4///Fear, Regeneration, Stupidity, LargeBase</Enemy>
-		<Enemy>Gyrobomber/Dwarfs/1/4/3/4/5/3/2/2/9/4//LargeBase</Enemy>
-		<Enemy>Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7///Fear, ColdBlooded, LargeBase</Enemy>
-		<Enemy>Tomb Scorpion/Tomb Kings/7/4/0/5/5/3/3/4/8///Undead, KillingBlow, PoisonAttack, LargeBase</Enemy>
-		<Enemy>Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8///Terror, LargeBase</Enemy>
-		<Enemy>Griffon/The Empire/6/5/0/5/5/4/5/4/7///Terror, LargeBase</Enemy>
-		<Enemy>Manticore/Chaos/6/5/0/5/5/4/5/4/5///Terror, KillingBlow, LargeBase</Enemy>
-		<Enemy>Varghulf/Vampire/8/5/0/5/5/4/2/5/4///Terror, Undead, Regeneration, Hate, LargeBase</Enemy>
-		<Enemy>War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4//Terror, LargeBase + 2/Apparentice//5/4/4/3/3/2/3/2/8///NoKillingBlow</Enemy>
-		<Enemy>Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4//Frenzy, Terror, LargeBase</Enemy>
-		<Enemy>Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4//Terror, ImmuneToPsychology, LargeBase</Enemy>
-		<Enemy>Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4//LargeBase, ColdBlooded, Terror, Stubborn, ImmuneToPsychology + 5/Skink Crew//6/2/3/3/2/4/4/4/5/4//ColdBlooded, PoisonAttack, NoKillingBlow</Enemy>
-		<Enemy>Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3//Terror, LargeBase</Enemy>
-		<Enemy>Giant/Orcs&amp;Goblins/6/3/3/6/5/6/3/0/10///Terror, Stubborn, LargeBase, Giant</Enemy>
-		<Enemy>Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4//Terror, LargeBase</Enemy>
-		<Enemy>Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10///Regeneration, Terror, Stubborn, LargeBase, HellPitAbomination</Enemy>
-		<Enemy>Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3//Terror, LargeBase, HeroicKillingBlow, Undead</Enemy>
-		<Enemy>Star Dragon/High Elves/6/7/0/7/6/7/2/6/9/3//Terror, LargeBase</Enemy>
-		<Enemy>Steam Tank/The Empire/0/0/4/6/6/10/0/0/10/1//Unbreakable, Terror, LargeBase, SteamTank</Enemy>
+	<Group List="Heroes">
+		<Enemy>Tretch Craventail/Skaven/5/5/4/4/4/2/6/4/6/5/4</Enemy>
+		<Enemy>The Herald Nekaph/Tomb Kings/4/5/3/4/4/2/3/3/8//5/KillingBlow, Undead, Flail, MultiWounds:2</Enemy>
+		<Enemy>Gitilla/Orcs&amp;Goblins/4/4/4/4/4/2/4/3/7/3 + Ulda the Great Wolf//9/3/0/3/3/1/3/2/3</Enemy>
+		<Enemy>Moonclaw/Beastmen/5/3/3/4/4/2/3/3/7//5 + Umbralok//7/3/0/4/4/1/2/3/6</Enemy>
+		<Enemy>Ludwig Schwarzhelm/The Empire/4/6/5/4/4/2/5/3/8/2//KillingBlow, Reroll:ToWound + Warhorse//8/3/0/3/3/1/3/1/5</Enemy>
+		<Enemy>Gor-Rok/Lizardmen/4/5/0/5/5/2/3/4/8/3//ColdBlooded, Stubborn, NoKillingBlow, NoMultiWounds, Reroll:ToHit;OpponentToWound</Enemy>
+		<Enemy>Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4/ImmuneToPsychology</Enemy>
+		<Enemy>Drycha/Wood Elves/5/7/4/5/4/3/8/5/8///Terror, Reroll:ToHit</Enemy>
+		<Enemy>Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4/Fear, HitFirst, MultiWounds:D3</Enemy>
+		<Enemy>Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5/Fear, HitFirst, Undead, MultiWounds:2, Reroll:ToHit</Enemy>
+		<Enemy>Bragg The Gutsman/Ogre Kingdoms/6/5/3/6/5/4/3/4/8/6//Fear, HeroicKillingBlow, LargeBase</Enemy>
+		<Enemy>Throgg/Chaos/6/5/2/6/5/4/2/5/8///Fear, Regeneration, LargeBase</Enemy>
+		<Enemy>Karanak/Daemons/8/7/0/5/5/3/6/4/8/6//Hate</Enemy>
+		<Enemy>Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3//NoArmour, Reroll:ToWound + Spite//7/3/0/4/4/1/2/2/4/5//Fear</Enemy>
+		<Enemy>Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4/HitFirst, MultiWounds:D3, ArmourPiercing:2</Enemy>
+		<Enemy>Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5/Unbreakable, HitFirst, Reroll:ToHit</Enemy>
+	</Group>
+	<Group List="Lords">
+		<Enemy>Green Knight/Bretonnia/6/7/3/6/4/3/6/4/9//4/ImmuneToPsychology, Terror, Undead + Shadow Steed//8/4/0/4/3/1/4/1/5/5</Enemy>
+		<Enemy>Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2</Enemy>
+		<Enemy>Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10///HitFirst, Undead, PoisonAttack</Enemy>
+		<Enemy>Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5/Lance, ImmuneToPsychology, Regeneration, Reroll:ToHit;ToWound + Beaquis//8/5/0/5/5/4/6/4/9/5//Terror</Enemy>
+		<Enemy>Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2//Stubborn, ImmuneToPsychology, AutoWound, NoArmour + Warhorse//8/3/0/3/3/1/3/1/5</Enemy>
+		<Enemy>Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4/Fear, ImmuneToPsychology, MultiWounds:D3</Enemy>
+		<Enemy>Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4/Undead + Zombie Dragon//6/3/0/6/6/6/1/4/4/5//Terror, Undead</Enemy>
+		<Enemy>Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4/AutoWound, NoArmour + Deathclaw//6/6/0/5/5/4/5/4/8///Terror, MultiWounds:D3</Enemy>
+		<Enemy>Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4/HitFirst, Regeneration + Malhandir//10/4/0/4/3/1/5/2/7</Enemy>
+		<Enemy>Torgrim Grudgebearer/Dwarfs/3/7/6/4/5/7/4/4/10/2/4/HitFirst, ImmuneToPsychology, Stubborn + Thronebearers//3/5/3/4/0/1/3/4/0</Enemy>
+		<Enemy>Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5/HitFirst, Frenzy, Terror, Unbreakable + 2/Hound of Orion//9/4/0/4/4/1/4/1/6///Frenzy, Unbreakable</Enemy>
+		<Enemy>Durthu/Wood Elves/5/7/7/6/6/6/2/6/10/3/6/LargeBase, Frenzy, Terror, Hate, Stubborn</Enemy>
+		<Enemy>Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5/ImmuneToPsychology, Terror, MultiWounds:D3</Enemy>
+		<Enemy>Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2/NoArmour + Seraphon//6/6/0/6/6/6/4/5/8/3//Terror, LargeBase</Enemy>
+		<Enemy>Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5/ColdBlooded, MultiWounds:2 + Grymloq//7/3/0/7/5/5/2/5/5/4//Terror, ColdBlooded, LargeBase, MultiWounds:D3</Enemy>
+		<Enemy>Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3/ImmuneToPsychology, NoArmour, Terror + Dorghar//8/4/0/5/5/3/3/3/9/4//LargeBase</Enemy>
+		<Enemy>Grimgor Ironhide/Orcs&amp;Goblins/4/8/1/7/5/3/5/7/9/1/5/Hate, HitFirst, ImmuneToPsychology</Enemy>
+		<Enemy>Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9///Terror, PoisonAttack, Hate, LargeBase</Enemy>
+		<Enemy>Bloodthister/Chaos/6/10/0/7/6/7/10/7/9/4/5/Terror, KillingBlow, LargeBase</Enemy>
 	</Group>
 	<Group List="Core Units">
 		<Enemy>20/Clanrat Slaves/Skaven/5/2/2/3/3/1/4/1/2///StrengthInNumbers</Enemy>
@@ -69,43 +87,25 @@
 		<Enemy>6/Blood Knights/Vampire Counts/4/5/3/5/4/1/4/2/7/2/5/Frenzy, Undead, Lance + 6/Nightmare//8/3/0/4/4/1/2/1/3</Enemy>
 		<Enemy>6/Skullcrushers/Chaos/4/5/3/4/4/1/5/2/8/1//Fear + 6/Juggernaut//7/5/0/5/4/3/2/3/7</Enemy>
 	</Group>
-	<Group List="Heroes">
-		<Enemy>Tretch Craventail/Skaven/5/5/4/4/4/2/6/4/6/5/4</Enemy>
-		<Enemy>The Herald Nekaph/Tomb Kings/4/5/3/4/4/2/3/3/8//5/KillingBlow, Undead, Flail, MultiWounds:2</Enemy>
-		<Enemy>Gitilla/Orcs&amp;Goblins/4/4/4/4/4/2/4/3/7/3 + Ulda the Great Wolf//9/3/0/3/3/1/3/2/3</Enemy>
-		<Enemy>Moonclaw/Beastmen/5/3/3/4/4/2/3/3/7//5 + Umbralok//7/3/0/4/4/1/2/3/6</Enemy>
-		<Enemy>Ludwig Schwarzhelm/The Empire/4/6/5/4/4/2/5/3/8/2//KillingBlow, Reroll:ToWound + Warhorse//8/3/0/3/3/1/3/1/5</Enemy>
-		<Enemy>Gor-Rok/Lizardmen/4/5/0/5/5/2/3/4/8/3//ColdBlooded, Stubborn, NoKillingBlow, NoMultiWounds, Reroll:ToHit;OpponentToWound</Enemy>
-		<Enemy>Josef Bugman/Dwarfs/3/6/5/5/5/2/4/4/10/3/4/ImmuneToPsychology</Enemy>
-		<Enemy>Drycha/Wood Elves/5/7/4/5/4/3/8/5/8///Terror, Reroll:ToHit</Enemy>
-		<Enemy>Caradryan/High Elves/5/6/6/4/3/4/7/3/9/5/4/Fear, HitFirst, MultiWounds:D3</Enemy>
-		<Enemy>Konrad/Vampire Counts/6/7/4/5/4/2/6/4/6/5/5/Fear, HitFirst, Undead, MultiWounds:2, Reroll:ToHit</Enemy>
-		<Enemy>Bragg The Gutsman/Ogre Kingdoms/6/5/3/6/5/4/3/4/8/6//Fear, HeroicKillingBlow, LargeBase</Enemy>
-		<Enemy>Throgg/Chaos/6/5/2/6/5/4/2/5/8///Fear, Regeneration, LargeBase</Enemy>
-		<Enemy>Karanak/Daemons/8/7/0/5/5/3/6/4/8/6//Hate</Enemy>
-		<Enemy>Malus (Tz'arkan)/Dark Elves/6/7/5/5/5/2/9/3/10/3//NoArmour, Reroll:ToWound + Spite//7/3/0/4/4/1/2/2/4/5//Fear</Enemy>
-		<Enemy>Deathmaster Snikch/Skaven/6/8/6/4/4/2/10/6/8//4/HitFirst, MultiWounds:D3, ArmourPiercing:2</Enemy>
-		<Enemy>Chakax/Lizardmen/4/5/0/7/5/2/3/4/8/4/5/Unbreakable, HitFirst, Reroll:ToHit</Enemy>
-	</Group>
-	<Group List="Lords">
-		<Enemy>Green Knight/Bretonnia/6/7/3/6/4/3/6/4/9//4/ImmuneToPsychology, Terror, Undead + Shadow Steed//8/4/0/4/3/1/4/1/5/5</Enemy>
-		<Enemy>Khuzrak/Beastmen/5/7/1/5/5/3/5/4/9/2</Enemy>
-		<Enemy>Khalida/Tomb Kings/6/6/3/4/5/3/9/5/10///HitFirst, Undead, PoisonAttack</Enemy>
-		<Enemy>Louen Leoncoeur/Bretonnia/4/7/5/5/4/3/7/5/9/3/5/Lance, ImmuneToPsychology, Regeneration, Reroll:ToHit;ToWound + Beaquis//8/5/0/5/5/4/6/4/9/5//Terror</Enemy>
-		<Enemy>Kurt Helborg/The Empire/6/7/3/4/4/3/6/4/9/2//Stubborn, ImmuneToPsychology, AutoWound, NoArmour + Warhorse//8/3/0/3/3/1/3/1/5</Enemy>
-		<Enemy>Greasus Goldtooth/Ogre Kingdoms/4/6/3/10/6/6/1/3/9//4/Fear, ImmuneToPsychology, MultiWounds:D3</Enemy>
-		<Enemy>Zacharias/Vampire Counts/6/6/6/5/5/4/8/5/10//4/Undead + Zombie Dragon//6/3/0/6/6/6/1/4/4/5//Terror, Undead</Enemy>
-		<Enemy>Karl Franz/The Empire/4/6/5/4/4/3/6/4/10/4/4/AutoWound, NoArmour + Deathclaw//6/6/0/5/5/4/5/4/8///Terror, MultiWounds:D3</Enemy>
-		<Enemy>Tyrion/High Elves/5/9/7/7/3/4/10/4/10/1/4/HitFirst, Regeneration + Malhandir//10/4/0/4/3/1/5/2/7</Enemy>
-		<Enemy>Torgrim Grudgebearer/Dwarfs/3/7/6/4/5/7/4/4/10/2/4/HitFirst, ImmuneToPsychology, Stubborn + Thronebearers//3/5/3/4/0/1/3/4/0</Enemy>
-		<Enemy>Orion/Wood Elves/9/8/8/6/5/5/9/5/10//5/HitFirst, Frenzy, Terror, Unbreakable + 2/Hound of Orion//9/4/0/4/4/1/4/1/6///Frenzy, Unbreakable</Enemy>
-		<Enemy>Durthu/Wood Elves/5/7/7/6/6/6/2/6/10/3/6/LargeBase, Frenzy, Terror, Hate, Stubborn</Enemy>
-		<Enemy>Vermin Lord/Skaven/8/8/4/6/5/5/10/5/8//5/ImmuneToPsychology, Terror, MultiWounds:D3</Enemy>
-		<Enemy>Malekith/Dark Elves/8/5/4/6/3/3/8/4/10/4/2/NoArmour + Seraphon//6/6/0/6/6/6/4/5/8/3//Terror, LargeBase</Enemy>
-		<Enemy>Kroq-Gar/Lizardmen/4/6/3/6/5/3/4/5/8/3/5/ColdBlooded, MultiWounds:2 + Grymloq//7/3/0/7/5/5/2/5/5/4//Terror, ColdBlooded, LargeBase, MultiWounds:D3</Enemy>
-		<Enemy>Archaon/Chaos/4/9/5/5/5/4/7/10/10/1/3/ImmuneToPsychology, NoArmour, Terror + Dorghar//8/4/0/5/5/3/3/3/9/4//LargeBase</Enemy>
-		<Enemy>Grimgor Ironhide/Orcs&amp;Goblins/4/8/1/7/5/3/5/7/9/1/5/Hate, HitFirst, ImmuneToPsychology</Enemy>
-		<Enemy>Ku'gath Plaguefather/Daemons/6/6/3/6/7/7/4/6/9///Terror, PoisonAttack, Hate, LargeBase</Enemy>
-		<Enemy>Bloodthister/Chaos/6/10/0/7/6/7/10/7/9/4/5/Terror, KillingBlow, LargeBase</Enemy>
+	<Group List="Monsters">
+		<Enemy>Troll/Orcs&amp;Goblins/6/3/1/5/4/3/1/3/4///Fear, Regeneration, Stupidity, LargeBase</Enemy>
+		<Enemy>Gyrobomber/Dwarfs/1/4/3/4/5/3/2/2/9/4//LargeBase</Enemy>
+		<Enemy>Ancient Kroxigor/Lizardmen/6/3/1/7/4/3/1/4/7///Fear, ColdBlooded, LargeBase</Enemy>
+		<Enemy>Tomb Scorpion/Tomb Kings/7/4/0/5/5/3/3/4/8///Undead, KillingBlow, PoisonAttack, LargeBase</Enemy>
+		<Enemy>Hippogryph/Bretonnia/8/4/0/5/5/4/4/4/8///Terror, LargeBase</Enemy>
+		<Enemy>Griffon/The Empire/6/5/0/5/5/4/5/4/7///Terror, LargeBase</Enemy>
+		<Enemy>Manticore/Chaos/6/5/0/5/5/4/5/4/5///Terror, KillingBlow, LargeBase</Enemy>
+		<Enemy>Varghulf/Vampire/8/5/0/5/5/4/2/5/4///Terror, Undead, Regeneration, Hate, LargeBase</Enemy>
+		<Enemy>War Hydra/Dark Elves/6/4/0/5/5/6/2/5/6/4//Terror, LargeBase + 2/Apparentice//5/4/4/3/3/2/3/2/8///NoKillingBlow</Enemy>
+		<Enemy>Stonehorn/Ogre Kingdoms/7/3/0/6/6/6/2/5/5/4//Frenzy, Terror, LargeBase</Enemy>
+		<Enemy>Dragon Ogre Shaggoth/Beastmen/7/6/3/5/5/6/4/5/9/4//Terror, ImmuneToPsychology, LargeBase</Enemy>
+		<Enemy>Stegadon/Lizardmen/6/3/0/5/6/5/2/4/5/4//LargeBase, ColdBlooded, Terror, Stubborn, ImmuneToPsychology + 5/Skink Crew//6/2/3/3/2/4/4/4/5/4//ColdBlooded, PoisonAttack, NoKillingBlow</Enemy>
+		<Enemy>Treeman/Wood Elves/5/5/0/6/6/6/2/5/8/3//Terror, LargeBase</Enemy>
+		<Enemy>Giant/Orcs&amp;Goblins/6/3/3/6/5/6/3/0/10///Terror, Stubborn, LargeBase, Giant</Enemy>
+		<Enemy>Soul Grinder/Daemons/8/3/3/6/7/6/3/4/7/4//Terror, LargeBase</Enemy>
+		<Enemy>Hell Pit Abomination/Skaven/6/3/3/6/5/6/3/0/10///Regeneration, Terror, Stubborn, LargeBase, HellPitAbomination</Enemy>
+		<Enemy>Necrosphinx/Tomb Kings/6/4/0/5/8/5/1/5/8/3//Terror, LargeBase, HeroicKillingBlow, Undead</Enemy>
+		<Enemy>Star Dragon/High Elves/6/7/0/7/6/7/2/6/9/3//Terror, LargeBase</Enemy>
+		<Enemy>Steam Tank/The Empire/0/0/4/6/6/10/0/0/10/1//Unbreakable, Terror, LargeBase, SteamTank</Enemy>
 	</Group>
 </Enemies>
