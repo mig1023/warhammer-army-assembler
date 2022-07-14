@@ -9,7 +9,7 @@ namespace WarhammerArmyAssembler
     {
         public static int MaxIDindex = -10;
 
-        private static Dictionary<string, List<Enemy>> EnemiesDirectories = new Dictionary<string, List<Enemy>>();
+        private static Dictionary<string, List<Enemy>> EnemiesDirectories { get; set; }
 
         public Enemy(string enemyName)
         {
@@ -55,7 +55,8 @@ namespace WarhammerArmyAssembler
                 this.Mount = new Enemy(multiplesProfile[1].Trim());
         }
 
-        private Profile NewProfile(string line) => ArmyBook.Parsers.ProfileParse(line);
+        private Profile NewProfile(string line) =>
+            ArmyBook.Parsers.ProfileParse(line);
 
         private Profile SetProfile(List<string> profile, int index)
         {
@@ -105,23 +106,24 @@ namespace WarhammerArmyAssembler
             return this;
         }
 
-        public static List<string> GetEnemiesGroups() => EnemiesDirectories.Keys.ToList<string>();
+        public static List<string> GetEnemiesGroups() =>
+            EnemiesDirectories.Keys.ToList<string>();
             
-        public static List<Enemy> GetEnemiesByGroup(string groupName) => EnemiesDirectories[groupName];
+        public static List<Enemy> GetEnemiesByGroup(string groupName) =>
+            EnemiesDirectories[groupName];
 
-        public static int GetEnemiesCount() => GetEnemiesGroups().Sum(x => GetEnemiesByGroup(x).Count());
+        public static int GetEnemiesCount() =>
+            GetEnemiesGroups().Sum(x => GetEnemiesByGroup(x).Count());
 
-        public static void CleanEnemies()
+        public static void CleanEnemies() =>
+            EnemiesDirectories = new Dictionary<string, List<Enemy>>();
+
+        public static void AddEnemies(string type, string enemy)
         {
-            EnemiesDirectories["Lords"] = new List<Enemy>();
-            EnemiesDirectories["Heroes"] = new List<Enemy>();
-            EnemiesDirectories["Core Units"] = new List<Enemy>();
-            EnemiesDirectories["Special Units"] = new List<Enemy>();
-            EnemiesDirectories["Rare Units"] = new List<Enemy>();
-            EnemiesDirectories["Monsters"] = new List<Enemy>();
-        }
+            if (!EnemiesDirectories.ContainsKey(type))
+                EnemiesDirectories[type] = new List<Enemy>();
 
-        public static void AddEnemies(string type, string enemy) =>
             EnemiesDirectories[type].Add(new Enemy(enemy));
+        }
     }
 }
