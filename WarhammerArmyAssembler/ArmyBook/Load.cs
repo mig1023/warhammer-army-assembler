@@ -84,7 +84,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (XmlNode option in xmlFile.SelectNodes("Options/*/Option"))
             {
-                string value = String.Format("{0}|{1}", option.Attributes["Title"].InnerText, option.InnerText);
+                string title = (option.Attributes["Title"] == null ? "Name" : "Title");
+                string value = String.Format("{0}|{1}", option.Attributes[title].InnerText, option.InnerText);
                 Constants.CommonXmlOption.Add(option.Attributes["Name"].InnerText, value);
             }
         }
