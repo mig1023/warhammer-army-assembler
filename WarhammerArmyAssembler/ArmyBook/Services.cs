@@ -16,6 +16,30 @@ namespace WarhammerArmyAssembler.ArmyBook
             return nodeName;
         }
 
+        public static XmlNode CreateRuleOnlyOption(XmlDocument xml, string rule)
+        {
+            XmlNode nodeName = xml.CreateNode(XmlNodeType.Element, rule, String.Empty);
+            XmlNode nodeParam = xml.CreateNode(XmlNodeType.Element, "OnlyRuleOption", String.Empty);
+            nodeParam.InnerText = "true";
+            nodeName.AppendChild(nodeParam);
+
+            return nodeName;
+        }
+
+        public static bool GetCommonXmlOption(string optionName, out string option)
+        {
+            if (Constants.CommonXmlOption.ContainsKey(optionName))
+            {
+                option = Constants.CommonXmlOption[optionName];
+                return true;
+            }
+            else
+            {
+                option = string.Empty;
+                return false;
+            }
+        }
+
         public static XmlNode Intro(XmlDocument xmlFile, string name) =>
             xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", name));
 

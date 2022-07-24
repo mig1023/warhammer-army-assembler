@@ -339,6 +339,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 if (additionalParam["Individual"] != null)
                     newUnit.Options.Add(LoadOption(GetNextIndex(), additionalParam["Individual"], xml));
+
+                AddCommonXmlOptionBySpecialRules(xml, additionalParam, ref newUnit);
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
@@ -354,6 +356,13 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.TooltipColor = (SolidColorBrush)Data.TooltipColor;
 
             return newUnit;
+        }
+
+        private static void AddCommonXmlOptionBySpecialRules(XmlDocument xml, XmlNode xmlUnitRules, ref Unit newUnit)
+        {
+            foreach (string option in Constants.CommonXmlOption.Keys)
+                if (xmlUnitRules[option] != null)
+                    newUnit.Options.Add(LoadOption(GetNextIndex(), Services.CreateRuleOnlyOption(xml, option), xml));
         }
 
         private static void AddToOption(XmlDocument xmlDocument, ref XmlNode xmlNode,
@@ -456,12 +465,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
         {
-            foreach (KeyValuePair<string, string> commonXmlOption in Constants.CommonXmlOption)
+            if (Services.GetCommonXmlOption(xmlNode.Name, out string commonOption))
             {
-                if (xmlNode.Name != commonXmlOption.Key)
-                    continue;
-
-                List<string> xmlOption = commonXmlOption.Value.Split('|').ToList();
+                List<string> xmlOption = commonOption.Split('|').ToList();
                 CreateOption(xmlOption[0], xmlOption[1], xmlDocument, ref xmlNode);
             }
 
@@ -600,6 +606,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 ArtefactGroup = artefactGroup ?? String.Empty,
                 TooltipColor = (SolidColorBrush)Data.TooltipColor,
+                OnlyRuleOption = BoolParse(xmlNode["OnlyRuleOption"]),
             };
 
             if (xmlNode["MagicItems"] != null)

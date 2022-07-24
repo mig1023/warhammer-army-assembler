@@ -147,6 +147,8 @@ namespace WarhammerArmyAssembler
         public Unit.MagicItemsTypes MagicItemsType { get; set; }
         public SolidColorBrush TooltipColor { get; set; }
 
+        public bool OnlyRuleOption { get; set; }
+
         private bool artefactAlreadyUsed = false;
         public bool ArtefactAlreadyUsed
         {
@@ -289,6 +291,7 @@ namespace WarhammerArmyAssembler
 
             InterfaceColor = this.InterfaceColor,
             Countable = this.Countable?.Clone(),
+            OnlyRuleOption = this.OnlyRuleOption,
         };
 
         public Dictionary<int, Option> AllRunicVersions() =>
