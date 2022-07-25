@@ -389,8 +389,6 @@
 					<Individual>
 						<Rule>Da boss 'as a Plan!</Rule>
 						<Rule>Orcs are Da Best!</Rule>
-						<Rule>Thick-skinned</Rule>
-						<AddToArmour>5</AddToArmour>
 					</Individual>
 				</SpecialRules>
 				<Equipments>
@@ -400,6 +398,7 @@
 						<NoArmour/>
 					</HandWeapon>
 					<HeavyArmour/>
+					<ThickSkinned/>
 				</Equipments>
 			</Hero>
 			<Hero>
@@ -976,10 +975,12 @@
 				<Profile M="7" WS="3" BS="0" S="3" T="4" W="1" I="3" A="1" Ld="3" AS="5"/>
 				<SpecialRules>
 					<Individual>
-						<Rule>Thick-skinned</Rule>
 						<Rule>Tusker Charge</Rule>
 					</Individual>
 				</SpecialRules>
+				<Equipments>
+					<ThickSkinned/>
+				</Equipments>
 			</Mount>
 			<Mount>
 				<Type>Mount</Type>
@@ -1376,10 +1377,7 @@
 					<Spear/>
 					<LightArmour/>
 					<Shield/>
-					<Armour>
-						<Rule>Thick-skinned</Rule>
-						<AddToArmour>5</AddToArmour>
-					</Armour>
+					<ThickSkinned/>
 				</Equipments>
 				<Options>
 					<Option>
@@ -1412,10 +1410,7 @@
 				</SpecialRules>
 				<Equipments>
 					<Choppa/>
-					<Armour>
-						<Rule>Thick-skinned</Rule>
-						<AddToArmour>5</AddToArmour>
-					</Armour>
+					<ThickSkinned/>
 				</Equipments>
 				<Options>
 					<Option>
@@ -1458,10 +1453,7 @@
 				<Equipments>
 					<Choppa/>
 					<Spear/>
-					<Armour>
-						<Rule>Thick-skinned</Rule>
-						<AddToArmour>4</AddToArmour>
-					</Armour>
+					<ThickSkinned/>
 				</Equipments>
 				<Options>
 					<Option>
