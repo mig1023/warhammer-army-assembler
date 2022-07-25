@@ -719,10 +719,7 @@
 					<Stupidity/>
 				</SpecialRules>
 				<Equipments>
-					<Armour>
-						<Name>Thick-skinned</Name>
-						<AddToArmour>5</AddToArmour>
-					</Armour>
+					<ThickSkinned/>
 				</Equipments>
 			</Mount>
 			<Mount>
@@ -734,10 +731,7 @@
 					<Fear/>
 				</SpecialRules>
 				<Equipments>
-					<Armour>
-						<Name>Thick-skinned</Name>
-						<AddToArmour>5</AddToArmour>
-					</Armour>
+					<ThickSkinned/>
 				</Equipments>
 			</Mount>
 			<Mount>
@@ -1004,13 +998,12 @@
 				<Min>5</Min>
 				<Mount>Cold One</Mount>
 				<Image>ColdOneKnight.jpg</Image>
-				<Profile M="7" WS="5" BS="4" S="3" T="3" W="1" I="5" A="1" Ld="8" AS="5"/>
+				<Profile M="7" WS="5" BS="4" S="3" T="3" W="1" I="5" A="1" Ld="8"/>
 				<SpecialRules>
 					<Stupidity/>
 					<Fear/>
 					<Individual>
 						<Rule>Hate High Elves</Rule>
-						<Rule>Thick-skinned</Rule>
 					</Individual>
 				</SpecialRules>
 				<Equipments>
@@ -1018,6 +1011,7 @@
 					<HandWeapon/>
 					<HeavyArmour/>
 					<Shield/>
+					<ThickSkinned/>
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Musician" Points="9"/>
