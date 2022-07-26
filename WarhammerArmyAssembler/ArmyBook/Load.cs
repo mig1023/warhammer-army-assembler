@@ -409,6 +409,28 @@ namespace WarhammerArmyAssembler.ArmyBook
                 AddToOption(xmlDocument, ref xmlNode, "AddToDispell", "1");
         }
 
+        private static void AddDependencies(XmlDocument xmlDocument, ref XmlNode xmlNode, string dependencies)
+        {
+            XmlElement xmlDependencies = xmlDocument.CreateElement("Dependencies");
+
+            List<string> allDependencies = dependencies.Split(';').ToList();
+
+            foreach (string dependenciesWithType in allDependencies)
+            {
+                List<string> typeAndDependencies = dependenciesWithType.Split(':').ToList();
+                List<string> optionDependencies = typeAndDependencies[1].Split(',').ToList();
+
+                foreach (string optionDependency in optionDependencies)
+                {
+                    XmlElement option = xmlDocument.CreateElement(typeAndDependencies[0].Trim());
+                    option.InnerText = optionDependency.Trim();
+                    xmlDependencies.AppendChild(option);
+                }
+            }
+
+            xmlNode.AppendChild(xmlDependencies);
+        }
+
         private static void CreateOption(string name, string attributes, XmlDocument xmlDocument, ref XmlNode xmlNode)
         {
             if (xmlNode["Name"] != null)
@@ -453,6 +475,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 if (xmlNode.Attributes["PointsPerModel"] != null)
                     AddToOption(xmlDocument, ref xmlNode, "PerModel", "True");
             }
+
+            if (xmlNode.Attributes["Dependencies"] != null)
+                AddDependencies(xmlDocument, ref xmlNode, xmlNode.Attributes["Dependencies"].InnerText);
 
             if (xmlNode.Attributes["Magic"] != null)
                 AddToOption(xmlDocument, ref xmlNode, "MagicItems", attributes: xmlNode.Attributes["Magic"].InnerText);
