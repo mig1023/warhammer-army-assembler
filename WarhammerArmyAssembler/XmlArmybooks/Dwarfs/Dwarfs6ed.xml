@@ -861,16 +861,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Pistol</Off>
-						</Dependencies>
-					</Option>
+					<GreatWeapon Points="4" Dependencies="Off: Pistol"/>
 					<Option>
 						<Name>Pistol</Name>
 						<Type>Option</Type>
@@ -895,26 +886,8 @@
 							<Off>Crossbow</Off>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Gromril armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Gromril armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
 					<Option>
 						<Name>Gromril armour</Name>
 						<Type>Option</Type>
@@ -944,26 +917,8 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="4"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Gromril armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Gromril armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
 					<Option>
 						<Name>Gromril armour</Name>
 						<Type>Option</Type>
@@ -993,17 +948,7 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Pistol</Off>
-							<Off>Brace of pistols</Off>
-						</Dependencies>
-					</Option>
+					<GreatWeapon Points="4" Dependencies="Off: Pistol, Brace of pistols"/>
 					<Option>
 						<Name>Pistol</Name>
 						<Type>Option</Type>
@@ -1027,26 +972,8 @@
 						<Type>Option</Type>
 						<Points>14</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Gromril armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Gromril armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
 					<Option>
 						<Name>Gromril armour</Name>
 						<Type>Option</Type>
@@ -1077,25 +1004,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>4</Points>
-					</Option>
+					<GreatWeapon Points="4" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon"/>
 				</Options>
 			</Hero>
 		</Heroes>
