@@ -777,7 +777,7 @@
 						</Dependencies>
 					</Option>
 					<LightArmour Points="3" Dependencies="Off: Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="3" Dependencies="Off: Light armour, Gromril armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour, Gromril armour"/>
 					<Option>
 						<Name>Gromril armour</Name>
 						<Type>Option</Type>
@@ -807,26 +807,8 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="6"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Gromril armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Gromril armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour, Gromril armour"/>
 					<Option>
 						<Name>Gromril armour</Name>
 						<Type>Option</Type>
@@ -862,25 +844,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>6</Points>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great weapon"/>
 				</Options>
 			</Hero>
 			<Hero>
