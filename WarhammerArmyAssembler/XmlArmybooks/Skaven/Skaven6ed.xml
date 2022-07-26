@@ -463,24 +463,8 @@
 						<Type>Option</Type>
 						<Points>15</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>3</Points>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<AddToArmour>5</AddToArmour>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<Shield Points="3"/>
 				</Options>
 			</Hero>
@@ -522,24 +506,8 @@
 					<GreatWeapon Points="4"/>
 					<AdditionalWeapon Points="2"/>
 					<Halberd Points="4"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>2</Points>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<AddToArmour>5</AddToArmour>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="2"/>
 					<Option>
 						<Name>Battle Standard Bearer</Name>
@@ -893,15 +861,7 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Spear</Name>
-						<Type>Option</Type>
-						<PerModel/>
-						<Dependencies>
-							<Off>Slings</Off>
-						</Dependencies>
-						<Points>1</Points>
-					</Option>
+					<Spear Points="1" Dependencies="Off: Slings"/>
 					<Option>
 						<Name>Slings</Name>
 						<Type>Option</Type>
