@@ -915,17 +915,7 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Dwarf crossbow</Off>
-							<Off>Dwarf handgun</Off>
-						</Dependencies>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Dwarf crossbow, Dwarf handgun"/>
 					<Option>
 						<Name>Dwarf crossbow</Name>
 						<Type>Option</Type>
@@ -1148,17 +1138,7 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Dwarf crossbow</Off>
-							<Off>Dwarf handgun</Off>
-						</Dependencies>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Dwarf crossbow, Dwarf handgun"/>
 					<Option>
 						<Name>Dwarf crossbow</Name>
 						<Type>Option</Type>
