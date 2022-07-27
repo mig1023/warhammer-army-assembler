@@ -497,16 +497,7 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
 					<Option>
 						<Name>Great axe</Name>
 						<Type>Option</Type>
@@ -528,24 +519,8 @@
 						</Dependencies>
 						<Points>3</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-						<AddToArmour>5</AddToArmour>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Boar" Points="24"/>
 					<Mount Name="Wyvern" Points="230"/>
@@ -874,16 +849,7 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
 					<Option>
 						<Name>Great axe</Name>
 						<Type>Option</Type>
@@ -905,24 +871,8 @@
 						</Dependencies>
 						<Points>2</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<AddToArmour>5</AddToArmour>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Boar" Points="16"/>
 					<Option>
