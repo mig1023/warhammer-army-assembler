@@ -479,43 +479,10 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>12</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>8</Points>
-					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>6</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<GreatWeapon Points="12" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="8" Dependencies="Off: Great weapon"/>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Tuskgor Chariot" Points="80"/>
 					<Mount Name="Razorgor Chariot" Points="145"/>
