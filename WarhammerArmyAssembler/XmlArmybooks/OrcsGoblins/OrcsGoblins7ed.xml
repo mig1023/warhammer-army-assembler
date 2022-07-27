@@ -736,27 +736,8 @@
 							<Off>Shield</Off>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Black Orc</Off>
-							<Off>Battle Standard Bearer</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Battle Standard Bearer</Off>
-						</Dependencies>
-					</Option>
+					<GreatWeapon Points="4" Dependencies="Off: Black Orc, Battle Standard Bearer"/>
+					<AdditionalWeapon Points="4" Dependencies="Off: Battle Standard Bearer"/>
 					<Option>
 						<Name>Spear</Name>
 						<Type>Option</Type>
@@ -766,25 +747,8 @@
 							<Off>Battle Standard Bearer</Off>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<AddToArmour>5</AddToArmour>
-						<Dependencies>
-							<On>Black Orc</On>
-							<Off>Light armour</Off>
-						</Dependencies>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="On: Black Orc; Off: Light armour"/>
 					<Option>
 						<Name>Shield</Name>
 						<Type>Option</Type>
