@@ -544,16 +544,7 @@
 						<Points>25</Points>
 						<AddToWeaponSkill>1</AddToWeaponSkill>
 					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Black Orc</Off>
-						</Dependencies>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Black Orc"/>
 					<AdditionalWeapon Points="6" Only="Infantry"/>
 					<Option>
 						<Name>Spear</Name>
@@ -561,25 +552,8 @@
 						<Only>Mount</Only>
 						<Points>3</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-						<AddToArmour>5</AddToArmour>
-						<Dependencies>
-							<On>Black Orc</On>
-							<Off>Light armour</Off>
-						</Dependencies>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="6" Dependencies="On: Black Orc; Off: Light armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Boar" Points="24"/>
 					<Mount Name="Wyvern" Points="200"/>
