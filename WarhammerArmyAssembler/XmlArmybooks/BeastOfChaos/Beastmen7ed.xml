@@ -509,43 +509,10 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>15</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>8</Points>
-					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>6</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>12</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<GreatWeapon Points="15" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="8" Dependencies="Off: Great weapon"/>
+					<LightArmour Points="6" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="12" Dependencies="Off: Light armour"/>
 					<Shield Points="6"/>
 				</Options>
 				<Equipments>
@@ -729,43 +696,10 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>4</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>8</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<GreatWeapon Points="10" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="5" Dependencies="Off: Great weapon"/>
+					<LightArmour Points="4" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="8" Dependencies="Off: Light armour"/>
 					<Shield Points="4"/>
 					<Option>
 						<Name>Battle Standard Bearer</Name>
