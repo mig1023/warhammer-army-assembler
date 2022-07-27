@@ -628,43 +628,10 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>4</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<GreatWeapon Points="4" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon"/>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="2"/>
 					<Option>
 						<Name>Battle Standard Bearer</Name>
