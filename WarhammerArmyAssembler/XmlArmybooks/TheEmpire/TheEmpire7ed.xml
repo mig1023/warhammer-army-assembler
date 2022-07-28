@@ -571,36 +571,9 @@
 						<Type>Option</Type>
 						<Points>10</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Full plate armour</Off>
-						</Dependencies>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Full plate armour</Off>
-						</Dependencies>
-						<Points>6</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Full plate armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>12</Points>
-						<AddToArmour>4</AddToArmour>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour, Full plate armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour, Full plate armour"/>
+					<FullPlateArmour Points="12" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Warhorse" Points="15"/>
 					<Mount Name="Imperial Pegasus" Points="50"/>
@@ -660,24 +633,8 @@
 						<AddToAttacks>1</AddToAttacks>
 						<Points>6</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>6</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Warhorse" Points="15"/>
 					<Option>
@@ -804,36 +761,9 @@
 						<Type>Option</Type>
 						<Points>10</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Full plate armour</Off>
-						</Dependencies>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Full plate armour</Off>
-						</Dependencies>
-						<Points>4</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Full plate armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>8</Points>
-						<AddToArmour>4</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour, Full plate armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour, Full plate armour"/>
+					<FullPlateArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
@@ -890,24 +820,8 @@
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>4</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
