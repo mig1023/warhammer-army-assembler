@@ -1216,28 +1216,8 @@
 						<Points>4</Points>
 						<Lance/>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<On>Von Carstein</On>
-							<On>Blood Dragon</On>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<On>Von Carstein</On>
-							<On>Blood Dragon</On>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour; On: Von Carstein, Blood Dragon"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour; On: Von Carstein, Blood Dragon"/>
 					<Option>
 						<Name>Shield</Name>
 						<Type>Option</Type>
@@ -1296,24 +1276,8 @@
 					<GreatWeapon Points="4"/>
 					<Halberd Points="4"/>
 					<Lance Points="4" Only="Mount"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Nightmare" Points="8"/>
 					<Option>
