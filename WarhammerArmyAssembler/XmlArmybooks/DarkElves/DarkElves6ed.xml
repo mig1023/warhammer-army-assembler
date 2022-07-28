@@ -505,24 +505,8 @@
 						<Type>Option</Type>
 						<Points>15</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<Option>
 						<Name>Sea Dragon Cloak</Name>
 						<Type>Option</Type>
@@ -589,24 +573,8 @@
 						<Type>Option</Type>
 						<Points>10</Points>
 					</Option>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Option>
 						<Name>Sea Dragon Cloak</Name>
 						<Type>Option</Type>
