@@ -578,26 +578,8 @@
 					<Halberd Points="6"/>
 					<AdditionalWeapon Points="6" Only="Infantry"/>
 					<LongBow Points="10"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Dragon armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Dragon armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour, Dragon armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour, Dragon armour"/>
 					<Option>
 						<Name>Dragon armour</Name>
 						<Type>Option</Type>
@@ -657,26 +639,8 @@
 					<Halberd Points="4"/>
 					<AdditionalWeapon Points="4" Only="Infantry"/>
 					<LongBow Points="10"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Dragon armour</Off>
-						</Dependencies>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Dragon armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour, Dragon armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour, Dragon armour"/>
 					<Option>
 						<Name>Dragon armour</Name>
 						<Type>Option</Type>
