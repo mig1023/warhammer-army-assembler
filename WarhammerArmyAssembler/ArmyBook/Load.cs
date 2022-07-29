@@ -72,7 +72,17 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Empty;
         }
 
-        public static void LoadCommonXmlOption()
+        private static void LoadCommonXmlOptionFromFile(XmlDocument xmlFile, string path)
+        {
+            foreach (XmlNode option in xmlFile.SelectNodes(path))
+            {
+                string title = (option.Attributes["Title"] == null ? "Name" : "Title");
+                string value = String.Format("{0}|{1}", option.Attributes[title].InnerText, option.InnerText);
+                Constants.CommonXmlOption.Add(option.Attributes["Name"].InnerText, value);
+            }
+        }
+
+        private static void LoadCommonXmlOption(XmlDocument armybook)
         {
             if (String.IsNullOrEmpty(Constants.CommonXmlOptionPath))
                 return;
@@ -81,16 +91,12 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(Constants.CommonXmlOptionPath);
+            LoadCommonXmlOptionFromFile(xmlFile, "Options/*/Option");
 
-            foreach (XmlNode option in xmlFile.SelectNodes("Options/*/Option"))
-            {
-                string title = (option.Attributes["Title"] == null ? "Name" : "Title");
-                string value = String.Format("{0}|{1}", option.Attributes[title].InnerText, option.InnerText);
-                Constants.CommonXmlOption.Add(option.Attributes["Name"].InnerText, value);
-            }
+            LoadCommonXmlOptionFromFile(armybook, "ArmyBook/Introduction/CommonXml/Option");
         }
 
-        public static void LoadEnemies()
+        private static void LoadEnemies()
         {
             if (String.IsNullOrEmpty(Constants.EnemiesOptionPath))
                 return;
@@ -114,11 +120,12 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.Mounts.Clear();
             Data.Artefact.Clear();
 
-            LoadCommonXmlOption();
             LoadEnemies();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
+
+            LoadCommonXmlOption(xmlFile);
 
             XmlNode armyFile = Services.Intro(xmlFile, "Images/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
