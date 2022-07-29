@@ -41,6 +41,9 @@
 			<Spell Name="Arcane Unforging">15</Spell>
 			<Spell Name="Fiery convocation">21</Spell>
 		</Dispell>
+		<CommonXml>
+			<Option Name="Choppa">Flail</Option>
+		</CommonXml>
 		<Annotation>The Greenskins are a highly primitive and warlike race of bestial humanoid barbarians and raiders that occupy much of the Eastern Hemisphere of the Warhammer World. The term "Greenskins" is a common collective description used by many civilised nations to refer to the forces of the Orcs and Goblins and other biologically related races. The broadest division is between the Orcs, who are strong, brutish, and savage warriors, and the Goblins, who are smaller and weaker, but cunning and conniving creatures.\n\nThe Greenskins are considered by many to be the scourge of all civilisation. These tribal warriors are extremely violent, raiding ceaselessly, carrying war and barbarism to all corners of the known world. Time and again, hordes of Greenskins would arise without warning and lay a great swath of destruction that has no direction or purpose other than simple violence. Indeed, the Greenskin race's single motive is violence, an ever increasing mass of warfare that has the potential to dominate and cover the entire world in a seething green tide.</Annotation>
 		<Released>2010</Released>
 		<Authors>Jeremy Vetock</Authors>
@@ -413,10 +416,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<LightArmour/>
 				</Equipments>
 				<Options>
@@ -476,10 +476,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
 						<AddToWard>6</AddToWard>
@@ -685,10 +682,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 				</Equipments>
 				<Options>
 					<Wizard Level="4" Points="35"/>
@@ -714,10 +708,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
 						<AddToWard>6</AddToWard>
@@ -848,10 +839,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<LightArmour/>
 				</Equipments>
 				<Options>
@@ -890,13 +878,7 @@
 					<Shield Points="2"/>
 					<Mount Name="War Boar" Points="16"/>
 					<Mount Name="Orc Boar Chariot" Points="85"/>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<Rule>BSB</Rule>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -916,10 +898,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
 						<AddToWard>6</AddToWard>
@@ -960,13 +939,7 @@
 					</Option>
 					<Shield Points="2"/>
 					<Mount Name="War Boar" Points="16"/>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<Rule>BSB</Rule>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -997,13 +970,7 @@
 					<Shield Points="2"/>
 					<Mount Name="War Boar" Points="16"/>
 					<Mount Name="Orc Boar Chariot" Points="85"/>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<Rule>BSB</Rule>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -1076,13 +1043,7 @@
 					<Mount Name="Giant Spider" Points="15"/>
 					<Mount Name="Giantic Spider" Points="40"/>
 					<Mount Name="Wolf Chariot" Points="50"/>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<Rule>BSB</Rule>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -1153,13 +1114,7 @@
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Mount Name="Great Cave Squig" Points="40"/>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<Rule>BSB</Rule>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -1178,10 +1133,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 				</Equipments>
 				<Options>
 					<Wizard Level="2" Points="35"/>
@@ -1204,10 +1156,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
 						<AddToWard>6</AddToWard>
@@ -1466,10 +1415,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<LightArmour/>
 				</Equipments>
 				<Options>
@@ -1517,10 +1463,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<LightArmour/>
 					<Bow/>
 				</Equipments>
@@ -1546,10 +1489,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
 						<AddToWard>6</AddToWard>
@@ -1803,10 +1743,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<LightArmour/>
 				</Equipments>
 				<Options>
@@ -1848,10 +1785,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
 						<AddToWard>6</AddToWard>
@@ -1919,10 +1853,7 @@
 					</Individual>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Choppa</Name>
-						<Flail/>
-					</HandWeapon>
+					<Choppa/>
 					<Spear/>
 				</Equipments>
 				<Options>
