@@ -37,6 +37,13 @@
 			<Spell Name="Conflagration of Doom">13</Spell>
 			<Spell Name="Wall of Fire">14</Spell>
 		</Dispell>
+		<CommonXml>
+			<Option Name="MarkOfSlaanesh" Title="Mark of Slaanesh">ImmuneToPsychology</Option>
+			<Option Name="MarkOfKhorne" Title="Mark of Khorne">Frenzy</Option>
+			<Option Name="MarkOfNurgle" Title="Mark of Nurgle">AddToWounds: 1</Option>
+			<Option Name="MarkOfNurgleForUnit" Title="Mark of Nurgle">Fear</Option>
+			<Option Name="MarkOfTzeentchForUnit" Title="Mark of Tzeentch">AddToCast: 1</Option>
+		</CommonXml>
 		<Annotation>The Warriors of Chaos, also known as the Hordes of Chaos, the Followers of Chaos, Chaos Undivided, the Northern Barbarians or simply just the Northmen, are the names given to a race of savage, warlike tribes of Human Barbarians that occupy the harsh and unforgiving lands of the uppermost North, known in the lands of the Old World as the dreaded Northern Waste.\n\nTo all those that face them, the northern barbarians are considered by all to be the enemies of all the world, whose unwavering worship to an uncaring and sadistic pantheon of ancient and evil gods has given them a single driving motive to usher in the inevitable downfall of all mortal-kind into their hellish enslavement.\n\nOut of all the many threats that the Old World must face, none strikes such fear and misery into the hearts of Men like the Followers of Chaos. Slaves to darkness all, they have given themselves wholly to the Ruinous Powers, some willingly, others because they felt they had no other choice.</Annotation>
 		<Released>2002</Released>
 		<Authors>Gav Thorpe, Rick Priestly, Anthony Reynolds and Alessio Cavatore</Authors>
@@ -885,39 +892,9 @@
 						<AddToCast>4</AddToCast>
 						<AddToDispell>2</AddToDispell>
 					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>40</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<AddToWounds>1</AddToWounds>
-					</Option>
+					<MarkOfSlaanesh Points="25" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<Mount Name="Dragon of Chaos" Points="360"/>
 					<Mount Name="Demonic mount" Points="50"/>
 					<Mount Name="Chaos Steed" Points="24"/>
@@ -1046,39 +1023,9 @@
 						<AddToCast>4</AddToCast>
 						<AddToDispell>2</AddToDispell>
 					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>35</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<AddToWounds>1</AddToWounds>
-					</Option>
+					<MarkOfSlaanesh Points="25" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne Points="35" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -1111,39 +1058,9 @@
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
 					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>35</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>40</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<AddToWounds>1</AddToWounds>
-					</Option>
+					<MarkOfSlaanesh Points="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne Points="35" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgle Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<Mount Name="Demonic mount" Points="50"/>
 					<Mount Name="Chaos Steed" Points="16"/>
 					<Option>
@@ -1227,39 +1144,9 @@
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
 					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>35</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>40</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<AddToWounds>1</AddToWounds>
-					</Option>
+					<MarkOfSlaanesh Points="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne Points="35" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgle Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -1292,47 +1179,11 @@
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
 					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>35</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>40</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<AddToWounds>1</AddToWounds>
-					</Option>
+					<MarkOfSlaanesh Points="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne Points="35" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgle Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<Mount Name="Chaos Steed" Points="16"/>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<Rule>BSB</Rule>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
@@ -1358,24 +1209,8 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="2" Points="35"/>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>40</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-						</Dependencies>
-						<AddToWounds>1</AddToWounds>
-					</Option>
+					<MarkOfSlaanesh Points="20" Dependencies="Off: Mark of Nurgle"/>
+					<MarkOfNurgle Points="40" Dependencies="Off: Mark of Slaanesh"/>
 					<Mount Name="Demonic mount" Points="50"/>
 					<Mount Name="Chaos Steed" Points="24"/>
 					<Option>
@@ -1506,52 +1341,11 @@
 					<Halberd PointsPerModel="2"/>
 					<AdditionalWeapon PointsPerModel="3"/>
 					<GreatWeapon PointsPerModel="2"/>
-					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<AddToCast>1</AddToCast>
-					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>45</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-						<AddToDispell>1</AddToDispell>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<Fear/>
-					</Option>
+					<Shield PointsPerModel="1"/>		
+					<MarkOfTzeentchForUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfSlaanesh PointsPerModel="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne PointsPerModel="45" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgleForUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<CommandGroup Position="Champion" Points="12"/>
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
@@ -1641,51 +1435,10 @@
 						<AddToAttacks>1</AddToAttacks>
 						<OnlyOneSuchUnits/>
 					</Option>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<AddToCast>1</AddToCast>
-					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>45</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-						<AddToDispell>1</AddToDispell>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<Fear/>
-					</Option>
+					<MarkOfTzeentchForUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfSlaanesh PointsPerModel="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne PointsPerModel="45" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgleForUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<CommandGroup Position="Champion" Points="20"/>
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
@@ -1705,51 +1458,10 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<AddToCast>1</AddToCast>
-					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>45</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-						<AddToDispell>1</AddToDispell>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<Fear/>
-					</Option>
+					<MarkOfTzeentchForUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfSlaanesh PointsPerModel="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne PointsPerModel="45" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgleForUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 				</Options>
 			</Unit>
 			<Unit>
