@@ -3,6 +3,9 @@
 	<Introduction>
 		<Name>Beast of Chaos</Name>
 		<Edition>6</Edition>
+		<Released>2003</Released>
+		<Authors>Anthony Reynolds and Matthew Ward</Authors>
+		<Annotation>The Beastmen, sometimes known as the Beastkin, the Cloven Ones, the Horned Ones, the Beast of Chaos or even the Children of Chaos, are a race of savage mutant humanoids that bear various traits of bestial appearance, such as cloven hooves, muscular human bodies, horned bestial heads and a malign primitive intelligence. Proud of their origins, it is said that they are the descendants of ancient humans corrupted and twisted by the influence of Chaos at the dawn of Chaos's coming into the world.\n\nFrom deep within the twisted forested woodlands of the Old World and beyond, the Beastmen are a violent, war-driven race that seek only to plague and destroy the civilisations of Mankind. They prey on the weak and defenseless, striking at lonely settlements without warning in a rampage of destruction before disappearing into the protective darkness of their dark wilderness, running away from the dire retribution that fails to follow.</Annotation>
 		<Images>
 			<Cover>Images/BeastOfChaos6ed.png</Cover>
 			<Symbol>Images/BeastOfChaos.png</Symbol>
@@ -35,10 +38,7 @@
 			<Spell Name="The Twilight Host">10</Spell>
 			<Spell Name="Ariel's Blessing">11</Spell>
 			<Spell Name="The Call of the Hunt">13</Spell>
-		</Dispell>
-		<Annotation>The Beastmen, sometimes known as the Beastkin, the Cloven Ones, the Horned Ones, the Beast of Chaos or even the Children of Chaos, are a race of savage mutant humanoids that bear various traits of bestial appearance, such as cloven hooves, muscular human bodies, horned bestial heads and a malign primitive intelligence. Proud of their origins, it is said that they are the descendants of ancient humans corrupted and twisted by the influence of Chaos at the dawn of Chaos's coming into the world.\n\nFrom deep within the twisted forested woodlands of the Old World and beyond, the Beastmen are a violent, war-driven race that seek only to plague and destroy the civilisations of Mankind. They prey on the weak and defenseless, striking at lonely settlements without warning in a rampage of destruction before disappearing into the protective darkness of their dark wilderness, running away from the dire retribution that fails to follow.</Annotation>
-		<Released>2003</Released>
-		<Authors>Anthony Reynolds and Matthew Ward</Authors>
+		</Dispell>	
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -366,44 +366,11 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon"/>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>6</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<Option>
 						<Name>Mark of Khorne</Name>
 						<Type>Option</Type>
@@ -474,44 +441,11 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>8</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<GreatWeapon Points="8" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great weapon"/>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>6</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<Option>
 						<Name>Mark of Khorne</Name>
 						<Type>Option</Type>
@@ -641,44 +575,11 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<GreatWeapon Points="4" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon"/>
 					<Shield Points="2"/>
-					<Option>
-						<Name>Light armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Light armour</Off>
-						</Dependencies>
-						<Points>4</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Option>
 						<Name>Mark of Khorne</Name>
 						<Type>Option</Type>
@@ -1004,27 +905,8 @@
 					</Armour>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon"/>
+					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
 					<HeavyArmour Points="3"/>
 					<Shield Points="3"/>
 					<CommandGroup Position="Musician" Points="10"/>
