@@ -38,9 +38,9 @@
 		</Dispell>
 		<CommonXml>
 			<Option Name="Etherblade">MagicItemsPoints; NoArmour</Option>
-			<Option Name="ArmedMonstrosity" Title="Armed Monstrosity<">MagicItemsPoints, AddToAttacks: 2</Option>
+			<Option Name="ArmedMonstrosity" Title="Armed Monstrosity">MagicItemsPoints, AddToAttacks: 2</Option>
 			<Option Name="DaemonicRobes" Title="Daemonic Robes">MagicItemsPoints, Rule: Can never be wounded on better than a 3+</Option>
-			<Option Name="EnrapturingGaze" Title="Enrapturing Gaze">Models in base contact may not use another model's Leadership value</Option>
+			<Option Name="EnrapturingGaze" Title="Enrapturing Gaze">MagicItemsPoints, Rule: Models in base contact may not use another model's Leadership value</Option>
 		</CommonXml>
 		<Annotation>The Daemons of Chaos, known also as the Legions of Chaos, the Arch-Enemy, the Great Beast, or simply just Daemons (not to be confused with other kinds of daemons) are malevolent, otherwordly entities born from the deepest and darkest emotions of all mortal creatures. From their fortresses and palaces within this Realm of Chaos, these entities watch with envious eyes towards the mortal kingdoms, waiting with unblinking patience for their chance to wreak destruction and dismay upon the world and to feed upon the misery that they have wrought.\n\nOf the many forces which permeate the world, both emotional and natural otherwise, there are but only Four which holds supreme power within this plane of unnatural existence. Power/Anger, Lust/Pleasure, Death/Despair and Change/Hope are the four greatest forces which have enthralled the world in its grip, for in a world engulfed in such amounts of war, corruption and disease, their dark presence and their malign influence is all but inevitable, for these dark emotions and thoughts fuel the main four Gods of Chaos, Khorne the Blood God, Slaanesh the Dark Prince, Nurgle the Plaguefather and Tzeentch the Changer of Ways.</Annotation>
 		<Released>2008</Released>
@@ -219,13 +219,7 @@
 					<ArmedMonstrosity Points="50"/>
 					<DaemonicRobes Points="25"/>
 					<EnrapturingGaze Points="25"/>
-					<Option>
-						<Name>Immortal Fury</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Reroll>ToHit</Reroll>
-					</Option>
+					<ImmortalFury Points="25"/>
 					<Option>
 						<Name>Iridescent Corona</Name>
 						<Type>Option</Type>
@@ -318,13 +312,7 @@
 						<AddToStrength>1</AddToStrength>
 						<Rule>Flaming Attacks</Rule>
 					</Option>
-					<Option>
-						<Name>Immortal Fury</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Reroll>ToHit</Reroll>
-					</Option>
+					<ImmortalFury Points="25"/>
 					<Option>
 						<Name>Spell Breaker</Name>
 						<Type>Option</Type>
