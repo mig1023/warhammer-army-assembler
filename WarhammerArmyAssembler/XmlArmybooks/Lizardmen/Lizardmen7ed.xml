@@ -3,6 +3,9 @@
 	<Introduction>
 		<Name>Lizardmen</Name>
 		<Edition>7</Edition>
+		<Released>2008</Released>
+		<Authors>Andy Hoare</Authors>
+		<Annotation>The Lizardmen, sometimes known as the Cold Ones or the Children of the Gods, are an ancient, savage, intelligent race of cold-blooded, reptilian humanoids that were at one time the first and oldest civilisation of the Warhammer World. Long before the rise of Men, Elf or Dwarf, the empire of the Lizardmen ruled supreme.\n\nAlien, enigmatic, and without mercy, the Lizardmen were there when it all began and will be there when the world draws its last dying breath, never tiring nor relenting until order is finally restored to this uncaring, chaotic world. Such is what they were made to do, for they are the ancient servants of the Old Ones, the one true protectors of this very world.</Annotation>
 		<Images>
 			<Cover>Images/Lizardmen7ed.png</Cover>
 			<Symbol>Images/Lizardmen.png</Symbol>
@@ -35,10 +38,7 @@
 			<Spell Name="Cloying Quagmire">11</Spell>
 			<Spell Name="Curse of the Leper">12</Spell>
 			<Spell Name="Rot, Glorious Rot">14</Spell>
-		</Dispell>
-		<Annotation>The Lizardmen, sometimes known as the Cold Ones or the Children of the Gods, are an ancient, savage, intelligent race of cold-blooded, reptilian humanoids that were at one time the first and oldest civilisation of the Warhammer World. Long before the rise of Men, Elf or Dwarf, the empire of the Lizardmen ruled supreme.\n\nAlien, enigmatic, and without mercy, the Lizardmen were there when it all began and will be there when the world draws its last dying breath, never tiring nor relenting until order is finally restored to this uncaring, chaotic world. Such is what they were made to do, for they are the ancient servants of the Old Ones, the one true protectors of this very world.</Annotation>
-		<Released>2008</Released>
-		<Authors>Andy Hoare</Authors>
+		</Dispell>		
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -564,12 +564,7 @@
 						<Points>50</Points>
 						<Rule>Re-roll miscast</Rule>
 					</Option>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 				</Options>
 				<Equipments>
 					<Armour>
@@ -771,12 +766,7 @@
 					<ColdBlooded/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 					<Spear Points="4"/>
 					<GreatWeapon Points="6"/>
 					<Option>
@@ -836,12 +826,7 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 					<Spear Points="4"/>
 					<Option>
 						<Name>Blowpipe</Name>
