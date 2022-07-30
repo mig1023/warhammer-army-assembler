@@ -38,6 +38,8 @@
 		</Dispell>
 		<CommonXml>
 			<Option Name="Etherblade">MagicItemsPoints; NoArmour</Option>
+			<Option Name="ArmedMonstrosity" Title="Armed Monstrosity<">MagicItemsPoints, AddToAttacks: 2</Option>
+			<Option Name="DaemonicRobes" Title="Daemonic Robes">MagicItemsPoints, Rule: Can never be wounded on better than a 3+</Option>
 		</CommonXml>
 		<Annotation>The Daemons of Chaos, known also as the Legions of Chaos, the Arch-Enemy, the Great Beast, or simply just Daemons (not to be confused with other kinds of daemons) are malevolent, otherwordly entities born from the deepest and darkest emotions of all mortal creatures. From their fortresses and palaces within this Realm of Chaos, these entities watch with envious eyes towards the mortal kingdoms, waiting with unblinking patience for their chance to wreak destruction and dismay upon the world and to feed upon the misery that they have wrought.\n\nOf the many forces which permeate the world, both emotional and natural otherwise, there are but only Four which holds supreme power within this plane of unnatural existence. Power/Anger, Lust/Pleasure, Death/Despair and Change/Hope are the four greatest forces which have enthralled the world in its grip, for in a world engulfed in such amounts of war, corruption and disease, their dark presence and their malign influence is all but inevitable, for these dark emotions and thoughts fuel the main four Gods of Chaos, Khorne the Blood God, Slaanesh the Dark Prince, Nurgle the Plaguefather and Tzeentch the Changer of Ways.</Annotation>
 		<Released>2008</Released>
@@ -213,20 +215,8 @@
 						</Dependencies>
 					</Option>
 					<Etherblade Points="50"/>
-					<Option>
-						<Name>Armed Monstrosity</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<MagicItemsPoints/>
-						<AddToAttacks>2</AddToAttacks>
-					</Option>
-					<Option>
-						<Name>Daemonic Robes</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Can never be wounded on better than a 3+</Rule>
-					</Option>
+					<ArmedMonstrosity Points="50"/>
+					<DaemonicRobes Points="25"/>
 					<Option>
 						<Name>Enrapturing Gaze</Name>
 						<Type>Option</Type>
@@ -455,13 +445,7 @@
 						<MagicItemsPoints/>
 						<Rule>Ignores the result of his first miscast</Rule>
 					</Option>
-					<Option>
-						<Name>Daemonic Robes</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Can never be wounded on better than a 3+</Rule>
-					</Option>
+					<DaemonicRobes Points="25"/>
 					<Option>
 						<Name>Flames of Tzeentch</Name>
 						<Type>Option</Type>
@@ -700,13 +684,7 @@
 						<MagicItemsPoints/>
 						<Test Bet="Pass" Context="Round">Leadership</Test>
 					</Option>
-					<Option>
-						<Name>Daemonic Robes</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Can never be wounded on better than a 3+</Rule>
-					</Option>
+					<DaemonicRobes Points="25"/>
 					<Option>
 						<Name>Enrapturing Gaze</Name>
 						<Type>Option</Type>
@@ -881,13 +859,7 @@
 						<AddToArmour>3</AddToArmour>
 						<Rule>Magic weapons carriad by enemy models lose their magical abilities in base contact</Rule>
 					</Option>
-					<Option>
-						<Name>Daemonic Robes</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Can never be wounded on better than a 3+</Rule>
-					</Option>
+					<DaemonicRobes Points="25"/>
 					<Option>
 						<Name>Firestorm Blade</Name>
 						<Type>Option</Type>
@@ -1026,13 +998,7 @@
 						<MagicItemsPoints/>
 						<Rule>D6 bolts in the Shooting phase with a range of 18" and a Strength of 4</Rule>
 					</Option>
-					<Option>
-						<Name>Daemonic Robes</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Can never be wounded on better than a 3+</Rule>
-					</Option>
+					<DaemonicRobes Points="25"/>
 					<Option>
 						<Name>Iridescent Corona</Name>
 						<Type>Option</Type>
@@ -1309,13 +1275,7 @@
 				<Options>
 					<Wizard Level="1" Points="50"/>
 					<Etherblade Points="50"/>
-					<Option>
-						<Name>Armed Monstrosity</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<MagicItemsPoints/>
-						<AddToAttacks>2</AddToAttacks>
-					</Option>
+					<ArmedMonstrosity Points="50"/>
 					<Option>
 						<Name>Allure of Slaanesh</Name>
 						<Type>Option</Type>
@@ -1323,13 +1283,7 @@
 						<MagicItemsPoints/>
 						<Test Bet="Pass" Context="Round">Leadership</Test>
 					</Option>
-					<Option>
-						<Name>Daemonic Robes</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Can never be wounded on better than a 3+</Rule>
-					</Option>
+					<DaemonicRobes Points="25"/>
 					<Option>
 						<Name>Enrapturing Gaze</Name>
 						<Type>Option</Type>
