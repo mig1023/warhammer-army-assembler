@@ -3,6 +3,9 @@
 	<Introduction>
 		<Name>Dwarfs</Name>
 		<Edition>8</Edition>
+		<Released>2014</Released>
+		<Authors>Jeremy Vetock</Authors>
+		<Annotation>The Dwarfs, also called the "Elder Race" (or the Dawi as they call themselves) are one of the oldest and proudest intelligent races of the Warhammer World, with a great wealth of history and power that stretches back to time immemorial. They once held an empire which stretched from Norsca in the north to the jungles in the south, and from Mount Silverspear in the east to the Grey Mountains in the west. But the heart of the Dwarfen realm, the Karaz Ankor as they call it, will always lie within the domains of the Worlds Edge Mountains. The highest mountain range in the world, it is filled with the magnificent halls and holds of the Dwarfen people - a testament to the great feats of engineering and power once wielded by this ancient civilization.</Annotation>
 		<Images>
 			<Cover>Images/Dwarfs8ed.png</Cover>
 			<Symbol>Images/Dwarfs.png</Symbol>
@@ -28,10 +31,7 @@
 			<Spell Name="Death Frenzy">11</Spell>
 			<Spell Name="Scorch">12</Spell>
 			<Spell Name="Cracks Call">13</Spell>
-		</Dispell>
-		<Annotation>The Dwarfs, also called the "Elder Race" (or the Dawi as they call themselves) are one of the oldest and proudest intelligent races of the Warhammer World, with a great wealth of history and power that stretches back to time immemorial. They once held an empire which stretched from Norsca in the north to the jungles in the south, and from Mount Silverspear in the east to the Grey Mountains in the west. But the heart of the Dwarfen realm, the Karaz Ankor as they call it, will always lie within the domains of the Worlds Edge Mountains. The highest mountain range in the world, it is filled with the magnificent halls and holds of the Dwarfen people - a testament to the great feats of engineering and power once wielded by this ancient civilization.</Annotation>
-		<Released>2014</Released>
-		<Authors>Jeremy Vetock</Authors>
+		</Dispell>	
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -1168,12 +1168,7 @@
 						<Type>Option</Type>
 						<Points>25</Points>
 					</Option>
-					<Option>
-						<Name>Battle Standard Bearer</Name>
-						<Type>Option</Type>
-						<OnlyOneInArmy/>
-						<Points>25</Points>
-					</Option>
+					<BattleStandardBearer Points="25"/>
 				</Options>
 				<Equipments>
 					<HandWeapon>
