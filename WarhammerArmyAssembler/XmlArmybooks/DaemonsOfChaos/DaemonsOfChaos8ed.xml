@@ -40,6 +40,12 @@
 			<Spell Name="Arcane Unforging">15</Spell>
 			<Spell Name="Fiery convocation">21</Spell>
 		</Dispell>
+		<CommonXml>
+			<Option Name="DaemonOfTzeentch" Title="Daemon of Tzeentch">Rule: Re-roll Ward save results of 1; Rule: Re-roll Channelling results of 1</Option>
+			<Option Name="DaemonOfSlaanesh" Title="Daemon of Slaanesh">ArmourPiercing: 1</Option>
+			<Option Name="DaemonOfKhorne" Title="Daemon of Khorne">Rule: On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</Option>
+			<Option Name="DaemonOfNurgle" Title="Daemon of Nurgle">SubOpponentToHit: 1</Option>
+		</CommonXml>
 		<Annotation>The Daemons of Chaos, known also as the Legions of Chaos, the Arch-Enemy, the Great Beast, or simply just Daemons (not to be confused with other kinds of daemons) are malevolent, otherwordly entities born from the deepest and darkest emotions of all mortal creatures. From their fortresses and palaces within this Realm of Chaos, these entities watch with envious eyes towards the mortal kingdoms, waiting with unblinking patience for their chance to wreak destruction and dismay upon the world and to feed upon the misery that they have wrought.\n\nOf the many forces which permeate the world, both emotional and natural otherwise, there are but only Four which holds supreme power within this plane of unnatural existence. Power/Anger, Lust/Pleasure, Death/Despair and Change/Hope are the four greatest forces which have enthralled the world in its grip, for in a world engulfed in such amounts of war, corruption and disease, their dark presence and their malign influence is all but inevitable, for these dark emotions and thoughts fuel the main four Gods of Chaos, Khorne the Blood God, Slaanesh the Dark Prince, Nurgle the Plaguefather and Tzeentch the Changer of Ways.</Annotation>
 		<Released>2012</Released>
 		<Authors>Mat Ward</Authors>
@@ -614,51 +620,10 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Daemon of Tzeentch</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Rule>Re-roll Ward save results of 1</Rule>
-						<Rule>Re-roll Channelling results of 1</Rule>
-						<Dependencies>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Khorne</Off>
-							<Off>Daemon of Nurgle</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Daemon of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>0</Points>
-						<ArmourPiercing>1</ArmourPiercing>
-						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Khorne</Off>
-							<Off>Daemon of Nurgle</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Daemons of Khorne</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<Rule>On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</Rule>
-						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Nurgle</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Daemon of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<SubOpponentToHit>1</SubOpponentToHit>
-						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Khorne</Off>
-						</Dependencies>
-					</Option>
+					<DaemonOfTzeentch Points="20" Dependencies="Off: Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle"/>
+					<DaemonOfSlaanesh Points="0" Dependencies="Off: Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle"/>
+					<DaemonOfKhorne Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle"/>
+					<DaemonOfNurgle Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
 					<Option>
 						<Name>Wizard Level</Name>
 						<Type>Option</Type>
@@ -1577,51 +1542,10 @@
 					</RangeWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Daemon of Tzeentch</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Rule>Re-roll Ward save results of 1</Rule>
-						<Rule>Re-roll Channelling results of 1</Rule>
-						<Dependencies>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Khorne</Off>
-							<Off>Daemon of Nurgle</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Daemon of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>0</Points>
-						<ArmourPiercing>1</ArmourPiercing>
-						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Khorne</Off>
-							<Off>Daemon of Nurgle</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Daemons of Khorne</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<Rule>On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</Rule>
-						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Nurgle</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Daemon of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<SubOpponentToHit>1</SubOpponentToHit>
-						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Khorne</Off>
-						</Dependencies>
-					</Option>
+					<DaemonOfTzeentch Points="10" Dependencies="Off: Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle"/>
+					<DaemonOfSlaanesh Points="0" Dependencies="Off: Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle"/>
+					<DaemonOfKhorne Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle"/>
+					<DaemonOfNurgle Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
 					<Option>
 						<Name>Daemonbone Claw</Name>
 						<Type>Option</Type>
