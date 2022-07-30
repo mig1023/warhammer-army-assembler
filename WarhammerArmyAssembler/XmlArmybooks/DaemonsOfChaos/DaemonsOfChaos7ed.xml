@@ -68,6 +68,11 @@
 				MagicItemsPoints;
 				Rule: Fly
 			</Option>
+			<Option Name="ObsidianArmour" Title="Obsidian Armour">
+				MagicItemsPoints;
+				AddToArmour: 3;
+				Rule: Magic weapons carriad by enemy models lose their magical abilities in base contact
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -295,14 +300,7 @@
 						<MagicItemsPoints/>
 						<Rule>2D6+2 Attacks, roll at the start of each combat</Rule>
 					</Option>
-					<Option>
-						<Name>Obsidian Armour</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<MagicItemsPoints/>
-						<AddToArmour>3</AddToArmour>
-						<Rule>Magic weapons carriad by enemy models lose their magical abilities in base contact</Rule>
-					</Option>
+					<ObsidianArmour Points="50"/>
 					<Option>
 						<Name>Axe of Khorne</Name>
 						<Type>Option</Type>
@@ -816,14 +814,7 @@
 				</SpecialRules>
 				<Options>
 					<Etherblade Points="50"/>
-					<Option>
-						<Name>Obsidian Armour</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<MagicItemsPoints/>
-						<AddToArmour>3</AddToArmour>
-						<Rule>Magic weapons carriad by enemy models lose their magical abilities in base contact</Rule>
-					</Option>
+					<ObsidianArmour Points="50"/>
 					<DaemonicRobes Points="25"/>
 					<Option>
 						<Name>Firestorm Blade</Name>
