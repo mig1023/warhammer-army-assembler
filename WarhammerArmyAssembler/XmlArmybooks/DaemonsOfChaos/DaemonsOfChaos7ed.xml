@@ -73,6 +73,11 @@
 				AddToArmour: 3;
 				Rule: Magic weapons carriad by enemy models lose their magical abilities in base contact
 			</Option>
+			<Option Name="FirestormBlade" Title="Firestorm Blade">
+				MagicItemsPoints;
+				AddToStrength: 1;
+				Rule: Flaming Attacks
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -308,14 +313,7 @@
 						<MagicItemsPoints/>
 						<KillingBlow/>
 					</Option>
-					<Option>
-						<Name>Firestorm Blade</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<AddToStrength>1</AddToStrength>
-						<Rule>Flaming Attacks</Rule>
-					</Option>
+					<FirestormBlade Points="25"/>
 					<ImmortalFury Points="25"/>
 					<Option>
 						<Name>Spell Breaker</Name>
@@ -816,14 +814,7 @@
 					<Etherblade Points="50"/>
 					<ObsidianArmour Points="50"/>
 					<DaemonicRobes Points="25"/>
-					<Option>
-						<Name>Firestorm Blade</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<AddToStrength>1</AddToStrength>
-						<Rule>Flaming Attacks</Rule>
-					</Option>
+					<FirestormBlade Points="25"/>
 					<SoulHunger Points="25"/>
 					<Option>
 						<Name>Armour of Khorne</Name>
