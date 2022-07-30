@@ -64,6 +64,10 @@
 				MagicItemsPoints;
 				Reroll: ToWound
 			</Option>
+			<Option Name="WingedHorror" Title="Winged Horror">
+				MagicItemsPoints;
+				Rule: Fly
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -249,13 +253,7 @@
 						<MagicItemsPoints/>
 						<HitFirst/>
 					</Option>
-					<Option>
-						<Name>Winged Horror</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<MagicItemsPoints/>
-						<Rule>Fly</Rule>
-					</Option>
+					<WingedHorror Points="20"/>
 				</Options>
 				<Equipments>
 					<HandWeapon>
@@ -975,13 +973,7 @@
 						<MagicItemsPoints/>
 						<Rule>Once per battle may automatically dispel one enemy spell</Rule>
 					</Option>
-					<Option>
-						<Name>Winged Horror</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<MagicItemsPoints/>
-						<Rule>Fly</Rule>
-					</Option>
+					<WingedHorror Points="20"/>
 					<BattleStandardBearer Points="25"/>
 					<Option>
 						<Name>Standard of Chaos Glory</Name>
