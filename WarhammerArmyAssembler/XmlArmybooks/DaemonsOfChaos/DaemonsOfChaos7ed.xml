@@ -83,6 +83,10 @@
 				MagicItemsPoints;
 				Rule: D6 bolts in the Shooting phase with a range of 18" and a Strength of 4
 			</Option>
+			<Option Name="MasterOfSorcery" Title="Master of Sorcery">
+				MagicItemsPoints;
+				Rule: Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -420,13 +424,7 @@
 					<DaemonicRobes Points="25"/>
 					<FlamesOfTzeentch Points="25"/>
 					<IridescentCorona Points="25"/>
-					<Option>
-						<Name>Master of Sorcery</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses</Rule>
-					</Option>
+					<MasterOfSorcery Points="25"/>
 				</Options>
 				<Equipments>
 					<HandWeapon>
@@ -904,13 +902,7 @@
 					<FlamesOfTzeentch Points="25"/>
 					<DaemonicRobes Points="25"/>
 					<IridescentCorona Points="25"/>
-					<Option>
-						<Name>Master of Sorcery</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses</Rule>
-					</Option>
+					<MasterOfSorcery Points="25"/>
 					<SpellBreaker Points="25"/>
 					<WingedHorror Points="20"/>
 					<BattleStandardBearer Points="25"/>
