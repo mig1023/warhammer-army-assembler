@@ -115,6 +115,10 @@
 				MagicItemsPoints;
 				Rule: Once per game, before charges are declared, nominate one enemy within 20", the target unit must either declare a charge against the Daemon (or the unit it is with) or immediately flee, exactly as if it had failed a Panic test
 			</Option>
+			<Option Name="SoporificMusk" Title="Soporific Musk">
+				MagicItemsPoints;
+				Rule: A unit in base contact rolls an extra dice when fleeing and then discards the highest resul
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -632,13 +636,7 @@
 					<EnrapturingGaze Points="25"/>
 					<SirenSong Points="25"/>
 					<SoulHunger Points="25"/>
-					<Option>
-						<Name>Soporific Musk</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>A unit in base contact rolls an extra dice when fleeing and then discards the highest result</Rule>
-					</Option>
+					<SoporificMusk Points="25"/>
 					<Option>
 						<Name>Torment Blade</Name>
 						<Type>Option</Type>
@@ -1108,13 +1106,7 @@
 					<DaemonicRobes Points="25"/>
 					<EnrapturingGaze Points="25"/>
 					<SirenSong Points="25"/>
-					<Option>
-						<Name>Soporific Musk</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>A unit in base contact rolls an extra dice when fleeing and then discards the highest result</Rule>
-					</Option>
+					<SoporificMusk Points="25"/>
 					<Option>
 						<Name>Torment Blade</Name>
 						<Type>Option</Type>
