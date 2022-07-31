@@ -79,6 +79,10 @@
 				AddToArmour: 3
 			</Option>
 			<Option Name="PowerVortex" Title="Power Vortex">MagicItemsPoints; AddToCast: 1</Option>
+			<Option Name="FlamesOfTzeentch" Title="Flames of Tzeentch">
+				MagicItemsPoints;
+				Rule: D6 bolts in the Shooting phase with a range of 18" and a Strength of 4
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -414,13 +418,7 @@
 						<Rule>Ignores the result of his first miscast</Rule>
 					</Option>
 					<DaemonicRobes Points="25"/>
-					<Option>
-						<Name>Flames of Tzeentch</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>D6 bolts in the Shooting phase with a range of 18" and a Strength of 4</Rule>
-					</Option>
+					<FlamesOfTzeentch Points="25"/>
 					<IridescentCorona Points="25"/>
 					<Option>
 						<Name>Master of Sorcery</Name>
@@ -903,13 +901,7 @@
 						<Test Bet="Death" Context="Wound">Toughness</Test>
 					</Option>
 					<PowerVortex Points="30"/>
-					<Option>
-						<Name>Flames of Tzeentch</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>D6 bolts in the Shooting phase with a range of 18" and a Strength of 4</Rule>
-					</Option>
+					<FlamesOfTzeentch Points="25"/>
 					<DaemonicRobes Points="25"/>
 					<IridescentCorona Points="25"/>
 					<Option>
