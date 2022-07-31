@@ -40,10 +40,7 @@
 			<Spell Name="The Comet of Cassanora">13</Spell>
 		</Dispell>
 		<CommonXml>
-			<Option Name="Etherblade">
-				MagicItemsPoints;
-				NoArmour
-			</Option>
+			<Option Name="Etherblade">MagicItemsPoints;	NoArmour</Option>
 			<Option Name="ArmedMonstrosity" Title="Armed Monstrosity">
 				MagicItemsPoints;
 				AddToAttacks: 2
@@ -60,14 +57,8 @@
 				MagicItemsPoints;
 				Rule: Enemy models in base contact at start of any combat suffer a Flaming Strength 3 hit before any blows are struck
 			</Option>
-			<Option Name="SoulHunger" Title="Soul Hunger">
-				MagicItemsPoints;
-				Reroll: ToWound
-			</Option>
-			<Option Name="WingedHorror" Title="Winged Horror">
-				MagicItemsPoints;
-				Rule: Fly
-			</Option>
+			<Option Name="SoulHunger" Title="Soul Hunger">MagicItemsPoints;	Reroll: ToWound</Option>
+			<Option Name="WingedHorror" Title="Winged Horror">MagicItemsPoints; Rule: Fly</Option>
 			<Option Name="ObsidianArmour" Title="Obsidian Armour">
 				MagicItemsPoints;
 				AddToArmour: 3;
@@ -81,6 +72,10 @@
 			<Option Name="SpellBreaker" Title="Spell Breaker">
 				MagicItemsPoints;
 				Rule: Once per battle may automatically dispel one enemy spell
+			</Option>
+			<Option Name="ArmourOfKhorne" Title="Armour of Khorne">
+				MagicItemsPoints;
+				AddToArmour: 3
 			</Option>
 		</CommonXml>
 	</Introduction>
@@ -320,13 +315,7 @@
 					<FirestormBlade Points="25"/>
 					<ImmortalFury Points="25"/>
 					<SpellBreaker Points="25"/>
-					<Option>
-						<Name>Armour of Khorne</Name>
-						<Type>Option</Type>
-						<Points>15</Points>
-						<MagicItemsPoints/>
-						<AddToArmour>3</AddToArmour>
-					</Option>
+					<ArmourOfKhorne Points="15"/>
 					<Option>
 						<Name>Collar of Khorne</Name>
 						<Type>Option</Type>
@@ -814,13 +803,7 @@
 					<DaemonicRobes Points="25"/>
 					<FirestormBlade Points="25"/>
 					<SoulHunger Points="25"/>
-					<Option>
-						<Name>Armour of Khorne</Name>
-						<Type>Option</Type>
-						<Points>15</Points>
-						<MagicItemsPoints/>
-						<AddToArmour>3</AddToArmour>
-					</Option>
+					<ArmourOfKhorne Points="15"/>
 					<BattleStandardBearer Points="25"/>
 					<Option>
 						<Name>Standard of Chaos Glory</Name>
