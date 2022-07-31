@@ -40,7 +40,8 @@
 			<Spell Name="The Comet of Cassanora">13</Spell>
 		</Dispell>
 		<CommonXml>
-			<Option Name="Etherblade">MagicItemsPoints;	NoArmour</Option>
+			<Option Name="Etherblade">MagicItemsPoints;	NoArmour
+			</Option>
 			<Option Name="ArmedMonstrosity" Title="Armed Monstrosity">
 				MagicItemsPoints;
 				AddToAttacks: 2
@@ -77,6 +78,7 @@
 				MagicItemsPoints;
 				AddToArmour: 3
 			</Option>
+			<Option Name="PowerVortex" Title="Power Vortex">MagicItemsPoints; AddToCast: 1</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -403,13 +405,7 @@
 						<MagicItemsPoints/>
 						<Rule>Once per battle may automatically dispel one enemy spell, the spell is lost on the roll of a 4+</Rule>
 					</Option>
-					<Option>
-						<Name>Power Vortex</Name>
-						<Type>Option</Type>
-						<Points>30</Points>
-						<MagicItemsPoints/>
-						<AddToCast>1</AddToCast>
-					</Option>
+					<PowerVortex Points="30"/>
 					<Option>
 						<Name>Dark Magister</Name>
 						<Type>Option</Type>
@@ -906,13 +902,7 @@
 						<MagicItemsPoints/>
 						<Test Bet="Death" Context="Wound">Toughness</Test>
 					</Option>
-					<Option>
-						<Name>Power Vortex</Name>
-						<Type>Option</Type>
-						<Points>30</Points>
-						<MagicItemsPoints/>
-						<AddToCast>1</AddToCast>
-					</Option>
+					<PowerVortex Points="30"/>
 					<Option>
 						<Name>Flames of Tzeentch</Name>
 						<Type>Option</Type>
