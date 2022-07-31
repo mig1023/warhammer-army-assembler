@@ -95,6 +95,10 @@
 				MagicItemsPoints;
 				Rule: All enemies models in base contact lose the Always Strikes First rule and always strike last
 			</Option>
+			<Option Name="PestilentMucus" Title="Pestilent Mucus">
+				MagicItemsPoints;
+				Rule: When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -520,13 +524,7 @@
 						<Regeneration/>
 					</Option>
 					<NoxiousVapours Points="25"/>
-					<Option>
-						<Name>Pestilent Mucus</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed</Rule>
-					</Option>
+					<PestilentMucus Points="25"/>
 					<Option>
 						<Name>Nurgle's Rot</Name>
 						<Type>Option</Type>
@@ -1013,13 +1011,7 @@
 						<MagicItemsPoints/>
 						<Rule>Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed</Rule>
 					</Option>
-					<Option>
-						<Name>Pestilent Mucus</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed</Rule>
-					</Option>
+					<PestilentMucus Points="25"/>
 					<Option>
 						<Name>Stream of Bile</Name>
 						<Type>Option</Type>
