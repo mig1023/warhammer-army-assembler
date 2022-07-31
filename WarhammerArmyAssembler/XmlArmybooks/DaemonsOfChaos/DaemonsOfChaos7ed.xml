@@ -103,6 +103,10 @@
 				MagicItemsPoints;
 				Rule: Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed
 			</Option>
+			<Option Name="StreamOfBile" Title="Stream of Bile">
+				MagicItemsPoints;
+				Rule: Strength 4 breath weapon
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -531,13 +535,7 @@
 					<PestilentMucus Points="25"/>
 					<NurglesRot Points="25"/>
 					<SoulHunger Points="25"/>
-					<Option>
-						<Name>Stream of Bile</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Strength 4 breath weapon</Rule>
-					</Option>
+					<StreamOfBile Points="25"/>
 					<Option>
 						<Name>Slime Trail</Name>
 						<Type>Option</Type>
@@ -1004,13 +1002,7 @@
 					<NoxiousVapours Points="25"/>
 					<NurglesRot Points="25"/>
 					<PestilentMucus Points="25"/>
-					<Option>
-						<Name>Stream of Bile</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Strength 4 breath weapon</Rule>
-					</Option>
+					<StreamOfBile Points="25"/>
 					<SoulHunger Points="25"/>
 					<Option>
 						<Name>Slime Trail</Name>
