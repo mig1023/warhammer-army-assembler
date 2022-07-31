@@ -111,6 +111,10 @@
 				MagicItemsPoints;
 				Rule: Enemy inits do not receive combat result bonuses for attacking the flank or rear
 			</Option>
+			<Option Name="SirenSong" Title="Siren Song">
+				MagicItemsPoints;
+				Rule: Once per game, before charges are declared, nominate one enemy within 20", the target unit must either declare a charge against the Daemon (or the unit it is with) or immediately flee, exactly as if it had failed a Panic test
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -626,13 +630,7 @@
 					</Option>
 					<DaemonicRobes Points="25"/>
 					<EnrapturingGaze Points="25"/>
-					<Option>
-						<Name>Siren Song</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Once per game, before charges are declared, nominate one enemy within 20": the target unit must either declare a charge against the Daemon (or the unit it is with) or immediately flee, exactly as if it had failed a Panic test</Rule>
-					</Option>
+					<SirenSong Points="25"/>
 					<SoulHunger Points="25"/>
 					<Option>
 						<Name>Soporific Musk</Name>
@@ -1109,13 +1107,7 @@
 					</Option>
 					<DaemonicRobes Points="25"/>
 					<EnrapturingGaze Points="25"/>
-					<Option>
-						<Name>Siren Song</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Once per game, before charges are declared, nominate one enemy within 20": the target unit must either declare a charge against the Daemon (or the unit it is with) or immediately flee, exactly as if it had failed a Panic test</Rule>
-					</Option>
+					<SirenSong Points="25"/>
 					<Option>
 						<Name>Soporific Musk</Name>
 						<Type>Option</Type>
