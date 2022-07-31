@@ -107,6 +107,10 @@
 				MagicItemsPoints;
 				Rule: Strength 4 breath weapon
 			</Option>
+			<Option Name="SlimeTrail" Title="Slime Trail">
+				MagicItemsPoints;
+				Rule: Enemy inits do not receive combat result bonuses for attacking the flank or rear
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -536,13 +540,7 @@
 					<NurglesRot Points="25"/>
 					<SoulHunger Points="25"/>
 					<StreamOfBile Points="25"/>
-					<Option>
-						<Name>Slime Trail</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<MagicItemsPoints/>
-						<Rule>Enemy inits do not receive combat result bonuses for attacking the flank or rear</Rule>
-					</Option>
+					<SlimeTrail Points="10"/>
 				</Options>
 				<Equipments>
 					<Flail/>
@@ -1004,13 +1002,7 @@
 					<PestilentMucus Points="25"/>
 					<StreamOfBile Points="25"/>
 					<SoulHunger Points="25"/>
-					<Option>
-						<Name>Slime Trail</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<MagicItemsPoints/>
-						<Rule>Enemy inits do not receive combat result bonuses for attacking the flank or rear</Rule>
-					</Option>
+					<SlimeTrail Points="10"/>
 					<BattleStandardBearer Points="25"/>
 					<Option>
 						<Name>Standard of Chaos Glory</Name>
