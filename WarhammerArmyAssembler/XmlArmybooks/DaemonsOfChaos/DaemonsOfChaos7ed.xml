@@ -91,6 +91,10 @@
 				MagicItemsPoints;
 				Rule: Bound spell, Power level 3: Rancid Visitation
 			</Option>
+			<Option Name="NoxiousVapours" Title="Noxious Vapours">
+				MagicItemsPoints;
+				Rule: All enemies models in base contact lose the Always Strikes First rule and always strike last
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -515,13 +519,7 @@
 						<AddToArmour>4</AddToArmour>
 						<Regeneration/>
 					</Option>
-					<Option>
-						<Name>Noxious Vapours</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>All enemies models in base contact lose the Always Strikes First rule and always strike last</Rule>
-					</Option>
+					<NoxiousVapours Points="25"/>
 					<Option>
 						<Name>Pestilent Mucus</Name>
 						<Type>Option</Type>
@@ -1007,13 +1005,7 @@
 						<AddToDispell>1</AddToDispell>
 					</Option>
 					<StaffOfNurgle Points="50"/>
-					<Option>
-						<Name>Noxious Vapours</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>All enemies models in base contact lose the Always Strikes First rule and always strike last</Rule>
-					</Option>
+					<NoxiousVapours Points="25"/>
 					<Option>
 						<Name>Nurgle's Rot</Name>
 						<Type>Option</Type>
