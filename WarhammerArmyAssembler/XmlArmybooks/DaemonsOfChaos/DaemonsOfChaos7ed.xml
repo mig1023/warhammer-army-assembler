@@ -87,6 +87,10 @@
 				MagicItemsPoints;
 				Rule: Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses
 			</Option>
+			<Option Name="StaffOfNurgle" Title="Staff of Nurgle">
+				MagicItemsPoints;
+				Rule: Bound spell, Power level 3: Rancid Visitation
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -502,13 +506,7 @@
 						<MagicItemsPoints/>
 						<Rule>Roll a D6 at the start of each Magic phase, on 2+ it may immediately increase, by one base, the size of one Nurgling unit within 6"</Rule>
 					</Option>
-					<Option>
-						<Name>Staff of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<MagicItemsPoints/>
-						<Rule>Bound spell, Power level 3: Rancid Visitation</Rule>
-					</Option>
+					<StaffOfNurgle Points="50"/>
 					<Option>
 						<Name>Trapping of Nurgle</Name>
 						<Type>Option</Type>
@@ -1008,13 +1006,7 @@
 						<AddToCast>1</AddToCast>
 						<AddToDispell>1</AddToDispell>
 					</Option>
-					<Option>
-						<Name>Staff of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<MagicItemsPoints/>
-						<Rule>Bound spell, Power level 3: Rancid Visitation</Rule>
-					</Option>
+					<StaffOfNurgle Points="50"/>
 					<Option>
 						<Name>Noxious Vapours</Name>
 						<Type>Option</Type>
