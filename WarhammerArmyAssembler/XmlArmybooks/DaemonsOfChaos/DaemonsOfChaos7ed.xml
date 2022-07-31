@@ -99,6 +99,10 @@
 				MagicItemsPoints;
 				Rule: When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed
 			</Option>
+			<Option Name="NurglesRot" Title="Nurgle's Rot">
+				MagicItemsPoints;
+				Rule: Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -525,13 +529,7 @@
 					</Option>
 					<NoxiousVapours Points="25"/>
 					<PestilentMucus Points="25"/>
-					<Option>
-						<Name>Nurgle's Rot</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed</Rule>
-					</Option>
+					<NurglesRot Points="25"/>
 					<SoulHunger Points="25"/>
 					<Option>
 						<Name>Stream of Bile</Name>
@@ -1004,13 +1002,7 @@
 					</Option>
 					<StaffOfNurgle Points="50"/>
 					<NoxiousVapours Points="25"/>
-					<Option>
-						<Name>Nurgle's Rot</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<Rule>Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed</Rule>
-					</Option>
+					<NurglesRot Points="25"/>
 					<PestilentMucus Points="25"/>
 					<Option>
 						<Name>Stream of Bile</Name>
