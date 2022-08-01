@@ -140,6 +140,7 @@
 			<Option Name="IconOfEndlessWar" Title="Icon of Endless War">
 				Rule: Adds D6" to its first charge move
 			</Option>
+			<Option Name="BannerOfEcstasy" Title="Banner of Ecstasy">Stubborn</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -1241,16 +1242,7 @@
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Alluress" Points="12"/>
 					<CommandGroup Position="Standard bearer" Points="12"/>
-					<Option>
-						<Name>Banner of Ecstasy</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Standard bearer</On>
-							<Off>Siren Standard</Off>
-						</Dependencies>
-						<Points>25</Points>
-						<Stubborn/>
-					</Option>
+					<BannerOfEcstasy Points="25" Dependencies="On: Standard bearer; Off: Siren Standard"/>
 					<Option>
 						<Name>Siren Standard</Name>
 						<Type>Option</Type>
@@ -1382,16 +1374,7 @@
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Alluress" Points="12"/>
 					<CommandGroup Position="Standard bearer" Points="12"/>
-					<Option>
-						<Name>Banner of Ecstasy</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Standard bearer</On>
-							<Off>Siren Standard</Off>
-						</Dependencies>
-						<Points>25</Points>
-						<Stubborn/>
-					</Option>
+					<BannerOfEcstasy Points="25" Dependencies="On: Standard bearer; Off: Siren Standard"/>
 					<Option>
 						<Name>Siren Standard</Name>
 						<Type>Option</Type>
