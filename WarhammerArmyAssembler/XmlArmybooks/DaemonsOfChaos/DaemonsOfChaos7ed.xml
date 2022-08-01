@@ -125,6 +125,9 @@
 			<Option Name="BannerOfHellfire" Title="Banner of Hellfire">
 				Rule: Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat
 			</Option>
+			<Option Name="GreatIconOfDespair" Title="Great Icon of Despair">
+				Rule: All enemy units within 12" suffer a -2 penalty to their Leadership
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -789,19 +792,7 @@
 					<BattleStandardBearer Points="25"/>
 					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<Option>
-						<Name>Great Icon of Despair</Name>
-						<Type>Option</Type>
-						<Points>75</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Banner of Hellfire</Off>
-							<Off>Banner of Unholy Victory</Off>
-							<Off>Great Standard of Sundering</Off>
-						</Dependencies>
-						<Rule>All enemy units within 12" suffer a -2 penalty to their Leadership</Rule>
-					</Option>
+					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<Option>
 						<Name>Banner of Unholy Victory</Name>
 						<Type>Option</Type>
@@ -873,19 +864,7 @@
 					<BattleStandardBearer Points="25"/>
 					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<Option>
-						<Name>Great Icon of Despair</Name>
-						<Type>Option</Type>
-						<Points>75</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Banner of Hellfire</Off>
-							<Off>Banner of Unholy Victory</Off>
-							<Off>Great Standard of Sundering</Off>
-						</Dependencies>
-						<Rule>All enemy units within 12" suffer a -2 penalty to their Leadership</Rule>
-					</Option>
+					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<Option>
 						<Name>Banner of Unholy Victory</Name>
 						<Type>Option</Type>
@@ -958,19 +937,7 @@
 					<BattleStandardBearer Points="25"/>
 					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<Option>
-						<Name>Great Icon of Despair</Name>
-						<Type>Option</Type>
-						<Points>75</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Banner of Hellfire</Off>
-							<Off>Banner of Unholy Victory</Off>
-							<Off>Great Standard of Sundering</Off>
-						</Dependencies>
-						<Rule>All enemy units within 12" suffer a -2 penalty to their Leadership</Rule>
-					</Option>
+					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<Option>
 						<Name>Banner of Unholy Victory</Name>
 						<Type>Option</Type>
@@ -1048,19 +1015,7 @@
 					<BattleStandardBearer Points="25"/>
 					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<Option>
-						<Name>Great Icon of Despair</Name>
-						<Type>Option</Type>
-						<Points>75</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Banner of Hellfire</Off>
-							<Off>Banner of Unholy Victory</Off>
-							<Off>Great Standard of Sundering</Off>
-						</Dependencies>
-						<Rule>All enemy units within 12" suffer a -2 penalty to their Leadership</Rule>
-					</Option>
+					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<Option>
 						<Name>Banner of Unholy Victory</Name>
 						<Type>Option</Type>
