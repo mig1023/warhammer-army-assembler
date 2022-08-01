@@ -40,8 +40,7 @@
 			<Spell Name="The Comet of Cassanora">13</Spell>
 		</Dispell>
 		<CommonXml>
-			<Option Name="Etherblade">MagicItemsPoints;	NoArmour
-			</Option>
+			<Option Name="Etherblade">MagicItemsPoints;	NoArmour</Option>
 			<Option Name="ArmedMonstrosity" Title="Armed Monstrosity">
 				MagicItemsPoints;
 				AddToAttacks: 2
@@ -122,6 +121,9 @@
 			<Option Name="StandardOfChaosGlory" Title="Standard of Chaos Glory">
 				Stubborn;
 				Rule: All Daemons within 12" are stubborn
+			</Option>
+			<Option Name="BannerOfHellfire" Title="Banner of Hellfire">
+				Rule: Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat
 			</Option>
 		</CommonXml>
 	</Introduction>
@@ -786,19 +788,7 @@
 					<ArmourOfKhorne Points="15"/>
 					<BattleStandardBearer Points="25"/>
 					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<Option>
-						<Name>Banner of Hellfire</Name>
-						<Type>Option</Type>
-						<Points>100</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Great Icon of Despair</Off>
-							<Off>Banner of Unholy Victory</Off>
-							<Off>Great Standard of Sundering</Off>
-						</Dependencies>
-						<Rule>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</Rule>
-					</Option>
+					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<Option>
 						<Name>Great Icon of Despair</Name>
 						<Type>Option</Type>
@@ -882,19 +872,7 @@
 					<WingedHorror Points="20"/>
 					<BattleStandardBearer Points="25"/>
 					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<Option>
-						<Name>Banner of Hellfire</Name>
-						<Type>Option</Type>
-						<Points>100</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Great Icon of Despair</Off>
-							<Off>Banner of Unholy Victory</Off>
-							<Off>Great Standard of Sundering</Off>
-						</Dependencies>
-						<Rule>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</Rule>
-					</Option>
+					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<Option>
 						<Name>Great Icon of Despair</Name>
 						<Type>Option</Type>
@@ -979,19 +957,7 @@
 					<SlimeTrail Points="10"/>
 					<BattleStandardBearer Points="25"/>
 					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<Option>
-						<Name>Banner of Hellfire</Name>
-						<Type>Option</Type>
-						<Points>100</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Great Icon of Despair</Off>
-							<Off>Banner of Unholy Victory</Off>
-							<Off>Great Standard of Sundering</Off>
-						</Dependencies>
-						<Rule>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</Rule>
-					</Option>
+					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<Option>
 						<Name>Great Icon of Despair</Name>
 						<Type>Option</Type>
@@ -1081,19 +1047,7 @@
 					</Option>
 					<BattleStandardBearer Points="25"/>
 					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<Option>
-						<Name>Banner of Hellfire</Name>
-						<Type>Option</Type>
-						<Points>100</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Great Icon of Despair</Off>
-							<Off>Banner of Unholy Victory</Off>
-							<Off>Great Standard of Sundering</Off>
-						</Dependencies>
-						<Rule>Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</Rule>
-					</Option>
+					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<Option>
 						<Name>Great Icon of Despair</Name>
 						<Type>Option</Type>
