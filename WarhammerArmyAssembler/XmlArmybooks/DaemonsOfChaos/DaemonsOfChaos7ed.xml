@@ -131,6 +131,9 @@
 			<Option Name="BannerOfUnholyVictory" Title="Banner of Unholy Victory">
 				AddToCloseCombat: D3
 			</Option>
+			<Option Name="GreatStandardOfSundering" Title="Great Standard of Sundering">
+				Rule: All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -797,19 +800,7 @@
 					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<BannerOfUnholyVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
-					<Option>
-						<Name>Great Standard of Sundering</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Banner of Hellfire</Off>
-							<Off>Great Icon of Despair</Off>
-							<Off>Banner of Unholy Victory</Off>
-						</Dependencies>
-						<Rule>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</Rule>
-					</Option>
+					<GreatStandardOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
 					<Mount Name="Juggernaut" Points="50"/>
 					<Mount Name="Blood Chariot" Points="75"/>
 				</Options>
@@ -857,19 +848,7 @@
 					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<BannerOfUnholyVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
-					<Option>
-						<Name>Great Standard of Sundering</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Banner of Hellfire</Off>
-							<Off>Great Icon of Despair</Off>
-							<Off>Banner of Unholy Victory</Off>
-						</Dependencies>
-						<Rule>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</Rule>
-					</Option>
+					<GreatStandardOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
 					<Mount Name="Disc of Tzeentch" Points="20"/>
 					<Mount Name="Burning Chariot" Points="60"/>
 				</Options>
@@ -918,19 +897,7 @@
 					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<BannerOfUnholyVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
-					<Option>
-						<Name>Great Standard of Sundering</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Banner of Hellfire</Off>
-							<Off>Great Icon of Despair</Off>
-							<Off>Banner of Unholy Victory</Off>
-						</Dependencies>
-						<Rule>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</Rule>
-					</Option>
+					<GreatStandardOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
 					<Mount Name="Palanquin" Points="50"/>
 				</Options>
 				<Equipments>
@@ -984,19 +951,7 @@
 					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
 					<BannerOfUnholyVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
-					<Option>
-						<Name>Great Standard of Sundering</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<On>Battle Standard Bearer</On>
-							<Off>Standard of Chaos Glory</Off>
-							<Off>Banner of Hellfire</Off>
-							<Off>Great Icon of Despair</Off>
-							<Off>Banner of Unholy Victory</Off>
-						</Dependencies>
-						<Rule>All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</Rule>
-					</Option>
+					<GreatStandardOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
 					<Mount Name="Steed of Slaanesh" Points="25"/>
 					<Mount Name="Seeker Chariot" Points="75"/>
 				</Options>
