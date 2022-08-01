@@ -134,6 +134,9 @@
 			<Option Name="GreatStandardOfSundering" Title="Great Standard of Sundering">
 				Rule: All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3
 			</Option>
+			<Option Name="SkullTotem" Title="Skull Totem">
+				Rule: May march even if enemy models are within 8"
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -1095,16 +1098,7 @@
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Bloodreaper" Points="12"/>
 					<CommandGroup Position="Standard bearer" Points="12"/>
-					<Option>
-						<Name>Skull Totem</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Standard bearer</On>
-							<Off>Icon of Endless War</Off>
-						</Dependencies>
-						<Points>25</Points>
-						<Rule>May march even if enemy models are within 8"</Rule>
-					</Option>
+					<SkullTotem Points="25" Dependencies="On: Standard bearer; Off: Icon of Endless War"/>
 					<Option>
 						<Name>Icon of Endless War</Name>
 						<Type>Option</Type>
@@ -1443,16 +1437,7 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Bloodreaper" Points="20"/>
 					<CommandGroup Position="Standard bearer" Points="20"/>
-					<Option>
-						<Name>Skull Totem</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Standard bearer</On>
-							<Off>Icon of Endless War</Off>
-						</Dependencies>
-						<Points>25</Points>
-						<Rule>May march even if enemy models are within 8"</Rule>
-					</Option>
+					<SkullTotem Points="25" Dependencies="On: Standard bearer; Off: Icon of Endless War"/>
 					<Option>
 						<Name>Icon of Endless War</Name>
 						<Type>Option</Type>
