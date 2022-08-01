@@ -141,6 +141,9 @@
 				Rule: Adds D6" to its first charge move
 			</Option>
 			<Option Name="BannerOfEcstasy" Title="Banner of Ecstasy">Stubborn</Option>
+			<Option Name="SirenStandard" Title="Siren Standard">
+				Rule: Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee
+			</Option>
 		</CommonXml>
 	</Introduction>
 	<Content>
@@ -1243,16 +1246,7 @@
 					<CommandGroup Position="Alluress" Points="12"/>
 					<CommandGroup Position="Standard bearer" Points="12"/>
 					<BannerOfEcstasy Points="25" Dependencies="On: Standard bearer; Off: Siren Standard"/>
-					<Option>
-						<Name>Siren Standard</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Standard bearer</On>
-							<Off>Banner of Ecstasy</Off>
-						</Dependencies>
-						<Points>25</Points>
-						<Rule>Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee</Rule>
-					</Option>
+					<SirenStandard Points="25" Dependencies="On: Standard bearer; Off: Banner of Ecstasy"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1375,16 +1369,7 @@
 					<CommandGroup Position="Alluress" Points="12"/>
 					<CommandGroup Position="Standard bearer" Points="12"/>
 					<BannerOfEcstasy Points="25" Dependencies="On: Standard bearer; Off: Siren Standard"/>
-					<Option>
-						<Name>Siren Standard</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Standard bearer</On>
-							<Off>Banner of Ecstasy</Off>
-						</Dependencies>
-						<Points>25</Points>
-						<Rule>Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee</Rule>
-					</Option>
+					<SirenStandard Points="25" Dependencies="On: Standard bearer; Off: Banner of Ecstasy"/>
 				</Options>
 			</Unit>
 			<Unit>
