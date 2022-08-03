@@ -1641,18 +1641,9 @@
 		</Units>
 	</Content>
 	<CommonXmlOptions>
-		<Option Name="DaemonOfTzeentch" Title="Daemon of Tzeentch">
-			Rule: Re-roll Ward save results of 1;
-			Rule: Re-roll Channelling results of 1
-		</Option>
-		<Option Name="DaemonOfSlaanesh" Title="Daemon of Slaanesh">
-			ArmourPiercing: 1
-		</Option>
-		<Option Name="DaemonOfKhorne" Title="Daemon of Khorne">
-			Rule: On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn
-		</Option>
-		<Option Name="DaemonOfNurgle" Title="Daemon of Nurgle">
-			SubOpponentToHit: 1
-		</Option>
+		<DaemonOfTzeentch Title="Daemon of Tzeentch">Rule: Re-roll Ward save results of 1; Rule: Re-roll Channelling results of 1</DaemonOfTzeentch>
+		<DaemonOfSlaanesh Title="Daemon of Slaanesh">ArmourPiercing: 1</DaemonOfSlaanesh>
+		<DaemonOfKhorne Title="Daemon of Khorne">Rule: On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn</DaemonOfKhorne>
+		<DaemonOfNurgle Title="Daemon of Nurgle">SubOpponentToHit: 1</DaemonOfNurgle>
 	</CommonXmlOptions>
 </ArmyBook>
