@@ -769,26 +769,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Shield</Name>
-						<Type>Option</Type>
-						<AddToArmour>1</AddToArmour>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>1</Points>
-					</Option>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Shield</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>1</Points>
-					</Option>
+					<Shield PointsPerModel="1" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="1" Dependencies="Off: Shield"/>
 					<CommandGroup Position="Foe-render" Points="10"/>
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
@@ -924,9 +906,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>				
-					<Shield Points="4" Dependencies="Off: Additional weapon, Great weapon"/>
-					<AdditionalWeapon Points="4" Dependencies="Off: Shield, Great weapon"/>
-					<GreatWeapon Points="8" Dependencies="Off: Shield, Additional weapon"/>				
+					<Shield PointsPerModel="4" Dependencies="Off: Additional weapon, Great weapon"/>
+					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Shield, Great weapon"/>
+					<GreatWeapon PointsPerModel="8" Dependencies="Off: Shield, Additional weapon"/>				
 					<CommandGroup Position="Bloodkine" Points="20" Magic="Type:Hero, Points:25"/>
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="20"/>
