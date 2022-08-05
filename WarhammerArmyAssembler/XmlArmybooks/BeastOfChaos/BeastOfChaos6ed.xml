@@ -440,25 +440,8 @@
 						<Points>8</Points>
 					</Option>
 					<AdditionalWeapon PointsPerModel="6" Dependencies="Off: Braystaff"/>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-						</Dependencies>
-						<Fear/>
-						<AddToWounds>1</AddToWounds>
-					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<Dependencies>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
+					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Nurgle"/>				
+					<MarkOfSlaanesh Points="25" Dependencies="Off: Mark of Slaanesh"/>
 					<Mount Name="Tuskgor Chariot" Points="85"/>
 				</Options>
 				<Equipments>
@@ -523,25 +506,8 @@
 						<Points>6</Points>
 					</Option>
 					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Braystaff"/>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>40</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-						</Dependencies>
-						<Fear/>
-						<AddToWounds>1</AddToWounds>
-					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<ImmuneToPsychology/>
-					</Option>
+					<MarkOfNurgle Points="40" Dependencies="Off: Mark of Nurgle"/>				
+					<MarkOfSlaanesh Points="20" Dependencies="Off: Mark of Slaanesh"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
