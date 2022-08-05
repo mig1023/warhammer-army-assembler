@@ -439,15 +439,7 @@
 						</Dependencies>
 						<Points>8</Points>
 					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Braystaff</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon PointsPerModel="6" Dependencies="Off: Braystaff"/>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Type>Option</Type>
@@ -530,15 +522,7 @@
 						</Dependencies>
 						<Points>6</Points>
 					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Braystaff</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Braystaff"/>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Type>Option</Type>
@@ -781,18 +765,9 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>4</Points>
-					</Option>
-					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
-					<LightArmour Points="3"/>
+					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Great weapon"/>
+					<GreatWeapon PointsPerModel="6" Dependencies="Off: Additional weapon"/>
+					<LightArmour PointsPerModel="3"/>
 					<CommandGroup Position="Standard bearer" Points="20"/>
 					<CommandGroup Position="Bloodkine" Points="20"/>				
 					<UnitMarkOfChaosUndivided Points="0" Dependencies="Off: Mark of Khorne, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
@@ -820,18 +795,9 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>4</Points>
-					</Option>
-					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
-					<LightArmour Points="3"/>
+					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Great weapon"/>
+					<GreatWeapon PointsPerModel="6" Dependencies="Off: Additional weapon"/>
+					<LightArmour PointsPerModel="3"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -855,18 +821,9 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>6</Points>
-					</Option>
-					<GreatWeapon Points="8" Dependencies="Off: Additional weapon"/>
-					<LightArmour Points="3"/>
+					<AdditionalWeapon PointsPerModel="6" Dependencies="Off: Great weapon"/>
+					<GreatWeapon PointsPerModel="8" Dependencies="Off: Additional weapon"/>
+					<LightArmour PointsPerModel="3"/>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Type>Option</Type>
