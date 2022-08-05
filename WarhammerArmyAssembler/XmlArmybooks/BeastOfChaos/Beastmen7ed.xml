@@ -923,41 +923,10 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-				<Options>
-					<Option>
-						<Name>Shield</Name>
-						<Type>Option</Type>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Shield</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Shield</Off>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>8</Points>
-					</Option>
+				<Options>				
+					<Shield Points="4" Dependencies="Off: Additional weapon, Great weapon"/>
+					<AdditionalWeapon Points="4" Dependencies="Off: Shield, Great weapon"/>
+					<GreatWeapon Points="8" Dependencies="Off: Shield, Additional weapon"/>				
 					<CommandGroup Position="Bloodkine" Points="20" Magic="Type:Hero, Points:25"/>
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="20"/>
