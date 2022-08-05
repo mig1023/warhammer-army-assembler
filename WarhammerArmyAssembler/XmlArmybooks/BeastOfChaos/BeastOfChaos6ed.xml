@@ -791,17 +791,7 @@
 						<PerModel/>
 						<Points>4</Points>
 					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>6</Points>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
 					<LightArmour Points="3"/>
 					<CommandGroup Position="Standard bearer" Points="20"/>
 					<CommandGroup Position="Bloodkine" Points="20"/>				
@@ -840,17 +830,7 @@
 						<PerModel/>
 						<Points>4</Points>
 					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>6</Points>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
 					<LightArmour Points="3"/>
 				</Options>
 			</Unit>
@@ -885,17 +865,7 @@
 						<PerModel/>
 						<Points>6</Points>
 					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>8</Points>
-					</Option>
+					<GreatWeapon Points="8" Dependencies="Off: Additional weapon"/>
 					<LightArmour Points="3"/>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
