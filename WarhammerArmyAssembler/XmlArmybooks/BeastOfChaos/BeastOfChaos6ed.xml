@@ -821,56 +821,13 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon PointsPerModel="6" Dependencies="Off: Great weapon"/>
-					<GreatWeapon PointsPerModel="8" Dependencies="Off: Additional weapon"/>
-					<LightArmour PointsPerModel="3"/>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Type>Option</Type>
-						<Points>80</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
-						<AddToDispell>1</AddToDispell>
-					</Option>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Type>Option</Type>
-						<Points>35</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-						<AddToDispell>1</AddToDispell>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Type>Option</Type>
-						<Points>50</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-						</Dependencies>
-						<AddToWounds>1</AddToWounds>
-					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Type>Option</Type>
-						<Points>40</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
-						</Dependencies>
-						<HitFirst/>
-					</Option>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great weapon"/>
+					<GreatWeapon Points="8" Dependencies="Off: Additional weapon"/>
+					<LightArmour Points="3"/>
+					<MarkOfTzeentchLittle Points="80" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhorne Points="35" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfSlaaneshHitFirst Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -968,6 +925,7 @@
 		<MarkOfTzeentchBig Title="Mark of Tzeentch">AddToWizard: 4; AddToCast: 4; AddToDispell: 2</MarkOfTzeentchBig>
 		<MarkOfTzeentchLittle Title="Mark of Tzeentch">AddToWizard: 2; AddToCast: 2; AddToDispell: 1</MarkOfTzeentchLittle>
 		<MarkOfSlaanesh Title="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaanesh>
+		<MarkOfSlaaneshHitFirst Title="Mark of Slaanesh">HitFirst</MarkOfSlaaneshHitFirst>
 		<UnitMarkOfChaosUndivided Title="Mark of Chaos Undivided">Rule: May re-roll failed Psychology tests</UnitMarkOfChaosUndivided>
 		<UnitMarkOfKhorne Title="Mark of Khorne">Frenzy; AddToDispell: 1</UnitMarkOfKhorne>
 		<UnitMarkOfNurgle Title="Mark of Nurgle">Fear</UnitMarkOfNurgle>
