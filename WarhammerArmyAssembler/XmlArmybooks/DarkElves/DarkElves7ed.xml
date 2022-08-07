@@ -1249,28 +1249,8 @@
 						<Points>18</Points>
 					</Option>
 					<LightArmour PointsPerModel="1"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>2</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>1</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
+					<GreatWeapon PointsPerModel="2" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="1" Dependencies="Off: Great weapon"/>
 				</Options>
 			</Unit>
 			<Unit>
