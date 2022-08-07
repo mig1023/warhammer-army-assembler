@@ -321,8 +321,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Settra the Imperishable</Name>
 				<Points>625</Points>
 				<Description>Settra the Imperishable</Description>
@@ -359,9 +358,8 @@
 						<Terror/>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>High Queen Khalida</Name>
 				<Points>420</Points>
 				<Description>High Queen Khalida</Description>
@@ -389,9 +387,8 @@
 						<Rule>Bound spell (power level 5): a magic missile with a range of 24", the target takes 2D6 Strength 4 hits, if unit takes any wounds, it may not move in its next Movement phase</Rule>
 					</RangeWeapon>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Tomb King</Name>
 				<Points>170</Points>
 				<Description>Tomb King</Description>
@@ -445,9 +442,8 @@
 					<Shield Points="3"/>
 					<Mount Name="Chariot" Points="45"/>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Liche High Priest</Name>
 				<Points>245</Points>
 				<Description>Liche High Priest</Description>
@@ -465,9 +461,8 @@
 					<Mount Name="Skeletal Steed" Points="15"/>
 					<Mount Name="Casket of Soul" Points="165"/>
 				</Options>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Tomb Prince</Name>
 				<Points>100</Points>
 				<Description>Tomb Prince</Description>
@@ -522,7 +517,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Icon Bearer</Name>
 				<Points>65</Points>
 				<Description>Icon Bearer</Description>
@@ -542,7 +536,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Liche Priest</Name>
 				<Points>115</Points>
 				<Description>Liche Priest</Description>
@@ -564,13 +557,11 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Skeletal Steed</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="2" BS="0" S="3" T="3" W="1" I="2" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Chariot</Name>
 				<Points>0</Points>
 				<Chariot>2</Chariot>
@@ -582,7 +573,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Casket of Soul</Name>
 				<Points>0</Points>
 				<Chariot>1</Chariot>
@@ -600,8 +590,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Skeleton Warriors</Name>
 				<Points>8</Points>
 				<Min>10</Min>
@@ -641,9 +630,8 @@
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<CommandGroup Position="Champion" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Skeleton Light Horsemen</Name>
 				<Points>14</Points>
 				<Min>5</Min>
@@ -666,9 +654,8 @@
 					<CommandGroup Position="Standard bearer" Points="14"/>
 					<CommandGroup Position="Champion" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Tomb Swarm</Name>
 				<Points>45</Points>
 				<Min>1</Min>
@@ -686,9 +673,8 @@
 						<Rule>"It Came From Below..."</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Skeleton Heavy Horsemen</Name>
 				<Points>16</Points>
 				<Min>5</Min>
@@ -710,9 +696,8 @@
 					<CommandGroup Position="Standard bearer" Points="14" Magic="Type:Unit, Points:25"/>
 					<CommandGroup Position="Champion" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Chariots</Name>
 				<Points>40</Points>
 				<Min>3</Min>
@@ -739,9 +724,8 @@
 					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Champion" Points="20"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Tomb Guard</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -762,9 +746,8 @@
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Champion" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Ushabti</Name>
 				<Points>65</Points>
 				<Min>3</Min>
@@ -784,9 +767,8 @@
 						<HitLast/>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Carrion</Name>
 				<Points>24</Points>
 				<Min>3</Min>
@@ -798,9 +780,8 @@
 					<LargeBase/>
 					<Fly/>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Tomb Scorpion</Name>
 				<Points>85</Points>
 				<Image>Scorpions.jpg</Image>
@@ -820,9 +801,8 @@
 						<Name>Stinging tail and wicked claws</Name>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Screaming Skull Catapult</Name>
 				<Points>90</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -843,9 +823,8 @@
 						<Points>20</Points>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Bone Giant</Name>
 				<Points>220</Points>
 				<Image>Giant.jpg</Image>
@@ -862,7 +841,7 @@
 					<TwoHandsWeapon/>
 					<HeavyArmour/>
 				</Equipments>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
