@@ -1263,29 +1263,9 @@
 					<HandWeapon/>
 					<RepeaterCrossbow/>
 				</Equipments>
-				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<AddToAttacks>2</AddToAttacks>
-						<Points>2</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>2</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-					</Option>
+				<Options>					
+					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Great weapon"/>
+					<GreatWeapon PointsPerModel="2" Dependencies="Off: Additional weapon"/>
 					<LightArmour PointsPerModel="1"/>
 					<CommandGroup Position="Bloodshadde" Points="10"/>
 					<CommandGroup Position="Musician" Points="10"/>
