@@ -480,8 +480,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Tyrion</Name>
 				<Points>400</Points>
 				<Mount>Malhandir</Mount>
@@ -511,9 +510,8 @@
 						<Regeneration/>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Teclis</Name>
 				<Points>475</Points>
 				<Wizard>4</Wizard>
@@ -547,9 +545,8 @@
 						<Rule>One use only, same as Dispel scroll, in addition, both Teclis and the caster roll a D6: if Teclis scores higher, the spell cannot be reused by caster</Rule>
 					</Arcane>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Eltharion</Name>
 				<Points>285</Points>
 				<Personified/>
@@ -585,9 +582,8 @@
 						<AddToDispell>1</AddToDispell>
 					</Arcane>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Alith Anar</Name>
 				<Points>245</Points>
 				<Personified/>
@@ -617,9 +613,8 @@
 						<Rule>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</Rule>
 					</Arcane>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Prince</Name>
 				<Points>150</Points>
 				<Description>Prince</Description>
@@ -668,9 +663,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Archmage</Name>
 				<Points>225</Points>
 				<Wizard>3</Wizard>
@@ -698,9 +692,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Caradryan</Name>
 				<Points>175</Points>
 				<Personified/>
@@ -728,7 +721,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Korhil</Name>
 				<Points>140</Points>
 				<Personified/>
@@ -768,7 +760,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Noble</Name>
 				<Points>85</Points>
 				<Description>Noble</Description>
@@ -816,7 +807,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Mage</Name>
 				<Points>100</Points>
 				<Wizard>1</Wizard>
@@ -843,7 +833,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Dragon Mage of Caledor</Name>
 				<Points>350</Points>
 				<Wizard>1</Wizard>
@@ -868,31 +857,26 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Malhandir</Name>
 				<Points>0</Points>
 				<Profile M="10" WS="4" BS="0" S="4" T="3" W="1" I="5" A="2" Ld="7"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Elven Steed</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="3" BS="0" S="3" T="3" W="1" I="4" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>War Lion</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="5" BS="0" S="5" T="5" W="1" I="4" A="2" Ld="8"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Barded Elven Steed</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="3" BS="0" S="3" T="3" W="1" I="4" A="1" Ld="5" AS="6"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Great Eagle</Name>
 				<Points>0</Points>
 				<Profile M="2" WS="5" BS="0" S="5" T="4" W="3" I="4" A="2" Ld="8"/>
@@ -902,7 +886,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Griffon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="5" BS="0" S="5" T="5" W="4" I="5" A="4" Ld="7"/>
@@ -914,7 +897,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Stormwing</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="6" BS="0" S="5" T="5" W="5" I="7" A="4" Ld="8"/>
@@ -926,7 +908,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Sun Dragon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="5" BS="0" S="5" T="6" W="5" I="4" A="4" Ld="7"/>
@@ -948,7 +929,6 @@
 				</Equipments>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Moon Dragon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="6" BS="0" S="6" T="6" W="6" I="3" A="5" Ld="8"/>
@@ -970,7 +950,6 @@
 				</Equipments>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Star Dragon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="7" BS="0" S="7" T="6" W="7" I="2" A="6" Ld="9"/>
@@ -992,7 +971,6 @@
 				</Equipments>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Tiranoc Chariot</Name>
 				<Points>0</Points>
 				<Chariot>2</Chariot>
@@ -1013,7 +991,6 @@
 				</Equipments>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Lion Chariot</Name>
 				<Points>0</Points>
 				<Chariot>2</Chariot>
@@ -1036,8 +1013,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Archers</Name>
 				<Points>11</Points>
 				<Min>10</Min>
@@ -1056,9 +1032,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Spearman</Name>
 				<Points>9</Points>
 				<Min>10</Min>
@@ -1078,9 +1053,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Sea Guard</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1101,9 +1075,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Sword Master of Hoeth</Name>
 				<Points>15</Points>
 				<Min>5</Min>
@@ -1121,9 +1094,8 @@
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Phoenix Guard</Name>
 				<Points>15</Points>
 				<Min>5</Min>
@@ -1143,9 +1115,8 @@
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>White Lions of Chrace</Name>
 				<Points>15</Points>
 				<Min>5</Min>
@@ -1174,9 +1145,8 @@
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Silver Helms</Name>
 				<Points>21</Points>
 				<Min>5</Min>
@@ -1197,9 +1167,8 @@
 					<CommandGroup Position="Musician" Points="8"/>
 					<CommandGroup Position="Standard bearer" Points="16"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Dragon Princes of Caledor</Name>
 				<Points>30</Points>
 				<Min>5</Min>
@@ -1224,9 +1193,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Ellyrian Reavers</Name>
 				<Points>17</Points>
 				<Min>5</Min>
@@ -1266,9 +1234,8 @@
 					<CommandGroup Position="Standard bearer" Points="14"/>
 					<CommandGroup Position="Harbinger" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Shadow Warriors</Name>
 				<Points>16</Points>
 				<Min>5</Min>
@@ -1290,9 +1257,8 @@
 				<Options>
 					<CommandGroup Position="Shadow-walker" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Tiranoc Chariot</Name>
 				<Points>85</Points>
 				<Chariot>2</Chariot>
@@ -1312,9 +1278,8 @@
 					<Spear/>
 					<Bow/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Lion Chariot of Chrace</Name>
 				<Points>140</Points>
 				<Chariot>2</Chariot>
@@ -1335,9 +1300,8 @@
 					<Spear/>
 					<Bow/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Repeater Bolt Thrower</Name>
 				<Points>100</Points>
 				<Image>RepeaterBoltThrower.jpg</Image>
@@ -1352,9 +1316,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Great Eagle</Name>
 				<Points>50</Points>
 				<Profile M="2" WS="5" BS="0" S="4" T="4" W="3" I="4" A="2" Ld="8"/>
@@ -1362,7 +1325,7 @@
 					<LargeBase/>
 					<Fly/>
 				</SpecialRules>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
