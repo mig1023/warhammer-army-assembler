@@ -740,8 +740,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Thorgrim Grudgebearer</Name>
 				<Points>650</Points>
 				<Personified/>
@@ -785,9 +784,8 @@
 						<Rule>Enchanted Item. If Thorgrim is on the battlefield when you roll on the Ancestral Grudge table, your army receives a'+3 modifier. If the total is 7 or more, Thorgrim, and any unit he joins, may re-roll failed To Hit rolls in every round of close combat, not just the first</Rule>
 					</Arcane>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Thorek Ironbrow</Name>
 				<Points>435</Points>
 				<Personified/>
@@ -820,9 +818,8 @@
 						<ArmourTo>1</ArmourTo>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Ungrim Ironfist</Name>
 				<Points>350</Points>
 				<Personified/>
@@ -860,9 +857,8 @@
 						<AddToArmour>6</AddToArmour>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Belegar Ironhammer</Name>
 				<Points>305</Points>
 				<Personified/>
@@ -891,9 +887,8 @@
 						<Rule>Immune to the effects of the Killing Blow and Heroic Killing Blow special rules, treating wounding hits that would automatically slay as a normal Wound</Rule>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Lord</Name>
 				<Points>145</Points>
 				<Description>Lord</Description>
@@ -946,9 +941,8 @@
 						<NativeArmour/>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Runelord</Name>
 				<Points>120</Points>
 				<Group>Runesmith</Group>
@@ -991,9 +985,8 @@
 						<NativeArmour/>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Daemon Slayer</Name>
 				<Points>140</Points>
 				<Description>Daemon Slayer</Description>
@@ -1019,9 +1012,8 @@
 						<Name>Array of axes</Name>
 					</HandWeapon>
 				</Equipments>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Josef Bugman</Name>
 				<Points>165</Points>
 				<Personified/>
@@ -1054,7 +1046,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Grimm Burloksson</Name>
 				<Points>165</Points>
 				<Personified/>
@@ -1086,7 +1077,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Thane</Name>
 				<Points>65</Points>
 				<Description>Thane</Description>
@@ -1128,7 +1118,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Runesmith</Name>
 				<Points>60</Points>
 				<Group>Runesmith</Group>
@@ -1166,7 +1155,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Master Engineer</Name>
 				<Points>70</Points>
 				<Description>Master Engineer</Description>
@@ -1203,7 +1191,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Dragon Slayer</Name>
 				<Points>70</Points>
 				<Description>Dragon Slayer</Description>
@@ -1232,21 +1219,18 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Anvil Guards</Name>
 				<Points>0</Points>
 				<Profile M="3" WS="5" BS="3" S="4" T="5" W="1" I="2" A="2" Ld="0"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Shieldbearers</Name>
 				<Points>0</Points>
 				<Profile M="3" WS="5" BS="3" S="4" T="5" W="1" I="3" A="2" Ld="0"/>
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Dwarf Warriors</Name>
 				<Points>8</Points>
 				<Min>10</Min>
@@ -1271,9 +1255,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Quarrellers</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1298,9 +1281,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Thunderers</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1334,9 +1316,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Longbeards</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1363,9 +1344,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Hammerers</Name>
 				<Points>14</Points>
 				<Min>10</Min>
@@ -1392,9 +1372,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:75"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Ironbreakers</Name>
 				<Points>14</Points>
 				<Min>10</Min>
@@ -1434,9 +1413,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Miners</Name>
 				<Points>10</Points>
 				<Min>10</Min>
@@ -1476,9 +1454,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Slayers</Name>
 				<Points>12</Points>
 				<Min>5</Min>
@@ -1506,9 +1483,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Cannon</Name>
 				<Points>120</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1527,9 +1503,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Gyrocopter</Name>
 				<Points>80</Points>
 				<Image>Gyrocopter.jpg</Image>
@@ -1561,9 +1536,8 @@
 						<Points>20</Points>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Bolt Thrower</Name>
 				<Points>55</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1582,9 +1556,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Grudge Thrower</Name>
 				<Points>80</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1603,9 +1576,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Organ Gun</Name>
 				<Points>120</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1625,9 +1597,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Flame Cannon</Name>
 				<Points>140</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1647,9 +1618,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Rangers</Name>
 				<Points>14</Points>
 				<Min>5</Min>
@@ -1677,9 +1647,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Irondrakes</Name>
 				<Points>15</Points>
 				<Min>10</Min>
@@ -1736,9 +1705,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Gyrobomber</Name>
 				<Points>125</Points>
 				<Profile M="1" WS="4" BS="3" S="4" T="5" W="3" I="2" A="2" Ld="9" AS="4"/>
@@ -1769,7 +1737,7 @@
 						<Points>20</Points>
 					</Option>
 				</Options>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 	<CommonXmlOptions>
