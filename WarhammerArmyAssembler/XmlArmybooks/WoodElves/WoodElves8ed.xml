@@ -223,8 +223,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Orion</Name>
 				<Points>600</Points>
 				<Personified/>
@@ -266,9 +265,8 @@
 				<Options>
 					<Mount Name="Hound of Orion" Points="20"/>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Durthu</Name>
 				<Points>385</Points>
 				<Wizard>1</Wizard>
@@ -291,9 +289,8 @@
 						<Rule>Can make the shooting attack with Range 12", Strength 2, Multiple Shots (2D6) and Killing Blow special rule</Rule>
 					</Individual>
 				</SpecialRules>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Araloth</Name>
 				<Points>260</Points>
 				<Wizard>1</Wizard>
@@ -315,9 +312,8 @@
 						<Rule>At the start of each of your turns, nominate a single enemy model within 18" of Araloth. That model takes a Strength 4 hit. If the Wound is unsaved, and the To Wound roll was a 6, the model suffers a -5 penalty to Weapon Skill and Initiative (to a minimum of 1) for the rest of the game. A model can only suffer this penalty once</Rule>
 					</RangeWeapon>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Glade Lord</Name>
 				<Points>145</Points>
 				<Description>Glade Lord</Description>
@@ -448,9 +444,8 @@
 					</RangeWeapon>
 					<LightArmour/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Spellweaver</Name>
 				<Points>185</Points>
 				<Wizard>3</Wizard>
@@ -479,9 +474,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Treeman Ancient</Name>
 				<Points>385</Points>
 				<Wizard>2</Wizard>
@@ -530,9 +524,8 @@
 						<Points>20</Points>
 					</Option>
 				</Options>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Drycha</Name>
 				<Points>255</Points>
 				<Wizard>2</Wizard>
@@ -557,7 +550,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Glade Captain</Name>
 				<Points>75</Points>
 				<Description>Glade Captain</Description>
@@ -690,7 +682,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Spellsinger</Name>
 				<Points>80</Points>
 				<Wizard>1</Wizard>
@@ -720,7 +711,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Shadowdancer</Name>
 				<Points>100</Points>
 				<Description>Shadowdancer</Description>
@@ -760,7 +750,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Waystalker</Name>
 				<Points>100</Points>
 				<Description>Waystalker</Description>
@@ -783,7 +772,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Branchwraith</Name>
 				<Points>75</Points>
 				<Wizard>1</Wizard>
@@ -803,13 +791,11 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Elven Steed</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="3" BS="0" S="3" T="3" W="1" I="4" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Hound of Orion</Name>
 				<Points>0</Points>
 				<ModelsInPack>2</ModelsInPack>
@@ -823,19 +809,16 @@
 				<Other/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Steed of Kurnous</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="3" BS="0" S="4" T="3" W="1" I="4" A="1" Ld="5" Ward="6"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Steed of Isha</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="3" BS="0" S="4" T="3" W="1" I="4" A="1" Ld="5" Ward="4"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Warhawk</Name>
 				<Points>0</Points>
 				<Profile M="1" WS="4" BS="0" S="4" T="4" W="3" I="5" A="2" Ld="5"/>
@@ -849,7 +832,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Great Eagle</Name>
 				<Points>0</Points>
 				<Profile M="2" WS="5" BS="0" S="4" T="4" W="3" I="4" A="2" Ld="8"/>
@@ -859,7 +841,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Great Stag</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="5" BS="0" S="5" T="4" W="3" I="4" A="2" Ld="7" Ward="6"/>
@@ -870,7 +851,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Unicorn</Name>
 				<Points>0</Points>
 				<Profile M="10" WS="5" BS="0" S="4" T="4" W="3" I="5" A="2" Ld="8" Ward="6"/>
@@ -885,7 +865,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Forest Dragon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="6" BS="0" S="6" T="6" W="6" I="3" A="5" Ld="8" AS="3" Ward="6"/>
@@ -901,8 +880,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Glade Guard</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1003,9 +981,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Dryads</Name>
 				<Points>11</Points>
 				<Min>10</Min>
@@ -1021,9 +998,8 @@
 				<Options>
 					<CommandGroup Position="Branch Nymph" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Glade Riders</Name>
 				<Points>19</Points>
 				<Min>5</Min>
@@ -1130,9 +1106,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Eternal Guard</Name>
 				<Points>11</Points>
 				<Min>10</Min>
@@ -1158,9 +1133,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Wildwood Rangers</Name>
 				<Points>11</Points>
 				<Min>10</Min>
@@ -1183,9 +1157,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Wardancers</Name>
 				<Points>15</Points>
 				<Min>5</Min>
@@ -1213,9 +1186,8 @@
 					<CommandGroup Position="Bladesinger" Points="10"/>
 					<CommandGroup Position="Musician" Points="5"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Tree Kin</Name>
 				<Points>45</Points>
 				<Min>3</Min>
@@ -1232,9 +1204,8 @@
 				<Options>
 					<CommandGroup Position="Tree Kin Elder" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Deepwood Scout</Name>
 				<Points>13</Points>
 				<Min>5</Min>
@@ -1336,9 +1307,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Warhawk Riders</Name>
 				<Points>45</Points>
 				<Min>3</Min>
@@ -1364,9 +1334,8 @@
 				<Options>
 					<CommandGroup Position="Wind Rider" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Sisters of the Thorn</Name>
 				<Points>26</Points>
 				<Min>5</Min>
@@ -1393,9 +1362,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Wild Riders</Name>
 				<Points>26</Points>
 				<Min>5</Min>
@@ -1424,9 +1392,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Waywatchers</Name>
 				<Points>20</Points>
 				<Min>5</Min>
@@ -1450,9 +1417,8 @@
 				<Options>
 					<CommandGroup Position="Waywatchers Sentiel" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Great Eagles</Name>
 				<Points>50</Points>
 				<Min>1</Min>
@@ -1461,9 +1427,8 @@
 					<LargeBase/>
 					<Fly/>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Treeman</Name>
 				<Points>225</Points>
 				<Image>Treeman.jpg</Image>
@@ -1486,7 +1451,7 @@
 						<Points>20</Points>
 					</Option>
 				</Options>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
