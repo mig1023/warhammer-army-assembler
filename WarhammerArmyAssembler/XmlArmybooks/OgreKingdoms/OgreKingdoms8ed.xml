@@ -296,8 +296,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Greasus Goldtooth</Name>
 				<Points>545</Points>
 				<Description>Greasus Goldtooth</Description>
@@ -324,9 +323,8 @@
 						<ImmuneToPsychology/>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Skrag the Slaughterer</Name>
 				<Points>425</Points>
 				<Description>Skrag the Slaughterer</Description>
@@ -350,9 +348,8 @@
 						<Name>Two hand weapons</Name>
 					</HandWeapon>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Tyrant</Name>
 				<Points>210</Points>
 				<Description>Tyrant</Description>
@@ -433,9 +430,8 @@
 					</Option>
 					<HeavyArmour Points="5"/>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Slaughtermaster</Name>
 				<Points>250</Points>
 				<Description>Slaughtermaster</Description>
@@ -472,9 +468,8 @@
 						<Points>3</Points>
 					</Option>
 				</Options>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Golgfag's Maneater</Name>
 				<Points>260</Points>
 				<Description>Golgfag's Maneater</Description>
@@ -500,7 +495,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Bragg the Gutsman</Name>
 				<Points>210</Points>
 				<Description>Bragg the Gutsman</Description>
@@ -521,7 +515,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Bruiser</Name>
 				<Points>105</Points>
 				<Description>Bruiser</Description>
@@ -605,7 +598,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Hunter</Name>
 				<Points>130</Points>
 				<Description>Hunter</Description>
@@ -691,7 +683,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Butcher</Name>
 				<Points>100</Points>
 				<Description>Butcher</Description>
@@ -746,7 +737,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Firebelly</Name>
 				<Points>120</Points>
 				<Description>Firebelly</Description>
@@ -793,7 +783,6 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Stonehorn</Name>
 				<Points>0</Points>
 				<Profile M="7" WS="3" BS="0" S="6" T="6" W="6" I="2" A="5" Ld="5" AS="4"/>
@@ -810,7 +799,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Mournfang</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="3" BS="0" S="5" T="4" W="3" I="2" A="4" Ld="5" AS="5"/>
@@ -819,7 +807,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Ogre Beast Rider</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="3" BS="3" S="4" T="4" W="1" I="2" A="3" Ld="7"/>
@@ -829,8 +816,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Ogres</Name>
 				<Points>30</Points>
 				<Min>3</Min>
@@ -877,9 +863,8 @@
 						<Points>5</Points>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Ironguts</Name>
 				<Points>43</Points>
 				<Min>3</Min>
@@ -906,9 +891,8 @@
 						<Points>5</Points>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Gnoblars</Name>
 				<Points>2,5</Points>
 				<Min>10</Min>
@@ -935,9 +919,8 @@
 						<Points>25</Points>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Leadbelchers</Name>
 				<Points>43</Points>
 				<Min>3</Min>
@@ -958,9 +941,8 @@
 					<CommandGroup Position="Thunderfist" Points="10"/>
 					<CommandGroup Position="Musician" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Maneaters</Name>
 				<Points>50</Points>
 				<Min>3</Min>
@@ -1042,9 +1024,8 @@
 						<Points>5</Points>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Sabretusk Pack</Name>
 				<Points>21</Points>
 				<Min>1</Min>
@@ -1058,9 +1039,8 @@
 						<Rule>Can not be joined by character other than Hunters</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Yhetees</Name>
 				<Points>44</Points>
 				<Min>3</Min>
@@ -1077,9 +1057,8 @@
 				<Options>
 					<CommandGroup Position="Greyback" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Mournfang Cavalry</Name>
 				<Points>60</Points>
 				<Min>2</Min>
@@ -1132,9 +1111,8 @@
 					<CommandGroup Position="Bellower" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Gorger</Name>
 				<Points>90</Points>
 				<Image>Gorger.jpg</Image>
@@ -1148,9 +1126,8 @@
 						<Rule>Ambushers</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Gnoblar Scraplauncher</Name>
 				<Points>130</Points>
 				<Image>Scraplauncher.jpg</Image>
@@ -1166,9 +1143,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Ironblaster</Name>
 				<Points>170</Points>
 				<Image>Ironblaster.jpg</Image>
@@ -1184,9 +1160,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Giant</Name>
 				<Points>200</Points>
 				<Image>Giant.jpg</Image>
@@ -1205,9 +1180,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Stonehorn</Name>
 				<Points>250</Points>
 				<Mount>Ogre Beast Rider</Mount>
@@ -1243,9 +1217,8 @@
 						</Dependencies>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Thundertusk</Name>
 				<Points>250</Points>
 				<Mount>Ogre Beast Rider</Mount>
@@ -1270,7 +1243,7 @@
 						<Name>Harpoon Launcher</Name>
 					</RangeWeapon>
 				</Equipments>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
