@@ -500,11 +500,7 @@
 					<Halberd Points="6"/>
 					<GreatWeapon Points="6"/>
 					<Lance Points="6" Only="Mount"/>
-					<Option>
-						<Name>Repeater Crossbow</Name>
-						<Type>Option</Type>
-						<Points>15</Points>
-					</Option>
+					<RepeaterCrossbow Points="15"/>
 					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<SeaDragonCloak Points="6"/>
@@ -563,11 +559,7 @@
 					<GreatWeapon Points="4"/>
 					<Halberd Points="4"/>
 					<Lance Points="4" Only="Mount"/>
-					<Option>
-						<Name>Repeater Crossbow</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-					</Option>
+					<RepeaterCrossbow Points="10"/>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<SeaDragonCloak Points="6"/>
@@ -865,9 +857,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Repeater crossbow</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 				</Equipments>
 				<Options>
 					<LightArmour PointsPerModel="1"/>
@@ -1046,5 +1036,6 @@
 	<CommonXmlOptions>
 		<SeaDragonCloak Title="Sea Dragon Cloak">AddToArmour: 6</SeaDragonCloak>
 		<Crossbows/>
+		<RepeaterCrossbow Title="Repeater Crossbow"/>
 	</CommonXmlOptions>
 </ArmyBook>
