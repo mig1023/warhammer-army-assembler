@@ -660,11 +660,7 @@
 					<GreatWeapon Points="6"/>
 					<Halberd Points="6"/>
 					<AdditionalWeapon Points="6" Only="Infantry"/>
-					<Option>
-						<Name>Repeater Crossbow</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-					</Option>
+					<RepeaterCrossbow Points="10"/>
 					<Option>
 						<Name>Repeater handbow</Name>
 						<Type>Option</Type>
@@ -865,11 +861,7 @@
 						<Type>Option</Type>
 						<Points>6</Points>
 					</Option>
-					<Option>
-						<Name>Repeater Crossbow</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-					</Option>
+					<RepeaterCrossbow Points="10"/>
 					<Option>
 						<Name>Repeater handbow</Name>
 						<Type>Option</Type>
@@ -1032,9 +1024,7 @@
 				<Equipments>
 					<Spear/>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Repeater Crossbows</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 					<Shield/>
 				</Equipments>
 			</Mount>
@@ -1135,9 +1125,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Repeater crossbow</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 					<LightArmour/>
 				</Equipments>
 				<Options>
@@ -1222,12 +1210,7 @@
 						<AddToArmour>6</AddToArmour>
 						<Rule>Not Fast Cavalry anymore</Rule>
 					</Option>
-					<Option>
-						<Name>Repeater crossbow</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<PerModel/>
-					</Option>
+					<RepeaterCrossbow PointsPerModel="5"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1292,9 +1275,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Repeater crossbow</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 				</Equipments>
 				<Options>
 					<Mount Name="Assassin" Points="90"/>
@@ -1425,9 +1406,7 @@
 				<Equipments>
 					<Spear/>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Repeater crossbow</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 				</Equipments>
 			</Unit>
 			<Unit>
@@ -1529,5 +1508,6 @@
 	</Content>
 	<CommonXmlOptions>
 		<ColdOneChariot Title="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
+		<RepeaterCrossbow Title="Repeater Crossbow"/>
 	</CommonXmlOptions>
 </ArmyBook>
