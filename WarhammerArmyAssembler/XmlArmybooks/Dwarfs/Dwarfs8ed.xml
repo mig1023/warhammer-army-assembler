@@ -849,10 +849,7 @@
 						<KillingBlow/>
 						<AddToStrength>2</AddToStrength>
 					</HandWeapon>
-					<Armour>
-						<Name>Gromril armour</Name>
-						<AddToArmour>4</AddToArmour>
-					</Armour>
+					<GromrilArmour/>
 					<Armour>
 						<Name>Dragon Cloak of Fyrskar</Name>
 						<AddToWard>4</AddToWard>
@@ -887,10 +884,7 @@
 						<HitFirst/>
 						<AddToWound>1</AddToWound>
 					</HandWeapon>
-					<Armour>
-						<Name>Gromril armour</Name>
-						<AddToArmour>4</AddToArmour>
-					</Armour>
+					<GromrilArmour/>
 					<Armour>
 						<Name>Shield of Defiance</Name>
 						<AddToWard>4</AddToWard>
@@ -1073,10 +1067,7 @@
 					<RangeWeapon>
 						<Name>Dwarf crossbow</Name>
 					</RangeWeapon>
-					<Armour>
-						<Name>Gromril armour</Name>
-						<AddToArmour>4</AddToArmour>
-					</Armour>
+					<GromrilArmour/>
 					<Shield/>
 					<Arcane>
 						<Name>Bugman's Tankard</Name>
@@ -1106,7 +1097,7 @@
 					<HandWeapon>
 						<Name>God Axe</Name>
 						<ArmourPiercing>1</ArmourPiercing>
-						<Rule>If Grimm scores one or more hits in close combat against a model using a magic weapon, roll a D6; on a 5 + , that weapon is immediately destroyed and cannot be used further in this game</Rule>
+						<Rule>If Grimm scores one or more hits in close combat against a model using a magic weapon, roll a D6; on a 5+, that weapon is immediately destroyed and cannot be used further in this game</Rule>
 					</HandWeapon>
 					<RangeWeapon>
 						<Name>Grudge-raker</Name>
@@ -1115,10 +1106,7 @@
 					<RangeWeapon>
 						<Name>Brace of Dwarf pistols</Name>
 					</RangeWeapon>
-					<Armour>
-						<Name>Gromril armour</Name>
-						<AddToArmour>4</AddToArmour>
-					</Armour>
+					<GromrilArmour/>
 				</Equipments>
 			</Hero>
 			<Hero>
@@ -1489,10 +1477,7 @@
 				<Equipments>
 					<HandWeapon/>
 					<Shield/>
-					<Armour>
-						<Name>Gromril armour</Name>
-						<AddToArmour>4</AddToArmour>
-					</Armour>
+					<GromrilArmour/>
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Ironbeard" Points="10"/>
@@ -1855,4 +1840,7 @@
 			</Unit>
 		</Units>
 	</Content>
+		<CommonXmlOptions>
+		<GromrilArmour Title="Gromril armour">AddToArmour: 4</GromrilArmour>
+	</CommonXmlOptions>
 </ArmyBook>
