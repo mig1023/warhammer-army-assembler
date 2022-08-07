@@ -919,15 +919,7 @@
 							<Off>Dwarf handgun</Off>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Dwarf handgun</Name>
-						<Type>Option</Type>
-						<Points>12</Points>
-						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Dwarf crossbow</Off>
-						</Dependencies>
-					</Option>
+					<DwarfHandgun Points="12" Dependencies="Off: Great weapon, Dwarf crossbow"/>
 					<Option>
 						<Name>Dwarf pistol</Name>
 						<Type>Option</Type>
@@ -1136,15 +1128,7 @@
 							<Off>Dwarf handgun</Off>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Dwarf handgun</Name>
-						<Type>Option</Type>
-						<Points>12</Points>
-						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Dwarf crossbow</Off>
-						</Dependencies>
-					</Option>
+					<DwarfHandgun Points="12" Dependencies="Off: Great weapon, Dwarf crossbow"/>
 					<Option>
 						<Name>Dwarf pistol</Name>
 						<Type>Option</Type>
@@ -1245,11 +1229,7 @@
 						</Dependencies>
 					</Option>
 					<GreatWeapon Points="6"/>
-					<Option>
-						<Name>Dwarf handgun</Name>
-						<Type>Option</Type>
-						<Points>12</Points>
-					</Option>
+					<DwarfHandgun Points="12"/>
 				</Options>
 				<Equipments>
 					<HandWeapon>
@@ -1380,9 +1360,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Dwarf handgun</Name>
-					</RangeWeapon>
+					<DwarfHandgun/>
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
@@ -1840,7 +1818,8 @@
 			</Unit>
 		</Units>
 	</Content>
-		<CommonXmlOptions>
+	<CommonXmlOptions>
 		<GromrilArmour Title="Gromril armour">AddToArmour: 4</GromrilArmour>
+		<DwarfHandgun Title="Dwarf handgun"/>
 	</CommonXmlOptions>
 </ArmyBook>
