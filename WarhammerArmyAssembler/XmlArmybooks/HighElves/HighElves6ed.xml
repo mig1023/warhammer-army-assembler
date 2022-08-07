@@ -441,8 +441,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Imrik</Name>
 				<Points>675</Points>
 				<Mount>Minaithnir</Mount>
@@ -473,9 +472,8 @@
 						<Rule>Once per battle, at the start of any of his own turns, Imrik may sound the Dragonhorn: until the start of his next turn, all friendly High Elf units may re-roll any Leadership-based tests</Rule>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Tyrion</Name>
 				<Points>585</Points>
 				<Mount>Malhandir</Mount>
@@ -511,9 +509,8 @@
 						<WardForLastWound>2</WardForLastWound>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Teclis</Name>
 				<Points>630</Points>
 				<Wizard>4</Wizard>
@@ -560,9 +557,8 @@
 						<Rule>Any spell which is normally limited to a specific range in inches is now of unlimited range</Rule>
 					</Arcane>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Prince</Name>
 				<Points>125</Points>
 				<Description>Prince</Description>
@@ -601,9 +597,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Archmage</Name>
 				<Points>220</Points>
 				<Wizard>3</Wizard>
@@ -622,9 +617,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Commander</Name>
 				<Points>70</Points>
 				<Description>Commander</Description>
@@ -663,7 +657,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Mage</Name>
 				<Points>95</Points>
 				<Wizard>1</Wizard>
@@ -684,25 +677,21 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Elven Steed</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="3" BS="0" S="3" T="3" W="1" I="4" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Barded Elven Steed</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="3" BS="0" S="3" T="3" W="1" I="4" A="1" Ld="5" AS="6"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Malhandir</Name>
 				<Points>0</Points>
 				<Profile M="10" WS="4" BS="0" S="4" T="3" W="3" I="5" A="2" Ld="7" AS="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Great Eagle</Name>
 				<Points>0</Points>
 				<Profile M="2" WS="5" BS="0" S="5" T="4" W="3" I="4" A="2" Ld="8"/>
@@ -712,7 +701,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Griffon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="5" BS="0" S="5" T="5" W="4" I="5" A="4" Ld="7"/>
@@ -724,7 +712,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Dragon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="6" BS="0" S="6" T="6" W="6" I="3" A="5" Ld="8"/>
@@ -746,7 +733,6 @@
 				</Equipments>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Minaithnir</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="7" BS="0" S="6" T="6" W="7" I="3" A="5" Ld="8"/>
@@ -769,8 +755,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Archers</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -786,9 +771,8 @@
 					<CommandGroup Position="Standard bearer" Points="12"/>
 					<CommandGroup Position="Champion" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Spearman</Name>
 				<Points>11</Points>
 				<Min>10</Min>
@@ -810,9 +794,8 @@
 					<CommandGroup Position="Standard bearer" Points="12"/>
 					<CommandGroup Position="Champion" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Lothern Sea Guard</Name>
 				<Points>15</Points>
 				<Min>10</Min>
@@ -836,9 +819,8 @@
 					<CommandGroup Position="Standard bearer" Points="14"/>
 					<CommandGroup Position="Champion" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Silver Helms</Name>
 				<Points>19</Points>
 				<Min>5</Min>
@@ -861,9 +843,8 @@
 					<CommandGroup Position="Standard bearer" Points="14"/>
 					<CommandGroup Position="Champion" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Ellyrian Reavers</Name>
 				<Points>18</Points>
 				<Min>5</Min>
@@ -903,9 +884,8 @@
 					<CommandGroup Position="Musician" Points="7"/>
 					<CommandGroup Position="Standard bearer" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Dragon Princes of Caledor</Name>
 				<Points>26</Points>
 				<Min>5</Min>
@@ -928,9 +908,8 @@
 					<CommandGroup Position="Standard bearer" Points="18" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Drakemaster" Points="18" Magic="Type:Hero, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Swordmasters of Hoeth</Name>
 				<Points>13</Points>
 				<Min>5</Min>
@@ -952,9 +931,8 @@
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Bladelord" Points="12" Magic="Type:Hero, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Shadow Warriors</Name>
 				<Points>15</Points>
 				<Min>5</Min>
@@ -976,9 +954,8 @@
 				<Options>
 					<CommandGroup Position="Shadow-walker" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Tiranoc Chariot</Name>
 				<Points>85</Points>
 				<Chariot>2</Chariot>
@@ -997,9 +974,8 @@
 					<Spear/>
 					<Bow/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Phoenix Guard</Name>
 				<Points>15</Points>
 				<Min>10</Min>
@@ -1019,9 +995,8 @@
 					<CommandGroup Position="Standard bearer" Points="14" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Keeper of the Flame" Points="12" Magic="Type:Hero, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Repeater Bolt Thrower</Name>
 				<Points>100</Points>
 				<Image>RepeaterBoltThrower.jpg</Image>
@@ -1035,9 +1010,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Rare>
+			<Special>
 				<Name>White Lions</Name>
 				<Points>13</Points>
 				<Min>10</Min>
@@ -1066,9 +1040,8 @@
 					<CommandGroup Position="Standard bearer" Points="14" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Guardian" Points="14" Magic="Type:Hero, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Great Eagle</Name>
 				<Points>50</Points>
 				<Image>GreatEagle.jpg</Image>
@@ -1077,7 +1050,7 @@
 					<LargeBase/>
 					<Fly/>
 				</SpecialRules>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
