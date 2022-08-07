@@ -162,7 +162,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return UnitType.Core;
 
-            bool success = Enum.TryParse(xmlNode.InnerText, out UnitType value);
+            bool success = Enum.TryParse(xmlNode.Name, out UnitType value);
 
             return (success ? value : UnitType.Core);
         }

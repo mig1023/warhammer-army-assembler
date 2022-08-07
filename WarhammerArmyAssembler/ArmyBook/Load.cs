@@ -148,9 +148,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             LoadStyles(xmlFile);
 
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Units/Unit", ref Data.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Heroes/Hero", ref Data.Units);
-            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Mounts/Mount", ref Data.Mounts);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Units/*", ref Data.Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Heroes/*", ref Data.Units);
+            LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Mounts/*", ref Data.Mounts);
 
             foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/Group"))
             {
@@ -213,7 +213,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 IDView = id.ToString(),
 
                 Name = StringParse(xmlUnit["Name"]),
-                Type = UnitTypeParse(xmlUnit["Type"]),
+                Type = UnitTypeParse(xmlUnit),
                 Points = DoubleParse(xmlUnit["Points"]),
                 UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]),
                 Wizard = IntParse(xmlUnit["Wizard"]),
