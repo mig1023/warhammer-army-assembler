@@ -752,14 +752,7 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="6" Dependencies="Off: Pistol"/>
-					<Option>
-						<Name>Pistol</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
+					<Pistol Points="10" Dependencies="Off: Great weapon"/>
 					<Option>
 						<Name>Crossbow</Name>
 						<Type>Option</Type>
@@ -844,14 +837,7 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="4" Dependencies="Off: Pistol"/>
-					<Option>
-						<Name>Pistol</Name>
-						<Type>Option</Type>
-						<Points>7</Points>
-						<Dependencies>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
+					<Pistol Points="7" Dependencies="Off: Great weapon"/>
 					<Option>
 						<Name>Crossbow</Name>
 						<Type>Option</Type>
@@ -913,15 +899,7 @@
 				</SpecialRules>
 				<Options>
 					<GreatWeapon Points="4" Dependencies="Off: Pistol, Brace of pistols"/>
-					<Option>
-						<Name>Pistol</Name>
-						<Type>Option</Type>
-						<Points>7</Points>
-						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Brace of pistols</Off>
-						</Dependencies>
-					</Option>
+					<Pistol Points="7" Dependencies="Off: Great weapon, Brace of pistols"/>
 					<Option>
 						<Name>Brace of pistols</Name>
 						<Type>Option</Type>
@@ -1314,5 +1292,6 @@
 	</Content>
 	<CommonXmlOptions>
 		<GromrilArmour Title="Gromril armour">AddToArmour: 4</GromrilArmour>
+		<Pistol/>
 	</CommonXmlOptions>
 </ArmyBook>
