@@ -523,13 +523,7 @@
 				<Options>
 					<Mount Name="Cold One" Points="30"/>
 					<Mount Name="Black Dragon" Points="320"/>
-					<Option>
-						<Name>Cold One Chariot</Name>
-						<Type>Option</Type>
-						<Points>110</Points>
-						<Mount/>
-						<AddToArmour>2</AddToArmour>
-					</Option>
+					<ColdOneChariot Points="110"/>
 				</Options>
 				<Equipments>
 					<HandWeapon>
@@ -695,13 +689,7 @@
 					<Mount Name="Dark Pegasus" Points="50"/>
 					<Mount Name="Manticore" Points="200"/>
 					<Mount Name="Black Dragon" Points="320"/>
-					<Option>
-						<Name>Cold One Chariot</Name>
-						<Type>Option</Type>
-						<Points>90</Points>
-						<Mount/>
-						<AddToArmour>2</AddToArmour>
-					</Option>
+					<ColdOneChariot Points="90"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
@@ -905,13 +893,7 @@
 					<Mount Name="Cold One" Points="20"/>
 					<Mount Name="Dark Pegasus" Points="50"/>
 					<Mount Name="Manticore" Points="200"/>
-					<Option>
-						<Name>Cold One Chariot</Name>
-						<Type>Option</Type>
-						<Points>90</Points>
-						<Mount/>
-						<AddToArmour>2</AddToArmour>
-					</Option>
+					<ColdOneChariot Points="90"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
 				<Equipments>
@@ -1545,4 +1527,7 @@
 			</Unit>
 		</Units>
 	</Content>
+	<CommonXmlOptions>
+		<ColdOneChariot Title="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
+	</CommonXmlOptions>
 </ArmyBook>
