@@ -405,15 +405,7 @@
 					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Halberd, Lance"/>
 					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
 					<RepeaterHandbow Points="5" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
-					<Option>
-						<Name>Pair of repeater handbow</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Repeater Crossbow</Off>
-							<Off>Repeater handbow</Off>
-						</Dependencies>
-						<Points>10</Points>
-					</Option>
+					<PairOfRepeaterHandbow Points="10" Dependencies="Off: Repeater Crossbow, Repeater handbow"/>
 					<HeavyArmour Points="6"/>
 					<Shield Points="3"/>
 					<Option>
@@ -1572,5 +1564,6 @@
 		<ColdOneChariot Title="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
 		<RepeaterCrossbow Title="Repeater Crossbow"/>
 		<RepeaterHandbow Title="Repeater handbow"/>
+		<PairOfRepeaterHandbow Title="Pair of repeater handbow"/>
 	</CommonXmlOptions>
 </ArmyBook>
