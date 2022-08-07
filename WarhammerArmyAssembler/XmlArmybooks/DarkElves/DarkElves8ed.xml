@@ -399,62 +399,11 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<Dependencies>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>3</Points>
-					</Option>
-					<Option>
-						<Name>Halberd</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Lance</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<AddToStrength>1</AddToStrength>
-						<Points>3</Points>
-					</Option>
-					<Option>
-						<Name>Lance</Name>
-						<Type>Option</Type>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>7</Points>
-						<Lance/>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-						</Dependencies>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Repeater Crossbow</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Repeater handbow</Off>
-							<Off>Pair of repeater handbow</Off>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
+					<AdditionalWeapon Points="3" Dependencies="Off: Halberd, Lance, Great weapon" Only="Infantry"/>
+					<Halberd Points="3" Dependencies="Off: Additional weapon, Lance, Great weapon"/>
+					<Lance Points="7" Dependencies="Off: Additional weapon, Halberd, Great weapon" Only="Mount"/>
+					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Halberd, Lance"/>
+					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
 					<Option>
 						<Name>Repeater handbow</Name>
 						<Type>Option</Type>
@@ -806,15 +755,7 @@
 						<Points>6</Points>
 						<Lance/>
 					</Option>
-					<Option>
-						<Name>Repeater Crossbow</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Repeater handbow</Off>
-							<Off>Pair of repeater handbow</Off>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
+					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
 					<Option>
 						<Name>Repeater handbow</Name>
 						<Type>Option</Type>
@@ -1246,9 +1187,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Repeater crossbow</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 					<LightArmour/>
 				</Equipments>
 				<Options>
@@ -1338,12 +1277,7 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Repeater crossbow</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<PerModel/>
-					</Option>
+					<RepeaterCrossbow PointsPerModel="3"/>
 				</Options>
 			</Unit>
 			<Unit>
@@ -1444,9 +1378,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Repeater crossbow</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 				</Equipments>
 				<Options>
 					<Option>
@@ -1499,9 +1431,7 @@
 				<Equipments>
 					<HandWeapon/>
 					<Spear/>
-					<RangeWeapon>
-						<Name>Repeater crossbow</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 				</Equipments>
 			</Unit>
 			<Unit>
@@ -1579,9 +1509,7 @@
 				<Equipments>
 					<HandWeapon/>
 					<Spear/>
-					<RangeWeapon>
-						<Name>Repeater crossbow</Name>
-					</RangeWeapon>
+					<RepeaterCrossbow/>
 					<RangeWeapon>
 						<Name>Ravager Harpoon</Name>
 					</RangeWeapon>
@@ -1683,5 +1611,6 @@
 	</Content>
 	<CommonXmlOptions>
 		<ColdOneChariot Title="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
+		<RepeaterCrossbow Title="Repeater Crossbow"/>
 	</CommonXmlOptions>
 </ArmyBook>
