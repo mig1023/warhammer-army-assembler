@@ -1120,25 +1120,8 @@
 					</Armour>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<Type>Option</Type>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Repeater handbows</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>2</Points>
-					</Option>
-					<Option>
-						<Name>Repeater handbows</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<PerModel/>
-						<Points>2</Points>
-					</Option>
+					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Repeater handbows"/>
+					<RepeaterHandbows PointsPerModel="2" Dependencies="Off: Additional weapon"/>
 					<CommandGroup Position="Reaver" Points="10"/>
 					<Option>
 						<Name>A brace of repeater handbows</Name>
