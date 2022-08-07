@@ -1081,9 +1081,7 @@
 						<Name>Grudge-raker</Name>
 						<Rule>Grudge-raker has range 18", Strength 4, Armour Piercing, Dwarf-crafted, Multiple Shots (2D3)</Rule>
 					</RangeWeapon>
-					<RangeWeapon>
-						<Name>Brace of Dwarf pistols</Name>
-					</RangeWeapon>
+					<BraceOfDwarfPistols/>
 					<GromrilArmour/>
 				</Equipments>
 			</Hero>
@@ -1187,14 +1185,7 @@
 				</SpecialRules>
 				<Options>
 					<DwarfPistol Points="6" Dependencies="Off: Brace of Dwarf pistols"/>
-					<Option>
-						<Name>Brace of Dwarf pistols</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Dependencies>
-							<Off>Dwarf pistol</Off>
-						</Dependencies>
-					</Option>
+					<BraceOfDwarfPistols Points="10" Dependencies="Off: Dwarf pistol"/>
 					<GreatWeapon Points="6"/>
 					<DwarfHandgun Points="12"/>
 				</Options>
@@ -1786,5 +1777,6 @@
 		<DwarfHandgun Title="Dwarf handgun"/>
 		<DwarfCrossbow Title="Dwarf crossbow"/>
 		<DwarfPistol Title="Dwarf pistol"/>
+		<BraceOfDwarfPistols Title="Brace of Dwarf pistols"/>
 	</CommonXmlOptions>
 </ArmyBook>
