@@ -778,16 +778,7 @@
 					</Option>
 					<LightArmour Points="3" Dependencies="Off: Heavy armour, Gromril armour"/>
 					<HeavyArmour Points="6" Dependencies="Off: Light armour, Gromril armour"/>
-					<Option>
-						<Name>Gromril armour</Name>
-						<Type>Option</Type>
-						<Points>12</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>4</AddToArmour>
-					</Option>
+					<GromrilArmour Points="12" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="3"/>
 				</Options>
 			</Hero>
@@ -809,16 +800,7 @@
 					<GreatWeapon Points="6"/>
 					<LightArmour Points="3" Dependencies="Off: Heavy armour, Gromril armour"/>
 					<HeavyArmour Points="6" Dependencies="Off: Light armour, Gromril armour"/>
-					<Option>
-						<Name>Gromril armour</Name>
-						<Type>Option</Type>
-						<Points>12</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>4</AddToArmour>
-					</Option>
+					<GromrilArmour Points="12" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="3"/>
 					<Option>
 						<Name>Anvil of Doom</Name>
@@ -888,16 +870,7 @@
 					</Option>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
 					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
-					<Option>
-						<Name>Gromril armour</Name>
-						<Type>Option</Type>
-						<Points>8</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>4</AddToArmour>
-					</Option>
+					<GromrilArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="2"/>
 				</Options>
 			</Hero>
@@ -919,16 +892,7 @@
 					<GreatWeapon Points="4"/>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
 					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
-					<Option>
-						<Name>Gromril armour</Name>
-						<Type>Option</Type>
-						<Points>8</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>4</AddToArmour>
-					</Option>
+					<GromrilArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="2"/>
 				</Options>
 			</Hero>
@@ -974,16 +938,7 @@
 					</Option>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
 					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
-					<Option>
-						<Name>Gromril armour</Name>
-						<Type>Option</Type>
-						<Points>8</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>4</AddToArmour>
-					</Option>
+					<GromrilArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
@@ -1222,10 +1177,7 @@
 				<Profile M="3" WS="5" BS="3" S="4" T="4" W="1" I="2" A="1" Ld="9"/>
 				<Equipments>
 					<HandWeapon/>
-					<Armour>
-						<Name>Gromril armour</Name>
-						<AddToArmour>4</AddToArmour>
-					</Armour>
+					<GromrilArmour/>
 					<Shield/>
 				</Equipments>
 				<Options>
@@ -1360,4 +1312,7 @@
 			</Unit>
 		</Units>
 	</Content>
+	<CommonXmlOptions>
+		<GromrilArmour Title="Gromril armour">AddToArmour: 4</GromrilArmour>
+	</CommonXmlOptions>
 </ArmyBook>
