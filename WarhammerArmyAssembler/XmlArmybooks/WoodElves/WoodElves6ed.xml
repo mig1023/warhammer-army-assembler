@@ -460,8 +460,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Orion</Name>
 				<Points>575</Points>
 				<Personified/>
@@ -508,9 +507,8 @@
 						</Countable>
 					</Option>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Drycha</Name>
 				<Points>355</Points>
 				<Wizard>2</Wizard>
@@ -531,9 +529,8 @@
 						<Rule>May cast the Tree Singing spell twince each turn</Rule>
 					</Individual>
 				</SpecialRules>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Wood Elf Highborn</Name>
 				<Points>145</Points>
 				<Description>Wood Elf Highborn</Description>
@@ -681,9 +678,8 @@
 				<Equipments>
 					<LongBow/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Spellweaver</Name>
 				<Points>215</Points>
 				<Wizard>3</Wizard>
@@ -716,9 +712,8 @@
 				<Equipments>
 					<LongBow/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Treeman Ancient</Name>
 				<Points>325</Points>
 				<Group>Treemen</Group>
@@ -737,9 +732,8 @@
 						<Rule>Tree Singing</Rule>
 					</Individual>
 				</SpecialRules>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Wood Elf Noble</Name>
 				<Points>75</Points>
 				<Description>Wood Elf Noble</Description>
@@ -889,7 +883,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Spellsinger</Name>
 				<Points>90</Points>
 				<Wizard>1</Wizard>
@@ -923,7 +916,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Branchwraith</Name>
 				<Points>65</Points>
 				<Group>Treemen</Group>
@@ -941,13 +933,11 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Elven Steed</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="3" BS="0" S="3" T="3" W="1" I="4" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Great Stag</Name>
 				<Points>0</Points>
 				<Profile M="9" WS="5" BS="0" S="5" T="4" W="3" I="4" A="2" Ld="7" Ward="5"/>
@@ -956,7 +946,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Great Eagle</Name>
 				<Points>0</Points>
 				<Profile M="2" WS="5" BS="0" S="4" T="4" W="3" I="4" A="2" Ld="8"/>
@@ -966,13 +955,11 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Warhawk</Name>
 				<Points>0</Points>
 				<Profile M="1" WS="4" BS="0" S="4" T="3" I="5" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Unicorn</Name>
 				<Points>0</Points>
 				<Profile M="10" WS="5" BS="0" S="4" T="4" W="3" I="5" A="2" Ld="8" Ward="5"/>
@@ -985,7 +972,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Forest Dragon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="6" BS="0" S="6" T="6" W="6" I="3" A="5" Ld="8" AS="3"/>
@@ -1002,8 +988,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Glade Guard</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1030,9 +1015,8 @@
 					<CommandGroup Position="Standard Bearer" Points="12" Magic="Type:Unit, Points:25"/>
 					<CommandGroup Position="Lord's Bowman" Points="6"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Glade Riders</Name>
 				<Points>24</Points>
 				<Min>5</Min>
@@ -1054,9 +1038,8 @@
 					<CommandGroup Position="Standard bearer" Points="18"/>
 					<CommandGroup Position="Horsemaster" Points="9"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Eternal Guard</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1081,9 +1064,8 @@
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Eternal Warden" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Dryads</Name>
 				<Points>12</Points>
 				<Min>8</Min>
@@ -1103,9 +1085,8 @@
 				<Options>
 					<CommandGroup Position="Branch Nymph" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Wardancers Troupe</Name>
 				<Points>18</Points>
 				<Min>5</Min>
@@ -1129,9 +1110,8 @@
 					<CommandGroup Position="Musician" Points="7"/>
 					<CommandGroup Position="Bladesinger" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Warhawk Riders</Name>
 				<Points>40</Points>
 				<Min>3</Min>
@@ -1152,9 +1132,8 @@
 				<Options>
 					<CommandGroup Position="Wind Rider" Points="20"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Wild Riders of Kurnous</Name>
 				<Points>26</Points>
 				<Min>5</Min>
@@ -1181,9 +1160,8 @@
 					<CommandGroup Position="Standard bearer" Points="18" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Wild Hunter" Points="18"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Tree Kin</Name>
 				<Points>65</Points>
 				<Min>3</Min>
@@ -1203,9 +1181,8 @@
 				<Options>
 					<CommandGroup Position="Tree Kin Elder" Points="20"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Waywatchers</Name>
 				<Points>24</Points>
 				<Min>5</Min>
@@ -1227,9 +1204,8 @@
 				<Options>
 					<CommandGroup Position="Shadow Sentiel" Points="8"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Treeman</Name>
 				<Points>285</Points>
 				<Image>Treeman.jpg</Image>
@@ -1250,9 +1226,8 @@
 						<Name>Gnarled fists</Name>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Great Eagles</Name>
 				<Points>50</Points>
 				<Min>1</Min>
@@ -1266,7 +1241,7 @@
 						<Name>Powerful talon</Name>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
