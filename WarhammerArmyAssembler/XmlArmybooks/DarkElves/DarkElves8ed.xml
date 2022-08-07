@@ -641,7 +641,6 @@
 					<Armour>
 						<Name>Heavy armour</Name>
 						<AddToArmour>5</AddToArmour>
-						<Rule>Hate High Elves</Rule>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -687,53 +686,13 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<Dependencies>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>2</Points>
-					</Option>
-					<Option>
-						<Name>Halberd</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Lance</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<AddToStrength>1</AddToStrength>
-						<Points>2</Points>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-						</Dependencies>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Lance</Name>
-						<Type>Option</Type>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-						<Points>6</Points>
-						<Lance/>
-					</Option>
+					<AdditionalWeapon Points="2" Dependencies="Off: Halberd, Lance, Great weapon" Only="Infantry"/>
+					<Halberd Points="2" Dependencies="Off: Additional weapon, Lance, Great weapon"/>
+					<GreatWeapon Points="4" Dependencies="Off: Additional weapon, Halberd, Lance"/>
+					<Lance Points="6" Dependencies="Off: Additional weapon, Halberd, Great weapon" Only="Mount"/>
+					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
+					<RepeaterHandbow Points="5" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
+					<PairOfRepeaterHandbow Points="10" Dependencies="Off: Repeater Crossbow, Repeater handbow"/>
 					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
 					<RepeaterHandbow Points="10" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
 					<HeavyArmour Points="4"/>
