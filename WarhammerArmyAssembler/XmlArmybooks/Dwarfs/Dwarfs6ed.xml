@@ -753,22 +753,8 @@
 				<Options>
 					<GreatWeapon Points="6" Dependencies="Off: Pistol"/>
 					<Pistol Points="10" Dependencies="Off: Great weapon"/>
-					<Option>
-						<Name>Crossbow</Name>
-						<Type>Option</Type>
-						<Points>15</Points>
-						<Dependencies>
-							<Off>Dwarf handgun</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Dwarf handgun</Name>
-						<Type>Option</Type>
-						<Points>21</Points>
-						<Dependencies>
-							<Off>Crossbow</Off>
-						</Dependencies>
-					</Option>
+					<Crossbow Points="15" Dependencies="Off: Dwarf handgun"/>
+					<DwarfHandgun Points="21" Dependencies="Off: Crossbow"/>
 					<LightArmour Points="3" Dependencies="Off: Heavy armour, Gromril armour"/>
 					<HeavyArmour Points="6" Dependencies="Off: Light armour, Gromril armour"/>
 					<GromrilArmour Points="12" Dependencies="Off: Light armour, Heavy armour"/>
@@ -838,22 +824,8 @@
 				<Options>
 					<GreatWeapon Points="4" Dependencies="Off: Pistol"/>
 					<Pistol Points="7" Dependencies="Off: Great weapon"/>
-					<Option>
-						<Name>Crossbow</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Dependencies>
-							<Off>Dwarf handgun</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Dwarf handgun</Name>
-						<Type>Option</Type>
-						<Points>14</Points>
-						<Dependencies>
-							<Off>Crossbow</Off>
-						</Dependencies>
-					</Option>
+					<Crossbow Points="10" Dependencies="Off: Dwarf handgun"/>
+					<DwarfHandgun Points="14" Dependencies="Off: Crossbow"/>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
 					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
 					<GromrilArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
@@ -991,9 +963,7 @@
 				<Profile M="3" WS="4" BS="3" S="3" T="4" W="1" I="2" A="1" Ld="9"/>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Crossbow</Name>
-					</RangeWeapon>
+					<Crossbow/>
 					<LightArmour/>
 				</Equipments>
 				<Options>
@@ -1082,12 +1052,7 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Crossbows</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<PerModel/>
-					</Option>
+					<Crossbow PointsPerModel="5"/>
 					<Option>
 						<Name>Throwing axe</Name>
 						<Type>Option</Type>
@@ -1293,5 +1258,7 @@
 	<CommonXmlOptions>
 		<GromrilArmour Title="Gromril armour">AddToArmour: 4</GromrilArmour>
 		<Pistol/>
+		<Crossbow/>
+		<DwarfHandgun Title="Dwarf handgun"/>
 	</CommonXmlOptions>
 </ArmyBook>
