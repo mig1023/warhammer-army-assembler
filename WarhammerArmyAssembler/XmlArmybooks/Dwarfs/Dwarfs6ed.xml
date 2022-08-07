@@ -668,8 +668,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Thorek Ironbrow</Name>
 				<Points>505</Points>
 				<Personified/>
@@ -695,9 +694,8 @@
 						<ArmourTo>1</ArmourTo>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>King Alrik Ranulfsson</Name>
 				<Points>425</Points>
 				<Personified/>
@@ -737,9 +735,8 @@
 						<Rule>In battle, this has the effect of allowing friendly units within 12" of King Alrik to re-roll failed break tests, just like an army standard</Rule>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Lord</Name>
 				<Points>135</Points>
 				<Description>Lord</Description>
@@ -760,9 +757,8 @@
 					<GromrilArmour Points="12" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="3"/>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Runelord</Name>
 				<Points>140</Points>
 				<Group>Runesmith</Group>
@@ -789,9 +785,8 @@
 						<Mount/>
 					</Option>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Daemon Slayer</Name>
 				<Points>130</Points>
 				<Description>Daemon Slayer</Description>
@@ -808,9 +803,8 @@
 					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
 					<AdditionalWeapon Points="6" Dependencies="Off: Great weapon"/>
 				</Options>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Thane</Name>
 				<Points>55</Points>
 				<Description>Thane</Description>
@@ -833,7 +827,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Runesmith</Name>
 				<Points>70</Points>
 				<Group>Runesmith</Group>
@@ -855,7 +848,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Engineer</Name>
 				<Points>65</Points>
 				<Group>Engineering</Group>
@@ -891,7 +883,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Dragon Slayer</Name>
 				<Points>65</Points>
 				<Description>Dragon Slayer</Description>
@@ -912,15 +903,13 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Anvil of Doom</Name>
 				<Points>0</Points>
 				<Profile M="3" WS="5" BS="3" S="4" T="4" W="2" I="2" A="4" Ld="10" AS="4"/>
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Warriors</Name>
 				<Points>7</Points>
 				<Min>10</Min>
@@ -949,9 +938,8 @@
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<CommandGroup Position="Veteran" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Crossbowmen</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -968,9 +956,8 @@
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<CommandGroup Position="Veteran" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Thunderers</Name>
 				<Points>14</Points>
 				<Min>10</Min>
@@ -995,9 +982,8 @@
 						</Dependencies>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Miners</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1024,9 +1010,8 @@
 					<CommandGroup Position="Standard bearer" Points="12"/>
 					<CommandGroup Position="Prospector" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Rangers</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -1057,9 +1042,8 @@
 					<CommandGroup Position="Standard bearer" Points="12"/>
 					<CommandGroup Position="Veteran" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Hammerers</Name>
 				<Points>14</Points>
 				<Min>10</Min>
@@ -1082,9 +1066,8 @@
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Gate Keeper" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Longbeards</Name>
 				<Points>14</Points>
 				<Min>10</Min>
@@ -1104,9 +1087,8 @@
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Greatbeard" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Ironbreakers</Name>
 				<Points>13</Points>
 				<Min>10</Min>
@@ -1122,9 +1104,8 @@
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Ironbeard" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Slayers</Name>
 				<Points>11</Points>
 				<Min>10</Min>
@@ -1143,9 +1124,8 @@
 					<CommandGroup Position="Standard bearer" Points="12"/>
 					<CommandGroup Position="Giant Slayers" Points="15"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Cannon</Name>
 				<Points>100</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1160,9 +1140,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Bolt Thrower</Name>
 				<Points>45</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1177,9 +1156,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Stone Thrower</Name>
 				<Points>85</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1193,9 +1171,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Organ Gun</Name>
 				<Points>125</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1209,9 +1186,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Flame Cannon</Name>
 				<Points>140</Points>
 				<ModelsInPack>4</ModelsInPack>
@@ -1226,9 +1202,8 @@
 					<HandWeapon/>
 					<LightArmour/>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Gyrocopter</Name>
 				<Points>140</Points>
 				<Image>Gyrocopter.jpg</Image>
@@ -1246,7 +1221,7 @@
 						<Name>Steam gun</Name>
 					</RangeWeapon>
 				</Equipments>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 	<CommonXmlOptions>
