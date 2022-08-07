@@ -511,8 +511,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Green Knight</Name>
 				<Points>275</Points>
 				<Personified/>
@@ -536,9 +535,8 @@
 					<HeavyArmour/>
 					<Shield/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Fay Enchantress</Name>
 				<Points>545</Points>
 				<Wizard>4</Wizard>
@@ -577,9 +575,8 @@
 						<AddToDispell>1</AddToDispell>
 					</Arcane>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>King Louen</Name>
 				<Points>728</Points>
 				<Personified/>
@@ -614,9 +611,8 @@
 						<Rule>Louen has a Magic Resistance value equal to the total number of dice used in the casting of any spell that affects him</Rule>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Bretonnian Lord</Name>
 				<Points>110</Points>
 				<Description>Bretonnian Lord</Description>
@@ -687,9 +683,8 @@
 					<Mount Name="Royal Pegasus" Points="50"/>
 					<Mount Name="Hippogryph" Points="200"/>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Prophetess of the Lady</Name>
 				<Points>190</Points>
 				<Wizard>3</Wizard>
@@ -719,9 +714,8 @@
 					</Option>
 					<Mount Name="Royal Pegasus" Points="50"/>
 				</Options>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Paladin</Name>
 				<Points>60</Points>
 				<Description>Paladin</Description>
@@ -794,7 +788,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Damsel of the Lady</Name>
 				<Points>70</Points>
 				<Wizard>1</Wizard>
@@ -827,25 +820,21 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Horse</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="3" BS="0" S="3" T="3" W="1" I="3" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Barded Warhorse</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="3" BS="0" S="3" T="3" W="1" I="3" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>The Shadow Steed</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="4" BS="0" S="4" T="3" W="1" I="4" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Silvaron</Name>
 				<Points>0</Points>
 				<Profile M="10" WS="5" BS="0" S="4" T="4" W="3" I="5" A="2" Ld="8" Ward="5"/>
@@ -855,7 +844,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Royal Pegasus</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="3" BS="0" S="4" T="4" W="3" I="4" A="2" Ld="7"/>
@@ -864,7 +852,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Beaquis</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="5" BS="0" S="5" T="5" W="4" I="6" A="4" Ld="9"/>
@@ -876,7 +863,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Hippogryph</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="4" BS="0" S="5" T="5" W="4" I="4" A="4" Ld="7"/>
@@ -889,8 +875,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Knights Errant</Name>
 				<Group>Knights</Group>
 				<Points>20</Points>
@@ -915,9 +900,8 @@
 					<CommandGroup Position="Musician" Points="7"/>
 					<CommandGroup Position="Standard bearer" Points="14" Magic="Type:Unit, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Knights of the Realm</Name>
 				<Group>Knights</Group>
 				<Points>24</Points>
@@ -937,9 +921,8 @@
 					<CommandGroup Position="Musician" Points="8"/>
 					<CommandGroup Position="Standard bearer" Points="16" Magic="Type:Unit, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Men-at-arms</Name>
 				<Points>5</Points>
 				<Min>10</Min>
@@ -969,9 +952,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Peasant Bowman</Name>
 				<Points>6</Points>
 				<Min>10</Min>
@@ -1007,9 +989,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Questing Knights</Name>
 				<Group>QuestingVow</Group>
 				<Points>28</Points>
@@ -1034,9 +1015,8 @@
 					<CommandGroup Position="Musician" Points="9"/>
 					<CommandGroup Position="Standard bearer" Points="18" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Pegasus Knights</Name>
 				<Group>Knights</Group>
 				<Points>55</Points>
@@ -1060,9 +1040,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="20"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Mounted Yeomen</Name>
 				<Points>15</Points>
 				<Min>5</Min>
@@ -1086,9 +1065,8 @@
 					<CommandGroup Position="Musician" Points="7"/>
 					<CommandGroup Position="Standard bearer" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Grail Knights</Name>
 				<Group>GrailVow</Group>
 				<Points>38</Points>
@@ -1115,9 +1093,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Field Trebuchet</Name>
 				<Points>90</Points>
 				<Mount>Peasant</Mount>
@@ -1132,7 +1109,7 @@
 				<Options>
 					<CommandGroup Position="Yeoman Craftsman" Points="10"/>
 				</Options>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
