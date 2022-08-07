@@ -370,8 +370,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Gray Seer Thanquol</Name>
 				<Wizard>4</Wizard>
 				<Points>560</Points>
@@ -409,9 +408,8 @@
 						<Points>200</Points>
 					</Option>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Throt</Name>
 				<Group>Moulder</Group>
 				<Points>285</Points>
@@ -440,9 +438,8 @@
 						<AddToAttack>1</AddToAttack>
 					</HandWeapon>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Warlord</Name>
 				<Points>90</Points>
 				<Description>Warlord</Description>
@@ -467,9 +464,8 @@
 					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<Shield Points="3"/>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Gray Seer</Name>
 				<Wizard>4</Wizard>
 				<Points>235</Points>
@@ -488,9 +484,8 @@
 				<Options>
 					<Mount Name="Screaming Bell" Points="200"/>
 				</Options>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Chieftain</Name>
 				<Points>45</Points>
 				<Description>Chieftain</Description>
@@ -513,7 +508,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Plague Priest</Name>
 				<Group>Pestilens</Group>
 				<Points>70</Points>
@@ -544,7 +538,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Master Moulder</Name>
 				<Group>Moulder</Group>
 				<Points>65</Points>
@@ -570,7 +563,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Warlock Engineer</Name>
 				<Group>Skryre</Group>
 				<Wizard>1</Wizard>
@@ -613,7 +605,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Assassin</Name>
 				<Group>Eshin</Group>
 				<Points>105</Points>
@@ -646,7 +637,6 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Screaming Bell</Name>
 				<Points>0</Points>
 				<Profile M="0" WS="0" BS="0" S="5" T="6" W="6" I="0" A="0" Ld="0" Ward="3"/>
@@ -662,7 +652,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<WeaponTeam/>
 				<Name>Warpfire Thrower</Name>
 				<Points>0</Points>
@@ -675,7 +664,6 @@
 				</Equipments>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<WeaponTeam/>
 				<Name>Ratling Gun</Name>
 				<Points>0</Points>
@@ -688,7 +676,6 @@
 				</Equipments>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Boneripper</Name>
 				<Points>0</Points>
 				<Profile M="5" WS="3" BS="0" S="5" T="5" W="3" I="1" A="4" Ld="10" AS="4"/>
@@ -711,8 +698,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Clanrats</Name>
 				<Points>5</Points>
 				<Min>20</Min>
@@ -734,9 +720,8 @@
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<CommandGroup Position="Clawleader" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Stormvermin</Name>
 				<Points>8</Points>
 				<Min>10</Min>
@@ -759,9 +744,8 @@
 					<CommandGroup Position="Standard bearer" Points="100" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Fangleader" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Rat Swarm</Name>
 				<Points>45</Points>
 				<Min>1</Min>
@@ -786,9 +770,8 @@
 						<PoisonAttack/>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Giant Rats</Name>
 				<Points>30</Points>
 				<Min>1</Min>
@@ -802,9 +785,8 @@
 						<Rule>Loss of Packmaster</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Night Runners</Name>
 				<Points>5</Points>
 				<Min>5</Min>
@@ -836,9 +818,8 @@
 					</Option>
 					<CommandGroup Position="Nightleader" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Clanrat slaves</Name>
 				<Points>2</Points>
 				<Min>20</Min>
@@ -868,9 +849,8 @@
 					<CommandGroup Position="Musician" Points="4"/>
 					<CommandGroup Position="Pawleader" Points="8"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Poisoned Wind Globadiers</Name>
 				<Points>10</Points>
 				<Min>2</Min>
@@ -887,9 +867,8 @@
 						<Name>Poisoned wind globes</Name>
 					</RangeWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Gutter Runners</Name>
 				<Points>12</Points>
 				<Min>5</Min>
@@ -944,9 +923,8 @@
 					</Option>
 					<CommandGroup Position="Black Skaven" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Warplock Jezzails</Name>
 				<Points>20</Points>
 				<Min>3</Min>
@@ -971,9 +949,8 @@
 				<Options>
 					<CommandGroup Position="Sharpshooter" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Plague Monks</Name>
 				<Group>Pestilens</Group>
 				<Points>6</Points>
@@ -993,9 +970,8 @@
 					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Deacon" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Rat Ogres</Name>
 				<Points>50</Points>
 				<Min>1</Min>
@@ -1011,9 +987,8 @@
 						<Rule>Loss of Packmaster</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Plague Censer Bearers</Name>
 				<Points>17</Points>
 				<Min>5</Min>
@@ -1036,9 +1011,8 @@
 						<Test Bet="Wound" Context="Round">Toughness</Test>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Warp-Ligtning Cannon</Name>
 				<Points>100</Points>
 				<Image>Cannon.jpg</Image>
@@ -1048,7 +1022,7 @@
 						<Rule>War Machine</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
