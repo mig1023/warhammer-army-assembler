@@ -666,12 +666,7 @@
 					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Sea Dragon Cloak</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<SeaDragonCloak Points="3"/>
 					<Mount Name="Dark Steed" Points="18"/>
 					<Mount Name="Cold One" Points="30"/>
 					<Mount Name="Dark Pegasus" Points="50"/>
@@ -794,10 +789,7 @@
 						<Reroll>ToWound</Reroll>
 						<Rule>Gains additional attacks in close combat equal to the number of ranks in the enemy unit he is attacking</Rule>
 					</HandWeapon>
-					<Armour>
-						<Name>Sea Dragon cloak</Name>
-						<AddToArmour>6</AddToArmour>
-					</Armour>
+					<SeaDragonCloak/>
 					<Armour>
 						<Name>Helm of the Kraken</Name>
 						<Regeneration/>
@@ -859,12 +851,7 @@
 					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="2"/>
-					<Option>
-						<Name>Sea Dragon Cloak</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<AddToArmour>6</AddToArmour>
-					</Option>
+					<SeaDragonCloak Points="4"/>
 					<Mount Name="Dark Steed" Points="12"/>
 					<Mount Name="Cold One" Points="20"/>
 					<Mount Name="Dark Pegasus" Points="50"/>
@@ -1132,10 +1119,7 @@
 				<Equipments>
 					<TwoHandsWeapon/>
 					<LightArmour/>
-					<Armour>
-						<Name>Sea Dragon cloak</Name>
-						<AddToArmour>6</AddToArmour>
-					</Armour>
+					<SeaDragonCloak/>
 				</Equipments>
 				<Options>
 					<Mount Name="Assassin" Points="90"/>
@@ -1491,5 +1475,6 @@
 		<RepeaterCrossbow Title="Repeater Crossbow"/>
 		<RepeaterHandbow Title="Repeater handbow"/>
 		<PairOfRepeaterHandbow Title="Pair of repeater handbow"/>
+		<SeaDragonCloak Title="Sea Dragon Cloak">AddToArmour: 6</SeaDragonCloak>
 	</CommonXmlOptions>
 </ArmyBook>
