@@ -449,13 +449,13 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             AddToOption(xmlDocument, ref xmlNode, "Name", name);
 
-            if (String.IsNullOrEmpty(attributes))
-                return;
-
             bool typesIncluded = false;
 
             foreach (string attributeLine in attributes.Split(';').Select(x => x.Trim('\n').Trim()))
             {
+                if (String.IsNullOrEmpty(attributeLine))
+                    continue;
+
                 if (attributeLine.Contains(":"))
                 {
                     List<string> attribute = attributeLine.Split(':').Select(x => x.Trim()).ToList();
