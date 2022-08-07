@@ -659,8 +659,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Mannfred von Carstein</Name>
 				<Points>690</Points>
 				<Group>Vampire</Group>
@@ -696,9 +695,8 @@
 						<Rule>This staff allows Mannfred to cast one spell for free in each of his Magic phases. The spell is cast with Power Level equal to its casting value and can be dispelled normally</Rule>
 					</Arcane>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Zacharias the Everliving</Name>
 				<Points>1015</Points>
 				<Personified/>
@@ -735,9 +733,8 @@
 						<AddToWard>4</AddToWard>
 					</Arcane>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Vampire Lord</Name>
 				<Points>285</Points>
 				<Group>Vampire</Group>
@@ -904,9 +901,8 @@
 						<Mount/>
 					</Option>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Vampire Count</Name>
 				<Points>205</Points>
 				<Group>Vampire</Group>
@@ -1063,9 +1059,8 @@
 						<Mount/>
 					</Option>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Master Necromancer</Name>
 				<Points>185</Points>
 				<Wizard>3</Wizard>
@@ -1100,9 +1095,8 @@
 					<Mount Name="Winged Nightmare" Points="175"/>
 					<Mount Name="Zombie Dragon" Points="300"/>
 				</Options>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Vampire Thrall</Name>
 				<Points>80</Points>
 				<Group>Vampire</Group>
@@ -1250,7 +1244,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Wight Lord</Name>
 				<Points>60</Points>
 				<Wizard>1</Wizard>
@@ -1287,7 +1280,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Wraith</Name>
 				<Points>90</Points>
 				<Wizard>1</Wizard>
@@ -1324,7 +1316,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Necromancer</Name>
 				<Points>65</Points>
 				<Wizard>1</Wizard>
@@ -1361,13 +1352,11 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Nightmare</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="2" BS="0" S="3" T="3" W="1" I="2" A="1" Ld="5"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Winged Nightmare</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="4" BS="0" S="5" T="5" W="4" I="2" A="3" Ld="5"/>
@@ -1376,7 +1365,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Zombie Dragon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="3" BS="0" S="6" T="6" W="6" I="1" A="4" Ld="4" AS="5"/>
@@ -1390,8 +1378,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Skeletons</Name>
 				<Points>8</Points>
 				<Min>10</Min>
@@ -1412,9 +1399,8 @@
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<CommandGroup Position="Skeleton Captain" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Zombies</Name>
 				<Points>6</Points>
 				<Min>10</Min>
@@ -1434,9 +1420,8 @@
 					<CommandGroup Position="Musician" Points="5"/>
 					<CommandGroup Position="Standard bearer" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Ghouls</Name>
 				<Points>8</Points>
 				<Min>5</Min>
@@ -1454,9 +1439,8 @@
 				<Options>
 					<CommandGroup Position="Chast" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Bat Swarm</Name>
 				<Points>60</Points>
 				<Min>1</Min>
@@ -1474,9 +1458,8 @@
 						<Rule>Flying move is restricted to a maximum of 10"</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Dire Wolves</Name>
 				<Points>10</Points>
 				<Min>5</Min>
@@ -1493,9 +1476,8 @@
 				<Options>
 					<CommandGroup Position="Doom Wolf" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Grave Guard</Name>
 				<Points>12</Points>
 				<Group>Wights</Group>
@@ -1526,9 +1508,8 @@
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Crypt Keeper" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Black Knight</Name>
 				<Points>23</Points>
 				<Group>Wights</Group>
@@ -1561,9 +1542,8 @@
 					<CommandGroup Position="Standard bearer" Points="16" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Hell Knight" Points="16"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Fell Bats</Name>
 				<Points>20</Points>
 				<Min>3</Min>
@@ -1574,9 +1554,8 @@
 					<Undead/>
 					<Fly/>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Spirit Host</Name>
 				<Points>65</Points>
 				<Min>1</Min>
@@ -1591,9 +1570,8 @@
 						<Rule>Swarm</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Banshee</Name>
 				<Points>90</Points>
 				<Image>Banshee.jpg</Image>
@@ -1606,9 +1584,8 @@
 						<Rule>Single model</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Black Coach</Name>
 				<Points>200</Points>
 				<UniqueUnits/>
@@ -1626,7 +1603,7 @@
 				<Equipments>
 					<GreatWeapon/>
 				</Equipments>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
