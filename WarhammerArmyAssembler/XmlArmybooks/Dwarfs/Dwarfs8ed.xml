@@ -912,11 +912,7 @@
 					<GreatWeapon Points="6" Dependencies="Off: Dwarf crossbow, Dwarf handgun"/>
 					<DwarfCrossbow Points="12" Dependencies="Off: Great weapon, Dwarf handgun"/>
 					<DwarfHandgun Points="12" Dependencies="Off: Great weapon, Dwarf crossbow"/>
-					<Option>
-						<Name>Dwarf pistol</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-					</Option>
+					<DwarfPistol Points="6"/>
 					<Shield Points="3"/>
 					<Option>
 						<Name>Shieldbearers</Name>
@@ -1111,11 +1107,7 @@
 					<GreatWeapon Points="6" Dependencies="Off: Dwarf crossbow, Dwarf handgun"/>
 					<DwarfCrossbow Points="12" Dependencies="Off: Great weapon, Dwarf handgun"/>
 					<DwarfHandgun Points="12" Dependencies="Off: Great weapon, Dwarf crossbow"/>
-					<Option>
-						<Name>Dwarf pistol</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-					</Option>
+					<DwarfPistol Points="6"/>
 					<Shield Points="3"/>
 					<Option>
 						<Name>Oath Stone</Name>
@@ -1194,14 +1186,7 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Dwarf pistol</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Brace of Dwarf pistols</Off>
-						</Dependencies>
-					</Option>
+					<DwarfPistol Points="6" Dependencies="Off: Brace of Dwarf pistols"/>
 					<Option>
 						<Name>Brace of Dwarf pistols</Name>
 						<Type>Option</Type>
@@ -1800,5 +1785,6 @@
 		<GromrilArmour Title="Gromril armour">AddToArmour: 4</GromrilArmour>
 		<DwarfHandgun Title="Dwarf handgun"/>
 		<DwarfCrossbow Title="Dwarf crossbow"/>
+		<DwarfPistol Title="Dwarf pistol"/>
 	</CommonXmlOptions>
 </ArmyBook>
