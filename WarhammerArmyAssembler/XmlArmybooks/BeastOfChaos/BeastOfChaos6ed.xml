@@ -247,8 +247,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Khazrak</Name>
 				<Points>292</Points>
 				<Personified/>
@@ -277,9 +276,8 @@
 						<AddToArmour>2</AddToArmour>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Gorthor</Name>
 				<Points>463</Points>
 				<Personified/>
@@ -314,9 +312,8 @@
 						<Rule>This talisman gives Gorthor a Ward save equal to the Strength of the attack that hit him (a Strength 3 hit would grant a 3+ Ward save, a Strength 5 hit would grant a 5+ Ward save)</Rule>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Morghur</Name>
 				<Points>378</Points>
 				<Personified/>
@@ -350,9 +347,8 @@
 						<SubOpponentToHit>1</SubOpponentToHit>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Beastlord</Name>
 				<Points>95</Points>
 				<Description>Beastlord</Description>
@@ -380,9 +376,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Doombull</Name>
 				<Points>180</Points>
 				<Description>Doombull</Description>
@@ -410,9 +405,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Great Bray-shaman</Name>
 				<Points>180</Points>
 				<Wizard>3</Wizard>
@@ -447,9 +441,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Wargor</Name>
 				<Points>60</Points>
 				<Description>Wargor</Description>
@@ -478,7 +471,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Bray-shaman</Name>
 				<Points>75</Points>
 				<Wizard>1</Wizard>
@@ -516,7 +508,6 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Tuskgor</Name>
 				<Points>0</Points>
 				<Profile M="7" WS="3" BS="0" S="3" T="0" W="0" I="2" A="1" Ld="0"/>
@@ -525,7 +516,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Tuskgor Chariot</Name>
 				<Points>0</Points>
 				<Chariot>2</Chariot>
@@ -542,8 +532,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Beast herd</Name>
 				<Points>7</Points>
 				<Min>5</Min>
@@ -577,9 +566,8 @@
 					<CommandGroup Position="Standard bearer" Points="10"/>
 					<CommandGroup Position="Foe-render" Points="20"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Bestigor herd</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -600,9 +588,8 @@
 					<MarkOfNurgleFUnits Points="50" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>				
 					<MarkOfSlaaneshFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Tuskgor Chariot</Name>
 				<Points>85</Points>
 				<Chariot>2</Chariot>
@@ -616,9 +603,8 @@
 						<Rule>Tuskgor Charge</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Warhounds of Chaos</Name>
 				<Points>6</Points>
 				<Min>5</Min>
@@ -626,9 +612,8 @@
 				<SpecialRules>
 					<NoCoreSlot/>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Chaos Trolls</Name>
 				<Points>55</Points>
 				<Min>3</Min>
@@ -648,9 +633,8 @@
 						<Name>Claws, fangs, club and potentially lethal halitosis!</Name>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Chaos Ogres</Name>
 				<Points>35</Points>
 				<Min>3</Min>
@@ -676,9 +660,8 @@
 					<CommandGroup Position="Standard bearer" Points="20"/>
 					<CommandGroup Position="Big Chaos Ogre" Points="20"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Centigor</Name>
 				<Points>17</Points>
 				<Min>5</Min>
@@ -712,9 +695,8 @@
 					<CommandGroup Position="Standard bearer" Points="14"/>
 					<CommandGroup Position="Gorehoof" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Minotaurs</Name>
 				<Points>40</Points>
 				<Min>3</Min>
@@ -742,9 +724,8 @@
 					<MarkOfNurgleFUnits Points="50" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>				
 					<MarkOfSlaaneshFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Dragon Ogres</Name>
 				<Points>70</Points>
 				<Min>3</Min>
@@ -765,9 +746,8 @@
 					<GreatWeapon PointsPerModel="6" Dependencies="Off: Additional weapon"/>
 					<LightArmour PointsPerModel="3"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Dragon Ogre Shaggoth</Name>
 				<Points>295</Points>
 				<Image>Shaggoth.jpg</Image>
@@ -795,9 +775,8 @@
 					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<MarkOfSlaaneshHitFirst Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Giant</Name>
 				<Points>205</Points>
 				<Image>Giant.jpg</Image>
@@ -826,9 +805,8 @@
 						<Points>20</Points>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Spawn of Chaos</Name>
 				<Points>60</Points>
 				<Profile M="2D6" WS="3" BS="0" S="4" T="5" W="3" I="2" A="D6" Ld="10"/>
@@ -882,7 +860,7 @@
 						<Points>15</Points>
 					</Option>
 				</Options>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 	<CommonXmlOptions>
