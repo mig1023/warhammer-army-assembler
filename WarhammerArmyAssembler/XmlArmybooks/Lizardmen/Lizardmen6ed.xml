@@ -394,8 +394,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Lord Kroak</Name>
 				<Group>Slann</Group>
 				<Wizard>4</Wizard>
@@ -432,9 +431,8 @@
 						<AddToWard>3</AddToWard>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Kroq-Gar Ancient</Name>
 				<Group>Saurus</Group>
 				<Points>576</Points>
@@ -460,9 +458,8 @@
 						<Rule>D6 Strength 4 hits within 8", no Armour saves allowed</Rule>
 					</RangeWeapon>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Slann Mage-Priest</Name>
 				<Group>Slann</Group>
 				<Wizard>4</Wizard>
@@ -527,9 +524,8 @@
 						<AddToWard>4</AddToWard>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Saurus Oldblood</Name>
 				<Group>Saurus</Group>
 				<Points>145</Points>
@@ -569,9 +565,8 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Saurus Scar-Veteran</Name>
 				<Group>Saurus</Group>
 				<Points>85</Points>
@@ -610,7 +605,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Skink Chief</Name>
 				<Group>Skink</Group>
 				<Points>55</Points>
@@ -672,7 +666,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Skink Priest</Name>
 				<Group>Skink</Group>
 				<Points>65</Points>
@@ -703,7 +696,6 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Cold One</Name>
 				<Points>0</Points>
 				<Profile M="7" WS="3" BS="0" S="4" T="4" W="1" I="2" A="1" Ld="3"/>
@@ -716,7 +708,6 @@
 				</Equipments>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Carnosaur</Name>
 				<Points>0</Points>
 				<Profile M="7" WS="3" BS="0" S="6" T="5" W="5" I="2" A="4" Ld="5" AS="4"/>
@@ -735,8 +726,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Saurus Warrior</Name>
 				<Points>12</Points>
 				<Min>10</Min>
@@ -761,9 +751,8 @@
 					<CommandGroup Position="Standard Bearer" Points="12"/>
 					<CommandGroup Position="Champion" Points="12"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Skink Skirmishers</Name>
 				<Points>6</Points>
 				<Min>10</Min>
@@ -801,9 +790,8 @@
 					</Option>
 					<CommandGroup Position="Brave" Points="5"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Jungle swarm</Name>
 				<Points>60</Points>
 				<Min>1</Min>
@@ -818,9 +806,8 @@
 						<Rule>Small</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Temple Guard</Name>
 				<Points>17</Points>
 				<Min>10</Min>
@@ -845,9 +832,8 @@
 					<CommandGroup Position="Standard bearer" Points="14" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Revered Guardian" Points="14"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Saurus Cavalry</Name>
 				<Points>35</Points>
 				<Min>5</Min>
@@ -868,9 +854,8 @@
 					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
 					<CommandGroup Position="Champion" Points="20"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Kroxigor</Name>
 				<Points>58</Points>
 				<Min>3</Min>
@@ -891,9 +876,8 @@
 				<Options>
 					<CommandGroup Position="Ancient" Points="20"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Chameleon Skinks</Name>
 				<Points>15</Points>
 				<Min>5</Min>
@@ -921,9 +905,8 @@
 				<Options>
 					<CommandGroup Position="Stalker" Points="6"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Terradons</Name>
 				<Points>35</Points>
 				<Min>3</Min>
@@ -948,9 +931,8 @@
 				<Options>
 					<CommandGroup Position="Brave" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Stegadon</Name>
 				<Points>235</Points>
 				<Image>Stegadon.jpg</Image>
@@ -973,9 +955,8 @@
 						<Name>Giant Bow</Name>
 					</RangeWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Salamander Hunting Pack</Name>
 				<Points>65</Points>
 				<Min>1</Min>
@@ -993,7 +974,7 @@
 						<Rule>Spout Flame</Rule>
 					</Individual>
 				</SpecialRules>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
