@@ -518,8 +518,7 @@
 			</Group>
 		</Artefacts>
 		<Heroes>
-			<Hero>
-				<Type>Lord</Type>
+			<Lord>
 				<Name>Vlad von Carstein</Name>
 				<Points>490</Points>
 				<Group>Vampire</Group>
@@ -547,9 +546,8 @@
 						<Rule>The first time the wearer of this ring is slain roll a D6 at the end of the phase. On a score of 2+ the vampire is immediately returned to 'life' with a single Wound</Rule>
 					</Armour>
 				</Equipments>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Count Mannfred</Name>
 				<Points>475</Points>
 				<Group>Vampire</Group>
@@ -587,9 +585,8 @@
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Abyssal Terror" Points="135"/>
 				</Options>
-			</Hero>
-			<Hero>
-				<Type>Lord</Type>
+			</Lord>
+			<Lord>
 				<Name>Vampire Lord</Name>
 				<Points>205</Points>
 				<Group>Vampire</Group>
@@ -612,9 +609,8 @@
 					<Mount Name="Abyssal Terror" Points="135"/>
 					<Mount Name="Zombie Dragon" Points="275"/>
 				</Options>
-			</Hero>
+			</Lord>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Mannfred the Acolyte</Name>
 				<Points>185</Points>
 				<Group>Vampire</Group>
@@ -645,7 +641,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Konrad von Carstein</Name>
 				<Points>145</Points>
 				<Group>Vampire</Group>
@@ -670,7 +665,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Isabella von Carstein</Name>
 				<Points>90</Points>
 				<Group>Vampire</Group>
@@ -694,7 +688,6 @@
 				</Equipments>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Necromancer</Name>
 				<Points>55</Points>
 				<Wizard>1</Wizard>
@@ -719,7 +712,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Vampire</Name>
 				<Points>100</Points>
 				<Group>Vampire</Group>
@@ -742,7 +734,6 @@
 				</Options>
 			</Hero>
 			<Hero>
-				<Type>Hero</Type>
 				<Name>Wight King</Name>
 				<Points>75</Points>
 				<Wizard>1</Wizard>
@@ -778,13 +769,11 @@
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Skeletal Steed</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="2" BS="0" S="3" T="3" W="1" I="2" A="1" Ld="4"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Hellsteed</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="3" BS="0" S="4" T="4" W="1" I="2" A="1" Ld="3"/>
@@ -793,13 +782,11 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Nightmare</Name>
 				<Points>0</Points>
 				<Profile M="8" WS="3" BS="0" S="4" T="4" W="1" I="2" A="1" Ld="3"/>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Abyssal Terror</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="4" BS="0" S="5" T="5" W="4" I="2" A="3" Ld="4"/>
@@ -810,7 +797,6 @@
 				</SpecialRules>
 			</Mount>
 			<Mount>
-				<Type>Mount</Type>
 				<Name>Zombie Dragon</Name>
 				<Points>0</Points>
 				<Profile M="6" WS="4" BS="0" S="5" T="5" W="4" I="2" A="3" Ld="4" AS="5"/>
@@ -827,8 +813,7 @@
 			</Mount>
 		</Mounts>
 		<Units>
-			<Unit>
-				<Type>Core</Type>
+			<Core>
 				<Name>Zombie Horde</Name>
 				<Points>4</Points>
 				<Min>20</Min>
@@ -848,9 +833,8 @@
 					<CommandGroup Position="Musician" Points="4"/>
 					<CommandGroup Position="Standard bearer" Points="8"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Skeleton Warriors</Name>
 				<Points>8</Points>
 				<Min>10</Min>
@@ -870,9 +854,8 @@
 					<CommandGroup Position="Musician" Points="4"/>
 					<CommandGroup Position="Standard bearer" Points="8" Magic="Type:Unit, Points:25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Crypt Ghouls</Name>
 				<Points>8</Points>
 				<Min>10</Min>
@@ -890,9 +873,8 @@
 				<Options>
 					<CommandGroup Position="Crypt Chast" Points="8"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Dire Wolves</Name>
 				<Points>8</Points>
 				<Min>5</Min>
@@ -914,9 +896,8 @@
 				<Options>
 					<CommandGroup Position="Doom Wolf" Points="10"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Bat Swarm</Name>
 				<Points>35</Points>
 				<Min>3</Min>
@@ -937,9 +918,8 @@
 						<Name>Teeth and claws</Name>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Core</Type>
+			</Core>
+			<Core>
 				<Name>Corpse Cart</Name>
 				<Points>75</Points>
 				<Image>CorpseCart.jpg</Image>
@@ -977,9 +957,8 @@
 						<Rule>If friendly unit within 6" is target by Invocation of Nehek, the unit gain an additional wound</Rule>
 					</Option>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Core>
+			<Special>
 				<Name>Grave Guard</Name>
 				<Points>12</Points>
 				<Min>5</Min>
@@ -1002,9 +981,8 @@
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Black Knight</Name>
 				<Points>24</Points>
 				<Min>5</Min>
@@ -1038,9 +1016,8 @@
 					<CommandGroup Position="Musician" Points="8"/>
 					<CommandGroup Position="Standard bearer" Points="16" Magic="Type:Unit, Points:50"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Fell Bats</Name>
 				<Points>20</Points>
 				<Min>3</Min>
@@ -1056,9 +1033,8 @@
 						<Name>Teeth and claws</Name>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Special</Type>
+			</Special>
+			<Special>
 				<Name>Spirit Host</Name>
 				<Points>65</Points>
 				<Min>3</Min>
@@ -1076,9 +1052,8 @@
 						<Name>Ethereal Blade</Name>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Special>
+			<Rare>
 				<Name>Varghulf</Name>
 				<Points>175</Points>
 				<Image>Varghulf.jpg</Image>
@@ -1098,9 +1073,8 @@
 						<Name>Massive fangs and talons</Name>
 					</HandWeapon>
 				</Equipments>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Cairn Wraiths</Name>
 				<Points>50</Points>
 				<Min>3</Min>
@@ -1123,9 +1097,8 @@
 				<Options>
 					<CommandGroup Position="Tomb Banshee" Points="25"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Blood Knight</Name>
 				<Points>55</Points>
 				<Min>4</Min>
@@ -1152,9 +1125,8 @@
 					<CommandGroup Position="Musician" Points="10"/>
 					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:75"/>
 				</Options>
-			</Unit>
-			<Unit>
-				<Type>Rare</Type>
+			</Rare>
+			<Rare>
 				<Name>Black Coach</Name>
 				<Points>200</Points>
 				<Image>BlackCoach.jpg</Image>
@@ -1171,7 +1143,7 @@
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
-			</Unit>
+			</Rare>
 		</Units>
 	</Content>
 </ArmyBook>
