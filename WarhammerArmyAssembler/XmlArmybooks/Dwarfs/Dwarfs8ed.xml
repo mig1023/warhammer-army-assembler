@@ -910,15 +910,7 @@
 				</SpecialRules>
 				<Options>
 					<GreatWeapon Points="6" Dependencies="Off: Dwarf crossbow, Dwarf handgun"/>
-					<Option>
-						<Name>Dwarf crossbow</Name>
-						<Type>Option</Type>
-						<Points>12</Points>
-						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Dwarf handgun</Off>
-						</Dependencies>
-					</Option>
+					<DwarfCrossbow Points="12" Dependencies="Off: Great weapon, Dwarf handgun"/>
 					<DwarfHandgun Points="12" Dependencies="Off: Great weapon, Dwarf crossbow"/>
 					<Option>
 						<Name>Dwarf pistol</Name>
@@ -1056,9 +1048,7 @@
 						<Name>Ol'Trustworthy</Name>
 						<ArmourPiercing>1</ArmourPiercing>
 					</HandWeapon>
-					<RangeWeapon>
-						<Name>Dwarf crossbow</Name>
-					</RangeWeapon>
+					<DwarfCrossbow/>
 					<GromrilArmour/>
 					<Shield/>
 					<Arcane>
@@ -1119,15 +1109,7 @@
 				</SpecialRules>
 				<Options>
 					<GreatWeapon Points="6" Dependencies="Off: Dwarf crossbow, Dwarf handgun"/>
-					<Option>
-						<Name>Dwarf crossbow</Name>
-						<Type>Option</Type>
-						<Points>12</Points>
-						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Dwarf handgun</Off>
-						</Dependencies>
-					</Option>
+					<DwarfCrossbow Points="12" Dependencies="Off: Great weapon, Dwarf handgun"/>
 					<DwarfHandgun Points="12" Dependencies="Off: Great weapon, Dwarf crossbow"/>
 					<Option>
 						<Name>Dwarf pistol</Name>
@@ -1330,9 +1312,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Dwarf crossbow</Name>
-					</RangeWeapon>
+					<DwarfCrossbow/>
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
@@ -1712,9 +1692,7 @@
 					<RangeWeapon>
 						<Name>Throwing axe</Name>
 					</RangeWeapon>
-					<RangeWeapon>
-						<Name>Dwarf crossbow</Name>
-					</RangeWeapon>
+					<DwarfCrossbow/>
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
@@ -1821,5 +1799,6 @@
 	<CommonXmlOptions>
 		<GromrilArmour Title="Gromril armour">AddToArmour: 4</GromrilArmour>
 		<DwarfHandgun Title="Dwarf handgun"/>
+		<DwarfCrossbow Title="Dwarf crossbow"/>
 	</CommonXmlOptions>
 </ArmyBook>
