@@ -404,15 +404,7 @@
 					<Lance Points="7" Dependencies="Off: Additional weapon, Halberd, Great weapon" Only="Mount"/>
 					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Halberd, Lance"/>
 					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
-					<Option>
-						<Name>Repeater handbow</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Repeater Crossbow</Off>
-							<Off>Pair of repeater handbow</Off>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
+					<RepeaterHandbow Points="5" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
 					<Option>
 						<Name>Pair of repeater handbow</Name>
 						<Type>Option</Type>
@@ -756,24 +748,7 @@
 						<Lance/>
 					</Option>
 					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
-					<Option>
-						<Name>Repeater handbow</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Repeater Crossbow</Off>
-							<Off>Pair of repeater handbow</Off>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Pair of repeater handbow</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Repeater Crossbow</Off>
-							<Off>Repeater handbow</Off>
-						</Dependencies>
-						<Points>10</Points>
-					</Option>
+					<RepeaterHandbow Points="10" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
 					<HeavyArmour Points="4"/>
 					<Option>
 						<Name>Sea Dragon Cloak</Name>
@@ -875,24 +850,8 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<Dependencies>
-							<Off>Repeater handbow</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>2</Points>
-					</Option>
-					<Option>
-						<Name>Repeater handbow</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
+					<GreatWeapon Points="2" Dependencies="Off: Repeater handbow"/>
+					<RepeaterHandbow Points="5" Dependencies="Off: Additional weapon"/>
 					<Option>
 						<Name>Black Lotus</Name>
 						<Type>Option</Type>
@@ -1612,5 +1571,6 @@
 	<CommonXmlOptions>
 		<ColdOneChariot Title="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
 		<RepeaterCrossbow Title="Repeater Crossbow"/>
+		<RepeaterHandbow Title="Repeater handbow"/>
 	</CommonXmlOptions>
 </ArmyBook>
