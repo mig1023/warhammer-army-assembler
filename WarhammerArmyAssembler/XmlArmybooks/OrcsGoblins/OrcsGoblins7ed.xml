@@ -57,321 +57,282 @@
 				<WarBanner Points="25"/>
 			</Group>
 			<Group Name="Magic weapons">
-				<Artefact>
+				<Weapon>
 					<Name>WAAAGH! Cleava</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Orc</OnlyGroup>
 					<Points>100</Points>
 					<AutoWound/>
 					<NoArmour/>
 					<Description>All hits from this weapons wound automatically and allow no armour saves</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Battleaxe of the Last WAAAGH!</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Orc</OnlyGroup>
 					<Points>100</Points>
 					<Rule>Attacks and Strength bonus equal rank bonus</Rule>
 					<Description>The wielder of this weapon receives a bonus equal to his unit's rank bonus to both his Attacks and Strength - calculate this when the wielder makes his attacks</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Basha's Bloodaxe</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Orc</OnlyGroup>
 					<Points>50</Points>
 					<Flail>1</Flail>
 					<Frenzy/>
 					<Description>Grants +1 Strength in the first round of combat. The wielder of this weapon is subject to Frenzy (D6 extra attacks). The wielder can never lose his Frenzy</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Shaga's Screamin' sword</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Rule>+1 Strength and +1 Attack for each enemy character within 12"</Rule>
 					<Description>The wielder receives +1 Strength and +1 Attack for each enemy character within 12"</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Arcane>
 					<Name>Skull wand of Kaloth</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Test Bet="Death" Context="Hit">Leadership</Test>
 					<Description>For each successful hit inflicted by this weapon, the victim must pass a Leadership test or be slain instantly. No armour, ward or regeneration saves are allowed against this special attack. If the tests are passed, roll to Wound and save as normal. Only for shamans</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Weapon>
 					<Name>Porko's Pigstikka</Name>
-					<Type>Weapon</Type>
 					<Only>Mount</Only>
 					<Points>40</Points>
 					<Rule>Additional attack for each pointt of rank bonus</Rule>
 					<Description>Spear. On the turn the wielder charges, he receives an additional attack for each point of rank bonus that the unit hi is attacking has (up to a maximum of +3)</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Ulag's Akrit axe</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<AddToStrength>1</AddToStrength>
 					<Reroll>ToHit</Reroll>
 					<Flail/>
 					<Description>The wielder may re-roll any missed to hit rolls. It also grants +1 Strength in the first round of combat</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Backstabber's blade</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>25</Points>
 					<PoisonAttack/>
 					<Rule>+1 Strength flank attack bonus</Rule>
 					<Rule>+2 Strength rear attack bonus</Rule>
 					<Description>Grants poisoned attacks. Grants the wielder +1 Strength if he is attacking the enemy in the flank and +2 Strength if he is attacking them in the rear</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Wollopa's One Hit Wunda</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>15</Points>
 					<Rule>Strength 10 for one combat phase</Rule>
 					<Description>Once per game, this weapon grants the wielder Strength 10 for duration of the combat phase. One use only</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Mortog's best Basha</Name>
-					<Type>Weapon</Type>
 					<Points>15</Points>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToStrength>1</AddToStrength>
 					<AddToInitiative>1</AddToInitiative>
 					<Description>The wielder of this blafe gains +1 Wepon Skill, +1 Strength and +1 Initiative</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Sneaky Skewerer</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>10</Points>
 					<ArmourPiercing>3</ArmourPiercing>
 					<Description>Wounds caused by this weapon suffer an additional -3 armour save modifier</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Lucky's Dirk</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>5</Points>
 					<Rule>+1 Strength for each enemy magic item</Rule>
 					<Description>If the bearer strikes an enemy character carrying one or more magic item, his hits at +1 Strength for each magic item</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic armour">
-				<Artefact>
+				<Armour>
 					<Name>Armour of Gork</Name>
-					<Type>Armour</Type>
 					<Points>50</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToToughness>1</AddToToughness>
 					<Description>Light armour. The wearer has +1 Toughness</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Shield>
 					<Name>Spliteful shield</Name>
-					<Type>Shield</Type>
 					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Strength 5 hit for each 1 on a enemy roll to Hit</Rule>
 					<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
-				</Artefact>
+				</Shield>
 			</Group>
 			<Group Name="Talismans">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Effigy of Mork</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
 					<SubOpponentToHit>1</SubOpponentToHit>
 					<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Warboss Umm's Best Boss 'at</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<AddToWard>5</AddToWard>
 					<Description>Grants the rearer a 5+ Ward save</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Amulet of Protectyness</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Rule>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Rule>
 					<Description>When the bearer of this amulet is wounded, he counts as having the save armour as the model that caused the wounds</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>The Collar of Zorga</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>5</Points>
 					<Rule>Steeds and monsters require Strength 6 to hit the bearer</Rule>
 					<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6S to hit the bearer</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane items">
-				<Artefact>
+				<Arcane>
 					<Name>Idol of Mork</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Orc</OnlyGroup>
 					<Points>50</Points>
 					<Rule>+1 Power dice for each Orc unit within 24"</Rule>
 					<Rule>-1 Power dice for each fleeing frendly unit within 24"</Rule>
 					<Description>+1 Power dice for each Orc unit within 24"\n-1 Power dice for each fleeing frendly unit within 24" </Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Staff of Sneaky Stealin'</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>50</Points>
 					<Rule>Steals 1 Power dice from the enemy to dispel</Rule>
 					<Description>At the start of each of your opponent's magic phases, you may take one dice from you opponent's power poll and add it to your dispel poll</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Staff of Baduumm</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>+1 to any casting attempts</Rule>
 					<Description>Adds +1 to any casting attempts made by the bearer</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>WAAAGH! paints</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Orc</OnlyGroup>
 					<Points>10</Points>
 					<Rule>+2 to any casting attemts in close combat</Rule>
 					<Description>If the Shaman is in combat at the start of the Orcs and Goblins magic phase, he receives +2 to any casting attempts</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Magic mushrooms</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>10</Points>
 					<Rule>+D6 to casting roll, one use only</Rule>
 					<Description>+D6 to casting roll, one use only. If Mushroom dice is an 1 then the spell is miscast</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Enchanted itams">
-				<Artefact>
+				<Weapon>
 					<Name>The Horn of Urgok</Name>
-					<Type>Weapon</Type>
 					<Points>40</Points>
 					<Rule>Bound item, Power Level 5: +1 Leadership for all friendly units, -1 Leadership for all enemy units</Rule>
 					<Description>Bound item, Power Level 5. +1 Leadership for all friendly units, -1 Leadership for all enemy units. Roll a D6 after each use. On the roll of a 1, the bearer suffer a Strength 5 hit with no armour save allowed</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>The Pipes of Doom</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>35</Points>
 					<Rule>Panic test for enemy cavalry, one use only</Rule>
 					<Description>The pipes can be played at the start of the shooting phase. Each enemy cavalry unit, monster (ridden or unridden) and chariot within 24" must take a Panic test</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Ironback Boar</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Orc</OnlyGroup>
 					<Points>35</Points>
 					<ImpactHit>D3</ImpactHit>
 					<Description>Boar. When charging, this steed does D3 Strength 5 impact hits in addition to its norman attack</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Warboss Imbad's iron gnashas</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<KillingBlow/>
 					<Description>The character wearing the Gnashas gains the Killing Blow special ability in close combat. Chomp!</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Bigged's Kickin' boots</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>Grants the wearer +1 Atack on his profile</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Maad's map</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Rule>Scout deploy by D6 roll</Rule>
 					<Description>Before deploymnet begins roll a D6. On 2-6 the bearer of the map may be deployed as a scout. On a roll of a 1, he got lost and must be deployed as normal</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<AdditionalArmour>
 					<Name>Brimstone bauble</Name>
-					<Type>AdditionalArmour</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>25</Points>
 					<Rule>D6 Strength 6 hits when bearer is slain</Rule>
 					<Description>When bearer is slain, all units (friend or foe) in base contact suffer D6 Strength 6 hits, distributed as for shooting</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Nibbla's Titty ring</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
 					<Rule>Bound spell 'Eadbutt Power Level 3</Rule>
 					<Description>Bound spell 'Eadbutt Power Level 3. Roll a D6 after each use. On the roll of a 1, the bearer suffers a Strength 5 hit with no armour saves allowed</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Weapon>
 					<Name>Mad Cap mushrooms</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>20</Points>
 					<Rule>Fanatics may re-roll the number of Hits caused</Rule>
 					<Description>Fanatics may re-roll the number of Hits caused</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<AdditionalArmour>
 					<Name>Guzzla's Battle Brew</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
 					<Hate/>
 					<Frenzy/>
 					<Description>The character with the brew is assumed to have 'bolstered' himself before battle - roll a dice and consult the following table to determine the effects upon the drinker:\n1-2 - Subject to Stupidity for remainder of the game\n3-4 - Hatred of all enemies for the remainder of the game\n5-6 - Hatred of all enemies and Frenzy for the remainder of the game</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Magic standards">
-				<Artefact>
+				<Banner>
 					<Name>Mork's Spirit-Totem</Name>
-					<Type>Banner</Type>
 					<OnlyGroup>Orc</OnlyGroup>
 					<Points>50</Points>
 					<Rule>Adds a number of dispel dice equal rank bonus</Rule>
 					<Description>This magical banner adds a number of dispel dice to the pool equal to the unit's rank bonus</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
-					<Type>Banner</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>50</Points>
 					<Rule>All Goblins within 12" may re-roll Panic test</Rule>
 					<Description>All Goblins within 12" of the banner may re-roll failed Panic test</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Bad Moon on a stick</Name>
-					<Type>Banner</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>50</Points>
 					<Stubborn/>
 					<Description>All Night Goblin in this unit are Stubborn</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>The Spider banner</Name>
-					<Type>Banner</Type>
 					<OnlyGroup>Goblin</OnlyGroup>
 					<Points>50</Points>
 					<PoisonAttack/>
 					<Description>All Goblin in the unit have poisoned attacks (shooting and combat)</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Gork's WAAAGH! banner</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>D6" to charge move, only one use</Rule>
 					<Description>The unit adds D6" to its charge move. Declare charges first and then roll</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Nogg's banner of Buthery</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>+1 Attack, only one use</Rule>
 					<Description>All model in the unit have +1 Attack in the turn the banner is used. In the case of mounted models, only the rider gets the bonus, not the mount</Description>
-				</Artefact>
+				</Banner>
 			</Group>
 		</Artefacts>
 		<Heroes>
