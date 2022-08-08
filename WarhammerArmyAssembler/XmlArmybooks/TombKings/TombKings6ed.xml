@@ -47,277 +47,242 @@
 				<WarBanner Points="25"/>
 			</Group>
 			<Group Name="Magic weapons">
-				<Artefact>
+				<Weapon>
 					<Name>Destroyer of Eternities</Name>
-					<Type>Weapon</Type>
 					<Points>70</Points>
 					<Only>Infantry</Only>
 					<AddToStrength>2</AddToStrength>
 					<KillingBlow/>
 					<Description>Counts as a great weapon and has the Killing Blow special ability. The player may choose to attack normally with the Destroyer of Kternities or make a special attack. If the special attack is chosen, all enemy models that are touching the Tomb King take two automatic hits. These hits do benefit from the special rules for great weapons and Killing blow. If a target is riding a monster or a chariot, then both take two automatic hits. In a challenge, only the model engaged in the challenge counts as being in contact with the Tomb King.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Crook and Flail of Radiance</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<HitFirst/>
 					<Description>+ 1 Attack. Always strikes first. If another character has this ability, then resolve the order of attacks in Initiative order. Requires two hands.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Blade of Setep</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<NoArmour/>
 					<Rule>If an enemy model hit by this character wears magical armour, then the first hit is automatically discounted but the magical armour is destroyed for the remainder of the battle</Rule>
 					<Description>Normal armour cannot save against the Blade of Setep. If an enemy model hit by this sword wears magical armour, then the first hit is automatically discounted (do not roll to wound) but the magical armour is destroyed for the remainder of the battle. Resolve any further hits as normal.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>The Blade of Mourning</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Rule>If a unit suffers at least one wound from the character and loses the combat, any negative modifiers to the unit's Leadership for the subsequent Break test are doubled</Rule>
 					<Description>If a unit suffers at least one wound from the Blade and loses the combat, any negative modifiers to the unit's Leadership for the subsequent Break test are doubled.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Flail of Skulls</Name>
-					<Type>Weapon</Type>
 					<Points>45</Points>
 					<Flail/>
 					<MultiWounds>2</MultiWounds>
 					<Description>Counts as a flail. Each unsaved wound becomes two wounds.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Spear of Antarhak</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<Rule>For every unsaved wound inflicted by the character, his chariot or a unit he is accompanying - immediately regains 1 Wound</Rule>
 					<Description>Follows all of the normal rules for a spear. In addition, for every unsaved wound inflicted by the Spear of Antarhak, either the character, his chariot or a unit he is accompanying immediately regains 1 Wound as if Djedra's Incantation of Summoning has been cast on them. Note that wounds inflicted by the enemy and subsequently healed by the Spear still count for combat resolution.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Serpent Staff</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<OnlyGroup>Liches</OnlyGroup>
 					<PoisonAttack/>
 					<Reroll>ToWound</Reroll>
 					<Description>Attacks with the Serpent Staff count as Poisoned Attacks. In addition, the model may re-roll any failed rolls to wound in close combat.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic armour">
-				<Artefact>
+				<Armour>
 					<Name>Armour of Eternity</Name>
-					<Type>Armour</Type>
 					<Points>70</Points>
 					<AddToArmour>6</AddToArmour>
 					<Reroll>OpponentToWound</Reroll>
 					<Description>Enemy models must re-roll successful rolls to wound against the character. Counts as light armour.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Armour>
 					<Name>Scorpion Armour</Name>
-					<Type>Armour</Type>
 					<Points>40</Points>
 					<AddToArmour>5</AddToArmour>
 					<Rule>The character can never suffer more than one wound due to combat resolution</Rule>
 					<Description>The character can never suffer more than one wound due to combat resolution (after any modifiers for being within 12" of the Battle Standard, etc). If the wearer is with a unit, no more than half the wounds suffered due to combat resolution can be allocated against the character. For example, if the unit suffers four wounds, two wounds are lost by the unit and two wounds are allocated to the character of which one is ignored. Counts as heavy armour.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Armour>
 					<Name>Armour of the Ages</Name>
-					<Type>Armour</Type>
 					<Points>35</Points>
 					<AddToArmour>5</AddToArmour>
 					<AddToWounds>1</AddToWounds>
 					<Description>Counts as heavy armour. The bearer gains +1 Wound.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Shield>
 					<Name>Shield of Ptra</Name>
-					<Type>Shield</Type>
 					<Points>15</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>If the character makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Rule>
 					<Description>Counts as a shield. If the bearer makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round.</Description>
-				</Artefact>
+				</Shield>
 			</Group>
 			<Group Name="Talismans">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Golden Ankhra</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>45</Points>
 					<AddToWard>4</AddToWard>
 					<Description>The model has a 4+ Ward save.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Crown of Kings</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>40</Points>
 					<OnlyGroup>TombKings</OnlyGroup>
 					<Rule>May roll two D6 for his "My Will Be Done!" incantations and to choose the highest score</Rule>
 					<Description>Tomb King only. The Crown of Kings enables the Tomb King to roll two D6 for his "My Will Be Done!" incantations and to choose the highest score.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Amulet of Pha-Stah</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>40</Points>
 					<Rule>Any Arcane items, Enchanted items, Talismans or Runic Talismans belonging to enemy models in base contact with the wearer cease to function while they are in base contact</Rule>
 					<Description>Any Arcane items, Enchanted items, Talismans or Runic Talismans belonging to enemy models in base contact with the wearer cease to function while they are in base contact. A character with this item cannot take any other magic items.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Collar of Shapesh</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Rule>For each wound that the bearer suffers roll a D6: on a 4+ the wound is transferred to any friendly model within 4" of the bearer's choosing</Rule>
 					<Description>For each wound that the bearer suffers (after saves, etc. but before any multiple wounds are calculated) roll a D6. On a 4+ the wound is transferred to any friendly model within 4" of the bearer's choosing. If inflicted in combat, these wounds will still count for combat resolution. This second model may not make any Armour save or Ward save to avoid this automatic wound. If there is no friendly model within range, then the Collar of Shapcsh has no effect.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Golden Eye of Rah-Nutt</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Rule>The chariot itself gains a Ward save of 5+, which only works against hits struck against the chariot, and will not apply to the character</Rule>
 					<Rule>Hits of Strength 7 or more that would normally destroy the chariot automatically do normal damage instead</Rule>
 					<Description>Character in chariot only. The chariot itself gains a Ward save of 5+, which only works against hits struck against the chariot, and will not apply to the character. In addition, wounding hits of Strength 7 or more that would normally destroy the chariot automatically do normal damage instead.</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Enchanted items">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Blue Khepra</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>40</Points>
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>The bearer and the unit he joins have Magic Resistance (2).</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Death Mask of Kharnut</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
 					<Terror/>
 					<Description>The model wearing this mask causes terror.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Brooch of the Great Desert</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Rule>Once per game may automatically dispel an enemy spell</Rule>
 					<Description>One use only. As soon as an enemy spell is cast, the Brooch of the Great Desert may be used to automatically dispel it, just like a Dispel Scroll. Note that as with Dispel Scrolls the Brooch cannot be used to dispel a spell that is cast with Irresistible Force.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Chariot of Fire</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<ImpactHit>D6+1</ImpactHit>
 					<Rule>Flaming Impact Hits attacks</Rule>
 					<Description>Character in chariot only. The character's chariot does D6+1 impacts hits rather than D3. Impact hits from the Chariot of Fire count as both magical attacks and flaming attacks.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Cloak of the Dunes</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
 					<Only>Infantry</Only>
 					<Rule>Fly</Rule>
 					<Rule>Pursues 3D6"</Rule>
 					<Description>The character can move as if flying, but may not charge whilst using this special movement. He pursues 3D6".</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Icon of Rulership</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
 					<Rule>+1 Unit Strength</Rule>
 					<Description>Character in chariot only. May be taken in addition to another item in the Enchanted Items list The character's chariot has +1 Unit Strength (so will be worth a total Unit Strength of 5).</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Vambraces of the Sun</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
 					<Rule>One model in base contact loses 1 Attack</Rule>
 					<Description>One model in base contact, chosen by the bearer, loses 1 Attack. Against mounted models, the Tomb Kings player must choose either the mount monster or the rider. If the model has several types of attack, the Tomb Kings player chooses which type of attack is lost. This has no effect against foes which do not use their Attacks value in combat, such as Giants.</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Enchanted items">
-				<Artefact>
+				<Arcane>
 					<Name>Staff of Ravening</Name>
-					<Type>Arcane</Type>
 					<Points>45</Points>
 					<Rule>Bound spell, Power level 4: a magic missile with 18" range, the targeted unit suffers 3D6 Strength 2 hits</Rule>
 					<Description>Bound spell, Power level 4. This spell is a magic missile with 18" range. The targeted unit suffers 3D6 Strength 2 hits.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Neferras Plaques of Mighty Incantations</Name>
-					<Type>Arcane</Type>
 					<Points>30</Points>
 					<Rule>Bound spell, Power level 4: a magic missile with 18" range, the targeted unit suffers 3D6 Strength 2 hits</Rule>
 					<Description>The Priest may re-roll the dice rolled for any Incantation he's cast. Either all of the dice must be re-rolled or none.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Staff of Mastery</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>+1 to the total rolled to determine the Power level of incantations</Rule>
 					<Description>The bearer adds +1 to the total rolled to determine the Power level of his incantations.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Hieratic Jar</Name>
-					<Type>Arcane</Type>
 					<Points>25</Points>
 					<Rule>Once per battle may use an extra incantation that Magic phase</Rule>
 					<Description>One use only. The Liche Priest may release the energy of the Hieratic Jar during any Magic phase, just after he has cast his normal incantation(s). The Jar allows him to use an extra incantation that phase.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Enkhil's Kanopi</Name>
-					<Type>Arcane</Type>
 					<Points>20</Points>
 					<Rule>Bound spell, Power level 4: all Remains in Play spells on the tabletop are automatically dispelled</Rule>
 					<Description>Bound spell, Power Level 4. If activated successfully, all Remains in Play spells on the tabletop are automatically dispelled.</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Enchanted items">
-				<Artefact>
+				<Banner>
 					<Name>Standard of the Sands</Name>
-					<Type>Banner</Type>
 					<Points>75</Points>
 					<Rule>Once per battle, opponent may not make any march moves during the Movement phase</Rule>
 					<Description>One use only. At the start of any of your opponent's turns, the Standard of the Sands may be activated. The opponent may not make any march moves (even Dwarfs!) during the Movement phase of that turn, although skirmishers and man-sized single models on foot may move as normal. In addition, all units attempting to rally suffer -1 to their Leadership for that player's turn only.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of the Hidden Dead</Name>
-					<Type>Banner</Type>
 					<Points>60</Points>
 					<Rule>At the beginning of the game, nominate one unit within your army that is to be hidden beneath the ground, this unit is not deployed at the beginning of the game: the banner may be used to unearth the unit during the remaining moves part of any Tomb Kings Movement phase</Rule>
 					<Description>One use only. At the beginning of the game, nominate one unit within your army that is to be hidden beneath the ground. This unit must be a Core Unit choice, and cannot cost more than 100 points. This unit is not deployed at the beginning of the game. The banner may be used to unearth the unit during the remaining moves part of any Tomb Kings Movement phase. The entire unit must be placed within 18" of the Banner and at least 1" away from any enemy models. It may move normally on the turn it appears.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Icon of the Sacred Eye</Name>
-					<Type>Banner</Type>
 					<Points>50</Points>
 					<Rule>In the first round of every combat, all models in the unit (including steeds) get +1 to hit</Rule>
 					<Description>In the first round of every combat, all models in the unit (including steeds) get +1 to hit.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Mirage Standard</Name>
-					<Type>Banner</Type>
 					<Points>40</Points>
 					<Rule>Any missile weapons that roll to hit must re-roll all successful rolls to hit when firing against a unit; against missile weapons that do not require a roll to hit, all models in the unit gain a 5+ Ward save</Rule>
 					<Description>Any missile weapons that roll to hit must re-roll all successful rolls to hit when firing against a unit that contains the Mirage Standard. Against missile weapons that do not require a roll to hit (such as cannons and stone throwers), all models in the unit containing the Mirage Standard gain a 5+ Ward save.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Icon of Rakaph</Name>
-					<Type>Banner</Type>
 					<Points>40</Points>
 					<Rule>Unit may make a free reform move at the start of its Movement phase</Rule>
 					<Description>Tomb Guard or Skeleton Warriors only. A unit of Tomb Guard or Skeleton Warriors containing this banner may make a free reform move at the start of its Movement phase. This is done before charges are declared, so that a unit with the Icon of Rakaph may charge on the turn it reforms.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Standard of the Cursing Word</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>Each enemy model in base contact with the Standard Bearer at the start of the Tomb Kings' Magic phase must pass a Leadership test or lose a wound with no Armour save allowed</Rule>
 					<Description>Each enemy model in base contact with the Standard Bearer at the start of the Tomb Kings' Magic phase must pass a Leadership test (on their own unmodified Ld) or lose a wound (with no Armour save allowed).</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of the Undying Legion</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>Bound spell, Power level 3: casts Djedra's incantation of Summoning</Rule>
 					<Description>Bound spell, Power Level 3. Casts Djedra's incantation of Summoning. May only be cast on the unit containing the banner</Description>
-				</Artefact>
+				</Banner>
 			</Group>
 		</Artefacts>
 		<Heroes>
