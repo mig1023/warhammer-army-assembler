@@ -44,78 +44,69 @@
 	<Content>
 		<Artefacts>
 			<Group Name="Sacred spawnings">
-				<Artefact>
+				<Powers>
 					<Name>Blessed Spawning of Tzunki</Name>
-					<Type>Powers</Type>
 					<Points>5</Points>
 					<TypeUnitIncrese/>
 					<AddToInitiative>1</AddToInitiative>
 					<Rule>Aquatic</Rule>
 					<Description>Aquatic, +1 Initiative.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Blessed Spawning of Sotek</Name>
-					<Type>Powers</Type>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>When the unit/character charges, they get +1 Attack for that round of combat.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Blessed Spawning of Quetzl</Name>
-					<Type>Powers</Type>
 					<Points>15</Points>
 					<TypeUnitIncrese/>
 					<AddToArmour>1</AddToArmour>
 					<Description>Scaly Skin save increased by +1.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Blessed Spawning of Tlazcotl</Name>
-					<Type>Powers</Type>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
 					<ImmuneToPsychology/>
 					<Description>Immune to Psychology (note that a Carnosaur ridden by a Saurus Oldblood with the Blessed Spawning of Tlazcotl is still subject to Blood-Frenzy, and Cold Ones will still be subject to stupidity).</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Blessed Spawning of Chotec</Name>
-					<Type>Powers</Type>
 					<Points>15</Points>
 					<TypeUnitIncrese/>
 					<Rule>Roll an extra dice when pursuing and choose the highest two (or three if mounted)</Rule>
 					<Description>Roll an extra dice when pursuing and choose the highest two (or three if mounted).</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Blessed Spawning of Huanchi</Name>
-					<Type>Powers</Type>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
 					<Rule>May move through jungle, woods and forest as if it were open ground, suffering no penalties for movement</Rule>
 					<Description>The unit may move through jungle, woods and forest as if it were open ground, suffering no penalties for movement.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Blessed Spawning of Tepok</Name>
-					<Type>Powers</Type>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
 					<AddToDispell>1</AddToDispell>
 					<Description>The presence of the unit or character on the battlefield adds one dice to the player's Dispel dice pool.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Blessed Spawning of Itzl</Name>
-					<Type>Powers</Type>
 					<Points>5</Points>
 					<TypeUnitIncrese/>
 					<Description>Characters must take the Blessed Spawning of Itzl if they wish to ride a Cold One or a Carnosaur.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Blessed Mark of the Old Ones</Name>
-					<Type>Powers</Type>
 					<Points>35</Points>
 					<TypeUnitIncrese/>
 					<Rule>May re-roll a total of D3 single D6's per game</Rule>
 					<Description>The character may re-roll a total of D3 (roll at the start of the game) single D6's per game. Each re-roll entitles the player to take a single D6 of his own that directly effects the character (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. This can potentially cause Irresistible Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
-				</Artefact>
+				</Powers>
 			</Group>
 			<Group Name="Common magic items">
 				<SwordOfStriking Points="30"/>
@@ -130,267 +121,234 @@
 				<WarBanner Points="25"/>
 			</Group>
 			<Group Name="Sacred Plaques">
-				<Artefact>
+				<Arcane>
 					<Name>Cupped Hands of the Old Ones</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Slann</OnlyGroup>
 					<Points>50</Points>
 					<AddToWard>5</AddToWard>
 					<Description>The entire unit that is accompanying the Slann gains a 5+ Ward save. Note, however, that the unit does not get this increase against models that are attacking it in close combat, for they are slightiy inside the mystical shield.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>The Divine Plaque of Protection</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Slann</OnlyGroup>
 					<Points>50</Points>
 					<Rule>Ward save 2+, but not for close combat</Rule>
 					<Description>Increases the Ward save that the Slann gets from 4+ to 2+. Note however, that the Slann does not get this increase against models that are attacking it in close combat, for they are slighdy inside the mystical shield. In close combat, the Slann still only gets a 4+ Ward save.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Plaque of Dominion</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Slann</OnlyGroup>
 					<Points>50</Points>
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Description>Adds an extra +1 dice to the Lizsmdmen player's Power dice and Dispel pools.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Plaque of Tepok</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Slann</OnlyGroup>
 					<Points>50</Points>
 					<Rule>Knows one more spell than he is normally allowed</Rule>
 					<Description>The Slann knows one more spell than he is normally allowed.</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Magic weapons">
-				<Artefact>
+				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
-					<Type>Weapon</Type>
 					<Points>65</Points>
 					<AddToStrength>1</AddToStrength>
 					<NoArmour/>
 					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Scimitar of the Sun Resplendent</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<AddToAttacks>2</AddToAttacks>
 					<Description>The wielder of this blade has +2 Attacks</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Staff of the Lost Sun</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<Rule>3 shots, Strength of 5</Rule>
 					<Description>The staff is treated as a short bow that has a Strenght of 5, and 3x Multiple Shots</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Piranha Blade</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<MultiWounds>2</MultiWounds>
 					<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Blade of Realities</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<NoWard/>
 					<Rule>Any wound inflicted on Daemons is multiplied into two wounds</Rule>
 					<Description>No Ward saves are allowed against the Blade of Realities, although Armour saves and Regeneration may be taken as normal. In addition, any wound inflicted on Daemons is multiplied into two wounds (after Armour saves, etc)</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Dagger of Sotek</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Skink</OnlyGroup>
 					<Points>25</Points>
 					<KillingBlow/>
 					<Fear/>
 					<Description>Confers on the bearer the killing blow ability. In addition, the bearer causes Fear in Skaven</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Sword of the Hornet</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<HitFirst/>
 					<Description>The bearer of this sword has the 'Always Strikes First' rule. If an opponent also has the ability to always strike first then resolve their attacks in normal Initiative order.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Burning Blade of Chotec</Name>
-					<Type>Weapon</Type>
 					<Points>20</Points>
 					<ArmourPiercing>2</ArmourPiercing>
 					<Rule>Flaming attacks</Rule>
 					<Description>Targets struck by the Burning Blade of Chotec suffer a -2 penalty to their Armour save in addition to any modifiers from the user's Strength. All attacks made with this weapon count as flaming attacks.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic armour">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Sacred Stegadon Helm</Name>
-					<Type>AdditionalArmour</Type>
 					<OnlyGroup>Skink</OnlyGroup>
 					<Points>40</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToLeadership>1</AddToLeadership>
 					<Description>Confers +1 to the model's Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
-					<Type>Shield</Type>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, any magic missile that strikes the bearer or any unit he is with is deflected on the roll of 4+ on a D6. If the spell is deflected, the results of the magic missile is resolved against the caster of the spell or the unit the character is with (following the normal targeting rules). This in turn cannot be dispelled.</Description>
-				</Artefact>
-				<Artefact>
+				</Shield>
+				<Shield>
 					<Name>The Mainming Shield</Name>
-					<Type>Shield</Type>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical.</Description>
-				</Artefact>
+				</Shield>
 			</Group>
 			<Group Name="Enchanted items">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Gleaming Pendant of Chotec</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
 					<Rule>For one turn, enemy unit that is in contact with the model using the pendant will strike last in combat, one use only</Rule>
 					<Description>One use only. The pendant may be used at the start of any Lizardmen player's Close Combat phase. For that turn only, any enemy unit that is in contact with the model using the pendant will strike last in combat - even striking after great weapons and Zombies! If an enemy has the ability to always strike first, then on the roll of a 4+ they get to attack first; if they roll a 1-3, then they too will strike last.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Blood Statuette of Spite</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<Test Bet="Wound" Context="Round" Repeat="Once">Toughness</Test>
 					<Description>Bounded Spell. Power Level 5. One use only. Once per game, the user may cast the spell bound within the statuette. The spell may be cast on any enemy character. That character must immediately take Toughness test. If this test is failed, then the model loses a Wound with no armour saves allowed. If the model takes a wound, it must immediately take another Toughness test, losing another wound if it fails again. This continues until either the model passes a Toughness test or is slain</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Cloak of Feathers</Name>
-					<Type>AdditionalArmour</Type>
 					<Only>Infantry</Only>
 					<OnlyGroup>Skink</OnlyGroup>
 					<Points>30</Points>
 					<Rule>Fly</Rule>
 					<Description>The wearer of the cloack may fly</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Charm of the Jaguar Warrior</Name>
-					<Type>AdditionalArmour</Type>
 					<Only>Infantry</Only>
 					<Points>20</Points>
 					<MovementTo>9</MovementTo>
 					<Description>The model's Movement is increased to 9.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Arcane>
 					<Name>Curse-Charm of Tepok</Name>
-					<Type>Arcane</Type>
 					<Points>20</Points>
 					<Rule>Enemy mage re-rolls Miscast, one use only</Rule>
 					<Description>After the enemy rolls on the Miscast Table for the first time in the game, the bearer of the Curse-Charm of Tepok may force their opponent to re-roll the result. This second result stands.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Weapon>
 					<Name>Bane Head</Name>
-					<Type>Weapon</Type>
 					<Points>15</Points>
 					<Rule>Unsaved wounds doubled for nominated target</Rule>
 					<Description>Nominate an enemy character at the start of the battle. All unsaved wounds caused by the bearer on the nominated target are doubled</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<AdditionalArmour>
 					<Name>Dragonfly of Quicksilver</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
 					<Rule>+1 to Scout deploys</Rule>
 					<Description>If both players have models with the Scout ability, the Lizardmen player adds 1 to his dice roll when rolling to see eho deploys their Scouts first</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Venom of the Firefly Frog</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
 					<PoisonAttack/>
 					<Description>All mundane weapons used by the model with the Venom of the Firefly Frog (both close combat weapons and ranged weapons) are coated with this venom. All attacks made with these weapons count as Poisoned Attacks and are magical.</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane items">
-				<Artefact>
+				<Arcane>
 					<Name>Rode of the Storm</Name>
-					<Type>Arcane</Type>
 					<Points>35</Points>
 					<Rule>Bound spell, Power Level 5: magic missile that inflicts 2D6 automatic Strength 3 hits (Strength 4 if the target has an Armour save of 4+ or better) on one enemy unit within 18", one use only</Rule>
 					<Description>Bound Spell. Power Level 5. One use only. May be targeted against an enemy unit during the Magic phase. It is a magic missile that inflicts 2D6 automatic Strength 3 hits (Strength 4 if the target has an Armour save of 4+ or better) on one enemy unit within 18". In addition, any unit that suffers wounds from the rod must take an immediate Panic test.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Cube of Darkness</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>One spell dispell, all Ramains in Play spells are dispelled, magic phase ends immediately on the roll of a 4+, one use only</Rule>
 					<Rule>On 4+ </Rule>
 					<Description>One use only. This may be used with the exact same effects as a Dispel Scroll. In addition, all Remains in Play spells are automaticaUy removed from play. Finally, roll a D6. The Magic phase ends immediately on the roll of a 4+.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Diadem of power</Name>
-					<Type>Arcane</Type>
 					<Points>35</Points>
 					<Rule>Two power dice save for dispel</Rule>
 					<Description>The diadem allows the bearer to save up to two of his own unused Power dice or Dispel dice at the end of any Magic phase and store them, to add to his side's dice pool in the next Magic phase.</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Talismans">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Amulet of Itza</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>40</Points>
 					<WardForFirstWound>2</WardForFirstWound>
 					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Aura of Quetzl</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<Rule>4+ Ward save against attacks with Strength 5 or more</Rule>
 					<Description>The bearer of this item has a 4+ Ward save against attacks with Strength 5 or more.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Glyph Necklace</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<AddToWard>5</AddToWard>
 					<Description>The character wearing this gains a 5+ ward save</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Magic banner">
-				<Artefact>
+				<Banner>
 					<Name>Totem of Prophecy</Name>
-					<Type>Banner</Type>
 					<Points>75</Points>
 					<Fear/>
 					<Description>The unit causes Fear</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Sun Standart of Chotec</Name>
-					<Type>Banner</Type>
 					<Points>40</Points>
 					<Rule>Missles fired at the unit suffer -1 to Hit</Rule>
 					<Description>Missles fired at the unit suffer -1 to Hit</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Huanchi's Blessed Totem</Name>
-					<Type>Banner</Type>
 					<Points>40</Points>
 					<Rule>Once +D6" to charge</Rule>
 					<Description>One use only. The unit may use this banner once per game, at the start of any Lizardmen Magic phase. The unit moves direcdy forwards yp to D6". If it runs into an enemy unit, it counts as charging in the next Close Combat phase. The enemy may not make any charge reaction.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Jaguar Standard</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>Pursues an extra D6"</Rule>
 					<Description>The unit pursues an extra D6"</Description>
-				</Artefact>
+				</Banner>
 			</Group>
 		</Artefacts>
 		<Heroes>
