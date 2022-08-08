@@ -518,7 +518,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 Name = StringParse(xmlNode["Name"]),
                 Description = StringParse(xmlNode["Description"]),
-                Type = OptionTypeParse(xmlNode["Type"]),
+                Type = OptionTypeParse(xmlNode),
                 Only = OnlyForParse(xmlNode["Only"]),
                 ServiceDependencies = AllStringParse(xmlNode["Dependencies"], "On"),
                 ServiceInverseDependencies = AllStringParse(xmlNode["Dependencies"], "Off"),

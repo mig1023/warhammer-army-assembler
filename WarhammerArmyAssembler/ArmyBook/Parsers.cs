@@ -182,7 +182,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return 0;
 
-            bool success = Enum.TryParse(xmlNode.InnerText, out OptionType value);
+            string type = (xmlNode["Type"] == null ? xmlNode.Name : xmlNode["Type"].InnerText);
+            bool success = Enum.TryParse(type, out OptionType value);
 
             return (success ? value : Option.OptionType.Option);
         }
