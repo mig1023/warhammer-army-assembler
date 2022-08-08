@@ -55,195 +55,172 @@
 				<WarBanner Points="25"/>
 			</Group>
 			<Group Name="Magic Weapons">
-				<Artefact>
+				<Weapon>
 					<Name>Axes of Khorgor</Name>
-					<Type>Weapon</Type>
 					<Points>65</Points>
 					<Only>Infantry</Only>
 					<AddToAttacks>1</AddToAttacks>
 					<Reroll>ToHit</Reroll>
 					<Description>This pair of axes requires two hands to use. The bearer gains +1 Attack and may re-roll any missed rolls to hit in close combat.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>The Black Maul</Name>
-					<Type>Weapon</Type>
 					<Points>60</Points>
 					<AddToStrength>2</AddToStrength>
 					<Frenzy/>
 					<Description>Adds +2 to the bearer's Strength, and the bearer is also subject to frenzy.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Bonecrusher Mace</Name>
-					<Type>Weapon</Type>
 					<Points>55</Points>
 					<WoundOn>2</WoundOn>
 					<Rule>Against Castles, Empire Steam Tanks and in other situations where a roll to wound is not taken, the wielder counts as having double its Strength characteristic, to a maximum of 10</Rule>
 					<Description>The Mace always wounds on a 2+. Armour saves are taken using the wielder's normal Strength. Against Castles, Empire Steam Tanks and in other situations where a roll to wound is not taken, the wielder counts as having double its Strength characteristic, to a maximum of 10.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Great Fang</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<NoArmour/>
 					<Description>No Armour saves are made against wounds caused by the Great Fang.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Slaughterer's Blade </Name>
-					<Type>Weapon</Type>
 					<Only>Infantry</Only>
 					<Points>40</Points>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Rule>For each wound inflicted to enemy, roll a D6 immediately: hach roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total)</Rule>
 					<Description>The Slaughterer's Blade counts as a great weapon in all respects. In addition, for each wound inflicted with the Slaughterer's Blade, roll a D6 immediately. Hach roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total). Wounds regained in this way do not count towards combat resolution.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Scimitar of Skultar</Name>
-					<Type>Weapon</Type>
 					<Points>15</Points>
 					<Rule>Rolls of 6 to wound allow no Armour saves</Rule>
 					<Description>Rolls of 6 to wound with this weapon allow no Armour saves.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic Armour">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Pelt of The Dark Young</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Magic Resistance (1)</Rule>
 					<Description>The Pelt confers a 6+ Scaly Skin save that can be combined with normal armour. It also gives the bearer and any unit he joins Magic Resistance (1).</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Armour>
 					<Name>Trollhide Armour</Name>
-					<Type>Armour</Type>
 					<Points>20</Points>
 					<AddToArmour>5</AddToArmour>
 					<Regeneration/>
 					<Description>Trollhide Armour counts as a suit of heavy armour. The wearer may also Regenerate, except that lost Wounds are only regained on the roll of a 6, rather than a 4, 5 or 6.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<AdditionalArmour>
 					<Name>The Fur of Sharrgu</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
 					<Rule>+2 Armour save against missile fire (including magic missiles)</Rule>
 					<Description>Adds +2 to the bearer's Armour save against missile fire (including magic missiles), up to a maximum Armour save of 1+.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Armour>
 					<Name>Chaos armour</Name>
-					<Type>Armour</Type>
 					<Points>10</Points>
 					<AddToArmour>4</AddToArmour>
 					<Description>Chaos Armour gives a 4+ Armour save, that can be combined with other equipment as normal (other than light armour and heavy armour). A model may wear Chaos Armour and still cast spells.</Description>
-				</Artefact>
+				</Armour>
 			</Group>
 			<Group Name="Talismans">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Crown of Horns</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<AddToWard>5</AddToWard>
 					<Rule>+1 to any attempts to rally to a unit</Rule>
 					<Description>The bearer benefits from a 5+ Ward save and confers +1 to any attempts to rally to a unit he has joined, in addition to other modifiers.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Rune of The True Beast</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<AddToWard>5</AddToWard>
 					<Rule>Ridden monsters, lone monsters, the steeds pulling chariots, cavalry mounts and swarms may never direct their attacks at a model bearing the Rune of the True Beast, although their riders may attack as normal</Rule>
 					<Description>Ridden monsters, lone monsters, the steeds pulling chariots, cavalry mounts and swarms may never direct their attacks at a model bearing the Rune of the True Beast, although their riders may attack as normal.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Horn of The Great Hunt</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<MustBeGeneral/>
 					<Rule>When sounding an ambush, all ambushing units may add +1 to their Leadership test for arriving on the battlefield</Rule>
 					<Description>May only be given to the army General. When sounding an ambush, all ambushing units may add +1 to their Leadership test for arriving on the battlefield.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Bloodhunt Horn</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<Rule>Once per battle, can force a fleeing enemy unit within 12" to automatically fail their Rally test</Rule>
 					<Description>Once per battle, the bearer can force a fleeing enemy unit within 12" to automatically fail their Rally test. This must be declared before the test is made.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>The Dark Heart</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Rule>The character and any unit led by him adds +D3" to their charge move</Rule>
 					<Description>The character and any unit led by him adds +D3" to their charge move. Roll after declaring charges - if the charge is failed, the models move their normal failed charge distance.</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane items">
-				<Artefact>
+				<Arcane>
 					<Name>The Plague Chalice</Name>
-					<Type>Arcane</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
 					<Rule>May drink from the Chalice at the start of his Magic phase, suffers an immediate Strength 4 hit that ignores Armour and Ward saves, for the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast</Rule>
 					<Description>Mark of Nurgle only. The Shaman may drink from the Chalice at the start of his Magic phase. He suffers an immediate Strength 4 hit that ignores Armour and Ward saves (Regeneration may be taken as normal). For the remainder of that Magic phase, any spell cast by the Shaman will be cast with Irresistible Force on a successful casting roll which includes any double, except a Miscast.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>The Goretooth</Name>
-					<Type>Arcane</Type>
 					<Points>25</Points>
 					<Hate/>
 					<Rule>Replace one of his randomly rolled spells with The Bear's Anger</Rule>
 					<Rule>Can never make Overrun</Rule>
 					<Rule>Pursue 3D6", rather than 2D6"</Rule>
 					<Description>The Goretooth confers hatred and the Bloodgreed special rules to the bearer. The bearer must replace one of his randomly rolled spells with The Bear's Anger, regardless of the lore he has chosen.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Staff of Darkoth</Name>
-					<Type>Arcane</Type>
 					<Points>25</Points>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Rule>Shaman knows spell The Wild Call</Rule>
 					<Description>Counts as a braystaff. Also, the Shaman knows following spell in addition to his other spells:\n\nThe Wild Call (9+ to cast)\nCast on a Beast Herd, Bestigor or Warhounds unit within 12" of the caster and within its normal charge range of an enemy. The unit may declare and make a normal charge move immediately, though the charged unit may only stand as a reaction.</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Magic banners">
-				<Artefact>
+				<Banner>
 					<Name>The Beast Banner</Name>
-					<Type>Banner</Type>
 					<Points>60</Points>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>All Beasts of Chaos models in the unit, including characters, gain +1 Attack when they charge.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>The Flesh Banner</Name>
-					<Type>Banner</Type>
 					<Points>50</Points>
 					<Rule>At the end of each of your Magic phases, any enemy unit in base contact  suffers D6 Strength 4 hits, distributed as shooting hits</Rule>
 					<Description>At the end of each of your Magic phases, any enemy unit in base contact with the bearer of the banner suffers D6 Strength 4 hits, distributed as shooting hits.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Vitriolic Totem</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<PoisonAttack/>
 					<Description>All models in the unit bearing this totem count as having Poisoned Attacks. This will have no effect on characters wielding magic weapons.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>The Gore Banner</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>May re-roll failed Panic tests</Rule>
 					<Description>A unit with this banner may re-roll failed Panic tests.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Preyseeker</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>When using the Ambush special rule, may re-roll its Leadership test for arriving on the battlefield if it is failed</Rule>
 					<Description>When using the Ambush special rule, the unit is able to re-roll its Leadership test for arriving on the battlefield if it is failed. The second roll stands.</Description>
-				</Artefact>
+				</Banner>
 			</Group>
 		</Artefacts>
 		<Heroes>
