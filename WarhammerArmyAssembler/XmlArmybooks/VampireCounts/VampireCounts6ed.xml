@@ -43,133 +43,120 @@
 	<Content>
 		<Artefacts>
 			<Group Name="Von Carstein">
-				<Artefact>
+				<Weapon>
 					<Name>Summon Bats</Name>
-					<Type>Weapon</Type>
 					<Points>65</Points>
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
 					<Rule>Once per game can summon either a Bat Swarm (one Base) or D3+1 Fell Bats</Rule>
 					<Description>Once per game the Vampire can use this power at the start of one of his turns. He can choose to summon either a Bat Swarm (one Base) or D3+1 Fell Bats. Immediately calculate the Victory points value new unit. The uniy can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Call Winds</Name>
-					<Type>Weapon</Type>
 					<Points>55</Points>
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
 					<Rule>Call Wind instead of movement: all shooting is at -1 lo hit, all flying movement is impossible</Rule>
 					<Description>At the beginning of each of his turns the Vampire can decide not to move in that Movement phase and attempt to call winds. Roll a dice: on a result of 1 nothing happens, on a 2 to 6 the Vampire summons a wild storm that will last until the beginning of his next turn. If he is engaged in close combat, wounded or killed, the storm ends immediately. The storm affects the entire battlefield. All shooting is at -1 lo hit. All flying movement is impossible and flying creatures have to use their gnuind Movement value.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Walking Death</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
 					<AddToCloseCombat>1</AddToCloseCombat>
 					<Description>The presence of one or more von Carstein Vampires with this power in a combat adds +1 io their side's combat resolution.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Summon Wolves</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
 					<Rule>Once per game can summon D3 Dire Wolves</Rule>
 					<Description>Once per game, the Vampire can use this power at the start of one of his turns to summon D3 Dire Wolves. Immediately calculate the Victory points value new unit. The uniy can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Aura of Dark Majesty</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
 					<Rule>Normal range of 12" for his troops to be able to march and use his Leadership is extended to 18"</Rule>
 					<Description>If the Vampire is the army's General, the normal range of 12" for his troops to be able to march and use his Leadership is extended to 18".</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Wolf Form</Name>
-					<Type>Weapon</Type>
 					<Points>20</Points>
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
 					<MovementTo>9</MovementTo>
 					<Description>The Movement of the Vampire is increased to 9 as long as he is moving on foot</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Blood Dragon">
-				<Artefact>
+				<Weapon>
 					<Name>Red Fury</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<On>Blood Dragon</On>
 					</Dependencies>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>The Vampire has +1 Attack</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Blademaster</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<On>Blood Dragon</On>
 					</Dependencies>
 					<Rule>Model in base contact lose one of his Attacks, chosen by the Vampire</Rule>
 					<Description>The Vampire can choose one model in base contact with him at the beginning of the Close Combat phase. The chosen model will lose one of his Attacks, chosen by the Vampire if he has different kinds of attack (for example, from a riding beast, bite attacks, etc).</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Heart Piercing</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Blood Dragon</On>
 					</Dependencies>
 					<Rule>Re-roll missed close combat attacks in the first round of every combat</Rule>
 					<Description>The Vampire can re-roll missed close combat attacks in the first round of every combat.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Master Strike</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Blood Dragon</On>
 					</Dependencies>
 					<KillingBlow/>
 					<Description>The Vampire has the Killing Blow special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Strength of Steel</Name>
-					<Type>Weapon</Type>
 					<Points>15</Points>
 					<Dependencies>
 						<On>Blood Dragon</On>
 					</Dependencies>
 					<ChargeStrengthBonus>1</ChargeStrengthBonus>
 					<Description>The Vampire has +1 Strength the turn he charges.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Honour or Death</Name>
-					<Type>Weapon</Type>
 					<Points>10</Points>
 					<Dependencies>
 						<On>Blood Dragon</On>
 					</Dependencies>
 					<Rule>Enemy character must take a Leadership test and hide in the rear ranks, refusing to fight the Vampire, if the test is failed</Rule>
 					<Description>At the start of a challenge, the enemy character selected to take on the Vampire must take a Leadership test before any blows are struck (a character Immune to Psychology is also immune to this effect). If the test is failed, the enemy character will change his mind and hide in the rear ranks, refusing to fight the Vampire. Then the combat will proceed as normal, with no challenges fought that turn and the Vampire will be free to fight against any models he is in contact with.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Necrarch">
-				<Artefact>
+				<Weapon>
 					<Name>Nehekhara's Noble Blood</Name>
-					<Type>Weapon</Type>
 					<Points>45</Points>
 					<Dependencies>
 						<On>Necrarch</On>
@@ -178,181 +165,164 @@
 					<AddToDispell>1</AddToDispell>
 					<AddToWizard>1</AddToWizard>
 					<Description>The Vampire has one extra Magic Level. A Thrall with this power is a Level 1 Wizard in all respects and can be the army's General</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>The Awakening</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Necrarch</On>
 					</Dependencies>
 					<Rule>+D3 to the total number of Skeletons or Zombies created by Invocation of Nehek</Rule>
 					<Description>Whenever the Vampire casts the Necromantic spell Invocation of Nehek he can add +D3 to the total number of Skeletons or Zombies created. For example, if he casts a level 2 Invocation, he can raise 2D6+D3 Skeletons.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Dark Acolyte</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Necrarch</On>
 					</Dependencies>
 					<AddToCast>1</AddToCast>
 					<Description>The presence of the Vampire on the battlefield adds one dice to the player's pile of Power dice (no effect on the Dispel dice).</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Unholy Cynosure</Name>
-					<Type>Weapon</Type>
 					<Points>20</Points>
 					<Dependencies>
 						<On>Necrarch</On>
 					</Dependencies>
 					<Rule>Once per game, can re-roll one of the dice rolled to cast a spell</Rule>
 					<Description>Once per game, the Vampire can re-roll one of the dice rolled to cast a spell. This can be used to negate a Miscast result or could cause an Irresistible Force result.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Master of the Black Arts</Name>
-					<Type>Weapon</Type>
 					<Points>20</Points>
 					<Dependencies>
 						<On>Necrarch</On>
 					</Dependencies>
 					<Rule>The range of all spells is increased by 6"</Rule>
 					<Description>The range of all spells cast by the Vampire is increased by 6". This power won't affect spells without a range (like Hand of Dust) nor the range or spells cast from bound spell items.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Forbidden Lore</Name>
-					<Type>Weapon</Type>
 					<Points>15</Points>
 					<Dependencies>
 						<On>Necrarch</On>
 					</Dependencies>
 					<Rule>Knows one more spell than he is normally allowed</Rule>
 					<Description>The Vampire knows one more spell than he is normally allowed. This does not increase his Magic Level.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Strigoi">
-				<Artefact>
+				<Weapon>
 					<Name>Curse of the Revenant</Name>
-					<Type>Weapon</Type>
 					<Points>55</Points>
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
 					<Regeneration/>
 					<Description>The Vampire has the Regeneration special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Massive Monstrosity</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
 					<AddToWounds>1</AddToWounds>
 					<Description>The Vampire has +1 Wound on his profile.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Bat Form</Name>
-					<Type>Weapon</Type>
 					<Points>45</Points>
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
 					<Rule>Fly</Rule>
 					<Description>The model has the Fly special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Infinite Hatred</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
 					<Reroll>ToHit</Reroll>
 					<Description>The Vampire can re-roll all failed To Hit rolls.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Summon Ghouls</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
 					<Rule>Once per game can summon D3+1 Ghouls</Rule>
 					<Description>Once per game, the Vampire can use this power at the start of one of his turns to summon D3+1 Ghouls. Immediately calculate the Victory points value of the new unit. The unit can enter from any table edge in the same way as a unit that had pursued an enemy off the field.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Iron Sinews</Name>
-					<Type>Weapon</Type>
 					<Points>20</Points>
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
 					<AddToStrength>1</AddToStrength>
 					<Description>The Vampire has +1 Strength on his profile.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Lahmia">
-				<Artefact>
+				<Weapon>
 					<Name>Seduction</Name>
-					<Type>Weapon</Type>
 					<Points>55</Points>
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
 					<Rule>One model in base contact with the Vampire must take a Leadership test, if the test is failed, the victim is controlled by the Vampire player in that Close Combat phase</Rule>
 					<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If the test is failed, the victim is controlled by the Vampire player in that Close Combat phase. The model will direct its attacks against his own side. The model cannot be attacked by either side in that Close Comhat phase but, after combat resolution has been worked out, he reverts immediately to the original player's control and can therefore use his Leadership for any Break tests and can be broken and pursued as normal. If the model has no friendly models in base contact, it will count as being dominated.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Domination</Name>
-					<Type>Weapon</Type>
 					<Points>40</Points>
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
 					<Rule>One model in base contact must take a Leadership test, if the test is failed, the victim cannot attack in that Close Combat phase and all attacks directed against the victim will hit automatically</Rule>
 					<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If the test is failed, the victim cannot attack in that Close Combat phase and all attacks directed against the victim will hit automatically.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Quickblood</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
 					<AddToWard>5</AddToWard>
 					<Description>The Vampire has a Ward save of 5+.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Innocence Lost</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
 					<HitFirst/>
 					<Description>The Vampire always attacks first in close combat, even if charged. If an enemy has the same power because of a magic item or spell, hits are resolved in order of Initiative. If the Vampire and her enemy have the same Initiative, roll a dice to decide who attacks first.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Transfix</Name>
-					<Type>Weapon</Type>
 					<Points>20</Points>
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack in that Close Combat phase.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Beguile</Name>
-					<Type>Weapon</Type>
 					<Points>10</Points>
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack the Vampire in that the Close Combat phase.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Common magic items">
 				<SwordOfStriking Points="30"/>
@@ -367,97 +337,86 @@
 				<WarBanner Points="25"/>
 			</Group>
 			<Group Name="Magic weapons">
-				<Artefact>
+				<Weapon>
 					<Name>Frostblade</Name>
-					<Type>Weapon</Type>
 					<Points>100</Points>
 					<NoArmour/>
 					<Test Bet="Death" Context="Wound">Toughness</Test>
 					<Description>Armour saving throws are not allowed against the Frostblade. Ward saves can he taken as nornal. For every unsaved wound caused by this sword, the victim must take a Toughness test to resist magic. If he fails, he is killed outright (remember that a 6 is always a failure). If the victim passes the test then he suffers damage (mm die hlow as normal</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Blood Drinker</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<OnlyGroup>Vampire</OnlyGroup>
 					<Rule>For every model killed in close comhat the wearer immediately regenerates one lost Wound</Rule>
 					<Description>For every model killed in close comhat the wearer immediately regenerates one lost Wound. This cannot take the character's Wounds characteristic above its initial value.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>The Black Axe of Krell</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Rule>Any model which suffers 1 or more wounds must roll a D6 at the start of both its own and its enemy's Magic phases, on a roll of 1 or 2 it suffers 1 more wound with no armour save allowed</Rule>
 					<Description>The Black Axe of Krell is a Great Weapon and follows all the rules for normal Great Weapons. Also, any model which suffers 1 or more wounds from the Black Axe must roll a D6 at the start of both its own and its enemy's Magic phases for the rest of the game. On a roll of 1 or 2 it suffers 1 more wound with no armour save allowed (a Ward save can be taken as normal).</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Sword of Unholy Power</Name>
-					<Type>Weapon</Type>
 					<Points>40</Points>
 					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Rule>For each unsaved Wound gains an extra Power or Dispel dice in the following Magic phase</Rule>
 					<Description>For each unsaved wound caused by the blade the plaver may inimedutely get a magic dice. This dice is added to his pile of Power or Dispel dice in the following Magic phase, (depending on whether it is his own turn or his enemy's).</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Tomb Blade</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<Rule>If the bearer is in a unit of Skeleton or Zombies, for each model with only 1 Wound on its starting profile he slays in close combat an extra model is added to the unit, armed exactly like the other rank-and-file models in the unit</Rule>
 					<Description>The full powers of this word can be used only when the bearer has joined a unit of Skeletons or Zombies, otherwise it is treated as a magic weapon with no particular power. If the wielder slays a model with only 1 Wound on its starting profile with the Tomb Blade, then one Skeleton or Zombie is created in its place. Models created by the Tomb Blade are added to the unit which the bearer is in, armed exactly like the other rank-and-file models in the unit. The Victory points value of the unit is unaffected.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Asp Bow</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
 					<Rule>Range 24", the bearer can pick any target it can see, hits are resolved at Strength 4 and count as Poisoned Attacks</Rule>
 					<Description>Range 24". The bearer can pick any target it can see (including a character/Champion in a unit, a war machine's crew, a chariot/monster rider etc), but if he uses this special ability he suffers a -1 to hit. Note that the normal -1 modifier for shooting at a single model does not apply (but other to hit modifiers do apply) and a character/Champion cannot benefit from the "Look out Sir!" rule. Hits are resolved at Strength 4 and count as Poisoned Attacks.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Sword of Kings</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<OnlyGroup>Wight Lord</OnlyGroup>
 					<ExtendedKillingBlow>5</ExtendedKillingBlow>
 					<Description>This sword scores a Killing Blow on the result of a 5+.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic armour">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Wailing Helm</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<AddToArmour>6</AddToArmour>
 					<Terror/>
 					<Description>Gives a 6+ armour save and may be worn in addition to normal armour. The wearer also causes terror.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Armour>
 					<Name>Armour of Bone</Name>
-					<Type>Armour</Type>
 					<Only>Infantry</Only>
 					<Points>50</Points>
 					<AddToArmour>5</AddToArmour>
 					<FirstWoundDiscount/>
 					<Description>Gives a 5+ armour save and may be combined with other equipment. Wizard can wear this armour without losing his ability to cast spells. When the wearer fails his first armour save (of if he's wounded by an attack aganst which he cannot take an armour save at all), the armour crumbles to dust and is destroyed, but the wound is ignored.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Armour>
 					<Name>The Flayed Hauberk</Name>
-					<Type>Armour</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<Off>Lahmia</Off>
 					</Dependencies>
 					<ArmourTo>1</ArmourTo>
 					<Description>1+ armour save. This cannot be improved by any means.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Shield>
 					<Name>The Cursed shield of Mousillon</Name>
-					<Type>Shield</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<Off>Lahmia</Off>
@@ -465,12 +424,11 @@
 					<AddToArmour>6</AddToArmour>
 					<Rule>One enemy in base contact (bearer's choice) lose 1 Attack</Rule>
 					<Description>Gives a 6+ armour save and may be combined with other equipment normally. One enemy in base contact (bearer's choice) lose 1 Attack. All Bretonnian Knights and Characters hate the model carrying the shield.</Description>
-				</Artefact>
+				</Shield>
 			</Group>
 			<Group Name="Talismans">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>The Carstein Ring</Name>
-					<Type>AdditionalArmour</Type>
 					<OnlyGroup>Vampire</OnlyGroup>
 					<Dependencies>
 						<On>Von Carstein</On>
@@ -479,50 +437,44 @@
 					<AddToWard>4</AddToWard>
 					<Regeneration/>
 					<Description>The model has a 4+ Ward save and the Regeneration special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Obsidian Amulet</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>45</Points>
 					<AddToWard>4</AddToWard>
 					<Rule>Magic Resistance (1)</Rule>
 					<Rule>Ward save against wounds caused by magic weapons, spells or indeed any form of magical attack</Rule>
 					<Description>The bearer has a 4+ Ward save against wounds caused by magic weapons, spells or indeed any form of magical attack. In addition, the ring confers Magic Resistance (1).</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Crown of the Damned</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
 					<AddToWard>4</AddToWard>
 					<Stupidity/>
 					<Description>4+ Ward save. The wearer is subject to Stupidity (even if the model is normally Immune to Psychology).</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Wristbands of Black Gold</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<Rule>3+ Ward save against missile fire of any kind</Rule>
 					<Description>3+ Ward save against missile fire of any kind (including hits from war machines, template attacks, magic missiles, etc).</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Ring of Night</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<AddToWard>5</AddToWard>
 					<Description>5+ Ward save.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>The Gem of Blood</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<WardForFirstWound>2</WardForFirstWound>
 					<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed.</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane items">
-				<Artefact>
+				<Arcane>
 					<Name>Power Familiar</Name>
-					<Type>Arcane</Type>
 					<Points>50</Points>
 					<Dependencies>
 						<Off>Blood Dragon</Off>
@@ -530,132 +482,116 @@
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Description>The Familiar adds one dice to both the Power dice and the Dispel dice pool of the bearer's side.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Staff of Damnation</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>Bound spell, power level 4: all Undead unils within 12" are affected by the Hellish Vigour spell</Rule>
 					<Description>Bound spell, power level 4. The Bearer can release the powers of the staff once in each of his Magic phases. All Undead unils within 12" are affected by the Hellish Vigour spell. Roll a D6 each time the Staff is used. On a roll of 1, the Staff is temporarily exhausted and can't be used again that battle.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Skull Staff</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>At the beginning of the bearer's Maguc phase, the enemy must reveal all magic items carried by each one of his models within 12"</Rule>
 					<Rule>Can choose to re-roll the dice on the Miscast table</Rule>
 					<Description>At the beginning of the bearer's Maguc phase, the enemy must reveal all magic items carried by each one of his models within 12" of the Skull Staff's bearer. In addition, thanks to the wise advice of the skull, after the bearer has rolled on the Miscast table, he can choose to re-roll the dice. The second result applies.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Warrior Familiar</Name>
-					<Type>Arcane</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<Off>Blood Dragon</Off>
 					</Dependencies>
 					<Rule>At the beginning of the Close Combat phase, before blows are struck, the familiar inflicts one Strength 5 hit on a single model in base contact with him</Rule>
 					<Description>At the beginning of the Close Combat phase, before blows are struck, the familiar inflicts one Strength 5 hit on a single model chosen by the Wizard from among those in base contact with him.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>The Book of Arkhan</Name>
-					<Type>Arcane</Type>
 					<Points>25</Points>
 					<Rule>Bound spell, power level 3: Vanhel's Danse Macabre</Rule>
 					<Description>Bound spell, power level 3. The bearer can release the Vanhel's Danse Macabre spell contained in the Book once per Magic phase like an ordinary spell. No power Dice necessary to cast the spell as the Book provides all the power required. Roll a D6 each time the Book is used. On a result of 1 its powers are temporarily exhausted and the Book cannot be used again that battle.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Black Periapt</Name>
-					<Type>Arcane</Type>
 					<Points>15</Points>
 					<Rule>The Periapt allows the bearer to save one unused Power dice or Dispel dice at the end of any Magic phase and store it, to add it to his side's dice pool in the next Magic phase</Rule>
 					<Description>The Periapt allows the bearer to save one unused Power dice or Dispel dice at the end of any Magic phase and store it, to add it to his side's dice pool in the next Magic phase.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Spell Familiar</Name>
-					<Type>Arcane</Type>
 					<Points>15</Points>
 					<Dependencies>
 						<Off>Blood Dragon</Off>
 					</Dependencies>
 					<Rule>Knows one more spell than he is normally allowed</Rule>
 					<Description>The familiar's owner knows one more spell than he is normally allowed. This does not increase his magic level.</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Enchanted items">
-				<Artefact>
+				<Weapon>
 					<Name>Rod of Flaming Death</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Rule>Bound spell, power level 4: a flaming magic missile with a range of 24" and causing D3 Strength 4 hits, a unit taking at least one casualty must take a Panic test</Rule>
 					<Description>Bound spell, power level 4. The bearer can cast the Rod's spell once in his Magic phase. The spell requires no Power dice to cast. A flaming magic missile with a range of 24" and causing D3 Strength 4 hits spews from the staff. A unit taking at least one casualty must take a Panic test.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>The Cursed Book</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Rule>All enemy models within 6" suffer a -1 penalty on their rolls to hit in close combat</Rule>
 					<Description>All enemy models within 6" of the Book's bearer suffer a -1 penalty on their rolls to hit in close combat.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Cloak of Mist and Shadows</Name>
-					<Type>Weapon</Type>
 					<Points>45</Points>
 					<Only>Infantry</Only>
 					<Rule>Ethereal</Rule>
 					<Description>This item can be used only by models on foot. The wearer is Ethereal for the entire game. He may cast spells in this form, but cannot use missile weapons nor strike blows in close combat, except against other Ethereal creatures.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Talon of Death</Name>
-					<Type>Weapon</Type>
 					<Points>40</Points>
 					<Rule>All enemy models in base contact automatically suffer 1 Strength 5 hit at the end of each of the Vampires Movement phases</Rule>
 					<Description>All enemy models in base contact with the bearer of the Talon of Death automatically suffer 1 Strength 5 hit at the end of each of the bearer's Movement phases. If a character riding a monster/chariot is touching the bearer then both reader and the mount chariot suffer 1 Strength 5 hit.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Casket of Ages</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Rule>Bound spell, power level 4, one use only: a model in base contact suffers one wound, no armour save is allowed, if the wound is not saved, the victim must take a Toughness test or die immediately, with no saves allowed whatsoever</Rule>
 					<Description>Bound spell, power level 4. One use only. The Casket may cast the spell once during the battle. The spell requires no Power dice to cast; all the power required is provided by the Casket itself. When the Casket's spell is cast, a model in base contact with the bearer (chosen by the bearer) suffers one wound. No armour save is allowed. If the wound is not saved, the victim must also take a Toughness test or die immediately, with no saves allowed whatsoever, not even Ward saves.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic standards">
-				<Artefact>
+				<Banner>
 					<Name>Hell Banner</Name>
-					<Type>Banner</Type>
 					<Points>65</Points>
 					<Terror/>
 					<Description>All models in the unit cause terror. Remember that all models in this unit will cause fear in fear-causing models.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of Doom</Name>
-					<Type>Banner</Type>
 					<Points>50</Points>
 					<Rule>5+ Ward save against normal and magical missiles</Rule>
 					<Description>The unit has a 5+ Ward save against normal and magical missiles.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of the Barrows</Name>
-					<Type>Banner</Type>
 					<Points>45</Points>
 					<OnlyGroup>Wights</OnlyGroup>
 					<HitOn>3</HitOn>
 					<Description>All Wights (Grave Guard, Black Knight and Wight lords) in the unit carrying the Banner will hit the enemy on a 3+ regardless of relative Weapon Skills or any other modifier.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Screaming Banner</Name>
-					<Type>Banner</Type>
 					<Points>40</Points>
 					<Rule>Enemy units taking a Fear test caused must roll one extra dice for their test and discard the one with the lowest result</Rule>
 					<Description>Enemy units taking a Fear test caused by the unit carrying this banner must roll one extra dice for their test and discard the one with the lowest result.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of the Dead Legion</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>+1D6 Unit Strength</Rule>
 					<Description>Treat the unit carrying the Banner as if it had 1D6 higher Unit Strength than it actually does. Roll each time you need to calculate the Unit Strength. The result applies only for that phase (Movement, Magic, etc) and you will have to roll again in other phases when needed.</Description>
-				</Artefact>
+				</Banner>
 			</Group>
 		</Artefacts>
 		<Heroes>
