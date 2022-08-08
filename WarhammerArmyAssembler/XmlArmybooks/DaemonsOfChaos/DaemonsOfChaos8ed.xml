@@ -47,233 +47,204 @@
 	<Content>
 		<Artefacts>
 			<Group Name="Daemonic Gifts">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Aura of Disruption</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
 					<Rule>Any dispel attempt you make while this model is on the table recieves one extra 'free' dispel dice</Rule>
 					<Description>Any dispel attempt you make while this model is on the table recieves one extra 'free' dispel dice.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Sorcerous Lodestone</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
 					<Rule>Whenever a spell is successfully cast by any Wizard, roll a D6 - this Daemon regains a Wound lost earlier in the battie on a roll of 5+</Rule>
 					<Description>Whenever a spell is successfully cast by any Wizard, roll a D6 - this Daemon regains a Wound lost earlier in the battie on a roll of 5+. Whenever a spell is miscast by any Wizard, the Daemon instead suffers a Wound on a roll of 4+.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Bringer of the Swarm</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
 					<Rule>At the end of every Close Combat phase in which the Daemon causes one or more unsaved Wounds, a unit of Chaos Furies is created within 6"</Rule>
 					<Description>At the end of every Close Combat phase in which the Daemon causes one or more unsaved Wounds, a unit of Chaos Furies is created. The unit consists of one Chaos Fury for every unsaved Wound caused. The unit must be placed wholly within 6" of the Daemon and cannot be placed with 1" of another unit or impassable terrain. If any model cannot be placed because there isn't enough room, or you do not have sufficient models, it is lost. Units created in this way do not award victory points.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Impenetrable Hide</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
 					<AddToToughness>2</AddToToughness>
 					<Description>The Daemon has +2 Toughness.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Massive Might</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
 					<AddToStrength>3</AddToStrength>
 					<Description>The Daemon has +3 Strength.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Unholy Sacrifice</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
 					<Rule>Can choose to lose D3 Wounds at the start of any of your Magic phases and add D3+1 dice to Power pool</Rule>
 					<Description>This Daemon can choose to lose D3 Wounds (with no saves allowed) at the start of any of your Magic phases. If it does so, add D3+1 dice to your power pool</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Corpulence</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
 					<AddToWounds>2</AddToWounds>
 					<Description>The Daemon has +1 Wound</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Incorporeal Strike</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
 					<NoArmour/>
 					<Description>Armour saves cannot be taken against the Daemon's close combat Attacks</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Souleater</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
 					<Rule>At the end of any phase in which the Daemon causes one or more unsaved Wounds in close combat, it regains a single lost Wound</Rule>
 					<Description>At the end of any phase in which the Daemon causes one or more unsaved Wounds in close combat, it regains a single lost Wound</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Unbreakable Skin</Name>
-					<Type>AdditionalArmour</Type>
 					<RandomGroup>Greater Gifts</RandomGroup>
 					<Points>50</Points>
 					<ArmourTo>2</ArmourTo>
 					<Description>The Daemon has a 2+ armour save that cannot be improved by any means.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Unholy Flurry</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
 					<AddToAttacks>2</AddToAttacks>
 					<Description>The Daemon has +2 Attacks.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Weapon>
 					<Name>Skill Swallower</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
 					<Rule>Whenever the Daemon slays an enemy character, it immediately increases one characteristic, of your choice, by one point</Rule>
 					<Description>Whenever the Daemon slays an enemy character, it immediately increases one characteristic, of your choice, by one point.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Cleaving Blow</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
 					<MultiWounds>2</MultiWounds>
 					<Description>The Daemon's close combat attacks have the Multiple Wounds (2) special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Crushing Mass</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
 					<ImpactHit>D3</ImpactHit>
 					<Description>The Daemon has the Impact Hits (D3) special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Dark Blessing</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
 					<WardForFirstWound>2</WardForFirstWound>
 					<Description>The Daemon has a 2+ ward save against the first Wound it suffers in the batde.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Noxious Breath</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
 					<Rule>Strength 2 Breath Weapon with no Armour saves allowed</Rule>
 					<Description>The Daemon has a Strength 2 Breath Weapon. Armour saves cannot be taken against Wounds caused by this attack.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Unnatural Swiftness</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
 					<HitFirst/>
 					<Description>The Daemon has the Always Strikes First special rule.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Hellforged Artefacts">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>The Portalglyph</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
 					<Rule>Can choose to keep a single unit in the Realm of Chaos instead of deploying it at the start of the game</Rule>
 					<Description>If your army contains the Portalglyph, you can choose to keep a single unit in the Realm of Chaos instead of deploying it at the start of the game. The Portalglyph can be placed in any of your Remaining Moves sub-phases. If the bearer is slain, he must immediately place the Portalglyph before being removed as a casualty. In either case, place a counter or other suitable marker within 12" of the bearer and scatter it 3D6" (6D6" if he was slain). If the counter ends up off the board, or within 1" of a unit or impassable terrain, alter the scatter distance by the smallest amount possible to ensure the counter is placed 1" before or beyond the obstruction.\n\nOnce the Portalglyph has been placed, the unit in the Realm of Chaos can enter play through the Portalglyph during the Remaining Moves sub-phase of any subsequent friendly turn. When the unit does so, place it facing any direction, provided that: the unit has at least as many files as it has ranks, the rear of the back rank is in base contact with the counter, no model is more than 12" from the counter, and the unit is not within 1" of another unit, impassable terrain or the board edge. The unit can then move normally (but not march).</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>The Rock of Inevitability</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>75</Points>
 					<Rule>One use only: at the end of any Movement phase place a cursed bulwark (an obstacle up to 8" long) anywhere within 6" of the bearer, at the end of each of your turns, roll a D6: on a score of 1-3 nothing happens; on a score of 4-5 place a further cursed bulwark; on a score of 6 place a cursed tower</Rule>
 					<Description>One use only. The bearer of the Rock of Inevitability can use it at the end of any Movement phase. Place a cursed bulwark (an obstacle up to 8" long) anywhere within 6" of the bearer. It cannot be placed on top of (or within 1" of) a unit, or placed on a terrain feature other than a hill. At the end of each of your turns, roll a D6. On a score of 1-3 nothing happens. On a score of 4-5 place a further cursed bulwark. On a score of 6 place a cursed tower (a Citadel Watchtower or another building of similar size). Cursed terrain features placed in this way must be positioned touching an existing cursed terrain feature, and cannot be placed on top of a unit, or a terrain feature other than a hill or forest. If the terrain feature cannot be placed, or you don't have the relevant terrain feature, then nothing is placed. Cursed bulwarks are walls, and cursed towers are buildings. A model from the Forces of Order that is in base contact with either a cursed tower or cursed bulwark suffers a -2 penalty to Initiative.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Weapon>
 					<Name>The Eternal Blade</Name>
-					<Type>Weapon</Type>
 					<Points>75</Points>
 					<Rule>Roll a D3 at the start of each round of combat: the bearer's Weapon Skill, Strength, Initiative and Attacks are increased by this amount until the end of the phase</Rule>
 					<Description>Roll a D3 at the start of each round of combat - the bearer's Weapon Skill, Strength, Initiative and Attacks are increased by this amount until the end of the phase.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>The Chromatic Tome</Name>
-					<Type>Weapon</Type>
 					<Points>75</Points>
 					<Rule>Can choose to re-roll the Winds of Magic dice in your turn</Rule>
 					<Description>You can choose to re-roll the Winds of Magic dice in your turn. However, if you do so, your opponent can also re-roll the Winds of Magic dice in his turn, if he wishes. In either case, all of the Winds of Magic dice must be re-rolled.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Weapons of The Dark Gods">
-				<Artefact>
+				<Weapon>
 					<Name>Blade of Blood</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<AddToStrength>1</AddToStrength>
 					<KillingBlow/>
 					<Description>Attacks made with the Blade of Blood are resolved at +1 Strength. They also have the Killing Blow special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Axe of Khorne</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Rule>+3 Attacks if in base contact three or more enemy models</Rule>
 					<Description>When he attacks with the Axe of Khorne, the wielder receives +3 Attacks if he is in base contact with three or more enemy models.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Wand of Whimsy</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Rule>Whenever the bearer successfully casts or dispels a spell, roll a D6 - the Wand of Whimsy gains a charge on a roll of 5+: The Wand grants the bearer a bonus to both Strength and Attacks equal to the number of charges</Rule>
 					<Description>Whenever the bearer successfully casts or dispels a spell, roll a D6 - the Wand of Whimsy gains a charge on a roll of 5+. The Wand of Whimsy grants the bearer a bonus to both Strength and Attacks equal to the number of charges.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Staff of Change</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Rule>Any character or monster that suffers one or more unsaved Wounds from the Staff of Change must immediately pass a Toughness test or suffer an additional D6 Wounds with no armour saves allowed</Rule>
 					<Description>Any character or monster that suffers one or more unsaved Wounds from the Staff of Change must immediately pass a Toughness test or suffer an additional D6 Wounds with no armour saves allowed. If such a model loses its last Wound to the Staff of Change, it explodes! All models within D6" immediately suffer a single Strength 5 hit.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Plague Flail</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Flail/>
 					<Test Bet="Wound" Context="Wound">Toughness</Test>
 					<Description>Attacks made with the Plague Flail are resolved at +2 Strength in the first round of combat. Any character or monster that suffers one or more unsaved Wounds from the Plague Flail must immediately pass a Toughness test or suffer another Wound with no armour saves allowed.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Balesword</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<PoisonAttack/>
 					<MultiWounds>D3</MultiWounds>
 					<Description>Attacks made with the Balesword have the Poisoned Attacks and Multiple Wounds (D3) special rules.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Witstealer Sword</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Test Bet="Wound" Context="Wound">Initiative</Test>
 					<Description>Any character or monster that suffers one or more unsaved Wounds from the Witstealer Sword must immediately pass an Initiative test or suffer another Wound with no armour saves allowed.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Lash of Despair</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Rule>Any character or monster that suffers one or more unsaved Wounds from the Staff of Change must immediately pass a Toughness test or suffer an additional D6 Wounds with no armour saves allowed</Rule>
 					<Description>Magic missle with 12" range, Strength of the bearer and Multiple Shots (2D6)</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Common magic weapons">
 				<ObsidianBlade Points="50"/>
@@ -299,14 +270,13 @@
 				<TrickstersHelm Points="50"/>
 				<ArmourOfSilveredSteel Points="50"/>
 				<ArmourOfFortune Points="35"/>
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Helm of Discord</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically.</Description>
-				</Artefact>
+				</AdditionalArmour>
 				<GlitteringScales Points="25"/>
 				<ShieldOfPtolos Points="25"/>
 				<Spellshield Points="20"/>
