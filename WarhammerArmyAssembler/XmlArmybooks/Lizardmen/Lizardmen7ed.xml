@@ -55,81 +55,71 @@
 				<WarBanner Points="25"/>
 			</Group>
 			<Group Name="Magic weapons">
-				<Artefact>
+				<Weapon>
 					<Name>Blade of Realities</Name>
-					<Type>Weapon</Type>
 					<Points>75</Points>
 					<Test Bet="Death" Context="Hit">Leadership</Test>
 					<Description>For each successful hit inflicted by this weapon, the victim must pass a Leadership test or be slain instantly. No armour, ward or regeneration saves are allowed against this special attack. If the tests are passed, roll to Wound and save as normal</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
-					<Type>Weapon</Type>
 					<Points>65</Points>
 					<AddToStrength>1</AddToStrength>
 					<NoArmour/>
 					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Scimitar of the Sun Resplendent</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<AddToAttacks>2</AddToAttacks>
 					<Description>The wielder of this blade has +2 Attacks</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Stegadon War-spear</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Skink</OnlyGroup>
 					<Only>Mount</Only>
 					<Points>50</Points>
 					<ImpactHit>2D6+1</ImpactHit>
 					<Lance/>
 					<Description>Lance. In addition, the bearer's mount inflicts 2D6+1 impact hits rather then the normal 1D6+1</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Staff of the Lost Sun</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<Rule>3 shots, Strength 5</Rule>
 					<Description>The staff is treated as a short bow that has a Strenght of 5, and 3x Multiple Shots</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Piranha Blade</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<MultiWounds>2</MultiWounds>
 					<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Dagger of Sotek</Name>
-					<Type>Weapon</Type>
 					<OnlyGroup>Skink</OnlyGroup>
 					<Points>25</Points>
 					<KillingBlow/>
 					<Fear/>
 					<Description>Confers on the bearer the killing blow ability. In addition, the bearer causes Fear in Skaven</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Sword of the Hornet</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<HitFirst/>
 					<Description>The bearer of this sword has the 'Always Strikes First' rule</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Burning Blade of Chotec</Name>
-					<Type>Weapon</Type>
 					<Points>20</Points>
 					<Rule>Flaming attacks</Rule>
 					<ArmourPiercing>2</ArmourPiercing>
 					<Description>Flaming attacks. Targets struck by the Burning of Chotek suffer a -2 penalty to their armour save in addition to any modifiers from the user's Strength</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic armour">
-				<Artefact>
+				<Armour>
 					<Name>Hide of the Cold Ones</Name>
-					<Type>Armour</Type>
 					<Only>Infantry</Only>
 					<Points>50</Points>
 					<AddToArmour>5</AddToArmour>
@@ -137,232 +127,203 @@
 					<Fear/>
 					<Stupidity/>
 					<Description>Heavy armour. The wearer causes Fear and has +1 Toughness, but becomes subject to Stupidity</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<AdditionalArmour>
 					<Name>Sacred Stegadon Helm</Name>
-					<Type>AdditionalArmour</Type>
 					<OnlyGroup>Skink</OnlyGroup>
 					<Points>50</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToLeadership>1</AddToLeadership>
 					<Description>Confers +1 to the model's armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
-					<Type>Shield</Type>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Description>Shield. Any magic missile that strikes the bearer or any unit he is with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell or the unit the character is with. This in turn cannot be dispelled</Description>
-				</Artefact>
-				<Artefact>
+				</Shield>
+				<Shield>
 					<Name>The Mainming Shield</Name>
-					<Type>Shield</Type>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>Shield. The Mainming Shield confres +1 Attack to the bearer. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
-				</Artefact>
+				</Shield>
 			</Group>
 			<Group Name="Enchanted items">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>The Horn of Kygor</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>100</Points>
 					<Fear/>
 					<Rule>Cavalry within 12" are Stubborn</Rule>
 					<Description>Friendly cavalry within 12" are Stubborn. Enemy cavalry Fear the bearer</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Horned One</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
 					<Rule>Horned One</Rule>
 					<Description>Cold One. The Horned One has a Movement of 8, an Initiative of 3, and is not subject to Stupidity</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Arcane>
 					<Name>Divine Plaque of Protection</Name>
-					<Type>Arcane</Type>
 					<OnlyGroup>Slann</OnlyGroup>
 					<Points>30</Points>
 					<AddToWard>2</AddToWard>
 					<Description>The Slann's Shield of the Old Ones ward save in increased from 4+ to 2+ against the ranged attacks</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<AdditionalArmour>
 					<Name>War Drum of Xahutec</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<Rule>Marching within 8" of enemy</Rule>
 					<Rule>+1 Leadership to friendly unit attempting to rally</Rule>
 					<Description>The presence of enemy units within 8" does not stop the bearer and any unit he is eith from marching. In addition any friendly unit attemptiong to rally within 12" of the War Drum gains an additional +a Leadership, up to a maximum of 10, so long as the bearer is not fleeing</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Blood Statuette of Spite</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Test Bet="Wound" Context="Round" Repeat="Once">Toughness</Test>
 					<Description>Bounded Spell. Power Level 5. One use only. Once per game, the user may cast the spell bound within the statuette. The spell may be cast on any enemy character. That character must immediately take Toughness test. If this test is failed, then the model loses a Wound with no armour saves allowed. If the model takes a wound, it must immediately take another Toughness test, losing another wound if it fails again. This continues until either the model passes a Toughness test or is slain</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Charm of the Jaguar Warrior</Name>
-					<Type>AdditionalArmour</Type>
 					<Only>Infantry</Only>
 					<Points>25</Points>
 					<Rule>Steed of Shadows spell</Rule>
 					<Description>Bound Spell. Power Level 5. The Charm of th Jaguar Warrior contains the bound spell Steed of Shadows, as detailed in the Lore of Shadow in the Warhammer rulebook. The spell may only be cast on the bearer himself</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Cloak of Feathers</Name>
-					<Type>AdditionalArmour</Type>
 					<Only>Infantry</Only>
 					<OnlyGroup>Skink</OnlyGroup>
 					<Points>25</Points>
 					<Rule>Fly</Rule>
 					<Description>The wearer of the cloack may fly</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Carnosaur Pendant</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
 					<Frenzy/>
 					<Description>Once the bearer has inficted a wound, he will become immediately subject to Frenzy. The bearer will never lose its Frenzy, even if it is beaten in combat. See the main rulebook for details of Frenzy</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Arcane>
 					<Name>Curse-Charm of Tepok</Name>
-					<Type>Arcane</Type>
 					<Points>20</Points>
 					<Rule>Enemy mage re-rolls Miscast</Rule>
 					<Description>Only one use. When the enemy rolls on the Miscast table, the bearer of the Curse-Charm of Tepok may force him to re-roll the result. This second result stands</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Weapon>
 					<Name>Bane Head</Name>
-					<Type>Weapon</Type>
 					<Points>15</Points>
 					<Rule>Unsaved wounds doubled for nominated target</Rule>
 					<Description>Nominate an enemy character at the start of the battle. All unsaved wounds caused by the bearer on the nominated target are doubled</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<AdditionalArmour>
 					<Name>Dragonfly of Quicksilver</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>10</Points>
 					<Rule>+1 to Scout deploys</Rule>
 					<Description>If both players have models with the Scout ability, the Lizardmen player adds 1 to his dice roll when rolling to see eho deploys their Scouts first</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Venom of the Firefly Frog</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>10</Points>
 					<PoisonAttack/>
 					<Description>All mundane weapons used by the bearer are coated with this venom. In addition to the weapons normal rules, all attackes made with them count as Poisoned Attacks and magical. Mundane weapons that already make Poisoned Attacks may re-roll the dice to hit</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane items">
-				<Artefact>
+				<Arcane>
 					<Name>Cupped Hands of the Old Ones</Name>
-					<Type>Arcane</Type>
 					<Points>45</Points>
 					<Rule>Miscast passes to the enemy</Rule>
 					<Description>One use only. If the bearer miscasts, roll a D6. On a roll of 1 the bearer suffers the results of the miscast as normal. On 2+ the miscast is ignored and if there is an enemy Wizard within line of sight he will suffer its effects, ignoring result 5-6</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Cube of Darkness</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>One spell dispell</Rule>
 					<Rule>On 4+ all Ramains in Play spells are dispelled</Rule>
 					<Description>One use only. This is used as a Dispell Scroll. When used, roll a D6. On 4+ all Remains in Play spells are automatically dispelled and the Magic phase ends immediately</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Rode of the Storm</Name>
-					<Type>Arcane</Type>
 					<Points>25</Points>
 					<Rule>Uranon's Thunderbold spell</Rule>
 					<Description>Bound Spell. Power Level 6. One use only. The Rod of the Storm contains the bound spell Uranon's Thunderbold as detailed in the Lore of Heavens in the Warhammer rulebook</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Diadem of power</Name>
-					<Type>Arcane</Type>
 					<Points>25</Points>
 					<Rule>Two power dice save for dispel</Rule>
 					<Description>The Wizard may save up to two of his unused power dice at the end of his Magic phase and add them to his side's dispel dice pool in the next enemy Magic phase</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Plaque of Tepok</Name>
-					<Type>Arcane</Type>
 					<Points>15</Points>
 					<Rule>1 additional spell</Rule>
 					<Description>The Wizard bearing the plaque knows one more spell then he would normally be allowed</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Talismans">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Aura of Quetzl</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>40</Points>
 					<SubOpponentToHit>1</SubOpponentToHit>
 					<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Glyph Necklace</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<AddToWard>5</AddToWard>
 					<Description>The character wearing this gains a 5+ ward save</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Amulet of Itza</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<WardForFirstWound>2</WardForFirstWound>
 					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered, after Armour saves have boon taken</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Magic banner">
-				<Artefact>
+				<Banner>
 					<Name>Totem of Prophecy</Name>
-					<Type>Banner</Type>
 					<Points>50</Points>
 					<Fear/>
 					<Description>The unit causes Fear</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Plaque of Dominion</Name>
-					<Type>Banner</Type>
 					<Points>50</Points>
 					<Rule>Stupidity for enemy Wizards within 18"</Rule>
 					<Description>The plaque can be used at the beginning of any enemy turn. Each enemy Wizard within 18" that can draw a line of sight to the plaque or the unit it is with must take a Stupidity test</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Sun Standart of Chotec</Name>
-					<Type>Banner</Type>
 					<Points>40</Points>
 					<Rule>-2 to Hit from within 12"</Rule>
 					<Rule>-1 to Hit from over 12"</Rule>
 					<Description>Missles fired at the unit from within 12" suffer an additional -2 to Hit, or -1 to Hit if fired from over 12" away</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Huanchi's Blessed Totem</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>Once +D6" to charge</Rule>
 					<Description>One use only. The unit can add D6" to its charge move. If the charge is failed, the unit will move forward at its normal movement rate</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Jaguar Standard</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>Pursues an extra D6"</Rule>
 					<Description>The unit pursues an extra D6"</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Skavenpelt Banner</Name>
-					<Type>Banner</Type>
 					<OnlyGroup>Skink</OnlyGroup>
 					<Points>25</Points>
 					<Franzy/>
 					<Hate/>
 					<Description>The unit is subject to Frenzy until defeat in combet. In addition the unit Hates all units in the Skaven army</Description>
-				</Artefact>
+				</Banner>
 			</Group>
 		</Artefacts>
 		<Heroes>
