@@ -55,35 +55,31 @@
 				<WarBanner Points="20"/>
 			</Group>
 			<Group Name="Honours">
-				<Artefact>
+				<Weapon>
 					<Name>Pure of Heart</Name>
-					<Type>Weapon</Type>
 					<ImmuneToPsychology/>
 					<Points>0</Points>
 					<Honours/>
 					<Description>This Honour MUST be given to exactly one high Elf character. It costs no points.\n\nThe character, and any unit he joins, is Immune to Panic. If the Pure of Heart character is killed, the High Elf player loses 100 Victory points from his total at the end of the battle. If the scenario does not use Victory points then the demise of the Pure of Heart character has no effect.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Lion Guard</Name>
-					<Type>Weapon</Type>
 					<Stubborn/>
 					<Points>45</Points>
 					<Honours/>
 					<Description>The character comes equipped with a lion cloak. The character and any unit he leads is Stubborn. If you have a character with Lion Guard, then White Lions become a Special Choice for your army (but remain 0-1).</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Loremaster</Name>
-					<Type>Weapon</Type>
 					<WizardTo>1</WizardTo>
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Points>40</Points>
 					<Honours/>
 					<Description>The character is a Level 1 Wizard. Note that he may not cast spells if he is wearing armour (remember that barding for his steed will not affect his spell casting).</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Swordmaster</Name>
-					<Type>Weapon</Type>
 					<WizardTo>1</WizardTo>
 					<KillingBlow/>
 					<AddToStrength>2</AddToStrength>
@@ -93,351 +89,306 @@
 					<Points>40</Points>
 					<Honours/>
 					<Description>The character is equipped with a Great weapon and may not take a magic weapon. Instead of striking last in any turn he does not charge, the character will strike in initiative order. The character also has the killing blow special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Arcane>
 					<Name>Seer</Name>
-					<Type>Arcane</Type>
 					<Points>30</Points>
 					<Honours/>
 					<Rule>May choose his spells instead of rolling for them</Rule>
 					<Description>Mage only. May choose his spells instead of rolling for them.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Channeller</Name>
-					<Type>Arcane</Type>
 					<Points>10</Points>
 					<Honours/>
 					<Rule>May cast with a maximum of +1 more Power dice than normal</Rule>
 					<Description>Mage only. May cast with a maximum of +1 more Power dice than normal. For example, a Level 3 Mage may use up to five Power dice in an attempt to cast a spell (instead of the usual four).</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Magic weapons">
-				<Artefact>
+				<Weapon>
 					<Name>Blade of Leaping Gold</Name>
-					<Type>Weapon</Type>
 					<AddToAttacks>3</AddToAttacks>
 					<Points>60</Points>
 					<Description>The blade confers +3 Attacks on the character wielding it.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Bow of the Seafarer</Name>
-					<Type>Weapon</Type>
 					<Points>60</Points>
 					<Rule>Resolve each bow hit like a single bolt from a Bolt Thrower</Rule>
 					<Description>Treat the Bow of the Seafarer as a normal longbow with the following exception. Resolve a hit from this like a single bolt from a Bolt Thrower. Note that you may stand and shoot with the Bow of the Seafarer.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Sword of Hoeth</Name>
-					<Type>Weapon</Type>
 					<Points>60</Points>
 					<AutoHit/>
 					<Description>All hits wound automatically. Armour saves are modified by the Strength of the bearer.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Blade of Darting Steel</Name>
-					<Type>Weapon</Type>
 					<Points>45</Points>
 					<HitFirst/>
 					<AddToHit>1</AddToHit>
 					<Description>The wielder always strikes first, even if his opponent charged that turn. If both models have this ability, roll off to see who strikes first in each Close Combat phase. In addition, the wielder adds +1 to his rolls to hit.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Reaver bow</Name>
-					<Type>Weapon</Type>
 					<Points>40</Points>
 					<Rule>Longbow with Strength 5, multiple shot x3</Rule>
 					<Description>Treat the Reaver Bow as a normal longbow with the following exceptions: the bearer may shoot three times at the same target in each ot his Shooting phases and any hits are resolved at Strength 5.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Blade of Sea Gold</Name>
-					<Type>Weapon</Type>
 					<Points>40</Points>
 					<NoArmour/>
 					<Description>No armour saves may be taken against wounds caused by the Blade of Sea Gold.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Foe Bane</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Rule>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+</Rule>
 					<Description>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+. Armour saves are modified by the Strength of the bearer.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic armour">
-				<Artefact>
+				<Armour>
 					<Name>Armour of Protection</Name>
-					<Type>Armour</Type>
 					<Points>45</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToWard>4</AddToWard>
 					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save he may make a 4+ Ward save.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Shield>
 					<Name>Golden Shield</Name>
-					<Type>Shield</Type>
 					<Points>35</Points>
 					<AddToArmour>6</AddToArmour>
 					<SubOpponentToHit>1</SubOpponentToHit>
 					<Description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all attempts to hit the bearer in close combat suffer a penalty of -1.</Description>
-				</Artefact>
-				<Artefact>
+				</Shield>
+				<Armour>
 					<Name>Armour of Stars</Name>
-					<Type>Armour</Type>
 					<Only>Infantry</Only>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>After any unsaved wound model is instantly teleported 3D6" in a random direction</Rule>
 					<Description>May only be worn by a model on foot. Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound then one of the gems will burst into brilliant white light as he is instantly teleported 3D6" in a random direction.\n\nNote that this means that he can only suffer 1 unsaved wound in a round of close combat as he will be teleported away before the second can strike him. However, if he was struck by a Killing Blow or a weapon that does multiple wounds per hit (such as a cannon ball) then he would still suffer the instant death or multiplied wounds as normal before teleporting away.\n\nIf the model is teleported into another model or impassable terrain then simply carry on moving it along in the same direction until it is 1" beyond. If the model teleports off the table then treat it as having pursued off.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Armour>
 					<Name>Armour of Heroes</Name>
-					<Type>Armour</Type>
 					<Points>25</Points>
 					<AddToArmour>5</AddToArmour>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may attack another model in base contact instead. Models who are Immune to Psychology are immune to this effect also.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Armour>
 					<Name>Shadow Armour</Name>
-					<Type>Armour</Type>
 					<Points>25</Points>
 					<AddToArmour>5</AddToArmour>
 					<Rule>Scout</Rule>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors).</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<AdditionalArmour>
 					<Name>Helm of Fortune</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
 					<Reroll>ToArmour</Reroll>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Shield>
 					<Name>Dragonscale Shield</Name>
-					<Type>Shield</Type>
 					<Points>20</Points>
 					<AddToArmour>5</AddToArmour>
 					<AddToWard>6</AddToWard>
 					<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save.</Description>
-				</Artefact>
+				</Shield>
 			</Group>
 			<Group Name="Talismans">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Vambraces of Defence</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>55</Points>
 					<AddToWard>4</AddToWard>
 					<Reroll>ToArmour</Reroll>
 					<Description>Gives the wearer a 4+ Ward save. In addition, the wearer may re-roll failed armour saves.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Golden Crown of Atrazar</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>40</Points>
 					<FirstWoundDiscount/>
 					<Description>Discount the first wound suffered. One use only.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Loremaster's Cloak</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>40</Points>
 					<Rule>2+ Ward save against wounds caused by spells</Rule>
 					<Description>Gives the wearer and the unit he is with a 2+ Ward save against wounds caused by spells. It has no effect against shooting or close combat attacks.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Talisman of Saphery</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
 					<Rule>The magical weapons of enemy models will have no special effects whilst they are in base contact</Rule>
 					<Description>The magical weapons of enemy models will have no special effects whilst they are in base contact with the bearer of the talisman. Treat the magic weapon as a normal one of its type, eg, a Sword of Battle would count as a hand weapon, Porko's Pigstikka would count as a spear, etc.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Sacred Incense</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<Rule>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty</Rule>
 					<Description>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Guardian Phoenix</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<AddToWard>5</AddToWard>
 					<Description>Gives the wearer a 5+ Ward save.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Amulet of Fire</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
 					<Rule>Magic Resistance (1)</Rule>
 					<Rule>Cannot be harmed by Flaming Attacks</Rule>
 					<Description>Gives the wearer Magic Resistance (1). In addition, the wearer cannot be harmed by fire-based attacks, eg, Skaven Watpfire Throwers, Dwarf Flame Cannons, or fire balls, etc.</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane items">
-				<Artefact>
+				<Arcane>
 					<Name>Book of Hoeth</Name>
-					<Type>Arcane</Type>
 					<Points>100</Points>
 					<Rule>Irresistible Force on any successful casting roll which includes any double, except a Miscast</Rule>
 					<Description>Any spell cast by the mage with this book will be cast with Irresistible Force on any successful casting roll which includes any double, except a Miscast.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Annulian Crystal</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile</Rule>
 					<Description>During the enemy's Magic phase, the Crystal allows the High Elf player to remove one dice from the opponent's pile of Power dice and add it to his own Dispel dice pile.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Starwood Staff</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>+1 to all casting attempts</Rule>
 					<Description>Gives +1 to all casting attempts made by the wizard carrying it.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Sigil of Asuryan</Name>
-					<Type>Arcane</Type>
 					<Points>40</Points>
 					<Rule>Automatically dispels one enemy spell, in addition, roll a D6: on a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle, one use only</Rule>
 					<Description>Automatically dispels one enemy spell. In addition, roll a D6. On a 4+ the spell is destroyed and the casting Wizard cannot use it for the duration of the battle. One use only.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Staff of Solidity</Name>
-					<Type>Arcane</Type>
 					<Points>20</Points>
 					<Rule>Mage immune to the effects of his first Miscast</Rule>
 					<Description>This staff makes the Mage immune to the effects of his first Miscast. Note that a miscast spell still fails regardless of the actual dice score rolled.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Jewel of the Dusk</Name>
-					<Type>Arcane</Type>
 					<Points>15</Points>
 					<AddToCast>1</AddToCast>
 					<Description>The jewel gives the Mage +1 Power dice in each of his own Magic phases. Only he may use this dice.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Silver Wand</Name>
-					<Type>Arcane</Type>
 					<Points>10</Points>
 					<Rule>One more spell than is normal for level</Rule>
 					<Description>The wearer knows one more spell than is normal for his level.</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Enchanted items">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Null Stone</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>100</Points>
 					<Rule>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work</Rule>
 					<Description>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work. Treat them as normal weapons, banners, etc, of the appropriate type. Note that this applies to all friendly wizards and magic items as well as enemy ones.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Healing Potion</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<Rule>May immediately restores all wounds lost at the start of any phase in either player's turn, one use only</Rule>
 					<Description>The character or any character in base contact may drink this at the start of any phase in either player's turn. It immediately restores all wounds lost by the character during the battle so far. Obviously, if the character is dead at the start of the phase then he can't drink the potion. One use only.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Radiant Gem of Hoeth</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>45</Points>
 					<WizardTo>1</WizardTo>
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Description>The wearer counts as a Level 1 High Elf Mage. However, the wearer may still cast spells whilst wearing armour. This has no effect on characters who are already Wizards.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Cloak of Beards</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>35</Points>
 					<Rule>Dwarfs both Hate and Fear the wearer of the Cloak</Rule>
 					<Rule>Eeach model in base contact with the wearer loses all the runes from one of their runic items</Rule>
 					<Description>Dwarfs both Hate and Fear the wearer of the Cloak. In addition, for the duration of each Close Combat phase, each model in base contact with the wearer loses all the runes from one of their runic items (determined randomly). Treat the item as a normal one of its kind.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Arcane>
 					<Name>Ring of Corin</Name>
-					<Type>Arcane</Type>
 					<Points>35</Points>
 					<Rule>Bound spell, Power level 4, one use only: Vaul's Unmaking spell</Rule>
 					<Description>Bound spell (Power level 4). One use only. The Ring of Corin may cast its Bound spell in the Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Corin contains the Vaul's Unmaking spell.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<AdditionalArmour>
 					<Name>Ring of Fury</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<Rule>Bound spell, Power level 3: contains the Fury of Khaine spell</Rule>
 					<Description>Bound spell (Power level 3). This ring may cast its Bound Spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Fury contains the Fury of Khaine spell. After each use, even if it was dispelled, roll a D6. On a roll of a 1 the power of the Ring has been exhausted and it may not be used for the rest of the battle.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Blessed tome</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Rule>All High Elf units within 6" get +1 Leadership</Rule>
 					<Description>The character with the tome recites the stirring words of heroes of old as battle is joined. All High Elf units within 6" of the bearer get +1 Leadership (up to a maximum of 10).</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Amulet of the Purifying Flame</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>15</Points>
 					<Rule>Spells that target the character or the unit he is with subtract -3 from their casting roll</Rule>
 					<Description>Spells that target the character or the unit he is with subtract -3 from their casting roll. It has no effect on spells cast with Irresistible Force.</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Magic banner">
-				<Artefact>
+				<Banner>
 					<Name>Battle Banner</Name>
-					<Type>Banner</Type>
 					<Points>80</Points>
 					<AddToCloseCombat>D6</AddToCloseCombat>
 					<Description>The unit may add +D6 to the combat resolution of any close combat in which it is involved.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of the World Dragon</Name>
-					<Type>Banner</Type>
 					<Points>60</Points>
 					<Rule>The unit is completely immune to all spell effects, whatever their source</Rule>
 					<Description>The unit is completely immune to all spell effects, whatever their source. This includes friendly spells, bound items, and spells with areas of effect that were cast on nearby units, etc. Spells which are cast on another unit, such as the Flaming Sword of Rhuin, will work as normal, as will all magic weapons used to attack them.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of Sorcery</Name>
-					<Type>Banner</Type>
 					<Points>50</Points>
 					<Rule>+D3 Power dice to pile in each Magic phases</Rule>
 					<Description>The banner adds +D3 Power dice to pile in each of your own Magic phases.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Standard of Balance</Name>
-					<Type>Banner</Type>
 					<Points>45</Points>
 					<ImmuneToPsychology/>
 					<Description>The unit carrying the Standard of Balance, and any enemy unit in base contact with it, is completely immune to all Psychology. Note that troops with frenzy lose it, just as if they had lost a round of combat.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of Arcane Protection</Name>
-					<Type>Banner</Type>
 					<Points>40</Points>
 					<Rule>Magic Resistance (2)</Rule>
 					<Rule>Any Undead or Daemon model touching the unit will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases</Rule>
 					<Description>The unit gets Magic Resistance (2). In addition, any Undead or Daemon model touching the unit carrying the banner will suffer 1 Wound (saves as normal) at the start of each of the bearer's Magic phases. Note that this does not count as a close combat attack.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Lion Standard</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Rule>Immune to fear and terror</Rule>
 					<Description>The unit is immune to fear and terror.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of Ellyrion</Name>
-					<Type>Banner</Type>
 					<Points>15</Points>
 					<Rule>The unit treats difficult ground as open ground for purposes of movement</Rule>
 					<Description>The unit treats difficult ground as open ground for purposes of movement.</Description>
-				</Artefact>
+				</Banner>
 			</Group>
 		</Artefacts>
 		<Heroes>
