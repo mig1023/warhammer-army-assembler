@@ -46,127 +46,112 @@
 	<Content>
 		<Artefacts>
 			<Group Name="Chaos Mutations and Powers">
-				<Artefact>
+				<Powers>
 					<Name>Daemonblade</Name>
-					<Type>Powers</Type>
 					<Points>50</Points>
 					<Rule>Random Attacks (D6+3) special rule</Rule>
 					<Rule>Every ToHit roll of a 1 made by this character in close combat is resolved against himself - the character can never re-roll a To Hit roll of a 1</Rule>
 					<Description>The wielder of a Daemonblade has the Random Attacks (D6 + 3) special rule. However, every To Hit roll of a 1 made by this character in close combat is resolved against himself; the character can never re-roll a To Hit roll of a 1.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Collar of Khorne</Name>
-					<Type>Powers</Type>
 					<Points>45</Points>
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
 					<Rule>Magic Resistance (3)</Rule>
 					<Description>Daemon of Khorne or model with Mark of Khorne only. The character has the Magic Resistance (3) special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Unholy Strike</Name>
-					<Type>Powers</Type>
 					<Points>35</Points>
 					<Rule>Instead of striking normally, the character can choose to make a single special Attack with double the character's Strength and has the Multiple Wounds (D3) special rule</Rule>
 					<Description>Instead of striking normally, the character can choose to make a single special Attack. If he does so, and the Attack hits, the hit is resolved at double the character's Strength and has the Multiple Wounds (D3) special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Flaming Breath</Name>
-					<Type>Powers</Type>
 					<Points>30</Points>
 					<Rule>Strength 4 Breath Weapon that has the Flaming Attacks special rule</Rule>
 					<Description>The character has a Strength 4 Breath Weapon that has the Flaming Attacks special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Chaos Familiar</Name>
-					<Type>Powers</Type>
 					<Points>25</Points>
 					<Rule>+1 to all of his channelling attempts</Rule>
 					<Rule>Knows one extra spell than normal for his level</Rule>
 					<Description>The character adds +1 to all of his channelling attempts and knows one extra spell than normal for his level.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Scaled Skin</Name>
-					<Type>Powers</Type>
 					<Points>20</Points>
 					<AddToArmour>5</AddToArmour>
 					<Description>The character has the Scaly Skin (5+) special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Allure of Slaanesh</Name>
-					<Type>Powers</Type>
 					<Points>15</Points>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>Model with Mark of Slaanesh only. Any opponent wishing to strike the character in close combat must first pass a Leadership test (test immediately before the model rolls To Hit). If the test is failed, that model cannot make any close combat attacks that phase. This does not affect Attacks that do not roll To Hit.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Poisonous Slime</Name>
-					<Type>Powers</Type>
 					<Points>15</Points>
 					<PoisonAttack/>
 					<Rule>5+ Ward save against Poisoned Attacks</Rule>
 					<Description>The character has the Poisoned Attacks special rule and a 5+ ward save against Poisoned Attacks.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Acid Ichor</Name>
-					<Type>Powers</Type>
 					<Points>10</Points>
 					<PoisonAttack/>
 					<Rule>Whenever this character suffers an unsaved Wound in close combat, the model that inflicted that hit must pass an Initiative test or suffer a Strength 4 hit</Rule>
 					<Description>Whenever this character suffers an unsaved Wound in close combat, the model that inflicted that hit must pass an Initiative test or suffer a Strength 4 hit. Wounds inflicted by Acid Ichor count towards the combat result.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Burning Body</Name>
-					<Type>Powers</Type>
 					<Points>10</Points>
 					<Rule>Flaming Attacks</Rule>
 					<Rule>5+ Ward save against Flaming Attacks</Rule>
 					<Description>The character has the Flaming Attacks special rule and a 5+ Ward save against Flaming Attacks.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Soul Feeder</Name>
-					<Type>Powers</Type>
 					<Points>10</Points>
 					<Rule>Roll a D6 for every unsaved Wound inflicted by the character in close combat: for each result of a 6 rolled, he immediately regains a single lost Wound.</Rule>
 					<Description>Roll a D6 for every unsaved Wound inflicted by the character in close combat. For each result of a 6 rolled, he immediately regains a single lost Wound.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Third Eye of Tzeentch</Name>
-					<Type>Powers</Type>
 					<Points>10</Points>
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<Rule>Re-rolls ward save results of 1</Rule>
 					<Description>Model with Mark of Tzeentch only. The character re-rolls ward save results of 1.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Nurgle's Rot</Name>
-					<Type>Powers</Type>
 					<Points>10</Points>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
 					<Rule>At the start of every Magic phase, every enemy model in base contact with the character suffers a single Strength 1 hit, with no armour saves allowed</Rule>
 					<Description>Model with Mark of Nurgle only. At the start of every Magic phase, every enemy model in base contact with the character suffers a single Strength 1 hit, with no armour saves allowed.</Description>
-				</Artefact>
-				<Artefact>
+				</Powers>
+				<Powers>
 					<Name>Hideous Visage</Name>
-					<Type>Powers</Type>
 					<Points>5</Points>
 					<Fear/>
 					<NotALeader/>
 					<Description>The character has the Fear special rule. However, other models can never use this character's Leadership.</Description>
-				</Artefact>
+				</Powers>
 			</Group>
 			<Group Name="Dread Artefacts of Chaos">
-				<Artefact>
+				<Weapon>
 					<Name>Hellfire sword</Name>
-					<Type>Weapon</Type>
 					<Points>65</Points>
 					<MultiWounds>D3</MultiWounds>
 					<NoArmour/>
@@ -174,17 +159,15 @@
 					<Rule>After all close combat blows have been struck, roll a D6 for every foe slain: on the roll of a 6, the slain foe's body explodes, inflicting an additional D6 Strength 4 hits on the enemy unit with the Flaming Attacks special rule</Rule>
 					<Rule>At the end of each turns, roll a D6: on the roll of a 1, he suffers one Wound with no armour saves allowed</Rule>
 					<Description>Close combat attacks made with the Hellfire Sword have the Flaming Attacks and Multiple Wounds (D3) special rules. No armour saves can be taken against Wounds caused by the Hellfire Sword. After all close combat blows have been struck, roll a D6 for every foe slain by the Hellfire Sword - on the roll of a 6, the slain foe's body explodes, inflicting an additional D6 Strength 4 hits on the enemy unit with the Flaming Attacks special rule. Unsaved Wounds inflicted in this way count towards the combat result. At the end of each of the wielder's turns, roll a D6; on the roll of a 1, he suffers one Wound with no armour saves allowed.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Sword of Change</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<Rule>If an enemy character or monster is slain in close combat, roll a D6: on the roll of a 4+, the model is transformed into a Chaos Spawn under the control of the owner of the Sword of Change</Rule>
 					<Description>If an enemy character or monster is slain by the Sword of Change in close combat, roll a D6. On the roll of a 4+, the model is transformed into a Chaos Spawn under the control of the owner of the Sword of Change, exactly as if the enemy model were a Chaos Champion that had suffered a Spawndom result on the Eye of the Gods table.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Filth Mace</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
@@ -193,33 +176,29 @@
 					<PoisonAttack/>
 					<MultiWounds>D3</MultiWounds>
 					<Description>Model with Mark of Nurgle only. Close combat attacks made with the Filth Mace have the Poisoned Attacks special rule. Once the wielder has killed an enemy model in close combat, he immediately gains the Terror special rule and, from the start of the next Close Combat phase (friend or foe), all subsequent Attacks made with the Filth Mace that result in a successful Poisoned Attack have the Multiple Wounds (D3) special rule.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<AdditionalArmour>
 					<Name>Helm of Many Eyes</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<HitFirst/>
 					<Stupidity/>
 					<AddToArmour>6</AddToArmour>
 					<Description>The bearer of the Helm of Many Eyes counts his armour save as being one higher than normal. In addition, the bearer has both the Always Strikes First and Stupidity special rules.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Arcane>
 					<Name>Skull of Katam</Name>
-					<Type>Arcane</Type>
 					<Points>15</Points>
 					<Rule>Can choose to consult Skull of Katam before attempting to channel power dice: if he does so, roll 6 dice instead of 1, but the bearer suffers a -1 Leadership penalty for the rest of the game for every result of a 1 rolled</Rule>
 					<Description>The bearer of the Skull of Katam can choose to consult it before attempting to channel power dice. If he does so, roll 6 dice instead of 1. If the bearer consulted the Skull of Katam, he suffers a -1 Leadership penalty for the rest of the game for every result of a 1 rolled when channelling - if it is ever reduced to 0, he is immediately removed as a casualty. A Wizard with the Mark of Tzeentch may not re-roll channelling results of a 1 when using the Skull of Katam.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<AdditionalArmour>
 					<Name>Chalice of Chaos</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>10</Points>
 					<Rule>Chalice of Chaos: consult the table</Rule>
 					<Description>One use only. The bearer of the Chalice of Chaos may drink from it at the start of any phase. If he chooses to do so, roll a D6 and consult the table below.\n\nD6 Result\n\n1 Unworthy Fool: The imbiber immediately suffers a Wound, with no saves of any kind allowed.\n\n2 Inhuman Speed: The imbiber gains the Always Strikes First special rule until the end of the turn.\n\n3 Regenerating Flesh: The imbiber gains the Regeneration special rule until the end of the turn.\n\n4 Dark Fortune: The imbiber gains a 5+ ward save until the end of the turn.\n\n5 Daemonic Strength: The imbiber gains the Killing Blow special rule until the end of the turn.\n\n6 Final Transformation: If the imbiber is already a Daemon Prince, he instead treats this result as Unworthy Fool. Otherwise, he must immediately take a Leadership test. If passed, he is gifted with Daemonhood, as described on the Eye of the Gods table on page 25. If failed, he is gifted with Spawndom, as described on the same table.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Pendant of Slaanesh</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
@@ -227,20 +206,18 @@
 					<Rule>Whenever character or his unit take a Break test, it is taken on one less dice than usual</Rule>
 					<Rule>For each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle</Rule>
 					<Description>Model with Mark of Slaanesh only. The bearer of the Pendant of Slaanesh can only join units that have the Mark of Slaanesh. No other character may join the same unit as the bearer and he cannot join units that already contain a character. Whenever the bearer, or his unit, take a Break test, it is taken on one less dice than usual (note that a Break test cannot be passed with Insane Courage on a single D6). In addition, for each unsaved Wound the bearer suffers, he gains +1 Attack for the rest of the battle.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Banner>
 					<Name>Blasted Standard</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
 					<Rule>Each time the character, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound: on the roll of 2+, the Strength of that hit is halved, if the result is a 1, the Strength of that hit is instead doubled</Rule>
 					<Description>Model with Mark of Tzeentch only. Each time the bearer, or his unit, suffer a hit from a shooting attack, roll a D6 immediately before rolling To Wound. On the roll of 2+, the Strength of that hit is halved. However, if the result is a 1, the Strength of that hit is instead doubled. Attacks that do not roll To Wound, or that wound automatically, are not affected by the Blasted Standard.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of Rage</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<On>Mark of Khorne</On>
@@ -248,7 +225,7 @@
 					<Frenzy/>
 					<Rule>Will never lose their Frenzy, even if beaten in close combat</Rule>
 					<Description>Model with Mark of Khorne only. The bearer of the Banner of Rage can only join units that are completely comprised of models with the Mark of Khorne. Only characters that have the Mark of Khorne may join the same unit as the bearer. Whilst the bearer is alive, neither he, nor his unit, can ever lose their Frenzy special rule. If the bearer joins a unit that has lost its Frenzy, the unit immediately regains the Frenzy special rule.</Description>
-				</Artefact>
+				</Banner>
 			</Group>
 			<Group Name="Common magic weapons">
 				<GiantBlade Points="60"/>
@@ -276,14 +253,13 @@
 				<TrickstersHelm Points="50"/>
 				<ArmourOfSilveredSteel Points="50"/>
 				<ArmourOfFortune Points="35"/>
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Helm of Discord</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically.</Description>
-				</Artefact>
+				</AdditionalArmour>
 				<GlitteringScales Points="25"/>
 				<ShieldOfPtolos Points="25"/>
 				<Spellshield Points="20"/>
