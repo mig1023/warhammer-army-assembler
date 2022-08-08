@@ -55,150 +55,131 @@
 				<WarBanner Points="25"/>
 			</Group>
 			<Group Name="Magic weapons">
-				<Artefact>
+				<Weapon>
 					<Name>Chaos Daemonsword</Name>
-					<Type>Weapon</Type>
 					<Points>75</Points>
 					<Rule>+D3 to Strength and +D6 Attacks, to a maximum of 10 (roll separately for these values at the start of each round)</Rule>
 					<Description>A character with the Daemonsword adds D3 to his Strength and has an extra D6 Attacks, to a maximum of 10 (roll separately for these values at the start of each round). However, every roll of a 1 to hit in close combat is resolved against the bearer instead of the enemy. Furthermore, the character can never re-roll a to-hit roll of a '1' in close combat.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Hellfire sword</Name>
-					<Type>Weapon</Type>
 					<Points>75</Points>
 					<MultiWounds>D3+1</MultiWounds>
 					<Rule>Flaming attacks</Rule>
 					<Description>Flaming attacks. Each unsaved wound caused by the Hellfire Sword causes not one but D3+1 wounds.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Sword of Change</Name>
-					<Type>Weapon</Type>
 					<Points>65</Points>
 					<AddToStrength>1</AddToStrength>
 					<Rule>Every time an enemy character or monster takes an unsaved wound it must take a Toughness test: if the test is failed, the victim becomes a repulsive Spawn-thing, all enemy models in base contact with the victim take a S4 hit, the victim is then removed from play</Rule>
 					<Description>Confers +1 Strength. Every time an enemy character or monster takes an unsaved wound from the Sword of Change it must take a Toughness test. If the test is failed, the victim becomes a repulsive Spawn-thing. All enemy models in base contact with the victim take a S4 hit as the Spawn-thing flails wildly in its death throes (unsaved wounds will count towards combat resolution). The victim is then removed from play.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Chaos Runesword</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToStrength>1</AddToStrength>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Berserker sword</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<Only>Infantry</Only>
 					<Rule>Number of extra Attacks equal to the number of enemy models in base contact</Rule>
 					<Description>The Berserker Sword confers a number of extra Attacks equal to the number of enemy models in base contact.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Aethersword</Name>
-					<Type>Weapon</Type>
 					<Points>50</Points>
 					<NoArmour/>
 					<Description>The Aethersword ignores Armour saves.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Rapier of Ecstasy</Name>
-					<Type>Weapon</Type>
 					<Points>45</Points>
 					<Test Bet="Death" Context="Wound">Strength</Test>
 					<Description>Each time the Rapier of Ecstasy inflicts an unsaved wound on a model, that model must pass a Strength test or be removed from the game.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>The Father of Blades</Name>
-					<Type>Weapon</Type>
 					<Points>40</Points>
 					<Rule>Any 'to hit' rolls directed against the model that result in the roll of a '1' instead hit the attacking model</Rule>
 					<Description>Any 'to hit' rolls directed against the bearer that result in the roll of a '1' instead hit the attacking model.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Axe of Khorn</Name>
-					<Type>Weapon</Type>
 					<Points>45</Points>
 					<KillingBlow/>
 					<AddToStrength>1</AddToStrength>
 					<Description>This axe confers +1 Strength and the Killing Blow special rule upon the bearer.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Filth Mace</Name>
-					<Type>Weapon</Type>
 					<Points>35</Points>
 					<Terror/>
 					<PoisonAttack/>
 					<Description>All attacks with the Filth Mace count as poisoned attacks. In addition, if the bearer of the mace kills an enemy character in close combat, he will cause terror for the rest of the game.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Rending Sword</Name>
-					<Type>Weapon</Type>
 					<Points>30</Points>
 					<Reroll>ToWound</Reroll>
 					<Description>A character with the Rending Sword may re-roll failed 'to wound' rolls.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Whip of Subversion</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Rule>If an enemy character or monster takes an unsaved wound and that model has not yet made its attacks for that round, then the Chaos player may force it to allocate its attacks upon other models from its own side</Rule>
 					<Description>If an enemy character or monster takes an unsaved wound from the Whip of Subversion and that model has not yet made its attacks for that round, then the Chaos player may force it to allocate its attacks upon other models from its own side. Wounds caused count towards the owning model's combat resolution.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<Weapon>
 					<Name>Glaive of Putrefaction </Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<Rule>Any model that suffers an unsaved wound from this weapon has its Strength and Toughness reduced to 2 for the rest of the game</Rule>
 					<Description>Any model that suffers an unsaved wound from this weapon has its Strength and Toughness reduced to 2 at the end of that combat phase. This penalty is effective for the rest of the game.</Description>
-				</Artefact>
+				</Weapon>
 			</Group>
 			<Group Name="Magic armour">
-				<Artefact>
+				<Armour>
 					<Name>Skinhidden Plate</Name>
-					<Type>Armour</Type>
 					<Points>60</Points>
 					<AddToArmour>4</AddToArmour>
 					<AddToToughness>1</AddToToughness>
 					<Description>Chaos armour. The Skinhidden Plate confers +1 Toughness upon the wearer.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Shield>
 					<Name>Chaos Runeshield</Name>
-					<Type>Shield</Type>
 					<Points>50</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Negates the power of any magic or runic weapons carried by models in base contact</Rule>
 					<Description>Shield. Negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type.</Description>
-				</Artefact>
-				<Artefact>
+				</Shield>
+				<Armour>
 					<Name>Armour of Damnation</Name>
-					<Type>Armour</Type>
 					<Points>45</Points>
 					<AddToArmour>4</AddToArmour>
 					<Reroll>OpponentToHit</Reroll>
 					<Description>Chaos armour. Any model striking the wearer in close combat must re-roll successful rolls to hit.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Armour>
 					<Name>Crimson Armour of Dargan</Name>
-					<Type>Armour</Type>
 					<Points>40</Points>
 					<AddToArmour>4</AddToArmour>
 					<NoKillingBlow/>
 					<NoMultiWounds/>
 					<Description>Chaos armour. The wearer is immune to Killing Blow. Furthermore, wounds suffered by the character can never be converted into multiple wounds - they do a single wound as normal.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Armour>
 					<Name>Armour of Morrslieb</Name>
-					<Type>Armour</Type>
 					<Points>35</Points>
 					<AddToArmour>4</AddToArmour>
 					<AddToWard>4</AddToWard>
 					<Description>Chaos armour. Confers a 4+ Ward save against non-magical attacks.</Description>
-				</Artefact>
-				<Artefact>
+				</Armour>
+				<Armour>
 					<Name>The Bronze Armour of Zhrakk</Name>
-					<Type>Armour</Type>
 					<Points>15</Points>
 					<AddToArmour>4</AddToArmour>
 					<ImmuneToPsychology/>
@@ -206,125 +187,109 @@
 					<NotALeader/>
 					<ImmuneToPoison/>
 					<Description>Chaos armour. The bearer is Immune to Psychology and also immune to Killing Blow and Poisoned Attacks, which must roll to wound as usual. However, the bearer may never confer his Leadership to others. Artefacts of the Dark Gods.</Description>
-				</Artefact>
+				</Armour>
 			</Group>
 			<Group Name="Talismans">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>The Beguiling Gem</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take Leadership tests at the beginning of each close combat round. If it is failed, they may not make any attacks that round, and any attacks directed against that specific model (not the unit that model is in) will hit automatically.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Crown of Everlasting Conquest</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<Regeneration/>
 					<Description>The bearer gains the Regenerate ability.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>The Black Tongue</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>50</Points>
 					<Rule>Once per battle can be used to automatically convert an unsuccessful spellcasting roll into a Miscast</Rule>
 					<Description>One use only. The Black Tongue can be used to automatically convert an unsuccessful spellcasting roll into a Miscast. The owning character then takes a wound that may not be saved by any means.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Blasphemous Amulet</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Test Bet="Wound" Context="Round">Toughness</Test>
 					<Description>At the start of every friendly Magic phase, any enemy models in base contact with the bearer (including monstrous mounts) must pass a Toughness test or lose one wound with no armour saves allowed.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<Weapon>
 					<Name>Collar of Khorne</Name>
-					<Type>Weapon</Type>
 					<Points>25</Points>
 					<AddToWard>6</AddToWard>
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>The model with the Collar of Khorne has Magic Resistance (2) and a 6+ Ward save.</Description>
-				</Artefact>
-				<Artefact>
+				</Weapon>
+				<AdditionalArmour>
 					<Name>Golden Eye of Tzeentch</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Rule>Ward save of 4+ against all normal and magical missiles</Rule>
 					<Description>The model has a 4+ Ward save against all normal and magical missiles. This does not apply to his mount.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Necrotic Phylactery</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>10</Points>
 					<ImmuneToPoison/>
 					<Rule>Immune to the effects of spells from the Lores of Death and Nurgle</Rule>
 					<Rule>Automatically passes all characteristic tests (except Leadership tests)</Rule>
 					<Description>The model carrying the phylactery is immune to Poisoned Attacks, which must roll to Wound as normal. He is also immune to the effects of spells from the Lores of Death and Nurgle. Lastly, the bearer automatically passes all characteristic tests (except Leadership tests).</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane items">
-				<Artefact>
+				<Arcane>
 					<Name>Skull of Katam</Name>
-					<Type>Arcane</Type>
 					<Points>50</Points>
 					<Rule>The character and any other Wizards within 3" (friend or foe) add +1 to their casting rolls</Rule>
 					<Description>The bearer and any other Wizards within 3" (friend or foe) add +1 to their casting rolls.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Infernal Puppet</Name>
-					<Type>Arcane</Type>
 					<Points>35</Points>
 					<Rule>May opt to modify any rolls on the Miscast table made by any Wizard on the battlefield by up to D3</Rule>
 					<Description>A Sorcerer with an Infernal Puppet may opt to modify any rolls on the Miscast table made by any Wizard on the battlefield by up to D3. For instance, an enemy Wizard miscasts, and the Puppet's owner rolls a 2 on his D3, allowing the Chaos player to add or subtract up to 2 from the miscast result the enemy Wizard rolled.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Blood of Tzeentch</Name>
-					<Type>Arcane</Type>
 					<Points>30</Points>
 					<Rule>May re-roll one casting dice per turn, provided it was not originally a roll of a 1</Rule>
 					<Description>A model with the Blood of Tzeentch may re-roll one casting dice per turn, provided it was not originally a roll of a 1.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Power Familiar</Name>
-					<Type>Arcane</Type>
 					<Points>25</Points>
 					<AddToCast>1</AddToCast>
 					<Description>The familiar adds one power dice to its owner's pool during each friendly Magic phase.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Warrior Familiar</Name>
-					<Type>Arcane</Type>
 					<Points>20</Points>
 					<Rule>Strength 5 hit on a single model in base contact</Rule>
 					<Description>At the beginning of each Close Combat round, before blows are struck, the familiar inflicts one S5 hit on a single model in base contact with the Sorcerer, chosen by the owning player.</Description>
-				</Artefact>
-				<Artefact>
+				</Arcane>
+				<Arcane>
 					<Name>Spell Familiar</Name>
-					<Type>Arcane</Type>
 					<Points>15</Points>
 					<Rule>One more spell</Rule>
 					<Description>The Familiar's owner knows one more spell than is normal for his level. This does not increase his Magic Level.</Description>
-				</Artefact>
+				</Arcane>
 			</Group>
 			<Group Name="Enchanted items">
-				<Artefact>
+				<AdditionalArmour>
 					<Name>Rod of Torment</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>45</Points>
 					<Rule>Bound spell, power level 4: magic missile that has a range of 18" and causes 2D6 Strength 3 hits</Rule>
 					<Description>Bound Spell, power level 3. The Rod of Torment holds a magic missile that has a range of 18" and causes 2D6 Strength 3 hits.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Bloodskull Pendant</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>45</Points>
 					<Only>Infantry</Only>
 					<Rule>Instead of making his normal attacks for that round, may choose to inflict a S8 hit on every enemy model in base contact, whith Killing Blow special rule</Rule>
 					<Description>Instead of making his normal attacks for that round, the wielder of the Bloodskull Pendant may choose to inflict a S8 hit on every enemy model in base contact. These hits have the Killing Blow special rule.</Description>
-				</Artefact>
-					<Artefact>
+				</AdditionalArmour>
+					<AdditionalArmour>
 					<Name>Book of Secrets</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<Dependencies>
 						<Off>Mark of Khorne</Off>
@@ -333,89 +298,78 @@
 					<Rule>Knows a random spell from the Lore of Fire, Shadow or Death (player's choice)</Rule>
 					<Rule>Roll 1D6+1 instead of 2D6 on the Miscast table</Rule>
 					<Description>The bearer knows a random spell from the Lore of Fire, Shadow or Death (player's choice) and generates a single extra power dice, though he does not generate extra dispel dice. If the bearer ever miscasts, roll 1D6+1 instead of 2D6 on the Miscast table.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Helm of Many Eyes</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>25</Points>
 					<HitFirst/>
 					<Stupidity/>
 					<Description>The wearer has the Always Strikes First rule. However, due to the random and conflicting images that confront him, the character is subject to Stupidity.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Pendant of Slaanesh</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
 					<Rule>For each unsaved wound suffers he gains +1 Attack for the rest of the battle</Rule>
 					<Description>For each unsaved wound the character suffers he gains +1 Attack for the rest of the battle.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Death's Head</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>20</Points>
 					<Rule>One use only. Thrown weapon with a range of 12", hit on a 2+, wounds with no armour by Toughness test</Rule>
 					<Description>One use only. The Death's Head is a thrown weapon with a range of 12". The Death's Head always hits on a 2+. Any unit hit by the Death's Head must take D6 Toughness tests, distributed as for shooting. For each failed test the model(s) that failed that test will take a wound with no armour saves allowed.</Description>
-				</Artefact>
-				<Artefact>
+				</AdditionalArmour>
+				<AdditionalArmour>
 					<Name>Favour of the Gods</Name>
-					<Type>AdditionalArmour</Type>
 					<Points>5</Points>
 					<Rule>After rolling on the Eye of the Gods table may add or subtract one from his roll, this may not affect the roll of a natural 2.</Rule>
 					<Description>After rolling on the Eye of the Gods table the bearer may add or subtract one from his roll. This may not affect the roll of a natural 2.</Description>
-				</Artefact>
+				</AdditionalArmour>
 			</Group>
 			<Group Name="Magic banner">
-				<Artefact>
+				<Banner>
 					<Name>Banner of the Gods</Name>
-					<Type>Banner</Type>
 					<Points>125</Points>
 					<Stubborn/>
 					<Rule>All friendly units within 6" become Stubborn</Rule>
 					<Terror/>
 					<Description>The model bearing the Banner of the Gods causes Terror. All friendly units within 6" of the banner become Stubborn.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Doom Totem</Name>
-					<Type>Banner</Type>
 					<Points>75</Points>
 					<Rule>All enemy units with line of sight are at -1 Leadership</Rule>
 					<Description>All enemy units with line of sight to the Doom Totem are at -1 Leadership.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of Wrath</Name>
-					<Type>Banner</Type>
 					<Points>45</Points>
 					<Rule>Bound spell, power level 4: magic missile with range 24", causing D6 Strength 4 hits</Rule>
 					<Description>Bound spell, power level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Blasted Standard</Name>
-					<Type>Banner</Type>
 					<Points>40</Points>
 					<Rule>5+ Ward save against all attacks made in the Shooting phase</Rule>
 					<Description>The unit with the Blasted Standard has a 5+ Ward save against all attacks made in the Shooting phase.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Banner of Rage</Name>
-					<Type>Banner</Type>
 					<Points>35</Points>
 					<Frenzy/>
 					<Rule>Will never lose their Frenzy, even if beaten in close combat</Rule>
 					<Description>The unit with this banner has the Frenzy special rule. They will never lose their Frenzy, even if beaten in close combat.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Festering Shroud</Name>
-					<Type>Banner</Type>
 					<Points>25</Points>
 					<Test Bet="Wound" Context="Round">Toughness</Test>
 					<Description>Any model that does not have the Mark of Nurgle and is in contact with the banner bearer at the start of the friendly Magic phase must pass a Toughness test or suffer a wound with no armour saves allowed.</Description>
-				</Artefact>
-				<Artefact>
+				</Banner>
+				<Banner>
 					<Name>Rapturous Standard</Name>
-					<Type>Banner</Type>
 					<Points>20</Points>
 					<Rule>Any time a unit with the Rapturous Standard takes a Break test that includes a double or the roll of a 1, that roll is counted as an 'Insane Courage' result</Rule>
-				</Artefact>
+				</Banner>
 			</Group>
 		</Artefacts>
 		<Heroes>
