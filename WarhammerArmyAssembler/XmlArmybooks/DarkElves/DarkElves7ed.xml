@@ -38,7 +38,14 @@
 			<Spell Name="Fury of Khaine">10</Spell>
 			<Spell Name="Flame of the Phoenix">13</Spell>
 			<Spell Name="Vaul's Unmaking">14</Spell>
-		</Dispell>
+		</Dispell>		
+		<CommonXmlOptions>
+			<ColdOneChariot Title="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
+			<RepeaterCrossbow Title="Repeater Crossbow"/>
+			<RepeaterHandbow Title="Repeater handbow"/>
+			<PairOfRepeaterHandbow Title="Pair of repeater handbow"/>
+			<SeaDragonCloak Title="Sea Dragon Cloak">AddToArmour: 6</SeaDragonCloak>
+		</CommonXmlOptions>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -1358,11 +1365,4 @@
 			</Rare>
 		</Units>
 	</Content>
-	<CommonXmlOptions>
-		<ColdOneChariot Title="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
-		<RepeaterCrossbow Title="Repeater Crossbow"/>
-		<RepeaterHandbow Title="Repeater handbow"/>
-		<PairOfRepeaterHandbow Title="Pair of repeater handbow"/>
-		<SeaDragonCloak Title="Sea Dragon Cloak">AddToArmour: 6</SeaDragonCloak>
-	</CommonXmlOptions>
 </ArmyBook>
