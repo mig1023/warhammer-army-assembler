@@ -38,7 +38,20 @@
 			<Spell Name="The Twilight Host">10</Spell>
 			<Spell Name="Ariel's Blessing">11</Spell>
 			<Spell Name="The Call of the Hunt">13</Spell>
-		</Dispell>
+		</Dispell>		
+		<CommonXmlOptions>
+			<MarkOfKhorne Title="Mark of Khorne">Frenzy; AddToDispell: 1</MarkOfKhorne>
+			<MarkOfNurgle Title="Mark of Nurgle">Fear; AddToWounds: 1</MarkOfNurgle>
+			<MarkOfTzeentchBig Title="Mark of Tzeentch">AddToWizard: 4; AddToCast: 4; AddToDispell: 2</MarkOfTzeentchBig>
+			<MarkOfTzeentchLittle Title="Mark of Tzeentch">AddToWizard: 2; AddToCast: 2; AddToDispell: 1</MarkOfTzeentchLittle>
+			<MarkOfSlaanesh Title="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaanesh>
+			<MarkOfSlaaneshHitFirst Title="Mark of Slaanesh">HitFirst</MarkOfSlaaneshHitFirst>
+			<MarkOfChaosUndividedFUnits Title="Mark of Chaos Undivided">Rule: May re-roll failed Psychology tests</MarkOfChaosUndividedFUnits>
+			<MarkOfKhorneFUnits Title="Mark of Khorne">Frenzy; AddToDispell: 1</MarkOfKhorneFUnits>
+			<MarkOfNurgleFUnits Title="Mark of Nurgle">Fear</MarkOfNurgleFUnits>
+			<MarkOfTzeentchFUnits Title="Mark of Tzeentch">AddToCast: 1</MarkOfTzeentchFUnits>
+			<MarkOfSlaaneshFUnits Title="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaaneshFUnits>
+		</CommonXmlOptions>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -840,17 +853,4 @@
 			</Rare>
 		</Units>
 	</Content>
-	<CommonXmlOptions>
-		<MarkOfKhorne Title="Mark of Khorne">Frenzy; AddToDispell: 1</MarkOfKhorne>
-		<MarkOfNurgle Title="Mark of Nurgle">Fear; AddToWounds: 1</MarkOfNurgle>
-		<MarkOfTzeentchBig Title="Mark of Tzeentch">AddToWizard: 4; AddToCast: 4; AddToDispell: 2</MarkOfTzeentchBig>
-		<MarkOfTzeentchLittle Title="Mark of Tzeentch">AddToWizard: 2; AddToCast: 2; AddToDispell: 1</MarkOfTzeentchLittle>
-		<MarkOfSlaanesh Title="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaanesh>
-		<MarkOfSlaaneshHitFirst Title="Mark of Slaanesh">HitFirst</MarkOfSlaaneshHitFirst>
-		<MarkOfChaosUndividedFUnits Title="Mark of Chaos Undivided">Rule: May re-roll failed Psychology tests</MarkOfChaosUndividedFUnits>
-		<MarkOfKhorneFUnits Title="Mark of Khorne">Frenzy; AddToDispell: 1</MarkOfKhorneFUnits>
-		<MarkOfNurgleFUnits Title="Mark of Nurgle">Fear</MarkOfNurgleFUnits>
-		<MarkOfTzeentchFUnits Title="Mark of Tzeentch">AddToCast: 1</MarkOfTzeentchFUnits>
-		<MarkOfSlaaneshFUnits Title="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaaneshFUnits>
-	</CommonXmlOptions>
 </ArmyBook>
