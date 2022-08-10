@@ -183,9 +183,13 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return 0;
 
             string type = (xmlNode["Type"] == null ? xmlNode.Name : xmlNode["Type"].InnerText);
+
             bool success = Enum.TryParse(type, out OptionType value);
 
-            return (success ? value : Option.OptionType.Option);
+            if (xmlNode.ParentNode?.Name == "Equipments")
+                return OptionType.AdditionalArmour;
+            else
+                return (success ? value : Option.OptionType.Option);
         }
 
         public static OnlyType OnlyForParse(XmlNode xmlNode)
