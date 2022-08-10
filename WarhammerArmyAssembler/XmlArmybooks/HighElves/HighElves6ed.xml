@@ -39,6 +39,9 @@
 			<Spell Name="Lamehk's Dominion">12</Spell>
 			<Spell Name="Arnizipal's Black Horror">14</Spell>
 		</Dispell>
+		<CommonXmlOptions>
+			<DragonArmour Title="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
+		</CommonXmlOptions>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -527,17 +530,7 @@
 					<LongBow Points="10"/>
 					<LightArmour Points="3" Dependencies="Off: Heavy armour, Dragon armour"/>
 					<HeavyArmour Points="6" Dependencies="Off: Light armour, Dragon armour"/>
-					<Option>
-						<Name>Dragon armour</Name>
-						<Type>Option</Type>
-						<Points>8</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-						<Rule>Immune to all breath and all Flaming attacks</Rule>
-					</Option>
+					<DragonArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Elven Steed" Points="18"/>
 					<Mount Name="Barded Elven Steed" Points="24"/>
@@ -586,17 +579,7 @@
 					<LongBow Points="10"/>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour, Dragon armour"/>
 					<HeavyArmour Points="4" Dependencies="Off: Light armour, Dragon armour"/>
-					<Option>
-						<Name>Dragon armour</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Light armour</Off>
-							<Off>Heavy armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-						<Rule>Immune to all breath and all Flaming attacks</Rule>
-					</Option>
+					<DragonArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Elven Steed" Points="12"/>
 					<Mount Name="Barded Elven Steed" Points="5"/>
@@ -847,11 +830,7 @@
 				<Equipments>
 					<HandWeapon/>
 					<Lance/>
-					<Armour>
-						<Name>Dragon armour</Name>
-						<AddToArmour>5</AddToArmour>
-						<Rule>Immune to all breath and all Flaming attacks</Rule>
-					</Armour>
+					<DragonArmour/>
 					<Shield/>
 				</Equipments>
 				<Options>
