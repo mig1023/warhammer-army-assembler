@@ -49,6 +49,7 @@
 			<IthilmarBarding Title="Ithilmar barding">AddToArmour: 6</IthilmarBarding>
 			<Swiftsense/>
 			<ShreddingTalon/>
+			<SwoopingStrike/>
 		</CommonXmlOptions>
 	</Introduction>
 	<Content>
@@ -485,14 +486,7 @@
 					<Swiftsense Points="10" Dependencies="On: Great Eagle"/>
 					<ShreddingTalon Points="5" Dependencies="On: Great Eagle"/>
 					<Mount Name="Griffon" Points="150"/>
-					<Option>
-						<Name>Swooping Strike</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<Dependencies>
-							<On>Griffon</On>
-						</Dependencies>
-					</Option>
+					<SwoopingStrike Points="25" Dependencies="On: Griffon"/>
 					<Swiftsense Points="20" Dependencies="On: Griffon"/>
 					<Mount Name="Sun Dragon" Points="235"/>
 					<Mount Name="Moon Dragon" Points="300"/>
@@ -681,14 +675,7 @@
 					<Swiftsense Points="10" Dependencies="On: Great Eagle"/>
 					<ShreddingTalon Points="5" Dependencies="On: Great Eagle"/>
 					<Mount Name="Griffon" Points="150"/>
-					<Option>
-						<Name>Swooping Strike</Name>
-						<Type>Option</Type>
-						<Points>25</Points>
-						<Dependencies>
-							<On>Griffon</On>
-						</Dependencies>
-					</Option>
+					<SwoopingStrike Points="25" Dependencies="On: Griffon"/>
 					<Swiftsense Points="20" Dependencies="On: Griffon"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
