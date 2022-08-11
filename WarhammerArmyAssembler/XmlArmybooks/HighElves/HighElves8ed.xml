@@ -47,6 +47,7 @@
 			<DragonArmour Title="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
 			<LionCloak Title="Lion cloak">AddToArmour: 5</LionCloak>
 			<IthilmarBarding Title="Ithilmar barding">AddToArmour: 6</IthilmarBarding>
+			<Swiftsense/>
 		</CommonXmlOptions>
 	</Introduction>
 	<Content>
@@ -480,14 +481,7 @@
 					<Mount Name="Elven Steed" Points="20"/>
 					<IthilmarBarding Points="7" Dependencies="On: Elven Steed"/>
 					<Mount Name="Great Eagle" Points="50"/>
-					<Option>
-						<Name>Swiftsense</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Dependencies>
-							<On>Great Eagle</On>
-						</Dependencies>
-					</Option>
+					<Swiftsense Points="10" Dependencies="On: Great Eagle"/>
 					<Option>
 						<Name>Shredding Talon</Name>
 						<Type>Option</Type>
@@ -505,14 +499,7 @@
 							<On>Griffon</On>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Swiftsense</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<On>Griffon</On>
-						</Dependencies>
-					</Option>
+					<Swiftsense Points="20" Dependencies="On: Griffon"/>
 					<Mount Name="Sun Dragon" Points="235"/>
 					<Mount Name="Moon Dragon" Points="300"/>
 					<Mount Name="Star Dragon" Points="390"/>
@@ -542,14 +529,7 @@
 					<Mount Name="Elven Steed" Points="20"/>
 					<IthilmarBarding Points="7" Dependencies="On: Elven Steed"/>
 					<Mount Name="Great Eagle" Points="50"/>
-					<Option>
-						<Name>Swiftsense</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Dependencies>
-							<On>Great Eagle</On>
-						</Dependencies>
-					</Option>
+					<Swiftsense Points="10" Dependencies="On: Great Eagle"/>
 					<Option>
 						<Name>Shredding Talon</Name>
 						<Type>Option</Type>
@@ -711,14 +691,7 @@
 					<Mount Name="Elven Steed" Points="10"/>
 					<IthilmarBarding Points="5" Dependencies="On: Elven Steed"/>
 					<Mount Name="Great Eagle" Points="50"/>
-					<Option>
-						<Name>Swiftsense</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Dependencies>
-							<On>Great Eagle</On>
-						</Dependencies>
-					</Option>
+					<Swiftsense Points="10" Dependencies="On: Great Eagle"/>
 					<Option>
 						<Name>Shredding Talon</Name>
 						<Type>Option</Type>
@@ -736,14 +709,7 @@
 							<On>Griffon</On>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Swiftsense</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<On>Griffon</On>
-						</Dependencies>
-					</Option>
+					<Swiftsense Points="20" Dependencies="On: Griffon"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
 			</Hero>
@@ -1401,12 +1367,7 @@
 					<Fly/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Swiftsense</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<PerModel/>
-					</Option>
+					<Swiftsense PointsPerModel="10"/>
 					<Option>
 						<Name>Shredding Talons</Name>
 						<Type>Option</Type>
