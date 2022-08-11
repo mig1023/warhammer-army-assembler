@@ -43,6 +43,10 @@
 			<Spell Name="Doombolt">14</Spell>
 			<Spell Name="Arnzipal's Black Horror">17</Spell>
 		</Dispell>
+		<CommonXmlOptions>
+			<DragonArmour Title="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
+			<LionCloak Title="Lion cloak">AddToArmour: 5</LionCloak>
+		</CommonXmlOptions>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -462,98 +466,16 @@
 					</Armour>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>3</Points>
-						<Dependencies>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-							<Off>Spear</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Halberd</Name>
-						<Type>Option</Type>
-						<AddToStrength>1</AddToStrength>
-						<Points>3</Points>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Lance</Off>
-							<Off>Spear</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Lance</Name>
-						<Type>Option</Type>
-						<Only>Mount</Only>
-						<Points>7</Points>
-						<Lance/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Spear</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Spear</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-					</Option>
+					<AdditionalWeapon Points="3" Dependencies="Off: Halberd, Lance, Spear, Great weapon" Only="Infantry"/>
+					<Halberd Points="3" Dependencies="Off: Additional weapon, Lance, Spear, Great weapon"/>
+					<Lance Points="7" Dependencies="Off: Additional weapon, Halberd, Spear, Great weapon"/>
+					<Spear Points="3" Dependencies="Off: Additional weapon, Halberd, Lance, Great weapon"/>
+					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Halberd, Lance, Spear"/>
 					<LongBow Points="5"/>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>6</Points>
-						<Dependencies>
-							<Off>Dragon armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Dragon armour</Name>
-						<Type>Option</Type>
-						<Points>20</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Lion cloak</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-						<Rule>Immune to all breath and all Flaming attacks</Rule>
-					</Option>
+					<HeavyArmour Points="6" Dependencies="Off: Dragon armour"/>
+					<DragonArmour Points="20" Dependencies="Off: Heavy armour, Lion cloak"/>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Lion cloak</Name>
-						<Type>Option</Type>
-						<Points>3</Points>
-						<Dependencies>
-							<Off>Dragon armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LionCloak Points="3" Dependencies="Off: Dragon armour"/>
 					<Mount Name="Elven Steed" Points="20"/>
 					<Option>
 						<Name>Ithilmar barding</Name>
