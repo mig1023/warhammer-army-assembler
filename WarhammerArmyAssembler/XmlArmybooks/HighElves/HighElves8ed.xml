@@ -711,98 +711,16 @@
 					</Armour>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-							<Off>Spear</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Halberd</Name>
-						<Type>Option</Type>
-						<AddToStrength>1</AddToStrength>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Lance</Off>
-							<Off>Spear</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Lance</Name>
-						<Type>Option</Type>
-						<Only>Mount</Only>
-						<Points>6</Points>
-						<Lance/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Spear</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Spear</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-							<Off>Great weapon</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<Type>Option</Type>
-						<AddToStrength>2</AddToStrength>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-					</Option>
+					<AdditionalWeapon Points="2" Dependencies="Off: Halberd, Lance, Spear, Great weapon" Only="Infantry"/>
+					<Halberd Points="2" Dependencies="Off: Additional weapon, Lance, Spear, Great weapon"/>
+					<Lance Points="6" Dependencies="Off: Additional weapon, Halberd, Spear, Great weapon"/>
+					<Spear Points="2" Dependencies="Off: Additional weapon, Halberd, Lance, Great weapon"/>
+					<GreatWeapon Points="4" Dependencies="Off: Additional weapon, Halberd, Lance, Spear"/>
 					<LongBow Points="5"/>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Dragon armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Dragon armour</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-							<Off>Lion cloak</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-						<Rule>Immune to all breath and all Flaming attacks</Rule>
-					</Option>
+					<HeavyArmour Points="4" Dependencies="Off: Dragon armour"/>
+					<DragonArmour Points="10" Dependencies="Off: Heavy armour, Lion cloak"/>
 					<Shield Points="2"/>
-					<Option>
-						<Name>Lion cloak</Name>
-						<Type>Option</Type>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Dragon armour</Off>
-						</Dependencies>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<LionCloak Points="4" Dependencies="Off: Dragon armour"/>
 					<Mount Name="Elven Steed" Points="10"/>
 					<Option>
 						<Name>Ithilmar barding</Name>
