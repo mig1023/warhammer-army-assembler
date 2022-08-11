@@ -9,7 +9,7 @@ namespace WarhammerArmyAssembler
 {
     public class Option : INotifyPropertyChanged
     {
-        public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption, Powers }
+        public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption, Powers, Info }
 
         public enum OnlyType { All, Infantry, Mount }
 
