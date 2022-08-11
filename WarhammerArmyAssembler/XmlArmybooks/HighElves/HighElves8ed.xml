@@ -48,6 +48,7 @@
 			<LionCloak Title="Lion cloak">AddToArmour: 5</LionCloak>
 			<IthilmarBarding Title="Ithilmar barding">AddToArmour: 6</IthilmarBarding>
 			<Swiftsense/>
+			<ShreddingTalon/>
 		</CommonXmlOptions>
 	</Introduction>
 	<Content>
@@ -482,14 +483,7 @@
 					<IthilmarBarding Points="7" Dependencies="On: Elven Steed"/>
 					<Mount Name="Great Eagle" Points="50"/>
 					<Swiftsense Points="10" Dependencies="On: Great Eagle"/>
-					<Option>
-						<Name>Shredding Talon</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<Dependencies>
-							<On>Great Eagle</On>
-						</Dependencies>
-					</Option>
+					<ShreddingTalon Points="5" Dependencies="On: Great Eagle"/>
 					<Mount Name="Griffon" Points="150"/>
 					<Option>
 						<Name>Swooping Strike</Name>
@@ -530,14 +524,7 @@
 					<IthilmarBarding Points="7" Dependencies="On: Elven Steed"/>
 					<Mount Name="Great Eagle" Points="50"/>
 					<Swiftsense Points="10" Dependencies="On: Great Eagle"/>
-					<Option>
-						<Name>Shredding Talon</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<Dependencies>
-							<On>Great Eagle</On>
-						</Dependencies>
-					</Option>
+					<ShreddingTalon Points="5" Dependencies="On: Great Eagle"/>
 					<Mount Name="Sun Dragon" Points="235"/>
 					<Mount Name="Moon Dragon" Points="300"/>
 					<Mount Name="Star Dragon" Points="390"/>
@@ -692,14 +679,7 @@
 					<IthilmarBarding Points="5" Dependencies="On: Elven Steed"/>
 					<Mount Name="Great Eagle" Points="50"/>
 					<Swiftsense Points="10" Dependencies="On: Great Eagle"/>
-					<Option>
-						<Name>Shredding Talon</Name>
-						<Type>Option</Type>
-						<Points>5</Points>
-						<Dependencies>
-							<On>Great Eagle</On>
-						</Dependencies>
-					</Option>
+					<ShreddingTalon Points="5" Dependencies="On: Great Eagle"/>
 					<Mount Name="Griffon" Points="150"/>
 					<Option>
 						<Name>Swooping Strike</Name>
