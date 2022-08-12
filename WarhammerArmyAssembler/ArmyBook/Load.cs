@@ -94,7 +94,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlFile.Load(Constants.CommonXmlOptionPath);
             LoadCommonXmlOptionFromFile(xmlFile, "Options/*/*");
 
-            LoadCommonXmlOptionFromFile(armybook, "ArmyBook/Introduction/CommonXmlOptions/*");
+            LoadCommonXmlOptionFromFile(armybook, "ArmyBook/Introduction/LocalXmlOption/*");
         }
 
         private static void LoadEnemies()
