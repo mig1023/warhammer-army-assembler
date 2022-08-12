@@ -39,9 +39,9 @@
 			<Spell Name="Soul Stealer">12</Spell>
 			<Spell Name="Black Horror">13</Spell>
 		</Dispell>
-		<CommonXmlOptions>
+		<LocalXmlOption>
 			<DragonArmour Title="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
-		</CommonXmlOptions>
+		</LocalXmlOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -1108,11 +1108,7 @@
 				<Equipments>
 					<Lance/>
 					<HandWeapon/>
-					<Armour>
-						<Name>Dragon armour</Name>
-						<AddToArmour>5</AddToArmour>
-						<Rule>Immune to all breath and all Flaming attacks</Rule>
-					</Armour>
+					<DragonArmour/>
 					<Shield/>
 				</Equipments>
 				<Options>
