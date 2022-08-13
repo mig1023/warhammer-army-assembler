@@ -674,7 +674,7 @@ namespace WarhammerArmyAssembler.Interface
                 {
                     Text = head,
                     FontFamily = new FontFamily("Impact"),
-                    FontSize = 24,
+                    FontSize = 64,
                     Margin = new Thickness(0, 4, 0, 0),
                     Foreground = lineColor,
                 },
