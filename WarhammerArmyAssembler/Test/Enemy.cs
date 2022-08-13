@@ -42,6 +42,9 @@ namespace WarhammerArmyAssembler
             this.Armour = SetProfile(profile, 12);
             this.Ward = SetProfile(profile, 13);
 
+            if (multiplesProfile.Count > 1)
+                this.Mount = new Enemy(multiplesProfile[1].Trim());
+
             if ((profile.Count < 15) || String.IsNullOrEmpty(profile[14]))
                 return;
 
@@ -50,9 +53,6 @@ namespace WarhammerArmyAssembler
             foreach (string specialRule in profile[14].Split(','))
                 if (!SpecialProperty(specialRule.Trim(), ref thisEnemy))
                     this.GetType().GetProperty(specialRule.Trim()).SetValue(this, true);
-
-            if (multiplesProfile.Count > 1)
-                this.Mount = new Enemy(multiplesProfile[1].Trim());
         }
 
         private Profile NewProfile(string line) =>
