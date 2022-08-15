@@ -549,23 +549,8 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Spear</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Spear</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Dependencies="Off: Spear"/>
+					<Spear Points="4" Dependencies="Off: Additional weapon"/>
 					<Option>
 						<Name>Blowpipe</Name>
 						<Type>Option</Type>
