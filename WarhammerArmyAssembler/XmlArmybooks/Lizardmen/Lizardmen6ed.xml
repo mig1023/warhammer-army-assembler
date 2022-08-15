@@ -526,15 +526,7 @@
 					<Halberd Points="4"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
-					<Option>
-						<Name>Cold One</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Blessed Spawning of Itzl</On>
-						</Dependencies>
-						<Points>23</Points>
-						<Mount/>
-					</Option>
+					<Mount Name="Cold One" Points="23" Dependencies="On: Blessed Spawning of Itzl"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
 				<Equipments>
