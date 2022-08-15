@@ -40,6 +40,10 @@
 			<Spell Name="Glorious Afflictions">12</Spell>
 			<Spell Name="Sumptuous Pestilience">13</Spell>
 		</Dispell>
+		<LocalXmlOption>
+			<Blowpipe/>
+			<Javelins/>
+		</LocalXmlOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -551,22 +555,8 @@
 				<Options>
 					<AdditionalWeapon Points="4" Dependencies="Off: Spear"/>
 					<Spear Points="4" Dependencies="Off: Additional weapon"/>
-					<Option>
-						<Name>Blowpipe</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Javelins</Off>
-						</Dependencies>
-						<Points>8</Points>
-					</Option>
-					<Option>
-						<Name>Javelins</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<Off>Blowpipe</Off>
-						</Dependencies>
-						<Points>8</Points>
-					</Option>
+					<Blowpipe Points="8" Dependencies="Off: Javelins"/>
+					<Javelins Points="8" Dependencies="Off: Blowpipe"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Option>
@@ -683,9 +673,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Blowpipe</Name>
-					</RangeWeapon>
+					<Blowpipe/>
 				</Equipments>
 				<Options>
 					<Option>
@@ -809,9 +797,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Blowpipe</Name>
-					</RangeWeapon>
+					<Blowpipe/>
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Stalker" Points="6"/>
