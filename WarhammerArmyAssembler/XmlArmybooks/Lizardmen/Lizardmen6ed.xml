@@ -501,24 +501,8 @@
 					<Halberd Points="6"/>
 					<LightArmour Points="6"/>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Cold One</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Blessed Spawning of Itzl</On>
-						</Dependencies>
-						<Points>37</Points>
-						<Mount/>
-					</Option>
-					<Option>
-						<Name>Carnosaur</Name>
-						<Type>Option</Type>
-						<Dependencies>
-							<On>Blessed Spawning of Itzl</On>
-						</Dependencies>
-						<Points>210</Points>
-						<Mount/>
-					</Option>
+					<Mount Name="Cold One" Points="37" Dependencies="On: Blessed Spawning of Itzl"/>
+					<Mount Name="Carnosaur" Points="210" Dependencies="On: Blessed Spawning of Itzl"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
