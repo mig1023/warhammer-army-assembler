@@ -43,6 +43,7 @@
 		<LocalXmlOption>
 			<Blowpipe/>
 			<Javelins/>
+			<Scout/>
 		</LocalXmlOption>
 	</Introduction>
 	<Content>
@@ -559,11 +560,7 @@
 					<Javelins Points="8" Dependencies="Off: Blowpipe"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
-					<Option>
-						<Name>Scout</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-					</Option>
+					<Scout Points="10"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
@@ -587,11 +584,7 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="2" Points="35"/>
-					<Option>
-						<Name>Scout</Name>
-						<Type>Option</Type>
-						<Points>10</Points>
-					</Option>
+					<Scout Level="10"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
@@ -645,12 +638,7 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spears</Name>
-						<Type>Option</Type>
-						<Points>2</Points>
-						<PerModel/>
-					</Option>
+					<Spear PointsPerModel="2">
 					<CommandGroup Position="Musician" Points="6"/>
 					<CommandGroup Position="Standard Bearer" Points="12"/>
 					<CommandGroup Position="Champion" Points="12"/>
@@ -821,9 +809,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<RangeWeapon>
-						<Name>Javelin</Name>
-					</RangeWeapon>
+					<Javelins/>
 				</Equipments>
 				<Options>
 					<CommandGroup Position="Brave" Points="10"/>
