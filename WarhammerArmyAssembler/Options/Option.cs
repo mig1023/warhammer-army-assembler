@@ -302,7 +302,7 @@ namespace WarhammerArmyAssembler
 
         public int GetWizardLevelBonus() => this.Countable.Value - (this.Countable.Nullable && (this.Countable.Value > 0) ? 1 : 0);
 
-        public string FullName() => (Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name);
+        public string FullName() => Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name;
 
         public string SelfDescription()
         {
@@ -325,17 +325,18 @@ namespace WarhammerArmyAssembler
 
         public bool IsMagicItem()
         {
-            bool weaponsOrArmours = (this.Type == OptionType.Weapon || this.Type == OptionType.Armour || this.Type == OptionType.Shield);
-            bool otherStuffs = (this.Type == OptionType.AdditionalArmour || this.Type == OptionType.Arcane || this.Type == OptionType.Banner);
+            bool weapons = this.Type == OptionType.Weapon || this.Type == OptionType.Info;
+            bool armour = this.Type == OptionType.Armour || this.Type == OptionType.Shield || this.Type == OptionType.AdditionalArmour;
+            bool otherStuffs = this.Type == OptionType.Arcane || this.Type == OptionType.Banner;
 
-            return (weaponsOrArmours || otherStuffs);
+            return weapons || armour || otherStuffs;
         }
 
-        public bool IsPowers() => (this.Type == OptionType.Powers);
+        public bool IsPowers() => this.Type == OptionType.Powers;
 
-        public bool IsOption() => (this.Type == OptionType.Option || this.Type == OptionType.SlannOption);
+        public bool IsOption() => this.Type == OptionType.Option || this.Type == OptionType.SlannOption;
 
-        public bool IsSlannOption() => (this.Type == OptionType.SlannOption);
+        public bool IsSlannOption() => this.Type == OptionType.SlannOption;
 
         private bool TypeAndPointsSatisfy(Unit.MagicItemsTypes itemsType, int itemsPoints, int itemsCout)
         {

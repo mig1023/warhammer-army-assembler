@@ -944,14 +944,14 @@ namespace WarhammerArmyAssembler
 
             if (!onlyUnitParam)
             {
-                foreach (Option option in Options.Where(x => (!x.IsOption() || x.Realised)))
+                foreach (Option option in Options.Where(x => !x.IsOption() || x.Realised))
                 {
                     PropertyInfo optionField = typeof(Option).GetProperty(name);
 
                     bool fromParamValue = GetUnitValueTrueOrFalse(optionField.GetValue(option),
                         out string lineOptionValue, out int intOptionValue);
 
-                    anyIsTrue = (fromParamValue ? true : anyIsTrue);
+                    anyIsTrue = fromParamValue || anyIsTrue;
 
                     if ((name == "ImpactHitByFront") && (((int)property > 0) || option.ImpactHitByFront > 0))
                     {
@@ -965,7 +965,7 @@ namespace WarhammerArmyAssembler
 
                         foreach (string reroll in allRerolls)
                         {
-                            string secondElement = (String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ");
+                            string secondElement = String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ";
                             string[] rerollsParams = reroll.Split('(');
                             lineParamValue += String.Format("{0}{1}", secondElement, SpecialRules.RerollsLines[rerollsParams[0]]);
 
