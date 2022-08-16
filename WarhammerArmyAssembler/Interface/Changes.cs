@@ -377,13 +377,13 @@ namespace WarhammerArmyAssembler.Interface
                 mainMenuIsOpen = false;
         }
 
-        private static BitmapImage GetImage(XmlNode imageName, string armyName) =>
-            new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\" + imageName.InnerText));
+        private static BitmapImage GetImage(string imageName, string armyName) =>
+            new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\Images\\" + imageName));
 
         public static void LoadArmyImage(XmlNode imageName, string armyName)
         {
             if (imageName != null)
-                main.armySymbol.Source = GetImage(imageName, armyName);
+                main.armySymbol.Source = GetImage(imageName.InnerText, armyName);
             else
                 main.armySymbol.Source = null;
         }
@@ -424,7 +424,7 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            XmlNode armyFile = Intro(xmlFile, "Images/Cover");
+            string armyFile = Intro(xmlFile, "Images/Cover").InnerText;
             changeArmybook.imageArmybook.Source = GetImage(armyFile, armyName);
             changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
@@ -512,7 +512,7 @@ namespace WarhammerArmyAssembler.Interface
                 xmlFile.Load(armyName);
 
                 XmlNode armyFile = Intro(xmlFile, "Images/Cover");
-                string source = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
+                string source = String.Format("{0}\\Images\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
 
                 Image newImage = new Image()
                 {
@@ -534,7 +534,7 @@ namespace WarhammerArmyAssembler.Interface
                 if (String.IsNullOrEmpty(illustration))
                     illustration = source;
                 else
-                    illustration = String.Format("{0}\\{1}", Path.GetDirectoryName(armyName), illustration);
+                    illustration = String.Format("{0}\\Images\\{1}", Path.GetDirectoryName(armyName), illustration);
 
                 int armyEdition = int.Parse(edition);
 
