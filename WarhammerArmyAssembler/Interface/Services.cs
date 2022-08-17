@@ -22,7 +22,8 @@ namespace WarhammerArmyAssembler.Interface
             return (success ? value : 0);
         }
 
-        public static Brush BrushFromXml(XmlNode path) => (SolidColorBrush)new BrushConverter().ConvertFromString(path.InnerText);
+        public static Brush BrushFromXml(XmlNode path) =>
+            (SolidColorBrush)new BrushConverter().ConvertFromString("#" + path.InnerText);
 
         public static int CalcPercent(double x, double y) => (int)Math.Round((x * 100) / y);
 

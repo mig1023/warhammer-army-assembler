@@ -559,7 +559,7 @@ namespace WarhammerArmyAssembler
             if (count > 2)
                 count = 2;
 
-            return (SolidColorBrush)new BrushConverter().ConvertFromString(colors[count]);
+            return (SolidColorBrush)new BrushConverter().ConvertFromString("#" + colors[count]);
         }
 
         public Unit GetOptionRules(bool directModification = false)
