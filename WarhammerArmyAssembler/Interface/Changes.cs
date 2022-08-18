@@ -675,12 +675,14 @@ namespace WarhammerArmyAssembler.Interface
                     Text = head,
                     FontFamily = new FontFamily("Impact"),
                     FontSize = 64,
-                    Margin = new Thickness(0, 4, 0, 0),
+                    Margin = new Thickness(-3, 4, 0, 0),
                     Foreground = lineColor,
                 },
                 new TextBlock
                 {
                     Text = String.Format("{0}th Edition", edition),
+                    FontSize = 14,
+                    Margin = new Thickness(0, -7, 0, 0),
                 },
                 new TextBlock
                 {
