@@ -378,7 +378,7 @@ namespace WarhammerArmyAssembler.Interface
         }
 
         private static BitmapImage GetImage(string imageName, string armyName) =>
-            new BitmapImage(new Uri(Path.GetDirectoryName(armyName) + "\\Images\\" + imageName));
+            new BitmapImage(new Uri(String.Format("{0}\\Images\\{1}", Path.GetDirectoryName(armyName), imageName)));
 
         public static void LoadArmyImage(XmlNode imageName, string armyName)
         {

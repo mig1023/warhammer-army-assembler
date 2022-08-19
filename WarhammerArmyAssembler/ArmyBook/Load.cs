@@ -50,9 +50,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             xmlFile.Load(xmlFileName);
 
-            string imagePath = Path.GetDirectoryName(xmlFileName) + "\\Images\\" +
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")) + "\\";
-
+            string imagePath = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")));
+                
             string unitType = (isHero ? "Heroes/Hero" : "Units/Unit");
             XmlNodeList xmlNodes =  xmlFile.SelectNodes("ArmyBook/Content/" + unitType);
 
