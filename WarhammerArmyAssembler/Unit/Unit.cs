@@ -780,13 +780,19 @@ namespace WarhammerArmyAssembler
             option.Realised = realise;
         }
 
-        public string GetSpecialRulesLine(bool withCommandData = false, bool onlyUnitParam = false, bool noNeedToDoubleBSB = false)
+        public string GetWizardLevelLine()
         {
-            string rules = (withCommandData ? GetCommandGroupLine() : String.Empty);
+            int wizard = GetUnitWizard();
+            return wizard > 0 ? String.Format("Wizard Level {0}", wizard) : String.Empty;
+        }
 
-            foreach (string rule in GetSpecialRules(onlyUnitParam))
-                if (!(noNeedToDoubleBSB && (rule == "Battle Standard Bearer")))
-                    rules += String.Format("{0}; ", rule);
+        public string GetSpecialRulesLine(bool withCommandData = false,
+            bool onlyUnitParam = false, bool withoutWizards = false)
+        {
+            string rules = withCommandData ? GetCommandGroupLine() : String.Empty;
+
+            foreach (string rule in GetSpecialRules(onlyUnitParam, withoutWizards))
+                rules += String.Format("{0}; ", rule);
 
             if (!String.IsNullOrEmpty(rules))
                 rules = rules.Remove(rules.Length - 2);
@@ -802,13 +808,15 @@ namespace WarhammerArmyAssembler
             {
                 bool thisIsRealised = (option.Realised || option.IsMagicItem()) && option.Points != 0;
                 bool thisIsNotMountOrFC = !(option.Mount || option.CommandGroup);
+                bool wizard = option.WizardTo > 0 || option.AddToWizard > 0;
 
-                if (!String.IsNullOrEmpty(option.Name) && thisIsRealised && thisIsNotMountOrFC)
+                if (!String.IsNullOrEmpty(option.Name) && thisIsRealised && thisIsNotMountOrFC && !wizard)
                     equipment += String.Format("{0}; ", option.FullName());
             }
 
             foreach (Option option in Options.Where(x => (x.Countable != null) && (x.Countable.Value > 0)))
-                equipment += String.Format("{0} {1}; ", option.Countable.Value, option.Name);
+                if (!option.Countable?.ExportToWizardLevel ?? false)
+                    equipment += String.Format("{0} {1}; ", option.Countable.Value, option.Name);
 
             foreach (Option option in Options.Where(x => !String.IsNullOrEmpty(x.Name) && x.IsPowers()))
                 equipment += String.Format("{0}; ", option.Name);
@@ -1022,7 +1030,7 @@ namespace WarhammerArmyAssembler
             return rulesLine;
         }
 
-        public List<string> GetSpecialRules(bool onlyUnitParam = false)
+        public List<string> GetSpecialRules(bool onlyUnitParam = false, bool withoudWizards = false)
         {
             List<string> rules = new List<string>();
 
@@ -1032,8 +1040,9 @@ namespace WarhammerArmyAssembler
             if (MountOn > 0)
                 rules.Add(Army.Data.Units[MountOn].Name);
 
-            foreach (Option option in Options.Where(x => (x.Realised && x.SpecialRuleDescription.Length > 0)))
-                rules.Add(option.Name);
+            foreach (Option option in Options.Where(x => x.Realised && x.SpecialRuleDescription.Length > 0))
+                if (!withoudWizards || (option.WizardTo <= 0 && option.AddToWizard <= 0 && !(option.Countable?.ExportToWizardLevel ?? false)))
+                    rules.Add(option.Name);
 
             foreach (KeyValuePair<string, string> specialRule in SpecialRules.All) 
                 if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam: onlyUnitParam))

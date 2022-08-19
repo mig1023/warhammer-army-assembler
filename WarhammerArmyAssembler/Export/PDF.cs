@@ -42,6 +42,7 @@ namespace WarhammerArmyAssembler.Export
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in armyByCategories)
+            {
                 foreach (Unit unit in unitType.Items)
                 {
                     AddText(String.Format("{0}", Services.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
@@ -51,7 +52,8 @@ namespace WarhammerArmyAssembler.Export
 
                     if (fullRules)
                     {
-                        linesForEachUnit.Add(unit.GetSpecialRulesLine(noNeedToDoubleBSB: true));
+                        linesForEachUnit.Add(unit.GetWizardLevelLine());
+                        linesForEachUnit.Add(unit.GetSpecialRulesLine(withoutWizards: true));
                         linesForEachUnit.Add(unit.GetModifiedParamsLine());
                     }
 
@@ -61,6 +63,7 @@ namespace WarhammerArmyAssembler.Export
 
                     AddText(lineHeight: 16);
                 }
+            }
 
             AddText(lineHeight: 8);
 
