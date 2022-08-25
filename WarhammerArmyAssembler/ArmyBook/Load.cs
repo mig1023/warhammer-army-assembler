@@ -152,14 +152,14 @@ namespace WarhammerArmyAssembler.ArmyBook
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Heroes/*", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Mounts/*", ref Data.Mounts);
 
-            foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/Group"))
+            foreach (XmlNode xmlArtefactClass in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/Class"))
             {
-                string groupName = xmlArtefactGroup.Attributes["Name"].Value;
+                string className = xmlArtefactClass.Attributes["Name"].Value;
 
-                foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("*"))
+                foreach (XmlNode xmlArtefact in xmlArtefactClass.SelectNodes("*"))
                 {
                     int newID = GetNextIndex();
-                    Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, xmlFile, groupName));
+                    Data.Artefact.Add(newID, LoadOption(newID, xmlArtefact, xmlFile, className));
                 }
             }
 
