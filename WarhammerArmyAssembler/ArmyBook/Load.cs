@@ -54,7 +54,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")));
                 
             string unitType = (isHero ? "Heroes/Hero" : "Units/Unit");
-            XmlNodeList xmlNodes =  xmlFile.SelectNodes("ArmyBook/Content/" + unitType);
+            XmlNodeList xmlNodes =  xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}", unitType));
 
             foreach (XmlNode xmlUnit in xmlNodes)
             {
@@ -107,9 +107,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(Constants.EnemiesOptionPath);
 
-            foreach (XmlNode group in xmlFile.SelectNodes("Enemies/Group"))
-                foreach (XmlNode enemy in group.SelectNodes("Enemy"))
-                    Enemy.AddEnemies(group.Attributes["List"].InnerText, enemy.InnerText);
+            foreach (XmlNode genus in xmlFile.SelectNodes("Enemies/Genus"))
+                foreach (XmlNode enemy in genus.SelectNodes("Enemy"))
+                    Enemy.AddEnemies(genus.Attributes["Name"].InnerText, enemy.InnerText);
         }
 
         public static void LoadArmy(string xmlFileName)
@@ -166,8 +166,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             LoadMagic(xmlFile, "Magic");
             LoadMagic(xmlFile, "Dispell", enemy: true);
 
-            Army.Data.UnitsImagesDirectory = Path.GetDirectoryName(xmlFileName) + "\\Images\\" +
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")) + "\\";
+            Army.Data.UnitsImagesDirectory = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")));
         }
 
         private static void LoadMagic(XmlDocument xmlFile, string magic, bool enemy = false)
