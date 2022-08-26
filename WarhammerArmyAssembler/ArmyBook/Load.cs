@@ -516,8 +516,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 ID = id,
                 IDView = id.ToString(),
 
-                Name = StringParse(xmlNode["Name"]),
-                Description = StringParse(xmlNode["Description"]),
+                Name = StringParse(xmlNode["Name"]),              
                 Type = OptionTypeParse(xmlNode),
                 Only = OnlyForParse(xmlNode["Only"]),
                 ServiceDependencies = AllStringParse(xmlNode["Dependencies"], "On"),
@@ -531,8 +530,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Honours = BoolParse(xmlNode["Honours"]),
 
                 Countable = CountableParse(xmlNode["Countable"]),
-
-                SpecialRuleDescription = AllStringParse(xmlNode, "Rule"),
 
                 NativeArmour = BoolParse(xmlNode["NativeArmour"]),
                 Group = StringParse(xmlNode["Group"]),
@@ -642,6 +639,12 @@ namespace WarhammerArmyAssembler.ArmyBook
                 TooltipColor = (SolidColorBrush)Data.TooltipColor,
                 OnlyRuleOption = BoolParse(xmlNode["OnlyRuleOption"]),
             };
+
+            newOption.Description = StringParse(xmlNode["Description"]);
+            newOption.SpecialRuleDescription = AllStringParse(xmlNode, "Rule");
+
+            if (String.IsNullOrEmpty(newOption.Description) && (newOption.SpecialRuleDescription.Length > 0))
+                newOption.Description = newOption.SpecialRuleDescription[0];
 
             if (xmlNode["MagicItems"] != null)
             {
