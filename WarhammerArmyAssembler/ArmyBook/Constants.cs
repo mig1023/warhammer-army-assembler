@@ -12,5 +12,18 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static string CommonXmlOptionPath { get; set; }
         public static string EnemiesOptionPath { get; set; }
         public static Dictionary<string, string> CommonXmlOption { get; set; }
+
+        public static List<string> ProfilesNames = new List<string> {
+            "Movement",
+            "WeaponSkill",
+            "BallisticSkill",
+            "Strength",
+            "Toughness",
+            "Wounds",
+            "Initiative",
+            "Attacks",
+            "Leadership",
+            "Armour",
+        };
     }
 }

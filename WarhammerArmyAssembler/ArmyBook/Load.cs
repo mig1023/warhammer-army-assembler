@@ -599,32 +599,11 @@ namespace WarhammerArmyAssembler.ArmyBook
                 VirtueOriginalPoints = DoubleParse(xmlNode["Points"]),
                 MagicItemsPoints = BoolParse(xmlNode["MagicItemsPoints"]),
 
-                AddToMovement = IntParse(xmlNode["AddToMovement"]),
-                AddToWeaponSkill = IntParse(xmlNode["AddToWeaponSkill"]),
-                AddToBallisticSkill = IntParse(xmlNode["AddToBallisticSkill"]),
-                AddToStrength = IntParse(xmlNode["AddToStrength"]),
-                AddToToughness = IntParse(xmlNode["AddToToughness"]),
-                AddToWounds = IntParse(xmlNode["AddToWounds"]),
-                AddToInitiative = IntParse(xmlNode["AddToInitiative"]),
-                AddToAttacks = IntParse(xmlNode["AddToAttacks"]),
-                AddToLeadership = IntParse(xmlNode["AddToLeadership"]),
-                AddToArmour = IntParse(xmlNode["AddToArmour"]),
                 AddToWard = IntParse(xmlNode["AddToWard"]),
                 AddToCast = IntParse(xmlNode["AddToCast"]),
                 AddToDispell = IntParse(xmlNode["AddToDispell"]),
                 AddToWizard = IntParse(xmlNode["AddToWizard"]),
                 AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]),
-
-                MovementTo = IntParse(xmlNode["MovementTo"]),
-                WeaponSkillTo = IntParse(xmlNode["WeaponSkillTo"]),
-                BallisticSkillTo = IntParse(xmlNode["BallisticSkillTo"]),
-                StrengthTo = IntParse(xmlNode["StrengthTo"]),
-                ToughnessTo = IntParse(xmlNode["ToughnessTo"]),
-                WoundsTo = IntParse(xmlNode["WoundsTo"]),
-                InitiativeTo = IntParse(xmlNode["InitiativeTo"]),
-                AttacksTo = IntParse(xmlNode["AttacksTo"]),
-                LeadershipTo = IntParse(xmlNode["LeadershipTo"]),
-                ArmourTo = IntParse(xmlNode["ArmourTo"]),
                 WizardTo = IntParse(xmlNode["WizardTo"]),
 
                 MagicItems = IntParse(xmlNode["MagicItems"]),
@@ -640,6 +619,12 @@ namespace WarhammerArmyAssembler.ArmyBook
                 OnlyRuleOption = BoolParse(xmlNode["OnlyRuleOption"]),
             };
 
+            foreach (string name in Constants.ProfilesNames)
+            {
+                PropertyChange(ref newOption, xmlNode, String.Format("AddTo{0}", name));
+                PropertyChange(ref newOption, xmlNode, String.Format("{0}To", name));
+            }
+                
             newOption.Description = StringParse(xmlNode["Description"]);
             newOption.SpecialRuleDescription = AllStringParse(xmlNode, "Rule");
 
@@ -654,5 +639,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             return newOption;
         }
+
+        private static void PropertyChange(ref Option newOption, XmlNode xmlNode, string name) =>
+            newOption.GetType().GetProperty(name).SetValue(newOption, IntParse(xmlNode[name]));
     }
 }
