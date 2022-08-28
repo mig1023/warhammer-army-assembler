@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -243,7 +244,13 @@ namespace WarhammerArmyAssembler.Interface
             };
             Changes.main.unitDetail.Children.Add(personificationName);
 
-            newOption.MouseDown += (sender, e) => personificationName.Visibility = Visibility.Visible;
+            newOption.MouseDown += (sender, e) =>
+            {
+                personificationName.Visibility = Visibility.Visible;
+
+                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+                    { personificationName.Focus(); }), System.Windows.Threading.DispatcherPriority.Render);
+            };
         }
 
         private static void AddOption_Click(object sender, RoutedEventArgs e)
