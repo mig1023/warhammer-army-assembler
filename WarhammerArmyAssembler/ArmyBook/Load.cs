@@ -257,65 +257,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (additionalParam != null)
             {
-                newUnit.NoKillingBlow = BoolParse(additionalParam["NoKillingBlow"]);
-                newUnit.NoMultiWounds = BoolParse(additionalParam["NoMultiWounds"]);
-                newUnit.LargeBase = BoolParse(additionalParam["LargeBase"]);
-                newUnit.ImmuneToPsychology = BoolParse(additionalParam["ImmuneToPsychology"]);
-                newUnit.ImmuneToPoison = BoolParse(additionalParam["ImmuneToPoison"]);
-                newUnit.Stubborn = BoolParse(additionalParam["Stubborn"]);
-                newUnit.Hate = BoolParse(additionalParam["Hate"]);
-                newUnit.Fear = BoolParse(additionalParam["Fear"]);
-                newUnit.Terror = BoolParse(additionalParam["Terror"]);
-                newUnit.Frenzy = BoolParse(additionalParam["Frenzy"]);
-                newUnit.BloodFrenzy = BoolParse(additionalParam["BloodFrenzy"]);
-                newUnit.Unbreakable = BoolParse(additionalParam["Unbreakable"]);
-                newUnit.ColdBlooded = BoolParse(additionalParam["ColdBlooded"]);
-                newUnit.Stupidity = BoolParse(additionalParam["Stupidity"]);
-                newUnit.Undead = BoolParse(additionalParam["Undead"]);
-                newUnit.StrengthInNumbers = BoolParse(additionalParam["StrengthInNumbers"]);
-                newUnit.AutoHit = BoolParse(additionalParam["AutoHit"]);
-                newUnit.AutoWound = BoolParse(additionalParam["AutoWound"]);
-                newUnit.AutoDeath = BoolParse(additionalParam["AutoDeath"]);
-                newUnit.HitFirst = BoolParse(additionalParam["HitFirst"]);
-                newUnit.HitLast = BoolParse(additionalParam["HitLast"]);
-                newUnit.Regeneration = BoolParse(additionalParam["Regeneration"]);
-                newUnit.ExtendedRegeneration = IntParse(additionalParam["ExtendedRegeneration"]);
-                newUnit.KillingBlow = BoolParse(additionalParam["KillingBlow"]);
-                newUnit.ExtendedKillingBlow = IntParse(additionalParam["ExtendedKillingBlow"]);
-                newUnit.HeroicKillingBlow = BoolParse(additionalParam["HeroicKillingBlow"]);
-                newUnit.PoisonAttack = BoolParse(additionalParam["PoisonAttack"]);
-                newUnit.MultiWounds = StringParse(additionalParam["MultiWounds"]);
-                newUnit.NoArmour = BoolParse(additionalParam["NoArmour"]);
-                newUnit.NoWard = BoolParse(additionalParam["NoWard"]);
-                newUnit.ArmourPiercing = IntParse(additionalParam["ArmourPiercing"]);
-                newUnit.MagicPowers = IntParse(additionalParam["MagicPowers"]);
-                newUnit.MagicPowersCount = IntParse(additionalParam["MagicPowersCount"]);
-                newUnit.NotALeader = BoolParse(additionalParam["NotALeader"]);
-                newUnit.MustBeGeneral = BoolParse(additionalParam["MustBeGeneral"]);
-                newUnit.Reroll = StringParse(additionalParam["Reroll"]);
-                newUnit.ImpactHit = StringParse(additionalParam["ImpactHit"]);
-                newUnit.ImpactHitByFront = (BoolParse(additionalParam["ImpactHitByFront"]) ? 1 : 0);
-                newUnit.SteamTank = BoolParse(additionalParam["SteamTank"]);
-                newUnit.HellPitAbomination = BoolParse(additionalParam["HellPitAbomination"]);
-                newUnit.Giant = BoolParse(additionalParam["Giant"]);
-                newUnit.Lance = BoolParse(additionalParam["Lance"]);
-                newUnit.Flail = BoolParse(additionalParam["Flail"]);
-                newUnit.ChargeStrengthBonus = IntParse(additionalParam["ChargeStrengthBonus"]);
-                newUnit.Resolute = BoolParse(additionalParam["Resolute"]);
-                newUnit.PredatoryFighter = BoolParse(additionalParam["PredatoryFighter"]);
-                newUnit.MurderousProwess = BoolParse(additionalParam["MurderousProwess"]);
-                newUnit.AddToCloseCombat = StringParse(additionalParam["AddToCloseCombat"]);
-                newUnit.Bloodroar = BoolParse(additionalParam["Bloodroar"]);
-                newUnit.AddToHit = IntParse(additionalParam["AddToHit"]);
-                newUnit.SubOpponentToHit = IntParse(additionalParam["SubOpponentToHit"]);
-                newUnit.AddToWound = IntParse(additionalParam["AddToWound"]);
-                newUnit.SubOpponentToWound = IntParse(additionalParam["SubOpponentToWound"]);
-                newUnit.HitOn = IntParse(additionalParam["HitOn"]);
-                newUnit.OpponentHitOn = IntParse(additionalParam["OpponentHitOn"]);
-                newUnit.WoundOn = IntParse(additionalParam["WoundOn"]);
-                newUnit.WardForFirstWound = IntParse(additionalParam["WardForFirstWound"]);
-                newUnit.WardForLastWound = IntParse(additionalParam["WardForLastWound"]);
-                newUnit.FirstWoundDiscount = BoolParse(additionalParam["FirstWoundDiscount"]);
+                foreach (string name in Constants.UnitProperties)
+                    SetProperty(newUnit, additionalParam, name);
 
                 if (additionalParam["MagicItems"] != null)
                 {
