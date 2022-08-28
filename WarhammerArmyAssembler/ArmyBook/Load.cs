@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Xml;
-using System.Windows.Media;
 using System.IO;
-using static WarhammerArmyAssembler.Unit;
-using static WarhammerArmyAssembler.ArmyBook.Parsers;
 using System.Linq;
 using System.Reflection;
+using System.Windows.Media;
+using System.Xml;
+using static WarhammerArmyAssembler.ArmyBook.Parsers;
+using static WarhammerArmyAssembler.Unit;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
@@ -248,21 +248,11 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             XmlNode profile = xmlUnit["Profile"];
 
-            newUnit.Movement = ProfileParse(profile.Attributes["M"]);
-            newUnit.WeaponSkill = ProfileParse(profile.Attributes["WS"]);
-            newUnit.BallisticSkill = ProfileParse(profile.Attributes["BS"]);
-            newUnit.Strength = ProfileParse(profile.Attributes["S"]);
-            newUnit.Toughness = ProfileParse(profile.Attributes["T"]);
-            newUnit.Wounds = ProfileParse(profile.Attributes["W"]);
-            newUnit.Initiative = ProfileParse(profile.Attributes["I"]);
-            newUnit.Attacks = ProfileParse(profile.Attributes["A"]);
-            newUnit.Leadership = ProfileParse(profile.Attributes["Ld"]);
+            foreach (string name in Constants.ProfilesNames.Keys)
+                SetProperty(newUnit, profile, name, byAttr: Constants.ProfilesNames[name]);
 
-            newUnit.Armour = IntNullableParse(profile.Attributes["AS"]);
             newUnit.Ward = IntNullableParse(profile.Attributes["Ward"]);
-
             XmlNode additionalParam = xmlUnit["SpecialRules"];
-
             newUnit.SetGroup(StringParse(xmlUnit["Group"]));
 
             if (additionalParam != null)
@@ -531,7 +521,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 TooltipColor = (SolidColorBrush)Data.TooltipColor,
             };
 
-            foreach (string name in Constants.ProfilesNames)
+            foreach (string name in Constants.ProfilesNames.Keys)
             {
                 SetProperty(newOption, xmlNode, String.Format("AddTo{0}", name));
                 SetProperty(newOption, xmlNode, String.Format("{0}To", name));
@@ -555,12 +545,18 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newOption;
         }
 
-        private static object PropertyByType(object action, XmlNode value, string paramName)
+        private static object PropertyByType(object element, XmlNode value, string paramName)
         {
-            PropertyInfo param = action.GetType().GetProperty(paramName);
+            PropertyInfo param = element.GetType().GetProperty(paramName);
 
-            if (param.PropertyType == typeof(bool))
+            if (param.PropertyType == typeof(Profile))
+                return ProfileParse(value);
+
+            else if (param.PropertyType == typeof(bool))
                 return BoolParse(value);
+
+            else if (param.PropertyType == typeof(int?))
+                return IntNullableParse(value);
 
             else if (param.PropertyType == typeof(int))
                 return IntParse(value);
@@ -572,12 +568,19 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return null;
         }
 
-        public static void SetProperty(object action, XmlNode value, string name)
+        public static void SetProperty(object element, XmlNode value, string name, string byAttr = "")
         {
-            object propetyValue = PropertyByType(action, value[name], name);
+            bool isByAttr = !String.IsNullOrEmpty(byAttr);
+
+            XmlNode xmlNode = isByAttr ? (XmlNode)value.Attributes[byAttr] : value[name];
+
+            if (isByAttr && (xmlNode == null))
+                return;
+
+            object propetyValue = PropertyByType(element, xmlNode, name);
 
             if (propetyValue != null)
-                action.GetType().GetProperty(name).SetValue(action, propetyValue);
+                element.GetType().GetProperty(name).SetValue(element, propetyValue);
         }
     }
 }

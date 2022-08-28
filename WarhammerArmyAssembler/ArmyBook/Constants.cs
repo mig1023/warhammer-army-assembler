@@ -13,17 +13,17 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static string EnemiesOptionPath { get; set; }
         public static Dictionary<string, string> CommonXmlOption { get; set; }
 
-        public static List<string> ProfilesNames = new List<string> {
-            "Movement",
-            "WeaponSkill",
-            "BallisticSkill",
-            "Strength",
-            "Toughness",
-            "Wounds",
-            "Initiative",
-            "Attacks",
-            "Leadership",
-            "Armour",
+        public static SortedDictionary<string, string> ProfilesNames = new SortedDictionary<string, string> {
+            ["Movement"] = "M",
+            ["WeaponSkill"] = "WS",
+            ["BallisticSkill"] = "BS",
+            ["Strength"] = "S",
+            ["Toughness"] = "T",
+            ["Wounds"] = "W",
+            ["Initiative"] = "I",
+            ["Attacks"] = "A",
+            ["Leadership"] = "Ld",
+            ["Armour"] = "AS",
         };
 
         public static List<string> OptionProperties = new List<string> {
