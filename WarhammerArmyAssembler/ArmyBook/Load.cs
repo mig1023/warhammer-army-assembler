@@ -6,6 +6,7 @@ using System.IO;
 using static WarhammerArmyAssembler.Unit;
 using static WarhammerArmyAssembler.ArmyBook.Parsers;
 using System.Linq;
+using System.Reflection;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
@@ -515,116 +516,30 @@ namespace WarhammerArmyAssembler.ArmyBook
             {
                 ID = id,
                 IDView = id.ToString(),
-
-                Name = StringParse(xmlNode["Name"]),              
                 Type = OptionTypeParse(xmlNode),
                 Only = OnlyForParse(xmlNode["Only"]),
                 ServiceDependencies = AllStringParse(xmlNode["Dependencies"], "On"),
                 ServiceInverseDependencies = AllStringParse(xmlNode["Dependencies"], "Off"),
-                OnlyOneInArmy = BoolParse(xmlNode["OnlyOneInArmy"]),
-                OnlyOneSuchUnits = BoolParse(xmlNode["OnlyOneSuchUnits"]),
-                OnlyGroup = StringParse(xmlNode["OnlyGroup"]),
                 Realised = BoolParse(xmlNode["RealisedByDefault"]),
-                Multiple = BoolParse(xmlNode["Multiple"]),
-                Virtue = BoolParse(xmlNode["Virtue"]),
-                Honours = BoolParse(xmlNode["Honours"]),
-
                 Countable = CountableParse(xmlNode["Countable"]),
-
-                NativeArmour = BoolParse(xmlNode["NativeArmour"]),
-                Group = StringParse(xmlNode["Group"]),
-                AutoHit = BoolParse(xmlNode["AutoHit"]),
-                AutoWound = BoolParse(xmlNode["AutoWound"]),
-                AutoDeath = BoolParse(xmlNode["AutoDeath"]),
-                HitFirst = BoolParse(xmlNode["HitFirst"]),
-                HitLast = BoolParse(xmlNode["HitLast"]),
-                KillingBlow = BoolParse(xmlNode["KillingBlow"]),
-                ExtendedKillingBlow = IntParse(xmlNode["ExtendedKillingBlow"]),
-                HeroicKillingBlow = BoolParse(xmlNode["HeroicKillingBlow"]),
-                PoisonAttack = BoolParse(xmlNode["PoisonAttack"]),
-                MultiWounds = StringParse(xmlNode["MultiWounds"]),
-                NoArmour = BoolParse(xmlNode["NoArmour"]),
-                NoWard = BoolParse(xmlNode["NoWard"]),
-                NoMultiWounds = BoolParse(xmlNode["NoMultiWounds"]),
-                NoKillingBlow = BoolParse(xmlNode["NoKillingBlow"]),
-                ArmourPiercing = IntParse(xmlNode["ArmourPiercing"]),
-
-                Regeneration = BoolParse(xmlNode["Regeneration"]),
-                ExtendedRegeneration = IntParse(xmlNode["ExtendedRegeneration"]),
-                ImmuneToPsychology = BoolParse(xmlNode["ImmuneToPsychology"]),
-                ImmuneToPoison = BoolParse(xmlNode["ImmuneToPoison"]),
-                Stubborn = BoolParse(xmlNode["Stubborn"]),
-                Hate = BoolParse(xmlNode["Hate"]),
-                Fear = BoolParse(xmlNode["Fear"]),
-                Terror = BoolParse(xmlNode["Terror"]),
-                Frenzy = BoolParse(xmlNode["Frenzy"]),
-                BloodFrenzy = BoolParse(xmlNode["BloodFrenzy"]),
-                Unbreakable = BoolParse(xmlNode["Unbreakable"]),
-                ColdBlooded = BoolParse(xmlNode["ColdBlooded"]),
-                Reroll = StringParse(xmlNode["Reroll"]),
-                Stupidity = BoolParse(xmlNode["Stupidity"]),
-                Undead = BoolParse(xmlNode["Undead"]),
-                StrengthInNumbers = BoolParse(xmlNode["StrengthInNumbers"]),
-                ImpactHit = StringParse(xmlNode["ImpactHit"]),
-                ImpactHitByFront = (BoolParse(xmlNode["ImpactHitByFront"]) ? 1 : 0),
-                SteamTank = BoolParse(xmlNode["SteamTank"]),
-                Lance = BoolParse(xmlNode["Lance"]),
-                Flail = BoolParse(xmlNode["Flail"]),
-                ChargeStrengthBonus = IntParse(xmlNode["ChargeStrengthBonus"]),
-                Resolute = BoolParse(xmlNode["Resolute"]),
-                PredatoryFighter = BoolParse(xmlNode["PredatoryFighter"]),
-                MurderousProwess = BoolParse(xmlNode["MurderousProwess"]),
-                AddToCloseCombat = StringParse(xmlNode["AddToCloseCombat"]),
-                Bloodroar = BoolParse(xmlNode["Bloodroar"]),
-                AddToHit = IntParse(xmlNode["AddToHit"]),
-                SubOpponentToHit = IntParse(xmlNode["SubOpponentToHit"]),
-                AddToWound = IntParse(xmlNode["AddToWound"]),
-                SubOpponentToWound = IntParse(xmlNode["SubOpponentToWound"]),
-                HitOn = IntParse(xmlNode["HitOn"]),
-                OpponentHitOn = IntParse(xmlNode["OpponentHitOn"]),
-                WoundOn = IntParse(xmlNode["WoundOn"]),
-                Runic = IntParse(xmlNode["Runic"]),
-                MasterRunic = BoolParse(xmlNode["MasterRunic"]),
-                RandomGroup = StringParse(xmlNode["RandomGroup"]),
-                TypeUnitIncrese = BoolParse(xmlNode["TypeUnitIncrese"]),
-                WardForFirstWound = IntParse(xmlNode["WardForFirstWound"]),
-                WardForLastWound = IntParse(xmlNode["WardForLastWound"]),
-                FirstWoundDiscount = BoolParse(xmlNode["FirstWoundDiscount"]),
-                NotALeader = BoolParse(xmlNode["NotALeader"]),
-
+                ImpactHitByFront = BoolParse(xmlNode["ImpactHitByFront"]) ? 1 : 0,
                 ParamTests = ParamParse(xmlNode),
-
                 Points = DoubleParse(xmlNode["Points"]),
-                PerModel = BoolParse(xmlNode["PerModel"]),
                 VirtueOriginalPoints = DoubleParse(xmlNode["Points"]),
-                MagicItemsPoints = BoolParse(xmlNode["MagicItemsPoints"]),
-
-                AddToWard = IntParse(xmlNode["AddToWard"]),
-                AddToCast = IntParse(xmlNode["AddToCast"]),
-                AddToDispell = IntParse(xmlNode["AddToDispell"]),
-                AddToWizard = IntParse(xmlNode["AddToWizard"]),
-                AddToModelsInPack = IntParse(xmlNode["AddToModelsInPack"]),
-                WizardTo = IntParse(xmlNode["WizardTo"]),
-
-                MagicItems = IntParse(xmlNode["MagicItems"]),
                 MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]),
-
-                CommandGroup = BoolParse(xmlNode["CommandGroup"]),
-                PersonifiedCommander = BoolParse(xmlNode["PersonifiedCommander"]),
-
-                Mount = BoolParse(xmlNode["Mount"]),
-
                 ArtefactGroup = artefactGroup ?? String.Empty,
                 TooltipColor = (SolidColorBrush)Data.TooltipColor,
-                OnlyRuleOption = BoolParse(xmlNode["OnlyRuleOption"]),
             };
 
             foreach (string name in Constants.ProfilesNames)
             {
-                PropertyChange(ref newOption, xmlNode, String.Format("AddTo{0}", name));
-                PropertyChange(ref newOption, xmlNode, String.Format("{0}To", name));
+                SetProperty(newOption, xmlNode, String.Format("AddTo{0}", name));
+                SetProperty(newOption, xmlNode, String.Format("{0}To", name));
             }
-                
+
+            foreach (string name in Constants.OptionProperties)
+                SetProperty(newOption, xmlNode, name);
+
             newOption.Description = StringParse(xmlNode["Description"]);
             newOption.SpecialRuleDescription = AllStringParse(xmlNode, "Rule");
 
@@ -640,7 +555,29 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newOption;
         }
 
-        private static void PropertyChange(ref Option newOption, XmlNode xmlNode, string name) =>
-            newOption.GetType().GetProperty(name).SetValue(newOption, IntParse(xmlNode[name]));
+        private static object PropertyByType(object action, XmlNode value, string paramName)
+        {
+            PropertyInfo param = action.GetType().GetProperty(paramName);
+
+            if (param.PropertyType == typeof(bool))
+                return BoolParse(value);
+
+            else if (param.PropertyType == typeof(int))
+                return IntParse(value);
+
+            else if (param.PropertyType == typeof(string))
+                return StringParse(value);
+
+            else
+                return null;
+        }
+
+        public static void SetProperty(object action, XmlNode value, string name)
+        {
+            object propetyValue = PropertyByType(action, value[name], name);
+
+            if (propetyValue != null)
+                action.GetType().GetProperty(name).SetValue(action, propetyValue);
+        }
     }
 }
