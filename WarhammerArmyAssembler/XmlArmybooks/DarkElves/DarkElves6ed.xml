@@ -47,7 +47,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Common magic items">
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="30"/>
 				<SwordOfBattle Points="25"/>
 				<SwordOfMight Points="20"/>
@@ -58,8 +58,8 @@
 				<DispellScroll Points="25"/>
 				<PowerStone Points="25"/>
 				<WarBanner Points="25"/>
-			</Class>
-			<Class Name="Magic weapons">
+			</Group>
+			<Group Name="Magic weapons">
 				<Weapon>
 					<Name>Executioner's Axe</Name>
 					<Only>Infantry</Only>
@@ -122,8 +122,8 @@
 					<Rule>Any model losing one or more wounds becomes subject to the rules for stupidity for the remainder of the battle</Rule>
 					<Description>Any model losing one or more wounds (after saves, etc) to the Dark Sword becomes subject to the rules for stupidity for the remainder of the battle.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<Armour>
 					<Name>Armour of Living Death</Name>
 					<Points>100</Points>
@@ -159,8 +159,8 @@
 					<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
 					<Description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improuved by 1 (to 4+ then 3+, etc) up to maximum of 1+.</Description>
 				</Armour>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>Black Amulet</Name>
 					<Points>50</Points>
@@ -193,8 +193,8 @@
 					<Rule>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double</Rule>
 					<Description>Any magic user (friend or foe) attempting to cast a spell within 6" of the wearer will miscast on the roll of any double. If they roll a double 6 they cast the spell (with Irresistible Force) and then suffer a Miscast.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Enchanted items">
+			</Group>
+			<Group Name="Enchanted items">
 				<Weapon>
 					<Name>Rubric of Dark Dimensions</Name>
 					<Points>50</Points>
@@ -214,8 +214,8 @@
 					<Rule>Bound spell, power level 3, one use only: enemy Wizard must pass a Leadership test on 3D6 otherwise they forget one randomly spell</Rule>
 					<Description>One use only. Nominate a Wizard anywhere on the table. The Wizard must pass a Leadership test on 3D6 otherwise he forgets one randomly determined spell for the rest of the battle.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Arcane items">
+			</Group>
+			<Group Name="Arcane items">
 				<Arcane>
 					<Name>Soulstone</Name>
 					<Points>25</Points>
@@ -240,8 +240,8 @@
 					<Rule>1 additional spell</Rule>
 					<Description>The Tome of Furion grants its bearer one additional spell.</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Magic banner">
+			</Group>
+			<Group Name="Magic banner">
 				<Banner>
 					<Name>Banner of Nagarythe</Name>
 					<Points>150</Points>
@@ -273,8 +273,8 @@
 					<AddToCloseCombat>D3</AddToCloseCombat>
 					<Description>The unit gains +D3 to its combat resolution the first time it charges.</Description>
 				</Banner>
-			</Class>
-			<Class Name="Gifts of Khaine">
+			</Group>
+			<Group Name="Gifts of Khaine">
 				<Weapon>
 					<Name>Manbane</Name>
 					<Points>25</Points>
@@ -339,7 +339,7 @@
 					<Rule>A unit charged character must pass a Leadership test or reduce their Weapon Skill by -1 for the duration of that Close Combat phase</Rule>
 					<Description>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by -1 (to a minimum of 1) for the duration of that Close Combat phase.</Description>
 				</Weapon>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
