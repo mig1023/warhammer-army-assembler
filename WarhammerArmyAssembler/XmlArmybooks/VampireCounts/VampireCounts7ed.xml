@@ -44,7 +44,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Vampire Powers">
+			<Group Name="Vampire Powers">
 				<Powers>
 					<Name>Spectral Form</Name>
 					<Points>50</Points>
@@ -149,8 +149,8 @@
 					<Points>15</Points>
 					<Rule>The Vampire may use Invocation of Nehek to increase units of Crypt Ghouls beyond their starting size and adds +1 to his casting roll when casting Invocation of Nehek on these units</Rule>
 				</Powers>
-			</Class>
-			<Class Name="Common magic items">
+			</Group>
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="15"/>
 				<SwordOfBattle Points="15"/>
 				<SwordOfMight Points="15"/>
@@ -161,8 +161,8 @@
 				<DispellScroll Points="25"/>
 				<PowerStone Points="20"/>
 				<WarBanner Points="25"/>
-			</Class>
-			<Class Name="Magic weapons">
+			</Group>
+			<Group Name="Magic weapons">
 				<Weapon>
 					<Name>Frostblade</Name>
 					<Points>100</Points>
@@ -216,8 +216,8 @@
 					<Rule>Flaming attacks</Rule>
 					<Description>Lanee. Attacks with the Balefire Spike are flaming.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<Armour>
 					<Name>Walach's Bloody Hauberk</Name>
 					<Points>45</Points>
@@ -265,8 +265,8 @@
 					<ImmuneToPoison/>
 					<Description>Heavy armour. Killing Blow and/or Poisoned Attacks have no additional effect against the wearer.</Description>
 				</Armour>
-			</Class>
-			<Class Name="Enchanted items">
+			</Group>
+			<Group Name="Enchanted items">
 				<Weapon>
 					<Name>The Hand of Dust</Name>
 					<Points>50</Points>
@@ -302,8 +302,8 @@
 					<MovementTo>9</MovementTo>
 					<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>The Carstein Ring</Name>
 					<OnlyGroup>Vampire</OnlyGroup>
@@ -330,8 +330,8 @@
 					<WardForFirstWound>2</WardForFirstWound>
 					<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Arcane items">
+			</Group>
+			<Group Name="Arcane items">
 				<Arcane>
 					<Name>Skull Staff</Name>
 					<Points>65</Points>
@@ -363,8 +363,8 @@
 					<Rule>The Black Periapt allows the bearer to save one of his own unused power dice or one of the army's unused dispel dice at the end of any Magic phase, and then add it to his side's power or dispel dice pool in the next Magic phase</Rule>
 					<Description>The Black Periapt allows the bearer to save one of his own unused power dice or one of the army's unused dispel dice at the end of any Magic phase, and then add it to his side's power or dispel dice pool in the next Magic phasee.</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Magic standards">
+			</Group>
+			<Group Name="Magic standards">
 				<Banner>
 					<Name>The Drakenhof Banner</Name>
 					<Points>125</Points>
@@ -431,7 +431,7 @@
 					<Rule>Flaming attacks</Rule>
 					<Description>All close combat attacks by models in the unit (not mounts) are magical flaming attacks.</Description>
 				</Banner>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
