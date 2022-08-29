@@ -44,7 +44,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Common magic items">
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="25"/>
 				<SwordOfBattle Points="20"/>
 				<SwordOfMight Points="15"/>
@@ -55,8 +55,8 @@
 				<DispellScroll Points="25"/>
 				<PowerStone Points="20"/>
 				<WarBanner Points="25"/>
-			</Class>
-			<Class Name="Gifts of Chaos">
+			</Group>
+			<Group Name="Gifts of Chaos">
 				<AdditionalArmour>
 					<Name>Crown of Horns</Name>
 					<Points>75</Points>
@@ -103,8 +103,8 @@
 					<Points>5</Points>
 					<Rule>When at least partially in cover, a further -1 To Hit modifier is applied when enemies shoot at the character</Rule>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Magic Weapons">
+			</Group>
+			<Group Name="Magic Weapons">
 				<Weapon>
 					<Name>Primeval Club</Name>
 					<Points>100</Points>
@@ -166,8 +166,8 @@
 					<Rule>Every time an enemy model suffers an unsaved wound from this weapon, roll a D6: on the result of a 6, the enemy loses an additional wound, with no saves of any kind allowed, and you must roll again</Rule>
 					<Description>Every time an enemy model suffers an unsaved wound from this weapon, roll a D6. On the result of a 6, the enemy loses an additional wound, with no saves of any kind allowed, and you must roll again. Keep on rolling as long as the result is a 6.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<Armour>
 					<Name>Blade-Blunter Armour</Name>
 					<Points>50</Points>
@@ -205,8 +205,8 @@
 					<Rule>For every armour save he passes, the character may immediately make a bonus attack at his basic Strength</Rule>
 					<Description>6+ armour save. This may be combined with other armour as normal. For every armour save he passes, the bearer may immediately make a bonus attack at his basic Strength.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Enchanted items">
+			</Group>
+			<Group Name="Enchanted items">
 				<Weapon>
 					<Name>Shard of The Herdstone</Name>
 					<Points>50</Points>
@@ -242,8 +242,8 @@
 					<Rule>Enemy musicians fighting in the same combat as the character have no effect.</Rule>
 					<Description>Enemy musicians fighting in the same combat as the bearer have no effect.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>Eye of Night</Name>
 					<Points>45</Points>
@@ -257,8 +257,8 @@
 					<Rule>Once per game, for the rest of the phase, all enemy missile units are at -1 To Hit, weapons or attacks that do not use Ballistic Skill may only fire on the roll of a 4+</Rule>
 					<Description>One use only. At the beginning of the enemy Shooting phase, the bearer can summon a storm of mud and worms with which to blind his enemies. For the rest of the phase, all enemy missile units are at -1 To Hit. Weapons or attacks that do not use Ballistic Skill may only fire on the roll of a 4+.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Arcane items">
+			</Group>
+			<Group Name="Arcane items">
 				<Arcane>
 					<Name>Skull of Rarkos</Name>
 					<Points>60</Points>
@@ -283,8 +283,8 @@
 					<Rule>Each model kept to the side in such a manner may be 'expended' in the Magic phase to allow the character to roll an additional power dice</Rule>
 					<Description>Each model kept to the side in such a manner may be 'expended' in the Magic phase to allow the bearer to roll an additional power dice.</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Magic banner">
+			</Group>
+			<Group Name="Magic banner">
 				<Banner>
 					<Name>The Beast Banner</Name>
 					<Points>75</Points>
@@ -311,7 +311,7 @@
 					<Rule>Enemy units Hate the unit</Rule>
 					<Description>The bearer's unit automatically passes Primal Fury tests (there is no need to roll). Enemy units Hate the bearer's unit.</Description>
 				</Banner>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
