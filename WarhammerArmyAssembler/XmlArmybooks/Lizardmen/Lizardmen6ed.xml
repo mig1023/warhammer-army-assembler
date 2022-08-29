@@ -48,7 +48,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Sacred spawnings">
+			<Group Name="Sacred spawnings">
 				<Powers>
 					<Name>Blessed Spawning of Tzunki</Name>
 					<Points>5</Points>
@@ -111,8 +111,8 @@
 					<Rule>May re-roll a total of D3 single D6's per game</Rule>
 					<Description>The character may re-roll a total of D3 (roll at the start of the game) single D6's per game. Each re-roll entitles the player to take a single D6 of his own that directly effects the character (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. This can potentially cause Irresistible Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once.</Description>
 				</Powers>
-			</Class>
-			<Class Name="Common magic items">
+			</Group>
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="30"/>
 				<SwordOfBattle Points="25"/>
 				<SwordOfMight Points="20"/>
@@ -123,8 +123,8 @@
 				<DispellScroll Points="25"/>
 				<PowerStone Points="25"/>
 				<WarBanner Points="25"/>
-			</Class>
-			<Class Name="Sacred Plaques">
+			</Group>
+			<Group Name="Sacred Plaques">
 				<Arcane>
 					<Name>Cupped Hands of the Old Ones</Name>
 					<OnlyGroup>Slann</OnlyGroup>
@@ -154,8 +154,8 @@
 					<Rule>Knows one more spell than he is normally allowed</Rule>
 					<Description>The Slann knows one more spell than he is normally allowed.</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Magic weapons">
+			</Group>
+			<Group Name="Magic weapons">
 				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
 					<Points>65</Points>
@@ -209,8 +209,8 @@
 					<Rule>Flaming attacks</Rule>
 					<Description>Targets struck by the Burning Blade of Chotec suffer a -2 penalty to their Armour save in addition to any modifiers from the user's Strength. All attacks made with this weapon count as flaming attacks.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<AdditionalArmour>
 					<Name>Sacred Stegadon Helm</Name>
 					<OnlyGroup>Skink</OnlyGroup>
@@ -233,8 +233,8 @@
 					<AddToAttacks>1</AddToAttacks>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical.</Description>
 				</Shield>
-			</Class>
-			<Class Name="Enchanted items">
+			</Group>
+			<Group Name="Enchanted items">
 				<AdditionalArmour>
 					<Name>Gleaming Pendant of Chotec</Name>
 					<Points>35</Points>
@@ -286,8 +286,8 @@
 					<PoisonAttack/>
 					<Description>All mundane weapons used by the model with the Venom of the Firefly Frog (both close combat weapons and ranged weapons) are coated with this venom. All attacks made with these weapons count as Poisoned Attacks and are magical.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Arcane items">
+			</Group>
+			<Group Name="Arcane items">
 				<Arcane>
 					<Name>Rode of the Storm</Name>
 					<Points>35</Points>
@@ -307,8 +307,8 @@
 					<Rule>Two power dice save for dispel</Rule>
 					<Description>The diadem allows the bearer to save up to two of his own unused Power dice or Dispel dice at the end of any Magic phase and store them, to add to his side's dice pool in the next Magic phase.</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>Amulet of Itza</Name>
 					<Points>40</Points>
@@ -327,8 +327,8 @@
 					<AddToWard>5</AddToWard>
 					<Description>The character wearing this gains a 5+ ward save</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Magic banner">
+			</Group>
+			<Group Name="Magic banner">
 				<Banner>
 					<Name>Totem of Prophecy</Name>
 					<Points>75</Points>
@@ -352,7 +352,7 @@
 					<Rule>Pursues an extra D6"</Rule>
 					<Description>The unit pursues an extra D6"</Description>
 				</Banner>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
