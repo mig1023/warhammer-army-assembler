@@ -45,7 +45,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Common magic items">
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="25"/>
 				<SwordOfBattle Points="20"/>
 				<SwordOfMight Points="15"/>
@@ -56,8 +56,8 @@
 				<PowerStone Points="20"/>
 				<StaffOfSorcery Points="40"/>
 				<WarBanner Points="20"/>
-			</Class>
-			<Class Name="Honours">
+			</Group>
+			<Group Name="Honours">
 				<Weapon>
 					<Name>Pure of Heart</Name>
 					<ImmuneToPsychology/>
@@ -107,8 +107,8 @@
 					<Rule>May cast with a maximum of +1 more Power dice than normal</Rule>
 					<Description>Mage only. May cast with a maximum of +1 more Power dice than normal. For example, a Level 3 Mage may use up to five Power dice in an attempt to cast a spell (instead of the usual four).</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Magic weapons">
+			</Group>
+			<Group Name="Magic weapons">
 				<Weapon>
 					<Name>Blade of Leaping Gold</Name>
 					<AddToAttacks>3</AddToAttacks>
@@ -152,8 +152,8 @@
 					<Rule>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+</Rule>
 					<Description>All hits on a target with 3 or more Wounds on its starting profile will always wound on a 2+. Armour saves are modified by the Strength of the bearer.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<Armour>
 					<Name>Armour of Protection</Name>
 					<Points>45</Points>
@@ -204,8 +204,8 @@
 					<AddToWard>6</AddToWard>
 					<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save.</Description>
 				</Shield>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>Vambraces of Defence</Name>
 					<Points>55</Points>
@@ -249,8 +249,8 @@
 					<Rule>Cannot be harmed by Flaming Attacks</Rule>
 					<Description>Gives the wearer Magic Resistance (1). In addition, the wearer cannot be harmed by fire-based attacks, eg, Skaven Watpfire Throwers, Dwarf Flame Cannons, or fire balls, etc.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Arcane items">
+			</Group>
+			<Group Name="Arcane items">
 				<Arcane>
 					<Name>Book of Hoeth</Name>
 					<Points>100</Points>
@@ -292,8 +292,8 @@
 					<Rule>One more spell than is normal for level</Rule>
 					<Description>The wearer knows one more spell than is normal for his level.</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Enchanted items">
+			</Group>
+			<Group Name="Enchanted items">
 				<AdditionalArmour>
 					<Name>Null Stone</Name>
 					<Points>100</Points>
@@ -345,8 +345,8 @@
 					<Rule>Spells that target the character or the unit he is with subtract -3 from their casting roll</Rule>
 					<Description>Spells that target the character or the unit he is with subtract -3 from their casting roll. It has no effect on spells cast with Irresistible Force.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Magic banner">
+			</Group>
+			<Group Name="Magic banner">
 				<Banner>
 					<Name>Battle Banner</Name>
 					<Points>80</Points>
@@ -389,7 +389,7 @@
 					<Points>15</Points>
 					<Rule>The unit treats difficult ground as open ground for purposes of movement</Rule>
 				</Banner>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
