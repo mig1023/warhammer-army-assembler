@@ -35,7 +35,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Common magic items">
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="30"/>
 				<SwordOfBattle Points="25"/>
 				<SwordOfMight Points="20"/>
@@ -45,8 +45,8 @@
 				<DispellScroll Points="25"/>
 				<StaffOfSorcery Points="50"/>
 				<WarBanner Points="25"/>
-			</Class>
-			<Class Name="Magic weapons">
+			</Group>
+			<Group Name="Magic weapons">
 				<Weapon>
 					<Name>Destroyer of Eternities</Name>
 					<Points>70</Points>
@@ -96,8 +96,8 @@
 					<Reroll>ToWound</Reroll>
 					<Description>Attacks with the Serpent Staff count as Poisoned Attacks. In addition, the model may re-roll any failed rolls to wound in close combat.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<Armour>
 					<Name>Armour of Eternity</Name>
 					<Points>70</Points>
@@ -126,8 +126,8 @@
 					<Rule>If the character makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Rule>
 					<Description>Counts as a shield. If the bearer makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round.</Description>
 				</Shield>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>Golden Ankhra</Name>
 					<Points>45</Points>
@@ -160,8 +160,8 @@
 					<Rule>Hits of Strength 7 or more that would normally destroy the chariot automatically do normal damage instead</Rule>
 					<Description>Character in chariot only. The chariot itself gains a Ward save of 5+, which only works against hits struck against the chariot, and will not apply to the character. In addition, wounding hits of Strength 7 or more that would normally destroy the chariot automatically do normal damage instead.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Enchanted items">
+			</Group>
+			<Group Name="Enchanted items">
 				<AdditionalArmour>
 					<Name>Blue Khepra</Name>
 					<Points>40</Points>
@@ -207,8 +207,8 @@
 					<Rule>One model in base contact loses 1 Attack</Rule>
 					<Description>One model in base contact, chosen by the bearer, loses 1 Attack. Against mounted models, the Tomb Kings player must choose either the mount monster or the rider. If the model has several types of attack, the Tomb Kings player chooses which type of attack is lost. This has no effect against foes which do not use their Attacks value in combat, such as Giants.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Enchanted items">
+			</Group>
+			<Group Name="Enchanted items">
 				<Arcane>
 					<Name>Staff of Ravening</Name>
 					<Points>45</Points>
@@ -239,8 +239,8 @@
 					<Rule>Bound spell, Power level 4: all Remains in Play spells on the tabletop are automatically dispelled</Rule>
 					<Description>Bound spell, Power Level 4. If activated successfully, all Remains in Play spells on the tabletop are automatically dispelled.</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Enchanted items">
+			</Group>
+			<Group Name="Enchanted items">
 				<Banner>
 					<Name>Standard of the Sands</Name>
 					<Points>75</Points>
@@ -282,7 +282,7 @@
 					<Rule>Bound spell, Power level 3: casts Djedra's incantation of Summoning</Rule>
 					<Description>Bound spell, Power Level 3. Casts Djedra's incantation of Summoning. May only be cast on the unit containing the banner</Description>
 				</Banner>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
