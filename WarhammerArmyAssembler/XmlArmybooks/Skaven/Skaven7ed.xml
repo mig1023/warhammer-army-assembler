@@ -44,7 +44,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Common magic items">
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="30"/>
 				<SwordOfBattle Points="25"/>
 				<SwordOfMight Points="20"/>
@@ -55,8 +55,8 @@
 				<PowerStone Points="20"/>
 				<StaffOfSorcery Points="35"/>
 				<WarBanner Points="25"/>
-			</Class>
-			<Class Name="Magic weapons">
+			</Group>
+			<Group Name="Magic weapons">
 				<Weapon>
 					<Name>The Fellblade</Name>
 					<Points>100</Points>
@@ -108,8 +108,8 @@
 					<Rule>Enemy lose 1 point of Toughness for each unsaved wound</Rule>
 					<Description>Enemy lose 1 point of Toughness for each unsaved wound they suffer from this blade. Any model reduced to Toughness 0 is removed as a casualty.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<Armour>
 					<Name>Warpstone Armour</Name>
 					<Points>30</Points>
@@ -131,8 +131,8 @@
 					<Rule>Any models in base contact suffer -1 Attack</Rule>
 					<Description>Any models in base contact wishing to strike the bearer of this shield suffer -1 Attack, to a minimum of 1.</Description>
 				</Shield>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>Foul Pendant</Name>
 					<Points>30</Points>
@@ -151,8 +151,8 @@
 					<Rule>Enemy must re-roll all its successful To Hit dice rolls, one use only</Rule>
 					<Description>One use only. A Skaven model wearing a Rival Hide Talisman can make a single enemy model in base contact re-roll all its successful To Hit dice rolls.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Arcane items">
+			</Group>
+			<Group Name="Arcane items">
 				<Arcane>
 					<Name>Warpstorm Scroll</Name>
 					<Points>50</Points>
@@ -178,8 +178,8 @@
 					<Rule>Warpstone Tokens</Rule>
 					<Description>Multiple Grey Seers and Warlock Engineers may purchase as many Warpstone Tokens as are allowed within the limit of points they are able to spend on magic items. Warpstone Tokens do not count against the total Arcane items a model is allowed to bear.\nA Grey Seer or Clan Skryre Warlock may choose to eat some warpstone to boost his powers. Before casting a spell announce which model is eating Warpstone Tokens. For each token consumed, a Wizard can add a single dice to his casting effort. These dice are added to the normal power dice, although this does allow users to roll more dice than is normally allowed by their level. A spell may be cast entirely with warpstone.\nFor any of the warpstone generated dice that rolls a one the Wizard suffers a wound with no armour saves allowed. The results of miscasts or irresistible force apply as normal. When using both normal power dice and Warpstone Token generated dice it is a good idea to roll separately or use dice of a different colour (green-tinged ones work best!).</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Enchanted itams">
+			</Group>
+			<Group Name="Enchanted itams">
 				<Weapon>
 					<Name>Skavenbrew</Name>
 					<Points>50</Points>
@@ -204,8 +204,8 @@
 					<Rule>-1 penalty to enemy Leadership in base contact</Rule>
 					<Description>Any enemy unit in base contact with the model bearing Portents of Verminous Doom suffers a -1 penalty to its Leadership for as long as they remain in contact.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Clan Eshin tools of war">
+			</Group>
+			<Group Name="Clan Eshin tools of war">
 				<Weapon>
 					<Name>Warpstone stars</Name>
 					<OnlyGroup>Eshin</OnlyGroup>
@@ -227,8 +227,8 @@
 					<Rule>All pursuing units in the combat must roll 1D6 less than normal</Rule>
 					<Description>One use only. If a character equipped with Smoke-Bombs is forced to flee he can choose to smash the bombs underfoot to slow the victors as they pursue. Before any dice are rolled announce the Smoke Bombs are being detonated. All pursuing units in the combat must roll 1D6 less than normal.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Clan Skryre gear of war">
+			</Group>
+			<Group Name="Clan Skryre gear of war">
 				<Weapon>
 					<Name>Brass Orb</Name>
 					<OnlyGroup>Skryre</OnlyGroup>
@@ -257,8 +257,8 @@
 					<AddToBallisticSkill>1</AddToBallisticSkill>
 					<Description>A Warlock Engineer equipped with Warlock Optics adds +1 to his Ballistic Skill. Additionally, a model so equipped can see partially see through objects and so suffers no penalty for shooting at targets in cover.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Clan Pestilens befouled items">
+			</Group>
+			<Group Name="Clan Pestilens befouled items">
 				<Weapon>
 					<Name>Warp Scroll</Name>
 					<OnlyGroup>Pestilens</OnlyGroup>
@@ -273,8 +273,8 @@
 					<Rule>Plague Monk models in the unit may re-roll failed To Hit and To Wound rolls, one use only. </Rule>
 					<Description>One use only. Once per game in any Close Combat phase the Plague Banner may be activated. For the remainder of the phase all Plague Monk models in the unit may re-roll failed To Hit rolls and failed To Wound rolls.</Description>
 				</Banner>
-			</Class>
-			<Class Name="Clan Moulder beast-prods">
+			</Group>
+			<Group Name="Clan Moulder beast-prods">
 				<Weapon>
 					<Name>Shock-Prod</Name>
 					<OnlyGroup>Moulder</OnlyGroup>
@@ -289,8 +289,8 @@
 					<Rule>D3 Attacks instead of the normal 1</Rule>
 					<Description>This weapon follows the rules for whips but confers D3 Attacks instead of the normal 1 when in base contact and from the rear ranks. Roll to determine the number of Attacks each combat.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic standards">
+			</Group>
+			<Group Name="Magic standards">
 				<Banner>
 					<Name>Sacred Banner of the Horned Rat</Name>
 					<Points>70</Points>
@@ -336,7 +336,7 @@
 					<Rule>Unit can march at triple-speed, but suffers 2D6 Strength 3 hits (no armour saves allowed)</Rule>
 					<Description>Once per battle, at the start of any friendly turn except the first, the banner can be activated. If the unit carrying the banner can march, they can do so at triple-speed. Such a rapid expenditure of energy has a cost, as after marching the unit suffers 2D6 Strength 3 hits (no armour saves allowed), distributed as per shooting.</Description>
 				</Banner>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
