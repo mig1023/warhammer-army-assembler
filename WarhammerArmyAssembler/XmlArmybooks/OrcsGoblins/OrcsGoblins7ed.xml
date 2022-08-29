@@ -47,7 +47,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Common magic items">
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="15"/>
 				<SwordOfBattle Points="15"/>
 				<SwordOfMight Points="10"/>
@@ -58,8 +58,8 @@
 				<PowerStone Points="25"/>
 				<StaffOfSorcery Points="30"/>
 				<WarBanner Points="25"/>
-			</Class>
-			<Class Name="Magic weapons">
+			</Group>
+			<Group Name="Magic weapons">
 				<Weapon>
 					<Name>WAAAGH! Cleava</Name>
 					<OnlyGroup>Orc</OnlyGroup>
@@ -148,8 +148,8 @@
 					<Rule>+1 Strength for each enemy magic item</Rule>
 					<Description>If the bearer strikes an enemy character carrying one or more magic item, his hits at +1 Strength for each magic item</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>50</Points>
@@ -164,8 +164,8 @@
 					<Rule>Strength 5 hit for each 1 on a enemy roll to Hit</Rule>
 					<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
 				</Shield>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>Effigy of Mork</Name>
 					<Points>35</Points>
@@ -189,8 +189,8 @@
 					<Rule>Steeds and monsters require Strength 6 to hit the bearer</Rule>
 					<Description>Steeds, monsters (ridden and unridden) and beasts pulling chariots require 6S to hit the bearer</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Arcane items">
+			</Group>
+			<Group Name="Arcane items">
 				<Arcane>
 					<Name>Idol of Mork</Name>
 					<OnlyGroup>Orc</OnlyGroup>
@@ -226,8 +226,8 @@
 					<Rule>+D6 to casting roll, one use only</Rule>
 					<Description>+D6 to casting roll, one use only. If Mushroom dice is an 1 then the spell is miscast</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Enchanted itams">
+			</Group>
+			<Group Name="Enchanted itams">
 				<Weapon>
 					<Name>The Horn of Urgok</Name>
 					<Points>40</Points>
@@ -292,8 +292,8 @@
 					<Frenzy/>
 					<Description>The character with the brew is assumed to have 'bolstered' himself before battle - roll a dice and consult the following table to determine the effects upon the drinker:\n1-2 - Subject to Stupidity for remainder of the game\n3-4 - Hatred of all enemies for the remainder of the game\n5-6 - Hatred of all enemies and Frenzy for the remainder of the game</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Magic standards">
+			</Group>
+			<Group Name="Magic standards">
 				<Banner>
 					<Name>Mork's Spirit-Totem</Name>
 					<OnlyGroup>Orc</OnlyGroup>
@@ -334,7 +334,7 @@
 					<Rule>+1 Attack, only one use</Rule>
 					<Description>All model in the unit have +1 Attack in the turn the banner is used. In the case of mounted models, only the rider gets the bonus, not the mount</Description>
 				</Banner>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
