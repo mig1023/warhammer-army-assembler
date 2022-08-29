@@ -42,7 +42,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Class Name="Common magic items">
+			<Group Name="Common magic items">
 				<SwordOfStriking Points="30"/>
 				<SwordOfBattle Points="25"/>
 				<SwordOfMight Points="20"/>
@@ -52,8 +52,8 @@
 				<DispellScroll Points="25"/>
 				<PowerStone Points="25"/>
 				<WarBanner Points="25"/>
-			</Class>
-			<Class Name="Magic Weapons">
+			</Group>
+			<Group Name="Magic Weapons">
 				<Weapon>
 					<Name>Thundermace</Name>
 					<Points>55</Points>
@@ -92,8 +92,8 @@
 					<Rule>Every time a Butcher causes an unsaved wound, he may regain one wound he lost earlier in the battle</Rule>
 					<Description>Butchers only. Every time a Butcher causes an unsaved wound with the Bloodcleaver, he may regain one wound he lost earlier in the battle.</Description>
 				</Weapon>
-			</Class>
-			<Class Name="Magic armour">
+			</Group>
+			<Group Name="Magic armour">
 				<Armour>
 					<Name>Mastodon Armour</Name>
 					<Points>50</Points>
@@ -123,8 +123,8 @@
 					<Rule>If character kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent, if character is already at full Wounds, then he may add +1 Wound to his profile</Rule>
 					<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. If an Ogre wearing the Gut Maw kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent. If the owner of the Gut Maw is already at full Wounds, then he may add +1 Wound to his profile.</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Talismans">
+			</Group>
+			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>Cathayan Jet</Name>
 					<Points>30</Points>
@@ -164,8 +164,8 @@
 					<Runic>3</Runic>
 					<Rule>Magic Resistance (3)</Rule>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Arcane Items">
+			</Group>
+			<Group Name="Arcane Items">
 				<Arcane>
 					<Name>Hellheart</Name>
 					<Points>50</Points>
@@ -196,8 +196,8 @@
 					<Rule>Any enemy unit forced to take any Leadership tests due to the character or a unit he has joined, suffers a -1 penalty to their Leadership</Rule>
 					<Description>Any enemy unit forced to take any Leadership tests (including Psychology and Break tests) due to the Butcher wearing the Skull mantle, or a unit he has joined, suffers a -1 penalty to their Leadership.</Description>
 				</Arcane>
-			</Class>
-			<Class Name="Enchanted Items">
+			</Group>
+			<Group Name="Enchanted Items">
 				<AdditionalArmour>
 					<Name>Brahmir Statue</Name>
 					<Points>35</Points>
@@ -235,8 +235,8 @@
 					<Rule>A character with this item or the unit he is with may re-roll a failed Break test once per game</Rule>
 					<Description>A character with this item or the unit he is with may re-roll a failed Break test once per game, just as if a Battle standard was within 12".</Description>
 				</AdditionalArmour>
-			</Class>
-			<Class Name="Magic Standards">
+			</Group>
+			<Group Name="Magic Standards">
 				<Banner>
 					<Name>Bull Standard</Name>
 					<Points>20</Points>
@@ -249,7 +249,7 @@
 					<Rule>When a spell is successfully cast by an enemy spellcaster against the unit, roll a D6: on the roll of a 2+, the player may redirect the spell against any other friendly unit within 6" of the unit with the standard</Rule>
 					<Description>When a spell is successfully cast by an enemy spellcaster against the unit bearing the Rune Maw, roll a D6. On the roll of a 2+, the controlling player may redirect the spell against any other friendly unit within 6" of the unit with the standard, regardless of whether it was originally a valid target or not.</Description>
 				</Banner>
-			</Class>
+			</Group>
 		</Artefacts>
 		<Heroes>
 			<Lord>
