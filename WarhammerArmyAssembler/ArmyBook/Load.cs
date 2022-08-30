@@ -488,12 +488,16 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newOption;
         }
 
-        private static object PropertyByType(object element, XmlNode value, string paramName)
+        private static object PropertyByType(object element, XmlNode value,
+            string paramName, bool byAttr = false)
         {
             PropertyInfo param = element.GetType().GetProperty(paramName);
 
             if (param.PropertyType == typeof(Profile))
                 return ProfileParse(value);
+
+            else if (byAttr)
+                return null;
 
             else if (param.PropertyType == typeof(bool))
                 return BoolParse(value);
@@ -517,10 +521,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             XmlNode xmlNode = isByAttr ? (XmlNode)value.Attributes[byAttr] : value[name];
 
-            if (isByAttr && (xmlNode == null))
-                return;
-
-            object propetyValue = PropertyByType(element, xmlNode, name);
+            object propetyValue = PropertyByType(element, xmlNode, name, isByAttr);
 
             if (propetyValue != null)
                 element.GetType().GetProperty(name).SetValue(element, propetyValue);
