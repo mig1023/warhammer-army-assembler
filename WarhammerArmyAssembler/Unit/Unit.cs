@@ -1066,7 +1066,9 @@ namespace WarhammerArmyAssembler
             (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero);
 
         public bool IsHeroOrHisMount() =>
-            (LargeBase || Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount);
+            (LargeBase && (MaxSize == MinSize))
+            ||
+            (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount);
 
         public bool IsUnit() =>
             (this.Type == Unit.UnitType.Core || this.Type == Unit.UnitType.Special || this.Type == Unit.UnitType.Rare);
