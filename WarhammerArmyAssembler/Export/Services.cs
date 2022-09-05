@@ -44,7 +44,7 @@ namespace WarhammerArmyAssembler.Export
 
         static public string UnitSizeIfNeed(Unit unit)
         {
-            string unitSize = (unit.IsHeroOrHisMount() ? String.Empty : unit.Size.ToString());
+            string unitSize = unit.Size.ToString();
 
             foreach (Option option in unit.Options)
                 if ((option.Countable != null) && (option.Countable.ExportToUnitSize) && (option.Countable.Value > 0))
