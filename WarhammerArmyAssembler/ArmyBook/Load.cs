@@ -379,7 +379,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return;
 
             if (name == "Command")
-                name = xmlNode.Attributes["Position"].InnerText;
+                name = xmlNode.Attributes["Name"].InnerText;
 
             AddToOption(xmlDocument, ref xmlNode, "Name", name);
 
