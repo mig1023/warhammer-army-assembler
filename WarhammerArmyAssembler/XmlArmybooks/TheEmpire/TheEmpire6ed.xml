@@ -946,7 +946,7 @@
 						<Rule>Longbow</Rule>
 						<OnlyOneInArmy/>
 					</Option>
-					<CommandGroup Position="Marksman" Points="5"/>
+					<CommandGroup Name="Marksman" Points="5"/>
 				</Options>
 			</Core>
 			<Core>
@@ -962,9 +962,9 @@
 					</RangeWeapon>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Musician" Points="5"/>
-					<CommandGroup Position="Standard bearer" Points="10"/>
-					<CommandGroup Position="Marksman" Points="5"/>
+					<CommandGroup Name="Musician" Points="5"/>
+					<CommandGroup Name="Standard bearer" Points="10"/>
+					<CommandGroup Name="Marksman" Points="5"/>
 				</Options>
 			</Core>
 			<Core>
@@ -990,9 +990,9 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<CommandGroup Position="Musician" Points="8"/>
-					<CommandGroup Position="Standard bearer" Points="16" Magic="Type:Unit, Points:50"/>
-					<CommandGroup Position="First Knight" Points="16"/>
+					<CommandGroup Name="Musician" Points="8"/>
+					<CommandGroup Name="Standard bearer" Points="16" Magic="Type:Unit, Points:50"/>
+					<CommandGroup Name="First Knight" Points="16"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1019,9 +1019,9 @@
 						<PerModel/>
 						<AddToStrength>1</AddToStrength>
 					</Option>
-					<CommandGroup Position="Musician" Points="8"/>
-					<CommandGroup Position="Standard bearer" Points="16" Magic="Type:Unit, Points:50"/>
-					<CommandGroup Position="First Knight" Points="16"/>
+					<CommandGroup Name="Musician" Points="8"/>
+					<CommandGroup Name="Standard bearer" Points="16" Magic="Type:Unit, Points:50"/>
+					<CommandGroup Name="First Knight" Points="16"/>
 				</Options>
 			</Core>
 			<Special>
@@ -1040,9 +1040,9 @@
 					<FullPlateArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Musician" Points="6"/>
-					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
-					<CommandGroup Position="Count's Champion" Points="12"/>
+					<CommandGroup Name="Musician" Points="6"/>
+					<CommandGroup Name="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
+					<CommandGroup Name="Count's Champion" Points="12"/>
 				</Options>
 			</Special>
 			<Special>
@@ -1066,7 +1066,7 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Marksman" Points="7"/>
+					<CommandGroup Name="Marksman" Points="7"/>
 					<Option>
 						<Name>Repeater handgun for Marksman</Name>
 						<Type>Option</Type>
@@ -1139,7 +1139,7 @@
 					<Flail/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Prophet of Doom" Points="12"/>
+					<CommandGroup Name="Prophet of Doom" Points="12"/>
 				</Options>
 			</Rare>
 		</Units>
