@@ -544,9 +544,9 @@
 							<ExportToUnitSize/>
 						</Countable>
 					</Option>
-					<CommandGroup Position="Musician" Points="5"/>
-					<CommandGroup Position="Standard bearer" Points="10"/>
-					<CommandGroup Position="Foe-render" Points="20"/>
+					<CommandGroup Name="Musician" Points="5"/>
+					<CommandGroup Name="Standard bearer" Points="10"/>
+					<CommandGroup Name="Foe-render" Points="20"/>
 				</Options>
 			</Core>
 			<Core>
@@ -561,9 +561,9 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Musician" Points="6"/>
-					<CommandGroup Position="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
-					<CommandGroup Position="Gouge-horn" Points="12"/>				
+					<CommandGroup Name="Musician" Points="6"/>
+					<CommandGroup Name="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
+					<CommandGroup Name="Gouge-horn" Points="12"/>				
 					<MarkOfChaosUndividedFUnits Points="0" Dependencies="Off: Mark of Khorne, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
 					<MarkOfTzeentchFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfKhorneFUnits Points="45" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
@@ -638,9 +638,9 @@
 					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
 					<HeavyArmour Points="3"/>
 					<Shield Points="3"/>
-					<CommandGroup Position="Musician" Points="10"/>
-					<CommandGroup Position="Standard bearer" Points="20"/>
-					<CommandGroup Position="Big Chaos Ogre" Points="20"/>
+					<CommandGroup Name="Musician" Points="10"/>
+					<CommandGroup Name="Standard bearer" Points="20"/>
+					<CommandGroup Name="Big Chaos Ogre" Points="20"/>
 				</Options>
 			</Special>
 			<Special>
@@ -673,9 +673,9 @@
 						<Points>3</Points>
 					</Option>
 					<Shield PointsPerModel="2"/>
-					<CommandGroup Position="Musician" Points="7"/>
-					<CommandGroup Position="Standard bearer" Points="14"/>
-					<CommandGroup Position="Gorehoof" Points="14"/>
+					<CommandGroup Name="Musician" Points="7"/>
+					<CommandGroup Name="Standard bearer" Points="14"/>
+					<CommandGroup Name="Gorehoof" Points="14"/>
 				</Options>
 			</Special>
 			<Special>
@@ -698,8 +698,8 @@
 					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Great weapon"/>
 					<GreatWeapon PointsPerModel="6" Dependencies="Off: Additional weapon"/>
 					<LightArmour PointsPerModel="3"/>
-					<CommandGroup Position="Standard bearer" Points="20"/>
-					<CommandGroup Position="Bloodkine" Points="20"/>				
+					<CommandGroup Name="Standard bearer" Points="20"/>
+					<CommandGroup Name="Bloodkine" Points="20"/>				
 					<MarkOfChaosUndividedFUnits Points="0" Dependencies="Off: Mark of Khorne, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
 					<MarkOfTzeentchFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfKhorneFUnits Points="45" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
