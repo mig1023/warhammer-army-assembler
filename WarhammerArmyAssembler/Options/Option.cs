@@ -129,7 +129,7 @@ namespace WarhammerArmyAssembler
         public int WizardTo { get; set; }
 
         public int AddToModelsInPack { get; set; }
-        public bool CommandGroup { get; set; }
+        public bool Command { get; set; }
         public bool PersonifiedCommander { get; set; }
 
         public string[] SpecialRuleDescription { get; set; }
@@ -280,7 +280,7 @@ namespace WarhammerArmyAssembler
             WizardTo = this.WizardTo,
 
             AddToModelsInPack = this.AddToModelsInPack,
-            CommandGroup = this.CommandGroup,
+            Command = this.Command,
             PersonifiedCommander = this.PersonifiedCommander,
 
             MagicItems = this.MagicItems,

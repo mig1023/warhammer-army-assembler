@@ -163,7 +163,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "AddToModelsInPack",
             "WizardTo",
             "MagicItems",
-            "CommandGroup",
+            "Command",
             "PersonifiedCommander",
             "Mount",
             "OnlyRuleOption",

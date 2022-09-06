@@ -807,7 +807,7 @@ namespace WarhammerArmyAssembler
             foreach (Option option in Options)
             {
                 bool thisIsRealised = (option.Realised || option.IsMagicItem()) && option.Points != 0;
-                bool thisIsNotMountOrFC = !(option.Mount || option.CommandGroup);
+                bool thisIsNotMountOrFC = !(option.Mount || option.Command);
                 bool wizard = option.WizardTo > 0 || option.AddToWizard > 0;
 
                 if (!String.IsNullOrEmpty(option.Name) && thisIsRealised && thisIsNotMountOrFC && !wizard)
@@ -1004,7 +1004,7 @@ namespace WarhammerArmyAssembler
 
             foreach (Option option in Options)
             {
-                if (option.CommandGroup && option.Realised)
+                if (option.Command && option.Realised)
                     fullCommand += 1;
 
                 if (option.PersonifiedCommander && option.Realised)
@@ -1019,7 +1019,7 @@ namespace WarhammerArmyAssembler
                     rules.Add(personifiedCommander);
             }
             else
-                foreach (Option option in Options.Where(x => (x.CommandGroup && x.Realised)))
+                foreach (Option option in Options.Where(x => (x.Command && x.Realised)))
                     rules.Add(option.Name);
 
             string rulesLine = String.Empty;
@@ -1074,10 +1074,10 @@ namespace WarhammerArmyAssembler
             (this.Type == Unit.UnitType.Core || this.Type == Unit.UnitType.Special || this.Type == Unit.UnitType.Rare);
 
         public bool ExistsOptions() =>
-            Options.Where(x => x.IsOption() && !x.MagicItemsPoints && !x.CommandGroup).FirstOrDefault() != null;
+            Options.Where(x => x.IsOption() && !x.MagicItemsPoints && !x.Command).FirstOrDefault() != null;
 
         public bool ExistsCommand() =>
-            Options.Where(x => x.CommandGroup).FirstOrDefault() != null;
+            Options.Where(x => x.Command).FirstOrDefault() != null;
 
         public bool ExistsMagicItems() =>
             Options.Where(x => x.IsMagicItem() && ((x.Points > 0) || x.Honours)).FirstOrDefault() != null;
