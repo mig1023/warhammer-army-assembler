@@ -989,9 +989,9 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Lordling" Points="10"/>
-					<CommandGroup Position="Musician" Points="10"/>
-					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
+					<CommandGroup Name="Lordling" Points="10"/>
+					<CommandGroup Name="Musician" Points="10"/>
+					<CommandGroup Name="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1013,9 +1013,9 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Lordling" Points="10"/>
-					<CommandGroup Position="Musician" Points="10"/>
-					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
+					<CommandGroup Name="Lordling" Points="10"/>
+					<CommandGroup Name="Musician" Points="10"/>
+					<CommandGroup Name="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1038,9 +1038,9 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<CommandGroup Position="Guardmaster" Points="10"/>
-					<CommandGroup Position="Musician" Points="10"/>
-					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
+					<CommandGroup Name="Guardmaster" Points="10"/>
+					<CommandGroup Name="Musician" Points="10"/>
+					<CommandGroup Name="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1067,7 +1067,7 @@
 				<Options>
 					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Repeater handbows"/>
 					<RepeaterHandbows PointsPerModel="2" Dependencies="Off: Additional weapon"/>
-					<CommandGroup Position="Reaver" Points="10"/>
+					<CommandGroup Name="Reaver" Points="10"/>
 					<Option>
 						<Name>A brace of repeater handbows</Name>
 						<Type>Option</Type>
@@ -1076,8 +1076,8 @@
 							<On>Reaver</On>
 						</Dependencies>
 					</Option>
-					<CommandGroup Position="Musician" Points="10"/>
-					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
+					<CommandGroup Name="Musician" Points="10"/>
+					<CommandGroup Name="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1100,9 +1100,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Herald" Points="10"/>
-					<CommandGroup Position="Musician" Points="10"/>
-					<CommandGroup Position="Standard bearer" Points="10"/>
+					<CommandGroup Name="Herald" Points="10"/>
+					<CommandGroup Name="Musician" Points="10"/>
+					<CommandGroup Name="Standard bearer" Points="10"/>
 					<Shield PointsPerModel="1"/>
 					<RepeaterCrossbow PointsPerModel="3"/>
 				</Options>
@@ -1128,9 +1128,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Hag" Points="10"/>
-					<CommandGroup Position="Musician" Points="10"/>
-					<CommandGroup Position="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<CommandGroup Name="Hag" Points="10"/>
+					<CommandGroup Name="Musician" Points="10"/>
+					<CommandGroup Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Core>
 			<Special>
