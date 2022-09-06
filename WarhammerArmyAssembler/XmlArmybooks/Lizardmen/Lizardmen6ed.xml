@@ -628,9 +628,9 @@
 				</Equipments>
 				<Options>
 					<Spear PointsPerModel="2"/>
-					<CommandGroup Position="Musician" Points="6"/>
-					<CommandGroup Position="Standard Bearer" Points="12"/>
-					<CommandGroup Position="Champion" Points="12"/>
+					<CommandGroup Name="Musician" Points="6"/>
+					<CommandGroup Name="Standard Bearer" Points="12"/>
+					<CommandGroup Name="Champion" Points="12"/>
 				</Options>
 			</Core>
 			<Core>
@@ -667,7 +667,7 @@
 						<PerModel/>
 						<AddToArmour>6</AddToArmour>
 					</Option>
-					<CommandGroup Position="Brave" Points="5"/>
+					<CommandGroup Name="Brave" Points="5"/>
 				</Options>
 			</Core>
 			<Core>
@@ -704,9 +704,9 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<CommandGroup Position="Musicain" Points="7"/>
-					<CommandGroup Position="Standard bearer" Points="14" Magic="Type:Unit, Points:50"/>
-					<CommandGroup Position="Revered Guardian" Points="14"/>
+					<CommandGroup Name="Musicain" Points="7"/>
+					<CommandGroup Name="Standard bearer" Points="14" Magic="Type:Unit, Points:50"/>
+					<CommandGroup Name="Revered Guardian" Points="14"/>
 				</Options>
 			</Core>
 			<Special>
@@ -726,9 +726,9 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Musicain" Points="10"/>
-					<CommandGroup Position="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
-					<CommandGroup Position="Champion" Points="20"/>
+					<CommandGroup Name="Musicain" Points="10"/>
+					<CommandGroup Name="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
+					<CommandGroup Name="Champion" Points="20"/>
 				</Options>
 			</Special>
 			<Special>
@@ -750,7 +750,7 @@
 					<GreatWeapon/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Ancient" Points="20"/>
+					<CommandGroup Name="Ancient" Points="20"/>
 				</Options>
 			</Special>
 			<Special>
@@ -777,7 +777,7 @@
 					<Blowpipe/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Stalker" Points="6"/>
+					<CommandGroup Name="Stalker" Points="6"/>
 				</Options>
 			</Special>
 			<Special>
@@ -801,7 +801,7 @@
 					<Javelins/>
 				</Equipments>
 				<Options>
-					<CommandGroup Position="Brave" Points="10"/>
+					<CommandGroup Name="Brave" Points="10"/>
 				</Options>
 			</Special>
 			<Rare>
