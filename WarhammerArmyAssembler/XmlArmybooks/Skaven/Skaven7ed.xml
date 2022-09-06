@@ -1018,9 +1018,9 @@
 					<Mount Name="Warpfire Thrower" Points="70"/>
 					<Mount Name="Ratling Gun" Points="55"/>
 					<Mount Name="Doom-flayer" Points="55"/>
-					<CommandGroup Name="Musician" Points="4"/>
-					<CommandGroup Name="Standard bearer" Points="8"/>
-					<CommandGroup Name="Clawleader" Points="8"/>
+					<Command Name="Musician" Points="4"/>
+					<Command Name="Standard bearer" Points="8"/>
+					<Command Name="Clawleader" Points="8"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1042,9 +1042,9 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<CommandGroup Name="Musician" Points="5"/>
-					<CommandGroup Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
-					<CommandGroup Name="Fangleader" Points="15"/>
+					<Command Name="Musician" Points="5"/>
+					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<Command Name="Fangleader" Points="15"/>
 					<Mount Name="Poisoned Wind Mortar" Points="65"/>
 					<Mount Name="Warpfire Thrower" Points="70"/>
 					<Mount Name="Ratling Gun" Points="55"/>
@@ -1076,8 +1076,8 @@
 						<Points>0,5</Points>
 						<PerModel/>
 					</Option>
-					<CommandGroup Name="Musician" Points="4"/>
-					<CommandGroup Name="Pawleader" Points="8"/>
+					<Command Name="Musician" Points="4"/>
+					<Command Name="Pawleader" Points="8"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1106,7 +1106,7 @@
 						<Points>1</Points>
 						<PerModel/>
 					</Option>
-					<CommandGroup Name="Nightleader" Points="8"/>
+					<Command Name="Nightleader" Points="8"/>
 					<Option>
 						<Name>Warp-grinder</Name>
 						<Mount/>
@@ -1195,7 +1195,7 @@
 						<PoisonAttack/>
 						<PerModel/>
 					</Option>
-					<CommandGroup Name="Deathrunner" Points="12"/>
+					<Command Name="Deathrunner" Points="12"/>
 					<Option>
 						<Name>Smoke Bombs</Name>
 						<Type>Option</Type>
@@ -1239,7 +1239,7 @@
 					</HandWeapon>
 				</Equipments>
 				<Options>
-					<CommandGroup Name="Master-bred Rat Ogre" Points="15"/>
+					<Command Name="Master-bred Rat Ogre" Points="15"/>
 				</Options>
 			</Special>
 			<Special>
@@ -1260,9 +1260,9 @@
 					<TwoHandsWeapon/>
 				</Equipments>
 				<Options>
-					<CommandGroup Name="Musician" Points="5"/>
-					<CommandGroup Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
-					<CommandGroup Name="Bringer-of-the-Word" Points="10"/>
+					<Command Name="Musician" Points="5"/>
+					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<Command Name="Bringer-of-the-Word" Points="10"/>
 				</Options>
 			</Special>
 			<Special>
@@ -1289,7 +1289,7 @@
 					</HandWeapon>
 				</Equipments>
 				<Options>
-					<CommandGroup Name="Plague Chanter" Points="13"/>
+					<Command Name="Plague Chanter" Points="13"/>
 				</Options>
 			</Special>
 			<Special>
@@ -1313,7 +1313,7 @@
 					</Armour>
 				</Equipments>
 				<Options>
-					<CommandGroup Name="Sharpshooter" Points="10"/>
+					<Command Name="Sharpshooter" Points="10"/>
 				</Options>
 			</Special>
 			<Special>
@@ -1340,7 +1340,7 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup Name="Bombardier" Points="5"/>
+					<Command Name="Bombardier" Points="5"/>
 					<Option>
 						<Name>Death Globe</Name>
 						<Type>Option</Type>
