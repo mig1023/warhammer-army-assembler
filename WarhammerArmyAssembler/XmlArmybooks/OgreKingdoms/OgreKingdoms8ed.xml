@@ -818,9 +818,9 @@
 						<PerModel/>
 						<Points>2</Points>
 					</Option>
-					<CommandGroup Name="Crusher" Points="10"/>
-					<CommandGroup Name="Musician" Points="10"/>
-					<CommandGroup Name="Standard bearer" Points="20"/>
+					<Command Name="Crusher" Points="10"/>
+					<Command Name="Musician" Points="10"/>
+					<Command Name="Standard bearer" Points="20"/>
 					<Option>
 						<Name>Look-out Gnoblar</Name>
 						<Type>Option</Type>
@@ -846,9 +846,9 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup Name="Gutlord" Points="10"/>
-					<CommandGroup Name="Musician" Points="10"/>
-					<CommandGroup Name="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
+					<Command Name="Gutlord" Points="10"/>
+					<Command Name="Musician" Points="10"/>
+					<Command Name="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
 					<Option>
 						<Name>Look-out Gnoblar</Name>
 						<Type>Option</Type>
@@ -877,9 +877,9 @@
 					</RangeWeapon>
 				</Equipments>
 				<Options>
-					<CommandGroup Name="Groinbiter" Points="5"/>
-					<CommandGroup Name="Musician" Points="10"/>
-					<CommandGroup Name="Standard bearer" Points="10"/>
+					<Command Name="Groinbiter" Points="5"/>
+					<Command Name="Musician" Points="10"/>
+					<Command Name="Standard bearer" Points="10"/>
 					<Option>
 						<Name>Gnoblar Trappers</Name>
 						<Type>Option</Type>
@@ -905,8 +905,8 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup Name="Thunderfist" Points="10"/>
-					<CommandGroup Name="Musician" Points="10"/>
+					<Command Name="Thunderfist" Points="10"/>
+					<Command Name="Musician" Points="10"/>
 				</Options>
 			</Special>
 			<Special>
@@ -979,9 +979,9 @@
 						<Points>12</Points>
 					</Option>
 					<HeavyArmour PointsPerModel="4"/>
-					<CommandGroup Name="Captain" Points="10"/>
-					<CommandGroup Name="Musician" Points="10"/>
-					<CommandGroup Name="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
+					<Command Name="Captain" Points="10"/>
+					<Command Name="Musician" Points="10"/>
+					<Command Name="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
 					<Option>
 						<Name>Look-out Gnoblar</Name>
 						<Type>Option</Type>
@@ -1022,7 +1022,7 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<CommandGroup Name="Greyback" Points="10"/>
+					<Command Name="Greyback" Points="10"/>
 				</Options>
 			</Special>
 			<Special>
@@ -1066,7 +1066,7 @@
 						<PerModel/>
 						<Points>5</Points>
 					</Option>
-					<CommandGroup Name="Crusher" Points="10"/>
+					<Command Name="Crusher" Points="10"/>
 					<Option>
 						<Name>Brace of Ogre pistol</Name>
 						<Type>Option</Type>
@@ -1075,8 +1075,8 @@
 						</Dependencies>
 						<Points>6</Points>
 					</Option>
-					<CommandGroup Name="Bellower" Points="10"/>
-					<CommandGroup Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<Command Name="Bellower" Points="10"/>
+					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
 				</Options>
 			</Special>
 			<Special>
