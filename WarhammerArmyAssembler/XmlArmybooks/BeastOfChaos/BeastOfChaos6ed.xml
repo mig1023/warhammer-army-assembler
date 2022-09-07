@@ -646,7 +646,7 @@
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="20">Standard bearer</Leader>
 						<Leader Points="20">Big Chaos Ogre</Leader>
-					<CommandGroup>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
@@ -679,9 +679,11 @@
 						<Points>3</Points>
 					</Option>
 					<Shield PointsPerModel="2"/>
-					<Command Name="Musician" Points="7"/>
-					<Command Name="Standard bearer" Points="14"/>
-					<Command Name="Gorehoof" Points="14"/>
+					<CommandGroup>
+						<Leader Points="7">Musician</Leader>
+						<Leader Points="14">Standard bearer</Leader>
+						<Leader Points="14">Gorehoof</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
