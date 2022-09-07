@@ -1039,7 +1039,7 @@
 				</SpecialRules>
 				<Options>
 					<CommandGroup>
-						<Command Name="Doom Wolf" Points="10"/>
+						<Leader Points="10">Doom Wolf</Leader>
 					</CommandGroup>
 				</Options>
 			</Core>
@@ -1098,9 +1098,11 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="1"/>
-					<Command Name="Seneschal" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<CommandGroup>
+						<Leader Points="10">Seneschal</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
