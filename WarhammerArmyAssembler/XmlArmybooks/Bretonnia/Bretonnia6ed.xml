@@ -850,9 +850,11 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Command Name="Gallant" Points="0"/>
-					<Command Name="Musician" Points="8"/>
-					<Command Name="Standard bearer" Points="16" Magic="Type:Unit, Points:25"/>
+					<CommandGroup>
+						<Leader Points="0">Gallant</Leader>
+						<Leader Points="8">Musician</Leader>
+						<Leader Points="16" Magic="Type:Unit, Points:25">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
