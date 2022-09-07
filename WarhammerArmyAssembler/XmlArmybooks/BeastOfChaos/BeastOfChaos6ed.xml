@@ -544,9 +544,11 @@
 							<ExportToUnitSize/>
 						</Countable>
 					</Option>
-					<Command Name="Musician" Points="5"/>
-					<Command Name="Standard bearer" Points="10"/>
-					<Command Name="Foe-render" Points="20"/>
+					<CommandGroup>
+						<Leader Points="5">Musician</Leader>
+						<Leader Points="10">Standard bearer</Leader>
+						<Leader Points="20">Foe-render</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
