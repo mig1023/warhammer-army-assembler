@@ -1285,9 +1285,11 @@
 					</HandWeapon>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Bloodreaper" Points="20"/>
-					<Command Name="Standard bearer" Points="20"/>
+					<CommandGroup>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="20">Bloodreaper</Leader>
+						<Leader Points="20">Standard bearer</Leader>
+					</CommandGroup>
 					<SkullTotem Points="25" Dependencies="On: Standard bearer; Off: Icon of Endless War"/>
 					<IconOfEndlessWar Points="25" Dependencies="On: Standard bearer; Off: Skull Totem"/>
 				</Options>
