@@ -289,8 +289,16 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
                 newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml));
 
-            foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Options/*"))
-                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml));
+            foreach (XmlNode xmlOption in xmlUnit.SelectNodes("Options/*"))
+            {
+                if (xmlOption.Name == "CommandGroup")
+                {
+                    foreach (XmlNode xmlCommand in xmlOption.SelectNodes("Leader"))
+                        newUnit.Options.Add(LoadOption(GetNextIndex(), xmlCommand, xml));
+                }
+                else
+                    newUnit.Options.Add(LoadOption(GetNextIndex(), xmlOption, xml));
+            }
 
             newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize));
             newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
@@ -380,6 +388,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (name == "Command")
                 name = xmlNode.Attributes["Name"].InnerText;
+
+            if (name == "Leader")
+                name = xmlNode.InnerText;
 
             AddToOption(xmlDocument, ref xmlNode, "Name", name);
 
