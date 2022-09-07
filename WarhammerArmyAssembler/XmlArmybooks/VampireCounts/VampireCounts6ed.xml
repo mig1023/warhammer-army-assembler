@@ -1435,9 +1435,11 @@
 						<PerModel/>
 					</Option>
 					<Shield PointsPerModel="1"/>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
-					<Command Name="Crypt Keeper" Points="12"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+						<Leader Points="12">Crypt Keeper</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
