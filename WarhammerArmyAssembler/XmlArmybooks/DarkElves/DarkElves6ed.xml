@@ -959,9 +959,11 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="7"/>
-					<Command Name="Standard bearer" Points="14" Magic="Type:Unit, Points:75"/>
-					<Command Name="Master" Points="14"/>
+					<CommandGroup>
+						<Leader Points="7">Musician</Leader>
+						<Leader Points="14" Magic="Type:Unit, Points:75">Standard bearer</Leader>
+						<Leader Points="14">Master</Leader>
+					</CommandGroup>
 				</Options>
 			</Rare>
 		</Units>
