@@ -769,9 +769,11 @@
 				</Equipments>
 				<Options>
 					<Crossbows PointsPerModel="6"/>
-					<Command Name="Musician" Points="7"/>
-					<Command Name="Standard bearer" Points="14"/>
-					<Command Name="Herald" Points="14"/>
+					<CommandGroup>
+						<Leader Points="7">Musician</Leader>
+						<Leader Points="14">Standard bearer</Leader>
+						<Leader Points="14">Herald</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Special>
