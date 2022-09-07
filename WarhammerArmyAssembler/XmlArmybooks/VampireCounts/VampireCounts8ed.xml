@@ -1000,9 +1000,11 @@
 						<Points>0</Points>
 						<PerModel/>
 					</Option>
-					<Command Name="Champion" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
+					<CommandGroup>
+						<Leader Points="10">Champion</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:25">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
