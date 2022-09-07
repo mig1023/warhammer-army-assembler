@@ -1119,9 +1119,11 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Command Name="Iridescent Horrors" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<CommandGroup>
+						<Leader Points="10">Iridescent Horrors</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
