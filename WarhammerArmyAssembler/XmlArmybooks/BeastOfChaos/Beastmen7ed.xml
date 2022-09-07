@@ -839,9 +839,11 @@
 					<Shield PointsPerModel="4" Dependencies="Off: Additional weapon, Great weapon"/>
 					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Shield, Great weapon"/>
 					<GreatWeapon PointsPerModel="8" Dependencies="Off: Shield, Additional weapon"/>				
-					<Command Name="Bloodkine" Points="20" Magic="Type:Hero, Points:25"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="20"/>
+					<CommandGroup>
+						<Leader Points="20" Magic="Type:Hero, Points:25">Bloodkine</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="20">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
