@@ -1037,9 +1037,11 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Command Name="Kastellan" Points="20" Magic="Type:Hero, Points:25"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="20" Magic="Type:Unit, Points:75"/>
+					<CommandGroup>
+						<Leader Points="20" Magic="Type:Hero, Points:25">Kastellan</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="20" Magic="Type:Unit, Points:75">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Rare>
 			<Rare>
