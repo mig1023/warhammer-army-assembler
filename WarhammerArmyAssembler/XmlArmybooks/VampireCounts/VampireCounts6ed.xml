@@ -1471,9 +1471,11 @@
 						<Points>2</Points>
 						<PerModel/>
 					</Option>
-					<Command Name="Musician" Points="8"/>
-					<Command Name="Standard bearer" Points="16" Magic="Type:Unit, Points:50"/>
-					<Command Name="Hell Knight" Points="16"/>
+					<CommandGroup>
+						<Leader Points="8">Musician</Leader>
+						<Leader Points="16" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+						<Leader Points="16">Hell Knight</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
