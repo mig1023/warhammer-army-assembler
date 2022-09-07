@@ -900,9 +900,11 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
-					<Command Name="Draich-master" Points="12"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+						<Leader Points="12">Draich-master</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
