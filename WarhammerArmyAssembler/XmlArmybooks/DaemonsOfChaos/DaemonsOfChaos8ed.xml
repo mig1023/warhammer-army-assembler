@@ -1009,9 +1009,6 @@
 						<Rule>Warpflame</Rule>
 					</Individual>
 				</SpecialRules>
-				<Options>
-					<Command Name="Blue Horror Crew" Points="20"/>
-				</Options>
 			</Mount>
 			<Mount>
 				<Name>Seeker Chariot</Name>
@@ -1100,9 +1097,11 @@
 					<Hellblade/>
 				</Equipments>
 				<Options>
-					<Command Name="Bloodreaper" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
+					<CommandGroup>
+						<Leader Points="10">Bloodreaper</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:25">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
