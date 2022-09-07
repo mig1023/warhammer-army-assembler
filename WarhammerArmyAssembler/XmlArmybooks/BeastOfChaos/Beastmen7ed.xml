@@ -700,9 +700,11 @@
 				<Options>
 					<Shield PointsPerModel="1" Dependencies="Off: Additional weapon"/>
 					<AdditionalWeapon PointsPerModel="1" Dependencies="Off: Shield"/>
-					<Command Name="Foe-render" Points="10"/>
-					<Command Name="Musician" Points="5"/>
-					<Command Name="Standard bearer" Points="10"/>
+					<CommandGroup>
+						<Leader Points="10">Foe-render</Leader>
+						<Leader Points="5">Musician</Leader>
+						<Leader Points="10">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
