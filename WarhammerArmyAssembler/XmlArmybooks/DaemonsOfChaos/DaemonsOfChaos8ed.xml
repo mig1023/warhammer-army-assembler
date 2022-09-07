@@ -1529,9 +1529,11 @@
 					<Plaguesword/>
 				</Equipments>
 				<Options>
-					<Command Name="Plaguebringer" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
+					<CommandGroup>
+						<Leader Points="10">Plaguebringer</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:25">Standard bearer</Leader>
+					</CommandGroup>
 					<Option>
 						<Name>Death's Heads</Name>
 						<Type>Option</Type>
