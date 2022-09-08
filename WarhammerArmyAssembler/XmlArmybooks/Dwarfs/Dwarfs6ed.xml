@@ -930,9 +930,11 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard bearer" Points="12"/>
-					<Command Name="Prospector" Points="12"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12">Standard bearer</Leader>
+						<Leader Points="12">Prospector</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
