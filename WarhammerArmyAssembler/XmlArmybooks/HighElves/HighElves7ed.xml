@@ -1139,9 +1139,11 @@
 							<Off>Bow</Off>
 						</Dependencies>
 					</Option>
-					<Command Name="Musician" Points="7"/>
-					<Command Name="Standard bearer" Points="14"/>
-					<Command Name="Harbinger" Points="14"/>
+					<CommandGroup>
+						<Leader Points="7">Musician</Leader>
+						<Leader Points="14">Standard bearer</Leader>
+						<Leader Points="14">Harbinger</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
