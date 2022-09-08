@@ -964,9 +964,11 @@
 						<Points>3</Points>
 						<PerModel/>
 					</Option>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard bearer" Points="12"/>
-					<Command Name="Veteran" Points="12"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12">Standard bearer</Leader>
+						<Leader Points="12">Veteran</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Special>
