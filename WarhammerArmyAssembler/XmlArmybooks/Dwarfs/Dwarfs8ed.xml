@@ -1285,9 +1285,11 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Command Name="Keeper of the Gate" Points="10" Magic="Type:Hero, Points:25"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:75"/>
+					<CommandGroup>
+						<Leader Points="10" Magic="Type:Hero, Points:25">Keeper of the Gate</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:75">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
@@ -1396,9 +1398,11 @@
 					</HandWeapon>
 				</Equipments>
 				<Options>
-					<Command Name="Giant Slayers" Points="10" Magic="Type:Hero, Points:25"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<CommandGroup>
+						<Leader Points="10" Magic="Type:Hero, Points:25">Giant Slayers</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
