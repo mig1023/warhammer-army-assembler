@@ -1072,9 +1072,11 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="2"/>
-					<Command Name="High Helm" Points="16"/>
-					<Command Name="Musician" Points="8"/>
-					<Command Name="Standard bearer" Points="16"/>
+					<CommandGroup>
+						<Leader Points="16">High Helm</Leader>
+						<Leader Points="8">Musician</Leader>
+						<Leader Points="16">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
