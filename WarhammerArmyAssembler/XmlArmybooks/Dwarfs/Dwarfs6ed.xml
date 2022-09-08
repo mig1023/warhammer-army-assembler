@@ -1054,9 +1054,11 @@
 					<TwoHandsWeapon/>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard bearer" Points="12"/>
-					<Command Name="Giant Slayers" Points="15"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12">Standard bearer</Leader>
+						<Leader Points="15">Giant Slayers</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
