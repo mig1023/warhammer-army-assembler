@@ -1819,9 +1819,11 @@
 					</Option>
 					<AdditionalWeapon PointsPerModel="5"/>
 					<GreatWeapon PointsPerModel="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="20"/>
-					<Command Name="Mutant Ogre" Points="20"/>
+					<CommandGroup>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="20">Standard bearer</Leader>
+						<Leader Points="20">Mutant Ogre</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
