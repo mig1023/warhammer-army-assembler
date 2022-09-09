@@ -885,9 +885,11 @@
 						<Points>0</Points>
 						<PerModel/>
 					</Option>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard Bearer" Points="10"/>
-					<Command Name="Spawn Leader" Points="10"/>
+					<CommandGroup>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10">Standard Bearer</Leader>
+						<Leader Points="10">Spawn Leader</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
