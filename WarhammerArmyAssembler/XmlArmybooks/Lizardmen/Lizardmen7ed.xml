@@ -918,9 +918,11 @@
 				</Equipments>
 				<Options>
 					<Spear PointsPerModel="1"/>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard Bearer" Points="12"/>
-					<Command Name="Champion" Points="12"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12">Standard Bearer</Leader>
+						<Leader Points="12">Champion</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
