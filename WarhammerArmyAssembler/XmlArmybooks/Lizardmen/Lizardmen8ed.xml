@@ -1068,9 +1068,11 @@
 						<Points>4</Points>
 						<PerModel/>
 					</Option>
-					<Command Name="Musicain" Points="10"/>
-					<Command Name="Standard Bearer" Points="10"/>
-					<Command Name="Pack Leader" Points="10"/>
+					<CommandGroup>
+						<Leader Points="10">Musicain</Leader>
+						<Leader Points="10">Standard Bearer</Leader>
+						<Leader Points="10">Pack Leader</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
@@ -1092,7 +1094,9 @@
 					<GreatWeapon/>
 				</Equipments>
 				<Options>
-					<Command Name="Ancient" Points="10"/>
+					<CommandGroup>
+						<Leader Points="10">Ancient</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
