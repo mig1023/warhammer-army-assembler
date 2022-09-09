@@ -1100,9 +1100,11 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Command Name="Musicain" Points="7"/>
-					<Command Name="Standard bearer" Points="14" Magic="Type:Unit, Points:50"/>
-					<Command Name="Revered Guardian" Points="14"/>
+					<CommandGroup>
+						<Leader Points="7">Musicain</Leader>
+						<Leader Points="14" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+						<Leader Points="14">Revered Guardian</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
@@ -1125,9 +1127,11 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Command Name="Musicain" Points="10"/>
-					<Command Name="Standard bearer" Points="20" Magic="Type:Unit, Points:50"/>
-					<Command Name="Champion" Points="20"/>
+					<CommandGroup>
+						<Leader Points="10">Musicain</Leader>
+						<Leader Points="20" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+						<Leader Points="20">Champion</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
