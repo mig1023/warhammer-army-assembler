@@ -956,9 +956,11 @@
 							<ExportToUnitSize/>
 						</Countable>
 					</Option>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard Bearer" Points="8"/>
-					<Command Name="Brave" Points="8"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="8">Standard Bearer</Leader>
+						<Leader Points="8">Brave</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
