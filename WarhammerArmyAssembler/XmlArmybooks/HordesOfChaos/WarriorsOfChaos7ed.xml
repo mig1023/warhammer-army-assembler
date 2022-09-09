@@ -1425,9 +1425,11 @@
 					<Flail PointsPerModel="1"/>
 					<GreatWeapon PointsPerModel="1"/>
 					<LightArmour PointsPerModel="1"/>
-					<Command Name="Musician" Points="4"/>
-					<Command Name="Marauder Chieftain" Points="8"/>
-					<Command Name="Standard bearer" Points="8"/>
+					<CommandGroup>
+						<Leader Points="4">Musician</Leader>
+						<Leader Points="8">Marauder Chieftain</Leader>
+						<Leader Points="8">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
