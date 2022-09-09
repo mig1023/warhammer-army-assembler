@@ -992,9 +992,11 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Command Name="Musicain" Points="10"/>
-					<Command Name="Standard Bearer" Points="10" Magic="Type:Unit, Points:50"/>
-					<Command Name="Revered Guardian" Points="10" Magic="Type:Hero, Points:25"/>
+					<CommandGroup>
+						<Leader Points="10">Musicain</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:50">Standard Bearer</Leader>
+						<Leader Points="10" Magic="Type:Hero, Points:25">Revered Guardian</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
