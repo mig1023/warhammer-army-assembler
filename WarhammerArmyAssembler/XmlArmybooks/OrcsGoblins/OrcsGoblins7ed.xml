@@ -939,9 +939,11 @@
 						<PerModel/>
 					</Option>
 					<Shield PointsPerModel="1"/>
-					<Command Name="Musician" Points="5"/>
-					<Command Name="Standard bearer" Points="10"/>
-					<Command Name="Boss" Points="15"/>
+					<CommandGroup>
+						<Leader Points="5">Musician</Leader>
+						<Leader Points="10">Standard bearer</Leader>
+						<Leader Points="15">Boss</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
