@@ -1442,9 +1442,11 @@
 							<ExportToUnitSize/>
 						</Countable>
 					</Option>
-					<Command Name="Musician" Points="4"/>
-					<Command Name="Standard bearer" Points="8"/>
-					<Command Name="Boss" Points="8"/>
+					<CommandGroup>
+						<Leader Points="4">Musician</Leader>
+						<Leader Points="8">Standard bearer</Leader>
+						<Leader Points="8">Boss</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
