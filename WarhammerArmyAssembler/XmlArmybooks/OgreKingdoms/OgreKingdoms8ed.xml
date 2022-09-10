@@ -818,9 +818,11 @@
 						<PerModel/>
 						<Points>2</Points>
 					</Option>
-					<Command Name="Crusher" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="20"/>
+					<CommandGroup>
+						<Leader Points="10">Crusher</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="20">Standard bearer</Leader>
+					</CommandGroup>
 					<Option>
 						<Name>Look-out Gnoblar</Name>
 						<Type>Option</Type>
