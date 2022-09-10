@@ -1356,9 +1356,11 @@
 						<AddToAttacks>1</AddToAttacks>
 					</Option>
 					<Shield PointsPerModel="1"/>
-					<Command Name="Orc Boss" Points="15"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10"/>
+					<CommandGroup>
+						<Leader Points="15">Orc Boss</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
