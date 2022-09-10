@@ -1642,9 +1642,11 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Command Name="Black Orc Boss" Points="15"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<CommandGroup>
+						<Leader Points="15">Black Orc Boss</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
