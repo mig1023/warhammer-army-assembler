@@ -1235,9 +1235,11 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard bearer" Points="12"/>
-					<Command Name="Boss" Points="17"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12">Standard bearer</Leader>
+						<Leader Points="17">Boss</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
