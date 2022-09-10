@@ -1300,9 +1300,11 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<Command Name="Musician" Points="5"/>
-					<Command Name="Standard bearer" Points="10"/>
-					<Command Name="Boss" Points="13"/>
+					<CommandGroup>
+						<Leader Points="5">Musician</Leader>
+						<Leader Points="10">Standard bearer</Leader>
+						<Leader Points="13">Boss</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
