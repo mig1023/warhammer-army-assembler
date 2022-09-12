@@ -974,9 +974,11 @@
 					</RangeWeapon>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="5"/>
-					<Command Name="Standard bearer" Points="10"/>
-					<Command Name="Marksman" Points="5"/>
+					<CommandGroup>
+						<Leader Points="5">Musician</Leader>
+						<Leader Points="10">Standard bearer</Leader>
+						<Leader Points="5">Marksman</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
