@@ -1249,7 +1249,9 @@
 					</HandWeapon>
 				</Equipments>
 				<Options>
-					<Command Name="Master-bred Rat Ogre" Points="15"/>
+					<CommandGroup>
+						<Leader Points="15">Master-bred Rat Ogre</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
@@ -1270,9 +1272,11 @@
 					<TwoHandsWeapon/>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="5"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
-					<Command Name="Bringer-of-the-Word" Points="10"/>
+					<CommandGroup>
+						<Leader Points="5">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+						<Leader Points="10">Bringer-of-the-Word</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
