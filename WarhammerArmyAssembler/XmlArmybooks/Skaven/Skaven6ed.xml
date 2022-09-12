@@ -800,8 +800,10 @@
 						</Dependencies>
 						<Points>2</Points>
 					</Option>
-					<Command Name="Musician" Points="4"/>
-					<Command Name="Pawleader" Points="8"/>
+					<CommandGroup>
+						<Leader Points="4">Musician</Leader>
+						<Leader Points="8">Pawleader</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
