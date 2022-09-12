@@ -1018,9 +1018,11 @@
 					<Mount Name="Warpfire Thrower" Points="70"/>
 					<Mount Name="Ratling Gun" Points="55"/>
 					<Mount Name="Doom-flayer" Points="55"/>
-					<Command Name="Musician" Points="4"/>
-					<Command Name="Standard bearer" Points="8"/>
-					<Command Name="Clawleader" Points="8"/>
+					<CommandGroup>
+						<Leader Points="4">Musician</Leader>
+						<Leader Points="8">Standard bearer</Leader>
+						<Leader Points="8">Clawleader</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
