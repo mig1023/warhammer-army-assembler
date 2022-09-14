@@ -969,9 +969,11 @@
 					<LongBow/>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="9"/>
-					<Command Name="Standard bearer" Points="18"/>
-					<Command Name="Horsemaster" Points="9"/>
+					<CommandGroup>
+						<Leader Points="9">Musician</Leader>
+						<Leader Points="18">Standard bearer</Leader>
+						<Leader Points="9">Horsemaster</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
