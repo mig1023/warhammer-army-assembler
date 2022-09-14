@@ -944,9 +944,11 @@
 						<PerModel/>
 						<Rule>Skirmishers</Rule>
 					</Option>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard Bearer" Points="12" Magic="Type:Unit, Points:25"/>
-					<Command Name="Lord's Bowman" Points="6"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12" Magic="Type:Unit, Points:25">Standard Bearer</Leader>
+						<Leader Points="6">Lord's Bowman</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Core>
