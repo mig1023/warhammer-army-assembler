@@ -583,7 +583,7 @@
 					<CommandGroup>
 						<Leader Points="5">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-						<Command Name="Champion" Points="10"/>
+						<Leader Points="10">Champion</Leader>
 					</CommandGroup>
 				</Options>
 			</Core>
@@ -704,9 +704,11 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard bearer" Points="12" Magic="Type:Unit, Points:50"/>
-					<Command Name="Champion" Points="12"/>
+					<CommandGroup>
+						<Leader Points="6">Musician</Leader>
+						<Leader Points="12" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+						<Leader Points="12">Champion</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
