@@ -945,9 +945,11 @@
 						<PerModel/>
 						<Rule>Ambushers special rule</Rule>
 					</Option>
-					<Command Name="Necropolis Captain" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:50"/>
+					<CommandGroup>
+						<Leader Points="10">Necropolis Captain</Leader>
+						<Leader Points="10">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
