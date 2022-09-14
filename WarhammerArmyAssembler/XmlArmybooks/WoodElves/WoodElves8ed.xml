@@ -1101,9 +1101,11 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Command Name="Eternal Warden" Points="10"/>
-					<Command Name="Musician" Points="5"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type:Unit, Points:25"/>
+					<CommandGroup>
+						<Leader Points="10">Eternal Warden</Leader>
+						<Leader Points="5">Musician</Leader>
+						<Leader Points="10" Magic="Type:Unit, Points:25">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Core>
 			<Special>
