@@ -1283,9 +1283,11 @@
 							<Off>Swiftshiver shards</Off>
 						</Dependencies>
 					</Option>
-					<Command Name="Master Scout" Points="10"/>
-					<Command Name="Musician" Points="5"/>
-					<Command Name="Standard bearer" Points="10"/>
+					<CommandGroup>
+						<Leader Points="10">Master Scout</Leader>
+						<Leader Points="5">Musician</Leader>
+						<Leader Points="10">Standard bearer</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
