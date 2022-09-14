@@ -1048,8 +1048,10 @@
 					</HandWeapon>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="7"/>
-					<Command Name="Bladesinger" Points="14"/>
+					<CommandGroup>
+						<Leader Points="7">Musician</Leader>
+						<Leader Points="14">Bladesinger</Leader>
+					</CommandGroup>
 				</Options>
 			</Special>
 			<Special>
