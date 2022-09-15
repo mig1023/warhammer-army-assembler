@@ -718,7 +718,7 @@
 			<Core>
 				<Name>Zombie Horde</Name>
 				<Points>4</Points>
-				<Min>20</Min>
+				<Size>20+</Size>
 				<Image>Zombies.jpg</Image>
 				<Profile M="4" WS="1" BS="0" S="2" T="2" W="1" I="1" A="1" Ld="2"/>
 				<SpecialRules>
@@ -741,7 +741,7 @@
 			<Core>
 				<Name>Skeleton Warriors</Name>
 				<Points>8</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<Image>SkeletonWarrior.jpg</Image>
 				<Profile M="4" WS="2" BS="2" S="3" T="3" W="1" I="2" A="1" Ld="3"/>
 				<SpecialRules>
@@ -764,7 +764,7 @@
 			<Core>
 				<Name>Crypt Ghouls</Name>
 				<Points>8</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<Image>CryptGhouls.jpg</Image>
 				<Profile M="4" WS="3" BS="0" S="3" T="4" W="1" I="3" A="2" Ld="5"/>
 				<SpecialRules>
@@ -785,8 +785,7 @@
 			<Core>
 				<Name>Dire Wolves</Name>
 				<Points>8</Points>
-				<Min>5</Min>
-				<Max>20</Max>
+				<Size>5-20</Size>
 				<Image>DireWolfs.jpg</Image>
 				<Profile M="9" WS="3" BS="0" S="3" T="3" W="1" I="3" A="1" Ld="3"/>
 				<SpecialRules>
@@ -810,8 +809,7 @@
 			<Core>
 				<Name>Bat Swarm</Name>
 				<Points>35</Points>
-				<Min>3</Min>
-				<Max>20</Max>
+				<Size>3-20</Size>
 				<Image>BatSwarms.jpg</Image>
 				<Profile M="1" WS="3" BS="0" S="2" T="2" W="4" I="1" A="4" Ld="3"/>
 				<SpecialRules>
@@ -871,7 +869,7 @@
 			<Special>
 				<Name>Grave Guard</Name>
 				<Points>12</Points>
-				<Min>5</Min>
+				<Size>5+</Size>
 				<Image>GraveGuard.jpg</Image>
 				<Profile M="4" WS="3" BS="0" S="4" T="4" W="1" I="3" A="1" Ld="6"/>
 				<SpecialRules>
@@ -897,7 +895,7 @@
 			<Special>
 				<Name>Black Knight</Name>
 				<Points>24</Points>
-				<Min>5</Min>
+				<Size>5+</Size>
 				<Mount>Skeletal Steed</Mount>
 				<Image>BlackKnights.jpg</Image>
 				<Profile M="4" WS="3" BS="0" S="4" T="4" W="1" I="3" A="1" Ld="6" AS="6"/>
@@ -934,8 +932,7 @@
 			<Special>
 				<Name>Fell Bats</Name>
 				<Points>20</Points>
-				<Min>3</Min>
-				<Max>10</Max>
+				<Size>3-10</Size>
 				<Image>FellBats.jpg</Image>
 				<Profile M="1" WS="3" BS="0" S="3" T="3" W="2" I="3" A="2" Ld="3"/>
 				<SpecialRules>
@@ -951,8 +948,7 @@
 			<Special>
 				<Name>Spirit Host</Name>
 				<Points>65</Points>
-				<Min>3</Min>
-				<Max>10</Max>
+				<Size>3-10</Size>
 				<Image>SpiritHost.jpg</Image>
 				<Profile M="6" WS="3" BS="0" S="3" T="3" W="4" I="1" A="4" Ld="4"/>
 				<SpecialRules>
@@ -991,8 +987,7 @@
 			<Rare>
 				<Name>Cairn Wraiths</Name>
 				<Points>50</Points>
-				<Min>3</Min>
-				<Max>10</Max>
+				<Size>3-10</Size>
 				<Image>CairnWraiths.jpg</Image>
 				<Profile M="6" WS="3" BS="0" S="3" T="3" W="2" I="2" A="3" Ld="5"/>
 				<SpecialRules>
@@ -1017,8 +1012,7 @@
 			<Rare>
 				<Name>Blood Knight</Name>
 				<Points>55</Points>
-				<Min>4</Min>
-				<Max>20</Max>
+				<Size>4-20</Size>
 				<Mount>Nightmare</Mount>
 				<Image>BloodKnights.jpg</Image>
 				<Profile M="4" WS="5" BS="3" S="5" T="4" W="1" I="4" A="2" Ld="7" AS="5"/>
