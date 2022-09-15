@@ -230,8 +230,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Chariot = IntParse(xmlUnit["Chariot"]),
             };
 
-            int min = IntParse(xmlUnit["Min"]);
-            int max = IntParse(xmlUnit["Max"]);
+            Parsers.SizeParse(StringParse(xmlUnit["Size"]), out int min, out int max);
 
             if ((min == 0) && (max == 0))
             {

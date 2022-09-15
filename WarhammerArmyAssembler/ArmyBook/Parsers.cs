@@ -202,6 +202,26 @@ namespace WarhammerArmyAssembler.ArmyBook
             return (success ? value : Option.OnlyType.All);
         }
 
-        public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;        
+        public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;  
+        
+        public static void SizeParse(string line, out int min, out int max)
+        {
+            if (line.Contains("+"))
+            {
+                min = IntParse(line.Replace("+", String.Empty));
+                max = 0;
+            }
+            else if (line.Contains("-"))
+            {
+                string[] sizes = line.Split('-');
+                min = IntParse(sizes[0]);
+                max = IntParse(sizes[1]);
+            }
+            else
+            {
+                min = 0;
+                max = 0;
+            }
+        }
     }
 }
