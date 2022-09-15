@@ -806,7 +806,7 @@
 			<Core>
 				<Name>Halberdiers</Name>
 				<Points>6</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<Image>Halberdiers.jpg</Image>
 				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7"/>
 				<Equipments>
@@ -826,7 +826,7 @@
 			<Core>
 				<Name>Spearmen</Name>
 				<Points>6</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<Image>Spearmen.jpg</Image>
 				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7"/>
 				<Equipments>
@@ -846,7 +846,7 @@
 			<Core>
 				<Name>Swordmen</Name>
 				<Points>7</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<Image>Swordmen.jpg</Image>
 				<Profile M="4" WS="4" BS="3" S="3" T="3" W="1" I="4" A="1" Ld="7"/>
 				<Equipments>
@@ -867,7 +867,7 @@
 			<Core>
 				<Name>Handgunners</Name>
 				<Points>8</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<Image>Handgunners.jpg</Image>
 				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7"/>
 				<Equipments>
@@ -917,7 +917,7 @@
 			<Core>
 				<Name>Free Companies</Name>
 				<Points>5</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<Image>FreeCompany.jpg</Image>
 				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7"/>
 				<Equipments>
@@ -935,8 +935,7 @@
 			<Core>
 				<Name>Archers</Name>
 				<Points>8</Points>
-				<Min>10</Min>
-				<Max>20</Max>
+				<Size>10-20</Size>
 				<Image>Archers.jpg</Image>
 				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7"/>
 				<SpecialRules>
@@ -964,7 +963,7 @@
 			<Core>
 				<Name>Crossbowmen</Name>
 				<Points>8</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<Image>Crossbowmen.jpg</Image>
 				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7"/>
 				<Equipments>
@@ -985,7 +984,7 @@
 				<Name>Knightly Orders</Name>
 				<Group>Knights</Group>
 				<Points>23</Points>
-				<Min>5</Min>
+				<Size>5+</Size>
 				<Mount>Warhorse</Mount>
 				<Image>KnightsOrders.jpg</Image>
 				<Profile M="4" WS="4" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="8" AS="5"/>
@@ -1015,7 +1014,7 @@
 				<Name>Knights of the White Wolf</Name>
 				<Group>WhiteWolf</Group>
 				<Points>25</Points>
-				<Min>5</Min>
+				<Size>5+</Size>
 				<UniqueUnits/>
 				<Mount>Warhorse</Mount>
 				<Profile M="4" WS="4" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="8" AS="5"/>
@@ -1045,7 +1044,7 @@
 			<Special>
 				<Name>Greatswords</Name>
 				<Points>12</Points>
-				<Min>10</Min>
+				<Size>10+</Size>
 				<UniqueUnits/>
 				<Image>Greatswords.jpg</Image>
 				<Profile M="4" WS="4" BS="4" S="3" T="3" W="1" I="3" A="1" Ld="8"/>
@@ -1068,7 +1067,7 @@
 			<Special>
 				<Name>Pistoliers</Name>
 				<Points>19</Points>
-				<Min>5</Min>
+				<Size>5+</Size>
 				<Mount>Warhorse</Mount>
 				<Image>Pistoliers.jpg</Image>
 				<Profile M="4" WS="3" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7" AS="6"/>
@@ -1143,8 +1142,7 @@
 			<Rare>
 				<Name>Flagellants</Name>
 				<Points>11</Points>
-				<Min>5</Min>
-				<Max>30</Max>
+				<Size>5-30</Size>
 				<UniqueUnits/>
 				<Image>Flagellants.jpg</Image>
 				<Profile M="4" WS="2" BS="2" S="3" T="4" W="1" I="3" A="1" Ld="10"/>
