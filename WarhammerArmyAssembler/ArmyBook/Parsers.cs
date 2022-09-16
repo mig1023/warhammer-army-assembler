@@ -18,7 +18,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             return IntParse(xmlNode.InnerText, byDefault);
         }
 
-        public static Profile ProfileParse(XmlNode xmlNode) => new Profile { Value = IntParse(xmlNode) };
+        public static Profile ProfileParse(XmlNode xmlNode) =>
+            new Profile { Value = IntParse(xmlNode), Null = (xmlNode == null) };
 
         public static int IntParse(string xmlNode, int? byDefault = null)
         {
