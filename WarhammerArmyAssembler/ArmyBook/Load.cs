@@ -395,6 +395,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             bool typesIncluded = false;
 
+            if (xmlNode.Attributes["Attr"] != null)
+                attributes += ";" + String.Join(";", xmlNode.Attributes["Attr"].InnerText.Split(',').Select(x => x.Trim()));
+
             foreach (string attributeLine in attributes.Split(';').Select(x => x.Trim('\n').Trim()))
             {
                 if (String.IsNullOrEmpty(attributeLine))
