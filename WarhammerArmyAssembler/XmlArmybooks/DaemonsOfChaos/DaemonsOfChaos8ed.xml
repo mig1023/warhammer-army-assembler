@@ -468,7 +468,6 @@
 				<Options>
 					<Option>
 						<Name>Wizard Level 3</Name>
-						<Type>Option</Type>
 						<Points>35</Points>
 						<AddToWizard>1</AddToWizard>
 						<AddToCast>1</AddToCast>
@@ -479,7 +478,6 @@
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
-						<Type>Option</Type>
 						<Points>70</Points>
 						<AddToWizard>2</AddToWizard>
 						<AddToCast>2</AddToCast>
@@ -512,7 +510,6 @@
 				<Options>
 					<Option>
 						<Name>Wizard Level</Name>
-						<Type>Option</Type>
 						<Points>35</Points>
 						<Countable>
 							<Nullable/>
@@ -546,7 +543,6 @@
 				<Options>
 					<Option>
 						<Name>Wizard Level</Name>
-						<Type>Option</Type>
 						<Points>35</Points>
 						<Countable>
 							<Nullable/>
@@ -582,7 +578,6 @@
 					<DaemonOfNurgle Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
 					<Option>
 						<Name>Wizard Level</Name>
-						<Type>Option</Type>
 						<Points>35</Points>
 						<Countable>
 							<Min>0</Min>
@@ -593,13 +588,11 @@
 					</Option>
 					<Option>
 						<Name>Chaos Armour</Name>
-						<Type>Option</Type>
 						<Points>20</Points>
 						<AddToArmour>4</AddToArmour>
 					</Option>
 					<Option>
 						<Name>Daemonic Flight</Name>
-						<Type>Option</Type>
 						<Points>40</Points>
 						<Rule>Fly</Rule>
 					</Option>
@@ -752,7 +745,6 @@
 				<Options>
 					<Option>
 						<Name>Lesser Locus of Abjuration</Name>
-						<Type>Option</Type>
 						<Points>30</Points>
 						<Rule>+1 Magic Resistance</Rule>
 						<Dependencies>
@@ -762,7 +754,6 @@
 					</Option>
 					<Option>
 						<Name>Greater Locus of Fury</Name>
-						<Type>Option</Type>
 						<Points>60</Points>
 						<Frenzy/>
 						<Dependencies>
@@ -772,7 +763,6 @@
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Wrath</Name>
-						<Type>Option</Type>
 						<Points>75</Points>
 						<Hate/>
 						<Dependencies>
@@ -806,7 +796,6 @@
 					<Wizard Level="2" Points="35"/>
 					<Option>
 						<Name>Lesser Locus of Transmogrification</Name>
-						<Type>Option</Type>
 						<Points>25</Points>
 						<Rule>When a model is slain, place D3+1 Blue Horror</Rule>
 						<Dependencies>
@@ -816,7 +805,6 @@
 					</Option>
 					<Option>
 						<Name>Greater Locus of Change</Name>
-						<Type>Option</Type>
 						<Points>35</Points>
 						<Rule>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</Rule>
 						<Dependencies>
@@ -826,7 +814,6 @@
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Conjuration</Name>
-						<Type>Option</Type>
 						<Points>50</Points>
 						<Rule>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</Rule>
 						<Dependencies>
@@ -859,7 +846,6 @@
 				<Options>
 					<Option>
 						<Name>Wizard Level 1</Name>
-						<Type>Option</Type>
 						<Points>35</Points>
 						<MagicItemsPoints/>
 						<AddToWizard>1</AddToWizard>
@@ -868,7 +854,6 @@
 					</Option>
 					<Option>
 						<Name>Lesser Locus of Virulence</Name>
-						<Type>Option</Type>
 						<Points>40</Points>
 						<Rule>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</Rule>
 						<Dependencies>
@@ -878,7 +863,6 @@
 					</Option>
 					<Option>
 						<Name>Greater Locus of Fecundity</Name>
-						<Type>Option</Type>
 						<Points>45</Points>
 						<Regeneration/>
 						<Dependencies>
@@ -888,7 +872,6 @@
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Contagion</Name>
-						<Type>Option</Type>
 						<Points>50</Points>
 						<Rule>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</Rule>
 						<Dependencies>
@@ -918,7 +901,6 @@
 					<Wizard Level="1" Points="35"/>
 					<Option>
 						<Name>Lesser Locus of Grace</Name>
-						<Type>Option</Type>
 						<Points>5</Points>
 						<Rule>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</Rule>
 						<Dependencies>
@@ -928,7 +910,6 @@
 					</Option>
 					<Option>
 						<Name>Greater Locus of Swiftness</Name>
-						<Type>Option</Type>
 						<Points>50</Points>
 						<Rule>This model, and all models in her unit, have the Always Strikes First special rule</Rule>
 						<Dependencies>
@@ -938,7 +919,6 @@
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Beguilement</Name>
-						<Type>Option</Type>
 						<Points>60</Points>
 						<Rule>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</Rule>
 						<Dependencies>
@@ -1048,7 +1028,6 @@
 				<Options>
 					<Option>
 						<Name>Plague Proboscis</Name>
-						<Type>Option</Type>
 						<Points>5</Points>
 						<Dependencies>
 							<Off>Venom Sting</Off>
@@ -1057,7 +1036,6 @@
 					</Option>
 					<Option>
 						<Name>Venom Sting</Name>
-						<Type>Option</Type>
 						<Points>10</Points>
 						<Dependencies>
 							<Off>Plague Proboscis</Off>
@@ -1207,7 +1185,6 @@
 				<Options>
 					<Option>
 						<Name>Ambushers</Name>
-						<Type>Option</Type>
 						<Points>3</Points>
 						<PerModel/>
 					</Option>
@@ -1339,7 +1316,6 @@
 				<Options>
 					<Option>
 						<Name>Daemons of Tzeentch</Name>
-						<Type>Option</Type>
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
@@ -1350,7 +1326,6 @@
 					</Option>
 					<Option>
 						<Name>Daemons of Slaanesh</Name>
-						<Type>Option</Type>
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
@@ -1361,7 +1336,6 @@
 					</Option>
 					<Option>
 						<Name>Daemons of Khorne</Name>
-						<Type>Option</Type>
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
@@ -1372,7 +1346,6 @@
 					</Option>
 					<Option>
 						<Name>Daemons of Nurgle</Name>
-						<Type>Option</Type>
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
@@ -1448,12 +1421,10 @@
 					<DaemonOfNurgle Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
 					<Option>
 						<Name>Daemonbone Claw</Name>
-						<Type>Option</Type>
 						<Points>10</Points>
 					</Option>
 					<Option>
 						<Name>Baleful Torrent</Name>
-						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
 							<Off>Phlegm Bombardment</Off>
@@ -1462,7 +1433,6 @@
 					</Option>
 					<Option>
 						<Name>Phlegm Bombardment</Name>
-						<Type>Option</Type>
 						<Points>50</Points>
 						<Dependencies>
 							<Off>Baleful Torrent</Off>
@@ -1471,7 +1441,6 @@
 					</Option>
 					<Option>
 						<Name>Warp Gaze</Name>
-						<Type>Option</Type>
 						<Points>55</Points>
 						<Dependencies>
 							<Off>Baleful Torrent</Off>
@@ -1534,7 +1503,6 @@
 					</CommandGroup>
 					<Option>
 						<Name>Death's Heads</Name>
-						<Type>Option</Type>
 						<Points>10</Points>
 						<PerModel/>
 					</Option>
