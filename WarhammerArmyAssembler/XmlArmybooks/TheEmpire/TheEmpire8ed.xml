@@ -240,7 +240,6 @@
 				<Options>
 					<Option>
 						<Name>The Reikland Runefang</Name>
-						<Type>Option</Type>
 						<NoArmour/>
 						<AutoWound/>
 						<Points>0</Points>
@@ -251,7 +250,6 @@
 					</Option>
 					<Option>
 						<Name>Ghal Maraz</Name>
-						<Type>Option</Type>
 						<NoArmour/>
 						<AutoWound/>
 						<MultiWounds>D3</MultiWounds>
@@ -266,7 +264,6 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for warhorse</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -364,7 +361,6 @@
 				<Options>
 					<Option>
 						<Name>The War Altar</Name>
-						<Type>Option</Type>
 						<Points>150</Points>
 						<Mount/>
 						<OnlyOneInArmy/>
@@ -419,7 +415,6 @@
 				<Options>
 					<Option>
 						<Name>Additional weapon</Name>
-						<Type>Option</Type>
 						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
@@ -433,7 +428,6 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<Type>Option</Type>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
@@ -447,7 +441,6 @@
 					</Option>
 					<Option>
 						<Name>Lance</Name>
-						<Type>Option</Type>
 						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
@@ -461,7 +454,6 @@
 					</Option>
 					<Option>
 						<Name>Handgun</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great weapon</Off>
@@ -473,7 +465,6 @@
 					</Option>
 					<Option>
 						<Name>Longbow</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great weapon</Off>
@@ -485,7 +476,6 @@
 					</Option>
 					<Option>
 						<Name>Pistol</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great weapon</Off>
@@ -497,7 +487,6 @@
 					</Option>
 					<Option>
 						<Name>Full plate armour</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Heavy armour</Off>
 						</Dependencies>
@@ -506,7 +495,6 @@
 					</Option>
 					<Option>
 						<Name>Heavy armour</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Full plate armour</Off>
 						</Dependencies>
@@ -519,7 +507,6 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for warhorse</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -546,7 +533,6 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<Type>Option</Type>
 						<AddToArmour>6</AddToArmour>
 						<Dependencies>
 							<On>Warhorse</On>
@@ -555,21 +541,18 @@
 					</Option>
 					<Option>
 						<Name>Celestail Hurricanum</Name>
-						<Type>Option</Type>
 						<Points>125</Points>
 						<Rule>May choose spells only from the Lore of Heaven</Rule>
 						<Mount/>
 					</Option>
 					<Option>
 						<Name>Luminark of Hysh</Name>
-						<Type>Option</Type>
 						<Points>120</Points>
 						<Rule>May choose spells only from the Lore of Light</Rule>
 						<Mount/>
 					</Option>
 					<Option>
 						<Name>Imperial Griffon</Name>
-						<Type>Option</Type>
 						<Points>170</Points>
 						<Rule>May choose spells only from the Lore of Beasts</Rule>
 						<Mount/>
@@ -597,7 +580,6 @@
 				<Options>
 					<Option>
 						<Name>Additional weapon</Name>
-						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -606,7 +588,6 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<Type>Option</Type>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
@@ -618,7 +599,6 @@
 					<Shield Points="4"/>
 					<Option>
 						<Name>The War Altar</Name>
-						<Type>Option</Type>
 						<Points>150</Points>
 						<Mount/>
 						<OnlyOneInArmy/>
@@ -626,7 +606,6 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<Type>Option</Type>
 						<AddToArmour>6</AddToArmour>
 						<Dependencies>
 							<On>Warhorse</On>
@@ -654,7 +633,6 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<Type>Option</Type>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
@@ -664,7 +642,6 @@
 					</Option>
 					<Option>
 						<Name>Lance</Name>
-						<Type>Option</Type>
 						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -770,7 +747,6 @@
 				<Options>
 					<Option>
 						<Name>Additional weapon</Name>
-						<Type>Option</Type>
 						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
@@ -784,7 +760,6 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<Type>Option</Type>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
@@ -798,7 +773,6 @@
 					</Option>
 					<Option>
 						<Name>Lance</Name>
-						<Type>Option</Type>
 						<Only>Mount</Only>
 						<Dependencies>
 							<Off>Additional weapon</Off>
@@ -812,7 +786,6 @@
 					</Option>
 					<Option>
 						<Name>Handgun</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great weapon</Off>
@@ -824,7 +797,6 @@
 					</Option>
 					<Option>
 						<Name>Longbow</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great weapon</Off>
@@ -836,7 +808,6 @@
 					</Option>
 					<Option>
 						<Name>Pistol</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great weapon</Off>
@@ -848,7 +819,6 @@
 					</Option>
 					<Option>
 						<Name>Full plate armour</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Heavy armour</Off>
 						</Dependencies>
@@ -857,7 +827,6 @@
 					</Option>
 					<Option>
 						<Name>Heavy armour</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Full plate armour</Off>
 						</Dependencies>
@@ -869,7 +838,6 @@
 					<Mount Name="Warhorse" Points="12"/>
 					<Option>
 						<Name>Barding for warhorse</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -896,7 +864,6 @@
 					<Mount Name="Warhorse" Points="12"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<Type>Option</Type>
 						<AddToArmour>6</AddToArmour>
 						<Dependencies>
 							<On>Warhorse</On>
@@ -926,7 +893,6 @@
 				<Options>
 					<Option>
 						<Name>Additional weapon</Name>
-						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Dependencies>
 							<Off>Great weapon</Off>
@@ -935,7 +901,6 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<Type>Option</Type>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Dependencies>
@@ -945,7 +910,6 @@
 					</Option>
 					<Option>
 						<Name>Heavy armour</Name>
-						<Type>Option</Type>
 						<Points>2</Points>
 						<AddToArmour>5</AddToArmour>
 					</Option>
@@ -954,7 +918,6 @@
 					<Mount Name="Warhorse" Points="12"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<Type>Option</Type>
 						<AddToArmour>6</AddToArmour>
 						<Dependencies>
 							<On>Warhorse</On>
@@ -981,7 +944,6 @@
 				<Options>
 					<Option>
 						<Name>Grenade blunderbuss</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Hochland long rifke</Off>
 							<Off>Pigeon bombs</Off>
@@ -992,7 +954,6 @@
 					</Option>
 					<Option>
 						<Name>Hochland long rifke</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Grenade blunderbuss</Off>
 							<Off>Pigeon bombs</Off>
@@ -1003,7 +964,6 @@
 					</Option>
 					<Option>
 						<Name>Pigeon bombs</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Grenade blunderbuss</Off>
 							<Off>Hochland long rifke</Off>
@@ -1014,7 +974,6 @@
 					</Option>
 					<Option>
 						<Name>Repeater handgun</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Grenade blunderbuss</Off>
 							<Off>Hochland long rifke</Off>
@@ -1025,7 +984,6 @@
 					</Option>
 					<Option>
 						<Name>Repeater pistol</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Grenade blunderbuss</Off>
 							<Off>Hochland long rifke</Off>
@@ -1036,7 +994,6 @@
 					</Option>
 					<Option>
 						<Name>Pistol</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<Off>Additional weapon</Off>
 							<Off>Great weapon</Off>
@@ -1051,7 +1008,6 @@
 					<Mount Name="Warhorse" Points="12"/>
 					<Option>
 						<Name>Barding for warhorse</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -1081,7 +1037,6 @@
 				<Options>
 					<Option>
 						<Name>Pistol</Name>
-						<Type>Option</Type>
 						<Points>0</Points>
 						<Dependencies>
 							<Off>Brace of pistols</Off>
@@ -1090,7 +1045,6 @@
 					</Option>
 					<Option>
 						<Name>Brace of pistols</Name>
-						<Type>Option</Type>
 						<Points>5</Points>
 						<Dependencies>
 							<Off>Pistol</Off>
@@ -1133,14 +1087,12 @@
 				<Options>
 					<Option>
 						<Name>Bloodroar</Name>
-						<Type>Option</Type>
 						<Points>25</Points>
 						<Rule>Enemy units must roll an additional D6, discarding the lowest result, for Leadership tests caused by this beast's Fear of Terror special rules</Rule>
 						<AddToArmour>6</AddToArmour>
 					</Option>
 					<Option>
 						<Name>Two Heads</Name>
-						<Type>Option</Type>
 						<AddToAttacks>1</AddToAttacks>
 						<Rule>+1 To Hit against models with the Large Target special rule</Rule>
 						<Points>30</Points>
@@ -1156,13 +1108,11 @@
 				<Options>
 					<Option>
 						<Name>Iron-hard Hooves</Name>
-						<Type>Option</Type>
 						<Points>5</Points>
 						<Rule>Re-rolls failed To Wound rolls when making a Stomp</Rule>
 					</Option>
 					<Option>
 						<Name>Swift as the Wind</Name>
-						<Type>Option</Type>
 						<Rule>Re-roll ant dice results of a 1 when determining its charge range</Rule>
 						<Points>10</Points>
 					</Option>
@@ -1215,7 +1165,6 @@
 				<Options>
 					<Option>
 						<Name>Horn of Sigismund</Name>
-						<Type>Option</Type>
 						<Points>10</Points>
 					</Option>
 				</Options>
@@ -1377,7 +1326,6 @@
 					</CommandGroup>
 					<Option>
 						<Name>Brace pistols for Marksman</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Marksman</On>
 							<Off>Hochland long rifle for Marksman</Off>
@@ -1387,7 +1335,6 @@
 					</Option>
 					<Option>
 						<Name>Hochland long rifle for Marksman</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Marksman</On>
 							<Off>Repeater handgun for Marksman</Off>
@@ -1397,7 +1344,6 @@
 					</Option>
 					<Option>
 						<Name>Repeater handgun for Marksman</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Marksman</On>
 							<Off>Hochland long rifle for Marksman</Off>
@@ -1469,7 +1415,6 @@
 				<Options>
 					<Option>
 						<Name>Knights of the Inner Circle</Name>
-						<Type>Option</Type>
 						<Points>3</Points>
 						<PerModel/>
 						<AddToStrength>1</AddToStrength>
@@ -1521,7 +1466,6 @@
 				<Options>
 					<Option>
 						<Name>Lance</Name>
-						<Type>Option</Type>
 						<Points>0</Points>
 						<Dependencies>
 							<Off>Halberd</Off>
@@ -1531,7 +1475,6 @@
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
-						<Type>Option</Type>
 						<Points>0</Points>
 						<Dependencies>
 							<Off>Lance</Off>
@@ -1615,7 +1558,6 @@
 					<Command Name="Musician" Points="10"/>
 					<Option>
 						<Name>Repeater pistol for Outrider</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Outrider</On>
 							<Off>Repeater Handgun for Outrider</Off>
@@ -1624,7 +1566,6 @@
 					</Option>
 					<Option>
 						<Name>Repeater Handgun for Outrider</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Outrider</On>
 							<Off>Repeater pistol for Outrider</Off>
@@ -1657,14 +1598,12 @@
 					<Command Name="Musician" Points="8"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<Type>Option</Type>
 						<PerModel/>
 						<AddToArmour>6</AddToArmour>
 						<Points>1</Points>
 					</Option>
 					<Option>
 						<Name>Brace of pistol for Sharpshooter</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Sharpshooter</On>
 							<Off>Grenade launching for Sharpshooter</Off>
@@ -1673,7 +1612,6 @@
 					</Option>
 					<Option>
 						<Name>Grenade launching for Sharpshooter</Name>
-						<Type>Option</Type>
 						<Dependencies>
 							<On>Sharpshooter</On>
 							<Off>Brace of pistol for Sharpshooter</Off>
@@ -1773,7 +1711,6 @@
 				<Options>
 					<Option>
 						<Name>Hochland long rifle</Name>
-						<Type>Option</Type>
 						<Points>20</Points>
 					</Option>
 				</Options>
