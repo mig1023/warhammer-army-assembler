@@ -22,14 +22,13 @@ namespace WarhammerArmyAssembler
         {
             get
             {
-                if (this.Type == Unit.UnitType.Mount)
-                    return string.Format("↳ {0}", Name);
+                string mount = this.Type == Unit.UnitType.Mount ? "↳ " : String.Empty;
 
-                else if (!String.IsNullOrEmpty(this.Personification))
-                    return string.Format("{0} ({1})", this.Personification, Name);
+                if (!String.IsNullOrEmpty(this.Personification))
+                    return string.Format("{0}{1} ({2})", mount, this.Personification, Name);
 
                 else
-                    return Name;
+                    return string.Format("{0}{1}", mount, Name);
             }
         }
 
