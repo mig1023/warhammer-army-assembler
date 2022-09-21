@@ -1106,8 +1106,8 @@ namespace WarhammerArmyAssembler
             return true;
         }
 
-        public bool ExistsOrdinaryItems() =>
-            Options.Where(x => x.IsMagicItem() && !String.IsNullOrEmpty(x.Name) && (x.Points == 0)).FirstOrDefault() != null;
+        public bool ExistsEquipmentsItems() =>
+            Options.Where(x => x.IsEquipment() && !String.IsNullOrEmpty(x.Name)).FirstOrDefault() != null;
 
         public int GetMountOn()
         {

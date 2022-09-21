@@ -10,7 +10,7 @@ namespace WarhammerArmyAssembler
     public class Option : INotifyPropertyChanged
     {
         public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption, Powers, Info }
-
+        public enum OptionCategory { Option, Equipment, SpecialRule, Nope }
         public enum OnlyType { All, Infantry, Mount }
 
         public string Name { get; set; }
@@ -18,6 +18,7 @@ namespace WarhammerArmyAssembler
         public string IDView { get; set; }
         public OptionType Type { get; set; }
         public OnlyType Only { get; set; }
+        public OptionCategory Category { get; set; }
         public string[] ServiceDependencies { get; set; }
         public string[] ServiceInverseDependencies { get; set; }
         public bool OnlyOneInArmy { get; set; }
@@ -176,6 +177,7 @@ namespace WarhammerArmyAssembler
             PerModel = this.PerModel,
             MagicItemsPoints = this.MagicItemsPoints,
             Type = this.Type,
+            Category = this.Category,
             Description = this.Description,
             SpecialRuleDescription = this.SpecialRuleDescription,
             Realised = this.Realised,
@@ -335,6 +337,8 @@ namespace WarhammerArmyAssembler
         public bool IsPowers() => this.Type == OptionType.Powers;
 
         public bool IsOption() => this.Type == OptionType.Option || this.Type == OptionType.SlannOption;
+
+        public bool IsEquipment() => this.Category == OptionCategory.Equipment;
 
         public bool IsSlannOption() => this.Type == OptionType.SlannOption;
 

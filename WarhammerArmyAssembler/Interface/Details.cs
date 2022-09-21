@@ -192,7 +192,7 @@ namespace WarhammerArmyAssembler.Interface
             if ((unit.GetUnitMagicPowersPoints() > 0) || (unit.GetMagicPowersCount() > 0))
                 margins = CreateColumn(ArmyBook.Data.MagicPowersStyle, margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
-            if (unit.ExistsOrdinaryItems())
+            if (unit.ExistsEquipmentsItems())
                 margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
 
             if (unit.GetSpecialRules().Count > 0)

@@ -286,7 +286,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
-                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml));
+                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml, category: Option.OptionCategory.Equipment));
 
             foreach (XmlNode xmlOption in xmlUnit.SelectNodes("Options/*"))
             {
@@ -444,7 +444,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 AddToOption(xmlDocument, ref xmlNode, "OnlyGroup", xmlNode.Attributes["OnlyGroup"].InnerText);
         }
 
-        public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument, string artefactGroup = null)
+        public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument,
+            string artefactGroup = null, Option.OptionCategory category = Option.OptionCategory.Nope)
         {
             if (Services.GetCommonXmlOption(xmlNode.Name, out string commonOption))
             {
@@ -476,6 +477,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 ArtefactGroup = artefactGroup ?? String.Empty,
                 TooltipColor = (SolidColorBrush)Data.TooltipColor,
             };
+
+            if (category != Option.OptionCategory.Nope)
+                newOption.Category = category;
 
             foreach (string name in Constants.ProfilesNames.Keys)
             {
