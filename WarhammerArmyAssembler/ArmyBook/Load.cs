@@ -145,6 +145,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
 
+            Army.Data.UnitsImagesDirectory = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")));
+
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
             LoadStyles(xmlFile);
@@ -166,9 +169,6 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             LoadMagic(xmlFile, "Magic");
             LoadMagic(xmlFile, "Dispell", enemy: true);
-
-            Army.Data.UnitsImagesDirectory = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")));
         }
 
         private static void LoadMagic(XmlDocument xmlFile, string magic, bool enemy = false)
@@ -223,7 +223,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1),
 
                 Description = description,
-                Image = StringParse(xmlUnit["Image"]),
+                Image = Army.Data.UnitsImagesDirectory + StringParse(xmlUnit["Image"]),
 
                 Personified = BoolParse(xmlUnit["Personified"]),
                 WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]),

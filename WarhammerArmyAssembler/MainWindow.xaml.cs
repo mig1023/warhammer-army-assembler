@@ -112,7 +112,7 @@ namespace WarhammerArmyAssembler
             {
                 Unit unit = ArmyBook.Data.Units[id];
 
-                armyUnitImage.Source = ArmyBook.Services.GetUnitImage(Army.Data.UnitsImagesDirectory + unit.Image);
+                armyUnitImage.Source = ArmyBook.Services.GetUnitImage(unit.Image);
 
                 if (armyUnitImage.Source == null)
                     armyUnitImage.Source = Interface.Changes.TryHomologueImage(unit);
