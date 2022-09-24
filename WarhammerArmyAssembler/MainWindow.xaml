@@ -371,9 +371,9 @@
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Text="{Binding Name}" Tag="{Binding IDView}" MouseDown="UnitInArmyList_MouseDown">
                                         <ToolTipService.ToolTip>
-                                            <ToolTip Background="{Binding TooltipColor}" MaxWidth="300">
+                                            <ToolTip Background="{Binding TooltipColor}" MaxWidth="300" Padding="0">
                                                 <StackPanel>
-                                                    <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Padding="5"/>
+                                                    <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Padding="8"/>
                                                     <Image Source="{Binding Image}"/>
                                                 </StackPanel>
                                             </ToolTip>
