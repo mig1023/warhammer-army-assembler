@@ -760,17 +760,13 @@ namespace WarhammerArmyAssembler.Interface
             main.armybookDetailScroll.Visibility = Visibility.Hidden;
         }
 
-        public static BitmapImage TryHomologueImage(Unit unit)
+        public static string TryHomologueImage(Unit unit)
         {
             foreach (string homologueImage in ArmyBook.XmlBook.GetHomologue(Army.Data.InternalName, unit.Name, unit.IsHero()))
-            {
-                BitmapImage image = GetUnitImage(homologueImage);
+                if (!String.IsNullOrEmpty(homologueImage))
+                    return homologueImage;
 
-                if (image != null)
-                    return image;
-            }
-
-            return null;
+            return String.Empty;
         }
 
         public static void SetContentDescriptionWithImage(Unit unit)

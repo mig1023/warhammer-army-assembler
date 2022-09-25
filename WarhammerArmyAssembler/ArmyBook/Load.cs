@@ -221,10 +221,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 MountOn = IntParse(xmlUnit["MountOn"]),
                 MountInit = StringParse(xmlUnit["Mount"]),
                 ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1),
-
                 Description = description,
-                Image = Army.Data.UnitsImagesDirectory + StringParse(xmlUnit["Image"]),
-
                 Personified = BoolParse(xmlUnit["Personified"]),
                 WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]),
                 Chariot = IntParse(xmlUnit["Chariot"]),
@@ -299,11 +296,19 @@ namespace WarhammerArmyAssembler.ArmyBook
                     newUnit.Options.Add(LoadOption(GetNextIndex(), xmlOption, xml));
             }
 
-            newUnit.SizableType = (!newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize));
-            newUnit.VisibleType = (newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden);
+            newUnit.SizableType = !newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize);
+            newUnit.VisibleType = newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden;
 
             newUnit.ArmyColor = (SolidColorBrush)Data.FrontColor;
             newUnit.TooltipColor = (SolidColorBrush)Data.TooltipColor;
+
+
+            string image = StringParse(xmlUnit["Image"]);
+
+            if (String.IsNullOrEmpty(image))
+                newUnit.Image = Interface.Changes.TryHomologueImage(newUnit);
+            else
+                newUnit.Image = Army.Data.UnitsImagesDirectory + image;
 
             return newUnit;
         }
