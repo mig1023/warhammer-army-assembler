@@ -25,7 +25,9 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             List<string> images = new List<string>();
 
-            foreach (string homologue in HomologousSeries[army])
+            IEnumerable<string> homologousSeries = HomologousSeries[army];
+
+            foreach (string homologue in homologousSeries.Reverse())
             {
                 string homologueImage = Load.LoadArmyUnitImageOnly(homologue, unit, isHero);
 
