@@ -110,7 +110,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (XmlNode genus in xmlFile.SelectNodes("Enemies/Genus"))
                 foreach (XmlNode enemy in genus.SelectNodes("Enemy"))
-                    Enemy.AddEnemies(genus.Attributes["Name"].InnerText, enemy.InnerText);
+                    Enemy.AddEnemies(genus.Attributes["Name"].InnerText, enemy.InnerText, enemy.Attributes["Armybook"].InnerText);
         }
 
         public static void LoadArmy(string xmlFileName)

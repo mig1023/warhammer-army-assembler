@@ -11,7 +11,7 @@ namespace WarhammerArmyAssembler
 
         private static Dictionary<string, List<Enemy>> EnemiesDirectories { get; set; }
 
-        public Enemy(string enemyName)
+        public Enemy(string enemyName, string armybook)
         {
             List<string> multiplesProfile = enemyName.Split(new string[] { " + " }, StringSplitOptions.RemoveEmptyEntries).ToList();
             List<string> profile = multiplesProfile[0].Trim().Split('/').ToList();
@@ -27,30 +27,30 @@ namespace WarhammerArmyAssembler
                 this.Size = size;
                 
             this.Name = profile[1];
-            this.Armybook = profile[2];
+            this.Armybook = armybook;
 
-            this.Movement = NewProfile(profile[3]);
-            this.WeaponSkill = NewProfile(profile[4]);
-            this.BallisticSkill = NewProfile(profile[5]);
-            this.Strength = NewProfile(profile[6]);
-            this.Toughness = NewProfile(profile[7]);
-            this.Wounds = NewProfile(profile[8]);
-            this.Initiative = NewProfile(profile[9]);
-            this.Attacks = NewProfile(profile[10]);
-            this.Leadership = NewProfile(profile[11]);
+            this.Movement = NewProfile(profile[2]);
+            this.WeaponSkill = NewProfile(profile[3]);
+            this.BallisticSkill = NewProfile(profile[4]);
+            this.Strength = NewProfile(profile[5]);
+            this.Toughness = NewProfile(profile[6]);
+            this.Wounds = NewProfile(profile[7]);
+            this.Initiative = NewProfile(profile[8]);
+            this.Attacks = NewProfile(profile[9]);
+            this.Leadership = NewProfile(profile[10]);
 
-            this.Armour = SetProfile(profile, 12);
-            this.Ward = SetProfile(profile, 13);
+            this.Armour = SetProfile(profile, 11);
+            this.Ward = SetProfile(profile, 12);
 
             if (multiplesProfile.Count > 1)
-                this.Mount = new Enemy(multiplesProfile[1].Trim());
+                this.Mount = new Enemy(multiplesProfile[1].Trim(), armybook);
 
-            if ((profile.Count < 15) || String.IsNullOrEmpty(profile[14]))
+            if ((profile.Count < 15) || String.IsNullOrEmpty(profile[13]))
                 return;
 
             Enemy thisEnemy = this;
 
-            foreach (string specialRule in profile[14].Split(','))
+            foreach (string specialRule in profile[13].Split(','))
                 if (!SpecialProperty(specialRule.Trim(), ref thisEnemy))
                     this.GetType().GetProperty(specialRule.Trim()).SetValue(this, true);
         }
@@ -118,12 +118,12 @@ namespace WarhammerArmyAssembler
         public static void CleanEnemies() =>
             EnemiesDirectories = new Dictionary<string, List<Enemy>>();
 
-        public static void AddEnemies(string type, string enemy)
+        public static void AddEnemies(string type, string enemy, string armybook)
         {
             if (!EnemiesDirectories.ContainsKey(type))
                 EnemiesDirectories[type] = new List<Enemy>();
 
-            EnemiesDirectories[type].Add(new Enemy(enemy));
+            EnemiesDirectories[type].Add(new Enemy(enemy, armybook));
         }
     }
 }
