@@ -13,7 +13,10 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static void AddHomologue(string head, string file)
         {
             if (HomologousSeries.ContainsKey(head))
-                HomologousSeries[head].Add(file);
+            {
+                if (!HomologousSeries[head].Contains(file))
+                    HomologousSeries[head].Add(file);
+            }
             else
                 HomologousSeries.Add(head, new List<string> { file });
         }
