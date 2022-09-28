@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace WarhammerArmyAssembler.Interface
 {
@@ -11,7 +12,7 @@ namespace WarhammerArmyAssembler.Interface
             Dictionary<Unit.UnitType, double> units = Army.Checks.UnitsPointsPercent();
 
             double armyCurrentPoint = Army.Params.GetArmyPoints();
-            double availablePoints = (Army.Params.GetArmyMaxPoints() - armyCurrentPoint);
+            double availablePoints = Army.Params.GetArmyMaxPoints() - armyCurrentPoint;
 
             string headLine = "All points:\t\t{0} pts\n\nAlready used:\t\t{1} pts / {2}%\n\nAvailable:\t\t{3} pts / {4}%";
             int currentPercent = Services.CalcPercent(armyCurrentPoint, Army.Params.GetArmyMaxPoints());
@@ -26,11 +27,22 @@ namespace WarhammerArmyAssembler.Interface
                 string minMax = (entry.Key == Unit.UnitType.Core ? "min" : "max");
                 int maxPoints = (int)(Army.Data.MaxPoints * entry.Value);
 
-                pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t( {3} {4} pts / {5}% )\n\n",
-                    entry.Key, units[entry.Key], percent, minMax, maxPoints, entry.Value * 100);
+                pointsMsg += String.Format("{0}:\t{1,10} pts / {2}%\t( {3} {4} pts / {5}% )\n{6}\n\n",
+                    entry.Key, units[entry.Key], percent, minMax, maxPoints, entry.Value * 100, PercentLine(percent));
             }
 
             return pointsMsg;
+        }
+
+        private static string PercentLine(int pecrent)
+        {
+            int current = (int)Math.Ceiling((double)pecrent / 4.4);
+            StringBuilder line = new StringBuilder(new string('▯', 23));
+
+            for (int i = 0; i < current; i++)
+                line[i] = '▮';
+
+            return line.ToString();
         }
 
         public static string ArmyUnits() => String.Format("CORE UNITS:\n{0}\n\nSPECIAL UNITS:\n{1}\n\nRARE UNITS:\n{2}",
