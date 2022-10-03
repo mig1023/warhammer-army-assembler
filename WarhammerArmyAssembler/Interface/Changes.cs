@@ -523,7 +523,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 string head = StringParse(Intro(xmlFile, "Name")).ToUpper();
                 string edition = StringParse(Intro(xmlFile, "Edition"));
-                string description = StringParse(Intro(xmlFile, "Annotation"));
+                string description = StringParse(Intro(xmlFile, "Description"));
                 string authors = StringParse(Intro(xmlFile, "Authors"));
                 int released = IntParse(Intro(xmlFile, "Released"));
                 string illustration = StringParse(Intro(xmlFile, "Images/Illustration"));
