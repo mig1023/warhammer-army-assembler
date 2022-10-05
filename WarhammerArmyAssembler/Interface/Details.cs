@@ -406,14 +406,14 @@ namespace WarhammerArmyAssembler.Interface
                     Background = background,
                     Child = newPart,
                 };
-                border.Margin = Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 20);
+                border.Margin = Changes.Thick(newPart, Math.Ceiling(margins[0] + 2 + actualPrevPartWidth), margins[1] + 20);
                 border.Width = partWidth ?? (countable ? 51 : 77);
 
                 Changes.main.unitDetail.Children.Add(border);
             }
             else
             {
-                newPart.Margin = Changes.Thick(newPart, margins[0] + 2 + actualPrevPartWidth, margins[1] + 21);
+                newPart.Margin = Changes.Thick(newPart, Math.Ceiling(margins[0] + 2 + actualPrevPartWidth), margins[1] + 21);
                 Changes.main.unitDetail.Children.Add(newPart);
             }
             
