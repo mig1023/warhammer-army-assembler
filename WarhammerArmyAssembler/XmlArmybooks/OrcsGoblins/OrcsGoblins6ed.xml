@@ -991,34 +991,9 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Points>2</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Spears</Off>
-							<Off>Bow</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-					</Option>
-					<Option>
-						<Name>Spear</Name>
-						<Points>2</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Bow</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Bow</Name>
-						<Points>3</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Spears</Off>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-					</Option>
+					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Spears, Bow"/>
+					<Spear PointsPerModel="2" Dependencies="Off: Additional weapon, Bow"/>
+					<Bow PointsPerModel="3" Dependencies="Off: Spears, Additional weapon"/>
 					<Option>
 						<Name>Warprint</Name>
 						<Points>3</Points>
@@ -1058,22 +1033,8 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spears</Name>
-						<Points>1</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Bows</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Bows</Name>
-						<Points>1</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Spears</Off>
-						</Dependencies>
-					</Option>
+					<Spear PointsPerModel="1" Dependencies="Off: Bow"/>
+					<Bow PointsPerModel="1" Dependencies="Off: Spears"/>
 					<LightArmour PointsPerModel="1"/>
 					<CommandGroup>
 						<Leader Points="4">Musician</Leader>
@@ -1100,16 +1061,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spears</Name>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
-					<Option>
-						<Name>Short bows</Name>
-						<Points>2</Points>
-						<PerModel/>
-					</Option>
+					<Spear PointsPerModel="1"/>
+					<ShortBow PointsPerModel="2"/>
 					<LightArmour PointsPerModel="1"/>
 					<CommandGroup>
 						<Leader Points="6">Musician</Leader>
@@ -1137,22 +1090,8 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spears</Name>
-						<Points>1</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Bows</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Bows</Name>
-						<Points>1</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Spears</Off>
-						</Dependencies>
-					</Option>
+					<Spear PointsPerModel="1" Dependencies="Off: Bow"/>
+					<Bow PointsPerModel="1" Dependencies="Off: Spears"/>
 					<Option>
 						<Name>Nets</Name>
 						<Points>2</Points>
@@ -1280,11 +1219,7 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<Option>
-						<Name>Spears</Name>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
+					<Spear PointsPerModel="1"/>
 					<Option>
 						<Name>Warprint</Name>
 						<Points>3</Points>
@@ -1385,10 +1320,7 @@
 						<AddToModelsInPack>1</AddToModelsInPack>
 						<Points>7</Points>
 					</Option>
-					<Option>
-						<Name>Spears</Name>
-						<Points>3</Points>
-					</Option>
+					<Spear Points="3"/>
 				</Options>
 			</Special>
 			<Special>
