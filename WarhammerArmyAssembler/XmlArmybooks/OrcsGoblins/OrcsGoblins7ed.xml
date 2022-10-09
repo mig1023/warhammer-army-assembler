@@ -497,11 +497,7 @@
 					</Option>
 					<GreatWeapon Points="6" Dependencies="Off: Black Orc"/>
 					<AdditionalWeapon Points="6" Only="Infantry"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Points>3</Points>
-					</Option>
+					<Spear Points="3" Only="Mount"/>
 					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="6" Dependencies="On: Black Orc; Off: Light armour"/>
 					<Shield Points="3"/>
@@ -638,14 +634,7 @@
 					<Spear Points="2" Only="Mount" Dependencies="Off: Battle Standard Bearer"/>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="4" Dependencies="On: Black Orc; Off: Light armour"/>
-					<Option>
-						<Name>Shield</Name>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Battle Standard Bearer</Off>
-						</Dependencies>
-					</Option>
+					<Shield Points="2" Dependencies="Off: Battle Standard Bearer"/>
 					<Mount Name="Boar" Points="24"/>
 					<Mount Name="Orc Boar Chariot" Points="80"/>
 				</Options>
