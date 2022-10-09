@@ -1315,17 +1315,8 @@
 						<OnlyOneInArmy/>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Option>
-						<Name>Spears</Name>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
-					<Option>
-						<Name>Additional hand weapons</Name>
-						<Points>1</Points>
-						<PerModel/>
-						<AddToAttacks>1</AddToAttacks>
-					</Option>
+					<Spear PointsPerModel="1"/>
+					<AdditionalWeapon PointsPerModel="1"/>
 					<Shield PointsPerModel="1"/>
 					<CommandGroup>
 						<Leader Points="15">Orc Boss</Leader>
@@ -1397,16 +1388,8 @@
 						<OnlyOneInArmy/>
 						<ImpactHit>D3</ImpactHit>
 					</Option>
-					<Option>
-						<Name>Spears</Name>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
-					<Option>
-						<Name>Bows</Name>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
+					<Spear PointsPerModel="1"/>
+					<ShortBow PointsPerModel="1"/>
 					<Option>
 						<Name>Additional choppa</Name>
 						<Points>1</Points>
