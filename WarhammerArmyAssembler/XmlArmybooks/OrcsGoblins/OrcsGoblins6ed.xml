@@ -44,6 +44,7 @@
 		<LocalXmlOption>
 			<Choppa/>
 			<GreatAxe Title="Great axe">AddToStrength: 2; HitLast</GreatWeapon>
+			<Warprint>AddToWard: 6</Warprint>
 		</LocalXmlOption>
 	</Introduction>
 	<Content>
@@ -508,12 +509,7 @@
 					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
 					<Spear Points="3" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Warprint</Name>
-						<Points>12</Points>
-						<PerModel/>
-						<AddToWard>6</AddToWard>
-					</Option>
+					<Warprint Points="12"/>
 					<Mount Name="Boar" Points="24"/>
 				</Options>
 			</Lord>
@@ -550,12 +546,7 @@
 				</Equipments>
 				<Options>
 					<Wizard Level="4" Points="35"/>
-					<Option>
-						<Name>Warprint</Name>
-						<Points>12</Points>
-						<PerModel/>
-						<AddToWard>6</AddToWard>
-					</Option>
+					<Warprint Points="12"/>
 					<Mount Name="Boar" Points="24"/>
 				</Options>
 			</Lord>
@@ -718,12 +709,7 @@
 					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
 					<Spear Points="2" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
-					<Option>
-						<Name>Warprint</Name>
-						<Points>8</Points>
-						<PerModel/>
-						<AddToWard>6</AddToWard>
-					</Option>
+					<Warprint Points="8"/>
 					<Shield Points="2"/>
 					<Mount Name="Boar" Points="16"/>
 					<BattleStandardBearer Points="25" Dependencies="Off: Great axe, Additional weapon, Spear, Shield"/>
@@ -768,12 +754,7 @@
 				</Equipments>
 				<Options>
 					<Wizard Level="2" Points="35"/>
-					<Option>
-						<Name>Warprint</Name>
-						<Points>8</Points>
-						<PerModel/>
-						<AddToWard>6</AddToWard>
-					</Option>
+					<Warprint Points="8"/>
 					<Mount Name="Boar" Points="16"/>
 				</Options>
 			</Hero>
@@ -994,12 +975,7 @@
 					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Spears, Bow"/>
 					<Spear PointsPerModel="2" Dependencies="Off: Additional weapon, Bow"/>
 					<Bow PointsPerModel="3" Dependencies="Off: Spears, Additional weapon"/>
-					<Option>
-						<Name>Warprint</Name>
-						<Points>3</Points>
-						<PerModel/>
-						<AddToWard>6</AddToWard>
-					</Option>
+					<Warprint PointsPerModel="3"/>
 					<Shield PointsPerModel="1"/>
 					<Option>
 						<Name>Big'Uns</Name>
@@ -1220,12 +1196,7 @@
 						<OnlyOneInArmy/>
 					</Option>
 					<Spear PointsPerModel="1"/>
-					<Option>
-						<Name>Warprint</Name>
-						<Points>3</Points>
-						<PerModel/>
-						<AddToWard>6</AddToWard>
-					</Option>
+					<Warprint PointsPerModel="3"/>
 					<CommandGroup>
 						<Leader Points="7">Musicain</Leader>
 						<Leader Points="14" Magic="Type:Unit, Points:50">Standard bearer</Leader>
