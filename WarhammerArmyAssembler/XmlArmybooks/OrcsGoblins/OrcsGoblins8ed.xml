@@ -1517,20 +1517,8 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spears</Name>
-						<Points>0</Points>
-						<Dependencies>
-							<Off>Short bows</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Short bows</Name>
-						<Points>0</Points>
-						<Dependencies>
-							<Off>Spears</Off>
-						</Dependencies>
-					</Option>
+					<Spear PointsPerModel="0" Dependencies="Off: Short bow"/>
+					<ShortBow PointsPerModel="0" Dependencies="Off: Spear"/>
 					<Option>
 						<Name>Netters</Name>
 						<Points>45</Points>
@@ -1565,11 +1553,7 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Short bows</Name>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
+					<ShortBow PointsPerModel="1"/>
 					<CommandGroup>
 						<Leader Points="10">Spider Rider Boss</Leader>
 						<Leader Points="10">Musician</Leader>
@@ -1635,11 +1619,7 @@
 						<OnlyOneInArmy/>
 					</Option>
 					<Shield PointsPerModel="2"/>
-					<Option>
-						<Name>Spears</Name>
-						<Points>2</Points>
-						<PerModel/>
-					</Option>
+					<Spear PointsPerModel="2"/>
 					<CommandGroup>
 						<Leader Points="15">Boar Boy Boss</Leader>
 						<Leader Points="10">Musician</Leader>
@@ -1678,32 +1658,9 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Spears</Off>
-						</Dependencies>
-						<Points>2</Points>
-						<PerModel/>
-					</Option>
-					<Option>
-						<Name>Spears</Name>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<Points>2</Points>
-						<PerModel/>
-					</Option>
-					<Option>
-						<Name>Shields</Name>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<Points>2</Points>
-						<PerModel/>
-					</Option>
+					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Spears"/>
+					<Spear PointsPerModel="2" Dependencies="Off: Additional weapon"/>
+					<Shield PointsPerModel="2" Dependencies="Off: Additional weapon"/>
 					<CommandGroup>
 						<Leader Points="15">Savage Orc Boar Boy Boss</Leader>
 						<Leader Points="10">Musician</Leader>
