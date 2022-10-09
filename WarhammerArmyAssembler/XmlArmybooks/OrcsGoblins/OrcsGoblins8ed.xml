@@ -789,35 +789,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional hand weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>2</Points>
-					</Option>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Additional hand weapon</Off>
-						</Dependencies>
-						<Points>2</Points>
-					</Option>
+					<GreatWeapon Points="4" Dependencies="Off: Additional weapon, Spear"/>
+					<AdditionalWeapon Only="Infantry" Points="2" Dependencies="Off: Great weapon, Spear"/>
+					<Spear Points="2" Only="Mount" Dependencies="Off: Great weapon, Additional weapon"/>
 					<Shield Points="2"/>
 					<Mount Name="War Boar" Points="16"/>
 					<Mount Name="Orc Boar Chariot" Points="85"/>
