@@ -454,15 +454,7 @@
 				<Options>
 					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>3</Points>
-					</Option>
+					<Spear Points="3" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<Shield Points="3"/>
@@ -488,15 +480,7 @@
 				<Options>
 					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>3</Points>
-					</Option>
+					<Spear Points="3" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<LightArmour Points="3"/>
 					<Shield Points="3"/>
 					<Mount Name="Boar" Points="24"/>
@@ -522,15 +506,7 @@
 				<Options>
 					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>3</Points>
-					</Option>
+					<Spear Points="3" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<Shield Points="3"/>
 					<Option>
 						<Name>Warprint</Name>
@@ -601,15 +577,7 @@
 				<Options>
 					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>3</Points>
-					</Option>
+					<Spear Points="3" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<LightArmour Points="3"/>
 					<Shield Points="3"/>
 					<Mount Name="Wolf" Points="18"/>
@@ -698,15 +666,7 @@
 				<Options>
 					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>2</Points>
-					</Option>
+					<Spear Points="2" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
 					<Shield Points="2"/>
@@ -731,15 +691,7 @@
 				<Options>
 					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>2</Points>
-					</Option>
+					<Spear Points="2" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Mount Name="Boar" Points="16"/>
@@ -765,15 +717,7 @@
 				<Options>
 					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>2</Points>
-					</Option>
+					<Spear Points="2" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<Option>
 						<Name>Warprint</Name>
 						<Points>8</Points>
@@ -850,15 +794,7 @@
 				<Options>
 					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
 					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>2</Points>
-					</Option>
+					<Spear Points="3" Only="Mount" Dependencies="Off: Additional weapon, Great axe"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Mount Name="Wolf" Points="12"/>
@@ -996,23 +932,8 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Points>2</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Spears</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-					</Option>
-					<Option>
-						<Name>Spears</Name>
-						<Points>2</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-					</Option>
+					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Spear"/>
+					<Spear PointsPerModel="2" Dependencies="Off: Additional weapon"/>
 					<Shield PointsPerModel="1"/>
 					<Option>
 						<Name>Big'Uns</Name>
