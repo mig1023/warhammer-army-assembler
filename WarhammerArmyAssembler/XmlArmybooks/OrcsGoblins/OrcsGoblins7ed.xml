@@ -562,11 +562,7 @@
 					</Option>
 					<GreatWeapon Points="6"/>
 					<AdditionalWeapon Points="6" Only="Infantry"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Points>3</Points>
-					</Option>
+					<Spear Points="3" Only="Mount"/>
 					<LightArmour Points="3"/>
 					<Shield Points="3"/>
 					<Mount Name="Wolf" Points="18"/>
@@ -639,14 +635,7 @@
 					<BattleStandardBearer Points="25" Dependencies="Off: Great weapon, Additional weapon, Spear, Shield"/>
 					<GreatWeapon Points="4" Dependencies="Off: Black Orc, Battle Standard Bearer"/>
 					<AdditionalWeapon Points="4" Dependencies="Off: Battle Standard Bearer"/>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Battle Standard Bearer</Off>
-						</Dependencies>
-					</Option>
+					<Spear Points="2" Only="Mount" Dependencies="Off: Battle Standard Bearer"/>
 					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
 					<HeavyArmour Points="4" Dependencies="On: Black Orc; Off: Light armour"/>
 					<Option>
@@ -709,42 +698,12 @@
 						<AddToInitiative>1</AddToInitiative>
 						<AddToLeadership>-1</AddToLeadership>
 					</Option>
-					<BattleStandardBearer Points="25" Dependencies="Off: Great weapon, Additional weapon, Spear, Shield"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Battle Standard Bearer</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>4</Points>
-						<Dependencies>
-							<Off>Battle Standard Bearer</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Spear</Name>
-						<Only>Mount</Only>
-						<Points>2</Points>
-						<Dependencies>
-							<Off>Battle Standard Bearer</Off>
-						</Dependencies>
-					</Option>
+					<BattleStandardBearer Points="25" Dependencies="Off: Great weapon, Additional weapon, Spear, Shield"/>					
+					<GreatWeapon Points="4" Dependencies="Off: Battle Standard Bearer"/>
+					<AdditionalWeapon Points="4" Only="Infantry" Dependencies="Off: Battle Standard Bearer"/>
+					<Spear Points="2" Only="Mount" Dependencies="Off: Battle Standard Bearer"/>
 					<LightArmour Points="2"/>
-					<Option>
-						<Name>Shield</Name>
-						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Battle Standard Bearer</Off>
-						</Dependencies>
-					</Option>
+					<Shield Points="2" Dependencies="Off: Battle Standard Bearer"/>
 					<Mount Name="Wolf" Points="12"/>
 					<Mount Name="Gigantic spider" Points="40"/>
 					<Option>
