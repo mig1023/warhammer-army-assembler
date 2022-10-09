@@ -43,6 +43,7 @@
 		</Dispell>		
 		<LocalXmlOption>
 			<Choppa/>
+			<GreatAxe Title="Great axe">AddToStrength: 2; HitLast</GreatWeapon>
 		</LocalXmlOption>
 	</Introduction>
 	<Content>
@@ -452,16 +453,7 @@
 				</Equipments>
 				<Options>
 					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
 					<Option>
 						<Name>Spear</Name>
 						<Only>Mount</Only>
@@ -494,25 +486,8 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
+					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
 					<Option>
 						<Name>Spear</Name>
 						<Only>Mount</Only>
@@ -545,25 +520,8 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
+					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
 					<Option>
 						<Name>Spear</Name>
 						<Only>Mount</Only>
@@ -641,25 +599,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great axe, Spear"/>
+					<GreatAxe Points="6" Dependencies="Off: Additional weapon, Spear"/>
 					<Option>
 						<Name>Spear</Name>
 						<Only>Mount</Only>
@@ -690,23 +631,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great axe"/>
+					<GreatAxe Points="6" Dependencies="Off: Additional weapon"/>
 					<LightArmour Points="3"/>
 					<Shield Points="3"/>
 				</Options>
@@ -771,16 +697,7 @@
 				</Equipments>
 				<Options>
 					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
 					<Option>
 						<Name>Spear</Name>
 						<Only>Mount</Only>
@@ -812,25 +729,8 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
+					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
 					<Option>
 						<Name>Spear</Name>
 						<Only>Mount</Only>
@@ -863,25 +763,8 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
+					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
 					<Option>
 						<Name>Spear</Name>
 						<Only>Mount</Only>
@@ -965,25 +848,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Spear</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great axe, Spear"/>
+					<GreatAxe Points="4" Dependencies="Off: Additional weapon, Spear"/>
 					<Option>
 						<Name>Spear</Name>
 						<Only>Mount</Only>
@@ -1016,23 +882,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great axe"/>
+					<GreatAxe Points="4" Dependencies="Off: Additional weapon"/>
 					<LightArmour PointsPerModel="2"/>
 					<Shield Points="2"/>
 					<BattleStandardBearer Points="25" Dependencies="Off: Great axe, Additional weapon, Shield"/>
@@ -1435,25 +1286,8 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Points>2</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Great axe</Off>
-						</Dependencies>
-						<AddToAttacks>1</AddToAttacks>
-					</Option>
-					<Option>
-						<Name>Great axe</Name>
-						<Points>2</Points>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<PerModel/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
-					</Option>
+					<AdditionalWeapon Points="2" Dependencies="Off: Great axe"/>
+					<GreatAxe Points="2" Dependencies="Off: Additional weapon"/>
 					<Shield PointsPerModel="1"/>
 					<CommandGroup>
 						<Leader Points="6">Musician</Leader>
