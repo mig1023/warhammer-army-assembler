@@ -1438,22 +1438,8 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spears</Name>
-						<Points>0,5</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Short bows</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Short bows</Name>
-						<Points>0,5</Points>
-						<PerModel/>
-						<Dependencies>
-							<Off>Spears</Off>
-						</Dependencies>
-					</Option>
+					<Spear PointsPerModel="0,5" Dependencies="Off: Short bow"/>
+					<ShortBow PointsPerModel="0,5" Dependencies="Off: Spears"/>
 					<Shield PointsPerModel="0,5"/>
 					<CommandGroup>
 						<Leader Points="10">Goblin Boss</Leader>
@@ -1481,16 +1467,8 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spears</Name>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
-					<Option>
-						<Name>Short bows</Name>
-						<Points>1</Points>
-						<PerModel/>
-					</Option>
+					<Spear PointsPerModel="1"/>
+					<ShortBow PointsPerModel="1"/>
 					<Shield PointsPerModel="1"/>
 					<CommandGroup>
 						<Leader Points="10">Wolf Rider Boss</Leader>
