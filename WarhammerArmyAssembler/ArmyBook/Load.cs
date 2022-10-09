@@ -308,7 +308,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (String.IsNullOrEmpty(image))
                 newUnit.Image = Interface.Changes.TryHomologueImage(newUnit);
             else
-                newUnit.Image = Army.Data.UnitsImagesDirectory + image;
+                newUnit.Image = String.Format("{0}{1}.jpg", Army.Data.UnitsImagesDirectory, image);
 
             return newUnit;
         }
