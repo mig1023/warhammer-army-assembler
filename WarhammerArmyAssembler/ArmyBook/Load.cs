@@ -192,7 +192,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/{0}/Spell", magic)))
             {
                 string spellName = spell.Attributes["Name"].Value;
-                int spellDifficulty = int.Parse(spell.InnerText);
+
+                if (!int.TryParse(spell.Attributes["Cast"]?.Value, out int spellDifficulty))
+                    continue;
 
                 if (!enemy)
                     Data.Magic.Add(spellName, spellDifficulty);
