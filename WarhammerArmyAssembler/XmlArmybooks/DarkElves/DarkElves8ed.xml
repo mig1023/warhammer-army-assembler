@@ -655,8 +655,6 @@
 					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
 					<RepeaterHandbow Points="5" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
 					<PairOfRepeaterHandbow Points="10" Dependencies="Off: Repeater Crossbow, Repeater handbow"/>
-					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
-					<RepeaterHandbow Points="10" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
 					<HeavyArmour Points="4"/>
 					<SeaDragonCloak Points="6"/>
 					<Shield Points="2"/>
@@ -1046,7 +1044,7 @@
 				</Equipments>
 				<Options>
 					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Repeater handbows"/>
-					<RepeaterHandbows PointsPerModel="2" Dependencies="Off: Additional weapon"/>
+					<RepeaterHandbow PointsPerModel="2" Dependencies="Off: Additional weapon"/>
 					<Command Name="Reaver" Points="10"/>
 					<Option>
 						<Name>A brace of repeater handbows</Name>
