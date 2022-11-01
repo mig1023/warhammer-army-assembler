@@ -1,23 +1,23 @@
 <Options>
 	<Group Name="Options">
-		<HandWeapon Title="Hand weapon"/>
-		<AdditionalWeapon Title="Additional weapon">AddToAttacks: 1</AdditionalWeapon>		
-		<GreatWeapon Title="Great weapon">AddToStrength: 2; HitLast</GreatWeapon>
+		<HandWeapon Name="Hand weapon"/>
+		<AdditionalWeapon Name="Additional weapon">AddToAttacks: 1</AdditionalWeapon>		
+		<GreatWeapon Name="Great weapon">AddToStrength: 2; HitLast</GreatWeapon>
 		<Halberd>AddToStrength: 1</Halberd>
 		<Flail>Flail</Flail>
-		<TwoHandsWeapon Title="Two hands weapons">AddoAttacks: 1</TwoHandsWeapon>
+		<TwoHandsWeapon Name="Two hands weapons">AddoAttacks: 1</TwoHandsWeapon>
 		<Spear/>
 		<Lance>Lance</Lance>
-		<LightArmour Title="Light armour">AddToArmour: 6</LightArmour>
-		<HeavyArmour Title="Heavy armour">AddToArmour: 5</HeavyArmour>
+		<LightArmour Name="Light armour">AddToArmour: 6</LightArmour>
+		<HeavyArmour Name="Heavy armour">AddToArmour: 5</HeavyArmour>
 		<Shield>AddToArmour: 6</Shield>
 		<ThickSkinned>AddToArmour: 5</ThickSkinned>
-		<LongBow Title="Longbow"/>
+		<LongBow Name="Longbow"/>
 		<Bow/>
-		<ShortBow Title="Short bow"/>
+		<ShortBow Name="Short bow"/>
 		<Command>Command</Command>
 		<Leader>Command</Leader>
-		<BattleStandardBearer Title="Battle Standard Bearer">OnlyOneInArmy</BattleStandardBearer>
+		<BattleStandardBearer Name="Battle Standard Bearer">OnlyOneInArmy</BattleStandardBearer>
 	</Group>
 	<Group Name="Special rules">
 		<Fly>Rule: Fly</Fly>
@@ -26,363 +26,363 @@
 		<Skirmishers>Rule: Skirmishers</Skirmishers>
 	</Group>
 	<Group Name="6ed/7ed common magic items">
-		<SwordOfStriking Title="Sword of Striking">
+		<SwordOfStriking Name="Sword of Striking">
 			Type: Weapon;
 			AddToHit: 1;
 			Description: +1 to Hit
 		</SwordOfStriking>
-		<SwordOfBattle Title="Sword of Battle">
+		<SwordOfBattle Name="Sword of Battle">
 			Type: Weapon;
 			AddToAttacks: 1;
 			Description: +1 Attack
 		</SwordOfBattle>
-		<SwordOfMight Title="Sword of Might">
+		<SwordOfMight Name="Sword of Might">
 			Type: Weapon;
 			AddToStrength: 1;
 			Description: +1 Strenght
 		</SwordOfMight>
-		<BitingBlade Title="Biting Blade">
+		<BitingBlade Name="Biting Blade">
 			Type: Weapon;
 			ArmourPiercing: 1;
 			Description: -1 Armour save
 		</BitingBlade>
-		<EnchantedShield Title="Enchanted shield">
+		<EnchantedShield Name="Enchanted shield">
 			Type: Shield;
 			AddToArmour: 5;
 			Description: 5+ Armour save
 		</EnchantedShield>
-		<TalismanOfProtection Title="Talisman of Protection">
+		<TalismanOfProtection Name="Talisman of Protection">
 			Type: AdditionalArmour;
 			AddToWard: 5;
 			Description: 6+ Ward save
 		</TalismanOfProtection>
-		<StaffOfSorcery Title="Staff of Sorcery">
+		<StaffOfSorcery Name="Staff of Sorcery">
 			Type: Arcane;
 			AddToWard: 5;
 			Rule: +1 to dispell;
 			Description: +1 to dispell
 		</StaffOfSorcery>
-		<DispellScroll Title="Dispell Scroll">
+		<DispellScroll Name="Dispell Scroll">
 			Type: Arcane;
 			Multiple;
 			Description: Automatically dispel an enemy spell, one use only
 		</DispellScroll>
-		<PowerStone Title="Power Stone">
+		<PowerStone Name="Power Stone">
 			Type: Arcane;
 			Multiple;
 			Description: +2 dice to cast a spell
 		</PowerStone>
-		<WarBanner Title="War Banner">
+		<WarBanner Name="War Banner">
 			Type: Banner;
 			AddToCloseCombat: 1;
 			Description: +1 Combat Resolution
 		</WarBanner>
 	</Group>
 	<Group Name="8ed common magic weapons">
-		<GiantBlade Title="Giant Blade">
+		<GiantBlade Name="Giant Blade">
 			Type: Weapon;
 			AddToStrength: 3;
 			Description: Close combat attacks made with this sword are resolved at +3 Strength
 		</GiantBlade>
-		<SwordOfBloodshed Title="Sword of Bloodshed">
+		<SwordOfBloodshed Name="Sword of Bloodshed">
 			Type: Weapon;
 			AddToAttacks: 3;
 			Description: The wielder has +3 Attacks
 		</SwordOfBloodshed>
-		<ObsidianBlade Title="Obsidian Blade">
+		<ObsidianBlade Name="Obsidian Blade">
 			Type: Weapon;
 			NoArmour;
 			Description: Armour saves cannot be taken against wounds caused by the Obsidian Blade
 		</ObsidianBlade>
-		<OgreBlade Title="Ogre Blade">
+		<OgreBlade Name="Ogre Blade">
 			Type: Weapon;
 			AddToStrength: 2;
 			Description: Close combat attacks made with this sword are resolved at +2 Strength
 		</OgreBlade>
-		<SwordOfStrife Title="Sword of Strife">
+		<SwordOfStrife Name="Sword of Strife">
 			Type: Weapon;
 			AddToAttacks: 2;
 			Description: This wieider of the Sword of Strife has +2 Attacks
 		</SwordOfStrife>
-		<FencersBlades Title="Fencer's Blades">
+		<FencersBlades Name="Fencer's Blades">
 			Type: Weapon;
 			WeaponSkillTo: 10;
 			Description: Paired weapons, the bearer has Weapon Skill 10
 		</FencersBlades>
-		<SwordOfAntiHeroes Title="Sword of Anti-Heroes">
+		<SwordOfAntiHeroes Name="Sword of Anti-Heroes">
 			Type: Weapon;
 			Rule: +1 Strength and +1 Attack for every enemy character in base contact;
 			Description: The bearer has +1 Strength and +1 Attack for every enemy character in base contact with him or his unit. These bonuses are calculated at the start of each round ol close combat and last until its end
 		</SwordOfAntiHeroes>
-		<SpellthievingSword Title="Spellthieving Sword">
+		<SpellthievingSword Name="Spellthieving Sword">
 			Type: Weapon;
 			Rule: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells;
 			Description: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound
 		</SpellthievingSword>
-		<SwordOfSwiftSlaying Title="Sword of Swift Slaying">
+		<SwordOfSwiftSlaying Name="Sword of Swift Slaying">
 			Type: Weapon;
 			HitFirst;
 			Description: The wieider of the Sword of Swift Slaying has the Always Strikes First special rule
 		</SwordOfSwiftSlaying>
-		<BerserkerSword Title="Berserker Sword">
+		<BerserkerSword Name="Berserker Sword">
 			Type: Weapon;
 			Frenzy;
 			Description: The bearer has the Frenzy special rule and can never lose his Frenzy
 		</BerserkerSword>
-		<GoldSigilSword Title="Gold Sigil Sword">
+		<GoldSigilSword Name="Gold Sigil Sword">
 			Type: Weapon;
 			InitiativeTo: 10;
 			Description: Attacks from the Gold Sigil Sword are made at Initiative 10
 		</GoldSigilSword>
-		<RelicSword Title="Relic Sword">
+		<RelicSword Name="Relic Sword">
 			Type: Weapon;
 			WoundOn: 5;
 			Description: Attacks made with the Relic Sword will always wound on a 5+ unless they would normally need a lower result
 		</RelicSword>
-		<ShriekingBlade Title="Shrieking Blade">
+		<ShriekingBlade Name="Shrieking Blade">
 			Type: Weapon;
 			Fear;
 			Description: The bearer causes Fear
 		</ShriekingBlade>
-		<TormentorSword Title="Tormentor Sword">
+		<TormentorSword Name="Tormentor Sword">
 			Type: Weapon;
 			Rule: A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game;
 			Description: A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game
 		</TormentorSword>
-		<WarriorBane Title="Warrior Bane">
+		<WarriorBane Name="Warrior Bane">
 			Type: Weapon;
 			Rule: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound;
 			Description: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound (to a minimum of Attacks 1)
 		</WarriorBane>
 	</Group>
 	<Group Name="8ed common magic armours">
-		<ArmourOfDestiny Title="Armour of Destiny">
+		<ArmourOfDestiny Name="Armour of Destiny">
 			Type: Armour;
 			AddToArmour: 5;
 			AddToWard: 4;
 			Description: Heavy armour. The Armour of Destiny grants the wearer a 4+ ward save
 		</ArmourOfDestiny>
-		<TrickstersHelm Title="Trickster's Helm">
+		<TrickstersHelm Name="Trickster's Helm">
 			Type: AdditionalArmour;
 			AddToArmour: 6;
 			Reroll: OpponentToWound;
 			Description: The wearer counts his armour save as being one point higher than normal. Any successful roll to wound made against the wearer of the Trickster's Helm must be re-rolled
 		</TrickstersHelm>
-		<ArmourOfSilveredSteel Title="Armour of Silvered Steel">
+		<ArmourOfSilveredSteel Name="Armour of Silvered Steel">
 			Type: Armour;
 			ArmourTo: 2;
 			Reroll: OpponentToWound;
 			Description: The Armour of Silvered Steel grants its wearer a 2+ armour save that cannot be improved by any means
 		</ArmourOfSilveredSteel>
-		<ArmourOfFortune Title="Armour of Fortune">
+		<ArmourOfFortune Name="Armour of Fortune">
 			Type: Armour;
 			AddToArmour: 5;
 			AddToWard: 5;
 			Description: Heavy armour. The Armour of Fortune grants the wearer a 5+ ward save
 		</ArmourOfFortune>
-		<GlitteringScales Title="Glittering Scales">
+		<GlitteringScales Name="Glittering Scales">
 			Type: Armour;
 			AddToArmour: 6;
 			SubOpponentToHit: -1;
 			Description: Light armour. Enemies suffer a -1 to hit penalty when attempting to strike the wearer in close combat
 		</GlitteringScales>
-		<ShieldOfPtolos Title="Shield of Ptolos">
+		<ShieldOfPtolos Name="Shield of Ptolos">
 			Type: Shield;
 			AddToArmour: 6;
 			Rule: 1+ armour save against shooting attacks;
 			Description: Shield. The bearer has a 1+ armour save against shooting attacks
 		</ShieldOfPtolos>
-		<Spellshield Title="Spellshield">
+		<Spellshield Name="Spellshield">
 			Type: Shield;
 			AddToArmour: 6;
 			Rule: Magic Resistance (1);
 			Description: Shield. The bearer gains Magic Resistance (1)
 		</Spellshield>
-		<GamblersArmour Title="Gambler's Armour">
+		<GamblersArmour Name="Gambler's Armour">
 			Type: Armour;
 			AddToArmour: 5;
 			AddToWard: 6;
 			Description: Heavy armour. The Gambler's Armour grants the wearer a 6+ Ward save
 		</GamblersArmour>
-		<Dragonhelm Title="Dragonhelm">
+		<Dragonhelm Name="Dragonhelm">
 			Type: AdditionalArmour;
 			AddToArmour: 6;
 			Rule: 2+ Ward save against flaming attacks;
 			Description: The wearer counts his armour save as being one point higher than normal. The wearer has a 2+ ward save against flaming attacks
 		</Dragonhelm>
-		<CharmedShield Title="Charmed Shield">
+		<CharmedShield Name="Charmed Shield">
 			Type: Shield;
 			AddToArmour: 6;
 			Rule: First hit suffered is discounted on a roll of 2+;
 			Description: Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is discounted on a roll of 2+
 		</CharmedShield>
-		<TalismanOfPreservation Title="Talisman of Preservation">
+		<TalismanOfPreservation Name="Talisman of Preservation">
 			Type: AdditionalArmour;
 			AddToWard: 4;
 			Description: The Talisman of Preservation grants the bearer a 4+ Ward save
 		</TalismanOfPreservation>
-		<ObsidianLodestone Title="Obsidian Lodestone">
+		<ObsidianLodestone Name="Obsidian Lodestone">
 			Type: AdditionalArmour;
 			Rule: Magic Resistance (3);
 			Description: The Obsidian Lodestone grants Magic Resistance (3)
 		</ObsidianLodestone>
-		<TalismanOfEndurance Title="Talisman of Endurance">
+		<TalismanOfEndurance Name="Talisman of Endurance">
 			Type: AdditionalArmour;
 			AddToWard: 5;
 			Description: The Talisman of Endurance grants the bearer a 5+ Ward save
 		</TalismanOfEndurance>
-		<Dawnstone Title="Dawnstone">
+		<Dawnstone Name="Dawnstone">
 			Type: AdditionalArmour;
 			Reroll: ToArmour;
 			Description: The bearer re-rolls failed armour saves
 		</Dawnstone>
-		<OpalAmulet Title="Opal Amulet">
+		<OpalAmulet Name="Opal Amulet">
 			Type: AdditionalArmour;
 			WardForFirstWound: 4;
 			Description: One use only. The Opal Amulet bestows a 4+ Ward save against the first wound suffered by the bearer, after which its power fades and it cannot be used again during the game
 		</OpalAmulet>
-		<ObsidianTrinket Title="Obsidian Trinket">
+		<ObsidianTrinket Name="Obsidian Trinket">
 			Type: AdditionalArmour;
 			Rule: Magic Resistance (1);
 			Description: The Obsidian Trinket grants Magic Resistance (1)
 		</ObsidianTrinket>
-		<SeedOfRebirt Title="Seed of Rebirt">
+		<SeedOfRebirt Name="Seed of Rebirt">
 			Type: AdditionalArmour;
 			ExtendedRegeneration: 6;
 			Description: The bearer of the Seed of Rebirth has the Regeneration (6+) special rule
 		</SeedOfRebirt>
-		<DragonbaneGem Title="Dragonbane Gem">
+		<DragonbaneGem Name="Dragonbane Gem">
 			Type: AdditionalArmour;
 			Rule: 2+ Ward save against flaming attacks;
 			Description: The bearer of the Dragonbane Gem has a 2+ Ward save against flaming attacks
 		</DragonbaneGem>
-		<PidgeonPluckerPendant Title="Pidgeon Plucker Pendant">
+		<PidgeonPluckerPendant Name="Pidgeon Plucker Pendant">
 			Type: AdditionalArmour;
 			Rule: 5+ Ward save against wounds caused in close combat by models that have the Fly special rule;
 			Description: This item grants the bearer a 5+ Ward save against wounds caused in close combat by models that have the Fly special rule
 		</PidgeonPluckerPendant>
-		<Luckstone Title="Luckstone">
+		<Luckstone Name="Luckstone">
 			Type: AdditionalArmour;
 			Rule: May re-roll single failed armour save;
 			Description: The Luckstone allows the bearer to re-roll single failed armour save
 		</Luckstone>
 	</Group>
 	<Group Name="8ed common magic standards">
-		<RampagersStandard Title="Rampager's Standard">
+		<RampagersStandard Name="Rampager's Standard">
 			Type: Banner;
 			Rule: May re-roll charge distance dice;
 			Description: A unit with this magic standard can re-roll its charge distance dice
 		</RampagersStandard>
-		<WailingBanner Title="Wailing Banner">
+		<WailingBanner Name="Wailing Banner">
 			Type: Banner;
 			Terror;
 			Description: A unit with this banner causes Terror in its enemies
 		</WailingBanner>
-		<RangersStandard Title="Ranger's Standard">
+		<RangersStandard Name="Ranger's Standard">
 			Type: Banner;
 			Rule: Strider;
 			Description: A unit with the Ranger's Standard has the Strider special rule
 		</RangersStandard>
-		<RazorStandard Title="Razor Standard">
+		<RazorStandard Name="Razor Standard">
 			Type: Banner;
 			ArmourPiercing: 1;
 			Description: Models in a unit with the Razor Standard have the Armour Piercing special rule
 		</RazorStandard>
-		<BannerOfSwiftness Title="Banner of Swiftness">
+		<BannerOfSwiftness Name="Banner of Swiftness">
 			Type: Banner;
 			AddToMovement: 1;
 			Description: Models in a unit with the Banner of Swiftness have +1 to their Movement characteristic
 		</BannerOfSwiftness>
-		<LichebonePennant Title="Lichebone Pennant">
+		<LichebonePennant Name="Lichebone Pennant">
 			Type: Banner;
 			Rule: Magic Resistance (1);
 			Description: Models in a unit with the Lichebone Pennant have Magic Resistance (1)
 		</LichebonePennant>
-		<StandardOfDiscipline Title="Standard of Discipline">
+		<StandardOfDiscipline Name="Standard of Discipline">
 			Type: Banner;
 			AddToLeadership: 1;
 			Description: Models in a unit with the Standard of Discipline have +1 Leadership, but cannot use the General's Inspiring Presence special rule
 		</StandardOfDiscipline>
-		<BannerOfEternalFlame Title="Banner of Eternal Flame">
+		<BannerOfEternalFlame Name="Banner of Eternal Flame">
 			Type: Banner;
 			Rule: Flaming Attacks;
 			Description: Models in a unit with the Banner of Eternal Flame have Flaming Attacks
 		</BannerOfEternalFlame>
-		<GleamingPennant Title="Gleaming Pennant">
+		<GleamingPennant Name="Gleaming Pennant">
 			Type: Banner;
 			Rule: Сan re-roll first failed Leadership test;
 			Description: One use only. A unit with the Gleaming Pennant can re-roll its first failed Leadership test
 		</GleamingPennant>
-		<ScarecrowBanner Title="Scarecrow Banner">
+		<ScarecrowBanner Name="Scarecrow Banner">
 			Type: Banner;
 			Rule: Сauses Fear in models with the Fly special rule;
 			Description: A unit with the Scarecrow Banner causes Fear in models with the Fly special rule
 		</ScarecrowBanner>
 	</Group>
 	<Group Name="8ed common arcane items">
-		<BookOfAshur Title="Book of Ashur">
+		<BookOfAshur Name="Book of Ashur">
 			Type: Arcane;
 			Rule: +1 bonus on attempts to cast and dispel;
 			Description: The bearer receives a +1 bonus on attempts to cast and dispel
 		</BookOfAshur>
-		<FeedbackScroll Title="Feedback Scroll">
+		<FeedbackScroll Name="Feedback Scroll">
 			Type: Arcane;
 			Rule: Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed;
 			Description: One use only. When an enemy spell has been cast, a Wizard who has a Feedback Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, roll a dice for every dice used to cast the spell. The casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed
 		</FeedbackScroll>
-		<ScrollOfLeeching Title="Scroll of Leeching">
+		<ScrollOfLeeching Name="Scroll of Leeching">
 			Type: Arcane;
 			Rule: Once per game, after the enemy spell has been resolved, add a number of dispel dice to your pool equal to the number of dice used to cast the spell;
 			Description: One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Leeching can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, the bearer of the scroll adds a number of dispel dice to his pool equal to the number of dice used to cast the spell (remember that your dispel pool cannot exceed 12 dice)
 		</ScrollOfLeeching>
-		<SivejirsHexScroll Title="Sivejir's Hex Scroll">
+		<SivejirsHexScroll Name="Sivejir's Hex Scroll">
 			Type: Arcane;
 			Rule: Once per game, after the enemy spell has been resolved, the enemy wizard must roll equal to or under his wizard level on a D6, if he fails he becomes a small, slimy toad;
 			Description: One use only. When an enemy spell has been cast, a Wizard who has a Hex Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but a portion of the spell's energy is transformed and redirected at the caster. The enemy wizard can resist the spell's effects by rolling equal to or under his wizard level on a D6. If he fails, an amphibian transformation takes hold and he becomes a small, slimy toad! Whilst transformed, the wizard cannot channel or cast spells, all of his magic items and mundane equipment (armour, weapons, etc.) temporarily stop working and all of his characteristics are reduced to 1 (except for his wounds, which are unaffected). His controlling player can roll a D6 at the start of each of his subsequent magic phases, the spell dissipates on a roll of 4+ and the wizard returns to his normal form (but still attempts to eat flies for several days afterward)
 		</SivejirsHexScroll>
-		<PowerScroll Title="Power Scroll">
+		<PowerScroll Name="Power Scroll">
 			Type: Arcane;
 			Rule: Once per game, during one casting attempt any roll of a double will cause Irresistible Force (and a Miscast);
 			Description: One use only. A Power Scroll can be used when the Wizard makes a casting attempt. During that casting attempt, any roll of a double will cause irresistible force (and a miscast)
 		</PowerScroll>
-		<WandOfJet Title="Wand of Jet">
+		<WandOfJet Name="Wand of Jet">
 			Type: Arcane;
 			Rule: Once per game, can increase one of his casting results by an additional +D6, after other casting dice have been rolled;
 			Description: One use only. The bearer can increase one of his casting results by an additional +D6, after other casting dice have been rolled. This extra power dice can contribute to casting a spell with Irresistible Force (and a Miscast)
 		</WandOfJet>
-		<ForbiddenRod Title="Forbidden Rod">
+		<ForbiddenRod Name="Forbidden Rod">
 			Type: Arcane;
 			Rule: Once per game, adds +D6 dice in the power pool and inflicts D3 wounds;
 			Description: One use only. The forbidden rod adds +D6 dice in the power pool at the start of the caster's own magic phase, but also inflicts D3 wounds on the bearer (with no armour saves allowed)
 		</ForbiddenRod>
-		<TrickstersShard Title="Trickster's Shard">
+		<TrickstersShard Name="Trickster's Shard">
 			Type: Arcane;
 			Rule: Once per game, declare you are using Shard at the start of one of your magic phases, for the duration of the phase, when one of spells is dispelled by an enemy wizard, on a 5+, that wizard surfers a wound with no armour saves allowed;
 			Description: One use only. Declare you are using this item at the start of one of your magic phases. For the duration of the phase, when one of the bearer's spells is dispelled by an enemy wizard, roll a D6. On a 5+, that wizard surfers a wound with no armour saves allowed
 		</TrickstersShard>
-		<EarthingRod Title="Earthing Rod">
+		<EarthingRod Name="Earthing Rod">
 			Type: Arcane;
 			Rule: Once per game, can re-roll the Miscast;
 			Description: One use only. If the wizard rolls on the miscast table he can re-roll the result
 		</EarthingRod>
-		<SceptreOfStability Title="Sceptre of Stability">
+		<SceptreOfStability Name="Sceptre of Stability">
 			Type: Arcane;
 			Rule: Once per game, can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled;
 			Description: One use only. The bearer can choose to increase one of his dispel results by an additional +D6, after his other dispel dice have been rolled. This extra dispel dice can contribute to dispelling with Irresistible Force
 		</SceptreOfStability>
-		<ChannellingStaff Title="Channelling Staff">
+		<ChannellingStaff Name="Channelling Staff">
 			Type: Arcane;
 			Rule: +1 to all of his channeling attempts;
 			Description: The Wizard adds +1 to all of his channeling attempts
 		</ChannellingStaff>
-		<ScrollOfShielding Title="Scroll of Shielding">
+		<ScrollOfShielding Name="Scroll of Shielding">
 			Type: Arcane;
 			Rule: Once per game, after the enemy spell has been resolved, the target of the spell is granted a 4+ Ward save against any wounds caused by the spell;
 			Description: One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted a 4+ Ward save against any wounds caused by the spell
 		</ScrollOfShielding>
 	</Group>
 	<Group Name="8ed common enchanted items">
-		<WizardingHat Title="Wizarding Hat">
+		<WizardingHat Name="Wizarding Hat">
 			Type: AdditionalArmour;
 			AddToWizard: 2;
 			AddToCast: 2;
@@ -390,69 +390,69 @@
 			Stupidity;
 			Description: The wearer is treated as being a Level 2 Wizard who can use a randomly chosen spell lore. However, he also has the Stupidity special rule
 		</WizardingHat>
-		<FozzriksFoldingFortress Title="Fozzrik's Folding Fortress">
+		<FozzriksFoldingFortress Name="Fozzrik's Folding Fortress">
 			Type: AdditionalArmour;
 			Rule: After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building in your deployment zone to represent rhe Folding Fortress;
 			Description: After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building (or scratch-built structure of a similar size) in your deployment zone to represent rhe Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik's Folding Fortress
 		</FozzriksFoldingFortress>
-		<ArabyanCarpet Title="Arabyan Carpet">
+		<ArabyanCarpet Name="Arabyan Carpet">
 			Type: AdditionalArmour;
 			Only: Infantry;
 			Rule: Fly;
 			Description: Infantry or monstrous infantry models on foot only. The owner of this magical carpet has the Fly special rule. However, he cannot join units
 		</ArabyanCarpet>
-		<CrownOfCommand Title="Crown of Command">
+		<CrownOfCommand Name="Crown of Command">
 			Type: AdditionalArmour;
 			Stubborn;
 			Description: The bearer of the Crown of Command has the Stubborn special rule
 		</CrownOfCommand>
-		<HealingPotion Title="Healing Potion">
+		<HealingPotion Name="Healing Potion">
 			Type: AdditionalArmour;
 			Rule: Once per battle recovers D6 Wounds lost in the battle;
 			Description: One use only. The Healing Potion can be drunk at the start of the controlling player's turn. The imbiber immediately recovers D6 Wounds lost in the battle
 		</HealingPotion>
-		<FeatherfoeTorc Title="Featherfoe Torc">
+		<FeatherfoeTorc Name="Featherfoe Torc">
 			Type: AdditionalArmour;
 			Rule: Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat;
 			Description: Flying creatures (and their riders) must re-roll successful rolls to hit against the bearer (and any unit he is with) in close combat
 		</FeatherfoeTorc>
-		<RubyRingOfRuin Title="Ruby Ring of Ruin">
+		<RubyRingOfRuin Name="Ruby Ring of Ruin">
 			Type: AdditionalArmour;
 			Rule: Bound spell, Power level 3: Fireball spell from Lore of Fire;
 			Description: Bound spell (power level 3). The Ruby Ring of Ruin contains the Fireball spell (see the Lore of Fire)
 		</RubyRingOfRuin>
-		<TheTerrifyingMaskOfEee Title="The Terrifying Mask of Eee!">
+		<TheTerrifyingMaskOfEee Name="The Terrifying Mask of Eee!">
 			Type: AdditionalArmour;
 			Terror;
 			NotALeader;
 			Description: The wearer of this mask causes Terror. However, other models can never use his Leadership
 		</TheTerrifyingMaskOfEee>
-		<PotionOfStrength Title="Potion of Strength">
+		<PotionOfStrength Name="Potion of Strength">
 			Type: AdditionalArmour;
 			Rule: Once per battle at the start of any player's turn has +3 Strength until the end of the turn;
 			Description: One use only. The Potion of Strength can be drunk at the start of any player's turn. The imbiber has +3 Strength until the end of the turn
 		</PotionOfStrength>
-		<PotionOfToughness Title="Potion of Toughness">
+		<PotionOfToughness Name="Potion of Toughness">
 			Type: AdditionalArmour;
 			Rule: Once per battle at the start of any player's turn has +3 Toughness until the end of the turn;
 			Description: One use only. The Potion of Toughness can be drunk at the start of any player's turn. The imbiber has +3 Toughness until the end of the turn
 		</PotionOfToughness>
-		<TheOtherTrickstersShard Title="The Other Trickster's Shard">
+		<TheOtherTrickstersShard Name="The Other Trickster's Shard">
 			Type: AdditionalArmour;
 			Reroll: OpponentToWard;
 			Description: Models in base contact with the bearer (friends and foes) must re-roll successful ward saves
 		</TheOtherTrickstersShard>
-		<IroncurseIcon Title="Ironcurse Icon">
+		<IroncurseIcon Name="Ironcurse Icon">
 			Type: AdditionalArmour;
 			Rule: The character (and any unit he is with) have 6+ Ward save against war machine weapons;
 			Description: The character (and any unit he is with) gain a 6+ ward save against war machine weapons
 		</IroncurseIcon>
-		<PotionOfFoolhardiness Title="Potion of Foolhardiness">
+		<PotionOfFoolhardiness Name="Potion of Foolhardiness">
 			Type: AdditionalArmour;
 			Rule: Once per battle character has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn;
 			Description: One use only. The Potion of Foolhardiness can be drunk at the start of any player's turn. The imbiber has the Immune to Psychology and the Devastating Charge special rules until the end of the player turn
 		</PotionOfFoolhardiness>
-		<PotionOfSpeed Title="Potion of Speed">
+		<PotionOfSpeed Name="Potion of Speed">
 			Type: AdditionalArmour;
 			Rule: Once per battle at the start of any player's turn has +3 Initiative until the end of the turn;
 			Description: One use only. The Potion of Speed can be drunk at the start of any player's turn. The imbiber has +3 Initiative until the end of the turn
