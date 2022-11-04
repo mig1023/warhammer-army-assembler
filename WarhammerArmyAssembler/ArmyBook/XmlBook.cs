@@ -115,7 +115,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                         continue;
                     }
 
-                    XmlNode armyName = Services.Intro(xmlFile, "Name");
+                    XmlNode armyName = Services.Intro(xmlFile, "Army");
 
                     if (armyName == null)
                         continue;
