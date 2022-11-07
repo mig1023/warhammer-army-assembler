@@ -52,7 +52,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlFile.Load(xmlFileName);
 
             string imagePath = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")));
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsFolder")));
                 
             string unitType = (isHero ? "Heroes/Hero" : "Units/Unit");
             XmlNodeList xmlNodes =  xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}", unitType));
@@ -145,7 +145,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
 
             Army.Data.UnitsImagesDirectory = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsIn")));
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsFolder")));
 
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
