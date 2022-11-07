@@ -521,7 +521,7 @@ namespace WarhammerArmyAssembler.Interface
                     Stretch = Stretch.UniformToFill,
                 };
 
-                string head = StringParse(Intro(xmlFile, "Name")).ToUpper();
+                string head = StringParse(Intro(xmlFile, "Army")).ToUpper();
                 string edition = StringParse(Intro(xmlFile, "Edition"));
                 string description = StringParse(Intro(xmlFile, "Description"));
                 string authors = StringParse(Intro(xmlFile, "Authors"));
