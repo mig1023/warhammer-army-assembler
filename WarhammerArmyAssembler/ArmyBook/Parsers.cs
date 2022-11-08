@@ -5,6 +5,7 @@ using WarhammerArmyAssembler.Test;
 using System.Text.RegularExpressions;
 using static WarhammerArmyAssembler.Option;
 using static WarhammerArmyAssembler.Unit;
+using System.Linq;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
@@ -74,7 +75,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             List<string> allSlots = new List<string>();
 
             foreach (XmlNode xmlSlot in xmlNode.SelectNodes("Slots"))
-                allSlots.Add(xmlSlot.InnerText);
+                foreach (string slot in xmlSlot.InnerText.Split(',').Select(x => x.Trim()))
+                    allSlots.Add(slot);
 
             return allSlots;
         }
