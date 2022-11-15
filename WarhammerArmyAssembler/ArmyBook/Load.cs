@@ -45,6 +45,41 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.MagicPowersStyle = LoadStyle(xmlFile, "MagicPowers", defaultValue: "MAGIC POWERS").ToUpper();
         }
 
+        public static Unit LoadArmyUnitOnly(string xmlFileName, string unitName, Unit target,
+            Dictionary<string, string> enemyCommonXmlOption, int size)
+        {
+            string filePath = Path.GetDirectoryName(Constants.EnemiesOptionPath) + "\\" + xmlFileName;
+
+            List<string> unitPath = unitName.Split('/').ToList();
+
+            XmlDocument xmlFile = new XmlDocument();
+
+            xmlFile.Load(filePath);
+
+            foreach (XmlNode unit in xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}/{1}", unitPath[0], unitPath[1])))
+            {
+                if (unit["Name"].InnerText != unitPath[2])
+                    continue;
+
+                Unit enemy = LoadUnit(0, unit, xmlFile, target, enemyCommonXmlOption);
+                enemy.Armybook = xmlFile.SelectSingleNode("ArmyBook/Introduction/Army").InnerText;
+
+                if (unit["Mount"] != null)
+                {
+                    foreach (XmlNode mount in xmlFile.SelectNodes("ArmyBook/Content/Mounts/Mount"))
+                        if (unit["Mount"].InnerText == mount["Name"].InnerText)
+                            enemy.Mount = LoadUnit(0, mount, xmlFile, null, enemyCommonXmlOption);
+                }
+
+                if (size > 0)
+                    enemy.Size = size;
+
+                return enemy;
+            }
+
+            return null;
+        }
+
         public static string LoadArmyUnitImageOnly(string xmlFileName, string unitName, bool isHero)
         {
             XmlDocument xmlFile = new XmlDocument();
@@ -54,8 +89,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             string imagePath = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Images/UnitsFolder")));
                 
-            string unitType = (isHero ? "Heroes/Hero" : "Units/Unit");
-            XmlNodeList xmlNodes =  xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}", unitType));
+            string unitType = isHero ? "Heroes/Hero" : "Units/Unit";
+            XmlNodeList xmlNodes = xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}", unitType));
 
             foreach (XmlNode xmlUnit in xmlNodes)
             {
@@ -73,28 +108,42 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Empty;
         }
 
-        private static void LoadCommonXmlOptionFromFile(XmlDocument xmlFile, string path)
+        private static void LoadCommonXmlOptionFromFile(XmlDocument xmlFile, string path,
+            Dictionary<string, string> commonXmlOption)
         {
             foreach (XmlNode option in xmlFile.SelectNodes(path))
             {
                 string title = option.Attributes["Name"]?.InnerText ?? option.Name;
                 string value = String.Format("{0}|{1}", title, option.InnerText);
-                Constants.CommonXmlOption.Add(option.Name, value);
+                commonXmlOption.Add(option.Name, value);
             }
         }
 
-        private static void LoadCommonXmlOption(XmlDocument armybook)
+        public static Dictionary<string, string> LoadCommonXmlOption(XmlDocument armybook)
         {
             if (String.IsNullOrEmpty(Constants.CommonXmlOptionPath))
-                return;
+                return null;
 
-            Constants.CommonXmlOption = new Dictionary<string, string>();
+            Dictionary<string, string> commonXmlOption = new Dictionary<string, string>();
 
-            XmlDocument xmlFile = new XmlDocument();
-            xmlFile.Load(Constants.CommonXmlOptionPath);
-            LoadCommonXmlOptionFromFile(xmlFile, "Options/*/*");
+            if ((armybook == null) && (Constants.CommonXmlOption != null))
+            {
+                return Constants.CommonXmlOption;
+            }
+            else
+            {
+                XmlDocument xmlFile = new XmlDocument();
+                xmlFile.Load(Constants.CommonXmlOptionPath);
+                LoadCommonXmlOptionFromFile(xmlFile, "Options/*/*", commonXmlOption);
 
-            LoadCommonXmlOptionFromFile(armybook, "ArmyBook/Introduction/LocalXmlOption/*");
+                if (armybook == null)
+                    Constants.CommonXmlOption = commonXmlOption;
+            }
+
+            if (armybook != null)
+                LoadCommonXmlOptionFromFile(armybook, "ArmyBook/Introduction/LocalXmlOption/*", commonXmlOption);
+
+            return commonXmlOption;
         }
 
         private static void LoadEnemies()
@@ -107,9 +156,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(Constants.EnemiesOptionPath);
 
-            foreach (XmlNode genus in xmlFile.SelectNodes("Enemies/Genus"))
-                foreach (XmlNode enemy in genus.SelectNodes("Enemy"))
-                    Enemy.AddEnemies(genus.Attributes["Name"].InnerText, enemy.InnerText, enemy.Attributes["Armybook"].InnerText);
+            foreach (XmlNode enemy in xmlFile.SelectNodes("Enemies/Enemy"))
+                Enemy.Add(enemy.Attributes["Armybook"], enemy.Attributes["Path"], enemy.Attributes["Size"]);
         }
 
         public static void LoadArmy(string xmlFileName)
@@ -126,7 +174,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
-            LoadCommonXmlOption(xmlFile);
+            Constants.CommonXmlOption = LoadCommonXmlOption(xmlFile);
 
             XmlNode armyFile = Services.Intro(xmlFile, "Images/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
@@ -202,31 +250,31 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
         }
 
-        public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml)
+        public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml,
+            Unit target = null, Dictionary<string, string> enemyCommonXmlOption = null)
         {
             string description = StringParse(xmlUnit["Description"]);
 
             if (String.IsNullOrEmpty(description))
                 description = StringParse(xmlUnit["Name"]);
 
-            Unit newUnit = new Unit
-            {
-                ID = id,
-                IDView = id.ToString(),
+            Unit newUnit = target ?? new Unit();
 
-                Name = StringParse(xmlUnit["Name"]),
-                Type = UnitTypeParse(xmlUnit),
-                Points = DoubleParse(xmlUnit["Points"]),
-                UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]),
-                Wizard = IntParse(xmlUnit["Wizard"]),
-                MountOn = IntParse(xmlUnit["MountOn"]),
-                MountInit = StringParse(xmlUnit["Mount"]),
-                ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1),
-                Description = description,
-                Personified = BoolParse(xmlUnit["Personified"]),
-                WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]),
-                Chariot = IntParse(xmlUnit["Chariot"]),
-            };
+            newUnit.ID = id;
+            newUnit.IDView = id.ToString();
+
+            newUnit.Name = StringParse(xmlUnit["Name"]);
+            newUnit.Type = UnitTypeParse(xmlUnit);
+            newUnit.Points = DoubleParse(xmlUnit["Points"]);
+            newUnit.UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]);
+            newUnit.Wizard = IntParse(xmlUnit["Wizard"]);
+            newUnit.MountOn = IntParse(xmlUnit["MountOn"]);
+            newUnit.MountInit = StringParse(xmlUnit["Mount"]);
+            newUnit.ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1);
+            newUnit.Description = description;
+            newUnit.Personified = BoolParse(xmlUnit["Personified"]);
+            newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
+            newUnit.Chariot = IntParse(xmlUnit["Chariot"]);
 
             Parsers.SizeParse(StringParse(xmlUnit["Size"]), out int min, out int max);
 
@@ -278,13 +326,16 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
 
                 if (additionalParam["Individual"] != null)
-                    newUnit.Options.Add(LoadOption(GetNextIndex(), additionalParam["Individual"], xml));
+                    newUnit.Options.Add(LoadOption(GetNextIndex(), additionalParam["Individual"],
+                        xml, commonXmlOption: enemyCommonXmlOption));
 
-                AddCommonXmlOptionBySpecialRules(xml, additionalParam, ref newUnit);
+                AddCommonXmlOptionBySpecialRules(xml, additionalParam, ref newUnit,
+                    enemyCommonXmlOption ?? Constants.CommonXmlOption);
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
-                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml, category: Option.OptionCategory.Equipment));
+                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml,
+                    category: Option.OptionCategory.Equipment, commonXmlOption: enemyCommonXmlOption));
 
             foreach (XmlNode xmlOption in xmlUnit.SelectNodes("Options/*"))
             {
@@ -314,11 +365,13 @@ namespace WarhammerArmyAssembler.ArmyBook
             return newUnit;
         }
 
-        private static void AddCommonXmlOptionBySpecialRules(XmlDocument xml, XmlNode xmlUnitRules, ref Unit newUnit)
+        private static void AddCommonXmlOptionBySpecialRules(XmlDocument xml, XmlNode xmlUnitRules,
+            ref Unit newUnit, Dictionary<string, string> commonXmlOption = null)
         {
-            foreach (string option in Constants.CommonXmlOption.Keys)
+            foreach (string option in commonXmlOption.Keys)
                 if (xmlUnitRules[option] != null)
-                    newUnit.Options.Add(LoadOption(GetNextIndex(), Services.CreateRuleOnlyOption(xml, option), xml));
+                    newUnit.Options.Add(LoadOption(GetNextIndex(), Services.CreateRuleOnlyOption(xml, option),
+                        xml, commonXmlOption: commonXmlOption));
         }
 
         private static void AddToOption(XmlDocument xmlDocument, ref XmlNode xmlNode,
@@ -451,9 +504,10 @@ namespace WarhammerArmyAssembler.ArmyBook
         }
 
         public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument,
-            string artefactGroup = null, Option.OptionCategory category = Option.OptionCategory.Nope)
+            string artefactGroup = null, Option.OptionCategory category = Option.OptionCategory.Nope,
+            Dictionary<string, string> commonXmlOption = null)
         {
-            if (Services.GetCommonXmlOption(xmlNode.Name, out string commonOption))
+            if (Services.GetCommonXmlOption(xmlNode.Name, out string commonOption, commonXmlOption))
             {
                 List<string> xmlOption = commonOption.Split('|').ToList();
                 CreateOption(xmlOption[0], xmlOption[1], xmlDocument, ref xmlNode);

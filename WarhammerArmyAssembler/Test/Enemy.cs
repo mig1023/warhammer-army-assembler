@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
+using System.Xml;
 
 namespace WarhammerArmyAssembler
 {
@@ -11,76 +11,8 @@ namespace WarhammerArmyAssembler
 
         private static Dictionary<string, List<Enemy>> EnemiesDirectories { get; set; }
 
-        public Enemy(string enemyName, string armybook)
-        {
-            List<string> multiplesProfile = enemyName.Split(new string[] { " + " }, StringSplitOptions.RemoveEmptyEntries).ToList();
-            List<string> profile = multiplesProfile[0].Trim().Split('/').ToList();
-
-            bool isSized = int.TryParse(profile[0], out int size);
-
-            if (!isSized)
-            {
-                this.Size = 1;
-                profile.Insert(0, String.Empty);
-            }
-            else
-                this.Size = size;
-                
-            this.Name = profile[1];
-            this.Armybook = armybook;
-
-            this.Movement = NewProfile(profile[2]);
-            this.WeaponSkill = NewProfile(profile[3]);
-            this.BallisticSkill = NewProfile(profile[4]);
-            this.Strength = NewProfile(profile[5]);
-            this.Toughness = NewProfile(profile[6]);
-            this.Wounds = NewProfile(profile[7]);
-            this.Initiative = NewProfile(profile[8]);
-            this.Attacks = NewProfile(profile[9]);
-            this.Leadership = NewProfile(profile[10]);
-
-            this.Armour = SetProfile(profile, 11);
-            this.Ward = SetProfile(profile, 12);
-
-            if (multiplesProfile.Count > 1)
-                this.Mount = new Enemy(multiplesProfile[1].Trim(), armybook);
-
-            if ((profile.Count < 15) || String.IsNullOrEmpty(profile[13]))
-                return;
-
-            Enemy thisEnemy = this;
-
-            foreach (string specialRule in profile[13].Split(','))
-                if (!SpecialProperty(specialRule.Trim(), ref thisEnemy))
-                    this.GetType().GetProperty(specialRule.Trim()).SetValue(this, true);
-        }
-
-        private Profile NewProfile(string line) =>
-            ArmyBook.Parsers.ProfileParse(line);
-
-        private Profile SetProfile(List<string> profile, int index)
-        {
-            if ((profile.Count > index) && int.TryParse(profile[index], out int value))
-                return new Profile { Value = value };
-            else
-                return new Profile { Null = true };
-        }
-
-        private bool SpecialProperty(string specialRule, ref Enemy enemy)
-        {
-            if (!specialRule.Contains(':'))
-                return false;
-
-            List<string> rule = specialRule.Split(':').Select(x => x.Trim()).ToList();
-            PropertyInfo property = enemy.GetType().GetProperty(rule[0]);
-
-            if (property.PropertyType == typeof(int))
-                property.SetValue(enemy, int.Parse(rule[1]));
-            else
-                property.SetValue(enemy, rule[1]);
-
-            return true;
-        }
+        public Enemy(string enemyName, string armybook, int size) =>
+            ArmyBook.Load.LoadArmyUnitOnly(armybook, enemyName, this, ArmyBook.Load.LoadCommonXmlOption(null), size);
 
         public string Fullname()
         {
@@ -118,12 +50,19 @@ namespace WarhammerArmyAssembler
         public static void CleanEnemies() =>
             EnemiesDirectories = new Dictionary<string, List<Enemy>>();
 
-        public static void AddEnemies(string type, string enemy, string armybook)
+        public static void Add(XmlNode xmlAmybook, XmlNode xmlEnemy, XmlNode xmlSize)
         {
-            if (!EnemiesDirectories.ContainsKey(type))
-                EnemiesDirectories[type] = new List<Enemy>();
+            string armybook = xmlAmybook.InnerText;
+            string enemy = xmlEnemy.InnerText;
 
-            EnemiesDirectories[type].Add(new Enemy(enemy, armybook));
+            bool sizeExist = int.TryParse(xmlSize?.InnerText, out int size);
+
+            List<string> type = enemy.Split('/').ToList();
+
+            if (!EnemiesDirectories.ContainsKey(type[1]))
+                EnemiesDirectories[type[1]] = new List<Enemy>();
+
+            EnemiesDirectories[type[1]].Add(new Enemy(enemy, armybook, sizeExist ? size : 0));
         }
     }
 }

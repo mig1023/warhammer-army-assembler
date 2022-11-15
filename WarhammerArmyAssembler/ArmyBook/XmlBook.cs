@@ -25,6 +25,9 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             List<string> images = new List<string>();
 
+            if ((HomologousSeries.Count == 0) || (army == null))
+                return images;
+
             IEnumerable<string> homologousSeries = HomologousSeries[army];
 
             foreach (string homologue in homologousSeries.Reverse())

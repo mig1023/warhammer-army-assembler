@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Media.Imaging;
 using System.Xml;
 
@@ -26,11 +27,14 @@ namespace WarhammerArmyAssembler.ArmyBook
             return nodeName;
         }
 
-        public static bool GetCommonXmlOption(string optionName, out string option)
+        public static bool GetCommonXmlOption(string optionName, out string option,
+            Dictionary<string, string> commonXmlOption)
         {
-            if (Constants.CommonXmlOption.ContainsKey(optionName))
+            Dictionary<string, string> xmlOption = commonXmlOption ?? Constants.CommonXmlOption;
+
+            if (xmlOption.ContainsKey(optionName))
             {
-                option = Constants.CommonXmlOption[optionName];
+                option = xmlOption[optionName];
                 return true;
             }
             else
