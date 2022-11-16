@@ -165,7 +165,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (XmlNode enemy in xmlFile.SelectNodes("Enemies/Enemy"))
             {
                 XmlAttributeCollection attr = enemy.Attributes;
-                Enemy.Add(attr["Armybook"], attr["Path"], attr["Size"], attr["Type"]);
+                Enemy.Add(attr["Path"], attr["Size"], attr["Type"]);
             }
         }
 
