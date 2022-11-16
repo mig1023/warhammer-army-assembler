@@ -45,20 +45,32 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.MagicPowersStyle = LoadStyle(xmlFile, "MagicPowers", defaultValue: "MAGIC POWERS").ToUpper();
         }
 
+        private static string UnitsPath(string unitPathLine, out string name)
+        {
+            List<string> unitPath = unitPathLine.Split('/').ToList();
+
+            if (unitPath.Count == 2)
+            {
+                name = unitPath[1];
+                return String.Format("ArmyBook/Content/{0}", unitPath[0]);
+            }
+            else
+            {
+                name = unitPath[2];
+                return String.Format("ArmyBook/Content/{0}/{1}", unitPath[0], unitPath[1]);
+            }
+        }
+
         public static Unit LoadArmyUnitOnly(string xmlFileName, string unitName, Unit target,
             Dictionary<string, string> enemyCommonXmlOption, int size)
         {
             string filePath = Path.GetDirectoryName(Constants.EnemiesOptionPath) + "\\" + xmlFileName;
-
-            List<string> unitPath = unitName.Split('/').ToList();
-
             XmlDocument xmlFile = new XmlDocument();
-
             xmlFile.Load(filePath);
 
-            foreach (XmlNode unit in xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}/{1}", unitPath[0], unitPath[1])))
+            foreach (XmlNode unit in xmlFile.SelectNodes(UnitsPath(unitName, out string name)))
             {
-                if (unit["Name"].InnerText != unitPath[2])
+                if (unit["Name"].InnerText != name)
                     continue;
 
                 Unit enemy = LoadUnit(0, unit, xmlFile, target, enemyCommonXmlOption);
@@ -157,7 +169,10 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlFile.Load(Constants.EnemiesOptionPath);
 
             foreach (XmlNode enemy in xmlFile.SelectNodes("Enemies/Enemy"))
-                Enemy.Add(enemy.Attributes["Armybook"], enemy.Attributes["Path"], enemy.Attributes["Size"]);
+            {
+                XmlAttributeCollection attr = enemy.Attributes;
+                Enemy.Add(attr["Armybook"], attr["Path"], attr["Size"], attr["Type"]);
+            }
         }
 
         public static void LoadArmy(string xmlFileName)

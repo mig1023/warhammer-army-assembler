@@ -50,19 +50,22 @@ namespace WarhammerArmyAssembler
         public static void CleanEnemies() =>
             EnemiesDirectories = new Dictionary<string, List<Enemy>>();
 
-        public static void Add(XmlNode xmlAmybook, XmlNode xmlEnemy, XmlNode xmlSize)
+        public static void Add(XmlNode xmlAmybook, XmlNode xmlEnemy, XmlNode xmlSize, XmlNode xmlType)
         {
             string armybook = xmlAmybook.InnerText;
             string enemy = xmlEnemy.InnerText;
+            string anotherType = xmlType?.InnerText ?? String.Empty;
 
             bool sizeExist = int.TryParse(xmlSize?.InnerText, out int size);
 
             List<string> type = enemy.Split('/').ToList();
 
-            if (!EnemiesDirectories.ContainsKey(type[1]))
-                EnemiesDirectories[type[1]] = new List<Enemy>();
+            string enemyType = String.IsNullOrEmpty(anotherType) ? type[1] : anotherType;
 
-            EnemiesDirectories[type[1]].Add(new Enemy(enemy, armybook, sizeExist ? size : 0));
+            if (!EnemiesDirectories.ContainsKey(enemyType))
+                EnemiesDirectories[enemyType] = new List<Enemy>();
+
+            EnemiesDirectories[enemyType].Add(new Enemy(enemy, armybook, sizeExist ? size : 0));
         }
     }
 }
