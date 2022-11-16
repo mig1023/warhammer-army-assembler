@@ -59,8 +59,7 @@ namespace WarhammerArmyAssembler
             bool sizeExist = int.TryParse(xmlSize?.InnerText, out int size);
 
             List<string> type = enemy.Split('/').ToList();
-
-            string enemyType = String.IsNullOrEmpty(anotherType) ? type[1] : anotherType;
+            string enemyType = String.IsNullOrEmpty(anotherType) ? type[0] : anotherType;
 
             if (!EnemiesDirectories.ContainsKey(enemyType))
                 EnemiesDirectories[enemyType] = new List<Enemy>();

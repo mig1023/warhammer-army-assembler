@@ -26,6 +26,16 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["Armour"] = "AS",
         };
 
+        public static Dictionary<string, string> EnemyPathTypes = new Dictionary<string, string>
+        {
+            ["Lord"] = "Heroes",
+            ["Hero"] = "Heroes",
+            ["Mount"] = "Mounts",
+            ["Special"] = "Units",
+            ["Core"] = "Units",
+            ["Rare"] = "Units",
+        };
+
         public static List<string> UnitProperties = new List<string> {
             "NoKillingBlow",
             "NoMultiWounds",

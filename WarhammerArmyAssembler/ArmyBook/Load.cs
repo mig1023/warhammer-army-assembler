@@ -45,20 +45,14 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.MagicPowersStyle = LoadStyle(xmlFile, "MagicPowers", defaultValue: "MAGIC POWERS").ToUpper();
         }
 
-        private static string UnitsPath(string unitPathLine, out string name)
+        private static string UnitsPath(string pathLine, out string name)
         {
-            List<string> unitPath = unitPathLine.Split('/').ToList();
+            List<string> pathList = pathLine.Split('/').ToList();
 
-            if (unitPath.Count == 2)
-            {
-                name = unitPath[1];
-                return String.Format("ArmyBook/Content/{0}", unitPath[0]);
-            }
-            else
-            {
-                name = unitPath[2];
-                return String.Format("ArmyBook/Content/{0}/{1}", unitPath[0], unitPath[1]);
-            }
+            string path = pathList[0];
+            name = pathList[1];
+
+            return String.Format("ArmyBook/Content/{0}/{1}", Constants.EnemyPathTypes[path], path);
         }
 
         public static Unit LoadArmyUnitOnly(string xmlFileName, string unitName, Unit target,
