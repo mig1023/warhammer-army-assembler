@@ -47,7 +47,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static string UnitsPath(string pathLine, out string name)
         {
-            List<string> pathList = pathLine.Split('/').ToList();
+            List<string> pathList = pathLine.Split('\\').ToList();
 
             string path = pathList[0];
             name = pathList[1];
