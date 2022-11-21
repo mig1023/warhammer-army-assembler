@@ -168,6 +168,12 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Enemy.Add(attr["Path"], attr["Size"], attr["Type"]);
             }
         }
+        private static void LoadDogsOfWar()
+        {
+            XmlDocument dogsFile = new XmlDocument();
+            dogsFile.Load(Constants.DogOfWarPath);
+            LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Units/*", ref Data.Units);
+        }
 
         public static void LoadArmy(string xmlFileName)
         {
@@ -211,6 +217,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Units/*", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Heroes/*", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Mounts/*", ref Data.Mounts);
+
+            LoadDogsOfWar();
 
             foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/Group"))
             {

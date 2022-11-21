@@ -100,6 +100,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             Constants.CommonXmlOptionPath = FindXmlFileByName(programDirectory, "CommonXmlOption.xml");
             Constants.EnemiesOptionPath = FindXmlFileByName(programDirectory, "Enemies.xml");
+            Constants.DogOfWarPath = FindXmlFileByName(programDirectory, "DogsOfWar.xml");
 
             SortedDictionary<string, string> files = new SortedDictionary<string, string>();
 
@@ -120,7 +121,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                     XmlNode armyName = Services.Intro(xmlFile, "Army");
 
-                    if (armyName == null)
+                    if ((armyName == null) || (armyName.InnerText == "Dogs of War"))
                         continue;
 
                     XmlNode armyInternalName = Services.Intro(xmlFile, "InternalName");
