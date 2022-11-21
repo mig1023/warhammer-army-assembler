@@ -394,6 +394,10 @@
                                                     <DataTrigger Binding="{Binding Personified}" Value="True">
                                                         <Setter Property="Foreground" Value="LightGray"/>
                                                     </DataTrigger>
+                                                    <DataTrigger Binding="{Binding DogsOfWar}" Value="True">
+                                                        <Setter Property="Foreground" Value="Gray"/>
+                                                        <Setter Property="TextBlock.FontStyle" Value="Italic"/>
+                                                    </DataTrigger>
                                                 </Style.Triggers>
                                             </Style>
                                         </TextBlock.Style>

@@ -123,6 +123,7 @@ namespace WarhammerArmyAssembler
         public int WardForFirstWound { get; set; }
         public int WardForLastWound { get; set; }
         public bool FirstWoundDiscount { get; set; }
+        public bool DogsOfWar { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -351,6 +352,7 @@ namespace WarhammerArmyAssembler
                 WardForFirstWound = this.WardForFirstWound,
                 WardForLastWound = this.WardForLastWound,
                 FirstWoundDiscount = this.FirstWoundDiscount,
+                DogsOfWar = this.DogsOfWar,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 

@@ -98,6 +98,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "WardForFirstWound",
             "WardForLastWound",
             "FirstWoundDiscount",
+            "DogsOfWar",
         };
 
         public static List<string> OptionProperties = new List<string> {

@@ -59,6 +59,7 @@ namespace WarhammerArmyAssembler
             ["WardForFirstWound"] = "Ward save [X]+ for first wound",
             ["WardForLastWound"] = "Ward save [X]+ for last wound",
             ["FirstWoundDiscount"] = "Discounts the first wound",
+            ["DogsOfWar"] = "Dogs of War",
             ["NotALeader"] = "Not a leader: can't be General, other models can never use this character's Leadership",
         };
 

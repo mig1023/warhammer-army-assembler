@@ -98,6 +98,7 @@ namespace WarhammerArmyAssembler
         public bool FirstWoundDiscount { get; set; }
         public bool NotALeader { get; set; }
         public bool NativeArmour { get; set; }
+        public bool DogsOfWar { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -244,6 +245,7 @@ namespace WarhammerArmyAssembler
             RandomGroup = this.RandomGroup,
             TypeUnitIncrese = this.TypeUnitIncrese,
             NativeArmour = this.NativeArmour,
+            DogsOfWar = this.DogsOfWar,
 
             Lance = this.Lance,
             Flail = this.Flail,
