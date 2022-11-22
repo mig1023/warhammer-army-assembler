@@ -14,12 +14,32 @@ namespace WarhammerArmyAssembler.ArmyBook
     {
         public static int GetNextIndex() => Data.MaxIDindex++;
 
-        private static void LoadUnitsFromXml(XmlDocument xmlFile, string path, ref Dictionary<int, Unit> dict)
+        private static void LoadUnitsFromXml(XmlDocument xmlFile, string path,
+            ref Dictionary<int, Unit> dict, string currentArmyLimit = "")
         {
             XmlNodeList xmlNodes = xmlFile.SelectNodes(path);
 
             foreach (XmlNode xmlUnit in xmlNodes)
             {
+                if (!String.IsNullOrEmpty(currentArmyLimit))
+                {
+                    string hireLimits = xmlUnit["Hire"].InnerText;
+                    bool negativeLogic = hireLimits.Contains("!");
+                    bool any = hireLimits.Contains("*");
+                    hireLimits = hireLimits.Replace("!", String.Empty);
+
+                    List<string> limits = hireLimits
+                        .Split(',')
+                        .Select(x => x.Trim())
+                        .ToList();
+
+                    if (!any && !negativeLogic && !limits.Contains(currentArmyLimit))
+                        continue;
+
+                    if (!any && negativeLogic && limits.Contains(currentArmyLimit))
+                        continue;
+                }
+
                 int newID = GetNextIndex(); 
                 dict.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
             }
@@ -168,11 +188,11 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Enemy.Add(attr["Path"], attr["Size"], attr["Type"]);
             }
         }
-        private static void LoadDogsOfWar()
+        private static void LoadDogsOfWar(string army)
         {
             XmlDocument dogsFile = new XmlDocument();
             dogsFile.Load(Constants.DogOfWarPath);
-            LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Units/*", ref Data.Units);
+            LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Units/*", ref Data.Units, army);
         }
 
         public static void LoadArmy(string xmlFileName)
@@ -218,7 +238,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Heroes/*", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Mounts/*", ref Data.Mounts);
 
-            LoadDogsOfWar();
+            LoadDogsOfWar(Army.Data.InternalName);
 
             foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/Group"))
             {
