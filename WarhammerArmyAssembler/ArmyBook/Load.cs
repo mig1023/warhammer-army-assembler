@@ -303,6 +303,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.Name = StringParse(xmlUnit["Name"]);
             newUnit.Type = UnitTypeParse(xmlUnit);
             newUnit.Points = DoubleParse(xmlUnit["Points"]);
+            newUnit.StaticPoints = DoubleParse(xmlUnit["StaticPoints"]);
             newUnit.UniqueUnits = BoolParse(xmlUnit["UniqueUnits"]);
             newUnit.Wizard = IntParse(xmlUnit["Wizard"]);
             newUnit.MountOn = IntParse(xmlUnit["MountOn"]);

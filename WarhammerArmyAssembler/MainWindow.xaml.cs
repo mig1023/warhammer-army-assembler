@@ -208,7 +208,7 @@ namespace WarhammerArmyAssembler
         {
             Unit u = e.Row.Item as Unit;
 
-            double pointsDiff = u.GetUnitPoints() - Army.Data.Units[u.ID].GetUnitPoints();
+            double diff = u.GetUnitPoints() - Army.Data.Units[u.ID].GetUnitPoints();
 
             if (!Interface.Checks.EnoughPointsForEditUnit(u.ID, u.Size))
                 u.Size = ErrorAndReturnSizeBack("Not enough points to change", u.ID);
@@ -219,7 +219,7 @@ namespace WarhammerArmyAssembler
             else if (u.Size < u.MinSize)
                 u.Size = ErrorAndReturnSizeBack("Unit size is less than the minimum allowed", u.ID);
 
-            else if ((u.Size > Army.Data.Units[u.ID].Size) && (!Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, pointsDiff)))
+            else if ((u.Size > Army.Data.Units[u.ID].Size) && (!Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, diff, u.StaticPoints)))
                 u.Size = ErrorAndReturnSizeBack(String.Format("The {0} has reached a point cost limit", u.UnitTypeName()), u.ID);
 
             else

@@ -37,7 +37,12 @@ namespace WarhammerArmyAssembler.Interface
             foreach (Unit entry in ArmyBook.Data.Units.Values)
             {
                 Unit unit = entry.Clone();
-                unit.PointsView = String.Format(" {0} pts", unit.Points);
+
+                if (unit.StaticPoints == 0)
+                    unit.PointsView = String.Format(" {0} pts", unit.Points);
+                else
+                    unit.PointsView = String.Format(" {0} pts (+{1} pts)", unit.Points, unit.StaticPoints);
+
                 unit.InterfaceColor = ArmyBook.Data.FrontColor;
                 categories[(int)unit.Type].Items.Add(unit);
             }

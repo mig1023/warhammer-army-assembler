@@ -124,7 +124,7 @@ namespace WarhammerArmyAssembler.Interface
             else if (!Checks.EnoughUnitPointsForAddArtefact(id, unit, pointsPenalty: prevRunicPointsPenalty))
                 Error(String.Format("Not enough magic item {0} to add an item", (unit.MagicItemCount > 0 ? "slots" : "points")));
 
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, artefact.Points))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, artefact.Points, 0))
                 Error("For this type, a point cost limit has been reached");
 
             else if (artefact.TypeUnitIncrese && Army.Checks.IsArmyFullForTypeIcrease(unit))
@@ -174,7 +174,7 @@ namespace WarhammerArmyAssembler.Interface
             else if (!Checks.EnoughPointsForAddUnit(id))
                 Error(String.Format("Not enough points to add a {0}", (unit.IsHero() ? "hero" : "unit")));
 
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, unit.Points))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, unit.Points, unit.StaticPoints))
                 Error(String.Format("The {0} has reached a point cost limit", unit.UnitTypeName()));
 
             else if (!Army.Checks.IsArmyDublicationOk(unit))
@@ -192,14 +192,16 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void ArmyGridDropMount(int id, double points, int unit)
         {
+            Unit currentUnit = Army.Data.Units[unit];
+
             if (!Checks.EnoughUnitPointsForAddOption(points))
                 Error("Not enough points to add a mount");
 
-            else if (Army.Data.Units[unit].MountOn > 0)
+            else if (currentUnit.MountOn > 0)
                 Error("The hero already has a mount");
 
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(Army.Data.Units[unit].Type, points))
-                Error(String.Format("The {0} has reached a point cost limit", ArmyBook.Data.Units[id].UnitTypeName()));
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(currentUnit.Type, points, currentUnit.StaticPoints))
+                Error(String.Format("The {0} has reached a point cost limit", currentUnit.UnitTypeName()));
 
             else
             {

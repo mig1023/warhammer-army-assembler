@@ -48,6 +48,7 @@ namespace WarhammerArmyAssembler
         public bool UniqueUnits { get; set; }
 
         public double Points { get; set; }
+        public double StaticPoints { get; set; }
         public string PointsView { get; set; }
 
         public string Description { get; set; }
@@ -170,7 +171,7 @@ namespace WarhammerArmyAssembler
 
         public double GetUnitPoints()
         {
-            double points = Size * Points;
+            double points = StaticPoints + (Size * Points);
 
             foreach (Option option in Options)
             {
@@ -290,6 +291,7 @@ namespace WarhammerArmyAssembler
                 ModelsInPack = this.ModelsInPack,
                 UniqueUnits = this.UniqueUnits,
                 Points = this.Points,
+                StaticPoints = this.StaticPoints,
                 MountOn = this.MountOn,
                 MountInit = this.MountInit,
                 Description = this.Description,
@@ -703,7 +705,7 @@ namespace WarhammerArmyAssembler
             }
             else
             {
-                if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
+                if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points, 0))
                     Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
 
                 else if (!Interface.Checks.EnoughUnitPointsForAddOption(option.Points))
@@ -732,10 +734,10 @@ namespace WarhammerArmyAssembler
 
                 Option artefact = ArmyBook.Data.Artefact[option.ID];
 
-                if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Special))
+                if (artefact.TypeUnitIncrese && (this.Type == Unit.UnitType.Special))
                     this.Type = Unit.UnitType.Core;
 
-                else if ((artefact.TypeUnitIncrese) && (this.Type == Unit.UnitType.Rare))
+                else if (artefact.TypeUnitIncrese && (this.Type == Unit.UnitType.Rare))
                     this.Type = Unit.UnitType.Special;
 
                 if (option.Virtue)
@@ -750,9 +752,9 @@ namespace WarhammerArmyAssembler
                     option.Realised = false;
                 else
                 {
-                    double optionPoints = (option.PerModel ? option.Points * this.Size : option.Points);
+                    double optionPoints = option.PerModel ? option.Points * this.Size : option.Points;
 
-                    if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points))
+                    if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points, 0))
                     {
                         Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
                         return;

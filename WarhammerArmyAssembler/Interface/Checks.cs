@@ -4,10 +4,16 @@ namespace WarhammerArmyAssembler.Interface
 {
     class Checks
     {
-        public static bool EnoughPointsForAddUnit(int id) =>
-            (ArmyBook.Data.Units[id].Size * ArmyBook.Data.Units[id].Points) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
+        public static bool EnoughPointsForAddUnit(int id)
+        {
+            Unit unit = ArmyBook.Data.Units[id];
+            double points = unit.StaticPoints + (unit.Size * unit.Points);
 
-        public static bool EnoughUnitPointsForAddOption(double points) => points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
+            return points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
+        }
+
+        public static bool EnoughUnitPointsForAddOption(double points) =>
+            points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
 
         public static bool EnoughPointsForAddArtefact(int id, double pointsPenalty) => 
             (ArmyBook.Data.Artefact[id].Points - pointsPenalty) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
@@ -49,8 +55,9 @@ namespace WarhammerArmyAssembler.Interface
 
         public static bool EnoughPointsForEditUnit(int id, int newSize)
         {
-            double newPrice = newSize * Army.Data.Units[id].Points;
-            double currentPrice = Army.Data.Units[id].Size * Army.Data.Units[id].Points;
+            Unit unit = Army.Data.Units[id];
+            double newPrice = unit.StaticPoints + (newSize * unit.Points);
+            double currentPrice = unit.StaticPoints + (unit.Size * unit.Points);
 
             return (newPrice - currentPrice) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
         }
