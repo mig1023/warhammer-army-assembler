@@ -32,7 +32,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (string homologue in homologousSeries.Reverse())
             {
-                string homologueImage = Load.LoadArmyUnitImageOnly(homologue, unit, isHero);
+                string homologueImage = Load.ArmyUnitImageOnly(homologue, unit, isHero);
 
                 if (!String.IsNullOrEmpty(homologueImage))
                     images.Add(homologueImage);

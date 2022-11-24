@@ -168,7 +168,7 @@ namespace WarhammerArmyAssembler.Interface
             Changes.main.dragWindowBottom.Content = "Warhammer Army Assembler (WAAgh)" +
                 (String.IsNullOrWhiteSpace(armyName) ? String.Empty : String.Format(" // {0}", armyName));
 
-            ArmyBook.Load.LoadArmy(Changes.CurrentSelectedArmy);
+            ArmyBook.Load.Armybook(Changes.CurrentSelectedArmy);
 
             LoadArmyList();
             ReloadArmyData();

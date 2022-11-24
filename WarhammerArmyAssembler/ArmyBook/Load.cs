@@ -75,7 +75,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Format("ArmyBook/Content/{0}/{1}", Constants.EnemyPathTypes[path], path);
         }
 
-        public static Unit LoadArmyUnitOnly(string xmlFileName, string unitName, Unit target,
+        public static Unit ArmyUnitOnly(string xmlFileName, string unitName, Unit target,
             Dictionary<string, string> enemyCommonXmlOption, int size)
         {
             string filePath = Path.GetDirectoryName(Constants.EnemiesOptionPath) + "\\" + xmlFileName;
@@ -106,7 +106,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             return null;
         }
 
-        public static string LoadArmyUnitImageOnly(string xmlFileName, string unitName, bool isHero)
+        public static string ArmyUnitImageOnly(string xmlFileName, string unitName, bool isHero)
         {
             XmlDocument xmlFile = new XmlDocument();
 
@@ -145,7 +145,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
         }
 
-        public static Dictionary<string, string> LoadCommonXmlOption(XmlDocument armybook)
+        public static Dictionary<string, string> CommonXmlOption(XmlDocument armybook)
         {
             if (String.IsNullOrEmpty(Constants.CommonXmlOptionPath))
                 return null;
@@ -195,7 +195,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Units/*", ref Data.Units, army);
         }
 
-        public static void LoadArmy(string xmlFileName)
+        public static void Armybook(string xmlFileName)
         {
             Data.Magic.Clear();
             Data.Dispell.Clear();
@@ -209,7 +209,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
 
-            Constants.CommonXmlOption = LoadCommonXmlOption(xmlFile);
+            Constants.CommonXmlOption = CommonXmlOption(xmlFile);
 
             XmlNode armyFile = Services.Intro(xmlFile, "Images/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
@@ -287,7 +287,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
         }
 
-        public static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml,
+        private static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml,
             Unit target = null, Dictionary<string, string> enemyCommonXmlOption = null)
         {
             string description = StringParse(xmlUnit["Description"]);
@@ -541,7 +541,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 AddToOption(xmlDocument, ref xmlNode, "OnlyGroup", xmlNode.Attributes["OnlyGroup"].InnerText);
         }
 
-        public static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument,
+        private static Option LoadOption(int id, XmlNode xmlNode, XmlDocument xmlDocument,
             string artefactGroup = null, Option.OptionCategory category = Option.OptionCategory.Nope,
             Dictionary<string, string> commonXmlOption = null)
         {
@@ -630,7 +630,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return null;
         }
 
-        public static void SetProperty(object element, XmlNode value, string name, string byAttr = "")
+        private static void SetProperty(object element, XmlNode value, string name, string byAttr = "")
         {
             bool isByAttr = !String.IsNullOrEmpty(byAttr);
 

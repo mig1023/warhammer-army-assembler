@@ -12,7 +12,7 @@ namespace WarhammerArmyAssembler
         private static Dictionary<string, List<Enemy>> EnemiesDirectories { get; set; }
 
         public Enemy(string enemyName, string armybook, int size) =>
-            ArmyBook.Load.LoadArmyUnitOnly(armybook, enemyName, this, ArmyBook.Load.LoadCommonXmlOption(null), size);
+            ArmyBook.Load.ArmyUnitOnly(armybook, enemyName, this, ArmyBook.Load.CommonXmlOption(null), size);
 
         public string Fullname()
         {
