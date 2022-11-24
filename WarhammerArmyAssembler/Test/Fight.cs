@@ -51,20 +51,20 @@ namespace WarhammerArmyAssembler.Test
         {
             int current = 0; 
 
-            foreach (string enemyGroupName in Enemy.GetEnemiesGroups())
+            foreach (string enemyGroupName in Enemy.Groups())
             {
                 string currentText = Interface.Test.GetFullConsoleText();
 
                 EnemiesGroupBox(enemyGroupName, current);
 
-                foreach (Enemy enemy in Enemy.GetEnemiesByGroup(enemyGroupName))
+                foreach (Enemy enemy in Enemy.ByGroup(enemyGroupName))
                 {
                     current += 1;
 
                     Unit currentEnemy = enemy.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
                     Unit currentMount = enemy.Mount?.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
 
-                    int enemyCount = Enemy.GetEnemiesCount();
+                    int enemyCount = Enemy.Count();
 
                     if (current < enemyCount)
                         progress.Report(String.Format("{0}/{1} {2}", current, enemyCount, enemy.Name));

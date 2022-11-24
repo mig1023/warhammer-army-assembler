@@ -171,7 +171,7 @@ namespace WarhammerArmyAssembler.Interface
             main.enemyGroup.Items.Clear();
             main.enemyForTest.Items.Clear();
 
-            foreach (string enemy in Enemy.GetEnemiesGroups())
+            foreach (string enemy in Enemy.Groups())
                 main.enemyGroup.Items.Add(enemy);
 
             Changes.armyUnitTest_Resize();
@@ -204,7 +204,7 @@ namespace WarhammerArmyAssembler.Interface
 
             WarhammerArmyAssembler.Test.Data.PrepareEnemy(SelectedEnemy());
 
-            Changes.main.enemyTestUnit.Content = Enemy.GetByName(SelectedEnemy()).Name;
+            Changes.main.enemyTestUnit.Content = Enemy.ByName(SelectedEnemy()).Name;
             LoadUnitParamInInterface(unitForLoad: WarhammerArmyAssembler.Test.Data.enemy, mountForLoad: WarhammerArmyAssembler.Test.Data.enemyMount,
                 elemetnsPostfix: "Enemy", unitGrid: Changes.main.enemyGrid);
             LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.enemy, target: Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
@@ -219,7 +219,7 @@ namespace WarhammerArmyAssembler.Interface
 
             Changes.main.enemyForTest.Items.Clear();
 
-            foreach (Enemy enemy in Enemy.GetEnemiesByGroup(SelectedGroup()))
+            foreach (Enemy enemy in Enemy.ByGroup(SelectedGroup()))
                 Changes.main.enemyForTest.Items.Add(enemy.Fullname());
         }
 

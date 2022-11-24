@@ -22,7 +22,7 @@ namespace WarhammerArmyAssembler
                 return String.Format("{0} ({1})", this.Name, this.Armybook);
         }
 
-        public static Enemy GetByName(string enemyName)
+        public static Enemy ByName(string enemyName)
         {
             foreach (List<Enemy> enemyList in EnemiesDirectories.Values)
                 foreach (Enemy enemy in enemyList.Where(x => x.Fullname() == enemyName))
@@ -38,16 +38,16 @@ namespace WarhammerArmyAssembler
             return this;
         }
 
-        public static List<string> GetEnemiesGroups() =>
+        public static List<string> Groups() =>
             EnemiesDirectories.Keys.ToList<string>();
             
-        public static List<Enemy> GetEnemiesByGroup(string groupName) =>
+        public static List<Enemy> ByGroup(string groupName) =>
             EnemiesDirectories[groupName];
 
-        public static int GetEnemiesCount() =>
-            GetEnemiesGroups().Sum(x => GetEnemiesByGroup(x).Count());
+        public static int Count() =>
+            Groups().Sum(x => ByGroup(x).Count());
 
-        public static void CleanEnemies() =>
+        public static void Clean() =>
             EnemiesDirectories = new Dictionary<string, List<Enemy>>();
 
         public static void Add(XmlNode xmlEnemy, XmlNode xmlSize, XmlNode xmlType)

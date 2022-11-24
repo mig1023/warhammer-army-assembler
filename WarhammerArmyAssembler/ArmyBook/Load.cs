@@ -177,7 +177,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (String.IsNullOrEmpty(Constants.EnemiesOptionPath))
                 return;
 
-            Enemy.CleanEnemies();
+            Enemy.Clean();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(Constants.EnemiesOptionPath);
