@@ -85,13 +85,29 @@
 					<DogsOfWar/>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon/>
-					<CrossBow/>
-					<LightArmour/>
-					<Weapon>
-						<Name>Pike</Name>
-					</Weapon>
+					<HandWeapon/>			
 				</Equipments>
+				<Options>
+					<Option>
+						<Name>Pike</Name>
+						<Points>0</Points>
+						<Dependencies>
+							<Rule>Crossbow</Rule>
+						</Dependencies>
+						<Rule>Heavy Armour</Rule>
+						<AddToArmour>5</AddToArmour>
+						<RealisedByDefault/>
+					</Option>
+					<Option>
+						<Name>Crossbow</Name>
+						<Points>0</Points>
+						<Dependencies>
+							<Off>Pike</Off>
+						</Dependencies>
+						<Rule>Light Armour</Rule>
+						<AddToArmour>6</AddToArmour>
+					</Option>
+				</Options>
 			</Rare>
 			<Rare>
 				<Name>Birdmen of Catrazza</Name>
