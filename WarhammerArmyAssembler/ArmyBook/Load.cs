@@ -193,6 +193,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlDocument dogsFile = new XmlDocument();
             dogsFile.Load(Constants.DogOfWarPath);
             LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Units/*", ref Data.Units, army);
+            LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Mounts/*", ref Data.Mounts);
         }
 
         public static void Armybook(string xmlFileName)
