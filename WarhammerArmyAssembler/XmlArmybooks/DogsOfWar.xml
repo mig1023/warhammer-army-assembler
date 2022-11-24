@@ -7,7 +7,12 @@
 	</Introduction>
 	<Content>
 		<Heroes/>
-		<Mounts/>
+		<Mounts>
+			<Mount>
+				<Name>Volands warhorse</Name>
+				<Profile M="8" WS="3" BS="0" S="3" T="3" W="1" I="3" A="1" Ld="5" AS="5"/>
+			</Mount>
+		</Mounts>
 		<Units>
 			<Rare>
 				<Name>Braganza's Basiegers</Name>
@@ -49,6 +54,24 @@
 					<RangeWeanon>
 						<Name>Pistols</Name>
 					</RangeWeanon>
+				</Equipments>
+			</Rare>
+			<Rare>
+				<Name>Voland's Venators</Name>
+				<Hire>!Bretonnia</Hire>
+				<Points>35</Points>
+				<StaticPoints>40</StaticPoints>
+				<Mount>Volands warhorse</Mount>
+				<Size>5+</Size>
+				<Profile M="4" WS="4" BS="3" S="3" T="3" W="1" I="3" A="1" Ld="7" AS="5"/>
+				<SpecialRules>
+					<DogsOfWar/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+					<Lance/>
+					<HeavyArmour/>
+					<Shield/>
 				</Equipments>
 			</Rare>
 			<Rare>
