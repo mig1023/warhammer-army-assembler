@@ -189,7 +189,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             bool success = Enum.TryParse(type, out OptionType value);
 
-            if ((xmlNode.ParentNode?.Name == "Options") || (xmlNode.ParentNode?.Name == "CommandGroup"))
+            if ((xmlNode.ParentNode?.Name == "Options") || (xmlNode.ParentNode?.Name == "Command"))
                 return (success ? value : Option.OptionType.Option);
             else
                 return OptionType.Info;
