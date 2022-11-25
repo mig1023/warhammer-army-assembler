@@ -1086,11 +1086,11 @@
 					<Spear PointsPerModel="1"/>
 					<AdditionalWeapon PointsPerModel="1"/>
 					<Shield PointsPerModel="1"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="15">Orc Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -1112,11 +1112,11 @@
 					<Bow/>
 				</Equipments>
 				<Options>
-					<CommandGroup>
+					<Command>
 						<Leader Points="10">Arrer Boy Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -1165,11 +1165,11 @@
 						<AddToAttacks>1</AddToAttacks>
 					</Option>
 					<Shield PointsPerModel="1"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="15">Savage Orc Boss</Leader>
 						<Leader Points="5">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -1192,11 +1192,11 @@
 					<Spear PointsPerModel="0,5" Dependencies="Off: Short bow"/>
 					<ShortBow PointsPerModel="0,5" Dependencies="Off: Spears"/>
 					<Shield PointsPerModel="0,5"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="10">Goblin Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -1221,11 +1221,11 @@
 					<Spear PointsPerModel="1"/>
 					<ShortBow PointsPerModel="1"/>
 					<Shield PointsPerModel="1"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="10">Wolf Rider Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -1252,11 +1252,11 @@
 						<Name>Netters</Name>
 						<Points>45</Points>
 					</Option>
-					<CommandGroup>
+					<Command>
 						<Leader Points="10">Night Goblin Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -1283,11 +1283,11 @@
 				</Equipments>
 				<Options>
 					<ShortBow PointsPerModel="1"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="10">Spider Rider Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Special>
@@ -1313,11 +1313,11 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="15">Black Orc Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1349,11 +1349,11 @@
 					</Option>
 					<Shield PointsPerModel="2"/>
 					<Spear PointsPerModel="2"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="15">Boar Boy Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1390,11 +1390,11 @@
 					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Spears"/>
 					<Spear PointsPerModel="2" Dependencies="Off: Additional weapon"/>
 					<Shield PointsPerModel="2" Dependencies="Off: Additional weapon"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="15">Savage Orc Boar Boy Boss</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="10" Magic="Type:Unit, Points:50">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
