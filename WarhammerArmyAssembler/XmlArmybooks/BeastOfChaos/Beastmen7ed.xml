@@ -700,11 +700,11 @@
 				<Options>
 					<Shield PointsPerModel="1" Dependencies="Off: Additional weapon"/>
 					<AdditionalWeapon PointsPerModel="1" Dependencies="Off: Shield"/>
-					<CommandGroup>
+					<Command>
 						<Leader Points="10">Foe-render</Leader>
 						<Leader Points="5">Musician</Leader>
 						<Leader Points="10">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -742,10 +742,10 @@
 						<OnlyOneInArmy/>
 						<Points>75</Points>
 					</Option>
-					<CommandGroup>
+					<Command>
 						<Leader Points="3">Musician</Leader>
 						<Leader Points="6">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -765,10 +765,10 @@
 					<ShortBow/>
 				</Equipments>
 				<Options>
-					<CommandGroup>
+					<Command>
 						<Leader Points="6">Halfhorn</Leader>
 						<Leader Points="3">Musician</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -834,11 +834,11 @@
 					<Shield PointsPerModel="4" Dependencies="Off: Additional weapon, Great weapon"/>
 					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Shield, Great weapon"/>
 					<GreatWeapon PointsPerModel="8" Dependencies="Off: Shield, Additional weapon"/>				
-					<CommandGroup>
+					<Command>
 						<Leader Points="20" Magic="Type:Hero, Points:25">Bloodkine</Leader>
 						<Leader Points="10">Musician</Leader>
 						<Leader Points="20">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -889,10 +889,10 @@
 						<OnlyOneInArmy/>
 						<Points>155</Points>
 					</Option>
-					<CommandGroup>
+					<Command>
 						<Leader Points="7">Musician</Leader>
 						<Leader Points="14">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -933,11 +933,11 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<CommandGroup>
+					<Command>
 						<Leader Points="12" Magic="Type:Hero, Points:25">Gouge-horn</Leader>
 						<Leader Points="6">Musician</Leader>
 						<Leader Points="12" Magic="Type:Unit, Points:50">Standard bearer</Leader>
-					</CommandGroup>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
