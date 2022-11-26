@@ -141,7 +141,7 @@ namespace WarhammerArmyAssembler
         public ObservableCollection<Option> Items { get; set; }
 
         public Brush InterfaceColor { get; set; }
-        public bool GroopBold { get; set; }
+        public bool GroupBold { get; set; }
         public string ArtefactGroup { get; set; }
         public bool Artefacts { get; set; }
 

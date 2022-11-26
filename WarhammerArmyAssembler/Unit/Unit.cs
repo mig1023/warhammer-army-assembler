@@ -141,7 +141,7 @@ namespace WarhammerArmyAssembler
         public string MountInit { get; set; }
 
         public Brush InterfaceColor { get; set; }
-        public bool GroopBold { get; set; }
+        public bool GroupBold { get; set; }
 
         public bool Personified { get; set; }
         public bool ArmyGeneral { get; set; }

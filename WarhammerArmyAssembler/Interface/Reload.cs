@@ -50,7 +50,7 @@ namespace WarhammerArmyAssembler.Interface
             foreach (Unit unitType in categories)
             {
                 unitType.Name = Army.Mod.CategoryNameModification(unitType.Name);
-                unitType.GroopBold = true;
+                unitType.GroupBold = true;
                 main.ArmyList.Items.Add(unitType);
             }
 
@@ -86,7 +86,7 @@ namespace WarhammerArmyAssembler.Interface
                     artefacts.Items.Add(artefact);
                 }
 
-                artefacts.GroopBold = true;
+                artefacts.GroupBold = true;
                 artefacts.Artefacts = true;
                 main.ArmyList.Items.Add(artefacts);
             }

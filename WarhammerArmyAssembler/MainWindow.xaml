@@ -381,7 +381,7 @@
                                         <TextBlock.Style>
                                             <Style TargetType="TextBlock">
                                                 <Style.Triggers>
-                                                    <DataTrigger Binding="{Binding GroopBold}" Value="True">
+                                                    <DataTrigger Binding="{Binding GroupBold}" Value="True">
                                                         <Setter Property="FontWeight" Value="Bold"/>
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding ArtefactAlreadyUsed}" Value="True">

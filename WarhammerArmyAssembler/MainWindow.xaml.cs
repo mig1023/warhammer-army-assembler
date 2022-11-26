@@ -56,10 +56,10 @@ namespace WarhammerArmyAssembler
             TreeView armyList = sender as TreeView;
 
             if (armyList.SelectedItem is Unit)
-                ChangeArmyListDetail((armyList.SelectedItem as Unit).ID, (armyList.SelectedItem as Unit).GroopBold);
+                ChangeArmyListDetail((armyList.SelectedItem as Unit).ID, (armyList.SelectedItem as Unit).GroupBold);
 
             if (armyList.SelectedItem is Option)
-                ChangeArmyListDetail((armyList.SelectedItem as Option).ID, (armyList.SelectedItem as Option).GroopBold);
+                ChangeArmyListDetail((armyList.SelectedItem as Option).ID, (armyList.SelectedItem as Option).GroupBold);
         }
 
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
