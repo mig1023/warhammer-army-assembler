@@ -43,7 +43,7 @@
 			<Spell Name="Flame Storm" Cast="15"/>
 		</Dispell>
 		<LocalXmlOption>
-			<ChaosArmour Name="Chaos armour">AddToArmour: 4</ChaosArmour>
+			<ChaosArmour Name="Chaos armour">AddToArmour: 4; NativeArmour</ChaosArmour>
 		</LocalXmlOption>
 	</Introduction>
 	<Content>
@@ -529,7 +529,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<ChaosArmour Attr="NativeArmour"/>
+					<ChaosArmour/>
 				</Equipments>
 				<Options>
 					<Option>
@@ -701,7 +701,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<ChaosArmour Attr="NativeArmour"/>
+					<ChaosArmour/>
 				</Equipments>
 				<Options>
 					<Wizard Level="4" Points="35"/>
@@ -886,7 +886,7 @@
 						<Rule>Wulfrik and a single unit of Marauders may have Ambushers special rule</Rule>
 					</HandWeapon>
 					<HandWeapon/>
-					<ChaosArmour Attr="NativeArmour"/>
+					<ChaosArmour/>
 					<Shield/>
 				</Equipments>
 			</Hero>
@@ -979,7 +979,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<ChaosArmour Attr="NativeArmour"/>
+					<ChaosArmour/>
 				</Equipments>
 				<Options>
 					<Option>
@@ -1135,7 +1135,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<ChaosArmour Attr="NativeArmour"/>
+					<ChaosArmour/>
 				</Equipments>
 				<Options>
 					<Wizard Level="2" Points="35"/>
@@ -2036,7 +2036,7 @@
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<HeavyArmour Attr="NativeArmour"/>
+					<HeavyNativeArmour/>
 				</Equipments>
 				<Options>
 					<Option>
