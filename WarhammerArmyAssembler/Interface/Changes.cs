@@ -426,7 +426,7 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            string armyFile = Intro(xmlFile, "Images/Cover").InnerText;
+            string armyFile = Intro(xmlFile, "Styles/Images/Cover").InnerText;
             changeArmybook.imageArmybook.Source = GetImage(armyFile, armyName);
             changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", Intro(xmlFile, "Edition").InnerText);
             changeArmybook.UpdateLayout();
@@ -513,7 +513,7 @@ namespace WarhammerArmyAssembler.Interface
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
 
-                XmlNode armyFile = Intro(xmlFile, "Images/Cover");
+                XmlNode armyFile = Intro(xmlFile, "Styles/Images/Cover");
                 string source = String.Format("{0}\\Images\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
 
                 Image newImage = new Image()
@@ -528,7 +528,7 @@ namespace WarhammerArmyAssembler.Interface
                 string description = StringParse(Intro(xmlFile, "Description"));
                 string authors = StringParse(Intro(xmlFile, "Authors"));
                 int released = IntParse(Intro(xmlFile, "Released"));
-                string illustration = StringParse(Intro(xmlFile, "Images/Illustration"));
+                string illustration = StringParse(Intro(xmlFile, "Styles/Images/Illustration"));
 
                 Brush backColor = Services.BrushFromXml(StyleColor(xmlFile, "Tooltip"));
                 Brush lineColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
