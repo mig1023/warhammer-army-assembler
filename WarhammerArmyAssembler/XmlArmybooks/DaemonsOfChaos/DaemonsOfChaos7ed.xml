@@ -42,18 +42,18 @@
 		<LocalXmlOption>
 			<Etherblade>MagicItemsPoints; NoArmour</Etherblade>
 			<ArmedMonstrosity Name="Armed Monstrosity">MagicItemsPoints; AddToAttacks: 2</ArmedMonstrosity>
-			<DaemonicRobes Name="Daemonic Robes">MagicItemsPoints;	Rule: Can never be wounded on better than a 3+</DaemonicRobes>
-			<EnrapturingGaze Name="Enrapturing Gaze">MagicItemsPoints;	Rule: Models in base contact may not use another model's Leadership value</EnrapturingGaze>
-			<IridescentCorona Name="Iridescent Corona">MagicItemsPoints; Rule: Enemy models in base contact at start of any combat suffer a Flaming Strength 3 hit before any blows are struck</IridescentCorona>
+			<DRobes Name="Daemonic Robes">MagicItemsPoints;	Rule: Can never be wounded on better than a 3+</DRobes>
+			<EnrGaze Name="Enrapturing Gaze">MagicItemsPoints;	Rule: Models in base contact may not use another model's Leadership value</EnrGaze>
+			<IridCorona Name="Iridescent Corona">MagicItemsPoints; Rule: Enemy models in base contact at start of any combat suffer a Flaming Strength 3 hit before any blows are struck</IridCorona>
 			<ImmortalFury Name="Immortal Fury">MagicItemsPoints; Reroll: ToHit</ImmortalFury>
 			<SoulHunger Name="Soul Hunger">MagicItemsPoints; Reroll: ToWound</SoulHunger>
 			<WingedHorror Name="Winged Horror">MagicItemsPoints; Rule: Fly</WingedHorror>
-			<ObsidianArmour Name="Obsidian Armour">MagicItemsPoints; AddToArmour: 3; Rule: Magic weapons carriad by enemy models lose their magical abilities in base contact</ObsidianArmour>
-			<FirestormBlade Name="Firestorm Blade">MagicItemsPoints; AddToStrength: 1; Rule: Flaming Attacks</FirestormBlade>
+			<ObsArmour Name="Obsidian Armour">MagicItemsPoints; AddToArmour: 3; Rule: Magic weapons carriad by enemy models lose their magical abilities in base contact</ObsArmour>
+			<FireBlade Name="Firestorm Blade">MagicItemsPoints; AddToStrength: 1; Rule: Flaming Attacks</FireBlade>
 			<SpellBreaker Name="Spell Breaker">MagicItemsPoints; Rule: Once per battle may automatically dispel one enemy spell</SpellBreaker>
-			<ArmourOfKhorne Name="Armour of Khorne">MagicItemsPoints; AddToArmour: 3</ArmourOfKhorne>
+			<ArmOfKhorne Name="Armour of Khorne">MagicItemsPoints; AddToArmour: 3</ArmOfKhorne>
 			<PowerVortex Name="Power Vortex">MagicItemsPoints; AddToCast: 1</PowerVortex>
-			<FlamesOfTzeentch Name="Flames of Tzeentch">MagicItemsPoints; Rule: D6 bolts in the Shooting phase with a range of 18" and a Strength of 4</FlamesOfTzeentch>
+			<FlOfTzeentch Name="Flames of Tzeentch">MagicItemsPoints; Rule: D6 bolts in the Shooting phase with a range of 18" and a Strength of 4</FlOfTzeentch>
 			<MasterOfSorcery Name="Master of Sorcery">MagicItemsPoints; Rule: Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses</MasterOfSorcery>
 			<StaffOfNurgle Name="Staff of Nurgle">MagicItemsPoints; Rule: Bound spell, Power level 3: Rancid Visitation</StaffOfNurgle>
 			<NoxiousVapours Name="Noxious Vapours">MagicItemsPoints; Rule: All enemies models in base contact lose the Always Strikes First rule and always strike last</NoxiousVapours>
@@ -63,14 +63,14 @@
 			<SlimeTrail Name="Slime Trail">MagicItemsPoints; Rule: Enemy inits do not receive combat result bonuses for attacking the flank or rear</SlimeTrail>
 			<SirenSong Name="Siren Song">MagicItemsPoints; Rule: Once per game, before charges are declared, nominate one enemy within 20", the target unit must either declare a charge against the Daemon (or the unit it is with) or immediately flee, exactly as if it had failed a Panic test</SirenSong>
 			<SoporificMusk Name="Soporific Musk">MagicItemsPoints;	Rule: A unit in base contact rolls an extra dice when fleeing and then discards the highest resul</SoporificMusk>
-			<StandardOfChaosGlory Name="Standard of Chaos Glory">Stubborn;	Rule: All Daemons within 12" are stubborn</StandardOfChaosGlory>
-			<BannerOfHellfire Name="Banner of Hellfire">Rule: Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</BannerOfHellfire>
-			<GreatIconOfDespair Name="Great Icon of Despair">Rule: All enemy units within 12" suffer a -2 penalty to their Leadership</GreatIconOfDespair>
-			<BannerOfUnholyVictory Name="Banner of Unholy Victory">AddToCloseCombat: D3</BannerOfUnholyVictory>
-			<GreatStandardOfSundering Name="Great Standard of Sundering">Rule: All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</GreatStandardOfSundering>
+			<StandardOfGlory Name="Standard of Chaos Glory">Stubborn; Rule: All Daemons within 12" are stubborn</StandardOfGlory>
+			<BanOfHellfire Name="Banner of Hellfire">Rule: Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat</BanOfHellfire>
+			<GreatIcon Name="Great Icon of Despair">Rule: All enemy units within 12" suffer a -2 penalty to their Leadership</GreatIcon>
+			<BanOfVictory Name="Banner of Unholy Victory">AddToCloseCombat: D3</BanOfVictory>
+			<StandOfSundering Name="Great Standard of Sundering">Rule: All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3</StandOfSundering>
 			<SkullTotem Name="Skull Totem">Rule: May march even if enemy models are within 8"</SkullTotem>
-			<IconOfEndlessWar Name="Icon of Endless War">Rule: Adds D6" to its first charge move</IconOfEndlessWar>
-			<BannerOfEcstasy Name="Banner of Ecstasy">Stubborn</BannerOfEcstasy>
+			<IconOfWar Name="Icon of Endless War">Rule: Adds D6" to its first charge move</IconOfWar>
+			<BanOfEcstasy Name="Banner of Ecstasy">Stubborn</BanOfEcstasy>
 			<SirenStandard Name="Siren Standard">Rule: Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee</SirenStandard>
 		</LocalXmlOption>
 	</Introduction>
@@ -234,10 +234,10 @@
 					</Option>
 					<Etherblade Points="50"/>
 					<ArmedMonstrosity Points="50"/>
-					<DaemonicRobes Points="25"/>
-					<EnrapturingGaze Points="25"/>
+					<DRobes Points="25"/>
+					<EnrGaze Points="25"/>
 					<ImmortalFury Points="25"/>
-					<IridescentCorona Points="25"/>
+					<IridCorona Points="25"/>
 					<SoulHunger Points="25"/>
 					<Option>
 						<Name>Unnatural Swiftness</Name>
@@ -283,17 +283,17 @@
 						<MagicItemsPoints/>
 						<Rule>2D6+2 Attacks, roll at the start of each combat</Rule>
 					</Option>
-					<ObsidianArmour Points="50"/>
+					<ObsArmour Points="50"/>
 					<Option>
 						<Name>Axe of Khorne</Name>
 						<Points>25</Points>
 						<MagicItemsPoints/>
 						<KillingBlow/>
 					</Option>
-					<FirestormBlade Points="25"/>
+					<FireBlade Points="25"/>
 					<ImmortalFury Points="25"/>
 					<SpellBreaker Points="25"/>
-					<ArmourOfKhorne Points="15"/>
+					<ArmOfKhorne Points="15"/>
 					<Option>
 						<Name>Collar of Khorne</Name>
 						<Points>15</Points>
@@ -379,9 +379,9 @@
 						<MagicItemsPoints/>
 						<Rule>Ignores the result of his first miscast</Rule>
 					</Option>
-					<DaemonicRobes Points="25"/>
-					<FlamesOfTzeentch Points="25"/>
-					<IridescentCorona Points="25"/>
+					<DRobes Points="25"/>
+					<FlOfTzeentch Points="25"/>
+					<IridCorona Points="25"/>
 					<MasterOfSorcery Points="25"/>
 				</Options>
 				<Equipments>
@@ -542,8 +542,8 @@
 						<MagicItemsPoints/>
 						<Test Bet="Pass" Context="Round">Leadership</Test>
 					</Option>
-					<DaemonicRobes Points="25"/>
-					<EnrapturingGaze Points="25"/>
+					<DRobes Points="25"/>
+					<EnrGaze Points="25"/>
 					<SirenSong Points="25"/>
 					<SoulHunger Points="25"/>
 					<SoporificMusk Points="25"/>
@@ -678,17 +678,17 @@
 				</SpecialRules>
 				<Options>
 					<Etherblade Points="50"/>
-					<ObsidianArmour Points="50"/>
-					<DaemonicRobes Points="25"/>
-					<FirestormBlade Points="25"/>
+					<ObsArmour Points="50"/>
+					<DRobes Points="25"/>
+					<FireBlade Points="25"/>
 					<SoulHunger Points="25"/>
-					<ArmourOfKhorne Points="15"/>
+					<ArmOfKhorne Points="15"/>
 					<BattleStandardBearer Points="25"/>
-					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<BannerOfUnholyVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
-					<GreatStandardOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
+					<StandardOfGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<BanOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<GreatIcon Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<BanOfVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
+					<StandOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
 					<Mount Name="Juggernaut" Points="50"/>
 					<Mount Name="Blood Chariot" Points="75"/>
 				</Options>
@@ -722,18 +722,18 @@
 						<Test Bet="Death" Context="Wound">Toughness</Test>
 					</Option>
 					<PowerVortex Points="30"/>
-					<FlamesOfTzeentch Points="25"/>
-					<DaemonicRobes Points="25"/>
-					<IridescentCorona Points="25"/>
+					<FlOfTzeentch Points="25"/>
+					<DRobes Points="25"/>
+					<IridCorona Points="25"/>
 					<MasterOfSorcery Points="25"/>
 					<SpellBreaker Points="25"/>
 					<WingedHorror Points="20"/>
 					<BattleStandardBearer Points="25"/>
-					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<BannerOfUnholyVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
-					<GreatStandardOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
+					<StandardOfGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<BanOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<GreatIcon Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<BanOfVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
+					<StandOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
 					<Mount Name="Disc of Tzeentch" Points="20"/>
 					<Mount Name="Burning Chariot" Points="60"/>
 				</Options>
@@ -775,11 +775,11 @@
 					<SoulHunger Points="25"/>
 					<SlimeTrail Points="10"/>
 					<BattleStandardBearer Points="25"/>
-					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<BannerOfUnholyVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
-					<GreatStandardOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
+					<StandardOfGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<BanOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<GreatIcon Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<BanOfVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
+					<StandOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
 					<Mount Name="Palanquin" Points="50"/>
 				</Options>
 				<Equipments>
@@ -814,8 +814,8 @@
 						<MagicItemsPoints/>
 						<Test Bet="Pass" Context="Round">Leadership</Test>
 					</Option>
-					<DaemonicRobes Points="25"/>
-					<EnrapturingGaze Points="25"/>
+					<DRobes Points="25"/>
+					<EnrGaze Points="25"/>
 					<SirenSong Points="25"/>
 					<SoporificMusk Points="25"/>
 					<Option>
@@ -825,11 +825,11 @@
 						<Test Bet="Pass" Context="Wound">Leadership</Test>
 					</Option>
 					<BattleStandardBearer Points="25"/>
-					<StandardOfChaosGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<BannerOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<GreatIconOfDespair Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
-					<BannerOfUnholyVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
-					<GreatStandardOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
+					<StandardOfGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<BanOfHellfire Points="100" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<GreatIcon Points="75" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Banner of Unholy Victory, Great Standard of Sundering"/>
+					<BanOfVictory Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Great Standard of Sundering"/>
+					<StandOfSundering Points="50" Dependencies="On: Battle Standard Bearer; Off: Standard of Chaos Glory, Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory"/>
 					<Mount Name="Steed of Slaanesh" Points="25"/>
 					<Mount Name="Seeker Chariot" Points="75"/>
 				</Options>
@@ -961,7 +961,7 @@
 						<Leader Points="12">Standard bearer</Leader>
 					</Command>
 					<SkullTotem Points="25" Dependencies="On: Standard bearer; Off: Icon of Endless War"/>
-					<IconOfEndlessWar Points="25" Dependencies="On: Standard bearer; Off: Skull Totem"/>
+					<IconOfWar Points="25" Dependencies="On: Standard bearer; Off: Skull Totem"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1095,7 +1095,7 @@
 						<Leader Points="12">Alluress</Leader>
 						<Leader Points="12">Standard bearer</Leader>
 					</Command>
-					<BannerOfEcstasy Points="25" Dependencies="On: Standard bearer; Off: Siren Standard"/>
+					<BanOfEcstasy Points="25" Dependencies="On: Standard bearer; Off: Siren Standard"/>
 					<SirenStandard Points="25" Dependencies="On: Standard bearer; Off: Banner of Ecstasy"/>
 				</Options>
 			</Core>
@@ -1215,7 +1215,7 @@
 						<Leader Points="12">Alluress</Leader>
 						<Leader Points="12">Standard bearer</Leader>
 					</Command>
-					<BannerOfEcstasy Points="25" Dependencies="On: Standard bearer; Off: Siren Standard"/>
+					<BanOfEcstasy Points="25" Dependencies="On: Standard bearer; Off: Siren Standard"/>
 					<SirenStandard Points="25" Dependencies="On: Standard bearer; Off: Banner of Ecstasy"/>
 				</Options>
 			</Special>
@@ -1248,7 +1248,7 @@
 						<Leader Points="20">Standard bearer</Leader>
 					</Command>
 					<SkullTotem Points="25" Dependencies="On: Standard bearer; Off: Icon of Endless War"/>
-					<IconOfEndlessWar Points="25" Dependencies="On: Standard bearer; Off: Skull Totem"/>
+					<IconOfWar Points="25" Dependencies="On: Standard bearer; Off: Skull Totem"/>
 				</Options>
 			</Rare>
 			<Rare>
