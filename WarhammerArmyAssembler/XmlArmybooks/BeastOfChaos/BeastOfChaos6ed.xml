@@ -42,15 +42,15 @@
 		<LocalXmlOption>
 			<MarkOfKhorne Name="Mark of Khorne">Frenzy; AddToDispell: 1</MarkOfKhorne>
 			<MarkOfNurgle Name="Mark of Nurgle">Fear; AddToWounds: 1</MarkOfNurgle>
-			<MarkOfTzeentchBig Name="Mark of Tzeentch">AddToWizard: 4; AddToCast: 4; AddToDispell: 2</MarkOfTzeentchBig>
-			<MarkOfTzeentchLittle Name="Mark of Tzeentch">AddToWizard: 2; AddToCast: 2; AddToDispell: 1</MarkOfTzeentchLittle>
+			<MarkOfTzBig Name="Mark of Tzeentch">AddToWizard: 4; AddToCast: 4; AddToDispell: 2</MarkOfTzBig>
+			<MarkOfTzLtl Name="Mark of Tzeentch">AddToWizard: 2; AddToCast: 2; AddToDispell: 1</MarkOfTzLtl>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaanesh>
-			<MarkOfSlaaneshHitFirst Name="Mark of Slaanesh">HitFirst</MarkOfSlaaneshHitFirst>
-			<MarkOfChaosUndividedFUnits Name="Mark of Chaos Undivided">Rule: May re-roll failed Psychology tests</MarkOfChaosUndividedFUnits>
-			<MarkOfKhorneFUnits Name="Mark of Khorne">Frenzy; AddToDispell: 1</MarkOfKhorneFUnits>
-			<MarkOfNurgleFUnits Name="Mark of Nurgle">Fear</MarkOfNurgleFUnits>
-			<MarkOfTzeentchFUnits Name="Mark of Tzeentch">AddToCast: 1</MarkOfTzeentchFUnits>
-			<MarkOfSlaaneshFUnits Name="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaaneshFUnits>
+			<MarkOfSlHitFirst Name="Mark of Slaanesh">HitFirst</MarkOfSlHitFirst>
+			<MarkOfChUndFUnits Name="Mark of Chaos Undivided">Rule: May re-roll failed Psychology tests</MarkOfChUndFUnits>
+			<MarkOfKhFUnits Name="Mark of Khorne">Frenzy; AddToDispell: 1</MarkOfKhFUnits>
+			<MarkOfNuFUnits Name="Mark of Nurgle">Fear</MarkOfNuFUnits>
+			<MarkOfTzFUnits Name="Mark of Tzeentch">AddToCast: 1</MarkOfTzFUnits>
+			<MarkOfSlFUnits Name="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlFUnits>
 		</LocalXmlOption>
 	</Introduction>
 	<Content>
@@ -357,7 +357,7 @@
 					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
 					<MarkOfKhorne Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
 					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
-					<MarkOfTzeentchBig Points="140" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfTzBig Points="140" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfSlaanesh Points="25" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 					<Mount Name="Tuskgor Chariot" Points="85"/>
 				</Options>
@@ -386,7 +386,7 @@
 					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>				
 					<MarkOfKhorne Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
 					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
-					<MarkOfTzeentchLittle Points="80" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfTzLtl Points="80" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfSlaanesh Points="25" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
 				<Equipments>
@@ -447,7 +447,7 @@
 					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>			
 					<MarkOfKhorne Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
 					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
-					<MarkOfTzeentchLittle Points="70" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfTzLtl Points="70" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfSlaanesh Points="25" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
 				<Equipments>
@@ -565,11 +565,11 @@
 						<Leader Points="12" Magic="Type: Unit, Points: 50">Standard bearer</Leader>
 						<Leader Points="12">Gouge-horn</Leader>
 					</Command>					
-					<MarkOfChaosUndividedFUnits Points="0" Dependencies="Off: Mark of Khorne, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfTzeentchFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
-					<MarkOfKhorneFUnits Points="45" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgleFUnits Points="50" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>				
-					<MarkOfSlaaneshFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfChUndFUnits Points="0" Dependencies="Off: Mark of Khorne, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfTzFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhFUnits Points="45" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNuFUnits Points="50" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>				
+					<MarkOfSlFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
 			</Core>
 			<Core>
@@ -698,11 +698,11 @@
 						<Leader Points="20">Standard bearer</Leader>
 						<Leader Points="20">Bloodkine</Leader>
 					</Command>					
-					<MarkOfChaosUndividedFUnits Points="0" Dependencies="Off: Mark of Khorne, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfTzeentchFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
-					<MarkOfKhorneFUnits Points="45" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgleFUnits Points="50" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>				
-					<MarkOfSlaaneshFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfChUndFUnits Points="0" Dependencies="Off: Mark of Khorne, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfTzFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfKhFUnits Points="45" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
+					<MarkOfNuFUnits Points="50" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>				
+					<MarkOfSlFUnits Points="20" Dependencies="Off: Mark of Chaos Undivided, Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
 			</Special>
 			<Rare>
@@ -750,10 +750,10 @@
 					<AdditionalWeapon Points="6" Dependencies="Off: Great weapon"/>
 					<GreatWeapon Points="8" Dependencies="Off: Additional weapon"/>
 					<LightArmour Points="3"/>
-					<MarkOfTzeentchLittle Points="80" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfTzLtl Points="80" Dependencies="Off: Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfKhorne Points="35" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
 					<MarkOfNurgle Points="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
-					<MarkOfSlaaneshHitFirst Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfSlHitFirst Points="40" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 				</Options>
 			</Rare>
 			<Rare>
