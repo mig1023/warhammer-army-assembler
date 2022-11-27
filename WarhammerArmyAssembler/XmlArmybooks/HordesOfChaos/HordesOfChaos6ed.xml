@@ -44,8 +44,8 @@
 			<MarkOfSlaanesh Name="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaanesh>
 			<MarkOfKhorne Name="Mark of Khorne">Frenzy</MarkOfKhorne>
 			<MarkOfNurgle Name="Mark of Nurgle">AddToWounds: 1</MarkOfNurgle>
-			<MarkOfNurgleForUnit Name="Mark of Nurgle">Fear</MarkOfNurgleForUnit>
-			<MarkOfTzeentchForUnit Name="Mark of Tzeentch">AddToCast: 1</MarkOfTzeentchForUnit>
+			<MarkOfNuFUnit Name="Mark of Nurgle">Fear</MarkOfNuFUnit>
+			<MarkOfTzFUnit Name="Mark of Tzeentch">AddToCast: 1</MarkOfTzFUnit>
 			<ChaosArmour Name="Chaos armour">AddToArmour: 4; NativeArmour</ChaosArmour>
 		</LocalXmlOption>
 	</Introduction>
@@ -1185,10 +1185,10 @@
 					<AdditionalWeapon PointsPerModel="3"/>
 					<GreatWeapon PointsPerModel="2"/>
 					<Shield PointsPerModel="1"/>
-					<MarkOfTzeentchForUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfTzFUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
 					<MarkOfSlaanesh PointsPerModel="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfKhorne PointsPerModel="45" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgleForUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfNuFUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<Command>
 						<Leader Points="12">Champion</Leader>
 						<Leader Points="6">Musician</Leader>
@@ -1277,10 +1277,10 @@
 						<AddToAttacks>1</AddToAttacks>
 						<OnlyOneSuchUnits/>
 					</Option>
-					<MarkOfTzeentchForUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfTzFUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
 					<MarkOfSlaanesh PointsPerModel="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfKhorne PointsPerModel="45" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgleForUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfNuFUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<Command>
 						<Leader Points="20">Champion</Leader>
 						<Leader Points="10">Musician</Leader>
@@ -1301,10 +1301,10 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<MarkOfTzeentchForUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfTzFUnit PointsPerModel="20" Dependencies="Off: Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
 					<MarkOfSlaanesh PointsPerModel="20" Dependencies="Off: Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
 					<MarkOfKhorne PointsPerModel="45" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgleForUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfNuFUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 				</Options>
 			</Core>
 			<Core>
