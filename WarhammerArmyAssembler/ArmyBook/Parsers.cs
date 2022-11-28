@@ -147,7 +147,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             return allParamTests;
         }
 
-        public static string[] AllStringParse(XmlNode xmlNode, string nodeName)
+        public static string[] AllStringParse(XmlNode xmlNode, string nodeName, bool comma = false)
         {
             if (xmlNode == null)
                 return new string[] { };
@@ -155,7 +155,20 @@ namespace WarhammerArmyAssembler.ArmyBook
             List<string> allString = new List<string>();
 
             foreach (XmlNode xmlSpecialRule in xmlNode.SelectNodes(nodeName))
-                allString.Add(xmlSpecialRule.InnerText);
+            {
+                if (comma)
+                {
+                    List<string> rules = xmlSpecialRule.InnerText
+                        .Split(',')
+                        .Select(x => x.Trim())
+                        .ToList();
+
+                    foreach (string rule in rules)
+                        allString.Add(rule);
+                }
+                else
+                    allString.Add(xmlSpecialRule.InnerText);
+            }
 
             return allString.ToArray();
         }
