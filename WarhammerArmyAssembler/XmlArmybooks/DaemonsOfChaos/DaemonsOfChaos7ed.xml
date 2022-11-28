@@ -178,36 +178,28 @@
 						<Name>Dedicate to Tzeentch</Name>
 						<Points>35</Points>
 						<Dependencies>
-							<Off>Dedicate to Slaanesh</Off>
-							<Off>Dedicate to Khorne</Off>
-							<Off>Dedicate to Nurgle</Off>
+							<Off>Dedicate to Slaanesh, Dedicate to Khorne, Dedicate to Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
 						<Name>Dedicate to Slaanesh</Name>
 						<Points>35</Points>
 						<Dependencies>
-							<Off>Dedicate to Tzeentch</Off>
-							<Off>Dedicate to Khorne</Off>
-							<Off>Dedicate to Nurgle</Off>
+							<Off>Dedicate to Tzeentch, Dedicate to Khorne, Dedicate to Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
 						<Name>Dedicate to Khorne</Name>
 						<Points>35</Points>
 						<Dependencies>
-							<Off>Dedicate to Tzeentch</Off>
-							<Off>Dedicate to Slaanesh</Off>
-							<Off>Dedicate to Nurgle</Off>
+							<Off>Dedicate to Tzeentch, Dedicate to Slaanesh, Dedicate to Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
 						<Name>Dedicate to Nurgle</Name>
 						<Points>35</Points>
 						<Dependencies>
-							<Off>Dedicate to Tzeentch</Off>
-							<Off>Dedicate to Slaanesh</Off>
-							<Off>Dedicate to Khorne</Off>
+							<Off>Dedicate to Tzeentch, Dedicate to Slaanesh, Dedicate to Khorne</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -217,8 +209,7 @@
 						<AddToCast>1</AddToCast>
 						<AddToDispell>1</AddToDispell>
 						<Dependencies>
-							<Off>Dedicate to Khorne</Off>
-							<Off>Wizard level 2</Off>
+							<Off>Dedicate to Khorne, Wizard level 2</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -228,8 +219,7 @@
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
 						<Dependencies>
-							<Off>Dedicate to Khorne</Off>
-							<Off>Wizard level 1</Off>
+							<Off>Dedicate to Khorne, Wizard level 1</Off>
 						</Dependencies>
 					</Option>
 					<Etherblade Points="50"/>
@@ -414,8 +404,7 @@
 						<AddToWizard>1</AddToWizard>
 						<AddToCast>1</AddToCast>
 						<Dependencies>
-							<Off>Wizard level 3</Off>
-							<Off>Wizard level 4</Off>
+							<Off>Wizard level 3, Wizard level 4</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -425,8 +414,7 @@
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
 						<Dependencies>
-							<Off>Wizard level 2</Off>
-							<Off>Wizard level 4</Off>
+							<Off>Wizard level 2, Wizard level 4</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -436,8 +424,7 @@
 						<AddToCast>3</AddToCast>
 						<AddToDispell>1</AddToDispell>
 						<Dependencies>
-							<Off>Wizard level 2</Off>
-							<Off>Wizard level 3</Off>
+							<Off>Wizard level 2, Wizard level 3</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -497,8 +484,7 @@
 						<AddToWizard>1</AddToWizard>
 						<AddToCast>1</AddToCast>
 						<Dependencies>
-							<Off>Wizard level 3</Off>
-							<Off>Wizard level 4</Off>
+							<Off>Wizard level 3, Wizard level 4</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -508,8 +494,7 @@
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
 						<Dependencies>
-							<Off>Wizard level 2</Off>
-							<Off>Wizard level 4</Off>
+							<Off>Wizard level 2, Wizard level 4</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -519,8 +504,7 @@
 						<AddToCast>3</AddToCast>
 						<AddToDispell>1</AddToDispell>
 						<Dependencies>
-							<Off>Wizard level 2</Off>
-							<Off>Wizard level 3</Off>
+							<Off>Wizard level 2, Wizard level 3</Off>
 						</Dependencies>
 					</Option>
 					<Option>
