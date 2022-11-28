@@ -748,8 +748,7 @@
 						<Points>30</Points>
 						<Rule>+1 Magic Resistance</Rule>
 						<Dependencies>
-							<Off>Greater Locus of Fury</Off>
-							<Off>Exalted Locus of Wrath</Off>
+							<Off>Greater Locus of Fury, Exalted Locus of Wrath</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -757,8 +756,7 @@
 						<Points>60</Points>
 						<Frenzy/>
 						<Dependencies>
-							<Off>Lesser Locus of Abjuration</Off>
-							<Off>Exalted Locus of Wrath</Off>
+							<Off>Lesser Locus of Abjuration, Exalted Locus of Wrath</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -766,8 +764,7 @@
 						<Points>75</Points>
 						<Hate/>
 						<Dependencies>
-							<Off>Lesser Locus of Abjuration</Off>
-							<Off>Greater Locus of Fury</Off>
+							<Off>Lesser Locus of Abjuration, Greater Locus of Fury</Off>
 						</Dependencies>
 					</Option>
 					<Mount Name="Juggernaut" Points="50"/>
@@ -799,8 +796,7 @@
 						<Points>25</Points>
 						<Rule>When a model is slain, place D3+1 Blue Horror</Rule>
 						<Dependencies>
-							<Off>Greater Locus of Change</Off>
-							<Off>Exalted Locus of Conjuration</Off>
+							<Off>Greater Locus of Change, Exalted Locus of Conjuration</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -808,8 +804,7 @@
 						<Points>35</Points>
 						<Rule>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</Rule>
 						<Dependencies>
-							<Off>Lesser Locus of Transmogrification</Off>
-							<Off>Exalted Locus of Conjuration</Off>
+							<Off>Lesser Locus of Transmogrification, Exalted Locus of Conjuration</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -817,8 +812,7 @@
 						<Points>50</Points>
 						<Rule>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</Rule>
 						<Dependencies>
-							<Off>Lesser Locus of Transmogrification</Off>
-							<Off>Greater Locus of Chang</Off>
+							<Off>Lesser Locus of Transmogrification, Greater Locus of Chang</Off>
 						</Dependencies>
 					</Option>
 					<Mount Name="Disc of Tzeentch" Points="20"/>
@@ -857,8 +851,7 @@
 						<Points>40</Points>
 						<Rule>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</Rule>
 						<Dependencies>
-							<Off>Greater Locus of Fecundity</Off>
-							<Off>Exalted Locus of Contagion</Off>
+							<Off>Greater Locus of Fecundity, Exalted Locus of Contagion</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -866,8 +859,7 @@
 						<Points>45</Points>
 						<Regeneration/>
 						<Dependencies>
-							<Off>Lesser Locus of Virulence</Off>
-							<Off>Exalted Locus of Contagion</Off>
+							<Off>Lesser Locus of Virulence, Exalted Locus of Contagion</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -875,8 +867,7 @@
 						<Points>50</Points>
 						<Rule>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</Rule>
 						<Dependencies>
-							<Off>Lesser Locus of Virulence</Off>
-							<Off>Greater Locus of Fecundity</Off>
+							<Off>Lesser Locus of Virulence, Greater Locus of Fecundity</Off>
 						</Dependencies>
 					</Option>
 					<Mount Name="Palanquin" Points="50"/>
@@ -904,8 +895,7 @@
 						<Points>5</Points>
 						<Rule>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</Rule>
 						<Dependencies>
-							<Off>Greater Locus of Swiftness</Off>
-							<Off>Exalted Locus of Beguilement</Off>
+							<Off>Greater Locus of Swiftness, Exalted Locus of Beguilement</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -913,8 +903,7 @@
 						<Points>50</Points>
 						<Rule>This model, and all models in her unit, have the Always Strikes First special rule</Rule>
 						<Dependencies>
-							<Off>Lesser Locus of Grace</Off>
-							<Off>Exalted Locus of Beguilement</Off>
+							<Off>Lesser Locus of Grace, Exalted Locus of Beguilement</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -922,8 +911,7 @@
 						<Points>60</Points>
 						<Rule>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</Rule>
 						<Dependencies>
-							<Off>Lesser Locus of Grace</Off>
-							<Off>Greater Locus of Swiftness</Off>
+							<Off>Lesser Locus of Grace, Greater Locus of Swiftness</Off>
 						</Dependencies>
 					</Option>
 					<Mount Name="Steed of Slaanesh" Points="25"/>
@@ -1319,9 +1307,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Daemons of Slaanesh</Off>
-							<Off>Daemons of Khorne</Off>
-							<Off>Daemons of Nurgle</Off>
+							<Off>Daemons of Slaanesh, Daemons of Khorne, Daemons of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1329,9 +1315,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Daemons of Tzeentch</Off>
-							<Off>Daemons of Khorne</Off>
-							<Off>Daemons of Nurgle</Off>
+							<Off>Daemons of Tzeentch, Daemons of Khorne, Daemons of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1339,9 +1323,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Daemons of Tzeentch</Off>
-							<Off>Daemons of Slaanesh</Off>
-							<Off>Daemons of Nurgle</Off>
+							<Off>Daemons of Tzeentch, Daemons of Slaanesh, Daemons of Nurgle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1349,9 +1331,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Daemons of Tzeentch</Off>
-							<Off>Daemons of Slaanesh</Off>
-							<Off>Daemons of Khorne</Off>
+							<Off>Daemons of Tzeentch, Daemons of Slaanesh, Daemons of Khorne</Off>
 						</Dependencies>
 					</Option>
 				</Options>
@@ -1427,24 +1407,21 @@
 						<Name>Baleful Torrent</Name>
 						<Points>50</Points>
 						<Dependencies>
-							<Off>Phlegm Bombardment</Off>
-							<Off>Warp Gaze</Off>
+							<Off>Phlegm Bombardment, Warp Gaze</Off>
 						</Dependencies>
 					</Option>
 					<Option>
 						<Name>Phlegm Bombardment</Name>
 						<Points>50</Points>
 						<Dependencies>
-							<Off>Baleful Torrent</Off>
-							<Off>Warp Gaze</Off>
+							<Off>Baleful Torrent, Warp Gaze</Off>
 						</Dependencies>
 					</Option>
 					<Option>
 						<Name>Warp Gaze</Name>
 						<Points>55</Points>
 						<Dependencies>
-							<Off>Baleful Torrent</Off>
-							<Off>Phlegm Bombardment</Off>
+							<Off>Baleful Torrent, Phlegm Bombardment</Off>
 						</Dependencies>
 					</Option>
 				</Options>
