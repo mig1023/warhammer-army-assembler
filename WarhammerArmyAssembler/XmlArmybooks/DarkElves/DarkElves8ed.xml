@@ -690,8 +690,7 @@
 						<Name>Cry of War</Name>
 						<Points>15</Points>
 						<Dependencies>
-							<Off>Witchbrew</Off>
-							<Off>Rune of Khaine</Off>
+							<Off>Witchbrew, Rune of Khaine</Off>
 						</Dependencies>
 						<Fear/>
 						<Rule>All Fear tests taken by enemy units in base contact with this model must be taken with a -3 penalty to Leadership</Rule>
@@ -700,8 +699,7 @@
 						<Name>Witchbrew</Name>
 						<Points>30</Points>
 						<Dependencies>
-							<Off>Cry of War</Off>
-							<Off>Rune of Khaine</Off>
+							<Off>Cry of War, Rune of Khaine</Off>
 						</Dependencies>
 						<Frenzy/>
 						<Rule>All models in the same unit, have the Frenzy special rule. If they already have the Frenzy special rule, that Frenzy grants +2 Attacks instead of just +1, but the unit suffers a -3 penalty to Leadership when testing not to declare a charge</Rule>
@@ -710,8 +708,7 @@
 						<Name>Rune of Khaine</Name>
 						<Points>40</Points>
 						<Dependencies>
-							<Off>Cry of War</Off>
-							<Off>Witchbrew</Off>
+							<Off>Cry of War, Witchbrew</Off>
 						</Dependencies>
 						<Rule>+D3 Attacks (roll each round of combat, immediately before the model attacks)</Rule>
 					</Option>
@@ -744,8 +741,7 @@
 					<Option>
 						<Name>Black Lotus</Name>
 						<Dependencies>
-							<Off>Dark Venom</Off>
-							<Off>Manbane</Off>
+							<Off>Dark Venom, Manbane</Off>
 						</Dependencies>
 						<Points>15</Points>
 						<Rule>For each unsaved Wound, enemy suffers a -1 penalty to their Leadership for the rest of the game</Rule>
@@ -753,8 +749,7 @@
 					<Option>
 						<Name>Dark Venom</Name>
 						<Dependencies>
-							<Off>Black Lotus</Off>
-							<Off>Manbane</Off>
+							<Off>Black Lotus, Manbane</Off>
 						</Dependencies>
 						<Points>20</Points>
 						<KillingBlow/>
@@ -762,8 +757,7 @@
 					<Option>
 						<Name>Manbane</Name>
 						<Dependencies>
-							<Off>Black Lotus</Off>
-							<Off>Dark Venom</Off>
+							<Off>Black Lotus, Dark Venom</Off>
 						</Dependencies>
 						<Points>20</Points>
 						<AddToWound>1</AddToWound>
