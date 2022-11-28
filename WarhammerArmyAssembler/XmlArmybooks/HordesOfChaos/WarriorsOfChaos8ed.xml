@@ -538,10 +538,7 @@
 						<Points>6</Points>
 						<Only>Infantry</Only>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Flail</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
+							<Off>Great weapon, Flail, Halberd, Lance</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -550,10 +547,7 @@
 						<HitLast/>
 						<Points>8</Points>
 						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Flail</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
+							<Off>Additional weapon, Flail, Halberd, Lance</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -561,10 +555,7 @@
 						<Points>6</Points>
 						<Flail/>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
-							<Off>Lance</Off>
+							<Off>Great weapon, Additional weapon, Halberd, Lance</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -572,10 +563,7 @@
 						<AddToStrength>1</AddToStrength>
 						<Points>8</Points>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Additional weapon</Off>
-							<Off>Flail</Off>
-							<Off>Lance</Off>
+							<Off>Great weapon, Additional weapon, Flail, Lance</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -583,10 +571,7 @@
 						<Only>Mount</Only>
 						<Points>8</Points>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Flail</Off>
-							<Off>Halberd</Off>
-							<Off>Additional weapon</Off>
+							<Off>Great weapon, Flail, Halberd, Additional weapon</Off>
 						</Dependencies>
 						<Lance/>
 					</Option>
@@ -595,9 +580,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -606,9 +589,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -617,9 +598,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -628,9 +607,7 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -710,8 +687,7 @@
 						<Points>15</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -720,8 +696,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -730,8 +705,7 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -809,9 +783,7 @@
 						<Name>Daemon of Khorne</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Nurgle</Off>
+							<Off>Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle</Off>
 						</Dependencies>
 						<Rule>Hate Daemon of Slaanesh</Rule>
 						<Rule>+1 Strength for the rest of the turn after successful charge</Rule>
@@ -821,9 +793,7 @@
 						<Points>15</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Khorne</Off>
-							<Off>Daemon of Nurgle</Off>
+							<Off>Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle</Off>
 						</Dependencies>
 						<Rule>Hate Daemon of Nurgle</Rule>
 						<Rule>Re-roll Ward save results of 1</Rule>
@@ -834,9 +804,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Slaanesh</Off>
-							<Off>Daemon of Khorne</Off>
+							<Off>Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne</Off>
 						</Dependencies>
 						<SubOpponentToHit>1</SubOpponentToHit>
 						<Rule>Hate Daemon of Tzeentch</Rule>
@@ -846,9 +814,7 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Daemon of Tzeentch</Off>
-							<Off>Daemon of Khorne</Off>
-							<Off>Daemon of Nurgle</Off>
+							<Off>Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle</Off>
 						</Dependencies>
 						<ArmourPiercing>1</ArmourPiercing>
 						<Rule>Hate Daemon of Khorne</Rule>
@@ -988,9 +954,7 @@
 						<Points>3</Points>
 						<Only>Infantry</Only>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Flail</Off>
-							<Off>Halberd</Off>
+							<Off>Great weapon, Flail, Halberd</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -998,9 +962,7 @@
 						<Points>5</Points>
 						<Flail/>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
+							<Off>Great weapon, Additional weapon, Halberd</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1009,9 +971,7 @@
 						<HitLast/>
 						<Points>6</Points>
 						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Flail</Off>
-							<Off>Halberd</Off>
+							<Off>Additional weapon, Flail, Halberd</Off>
 						</Dependencies>
 					</Option>
 					<Option>
@@ -1019,9 +979,7 @@
 						<AddToStrength>1</AddToStrength>
 						<Points>6</Points>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Additional weapon</Off>
-							<Off>Flail</Off>
+							<Off>Great weapon, Additional weapon, Flail</Off>
 						</Dependencies>
 					</Option>
 					<Shield Points="5"/>
@@ -1029,9 +987,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1040,9 +996,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -1051,9 +1005,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -1062,9 +1014,7 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1144,8 +1094,7 @@
 						<Points>15</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -1154,8 +1103,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -1164,8 +1112,7 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1368,9 +1315,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1379,9 +1324,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -1390,9 +1333,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -1401,9 +1342,7 @@
 						<Points>1</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1413,8 +1352,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Halberd</Off>
+							<Off>Great weapon, Halberd</Off>
 						</Dependencies>
 						<AddToAttacks>1</AddToAttacks>
 					</Option>
@@ -1423,8 +1361,7 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
+							<Off>Additional weapon, Halberd</Off>
 						</Dependencies>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
@@ -1434,8 +1371,7 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great weapon</Off>
+							<Off>Additional weapon, Great weapon</Off>
 						</Dependencies>
 						<AddToStrength>1</AddToStrength>
 					</Option>
@@ -1464,9 +1400,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1475,9 +1409,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -1486,9 +1418,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -1497,9 +1427,7 @@
 						<Points>1</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1557,9 +1485,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Forsaken of Tzeentch</Off>
-							<Off>Forsaken of Slaanesh</Off>
-							<Off>Forsaken of Nurgle</Off>
+							<Off>Forsaken of Tzeentch, Forsaken of Slaanesh, Forsaken of Nurgle</Off>
 						</Dependencies>
 						<Hate/>
 					</Option>
@@ -1568,9 +1494,7 @@
 						<Points>1</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Forsaken of Slaanesh</Off>
-							<Off>Forsaken of Khorne</Off>
-							<Off>Forsaken of Nurgle</Off>
+							<Off>Forsaken of Slaanesh, Forsaken of Khorne, Forsaken of Nurgle</Off>
 						</Dependencies>
 						<Rule>Magic Resistance (2)</Rule>
 					</Option>
@@ -1579,9 +1503,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Forsaken of Tzeentch</Off>
-							<Off>Forsaken of Slaanesh</Off>
-							<Off>Forsaken of Khorne</Off>
+							<Off>Forsaken of Tzeentch, Forsaken of Slaanesh, Forsaken of Khorne</Off>
 						</Dependencies>
 						<Fear/>
 					</Option>
@@ -1590,9 +1512,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Forsaken of Tzeentch</Off>
-							<Off>Forsaken of Khorne</Off>
-							<Off>Forsaken of Nurgle</Off>
+							<Off>Forsaken of Tzeentch, Forsaken of Khorne, Forsaken of Nurgle</Off>
 						</Dependencies>
 						<Swiftstride/>
 					</Option>
@@ -1649,9 +1569,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1659,9 +1577,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -1669,9 +1585,7 @@
 						<Name>Mark of Nurgle</Name>
 						<Points>15</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -1679,9 +1593,7 @@
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1708,9 +1620,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1719,9 +1629,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -1730,9 +1638,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -1741,9 +1647,7 @@
 						<Points>1</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1852,9 +1756,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1863,9 +1765,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -1874,9 +1774,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -1885,9 +1783,7 @@
 						<Points>1</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -1897,8 +1793,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Halberd</Off>
+							<Off>Great weapon, Halberd</Off>
 						</Dependencies>
 						<AddToAttacks>1</AddToAttacks>
 					</Option>
@@ -1907,8 +1802,7 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
+							<Off>Additional weapon, Halberd</Off>
 						</Dependencies>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
@@ -1918,8 +1812,7 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great weapon</Off>
+							<Off>Additional weapon, Great weapon</Off>
 						</Dependencies>
 						<AddToStrength>1</AddToStrength>
 					</Option>
@@ -1957,9 +1850,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -1968,9 +1859,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -1979,9 +1868,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -1990,9 +1877,7 @@
 						<Points>1</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -2044,9 +1929,7 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -2055,9 +1938,7 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -2066,9 +1947,7 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -2077,9 +1956,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -2134,8 +2011,7 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Great weapon</Off>
-							<Off>Halberd</Off>
+							<Off>Great weapon, Halberd</Off>
 						</Dependencies>
 						<AddToAttacks>1</AddToAttacks>
 					</Option>
@@ -2144,8 +2020,7 @@
 						<Points>8</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Halberd</Off>
+							<Off>Additional weapon, Halberd</Off>
 						</Dependencies>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
@@ -2155,8 +2030,7 @@
 						<Points>8</Points>
 						<PerModel/>
 						<Dependencies>
-							<Off>Additional weapon</Off>
-							<Off>Great weapon</Off>
+							<Off>Additional weapon, Great weapon</Off>
 						</Dependencies>
 						<AddToStrength>1</AddToStrength>
 					</Option>
@@ -2241,9 +2115,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -2251,9 +2123,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -2261,9 +2131,7 @@
 						<Name>Mark of Nurgle</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -2271,9 +2139,7 @@
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -2299,9 +2165,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 					</Option>
@@ -2309,9 +2173,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -2319,9 +2181,7 @@
 						<Name>Mark of Nurgle</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
@@ -2329,9 +2189,7 @@
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<ImmuneToPsychology/>
 					</Option>
@@ -2419,9 +2277,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
 						<AddToStrength>1</AddToStrength>
@@ -2430,9 +2286,7 @@
 						<Name>Mark of Nurgle</Name>
 						<Points>15</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<AddToToughness>1</AddToToughness>
 					</Option>
@@ -2440,9 +2294,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>15</Points>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToWard>6</AddToWard>
 					</Option>
@@ -2450,9 +2302,7 @@
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<AddToInitiative>1</AddToInitiative>
 					</Option>
@@ -2472,9 +2322,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>5</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Rule>Devastating Charge</Rule>
 					</Option>
@@ -2482,9 +2330,7 @@
 						<Name>Mark of Nurgle</Name>
 						<Points>20</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
+							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
 						</Dependencies>
 						<PoisonAttack/>
 					</Option>
@@ -2492,9 +2338,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Slaanesh</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<Rule>Strength 3 Breath Weapon with Flaming Attacks special rule</Rule>
 					</Option>
@@ -2502,9 +2346,7 @@
 						<Name>Mark of Slaanesh</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<Off>Mark of Tzeentch</Off>
-							<Off>Mark of Khorne</Off>
-							<Off>Mark of Nurgle</Off>
+							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
 						</Dependencies>
 						<HitFirst/>
 					</Option>
