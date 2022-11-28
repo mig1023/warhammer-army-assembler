@@ -391,7 +391,7 @@
                                                     <DataTrigger Binding="{Binding Artefacts}" Value="True">
                                                         <Setter Property="TextBlock.Foreground" Value="LightGray"/>
                                                     </DataTrigger>
-                                                    <DataTrigger Binding="{Binding Personified}" Value="True">
+                                                    <DataTrigger Binding="{Binding Character}" Value="True">
                                                         <Setter Property="Foreground" Value="LightGray"/>
                                                     </DataTrigger>
                                                     <DataTrigger Binding="{Binding DogsOfWar}" Value="True">

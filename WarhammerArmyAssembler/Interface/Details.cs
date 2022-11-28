@@ -177,7 +177,7 @@ namespace WarhammerArmyAssembler.Interface
                     lastColumnMaxWidth: ref lastColumnMaxWidth);
             }
 
-            if (!unit.Personified)
+            if (!unit.Character)
                 CreatePersonificationField(lastColumnMaxWidth, unitID);
 
             if (unit.ExistsOptions())

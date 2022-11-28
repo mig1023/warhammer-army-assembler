@@ -311,7 +311,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.MountInit = StringParse(xmlUnit["Mount"]);
             newUnit.ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1);
             newUnit.Description = description;
-            newUnit.Personified = BoolParse(xmlUnit["Personified"]);
+            newUnit.Character = BoolParse(xmlUnit["Character"]);
             newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
             newUnit.Chariot = IntParse(xmlUnit["Chariot"]);
 

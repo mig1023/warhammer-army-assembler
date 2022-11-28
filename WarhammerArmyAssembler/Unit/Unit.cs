@@ -143,7 +143,7 @@ namespace WarhammerArmyAssembler
         public Brush InterfaceColor { get; set; }
         public bool GroupBold { get; set; }
 
-        public bool Personified { get; set; }
+        public bool Character { get; set; }
         public bool ArmyGeneral { get; set; }
         public bool WeaponTeam { get; set; }
         public bool NotALeader { get; set; }
@@ -368,7 +368,7 @@ namespace WarhammerArmyAssembler
 
                 SizableType = this.SizableType,
                 VisibleType = this.VisibleType,
-                Personified = this.Personified,
+                Character = this.Character,
                 ArmyGeneral = this.ArmyGeneral,
                 WeaponTeam = this.WeaponTeam,
                 NotALeader = this.NotALeader,
@@ -874,8 +874,8 @@ namespace WarhammerArmyAssembler
         {
             string describe = String.Format("\nUnit type: {0}", Type);
 
-            if (Personified)
-                describe += " (personified)";
+            if (Character)
+                describe += " (character)";
 
             if (!IsHeroOrHisMount())
             {
@@ -1003,23 +1003,23 @@ namespace WarhammerArmyAssembler
             List<string> rules = new List<string>();
 
             int fullCommand = 0;
-            string personifiedCommander = String.Empty;
+            string characterCommander = String.Empty;
 
             foreach (Option option in Options)
             {
                 if (option.Command && option.Realised)
                     fullCommand += 1;
 
-                if (option.PersonifiedCommander && option.Realised)
-                    personifiedCommander = option.Name;
+                if (option.CharacterCommander && option.Realised)
+                    characterCommander = option.Name;
             }
 
             if (fullCommand == 3)
             {
                 rules.Add("FC");
 
-                if (!String.IsNullOrEmpty(personifiedCommander))
-                    rules.Add(personifiedCommander);
+                if (!String.IsNullOrEmpty(characterCommander))
+                    rules.Add(characterCommander);
             }
             else
                 foreach (Option option in Options.Where(x => (x.Command && x.Realised)))

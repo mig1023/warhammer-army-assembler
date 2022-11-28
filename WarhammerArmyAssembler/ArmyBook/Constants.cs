@@ -177,7 +177,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "WizardTo",
             "MagicItems",
             "Command",
-            "PersonifiedCommander",
+            "CharacterCommander",
             "Mount",
             "OnlyRuleOption",
         };
