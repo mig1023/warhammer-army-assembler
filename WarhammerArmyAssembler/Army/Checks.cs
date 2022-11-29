@@ -90,7 +90,7 @@ namespace WarhammerArmyAssembler.Army
         }
 
         public static bool IsArmyUnitMaxLimitOk(Unit newUnit) =>
-            !newUnit.UniqueUnits || !(Data.Units.Values.Where(x => x.ID == newUnit.ID).FirstOrDefault() != null);
+            !newUnit.Singleton || !(Data.Units.Values.Where(x => x.ID == newUnit.ID).FirstOrDefault() != null);
 
         public static int IsOptionAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
         {

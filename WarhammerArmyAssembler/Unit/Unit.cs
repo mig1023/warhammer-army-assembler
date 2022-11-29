@@ -45,7 +45,7 @@ namespace WarhammerArmyAssembler
         public int MinSize { get; set; }
         public int MaxSize { get; set; }
         public int ModelsInPack { get; set; }
-        public bool UniqueUnits { get; set; }
+        public bool Singleton { get; set; }
 
         public double Points { get; set; }
         public double StaticPoints { get; set; }
@@ -289,7 +289,7 @@ namespace WarhammerArmyAssembler
                 MinSize = this.MinSize,
                 MaxSize = this.MaxSize,
                 ModelsInPack = this.ModelsInPack,
-                UniqueUnits = this.UniqueUnits,
+                Singleton = this.Singleton,
                 Points = this.Points,
                 StaticPoints = this.StaticPoints,
                 MountOn = this.MountOn,
@@ -885,7 +885,7 @@ namespace WarhammerArmyAssembler
 
                 describe += ((MaxSize > 0) && (MinSize != MaxSize) ? minAndMax : minOnly);
 
-                if (UniqueUnits)
+                if (Singleton)
                     describe += "\nOnly one unit of this type can be in the army";
             }
 
