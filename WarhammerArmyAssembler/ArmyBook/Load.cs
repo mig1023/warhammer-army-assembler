@@ -380,7 +380,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             {
                 if (xmlOption.Name == "Command")
                 {
-                    foreach (XmlNode xmlCommand in xmlOption.SelectNodes("Leader"))
+                    foreach (XmlNode xmlCommand in xmlOption.SelectNodes("*"))
                         newUnit.Options.Add(LoadOption(GetNextIndex(), xmlCommand, xml));
                 }
                 else
