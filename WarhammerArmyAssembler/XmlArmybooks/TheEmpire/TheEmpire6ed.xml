@@ -1043,23 +1043,25 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Command Name="Marksman" Points="7"/>
-					<Option>
-						<Name>Repeater handgun for Marksman</Name>
-						<Dependencies>
-							<On>Marksman</On>
-							<Off>Repeater pistol for Marksman</Off>
-						</Dependencies>
-						<Points>15</Points>
-					</Option>
-					<Option>
-						<Name>Repeater pistol for Marksman</Name>
-						<Dependencies>
-							<On>Marksman</On>
-							<Off>Repeater handgun for Marksman</Off>
-						</Dependencies>
-						<Points>10</Points>
-					</Option>
+					<Command>
+						<Champion Points="7" Name="Marksman"/>				
+						<Option>
+							<Name>Repeater handgun for Marksman</Name>
+							<Dependencies>
+								<On>Marksman</On>
+								<Off>Repeater pistol for Marksman</Off>
+							</Dependencies>
+							<Points>15</Points>
+						</Option>
+						<Option>
+							<Name>Repeater pistol for Marksman</Name>
+							<Dependencies>
+								<On>Marksman</On>
+								<Off>Repeater handgun for Marksman</Off>
+							</Dependencies>
+							<Points>10</Points>
+						</Option>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
