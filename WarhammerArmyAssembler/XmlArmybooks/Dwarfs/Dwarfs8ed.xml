@@ -1195,16 +1195,18 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<GreatWeapon PointsPerModel="2"/>
-					<Command Name="Veteran" Points="10"/>
-					<Option>
-						<Name>Dwarf pistols</Name>
-						<Points>0</Points>
-						<Dependencies>
-							<On>Veteran</On>
-						</Dependencies>
-					</Option>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10"/>
+					<Command>
+						<Champion Points="10" Name="Veteran"/>
+						<Option>
+							<Name>Dwarf pistols</Name>
+							<Points>0</Points>
+							<Dependencies>
+								<On>Veteran</On>
+							</Dependencies>
+						</Option>
+						<Musician Points="10"/>
+						<StandardBearer Points="10"/>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
@@ -1287,23 +1289,25 @@
 					<GromrilArmour/>
 				</Equipments>
 				<Options>
-					<Command Name="Ironbeard" Points="10"/>
-					<Option>
-						<Name>A brace of drakefire pistols</Name>
-						<Points>0</Points>
-						<Dependencies>
-							<On>Ironbeard</On>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Cinderblast bombs</Name>
-						<Points>15</Points>
-						<Dependencies>
-							<On>Ironbeard</On>
-						</Dependencies>
-					</Option>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type: Unit, Points: 50"/>
+					<Command>
+						<Champion Points="10" Name="Ironbeard"/>
+						<Option>
+							<Name>A brace of drakefire pistols</Name>
+							<Points>0</Points>
+							<Dependencies>
+								<On>Ironbeard</On>
+							</Dependencies>
+						</Option>
+						<Option>
+							<Name>Cinderblast bombs</Name>
+							<Points>15</Points>
+							<Dependencies>
+								<On>Ironbeard</On>
+							</Dependencies>
+						</Option>
+						<Musician Points="10"/>
+						<StandardBearer Points="10" Magic="Type: Unit, Points: 50"/>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1332,17 +1336,19 @@
 						<PerModel/>
 						<Rule>Missile weapons with one use only rule and range attack with range 4", Strength 4 and Armour Piercing, Flaming Attacks special rules</Rule>
 					</Option>
-					<Command Name="Prospector" Points="10"/>
-					<Option>
-						<Name>Steam drill</Name>
-						<Points>25</Points>
-						<Rule>Can re-roll a failed arrival for its Ambushers special rule</Rule>
-						<Dependencies>
-							<On>Prospector</On>
-						</Dependencies>
-					</Option>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10"/>
+					<Command>
+						<Champion Points="10" Name="Prospector"/>
+						<Option>
+							<Name>Steam drill</Name>
+							<Points>25</Points>
+							<Rule>Can re-roll a failed arrival for its Ambushers special rule</Rule>
+							<Dependencies>
+								<On>Prospector</On>
+							</Dependencies>
+						</Option>
+						<Musician Points="10"/>
+						<StandardBearer Points="10"/>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1567,32 +1573,34 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Command Name="Ironwarden" Points="10"/>
-					<Option>
-						<Name>Cinderblast Bomb</Name>
-						<Points>15</Points>
-						<Dependencies>
-							<On>Ironwarden</On>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Brace of Drakefire pistols</Name>
-						<Points>0</Points>
-						<Dependencies>
-							<On>Ironwarden</On>
-							<Off>Trollhammer torpedo</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Trollhammer torpedo</Name>
-						<Points>20</Points>
-						<Dependencies>
-							<On>Ironwarden</On>
-							<Off>Brace of Drakefire pistols</Off>
-						</Dependencies>
-					</Option>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type: Unit, Points: 50"/>
+					<Command>
+						<Champion Points="10" Name="Ironwarden"/>
+						<Option>
+							<Name>Cinderblast Bomb</Name>
+							<Points>15</Points>
+							<Dependencies>
+								<On>Ironwarden</On>
+							</Dependencies>
+						</Option>
+						<Option>
+							<Name>Brace of Drakefire pistols</Name>
+							<Points>0</Points>
+							<Dependencies>
+								<On>Ironwarden</On>
+								<Off>Trollhammer torpedo</Off>
+							</Dependencies>
+						</Option>
+						<Option>
+							<Name>Trollhammer torpedo</Name>
+							<Points>20</Points>
+							<Dependencies>
+								<On>Ironwarden</On>
+								<Off>Brace of Drakefire pistols</Off>
+							</Dependencies>
+						</Option>
+						<Musician Points="10"/>
+						<StandardBearer Points="10" Magic="Type: Unit, Points: 50"/>
+					</Command>
 				</Options>
 			</Rare>
 			<Rare>
