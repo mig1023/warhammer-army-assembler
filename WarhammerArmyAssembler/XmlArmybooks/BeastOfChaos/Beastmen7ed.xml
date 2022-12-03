@@ -701,7 +701,7 @@
 					<Shield PointsPerModel="1" Dependencies="Off: Additional weapon"/>
 					<AdditionalWeapon PointsPerModel="1" Dependencies="Off: Shield"/>
 					<Command>
-						<Leader Points="10">Foe-render</Leader>
+						<Champion Points="10" Name="Foe-render"/>
 						<Musician Points="5"/>
 						<StandardBearer Points="10"/>
 					</Command>
@@ -766,7 +766,7 @@
 				</Equipments>
 				<Options>
 					<Command>
-						<Leader Points="6">Halfhorn</Leader>
+						<Champion Points="6" Name="Halfhorn"/>
 						<Musician Points="3"/>
 					</Command>
 				</Options>
@@ -835,7 +835,7 @@
 					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Shield, Great weapon"/>
 					<GreatWeapon PointsPerModel="8" Dependencies="Off: Shield, Additional weapon"/>				
 					<Command>
-						<Leader Points="20" Magic="Type: Hero, Points: 25">Bloodkine</Leader>
+						<Champion Points="20" Name="Bloodkine" Magic="Type: Hero, Points: 25"/>
 						<Musician Points="10"/>
 						<StandardBearer Points="20"/>
 					</Command>
@@ -934,7 +934,7 @@
 				</Equipments>
 				<Options>
 					<Command>
-						<Leader Points="12" Magic="Type: Hero, Points: 25">Gouge-horn</Leader>
+						<Champion Points="12" Name="Gouge-horn" Magic="Type: Hero, Points: 25"/>
 						<Musician Points="6"/>
 						<StandardBearer Points="12" Magic="Type: Unit, Points: 50"/>
 					</Command>
