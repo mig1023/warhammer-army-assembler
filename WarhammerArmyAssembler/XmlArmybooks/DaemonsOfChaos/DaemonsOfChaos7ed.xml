@@ -969,44 +969,46 @@
 					</HandWeapon>
 				</Equipments>
 				<Options>
-					<Command Name="Musician" Points="6"/>
-					<Option>
-						<Name>Iridescent Horrors</Name>
-						<Command/>
-						<Dependencies>
-							<Off>Changeling</Off>
-						</Dependencies>
-						<Points>12</Points>
-					</Option>
-					<Option>
-						<Name>Changeling</Name>
-						<Command/>
-						<Dependencies>
-							<Off>Iridescent Horrors</Off>
-						</Dependencies>
-						<OnlyOneInArmy/>
-						<Points>60</Points>
-						<Rule>Formless Horror</Rule>
-					</Option>
-					<Command Name="Standard bearer" Points="12"/>
-					<Option>
-						<Name>Banner of Change</Name>
-						<Dependencies>
-							<On>Standard bearer</On>
-							<Off>Icon of Sorcery</Off>
-						</Dependencies>
-						<Points>25</Points>
-						<Rule>Bound Spell, Power Level 3: inflicts 3D6 Strength 3 hits on one enemy unit in base contact</Rule>
-					</Option>
-					<Option>
-						<Name>Icon of Sorcery</Name>
-						<Dependencies>
-							<On>Standard bearer</On>
-							<Off>Banner of Change</Off>
-						</Dependencies>
-						<Points>15</Points>
-						<Rule>+1 bonus for casting spells</Rule>
-					</Option>
+					<Command>
+						<Musician Points="6"/>
+						<Option>
+							<Name>Iridescent Horrors</Name>
+							<Command/>
+							<Dependencies>
+								<Off>Changeling</Off>
+							</Dependencies>
+							<Points>12</Points>
+						</Option>
+						<Option>
+							<Name>Changeling</Name>
+							<Command/>
+							<Dependencies>
+								<Off>Iridescent Horrors</Off>
+							</Dependencies>
+							<OnlyOneInArmy/>
+							<Points>60</Points>
+							<Rule>Formless Horror</Rule>
+						</Option>
+						<StandardBearer Points="12"/>
+						<Option>
+							<Name>Banner of Change</Name>
+							<Dependencies>
+								<On>Standard bearer</On>
+								<Off>Icon of Sorcery</Off>
+							</Dependencies>
+							<Points>25</Points>
+							<Rule>Bound Spell, Power Level 3: inflicts 3D6 Strength 3 hits on one enemy unit in base contact</Rule>
+						</Option>
+						<Option>
+							<Name>Icon of Sorcery</Name>
+							<Dependencies>
+								<On>Standard bearer</On>
+								<Off>Banner of Change</Off>
+							</Dependencies>
+							<Points>15</Points>
+							<Rule>+1 bonus for casting spells</Rule>
+						</Option>
+					</Command>
 				</Options>
 			</Core>
 			<Core>
