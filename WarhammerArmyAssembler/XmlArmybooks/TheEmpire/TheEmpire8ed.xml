@@ -1484,24 +1484,26 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Command Name="Outrider" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Option>
-						<Name>Repeater pistol for Outrider</Name>
-						<Dependencies>
-							<On>Outrider</On>
-							<Off>Repeater Handgun for Outrider</Off>
-						</Dependencies>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Repeater Handgun for Outrider</Name>
-						<Dependencies>
-							<On>Outrider</On>
-							<Off>Repeater pistol for Outrider</Off>
-						</Dependencies>
-						<Points>10</Points>
-					</Option>
+					<Command>
+						<Champion Points="10" Name="Outrider"/>
+						<Musician Points="10"/>
+						<Option>
+							<Name>Repeater pistol for Outrider</Name>
+							<Dependencies>
+								<On>Outrider</On>
+								<Off>Repeater Handgun for Outrider</Off>
+							</Dependencies>
+							<Points>10</Points>
+						</Option>
+						<Option>
+							<Name>Repeater Handgun for Outrider</Name>
+							<Dependencies>
+								<On>Outrider</On>
+								<Off>Repeater pistol for Outrider</Off>
+							</Dependencies>
+							<Points>10</Points>
+						</Option>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1524,30 +1526,32 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Command Name="Sharpshooter" Points="10"/>
-					<Command Name="Musician" Points="8"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
 						<PerModel/>
 						<AddToArmour>6</AddToArmour>
 						<Points>1</Points>
 					</Option>
-					<Option>
-						<Name>Brace of pistol for Sharpshooter</Name>
-						<Dependencies>
-							<On>Sharpshooter</On>
-							<Off>Grenade launching for Sharpshooter</Off>
-						</Dependencies>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Grenade launching for Sharpshooter</Name>
-						<Dependencies>
-							<On>Sharpshooter</On>
-							<Off>Brace of pistol for Sharpshooter</Off>
-						</Dependencies>
-						<Points>10</Points>
-					</Option>
+					<Command>
+						<Champion Points="10" Name="Sharpshooter"/>
+						<Musician Points="8"/>
+						<Option>
+							<Name>Brace of pistol for Sharpshooter</Name>
+							<Dependencies>
+								<On>Sharpshooter</On>
+								<Off>Grenade launching for Sharpshooter</Off>
+							</Dependencies>
+							<Points>10</Points>
+						</Option>
+						<Option>
+							<Name>Grenade launching for Sharpshooter</Name>
+							<Dependencies>
+								<On>Sharpshooter</On>
+								<Off>Brace of pistol for Sharpshooter</Off>
+							</Dependencies>
+							<Points>10</Points>
+						</Option>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1589,7 +1593,9 @@
 					<Flail/>
 				</Equipments>
 				<Options>
-					<Command Name="Prophet of Doom" Points="10"/>
+					<Command>
+						<Champion Points="10" Name="Prophet of Doom"/>
+					</Command>
 				</Options>
 			</Rare>
 			<Rare>
