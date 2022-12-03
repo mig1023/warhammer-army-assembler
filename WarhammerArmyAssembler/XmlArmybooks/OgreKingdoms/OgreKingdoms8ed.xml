@@ -967,16 +967,18 @@
 						<PerModel/>
 						<Points>5</Points>
 					</Option>
-					<Command Name="Crusher" Points="10"/>
-					<Option>
-						<Name>Brace of Ogre pistol</Name>
-						<Dependencies>
-							<On>Brace of Ogre pistol</On>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
-					<Command Name="Bellower" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type: Unit, Points: 50"/>
+					<Command>
+						<Champion Points="10" Name="Crusher"/>
+						<Option>
+							<Name>Brace of Ogre pistol</Name>
+							<Dependencies>
+								<On>Crusher</On>
+							</Dependencies>
+							<Points>6</Points>
+						</Option>
+						<Musician Points="8" Name="Bellower"/>
+						<StandardBearer Points="10" Magic="Type: Unit, Points: 50"/>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
