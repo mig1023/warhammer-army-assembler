@@ -483,7 +483,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode["Name"] != null)
                 return;
 
-            if (name == "Command")
+            if ((name == "Command") || (name == "Champion"))
                 name = xmlNode.Attributes["Name"].InnerText;
 
             if (name == "Leader")
