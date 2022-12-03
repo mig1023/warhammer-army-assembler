@@ -1179,7 +1179,7 @@
 					<MarkOfKhorne PointsPerModel="45" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
 					<MarkOfNuFUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<Command>
-						<Leader Points="12">Champion</Leader>
+						<Champion Points="12" Name="Champion"/>
 						<Musician Points="6"/>
 						<StandardBearer Points="12" Magic="Type: Unit, Points: 50"/>
 					</Command>
@@ -1201,7 +1201,7 @@
 					<LightArmour PointsPerModel="1"/>
 					<Shield PointsPerModel="1"/>
 					<Command>
-						<Leader Points="10">Chieftain</Leader>
+						<Champion Points="10" Name="Chieftain"/>
 						<Musician Points="5"/>
 						<StandardBearer Points="10"/>
 					</Command>
@@ -1238,7 +1238,7 @@
 					</Option>
 					<Shield PointsPerModel="2"/>
 					<Command>
-						<Leader Points="12">Chieftain</Leader>
+						<Champion Points="12" Name="Chieftain"/>
 						<Musician Points="6"/>
 						<StandardBearer Points="12"/>
 					</Command>
@@ -1271,7 +1271,7 @@
 					<MarkOfKhorne PointsPerModel="45" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
 					<MarkOfNuFUnit PointsPerModel="50" Dependencies="Off: Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
 					<Command>
-						<Leader Points="20">Champion</Leader>
+						<Champion Points="20" Name="Champion"/>
 						<Musician Points="10"/>
 						<StandardBearer Points="20" Magic="Type: Unit, Points: 50"/>
 					</Command>
@@ -1327,9 +1327,11 @@
 					</Mark>
 				</Equipments>
 				<Options>
-					<Leader Points="14">Bloodhowler</Leader>
-					<Musician Points="7"/>
-					<StandardBearer Points="14"/>
+					<Command>
+						<Champion Points="14" Name="Bloodhowler"/>
+						<Musician Points="7"/>
+						<StandardBearer Points="14"/>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
