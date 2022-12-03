@@ -1105,9 +1105,11 @@
 						<Points>2</Points>
 						<PerModel/>
 					</Option>
-					<Command Name="Hell Knight" Points="10"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type: Unit, Points: 50"/>
+					<Command>
+						<Champion Points="10" Name="Hell Knight"/>
+						<Musician Points="10"/>
+						<StandardBearer Points="10" Magic="Type: Unit, Points: 50"/>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1125,7 +1127,9 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Command Name="Crypt Haunter" Points="10"/>
+					<Command>
+						<Champion Points="10" Name="Crypt Haunter"/>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1191,7 +1195,9 @@
 					<GreatWeapon/>
 				</Equipments>
 				<Options>
-					<Command Name="Hellwraith" Points="10"/>
+					<Command>
+						<Champion Points="10" Name="Hellwraith"/>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1209,7 +1215,9 @@
 					</Individual>
 				</SpecialRules>
 				<Options>
-					<Command Name="Vargoyle" Points="10"/>
+					<Command>
+						<Champion Points="10" Name="Vargoyle"/>
+					</Command>
 				</Options>
 			</Special>
 			<Rare>
@@ -1250,9 +1258,11 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Command Name="Kastellan" Points="15" Magic="Type: Hero, Points: 25"/>
-					<Command Name="Musician" Points="10"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type: Unit, Points: 50"/>
+					<Command>
+						<Champion Points="15" Name="Kastellan" Magic="Type: Hero, Points: 25"/>
+						<Musician Points="10"/>
+						<StandardBearer Points="10" Magic="Type: Unit, Points: 50"/>
+					</Command>
 				</Options>
 			</Rare>
 			<Rare>
@@ -1354,7 +1364,9 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Command Name="Blasphemous Tome" Points="20"/>
+					<Command>
+						<Champion Points="20" Name="Blasphemous Tome"/>
+					</Command>
 				</Options>
 			</Rare>
 		</Units>
