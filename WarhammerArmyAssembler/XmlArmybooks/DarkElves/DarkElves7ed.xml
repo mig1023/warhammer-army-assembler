@@ -1174,26 +1174,28 @@
 				</Equipments>
 				<Options>
 					<Mount Name="Assassin" Points="90"/>
-					<Option>
-						<Name>Draich-master</Name>
-						<Dependencies>
-							<Off>Tullaris</Off>
-						</Dependencies>
-						<Command/>
-						<Points>12</Points>
-					</Option>
-					<Option>
-						<Name>Tullaris</Name>
-						<Dependencies>
-							<Off>Draich-master</Off>
-						</Dependencies>
-						<OnlyOneInArmy/>
-						<PersonifiedCommander/>
-						<Command/>
-						<Points>95</Points>
-					</Option>
-					<Command Name="Musician" Points="6"/>
-					<Command Name="Standard bearer" Points="10" Magic="Type: Unit, Points: 25"/>
+					<Command>
+						<Champion>
+							<Name>Draich-master</Name>
+							<Dependencies>
+								<Off>Tullaris</Off>
+							</Dependencies>
+							<Command/>
+							<Points>12</Points>
+						</Champion>
+						<Champion>
+							<Name>Tullaris</Name>
+							<Dependencies>
+								<Off>Draich-master</Off>
+							</Dependencies>
+							<OnlyOneInArmy/>
+							<PersonifiedCommander/>
+							<Command/>
+							<Points>95</Points>
+						</Champion>
+						<Musician Points="8"/>
+						<StandardBearer Points="10" Magic="Type: Unit, Points: 25"/>
+					</Command>
 				</Options>
 			</Special>
 			<Special>
@@ -1272,27 +1274,29 @@
 				</Equipments>
 				<Options>
 					<Mount Name="Assassin" Points="90"/>
-					<Option>
-						<Name>Tower Master</Name>
-						<Dependencies>
-							<Off>Kouran</Off>
-						</Dependencies>
-						<MagicItems Points="25" Type="Hero"/>
-						<Command/>
-						<Points>14</Points>
-					</Option>
-					<Option>
-						<Name>Kouran</Name>
-						<Dependencies>
-							<Off>Tower Master</Off>
-						</Dependencies>
-						<OnlyOneInArmy/>
-						<PersonifiedCommander/>
-						<Command/>
-						<Points>75</Points>
-					</Option>
-					<Command Name="Musician" Points="7"/>
-					<Command Name="Standard bearer" Points="14" Magic="Type: Unit, Points: 50"/>
+					<Command>
+						<Champion>
+							<Name>Tower Master</Name>
+							<Dependencies>
+								<Off>Kouran</Off>
+							</Dependencies>
+							<MagicItems Points="25" Type="Hero"/>
+							<Command/>
+							<Points>14</Points>
+						</Champion>
+						<Champion>
+							<Name>Kouran</Name>
+							<Dependencies>
+								<Off>Tower Master</Off>
+							</Dependencies>
+							<OnlyOneInArmy/>
+							<PersonifiedCommander/>
+							<Command/>
+							<Points>75</Points>
+						</Champion>
+						<Musician Points="7"/>
+						<StandardBearer Points="14" Magic="Type: Unit, Points: 50"/>
+					</Command>
 				</Options>
 			</Special>
 			<Rare>
