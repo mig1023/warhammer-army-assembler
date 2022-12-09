@@ -549,7 +549,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 CreateOption(xmlOption[0], xmlOption[1], xmlDocument, ref xmlNode);
             }
 
-            if (xmlNode.Name == "Mount")
+            if ((xmlNode.Name == "Mount") || (xmlNode.Name == "Crew"))
                 CreateMountOption(xmlDocument, ref xmlNode);
 
             if (xmlNode.Name == "Wizard")
