@@ -5,7 +5,7 @@
 		<Edition>6</Edition>
 		<Released>2000</Released>
 		<Authors>Alessio Cavatore</Authors>
-		<Description>The Empire, sometimes referred to as the Empire of Man, is an electoral monarchy composed of feudal states that is the largest and most important of the Human nations in the Old World. It was forged by the warrior-king and ascended deity Sigmar from the primitive tribes of Human barbarians who inhabited what became the lands of the southern Empire more than 2500 years ago.\n\nAlthough not as skilled in craftsmanship as the Dwarfs or in magic as the High Elves, the people of the Empire are not beholden by the limits of tradition to the same extent as those elder races and continue to progress culturally, technologically and magically.\n\nHaving yet to succumb to any threat, external or internal, it is the faith, the sense of righteousness, and the unconquerable spirit of the realm's citizens which gives the Empire its strength, as well as the ruthless efficiency of its military and religious orders.</Description>
+		<Description>The Empire, sometimes referred to as the Empire of Man, is an electoral monarchy composed of feudal states that is the largest and most important of the Human nations in the Old World. It was forged by the warrior-king and ascended deity Sigmar from the primitive tribes of Human barbarians who inhabited what became the lands of the southern Empire more than 2500 years ago.\n\nAlthough not as skilled in craftsmanship as the Dwarfs or in magic as the High Elves, the people of the Empire are not beholden by the limits of tradition to the same extent as those elder races and continue to progress culturally, technologically and magically.\n\nHaving yet to succumb to any threat, external or internal, it is the faith, the sense of righteousness, and the unconquerable spirit of the realm's citizens which gives the Empire its strength, as well as the ruthless efficiency of its military and religious orders</Description>
 		<Styles>
 			<Images>
 				<Cover>TheEmpire6ed.png</Cover>
@@ -64,7 +64,7 @@
 					<OnlyGroup>ElectorCount</OnlyGroup>
 					<NoArmour/>
 					<AutoWound/>
-					<Description>All hits from a Runefang wound automatically. No armour saves allowed.</Description>
+					<Description>All hits from a Runefang wound automatically. No armour saves allowed</Description>
 				</Weapon>
 				<Weapon>
 					<Name>The Mace of Helsturm</Name>
@@ -72,7 +72,7 @@
 					<StrengthTo>10</StrengthTo>
 					<AttacksTo>1</AttacksTo>
 					<MultiWounds>D6</MultiWounds>
-					<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds.</Description>
+					<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Fate</Name>
@@ -84,25 +84,25 @@
 					<Points>50</Points>
 					<AddToStrength>1</AddToStrength>
 					<HitFirst/>
-					<Description>The wielder of this sword has +1 Strength and always strikes first in close combat, even before enemies that have charged. If the bearer is fighting another enemy who is also entitled to strike first (because of spells, special abilities, etc), then resolve attacks in Initiative order. If Initiative values are equal, roll a dice to determine who strikes first.</Description>
+					<Description>The wielder of this sword has +1 Strength and always strikes first in close combat, even before enemies that have charged. If the bearer is fighting another enemy who is also entitled to strike first (because of spells, special abilities, etc), then resolve attacks in Initiative order. If Initiative values are equal, roll a dice to determine who strikes first</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Righteous Steel</Name>
 					<Points>45</Points>
 					<HitOn>2</HitOn>
-					<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way.</Description>
+					<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Power</Name>
 					<Points>40</Points>
 					<AddToStrength>2</AddToStrength>
-					<Description>The sword confers +2 Strength to all close combat attacks made by the character fighting with it.</Description>
+					<Description>The sword confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Hammer of Judgement</Name>
 					<Points>25</Points>
 					<Test Bet="Wound" Context="Hit">Leadership</Test>
-					<Description>Models hit by this hammer must take a Leadership test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal.</Description>
+					<Description>Models hit by this hammer must take a Leadership test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Dragon Bow</Name>
@@ -113,13 +113,13 @@
 					<Name>Sword of Justice</Name>
 					<Points>25</Points>
 					<Reroll>ToWound</Reroll>
-					<Description>The bearer can re-roll To Wound failed rolls.</Description>
+					<Description>The bearer can re-roll To Wound failed rolls</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Wyrmslayer Sword</Name>
 					<Points>20</Points>
 					<WoundOn>4</WoundOn>
-					<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but Large Targets lose their armour save due to the scaly skin special rule against hits from this sword.</Description>
+					<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but Large Targets lose their armour save due to the scaly skin special rule against hits from this sword</Description>
 				</Weapon>
 			</Group>
 			<Group Name="Magic Armour">
@@ -128,48 +128,48 @@
 					<Points>50</Points>
 					<AddToArmour>5</AddToArmour>
 					<Test Bet="Pass" Context="ArmourSave">Strength</Test>
-					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie, roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed, the Attack is lost.</Description>
+					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie, roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed, the Attack is lost</Description>
 				</Armour>
 				<Armour>
 					<Name>Dawn Armour</Name>
 					<Points>40</Points>
 					<AddToArmour>4</AddToArmour>
 					<Reroll>ToArmour</Reroll>
-					<Description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save.</Description>
+					<Description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Tarnus</Name>
 					<Points>35</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToWard>5</AddToWard>
-					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save, he may make a 5+ Ward save. Wizards can wear this armour and cast spells.</Description>
+					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save, he may make a 5+ Ward save. Wizards can wear this armour and cast spells</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of the Gorgon</Name>
 					<Points>35</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Can force one model in base contact to lose one Attack</Rule>
-					<Description>This shield confers a 6+ armour save which can he combined with other equipment normally. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
+					<Description>This shield confers a 6+ armour save which can he combined with other equipment normally. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Meteoric Iron</Name>
 					<Points>30</Points>
 					<ArmourTo>1</ArmourTo>
-					<Description>This suit of armour gives the bearer a 1+ armour save which cannot be improved by any means.</Description>
+					<Description>This suit of armour gives the bearer a 1+ armour save which cannot be improved by any means</Description>
 				</Armour>
 				<Shield>
 					<Name>Bronze Shield</Name>
 					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
-					<Description>This shield gives a 6+ armour save which can be combined with other equipment normally. Also, the bearer ignores the first hit in the battle suffered from shooting or close combat.</Description>
+					<Description>This shield gives a 6+ armour save which can be combined with other equipment normally. Also, the bearer ignores the first hit in the battle suffered from shooting or close combat</Description>
 				</Shield>
 				<AdditionalArmour>
 					<Name>Helm of the Skaven Slayer</Name>
 					<Points>20</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Causes Fear in all models in a Skaven army</Rule>
-					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army.</Description>
+					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army</Description>
 				</AdditionalArmour>
 			</Group>
 			<Group Name="Talismans">
@@ -178,39 +178,39 @@
 					<Points>60</Points>
 					<AddToWard>5</AddToWard>
 					<Rule>Totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force</Rule>
-					<Description>This item gives a 5+ Ward save. A model carrying the Shroud and his mount are totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force. Note that the spell will not be dispelled and that other models in a unit the character is with will be affected normally.</Description>
+					<Description>This item gives a 5+ Ward save. A model carrying the Shroud and his mount are totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force. Note that the spell will not be dispelled and that other models in a unit the character is with will be affected normally</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Jade Amulet</Name>
 					<Points>50</Points>
 					<FirstWoundDiscount/>
-					<Description>The model may ignore the first wound it suffers.</Description>
+					<Description>The model may ignore the first wound it suffers</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Holy Relic</Name>
 					<Points>45</Points>
 					<AddToWard>4</AddToWard>
-					<Description>The Holy Relic gives its bearer a 4+ Ward save.</Description>
+					<Description>The Holy Relic gives its bearer a 4+ Ward save</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>The White Cloak</Name>
 					<Points>35</Points>
 					<AddToWard>5</AddToWard>
 					<Rule>Immune to all cold-based spells attacks</Rule>
-					<Description>This item gives a 5+ Ward save. Also, the wearer is immune to all cold-based spells attacks (White Dragon's breath, etc).</Description>
+					<Description>This item gives a 5+ Ward save. Also, the wearer is immune to all cold-based spells attacks (White Dragon's breath, etc)</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Sigil of Sigmar</Name>
 					<Points>20</Points>
 					<Rule>+1 dice to all Dispel rolls against enemy spells that would affect character or the unit he is with</Rule>
-					<Description>The Sigil of Sigmar adds one extra dice to all Dispel rolls against enemy spells that would affect its wearer or the unit he is with.</Description>
+					<Description>The Sigil of Sigmar adds one extra dice to all Dispel rolls against enemy spells that would affect its wearer or the unit he is with</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>The Crimson Amulet</Name>
 					<Points>20</Points>
 					<AddToWard>6</AddToWard>
 					<Rule>Automatically passes any characteristic tests he has to take (except Leadership tests)</Rule>
-					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests).</Description>
+					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests)</Description>
 				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane Items">
@@ -218,37 +218,37 @@
 					<Name>Grey Wand</Name>
 					<Points>50</Points>
 					<Rule>+1 to the casting attempts</Rule>
-					<Description>Gives +1 to the Casting attempts made by the Wizard.</Description>
+					<Description>Gives +1 to the Casting attempts made by the Wizard</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Seal of Destruction</Name>
 					<Points>50</Points>
 					<Rule>Once automatically dispel an enemy spell, on a 4+ the spell is removed from the caster's mind and he can no longer cast it</Rule>
-					<Description>One use only. The seal has the same effect as a Dispel Scroll. In addition, roll a D6. On a result of 4+ the spell is removed from the caster's mind and he can no longer cast it. Spells cast from a bound item will only be removed on the result of a 6.</Description>
+					<Description>One use only. The seal has the same effect as a Dispel Scroll. In addition, roll a D6. On a result of 4+ the spell is removed from the caster's mind and he can no longer cast it. Spells cast from a bound item will only be removed on the result of a 6</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Rod of Power</Name>
 					<Points>45</Points>
 					<Rule>Can save up to three unused Power dice from the pool and store them, at the beginning of each successive magic phase roll a dice, if the result is equal or higher to the number of dice stored, add them to the Power dice pool</Rule>
-					<Description>At the end of each Magic phase, you can save up to three dice from your Power dice pool and store them in the Rod. At the beginning of the next Magic phase (yours or the enemy's), roll a dice. If the result is equal or higher to the number of Power dice stored, add them to your pool, if the result is lower than the number of dice stored, they are lost.</Description>
+					<Description>At the end of each Magic phase, you can save up to three dice from your Power dice pool and store them in the Rod. At the beginning of the next Magic phase (yours or the enemy's), roll a dice. If the result is equal or higher to the number of Power dice stored, add them to your pool, if the result is lower than the number of dice stored, they are lost</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Luckstone</Name>
 					<Points>25</Points>
 					<Rule>Once per battle, can re-roll all of the dice rolled to cast or dispel</Rule>
-					<Description>One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a Miscast result, and cause Irresistible Force or a Miscast.</Description>
+					<Description>One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a Miscast result, and cause Irresistible Force or a Miscast</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Crystal Ball</Name>
 					<Points>25</Points>
 					<Rule>The enemy must always reveal all the 'secrets' involving all units that are within 12" of the Wizard at any time</Rule>
-					<Description>The enemy must always reveal all the 'secrets' involving all units which are within 12" of the Wizard at any time. This includes which magic items are in the unit and who is carrying them, the presence of disguised Assassins, the number of Fanatics and everything else thai ihe player is not normally obliged to disclose to his opponent.</Description>
+					<Description>The enemy must always reveal all the 'secrets' involving all units which are within 12" of the Wizard at any time. This includes which magic items are in the unit and who is carrying them, the presence of disguised Assassins, the number of Fanatics and everything else thai ihe player is not normally obliged to disclose to his opponent</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Wizard's Staff</Name>
 					<Points>15</Points>
 					<Rule>Use one more dice than he is normally allowed to when casting a spell</Rule>
-					<Description>The Wizard's Staff allows the bearer to use one more dice from the Power dice pool than he is normally allowed to when casting a spell (eg. a level 1 Wizard will be able to use-up to three dice to cast spells).</Description>
+					<Description>The Wizard's Staff allows the bearer to use one more dice from the Power dice pool than he is normally allowed to when casting a spell (eg. a level 1 Wizard will be able to use-up to three dice to cast spells)</Description>
 				</Arcane>
 			</Group>
 			<Group Name="Enchanted Items">
@@ -262,49 +262,49 @@
 					<Name>Rod of Command</Name>
 					<Points>50</Points>
 					<Rule>Once per battle, instead rolling the dice for Break test, the player can declare he is using Rod of Command and the character (and his unit) automatically passing Break test</Rule>
-					<Description>One use only. The character and the unit he is with will automatically pass the first Break test they have to take, regardless of modifiers and even if they would normally automatically fail their test (for example, losing a round of combat against an opponent thai outnumbers them and causes fear). If the player forgets to use it, even if he rolls and passes the lest, the item is slill used up. Note that this item cannot he used by a character in the turn he re-fused a challenge and who is hiding at the back of the unit (who would pay heed to such a coward!).</Description>
+					<Description>One use only. The character and the unit he is with will automatically pass the first Break test they have to take, regardless of modifiers and even if they would normally automatically fail their test (for example, losing a round of combat against an opponent thai outnumbers them and causes fear). If the player forgets to use it, even if he rolls and passes the lest, the item is slill used up. Note that this item cannot he used by a character in the turn he re-fused a challenge and who is hiding at the back of the unit (who would pay heed to such a coward!)</Description>
 				</Weapon>
 				<AdditionalArmour>
 					<Name>The Silver Horn</Name>
 					<Points>45</Points>
 					<Rule>Bound spell, power level 5: if successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left</Rule>
-					<Description>Bound spell, power level 5. The Silver Horn may cast its spell once per Empire Magic phase. The spell requires no Power dice to cast, all the power required is provided by the Horn itself. All friendly units that are fleeing anywhere on the battlefield will rally immediately.</Description>
+					<Description>Bound spell, power level 5. The Silver Horn may cast its spell once per Empire Magic phase. The spell requires no Power dice to cast, all the power required is provided by the Horn itself. All friendly units that are fleeing anywhere on the battlefield will rally immediately</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>The Orb of Thunder</Name>
 					<Points>40</Points>
 					<Rule>Bound spell, power level 4: when the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate, remains in play</Rule>
-					<Description>Bound spell, power level 4. The Orb of Thunder spell may be cast once per Empire Magic phase. The spell requires no Power dice to cast, all the power required is provided by the Orb Itself and the spell will last until dispelled. When the Orb of Thunder spell is in play, no flying creatures on the battlefield can use their ability to fly and will have to move on the ground at their normal Movement rate.</Description>
+					<Description>Bound spell, power level 4. The Orb of Thunder spell may be cast once per Empire Magic phase. The spell requires no Power dice to cast, all the power required is provided by the Orb Itself and the spell will last until dispelled. When the Orb of Thunder spell is in play, no flying creatures on the battlefield can use their ability to fly and will have to move on the ground at their normal Movement rate</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Aldred's Casket of Sorcery</Name>
 					<Points>35</Points>
 					<Rule>Bound spell, power level variable: at the end of each of his Movement phases, may automatically remove and capture one randomly determined spell from an enemy Wizard in base contact with him, he can cast the captured spell in his own Magic phase by releasing it from the casket</Rule>
-					<Description>Bound spell, power level variable. At the end of each of his Movement phases, the bearer may automatically remove and capture one randomly determined spell from an enemy Wizard in base contact with him. The bearer can cast the captured spell in his own Magic phase by releasing it from the casket. The spell is then removed from the game. No Power dice are required to cast the spell. Any number of spells may be captured by the casket, and the bearer can cast each one once, either over several Magic phases or all at the same time if he prefers. The Power Level of the spell cast by the casket will be equivalent to the score normally needed to cast the spell.</Description>
+					<Description>Bound spell, power level variable. At the end of each of his Movement phases, the bearer may automatically remove and capture one randomly determined spell from an enemy Wizard in base contact with him. The bearer can cast the captured spell in his own Magic phase by releasing it from the casket. The spell is then removed from the game. No Power dice are required to cast the spell. Any number of spells may be captured by the casket, and the bearer can cast each one once, either over several Magic phases or all at the same time if he prefers. The Power Level of the spell cast by the casket will be equivalent to the score normally needed to cast the spell</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Icon of Magnus</Name>
 					<Points>30</Points>
 					<Rule>Not affected by enemies that cause fear, faced with an enemy that causes terror, the character and the unit he is with only suffer fear, not terror</Rule>
-					<Description>Ihe character and the unit he is with are not affected by enemies that cause fear. Faced with an enemy that causes terror, the character and the unit he is with only suffer fear, not terror.</Description>
+					<Description>Ihe character and the unit he is with are not affected by enemies that cause fear. Faced with an enemy that causes terror, the character and the unit he is with only suffer fear, not terror</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Ring of Volans</Name>
 					<Points>30</Points>
 					<Rule>Bound spell, power level variable, one use only: choose one of the magic Lores in the Warhammer rulebook and randomly select one spell from that list to be held inside the Ring of Volans</Rule>
-					<Description>One use only. Bound Spell: Power Level variable. Choose one of the magic Lores in the Warhammer rulebook and randomly select one spell from that list to be held inside the Ring of Volans. This spell may be cast in the Magic phase and requires no Power dice to cast, all the power required is provided by the Ring itself. The Power Level of the spell cast by the Ring will be equivalent to the score normally needed to cast the spell.</Description>
+					<Description>One use only. Bound Spell: Power Level variable. Choose one of the magic Lores in the Warhammer rulebook and randomly select one spell from that list to be held inside the Ring of Volans. This spell may be cast in the Magic phase and requires no Power dice to cast, all the power required is provided by the Ring itself. The Power Level of the spell cast by the Ring will be equivalent to the score normally needed to cast the spell</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Doomfire Ring</Name>
 					<Points>25</Points>
 					<Rule>Bound spell, power level 3: a flaming magic missile spurts from the King in a straight line up to 18" long, striking the first unit in its path. The unit takes D6 Strength 3 hits</Rule>
-					<Description>Bound Spell, Power Level 3. The Doomfire King may cast its Bound spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the Ring itself. A flaming magic missile spurts from the King in a straight line up to 18" long, striking the first unit in its path. The unit takes D6 Strength 3 hits.</Description>
+					<Description>Bound Spell, Power Level 3. The Doomfire King may cast its Bound spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the Ring itself. A flaming magic missile spurts from the King in a straight line up to 18" long, striking the first unit in its path. The unit takes D6 Strength 3 hits</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Van Horstmann's Speculum</Name>
 					<Points>25</Points>
 					<Rule>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy</Rule>
-					<Description>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy. He can choose not to use the mirror, but if he does he must swap all these characteristics for the duration of the challenge. So, the wearer fights with his enemy's WS, S, T, I and A whilst his enemy fights with the wearer's WS, S, T, I and A.</Description>
+					<Description>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy. He can choose not to use the mirror, but if he does he must swap all these characteristics for the duration of the challenge. So, the wearer fights with his enemy's WS, S, T, I and A whilst his enemy fights with the wearer's WS, S, T, I and A</Description>
 				</AdditionalArmour>
 			</Group>
 			<Group Name="Magic Standards">
@@ -312,46 +312,46 @@
 					<Name>Imperial Banner</Name>
 					<Points>100</Points>
 					<Rule>All units within 12" can re-roll any failed Psychology test as well as tests to avoid pursuing a fleeing enemy</Rule>
-					<Description>All units with at least one model within 12" of the Imperial Banner can re-roll any failed Psychology test as well as tests to avoid pursuing a fleeing enemy.</Description>
+					<Description>All units with at least one model within 12" of the Imperial Banner can re-roll any failed Psychology test as well as tests to avoid pursuing a fleeing enemy</Description>
 				</Banner>
 				<Banner>
 					<Name>Banner of Sigismund</Name>
 					<Points>60</Points>
 					<Stubborn/>
-					<Description>The unit is Stubborn.</Description>
+					<Description>The unit is Stubborn</Description>
 				</Banner>
 				<Banner>
 					<Name>Banner of Ulric</Name>
 					<Points>50</Points>
 					<OnlyGroup>WhiteWolf</OnlyGroup>
 					<Rule>If a unit is charged by this unit it must take a Leadership test, if the test is fail, it must roll 6s to score hits in the first turn of close combat</Rule>
-					<Description>If a unit is charged by a unit of Knights carrying this banner, then it must take a leadership test as soon as the Knights are determined to be within charge range. If the test is passed, the unit can light on as normal. If the unit fails its test, it must roll 6s to score hits in the first turn of close combat.\n\nIf a unit wishes to charge Knights carrying this banner, it must take a Leadership test. If the lest is failed, it may not charge or shoot and must remain stationary in that Movement phase. A unit normally not affected by fear is immune to ihe effects of this banner as well.</Description>
+					<Description>If a unit is charged by a unit of Knights carrying this banner, then it must take a leadership test as soon as the Knights are determined to be within charge range. If the test is passed, the unit can light on as normal. If the unit fails its test, it must roll 6s to score hits in the first turn of close combat.\n\nIf a unit wishes to charge Knights carrying this banner, it must take a Leadership test. If the lest is failed, it may not charge or shoot and must remain stationary in that Movement phase. A unit normally not affected by fear is immune to ihe effects of this banner as well</Description>
 				</Banner>
 				<Banner>
 					<Name>Griffon Standard</Name>
 					<Points>50</Points>
 					<Rule>A unit counts double its rank bonus when it comes to working out combat results</Rule>
 					<Rule>Never pursue a fleeing enemy but will always hold its ground instead</Rule>
-					<Description>A unit carrying the Griffon Standard counts double its normal rank bonus when it comes to working out combat results. If in a single rank, it has no advantage. However, if the unit is in two ranks it receives +2, in three ranks +4, and in four ranks (the maximum bonus) +6.\n\nThe unit carrying the Griffon Standard will never pursue a fleeing enemy but will always hold its ground instead.</Description>
+					<Description>A unit carrying the Griffon Standard counts double its normal rank bonus when it comes to working out combat results. If in a single rank, it has no advantage. However, if the unit is in two ranks it receives +2, in three ranks +4, and in four ranks (the maximum bonus) +6.\n\nThe unit carrying the Griffon Standard will never pursue a fleeing enemy but will always hold its ground instead</Description>
 				</Banner>
 				<Banner>
 					<Name>Banner of Valour</Name>
 					<Points>40</Points>
 					<ImmuneToPsychology/>
-					<Description>The unit is immune to panic.</Description>
+					<Description>The unit is immune to panic</Description>
 				</Banner>
 				<Banner>
 					<Name>Standard of Arcane Warding</Name>
 					<Points>40</Points>
 					<Rule>Magic Resistance (2)</Rule>
-					<Description>This banner gives two extra dice to all Dispel rolls against enemy spells which would affect the unit.</Description>
+					<Description>This banner gives two extra dice to all Dispel rolls against enemy spells which would affect the unit</Description>
 				</Banner>
 				<Banner>
 					<Name>Steel Standard</Name>
 					<Points>25</Points>
 					<OnlyGroup>Knights</OnlyGroup>
 					<Rule>The unit can add +D3 to its charge move</Rule>
-					<Description>The unit can add +D3 to its charge move. If the charge is failed, the unit will move forward 7" as normal.</Description>
+					<Description>The unit can add +D3 to its charge move. If the charge is failed, the unit will move forward 7" as normal</Description>
 				</Banner>
 				<Banner>
 					<Name>Banner of Duty</Name>
