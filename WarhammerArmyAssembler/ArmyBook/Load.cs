@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using System.Windows.Media;
 using System.Xml;
 using static WarhammerArmyAssembler.ArmyBook.Parsers;
@@ -591,6 +592,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (String.IsNullOrEmpty(newOption.Description) && (newOption.SpecialRuleDescription.Length > 0))
                 newOption.Description = newOption.SpecialRuleDescription[0];
+
+            if (!String.IsNullOrEmpty(newOption.Description) && !Regex.IsMatch(newOption.Description, @"\.$"))
+                newOption.Description = String.Format("{0}.", newOption.Description);
 
             if (xmlNode["MagicItems"] != null)
             {
