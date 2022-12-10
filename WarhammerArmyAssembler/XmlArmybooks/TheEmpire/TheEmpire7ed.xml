@@ -5,7 +5,7 @@
 		<Edition>7</Edition>
 		<Released>2006</Released>
 		<Authors>Graham McNeill</Authors>
-		<Description>The Empire, sometimes referred to as the Empire of Man, is an electoral monarchy composed of feudal states that is the largest and most important of the Human nations in the Old World. It was forged by the warrior-king and ascended deity Sigmar from the primitive tribes of Human barbarians who inhabited what became the lands of the southern Empire more than 2500 years ago.\n\nAlthough not as skilled in craftsmanship as the Dwarfs or in magic as the High Elves, the people of the Empire are not beholden by the limits of tradition to the same extent as those elder races and continue to progress culturally, technologically and magically.\n\nHaving yet to succumb to any threat, external or internal, it is the faith, the sense of righteousness, and the unconquerable spirit of the realm's citizens which gives the Empire its strength, as well as the ruthless efficiency of its military and religious orders.</Description>
+		<Description>The Empire, sometimes referred to as the Empire of Man, is an electoral monarchy composed of feudal states that is the largest and most important of the Human nations in the Old World. It was forged by the warrior-king and ascended deity Sigmar from the primitive tribes of Human barbarians who inhabited what became the lands of the southern Empire more than 2500 years ago.\n\nAlthough not as skilled in craftsmanship as the Dwarfs or in magic as the High Elves, the people of the Empire are not beholden by the limits of tradition to the same extent as those elder races and continue to progress culturally, technologically and magically.\n\nHaving yet to succumb to any threat, external or internal, it is the faith, the sense of righteousness, and the unconquerable spirit of the realm's citizens which gives the Empire its strength, as well as the ruthless efficiency of its military and religious orders</Description>
 		<Styles>
 			<Images>
 				<Cover>TheEmpire7ed.png</Cover>
@@ -63,7 +63,7 @@
 					<Points>100</Points>
 					<NoArmour/>
 					<AutoWound/>
-					<Description>All hits from a Runefang wound automatically and allow no armour saves.</Description>
+					<Description>All hits from a Runefang wound automatically and allow no armour saves</Description>
 				</Weapon>
 				<Weapon>
 					<Name>The Mace of Helsturm</Name>
@@ -71,14 +71,14 @@
 					<StrengthTo>10</StrengthTo>
 					<AttacksTo>1</AttacksTo>
 					<MultiWounds>D6</MultiWounds>
-					<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds.</Description>
+					<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Sigismund</Name>
 					<Points>45</Points>
 					<AddToStrength>1</AddToStrength>
 					<HitFirst/>
-					<Description>The wielder of this sword strikes with +1 Strength and benefits from the 'always strikes first' special rule in close combat.</Description>
+					<Description>The wielder of this sword strikes with +1 Strength and benefits from the 'always strikes first' special rule in close combat</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Fate</Name>
@@ -89,19 +89,19 @@
 					<Name>Sword of Power</Name>
 					<Points>40</Points>
 					<AddToStrength>2</AddToStrength>
-					<Description>The sword confers +2 Strength to all close combat attacks made by the character.</Description>
+					<Description>The sword confers +2 Strength to all close combat attacks made by the character</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Righteous Steel</Name>
 					<Points>30</Points>
 					<HitOn>2</HitOn>
-					<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way.</Description>
+					<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Hammer of Judgement</Name>
 					<Points>25</Points>
 					<Test Bet="Wound" Context="Hit">Toughness</Test>
-					<Description>Models hit by this hammer must take a Toughness test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal.</Description>
+					<Description>Models hit by this hammer must take a Toughness test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Dragon Bow</Name>
@@ -112,13 +112,13 @@
 					<Name>Sword of Justice</Name>
 					<Points>20</Points>
 					<Reroll>ToWound</Reroll>
-					<Description>The bearer can re-roll failed rolls to wound.</Description>
+					<Description>The bearer can re-roll failed rolls to wound</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Wyrmslayer Sword</Name>
 					<Points>15</Points>
 					<WoundOn>4</WoundOn>
-					<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but large targets lose their armour save due to the scaly skin special rule against hits from this sword.</Description>
+					<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but large targets lose their armour save due to the scaly skin special rule against hits from this sword</Description>
 				</Weapon>
 			</Group>
 			<Group Name="Magic Armour">
@@ -127,48 +127,48 @@
 					<Points>40</Points>
 					<AddToArmour>5</AddToArmour>
 					<Test Bet="Pass" Context="ArmourSave">Strength</Test>
-					<Description>Heavy armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
+					<Description>Heavy armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
 				</Armour>
 				<Armour>
 					<Name>Dawn Armour</Name>
 					<Points>35</Points>
 					<AddToArmour>4</AddToArmour>
 					<Reroll>ToArmour</Reroll>
-					<Description>Full plate armour (armour save 4+). The model can re-roll any failed armour save.</Description>
+					<Description>Full plate armour (armour save 4+). The model can re-roll any failed armour save</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Tarnus</Name>
 					<Points>35</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToWard>5</AddToWard>
-					<Description>Light armour. The Armour of Tarnus confers a 5+ ward save to the wearer.</Description>
+					<Description>Light armour. The Armour of Tarnus confers a 5+ ward save to the wearer</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Meteoric Iron</Name>
 					<Points>25</Points>
 					<ArmourTo>1</ArmourTo>
-					<Description>This armour gives the bearer a 1+ armour save that cannot be improved by any means.</Description>
+					<Description>This armour gives the bearer a 1+ armour save that cannot be improved by any means</Description>
 				</Armour>
 				<AdditionalArmour>
 					<Name>Helm of the Ratslayer</Name>
 					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Causes Fear in all models in a Skaven army</Rule>
-					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army.</Description>
+					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army</Description>
 				</AdditionalArmour>
 				<Shield>
 					<Name>Shield of the Gorgon</Name>
 					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Can force one model in base contact to lose one Attack</Rule>
-					<Description>Shield. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected.</Description>
+					<Description>Shield. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
 				</Shield>
 				<Shield>
 					<Name>Bronze Shield</Name>
 					<Points>20</Points>
 					<AddToArmour>6</AddToArmour>
 					<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
-					<Description>Shield. The bearer ignores the first hit in the battle from shooting or close combat.</Description>
+					<Description>Shield. The bearer ignores the first hit in the battle from shooting or close combat</Description>
 				</Shield>
 			</Group>
 			<Group Name="Talismans">
@@ -177,39 +177,39 @@
 					<Points>50</Points>
 					<AddToWard>5</AddToWard>
 					<Rule>Magic Resistance (2)</Rule>
-					<Description>This item gives the bearer a 5+ Ward save and magic resistance (2).</Description>
+					<Description>This item gives the bearer a 5+ Ward save and magic resistance (2)</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Holy Relic</Name>
 					<Points>45</Points>
 					<AddToWard>4</AddToWard>
-					<Description>The Holy Relic gives its bearer a 4+ Ward save.</Description>
+					<Description>The Holy Relic gives its bearer a 4+ Ward save</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Jade Amulet</Name>
 					<Points>40</Points>
 					<FirstWoundDiscount/>
-					<Description>The model may ignore the first wound it suffers.</Description>
+					<Description>The model may ignore the first wound it suffers</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>The White Cloak</Name>
 					<Points>35</Points>
 					<AddToWard>5</AddToWard>
 					<Rule>2+ Ward save against Flaming Attacks</Rule>
-					<Description>This item gives a 5+ ward save, which is increased to 2+ against Flaming Attacks.</Description>
+					<Description>This item gives a 5+ ward save, which is increased to 2+ against Flaming Attacks</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>The Crimson Amulet</Name>
 					<Points>20</Points>
 					<AddToWard>6</AddToWard>
 					<Rule>Automatically passes any characteristic tests he has to take (except Leadership tests)</Rule>
-					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests).</Description>
+					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests)</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Sigil of Sigmar</Name>
 					<Points>15</Points>
 					<Rule>Magic Resistance (1)</Rule>
-					<Description>The Sigil of Sigmar confers magic resistance (1).</Description>
+					<Description>The Sigil of Sigmar confers magic resistance (1)</Description>
 				</AdditionalArmour>
 			</Group>
 			<Group Name="Arcane Items">
@@ -217,37 +217,37 @@
 					<Name>Seal of Destruction</Name>
 					<Points>45</Points>
 					<Rule>Once automatically dispel an enemy spell, on a 4+ the spell is removed from the caster's mind and he can no longer cast it</Rule>
-					<Description>One use only. The seal has the same effect as a Dispel Scroll. In addition, roll a D6. On a result of 4+ the spell is removed from the caster's mind and he can no longer cast it. Spells cast from a bound item will only be removed on the result of a 6.</Description>
+					<Description>One use only. The seal has the same effect as a Dispel Scroll. In addition, roll a D6. On a result of 4+ the spell is removed from the caster's mind and he can no longer cast it. Spells cast from a bound item will only be removed on the result of a 6</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Grey Wand</Name>
 					<Points>40</Points>
 					<Rule>+1 to the casting attempts</Rule>
-					<Description>Gives +1 to the casting attempts made by the Wizard.</Description>
+					<Description>Gives +1 to the casting attempts made by the Wizard</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Rod of Power</Name>
 					<Points>30</Points>
 					<Rule>Can save up to three unused power/dispel dice from the pool and store them, at the beginning of each successive magic phase roll a dice, if the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool</Rule>
-					<Description>At the end of each magic phase (yours and enemy's), you can save up to three unused power/dispel dice from the pool and store them in the rod. At the beginning of each successive magic phase (yours and enemy's), roll a dice. If the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool, if the result is lower than the number of dice stored, they are lost.</Description>
+					<Description>At the end of each magic phase (yours and enemy's), you can save up to three unused power/dispel dice from the pool and store them in the rod. At the beginning of each successive magic phase (yours and enemy's), roll a dice. If the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool, if the result is lower than the number of dice stored, they are lost</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Luckstone</Name>
 					<Points>25</Points>
 					<Rule>Once per battle, can re-roll all of the dice rolled to cast or dispel</Rule>
-					<Description>One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause irresistible force or a miscast.</Description>
+					<Description>One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause irresistible force or a miscast</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Crystal Ball</Name>
 					<Points>15</Points>
 					<Rule>The enemy must always reveal all the 'secrets' involving all units that are within 24" of the Wizard at any time</Rule>
-					<Description>The enemy must always reveal all the 'secrets' involving all units that are within 24" of the Wizard at any time. This includes which magic items are in the unit and who is carrying them, the presence of disguised, hidden or otherwise 'invisible' models and everything else that the player is not normally obliged to disclose to his opponent.</Description>
+					<Description>The enemy must always reveal all the 'secrets' involving all units that are within 24" of the Wizard at any time. This includes which magic items are in the unit and who is carrying them, the presence of disguised, hidden or otherwise 'invisible' models and everything else that the player is not normally obliged to disclose to his opponent</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Wizard's Staff</Name>
 					<Points>10</Points>
 					<Rule>Use one more dice than he is normally allowed to when casting a spell</Rule>
-					<Description>The Wizard's Staff allows the bearer to use one more dice than he is normally allowed to when casting a spell (eg, a Wizard that can normally use up to two dice to cast spells will be able to use up to three dice).</Description>
+					<Description>The Wizard's Staff allows the bearer to use one more dice than he is normally allowed to when casting a spell (eg, a Wizard that can normally use up to two dice to cast spells will be able to use up to three dice)</Description>
 				</Arcane>
 			</Group>
 			<Group Name="Enchanted Items">
@@ -267,43 +267,43 @@
 					<Name>Aldred's Casket of Sorcery</Name>
 					<Points>35</Points>
 					<Rule>Bound spell, power level variable: at the end of each of his movement phases, the bearer may remove and capture one randomly determined spell from an enemy Wizard within 12" of him on a roll of 4+, the bearer can then cast the captured spell in any of his own following magic phases</Rule>
-					<Description>Bound spell, power level variable. At the end of each of his movement phases, the bearer may remove and capture one randomly determined spell from an enemy Wizard within 12" of him on a roll of 4+. The bearer can then cast the captured spell in any of his own following magic phases by releasing it from the casket just like from a bound item, whereupon the spell is then removed from the game. Any number of spells may be captured by the casket, and the bearer can cast each one once, either over several magic phases or all at the same time if he prefers. The power level of the spell cast by the casket will be equivalent to the normal casting value of the spell.</Description>
+					<Description>Bound spell, power level variable. At the end of each of his movement phases, the bearer may remove and capture one randomly determined spell from an enemy Wizard within 12" of him on a roll of 4+. The bearer can then cast the captured spell in any of his own following magic phases by releasing it from the casket just like from a bound item, whereupon the spell is then removed from the game. Any number of spells may be captured by the casket, and the bearer can cast each one once, either over several magic phases or all at the same time if he prefers. The power level of the spell cast by the casket will be equivalent to the normal casting value of the spell</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>The Silver Horn</Name>
 					<Points>35</Points>
 					<Rule>Bound spell, power level 5: if successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left</Rule>
-					<Description>Bound spell, power level 5. If successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left.</Description>
+					<Description>Bound spell, power level 5. If successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>The Orb of Thunder</Name>
 					<Points>30</Points>
 					<Rule>Bound spell, power level 4: when the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate, remains in play</Rule>
-					<Description>Bound spell, power level 4. Remains in play. When the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate.</Description>
+					<Description>Bound spell, power level 4. Remains in play. When the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Doomfire Ring</Name>
 					<Points>30</Points>
 					<Rule>Bound spell, power level 3: casts the Burning Head spell from the Lore of Fire</Rule>
-					<Description>Bound Spell: Power Level 3. The Doomfire Ring casts the Burning Head spell from the Lore of Fire.</Description>
+					<Description>Bound Spell: Power Level 3. The Doomfire Ring casts the Burning Head spell from the Lore of Fire</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Van Horstmann's Speculum</Name>
 					<Points>30</Points>
 					<Rule>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy</Rule>
-					<Description>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy. He can choose not to use the mirror, but if he does he must swap all these characteristics for the duration of the challenge. So, the wearer fights with his enemy's WS, S, T, I and A whilst his enemy fights with the wearer's WS, S, T, I and A.</Description>
+					<Description>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy. He can choose not to use the mirror, but if he does he must swap all these characteristics for the duration of the challenge. So, the wearer fights with his enemy's WS, S, T, I and A whilst his enemy fights with the wearer's WS, S, T, I and A</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Icon of Magnus</Name>
 					<Points>25</Points>
 					<Rule>The character and the unit he is with are immune to Fear; when faced with an enemy that causes Terror, the character and the unit he is with only suffer Fear, not Terror</Rule>
-					<Description>The character and the unit he is with are immune to Fear. When faced with an enemy that causes Terror, the character and the unit he is with only suffer Fear, not Terror.</Description>
+					<Description>The character and the unit he is with are immune to Fear. When faced with an enemy that causes Terror, the character and the unit he is with only suffer Fear, not Terror</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Ring of Volans</Name>
 					<Points>20</Points>
 					<Rule>Bound spell: power level variable, one use only: choose any one of the eight magic lores in the Warhammer rulebook and randomly select one spell from that lore to be bound within the Ring of Volans</Rule>
-					<Description>One use only. Bound Spell: Power Level variable. Choose any one of the eight magic lores in the Warhammer rulebook and randomly select one spell from that lore to be bound within the Ring of Volans. The power level of the spell cast by the ring will be equivalent to the normal casting value of the spell.</Description>
+					<Description>One use only. Bound Spell: Power Level variable. Choose any one of the eight magic lores in the Warhammer rulebook and randomly select one spell from that lore to be bound within the Ring of Volans. The power level of the spell cast by the ring will be equivalent to the normal casting value of the spell</Description>
 				</AdditionalArmour>
 			</Group>
 			<Group Name="Magic Standards">
@@ -311,38 +311,38 @@
 					<Name>Imperial Banner</Name>
 					<Points>100</Points>
 					<Rule>All units within 12" can re-roll any failed Terror, Fear, Panic or Rally test as well as tests to avoid pursuing a fleeing enemy</Rule>
-					<Description>All units with at least one model within 12" of the Imperial Banner can re-roll any failed Terror, Fear, Panic or Rally test as well as tests to avoid pursuing a fleeing enemy.</Description>
+					<Description>All units with at least one model within 12" of the Imperial Banner can re-roll any failed Terror, Fear, Panic or Rally test as well as tests to avoid pursuing a fleeing enemy</Description>
 				</Banner>
 				<Banner>
 					<Name>Banner of Sigismund</Name>
 					<Points>60</Points>
 					<Stubborn/>
-					<Description>The standard bearer and all models in his unit are Stubborn. Note that this bonus is also conferred to other characters within the unit.</Description>
+					<Description>The standard bearer and all models in his unit are Stubborn. Note that this bonus is also conferred to other characters within the unit</Description>
 				</Banner>
 				<Banner>
 					<Name>Griffon Standard</Name>
 					<Points>55</Points>
 					<Rule>A unit counts double its rank bonus when it comes to working out combat results</Rule>
-					<Description>A unit joined by a Battle Standard Bearer carrying the Griffon Standard counts double its rank bonus when it comes to working out combat results. If the unit is in two ranks it receives +2, in three ranks +4, and in four ranks (the maximum bonus) +6. The unit will never pursue a fleeing enemy, but will always hold its ground, even if affected by a special rule that means it must normally do so.</Description>
+					<Description>A unit joined by a Battle Standard Bearer carrying the Griffon Standard counts double its rank bonus when it comes to working out combat results. If the unit is in two ranks it receives +2, in three ranks +4, and in four ranks (the maximum bonus) +6. The unit will never pursue a fleeing enemy, but will always hold its ground, even if affected by a special rule that means it must normally do so</Description>
 				</Banner>
 				<Banner>
 					<Name>Banner of the Daemonslayer</Name>
 					<Points>50</Points>
 					<Fear/>
 					<OnlyGroup>Knights</OnlyGroup>
-					<Description>During the turn when it charges into combat, the unit causes Fear (from the moment it is found to be in charge range to the end of that turn).</Description>
+					<Description>During the turn when it charges into combat, the unit causes Fear (from the moment it is found to be in charge range to the end of that turn)</Description>
 				</Banner>
 				<Banner>
 					<Name>Banner of Valour</Name>
 					<Points>30</Points>
 					<ImmuneToPsychology/>
-					<Description>The unit is Immune to Panic.</Description>
+					<Description>The unit is Immune to Panic</Description>
 				</Banner>
 				<Banner>
 					<Name>Standard of Arcane Warding</Name>
 					<Points>30</Points>
 					<Rule>Magic Resistance (2)</Rule>
-					<Description>This banner confers Magic Resistance (2) on the unit that carries it.</Description>
+					<Description>This banner confers Magic Resistance (2) on the unit that carries it</Description>
 				</Banner>
 				<Banner>
 					<Name>Steel Standard</Name>
