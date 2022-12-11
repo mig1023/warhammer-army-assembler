@@ -22,28 +22,33 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (XmlNode xmlUnit in xmlNodes)
             {
-                if (!String.IsNullOrEmpty(currentArmyLimit))
-                {
-                    string hireLimits = xmlUnit["Hire"].InnerText;
-                    bool negativeLogic = hireLimits.Contains("!");
-                    bool any = hireLimits.Contains("*");
-                    hireLimits = hireLimits.Replace("!", String.Empty);
-
-                    List<string> limits = hireLimits
-                        .Split(',')
-                        .Select(x => x.Trim())
-                        .ToList();
-
-                    if (!any && !negativeLogic && !limits.Contains(currentArmyLimit))
-                        continue;
-
-                    if (!any && negativeLogic && limits.Contains(currentArmyLimit))
-                        continue;
-                }
+                if (!String.IsNullOrEmpty(currentArmyLimit) && CurrentArmyLimitFail(xmlUnit, currentArmyLimit))
+                    continue;
 
                 int newID = GetNextIndex(); 
                 dict.Add(newID, LoadUnit(newID, xmlUnit, xmlFile));
             }
+        }
+
+        private static bool CurrentArmyLimitFail(XmlNode xmlUnit, string currentArmyLimit)
+        {
+            string hireLimits = xmlUnit["Hire"].InnerText;
+            bool negativeLogic = hireLimits.Contains("!");
+            bool any = hireLimits.Contains("*");
+            hireLimits = hireLimits.Replace("!", String.Empty);
+
+            List<string> limits = hireLimits
+                .Split(',')
+                .Select(x => x.Trim())
+                .ToList();
+
+            if (!any && !negativeLogic && !limits.Contains(currentArmyLimit))
+                return true;
+
+            if (!any && negativeLogic && limits.Contains(currentArmyLimit))
+                return true;
+
+            return false;
         }
 
         private static string LoadString(XmlDocument xmlFile, string node) =>
