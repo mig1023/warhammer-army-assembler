@@ -121,10 +121,13 @@ namespace WarhammerArmyAssembler.Interface
             }
         }
 
-        private static int Floor(double level, int difficulty) => (int)Math.Floor(level / difficulty);
+        private static int Floor(double level, int difficulty) =>
+            (int)Math.Floor(level / difficulty);
 
-        private static string UnitsByType(Unit.UnitType u) => Army.Params.GetUnitsListByType(u);
+        private static string UnitsByType(Unit.UnitType u) =>
+            Army.Params.GetUnitsListByType(u);
 
-        private static int UnitsByBase(Army.Params.BasesTypes u) => Army.Params.GetUnitsNumberByBase(u);
+        private static int UnitsByBase(Army.Params.BasesTypes u) =>
+            Army.Params.GetUnitsNumberByBase(u);
     }
 }
