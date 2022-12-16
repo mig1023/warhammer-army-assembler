@@ -322,10 +322,10 @@
 				<Image>Khazrak</Image>
 				<Profile M='5' WS='7' BS='1' S='5' T='5' W='3' I='5' A='4' Ld='9'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>All units using the Beastman Ambush special rule in the same army as Khazrak may choose to re-roll the dice to see how and when they enter play</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -347,12 +347,12 @@
 				<Description>Gorthor the Beastlord</Description>
 				<Profile M='5' WS='7' BS='3' S='5' T='5' W='3' I='5' A='5' Ld='9' AS='4'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Man-bane</Rule>
 						<Rule>Chariot</Rule>
 						<Rule>At the start of each friendly Magic phase randomly generate a spell from the Lore of Death: Gorthor may use this spell during this Magic phase as a Bound Spell, with a Power Level equal to half the casting value of the spell, rounding up</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -382,11 +382,11 @@
 				<Profile M='5' WS='5' BS='3' S='4' T='5' W='3' I='4' A='2' Ld='8'/>
 				<SpecialRules>
 					<Fly/>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Enemy units within 6" of Malagor may not use their General's Leadership, unless he is actually in the unit</Rule>
 						<Rule>For every spell Malagor casts that is not dispelled he gets a cumulative +1 on subsequent casting attempts for the rest of the Magic phase</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -405,11 +405,11 @@
 					<Fear/>
 					<Frenzy/>
 					<ImpactHit>D3+1</ImpactHit>
-					<Individual>
+					<Original>
 						<Rule>Bloodgreed</Rule>
 						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
 						<Rule>If an enemy attack rolls a '6' To Hit and then a '6' To Wound then Taurox will be slain outright if he fails his saving throw</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -426,10 +426,10 @@
 				<Profile M='5' WS='6' BS='3' S='5' T='4' W='3' I='5' A='4' Ld='9'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Hero"/>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Man-bane</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Options>
 					<GreatWeapon Points="12" Dependencies="Off: Additional weapon"/>
@@ -454,10 +454,10 @@
 					<Frenzy/>
 					<ImpactHit>D3</ImpactHit>
 					<MagicItems Points="100" Type="Hero"/>
-					<Individual>
+					<Original>
 						<Rule>Bloodgreed</Rule>
 						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Options>
 					<GreatWeapon Points="15" Dependencies="Off: Additional weapon"/>
@@ -478,9 +478,9 @@
 				<Profile M='5' WS='5' BS='3' S='4' T='5' W='3' I='4' A='2' Ld='8'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Wizard"/>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Options>
 					<Wizard Level="4" Points="35"/>
@@ -503,12 +503,12 @@
 				<Profile M='5' WS='6' BS='3' S='4' T='5' W='2' I='4' A='4' Ld='8'/>
 				<SpecialRules>
 					<Unbreakable/>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Cannot be harmed in any way by missile attacks or spells, unless the model which is the source of the attack is within 12" of him</Rule>
 						<Rule>At the beginning of each round of close combat, all enemy models in base contact take a S3 hit with no armour save allowed</Rule>
 						<Rule>At the beginning of your Magic phase, you must remove a friendly model within 12" from play, then roll a D6: on the roll of a 3+ you may place a Chaos Spawn within 3" of the spot vacated, provided there is space, and you have the appropriate model available</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -524,10 +524,10 @@
 				<SpecialRules>
 					<Regeneration/>
 					<PoisonAttack/>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Immediately after deployment, each enemy unit within 36" must roll once on the table of Curse of the Famine-fiend</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -546,12 +546,12 @@
 					<Mount Name="Umbralok" Points="35"/>
 				</Options>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Every unit, friend or foe, within 12" of Moonclaw at the start of their turn must take a Stupidity test</Rule>
 						<Rule>At the beginning of the game, secretly roll a D3 and record the number, in the turn that corresponds to this number, Morrslieb is full: for the entire duration of that turn Moonclaw has a +2 bonus to his casting rolls, he may make D3 shooting attacks resolved as if he were a stone thrower for that turn only, any results of a misfire cause a single wound upon Moonclaw that cannot be saved by any means</Rule>
 						<Rule>Magic Resistance (2)</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -566,10 +566,10 @@
 				<Profile M='5' WS='5' BS='3' S='4' T='5' W='2' I='4' A='3' Ld='8'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Man-bane</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Options>
 					<GreatWeapon Points="4" Dependencies="Off: Additional weapon"/>
@@ -594,10 +594,10 @@
 					<Frenzy/>
 					<ImpactHit>D3</ImpactHit>
 					<MagicItems Points="50" Type="Hero"/>
-					<Individual>
+					<Original>
 						<Rule>Bloodgreed</Rule>
 						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Options>
 					<GreatWeapon Points="10" Dependencies="Off: Additional weapon"/>
@@ -619,9 +619,9 @@
 				<Profile M='5' WS='4' BS='3' S='3' T='4' W='2' I='3' A='1' Ld='7'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Wizard"/>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Options>
 					<Wizard Level="2" Points="35"/>
@@ -675,9 +675,9 @@
 				<SpecialRules>
 					<Fear/>
 					<ImpactHit>D6+1</ImpactHit>
-					<Individual>
+					<Original>
 						<Rule>Thunderous Charge</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 			</Mount>
 		</Mounts>
@@ -689,10 +689,10 @@
 				<Image>GorHerd</Image>
 				<Profile M='5' WS='4' BS='3' S='3' T='4' W='1' I='3' A='1' Ld='7'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Beastman Ambush</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -714,10 +714,10 @@
 				<Image>UngorHerd</Image>
 				<Profile M='5' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='6'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Beastman Ambush</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -755,10 +755,10 @@
 				<Profile M='5' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='6'/>
 				<SpecialRules>
 					<Skirmishers/>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Beastman Ambush</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -780,10 +780,10 @@
 				<Profile M='7' WS='4' BS='3' S='4' T='4' W='4' I='3' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
 					<ImpactHit>D6+1</ImpactHit>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Chariot</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<GreatWeapon/>
@@ -822,9 +822,9 @@
 				<SpecialRules>
 					<Fear/>
 					<ImpactHit>1</ImpactHit>
-					<Individual>
+					<Original>
 						<Rule>Bloodgreed</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -848,10 +848,10 @@
 				<Image>Centigor</Image>
 				<Profile M='8' WS='4' BS='3' S='4' T='4' W='1' I='2' A='2' Ld='7'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Drunken</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<Spear/>
@@ -923,10 +923,10 @@
 				<Image>BestigorHerd</Image>
 				<Profile M='5' WS='4' BS='3' S='4' T='4' W='1' I='3' A='1' Ld='7'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Despoilers</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<GreatWeapon/>
@@ -949,11 +949,11 @@
 				<SpecialRules>
 					<Fear/>
 					<ImpactHit>D6+1</ImpactHit>
-					<Individual>
+					<Original>
 						<Rule>Primal Fury</Rule>
 						<Rule>Chariot</Rule>
 						<Rule>Thunderous Charge</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<GreatWeapon/>
@@ -966,9 +966,9 @@
 				<Profile M='7' WS='3' BS='0' S='5' T='5' W='3' I='2' A='4' Ld='6'/>
 				<SpecialRules>
 					<Fear/>
-					<Individual>
+					<Original>
 						<Rule>Thunderous Charge</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -986,12 +986,12 @@
 					<LargeTarget/>
 					<Stubborn/>
 					<ImmuneToPsychology/>
-					<Individual>
+					<Original>
 						<Rule>Magic Resistance (2)</Rule>
 						<Rule>When fighting enemy Wizards, models with any sort of magic item or magical attacks, Undead, or creatures with a ward save, the Cygor may re-roll any failed To Hit rolls</Rule>
 						<Rule>Hurl Attack</Rule>
 						<Rule>Enemy Wizards within 24" of one or more Cygors must take a Leadership test at the beginning of the Magic phase, if the test is failed any spell he fails to cast this Magic phase will result in a miscast</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -1009,11 +1009,11 @@
 					<Frenzy/>
 					<ImmuneToPsychology/>
 					<Stubborn/>
-					<Individual>
+					<Original>
 						<Rule>Bloodgreed</Rule>
 						<Rule>May forego all of its normal attacks and instead make a single special attack at an Initiative of 1: this attack has the Killing Blow ability, but To Wound rolls of a 4, 5 or 6 act as Killing Blow attacks, instead of just rolls of 6</Rule>
 						<Rule>Each time a Ghorgon causes a Killing Blow with its Swallow Whole ability, it regains D3 Wounds that it has lost earlier in the battle</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -1028,10 +1028,10 @@
 				<SpecialRules>
 					<Fear/>
 					<Unbreakable/>
-					<Individual>
+					<Original>
 						<Rule>Flailing Appendages</Rule>
 						<Rule>Lurching Horror</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -1051,11 +1051,11 @@
 					<LargeTarget/>
 					<Giant/>
 					<ImmuneToPsychology/>
-					<Individual>
+					<Original>
 						<Rule>Fall Over</Rule>
 						<Rule>Giant Special Attacks</Rule>
 						<Rule>Longshanks</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -1074,11 +1074,11 @@
 					<LargeTarget/>
 					<ImmuneToPsychology/>
 					<Fly/>
-					<Individual>
+					<Original>
 						<Rule>Each enemy unit within 12" of one or more Jabberslythes at the beginning of the Beastmen Magic phase must take a Leadership test: for every point by which a unit fails its test, it suffers a wound with no armour saves allowed - some of its members have gone irrevocably insane!</Rule>
 						<Rule>Slythey Tongue</Rule>
 						<Rule>For every wound caused on a Jabberslythe in close combat, the attacking unit immediately suffers a S5 hit, randomised as shooting</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
