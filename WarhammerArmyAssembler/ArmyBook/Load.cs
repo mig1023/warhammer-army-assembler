@@ -442,14 +442,14 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static void CreateMountOption(XmlDocument xmlDocument, ref XmlNode xmlNode)
         {
             AddToOption(xmlDocument, ref xmlNode, "Name", xmlNode.Attributes["Name"].InnerText);
-            AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"].InnerText);
+            AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"]?.InnerText ?? "0");
             AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
             AddToOption(xmlDocument, ref xmlNode, "Mount", "True");
         }
 
         private static void CreateWizardOption(XmlDocument xmlDocument, ref XmlNode xmlNode)
         {
-            AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"].InnerText);
+            AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"]?.InnerText ?? "0");
             AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
 
             int level = int.Parse(xmlNode.Attributes["Level"].InnerText);
