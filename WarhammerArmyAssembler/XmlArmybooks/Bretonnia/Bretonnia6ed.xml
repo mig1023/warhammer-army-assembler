@@ -465,9 +465,9 @@
 				<SpecialRules>
 					<Terror/>
 					<Undead/>
-					<Individual>
+					<Original>
 						<Rule>He suffers no movement penalties for moving over or through any kind of terrain; He never suffers any movement penalties, even from such things as magical effects</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -491,7 +491,7 @@
 					<Slots>Hero</Slots>
 					<Fear/>
 					<Test Bet="Wound" Context="Round">Initiative</Test>
-					<Individual>
+					<Original>
 						<Rule>One model in the Bretonnian army may be given the Favour of the Fay, this model may add +1 on all rolls to hit in close combat; however, if the model loses the Blessing of the Lady, then both the Favoured model and the Fay Enchantress take a wound that cannot be saved by Armour or Ward saves</Rule>
 						<Rule>Bretonnian army does not need to pray at the start of the game to gain the Blessing of the Lady</Rule>
 						<Rule>Ward save gained from the Blessing of the Lady is increased to 5+ against any attack</Rule>
@@ -500,7 +500,7 @@
 						<Rule>Magic Resistance (3)</Rule>
 						<Rule>May use any of the eight lores</Rule>
 						<Rule>+2 to cast Lore of Life spells</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<Armour>
@@ -531,10 +531,10 @@
 					<ImmuneToPsychology/>
 					<Reroll>ToHit;ToWound</Reroll>
 					<Regeneration/>
-					<Individual>
+					<Original>
 						<Rule>If Louen is removed as a casualty, all Bretonnian units must take a Panic test; Such is the determination to reclaim their fallen ruler that all Bretonnian troops count as stubborn for the rest of the battle</Rule>
 						<Rule>The 0-1 restriction on Grail Knights is lifted, Men-at-arms and Bowmen become Special choices</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -624,9 +624,9 @@
 				<Profile M='4' WS='3' BS='3' S='3' T='3' W='3' I='3' A='1' Ld='8'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Wizard"/>
-					<Individual>
+					<Original>
 						<Rule>Magic Resistance (2)</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -715,9 +715,9 @@
 				<Profile M='4' WS='3' BS='3' S='3' T='3' W='2' I='3' A='1' Ld='7'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Wizard"/>
-					<Individual>
+					<Original>
 						<Rule>Magic Resistance (2)</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -795,9 +795,9 @@
 				<Image>KnightsErrant</Image>
 				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='7' AS='5'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>After charges have been declared, if unit did not declare a charge but are within charge range of an enemy, then they must take a Leadership test to restrain themselves from charging; if this test is failed, they are forced to charge; if the test is passed, they may move normally; in addition, so reckless are the Knights Errant, that whenever they charge, the unit and any characters that have joined them are Immune to Psychology for the rest of that turn</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -842,9 +842,9 @@
 				<Image>MenAtArms</Image>
 				<Profile M='4' WS='2' BS='2' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -874,10 +874,10 @@
 				<Image>Bowman</Image>
 				<Profile M='4' WS='2' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
 						<Rule>No unit gains any charge bonus when they charge the unit's front</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -913,9 +913,9 @@
 				<Image>QuestingKnights</Image>
 				<Profile M='4' WS='4' BS='3' S='4' T='3' W='1' I='4' A='1' Ld='8' AS='5'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>May re-roll any failed Psychology tests</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<GreatWeapon/>
@@ -965,9 +965,9 @@
 				<Image>MountedYeomen</Image>
 				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='6'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<Spear/>
@@ -995,10 +995,10 @@
 				<Profile M='4' WS='5' BS='3' S='4' T='3' W='1' I='5' A='2' Ld='8' AS='5' Ward='6'/>
 				<SpecialRules>
 					<ImmuneToPsychology/>
-					<Individual>
+					<Original>
 						<Rule>5+ Ward save versus attacks with Strength 5 or higher</Rule>
 						<Rule>Every model in a unit of Grail Knights can issue and accept challenges as if they were a Champion</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Equipments>
 					<Lance/>
@@ -1020,10 +1020,10 @@
 				<Image>Trebuchet</Image>
 				<Profile M='4' WS='2' BS='2' S='3' T='7' W='4' I='3' A='1' Ld='5'/>
 				<SpecialRules>
-					<Individual>
+					<Original>
 						<Rule>Field Trebuchet</Rule>
 						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
-					</Individual>
+					</Original>
 				</SpecialRules>
 				<Options>
 					<Command>
