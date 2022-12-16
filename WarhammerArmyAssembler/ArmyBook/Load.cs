@@ -370,8 +370,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                     xmlUnit["Equipments"].AppendChild(Services.AddFrenzyAttack(xml));
                 }
 
-                if (additionalParam["Individual"] != null)
-                    newUnit.Options.Add(LoadOption(GetNextIndex(), additionalParam["Individual"],
+                if (additionalParam["Original"] != null)
+                    newUnit.Options.Add(LoadOption(GetNextIndex(), additionalParam["Original"],
                         xml, commonXmlOption: enemyCommonXmlOption));
 
                 AddCommonXmlOptionBySpecialRules(xml, additionalParam, ref newUnit,
