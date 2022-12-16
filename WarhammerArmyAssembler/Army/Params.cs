@@ -180,6 +180,9 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (Unit entry in Data.Units.Values)
             {
+                if (entry.Type == Unit.UnitType.Mount)
+                    continue;
+
                 bool cavalry = (entry.MountOn > 1 || !String.IsNullOrEmpty(entry.MountInit));
                 bool chariot = entry.Chariot > 0;
 
