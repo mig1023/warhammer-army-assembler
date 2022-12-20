@@ -25,22 +25,28 @@
 			<MagicItems>Shiny stuff</MagicItems>
 		</Styles>
 		<InternalName>Orcs</InternalName>
-		<Magic Name="Spells of the Big Waaagh!" Alternative="Spells of the Little Waaagh!">
-			<Spell Name="Mork save us!" Cast="5"/>
-			<Spell Name="Gork'll fix it" Cast="6"/>
-			<Spell Name="Bash 'em ladz" Cast="7"/>
-			<Spell Name="The Foot of Gork" Cast="9"/>
-			<Spell Name="Gork's warpath" Cast="10"/>
-			<Spell Name="Waaagh!" Cast="12"/>
+		<Magic>
+			<Name>Spells of the Big Waaagh!</Name>
+			<Alternative>Spells of the Little Waaagh!</Alternative>
+			<Magic>
+				<Spell Name="Mork save us!" Cast="5"/>
+				<Spell Name="Gork'll fix it" Cast="6"/>
+				<Spell Name="Bash 'em ladz" Cast="7"/>
+				<Spell Name="The Foot of Gork" Cast="9"/>
+				<Spell Name="Gork's warpath" Cast="10"/>
+				<Spell Name="Waaagh!" Cast="12"/>
+
+			</Magic>
+			<Enemy>Wood Elves, Lore of Athel Loren</Enemy>
+			<Dispell>
+				<Spell Name="Tree Singing" Cast="6"/>
+				<Spell Name="Fury of the Forest" Cast="8"/>
+				<Spell Name="The Hidden Path" Cast="9"/>
+				<Spell Name="The Twilight Host" Cast="10"/>
+				<Spell Name="Ariel's Blessing" Cast="11"/>
+				<Spell Name="The Call of the Hunt" Cast="13"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="Lore of Athel Loren" Enemy="Wood Elves">
-			<Spell Name="Tree Singing" Cast="6"/>
-			<Spell Name="Fury of the Forest" Cast="8"/>
-			<Spell Name="The Hidden Path" Cast="9"/>
-			<Spell Name="The Twilight Host" Cast="10"/>
-			<Spell Name="Ariel's Blessing" Cast="11"/>
-			<Spell Name="The Call of the Hunt" Cast="13"/>
-		</Dispell>		
 		<LocalXmlOption>
 			<Choppa/>
 			<GreatAxe Name="Great axe">AddToStrength: 2; HitLast</GreatAxe>
