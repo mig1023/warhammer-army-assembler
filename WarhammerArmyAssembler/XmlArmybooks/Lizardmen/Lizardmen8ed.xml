@@ -24,25 +24,30 @@
 			<MagicPowers>Disciplines</MagicPowers>
 		</Styles>
 		<InternalName>Lizardmen</InternalName>
-		<Magic Name="The Lore of Heaven" Alternative="High Magic or any of eight Lore of Battle Magic">
-			<Spell Name="Apotheosis" Cast="5"/>
-			<Spell Name="Hand of Glory" Cast="5"/>
-			<Spell Name="Walk Between Worlds" Cast="5"/>
-			<Spell Name="Drain magic" Cast="7"/>
-			<Spell Name="Soul Quench" Cast="8"/>
-			<Spell Name="Tempest" Cast="12"/>
-			<Spell Name="Arcane Unforging" Cast="13"/>
-			<Spell Name="Fiery convocation" Cast="19"/>
+		<Magic>
+			<Name>The Lore of Heaven</Name>
+			<Alternative>High Magic or any of eight Lore of Battle Magic</Alternative>
+			<Magic>
+				<Spell Name="Apotheosis" Cast="5"/>
+				<Spell Name="Hand of Glory" Cast="5"/>
+				<Spell Name="Walk Between Worlds" Cast="5"/>
+				<Spell Name="Drain magic" Cast="7"/>
+				<Spell Name="Soul Quench" Cast="8"/>
+				<Spell Name="Tempest" Cast="12"/>
+				<Spell Name="Arcane Unforging" Cast="13"/>
+				<Spell Name="Fiery convocation" Cast="19"/>
+			</Magic>
+			<Enemy>Warriors of Chaos, The Lore of Nurgle</Enemy>
+			<Dispell>
+				<Spell Name="Miasma of Pestilence" Cast="7"/>
+				<Spell Name="Ream of Corruption" Cast="9"/>
+				<Spell Name="Blades of Putrefaction" Cast="10"/>
+				<Spell Name="Curse of The Leper" Cast="12"/>
+				<Spell Name="Rancid Visitations" Cast="12"/>
+				<Spell Name="Fleshy Abundance" Cast="13"/>
+				<Spell Name="Plague Wind" Cast="17"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of Nurgle" Enemy="Warriors of Chaos">
-			<Spell Name="Miasma of Pestilence" Cast="7"/>
-			<Spell Name="Ream of Corruption" Cast="9"/>
-			<Spell Name="Blades of Putrefaction" Cast="10"/>
-			<Spell Name="Curse of The Leper" Cast="12"/>
-			<Spell Name="Rancid Visitations" Cast="12"/>
-			<Spell Name="Fleshy Abundance" Cast="13"/>
-			<Spell Name="Plague Wind" Cast="17"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
