@@ -277,8 +277,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (enemyMagic.Count < 2)
                 return;
 
-            Data.EnemyMagicLoreName = enemyMagic[0];
-            Data.EnemyMagicName = enemyMagic[1];
+            Data.EnemyMagicName = enemyMagic[0];
+            Data.EnemyMagicLoreName = enemyMagic[1];
 
             LoadSpells(xmlFile, "Magic", ref Data.Magic);
             LoadSpells(xmlFile, "Dispell", ref Data.Dispell);
