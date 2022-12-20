@@ -23,15 +23,18 @@
 			<MagicItems>Runic Magic</MagicItems>
 		</Styles>
 		<InternalName>Dwarfs</InternalName>
-		<Magic/>
-		<Dispell Name="Spells of Ruin" Enemy="Skaven">
-			<Spell Name="Skitterleap" Cast="7"/>
-			<Spell Name="Warp Lightning" Cast="8"/>
-			<Spell Name="Howling Warpgale" Cast="9"/>
-			<Spell Name="Death Frenzy" Cast="11"/>
-			<Spell Name="Scorch" Cast="12"/>
-			<Spell Name="Cracks Call" Cast="13"/>
-		</Dispell>		
+		<Magic>
+			<Magic/>
+			<Enemy>Skaven, Spells of Ruin</Enemy>
+			<Dispell>
+				<Spell Name="Skitterleap" Cast="7"/>
+				<Spell Name="Warp Lightning" Cast="8"/>
+				<Spell Name="Howling Warpgale" Cast="9"/>
+				<Spell Name="Death Frenzy" Cast="11"/>
+				<Spell Name="Scorch" Cast="12"/>
+				<Spell Name="Cracks Call" Cast="13"/>
+			</Dispell>
+		</Magic>
 		<LocalXmlOption>
 			<GromrilArmour Name="Gromril armour">AddToArmour: 4; NativeArmour</GromrilArmour>
 			<DwarfHandgun Name="Dwarf handgun"/>
