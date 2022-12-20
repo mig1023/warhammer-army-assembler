@@ -23,22 +23,26 @@
 			<MagicItems>Tools of Destruction</MagicItems>
 		</Styles>
 		<InternalName>OgreKingdoms</InternalName>
-		<Magic Name="Gut Magic">
-			<Spell Name="Bloodgruel" Cast="3"/>
-			<Spell Name="Braingobbler" Cast="3"/>
-			<Spell Name="Bullgorger" Cast="3"/>
-			<Spell Name="Bonecruncher" Cast="3"/>
-			<Spell Name="Toothcracker" Cast="3"/>
-			<Spell Name="Trollguts" Cast="3"/>
+		<Magic>
+			<Name>Gut Magic</Name>
+			<Magic>
+				<Spell Name="Bloodgruel" Cast="3"/>
+				<Spell Name="Braingobbler" Cast="3"/>
+				<Spell Name="Bullgorger" Cast="3"/>
+				<Spell Name="Bonecruncher" Cast="3"/>
+				<Spell Name="Toothcracker" Cast="3"/>
+				<Spell Name="Trollguts" Cast="3"/>
+			</Magic>
+			<Enemy>Orcs and Goblins, Spells of the Big Waaagh!</Enemy>
+			<Dispell>
+				<Spell Name="Mork save us!" Cast="7"/>
+				<Spell Name="Gork'll fix it" Cast="8"/>
+				<Spell Name="Bash 'em ladz" Cast="9"/>
+				<Spell Name="The Foot of Gork" Cast="11"/>
+				<Spell Name="Gork's warpath" Cast="12"/>
+				<Spell Name="Waaagh!" Cast="14"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="Spells of the Big Waaagh!" Enemy="Orcs and Goblins">
-			<Spell Name="Mork save us!" Cast="7"/>
-			<Spell Name="Gork'll fix it" Cast="8"/>
-			<Spell Name="Bash 'em ladz" Cast="9"/>
-			<Spell Name="The Foot of Gork" Cast="11"/>
-			<Spell Name="Gork's warpath" Cast="12"/>
-			<Spell Name="Waaagh!" Cast="14"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
