@@ -23,22 +23,27 @@
 			<MagicItems>Sorcerous Items</MagicItems>
 		</Styles>
 		<InternalName>DarkElves</InternalName>
-		<Magic Name="Dark Magic" Alternative="Lore of Shadow, Death">
-			<Spell Name="Nagaelythe the Chillwind" Cast="5"/>
-			<Spell Name="Doombolt of Kharaidon" Cast="6"/>
-			<Spell Name="Chroesh Word of Pain" Cast="8"/>
-			<Spell Name="Anchan-Rogar the Soul Stealer" Cast="9"/>
-			<Spell Name="Lamehk's Dominion" Cast="10"/>
-			<Spell Name="Arnizipal's Black Horror" Cast="12"/>
+		<Magic>
+			<Name>Dark Magic</Name>
+			<Alternative>Lore of Shadow, Death</Alternative>
+			<Magic>
+				<Spell Name="Nagaelythe the Chillwind" Cast="5"/>
+				<Spell Name="Doombolt of Kharaidon" Cast="6"/>
+				<Spell Name="Chroesh Word of Pain" Cast="8"/>
+				<Spell Name="Anchan-Rogar the Soul Stealer" Cast="9"/>
+				<Spell Name="Lamehk's Dominion" Cast="10"/>
+				<Spell Name="Arnizipal's Black Horror" Cast="12"/>
+			</Magic>
+			<Enemy>High Elves, High Magic Spells</Enemy>
+			<Dispell>
+				<Spell Name="Walk Between Worlds" Cast="6"/>
+				<Spell Name="Curse of Arrow Attraction" Cast="8"/>
+				<Spell Name="Fortune is Fickle" Cast="9"/>
+				<Spell Name="Fury of Khaine" Cast="10"/>
+				<Spell Name="Flame of the Phoenix" Cast="13"/>
+				<Spell Name="Vaul's Unmaking" Cast="14"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="High Magic Spells" Enemy="High Elves">
-			<Spell Name="Walk Between Worlds" Cast="6"/>
-			<Spell Name="Curse of Arrow Attraction" Cast="8"/>
-			<Spell Name="Fortune is Fickle" Cast="9"/>
-			<Spell Name="Fury of Khaine" Cast="10"/>
-			<Spell Name="Flame of the Phoenix" Cast="13"/>
-			<Spell Name="Vaul's Unmaking" Cast="14"/>
-		</Dispell>
 		<LocalXmlOption>
 			<SeaDragonCloak Name="Sea Dragon Cloak">AddToArmour: 6</SeaDragonCloak>
 			<Crossbows/>
