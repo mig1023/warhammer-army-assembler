@@ -25,22 +25,27 @@
 			<MagicItems>Tools of Supremacy</MagicItems>
 		</Styles>
 		<InternalName>Skaven</InternalName>
-		<Magic Name="Spells of Ruin" Alternative="Spells of Plague">
-			<Spell Name="Skitterleap" Cast="5"/>
-			<Spell Name="Warp Lightning" Cast="6"/>
-			<Spell Name="Howling Warpgale" Cast="7"/>
-			<Spell Name="Death Frenzy" Cast="9"/>
-			<Spell Name="Scorch" Cast="10"/>
-			<Spell Name="Cracks Call" Cast="11"/>
+		<Magic>
+			<Name>Spells of Ruin</Name>
+			<Alternative>Spells of Plague</Alternative>
+			<Magic>
+				<Spell Name="Skitterleap" Cast="5"/>
+				<Spell Name="Warp Lightning" Cast="6"/>
+				<Spell Name="Howling Warpgale" Cast="7"/>
+				<Spell Name="Death Frenzy" Cast="9"/>
+				<Spell Name="Scorch" Cast="10"/>
+				<Spell Name="Cracks Call" Cast="11"/>
+			</Magic>
+			<Enemy>High Elves, High Magic</Enemy>
+			<Dispell>
+				<Spell Name="Shield of Saphery" Cast="7"/>
+				<Spell Name="Curse of Arrow Attraction" Cast="8"/>
+				<Spell Name="Courage of Aenarion" Cast="10"/>
+				<Spell Name="Fury of Khaine" Cast="10"/>
+				<Spell Name="Flame of the Phoenix" Cast="13"/>
+				<Spell Name="Vaul's Unmaking" Cast="14"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="High Magic" Enemy="High Elves">
-			<Spell Name="Shield of Saphery" Cast="7"/>
-			<Spell Name="Curse of Arrow Attraction" Cast="8"/>
-			<Spell Name="Courage of Aenarion" Cast="10"/>
-			<Spell Name="Fury of Khaine" Cast="10"/>
-			<Spell Name="Flame of the Phoenix" Cast="13"/>
-			<Spell Name="Vaul's Unmaking" Cast="14"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
