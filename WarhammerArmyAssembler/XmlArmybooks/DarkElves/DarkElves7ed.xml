@@ -22,23 +22,28 @@
 			</Colors>
 			<MagicItems>Treasures of Naggaroth</MagicItems>
 		</Styles>
-		<InternalName>DarkElves</InternalName>
-		<Magic Name="The Lore of Dark Magic" Alternative="Lore of Fire, Shadow, Metal, Death">
-			<Spell Name="Chillwind" Cast="5"/>
-			<Spell Name="Doombolt" Cast="6"/>
-			<Spell Name="Word of Pain" Cast="7"/>
-			<Spell Name="Bladewind" Cast="8"/>
-			<Spell Name="Soul Stealer" Cast="10"/>
-			<Spell Name="Black Horror" Cast="11"/>
+		<InternalName>DarkElves</InternalName>		
+		<Magic>
+			<Name>The Lore of Dark Magic</Name>
+			<Alternative>Lore of Fire, Shadow, Metal, Death</Alternative>
+			<Magic>
+				<Spell Name="Chillwind" Cast="5"/>
+				<Spell Name="Doombolt" Cast="6"/>
+				<Spell Name="Word of Pain" Cast="7"/>
+				<Spell Name="Bladewind" Cast="8"/>
+				<Spell Name="Soul Stealer" Cast="10"/>
+				<Spell Name="Black Horror" Cast="11"/>
+			</Magic>
+			<Enemy>High Elves, High Magic</Enemy>
+			<Dispell>
+				<Spell Name="Shield of Saphery" Cast="7"/>
+				<Spell Name="Curse of Arrow Attraction" Cast="8"/>
+				<Spell Name="Courage of Aenarion" Cast="10"/>
+				<Spell Name="Fury of Khaine" Cast="10"/>
+				<Spell Name="Flame of the Phoenix" Cast="13"/>
+				<Spell Name="Vaul's Unmaking" Cast="14"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="High Magic" Enemy="High Elves">
-			<Spell Name="Shield of Saphery" Cast="7"/>
-			<Spell Name="Curse of Arrow Attraction" Cast="8"/>
-			<Spell Name="Courage of Aenarion" Cast="10"/>
-			<Spell Name="Fury of Khaine" Cast="10"/>
-			<Spell Name="Flame of the Phoenix" Cast="13"/>
-			<Spell Name="Vaul's Unmaking" Cast="14"/>
-		</Dispell>		
 		<LocalXmlOption>
 			<ColdOneChariot Name="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
 			<RepeaterCrossbow Name="Repeater Crossbow"/>
