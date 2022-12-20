@@ -258,39 +258,42 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
             }
 
-            LoadMagic(xmlFile, "Magic");
-            LoadMagic(xmlFile, "Dispell", enemy: true);
+            LoadMagic(xmlFile);
         }
 
-        private static void LoadMagic(XmlDocument xmlFile, string magic, bool enemy = false)
+        private static void LoadMagic(XmlDocument xmlFile)
         {
-            XmlNode loreBook = xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", magic));
+            XmlNode loreBook = xmlFile.SelectSingleNode("ArmyBook/Introduction/Magic");
 
             if (loreBook == null)
                 return;
 
-            if (!enemy)
-            {
-                Data.MagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
-                Data.MagicAlternative = loreBook.Attributes["Alternative"]?.Value ?? String.Empty;
-            }
-            else
-            {
-                Data.EnemyMagicLoreName = loreBook.Attributes["Name"]?.Value ?? String.Empty;
-                Data.EnemyMagicName = loreBook.Attributes["Enemy"]?.Value ?? String.Empty;
-            }
+            Data.MagicLoreName = StringParse(loreBook["Name"]);
+            Data.MagicAlternative = StringParse(loreBook["Alternative"]);
 
-            foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/{0}/Spell", magic)))
+            string enemyMagicLine = StringParse(loreBook["Enemy"]);
+            List<string> enemyMagic = enemyMagicLine.Split(',').Select(x => x.Trim()).ToList();
+
+            if (enemyMagic.Count < 2)
+                return;
+
+            Data.EnemyMagicLoreName = enemyMagic[0];
+            Data.EnemyMagicName = enemyMagic[1];
+
+            LoadSpells(xmlFile, "Magic", ref Data.Magic);
+            LoadSpells(xmlFile, "Dispell", ref Data.Dispell);
+        }
+
+        private static void LoadSpells(XmlDocument xmlFile, string magic, ref Dictionary<string, int> spells)
+        {
+            foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/Magic/{0}/Spell", magic)))
             {
                 string spellName = spell.Attributes["Name"].Value;
 
                 if (!int.TryParse(spell.Attributes["Cast"]?.Value, out int spellDifficulty))
                     continue;
 
-                if (!enemy)
-                    Data.Magic.Add(spellName, spellDifficulty);
-                else
-                    Data.Dispell.Add(spellName, spellDifficulty);
+                spells.Add(spellName, spellDifficulty);
             }
         }
 
