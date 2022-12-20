@@ -24,22 +24,27 @@
 			<MagicPowers>Sacred Spawnings</MagicPowers>
 		</Styles>
 		<InternalName>Lizardmen</InternalName>
-		<Magic Name="The Lore of Heaven" Alternative="Any of eight Lore of Battle Magic">
-			<Spell Name="Second Sign of Amul" Cast="5"/>
-			<Spell Name="Portent of Far" Cast="6"/>
-			<Spell Name="Forked Lightning" Cast="7"/>
-			<Spell Name="Uranon's Thunder Bolt" Cast="9"/>
-			<Spell Name="Storm of Cronos" Cast="9"/>
-			<Spell Name="The Comet of Cassanora" Cast="10"/>
+		<Magic>
+			<Name>The Lore of Heaven</Name>
+			<Alternative>Any of eight Lore of Battle Magic</Alternative>
+			<Magic>
+				<Spell Name="Second Sign of Amul" Cast="5"/>
+				<Spell Name="Portent of Far" Cast="6"/>
+				<Spell Name="Forked Lightning" Cast="7"/>
+				<Spell Name="Uranon's Thunder Bolt" Cast="9"/>
+				<Spell Name="Storm of Cronos" Cast="9"/>
+				<Spell Name="The Comet of Cassanora" Cast="10"/>
+			</Magic>
+			<Enemy>Warriors of Chaos, Lore of Nurgle</Enemy>
+			<Dispell>
+				<Spell Name="Magnificent Buboes" Cast="8"/>
+				<Spell Name="Favoured Poxes" Cast="9"/>
+				<Spell Name="Effulgent Boils" Cast="10"/>
+				<Spell Name="Glistening Scabs" Cast="11"/>
+				<Spell Name="Glorious Afflictions" Cast="12"/>
+				<Spell Name="Sumptuous Pestilience" Cast="13"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="Lore of Nurgle" Enemy="Warriors of Chaos">
-			<Spell Name="Magnificent Buboes" Cast="8"/>
-			<Spell Name="Favoured Poxes" Cast="9"/>
-			<Spell Name="Effulgent Boils" Cast="10"/>
-			<Spell Name="Glistening Scabs" Cast="11"/>
-			<Spell Name="Glorious Afflictions" Cast="12"/>
-			<Spell Name="Sumptuous Pestilience" Cast="13"/>
-		</Dispell>
 		<LocalXmlOption>
 			<Blowpipe/>
 			<Javelins/>
