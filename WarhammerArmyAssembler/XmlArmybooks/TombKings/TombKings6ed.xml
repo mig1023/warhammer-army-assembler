@@ -23,15 +23,19 @@
 			<MagicItems>Treasures of The Necropolis</MagicItems>
 		</Styles>
 		<InternalName>TombKings</InternalName>
-		<Magic/>
-		<Dispell Name="The Black Art" Enemy="Vampire Counts">
-			<Spell Name="Invocation of Nehek" Cast="5"/>
-			<Spell Name="Hand of Dust" Cast="9"/>
-			<Spell Name="Hellish Vigour" Cast="9"/>
-			<Spell Name="Gaze of Nagash" Cast="10"/>
-			<Spell Name="Vanhel's Danse Macabre" Cast="11"/>
-			<Spell Name="Curse of Years" Cast="12"/>
-		</Dispell>
+		<Magic>
+			<Magic/>
+			<Enemy>Vampire Counts, The Black Art</Enemy>
+			<Dispell>
+				<Spell Name="Invocation of Nehek" Cast="5"/>
+				<Spell Name="Hand of Dust" Cast="9"/>
+				<Spell Name="Hellish Vigour" Cast="9"/>
+				<Spell Name="Gaze of Nagash" Cast="10"/>
+				<Spell Name="Vanhel's Danse Macabre" Cast="11"/>
+				<Spell Name="Curse of Years" Cast="12"/>
+
+			</Dispell>
+		</Magic>
 	</Introduction>
 	<Content>
 		<Artefacts>
