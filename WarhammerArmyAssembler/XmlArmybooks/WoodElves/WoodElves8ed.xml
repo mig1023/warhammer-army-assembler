@@ -23,24 +23,29 @@
 			<MagicItems>Heirlooms of Athel Loren</MagicItems>
 		</Styles>
 		<InternalName>WoodElves</InternalName>
-		<Magic Name="The Lore of High Magic" Alternative="Lore of Dark Magic or any of eight Lore of Battle Magic">
-			<Spell Name="Apotheosis" Cast="5"/>
-			<Spell Name="Hand of Glory" Cast="5"/>
-			<Spell Name="Walk Between Worlds" Cast="5"/>
-			<Spell Name="Drain magic" Cast="7"/>
-			<Spell Name="Soul Quench" Cast="8"/>
-			<Spell Name="Tempest" Cast="12"/>
-			<Spell Name="Arcane Unforging" Cast="13"/>
-			<Spell Name="Fiery convocation" Cast="19"/>
+		<Magic>
+			<Name>The Lore of High Magic</Name>
+			<Alternative>Lore of Dark Magic or any of eight Lore of Battle Magic</Alternative>
+			<Magic>
+				<Spell Name="Apotheosis" Cast="5"/>
+				<Spell Name="Hand of Glory" Cast="5"/>
+				<Spell Name="Walk Between Worlds" Cast="5"/>
+				<Spell Name="Drain magic" Cast="7"/>
+				<Spell Name="Soul Quench" Cast="8"/>
+				<Spell Name="Tempest" Cast="12"/>
+				<Spell Name="Arcane Unforging" Cast="13"/>
+				<Spell Name="Fiery convocation" Cast="19"/>
+			</Magic>
+			<Enemy>Beastmen, The Lore of The Wild</Enemy>
+			<Dispell>
+				<Spell Name="Viletide" Cast="9"/>
+				<Spell Name="Devolve" Cast="11"/>
+				<Spell Name="Bray-scream" Cast="12"/>
+				<Spell Name="Traitor-Kin" Cast="12"/>
+				<Spell Name="Mantle of Ghorok" Cast="15"/>
+				<Spell Name="Savage Dominin" Cast="18"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of The Wild" Enemy="Beastmen">
-			<Spell Name="Viletide" Cast="9"/>
-			<Spell Name="Devolve" Cast="11"/>
-			<Spell Name="Bray-scream" Cast="12"/>
-			<Spell Name="Traitor-Kin" Cast="12"/>
-			<Spell Name="Mantle of Ghorok" Cast="15"/>
-			<Spell Name="Savage Dominin" Cast="18"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
