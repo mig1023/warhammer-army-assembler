@@ -25,25 +25,30 @@
 			<MagicItems>Shiny stuff</MagicItems>
 		</Styles>
 		<InternalName>Orcs</InternalName>
-		<Magic Name="Spells of the Da Big Waaagh!" Alternative="Spells of the Little Waaagh!">
-			<Spell Name="Brain Bursta" Cast="6"/>
-			<Spell Name="Gaze of Mork" Cast="7"/>
-			<Spell Name="Fist of Gork" Cast="8"/>
-			<Spell Name="The Hand of Gork" Cast="9"/>
-			<Spell Name="'Eadbutt" Cast="9"/>
-			<Spell Name="'Ere We Go!" Cast="11"/>
-			<Spell Name="Foot of Gork" Cast="15"/>
+		<Magic>
+			<Name>Spells of the Da Big Waaagh!</Name>
+			<Alternative>Spells of the Little Waaagh!</Alternative>
+			<Magic>
+				<Spell Name="Brain Bursta" Cast="6"/>
+				<Spell Name="Gaze of Mork" Cast="7"/>
+				<Spell Name="Fist of Gork" Cast="8"/>
+				<Spell Name="The Hand of Gork" Cast="9"/>
+				<Spell Name="'Eadbutt" Cast="9"/>
+				<Spell Name="'Ere We Go!" Cast="11"/>
+				<Spell Name="Foot of Gork" Cast="15"/>
+			</Magic>
+			<Enemy>Wood Elves, The Lore of High Magic</Enemy>
+			<Dispell>
+				<Spell Name="Apotheosis" Cast="7"/>
+				<Spell Name="Hand of Glory" Cast="7"/>
+				<Spell Name="Walk Between Worlds" Cast="7"/>
+				<Spell Name="Drain magic" Cast="9"/>
+				<Spell Name="Soul Quench" Cast="10"/>
+				<Spell Name="Tempest" Cast="14"/>
+				<Spell Name="Arcane Unforging" Cast="15"/>
+				<Spell Name="Fiery convocation" Cast="21"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of High Magic" Enemy="Wood Elves">
-			<Spell Name="Apotheosis" Cast="7"/>
-			<Spell Name="Hand of Glory" Cast="7"/>
-			<Spell Name="Walk Between Worlds" Cast="7"/>
-			<Spell Name="Drain magic" Cast="9"/>
-			<Spell Name="Soul Quench" Cast="10"/>
-			<Spell Name="Tempest" Cast="14"/>
-			<Spell Name="Arcane Unforging" Cast="15"/>
-			<Spell Name="Fiery convocation" Cast="21"/>
-		</Dispell>	
 		<LocalXmlOption>
 			<Choppa>Flail</Choppa>
 		</LocalXmlOption>
