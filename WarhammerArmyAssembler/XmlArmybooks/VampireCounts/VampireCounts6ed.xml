@@ -23,22 +23,27 @@
 			<MagicItems>The Black Art</MagicItems>
 		</Styles>
 		<InternalName>Vampires</InternalName>
-		<Magic Name="The Black Art" Alternative="Lore of Death">
-			<Spell Name="Invocation of Nehek" Cast="3"/>
-			<Spell Name="Hand of Dust" Cast="7"/>
-			<Spell Name="Hellish Vigour" Cast="7"/>
-			<Spell Name="Gaze of Nagash" Cast="8"/>
-			<Spell Name="Vanhel's Danse Macabre" Cast="9"/>
-			<Spell Name="Curse of Years" Cast="10"/>
+		<Magic>
+			<Name>The Black Art</Name>
+			<Alternative>Lore of Death</Alternative>
+			<Magic>
+				<Spell Name="Invocation of Nehek" Cast="3"/>
+				<Spell Name="Hand of Dust" Cast="7"/>
+				<Spell Name="Hellish Vigour" Cast="7"/>
+				<Spell Name="Gaze of Nagash" Cast="8"/>
+				<Spell Name="Vanhel's Danse Macabre" Cast="9"/>
+				<Spell Name="Curse of Years" Cast="10"/>
+			</Magic>
+			<Enemy>The Empire, The Lore of Fire</Enemy>
+			<Dispell>
+				<Spell Name="Fire Ball" Cast="7"/>
+				<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
+				<Spell Name="Fiery Blast" Cast="10"/>
+				<Spell Name="Burning Head" Cast="11"/>
+				<Spell Name="Conflagration of Doom" Cast="13"/>
+				<Spell Name="Wall of Fire" Cast="14"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of Fire" Enemy="The Empire">
-			<Spell Name="Fire Ball" Cast="7"/>
-			<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
-			<Spell Name="Fiery Blast" Cast="10"/>
-			<Spell Name="Burning Head" Cast="11"/>
-			<Spell Name="Conflagration of Doom" Cast="13"/>
-			<Spell Name="Wall of Fire" Cast="14"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
