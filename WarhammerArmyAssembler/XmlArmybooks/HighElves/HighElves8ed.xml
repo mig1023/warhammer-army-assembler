@@ -23,26 +23,31 @@
 			<MagicItems>Vaul's Forge</MagicItems>
 		</Styles>
 		<InternalName>HighElves</InternalName>
-		<Magic Name="The Lore of High Magic" Alternative="Any of eight Lore of Battle Magic">
-			<Spell Name="Apotheosis" Cast="5"/>
-			<Spell Name="Hand of Glory" Cast="5"/>
-			<Spell Name="Walk Between Worlds" Cast="5"/>
-			<Spell Name="Drain magic" Cast="7"/>
-			<Spell Name="Soul Quench" Cast="8"/>
-			<Spell Name="Tempest" Cast="12"/>
-			<Spell Name="Arcane Unforging" Cast="13"/>
-			<Spell Name="Fiery convocation" Cast="19"/>
+		<Magic>
+			<Name>The Lore of High Magic</Name>
+			<Alternative>Any of eight Lore of Battle Magic</Alternative>
+			<Magic>
+				<Spell Name="Apotheosis" Cast="5"/>
+				<Spell Name="Hand of Glory" Cast="5"/>
+				<Spell Name="Walk Between Worlds" Cast="5"/>
+				<Spell Name="Drain magic" Cast="7"/>
+				<Spell Name="Soul Quench" Cast="8"/>
+				<Spell Name="Tempest" Cast="12"/>
+				<Spell Name="Arcane Unforging" Cast="13"/>
+				<Spell Name="Fiery convocation" Cast="19"/>
+			</Magic>
+			<Enemy>Dark Elves, The Lore of Dark Magic</Enemy>
+			<Dispell>
+				<Spell Name="Chillwind" Cast="7"/>
+				<Spell Name="Power of Darkness" Cast="10"/>
+				<Spell Name="Word of Pain" Cast="11"/>
+				<Spell Name="Bladewind" Cast="11"/>
+				<Spell Name="Shround of Despair" Cast="12"/>
+				<Spell Name="Soul Stealer" Cast="13"/>
+				<Spell Name="Doombolt" Cast="14"/>
+				<Spell Name="Arnzipal's Black Horror" Cast="17"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of Dark Magic" Enemy="Dark Elves">
-			<Spell Name="Chillwind" Cast="7"/>
-			<Spell Name="Power of Darkness" Cast="10"/>
-			<Spell Name="Word of Pain" Cast="11"/>
-			<Spell Name="Bladewind" Cast="11"/>
-			<Spell Name="Shround of Despair" Cast="12"/>
-			<Spell Name="Soul Stealer" Cast="13"/>
-			<Spell Name="Doombolt" Cast="14"/>
-			<Spell Name="Arnzipal's Black Horror" Cast="17"/>
-		</Dispell>
 		<LocalXmlOption>
 			<DragonArmour Name="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
 			<LionCloak Name="Lion cloak">AddToArmour: 5</LionCloak>
