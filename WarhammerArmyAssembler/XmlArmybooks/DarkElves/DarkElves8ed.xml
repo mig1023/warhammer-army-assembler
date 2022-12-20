@@ -23,26 +23,31 @@
 			<MagicItems>The Black Armoury</MagicItems>
 		</Styles>
 		<InternalName>DarkElves</InternalName>
-		<Magic Name="The Lore of Dark Magic" Alternative="Any of eight Lore of Battle Magic">
-			<Spell Name="Chillwind" Cast="5"/>
-			<Spell Name="Power of Darkness" Cast="8"/>
-			<Spell Name="Word of Pain" Cast="9"/>
-			<Spell Name="Bladewind" Cast="9"/>
-			<Spell Name="Shround of Despair" Cast="10"/>
-			<Spell Name="Soul Stealer" Cast="11"/>
-			<Spell Name="Doombolt" Cast="12"/>
-			<Spell Name="Arnzipal's Black Horror" Cast="15"/>
+		<Magic>
+			<Name>The Lore of Dark Magic</Name>
+			<Alternative>Any of eight Lore of Battle Magic</Alternative>
+			<Magic>
+				<Spell Name="Chillwind" Cast="5"/>
+				<Spell Name="Power of Darkness" Cast="8"/>
+				<Spell Name="Word of Pain" Cast="9"/>
+				<Spell Name="Bladewind" Cast="9"/>
+				<Spell Name="Shround of Despair" Cast="10"/>
+				<Spell Name="Soul Stealer" Cast="11"/>
+				<Spell Name="Doombolt" Cast="12"/>
+				<Spell Name="Arnzipal's Black Horror" Cast="15"/>
+			</Magic>
+			<Enemy>High Elves, The Lore of High Magic</Enemy>
+			<Dispell>
+				<Spell Name="Apotheosis" Cast="7"/>
+				<Spell Name="Hand of Glory" Cast="7"/>
+				<Spell Name="Walk Between Worlds" Cast="7"/>
+				<Spell Name="Drain magic" Cast="9"/>
+				<Spell Name="Soul Quench" Cast="10"/>
+				<Spell Name="Tempest" Cast="14"/>
+				<Spell Name="Arcane Unforging" Cast="15"/>
+				<Spell Name="Fiery convocation" Cast="21"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of High Magic" Enemy="High Elves">
-			<Spell Name="Apotheosis" Cast="7"/>
-			<Spell Name="Hand of Glory" Cast="7"/>
-			<Spell Name="Walk Between Worlds" Cast="7"/>
-			<Spell Name="Drain magic" Cast="9"/>
-			<Spell Name="Soul Quench" Cast="10"/>
-			<Spell Name="Tempest" Cast="14"/>
-			<Spell Name="Arcane Unforging" Cast="15"/>
-			<Spell Name="Fiery convocation" Cast="21"/>
-		</Dispell>
 		<LocalXmlOption>
 			<ColdOneChariot Name="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
 			<RepeaterCrossbow Name="Repeater Crossbow"/>
