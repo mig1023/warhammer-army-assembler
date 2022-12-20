@@ -23,22 +23,27 @@
 			<MagicItems>Daemonic Gifts</MagicItems>
 		</Styles>
 		<InternalName>Daemons</InternalName>
-		<Magic Name="The Daemon Lore of Tzeentch" Alternative="Lore of Nurgle, Slaanesh">
-			<Spell Name="Boon of Tzeentch" Cast="3"/>
-			<Spell Name="Flickering Fire of Tzeentch" Cast="4"/>
-			<Spell Name="Glean Magic" Cast="7"/>
-			<Spell Name="Gift of Chaos" Cast="9"/>
-			<Spell Name="Bolt of Change" Cast="12"/>
-			<Spell Name="Tzeentch's Firestorm" Cast="13"/>
+		<Magic>
+			<Name>The Daemon Lore of Tzeentch</Name>
+			<Alternative>Lore of Nurgle, Slaanesh</Alternative>
+			<Magic>
+				<Spell Name="Boon of Tzeentch" Cast="3"/>
+				<Spell Name="Flickering Fire of Tzeentch" Cast="4"/>
+				<Spell Name="Glean Magic" Cast="7"/>
+				<Spell Name="Gift of Chaos" Cast="9"/>
+				<Spell Name="Bolt of Change" Cast="12"/>
+				<Spell Name="Tzeentch's Firestorm" Cast="13"/>
+			</Magic>
+			<Enemy>Lizardmen, The Lore of Heaven</Enemy>
+			<Dispell>
+				<Spell Name="Portent of Far" Cast="7"/>
+				<Spell Name="Second Sign of Amul" Cast="7"/>
+				<Spell Name="Forked Lightning" Cast="8"/>
+				<Spell Name="Celestail Shield" Cast="9"/>
+				<Spell Name="Uranon's Thunder Bolt" Cast="11"/>
+				<Spell Name="The Comet of Cassanora" Cast="13"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of Heaven" Enemy="Lizardmen">
-			<Spell Name="Portent of Far" Cast="7"/>
-			<Spell Name="Second Sign of Amul" Cast="7"/>
-			<Spell Name="Forked Lightning" Cast="8"/>
-			<Spell Name="Celestail Shield" Cast="9"/>
-			<Spell Name="Uranon's Thunder Bolt" Cast="11"/>
-			<Spell Name="The Comet of Cassanora" Cast="13"/>
-		</Dispell>	
 		<LocalXmlOption>
 			<Etherblade>MagicItemsPoints; NoArmour</Etherblade>
 			<ArmedMonstrosity Name="Armed Monstrosity">MagicItemsPoints; AddToAttacks: 2</ArmedMonstrosity>
