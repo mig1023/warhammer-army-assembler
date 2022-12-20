@@ -23,24 +23,28 @@
 			<MagicItems>Tools of Destruction</MagicItems>
 		</Styles>
 		<InternalName>OgreKingdoms</InternalName>
-		<Magic Name="Lore of The Great Maw">
-			<Spell Name="Spinemarrow" Cast="6"/>
-			<Spell Name="Bullgorger" Cast="7"/>
-			<Spell Name="Bonecruncher" Cast="8"/>
-			<Spell Name="Toothcracker" Cast="8"/>
-			<Spell Name="Braingobbler" Cast="9"/>
-			<Spell Name="Trollguts" Cast="12"/>
-			<Spell Name="The Maw" Cast="15"/>
+		<Magic>
+			<Name>Lore of The Great Maw</Name>
+			<Magic>
+				<Spell Name="Spinemarrow" Cast="6"/>
+				<Spell Name="Bullgorger" Cast="7"/>
+				<Spell Name="Bonecruncher" Cast="8"/>
+				<Spell Name="Toothcracker" Cast="8"/>
+				<Spell Name="Braingobbler" Cast="9"/>
+				<Spell Name="Trollguts" Cast="12"/>
+				<Spell Name="The Maw" Cast="15"/>
+			</Magic>
+			<Enemy>Orcs and Goblins, Spells of the Da Big Waaagh!</Enemy>
+			<Dispell>
+				<Spell Name="Brain Bursta" Cast="7"/>
+				<Spell Name="Gaze of Mork" Cast="9"/>
+				<Spell Name="Fist of Gork" Cast="10"/>
+				<Spell Name="The Hand of Gork" Cast="11"/>
+				<Spell Name="'Eadbutt" Cast="11"/>
+				<Spell Name="'Ere We Go!" Cast="13"/>
+				<Spell Name="Foot of Gork" Cast="17"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="Spells of the Da Big Waaagh!" Enemy="Orcs and Goblins">
-			<Spell Name="Brain Bursta" Cast="7"/>
-			<Spell Name="Gaze of Mork" Cast="9"/>
-			<Spell Name="Fist of Gork" Cast="10"/>
-			<Spell Name="The Hand of Gork" Cast="11"/>
-			<Spell Name="'Eadbutt" Cast="11"/>
-			<Spell Name="'Ere We Go!" Cast="13"/>
-			<Spell Name="Foot of Gork" Cast="17"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
