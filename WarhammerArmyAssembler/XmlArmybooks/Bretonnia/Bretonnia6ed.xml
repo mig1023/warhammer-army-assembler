@@ -23,22 +23,27 @@
 			<MagicItems>Blessed Heirlooms</MagicItems>
 		</Styles>
 		<InternalName>Bretonnia</InternalName>
-		<Magic Name="The Lore of Light" Alternative="Lore of Beasts, Life, Heavens">
-			<Spell Name="Pha's Illumination" Cast="5"/>
-			<Spell Name="Burning Gaze" Cast="5"/>
-			<Spell Name="Dazzling Brightness" Cast="6"/>
-			<Spell Name="Healing Hand" Cast="7"/>
-			<Spell Name="Guardian Light" Cast="8"/>
-			<Spell Name="Blinding Light" Cast="9"/>
+		<Magic>
+			<Name>The Lore of Light</Name>
+			<Alternative>Lore of Beasts, Life, Heavens</Alternative>
+			<Magic>
+				<Spell Name="Pha's Illumination" Cast="5"/>
+				<Spell Name="Burning Gaze" Cast="5"/>
+				<Spell Name="Dazzling Brightness" Cast="6"/>
+				<Spell Name="Healing Hand" Cast="7"/>
+				<Spell Name="Guardian Light" Cast="8"/>
+				<Spell Name="Blinding Light" Cast="9"/>
+			</Magic>
+			<Enemy>Vampire Counts, The Black Art</Enemy>
+			<Dispell>
+				<Spell Name="Invocation of Nehek" Cast="5"/>
+				<Spell Name="Hand of Dust" Cast="9"/>
+				<Spell Name="Hellish Vigour" Cast="9"/>
+				<Spell Name="Gaze of Nagash" Cast="10"/>
+				<Spell Name="Vanhel's Danse Macabre" Cast="11"/>
+				<Spell Name="Curse of Years" Cast="12"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Black Art" Enemy="Vampire Counts">
-			<Spell Name="Invocation of Nehek" Cast="5"/>
-			<Spell Name="Hand of Dust" Cast="9"/>
-			<Spell Name="Hellish Vigour" Cast="9"/>
-			<Spell Name="Gaze of Nagash" Cast="10"/>
-			<Spell Name="Vanhel's Danse Macabre" Cast="11"/>
-			<Spell Name="Curse of Years" Cast="12"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
