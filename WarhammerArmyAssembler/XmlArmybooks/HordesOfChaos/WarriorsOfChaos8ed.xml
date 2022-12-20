@@ -24,24 +24,29 @@
 			<MagicPowers>Chaos mutation</MagicPowers>
 		</Styles>
 		<InternalName>WarriorOfChaos</InternalName>
-		<Magic Name="The Lore of Nurgle" Alternative="Lore of Death, Fire, Metal, Shadow">
-			<Spell Name="Miasma of Pestilence" Cast="5"/>
-			<Spell Name="Ream of Corruption" Cast="7"/>
-			<Spell Name="Blades of Putrefaction" Cast="8"/>
-			<Spell Name="Curse of The Leper" Cast="10"/>
-			<Spell Name="Rancid Visitations" Cast="10"/>
-			<Spell Name="Fleshy Abundance" Cast="11"/>
-			<Spell Name="Plague Wind" Cast="15"/>
+		<Magic>
+			<Name>The Lore of Nurgle</Name>
+			<Alternative>Lore of Death, Fire, Metal, Shadow</Alternative>
+			<Magic>
+				<Spell Name="Miasma of Pestilence" Cast="5"/>
+				<Spell Name="Ream of Corruption" Cast="7"/>
+				<Spell Name="Blades of Putrefaction" Cast="8"/>
+				<Spell Name="Curse of The Leper" Cast="10"/>
+				<Spell Name="Rancid Visitations" Cast="10"/>
+				<Spell Name="Fleshy Abundance" Cast="11"/>
+				<Spell Name="Plague Wind" Cast="15"/>
+			</Magic>
+			<Enemy>The Empire, The Lore of Fire</Enemy>
+			<Dispell>
+				<Spell Name="Fireball" Cast="7"/>
+				<Spell Name="Cascading Fire-Cloak" Cast="7"/>
+				<Spell Name="Flaming Sword of Rhuin" Cast="10"/>
+				<Spell Name="The Burning Head" Cast="12"/>
+				<Spell Name="Piercing Bolts of Burning" Cast="12"/>
+				<Spell Name="Fulminating Flame Cage" Cast="13"/>
+				<Spell Name="Flame Storm" Cast="15"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of Fire" Enemy="The Empire">
-			<Spell Name="Fireball" Cast="7"/>
-			<Spell Name="Cascading Fire-Cloak" Cast="7"/>
-			<Spell Name="Flaming Sword of Rhuin" Cast="10"/>
-			<Spell Name="The Burning Head" Cast="12"/>
-			<Spell Name="Piercing Bolts of Burning" Cast="12"/>
-			<Spell Name="Fulminating Flame Cage" Cast="13"/>
-			<Spell Name="Flame Storm" Cast="15"/>
-		</Dispell>
 		<LocalXmlOption>
 			<ChaosArmour Name="Chaos armour">AddToArmour: 4; NativeArmour</ChaosArmour>
 		</LocalXmlOption>
