@@ -23,22 +23,27 @@
 			<MagicItems>Treasures of the Old Ones</MagicItems>
 		</Styles>
 		<InternalName>Lizardmen</InternalName>
-		<Magic Name="The Lore of Heaven" Alternative="Any of eight Lore of Battle Magic">
-			<Spell Name="Portent of Far" Cast="5"/>
-			<Spell Name="Second Sign of Amul" Cast="5"/>
-			<Spell Name="Celestail Shield" Cast="7"/>
-			<Spell Name="Forked Lightning" Cast="6"/>
-			<Spell Name="Uranon's Thunder Bolt" Cast="9"/>
-			<Spell Name="The Comet of Cassanora" Cast="12"/>
+		<Magic>
+			<Name>The Lore of Heaven</Name>
+			<Alternative>Any of eight Lore of Battle Magic</Alternative>
+			<Magic>
+				<Spell Name="Portent of Far" Cast="5"/>
+				<Spell Name="Second Sign of Amul" Cast="5"/>
+				<Spell Name="Celestail Shield" Cast="7"/>
+				<Spell Name="Forked Lightning" Cast="6"/>
+				<Spell Name="Uranon's Thunder Bolt" Cast="9"/>
+				<Spell Name="The Comet of Cassanora" Cast="12"/>
+			</Magic>
+			<Enemy>Warriors of Chaos, The Lore of Nurgle</Enemy>
+			<Dispell>
+				<Spell Name="Magnificent Buboes" Cast="7"/>
+				<Spell Name="Fleshy Abundance" Cast="9"/>
+				<Spell Name="Plague Squall" Cast="10"/>
+				<Spell Name="Cloying Quagmire" Cast="11"/>
+				<Spell Name="Curse of the Leper" Cast="12"/>
+				<Spell Name="Rot, Glorious Rot" Cast="14"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of Nurgle" Enemy="Warriors of Chaos">
-			<Spell Name="Magnificent Buboes" Cast="7"/>
-			<Spell Name="Fleshy Abundance" Cast="9"/>
-			<Spell Name="Plague Squall" Cast="10"/>
-			<Spell Name="Cloying Quagmire" Cast="11"/>
-			<Spell Name="Curse of the Leper" Cast="12"/>
-			<Spell Name="Rot, Glorious Rot" Cast="14"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
