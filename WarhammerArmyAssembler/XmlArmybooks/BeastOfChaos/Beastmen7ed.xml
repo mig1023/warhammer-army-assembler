@@ -23,24 +23,29 @@
 			<MagicItems>Gifts of Chaos</MagicItems>
 		</Styles>
 		<InternalName>Beasts</InternalName>
-		<Magic Name="The Lore of The Wild" Alternative="Lore of Death, Shadow, Beasts">
-			<Spell Name="Viletide" Cast="7"/>
-			<Spell Name="Devolve" Cast="9"/>
-			<Spell Name="Bray-scream" Cast="10"/>
-			<Spell Name="Traitor-Kin" Cast="10"/>
-			<Spell Name="Mantle of Ghorok" Cast="13"/>
-			<Spell Name="Savage Dominin" Cast="16"/>
+		<Magic>
+			<Name>The Lore of The Wild</Name>
+			<Alternative>Lore of Death, Shadow, Beasts</Alternative>
+			<Magic>
+				<Spell Name="Viletide" Cast="7"/>
+				<Spell Name="Devolve" Cast="9"/>
+				<Spell Name="Bray-scream" Cast="10"/>
+				<Spell Name="Traitor-Kin" Cast="10"/>
+				<Spell Name="Mantle of Ghorok" Cast="13"/>
+				<Spell Name="Savage Dominin" Cast="16"/>
+			</Magic>
+			<Enemy>Wood Elves, The Lore of High Magic</Enemy>
+			<Dispell>
+				<Spell Name="Apotheosis" Cast="7"/>
+				<Spell Name="Hand of Glory" Cast="7"/>
+				<Spell Name="Walk Between Worlds" Cast="7"/>
+				<Spell Name="Drain magic" Cast="9"/>
+				<Spell Name="Soul Quench" Cast="10"/>
+				<Spell Name="Tempest" Cast="14"/>
+				<Spell Name="Arcane Unforging" Cast="15"/>
+				<Spell Name="Fiery convocation" Cast="21"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of High Magic" Enemy="Wood Elves">
-			<Spell Name="Apotheosis" Cast="7"/>
-			<Spell Name="Hand of Glory" Cast="7"/>
-			<Spell Name="Walk Between Worlds" Cast="7"/>
-			<Spell Name="Drain magic" Cast="9"/>
-			<Spell Name="Soul Quench" Cast="10"/>
-			<Spell Name="Tempest" Cast="14"/>
-			<Spell Name="Arcane Unforging" Cast="15"/>
-			<Spell Name="Fiery convocation" Cast="21"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
