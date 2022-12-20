@@ -24,23 +24,28 @@
 			<MagicPowers>Vampiric Powers</MagicPowers>
 		</Styles>
 		<InternalName>Vampires</InternalName>
-		<Magic Name="Lore of the Vampires" Alternative="Lore of Death">
-			<Spell Name="Invocation of Nehek" Cast="4"/>
-			<Spell Name="Raise Dead" Cast="5"/>
-			<Spell Name="Vanhel's Danse Macabre" Cast="7"/>
-			<Spell Name="Gaze of Nagash" Cast="8"/>
-			<Spell Name="Curse of Years" Cast="8"/>
-			<Spell Name="Wind of Undeath" Cast="12"/>
-			<Spell Name="Summon Undead Horde" Cast="12"/>
+		<Magic>
+			<Name>Lore of the Vampires</Name>
+			<Alternative>Lore of Death</Alternative>
+			<Magic>
+				<Spell Name="Invocation of Nehek" Cast="4"/>
+				<Spell Name="Raise Dead" Cast="5"/>
+				<Spell Name="Vanhel's Danse Macabre" Cast="7"/>
+				<Spell Name="Gaze of Nagash" Cast="8"/>
+				<Spell Name="Curse of Years" Cast="8"/>
+				<Spell Name="Wind of Undeath" Cast="12"/>
+				<Spell Name="Summon Undead Horde" Cast="12"/>
+			</Magic>
+			<Enemy>The Empire, Lore of Fire</Enemy>
+			<Dispell>
+				<Spell Name="Fireball" Cast="7"/>
+				<Spell Name="Flaming Sword of Rhuin" Cast="7"/>
+				<Spell Name="The Burning Head" Cast="10"/>
+				<Spell Name="Fiery Blast" Cast="10"/>
+				<Spell Name="Conflagration of Doom" Cast="13"/>
+				<Spell Name="Wall of Fire" Cast="14"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="Lore of Fire" Enemy="The Empire">
-			<Spell Name="Fireball" Cast="7"/>
-			<Spell Name="Flaming Sword of Rhuin" Cast="7"/>
-			<Spell Name="The Burning Head" Cast="10"/>
-			<Spell Name="Fiery Blast" Cast="10"/>
-			<Spell Name="Conflagration of Doom" Cast="13"/>
-			<Spell Name="Wall of Fire" Cast="14"/>
-		</Dispell>
 	</Introduction>
 	<Content>
 		<Artefacts>
