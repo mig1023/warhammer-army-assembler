@@ -25,24 +25,29 @@
 			<MagicItems>Heirlooms of Magic</MagicItems>
 		</Styles>
 		<InternalName>Empire</InternalName>
-		<Magic Name="The Lore of Fire" Alternative="Any of eight Lore of Battle Magic">
-			<Spell Name="Fireball" Cast="5"/>
-			<Spell Name="Cascading Fire-Cloak" Cast="5"/>
-			<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
-			<Spell Name="The Burning Head" Cast="10"/>
-			<Spell Name="Piercing Bolts of Burning" Cast="10"/>
-			<Spell Name="Fulminating Flame Cage" Cast="11"/>
-			<Spell Name="Flame Storm" Cast="13"/>
-		</Magic>
-		<Dispell Name="The Lore of Nurgle" Enemy="Daemons of Chaos">
-			<Spell Name="Miasma of Pestilence" Cast="7"/>
-			<Spell Name="Ream of Corruption" Cast="9"/>
-			<Spell Name="Blades of Putrefaction" Cast="10"/>
-			<Spell Name="Curse of The Leper" Cast="12"/>
-			<Spell Name="Rancid Visitations" Cast="12"/>
-			<Spell Name="Fleshy Abundance" Cast="13"/>
-			<Spell Name="Plague Wind" Cast="17"/>
-		</Dispell>		
+		<Magic>
+			<Name>The Lore of Fire</Name>
+			<Alternative>Any of eight Lore of Battle Magic</Alternative>
+			<Magic>
+				<Spell Name="Fireball" Cast="5"/>
+				<Spell Name="Cascading Fire-Cloak" Cast="5"/>
+				<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
+				<Spell Name="The Burning Head" Cast="10"/>
+				<Spell Name="Piercing Bolts of Burning" Cast="10"/>
+				<Spell Name="Fulminating Flame Cage" Cast="11"/>
+				<Spell Name="Flame Storm" Cast="13"/>
+			</Magic>
+			<Enemy>Daemons of Chaos, The Lore of Nurgle</Enemy>
+			<Dispell>
+				<Spell Name="Miasma of Pestilence" Cast="7"/>
+				<Spell Name="Ream of Corruption" Cast="9"/>
+				<Spell Name="Blades of Putrefaction" Cast="10"/>
+				<Spell Name="Curse of The Leper" Cast="12"/>
+				<Spell Name="Rancid Visitations" Cast="12"/>
+				<Spell Name="Fleshy Abundance" Cast="13"/>
+				<Spell Name="Plague Wind" Cast="17"/>
+			</Dispell>
+		</Magic>		
 		<LocalXmlOption>
 			<FullPlateArmour Name="Full plate armour">AddToArmour: 4</FullPlateArmour>
 		</LocalXmlOption>
