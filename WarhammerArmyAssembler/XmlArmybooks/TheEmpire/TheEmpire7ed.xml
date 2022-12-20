@@ -25,22 +25,27 @@
 			<MagicItems>Heirlooms of Magic</MagicItems>
 		</Styles>
 		<InternalName>Empire</InternalName>
-		<Magic Name="Lore of Fire" Alternative="Any of eight Lore of Battle Magic">
-			<Spell Name="Fireball" Cast="5"/>
-			<Spell Name="Flaming Sword of Rhuin" Cast="5"/>
-			<Spell Name="The Burning Head" Cast="8"/>
-			<Spell Name="Fiery Blast" Cast="8"/>
-			<Spell Name="Conflagration of Doom" Cast="11"/>
-			<Spell Name="Wall of Fire" Cast="12"/>
+		<Magic>
+			<Name>Lore of Fire</Name>
+			<Alternative>Any of eight Lore of Battle Magic</Alternative>
+			<Magic>
+				<Spell Name="Fireball" Cast="5"/>
+				<Spell Name="Flaming Sword of Rhuin" Cast="5"/>
+				<Spell Name="The Burning Head" Cast="8"/>
+				<Spell Name="Fiery Blast" Cast="8"/>
+				<Spell Name="Conflagration of Doom" Cast="11"/>
+				<Spell Name="Wall of Fire" Cast="12"/>
+			</Magic>
+			<Enemy>Daemons of Chaos, The Lore of Nurgle</Enemy>
+			<Dispell>
+				<Spell Name="Magnificent Buboes" Cast="7"/>
+				<Spell Name="Fleshy Abundance" Cast="9"/>
+				<Spell Name="Plague Squall" Cast="10"/>
+				<Spell Name="Cloying Quagmire" Cast="11"/>
+				<Spell Name="Curse of the Leper" Cast="12"/>
+				<Spell Name="Rot, Glorious Rot" Cast="14"/>
+			</Dispell>
 		</Magic>
-		<Dispell Name="The Lore of Nurgle" Enemy="Daemons of Chaos">
-			<Spell Name="Magnificent Buboes" Cast="7"/>
-			<Spell Name="Fleshy Abundance" Cast="9"/>
-			<Spell Name="Plague Squall" Cast="10"/>
-			<Spell Name="Cloying Quagmire" Cast="11"/>
-			<Spell Name="Curse of the Leper" Cast="12"/>
-			<Spell Name="Rot, Glorious Rot" Cast="14"/>
-		</Dispell>	
 		<LocalXmlOption>
 			<FullPlateArmour Name="Full plate armour">AddToArmour: 4</FullPlateArmour>
 		</LocalXmlOption>
