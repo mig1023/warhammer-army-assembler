@@ -481,9 +481,9 @@
 							<Off>Longbow</Off>
 						</Dependencies>
 					</Option>
-					<LightArmour Points="3" Dependencies="Off: Heavy armour, Full plate armour"/>
-					<HeavyArmour Points="6" Dependencies="Off: Light armour, Full plate armour"/>
-					<FullPlateArmour Points="12" Dependencies="Off: Light armour, Heavy armour"/>
+					<LightArmour Points="3" Dependencies="Heavy armour, Full plate armour"/>
+					<HeavyArmour Points="6" Dependencies="Light armour, Full plate armour"/>
+					<FullPlateArmour Points="12" Dependencies="Light armour, Heavy armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Warhorse" Points="15"/>
 					<Option>
@@ -607,9 +607,9 @@
 							<Off>Longbow</Off>
 						</Dependencies>
 					</Option>
-					<LightArmour Points="2" Dependencies="Off: Heavy armour, Full plate armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour, Full plate armour"/>
-					<FullPlateArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
+					<LightArmour Points="2" Dependencies="Heavy armour, Full plate armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour, Full plate armour"/>
+					<FullPlateArmour Points="8" Dependencies="Light armour, Heavy armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
@@ -660,8 +660,8 @@
 							<Off>Two-handed warhammer</Off>
 						</Dependencies>
 					</Option>
-					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
+					<LightArmour Points="2" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
