@@ -420,8 +420,8 @@
 						<Name>Warplock pistol</Name>
 						<Points>15</Points>
 					</Option>
-					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
+					<LightArmour Points="3" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="6" Dependencies="Light armour"/>
 					<Shield Points="3"/>
 				</Options>
 			</Lord>
@@ -459,8 +459,8 @@
 					<GreatWeapon Points="4"/>
 					<AdditionalWeapon Points="2"/>
 					<Halberd Points="4"/>
-					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
+					<LightArmour Points="2" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour"/>
 					<Shield Points="2"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -779,7 +779,7 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Spear Points="1" Dependencies="Off: Slings"/>
+					<Spear Points="1" Dependencies="Slings"/>
 					<Option>
 						<Name>Slings</Name>
 						<PerModel/>
