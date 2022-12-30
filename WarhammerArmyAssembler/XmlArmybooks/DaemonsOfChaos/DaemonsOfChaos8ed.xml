@@ -577,10 +577,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<DaemonOfTzeentch Points="20" Dependencies="Off: Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle"/>
-					<DaemonOfSlaanesh Dependencies="Off: Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle"/>
-					<DaemonOfKhorne Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle"/>
-					<DaemonOfNurgle Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
+					<DaemonOfTzeentch Points="20" Dependencies="Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle"/>
+					<DaemonOfSlaanesh Dependencies="Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle"/>
+					<DaemonOfKhorne Points="5" Dependencies="Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle"/>
+					<DaemonOfNurgle Points="5" Dependencies="Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
 					<Option>
 						<Name>Wizard Level</Name>
 						<Points>35</Points>
@@ -1400,10 +1400,10 @@
 					</RangeWeapon>
 				</Equipments>
 				<Options>
-					<DaemonOfTzeentch Points="10" Dependencies="Off: Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle"/>
-					<DaemonOfSlaanesh Dependencies="Off: Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle"/>
-					<DaemonOfKhorne Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle"/>
-					<DaemonOfNurgle Points="5" Dependencies="Off: Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
+					<DaemonOfTzeentch Points="10" Dependencies="Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle"/>
+					<DaemonOfSlaanesh Dependencies="Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle"/>
+					<DaemonOfKhorne Points="5" Dependencies="Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle"/>
+					<DaemonOfNurgle Points="5" Dependencies="Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
 					<Option>
 						<Name>Daemonbone Claw</Name>
 						<Points>10</Points>
