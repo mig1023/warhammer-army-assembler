@@ -676,13 +676,13 @@ l			</Dispell>
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="6" Dependencies="Off: Pistol"/>
-					<Pistol Points="10" Dependencies="Off: Great weapon"/>
-					<Crossbow Points="15" Dependencies="Off: Dwarf handgun"/>
-					<DwarfHandgun Points="21" Dependencies="Off: Crossbow"/>
-					<LightArmour Points="3" Dependencies="Off: Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="6" Dependencies="Off: Light armour, Gromril armour"/>
-					<GromrilArmour Points="12" Dependencies="Off: Light armour, Heavy armour"/>
+					<GreatWeapon Points="6" Dependencies="Pistol"/>
+					<Pistol Points="10" Dependencies="Great weapon"/>
+					<Crossbow Points="15" Dependencies="Dwarf handgun"/>
+					<DwarfHandgun Points="21" Dependencies="Crossbow"/>
+					<LightArmour Points="3" Dependencies="Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="6" Dependencies="Light armour, Gromril armour"/>
+					<GromrilArmour Points="12" Dependencies="Light armour, Heavy armour"/>
 					<Shield Points="3"/>
 				</Options>
 			</Lord>
@@ -700,9 +700,9 @@ l			</Dispell>
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="6"/>
-					<LightArmour Points="3" Dependencies="Off: Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="6" Dependencies="Off: Light armour, Gromril armour"/>
-					<GromrilArmour Points="12" Dependencies="Off: Light armour, Heavy armour"/>
+					<LightArmour Points="3" Dependencies="Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="6" Dependencies="Light armour, Gromril armour"/>
+					<GromrilArmour Points="12" Dependencies="Light armour, Heavy armour"/>
 					<Shield Points="3"/>
 					<Option>
 						<Name>Anvil of Doom</Name>
@@ -725,8 +725,8 @@ l			</Dispell>
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="6" Dependencies="Off: Additional weapon"/>
-					<AdditionalWeapon Points="6" Dependencies="Off: Great weapon"/>
+					<GreatWeapon Points="6" Dependencies="Additional weapon"/>
+					<AdditionalWeapon Points="6" Dependencies="Great weapon"/>
 				</Options>
 			</Lord>
 			<Hero>
@@ -740,13 +740,13 @@ l			</Dispell>
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Off: Pistol"/>
-					<Pistol Points="7" Dependencies="Off: Great weapon"/>
-					<Crossbow Points="10" Dependencies="Off: Dwarf handgun"/>
-					<DwarfHandgun Points="14" Dependencies="Off: Crossbow"/>
-					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
-					<GromrilArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
+					<GreatWeapon Points="4" Dependencies="Pistol"/>
+					<Pistol Points="7" Dependencies="Great weapon"/>
+					<Crossbow Points="10" Dependencies="Dwarf handgun"/>
+					<DwarfHandgun Points="14" Dependencies="Crossbow"/>
+					<LightArmour Points="2" Dependencies="Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour, Gromril armour"/>
+					<GromrilArmour Points="8" Dependencies="Light armour, Heavy armour"/>
 					<Shield Points="2"/>
 				</Options>
 			</Hero>
@@ -764,9 +764,9 @@ l			</Dispell>
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="4"/>
-					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
-					<GromrilArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
+					<LightArmour Points="2" Dependencies="Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour, Gromril armour"/>
+					<GromrilArmour Points="8" Dependencies="Light armour, Heavy armour"/>
 					<Shield Points="2"/>
 				</Options>
 			</Hero>
@@ -784,8 +784,8 @@ l			</Dispell>
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Off: Pistol, Brace of pistols"/>
-					<Pistol Points="7" Dependencies="Off: Great weapon, Brace of pistols"/>
+					<GreatWeapon Points="4" Dependencies="Pistol, Brace of pistols"/>
+					<Pistol Points="7" Dependencies="Great weapon, Brace of pistols"/>
 					<Option>
 						<Name>Brace of pistols</Name>
 						<Points>14</Points>
@@ -794,9 +794,9 @@ l			</Dispell>
 						</Dependencies>
 					</Option>
 					<DwarfHandgun Points="14"/>
-					<LightArmour Points="2" Dependencies="Off: Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour, Gromril armour"/>
-					<GromrilArmour Points="8" Dependencies="Off: Light armour, Heavy armour"/>
+					<LightArmour Points="2" Dependencies="Heavy armour, Gromril armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour, Gromril armour"/>
+					<GromrilArmour Points="8" Dependencies="Light armour, Heavy armour"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
@@ -815,8 +815,8 @@ l			</Dispell>
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Off: Additional weapon"/>
-					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon"/>
+					<GreatWeapon Points="4" Dependencies="Additional weapon"/>
+					<AdditionalWeapon Points="4" Dependencies="Great weapon"/>
 				</Options>
 			</Hero>
 		</Heroes>
