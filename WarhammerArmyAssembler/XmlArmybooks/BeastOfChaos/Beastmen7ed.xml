@@ -437,10 +437,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="12" Dependencies="Off: Additional weapon"/>
-					<AdditionalWeapon Points="8" Dependencies="Off: Great weapon"/>
-					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
+					<GreatWeapon Points="12" Dependencies="Additional weapon"/>
+					<AdditionalWeapon Points="8" Dependencies="Great weapon"/>
+					<LightArmour Points="3" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Tuskgor Chariot" Points="80"/>
 					<Mount Name="Razorgor Chariot" Points="145"/>
@@ -465,10 +465,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="15" Dependencies="Off: Additional weapon"/>
-					<AdditionalWeapon Points="8" Dependencies="Off: Great weapon"/>
-					<LightArmour Points="6" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="12" Dependencies="Off: Light armour"/>
+					<GreatWeapon Points="15" Dependencies="Additional weapon"/>
+					<AdditionalWeapon Points="8" Dependencies="Great weapon"/>
+					<LightArmour Points="6" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="12" Dependencies="Light armour"/>
 					<Shield Points="6"/>
 				</Options>
 				<Equipments>
@@ -577,12 +577,12 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Off: Additional weapon"/>
-					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon"/>
-					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
+					<GreatWeapon Points="4" Dependencies="Additional weapon"/>
+					<AdditionalWeapon Points="4" Dependencies="Great weapon"/>
+					<LightArmour Points="2" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour"/>
 					<Shield Points="2"/>
-					<BattleStandardBearer Points="25" Dependencies="Off: Great axe, Additional weapon, Spear, Shield"/>
+					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Spear, Shield"/>
 					<Mount Name="Tuskgor Chariot" Points="80"/>
 					<Mount Name="Razorgor Chariot" Points="145"/>
 				</Options>
@@ -605,10 +605,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="10" Dependencies="Off: Additional weapon"/>
-					<AdditionalWeapon Points="5" Dependencies="Off: Great weapon"/>
-					<LightArmour Points="4" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="8" Dependencies="Off: Light armour"/>
+					<GreatWeapon Points="10" Dependencies="Additional weapon"/>
+					<AdditionalWeapon Points="5" Dependencies="Great weapon"/>
+					<LightArmour Points="4" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="8" Dependencies="Light armour"/>
 					<Shield Points="4"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -703,8 +703,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Shield PointsPerModel="1" Dependencies="Off: Additional weapon"/>
-					<AdditionalWeapon PointsPerModel="1" Dependencies="Off: Shield"/>
+					<Shield PointsPerModel="1" Dependencies="Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="1" Dependencies="Shield"/>
 					<Command>
 						<Champion Points="10" Name="Foe-render"/>
 						<Musician Points="5"/>
@@ -836,9 +836,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>				
-					<Shield PointsPerModel="4" Dependencies="Off: Additional weapon, Great weapon"/>
-					<AdditionalWeapon PointsPerModel="4" Dependencies="Off: Shield, Great weapon"/>
-					<GreatWeapon PointsPerModel="8" Dependencies="Off: Shield, Additional weapon"/>				
+					<Shield PointsPerModel="4" Dependencies="Additional weapon, Great weapon"/>
+					<AdditionalWeapon PointsPerModel="4" Dependencies="Shield, Great weapon"/>
+					<GreatWeapon PointsPerModel="8" Dependencies="Shield, Additional weapon"/>				
 					<Command>
 						<Champion Points="20" Name="Bloodkine" Magic="Type: Hero, Points: 25"/>
 						<Musician Points="10"/>
