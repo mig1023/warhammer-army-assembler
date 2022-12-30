@@ -604,8 +604,8 @@
 					<RepeaterCrossbow Points="10"/>
 					<RepeaterHandbow Points="8"/>
 					<PairOfHandbow Points="16"/>
-					<LightArmour Points="3" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="6" Dependencies="Off: Light armour"/>
+					<LightArmour Points="3" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="6" Dependencies="Light armour"/>
 					<Shield Points="3"/>
 					<SeaDragonCloak Points="3"/>
 					<Mount Name="Dark Steed" Points="18"/>
@@ -779,8 +779,8 @@
 					<RepeaterCrossbow Points="10"/>
 					<RepeaterHandbow Points="8"/>
 					<PairOfHandbow Points="16"/>
-					<LightArmour Points="2" Dependencies="Off: Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Off: Light armour"/>
+					<LightArmour Points="2" Dependencies="Heavy armour"/>
+					<HeavyArmour Points="4" Dependencies="Light armour"/>
 					<Shield Points="2"/>
 					<SeaDragonCloak Points="4"/>
 					<Mount Name="Dark Steed" Points="12"/>
@@ -1155,8 +1155,8 @@
 						<Points>18</Points>
 					</Option>
 					<LightArmour PointsPerModel="1"/>
-					<GreatWeapon PointsPerModel="2" Dependencies="Off: Additional weapon"/>
-					<AdditionalWeapon PointsPerModel="1" Dependencies="Off: Great weapon"/>
+					<GreatWeapon PointsPerModel="2" Dependencies="Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="1" Dependencies="Great weapon"/>
 				</Options>
 			</Special>
 			<Special>
