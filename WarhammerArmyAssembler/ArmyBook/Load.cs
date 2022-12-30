@@ -473,12 +473,25 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (string dependenciesWithType in allDependencies)
             {
-                List<string> typeAndDependencies = dependenciesWithType.Split(':').ToList();
-                List<string> optionDependencies = typeAndDependencies[1].Split(',').ToList();
+                string dependencyType, dependencyLine;
+
+                if (dependenciesWithType.Contains(":"))
+                {
+                    List<string> typeAndDependencies = dependenciesWithType.Split(':').ToList();
+                    dependencyType = typeAndDependencies[0].Trim();
+                    dependencyLine = typeAndDependencies[1];
+                }
+                else
+                {
+                    dependencyType = "Off";
+                    dependencyLine = dependenciesWithType;
+                }
+
+                List<string> optionDependencies = dependencyLine.Split(',').ToList();
 
                 foreach (string optionDependency in optionDependencies)
                 {
-                    XmlElement option = xmlDocument.CreateElement(typeAndDependencies[0].Trim());
+                    XmlElement option = xmlDocument.CreateElement(dependencyType);
                     option.InnerText = optionDependency.Trim();
                     xmlDependencies.AppendChild(option);
                 }
