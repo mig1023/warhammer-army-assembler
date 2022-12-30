@@ -393,13 +393,13 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<AdditionalWeapon Points="3" Dependencies="Off: Halberd, Lance, Great weapon" Only="Infantry"/>
-					<Halberd Points="3" Dependencies="Off: Additional weapon, Lance, Great weapon"/>
-					<Lance Points="7" Dependencies="Off: Additional weapon, Halberd, Great weapon" Only="Mount"/>
-					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Halberd, Lance"/>
-					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
-					<RepeaterHandbow Points="5" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
-					<PairOfHandbow Points="10" Dependencies="Off: Repeater Crossbow, Repeater handbow"/>
+					<AdditionalWeapon Points="3" Dependencies="Halberd, Lance, Great weapon" Only="Infantry"/>
+					<Halberd Points="3" Dependencies="Additional weapon, Lance, Great weapon"/>
+					<Lance Points="7" Dependencies="Additional weapon, Halberd, Great weapon" Only="Mount"/>
+					<GreatWeapon Points="6" Dependencies="Additional weapon, Halberd, Lance"/>
+					<RepeaterCrossbow Points="5" Dependencies="Repeater handbow, Pair of repeater handbow"/>
+					<RepeaterHandbow Points="5" Dependencies="Repeater Crossbow, Pair of repeater handbow"/>
+					<PairOfHandbow Points="10" Dependencies="Repeater Crossbow, Repeater handbow"/>
 					<HeavyArmour Points="6"/>
 					<Shield Points="3"/>
 					<SeaDragonCloak Points="8"/>
@@ -653,13 +653,13 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<AdditionalWeapon Points="2" Dependencies="Off: Halberd, Lance, Great weapon" Only="Infantry"/>
-					<Halberd Points="2" Dependencies="Off: Additional weapon, Lance, Great weapon"/>
-					<GreatWeapon Points="4" Dependencies="Off: Additional weapon, Halberd, Lance"/>
-					<Lance Points="6" Dependencies="Off: Additional weapon, Halberd, Great weapon" Only="Mount"/>
-					<RepeaterCrossbow Points="5" Dependencies="Off: Repeater handbow, Pair of repeater handbow"/>
-					<RepeaterHandbow Points="5" Dependencies="Off: Repeater Crossbow, Pair of repeater handbow"/>
-					<PairOfHandbow Points="10" Dependencies="Off: Repeater Crossbow, Repeater handbow"/>
+					<AdditionalWeapon Points="2" Dependencies="Halberd, Lance, Great weapon" Only="Infantry"/>
+					<Halberd Points="2" Dependencies="Additional weapon, Lance, Great weapon"/>
+					<GreatWeapon Points="4" Dependencies="Additional weapon, Halberd, Lance"/>
+					<Lance Points="6" Dependencies="Additional weapon, Halberd, Great weapon" Only="Mount"/>
+					<RepeaterCrossbow Points="5" Dependencies="Repeater handbow, Pair of repeater handbow"/>
+					<RepeaterHandbow Points="5" Dependencies="Repeater Crossbow, Pair of repeater handbow"/>
+					<PairOfHandbow Points="10" Dependencies="Repeater Crossbow, Repeater handbow"/>
 					<HeavyArmour Points="4"/>
 					<SeaDragonCloak Points="6"/>
 					<Shield Points="2"/>
@@ -741,8 +741,8 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="2" Dependencies="Off: Repeater handbow"/>
-					<RepeaterHandbow Points="5" Dependencies="Off: Additional weapon"/>
+					<GreatWeapon Points="2" Dependencies="Repeater handbow"/>
+					<RepeaterHandbow Points="5" Dependencies="Additional weapon"/>
 					<Option>
 						<Name>Black Lotus</Name>
 						<Dependencies>
@@ -1042,8 +1042,8 @@
 					</Armour>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Repeater handbows"/>
-					<RepeaterHandbow PointsPerModel="2" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="2" Dependencies="Repeater handbows"/>
+					<RepeaterHandbow PointsPerModel="2" Dependencies="Additional weapon"/>
 					<Command>
 						<Champion Points="10" Name="Reaver"/>
 						<Option>
@@ -1190,8 +1190,8 @@
 					<RepeaterCrossbow/>
 				</Equipments>
 				<Options>					
-					<AdditionalWeapon PointsPerModel="2" Dependencies="Off: Great weapon"/>
-					<GreatWeapon PointsPerModel="2" Dependencies="Off: Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="2" Dependencies="Great weapon"/>
+					<GreatWeapon PointsPerModel="2" Dependencies="Additional weapon"/>
 					<LightArmour PointsPerModel="1"/>
 					<Command>
 						<Champion Points="10" Name="Bloodshadde"/>
