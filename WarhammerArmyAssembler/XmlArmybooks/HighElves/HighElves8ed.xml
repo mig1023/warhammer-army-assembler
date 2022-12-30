@@ -466,16 +466,16 @@
 					<LightNativeArmour/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon Points="3" Dependencies="Off: Halberd, Lance, Spear, Great weapon" Only="Infantry"/>
-					<Halberd Points="3" Dependencies="Off: Additional weapon, Lance, Spear, Great weapon"/>
-					<Lance Points="7" Dependencies="Off: Additional weapon, Halberd, Spear, Great weapon"/>
-					<Spear Points="3" Dependencies="Off: Additional weapon, Halberd, Lance, Great weapon"/>
-					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Halberd, Lance, Spear"/>
+					<AdditionalWeapon Points="3" Dependencies="Halberd, Lance, Spear, Great weapon" Only="Infantry"/>
+					<Halberd Points="3" Dependencies="Additional weapon, Lance, Spear, Great weapon"/>
+					<Lance Points="7" Dependencies="Additional weapon, Halberd, Spear, Great weapon"/>
+					<Spear Points="3" Dependencies="Additional weapon, Halberd, Lance, Great weapon"/>
+					<GreatWeapon Points="6" Dependencies="Additional weapon, Halberd, Lance, Spear"/>
 					<LongBow Points="5"/>
-					<HeavyArmour Points="6" Dependencies="Off: Dragon armour"/>
-					<DragonArmour Points="20" Dependencies="Off: Heavy armour, Lion cloak"/>
+					<HeavyArmour Points="6" Dependencies="Dragon armour"/>
+					<DragonArmour Points="20" Dependencies="Heavy armour, Lion cloak"/>
 					<Shield Points="3"/>
-					<LionCloak Points="3" Dependencies="Off: Dragon armour"/>
+					<LionCloak Points="3" Dependencies="Dragon armour"/>
 					<Mount Name="Elven Steed" Points="20"/>
 					<IthilmarBarding Points="7" Dependencies="On: Elven Steed"/>
 					<Mount Name="Great Eagle" Points="50"/>
@@ -645,16 +645,16 @@
 					<LightNativeArmour/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon Points="2" Dependencies="Off: Halberd, Lance, Spear, Great weapon" Only="Infantry"/>
-					<Halberd Points="2" Dependencies="Off: Additional weapon, Lance, Spear, Great weapon"/>
-					<Lance Points="6" Dependencies="Off: Additional weapon, Halberd, Spear, Great weapon"/>
-					<Spear Points="2" Dependencies="Off: Additional weapon, Halberd, Lance, Great weapon"/>
-					<GreatWeapon Points="4" Dependencies="Off: Additional weapon, Halberd, Lance, Spear"/>
+					<AdditionalWeapon Points="2" Dependencies="Halberd, Lance, Spear, Great weapon" Only="Infantry"/>
+					<Halberd Points="2" Dependencies="Additional weapon, Lance, Spear, Great weapon"/>
+					<Lance Points="6" Dependencies="Additional weapon, Halberd, Spear, Great weapon"/>
+					<Spear Points="2" Dependencies="Additional weapon, Halberd, Lance, Great weapon"/>
+					<GreatWeapon Points="4" Dependencies="Additional weapon, Halberd, Lance, Spear"/>
 					<LongBow Points="5"/>
-					<HeavyArmour Points="4" Dependencies="Off: Dragon armour"/>
-					<DragonArmour Points="10" Dependencies="Off: Heavy armour, Lion cloak"/>
+					<HeavyArmour Points="4" Dependencies="Dragon armour"/>
+					<DragonArmour Points="10" Dependencies="Heavy armour, Lion cloak"/>
 					<Shield Points="2"/>
-					<LionCloak Points="4" Dependencies="Off: Dragon armour"/>
+					<LionCloak Points="4" Dependencies="Dragon armour"/>
 					<Mount Name="Elven Steed" Points="10"/>
 					<IthilmarBarding Points="5" Dependencies="On: Elven Steed"/>
 					<Mount Name="Great Eagle" Points="50"/>
