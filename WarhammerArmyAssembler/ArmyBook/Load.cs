@@ -269,7 +269,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return;
 
             Data.MagicLoreName = StringParse(loreBook["Name"]);
-            Data.MagicAlternative = StringParse(loreBook["Alternative"]);
+            Data.MagicOptions = StringParse(loreBook["Options"]);
 
             string enemyMagicLine = StringParse(loreBook["Enemy"]);
             List<string> enemyMagic = enemyMagicLine.Split(',').Select(x => x.Trim()).ToList();
