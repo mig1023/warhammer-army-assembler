@@ -99,6 +99,7 @@ namespace WarhammerArmyAssembler
         public bool NotALeader { get; set; }
         public bool NativeArmour { get; set; }
         public bool DogsOfWar { get; set; }
+        public bool General { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -164,9 +165,11 @@ namespace WarhammerArmyAssembler
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void OnPropertyChanged(string propName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+        public void OnPropertyChanged(string propName) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
 
-        public Option() => this.Items = new ObservableCollection<Option>();
+        public Option() =>
+            this.Items = new ObservableCollection<Option>();
 
         public Option Clone() => new Option
         {
@@ -246,6 +249,7 @@ namespace WarhammerArmyAssembler
             TypeUnitIncrese = this.TypeUnitIncrese,
             NativeArmour = this.NativeArmour,
             DogsOfWar = this.DogsOfWar,
+            General = this.General,
 
             Lance = this.Lance,
             Flail = this.Flail,
@@ -299,14 +303,21 @@ namespace WarhammerArmyAssembler
         };
 
         public Dictionary<int, Option> AllRunicVersions() =>
-            ArmyBook.Data.Artefact.Where(x => x.Value.Name == this.Name).ToDictionary(x => x.Value.Runic, x => x.Value);
+            ArmyBook.Data.Artefact
+                .Where(x => x.Value.Name == this.Name)
+                .ToDictionary(x => x.Value.Runic, x => x.Value);
 
         public List<Option> AllRandomByGroup() =>
-            ArmyBook.Data.Artefact.Where(x => x.Value.RandomGroup == this.RandomGroup).Select(x => x.Value).ToList();
+            ArmyBook.Data.Artefact
+                .Where(x => x.Value.RandomGroup == this.RandomGroup)
+                .Select(x => x.Value)
+                .ToList();
 
-        public int GetWizardLevelBonus() => this.Countable.Value - (this.Countable.Nullable && (this.Countable.Value > 0) ? 1 : 0);
+        public int GetWizardLevelBonus() =>
+            this.Countable.Value - (this.Countable.Nullable && (this.Countable.Value > 0) ? 1 : 0);
 
-        public string FullName() => Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name;
+        public string FullName() =>
+            Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name;
 
         public string SelfDescription()
         {
@@ -336,13 +347,17 @@ namespace WarhammerArmyAssembler
             return weapons || armour || otherStuffs;
         }
 
-        public bool IsPowers() => this.Type == OptionType.Powers;
+        public bool IsPowers() =>
+            this.Type == OptionType.Powers;
 
-        public bool IsOption() => this.Type == OptionType.Option || this.Type == OptionType.SlannOption;
+        public bool IsOption() =>
+            this.Type == OptionType.Option || this.Type == OptionType.SlannOption;
 
-        public bool IsEquipment() => this.Category == OptionCategory.Equipment;
+        public bool IsEquipment() =>
+            this.Category == OptionCategory.Equipment;
 
-        public bool IsSlannOption() => this.Type == OptionType.SlannOption;
+        public bool IsSlannOption() =>
+            this.Type == OptionType.SlannOption;
 
         private bool TypeAndPointsSatisfy(Unit.MagicItemsTypes itemsType, int itemsPoints, int itemsCout)
         {
@@ -361,7 +376,8 @@ namespace WarhammerArmyAssembler
             return true;
         }
 
-        public bool IsActual() => (IsOption() && Realised) || IsMagicItem() || IsPowers();
+        public bool IsActual() =>
+            (IsOption() && Realised) || IsMagicItem() || IsPowers();
 
         public bool IsUsableByUnit(Unit unit, bool addOption = true, bool dragOverCheck = false)
         {

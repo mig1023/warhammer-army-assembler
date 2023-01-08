@@ -78,31 +78,39 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (KeyValuePair<int, Unit> entry in Data.Units)
             {
-                if (entry.Value.CurrentGeneral)
-                    entry.Value.CurrentGeneral = false;
+                Unit unit = entry.Value;
 
-                int unitLeadership = entry.Value.Leadership.Value;
+                if (unit.CurrentGeneral)
+                    unit.CurrentGeneral = false;
+
+                int unitLeadership = unit.Leadership.Value;
                 bool notALeader = false;
+                bool mustBeGeneral = unit.General;
 
-                foreach (Option option in entry.Value.Options.Where(x => x.IsActual()))
+                foreach (Option option in unit.Options.Where(x => x.IsActual()))
                 {
                     if (option.AddToLeadership > 0)
                         unitLeadership += option.AddToLeadership;
 
                     if (option.NotALeader)
                         notALeader = true;
+
+                    if (option.General)
+                        mustBeGeneral = true;
                 }
 
-                bool newChallenger = !entry.Value.NotALeader && !notALeader && (unitLeadership > maxLeadership);
+                bool newChallenger = !unit.NotALeader && !notALeader && (unitLeadership > maxLeadership);
 
-                if (entry.Value.IsHero() && (newChallenger || entry.Value.General))
+                if (mustBeGeneral)
+                {
+                    maxLeadershipOwner = entry.Key;
+                    break;
+                }
+                else if (unit.IsHero() && (newChallenger || unit.General))
                 {
                     maxLeadership = unitLeadership;
                     maxLeadershipOwner = entry.Key;
                 }
-
-                if (entry.Value.General)
-                    break;
             }
 
             if (maxLeadershipOwner >= 0)
