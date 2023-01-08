@@ -172,7 +172,7 @@ namespace WarhammerArmyAssembler.Army
             new Unit() { Name = "Rare" },
         };
 
-        public static Unit GetArmyGeneral() => Data.Units.Values.Where(x => x.ArmyGeneral).FirstOrDefault();
+        public static Unit GetArmyGeneral() => Data.Units.Values.Where(x => x.CurrentGeneral).FirstOrDefault();
 
         public static int GetUnitsNumberByBase(BasesTypes type)
         {

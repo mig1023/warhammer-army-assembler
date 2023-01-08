@@ -73,7 +73,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "MagicPowers",
             "MagicPowersCount",
             "NotALeader",
-            "MustBeGeneral",
+            "General",
             "Reroll",
             "ImpactHit",
             "ImpactHitByFront",

@@ -78,8 +78,8 @@ namespace WarhammerArmyAssembler.Army
 
             foreach (KeyValuePair<int, Unit> entry in Data.Units)
             {
-                if (entry.Value.ArmyGeneral)
-                    entry.Value.ArmyGeneral = false;
+                if (entry.Value.CurrentGeneral)
+                    entry.Value.CurrentGeneral = false;
 
                 int unitLeadership = entry.Value.Leadership.Value;
                 bool notALeader = false;
@@ -95,19 +95,19 @@ namespace WarhammerArmyAssembler.Army
 
                 bool newChallenger = !entry.Value.NotALeader && !notALeader && (unitLeadership > maxLeadership);
 
-                if (entry.Value.IsHero() && (newChallenger || entry.Value.MustBeGeneral))
+                if (entry.Value.IsHero() && (newChallenger || entry.Value.General))
                 {
                     maxLeadership = unitLeadership;
                     maxLeadershipOwner = entry.Key;
                 }
 
-                if (entry.Value.MustBeGeneral)
+                if (entry.Value.General)
                     break;
             }
 
             if (maxLeadershipOwner >= 0)
             {
-                Data.Units[maxLeadershipOwner].ArmyGeneral = true;
+                Data.Units[maxLeadershipOwner].CurrentGeneral = true;
 
                 bool newGeneralIsDemon = (Data.Units[maxLeadershipOwner].GetGroup() == "Demonic");
                 bool generalIsDaemon = newGeneralIsDemon && !ArmyBook.Data.DemonicAlreadyReplaced;

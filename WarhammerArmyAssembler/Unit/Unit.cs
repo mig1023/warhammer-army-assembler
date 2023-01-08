@@ -144,10 +144,10 @@ namespace WarhammerArmyAssembler
         public bool GroupBold { get; set; }
 
         public bool Character { get; set; }
-        public bool ArmyGeneral { get; set; }
+        public bool CurrentGeneral { get; set; }
         public bool WeaponTeam { get; set; }
         public bool NotALeader { get; set; }
-        public bool MustBeGeneral { get; set; }
+        public bool General { get; set; }
         public int Chariot { get; set; }
 
         public List<Option> Options = new List<Option>();
@@ -369,10 +369,10 @@ namespace WarhammerArmyAssembler
                 SizableType = this.SizableType,
                 VisibleType = this.VisibleType,
                 Character = this.Character,
-                ArmyGeneral = this.ArmyGeneral,
+                CurrentGeneral = this.CurrentGeneral,
                 WeaponTeam = this.WeaponTeam,
                 NotALeader = this.NotALeader,
-                MustBeGeneral = this.MustBeGeneral,
+                General = this.General,
                 Chariot = this.Chariot,
 
                 TestType = this.TestType,
@@ -1037,7 +1037,7 @@ namespace WarhammerArmyAssembler
         {
             List<string> rules = new List<string>();
 
-            if (ArmyGeneral)
+            if (CurrentGeneral)
                 rules.Add("General");
 
             if (MountOn > 0)
