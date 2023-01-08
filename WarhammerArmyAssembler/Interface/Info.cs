@@ -95,7 +95,7 @@ namespace WarhammerArmyAssembler.Interface
             string footer = String.Empty;
                 
             if (!String.IsNullOrEmpty(ArmyBook.Data.MagicOptions))
-                footer = String.Format("\n\n\nAnother magic options::\n{0}", ArmyBook.Data.MagicOptions);
+                footer = String.Format("\n\n\nAnother magic options:\n{0}", ArmyBook.Data.MagicOptions);
 
             return String.Format("{0}\n\n\n{1}{2}", loreName, String.Join("\n\n", spellList), footer);
         }
