@@ -167,6 +167,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "WardForLastWound",
             "FirstWoundDiscount",
             "NotALeader",
+            "General",
             "PerModel",
             "MagicItemsPoints",
             "AddToWard",
