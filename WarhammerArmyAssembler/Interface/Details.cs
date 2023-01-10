@@ -492,11 +492,11 @@ namespace WarhammerArmyAssembler.Interface
                     margins: margins, id: id);
 
             else
-                AddButtonAllParts(captionFirst: String.Empty, captionSecond: ArmyBook.Data.AddStyle, backgroundFirst: Brushes.LightGray,
+                AddButtonAllParts(captionFirst: String.Empty, captionSecond: ArmyBook.Data.AddStyle,
+                    backgroundFirst: (Brush)(new BrushConverter().ConvertFrom("#E1E1E1")),
                     backgroundSecond: Brushes.Silver, margins: margins, id: id);
 
             return height;
         }
-
     }
 }
