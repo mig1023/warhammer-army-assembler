@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -401,17 +402,34 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newUnit.ArmyColor = (SolidColorBrush)Data.FrontColor;
             newUnit.TooltipColor = (SolidColorBrush)Data.TooltipColor;
-
-
-            string image = StringParse(xmlUnit["Image"]);
-
-            if (String.IsNullOrEmpty(image))
-                newUnit.Image = Interface.Changes.TryHomologueImage(newUnit);
-            else
-                newUnit.Image = String.Format("{0}{1}.jpg", Army.Data.UnitsImagesDirectory, image);
+            newUnit.Image = TryFindImage(xmlUnit, newUnit);
 
             return newUnit;
         }
+
+        private static string TryFindImage(XmlNode xmlUnit, Unit newUnit)
+        {
+            string image = StringParse(xmlUnit["Image"]);
+
+            if (xmlUnit["Image"] == null)
+            {
+                return Interface.Changes.TryHomologueImage(newUnit);
+            }
+            else if (String.IsNullOrEmpty(image))
+            {
+                string name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(newUnit.Name.ToLower());
+                string pathByName = FullImagePath(name.Replace(" ", String.Empty));
+
+                return File.Exists(pathByName) ? pathByName : String.Empty;
+            }
+            else
+            {
+                return FullImagePath(image);
+            }
+        }
+
+        private static string FullImagePath(string image) =>
+            String.Format("{0}{1}.jpg", Army.Data.UnitsImagesDirectory, image);
 
         private static void AddCommonXmlOptionBySpecialRules(XmlDocument xml, XmlNode xmlUnitRules,
             ref Unit newUnit, Dictionary<string, string> commonXmlOption = null)
