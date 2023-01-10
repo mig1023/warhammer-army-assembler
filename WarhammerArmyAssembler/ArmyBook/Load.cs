@@ -129,13 +129,15 @@ namespace WarhammerArmyAssembler.ArmyBook
             {
                 string xmlUnitName = StringParse(xmlUnit["Name"]);
 
-                if (xmlUnitName != unitName)
+                if ((xmlUnitName != unitName) || (xmlUnit["Image"] == null))
                     continue;
 
                 string image = StringParse(xmlUnit["Image"]);
 
-                if (!String.IsNullOrEmpty(image))
-                    return imagePath + image;
+                if (String.IsNullOrEmpty(image))
+                    return ImagePathByName(xmlUnit, imagePath);
+                else 
+                    return FullImagePath(image, imagePath);
             }
 
             return String.Empty;
@@ -412,24 +414,28 @@ namespace WarhammerArmyAssembler.ArmyBook
             string image = StringParse(xmlUnit["Image"]);
 
             if (xmlUnit["Image"] == null)
-            {
                 return Interface.Changes.TryHomologueImage(newUnit);
-            }
-            else if (String.IsNullOrEmpty(image))
-            {
-                string name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(newUnit.Name.ToLower());
-                string pathByName = FullImagePath(name.Replace(" ", String.Empty));
 
-                return File.Exists(pathByName) ? pathByName : String.Empty;
-            }
+            else if (String.IsNullOrEmpty(image))
+                return ImagePathByName(xmlUnit);
+
             else
-            {
                 return FullImagePath(image);
-            }
         }
 
-        private static string FullImagePath(string image) =>
-            String.Format("{0}{1}.jpg", Army.Data.UnitsImagesDirectory, image);
+        private static string ImagePathByName(XmlNode xmlUnit, string imagePath = "")
+        {
+            string name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(StringParse(xmlUnit["Name"]).ToLower());
+            string pathByName = FullImagePath(name.Replace(" ", String.Empty), imagePath);
+
+            return File.Exists(pathByName) ? pathByName : String.Empty;
+        }
+
+        private static string FullImagePath(string image, string imagePath = "")
+        {
+            string path = String.IsNullOrEmpty(imagePath) ? Army.Data.UnitsImagesDirectory : imagePath;
+            return String.Format("{0}{1}.jpg", path, image);
+        }
 
         private static void AddCommonXmlOptionBySpecialRules(XmlDocument xml, XmlNode xmlUnitRules,
             ref Unit newUnit, Dictionary<string, string> commonXmlOption = null)
