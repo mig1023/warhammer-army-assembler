@@ -765,8 +765,16 @@ namespace WarhammerArmyAssembler.Interface
         public static string TryHomologueImage(Unit unit)
         {
             foreach (string homologueImage in ArmyBook.XmlBook.GetHomologue(Army.Data.InternalName, unit.Name, unit.IsHero()))
-                if (!String.IsNullOrEmpty(homologueImage))
+            {
+                if (String.IsNullOrEmpty(homologueImage))
+                    continue;
+
+                else if (homologueImage.EndsWith(".jpg"))
+                    return homologueImage;
+
+                else
                     return String.Format("{0}.jpg", homologueImage);
+            }
 
             return String.Empty;
         }
