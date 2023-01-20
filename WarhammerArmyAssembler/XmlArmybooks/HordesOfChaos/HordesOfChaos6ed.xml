@@ -72,21 +72,21 @@
 				<Weapon>
 					<Name>Chaos Daemon Sword</Name>
 					<Points>85</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>The wielder has WS, S, I and A as the Greater Daemon of their patron god. With a Mark of Chaos only (except the Mark of Chaos Undivided)</Rule>
 					<Description>A character with a Daemon Sword has the same WS, S, I and A as the Greater Daemon of their patron god (eg, a Champion of Khorne would have Weapon Skill 10, Strength 7, Initiative 10 and Attacks 7). However, every roll of a 1 to hit in close combat means that the attack is resolved against the character instead of the enemy. Furthermore, the character can never re-roll an unmodified 1 to hit in close combat, regardless of the source of the re-roll</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Change</Name>
 					<Points>75</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a 4+ the model is turned into a Chaos Spawn (with only D3 Wounds) controlled by the Chaos player</Rule>
 					<Description>Roll a D6 every time an enemy character or monster is slain by the Sword of Change. On a roll of 1, 2 or 3 nothing happens. On a roll of 4 or more, the model is turned into a Chaos Spawn controlled by the Chaos player! Replace the model with a Chaos Spawn model. If you do not have a spare Chaos Spawn model the model is slain, but the sword has no additional effect. If the enemy is in a unit, dien the Spawn model is placed in contact with the unit on one of its free sides (bearer's choice) and will fight as normal in subsequent combat rounds. The Chaos Spawn starts with only D3 Wounds</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Hellfire sword</Name>
 					<Points>75</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<MultiWounds>D6</MultiWounds>
 					<NoArmour/>
 					<Rule>flaming</Rule>
@@ -95,7 +95,7 @@
 				<Weapon>
 					<Name>Chaos Runesword</Name>
 					<Points>70</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<AddToStrength>1</AddToStrength>
 					<AddToAttacks>1</AddToAttacks>
@@ -106,7 +106,7 @@
 					<Points>50</Points>
 					<HitFirst/>
 					<AddToAttacks>1</AddToAttacks>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
@@ -115,14 +115,14 @@
 				<Weapon>
 					<Name>Berserker sword</Name>
 					<Points>40</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>Half the Unit Strength of all enemy models in base contact as additional Attacks</Rule>
 					<Description>The wielder of the Berserker Sword may make additional attacks in every Close Combat phase. The number of additional attacks is equal to half the Unit Strength of all enemy models in base contact (rounding up). For example, a character in contact with two Ogres (combined Unit Strength of 6) would get 3 additional Attacks. If the bearer is involved in a challenge, only the Unit Strength of the opponent is counted</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Rending sword</Name>
 					<Points>40</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<MultiWounds>D3</MultiWounds>
 					<Rule>Wounded model loses not one but D3 wounds</Rule>
 					<Description>A model wounded by the Rending Sword (after saves, etc) loses not one but D3 wounds</Description>
@@ -130,14 +130,14 @@
 				<Weapon>
 					<Name>Blade of Blood</Name>
 					<Points>35</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>For each unsaved wound which the Blade of Blood causes, the wielder gains +1 Wound by Strength test</Rule>
 					<Description>For each unsaved wound which the Blade of Blood causes, the wielder may take a Strength test. If the test is passed, the wielder gains +1 Wound. This may not increase his Wounds value above double its normal number of Wounds. If the test is tailed, the wielder loses one Wound</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Filth Mace</Name>
 					<Points>35</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Terror/>
 					<PoisonAttack/>
 					<Description>All attacks with the Filth Mace count as poisoned attacks. In addition, if the bearer of the mace kills an enemy character in close combat, he will cause terror for the rest of the game</Description>
@@ -145,7 +145,7 @@
 				<Weapon>
 					<Name>Soul Cleaver</Name>
 					<Points>35</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Test Bet="Wound" Context="Wound">Toughness</Test>
 					<Description>Any model wounded by the Soul Cleaver (after saves, etc) must pass a Toughness test or suffer an additional wound (with no saves allowed)</Description>
 				</Weapon>
@@ -155,7 +155,7 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<KillingBlow/>
 					<Description>Confers on the bearer the Killing Blow ability</Description>
 				</Weapon>
@@ -168,7 +168,7 @@
 					<Rule>Magic Resistance (2)</Rule>
 					<Rule>Roll a D6 each time a spell is dispelled. On a roll of 4+ the spell is destroyed and the enemy Wizard may not cast it for the rest of the battle.</Rule>
 					<Description>The Spelleater Shield is treated like a normal shield. In addition, it grants Magic Resistance (2) to the character and any unit he is with. Roll a D6 each time a spell is cast at the bearer of the Spelleater Shield and is dispelled. On a roll of 4 or more, the spell is destroyed and the enemy Wizard mav not cast it for the rest of the battle</Description>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 				</Shield>
 				<Shield>
 					<Name>Chaos Runeshield</Name>
@@ -176,7 +176,7 @@
 					<AddToArmour>6</AddToArmour>
 					<Rule>Runeshiel negates the power of any magic weapons carried by models in base contac.</Rule>
 					<Description>The Chaos Runeshield is treated like a normal shield. It also negates the power of any magic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Description>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 				</Shield>
 				<Armour>
 					<Name>Armour of Tortured Souls</Name>
@@ -184,7 +184,7 @@
 					<AddToArmour>4</AddToArmour>
 					<AddToToughness>1</AddToToughness>
 					<Description>The Armour of Tortured Souls is a suit of Chaos armour. The wearer counts as having +1 Toughness against mundane attacks (not against spells, magic items, etc)</Description>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 				</Armour>
 				<Armour>
 					<Name>Armour of Damnation</Name>
@@ -199,7 +199,7 @@
 					<AddToArmour>6</AddToArmour>
 					<Rule>Strength 4 hit for each successful armour save</Rule>
 					<Description>The Bane Shield is treated like a normal shield. In addition, for each successful armour save in close combat, the shield inflicts a Strength 4 hit on the model that struck the blow</Description>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 				</Shield>
 				<Armour>
 					<Name>Crimson Armour of Dargan</Name>
@@ -207,7 +207,7 @@
 					<AddToArmour>4</AddToArmour>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>The Crimson Armour is a suit of Chaos armour. In addition, any model wishing to attack the wearer in close combat must first pass a Leadership test or they may not attack that combat round</Description>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 				</Armour>
 			</Group>
 			<Group Name="Talismans">
@@ -217,14 +217,14 @@
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take a Leadership test at the start of every Close Combat phase. Any model which fails is transfixed and may not make any attacks that round, and any attacks made against it by the bearer will hit automatically</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Amulet of Chaos</Name>
 					<Points>45</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Test Bet="Wound" Context="Round">Strength</Test>
 					<Description>At the start of every Chaos Magic phase, any enemy models in contact with the wearer must pass a Strength test or lose one wound, with no armour saves allowed</Description>
 				</AdditionalArmour>
@@ -234,14 +234,14 @@
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>Ward save of 3+ against all normal and magical missiles</Rule>
 					<Description>The model and his mount have a Ward save of 3+ against all normal and magical missiles</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Gaze of the Gods</Name>
 					<Points>30</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<AddToWard>3</AddToWard>
 					<Rule>If the model is fleeing at the start of a Chaos Magic phase he is turned into a Chaos Spawn</Rule>
 					<Description>The model gains a 4+ Ward save. If the model is fleeing at the start of a Chaos Magic phase, for any reason, the wrath of the Chaos gods is immediately visited upon him and he is turned into a Chaos Spawn, with the same number of wounds remaining as the character had. If you do not have a Spawn model to replace the character then he simply counts as slain. For Victory points purposes, the character is not counted as slain or below half Wounds unless the Spawn he has turned into is slain or is below half Wounds</Description>
@@ -252,7 +252,7 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>The model has Magic Resistance (2)</Description>
 				</AdditionalArmour>
@@ -264,20 +264,20 @@
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>The bearer can re-roll any number of the dice rolled to cast or dispel</Rule>
 					<Description>The bearer can re-roll any number of the dice rolled to cast or dispel a spell The second result(s) stand. This can effectively negate the effects of a Miscast and cause an Irresistible Force (and the equivalent results when dispelling). If the bearer casts a spell with Irresistible Force using the staff's re-roll ability, the staff will exhaust its power and cease working for the rest of the battle</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Skull of Katam</Name>
 					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>The bearer adds +1 to all Casting rolls</Rule>
 				</Arcane>
 				<Arcane>
 					<Name>Power Familiar</Name>
 					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Description>The Familiar adds one dice to both the Power dice and Dispel dice pool of the bearer's side</Description>
@@ -285,14 +285,14 @@
 				<Arcane>
 					<Name>Warrior Familiar</Name>
 					<Points>30</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>Strength 5 hit on a single model in base contact</Rule>
 					<Description>At the beginning of the Close Combat phase, before blows are struck, the Familiar inflicts one Strength 5 hit on a single model chosen by the Sorcerer from amongst those in base contact. Wounds inflicted do count towards combat resolution</Description>
 				</Arcane>
 				<Arcane>
 					<Name>Spell Familiar</Name>
 					<Points>15</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>One more spell</Rule>
 					<Description>The Familiar's owner knows one more spell than is normal for his level. This does not increase his Magic Level</Description>
 				</Arcane>
@@ -301,7 +301,7 @@
 				<AdditionalArmour>
 					<Name>Rod of Corruption</Name>
 					<Points>75</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
@@ -311,7 +311,7 @@
 				<AdditionalArmour>
 					<Name>Bindings of Slaanesh</Name>
 					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
@@ -321,7 +321,7 @@
 				<AdditionalArmour>
 					<Name>Book of Secrets</Name>
 					<Points>40</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
@@ -333,7 +333,7 @@
 				<AdditionalArmour>
 					<Name>Chalice of Chaos</Name>
 					<Points>35</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Group>Daemonic</Group>
 					<Rule>Daemonic</Rule>
 					<Description>The bearer becomes daemonic and follows all of the rules outlined in the Bestiary section. If the bearer is the army's General, he must lead a daemonic army. Remember, a daemonic character cannot join non-daemonic units. At the start of the battle he must take a Toughness test (remember that rolls of 6 always fail). If the test is failed, the bearer reduces his Wounds and Toughness by -1</Description>
@@ -341,7 +341,7 @@
 				<AdditionalArmour>
 					<Name>Death's Head</Name>
 					<Points>30</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
@@ -351,7 +351,7 @@
 				<AdditionalArmour>
 					<Name>Sceptre of Domination</Name>
 					<Points>25</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
@@ -361,14 +361,14 @@
 				<AdditionalArmour>
 					<Name>Helm of Many Eyes</Name>
 					<Points>25</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<HitFirst/>
 					<Description>The wearer always strikes first in close combat, even if charged or armed with a weapon that normally strikes last. If any of the wearer's opponents also strike first, revert to normal Initiative. The character is also subject to stupidity (even if immune to psychology) due to the random and conflicting images that confront him</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Mirror of Knowledge</Name>
 					<Points>20</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
@@ -380,14 +380,14 @@
 				<Banner>
 					<Name>Banner of the Gods</Name>
 					<Points>125</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>All non-daemonic friendly units within 6" of the banner become stubborn</Rule>
 					<Description>All non-daemonic friendly units within 6" of the banner become stubborn (even if normally immune to psychology)</Description>
 				</Banner>
 				<Banner>
 					<Name>Banner of Rage</Name>
 					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
@@ -397,7 +397,7 @@
 				<Banner>
 					<Name>Plague Banner</Name>
 					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
@@ -407,7 +407,7 @@
 				<Banner>
 					<Name>Blasted Standard</Name>
 					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
@@ -416,13 +416,13 @@
 				<Banner>
 					<Name>Banner of Wrath</Name>
 					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Rule>Bound spell. Power Level 4. The banner contains a bound magic missile with range 24", causing D6 Strength 4 hits</Rule>
 				</Banner>
 				<Banner>
 					<Name>Rapturous Standard</Name>
 					<Points>50</Points>
-					<OnlyGroup>Mortal</OnlyGroup>
+					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
