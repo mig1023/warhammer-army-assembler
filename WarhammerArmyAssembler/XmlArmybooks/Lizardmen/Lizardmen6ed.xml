@@ -146,7 +146,7 @@
 				</Arcane>
 				<Arcane>
 					<Name>Plaque of Dominion</Name>
-					<OnlyGroup>Slann</OnlyGroup>
+					<Only>Slann</Only>
 					<Points>50</Points>
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
@@ -154,7 +154,7 @@
 				</Arcane>
 				<Arcane>
 					<Name>Plaque of Tepok</Name>
-					<OnlyGroup>Slann</OnlyGroup>
+					<Only>Slann</Only>
 					<Points>50</Points>
 					<Rule>Knows one more spell than he is normally allowed</Rule>
 					<Description>The Slann knows one more spell than he is normally allowed</Description>
@@ -195,7 +195,7 @@
 				</Weapon>
 				<Weapon>
 					<Name>Dagger of Sotek</Name>
-					<OnlyGroup>Skink</OnlyGroup>
+					<Only>Skink</Only>
 					<Points>25</Points>
 					<KillingBlow/>
 					<Fear/>
@@ -218,7 +218,7 @@
 			<Group Name="Magic armour">
 				<AdditionalArmour>
 					<Name>Sacred Stegadon Helm</Name>
-					<OnlyGroup>Skink</OnlyGroup>
+					<Only>Skink</Only>
 					<Points>40</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToLeadership>1</AddToLeadership>
@@ -254,8 +254,7 @@
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Cloak of Feathers</Name>
-					<Only>Infantry</Only>
-					<OnlyGroup>Skink</OnlyGroup>
+					<Only>Infantry, Skink</Only>
 					<Points>30</Points>
 					<Rule>Fly</Rule>
 					<Description>The wearer of the cloack may fly</Description>
