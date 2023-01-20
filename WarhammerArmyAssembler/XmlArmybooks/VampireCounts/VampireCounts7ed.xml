@@ -184,7 +184,7 @@
 				<Weapon>
 					<Name>The Black Axe of Krell</Name>
 					<Points>50</Points>
-					<OnlyGroup>Wight King</OnlyGroup>
+					<Only>Wight King</Only>
 					<AddToStrength>2</AddToStrength>
 					<MultiWounds>D3</MultiWounds>
 					<HitLast/>
@@ -194,7 +194,7 @@
 				<Weapon>
 					<Name>Blood Drinker</Name>
 					<Points>40</Points>
-					<OnlyGroup>Vampire</OnlyGroup>
+					<Only>Vampire</Only>
 					<Rule>For each unsaved wound inflicted by the Blood Drinker, the wielder (or unit he is with) immediately regains a single Wound suffered earlier in the battle, as if Invocation of Nehek had been cast on them</Rule>
 				</Weapon>
 				<Weapon>
@@ -263,7 +263,7 @@
 				</Armour>
 				<Armour>
 					<Name>The Cadaverous Cuirass</Name>
-					<OnlyGroup>Vampire</OnlyGroup>
+					<Only>Vampire</Only>
 					<Points>15</Points>
 					<AddToArmour>5</AddToArmour>
 					<NoKillingBlow/>
@@ -295,14 +295,14 @@
 				</Weapon>
 				<Weapon>
 					<Name>Talisman of the Lycni</Name>
-					<OnlyGroup>Vampire</OnlyGroup>
+					<Only>Vampire</Only>
 					<Points>10</Points>
 					<MovementTo>9</MovementTo>
 					<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Talisman of the Lycni</Name>
-					<OnlyGroup>Vampire</OnlyGroup>
+					<Only>Vampire</Only>
 					<Points>10</Points>
 					<MovementTo>9</MovementTo>
 					<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9</Description>
@@ -311,7 +311,7 @@
 			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>The Carstein Ring</Name>
-					<OnlyGroup>Vampire</OnlyGroup>
+					<Only>Vampire</Only>
 					<Points>75</Points>
 					<Rule>The first time the wearer of this ring is slain roll a D6 at the end of the phase. On a score of 2+ the vampire is immediately returned to 'life' with a single Wound</Rule>
 					<Description>The first time the wearer of this ring is slain roll a D6 at the end of the phase. On a score of 2+ the vampire is immediately returned to 'life' with a single Wound. The returning model must be placed in the front rank of a friendly unit anywhere on the battlefield (even one in close combat). If there is no unit for the Vampire to join, it is removed as a casualty</Description>
