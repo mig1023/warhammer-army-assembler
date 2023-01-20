@@ -352,7 +352,7 @@
 				<Weapon>
 					<Name>Blood Drinker</Name>
 					<Points>50</Points>
-					<OnlyGroup>Vampire</OnlyGroup>
+					<Only>Vampire</Only>
 					<Rule>For every model killed in close comhat the wearer immediately regenerates one lost Wound</Rule>
 					<Description>For every model killed in close comhat the wearer immediately regenerates one lost Wound. This cannot take the character's Wounds characteristic above its initial value</Description>
 				</Weapon>
@@ -390,7 +390,7 @@
 				<Weapon>
 					<Name>Sword of Kings</Name>
 					<Points>25</Points>
-					<OnlyGroup>Wight Lord</OnlyGroup>
+					<Only>Wight Lord</Only>
 					<ExtendedKillingBlow>5</ExtendedKillingBlow>
 					<Description>This sword scores a Killing Blow on the result of a 5+</Description>
 				</Weapon>
@@ -434,7 +434,7 @@
 			<Group Name="Talismans">
 				<AdditionalArmour>
 					<Name>The Carstein Ring</Name>
-					<OnlyGroup>Vampire</OnlyGroup>
+					<Only>Vampire</Only>
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
@@ -580,7 +580,7 @@
 				<Banner>
 					<Name>Banner of the Barrows</Name>
 					<Points>45</Points>
-					<OnlyGroup>Wights</OnlyGroup>
+					<Only>Wights</Only>
 					<HitOn>3</HitOn>
 					<Description>All Wights (Grave Guard, Black Knight and Wight lords) in the unit carrying the Banner will hit the enemy on a 3+ regardless of relative Weapon Skills or any other modifier</Description>
 				</Banner>
