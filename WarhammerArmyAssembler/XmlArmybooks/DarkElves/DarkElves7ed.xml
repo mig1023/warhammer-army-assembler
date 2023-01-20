@@ -115,7 +115,7 @@
 				<Weapon>
 					<Name>Venom Sword</Name>
 					<Points>75</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<Rule>Any model that takes a wound from the Venom Sword (after saves, etc) must roll equal to or under its Toughness on 2D6 or automatically lose all remaining wounds.</Rule>
 				</Weapon>
 				<Weapon>
@@ -128,27 +128,27 @@
 				<AdditionalArmour>
 					<Name>Dance of Doom</Name>
 					<Points>30</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<AddToWard>5</AddToWard>
 					<Description>The model has a 5+ ward save</Description>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Touch of Death</Name>
 					<Points>30</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<KillingBlow/>
 					<Description>The model has killing blow</Description>
 				</AdditionalArmour>
 				<Weapon>
 					<Name>Rune of Khaine</Name>
 					<Points>25</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<Rule>The model has +D3 Attacks (rolled just before making the model's attacks)</Rule>
 				</Weapon>
 				<AdditionalArmour>
 					<Name>Witchbrew</Name>
 					<Points>25</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<Rule>Witchbrew affects the Hag's unit for the entire battle. Enemy units cannot claim combat resolution bonuses for outnumbering, flank or rear attacks, or higher ground if they are only fighting a unit affected by Witchbrew</Rule>
 				</AdditionalArmour>
 				<Weapon>
@@ -160,34 +160,34 @@
 				<Weapon>
 					<Name>Hand of Khaine</Name>
 					<Points>15</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<Rule>One model in base contact chosen by the Dark Elves player, or the model's opponent in a challenge, loses one Attack (to a minimum of 1)</Rule>
 					<Description>One model in base contact chosen by the Dark Elves player, or the model's opponent in a challenge, loses one Attack (to a minimum of 1). Against mounted models, the Dark Elves player must choose either the mount or the rider. If the model has special types of attack (a Giant, for example) the Hand of Khaine has no effect. Models that are Immune to Psychology are unaffected by the Hand of Khaine</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Cry of War</Name>
 					<Points>10</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<Rule>A unit charged by a warrior with a Cry of War must pass a Leadership test or reduce their Weapon Skill by 1 (to a minimum of 1) for that Close Combat</Rule>
 				</Weapon>
 				<Weapon>
 					<Name>Manbane</Name>
 					<Points>25</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<Rule>A model counts Strength as one higher than their target's Toughness</Rule>
 					<Description>A model with a weapon coated with Manbane always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this, up to a maximum of Strength 6. This means that they almost always wound opponents on a roll of 3+. This modified Strength is used to calculate armour save modifiers</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Black Lotus</Name>
 					<Points>20</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<Reroll>ToWound(1)</Reroll>
 					<Description>The model may re-roll any dice that score a 1 when rolling to wound with a weapon coated With Black Lotus</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Dark Venom</Name>
 					<Points>10</Points>
-					<OnlyGroup>Khainite</OnlyGroup>
+					<Only>Khainite</Only>
 					<Rule>Wounds inflicted in the challenge that round are doubled for the purposes of combat resolution scores</Rule>
 					<Description>If a model with Dark Venom slays an enemy in a challenge, all wounds inflicted by the model in the challenge that round are doubled for the purposes of combat resolution scores (up to the overkill maximum)</Description>
 				</Weapon>
