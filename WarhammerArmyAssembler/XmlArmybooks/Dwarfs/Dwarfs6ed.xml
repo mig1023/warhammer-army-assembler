@@ -347,14 +347,14 @@
 					<Name>Master Rune of Defence</Name>
 					<MasterRunic/>
 					<Points>40</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>All incoming missiles (including magic missiles) hit the machine itself on a 1-5 and the crew only on a 6</Rule>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Master Rune of Disguise</Name>
 					<MasterRunic/>
 					<Points>30</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>Until it moves or shoots, the machine cannot be seen</Rule>
 					<Description>Until it moves or shoots, the machine cannot be seen, and cannot therefore be targeted with spells, shot at, or charged. Once the machine has moved fired, or if an enemy unit moves to within 3" of it, the machine is revealed and can be Seen and attacked as normal for the rest of the battle</Description>
 				</AdditionalArmour>
@@ -362,7 +362,7 @@
 					<Name>Master Rune of Immolation</Name>
 					<MasterRunic/>
 					<Points>30</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>The Dwarf player can cause the machine to explode at any time (large circular template, all models under the template suffer a Strength 4 hit, models partially covered are hit on the roll of a 4+</Rule>
 					<Description>The Dwarf player can cause the machine to explode at any time. If the machine explodes, place the large circular template on the machine. The machine is destroyed and all models under the template suffer a Strength 4 hit (models partially covered are hit on the roll of a 4+)</Description>
 				</AdditionalArmour>
@@ -370,7 +370,7 @@
 					<Name>Master Rune of Skewering</Name>
 					<MasterRunic/>
 					<Points>25</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>Once per game the Bolt Thrower hits on a 2+ with no modifiers</Rule>
 					<Description>This rune may only be inscribed on a Bolt Thrower. Once per game the Bolt Thrower hits on a 2+ with no modifiers. You must choose to use this rune before rolling to hit</Description>
 				</AdditionalArmour>
@@ -378,7 +378,7 @@
 					<Name>Rune of Forging</Name>
 					<Runic>1</Runic>
 					<Points>35</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>Allows to re-roll Artillery dice when he rolls a Misfire</Rule>
 					<Description>Can only be placed on a cannon. Allows Dwarf player to re-roll Artillery dice when he rolls a Misfire. If you roll a Misfire when rolling Artillery dice either to hit or to bounce, then you can roll again. You are bound by the second roll even if it's another Misfire. Multiples have no effect</Description>
 				</AdditionalArmour>
@@ -386,7 +386,7 @@
 					<Name>Rune of Reloading</Name>
 					<Runic>1</Runic>
 					<Points>30</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>Can shoot every turn, as long as there is at least one crewman left</Rule>
 					<Description>Cannon can shoot every turn, as long as there is at least one crewman left, even if the machine has rolled a 2-3 on the Misfire table in the previous turn. Multiples have no effect</Description>
 				</AdditionalArmour>
@@ -394,7 +394,7 @@
 					<Name>Rune of Accuracy</Name>
 					<Runic>1</Runic>
 					<Points>25</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>May re-roll the Scatter dice</Rule>
 					<Description>May only be put on a Stone Thrower. The Dwarf player may re-roll the Scatter dice if he wishes, enabling the machine to shoot more accurately. If you re-roll the dice, you must accept the result of the second roll. Multiples have no effect</Description>
 				</AdditionalArmour>
@@ -402,7 +402,7 @@
 					<Name>Rune of Fortune</Name>
 					<Runic>1</Runic>
 					<Points>25</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>May re-roll a dice rolled on the machine's Misfire chart</Rule>
 					<Description>If a machine has the Rune of Fortune the player may re-roll a dice rolled on the machine's Misfire chart. For example, you can re-roll a result on the Cannon Misfire chart, or the Misfire chart for Stone Throwers. However, you must accept the result of the second dice roll. Multiples have no effect</Description>
 				</AdditionalArmour>
@@ -410,7 +410,7 @@
 					<Name>Valiant Rune</Name>
 					<Runic>1</Runic>
 					<Points>25</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Unbreakable/>
 					<Description>As long as their war machine is not destroyed, the war machine crew are Unbreakable</Description>
 				</AdditionalArmour>
@@ -418,28 +418,28 @@
 					<Name>Rune of Penetrating</Name>
 					<Runic>1</Runic>
 					<Points>25</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>The Strength of a hit from the war machine increases by +1</Rule>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Rune of Penetrating</Name>
 					<Runic>2</Runic>
 					<Points>50</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>The Strength of a hit from the war machine increases by +2</Rule>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Rune of Penetrating</Name>
 					<Runic>3</Runic>
 					<Points>75</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>The Strength of a hit from the war machine increases by +3</Rule>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Flakkson's Rune of Seeking</Name>
 					<Runic>1</Runic>
 					<Points>25</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>+1 to hit rolls against targets with the Fly special ability</Rule>
 					<Description>Each rune adds +1 to the bolt thrower's to hit rolls against targets with the Fly special ability</Description>
 				</AdditionalArmour>
@@ -447,21 +447,21 @@
 					<Name>Flakkson's Rune of Seeking</Name>
 					<Runic>2</Runic>
 					<Points>50</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>+2 to hit rolls against targets with the Fly special ability</Rule>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Flakkson's Rune of Seeking</Name>
 					<Runic>3</Runic>
 					<Points>75</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>+3 to hit rolls against targets with the Fly special ability</Rule>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Stalwart Rune</Name>
 					<Runic>1</Runic>
 					<Points>20</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<AddToCloseCombat>1</AddToCloseCombat>
 					<Description>This rune adds +1 to the crew's combat resolution score</Description>
 				</AdditionalArmour>
@@ -469,21 +469,21 @@
 					<Name>Stalwart Rune</Name>
 					<Runic>2</Runic>
 					<Points>40</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<AddToCloseCombat>2</AddToCloseCombat>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Stalwart Rune</Name>
 					<Runic>3</Runic>
 					<Points>60</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<AddToCloseCombat>3</AddToCloseCombat>
 				</AdditionalArmour>
 				<AdditionalArmour>
 					<Name>Rune of Burning</Name>
 					<Runic>1</Runic>
 					<Points>5</Points>
-					<OnlyGroup>Engineering</OnlyGroup>
+					<Only>Engineering</Only>
 					<Rule>Flaming Attacks</Rule>
 					<Description>The war engine makes flaming attacks</Description>
 				</AdditionalArmour>
