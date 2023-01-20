@@ -433,46 +433,46 @@
 				<Weapon>
 					<Name>Chaos Disruption</Name>
 					<Points>50</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Rule>Any shooting at the Daemon or the unit it is with suffers an additional -1 to hit penalty</Rule>
 				</Weapon>
 				<Weapon>
 					<Name>Blade of The Ether</Name>
 					<Points>45</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<NoArmour/>
 					<Description>Daemon ignore armour saves in close combat</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Radiance of Dark Glory</Name>
 					<Points>40</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Rule>The Daemon and any other Daemon unit within 6" suffers one less wound when defeated in combat</Rule>
 					<Description>The Daemon and any other Daemon unit within 6" suffers one less wound when defeated in combat. For example, if the Daemon fails its Instability test by 2, flien it would only lose one wound</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Soul Hunger</Name>
 					<Points>25</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Rule>The Daemon may re-roll missed close combat attacks in the first round of any combat</Rule>
 				</Weapon>
 				<Weapon>
 					<Name>Spell Breaker</Name>
 					<Points>25</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Rule>Once per battle, the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force</Rule>
 				</Weapon>
 				<Weapon>
 					<Name>Diabolic Splendour</Name>
 					<Points>20</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Rule>Daemonic Aura becomes a normal Ward save and so can be used against magical attacks</Rule>
 					<Description>Daemonic Aura becomes a normal Ward save and so can be used against magical attacks. This is also conferred to any Daemon unit which he joins</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Master of Mortals</Name>
 					<Points>5</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Group>Mortal</Group>
 					<Description>If the Daemon is the army General, Mortal units count as Core choices and Daemonic units count as Special</Description>
 				</Weapon>
@@ -481,7 +481,7 @@
 				<Weapon>
 					<Name>Collar of Khorne</Name>
 					<Points>40</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
@@ -491,7 +491,7 @@
 				<Weapon>
 					<Name>Axe of Khorne</Name>
 					<Points>25</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
@@ -501,7 +501,7 @@
 				<AdditionalArmour>
 					<Name>Armour of Khorne</Name>
 					<Points>25</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
@@ -511,7 +511,7 @@
 				<Weapon>
 					<Name>Armour of Khorne</Name>
 					<Points>20</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
@@ -523,7 +523,7 @@
 				<Weapon>
 					<Name>Tzeentch's Will</Name>
 					<Points>75</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
@@ -533,7 +533,7 @@
 				<AdditionalArmour>
 					<Name>Spell Destroyer</Name>
 					<Points>50</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
@@ -543,7 +543,7 @@
 				<Weapon>
 					<Name>Master of Sorcery</Name>
 					<Points>15</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
@@ -552,7 +552,7 @@
 				<Weapon>
 					<Name>Power Vortex</Name>
 					<Points>10</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Tzeentch</On>
 					</Dependencies>
@@ -564,7 +564,7 @@
 				<AdditionalArmour>
 					<Name>Cloud of Flies</Name>
 					<Points>40</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
@@ -574,7 +574,7 @@
 				<Weapon>
 					<Name>Stream of Corruption</Name>
 					<Points>30</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
@@ -584,7 +584,7 @@
 				<Weapon>
 					<Name>Stream of Corruption</Name>
 					<Points>15</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
@@ -596,7 +596,7 @@
 				<AdditionalArmour>
 					<Name>Aura of Slaanesh</Name>
 					<Points>30</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
@@ -606,7 +606,7 @@
 				<AdditionalArmour>
 					<Name>Soporific Musk</Name>
 					<Points>30</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
@@ -616,7 +616,7 @@
 				<AdditionalArmour>
 					<Name>Gaze of Acquiescence</Name>
 					<Points>20</Points>
-					<OnlyGroup>Demonic</OnlyGroup>
+					<Only>Demonic</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
 					</Dependencies>
