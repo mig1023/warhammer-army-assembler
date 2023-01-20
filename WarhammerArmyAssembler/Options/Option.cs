@@ -11,19 +11,19 @@ namespace WarhammerArmyAssembler
     {
         public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption, Powers, Info }
         public enum OptionCategory { Option, Equipment, SpecialRule, Nope }
-        public enum OnlyType { All, Infantry, Mount }
+        //public enum OnlyType { All, Infantry, Mount }
 
         public string Name { get; set; }
         public int ID { get; set; }
         public string IDView { get; set; }
         public OptionType Type { get; set; }
-        public OnlyType Only { get; set; }
+        public string Only { get; set; }
         public OptionCategory Category { get; set; }
         public string[] ServiceDependencies { get; set; }
         public string[] ServiceInverseDependencies { get; set; }
         public bool OnlyOneInArmy { get; set; }
         public bool OnlyOneSuchUnits { get; set; }
-        public string OnlyGroup { get; set; }
+        //public string OnlyGroup { get; set; }
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
         public bool Virtue { get; set; }
@@ -193,7 +193,7 @@ namespace WarhammerArmyAssembler
             Only = this.Only,
             ServiceDependencies = this.ServiceDependencies,
             ServiceInverseDependencies = this.ServiceInverseDependencies,
-            OnlyGroup = this.OnlyGroup,
+            //OnlyGroup = this.OnlyGroup,
             Group = this.Group,
             AutoHit = this.AutoHit,
             AutoWound = this.AutoWound,
@@ -323,11 +323,8 @@ namespace WarhammerArmyAssembler
         {
             string describe = String.Empty;
 
-            if (Only != OnlyType.All)
-                describe += String.Format("\nOnly for models: {0}", Only);
-
-            if (!String.IsNullOrEmpty(OnlyGroup))
-                describe += String.Format("\nOnly for: {0}", OnlyGroup);
+            if (!String.IsNullOrEmpty(Only))
+                describe += String.Format("\nOnly for: {0}", Only);
 
             if (OnlyOneInArmy)
                 describe += "\nOnly one in army";
@@ -381,8 +378,14 @@ namespace WarhammerArmyAssembler
 
         public bool IsUsableByUnit(Unit unit, bool addOption = true, bool dragOverCheck = false)
         {
-            if (!String.IsNullOrEmpty(OnlyGroup) && (OnlyGroup != unit.GetGroup()))
-                return false;
+            if (!String.IsNullOrEmpty(Only))
+            {
+                string group = String.Format("Infantry, Mount, {0}", unit.GetGroup());
+                string only = ArmyBook.Services.ExistsInOnly(Only, group);
+
+                if (!String.IsNullOrEmpty(only) && (only != "Infantry") && (only != "Mount") && (only != unit.GetGroup()))
+                    return false;
+            }
 
             if ((Runic > 0) && dragOverCheck)
             {

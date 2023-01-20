@@ -606,7 +606,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 ID = id,
                 IDView = id.ToString(),
                 Type = OptionTypeParse(xmlNode),
-                Only = OnlyForParse(xmlNode["Only"]),
+                Only = StringParse(xmlNode["Only"]),
                 ServiceDependencies = AllStringParse(xmlNode["Dependencies"], "On", comma: true),
                 ServiceInverseDependencies = AllStringParse(xmlNode["Dependencies"], "Off", comma: true),
                 Realised = BoolParse(xmlNode["RealisedByDefault"]),

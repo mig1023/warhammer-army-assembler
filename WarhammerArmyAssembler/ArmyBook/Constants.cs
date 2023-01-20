@@ -105,7 +105,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "Name",
             "OnlyOneInArmy",
             "OnlyOneSuchUnits",
-            "OnlyGroup",
+            //"OnlyGroup",
             "Multiple",
             "Virtue",
             "Honours",

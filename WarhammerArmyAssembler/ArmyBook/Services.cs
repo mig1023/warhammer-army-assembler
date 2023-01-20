@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Media.Imaging;
 using System.Xml;
 
@@ -64,6 +65,16 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             return image;
+        }
+
+        public static string ExistsInOnly(string onlyline, string sublines)
+        {
+            foreach (string ifOnly in onlyline.Split(',').Select(x => x.Trim()))
+                foreach (string subline in sublines.Split(',').Select(x => x.Trim()))
+                    if (!String.IsNullOrEmpty(subline) && (ifOnly == subline))
+                        return ifOnly;
+
+            return String.Empty;
         }
     }
 }

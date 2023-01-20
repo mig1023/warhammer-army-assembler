@@ -209,16 +209,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 
         }
 
-        public static OnlyType OnlyForParse(XmlNode xmlNode)
-        {
-            if (xmlNode == null)
-                return 0;
-
-            bool success = Enum.TryParse(xmlNode.InnerText, out OnlyType value);
-
-            return (success ? value : Option.OnlyType.All);
-        }
-
         public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;  
         
         public static void SizeParse(string line, out int min, out int max)
