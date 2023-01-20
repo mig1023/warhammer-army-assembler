@@ -11,7 +11,6 @@ namespace WarhammerArmyAssembler
     {
         public enum OptionType { Weapon, Armour, AdditionalArmour, Shield, Arcane, Banner, Option, SlannOption, Powers, Info }
         public enum OptionCategory { Option, Equipment, SpecialRule, Nope }
-        //public enum OnlyType { All, Infantry, Mount }
 
         public string Name { get; set; }
         public int ID { get; set; }
@@ -23,7 +22,6 @@ namespace WarhammerArmyAssembler
         public string[] ServiceInverseDependencies { get; set; }
         public bool OnlyOneInArmy { get; set; }
         public bool OnlyOneSuchUnits { get; set; }
-        //public string OnlyGroup { get; set; }
         public bool Realised { get; set; }
         public bool Multiple { get; set; }
         public bool Virtue { get; set; }
@@ -193,7 +191,6 @@ namespace WarhammerArmyAssembler
             Only = this.Only,
             ServiceDependencies = this.ServiceDependencies,
             ServiceInverseDependencies = this.ServiceInverseDependencies,
-            //OnlyGroup = this.OnlyGroup,
             Group = this.Group,
             AutoHit = this.AutoHit,
             AutoWound = this.AutoWound,
@@ -378,14 +375,10 @@ namespace WarhammerArmyAssembler
 
         public bool IsUsableByUnit(Unit unit, bool addOption = true, bool dragOverCheck = false)
         {
-            if (!String.IsNullOrEmpty(Only))
-            {
-                string group = String.Format("Infantry, Mount, {0}", unit.GetGroup());
-                string only = ArmyBook.Services.ExistsInOnly(Only, group);
+            string group = ArmyBook.Services.ExistsInOnly(Only, unit.GetGroup());
 
-                if (!String.IsNullOrEmpty(only) && (only != "Infantry") && (only != "Mount") && (only != unit.GetGroup()))
-                    return false;
-            }
+            if (!String.IsNullOrEmpty(Only) && (group != unit.GetGroup()))
+                return false;
 
             if ((Runic > 0) && dragOverCheck)
             {
