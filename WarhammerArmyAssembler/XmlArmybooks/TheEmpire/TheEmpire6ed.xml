@@ -694,24 +694,24 @@
 						<Name>Repeater pistol</Name>
 						<Points>10</Points>
 						<Dependencies>
-							<OnlyIfMot>Handgun</OnlyIfMot>
-							<OnlyIfMot>Hochland long rifle</OnlyIfMot>
+							<Off>Handgun</Off>
+							<Off>Hochland long rifle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
 						<Name>Handgun</Name>
 						<Points>15</Points>
 						<Dependencies>
-							<OnlyIfMot>Repeater pistol</OnlyIfMot>
-							<OnlyIfMot>Hochland long rifle</OnlyIfMot>
+							<Off>Repeater pistol</Off>
+							<Off>Hochland long rifle</Off>
 						</Dependencies>
 					</Option>
 					<Option>
 						<Name>Hochland long rifle</Name>
 						<Points>20</Points>
 						<Dependencies>
-							<OnlyIfMot>Repeater pistol</OnlyIfMot>
-							<OnlyIfMot>Handgun</OnlyIfMot>
+							<Off>Repeater pistol</Off>
+							<Off>Handgun</Off>
 						</Dependencies>
 					</Option>
 					<LightArmour Points="2"/>
