@@ -68,7 +68,7 @@
 				<Weapon>
 					<Name>Runefang</Name>
 					<Points>100</Points>
-					<OnlyGroup>ElectorCount</OnlyGroup>
+					<Only>ElectorCount</Only>
 					<NoArmour/>
 					<AutoWound/>
 					<Description>All hits from a Runefang wound automatically. No armour saves allowed</Description>
@@ -330,7 +330,7 @@
 				<Banner>
 					<Name>Banner of Ulric</Name>
 					<Points>50</Points>
-					<OnlyGroup>WhiteWolf</OnlyGroup>
+					<Only>WhiteWolf</Only>
 					<Rule>If a unit is charged by this unit it must take a Leadership test, if the test is fail, it must roll 6s to score hits in the first turn of close combat</Rule>
 					<Description>If a unit is charged by a unit of Knights carrying this banner, then it must take a leadership test as soon as the Knights are determined to be within charge range. If the test is passed, the unit can light on as normal. If the unit fails its test, it must roll 6s to score hits in the first turn of close combat.\n\nIf a unit wishes to charge Knights carrying this banner, it must take a Leadership test. If the lest is failed, it may not charge or shoot and must remain stationary in that Movement phase. A unit normally not affected by fear is immune to ihe effects of this banner as well</Description>
 				</Banner>
@@ -356,7 +356,7 @@
 				<Banner>
 					<Name>Steel Standard</Name>
 					<Points>25</Points>
-					<OnlyGroup>Knights</OnlyGroup>
+					<Only>Knights</Only>
 					<Rule>The unit can add +D3 to its charge move</Rule>
 					<Description>The unit can add +D3 to its charge move. If the charge is failed, the unit will move forward 7" as normal</Description>
 				</Banner>
