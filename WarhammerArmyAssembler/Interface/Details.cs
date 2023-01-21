@@ -472,8 +472,8 @@ namespace WarhammerArmyAssembler.Interface
 
             if (option.IsMagicItem() || option.IsPowers())
             {
-                AddButtonPart(ArmyBook.Data.DropStyle + " " + (option.IsPowers() ? "power" : "artefact"),
-                    margins, 0, id, ArmyBook.Data.FrontColor, 154);
+                string drop = String.Format("drop {0}", option.IsPowers() ? "power" : "artefact");
+                AddButtonPart(drop, margins, 0, id, ArmyBook.Data.FrontColor, 154);
 
                 return height;
             }
