@@ -211,7 +211,7 @@
 				</Armour>
 			</Group>
 			<Group Name="Talismans">
-				<AdditionalArmour>
+				<Additional>
 					<Name>The Beguiling Gem</Name>
 					<Points>75</Points>
 					<Dependencies>
@@ -220,15 +220,15 @@
 					<Only>Mortal</Only>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take a Leadership test at the start of every Close Combat phase. Any model which fails is transfixed and may not make any attacks that round, and any attacks made against it by the bearer will hit automatically</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Amulet of Chaos</Name>
 					<Points>45</Points>
 					<Only>Mortal</Only>
 					<Test Bet="Wound" Context="Round">Strength</Test>
 					<Description>At the start of every Chaos Magic phase, any enemy models in contact with the wearer must pass a Strength test or lose one wound, with no armour saves allowed</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>GoldenEye of Tzeentch</Name>
 					<Points>30</Points>
 					<Dependencies>
@@ -237,16 +237,16 @@
 					<Only>Mortal</Only>
 					<Rule>Ward save of 3+ against all normal and magical missiles</Rule>
 					<Description>The model and his mount have a Ward save of 3+ against all normal and magical missiles</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Gaze of the Gods</Name>
 					<Points>30</Points>
 					<Only>Mortal</Only>
 					<AddToWard>3</AddToWard>
 					<Rule>If the model is fleeing at the start of a Chaos Magic phase he is turned into a Chaos Spawn</Rule>
 					<Description>The model gains a 4+ Ward save. If the model is fleeing at the start of a Chaos Magic phase, for any reason, the wrath of the Chaos gods is immediately visited upon him and he is turned into a Chaos Spawn, with the same number of wounds remaining as the character had. If you do not have a Spawn model to replace the character then he simply counts as slain. For Victory points purposes, the character is not counted as slain or below half Wounds unless the Spawn he has turned into is slain or is below half Wounds</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Collar of Khorne</Name>
 					<Points>25</Points>
 					<Dependencies>
@@ -255,7 +255,7 @@
 					<Only>Mortal</Only>
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>The model has Magic Resistance (2)</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Arcane items">
 				<Arcane>
@@ -298,7 +298,7 @@
 				</Arcane>
 			</Group>
 			<Group Name="Enchanted items">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Rod of Corruption</Name>
 					<Points>75</Points>
 					<Only>Mortal</Only>
@@ -307,8 +307,8 @@
 					</Dependencies>
 					<Rule>Bound spell. Power Level 4. One use only. D6 Strength 2 hits at the start of the Magic phase, 2D6 Strength 2 next Magic phase, etc</Rule>
 					<Description>Bound spell. Power Level 4. One use only. Target any enemy unit on the tabletop. This unit becomes infected with Nurgle's Rot and suffers D6 Strength 2 hits, distributed as shooting hits amongst the models in the unit. At the start of the caster's next Magic phase, the unit takes 2D6 Strength 2 hits. At the start of the caster's Magic phase after that it takes 3D6 Strength 2 hits, and so on. Once cast, Nurgle's Rot cannot be stopped</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Bindings of Slaanesh</Name>
 					<Points>50</Points>
 					<Only>Mortal</Only>
@@ -317,8 +317,8 @@
 					</Dependencies>
 					<Rule>Enemy cannot refuse challenge</Rule>
 					<Description>Whenever the bearer issues a challenge, the enemy cannot refuse it and the Chaos player may choose who will accept the challenge. The model forced to accept the challenge may be anywhere within the enemy unit, and even characters that would normally be in a position that would disallow them from accepting challenges (by not being in the fighting rank, for instance) may be forced into accepting the challenge. In the first round an enemy is ensnared, the bearer always strike last, regardless of any other factor, magic item or spell</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Book of Secrets</Name>
 					<Points>40</Points>
 					<Only>Mortal</Only>
@@ -329,16 +329,16 @@
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Description>The bearer is a Level 1 Sorcerer and knows a random spell from the Lore of Fire, Shadow or Death (Chaos player's choice). If the bearer miscasts, roll twice on the Miscast table and apply both results</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Chalice of Chaos</Name>
 					<Points>35</Points>
 					<Only>Mortal</Only>
 					<Group>Daemonic</Group>
 					<Rule>Daemonic</Rule>
 					<Description>The bearer becomes daemonic and follows all of the rules outlined in the Bestiary section. If the bearer is the army's General, he must lead a daemonic army. Remember, a daemonic character cannot join non-daemonic units. At the start of the battle he must take a Toughness test (remember that rolls of 6 always fail). If the test is failed, the bearer reduces his Wounds and Toughness by -1</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Death's Head</Name>
 					<Points>30</Points>
 					<Only>Mortal</Only>
@@ -347,8 +347,8 @@
 					</Dependencies>
 					<Rule>One use only. D6 hits with D3 wounds with no armour by Toughness test for a range of 12"</Rule>
 					<Description>One use only. The model may throw the Death's Head in the Shooting phase. It is treated as a thrown weapon with a range of 12". If the Death's Head hits, the enemy unit takes D6 hits, and affected models must pass a Toughness test or lose D3 wounds, with no armour saves allowed. Units taking any casualties from a Death's Head must take a Panic test</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Sceptre of Domination</Name>
 					<Points>25</Points>
 					<Only>Mortal</Only>
@@ -357,15 +357,15 @@
 					</Dependencies>
 					<Rule>Bound spell Delectable Torture. Power Level 6. One use only.</Rule>
 					<Description>Bound spell. Power Level 6. One use only. The Sceptre of Domination contains the bound Slaanesh spell Delectable Torture</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Helm of Many Eyes</Name>
 					<Points>25</Points>
 					<Only>Mortal</Only>
 					<HitFirst/>
 					<Description>The wearer always strikes first in close combat, even if charged or armed with a weapon that normally strikes last. If any of the wearer's opponents also strike first, revert to normal Initiative. The character is also subject to stupidity (even if immune to psychology) due to the random and conflicting images that confront him</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Mirror of Knowledge</Name>
 					<Points>20</Points>
 					<Only>Mortal</Only>
@@ -374,7 +374,7 @@
 					</Dependencies>
 					<Rule>Opponent must reveal everything that is not apparent about the unit</Rule>
 					<Description>The bearer can pick any enemy unit on the battlefield at the beginning of each of his Magic phases. The opponent must reveal everything that is not apparent about the unit (magic items and their bearers, hidden Assassins and Fanatics, etc)</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Magic banner">
 				<Banner>
@@ -498,7 +498,7 @@
 					<KillingBlow/>
 					<Description>Daemon with an Axe gains the Killing Blow ability</Description>
 				</Weapon>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Armour of Khorne</Name>
 					<Points>25</Points>
 					<Only>Demonic</Only>
@@ -507,7 +507,7 @@
 					</Dependencies>
 					<ArmourTo>4</ArmourTo>
 					<Description>The Daemon has an armour save of 4+ in addition to its Daemonic aura</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Weapon>
 					<Name>Armour of Khorne</Name>
 					<Points>20</Points>
@@ -530,7 +530,7 @@
 					<Rule>The Daemon may re-roll a single D6 once per turn</Rule>
 					<Description>The Daemon may re-roll a single D6 once per turn. The re-roll endtles the player to take a single D6 (including one of the dice rolled as part of a 2D6, 3D6, etc) and roll it again. Any D6 can be re-rolled and can potentially cause Irresistible-Force or avoid a Miscast. Remember that you cannot re-roll a dice more than once</Description>
 				</Weapon>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Spell Destroyer</Name>
 					<Points>50</Points>
 					<Only>Demonic</Only>
@@ -539,7 +539,7 @@
 					</Dependencies>
 					<Rule>May automatically dispel one enemy spell per battle, except if cast with Irresistible Force. In addition roll a D6. On a 4+ enemy Wizard loses knowledge of the spell</Rule>
 					<Description>Once per battle the Daemon may automatically dispel one enemy spell, except one which has just been cast with Irresistible Force. In addition, roll a D6. On a roll of 4+, the enemy Wizard loses knowledge of that spell and may not cast it for the rest of the battle</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Weapon>
 					<Name>Master of Sorcery</Name>
 					<Points>15</Points>
@@ -561,7 +561,7 @@
 				</Weapon>
 			</Group>
 			<Group Name="Nurgle Gifts">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Cloud of Flies</Name>
 					<Points>40</Points>
 					<Only>Demonic</Only>
@@ -570,7 +570,7 @@
 					</Dependencies>
 					<SubOpponentToHit>1</SubOpponentToHit>
 					<Description>Any unit in close combat with one or more models with a Cloud of Flies suffers a -1 modifier on its rolls to hit</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Weapon>
 					<Name>Stream of Corruption</Name>
 					<Points>30</Points>
@@ -593,7 +593,7 @@
 				</Weapon>
 			</Group>
 			<Group Name="Slaanesh Gifts">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Aura of Slaanesh</Name>
 					<Points>30</Points>
 					<Only>Demonic</Only>
@@ -602,8 +602,8 @@
 					</Dependencies>
 					<Rule>Enemy unit in base contact reduces Ld by -1 to minimum Ld value of 2</Rule>
 					<Description>Any enemy unit in base contact with one or more models with the Aura of Slaanesh reduces its Leadership by -1, to a minimum Leadership value of 2</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Soporific Musk</Name>
 					<Points>30</Points>
 					<Only>Demonic</Only>
@@ -612,8 +612,8 @@
 					</Dependencies>
 					<Rule>Any model in base contact halve WS and Initiative (rounding up)</Rule>
 					<Description>Any models in base contact with one or more Daemons with Soporific Musk halve their WS and 1 (rounding up)</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Gaze of Acquiescence</Name>
 					<Points>20</Points>
 					<Only>Demonic</Only>
@@ -622,7 +622,7 @@
 					</Dependencies>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>At the beginning of the Close Combat phase, select one model in base contact with the Daemon. The target must pass a Leadership test or may not make any attacks in that Close Combat phase. Models immune to psychology cannot be affected</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 		</Artefacts>
 		<Heroes>
