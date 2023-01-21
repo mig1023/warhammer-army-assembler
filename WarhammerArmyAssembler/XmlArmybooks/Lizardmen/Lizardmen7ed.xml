@@ -132,14 +132,14 @@
 					<Stupidity/>
 					<Description>Heavy armour. The wearer causes Fear and has +1 Toughness, but becomes subject to Stupidity</Description>
 				</Armour>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>50</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToLeadership>1</AddToLeadership>
 					<Description>Confers +1 to the model's armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
@@ -156,19 +156,19 @@
 				</Shield>
 			</Group>
 			<Group Name="Enchanted items">
-				<AdditionalArmour>
+				<Additional>
 					<Name>The Horn of Kygor</Name>
 					<Points>100</Points>
 					<Fear/>
 					<Rule>Cavalry within 12" are Stubborn</Rule>
 					<Description>Friendly cavalry within 12" are Stubborn. Enemy cavalry Fear the bearer</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Horned One</Name>
 					<Points>35</Points>
 					<Rule>Horned One</Rule>
 					<Description>Cold One. The Horned One has a Movement of 8, an Initiative of 3, and is not subject to Stupidity</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Arcane>
 					<Name>Divine Plaque of Protection</Name>
 					<Only>Slann</Only>
@@ -176,40 +176,40 @@
 					<AddToWard>2</AddToWard>
 					<Description>The Slann's Shield of the Old Ones ward save in increased from 4+ to 2+ against the ranged attacks</Description>
 				</Arcane>
-				<AdditionalArmour>
+				<Additional>
 					<Name>War Drum of Xahutec</Name>
 					<Points>30</Points>
 					<Rule>Marching within 8" of enemy</Rule>
 					<Rule>+1 Leadership to friendly unit attempting to rally</Rule>
 					<Description>The presence of enemy units within 8" does not stop the bearer and any unit he is eith from marching. In addition any friendly unit attemptiong to rally within 12" of the War Drum gains an additional +a Leadership, up to a maximum of 10, so long as the bearer is not fleeing</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Blood Statuette of Spite</Name>
 					<Points>25</Points>
 					<Test Bet="Wound" Context="Round" Repeat="Once">Toughness</Test>
 					<Description>Bounded Spell. Power Level 5. One use only. Once per game, the user may cast the spell bound within the statuette. The spell may be cast on any enemy character. That character must immediately take Toughness test. If this test is failed, then the model loses a Wound with no armour saves allowed. If the model takes a wound, it must immediately take another Toughness test, losing another wound if it fails again. This continues until either the model passes a Toughness test or is slain</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Charm of the Jaguar Warrior</Name>
 					<Only>Infantry</Only>
 					<Points>25</Points>
 					<Rule>Steed of Shadows spell</Rule>
 					<Description>Bound Spell. Power Level 5. The Charm of th Jaguar Warrior contains the bound spell Steed of Shadows, as detailed in the Lore of Shadow in the Warhammer rulebook. The spell may only be cast on the bearer himself</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Cloak of Feathers</Name>
 					<Only>Infantry</Only>
 					<Only>Skink</Only>
 					<Points>25</Points>
 					<Rule>Fly</Rule>
 					<Description>The wearer of the cloack may fly</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Carnosaur Pendant</Name>
 					<Points>20</Points>
 					<Frenzy/>
 					<Description>Once the bearer has inficted a wound, he will become immediately subject to Frenzy. The bearer will never lose its Frenzy, even if it is beaten in combat. See the main rulebook for details of Frenzy</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Arcane>
 					<Name>Curse-Charm of Tepok</Name>
 					<Points>20</Points>
@@ -222,18 +222,18 @@
 					<Rule>Unsaved wounds doubled for nominated target</Rule>
 					<Description>Nominate an enemy character at the start of the battle. All unsaved wounds caused by the bearer on the nominated target are doubled</Description>
 				</Weapon>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Dragonfly of Quicksilver</Name>
 					<Points>10</Points>
 					<Rule>+1 to Scout deploys</Rule>
 					<Description>If both players have models with the Scout ability, the Lizardmen player adds 1 to his dice roll when rolling to see eho deploys their Scouts first</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Venom of the Firefly Frog</Name>
 					<Points>10</Points>
 					<PoisonAttack/>
 					<Description>All mundane weapons used by the bearer are coated with this venom. In addition to the weapons normal rules, all attackes made with them count as Poisoned Attacks and magical. Mundane weapons that already make Poisoned Attacks may re-roll the dice to hit</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Arcane items">
 				<Arcane>
@@ -269,24 +269,24 @@
 				</Arcane>
 			</Group>
 			<Group Name="Talismans">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Aura of Quetzl</Name>
 					<Points>40</Points>
 					<SubOpponentToHit>1</SubOpponentToHit>
 					<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Glyph Necklace</Name>
 					<Points>30</Points>
 					<AddToWard>5</AddToWard>
 					<Description>The character wearing this gains a 5+ ward save</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Amulet of Itza</Name>
 					<Points>30</Points>
 					<WardForFirstWound>2</WardForFirstWound>
 					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered, after Armour saves have boon taken</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Magic banner">
 				<Banner>
