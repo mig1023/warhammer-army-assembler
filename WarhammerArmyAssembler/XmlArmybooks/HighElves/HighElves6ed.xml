@@ -195,13 +195,13 @@
 					<Rule>Scout</Rule>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors)</Description>
 				</Armour>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Helm of Fortune</Name>
 					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
 					<Reroll>ToArmour</Reroll>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Shield>
 					<Name>Dragonscale Shield</Name>
 					<Points>20</Points>
@@ -211,49 +211,49 @@
 				</Shield>
 			</Group>
 			<Group Name="Talismans">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Vambraces of Defence</Name>
 					<Points>55</Points>
 					<AddToWard>4</AddToWard>
 					<Reroll>ToArmour</Reroll>
 					<Description>Gives the wearer a 4+ Ward save. In addition, the wearer may re-roll failed armour saves</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Golden Crown of Atrazar</Name>
 					<Points>40</Points>
 					<FirstWoundDiscount/>
 					<Description>Discount the first wound suffered. One use only</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Loremaster's Cloak</Name>
 					<Points>40</Points>
 					<Rule>2+ Ward save against wounds caused by spells</Rule>
 					<Description>Gives the wearer and the unit he is with a 2+ Ward save against wounds caused by spells. It has no effect against shooting or close combat attacks</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Talisman of Saphery</Name>
 					<Points>35</Points>
 					<Rule>The magical weapons of enemy models will have no special effects whilst they are in base contact</Rule>
 					<Description>The magical weapons of enemy models will have no special effects whilst they are in base contact with the bearer of the talisman. Treat the magic weapon as a normal one of its type, eg, a Sword of Battle would count as a hand weapon, Porko's Pigstikka would count as a spear, etc</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Sacred Incense</Name>
 					<Points>30</Points>
 					<Rule>All shooting at the bearer or the unit he is with suffers a -1 to hit penalty</Rule>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Guardian Phoenix</Name>
 					<Points>25</Points>
 					<AddToWard>5</AddToWard>
 					<Description>Gives the wearer a 5+ Ward save</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Amulet of Fire</Name>
 					<Points>20</Points>
 					<Rule>Magic Resistance (1)</Rule>
 					<Rule>Cannot be harmed by Flaming Attacks</Rule>
 					<Description>Gives the wearer Magic Resistance (1). In addition, the wearer cannot be harmed by fire-based attacks, eg, Skaven Watpfire Throwers, Dwarf Flame Cannons, or fire balls, etc</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Arcane items">
 				<Arcane>
@@ -299,57 +299,57 @@
 				</Arcane>
 			</Group>
 			<Group Name="Enchanted items">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Null Stone</Name>
 					<Points>100</Points>
 					<Rule>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work</Rule>
 					<Description>No Wizard within 6" ot the hearer may cast any spells. No other magic item or rune item within 6" of the hearer will work. Treat them as normal weapons, banners, etc, of the appropriate type. Note that this applies to all friendly wizards and magic items as well as enemy ones</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Healing Potion</Name>
 					<Points>50</Points>
 					<Rule>May immediately restores all wounds lost at the start of any phase in either player's turn, one use only</Rule>
 					<Description>The character or any character in base contact may drink this at the start of any phase in either player's turn. It immediately restores all wounds lost by the character during the battle so far. Obviously, if the character is dead at the start of the phase then he can't drink the potion. One use only</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Radiant Gem of Hoeth</Name>
 					<Points>45</Points>
 					<WizardTo>1</WizardTo>
 					<AddToCast>1</AddToCast>
 					<AddToDispell>1</AddToDispell>
 					<Description>The wearer counts as a Level 1 High Elf Mage. However, the wearer may still cast spells whilst wearing armour. This has no effect on characters who are already Wizards</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Cloak of Beards</Name>
 					<Points>35</Points>
 					<Rule>Dwarfs both Hate and Fear the wearer of the Cloak</Rule>
 					<Rule>Eeach model in base contact with the wearer loses all the runes from one of their runic items</Rule>
 					<Description>Dwarfs both Hate and Fear the wearer of the Cloak. In addition, for the duration of each Close Combat phase, each model in base contact with the wearer loses all the runes from one of their runic items (determined randomly). Treat the item as a normal one of its kind</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Arcane>
 					<Name>Ring of Corin</Name>
 					<Points>35</Points>
 					<Rule>Bound spell, Power level 4, one use only: Vaul's Unmaking spell</Rule>
 					<Description>Bound spell (Power level 4). One use only. The Ring of Corin may cast its Bound spell in the Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Corin contains the Vaul's Unmaking spell</Description>
 				</Arcane>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Ring of Fury</Name>
 					<Points>30</Points>
 					<Rule>Bound spell, Power level 3: contains the Fury of Khaine spell</Rule>
 					<Description>Bound spell (Power level 3). This ring may cast its Bound Spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the ring itself. The Ring of Fury contains the Fury of Khaine spell. After each use, even if it was dispelled, roll a D6. On a roll of a 1 the power of the Ring has been exhausted and it may not be used for the rest of the battle</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Blessed tome</Name>
 					<Points>25</Points>
 					<Rule>All High Elf units within 6" get +1 Leadership</Rule>
 					<Description>The character with the tome recites the stirring words of heroes of old as battle is joined. All High Elf units within 6" of the bearer get +1 Leadership (up to a maximum of 10)</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Amulet of the Purifying Flame</Name>
 					<Points>15</Points>
 					<Rule>Spells that target the character or the unit he is with subtract -3 from their casting roll</Rule>
 					<Description>Spells that target the character or the unit he is with subtract -3 from their casting roll. It has no effect on spells cast with Irresistible Force</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Magic banner">
 				<Banner>
@@ -962,9 +962,9 @@
 					</HandWeapon>
 					<HandWeapon/>
 					<LightArmour/>
-					<AdditionalArmour>
+					<Additional>
 						<Name>Lion cloak</Name>
-					</AdditionalArmour>
+					</Additional>
 				</Equipments>
 				<Options>
 					<Command>
