@@ -198,30 +198,30 @@
 				</Armour>
 			</Group>
 			<Group Name="Talismans">
-				<AdditionalArmour>
+				<Additional>
 					<Name>The Beguiling Gem</Name>
 					<Points>50</Points>
 					<Test Bet="Pass" Context="Round">Leadership</Test>
 					<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take Leadership tests at the beginning of each close combat round. If it is failed, they may not make any attacks that round, and any attacks directed against that specific model (not the unit that model is in) will hit automatically</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Crown of Everlasting Conquest</Name>
 					<Points>50</Points>
 					<Regeneration/>
 					<Description>The bearer gains the Regenerate ability</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>The Black Tongue</Name>
 					<Points>50</Points>
 					<Rule>Once per battle can be used to automatically convert an unsuccessful spellcasting roll into a Miscast</Rule>
 					<Description>One use only. The Black Tongue can be used to automatically convert an unsuccessful spellcasting roll into a Miscast. The owning character then takes a wound that may not be saved by any means</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Blasphemous Amulet</Name>
 					<Points>25</Points>
 					<Test Bet="Wound" Context="Round">Toughness</Test>
 					<Description>At the start of every friendly Magic phase, any enemy models in base contact with the bearer (including monstrous mounts) must pass a Toughness test or lose one wound with no armour saves allowed</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Weapon>
 					<Name>Collar of Khorne</Name>
 					<Points>25</Points>
@@ -229,20 +229,20 @@
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>The model with the Collar of Khorne has Magic Resistance (2) and a 6+ Ward save</Description>
 				</Weapon>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Golden Eye of Tzeentch</Name>
 					<Points>25</Points>
 					<Rule>Ward save of 4+ against all normal and magical missiles</Rule>
 					<Description>The model has a 4+ Ward save against all normal and magical missiles. This does not apply to his mount</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Necrotic Phylactery</Name>
 					<Points>10</Points>
 					<ImmuneToPoison/>
 					<Rule>Immune to the effects of spells from the Lores of Death and Nurgle</Rule>
 					<Rule>Automatically passes all characteristic tests (except Leadership tests)</Rule>
 					<Description>The model carrying the phylactery is immune to Poisoned Attacks, which must roll to Wound as normal. He is also immune to the effects of spells from the Lores of Death and Nurgle. Lastly, the bearer automatically passes all characteristic tests (except Leadership tests)</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Arcane items">
 				<Arcane>
@@ -283,20 +283,20 @@
 				</Arcane>
 			</Group>
 			<Group Name="Enchanted items">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Rod of Torment</Name>
 					<Points>45</Points>
 					<Rule>Bound spell, power level 4: magic missile that has a range of 18" and causes 2D6 Strength 3 hits</Rule>
 					<Description>Bound Spell, power level 3. The Rod of Torment holds a magic missile that has a range of 18" and causes 2D6 Strength 3 hits</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Bloodskull Pendant</Name>
 					<Points>45</Points>
 					<Only>Infantry</Only>
 					<Rule>Instead of making his normal attacks for that round, may choose to inflict a S8 hit on every enemy model in base contact, whith Killing Blow special rule</Rule>
 					<Description>Instead of making his normal attacks for that round, the wielder of the Bloodskull Pendant may choose to inflict a S8 hit on every enemy model in base contact. These hits have the Killing Blow special rule</Description>
-				</AdditionalArmour>
-					<AdditionalArmour>
+				</Additional>
+					<Additional>
 					<Name>Book of Secrets</Name>
 					<Points>25</Points>
 					<Dependencies>
@@ -306,32 +306,32 @@
 					<Rule>Knows a random spell from the Lore of Fire, Shadow or Death (player's choice)</Rule>
 					<Rule>Roll 1D6+1 instead of 2D6 on the Miscast table</Rule>
 					<Description>The bearer knows a random spell from the Lore of Fire, Shadow or Death (player's choice) and generates a single extra power dice, though he does not generate extra dispel dice. If the bearer ever miscasts, roll 1D6+1 instead of 2D6 on the Miscast table</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Helm of Many Eyes</Name>
 					<Points>25</Points>
 					<HitFirst/>
 					<Stupidity/>
 					<Description>The wearer has the Always Strikes First rule. However, due to the random and conflicting images that confront him, the character is subject to Stupidity</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Pendant of Slaanesh</Name>
 					<Points>20</Points>
 					<Rule>For each unsaved wound suffers he gains +1 Attack for the rest of the battle</Rule>
 					<Description>For each unsaved wound the character suffers he gains +1 Attack for the rest of the battle</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Death's Head</Name>
 					<Points>20</Points>
 					<Rule>One use only. Thrown weapon with a range of 12", hit on a 2+, wounds with no armour by Toughness test</Rule>
 					<Description>One use only. The Death's Head is a thrown weapon with a range of 12". The Death's Head always hits on a 2+. Any unit hit by the Death's Head must take D6 Toughness tests, distributed as for shooting. For each failed test the model(s) that failed that test will take a wound with no armour saves allowed</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Favour of the Gods</Name>
 					<Points>5</Points>
 					<Rule>After rolling on the Eye of the Gods table may add or subtract one from his roll, this may not affect the roll of a natural 2.</Rule>
 					<Description>After rolling on the Eye of the Gods table the bearer may add or subtract one from his roll. This may not affect the roll of a natural 2</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Magic banner">
 				<Banner>
