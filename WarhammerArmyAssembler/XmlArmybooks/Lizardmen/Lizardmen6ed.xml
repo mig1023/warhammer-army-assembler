@@ -216,14 +216,14 @@
 				</Weapon>
 			</Group>
 			<Group Name="Magic armour">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>40</Points>
 					<AddToArmour>6</AddToArmour>
 					<AddToLeadership>1</AddToLeadership>
 					<Description>Confers +1 to the model's Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
@@ -240,32 +240,32 @@
 				</Shield>
 			</Group>
 			<Group Name="Enchanted items">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Gleaming Pendant of Chotec</Name>
 					<Points>35</Points>
 					<Rule>For one turn, enemy unit that is in contact with the model using the pendant will strike last in combat, one use only</Rule>
 					<Description>One use only. The pendant may be used at the start of any Lizardmen player's Close Combat phase. For that turn only, any enemy unit that is in contact with the model using the pendant will strike last in combat - even striking after great weapons and Zombies! If an enemy has the ability to always strike first, then on the roll of a 4+ they get to attack first; if they roll a 1-3, then they too will strike last</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Blood Statuette of Spite</Name>
 					<Points>30</Points>
 					<Test Bet="Wound" Context="Round" Repeat="Once">Toughness</Test>
 					<Description>Bounded Spell. Power Level 5. One use only. Once per game, the user may cast the spell bound within the statuette. The spell may be cast on any enemy character. That character must immediately take Toughness test. If this test is failed, then the model loses a Wound with no armour saves allowed. If the model takes a wound, it must immediately take another Toughness test, losing another wound if it fails again. This continues until either the model passes a Toughness test or is slain</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Cloak of Feathers</Name>
 					<Only>Infantry, Skink</Only>
 					<Points>30</Points>
 					<Rule>Fly</Rule>
 					<Description>The wearer of the cloack may fly</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Charm of the Jaguar Warrior</Name>
 					<Only>Infantry</Only>
 					<Points>20</Points>
 					<MovementTo>9</MovementTo>
 					<Description>The model's Movement is increased to 9</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Arcane>
 					<Name>Curse-Charm of Tepok</Name>
 					<Points>20</Points>
@@ -278,18 +278,18 @@
 					<Rule>Unsaved wounds doubled for nominated target</Rule>
 					<Description>Nominate an enemy character at the start of the battle. All unsaved wounds caused by the bearer on the nominated target are doubled</Description>
 				</Weapon>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Dragonfly of Quicksilver</Name>
 					<Points>15</Points>
 					<Rule>+1 to Scout deploys</Rule>
 					<Description>If both players have models with the Scout ability, the Lizardmen player adds 1 to his dice roll when rolling to see eho deploys their Scouts first</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Venom of the Firefly Frog</Name>
 					<Points>15</Points>
 					<PoisonAttack/>
 					<Description>All mundane weapons used by the model with the Venom of the Firefly Frog (both close combat weapons and ranged weapons) are coated with this venom. All attacks made with these weapons count as Poisoned Attacks and are magical</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Arcane items">
 				<Arcane>
@@ -313,24 +313,24 @@
 				</Arcane>
 			</Group>
 			<Group Name="Talismans">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Amulet of Itza</Name>
 					<Points>40</Points>
 					<WardForFirstWound>2</WardForFirstWound>
 					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Aura of Quetzl</Name>
 					<Points>30</Points>
 					<Rule>4+ Ward save against attacks with Strength 5 or more</Rule>
 					<Description>The bearer of this item has a 4+ Ward save against attacks with Strength 5 or more</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Glyph Necklace</Name>
 					<Points>30</Points>
 					<AddToWard>5</AddToWard>
 					<Description>The character wearing this gains a 5+ ward save</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Magic banner">
 				<Banner>
