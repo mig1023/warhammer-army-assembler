@@ -259,13 +259,13 @@
 					<AddToWard>4</AddToWard>
 					<Description>The shield provides a 6+ Armour save which may be combined with other armour as normal. The bearer's Ward save gained from the Blessing of the Lady is increased to 4+ against attacks of any Strength. If the model loses the Blessing, they lose this Ward save as normal</Description>
 				</Shield>
-				<AdditionalArmour>
+				<Additional>
 					<Name>Gromril Great Helm</Name>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
 					<Reroll>ToArmour</Reroll>
 					<Description>Gives a 6+ Armour save and may be worn in addition to normal armour. The wearer may re-roll failed Armour saves</Description>
-				</AdditionalArmour>
+				</Additional>
 				<Armour>
 					<Name>Armour of Agilulf</Name>
 					<Points>25</Points>
@@ -289,65 +289,65 @@
 				</Shield>
 			</Group>
 			<Group Name="Talismans">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Sirienne's Locket</Name>
 					<Points>55</Points>
 					<NoMultiWounds/>
 					<Description>A Knight with Sirienne's Locket can never suffer more than one-wound in any one phase from non-magical attacks - even multiple wound weapons (including war machines) can only cause a single wound. After the first wound in that phase is suffered, all subsequent wounds suffered during that phase are ignored. The bearer can still be run down by pursuing enemies as normal, and may still be affected as normal by Killing Blow</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Token of the Damsel</Name>
 					<Points>35</Points>
 					<WardForFirstWound>2</WardForFirstWound>
 					<Description>Against the first wounding hit suffered, the Knight gains a 2+ Ward save</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Insignia of the Quest</Name>
 					<Points>30</Points>
 					<Only>QuestingVow</Only>
 					<WardForLastWound>3</WardForLastWound>
 					<Description>If the hearer is ever reduced to 1 Wound, then the Knight instantly gains a 3+ Ward save. If the character suffers multiple wounds that would kill him hefore he has gained this Ward save (eg, if he has more than one wound left and is hit by a cannon ball), he will be reduced to 1 Wound, then may attempt his 3+ Ward save to stay alive and nullify any further wounds caused by the same hit</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Braid of Bordeleaux</Name>
 					<Points>25</Points>
 					<Rule>One use only: until the beginning of the next Bretonnian turn, the character's Leadership value is increased by 1</Rule>
 					<Description>One use only. The Braid may be used at the start of any Bretonnian turn. Until the beginning of the next Bretonnian turn, the character's Leadership value is increased by 1. In addition, once the Braid has been used, until the start of the next Bretonnian turn, the model bearing the Braid and any unit he is with can move over marsh, rivers, lakes or any other water features without penalty and will benefit from soft cover while in such terrain</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Dragon's Claw</Name>
 					<Points>25</Points>
 					<AddToWard>5</AddToWard>
 					<Description>The bearer's Ward save gained from the Blessing of the Lady is increased to 5+ against attacks of any Strength. If the model loses the Blessing, then it loses this Ward save as normal. In addition, as long as the bearer has the Blessing, he is immune to lire based attacks (such as Dragon's breath. Warp-fire Throwers and spells from the Lore of Fire)</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Mantle of Damsel Elena</Name>
 					<Points>20</Points>
 					<NoKillingBlow/>
 					<ImmuneToPoison/>
 					<Description>Poisoned attacks do not wound automatically against a character with the Mantle. In addition, the special rules for Killing Blow-have no effect on the character</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Enchanted Items">
-				<AdditionalArmour>
+				<Additional>
 					<Name>Falcon-horn of Fredemund</Name>
 					<Points>45</Points>
 					<Rule>Until the start of the next Bretonnian turn, no enemy unit may fly, one use only</Rule>
 					<Description>One use only. The Horn may he sounded at the start of any Bretonnian turn. Until the start of the next Bretonnian turn, no enemy unit may fly - they are forced to use their ground movement. Note that this may also alter the enemies flee/pursuit distance</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Holy Icon</Name>
 					<Points>40</Points>
 					<Rule>Magic Resistance (3)</Rule>
 					<Description>The Holy Icon gives the character Magic Resistance (3)</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>The Ruby Goblet</Name>
 					<Points>30</Points>
 					<Rule>This magic item will start to take effect at the end of the first phase during which the bearer or his unit suffers an unsaved wound; from that moment on, the bearer (and any unit he is with) cannot be wounded on better than a 3+ from any non-magical source</Rule>
 					<Description>This magic item will start to take effect at the end of the first phase during which the bearer or his unit suffers an unsaved wound. From that moment on, the bearer (and any unit he is with) cannot be wounded on better than a 3+ from any non-magical source</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>The Mane of the Purebreed</Name>
 					<Points>25</Points>
 					<Dependencies>
@@ -355,24 +355,24 @@
 					</Dependencies>
 					<Rule>+1 Strength to the character's Warhorse and those of any unit he is with the first time they charge</Rule>
 					<Description>Character on Warhorse only. The Mane confers +1 Strength to the character's Warhorse and those of any unit he is with the first time they charge</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Antlers of the Great Hunt</Name>
 					<Points>25</Points>
 					<Rule>The Knight (and any unit he is with) may roll an additional dice when pursuing and choose the highest three (two if on foot)</Rule>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Tress of Isoulde</Name>
 					<Points>20</Points>
 					<Rule>Nominate one enemy model at the beginning of any Close Combat phase: the bearer hits that model on a 2+ for that Close Combat round, regardless of other modifiers</Rule>
 					<Description>Nominate one enemy model at the beginning of any Close Combat phase. The bearer hits that model on a 2+ for that Close Combat round, regardless of other modifiers</Description>
-				</AdditionalArmour>
-				<AdditionalArmour>
+				</Additional>
+				<Additional>
 					<Name>Gauntlet of the Duel</Name>
 					<Points>10</Points>
 					<Rule>Any challenge issued cannot be refused</Rule>
 					<Description>Any challenge issued by the bearer of the Gauntlet of the Duel cannot be refused</Description>
-				</AdditionalArmour>
+				</Additional>
 			</Group>
 			<Group Name="Arcane Items">
 				<Arcane>
