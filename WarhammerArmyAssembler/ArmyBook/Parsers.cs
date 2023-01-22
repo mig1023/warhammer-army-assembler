@@ -88,9 +88,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Countable countable = new Countable
             {
-                Min = IntParse(xmlNode["Min"]),
-                Max = IntParse(xmlNode["Max"]),
-                Value = IntParse(xmlNode["Value"]),
+                Min = IntParse(xmlNode.Attributes["Min"]),
+                Max = IntParse(xmlNode.Attributes["Max"]),
+                Value = IntParse(xmlNode.Attributes["Value"]),
                 Nullable = BoolParse(xmlNode["Nullable"]),
                 ExportToUnitSize = BoolParse(xmlNode["ExportToUnitSize"]),
                 ExportToWizardLevel = BoolParse(xmlNode["ExportToWizardLevel"]),
