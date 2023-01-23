@@ -739,25 +739,19 @@
 						<Name>Lesser Locus of Abjuration</Name>
 						<Points>30</Points>
 						<Rule>+1 Magic Resistance</Rule>
-						<Dependencies>
-							<Off>Greater Locus of Fury, Exalted Locus of Wrath</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Option>
 						<Name>Greater Locus of Fury</Name>
 						<Points>60</Points>
 						<Frenzy/>
-						<Dependencies>
-							<Off>Lesser Locus of Abjuration, Exalted Locus of Wrath</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Wrath</Name>
 						<Points>75</Points>
 						<Hate/>
-						<Dependencies>
-							<Off>Lesser Locus of Abjuration, Greater Locus of Fury</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Mount Name="Juggernaut" Points="50"/>
 					<Mount Name="Blood Throne" Points="160"/>
