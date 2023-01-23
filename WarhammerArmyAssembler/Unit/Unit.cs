@@ -1239,15 +1239,15 @@ namespace WarhammerArmyAssembler
             if (groupName.Length <= 0)
                 return false;
 
-            return Options.Where(x => (x.ServiceDependencyGroup == groupName) && x.IsActual()).FirstOrDefault() != null;
+            return Options.Where(x => (x.DependencyGroup == groupName) && x.IsActual()).FirstOrDefault() != null;
         }
             
 
         public bool IsAnotherOptionIsIncompatible(Option option)
         {
-            bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.ServiceDependencies, defaultResult: true);
-            bool noWhenNecessaryYes = IsAnotherOptionRealised(option.ServiceInverseDependencies, defaultResult: false);
-            bool groopAlreadyUsed = IsGroupAlreadyUsed(option.ServiceDependencyGroup);
+            bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.Dependencies, defaultResult: true);
+            bool noWhenNecessaryYes = IsAnotherOptionRealised(option.InverseDependencies, defaultResult: false);
+            bool groopAlreadyUsed = IsGroupAlreadyUsed(option.DependencyGroup);
 
             return (yesWhenNecessaryNo || noWhenNecessaryYes || groopAlreadyUsed);
         }

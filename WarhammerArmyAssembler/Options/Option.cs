@@ -18,9 +18,9 @@ namespace WarhammerArmyAssembler
         public OptionType Type { get; set; }
         public string Only { get; set; }
         public OptionCategory Category { get; set; }
-        public string[] ServiceDependencies { get; set; }
-        public string[] ServiceInverseDependencies { get; set; }
-        public string ServiceDependencyGroup { get; set; }
+        public string[] Dependencies { get; set; }
+        public string[] InverseDependencies { get; set; }
+        public string DependencyGroup { get; set; }
         public bool OnlyOneInArmy { get; set; }
         public bool OnlyOneSuchUnits { get; set; }
         public bool Realised { get; set; }
@@ -190,9 +190,9 @@ namespace WarhammerArmyAssembler
             OnlyOneInArmy = this.OnlyOneInArmy,
             OnlyOneSuchUnits = this.OnlyOneSuchUnits,
             Only = this.Only,
-            ServiceDependencies = this.ServiceDependencies,
-            ServiceInverseDependencies = this.ServiceInverseDependencies,
-            ServiceDependencyGroup = this.ServiceDependencyGroup,
+            Dependencies = this.Dependencies,
+            InverseDependencies = this.InverseDependencies,
+            DependencyGroup = this.DependencyGroup,
             Group = this.Group,
             AutoHit = this.AutoHit,
             AutoWound = this.AutoWound,
