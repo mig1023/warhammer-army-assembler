@@ -609,6 +609,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Only = StringParse(xmlNode["Only"]),
                 ServiceDependencies = AllStringParse(xmlNode["Dependencies"], "On", comma: true),
                 ServiceInverseDependencies = AllStringParse(xmlNode["Dependencies"], "Off", comma: true),
+                ServiceDependencyGroup = StringParse(xmlNode["Dependency"]?.Attributes["Group"]),
                 Realised = BoolParse(xmlNode["RealisedByDefault"]),
                 Countable = CountableParse(xmlNode["Countable"]),
                 ImpactHitByFront = BoolParse(xmlNode["ImpactHitByFront"]) ? 1 : 0,

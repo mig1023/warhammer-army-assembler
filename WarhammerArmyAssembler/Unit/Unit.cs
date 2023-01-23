@@ -1224,7 +1224,7 @@ namespace WarhammerArmyAssembler
         }
 
         public bool IsOptionRealised(string optionName) =>
-            Options.Where(x => (x.Name.ToUpper() == optionName.ToUpper()) && (x.Realised || x.IsMagicItem() || x.IsPowers())).FirstOrDefault() != null;
+            Options.Where(x => (x.Name.ToUpper() == optionName.ToUpper()) && x.IsActual()).FirstOrDefault() != null;
  
         public bool IsAnotherOptionRealised(string[] optionNames, bool defaultResult)
         {
@@ -1234,12 +1234,22 @@ namespace WarhammerArmyAssembler
             return optionNames.Where(x => IsOptionRealised(x)).FirstOrDefault() != null;
         }
 
+        public bool IsGroupAlreadyUsed(string groupName)
+        {
+            if (groupName.Length <= 0)
+                return false;
+
+            return Options.Where(x => (x.ServiceDependencyGroup == groupName) && x.IsActual()).FirstOrDefault() != null;
+        }
+            
+
         public bool IsAnotherOptionIsIncompatible(Option option)
         {
             bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.ServiceDependencies, defaultResult: true);
             bool noWhenNecessaryYes = IsAnotherOptionRealised(option.ServiceInverseDependencies, defaultResult: false);
+            bool groopAlreadyUsed = IsGroupAlreadyUsed(option.ServiceDependencyGroup);
 
-            return (yesWhenNecessaryNo || noWhenNecessaryYes);
+            return (yesWhenNecessaryNo || noWhenNecessaryYes || groopAlreadyUsed);
         }
 
         public bool IsMaxSlannOption() => Options.Where(x => x.IsSlannOption() && x.Realised).Count() >= 4;

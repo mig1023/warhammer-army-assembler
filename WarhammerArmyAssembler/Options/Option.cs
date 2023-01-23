@@ -20,6 +20,7 @@ namespace WarhammerArmyAssembler
         public OptionCategory Category { get; set; }
         public string[] ServiceDependencies { get; set; }
         public string[] ServiceInverseDependencies { get; set; }
+        public string ServiceDependencyGroup { get; set; }
         public bool OnlyOneInArmy { get; set; }
         public bool OnlyOneSuchUnits { get; set; }
         public bool Realised { get; set; }
@@ -191,6 +192,7 @@ namespace WarhammerArmyAssembler
             Only = this.Only,
             ServiceDependencies = this.ServiceDependencies,
             ServiceInverseDependencies = this.ServiceInverseDependencies,
+            ServiceDependencyGroup = this.ServiceDependencyGroup,
             Group = this.Group,
             AutoHit = this.AutoHit,
             AutoWound = this.AutoWound,
