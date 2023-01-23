@@ -781,25 +781,19 @@
 						<Name>Lesser Locus of Transmogrification</Name>
 						<Points>25</Points>
 						<Rule>When a model is slain, place D3+1 Blue Horror</Rule>
-						<Dependencies>
-							<Off>Greater Locus of Change, Exalted Locus of Conjuration</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Option>
 						<Name>Greater Locus of Change</Name>
 						<Points>35</Points>
 						<Rule>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</Rule>
-						<Dependencies>
-							<Off>Lesser Locus of Transmogrification, Exalted Locus of Conjuration</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Conjuration</Name>
 						<Points>50</Points>
 						<Rule>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</Rule>
-						<Dependencies>
-							<Off>Lesser Locus of Transmogrification, Greater Locus of Chang</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Mount Name="Disc of Tzeentch" Points="20"/>
 					<Mount Name="Burning Chariot" Points="60"/>
