@@ -868,25 +868,19 @@
 						<Name>Lesser Locus of Grace</Name>
 						<Points>5</Points>
 						<Rule>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</Rule>
-						<Dependencies>
-							<Off>Greater Locus of Swiftness, Exalted Locus of Beguilement</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Option>
 						<Name>Greater Locus of Swiftness</Name>
 						<Points>50</Points>
 						<Rule>This model, and all models in her unit, have the Always Strikes First special rule</Rule>
-						<Dependencies>
-							<Off>Lesser Locus of Grace, Exalted Locus of Beguilement</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Beguilement</Name>
 						<Points>60</Points>
 						<Rule>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</Rule>
-						<Dependencies>
-							<Off>Lesser Locus of Grace, Greater Locus of Swiftness</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Mount Name="Steed of Slaanesh" Points="25"/>
 					<Mount Name="Seeker Chariot" Points="85"/>
