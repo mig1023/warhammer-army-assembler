@@ -95,15 +95,17 @@ namespace WarhammerArmyAssembler.ArmyBook
                 ExportToUnitSize = BoolParse(xmlNode["ExportToUnitSize"]),
                 ExportToWizardLevel = BoolParse(xmlNode["ExportToWizardLevel"]),
             };
-            
-            if (xmlNode["MaxDependency"] != null)
-            {
-                if (xmlNode["MaxDependency"].Attributes["Dependency"] != null)
-                    countable.Dependency = xmlNode["MaxDependency"].Attributes["Dependency"].InnerText;
 
-                if (xmlNode["MaxDependency"].Attributes["Ratio"] != null)
+            XmlNode max = xmlNode["MaxDependency"];
+
+            if (max != null)
+            {
+                if (max.Attributes["Dependency"] != null)
+                    countable.Dependency = max.Attributes["Dependency"].InnerText;
+
+                if (max.Attributes["Ratio"] != null)
                 {
-                    bool success = Double.TryParse(xmlNode["MaxDependency"].Attributes["Ratio"].InnerText, out double value);
+                    bool success = Double.TryParse(max.Attributes["Ratio"].InnerText, out double value);
                     countable.Ratio = (success ? value : 0);
                 }
             }
