@@ -830,25 +830,19 @@
 						<Name>Lesser Locus of Virulence</Name>
 						<Points>40</Points>
 						<Rule>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</Rule>
-						<Dependencies>
-							<Off>Greater Locus of Fecundity, Exalted Locus of Contagion</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Option>
 						<Name>Greater Locus of Fecundity</Name>
 						<Points>45</Points>
 						<Regeneration/>
-						<Dependencies>
-							<Off>Lesser Locus of Virulence, Exalted Locus of Contagion</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Contagion</Name>
 						<Points>50</Points>
 						<Rule>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</Rule>
-						<Dependencies>
-							<Off>Lesser Locus of Virulence, Greater Locus of Fecundity</Off>
-						</Dependencies>
+						<Dependency Group="Gifts"/>
 					</Option>
 					<Mount Name="Palanquin" Points="50"/>
 					<BattleStandardBearer Points="25"/>
