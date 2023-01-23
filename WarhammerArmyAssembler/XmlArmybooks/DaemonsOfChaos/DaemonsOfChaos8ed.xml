@@ -1270,33 +1270,25 @@
 						<Name>Daemons of Tzeentch</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Daemons of Slaanesh, Daemons of Khorne, Daemons of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Daemons"/>
 					</Option>
 					<Option>
 						<Name>Daemons of Slaanesh</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Daemons of Tzeentch, Daemons of Khorne, Daemons of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Daemons"/>
 					</Option>
 					<Option>
 						<Name>Daemons of Khorne</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Daemons of Tzeentch, Daemons of Slaanesh, Daemons of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Daemons"/>
 					</Option>
 					<Option>
 						<Name>Daemons of Nurgle</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Daemons of Tzeentch, Daemons of Slaanesh, Daemons of Khorne</Off>
-						</Dependencies>
+						<Dependency Group="Daemons"/>
 					</Option>
 				</Options>
 			</Special>
