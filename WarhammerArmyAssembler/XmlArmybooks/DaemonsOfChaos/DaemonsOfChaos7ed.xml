@@ -182,30 +182,22 @@
 					<Option>
 						<Name>Dedicate to Tzeentch</Name>
 						<Points>35</Points>
-						<Dependencies>
-							<Off>Dedicate to Slaanesh, Dedicate to Khorne, Dedicate to Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Dedicate"/>
 					</Option>
 					<Option>
 						<Name>Dedicate to Slaanesh</Name>
 						<Points>35</Points>
-						<Dependencies>
-							<Off>Dedicate to Tzeentch, Dedicate to Khorne, Dedicate to Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Dedicate"/>
 					</Option>
 					<Option>
 						<Name>Dedicate to Khorne</Name>
 						<Points>35</Points>
-						<Dependencies>
-							<Off>Dedicate to Tzeentch, Dedicate to Slaanesh, Dedicate to Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Dedicate"/>
 					</Option>
 					<Option>
 						<Name>Dedicate to Nurgle</Name>
 						<Points>35</Points>
-						<Dependencies>
-							<Off>Dedicate to Tzeentch, Dedicate to Slaanesh, Dedicate to Khorne</Off>
-						</Dependencies>
+						<Dependency Group="Dedicate"/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 1</Name>
