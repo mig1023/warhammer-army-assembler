@@ -465,10 +465,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="15" Dependencies="Additional weapon"/>
-					<AdditionalWeapon Points="8" Dependencies="Great weapon"/>
-					<LightArmour Points="6" Dependencies="Heavy armour"/>
-					<HeavyArmour Points="12" Dependencies="Light armour"/>
+					<GreatWeapon Points="15" Dependency="Weapon"/>
+					<AdditionalWeapon Points="8" Dependency="Weapon"/>
+					<LightArmour Points="6" Dependency="Weapon"/>
+					<HeavyArmour Points="12" Dependency="Weapon"/>
 					<Shield Points="6"/>
 				</Options>
 				<Equipments>
