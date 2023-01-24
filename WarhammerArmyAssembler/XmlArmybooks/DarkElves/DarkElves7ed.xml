@@ -1178,17 +1178,13 @@
 					<Command>
 						<Champion>
 							<Name>Draich-master</Name>
-							<Dependencies>
-								<Off>Tullaris</Off>
-							</Dependencies>
+							<Dependency Group="Master"/>
 							<Command/>
 							<Points>12</Points>
 						</Champion>
 						<Champion>
 							<Name>Tullaris</Name>
-							<Dependencies>
-								<Off>Draich-master</Off>
-							</Dependencies>
+							<Dependency Group="Master"/>
 							<OnlyOneInArmy/>
 							<PersonifiedCommander/>
 							<Command/>
