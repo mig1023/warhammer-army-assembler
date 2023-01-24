@@ -795,33 +795,25 @@
 				<Options>
 					<Option>
 						<Name>Beast of Nurgle</Name>
-						<Dependencies>
-							<Off>Fiend of Slaanesh, Bloodbeast of Khorne, Firewyrm of Tzeentch</Off>
-						</Dependencies>
+						<Dependency Group="Chosen"/>
 						<PoisonAttack/>
 						<Points>15</Points>
 					</Option>
 					<Option>
 						<Name>Fiend of Slaanesh</Name>
-						<Dependencies>
-							<Off>Beast of Nurgle, Bloodbeast of Khorne, Firewyrm of Tzeentch</Off>
-						</Dependencies>
+						<Dependency Group="Chosen"/>
 						<Rule>Movement 3D6</Rule>
 						<Points>15</Points>
 					</Option>
 					<Option>
 						<Name>Bloodbeast of Khorne</Name>
-						<Dependencies>
-							<Off>Beast of Nurgle, Fiend of Slaanesh, Firewyrm of Tzeentch</Off>
-						</Dependencies>
+						<Dependency Group="Chosen"/>
 						<AddToStrength>1</AddToStrength>
 						<Points>15</Points>
 					</Option>
 					<Option>
 						<Name>Firewyrm of Tzeentch</Name>
-						<Dependencies>
-							<Off>Beast of Nurgle, Fiend of Slaanesh, Bloodbeast of Khorne</Off>
-						</Dependencies>
+						<Dependency Group="Chosen"/>
 						<Rule>Strength 3 breath weapon</Rule>
 						<Points>15</Points>
 					</Option>
