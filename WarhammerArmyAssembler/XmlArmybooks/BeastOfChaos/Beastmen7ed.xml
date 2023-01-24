@@ -732,17 +732,13 @@
 					<Spear PointsPerModel="1"/>
 					<Option>
 						<Name>Halfhorn</Name>
-						<Dependencies>
-							<Off>Ungrol Four-Horn</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Command/>
 						<Points>6</Points>
 					</Option>
 					<Option>
 						<Name>Ungrol Four-Horn</Name>
-						<Dependencies>
-							<Off>Halfhorn</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Command/>
 						<OnlyOneInArmy/>
 						<Points>75</Points>
