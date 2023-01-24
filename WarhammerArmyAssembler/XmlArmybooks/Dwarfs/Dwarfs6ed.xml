@@ -764,9 +764,9 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="4"/>
-					<LightArmour Points="2" Dependencies="Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour, Gromril armour"/>
-					<GromrilArmour Points="8" Dependencies="Light armour, Heavy armour"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
+					<GromrilArmour Points="8" Dependency="Armour"/>
 					<Shield Points="2"/>
 				</Options>
 			</Hero>
