@@ -437,10 +437,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="12" Dependencies="Additional weapon"/>
-					<AdditionalWeapon Points="8" Dependencies="Great weapon"/>
-					<LightArmour Points="3" Dependencies="Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour"/>
+					<GreatWeapon Points="12" Dependency="Weapon"/>
+					<AdditionalWeapon Points="8" Dependency="Weapon"/>
+					<LightArmour Points="3" Dependency="Weapon"/>
+					<HeavyArmour Points="4" Dependency="Weapon"/>
 					<Shield Points="3"/>
 					<Mount Name="Tuskgor Chariot" Points="80"/>
 					<Mount Name="Razorgor Chariot" Points="145"/>
