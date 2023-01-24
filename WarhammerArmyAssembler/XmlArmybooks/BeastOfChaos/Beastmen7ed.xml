@@ -703,8 +703,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Shield PointsPerModel="1" Dependencies="Additional weapon"/>
-					<AdditionalWeapon PointsPerModel="1" Dependencies="Shield"/>
+					<Shield PointsPerModel="1" Dependency="Weapon"/>
+					<AdditionalWeapon PointsPerModel="1" Dependency="Weapon"/>
 					<Command>
 						<Champion Points="10" Name="Foe-render"/>
 						<Musician Points="5"/>
