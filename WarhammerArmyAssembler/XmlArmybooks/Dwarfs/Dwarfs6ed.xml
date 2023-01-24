@@ -700,9 +700,9 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="6"/>
-					<LightArmour Points="3" Dependencies="Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="6" Dependencies="Light armour, Gromril armour"/>
-					<GromrilArmour Points="12" Dependencies="Light armour, Heavy armour"/>
+					<LightArmour Points="3" Dependency="Armour"/>
+					<HeavyArmour Points="6" Dependency="Armour"/>
+					<GromrilArmour Points="12" Dependency="Armour"/>
 					<Shield Points="3"/>
 					<Option>
 						<Name>Anvil of Doom</Name>
