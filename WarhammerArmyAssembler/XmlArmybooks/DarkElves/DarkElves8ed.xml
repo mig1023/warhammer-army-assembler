@@ -694,27 +694,21 @@
 					<Option>
 						<Name>Cry of War</Name>
 						<Points>15</Points>
-						<Dependencies>
-							<Off>Witchbrew, Rune of Khaine</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Fear/>
 						<Rule>All Fear tests taken by enemy units in base contact with this model must be taken with a -3 penalty to Leadership</Rule>
 					</Option>
 					<Option>
 						<Name>Witchbrew</Name>
 						<Points>30</Points>
-						<Dependencies>
-							<Off>Cry of War, Rune of Khaine</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Frenzy/>
 						<Rule>All models in the same unit, have the Frenzy special rule. If they already have the Frenzy special rule, that Frenzy grants +2 Attacks instead of just +1, but the unit suffers a -3 penalty to Leadership when testing not to declare a charge</Rule>
 					</Option>
 					<Option>
 						<Name>Rune of Khaine</Name>
 						<Points>40</Points>
-						<Dependencies>
-							<Off>Cry of War, Witchbrew</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Rule>+D3 Attacks (roll each round of combat, immediately before the model attacks)</Rule>
 					</Option>
 					<Mount Name="Cauldron of Blood" Points="190"/>
