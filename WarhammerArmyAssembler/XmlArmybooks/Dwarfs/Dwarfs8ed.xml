@@ -826,9 +826,9 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="6" Dependencies="Dwarf crossbow, Dwarf handgun"/>
-					<DwarfCrossbow Points="12" Dependencies="Great weapon, Dwarf handgun"/>
-					<DwarfHandgun Points="12" Dependencies="Great weapon, Dwarf crossbow"/>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
+					<DwarfCrossbow Points="12" Dependency="Weapon"/>
+					<DwarfHandgun Points="12" Dependency="Weapon"/>
 					<DwarfPistol Points="6"/>
 					<Shield Points="3"/>
 					<Option>
@@ -837,16 +837,12 @@
 						<AddToArmour>5</AddToArmour>
 						<AddToWounds>2</AddToWounds>
 						<Mount/>
-						<Dependencies>
-							<Off>Oath Stone</Off>
-						</Dependencies>
+						<Dependency Group="Mount"/>
 					</Option>
 					<Option>
 						<Name>Oath Stone</Name>
 						<Points>25</Points>
-						<Dependencies>
-							<Off>Shieldbearers</Off>
-						</Dependencies>
+						<Dependency Group="Mount"/>
 					</Option>
 				</Options>
 				<Equipments>
