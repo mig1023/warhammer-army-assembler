@@ -740,13 +740,13 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Pistol"/>
-					<Pistol Points="7" Dependencies="Great weapon"/>
-					<Crossbow Points="10" Dependencies="Dwarf handgun"/>
-					<DwarfHandgun Points="14" Dependencies="Crossbow"/>
-					<LightArmour Points="2" Dependencies="Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour, Gromril armour"/>
-					<GromrilArmour Points="8" Dependencies="Light armour, Heavy armour"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<Pistol Points="7" Dependency="Weapon"/>
+					<Crossbow Points="10" Dependency="Range"/>
+					<DwarfHandgun Points="14" Dependency="Range"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
+					<GromrilArmour Points="8" Dependency="Armour"/>
 					<Shield Points="2"/>
 				</Options>
 			</Hero>
