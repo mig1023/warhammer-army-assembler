@@ -418,14 +418,12 @@
 						<Name>Braystaff</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>8</Points>
 					</Option>
-					<AdditionalWeapon PointsPerModel="6" Dependencies="Braystaff"/>
-					<MarkOfNurgle Points="50" Dependencies="Mark of Nurgle"/>				
-					<MarkOfSlaanesh Points="25" Dependencies="Mark of Slaanesh"/>
+					<AdditionalWeapon PointsPerModel="6" Dependency="Weapon"/>
+					<MarkOfNurgle Points="50" Dependency="Mark"/>				
+					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 					<Mount Name="Tuskgor Chariot" Points="85"/>
 				</Options>
 				<Equipments>
@@ -445,15 +443,15 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Additional weapon"/>
-					<AdditionalWeapon Points="4" Dependencies="Great weapon"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
 					<Shield Points="2"/>
-					<LightArmour Points="2" Dependencies="Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour"/>			
-					<MarkOfKhorne Points="40" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgle Points="50" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
-					<MarkOfTzLtl Points="70" Dependencies="Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
-					<MarkOfSlaanesh Points="25" Dependencies="Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>			
+					<MarkOfKhorne Points="40" Dependency="Mark"/>
+					<MarkOfNurgle Points="50" Dependency="Mark"/>
+					<MarkOfTzLtl Points="70" Dependency="Mark"/>
+					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
