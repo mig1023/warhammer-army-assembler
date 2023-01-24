@@ -690,18 +690,18 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon PointsPerModel="4" Dependencies="Great weapon"/>
-					<GreatWeapon PointsPerModel="6" Dependencies="Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="4" Dependency="Weapon"/>
+					<GreatWeapon PointsPerModel="6" Dependency="Weapon"/>
 					<LightArmour PointsPerModel="3"/>
 					<Command>
 						<StandardBearer Points="20"/>
 						<Champion Points="20" Name="Bloodkine"/>
 					</Command>					
-					<MarkOfChUndFUnits Dependencies="Mark of Khorne, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfTzFUnits Points="20" Dependencies="Mark of Chaos Undivided, Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
-					<MarkOfKhFUnits Points="45" Dependencies="Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNuFUnits Points="50" Dependencies="Mark of Chaos Undivided, Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>				
-					<MarkOfSlFUnits Points="20" Dependencies="Mark of Chaos Undivided, Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfChUndFUnits Dependency="Mark"/>
+					<MarkOfTzFUnits Points="20" Dependency="Mark"/>
+					<MarkOfKhFUnits Points="45" Dependency="Mark"/>
+					<MarkOfNuFUnits Points="50" Dependency="Mark"/>				
+					<MarkOfSlFUnits Points="20" Dependency="Mark"/>
 				</Options>
 			</Special>
 			<Rare>
