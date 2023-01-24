@@ -439,8 +439,8 @@
 				<Options>
 					<GreatWeapon Points="12" Dependency="Weapon"/>
 					<AdditionalWeapon Points="8" Dependency="Weapon"/>
-					<LightArmour Points="3" Dependency="Weapon"/>
-					<HeavyArmour Points="4" Dependency="Weapon"/>
+					<LightArmour Points="3" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Tuskgor Chariot" Points="80"/>
 					<Mount Name="Razorgor Chariot" Points="145"/>
@@ -467,8 +467,8 @@
 				<Options>
 					<GreatWeapon Points="15" Dependency="Weapon"/>
 					<AdditionalWeapon Points="8" Dependency="Weapon"/>
-					<LightArmour Points="6" Dependency="Weapon"/>
-					<HeavyArmour Points="12" Dependency="Weapon"/>
+					<LightArmour Points="6" Dependency="Armour"/>
+					<HeavyArmour Points="12" Dependency="Armour"/>
 					<Shield Points="6"/>
 				</Options>
 				<Equipments>
@@ -577,10 +577,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Additional weapon"/>
-					<AdditionalWeapon Points="4" Dependencies="Great weapon"/>
-					<LightArmour Points="2" Dependencies="Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="2"/>
 					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Spear, Shield"/>
 					<Mount Name="Tuskgor Chariot" Points="80"/>
@@ -605,10 +605,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="10" Dependencies="Additional weapon"/>
-					<AdditionalWeapon Points="5" Dependencies="Great weapon"/>
-					<LightArmour Points="4" Dependencies="Heavy armour"/>
-					<HeavyArmour Points="8" Dependencies="Light armour"/>
+					<GreatWeapon Points="10" Dependency="Weapon"/>
+					<AdditionalWeapon Points="5" Dependency="Weapon"/>
+					<LightArmour Points="4" Dependency="Armour"/>
+					<HeavyArmour Points="8" Dependency="Armour"/>
 					<Shield Points="4"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
