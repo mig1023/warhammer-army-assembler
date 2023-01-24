@@ -784,19 +784,17 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Pistol, Brace of pistols"/>
-					<Pistol Points="7" Dependencies="Great weapon, Brace of pistols"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<Pistol Points="7" Dependency="Weapon"/>
 					<Option>
 						<Name>Brace of pistols</Name>
 						<Points>14</Points>
-						<Dependencies>
-							<Off>Pistol, Great weapon</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<DwarfHandgun Points="14"/>
-					<LightArmour Points="2" Dependencies="Heavy armour, Gromril armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour, Gromril armour"/>
-					<GromrilArmour Points="8" Dependencies="Light armour, Heavy armour"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
+					<GromrilArmour Points="8" Dependency="Armour"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
