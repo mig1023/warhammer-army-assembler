@@ -1193,13 +1193,15 @@ namespace WarhammerArmyAssembler
             if ((only == "Infantry") && ((mountAlreadyOn > 0) || (mountTypeAlreadyFixed == "Mount")))
                 return false;
 
-            if (IsAnotherOptionIsIncompatible(option))
+            if (IsAnotherOptionIsIncompatible(option, postCheck))
                 return false;
 
             if (option.IsSlannOption() && !option.Realised && IsMaxSlannOption())
                 return false;
 
-            double alreadyRealised = Options.Where(x => x.MagicItemsPoints && x.Realised).Sum(x => x.Points) + (postCheck ? 0 : option.Points);
+            double alreadyRealised = Options
+                .Where(x => x.MagicItemsPoints && x.Realised)
+                .Sum(x => x.Points) + (postCheck ? 0 : option.Points);
 
             if (option.MagicItemsPoints && !option.Realised && (alreadyRealised > MagicItemsPoints))
                 return false;
@@ -1234,20 +1236,31 @@ namespace WarhammerArmyAssembler
             return optionNames.Where(x => IsOptionRealised(x)).FirstOrDefault() != null;
         }
 
-        public bool IsGroupAlreadyUsed(string groupName)
+        private bool IsAnyInGroupUsed(string groupName, Option currentOption)
+        {
+            IEnumerable<Option> options = Options.Where(x => (x.DependencyGroup == groupName) && x.IsActual());
+
+            if (currentOption == null)
+                return options.FirstOrDefault() != null;
+
+            IEnumerable<Option> byName = options.Where(y => y.Name != currentOption.Name);
+            return byName.FirstOrDefault() != null;
+
+        }
+
+        public bool IsGroupAlreadyUsed(string groupName, Option currentOption, bool postCheck)
         {
             if (groupName.Length <= 0)
                 return false;
 
-            return Options.Where(x => (x.DependencyGroup == groupName) && x.IsActual()).FirstOrDefault() != null;
+            return IsAnyInGroupUsed(groupName, postCheck ? null : currentOption);
         }
             
-
-        public bool IsAnotherOptionIsIncompatible(Option option)
+        public bool IsAnotherOptionIsIncompatible(Option option, bool postCheck = false)
         {
             bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.Dependencies, defaultResult: true);
             bool noWhenNecessaryYes = IsAnotherOptionRealised(option.InverseDependencies, defaultResult: false);
-            bool groopAlreadyUsed = IsGroupAlreadyUsed(option.DependencyGroup);
+            bool groopAlreadyUsed = postCheck ? false : IsGroupAlreadyUsed(option.DependencyGroup, option, postCheck);
 
             return (yesWhenNecessaryNo || noWhenNecessaryYes || groopAlreadyUsed);
         }

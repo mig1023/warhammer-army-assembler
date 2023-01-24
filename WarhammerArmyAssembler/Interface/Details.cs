@@ -464,7 +464,7 @@ namespace WarhammerArmyAssembler.Interface
             if (!mustBeEnabled)
                 optionIsEnabled = false;
 
-            if ((unit != null) && unit.IsAnotherOptionIsIncompatible(option))
+            if ((unit != null) && unit.IsAnotherOptionIsIncompatible(option, postCheck: true))
                 optionIsEnabled = false;
 
             AddLabel(caption, margins, height, ref lastColumnMaxWidth, option.Realised, option.Points,

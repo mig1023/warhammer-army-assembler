@@ -572,6 +572,12 @@ namespace WarhammerArmyAssembler.ArmyBook
                     AddToOption(xmlDocument, ref xmlNode, "PerModel", "True");
             }
 
+            if (xmlNode.Attributes["Dependency"] != null)
+            {
+                string dependency = String.Format("Group:{0}", xmlNode.Attributes["Dependency"].InnerText);
+                AddToOption(xmlDocument, ref xmlNode, "Dependency", attributes: dependency);
+            }
+
             if (xmlNode.Attributes["Dependencies"] != null)
                 AddDependencies(xmlDocument, ref xmlNode, xmlNode.Attributes["Dependencies"].InnerText);
 
