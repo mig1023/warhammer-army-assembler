@@ -567,10 +567,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<DaemonOfTzeentch Points="20" Dependencies="Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle"/>
-					<DaemonOfSlaanesh Dependencies="Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle"/>
-					<DaemonOfKhorne Points="5" Dependencies="Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle"/>
-					<DaemonOfNurgle Points="5" Dependencies="Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne"/>
+					<DaemonOfTzeentch Points="20" Dependency="Daemons"/>
+					<DaemonOfSlaanesh Dependency="Daemons"/>
+					<DaemonOfKhorne Points="5" Dependency="Daemons"/>
+					<DaemonOfNurgle Points="5" Dependency="Daemons"/>
 					<Option>
 						<Name>Wizard Level</Name>
 						<Points>35</Points>
