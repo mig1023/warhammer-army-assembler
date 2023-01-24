@@ -1274,18 +1274,14 @@
 					<Command>
 						<Champion>
 							<Name>Tower Master</Name>
-							<Dependencies>
-								<Off>Kouran</Off>
-							</Dependencies>
+							<Dependency Group="Master"/>
 							<MagicItems Points="25" Type="Hero"/>
 							<Command/>
 							<Points>14</Points>
 						</Champion>
 						<Champion>
 							<Name>Kouran</Name>
-							<Dependencies>
-								<Off>Tower Master</Off>
-							</Dependencies>
+							<Dependency Group="Master"/>
 							<OnlyOneInArmy/>
 							<PersonifiedCommander/>
 							<Command/>
