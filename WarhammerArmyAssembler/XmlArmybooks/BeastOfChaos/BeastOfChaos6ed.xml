@@ -384,15 +384,15 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="8" Dependencies="Additional weapon"/>
-					<AdditionalWeapon Points="6" Dependencies="Great weapon"/>
+					<GreatWeapon Points="8" Dependency="AdditionalWeapon"/>
+					<AdditionalWeapon Points="6" Dependency="AdditionalWeapon"/>
 					<Shield Points="3"/>
-					<LightArmour Points="3" Dependencies="Heavy armour"/>
-					<HeavyArmour Points="6" Dependencies="Light armour"/>				
-					<MarkOfKhorne Points="40" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgle Points="50" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
-					<MarkOfTzLtl Points="80" Dependencies="Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
-					<MarkOfSlaanesh Points="25" Dependencies="Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<LightArmour Points="3" Dependency="Armour"/>
+					<HeavyArmour Points="6" Dependency="Armour"/>				
+					<MarkOfKhorne Points="40" Dependency="Mark"/>
+					<MarkOfNurgle Points="50" Dependency="Mark"/>
+					<MarkOfTzLtl Points="80" Dependency="Mark"/>
+					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
