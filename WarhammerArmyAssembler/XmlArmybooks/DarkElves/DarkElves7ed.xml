@@ -1151,8 +1151,8 @@
 						<Points>18</Points>
 					</Option>
 					<LightArmour PointsPerModel="1"/>
-					<GreatWeapon PointsPerModel="2" Dependencies="Additional weapon"/>
-					<AdditionalWeapon PointsPerModel="1" Dependencies="Great weapon"/>
+					<GreatWeapon PointsPerModel="2" Dependency="Weapon"/>
+					<AdditionalWeapon PointsPerModel="1" Dependency="Weapon"/>
 				</Options>
 			</Special>
 			<Special>
