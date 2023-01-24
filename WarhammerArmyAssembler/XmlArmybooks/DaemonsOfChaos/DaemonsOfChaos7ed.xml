@@ -955,17 +955,13 @@
 						<Option>
 							<Name>Iridescent Horrors</Name>
 							<Command/>
-							<Dependencies>
-								<Off>Changeling</Off>
-							</Dependencies>
+							<Dependency Group="Weapon"/>
 							<Points>12</Points>
 						</Option>
 						<Option>
 							<Name>Changeling</Name>
 							<Command/>
-							<Dependencies>
-								<Off>Iridescent Horrors</Off>
-							</Dependencies>
+							<Dependency Group="Weapon"/>
 							<OnlyOneInArmy/>
 							<Points>60</Points>
 							<Rule>Formless Horror</Rule>
