@@ -393,13 +393,13 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<AdditionalWeapon Points="3" Dependencies="Halberd, Lance, Great weapon" Only="Infantry"/>
-					<Halberd Points="3" Dependencies="Additional weapon, Lance, Great weapon"/>
-					<Lance Points="7" Dependencies="Additional weapon, Halberd, Great weapon" Only="Mount"/>
-					<GreatWeapon Points="6" Dependencies="Additional weapon, Halberd, Lance"/>
-					<RepeaterCrossbow Points="5" Dependencies="Repeater handbow, Pair of repeater handbow"/>
-					<RepeaterHandbow Points="5" Dependencies="Repeater Crossbow, Pair of repeater handbow"/>
-					<PairOfHandbow Points="10" Dependencies="Repeater Crossbow, Repeater handbow"/>
+					<AdditionalWeapon Points="3" Dependency="Weapon" Only="Infantry"/>
+					<Halberd Points="3" Dependency="Weapon"/>
+					<Lance Points="7" Dependency="Weapon" Only="Mount"/>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
+					<RepeaterCrossbow Points="5" Dependency="Range"/>
+					<RepeaterHandbow Points="5" Dependency="Range"/>
+					<PairOfHandbow Points="10" Dependency="Range"/>
 					<HeavyArmour Points="6"/>
 					<Shield Points="3"/>
 					<SeaDragonCloak Points="8"/>
