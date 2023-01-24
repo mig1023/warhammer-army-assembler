@@ -746,13 +746,13 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon Points="6" Dependencies="Great weapon"/>
-					<GreatWeapon Points="8" Dependencies="Additional weapon"/>
+					<AdditionalWeapon Points="6" Dependency="Weapon"/>
+					<GreatWeapon Points="8" Dependency="Weapon"/>
 					<LightArmour Points="3"/>
-					<MarkOfTzLtl Points="80" Dependencies="Mark of Slaanesh, Mark of Khorne, Mark of Nurgle"/>
-					<MarkOfKhorne Points="35" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgle Points="50" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
-					<MarkOfSlHitFirst Points="40" Dependencies="Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
+					<MarkOfTzLtl Points="80" Dependency="Mark"/>
+					<MarkOfKhorne Points="35" Dependency="Mark"/>
+					<MarkOfNurgle Points="50" Dependency="Mark"/>
+					<MarkOfSlHitFirst Points="40" Dependency="Mark"/>
 				</Options>
 			</Rare>
 			<Rare>
