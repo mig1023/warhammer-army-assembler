@@ -575,18 +575,14 @@
 					<Option>
 						<Name>Questing Vow</Name>
 						<Group>QuestingVow</Group>
-						<Dependencies>
-							<Off>Grail Vow</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>12</Points>
 						<Rule>May re-roll any failed Psychology tests</Rule>
 					</Option>
 					<Option>
 						<Name>Grail Vow</Name>
 						<Group>GrailVow</Group>
-						<Dependencies>
-							<Off>Questing Vow</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>28</Points>
 						<ImmuneToPsychology/>
 						<AddToWard>6</AddToWard>
