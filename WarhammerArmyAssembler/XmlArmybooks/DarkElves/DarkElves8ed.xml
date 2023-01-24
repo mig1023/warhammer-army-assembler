@@ -735,29 +735,23 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<GreatWeapon Points="2" Dependencies="Repeater handbow"/>
-					<RepeaterHandbow Points="5" Dependencies="Additional weapon"/>
+					<GreatWeapon Points="2" Dependency="Weapon"/>
+					<RepeaterHandbow Points="5" Dependency="Weapon"/>
 					<Option>
 						<Name>Black Lotus</Name>
-						<Dependencies>
-							<Off>Dark Venom, Manbane</Off>
-						</Dependencies>
+						<Dependency Group="Khainite"/>
 						<Points>15</Points>
 						<Rule>For each unsaved Wound, enemy suffers a -1 penalty to their Leadership for the rest of the game</Rule>
 					</Option>
 					<Option>
 						<Name>Dark Venom</Name>
-						<Dependencies>
-							<Off>Black Lotus, Manbane</Off>
-						</Dependencies>
+						<Dependency Group="Khainite"/>
 						<Points>20</Points>
 						<KillingBlow/>
 					</Option>
 					<Option>
 						<Name>Manbane</Name>
-						<Dependencies>
-							<Off>Black Lotus, Dark Venom</Off>
-						</Dependencies>
+						<Dependency Group="Khainite"/>
 						<Points>20</Points>
 						<AddToWound>1</AddToWound>
 					</Option>
