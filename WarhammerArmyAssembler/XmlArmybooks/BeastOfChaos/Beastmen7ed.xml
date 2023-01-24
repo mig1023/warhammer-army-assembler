@@ -832,9 +832,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>				
-					<Shield PointsPerModel="4" Dependencies="Additional weapon, Great weapon"/>
-					<AdditionalWeapon PointsPerModel="4" Dependencies="Shield, Great weapon"/>
-					<GreatWeapon PointsPerModel="8" Dependencies="Shield, Additional weapon"/>				
+					<Shield PointsPerModel="4" Dependency="Weapon"/>
+					<AdditionalWeapon PointsPerModel="4" Dependency="Weapon"/>
+					<GreatWeapon PointsPerModel="8" Dependency="Weapon"/>				
 					<Command>
 						<Champion Points="20" Name="Bloodkine" Magic="Type: Hero, Points: 25"/>
 						<Musician Points="10"/>
