@@ -477,14 +477,12 @@
 						<Name>Braystaff</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>6</Points>
 					</Option>
-					<AdditionalWeapon PointsPerModel="4" Dependencies="Braystaff"/>
-					<MarkOfNurgle Points="40" Dependencies="Mark of Nurgle"/>				
-					<MarkOfSlaanesh Points="20" Dependencies="Mark of Slaanesh"/>
+					<AdditionalWeapon PointsPerModel="4" Dependency="Weapon"/>
+					<MarkOfNurgle Points="40" Dependency="Mark"/>				
+					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
