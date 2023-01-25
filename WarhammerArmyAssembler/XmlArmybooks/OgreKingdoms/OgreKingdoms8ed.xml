@@ -807,9 +807,7 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon, Ogre pistol, Brace of Ogre pistol</Off>
-						</Dependencies>
+						<Dependency/>
 						<PerModel/>
 						<Points>2</Points>
 					</Option>
@@ -817,25 +815,19 @@
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon, Ogre pistol, Brace of Ogre pistol</Off>
-						</Dependencies>
+						<Dependency/>
 						<PerModel/>
 						<Points>11</Points>
 					</Option>
 					<Option>
 						<Name>Ogre pistol</Name>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon, Brace of Ogre pistol</Off>
-						</Dependencies>
+						<Dependency/>
 						<PerModel/>
 						<Points>7</Points>
 					</Option>
 					<Option>
 						<Name>Brace of Ogre pistol</Name>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon, Ogre pistol</Off>
-						</Dependencies>
+						<Dependency/>
 						<PerModel/>
 						<Points>12</Points>
 					</Option>
