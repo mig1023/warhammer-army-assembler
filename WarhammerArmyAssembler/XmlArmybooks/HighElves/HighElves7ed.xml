@@ -698,9 +698,9 @@
 					<GreatWeapon Points="8"/>
 					<Halberd Points="4"/>
 					<AdditionalWeapon Points="4" Only="Infantry"/>
-					<LightArmour Points="2" Dependencies="Heavy armour, Dragon armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour, Dragon armour"/>
-					<DragonArmour Points="6" Dependencies="Light armour, Heavy armour"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
+					<DragonArmour Points="6" Dependency="Armour"/>
 					<Shield Points="2"/>
 					<LongBow Points="10"/>
 					<Mount Name="Elven Steed" Points="12"/>
