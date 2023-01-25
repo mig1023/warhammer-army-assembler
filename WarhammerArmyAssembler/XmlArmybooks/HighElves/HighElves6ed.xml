@@ -794,17 +794,13 @@
 						<Name>Bow</Name>
 						<Points>4</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Swap spear for bow</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Swap spear for bow</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Bow</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Command>
 						<Champion Points="7" Name="Harbinger"/>
