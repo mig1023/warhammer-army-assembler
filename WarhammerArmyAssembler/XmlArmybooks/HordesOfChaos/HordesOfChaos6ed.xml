@@ -1281,10 +1281,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<MarkOfTzFUnit PointsPerModel="20" Dependencies="Mark of Nurgle, Mark of Slaanesh, Mark of Khorne"/>
-					<MarkOfSlaanesh PointsPerModel="20" Dependencies="Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
-					<MarkOfKhorne PointsPerModel="45" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNuFUnit PointsPerModel="50" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfTzFUnit PointsPerModel="20" Dependency="Mark"/>
+					<MarkOfSlaanesh PointsPerModel="20" Dependency="Mark"/>
+					<MarkOfKhorne PointsPerModel="45" Dependency="Mark"/>
+					<MarkOfNuFUnit PointsPerModel="50" Dependency="Mark"/>
 				</Options>
 			</Core>
 			<Core>
