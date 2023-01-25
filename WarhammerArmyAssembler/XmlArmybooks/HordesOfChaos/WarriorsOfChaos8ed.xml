@@ -542,78 +542,60 @@
 						<AddToAttacks>1</AddToAttacks>
 						<Points>6</Points>
 						<Only>Infantry</Only>
-						<Dependencies>
-							<Off>Great weapon, Flail, Halberd, Lance</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Points>8</Points>
-						<Dependencies>
-							<Off>Additional weapon, Flail, Halberd, Lance</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Flail</Name>
 						<Points>6</Points>
 						<Flail/>
-						<Dependencies>
-							<Off>Great weapon, Additional weapon, Halberd, Lance</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
 						<AddToStrength>1</AddToStrength>
 						<Points>8</Points>
-						<Dependencies>
-							<Off>Great weapon, Additional weapon, Flail, Lance</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Lance</Name>
 						<Only>Mount</Only>
 						<Points>8</Points>
-						<Dependencies>
-							<Off>Great weapon, Flail, Halberd, Additional weapon</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Lance/>
 					</Option>
 					<Shield Points="5"/>
 					<Option>
 						<Name>Mark of Khorne</Name>
 						<Points>10</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<Frenzy/>
 					</Option>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<AddToWard>6</AddToWard>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>10</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<ImmuneToPsychology/>
 					</Option>
 					<Option>
