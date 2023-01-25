@@ -1368,33 +1368,25 @@
 					<Option>
 						<Name>Mark of Khorne</Name>
 						<Points>30</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency/>
 						<Frenzy/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>30</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
-						</Dependencies>
+						<Dependency/>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToWard>6</AddToWard>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>10</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency/>
 						<ImmuneToPsychology/>
 					</Option>
 					<Shield PointsPerModel="1"/>
