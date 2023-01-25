@@ -477,7 +477,7 @@
 						<AddToWizard>1</AddToWizard>
 						<AddToCast>1</AddToCast>
 						<AddToDispell>1</AddToDispell>
-						<Dependency Group="Wizard"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
@@ -485,7 +485,7 @@
 						<AddToWizard>2</AddToWizard>
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
-						<Dependency Group="Wizard"/>
+						<Dependency/>
 					</Option>
 				</Options>
 				<Equipments>
@@ -739,19 +739,19 @@
 						<Name>Lesser Locus of Abjuration</Name>
 						<Points>30</Points>
 						<Rule>+1 Magic Resistance</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Greater Locus of Fury</Name>
 						<Points>60</Points>
 						<Frenzy/>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Wrath</Name>
 						<Points>75</Points>
 						<Hate/>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Mount Name="Juggernaut" Points="50"/>
 					<Mount Name="Blood Throne" Points="160"/>
@@ -781,19 +781,19 @@
 						<Name>Lesser Locus of Transmogrification</Name>
 						<Points>25</Points>
 						<Rule>When a model is slain, place D3+1 Blue Horror</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Greater Locus of Change</Name>
 						<Points>35</Points>
 						<Rule>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Conjuration</Name>
 						<Points>50</Points>
 						<Rule>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Mount Name="Disc of Tzeentch" Points="20"/>
 					<Mount Name="Burning Chariot" Points="60"/>
@@ -830,19 +830,19 @@
 						<Name>Lesser Locus of Virulence</Name>
 						<Points>40</Points>
 						<Rule>Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Greater Locus of Fecundity</Name>
 						<Points>45</Points>
 						<Regeneration/>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Contagion</Name>
 						<Points>50</Points>
 						<Rule>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Mount Name="Palanquin" Points="50"/>
 					<BattleStandardBearer Points="25"/>
@@ -868,19 +868,19 @@
 						<Name>Lesser Locus of Grace</Name>
 						<Points>5</Points>
 						<Rule>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Greater Locus of Swiftness</Name>
 						<Points>50</Points>
 						<Rule>This model, and all models in her unit, have the Always Strikes First special rule</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Exalted Locus of Beguilement</Name>
 						<Points>60</Points>
 						<Rule>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</Rule>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Mount Name="Steed of Slaanesh" Points="25"/>
 					<Mount Name="Seeker Chariot" Points="85"/>
@@ -985,13 +985,13 @@
 					<Option>
 						<Name>Plague Proboscis</Name>
 						<Points>5</Points>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 						<PoisonAttack/>
 					</Option>
 					<Option>
 						<Name>Venom Sting</Name>
 						<Points>10</Points>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 				</Options>
 			</Mount>
@@ -1270,25 +1270,25 @@
 						<Name>Daemons of Tzeentch</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependency Group="Daemons"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Daemons of Slaanesh</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependency Group="Daemons"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Daemons of Khorne</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependency Group="Daemons"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Daemons of Nurgle</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependency Group="Daemons"/>
+						<Dependency/>
 					</Option>
 				</Options>
 			</Special>
@@ -1362,17 +1362,17 @@
 					<Option>
 						<Name>Baleful Torrent</Name>
 						<Points>50</Points>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Phlegm Bombardment</Name>
 						<Points>50</Points>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Warp Gaze</Name>
 						<Points>55</Points>
-						<Dependency Group="Gifts"/>
+						<Dependency/>
 					</Option>
 				</Options>
 			</Rare>
