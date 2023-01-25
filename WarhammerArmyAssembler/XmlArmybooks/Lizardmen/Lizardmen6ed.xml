@@ -536,10 +536,10 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<AdditionalWeapon Points="4" Dependencies="Spear"/>
-					<Spear Points="4" Dependencies="Additional weapon"/>
-					<Blowpipe Points="8" Dependencies="Javelins"/>
-					<Javelins Points="8" Dependencies="Blowpipe"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<Spear Points="4" Dependency="Weapon"/>
+					<Blowpipe Points="8" Dependency="Range"/>
+					<Javelins Points="8" Dependency="Range"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Scout Points="10"/>
