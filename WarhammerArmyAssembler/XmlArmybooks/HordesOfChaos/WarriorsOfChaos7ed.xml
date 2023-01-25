@@ -950,65 +950,49 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Points>8</Points>
-						<Dependencies>
-							<Off>Additional weapon, Flail, Halberd</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Additional weapon</Name>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Great weapon, Flail, Halberd</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Flail</Name>
 						<Points>4</Points>
 						<Flail/>
-						<Dependencies>
-							<Off>Great weapon, Additional weapon, Halberd</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
 						<AddToStrength>1</AddToStrength>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Great weapon, Additional weapon, Flail</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Shield Points="5"/>
 					<Option>
 						<Name>Mark of Khorne</Name>
 						<Points>15</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<Frenzy/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<AddToWard>6</AddToWard>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<ImmuneToPsychology/>
 					</Option>
 					<Mount Name="Chaos Steed" Points="16"/>
