@@ -884,26 +884,20 @@
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh</Off>
-						</Dependencies>
+						<Dependency/>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToWard>6</AddToWard>
 						<Rule>+1 on attempts to cast spell</Rule>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency/>
 						<ImmuneToPsychology/>
 					</Option>
 					<Mount Name="Chaos Steed" Points="16"/>
