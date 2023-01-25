@@ -519,13 +519,13 @@
 						<Name>Heartrender</Name>
 						<Points>45</Points>
 						<KillingBlow/>
-						<Dependency Group="Weapon"/>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>The Darksword</Name>
 						<Points>25</Points>
 						<Rule>Each wound inflicted on an enemy character or champion (after saves, etc) also deducts 1 from the model's S, A and T for the remainder of the game</Rule>
-						<Dependency Group="Weapon"/>
+						<Dependency/>
 					</Option>
 				</Options>
 				<Equipments>
@@ -1178,13 +1178,13 @@
 					<Command>
 						<Champion>
 							<Name>Draich-master</Name>
-							<Dependency Group="Master"/>
+							<Dependency/>
 							<Command/>
 							<Points>12</Points>
 						</Champion>
 						<Champion>
 							<Name>Tullaris</Name>
-							<Dependency Group="Master"/>
+							<Dependency/>
 							<OnlyOneInArmy/>
 							<PersonifiedCommander/>
 							<Command/>
@@ -1274,14 +1274,14 @@
 					<Command>
 						<Champion>
 							<Name>Tower Master</Name>
-							<Dependency Group="Master"/>
+							<Dependency/>
 							<MagicItems Points="25" Type="Hero"/>
 							<Command/>
 							<Points>14</Points>
 						</Champion>
 						<Champion>
 							<Name>Kouran</Name>
-							<Dependency Group="Master"/>
+							<Dependency/>
 							<OnlyOneInArmy/>
 							<PersonifiedCommander/>
 							<Command/>
