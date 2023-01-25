@@ -1250,7 +1250,7 @@ namespace WarhammerArmyAssembler
 
         public bool IsGroupAlreadyUsed(string groupName, Option currentOption, bool postCheck)
         {
-            if (groupName.Length <= 0)
+            if (String.IsNullOrEmpty(groupName))
                 return false;
 
             return IsAnyInGroupUsed(groupName, postCheck ? null : currentOption);

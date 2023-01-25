@@ -615,7 +615,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Only = StringParse(xmlNode["Only"]),
                 Dependencies = AllStringParse(xmlNode["Dependencies"], "On", comma: true),
                 InverseDependencies = AllStringParse(xmlNode["Dependencies"], "Off", comma: true),
-                DependencyGroup = StringParse(xmlNode["Dependency"]?.Attributes["Group"]),
                 Realised = BoolParse(xmlNode["RealisedByDefault"]),
                 Countable = CountableParse(xmlNode["Countable"]),
                 ImpactHitByFront = BoolParse(xmlNode["ImpactHitByFront"]) ? 1 : 0,
@@ -629,6 +628,12 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (category != Option.OptionCategory.Nope)
                 newOption.Category = category;
+
+            if (xmlNode["Dependency"] != null)
+            {
+                string group = StringParse(xmlNode["Dependency"]?.Attributes["Group"]);
+                newOption.DependencyGroup = String.IsNullOrEmpty(group) ? "Default" : group;
+            }
 
             foreach (string name in Constants.ProfilesNames.Keys)
             {
