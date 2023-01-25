@@ -929,16 +929,14 @@
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>70</Points>
-						<Dependencies>
-							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<AddToWizard>2</AddToWizard>
 						<AddToCast>2</AddToCast>
 						<AddToDispell>1</AddToDispell>
 					</Option>
-					<MarkOfSlaanesh Points="20" Dependencies="Mark of Tzeentch, Mark of Khorne, Mark of Nurgle"/>
-					<MarkOfKhorne Points="35" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle"/>
-					<MarkOfNurgle Points="40" Dependencies="Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne"/>
+					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
+					<MarkOfKhorne Points="35" Dependency="Mark"/>
+					<MarkOfNurgle Points="40" Dependency="Mark"/>
 					<Mount Name="Demonic mount" Points="50"/>
 					<Mount Name="Chaos Steed" Points="16"/>
 					<Option>
