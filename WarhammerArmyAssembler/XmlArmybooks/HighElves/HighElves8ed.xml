@@ -466,11 +466,11 @@
 					<LightNativeArmour/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon Points="3" Dependencies="Halberd, Lance, Spear, Great weapon" Only="Infantry"/>
-					<Halberd Points="3" Dependencies="Additional weapon, Lance, Spear, Great weapon"/>
-					<Lance Points="7" Dependencies="Additional weapon, Halberd, Spear, Great weapon"/>
-					<Spear Points="3" Dependencies="Additional weapon, Halberd, Lance, Great weapon"/>
-					<GreatWeapon Points="6" Dependencies="Additional weapon, Halberd, Lance, Spear"/>
+					<AdditionalWeapon Points="3" Dependency="Weapon" Only="Infantry"/>
+					<Halberd Points="3" Dependency="Weapon"/>
+					<Lance Points="7" Dependency="Weapon"/>
+					<Spear Points="3" Dependency="Weapon"/>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<LongBow Points="5"/>
 					<HeavyArmour Points="6" Dependencies="Dragon armour"/>
 					<DragonArmour Points="20" Dependencies="Heavy armour, Lion cloak"/>
