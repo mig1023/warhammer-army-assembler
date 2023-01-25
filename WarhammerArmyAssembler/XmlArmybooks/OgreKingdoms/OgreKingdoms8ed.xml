@@ -521,40 +521,30 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Ironfists, Great weapon, Harpoon launcher, Blood vulture</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>3</Points>
 					</Option>
 					<Option>
 						<Name>Ironfists</Name>
 						<AddToArmour>6</AddToArmour>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon, Harpoon launcher, Blood vulture</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>4</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon, Ironfists, Harpoon launcher, Blood vulture</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>11</Points>
 					</Option>
 					<Option>
 						<Name>Harpoon launcher</Name>
-						<Dependencies>
-							<Off>Additional weapon, Ironfists, Great weapon, Blood vulture</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>10</Points>
 					</Option>
 					<Option>
 						<Name>Blood vulture</Name>
-						<Dependencies>
-							<Off>Additional weapon, Ironfists, Great weapon, Harpoon launcher</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>10</Points>
 					</Option>
 					<Mount Name="Stonehorn" Points="250"/>
