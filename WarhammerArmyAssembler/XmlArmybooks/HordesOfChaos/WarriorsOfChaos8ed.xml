@@ -1256,36 +1256,28 @@
 						<Name>Mark of Khorne</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<Frenzy/>
 					</Option>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Mark of Slaanesh, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<AddToWard>6</AddToWard>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Khorne</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Khorne, Mark of Nurgle</Off>
-						</Dependencies>
+						<Dependency Group="Mark"/>
 						<ImmuneToPsychology/>
 					</Option>
 					<Shield PointsPerModel="1"/>
@@ -1293,18 +1285,14 @@
 						<Name>Additional weapon</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Great weapon, Halberd</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<AddToAttacks>1</AddToAttacks>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<Points>3</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Additional weapon, Halberd</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 					</Option>
@@ -1312,9 +1300,7 @@
 						<Name>Halberd</Name>
 						<Points>3</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<AddToStrength>1</AddToStrength>
 					</Option>
 					<Command>
