@@ -759,9 +759,7 @@
 					<Option>
 						<Name>Daemon of Khorne</Name>
 						<Points>10</Points>
-						<Dependencies>
-							<Off>Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Nurgle</Off>
-						</Dependencies>
+						<Dependency/>
 						<Rule>Hate Daemon of Slaanesh</Rule>
 						<Rule>+1 Strength for the rest of the turn after successful charge</Rule>
 					</Option>
@@ -769,9 +767,7 @@
 						<Name>Daemon of Tzeentch</Name>
 						<Points>15</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Daemon of Slaanesh, Daemon of Khorne, Daemon of Nurgle</Off>
-						</Dependencies>
+						<Dependency/>
 						<Rule>Hate Daemon of Nurgle</Rule>
 						<Rule>Re-roll Ward save results of 1</Rule>
 						<Rule>Re-roll Channelling results of 1</Rule>
@@ -780,9 +776,7 @@
 						<Name>Daemon of Nurgle</Name>
 						<Points>10</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Daemon of Tzeentch, Daemon of Slaanesh, Daemon of Khorne</Off>
-						</Dependencies>
+						<Dependency/>
 						<SubOpponentToHit>1</SubOpponentToHit>
 						<Rule>Hate Daemon of Tzeentch</Rule>
 					</Option>
@@ -790,9 +784,7 @@
 						<Name>Daemon of Slaanesh</Name>
 						<Points>5</Points>
 						<PerModel/>
-						<Dependencies>
-							<Off>Daemon of Tzeentch, Daemon of Khorne, Daemon of Nurgle</Off>
-						</Dependencies>
+						<Dependency/>
 						<ArmourPiercing>1</ArmourPiercing>
 						<Rule>Hate Daemon of Khorne</Rule>
 					</Option>
