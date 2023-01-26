@@ -405,9 +405,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="6" Dependencies="Additional weapon, Spear"/>
-					<AdditionalWeapon Only="Infantry" Points="3" Dependencies="Great weapon, Spear"/>
-					<Spear Points="3" Only="Mount" Dependencies="Great weapon, Additional weapon"/>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
+					<AdditionalWeapon Only="Infantry" Points="3" Dependency="Weapon"/>
+					<Spear Points="3" Only="Mount" Dependency="Weapon"/>
 					<Shield Points="3"/>
 					<Mount Name="War Boar" Points="24"/>
 					<Mount Name="Wyvern" Points="160"/>
