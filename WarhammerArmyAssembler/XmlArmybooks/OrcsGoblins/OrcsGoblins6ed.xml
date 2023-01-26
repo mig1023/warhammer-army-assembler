@@ -1014,8 +1014,8 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Spear PointsPerModel="1" Dependencies="Bow"/>
-					<Bow PointsPerModel="1" Dependencies="Spears"/>
+					<Spear PointsPerModel="1" Dependency="Weapon"/>
+					<Bow PointsPerModel="1" Dependency="Weapon"/>
 					<LightArmour PointsPerModel="1"/>
 					<Command>
 						<Musician Points="4"/>
