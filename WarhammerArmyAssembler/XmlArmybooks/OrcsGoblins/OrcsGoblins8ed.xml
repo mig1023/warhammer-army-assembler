@@ -519,9 +519,9 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="6" Dependencies="Additional weapon, Spear"/>
-					<AdditionalWeapon Only="Infantry" Points="3" Dependencies="Great weapon, Spear"/>
-					<Spear Points="3" Only="Mount" Dependencies="Great weapon, Additional weapon"/>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
+					<AdditionalWeapon Only="Infantry" Points="3" Dependency="Weapon"/>
+					<Spear Points="3" Only="Mount" Dependency="Weapon"/>
 					<LightArmour Points="3"/>
 					<Shield Points="3"/>
 					<Mount Name="Great Cave Squig" Points="40"/>
