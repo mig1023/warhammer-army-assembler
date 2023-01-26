@@ -660,11 +660,11 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon Points="4" Dependencies="Great axe, Spear"/>
-					<GreatAxe Points="4" Dependencies="Additional weapon, Spear"/>
-					<Spear Points="2" Only="Mount" Dependencies="Additional weapon, Great axe"/>
-					<LightArmour Points="2" Dependencies="Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
+					<Spear Points="2" Only="Mount" Dependency="Weapon"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Boar" Points="16"/>
 					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Spear, Shield"/>
