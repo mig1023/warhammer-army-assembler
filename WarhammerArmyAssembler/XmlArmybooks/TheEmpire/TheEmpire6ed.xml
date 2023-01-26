@@ -554,9 +554,7 @@
 						<Name>Lance</Name>
 						<Only>Mount</Only>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Great weapon, Pistol, Halberd</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Lance/>
 					</Option>
 					<Option>
@@ -564,42 +562,32 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Lance, Pistol, Halberd</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
 						<AddToStrength>1</AddToStrength>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Lance, Pistol</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Pistol</Name>
 						<Points>7</Points>
-						<Dependencies>
-							<Off>Great weapon, Lance, Halberd</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Longbow</Name>
 						<Points>10</Points>
-						<Dependencies>
-							<Off>Handgun</Off>
-						</Dependencies>
+						<Dependency Group="Range"/>
 					</Option>
 					<Option>
 						<Name>Handgun</Name>
 						<Points>10</Points>
-						<Dependencies>
-							<Off>Longbow</Off>
-						</Dependencies>
+						<Dependency Group="Range"/>
 					</Option>
-					<LightArmour Points="2" Dependencies="Heavy armour, Full plate armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour, Full plate armour"/>
-					<FullPlateArmour Points="8" Dependencies="Light armour, Heavy armour"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
+					<FullPlateArmour Points="8" Dependency="Armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
