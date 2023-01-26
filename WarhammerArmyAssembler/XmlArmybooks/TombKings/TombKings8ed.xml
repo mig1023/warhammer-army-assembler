@@ -535,33 +535,25 @@
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Flail, Spear, Halberd</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>4</Points>
 					</Option>
 					<Option>
 						<Name>Spear</Name>
-						<Dependencies>
-							<Off>Great weapon, Flail, Halberd</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>2</Points>
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
 						<AddToStrength>1</AddToStrength>
-						<Dependencies>
-							<Off>Great weapon, Flail, Spear</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>2</Points>
 					</Option>
 					<Option>
 						<Name>Flail</Name>
 						<Only>Infantry</Only>
 						<Fail/>
-						<Dependencies>
-							<Off>Great weapon, Spear, Halberd</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>4</Points>
 					</Option>
 					<Shield Points="2"/>
