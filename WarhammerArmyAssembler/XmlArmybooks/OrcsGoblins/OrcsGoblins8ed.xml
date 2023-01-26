@@ -690,9 +690,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Additional weapon, Spear"/>
-					<AdditionalWeapon Only="Infantry" Points="2" Dependencies="Great weapon, Spear"/>
-					<Spear Points="2" Only="Mount" Dependencies="Great weapon, Additional weapon"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<AdditionalWeapon Only="Infantry" Points="2" Dependency="Weapon"/>
+					<Spear Points="2" Only="Mount" Dependency="Weapon"/>
 					<Shield Points="2"/>
 					<Mount Name="War Boar" Points="16"/>
 					<Mount Name="Orc Boar Chariot" Points="85"/>
