@@ -633,25 +633,19 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Spear, Great weapon</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>4</Points>
 					</Option>
 					<Option>
 						<Name>Spear</Name>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>2</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Spear, Additional weapon</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>4</Points>
 					</Option>
 					<LightArmour Points="2"/>
@@ -665,9 +659,7 @@
 						<ImmuneToPsychology/>
 						<AddToWard>6</AddToWard>
 						<Rule>Magic Resistance (1)</Rule>
-						<Dependencies>
-							<Off>Wild Rider, Waywatcher, Alter, Scout, Eternal</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wild Rider</Name>
@@ -676,18 +668,14 @@
 						<Rule>Magic Resistance (1)</Rule>
 						<AddToAttacks>1</AddToAttacks>
 						<ImmuneToPsychology/>
-						<Dependencies>
-							<Off>Wardancer, Waywatcher, Alter, Scout, Eternal</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Waywatcher</Name>
 						<Points>35</Points>
 						<Rule>Lethal shot</Rule>
 						<Rule>Forest Stalker</Rule>
-						<Dependencies>
-							<Off>Wardancer, Wild Rider, Alter, Scout, Eternal</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Alter</Name>
@@ -696,25 +684,19 @@
 						<InitiativeTo>9</InitiativeTo>
 						<AddToAttacks>1</AddToAttacks>
 						<NotALeader/>
-						<Dependencies>
-							<Off>Wardancer, Wild Rider, Waywatcher, Scout, Eternal</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Scout</Name>
 						<Points>15</Points>
 						<Rule>Scout</Rule>
-						<Dependencies>
-							<Off>Wardancer, Wild Rider, Waywatcher, Alter, Eternal</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Eternal</Name>
 						<Points>5</Points>
 						<AddToArmour>5</AddToArmour>
-						<Dependencies>
-							<Off>Wardancer, Wild Rider, Waywatcher, Alter, Scout</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Great Stag</Name>
