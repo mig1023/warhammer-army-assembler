@@ -918,8 +918,8 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon PointsPerModel="2" Dependencies="Spear"/>
-					<Spear PointsPerModel="2" Dependencies="Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
+					<Spear PointsPerModel="2" Dependency="Weapon"/>
 					<Shield PointsPerModel="1"/>
 					<Option>
 						<Name>Big'Uns</Name>
