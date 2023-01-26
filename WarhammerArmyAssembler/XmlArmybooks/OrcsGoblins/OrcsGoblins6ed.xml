@@ -778,9 +778,9 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon Points="4" Dependencies="Great axe, Spear"/>
-					<GreatAxe Points="4" Dependencies="Additional weapon, Spear"/>
-					<Spear Points="3" Only="Mount" Dependencies="Additional weapon, Great axe"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
+					<Spear Points="3" Only="Mount" Dependency="Weapon"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Mount Name="Wolf" Points="12"/>
