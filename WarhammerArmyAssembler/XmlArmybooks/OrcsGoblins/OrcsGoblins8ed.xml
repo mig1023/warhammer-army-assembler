@@ -774,10 +774,10 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<GreatWeapon Points="4" Dependencies="Additional weapon, Spear, Short bow"/>
-					<AdditionalWeapon Only="Infantry" Points="2" Dependencies="Great weapon, Spear, Short bow"/>
-					<Spear Points="2" Only="Mount" Dependencies="Great weapon, Additional weapon, Short bow"/>
-					<ShortBow Points="2" Only="Mount" Dependencies="Great weapon, Additional weapon, Spear"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<AdditionalWeapon Only="Infantry" Points="2" Dependency="Weapon"/>
+					<Spear Points="2" Only="Mount" Dependency="Weapon"/>
+					<ShortBow Points="2" Only="Mount" Dependency="Weapon"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Mount Name="Giant Wolf" Points="12"/>
