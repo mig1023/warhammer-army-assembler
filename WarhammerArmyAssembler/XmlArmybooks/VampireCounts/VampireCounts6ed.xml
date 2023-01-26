@@ -813,16 +813,12 @@
 					<Option>
 						<Name>Von Carstein</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Necrarch, Blood Dragon, Strigoi, Lahmia</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Necrarch</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Von Carstein, Blood Dragon, Strigoi, Lahmia</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToWeaponSkill>-2</AddToWeaponSkill>
 						<Rule>+1 to the total rolled when trying to cast a spell</Rule>
 						<Rule>Cannot choose any mundane weapons or armour</Rule>
@@ -830,9 +826,7 @@
 					<Option>
 						<Name>Blood Dragon</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Von Carstein, Necrarch, Strigoi, Lahmia</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToWeaponSkill>2</AddToWeaponSkill>
 						<AddToArmour>4</AddToArmour>
 						<Rule>Full Plate Armour</Rule>
@@ -841,9 +835,7 @@
 					<Option>
 						<Name>Strigoi</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Von Carstein, Necrarch, Blood Dragon, Lahmia</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToAttacks>1</AddToAttacks>
 						<Hate/>
 						<Rule>Cannot choose any mundane weapons or armour</Rule>
@@ -852,9 +844,7 @@
 					<Option>
 						<Name>Lahmia</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Von Carstein, Necrarch, Blood Dragon, Strigoi</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToInitiative>2</AddToInitiative>
 						<Hate/>
 						<Rule>All models in base contact suffer a -1 to their Leadership</Rule>
@@ -972,33 +962,25 @@
 					<Option>
 						<Name>Von Carstein</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Necrarch, Blood Dragon, Strigoi, Lahmia</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Necrarch</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Von Carstein, Blood Dragon, Strigoi, Lahmia</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToWeaponSkill>-2</AddToWeaponSkill>
 					</Option>
 					<Option>
 						<Name>Blood Dragon</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Von Carstein, Necrarch, Strigoi, Lahmia</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToWeaponSkill>2</AddToWeaponSkill>
 						<Rule>Must always issue challenges and must always accept enemy challenges</Rule>
 					</Option>
 					<Option>
 						<Name>Strigoi</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Von Carstein, Necrarch, Blood Dragon, Lahmia</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToAttacks>1</AddToAttacks>
 						<Hate/>
 						<Rule>Cannot choose any mundane weapons or armour</Rule>
@@ -1007,9 +989,7 @@
 					<Option>
 						<Name>Lahmia</Name>
 						<Points>0</Points>
-						<Dependencies>
-							<Off>Von Carstein, Necrarch, Blood Dragon, Strigoi</Off>
-						</Dependencies>
+						<Dependency/>
 						<AddToInitiative>2</AddToInitiative>
 						<Hate/>
 						<Rule>All models in base contact suffer a -1 to their Leadership</Rule>
