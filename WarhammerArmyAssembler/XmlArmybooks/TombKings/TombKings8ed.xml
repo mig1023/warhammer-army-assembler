@@ -607,25 +607,19 @@
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Flail, Spear</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>6</Points>
 					</Option>
 					<Option>
 						<Name>Flail</Name>
 						<Only>Infantry</Only>
 						<Fail/>
-						<Dependencies>
-							<Off>Great weapon, Spear</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>6</Points>
 					</Option>
 					<Option>
 						<Name>Spear</Name>
-						<Dependencies>
-							<Off>Great weapon, Flail</Off>
-						</Dependencies>
+						<Dependency/>
 						<Points>3</Points>
 					</Option>
 					<Shield Points="3"/>
