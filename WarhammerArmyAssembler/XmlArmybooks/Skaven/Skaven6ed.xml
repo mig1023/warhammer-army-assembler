@@ -779,13 +779,11 @@
 				</Equipments>
 				<Options>
 					<Shield PointsPerModel="1"/>
-					<Spear PointsPerModel="1" Dependencies="Slings"/>
+					<Spear PointsPerModel="1" Dependency="Weapon"/>
 					<Option>
 						<Name>Slings</Name>
 						<PerModel/>
-						<Dependencies>
-							<Off>Spear</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>2</Points>
 					</Option>
 					<Command>
