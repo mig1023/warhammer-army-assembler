@@ -626,20 +626,16 @@
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Second warhammer</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Second warhammer</Name>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Two-handed warhammer</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 					</Option>
-					<LightArmour Points="2" Dependencies="Heavy armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
