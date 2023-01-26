@@ -685,9 +685,9 @@
 						<Name>Handgun</Name>
 						<Points>10</Points>
 					</Option>
-					<LightArmour Points="2" Dependencies="Heavy armour, Full plate armour"/>
-					<HeavyArmour Points="4" Dependencies="Light armour, Full plate armour"/>
-					<FullPlateArmour Points="8" Dependencies="Light armour, Heavy armour"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
+					<FullPlateArmour Points="8" Dependency="Armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
