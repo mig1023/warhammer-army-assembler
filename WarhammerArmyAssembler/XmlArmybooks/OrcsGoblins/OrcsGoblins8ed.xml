@@ -1392,8 +1392,8 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<AdditionalWeapon PointsPerModel="2" Dependencies="Spears"/>
-					<Spear PointsPerModel="2" Dependencies="Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
+					<Spear PointsPerModel="2" Dependency="Weapon"/>
 					<Shield PointsPerModel="2" Dependencies="Additional weapon"/>
 					<Command>
 						<Champion Points="15" Name="Savage Orc Boar Boy Boss"/>
