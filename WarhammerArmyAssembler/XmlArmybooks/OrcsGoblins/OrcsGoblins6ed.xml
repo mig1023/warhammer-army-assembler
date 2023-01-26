@@ -804,8 +804,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon Points="4" Dependencies="Great axe"/>
-					<GreatAxe Points="4" Dependencies="Additional weapon"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
 					<LightArmour PointsPerModel="2"/>
 					<Shield Points="2"/>
 					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Shield"/>
