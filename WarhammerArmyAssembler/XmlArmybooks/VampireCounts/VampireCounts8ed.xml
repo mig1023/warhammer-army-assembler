@@ -435,26 +435,20 @@
 						<Name>Additional hand weapon</Name>
 						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Lance, Great weapon</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Points>6</Points>
-						<Dependencies>
-							<Off>Lance, Additional hand weapon</Off>
-						</Dependencies>
+						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Lance</Name>
 						<Only>Mount</Only>
 						<Points>6</Points>
-						<Dependencies>
-							<Off>Great weapon, Additional hand weapon</Off>
-						</Dependencies>
+						<Dependency/>
 						<Lance/>
 					</Option>
 					<Shield Points="3"/>
