@@ -1305,17 +1305,13 @@
 					<Option>
 						<Name>Rancid Maw</Name>
 						<Points>15</Points>
-						<Dependencies>
-							<Off>Infested</Off>
-						</Dependencies>
+						<Dependency/>
 						<PoisonAttack/>
 					</Option>
 					<Option>
 						<Name>Infested</Name>
 						<Points>10</Points>
-						<Dependencies>
-							<Off>Rancid Maw</Off>
-						</Dependencies>
+						<Dependency/>
 						<Rule>When Terrorgheist removed as casualty, all units in base contact (friend or foe) take 3D6 Strength 2 hits</Rule>
 					</Option>
 				</Options>
