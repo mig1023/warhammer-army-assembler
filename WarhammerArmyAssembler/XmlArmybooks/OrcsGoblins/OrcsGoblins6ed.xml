@@ -711,9 +711,9 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon Points="4" Dependencies="Great axe, Spear"/>
-					<GreatAxe Points="4" Dependencies="Additional weapon, Spear"/>
-					<Spear Points="2" Only="Mount" Dependencies="Additional weapon, Great axe"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
+					<Spear Points="2" Only="Mount" Dependency="Weapon"/>
 					<Warprint Points="8"/>
 					<Shield Points="2"/>
 					<Mount Name="Boar" Points="16"/>
