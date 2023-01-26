@@ -486,71 +486,53 @@
 				<Options>
 					<Option>
 						<Name>Asrai spear</Name>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>2</Points>
 					</Option>
 					<Option>
 						<Name>Additional weapon</Name>
 						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Asrai spear, Great weapon</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>2</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Asrai spear, Additional weapon</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>4</Points>
 					</Option>
 					<Shield Points="2"/>
 					<Option>
 						<Name>Hagbane tips</Name>
 						<Points>3</Points>
-						<Dependencies>
-							<Off>Trueflight arrows, Moontire shot, Starfire shafts, Swiftshiver shards, Arcane bodkins</Off>
-						</Dependencies>
+						<Dependency Group="Range"/>
 					</Option>
 					<Option>
 						<Name>Trueflight arrows</Name>
 						<Points>3</Points>
-						<Dependencies>
-							<Off>Hagbane tips, Moontire shot, Starfire shafts, Swiftshiver shards, Arcane bodkins</Off>
-						</Dependencies>
+						<Dependency Group="Range"/>
 					</Option>
 					<Option>
 						<Name>Moontire shot</Name>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Hagbane tips, Trueflight arrows, Starfire shafts, Swiftshiver shards, Arcane bodkins</Off>
-						</Dependencies>
+						<Dependency Group="Range"/>
 					</Option>
 					<Option>
 						<Name>Starfire shafts</Name>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Hagbane tips, Trueflight arrows, Moontire shot, Swiftshiver shards, Arcane bodkins</Off>
-						</Dependencies>
+						<Dependency Group="Range"/>
 					</Option>
 					<Option>
 						<Name>Swiftshiver shards</Name>
 						<Points>4</Points>
-						<Dependencies>
-							<Off>Hagbane tips, Trueflight arrows, Moontire shot, Starfire shafts, Arcane bodkins</Off>
-						</Dependencies>
+						<Dependency Group="Range"/>
 					</Option>
 					<Option>
 						<Name>Arcane bodkins</Name>
 						<Points>5</Points>
-						<Dependencies>
-							<Off>Hagbane tips, Trueflight arrows, Moontire shot, Starfire shafts, Swiftshiver shards</Off>
-						</Dependencies>
+						<Dependency Group="Range"/>
 					</Option>
 					<Mount Name="Elven Steed" Points="10"/>
 					<Mount Name="Great Eagle" Points="50"/>
