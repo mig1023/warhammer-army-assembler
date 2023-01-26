@@ -704,63 +704,47 @@
 						<Name>Additional weapon</Name>
 						<Only>Infantry</Only>
 						<AddToAttacks>1</AddToAttacks>
-						<Dependencies>
-							<Off>Great weapon, Lance, Handgun, Longbow, Pistol</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>3</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength>2</AddToStrength>
 						<HitLast/>
-						<Dependencies>
-							<Off>Additional weapon, Lance, Handgun, Longbow, Pistol</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>6</Points>
 					</Option>
 					<Option>
 						<Name>Lance</Name>
 						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon, Handgun, Longbow, Pistol</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>7</Points>
 						<Lance/>
 					</Option>
 					<Option>
 						<Name>Handgun</Name>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon, Lance, Longbow, Pistol</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>6</Points>
 					</Option>
 					<Option>
 						<Name>Longbow</Name>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon, Lance, Handgun, Pistol</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>5</Points>
 					</Option>
 					<Option>
 						<Name>Pistol</Name>
-						<Dependencies>
-							<Off>Additional weapon, Great weapon, Lance, Handgun, Longbow</Off>
-						</Dependencies>
+						<Dependency Group="Weapon"/>
 						<Points>5</Points>
 					</Option>
 					<Option>
 						<Name>Full plate armour</Name>
-						<Dependencies>
-							<Off>Heavy armour</Off>
-						</Dependencies>
+						<Dependency Group="Armour"/>
 						<Points>6</Points>
 						<AddToArmour>4</AddToArmour>
 					</Option>
 					<Option>
 						<Name>Heavy armour</Name>
-						<Dependencies>
-							<Off>Full plate armour</Off>
-						</Dependencies>
+						<Dependency Group="Armour"/>
 						<Points>2</Points>
 						<AddToArmour>5</AddToArmour>
 					</Option>
