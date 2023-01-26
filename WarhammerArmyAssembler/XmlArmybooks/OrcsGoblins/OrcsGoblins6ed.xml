@@ -977,9 +977,9 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<AdditionalWeapon PointsPerModel="2" Dependencies="Spears, Bow"/>
-					<Spear PointsPerModel="2" Dependencies="Additional weapon, Bow"/>
-					<Bow PointsPerModel="3" Dependencies="Spears, Additional weapon"/>
+					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
+					<Spear PointsPerModel="2" Dependency="Weapon"/>
+					<Bow PointsPerModel="3" Dependency="Weapon"/>
 					<Warprint PointsPerModel="3"/>
 					<Shield PointsPerModel="1"/>
 					<Option>
