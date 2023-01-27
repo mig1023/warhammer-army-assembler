@@ -503,19 +503,8 @@
 					<LightNativeArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependency/>
-						<Points>3</Points>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependency/>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="3" Dependency="Weapon"/>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<HeavyArmour Points="4"/>
 					<Shield Points="4"/>
 					<Option>
