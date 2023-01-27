@@ -639,54 +639,14 @@
 					<LightNativeArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Only>Infantry</Only>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependency Group="Weapon"/>
-						<Points>3</Points>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependency Group="Weapon"/>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Lance</Name>
-						<Only>Mount</Only>
-						<Dependency Group="Weapon"/>
-						<Points>7</Points>
-						<Lance/>
-					</Option>
-					<Option>
-						<Name>Handgun</Name>
-						<Dependency Group="Weapon"/>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Longbow</Name>
-						<Dependency Group="Weapon"/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Pistol</Name>
-						<Dependency Group="Weapon"/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Full plate armour</Name>
-						<Dependency Group="Armour"/>
-						<Points>6</Points>
-						<AddToArmour>4</AddToArmour>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Dependency Group="Armour"/>
-						<Points>2</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<AdditionalWeapon Points="3" Only="Infantry" Dependency="Weapon"/>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
+					<Lance Points="7" Only="Mount" Dependency="Weapon"/>
+					<Handgun Points="6" Dependency="Weapon"/>
+					<LongBow Points="5" Dependency="Weapon"/>
+					<Pistol Points="5" Dependency="Weapon"/>				
+					<FullPlateArmour Points="6" Dependency="Armour"/>
+					<HeavyArmour Points="2" Dependency="Armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Imperial Pegasus" Points="45"/>
 					<Mount Name="Warhorse" Points="12"/>
