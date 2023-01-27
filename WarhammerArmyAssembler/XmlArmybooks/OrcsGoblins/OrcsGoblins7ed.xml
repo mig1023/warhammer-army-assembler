@@ -692,7 +692,7 @@
 						<AddToInitiative>1</AddToInitiative>
 						<AddToLeadership>-1</AddToLeadership>
 					</Option>
-					<BattleStandardBearer Points="25" Dependencies="Great weapon, Additional weapon, Spear, Shield"/>					
+					<BattleStandardBearer Points="25" Dependencies="Great weapon, Additional weapon, Spear, Shield"/>
 					<GreatWeapon Points="4" Dependencies="Battle Standard Bearer"/>
 					<AdditionalWeapon Points="4" Only="Infantry" Dependencies="Battle Standard Bearer"/>
 					<Spear Points="2" Only="Mount" Dependencies="Battle Standard Bearer"/>
@@ -1040,7 +1040,7 @@
 					<Option>
 						<Name>Fanatic</Name>
 						<Points>25</Points>
-						<Countable Min="0" Max="3" Value="0">
+						<Countable Min="0" Max="3">
 							<ExportToUnitSize/>
 						</Countable>
 					</Option>
