@@ -541,20 +541,8 @@
 					<FullPlateArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependency/>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Lance</Name>
-						<Only>Mount</Only>
-						<Dependency/>
-						<Points>7</Points>
-						<Lance/>
-					</Option>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
+					<Lance Points="7" Only="Mount" Dependency="Weapon"/>
 					<Shield Points="4"/>
 				</Options>
 			</Lord>
