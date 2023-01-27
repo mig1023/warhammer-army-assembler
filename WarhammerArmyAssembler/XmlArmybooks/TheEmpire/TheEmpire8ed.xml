@@ -705,24 +705,8 @@
 					<LightNativeArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Dependency Group="Weapon"/>
-						<Points>2</Points>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Dependency Group="Weapon"/>
-						<Points>5</Points>
-					</Option>
-					<Option>
-						<Name>Heavy armour</Name>
-						<Points>2</Points>
-						<AddToArmour>5</AddToArmour>
-					</Option>
+					<AdditionalWeapon Points="2" Dependency="Weapon"/>
+					<GreatWeapon Points="5" Dependency="Weapon"/>
 					<HeavyArmour Points="2"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="12"/>
