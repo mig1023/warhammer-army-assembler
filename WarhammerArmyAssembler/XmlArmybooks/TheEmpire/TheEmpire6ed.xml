@@ -528,41 +528,12 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Lance</Name>
-						<Only>Mount</Only>
-						<Points>4</Points>
-						<Dependency Group="Weapon"/>
-						<Lance/>
-					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>4</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
-					<Option>
-						<Name>Halberd</Name>
-						<AddToStrength>1</AddToStrength>
-						<Points>4</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
-					<Option>
-						<Name>Pistol</Name>
-						<Points>7</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
-					<Option>
-						<Name>Longbow</Name>
-						<Points>10</Points>
-						<Dependency Group="Range"/>
-					</Option>
-					<Option>
-						<Name>Handgun</Name>
-						<Points>10</Points>
-						<Dependency Group="Range"/>
-					</Option>
+					<Lance Points="4" Only="Mount" Dependency="Weapon"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<Halberd Points="4" Dependency="Weapon"/>
+					<Pistol Points="7" Dependency="Weapon"/>
+					<LongBow Points="10" Dependency="Range"/>
+					<Handgun Points="10" Dependency="Range"/>
 					<LightArmour Points="2" Dependency="Armour"/>
 					<HeavyArmour Points="4" Dependency="Armour"/>
 					<FullPlateArmour Points="8" Dependency="Armour"/>
