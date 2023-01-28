@@ -137,13 +137,16 @@ namespace WarhammerArmyAssembler
 
             UpdateLayout();
 
-            double descrHeight = (armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20);
-            double specHeight = (armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20);
-            armybookDetail.Height = armyUnitDescription.Margin.Top + descrHeight + specHeight + 20;
+            double descrHeight = armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20;
+            double specHeight = armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20;
+            double paramsHeight = detailUnitGrid.ActualHeight > 0 ? detailUnitGrid.ActualHeight : 20;
 
+            armybookDetail.Height = armyUnitDescription.Margin.Top + descrHeight + specHeight + paramsHeight + 20;
             armybookArtefactDetail.Height = armybookDetail.Height;
 
-            double top = armyUnitDescription.Margin.Top + armyUnitDescription.ActualHeight + 15;
+            double top = armyUnitDescription.Margin.Top + 35;
+            detailUnitGridBorder.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
+            top += armyUnitDescription.ActualHeight + detailUnitGrid.ActualHeight - 5;
             armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
 
             armyUnitSpecific.Foreground = ArmyBook.Data.FrontColor;
