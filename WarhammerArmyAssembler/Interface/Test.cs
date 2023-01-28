@@ -11,8 +11,6 @@ namespace WarhammerArmyAssembler.Interface
     {
         private static bool showLinesToConsole = true;
 
-        private static Dictionary<string, List<FrameworkElement>> mountRow = new Dictionary<string, List<FrameworkElement>>();
-
         private static void LoadUnitParamInInterface(Unit unitForLoad, Unit mountForLoad, Grid unitGrid)
         {
             Unit load = unitForLoad.Clone();
@@ -153,9 +151,9 @@ namespace WarhammerArmyAssembler.Interface
 
             Changes.main.enemyTestUnit.Content = Enemy.ByName(SelectedEnemy()).Name;
 
-            // TMP
-            LoadUnitParamInInterface(WarhammerArmyAssembler.Test.Data.enemy, WarhammerArmyAssembler.Test.Data.enemyMount,
-                unitGrid: Changes.main.enemyGrid);
+            Unit enemyLoad = WarhammerArmyAssembler.Test.Data.enemy;
+            Unit mountLoad = WarhammerArmyAssembler.Test.Data.enemyMount;
+            LoadUnitParamInInterface(enemyLoad, mountLoad, Changes.main.enemyGrid);
             LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.enemy, target: Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
 
             Changes.armyUnitTest_Resize();
