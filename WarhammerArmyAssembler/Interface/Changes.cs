@@ -307,18 +307,18 @@ namespace WarhammerArmyAssembler.Interface
                 main.unitDetailScroll.Visibility = Visibility.Visible;
                 main.mainGrid.RowDefinitions[2].Height = new GridLength(270);
                 main.mainGrid.RowDefinitions[2].MinHeight = 170;
-                main.unitDetailScrollSlitter.IsEnabled = true;
+                main.unitDetailScrollSplitter.IsEnabled = true;
                 main.mainGrid.RowDefinitions[1].Height = new GridLength(5);
-                main.unitDetailScrollSlitter.Height = 5;
+                main.unitDetailScrollSplitter.Height = 5;
             }
             else
             {
                 main.unitDetailScroll.Visibility = Visibility.Hidden;
                 main.mainGrid.RowDefinitions[2].MinHeight = 0;
                 main.mainGrid.RowDefinitions[2].Height = new GridLength(0);
-                main.unitDetailScrollSlitter.IsEnabled = false;
+                main.unitDetailScrollSplitter.IsEnabled = false;
                 main.mainGrid.RowDefinitions[1].Height = new GridLength(0);
-                main.unitDetailScrollSlitter.Height = 0;
+                main.unitDetailScrollSplitter.Height = 0;
             }
         }
 
