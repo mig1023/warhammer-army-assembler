@@ -165,9 +165,11 @@ namespace WarhammerArmyAssembler
 
         public string RulesView { get; set; }
 
-        public Unit() => this.Items = new ObservableCollection<Unit>();
+        public Unit() =>
+            this.Items = new ObservableCollection<Unit>();
 
-        public int CompareTo(Unit anotherUnit) => (Test.Fight.CheckInitiative(this, anotherUnit) ? -1 : 1);
+        public int CompareTo(Unit anotherUnit) =>
+            (Test.Fight.CheckInitiative(this, anotherUnit) ? -1 : 1);
 
         public double GetUnitPoints()
         {
@@ -211,10 +213,13 @@ namespace WarhammerArmyAssembler
                 return change?.Group ?? Group;
             }
             else
+            {
                 return option.Group;
+            }
         }
 
-        public void SetGroup(string newGroup) => this.Group = newGroup;
+        public void SetGroup(string newGroup) =>
+            this.Group = newGroup;
 
         public int GetUnitMagicPoints()
         {
@@ -248,15 +253,20 @@ namespace WarhammerArmyAssembler
             return alreayUsed;
         }
 
-        public double GetUnitMagicPowersPoints() => MagicPowers;
+        public double GetUnitMagicPowersPoints() =>
+            MagicPowers;
 
-        public double MagicPowersPointsAlreadyUsed() => Options.Where(x => x.IsPowers()).Sum(x => x.Points);
+        public double MagicPowersPointsAlreadyUsed() =>
+            Options.Where(x => x.IsPowers()).Sum(x => x.Points);
 
-        public double GetMagicPowersCount() => MagicPowersCount;
+        public double GetMagicPowersCount() =>
+            MagicPowersCount;
 
-        public double MagicPowersCountAlreadyUsed() => Options.Where(x => x.IsPowers()).Count();
+        public double MagicPowersCountAlreadyUsed() =>
+            Options.Where(x => x.IsPowers()).Count();
             
-        public double MagicItemSlotsAlreadyUsed() => Options.Where(x => x.IsMagicItem() && (x.Points > 0)).Count();
+        public double MagicItemSlotsAlreadyUsed() =>
+            Options.Where(x => x.IsMagicItem() && (x.Points > 0)).Count();
 
         public int GetUnitWizard()
         {
@@ -408,7 +418,8 @@ namespace WarhammerArmyAssembler
             return newUnit;
         }
 
-        private bool ContainsCaseless(string line, string subline) => line.IndexOf(subline, StringComparison.OrdinalIgnoreCase) >= 0;
+        private bool ContainsCaseless(string line, string subline) =>
+            line.IndexOf(subline, StringComparison.OrdinalIgnoreCase) >= 0;
 
         private bool OptionTypeAlreadyUsed(Option option, ref bool alreadyArmour, ref bool alreadyShield)
         {
@@ -818,8 +829,10 @@ namespace WarhammerArmyAssembler
             }
 
             foreach (Option option in Options.Where(x => (x.Countable != null) && (x.Countable.Value > 0)))
+            {
                 if (!option.Countable?.ExportToWizardLevel ?? false)
                     equipment += String.Format("{0} {1}; ", option.Countable.Value, option.Name);
+            }
 
             foreach (Option option in Options.Where(x => !String.IsNullOrEmpty(x.Name) && x.IsPowers()))
                 equipment += String.Format("{0}; ", option.Name);
@@ -880,10 +893,10 @@ namespace WarhammerArmyAssembler
             if (!IsHeroOrHisMount())
             {
                 string minAndMax = String.Format("\nUnit size: {0} - {1}", MinSize, MaxSize);
-                string plus = (MinSize == MaxSize ? String.Empty : "+");
+                string plus = MinSize == MaxSize ? String.Empty : "+";
                 string minOnly = String.Format("\nUnit size: {0}{1}", MinSize, plus);
 
-                describe += ((MaxSize > 0) && (MinSize != MaxSize) ? minAndMax : minOnly);
+                describe += (MaxSize > 0) && (MinSize != MaxSize) ? minAndMax : minOnly;
 
                 if (Singleton)
                     describe += "\nOnly one unit of this type can be in the army";
@@ -911,7 +924,7 @@ namespace WarhammerArmyAssembler
                 [Unit.UnitType.Rare] = "rare units",
             };
 
-            return (typesNames.ContainsKey(Type) ? typesNames[Type] : String.Empty);
+            return typesNames.ContainsKey(Type) ? typesNames[Type] : String.Empty;
         }
 
         public static int ParamNormalization(int param, bool onlyZeroCheck = false)
@@ -931,8 +944,9 @@ namespace WarhammerArmyAssembler
             intValue = 0;
 
             if (unitValue is bool)
+            {
                 return (bool)unitValue;
-
+            }
             else if (unitValue is string)
             {
                 additionalParam = unitValue.ToString();
@@ -944,7 +958,9 @@ namespace WarhammerArmyAssembler
                 return intValue > 0;
             }
             else
+            {
                 return false;
+            }
         }
 
         public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue,
@@ -969,7 +985,6 @@ namespace WarhammerArmyAssembler
                         intParamValue = GetFront();
                         anyIsTrue = true;
                     }
-
                     else if ((name == "Reroll") && !directModification && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
                     {
                         string[] allRerolls = lineOptionValue.Split(';');
@@ -985,7 +1000,9 @@ namespace WarhammerArmyAssembler
                         }
                     }
                     else if (fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
+                    {
                         lineParamValue = lineOptionValue;
+                    }
 
                     if (fromParamValue && (intOptionValue > 0))
                         intParamValue = intOptionValue;
@@ -1022,9 +1039,11 @@ namespace WarhammerArmyAssembler
                     rules.Add(characterCommander);
             }
             else
+            {
                 foreach (Option option in Options.Where(x => (x.Command && x.Realised)))
                     rules.Add(option.Name);
-
+            }
+                
             string rulesLine = String.Empty;
 
             foreach (string rule in rules)
@@ -1055,8 +1074,10 @@ namespace WarhammerArmyAssembler
             Test.Param.Describe(ParamTests, ref rules);
 
             if (!onlyUnitParam)
+            {
                 foreach (Option option in Options)
                     Test.Param.Describe(option.ParamTests, ref rules);
+            }
 
             foreach (Option option in Options.Where(x => (x.SpecialRuleDescription.Length > 0) && (!x.IsOption() || x.Realised)))
                 foreach (string specialRule in option.SpecialRuleDescription)
@@ -1066,15 +1087,19 @@ namespace WarhammerArmyAssembler
         }
 
         public bool IsHero() =>
-            (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero);
+            Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero;
 
-        public bool IsHeroOrHisMount() =>
-            (LargeBase && (MaxSize == MinSize))
-            ||
-            (Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero || Type == Unit.UnitType.Mount);
+        public bool IsHeroOrHisMount()
+        {
+            bool hero = Type == Unit.UnitType.Lord || Type == Unit.UnitType.Hero;
+            bool mount = Type == Unit.UnitType.Mount;
+            bool monster = LargeBase && (MaxSize == MinSize);
+
+            return hero || mount || monster;
+        }
 
         public bool IsUnit() =>
-            (this.Type == Unit.UnitType.Core || this.Type == Unit.UnitType.Special || this.Type == Unit.UnitType.Rare);
+            this.Type == Unit.UnitType.Core || this.Type == Unit.UnitType.Special || this.Type == Unit.UnitType.Rare;
 
         public bool ExistsOptions() =>
             Options.Where(x => x.IsOption() && !x.MagicItemsPoints && !x.Command).FirstOrDefault() != null;
@@ -1265,21 +1290,25 @@ namespace WarhammerArmyAssembler
             return (yesWhenNecessaryNo || noWhenNecessaryYes || groopAlreadyUsed);
         }
 
-        public bool IsMaxSlannOption() => Options.Where(x => x.IsSlannOption() && x.Realised).Count() >= 4;
+        public bool IsMaxSlannOption() =>
+            Options.Where(x => x.IsSlannOption() && x.Realised).Count() >= 4;
 
         public Unit SetTestType(TestTypeTypes testType)
         {
             TestType = testType;
-
             return this;
         }
 
-        public bool IsSimpleMount() => (this.Type == Unit.UnitType.Mount) && (this.Wounds.Original == 1);
+        public bool IsSimpleMount() =>
+            (this.Type == Unit.UnitType.Mount) && (this.Wounds.Original == 1);
 
-        public bool IsNotSimpleMount() => (this.Type != Unit.UnitType.Mount) || (this.Wounds.Original != 1);
+        public bool IsNotSimpleMount() =>
+            (this.Type != Unit.UnitType.Mount) || (this.Wounds.Original != 1);
 
-        public bool IsFearOrTerror() => (this.Terror || this.Fear || this.Undead);
+        public bool IsFearOrTerror() =>
+            (this.Terror || this.Fear || this.Undead);
 
-        public bool IsAlready(string name) => Options.Where(x => x.Name == name).FirstOrDefault() != null;
+        public bool IsAlready(string name) =>
+            Options.Where(x => x.Name == name).FirstOrDefault() != null;
     }
 }
