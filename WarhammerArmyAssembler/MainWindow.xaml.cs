@@ -140,9 +140,9 @@ namespace WarhammerArmyAssembler
             double descrHeight = armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20;
             double specHeight = armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20;
             double paramsHeight = detailUnitGrid.ActualHeight > 0 ? detailUnitGrid.ActualHeight : 20;
-
-            armybookDetail.Height = armyUnitDescription.Margin.Top + descrHeight + specHeight + paramsHeight + 20;
-            armybookArtefactDetail.Height = armybookDetail.Height;
+            
+            armybookArtefactDetail.Height = armyUnitDescription.Margin.Top + descrHeight + specHeight + 20;
+            armybookDetail.Height = armybookArtefactDetail.Height + paramsHeight;
 
             double top = armyUnitDescription.Margin.Top + 35;
             detailUnitGridBorder.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
