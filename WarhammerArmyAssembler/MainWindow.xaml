@@ -28,7 +28,7 @@
                 </TextBlock.TextDecorations>
             </TextBlock>
         </ControlTemplate>
-        <ControlTemplate TargetType="Label" x:Key="profileLabel">
+        <ControlTemplate TargetType="Label" x:Key="detailProfile">
             <TextBlock Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Height="25"/>
         </ControlTemplate>
     </Window.Resources>
@@ -86,26 +86,26 @@
                                     <ColumnDefinition Width="200"/>
                                     <ColumnDefinition Width="150"/>
                                 </Grid.ColumnDefinitions>
-                                
-                                <Label Content="Movement" Template="{StaticResource profileLabel}" Grid.Row="0" Grid.Column="0"/>
-                                <Label Content="Weapon skill" Template="{StaticResource profileLabel}" Grid.Row="1" Grid.Column="0"/>
-                                <Label Content="Ballistic skill" Template="{StaticResource profileLabel}" Grid.Row="2" Grid.Column="0"/>
-                                <Label Content="Strength" Template="{StaticResource profileLabel}" Grid.Row="3" Grid.Column="0"/>
-                                <Label Content="Toughness" Template="{StaticResource profileLabel}" Grid.Row="4" Grid.Column="0"/>
-                                <Label Content="Wounds" Template="{StaticResource profileLabel}" Grid.Row="5" Grid.Column="0"/>
-                                <Label Content="Initiative" Template="{StaticResource profileLabel}" Grid.Row="6" Grid.Column="0"/>
-                                <Label Content="Attacks" Template="{StaticResource profileLabel}" Grid.Row="7" Grid.Column="0"/>
-                                <Label Content="Leadership" Template="{StaticResource profileLabel}" Grid.Row="8" Grid.Column="0"/>
 
-                                <Label Content="{Binding Movement.Value}" Template="{StaticResource profileLabel}" Grid.Row="0" Grid.Column="1"/>
-                                <Label Content="{Binding WeaponSkill.Value}" Template="{StaticResource profileLabel}" Grid.Row="1" Grid.Column="1"/>
-                                <Label Content="{Binding BallisticSkill.Value}" Template="{StaticResource profileLabel}" Grid.Row="2" Grid.Column="1"/>
-                                <Label Content="{Binding Strength.Value}" Template="{StaticResource profileLabel}" Grid.Row="3" Grid.Column="1"/>
-                                <Label Content="{Binding Toughness.Value}" Template="{StaticResource profileLabel}" Grid.Row="4" Grid.Column="1"/>
-                                <Label Content="{Binding Wounds.Value}" Template="{StaticResource profileLabel}" Grid.Row="5" Grid.Column="1"/>
-                                <Label Content="{Binding Initiative.Value}" Template="{StaticResource profileLabel}" Grid.Row="6" Grid.Column="1"/>
-                                <Label Content="{Binding Attacks.Value}" Template="{StaticResource profileLabel}" Grid.Row="7" Grid.Column="1"/>
-                                <Label Content="{Binding Leadership.Value}" Template="{StaticResource profileLabel}" Grid.Row="8" Grid.Column="1"/>
+                                <Label Content="Movement" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="0"/>
+                                <Label Content="Weapon skill" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="0"/>
+                                <Label Content="Ballistic skill" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="0"/>
+                                <Label Content="Strength" Template="{StaticResource detailProfile}" Grid.Row="3" Grid.Column="0"/>
+                                <Label Content="Toughness" Template="{StaticResource detailProfile}" Grid.Row="4" Grid.Column="0"/>
+                                <Label Content="Wounds" Template="{StaticResource detailProfile}" Grid.Row="5" Grid.Column="0"/>
+                                <Label Content="Initiative" Template="{StaticResource detailProfile}" Grid.Row="6" Grid.Column="0"/>
+                                <Label Content="Attacks" Template="{StaticResource detailProfile}" Grid.Row="7" Grid.Column="0"/>
+                                <Label Content="Leadership" Template="{StaticResource detailProfile}" Grid.Row="8" Grid.Column="0"/>
+
+                                <Label Content="{Binding Movement.Value}" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="1"/>
+                                <Label Content="{Binding WeaponSkill.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="1"/>
+                                <Label Content="{Binding BallisticSkill.Value}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="1"/>
+                                <Label Content="{Binding Strength.Value}" Template="{StaticResource detailProfile}" Grid.Row="3" Grid.Column="1"/>
+                                <Label Content="{Binding Toughness.Value}" Template="{StaticResource detailProfile}" Grid.Row="4" Grid.Column="1"/>
+                                <Label Content="{Binding Wounds.Value}" Template="{StaticResource detailProfile}" Grid.Row="5" Grid.Column="1"/>
+                                <Label Content="{Binding Initiative.Value}" Template="{StaticResource detailProfile}" Grid.Row="6" Grid.Column="1"/>
+                                <Label Content="{Binding Attacks.Value}" Template="{StaticResource detailProfile}" Grid.Row="7" Grid.Column="1"/>
+                                <Label Content="{Binding Leadership.Value}" Template="{StaticResource detailProfile}" Grid.Row="8" Grid.Column="1"/>
                             </Grid>
                         </Border>
                         <TextBlock x:Name="armyUnitSpecific" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,105"/>
@@ -138,85 +138,34 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0">
-                                <Label Content="Name" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1">
-                                <Label Content="Size" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="2">
-                                <Label Content="Movement" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="3">
-                                <Label Content="WeaponSkill" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="4">
-                                <Label Content="BallisticSkill" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="5">
-                                <Label Content="Strength"  FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="6">
-                                <Label Content="Toughness" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="7">
-                                <Label Content="Wounds" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="8">
-                                <Label Content="Initiative" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="9">
-                                <Label Content="Attacks" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="10">
-                                <Label Content="Leadership" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="11">
-                                <Label Content="Armour" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="12">
-                                <Label Content="Ward" FontSize="16"/>
-                            </StackPanel>
 
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0">
-                                <Label x:Name="NameTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">
-                                <Label x:Name="SizeTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="2">
-                                <Label x:Name="MovementTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="3">
-                                <Label x:Name="WeaponSkillTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="4">
-                                <Label x:Name="BallisticSkillTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="5">
-                                <Label x:Name="StrengthTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="6">
-                                <Label x:Name="ToughnessTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="7">
-                                <Label x:Name="WoundsTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="8">
-                                <Label x:Name="InitiativeTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="9">
-                                <Label x:Name="AttacksTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="10">
-                                <Label x:Name="LeadershipTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="11">
-                                <Label x:Name="ArmourTest" FontSize="16"/>
-                            </StackPanel>
-                            <StackPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="12">
-                                <Label x:Name="WardTest" FontSize="16"/>
-                            </StackPanel>
+                            <Label Content="Name" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="0"/>
+                            <Label Content="Size" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="1"/>
+                            <Label Content="Movement" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="2"/>
+                            <Label Content="Weapon skill" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="3"/>
+                            <Label Content="Ballistic skill" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="4"/>
+                            <Label Content="Strength" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="5"/>
+                            <Label Content="Toughness" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="6"/>
+                            <Label Content="Wounds" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="7"/>
+                            <Label Content="Initiative" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="8"/>
+                            <Label Content="Attacks" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="9"/>
+                            <Label Content="Leadership" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="10"/>
+                            <Label Content="Armour" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="11"/>
+                            <Label Content="Ward" Template="{StaticResource detailProfile}" Grid.Row="0" Grid.Column="12"/>
+
+                            <Label Content="{Binding Name}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="0"/>
+                            <Label Content="{Binding Size}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="1"/>
+                            <Label Content="{Binding Movement.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="2"/>
+                            <Label Content="{Binding WeaponSkill.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="3"/>
+                            <Label Content="{Binding BallisticSkill.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="4"/>
+                            <Label Content="{Binding Strength.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="5"/>
+                            <Label Content="{Binding Toughness.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="6"/>
+                            <Label Content="{Binding Wounds.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="7"/>
+                            <Label Content="{Binding Initiative.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="8"/>
+                            <Label Content="{Binding Attacks.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="9"/>
+                            <Label Content="{Binding Leadership.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="10"/>
+                            <Label Content="{Binding Armour.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="11"/>
+                            <Label Content="{Binding Ward.Value}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="12"/>
                         </Grid>
                     </Border>
                     <TextBlock x:Name="specialRulesTest" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="173"/>
