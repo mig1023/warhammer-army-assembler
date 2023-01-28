@@ -122,6 +122,7 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition/>
                                 <RowDefinition/>
+                                <RowDefinition/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="200"/>
@@ -166,6 +167,20 @@
                             <Label Content="{Binding Leadership.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="10"/>
                             <Label Content="{Binding Armour.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="11"/>
                             <Label Content="{Binding Ward.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="12"/>
+
+                            <Label Content="{Binding Mount.Name}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="0"/>
+                            <Label Content="{Binding Mount.Size}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="1"/>
+                            <Label Content="{Binding Mount.Movement.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="2"/>
+                            <Label Content="{Binding Mount.WeaponSkill.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="3"/>
+                            <Label Content="{Binding Mount.BallisticSkill.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="4"/>
+                            <Label Content="{Binding Mount.Strength.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="5"/>
+                            <Label Content="{Binding Mount.Toughness.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="6"/>
+                            <Label Content="{Binding Mount.Wounds.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="7"/>
+                            <Label Content="{Binding Mount.Initiative.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="8"/>
+                            <Label Content="{Binding Mount.Attacks.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="9"/>
+                            <Label Content="{Binding Mount.Leadership.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="10"/>
+                            <Label Content="{Binding Mount.Armour.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="11"/>
+                            <Label Content="{Binding Mount.Ward.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="12"/>
                         </Grid>
                     </Border>
                     <TextBlock x:Name="specialRulesTest" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="173"/>

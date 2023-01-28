@@ -13,28 +13,9 @@ namespace WarhammerArmyAssembler.Interface
 
         private static Dictionary<string, List<FrameworkElement>> mountRow = new Dictionary<string, List<FrameworkElement>>();
 
-        private static List<string> unitParam = new List<string> {
-            "Name", "Size", "Movement", "WeaponSkill", "BallisticSkill", "Strength", "Toughness",
-            "Wounds", "Initiative", "Attacks", "Leadership", "Armour", "Ward"
-        };
-
-        private static void LoadUnitParamInInterface(Unit unitForLoad, Unit mountForLoad, string elemetnsPostfix, Grid unitGrid)
+        private static void LoadUnitParamInInterface(Unit unitForLoad, Unit mountForLoad, Grid unitGrid)
         {
-            if (unitGrid.RowDefinitions.Count > 2)
-            {
-                unitGrid.RowDefinitions.RemoveAt(2);
-
-                if (mountRow.ContainsKey(unitGrid.Name))
-                {
-                    foreach (Panel row in mountRow[unitGrid.Name])
-                    {
-                        row.Children.Clear();
-                        unitGrid.Children.Remove(row);
-                    }
-
-                    mountRow[unitGrid.Name].Clear();
-                }
-            }
+            Unit load = unitForLoad.Clone();
 
             if ((unitForLoad.MountOn > 0) || (unitForLoad.Mount != null))
             {
@@ -44,34 +25,17 @@ namespace WarhammerArmyAssembler.Interface
                 unitGrid.Height = 99;
             }
             else
-                unitGrid.Height = 66;
-
-            int mountIndex = 0;
-
-            foreach (string name in unitParam)
             {
-                Label testUnitElement = (Label)Changes.main.FindName(String.Format("{0}{1}", name, elemetnsPostfix));
-                testUnitElement.Content = ParamView(name, unitForLoad);
+                if (unitGrid.RowDefinitions.Count > 2)
+                    unitGrid.RowDefinitions.RemoveAt(2);
 
-                if (mountForLoad != null)
-                {
-                    AddMountUnitParam(ParamView(name, mountForLoad), mountIndex, unitGrid);
-                    mountIndex += 1;
-                }
+                unitGrid.Height = 66;
             }
+
+            load.Mount = mountForLoad;
+            unitGrid.DataContext = load;
 
             Changes.armyUnitTest_Resize();
-        }
-
-        private static string ParamView(string name, Unit unitForLoad)
-        {
-            if ((name != "Size") && (name != "Name"))
-            {
-                Profile param = (Profile)typeof(Unit).GetProperty(name).GetValue(unitForLoad);
-                return param?.View;
-            }
-            else
-                return typeof(Unit).GetProperty(name).GetValue(unitForLoad).ToString();
         }
 
         public static void startTest(WarhammerArmyAssembler.Test.Data.TestTypes testType)
@@ -84,27 +48,6 @@ namespace WarhammerArmyAssembler.Interface
 
         public static string GetFullConsoleText() => new TextRange(Changes.main.testConsole.Document.ContentStart,
             Changes.main.testConsole.Document.ContentEnd).Text;
-
-        private static void AddMountUnitParam(string param, int gridIndex, Grid unitGrid)
-        {
-            StackPanel panel = new StackPanel { HorizontalAlignment = HorizontalAlignment.Center };
-
-            unitGrid.Children.Add(panel);
-            Grid.SetRow(panel, 2);
-            Grid.SetColumn(panel, gridIndex);
-
-            if (!mountRow.ContainsKey(unitGrid.Name))
-                mountRow.Add(unitGrid.Name, new List<FrameworkElement>());
-
-            mountRow[unitGrid.Name].Add(panel);
-
-            Label label = new Label
-            {
-                FontSize = 16,
-                Content = param
-            };
-            panel.Children.Add(label);
-        }
 
         private static void LoadSpecialRules(Unit unitForLoad, TextBlock target, bool onlyUnitRules = false)
         {
@@ -159,7 +102,9 @@ namespace WarhammerArmyAssembler.Interface
             main.startBattleRoyale.Visibility = Visibility.Visible;
 
             main.armyTestUnit.Content = WarhammerArmyAssembler.Test.Data.unit.Name;
-            LoadUnitParamInInterface(unitForLoad: WarhammerArmyAssembler.Test.Data.unit, mountForLoad: WarhammerArmyAssembler.Test.Data.unitMount, elemetnsPostfix: "Test", unitGrid: Changes.main.unitGrid);
+            Unit unitLoad = WarhammerArmyAssembler.Test.Data.unit;
+            Unit mountLoad = WarhammerArmyAssembler.Test.Data.unitMount;
+            LoadUnitParamInInterface(unitLoad, mountLoad, Changes.main.unitGrid);
             LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.unit, target: main.specialRulesTest, onlyUnitRules: true);
 
             foreach (Label label in new List<Label> { main.startFullTest, main.startStatisticTest, main.startBattleRoyale })
@@ -193,9 +138,11 @@ namespace WarhammerArmyAssembler.Interface
             }
         }
 
-        private static string SelectedEnemy() => (string)Changes.main.enemyForTest.SelectedItem;
+        private static string SelectedEnemy() =>
+            (string)Changes.main.enemyForTest.SelectedItem;
 
-        private static string SelectedGroup() => (string)Changes.main.enemyGroup.SelectedItem;
+        private static string SelectedGroup() =>
+            (string)Changes.main.enemyGroup.SelectedItem;
 
         public static void TestEnemyPrepare()
         {
@@ -205,8 +152,10 @@ namespace WarhammerArmyAssembler.Interface
             WarhammerArmyAssembler.Test.Data.PrepareEnemy(SelectedEnemy());
 
             Changes.main.enemyTestUnit.Content = Enemy.ByName(SelectedEnemy()).Name;
-            LoadUnitParamInInterface(unitForLoad: WarhammerArmyAssembler.Test.Data.enemy, mountForLoad: WarhammerArmyAssembler.Test.Data.enemyMount,
-                elemetnsPostfix: "Enemy", unitGrid: Changes.main.enemyGrid);
+
+            // TMP
+            LoadUnitParamInInterface(WarhammerArmyAssembler.Test.Data.enemy, WarhammerArmyAssembler.Test.Data.enemyMount,
+                unitGrid: Changes.main.enemyGrid);
             LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.enemy, target: Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
 
             Changes.armyUnitTest_Resize();
@@ -242,8 +191,10 @@ namespace WarhammerArmyAssembler.Interface
             text.ApplyPropertyValue(TextElement.ForegroundProperty, color ?? Brushes.Black);
         }
 
-        public static void PreventConsoleOutput(bool prevent = true) => showLinesToConsole = !prevent;
+        public static void PreventConsoleOutput(bool prevent = true) =>
+            showLinesToConsole = !prevent;
 
-        public static bool PreventConsoleOutputStatus() => showLinesToConsole;
+        public static bool PreventConsoleOutputStatus() =>
+            showLinesToConsole;
     }
 }
