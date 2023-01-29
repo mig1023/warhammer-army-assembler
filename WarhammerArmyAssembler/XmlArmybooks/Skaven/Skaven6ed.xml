@@ -229,7 +229,7 @@
 				<Weapon>
 					<Name>Brass Orb</Name>
 					<Points>50</Points>
-					<Test Bet="Death" Context="Round" Repeat="Once">Initiative</Test>
+					<Test Bet="Death" Context="Round" Repeat="Once" Profile="Initiative"/>
 					<Description>Once per battle, the user can throw the orb exactly like a Death Globe. Models hit must take an Initiative test or be destroyed, with no saves (of any kind) allowed. Remember that a 6 is always a failure, but characters are allowed a 'Look Out Sir!' roll as normal. An Empire Steam Tank hit by the orb suffers 3D6 points Of damage</Description>
 				</Weapon>
 				<Additional>
@@ -481,7 +481,7 @@
 					<Option>
 						<Name>Plague Censer</Name>
 						<Flail/>
-						<Test Bet="Wound" Context="Round">Toughness</Test>
+						<Test Bet="Wound" Context="Round" Profile="Toughness"/>
 						<Points>16</Points>
 					</Option>
 					<Flail Points="4"/>
@@ -947,7 +947,7 @@
 					<HandWeapon>
 						<Name>Plague censer</Name>
 						<Flail/>
-						<Test Bet="Wound" Context="Round">Toughness</Test>
+						<Test Bet="Wound" Context="Round" Profile="Toughness"/>
 					</HandWeapon>
 				</Equipments>
 			</Rare>
