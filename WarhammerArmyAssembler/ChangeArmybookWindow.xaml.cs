@@ -80,12 +80,24 @@ namespace WarhammerArmyAssembler
                 return;
 
             double x = e.GetPosition(sender as UIElement).X - PointesTumblerOffset.Value.X;
-            //double y = e.GetPosition(sender as UIElement).Y - PointesTumblerOffset.Value.Y;
 
             PointesTumblerRotate += 0.1 * (x > 0 ? 1 : -1);
-            PointesTumblerElement.RenderTransform = new RotateTransform(PointesTumblerRotate, 75, 75);
 
-            //DEBUG.Content = PointesTumblerRotate;
+            if (PointesTumblerRotate < -170)
+            {
+                PointesTumblerRotate = -170;
+            }
+            else if (PointesTumblerRotate > 170)
+            {
+                PointesTumblerRotate = 170;
+            }
+            else
+            {
+                PointesTumblerElement.RenderTransform = new RotateTransform(PointesTumblerRotate, 75, 75);
+            }
+
+            int points = Interface.Services.PointsCalculator(PointesTumblerRotate);
+            listArmybookPoints.Text = points.ToString();
         }
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e) =>

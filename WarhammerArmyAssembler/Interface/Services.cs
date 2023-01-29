@@ -52,5 +52,17 @@ namespace WarhammerArmyAssembler.Interface
 
             return parts.ToArray();
         }
+
+        public static int PointsCalculator(double rotate)
+        {
+            int rotateAngle = (int)rotate;
+            int maxPoints = 4000;
+
+            foreach (int angle in ArmyBook.Constants.ArmySizeAngles.Keys)
+                if (angle >= rotateAngle)
+                    return maxPoints = ArmyBook.Constants.ArmySizeAngles[angle];
+
+            return maxPoints;
+        }
     }
 }

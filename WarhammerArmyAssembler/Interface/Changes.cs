@@ -437,11 +437,8 @@ namespace WarhammerArmyAssembler.Interface
             ArmyChangesColors(changeArmybook.prev);
             ArmyChangesColors(changeArmybook.next);
 
-            //foreach (Label label in PointsButtons)
-            //{
-            //    label.BorderBrush = mainColor;
-            //    label.Foreground = mainColor;
-            //}
+            changeArmybook.pointesTumbler.Stroke = mainColor;
+            changeArmybook.pointesTumblerMark.Stroke = mainColor;
 
             List<Control> labels = new List<Control>
             {
