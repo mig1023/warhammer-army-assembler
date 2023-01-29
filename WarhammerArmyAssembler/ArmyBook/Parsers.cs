@@ -122,7 +122,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (XmlNode xmlParamTest in xmlNode.SelectNodes("Test"))
             {
-                Param newParamTest = new Param { Type = xmlParamTest.InnerText };
+                Param newParamTest = new Param { Type = xmlParamTest.Attributes["Profile"].Value };
 
                 bool success = Enum.TryParse(xmlParamTest.Attributes["Bet"].Value, out Param.TestType bet);
                 newParamTest.Bet = (success ? bet : Param.TestType.Wound);
