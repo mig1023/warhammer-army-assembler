@@ -56,13 +56,12 @@ namespace WarhammerArmyAssembler.Interface
         public static int PointsCalculator(double rotate)
         {
             int rotateAngle = (int)rotate;
-            int maxPoints = 4000;
 
             foreach (int angle in ArmyBook.Constants.ArmySizeAngles.Keys)
                 if (angle >= rotateAngle)
-                    return maxPoints = ArmyBook.Constants.ArmySizeAngles[angle];
+                   return ArmyBook.Constants.ArmySizeAngles[angle];
 
-            return maxPoints;
+            return 4000;
         }
 
         public static double AngleCalculator(int points)
