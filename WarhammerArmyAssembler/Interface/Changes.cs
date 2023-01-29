@@ -440,6 +440,20 @@ namespace WarhammerArmyAssembler.Interface
             changeArmybook.pointesTumbler.Stroke = mainColor;
             changeArmybook.pointesTumblerMark.Stroke = mainColor;
 
+            List<Control> marks = new List<Control>
+            {
+                changeArmybook.mark500,
+                changeArmybook.mark1000,
+                changeArmybook.mark2000,
+                changeArmybook.mark2500,
+                changeArmybook.mark3000,
+            };
+
+            foreach (Control label in marks)
+            {
+                label.Foreground = mainColor;
+            }
+
             List<Control> labels = new List<Control>
             {
                 changeArmybook.next,
