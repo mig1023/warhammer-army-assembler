@@ -316,7 +316,7 @@
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
-					<Test Bet="Pass" Context="Round">Leadership</Test>
+					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack in that Close Combat phase</Description>
 				</Weapon>
 				<Weapon>
@@ -325,7 +325,7 @@
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
-					<Test Bet="Pass" Context="Round">Leadership</Test>
+					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>At the beginning of the Close Combat phase select one model in base contact with the Vampire. The selected model must take a Leadership test. If test is failed, the victim cannot attack the Vampire in that the Close Combat phase</Description>
 				</Weapon>
 			</Group>
@@ -346,7 +346,7 @@
 					<Name>Frostblade</Name>
 					<Points>100</Points>
 					<NoArmour/>
-					<Test Bet="Death" Context="Wound">Toughness</Test>
+					<Test Bet="Death" Context="Wound" Profile="Toughness"/>
 					<Description>Armour saving throws are not allowed against the Frostblade. Ward saves can he taken as nornal. For every unsaved wound caused by this sword, the victim must take a Toughness test to resist magic. If he fails, he is killed outright (remember that a 6 is always a failure). If the victim passes the test then he suffers damage (mm die hlow as normal</Description>
 				</Weapon>
 				<Weapon>
