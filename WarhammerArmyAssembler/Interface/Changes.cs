@@ -122,7 +122,7 @@ namespace WarhammerArmyAssembler.Interface
                 Error("Not enough points add an item");
 
             else if (!Checks.EnoughUnitPointsForAddArtefact(id, unit, pointsPenalty: prevRunicPointsPenalty))
-                Error(String.Format("Not enough magic item {0} to add an item", (unit.MagicItemCount > 0 ? "slots" : "points")));
+                Error(String.Format("Not enough magic item {0} to add an item", unit.MagicItemCount > 0 ? "slots" : "points"));
 
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, artefact.Points, 0))
                 Error("For this type, a point cost limit has been reached");
@@ -135,10 +135,10 @@ namespace WarhammerArmyAssembler.Interface
                 if (prevRunicItem != null)
                     unit.Options.Remove(prevRunicItem);
 
-                if ((ArmyBook.Data.Artefact[id].TypeUnitIncrese) && (unit.Type == Unit.UnitType.Core))
+                if (ArmyBook.Data.Artefact[id].TypeUnitIncrese && (unit.Type == Unit.UnitType.Core))
                     unit.Type = Unit.UnitType.Special;
 
-                else if ((ArmyBook.Data.Artefact[id].TypeUnitIncrese) && (unit.Type == Unit.UnitType.Special))
+                else if (ArmyBook.Data.Artefact[id].TypeUnitIncrese && (unit.Type == Unit.UnitType.Special))
                     unit.Type = Unit.UnitType.Rare;
 
                 unit.AddAmmunition(id);
@@ -159,8 +159,8 @@ namespace WarhammerArmyAssembler.Interface
         {
             Unit unit = ArmyBook.Data.Units[id];
 
-            bool slotExists = (Army.Params.GetArmyUnitsNumber(unit.Type) < Army.Params.GetArmyMaxUnitsNumber(unit.Type));
-            bool coreUnit = (unit.Type == Unit.UnitType.Core);
+            bool slotExists = Army.Params.GetArmyUnitsNumber(unit.Type) < Army.Params.GetArmyMaxUnitsNumber(unit.Type);
+            bool coreUnit = unit.Type == Unit.UnitType.Core;
 
             int allHeroes = Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord) + Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero);
             bool lordInHeroSlot = (unit.Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
@@ -169,10 +169,10 @@ namespace WarhammerArmyAssembler.Interface
                 Error("Personalities cannot be repeated");
 
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)
-                Error(String.Format("The number of {0} of this type has been exhausted.", (unit.IsHero() ? "heroes" : "units")));
+                Error(String.Format("The number of {0} of this type has been exhausted.", unit.IsHero() ? "heroes" : "units"));
 
             else if (!Checks.EnoughPointsForAddUnit(id))
-                Error(String.Format("Not enough points to add a {0}", (unit.IsHero() ? "hero" : "unit")));
+                Error(String.Format("Not enough points to add a {0}", unit.IsHero() ? "hero" : "unit"));
 
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, unit.Points, unit.StaticPoints))
                 Error(String.Format("The {0} has reached a point cost limit", unit.UnitTypeName()));
@@ -327,7 +327,7 @@ namespace WarhammerArmyAssembler.Interface
         {
             Thickness newPosition = new Thickness(0, 0, 0, 0);
 
-            main.ResizeMode = (detail ? ResizeMode.NoResize : ResizeMode.CanResizeWithGrip);
+            main.ResizeMode = detail ? ResizeMode.NoResize : ResizeMode.CanResizeWithGrip;
 
             if (menu)
                 Mod.View(canvasToShow: main.mainMenu, top: true);
@@ -395,7 +395,8 @@ namespace WarhammerArmyAssembler.Interface
             if (Army.Data.Units.Count <= 0)
                 return true;
 
-            return MessageBox.Show("All army data will be lost.\nContinue?", String.Empty, MessageBoxButton.OKCancel) == MessageBoxResult.OK;
+            string text = "All army data will be lost.\nContinue?";
+            return MessageBox.Show(text, String.Empty, MessageBoxButton.OKCancel) == MessageBoxResult.OK;
         }
 
         private static void ArmyChangesColors(Label label)
@@ -661,7 +662,8 @@ namespace WarhammerArmyAssembler.Interface
             }
         }
 
-        public static double ZeroFuse(double currentParam) => (currentParam < 0 ? 0 : currentParam);
+        public static double ZeroFuse(double currentParam) =>
+            currentParam < 0 ? 0 : currentParam;
 
         private static StackPanel TooltipBlock(string head, int edition, string description,
             string image, int released, string authors, Brush lineColor) => new StackPanel
@@ -803,9 +805,9 @@ namespace WarhammerArmyAssembler.Interface
         {
             main.UpdateLayout();
 
-            double marginTop = Changes.ZeroFuse(main.unitGrid.ActualHeight - 66);
+            double marginTop = ZeroFuse(main.unitGrid.ActualHeight - 66);
 
-            main.specialRulesTest.Margin = Changes.Thick(main.specialRulesTest, top: marginTop);
+            main.specialRulesTest.Margin = Thick(main.specialRulesTest, top: marginTop);
 
             marginTop += main.specialRulesTest.ActualHeight;
 
@@ -820,9 +822,9 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             foreach (FrameworkElement element in elements)
-                element.Margin = Changes.Thick(main.enemyForTestText, top: marginTop);
+                element.Margin = Thick(main.enemyForTestText, top: marginTop);
 
-            marginTop += Changes.ZeroFuse(main.enemyGrid.ActualHeight - 66);
+            marginTop += ZeroFuse(main.enemyGrid.ActualHeight - 66);
 
             elements = new List<FrameworkElement>
             {
@@ -835,7 +837,7 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             foreach (FrameworkElement element in elements)
-                element.Margin = Changes.Thick(main.enemyForTestText, top: marginTop);
+                element.Margin = Thick(main.enemyForTestText, top: marginTop);
 
             double unitTestHeight = (double)main.enemyForTest.GetValue(Canvas.TopProperty) +
                 main.enemyForTest.ActualHeight + 50;
@@ -847,20 +849,20 @@ namespace WarhammerArmyAssembler.Interface
                 double startButtonPosition = (double)main.startFullTest.GetValue(Canvas.TopProperty);
                 unitTestHeight = main.startFullTest.Margin.Top + main.startFullTest.ActualHeight + startButtonPosition + 20;
 
-                main.startBattleRoyale.Margin = Changes.Thick(main.enemyForTestText, top: marginTop + 154,
+                main.startBattleRoyale.Margin = Thick(main.enemyForTestText, top: marginTop + 154,
                     left: main.startBattleRoyale.Margin.Left + 163);
 
-                main.currentTest.Margin = Changes.Thick(main.startBattleRoyale);
+                main.currentTest.Margin = Thick(main.startBattleRoyale);
             }
             else
             {
-                main.testConsole.Margin = Changes.Thick(main.enemyForTestText, top: marginTop - 155);
+                main.testConsole.Margin = Thick(main.enemyForTestText, top: marginTop - 155);
                 royalConsoleSize = -70;
             }
 
             if (unitTestHeight + 140 < main.armyUnitTestScroll.ActualHeight)
             {
-                main.testConsole.Height = Changes.ZeroFuse(
+                main.testConsole.Height = ZeroFuse(
                     main.armyUnitTestScroll.ActualHeight - unitTestHeight - 20) + royalConsoleSize;
             }
             else
@@ -869,7 +871,7 @@ namespace WarhammerArmyAssembler.Interface
                 main.testConsole.Height = 120 + royalConsoleSize;
             }
 
-            main.waitingSpinner.Margin = Changes.Thick(main.testConsole,
+            main.waitingSpinner.Margin = Thick(main.testConsole,
                 top: main.testConsole.Margin.Top - Services.SPINNER_TOP_MARGIN,
                 left: main.testConsole.Margin.Left - Services.SPINNER_LEFT_MARGIN);
 
@@ -890,7 +892,7 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             foreach (FrameworkElement element in elements)
-                element.Width = Changes.ZeroFuse(e.NewSize.Width - 120);
+                element.Width = ZeroFuse(e.NewSize.Width - 120);
 
             armyUnitTest_Resize();
         }
