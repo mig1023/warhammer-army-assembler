@@ -347,7 +347,7 @@
 						<Name>Staff of Change</Name>
 						<Points>50</Points>
 						<MagicItemsPoints/>
-						<Test Bet="Death" Context="Wound">Toughness</Test>
+						<Test Bet="Death" Context="Wound" Profile="Toughness"/>
 					</Option>
 					<Option>
 						<Name>Spell Destroyer</Name>
@@ -505,7 +505,7 @@
 						<Name>Allure of Slaanesh</Name>
 						<Points>25</Points>
 						<MagicItemsPoints/>
-						<Test Bet="Pass" Context="Round">Leadership</Test>
+						<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					</Option>
 					<DRobes Points="25"/>
 					<EnrGaze Points="25"/>
@@ -516,7 +516,7 @@
 						<Name>Torment Blade</Name>
 						<Points>5</Points>
 						<MagicItemsPoints/>
-						<Test Bet="Pass" Context="Wound">Leadership</Test>
+						<Test Bet="Pass" Context="Wound" Profile="Leadership"/>
 					</Option>
 				</Options>
 				<Equipments>
@@ -684,7 +684,7 @@
 						<Name>Staff of Change</Name>
 						<Points>50</Points>
 						<MagicItemsPoints/>
-						<Test Bet="Death" Context="Wound">Toughness</Test>
+						<Test Bet="Death" Context="Wound" Profile="Toughness"/>
 					</Option>
 					<PowerVortex Points="30"/>
 					<FlOfTzeentch Points="25"/>
@@ -777,7 +777,7 @@
 						<Name>Allure of Slaanesh</Name>
 						<Points>25</Points>
 						<MagicItemsPoints/>
-						<Test Bet="Pass" Context="Round">Leadership</Test>
+						<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					</Option>
 					<DRobes Points="25"/>
 					<EnrGaze Points="25"/>
@@ -787,7 +787,7 @@
 						<Name>Torment Blade</Name>
 						<Points>5</Points>
 						<MagicItemsPoints/>
-						<Test Bet="Pass" Context="Wound">Leadership</Test>
+						<Test Bet="Pass" Context="Wound" Profile="Leadership"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 					<StandardOfGlory Points="125" Dependencies="On: Battle Standard Bearer; Off: Banner of Hellfire, Great Icon of Despair, Banner of Unholy Victory, Great Standard of Sundering"/>
