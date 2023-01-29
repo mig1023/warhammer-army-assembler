@@ -34,7 +34,6 @@ namespace WarhammerArmyAssembler.Interface
 
         public enum MovingType { ToMain, ToRight, ToLeft, ToTop, ToMainMenu }
 
-        public static List<Label> PointsButtons = new List<Label>();
         public static List<Label> MainMenuButtons = new List<Label>();
 
         public static bool mainMenuIsOpen = false;
@@ -438,11 +437,11 @@ namespace WarhammerArmyAssembler.Interface
             ArmyChangesColors(changeArmybook.prev);
             ArmyChangesColors(changeArmybook.next);
 
-            foreach (Label label in PointsButtons)
-            {
-                label.BorderBrush = mainColor;
-                label.Foreground = mainColor;
-            }
+            //foreach (Label label in PointsButtons)
+            //{
+            //    label.BorderBrush = mainColor;
+            //    label.Foreground = mainColor;
+            //}
 
             List<Control> labels = new List<Control>
             {
@@ -611,53 +610,6 @@ namespace WarhammerArmyAssembler.Interface
                     bwImage.EndInit();
 
                     image.Key.Source = bwImage;
-                }
-            }
-        }
-
-        public static void CreatePointsButtons()
-        {
-            int[] points = { 200, 500, 600, 750, 1000, 1250, 1500, 1750, 1850, 2000, 2250, 2400, 2500, 2700, 3000 };
-            double[] xButtons = { 20, 116, 213 };
-            double[] yButtons = { 377, 416, 455, 494, 533 };
-
-            int xIndex = 0;
-            int yIndex = 0;
-
-            foreach (Label button in PointsButtons)
-                changeArmybook.menuArmybookPlace.Children.Remove(button);
-
-            PointsButtons.Clear();
-
-            foreach (int button in points)
-            {
-                Label newPointsBotton = new Label
-                {
-                    Name = String.Format("button{0}pts", button),
-                    Content = String.Format("{0} points", button),
-                    Height = 34,
-                    Width = 78,
-                    FontSize = 12,
-                    Background = Brushes.White,
-                    BorderThickness = new Thickness(1),
-                    HorizontalContentAlignment = HorizontalAlignment.Center,
-                    VerticalContentAlignment = VerticalAlignment.Center,
-                };
-
-                newPointsBotton.Margin = Thick(newPointsBotton, xButtons[xIndex], yButtons[yIndex]);
-                newPointsBotton.MouseDown += changeArmybook.buttonPoints_Click;
-                newPointsBotton.MouseEnter += (sender, e) => newPointsBotton.Background = CurrentSelectedArmyBackColor;
-                newPointsBotton.MouseLeave += (sender, e) => newPointsBotton.Background = Brushes.White;
-
-                changeArmybook.menuArmybookPlace.Children.Add(newPointsBotton);
-                PointsButtons.Add(newPointsBotton);
-
-                xIndex += 1;
-
-                if (xIndex >= xButtons.Length)
-                {
-                    xIndex = 0;
-                    yIndex += 1;
                 }
             }
         }

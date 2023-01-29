@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace WarhammerArmyAssembler
 {
     public partial class ChangeArmybookWindow : Window
     {
         public static bool sortedByEditions = false;
+
+        private UIElement PointesTumblerElement;
+        private Point? PointesTumblerOffset;
+        private double PointesTumblerRotate = 0;
 
         public ChangeArmybookWindow()
         {
@@ -60,8 +66,27 @@ namespace WarhammerArmyAssembler
                 MessageBox.Show("Wrong army points!");
         }
 
-        public void buttonPoints_Click(object sender, RoutedEventArgs e) =>
-            StartArmybookOption((sender as Label).Content.ToString().Split()[0]);
+        private void pointesTumbler_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
+
+            PointesTumblerElement = sender as Grid;
+            PointesTumblerOffset = e.GetPosition(PointesTumblerElement);
+        }
+
+        private void pointesTumbler_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((PointesTumblerElement == null) || (e.LeftButton != MouseButtonState.Pressed))
+                return;
+
+            double x = e.GetPosition(sender as UIElement).X - PointesTumblerOffset.Value.X;
+            //double y = e.GetPosition(sender as UIElement).Y - PointesTumblerOffset.Value.Y;
+
+            PointesTumblerRotate += 0.1 * (x > 0 ? 1 : -1);
+            PointesTumblerElement.RenderTransform = new RotateTransform(PointesTumblerRotate, 75, 75);
+
+            //DEBUG.Content = PointesTumblerRotate;
+        }
 
         private void buttonArmybook_Click(object sender, RoutedEventArgs e) =>
             StartArmybookOption(listArmybookPoints.Text);
@@ -75,7 +100,8 @@ namespace WarhammerArmyAssembler
                 this.DragMove();
         }
 
-        private void closeArmybook_Click(object sender, MouseButtonEventArgs e) => Environment.Exit(0);
+        private void closeArmybook_Click(object sender, MouseButtonEventArgs e) =>
+            Environment.Exit(0);
 
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
