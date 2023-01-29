@@ -107,7 +107,7 @@
 				<Weapon>
 					<Name>Hammer of Judgement</Name>
 					<Points>25</Points>
-					<Test Bet="Wound" Context="Hit">Toughness</Test>
+					<Test Bet="Wound" Context="Hit" Profile="Toughness"/>
 					<Description>Models hit by this hammer must take a Toughness test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal</Description>
 				</Weapon>
 				<Weapon>
@@ -133,7 +133,7 @@
 					<Name>The Gilded Armour</Name>
 					<Points>40</Points>
 					<AddToArmour>5</AddToArmour>
-					<Test Bet="Pass" Context="ArmourSave">Strength</Test>
+					<Test Bet="Pass" Context="ArmourSave" Profile="Strength"/>
 					<Description>Heavy armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
 				</Armour>
 				<Armour>
