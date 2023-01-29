@@ -64,5 +64,14 @@ namespace WarhammerArmyAssembler.Interface
 
             return maxPoints;
         }
+
+        public static double AngleCalculator(int points)
+        {
+            foreach (int angle in ArmyBook.Constants.ArmySizeAngles.Keys)
+                if (ArmyBook.Constants.ArmySizeAngles[angle] >= points)
+                    return angle;
+
+            return 160;
+        } 
     }
 }

@@ -156,5 +156,13 @@ namespace WarhammerArmyAssembler
             Interface.Changes.LoadAllArmy(ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory), reload: true);
             Interface.Changes.PreviewArmyList();
         }
+
+        private void listArmybookPoints_KeyUp(object sender, KeyEventArgs e)
+        {
+            bool success = int.TryParse(listArmybookPoints.Text, out int points);
+            
+            if (success)
+                tumbler.RenderTransform = new RotateTransform(Interface.Services.AngleCalculator(points), 75, 75);
+        }
     }
 }

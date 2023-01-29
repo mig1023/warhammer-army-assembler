@@ -39,7 +39,7 @@
                     </Label.LayoutTransform>
                 </Label>
 
-                <Grid Margin="75, 400, 0, 0" PreviewMouseLeftButtonDown="pointesTumbler_MouseLeftButtonDown" MouseMove="pointesTumbler_MouseMove">
+                <Grid x:Name="tumbler" Margin="75, 400, 0, 0" PreviewMouseLeftButtonDown="pointesTumbler_MouseLeftButtonDown" MouseMove="pointesTumbler_MouseMove">
                     <Ellipse x:Name="pointesTumbler" Width="150" Height="150" StrokeThickness="1" Stroke="Black" Fill="White"/>
                     <Ellipse x:Name="pointesTumblerMark" Width="30" Height="30" Margin="0, -75, 0, 0" StrokeThickness="1" Stroke="Black" Fill="White"/>
                 </Grid>
@@ -50,7 +50,7 @@
                 <Label x:Name="mark2500" Content="2500" Canvas.Left="210" Canvas.Top="405" FontSize="10"/>
                 <Label x:Name="mark3000" Content="3000" Canvas.Left="228" Canvas.Top="475" FontSize="10"/>
 
-                <TextBox x:Name="listArmybookPoints" Height="34" Padding="5,2,0,0" Canvas.Left="20" Text="2000" Canvas.Top="580" Width="132" FontSize="20" TextAlignment="Center"/>
+                <TextBox x:Name="listArmybookPoints" Height="34" Padding="5,2,0,0" Canvas.Left="20" Text="2000" Canvas.Top="580" Width="132" FontSize="20" TextAlignment="Center" KeyUp="listArmybookPoints_KeyUp"/>
                 <Label x:Name="showArmyAdditionalName" Content="+ add army name if you wish" Canvas.Left="17" Canvas.Top="617" Width="288" MouseDown="showArmyAdditionalName_MouseDown"/>
                 <TextBox x:Name="armyAdditionalName" Height="28" Visibility="Hidden" Padding="5,2,0,0" Canvas.Left="20" Text="" Canvas.Top="625" Width="271" FontSize="16"/>
             </Canvas>
