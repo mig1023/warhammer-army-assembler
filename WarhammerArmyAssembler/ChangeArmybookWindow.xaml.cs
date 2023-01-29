@@ -12,7 +12,6 @@ namespace WarhammerArmyAssembler
     {
         public static bool sortedByEditions = false;
 
-        private UIElement PointesTumblerElement;
         private Point? PointesTumblerOffset;
         private double PointesTumblerRotate = 0;
 
@@ -69,14 +68,12 @@ namespace WarhammerArmyAssembler
         private void pointesTumbler_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             e.Handled = true;
-
-            PointesTumblerElement = sender as Grid;
-            PointesTumblerOffset = e.GetPosition(PointesTumblerElement);
+            PointesTumblerOffset = e.GetPosition(tumbler);
         }
 
         private void pointesTumbler_MouseMove(object sender, MouseEventArgs e)
         {
-            if ((PointesTumblerElement == null) || (e.LeftButton != MouseButtonState.Pressed))
+            if (e.LeftButton != MouseButtonState.Pressed)
                 return;
 
             double x = e.GetPosition(sender as UIElement).X - PointesTumblerOffset.Value.X;
@@ -93,7 +90,7 @@ namespace WarhammerArmyAssembler
             }
             else
             {
-                PointesTumblerElement.RenderTransform = new RotateTransform(PointesTumblerRotate, 75, 75);
+                tumbler.RenderTransform = new RotateTransform(PointesTumblerRotate, 75, 75);
             }
 
             int points = Interface.Services.PointsCalculator(PointesTumblerRotate);
