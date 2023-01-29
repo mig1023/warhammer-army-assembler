@@ -107,7 +107,7 @@
 				<Weapon>
 					<Name>Rapier of Ecstasy</Name>
 					<Points>45</Points>
-					<Test Bet="Death" Context="Wound">Strength</Test>
+					<Test Bet="Death" Context="Wound" Profile="Strength"/>
 					<Description>Each time the Rapier of Ecstasy inflicts an unsaved wound on a model, that model must pass a Strength test or be removed from the game</Description>
 				</Weapon>
 				<Weapon>
@@ -201,7 +201,7 @@
 				<Additional>
 					<Name>The Beguiling Gem</Name>
 					<Points>50</Points>
-					<Test Bet="Pass" Context="Round">Leadership</Test>
+					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>All enemy models in base contact with the bearer of the Beguiling Gem must take Leadership tests at the beginning of each close combat round. If it is failed, they may not make any attacks that round, and any attacks directed against that specific model (not the unit that model is in) will hit automatically</Description>
 				</Additional>
 				<Additional>
@@ -219,7 +219,7 @@
 				<Additional>
 					<Name>Blasphemous Amulet</Name>
 					<Points>25</Points>
-					<Test Bet="Wound" Context="Round">Toughness</Test>
+					<Test Bet="Wound" Context="Round" Profile="Toughness"/>
 					<Description>At the start of every friendly Magic phase, any enemy models in base contact with the bearer (including monstrous mounts) must pass a Toughness test or lose one wound with no armour saves allowed</Description>
 				</Additional>
 				<Weapon>
@@ -370,7 +370,7 @@
 				<Banner>
 					<Name>Festering Shroud</Name>
 					<Points>25</Points>
-					<Test Bet="Wound" Context="Round">Toughness</Test>
+					<Test Bet="Wound" Context="Round" Profile="Toughness"/>
 					<Description>Any model that does not have the Mark of Nurgle and is in contact with the banner bearer at the start of the friendly Magic phase must pass a Toughness test or suffer a wound with no armour saves allowed</Description>
 				</Banner>
 				<Banner>
