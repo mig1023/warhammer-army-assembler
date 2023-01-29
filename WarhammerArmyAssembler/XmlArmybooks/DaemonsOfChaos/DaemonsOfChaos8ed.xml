@@ -233,7 +233,7 @@
 					<Name>Plague Flail</Name>
 					<Points>50</Points>
 					<Flail/>
-					<Test Bet="Wound" Context="Wound">Toughness</Test>
+					<Test Bet="Wound" Context="Wound" Profile="Toughness"/>
 					<Description>Attacks made with the Plague Flail are resolved at +2 Strength in the first round of combat. Any character or monster that suffers one or more unsaved Wounds from the Plague Flail must immediately pass a Toughness test or suffer another Wound with no armour saves allowed</Description>
 				</Weapon>
 				<Weapon>
@@ -246,7 +246,7 @@
 				<Weapon>
 					<Name>Witstealer Sword</Name>
 					<Points>50</Points>
-					<Test Bet="Wound" Context="Wound">Initiative</Test>
+					<Test Bet="Wound" Context="Wound" Profile="Initiative"/>
 					<Description>Any character or monster that suffers one or more unsaved Wounds from the Witstealer Sword must immediately pass an Initiative test or suffer another Wound with no armour saves allowed</Description>
 				</Weapon>
 				<Weapon>
@@ -284,7 +284,7 @@
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
 					<AddToArmour>6</AddToArmour>
-					<Test Bet="Pass" Context="Round">Leadership</Test>
+					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
 				<GlitteringScales Points="25"/>
@@ -1097,7 +1097,7 @@
 					</Command>
 				</Options>
 			</Core>
-			<Special>
+				<Special>
 				<Name>Bloodcrushers of Khorne</Name>
 				<Points>65</Points>
 				<Size>3+</Size>
@@ -1105,7 +1105,7 @@
 				<Image>Bloodcrushers</Image>
 				<Profile M='5' WS='5' BS='0' S='6' T='4' W='2' I='4' A='2' Ld='7' AS='5' Ward='5'/>
 				<SpecialRules>
-					<Original>
+				<Original>
 						<Rule>Demonic</Rule>
 						<Rule>Magic Resistance (1)</Rule>
 						<Rule>Brass Behemoth</Rule>
