@@ -110,7 +110,7 @@
 				<Weapon>
 					<Name>Hammer of Judgement</Name>
 					<Points>25</Points>
-					<Test Bet="Wound" Context="Hit">Leadership</Test>
+					<Test Bet="Wound" Context="Hit" Profile="Leadership"/>
 					<Description>Models hit by this hammer must take a Leadership test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal</Description>
 				</Weapon>
 				<Weapon>
@@ -136,7 +136,7 @@
 					<Name>The Gilded Armour</Name>
 					<Points>50</Points>
 					<AddToArmour>5</AddToArmour>
-					<Test Bet="Pass" Context="ArmourSave">Strength</Test>
+					<Test Bet="Pass" Context="ArmourSave" Profile="Strength"/>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie, roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed, the Attack is lost</Description>
 				</Armour>
 				<Armour>
