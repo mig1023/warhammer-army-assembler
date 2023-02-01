@@ -20,7 +20,8 @@ namespace WarhammerArmyAssembler
             InitializeComponent();
         }
 
-        private void Window_Closed(object sender, EventArgs e) => Environment.Exit(0);
+        private void Window_Closed(object sender, EventArgs e) =>
+            Environment.Exit(0);
 
         private void changeArmybook_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -154,12 +155,22 @@ namespace WarhammerArmyAssembler
             Interface.Changes.PreviewArmyList();
         }
 
+        private void ChangeTumblerAngle(int points) =>
+            tumbler.RenderTransform = new RotateTransform(Interface.Services.AngleCalculator(points), 75, 75);
+
         private void listArmybookPoints_KeyUp(object sender, KeyEventArgs e)
         {
             bool success = int.TryParse(listArmybookPoints.Text, out int points);
-            
+
             if (success)
-                tumbler.RenderTransform = new RotateTransform(Interface.Services.AngleCalculator(points), 75, 75);
+                ChangeTumblerAngle(points);
+        }
+
+        private void mark_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            string points = (sender as Label).Name.Replace("mark", String.Empty);
+            listArmybookPoints.Text = points;
+            ChangeTumblerAngle(int.Parse(points));
         }
     }
 }

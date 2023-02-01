@@ -44,11 +44,11 @@
                     <Ellipse x:Name="pointesTumblerMark" Width="30" Height="30" Margin="0, -75, 0, 0" StrokeThickness="1" Stroke="Black" Fill="White"/>
                 </Grid>
 
-                <Label x:Name="mark500" Content="500" Canvas.Left="45" Canvas.Top="475" FontSize="10"/>
-                <Label x:Name="mark1000" Content="1000" Canvas.Left="60" Canvas.Top="405" FontSize="10"/>
-                <Label x:Name="mark2000" Content="2000" Canvas.Left="132" Canvas.Top="375" FontSize="10"/>
-                <Label x:Name="mark2500" Content="2500" Canvas.Left="210" Canvas.Top="405" FontSize="10"/>
-                <Label x:Name="mark3000" Content="3000" Canvas.Left="228" Canvas.Top="475" FontSize="10"/>
+                <Label x:Name="mark500" Content="500" Canvas.Left="45" Canvas.Top="475" FontSize="10" MouseDown="mark_MouseDown"/>
+                <Label x:Name="mark1000" Content="1000" Canvas.Left="60" Canvas.Top="405" FontSize="10" MouseDown="mark_MouseDown"/>
+                <Label x:Name="mark2000" Content="2000" Canvas.Left="132" Canvas.Top="375" FontSize="10" MouseDown="mark_MouseDown"/>
+                <Label x:Name="mark2500" Content="2500" Canvas.Left="210" Canvas.Top="405" FontSize="10" MouseDown="mark_MouseDown"/>
+                <Label x:Name="mark3000" Content="3000" Canvas.Left="228" Canvas.Top="475" FontSize="10" MouseDown="mark_MouseDown"/>
 
                 <TextBox x:Name="listArmybookPoints" Height="34" Padding="5,2,0,0" Canvas.Left="20" Text="2000" Canvas.Top="580" Width="132" FontSize="20" TextAlignment="Center" KeyUp="listArmybookPoints_KeyUp"/>
                 <Label x:Name="showArmyAdditionalName" Content="+ add army name if you wish" Canvas.Left="17" Canvas.Top="617" Width="288" MouseDown="showArmyAdditionalName_MouseDown"/>
