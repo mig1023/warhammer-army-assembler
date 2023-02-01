@@ -790,18 +790,17 @@ namespace WarhammerArmyAssembler.Interface
 
             marginTop += ZeroFuse(main.enemyGrid.ActualHeight - 66);
 
+            main.specialRulesEnemyTest.Margin = Thick(main.enemyForTestText, top: marginTop);
+
             elements = new List<FrameworkElement>
             {
-                main.specialRulesEnemyTest,
                 main.startFullTest,
                 main.startStatisticTest,
-                main.startBattleRoyale,
                 main.testConsole,
-                main.currentTest,
             };
 
             foreach (FrameworkElement element in elements)
-                element.Margin = Thick(main.enemyForTestText, top: marginTop);
+                element.Margin = Thick(main.enemyForTestText, top: marginTop + main.specialRulesEnemyTest.ActualHeight - 20);
 
             double unitTestHeight = (double)main.enemyForTest.GetValue(Canvas.TopProperty) +
                 main.enemyForTest.ActualHeight + 50;
@@ -813,15 +812,15 @@ namespace WarhammerArmyAssembler.Interface
                 double startButtonPosition = (double)main.startFullTest.GetValue(Canvas.TopProperty);
                 unitTestHeight = main.startFullTest.Margin.Top + main.startFullTest.ActualHeight + startButtonPosition + 20;
 
-                main.startBattleRoyale.Margin = Thick(main.enemyForTestText, top: marginTop + 154,
-                    left: main.startBattleRoyale.Margin.Left + 163);
-
-                main.currentTest.Margin = Thick(main.startBattleRoyale);
+                main.startBattleRoyale.Visibility = Visibility.Hidden;
             }
             else
             {
                 main.testConsole.Margin = Thick(main.enemyForTestText, top: marginTop - 155);
                 royalConsoleSize = -70;
+
+                main.startBattleRoyale.Visibility = Visibility.Visible;
+                main.startBattleRoyale.Margin = Thick(main.startStatisticTest, top: 10, left: 0);
             }
 
             if (unitTestHeight + 140 < main.armyUnitTestScroll.ActualHeight)
