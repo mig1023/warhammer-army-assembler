@@ -18,6 +18,23 @@ namespace WarhammerArmyAssembler
         public ChangeArmybookWindow()
         {
             InitializeComponent();
+
+            List<int> spaces = new List<int> { 10, 80, 90, 100, 170, 220, 260, 270, 280, 320 };
+            double pi = Math.PI / 180;
+
+            for (int i = 0; i < 360; i += 10)
+            {
+                if (spaces.Contains(i))
+                    continue;
+
+                double x1 = 150 + (85 * Math.Cos(i * pi));
+                double x2 = 150 + (91 * Math.Cos(i * pi));
+                double y1 = 475 + (85 * Math.Sin(i * pi));
+                double y2 = 475 + (91 * Math.Sin(i * pi));
+
+                Line newLine = new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = Brushes.LightGray };
+                menuArmybookPlace.Children.Add(newLine);
+            } 
         }
 
         private void Window_Closed(object sender, EventArgs e) =>
