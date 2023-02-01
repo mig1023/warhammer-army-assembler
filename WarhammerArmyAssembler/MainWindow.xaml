@@ -108,6 +108,7 @@
                                 <Label Content="{Binding Leadership.View}" Template="{StaticResource detailProfile}" Grid.Row="8" Grid.Column="1"/>
                             </Grid>
                         </Border>
+                        <TextBlock x:Name="profileMods" Text="* modified by artefacts or special rules" Height="Auto" Margin="20,105"/>
                         <TextBlock x:Name="armyUnitSpecific" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,105"/>
                     </Canvas>
                 </Grid>

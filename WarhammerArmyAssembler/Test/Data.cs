@@ -27,15 +27,18 @@ namespace WarhammerArmyAssembler.Test
 
         public static void PrepareUnit(Unit unit)
         {
-            Data.unit = unit.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+            Data.unit = unit
+                .Clone()
+                .GetOptionRules(hasMods: out _, directModification: true)
+                .GetUnitMultiplier();
 
             if (unit.MountOn > 0)
             {
-                int size = (Army.Data.Units[unit.ArmyID].Chariot > 0 ? Army.Data.Units[unit.ArmyID].Chariot : Data.unit.Size);
+                int size = Army.Data.Units[unit.ArmyID].Chariot > 0 ? Army.Data.Units[unit.ArmyID].Chariot : Data.unit.Size;
 
                 Data.unitMount = Army.Data.Units[unit.MountOn]
                     .Clone()
-                    .GetOptionRules(directModification: true)
+                    .GetOptionRules(hasMods: out _, directModification: true)
                     .GetUnitMultiplier(size);
             }
             else
@@ -44,12 +47,23 @@ namespace WarhammerArmyAssembler.Test
 
         public static void PrepareEnemy(string enemyName)
         {
-            Data.enemy = Enemy.ByName(enemyName).Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
-            Data.enemyMount = enemy.Mount?.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+            Data.enemy = Enemy
+                .ByName(enemyName)
+                .Clone()
+                .GetOptionRules(hasMods: out _, directModification: true)
+                .GetUnitMultiplier();
+
+            Data.enemyMount = enemy
+                .Mount?
+                .Clone()
+                .GetOptionRules(hasMods: out _, directModification: true)
+                .GetUnitMultiplier();
         }
 
-        public static void Console(Brush color, string line) => Interface.Test.LineToConsole(line, color);
+        public static void Console(Brush color, string line) =>
+            Interface.Test.LineToConsole(line, color);
 
-        public static void Console(Brush color, string line, params object[] p) => Console(color, String.Format(line, p));
+        public static void Console(Brush color, string line, params object[] p) =>
+            Console(color, String.Format(line, p));
     }
 }

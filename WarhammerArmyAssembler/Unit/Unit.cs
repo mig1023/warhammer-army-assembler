@@ -567,7 +567,11 @@ namespace WarhammerArmyAssembler
 
         private SolidColorBrush ColorByMods(string newParamLine)
         {
-            string[] colors = ArmyBook.Data.Upgraded.Split(',').Select(x => x.Trim()).ToArray();
+            string[] colors = ArmyBook.Data.Upgraded
+                .Split(',')
+                .Select(x => x.Trim())
+                .ToArray();
+
             int count = newParamLine.Count(x => x == '*') - 1;
 
             if (count > 2)
@@ -576,15 +580,16 @@ namespace WarhammerArmyAssembler
             return (SolidColorBrush)new BrushConverter().ConvertFromString(String.Format("#{0}", colors[count]));
         }
 
-        public Unit GetOptionRules(bool directModification = false)
+        public Unit GetOptionRules(out bool hasMods, bool directModification = false)
         {
             Unit unit = this.Clone();
+            hasMods = false;
 
             foreach (string name in SpecialRules.UnitParam)
             {
-                bool reverse = (name == "Armour" || name == "Ward");
-                bool mount = (name == "Armour");
-                bool combine = (name == "Ward");
+                bool reverse = name == "Armour" || name == "Ward";
+                bool mount = name == "Armour";
+                bool combine = name == "Ward";
 
                 string newParamLine = AddFromAnyOption(ref unit, name,
                     reversParam: reverse, mountParam: mount, doNotCombine: combine);
@@ -597,7 +602,10 @@ namespace WarhammerArmyAssembler
                 param.View = newParamLine;
 
                 if (newParamLine.Contains("*"))
+                {
                     param.Color = ColorByMods(newParamLine);
+                    hasMods = true;
+                }
 
                 if (directModification && !String.IsNullOrEmpty(newParamLine))
                 {
@@ -855,7 +863,7 @@ namespace WarhammerArmyAssembler
 
         public string GetModifiedParamsLine()
         {
-            Unit unit = GetOptionRules();
+            Unit unit = GetOptionRules(hasMods: out _);
 
             string paramLine = String.Empty;
 

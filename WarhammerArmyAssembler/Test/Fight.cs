@@ -61,8 +61,16 @@ namespace WarhammerArmyAssembler.Test
                 {
                     current += 1;
 
-                    Unit currentEnemy = enemy.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
-                    Unit currentMount = enemy.Mount?.Clone().GetOptionRules(directModification: true).GetUnitMultiplier();
+                    Unit currentEnemy = enemy
+                        .Clone()
+                        .GetOptionRules(hasMods: out _, directModification: true)
+                        .GetUnitMultiplier();
+
+                    Unit currentMount = enemy
+                        .Mount?
+                        .Clone()
+                        .GetOptionRules(hasMods: out _, directModification: true)
+                        .GetUnitMultiplier();
 
                     int enemyCount = Enemy.Count();
 
@@ -158,12 +166,16 @@ namespace WarhammerArmyAssembler.Test
             Dictionary<Unit.TestTypeTypes, int> opponentsWounds = new Dictionary<Unit.TestTypeTypes, int>();
 
             foreach (Unit u in opponents)
-                if (opponentsWounds.ContainsKey(u.TestType))
-                    opponentsWounds[u.TestType] += (u.IsNotSimpleMount() ? u.Wounds.Value : 0);
-                else
-                    opponentsWounds.Add(u.TestType, (u.IsNotSimpleMount() ? u.Wounds.Value : 0));
+            {
+                int value = u.IsNotSimpleMount() ? u.Wounds.Value : 0;
 
-            return ((opponentsWounds[Unit.TestTypeTypes.Unit] > 0) && (opponentsWounds[Unit.TestTypeTypes.Enemy] > 0));
+                if (opponentsWounds.ContainsKey(u.TestType))
+                    opponentsWounds[u.TestType] += value;
+                else
+                    opponentsWounds.Add(u.TestType, value);
+            }
+
+            return (opponentsWounds[Unit.TestTypeTypes.Unit] > 0) && (opponentsWounds[Unit.TestTypeTypes.Enemy] > 0);
         }
 
         public static int FullTest(Unit originalUnit, Unit originalUnitMount, Unit originalEnemy, Unit originalEnemyMount)
@@ -380,7 +392,7 @@ namespace WarhammerArmyAssembler.Test
             int unitFullSize = (unit.Size * unit.Wounds.Original) + (unitMount != null ? unitMount.Size * unitMount.Wounds.Original : 0);
             int enemyFullSize = (enemy.Size * enemy.Wounds.Original) + (enemyMount != null ? enemyMount.Size * enemyMount.Wounds.Original : 0);
 
-            string unitSide = (((unitMount != null) && (unit.Wounds.Value <= 0)) ? unitMount.Name : unit.Name);
+            string unitSide = ((unitMount != null) && (unit.Wounds.Value <= 0)) ? unitMount.Name : unit.Name;
 
             if (unitFullSize > enemyFullSize)
                 AddRoundBonus(unitSide, "outnumber", ref roundBonus, bonus: 1);

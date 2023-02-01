@@ -154,7 +154,7 @@ namespace WarhammerArmyAssembler.Army
 
         public static Unit ReloadArmyUnit(int id, Unit unit)
         {
-            Unit newUnit = unit.Clone().GetOptionRules();
+            Unit newUnit = unit.Clone().GetOptionRules(hasMods: out _);
 
             newUnit.RulesView = newUnit.GetSpecialRulesLine(withCommandData: true);
             newUnit.PointsView = newUnit.GetUnitPoints().ToString();

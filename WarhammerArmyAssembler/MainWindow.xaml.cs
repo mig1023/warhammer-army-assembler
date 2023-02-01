@@ -148,6 +148,9 @@ namespace WarhammerArmyAssembler
             top += armyUnitDescription.ActualHeight + detailUnitGrid.ActualHeight - 5;
             armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
 
+            double detailGridSubline = detailUnitGridBorder.Margin.Top + detailUnitGridBorder.ActualHeight;
+            profileMods.Margin = Interface.Changes.Thick(detailUnitGridBorder, left: 170, top: detailGridSubline);
+
             armyUnitSpecific.Foreground = ArmyBook.Data.FrontColor;
 
             top = armyArtefactDescription.Margin.Top + armyArtefactDescription.ActualHeight + 15;

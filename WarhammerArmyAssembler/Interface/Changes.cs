@@ -749,7 +749,7 @@ namespace WarhammerArmyAssembler.Interface
             main.armyUnitName.Content = unit.Name.ToUpper();
             main.armyUnitDescription.Text = unit.Description;
             main.armyUnitSpecific.Text = unit.SelfDescription();
-            main.detailUnitGrid.DataContext = unit.GetOptionRules();
+            main.detailUnitGrid.DataContext = unit.GetOptionRules(out bool hasMods);
 
             main.UpdateLayout();
 
@@ -762,6 +762,7 @@ namespace WarhammerArmyAssembler.Interface
 
             main.armybookDetailScroll.Visibility = Visibility.Visible;
             main.armybookArtefactDetailScroll.Visibility = Visibility.Hidden;
+            main.profileMods.Visibility = hasMods ? Visibility.Visible : Visibility.Hidden;
         }
 
         public static void armyUnitTest_Resize()
