@@ -749,7 +749,7 @@ namespace WarhammerArmyAssembler.Interface
             main.armyUnitName.Content = unit.Name.ToUpper();
             main.armyUnitDescription.Text = unit.Description;
             main.armyUnitSpecific.Text = unit.SelfDescription();
-            main.detailUnitGrid.DataContext = unit;
+            main.detailUnitGrid.DataContext = unit.GetOptionRules();
 
             main.UpdateLayout();
 
