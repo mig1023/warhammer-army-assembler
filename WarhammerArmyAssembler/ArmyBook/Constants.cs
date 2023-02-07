@@ -14,6 +14,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static string DogOfWarPath { get; set; }
 
         public static Dictionary<string, string> CommonXmlOption { get; set; }
+        public static Dictionary<string, string> CommonXmlSpecialRules { get; set; }
 
         public static SortedDictionary<string, string> ProfilesNames = new SortedDictionary<string, string> {
             ["Movement"] = "M",

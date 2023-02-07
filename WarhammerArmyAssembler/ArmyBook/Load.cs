@@ -181,6 +181,24 @@ namespace WarhammerArmyAssembler.ArmyBook
             return commonXmlOption;
         }
 
+        public static Dictionary<string, string> CommonXmlSpecialRules(XmlDocument armybook)
+        {
+            Dictionary<string, string> ruleList = new Dictionary<string, string>();
+
+            XmlNodeList specialRules = armybook.SelectNodes("ArmyBook/Introduction/LocalXmlSpecialRules/*");
+
+            if (specialRules == null)
+                return ruleList;
+
+            foreach (XmlNode option in specialRules)
+            {
+                string value = String.IsNullOrEmpty(option.InnerText) ? option.Name : option.InnerText;
+                ruleList.Add(option.Name, value);
+            }
+
+            return ruleList;
+        }
+
         private static void LoadEnemies()
         {
             if (String.IsNullOrEmpty(Constants.EnemiesOptionPath))
@@ -220,6 +238,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlFile.Load(xmlFileName);
 
             Constants.CommonXmlOption = CommonXmlOption(xmlFile);
+            Constants.CommonXmlSpecialRules = CommonXmlSpecialRules(xmlFile);
 
             XmlNode armyFile = Services.Intro(xmlFile, "Styles/Images/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
@@ -356,6 +375,11 @@ namespace WarhammerArmyAssembler.ArmyBook
                 foreach (string name in Constants.UnitProperties)
                     SetProperty(newUnit, additionalParam, name);
 
+                if (Constants.CommonXmlSpecialRules != null)
+                    foreach (XmlNode specialRule in additionalParam.SelectNodes("*"))
+                        if (Constants.CommonXmlSpecialRules.ContainsKey(specialRule.Name))
+                            newUnit.Options.Add(AddCommonXmlSpecialRules(GetNextIndex(), specialRule.Name));
+
                 if (additionalParam["MagicItems"] != null)
                 {
                     newUnit.MagicItemsPoints = IntParse(additionalParam["MagicItems"].Attributes["Points"]);
@@ -364,7 +388,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
 
                 newUnit.ParamTests = ParamParse(additionalParam);
-
                 newUnit.Slots = SlotsParse(additionalParam);
                 newUnit.NoCoreSlot = BoolParse(additionalParam["NoCoreSlot"]);
 
@@ -435,6 +458,22 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             string path = String.IsNullOrEmpty(imagePath) ? Army.Data.UnitsImagesDirectory : imagePath;
             return String.Format("{0}{1}.jpg", path, image);
+        }
+
+        private static Option AddCommonXmlSpecialRules(int id, string specialRule)
+        {
+            string rule = Constants.CommonXmlSpecialRules[specialRule];
+
+            Option newOption = new Option
+            {
+                ID = id,
+                IDView = id.ToString(),
+                Name = specialRule,
+                Type = Option.OptionType.Additional,
+                SpecialRuleDescription = new string[] { rule },
+            };
+
+            return newOption;
         }
 
         private static void AddCommonXmlOptionBySpecialRules(XmlDocument xml, XmlNode xmlUnitRules,
