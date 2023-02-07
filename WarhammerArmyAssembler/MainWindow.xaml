@@ -518,8 +518,9 @@
                         <DataGridTextColumn Header="Special rules" Binding="{Binding RulesView}" Width="*" IsReadOnly="True">
                             <DataGridTextColumn.ElementStyle>
                                 <Style TargetType="{x:Type TextBlock}">
-                                    <Setter Property="TextWrapping" Value="Wrap"/>
                                     <Setter Property="FontSize" Value="9"/>
+                                    <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                                    <EventSetter Event="MouseLeftButtonDown" Handler="specialRule_MouseDown"/>
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>

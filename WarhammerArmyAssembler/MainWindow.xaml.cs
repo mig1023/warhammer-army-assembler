@@ -483,6 +483,11 @@ namespace WarhammerArmyAssembler
         private void startBattleRoyale_MouseDown(object sender, MouseButtonEventArgs e) =>
             Interface.Test.startTest(Test.Data.TestTypes.battleRoyale);
 
+        private void specialRule_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            TextBlock column = sender as TextBlock;
+            column.TextWrapping = Interface.Services.ChangeTextWrapping(column);
+        }
 
         private void dragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
 

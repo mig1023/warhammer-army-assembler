@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using System.Xml;
 
@@ -71,6 +73,9 @@ namespace WarhammerArmyAssembler.Interface
                     return angle;
 
             return 160;
-        } 
+        }
+
+        public static TextWrapping ChangeTextWrapping(TextBlock text) =>
+            text.TextWrapping == TextWrapping.Wrap ? TextWrapping.NoWrap : TextWrapping.Wrap;
     }
 }
