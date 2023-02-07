@@ -44,6 +44,9 @@
 				<Spell Name="The Comet of Cassanora" Cast="13"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Daemonic/>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<Etherblade>MagicItemsPoints; NoArmour</Etherblade>
 			<ArmedMonstrosity Name="Armed Monstrosity">MagicItemsPoints; AddToAttacks: 2</ArmedMonstrosity>
@@ -174,9 +177,7 @@
 					<ImmuneToPsychology/>
 					<Fear/>
 					<MagicItems Points="75" Type="Hero"/>
-					<Original>
-						<Rule>Daemonic</Rule>
-					</Original>
+					<Daemonic/>
 				</SpecialRules>
 				<Options>
 					<Option>
@@ -635,8 +636,8 @@
 					<ImmuneToPsychology/>
 					<Fear/>
 					<MagicItems Points="50" Type="Hero"/>
+					<Daemonic/>
 					<Original>
-						<Rule>Daemonic</Rule>
 						<Rule>Magic Resistance (1)</Rule>
 						<Rule>Locus of Khorne</Rule>
 					</Original>
