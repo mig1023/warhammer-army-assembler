@@ -48,6 +48,9 @@
 				<Spell Name="Fiery convocation" Cast="21"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Daemonic/>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<DaemonOfTzeentch Name="Daemon of Tzeentch">Rule: Re-roll Ward save results of 1; Rule: Re-roll Channelling results of 1</DaemonOfTzeentch>
 			<DaemonOfSlaanesh Name="Daemon of Slaanesh">ArmourPiercing: 1</DaemonOfSlaanesh>
@@ -562,9 +565,7 @@
 				<SpecialRules>
 					<Terror/>
 					<MagicItems Points="75" Type="Hero"/>
-					<Original>
-						<Rule>Daemonic</Rule>
-					</Original>
+					<Daemonic/>
 				</SpecialRules>
 				<Options>
 					<DaemonOfTzeentch Points="20" Dependency="Daemons"/>
