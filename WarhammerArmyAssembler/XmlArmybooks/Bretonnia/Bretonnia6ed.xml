@@ -44,6 +44,9 @@
 				<Spell Name="Curse of Years" Cast="12"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<LeadershipOfKnight>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</LeadershipOfKnight>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -839,9 +842,7 @@
 				<Image>MenAtArms</Image>
 				<Profile M='4' WS='2' BS='2' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
 				<SpecialRules>
-					<Original>
-						<Rule>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</Rule>
-					</Original>
+					<LeadershipOfKnight/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
