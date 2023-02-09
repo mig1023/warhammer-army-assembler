@@ -44,6 +44,9 @@
 				<Spell Name="Vaul's Unmaking" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<EternalHatred>Eternal Hatred</EternalHatred>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<ColdOneChariot Name="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
 			<RepeaterCrossbow Name="Repeater Crossbow"/>
@@ -462,9 +465,9 @@
 				<Profile M='5' WS='8' BS='6' S='5' T='4' W='3' I='8' A='4' Ld='10' AS='4'/>
 				<SpecialRules>
 					<ImmuneToPsychology/>
+					<EternalHatred/>
 					<Original>
 						<Rule>Any unit in Malekith's army that is within 12" of him automatically passes all panic tests</Rule>
-						<Rule>Eternal Hatred</Rule>
 					</Original>
 				</SpecialRules>
 				<Options>
