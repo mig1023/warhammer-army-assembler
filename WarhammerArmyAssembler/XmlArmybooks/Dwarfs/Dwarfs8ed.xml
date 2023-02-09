@@ -35,6 +35,9 @@
 				<Spell Name="Cracks Call" Cast="13"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<WarMachine>War Machine</WarMachine>
+		</LocalXmlSpecialRules>	
 		<LocalXmlOption>
 			<GromrilArmour Name="Gromril armour">AddToArmour: 4; NativeArmour</GromrilArmour>
 			<DwarfHandgun Name="Dwarf handgun"/>
@@ -1389,9 +1392,9 @@
 					<Resolute/>
 					<Stubborn/>
 					<MagicItems Points="100" Type="Runes"/>
+					<WarMachine/>
 					<Original>
 						<Rule>Dwarfs always have the Hatred Orcs, Goblins and Skaven</Rule>
-						<Rule>War Machine</Rule>
 					</Original>
 				</SpecialRules>
 				<Equipments>
