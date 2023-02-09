@@ -48,6 +48,9 @@
 				<Spell Name="Fiery convocation" Cast="21"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<HateHighElves>Hate High Elves</HateHighElves>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<ColdOneChariot Name="Cold One Chariot">Mount; AddToArmour: 5</ColdOneChariot>
 			<RepeaterCrossbow Name="Repeater Crossbow"/>
@@ -288,8 +291,8 @@
 				<SpecialRules>
 					<HitFirst/>
 					<MurderousProwess/>
+					<HateHighElves/>
 					<Original>
-						<Rule>Hate High Elves</Rule>
 						<Rule>+1 to all casting Dark Magic Spells</Rule>
 					</Original>
 				</SpecialRules>
