@@ -48,6 +48,9 @@
 				<Spell Name="Arnzipal's Black Horror" Cast="17"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<ValourOfAge>Valour of Age</ValourOfAge>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<DragonArmour Name="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
 			<LionCloak Name="Lion cloak">AddToArmour: 5</LionCloak>
@@ -1354,9 +1357,9 @@
 				<Profile M='5' WS='5' BS='5' S='3' T='3' W='1' I='5' A='1' Ld='8'/>
 				<SpecialRules>
 					<HitFirst/>
+					<ValourOfAge/>
 					<Original>
 						<Rule>Martial Prowess</Rule>
-						<Rule>Valour of Age</Rule>
 					</Original>
 				</SpecialRules>
 				<Equipments>
