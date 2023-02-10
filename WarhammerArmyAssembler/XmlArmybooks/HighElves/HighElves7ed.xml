@@ -44,6 +44,9 @@
 				<Spell Name="Black Horror" Cast="13"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Chariot/>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<DragonArmour Name="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
 		</LocalXmlOption>
@@ -1198,9 +1201,7 @@
 					<HitFirst/>
 					<LargeBase/>
 					<ImpactHit>D6</ImpactHit>
-					<Original>
-						<Rule>Chariot</Rule>
-					</Original>
+					<Chariot/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
