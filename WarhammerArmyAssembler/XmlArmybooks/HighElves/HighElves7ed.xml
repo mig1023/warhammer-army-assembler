@@ -46,6 +46,7 @@
 		</Magic>
 		<LocalXmlSpecialRules>
 			<Chariot/>
+			<Scout/>
 		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<DragonArmour Name="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
@@ -535,9 +536,7 @@
 				<Profile M='5' WS='7' BS='7' S='4' T='3' W='3' I='9' A='4' Ld='10'/>
 				<SpecialRules>
 					<HitFirst/>
-					<Original>
-						<Rule>Scout</Rule>
-					</Original>
+					<Scout/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -1148,8 +1147,8 @@
 				<SpecialRules>
 					<HitFirst/>
 					<Skirmishers/>
+					<Scout/>
 					<Original>
-						<Rule>Scout</Rule>
 						<Rule>Negative Hatred</Rule>
 					</Original>
 				</SpecialRules>
