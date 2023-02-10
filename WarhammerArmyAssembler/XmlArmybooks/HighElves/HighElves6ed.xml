@@ -46,6 +46,7 @@
 		</Magic>
 		<LocalXmlSpecialRules>
 			<ThreeRanks>Fight in three ranks with spears</ThreeRanks>
+			<BreatheFire>Breathe Fire</BreatheFire>
 		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<DragonArmour Name="Dragon armour">AddToArmour: 5; Rule: Immune to all breath and all Flaming attacks</DragonArmour>
@@ -648,9 +649,7 @@
 					<LargeBase/>
 					<LargeTarget/>
 					<Fly/>
-					<Original>
-						<Rule>Breathe Fire</Rule>
-					</Original>
+					<BreatheFire/>
 				</SpecialRules>
 				<Equipments>
 					<Armour>
@@ -667,8 +666,8 @@
 					<LargeBase/>
 					<LargeTarget/>
 					<Fly/>
+					<BreatheFire/>
 					<Original>
-						<Rule>Breathe Fire</Rule>
 						<Rule>If Imrik is slain, will become subject to the rules for frenzy, but will otherwise remain under the control of the High Elf player</Rule>
 					</Original>
 				</SpecialRules>
