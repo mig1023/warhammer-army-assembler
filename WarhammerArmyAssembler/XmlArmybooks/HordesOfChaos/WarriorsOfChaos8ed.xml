@@ -47,6 +47,9 @@
 				<Spell Name="Flame Storm" Cast="15"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<DaemonicAttacks>Daemonic Attacks</DaemonicAttacks>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<ChaosArmour Name="Chaos armour">AddToArmour: 4; NativeArmour</ChaosArmour>
 		</LocalXmlOption>
@@ -744,8 +747,8 @@
 					<Unbreakable/>
 					<MagicItems Points="25" Type="Hero"/>
 					<MagicPowers>100</MagicPowers>
+					<DaemonicAttacks/>
 					<Original>
-						<Rule>Daemonic attacks</Rule>
 						<Rule>Scion of Chaos</Rule>
 					</Original>
 				</SpecialRules>
