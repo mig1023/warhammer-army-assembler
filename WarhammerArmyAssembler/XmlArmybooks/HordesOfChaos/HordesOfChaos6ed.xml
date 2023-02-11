@@ -48,6 +48,7 @@
 		<LocalXmlSpecialRules>
 			<Daemonic/>
 			<TwoBreathWeapon>Two Breath Weapon</TwoBreathWeapon>
+			<FastCavalry>Fast Cavalry</FastCavalry>
 		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaanesh>
@@ -1196,9 +1197,11 @@
 				<Mount>Chaos Steed</Mount>
 				<Image>MarauderHorseman</Image>
 				<Profile M='8' WS='4' BS='3' S='3' T='3' W='1' I='4' A='1' Ld='7'/>
+				<SpecialRules>
+					<FastCavalry/>
+				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<Rule>Fast Cavalry</Rule>
 				</Equipments>
 				<Options>
 					<Option>
@@ -1324,9 +1327,9 @@
 				<SpecialRules>
 					<Frenzy/>
 					<NoCoreSlot/>
+					<FastCavalry/>
 					<Original>
 						<Rule>Magic Resistance (2)</Rule>
-						<Rule>Fast Cavalry</Rule>
 					</Original>
 				</SpecialRules>
 				<Equipments>
