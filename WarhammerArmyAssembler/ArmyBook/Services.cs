@@ -69,6 +69,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static string ExistsInOnly(string onlyline, string sublines)
         {
+            if (String.IsNullOrEmpty(onlyline) || String.IsNullOrEmpty(sublines))
+                return String.Empty;
+
             foreach (string ifOnly in onlyline.Split(',').Select(x => x.Trim()))
                 foreach (string subline in sublines.Split(',').Select(x => x.Trim()))
                     if (!String.IsNullOrEmpty(subline) && (ifOnly == subline))
