@@ -44,6 +44,9 @@
 				<Spell Name="Wall of Fire" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<WillOfChaos>The Will of Chaos</WillOfChaos>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<ChaosArmour Name="Chaos armour">AddToArmour: 4; NativeArmour</ChaosArmour>
 		</LocalXmlOption>
@@ -438,8 +441,8 @@
 					<LargeBase/>
 					<LargeTarget/>
 					<Fly/>
+					<WillOfChaos/>
 					<Original>
-						<Rule>The Will of Chaos</Rule>
 						<Rule>Knows all six spells from the Lore of Tzeentch</Rule>
 						<Rule>Can use either of the normal Chaos Dragon breath attacks</Rule>
 						<Rule>Once per battle, can use the Breath of Change: models hit by the Breath must pass a Toughness test or be overwhelmed by horrible mutations - remove such models from play</Rule>
