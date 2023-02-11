@@ -44,6 +44,9 @@
 				<Spell Name="Rot, Glorious Rot" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Aquatic/>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -1223,8 +1226,8 @@
 					<Fear/>
 					<ColdBlooded/>
 					<Skirmishers/>
+					<Aquatic/>
 					<Original>
-						<Rule>Aquatic</Rule>
 						<Rule>Hunting Pack</Rule>
 						<Rule>Shoot Barbs</Rule>
 					</Original>
