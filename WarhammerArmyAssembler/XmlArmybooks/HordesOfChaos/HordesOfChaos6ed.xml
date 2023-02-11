@@ -45,6 +45,9 @@
 				<Spell Name="Wall of Fire" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Daemonic/>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlaanesh>
 			<MarkOfKhorne Name="Mark of Khorne">Frenzy</MarkOfKhorne>
@@ -892,8 +895,8 @@
 					<MagicItems Points="100" Type="Hero"/>
 					<LargeBase/>
 					<Fly/>
+					<Daemonic/>
 					<Original>
-						<Rule>Daemonic</Rule>
 						<Rule>Two Breath Weapon</Rule>
 					</Original>
 				</SpecialRules>
