@@ -1032,19 +1032,22 @@ namespace WarhammerArmyAssembler
 
             foreach (Option option in Options)
             {
-                if (option.Command && option.Realised)
-                    fullCommand += 1;
+                if (!option.Command || !option.Realised)
+                    continue;
 
-                if (option.CharacterCommander && option.Realised)
+                fullCommand += 1;
+
+                if (option.PersonifiedCommander)
                     characterCommander = option.Name;
             }
 
-            if (fullCommand == 3)
+            if ((fullCommand == 3) && !String.IsNullOrEmpty(characterCommander))
+            {
+                rules.Add(String.Format("FC ({0})", characterCommander));
+            }
+            else if (fullCommand == 3)
             {
                 rules.Add("FC");
-
-                if (!String.IsNullOrEmpty(characterCommander))
-                    rules.Add(characterCommander);
             }
             else
             {
