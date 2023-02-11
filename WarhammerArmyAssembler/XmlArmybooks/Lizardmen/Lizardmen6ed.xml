@@ -45,6 +45,9 @@
 				<Spell Name="Sumptuous Pestilience" Cast="13"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Aquatic/>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<Blowpipe/>
 			<Javelins/>
@@ -531,9 +534,7 @@
 					<MagicPowersCount>1</MagicPowersCount>
 					<ColdBlooded/>
 					<PoisonAttack/>
-					<Original>
-						<Rule>Aquatic</Rule>
-					</Original>
+					<Aquatic/>
 				</SpecialRules>
 				<Options>
 					<AdditionalWeapon Points="4" Dependency="Weapon"/>
