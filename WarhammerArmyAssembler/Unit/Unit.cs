@@ -1263,7 +1263,7 @@ namespace WarhammerArmyAssembler
  
         public bool IsAnotherOptionRealised(string[] optionNames, bool defaultResult)
         {
-            if (optionNames.Length <= 0)
+            if ((optionNames == null) || (optionNames.Length <= 0))
                 return defaultResult;
 
             return optionNames.Where(x => IsOptionRealised(x)).FirstOrDefault() != null;
