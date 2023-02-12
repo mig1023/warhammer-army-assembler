@@ -43,6 +43,9 @@
 				<Spell Name="Waaagh!" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<DogsOfWar>Dogs of War</DogsOfWar>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -539,9 +542,7 @@
 				<SpecialRules>
 					<Fear/>
 					<ImpactHitByFront/>
-					<Original>
-						<Rule>Dogs of War</Rule>
-					</Original>
+					<DogsOfWar/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
