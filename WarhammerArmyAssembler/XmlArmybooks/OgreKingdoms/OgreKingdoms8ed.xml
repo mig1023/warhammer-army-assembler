@@ -45,6 +45,9 @@
 				<Spell Name="Foot of Gork" Cast="17"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<BeastRider>Beast Rider</BeastRider>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -637,8 +640,8 @@
 					<Terror/>
 					<Frenzy/>
 					<LargeBase/>
+					<BeastRider>
 					<Original>
-						<Rule>Beast Rider</Rule>
 						<Rule>Earth-shattering Charge</Rule>
 						<Rule>Hunting Beast</Rule>
 						<Rule>Stone Skeleton</Rule>
