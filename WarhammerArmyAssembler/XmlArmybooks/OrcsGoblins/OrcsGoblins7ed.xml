@@ -46,6 +46,9 @@
 				<Spell Name="The Call of the Hunt" Cast="13"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<FearElves>Fear Elves</FearElves>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<Choppa/>
 		</LocalXmlOption>
@@ -458,11 +461,11 @@
 				<SpecialRules>
 					<Hate/>
 					<KillingBlow/>
+					<FearElves/>
 					<Original>
 						<Rule>Down in One</Rule>
 						<Rule>Tricksy Traps</Rule>
 						<Rule>Sneaky Schemes</Rule>
-						<Rule>Fear Elves</Rule>
 						<Rule>Hate Dwarfs</Rule>
 					</Original>
 				</SpecialRules>
