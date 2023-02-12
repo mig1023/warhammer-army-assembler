@@ -46,6 +46,9 @@
 				<Spell Name="The Call of the Hunt" Cast="13"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Animosity/>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<Choppa/>
 			<GreatAxe Name="Great axe">AddToStrength: 2; HitLast</GreatAxe>
@@ -907,9 +910,9 @@
 				<Image/>
 				<Profile M='4' WS='3' BS='3' S='3' T='4' W='1' I='2' A='1' Ld='7'/>
 				<SpecialRules>
+					<Animosity/>
 					<Original>
 						<Rule>Ignore Goblin Panic</Rule>
-						<Rule>Animosity</Rule>
 					</Original>
 				</SpecialRules>
 				<Equipments>
