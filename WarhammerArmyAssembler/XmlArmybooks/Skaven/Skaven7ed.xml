@@ -46,6 +46,9 @@
 				<Spell Name="Vaul's Unmaking" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<ScurryAway>Scurry Away!</ScurryAway>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -357,10 +360,10 @@
 					<Terror/>
 					<StrengthInNumbers/>
 					<SubOpponentToHit>1</SubOpponentToHit>
+					<ScurryAway/>
 					<Original>
 						<Rule>Plague Monks as Core units</Rule>
 						<Rule>The Liber Bubonicus</Rule>
-						<Rule>Scurry Away!</Rule>
 					</Original>
 				</SpecialRules>
 				<Equipments>
