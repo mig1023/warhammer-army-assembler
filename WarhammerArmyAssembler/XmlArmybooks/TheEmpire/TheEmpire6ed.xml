@@ -46,6 +46,9 @@
 				<Spell Name="Sumptuous Pestilience" Cast="13"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Cannon/>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<Pistol/>
 			<Handgun/>
@@ -991,9 +994,7 @@
 				<Image>Cannon</Image>
 				<Profile M='4' WS='3' BS='3' S='3' T='7' W='3' I='3' A='1' Ld='7'/>
 				<SpecialRules>
-					<Original>
-						<Rule>Cannon</Rule>
-					</Original>
+					<Cannon/>
 				</SpecialRules>
 			</Special>
 			<Special>
