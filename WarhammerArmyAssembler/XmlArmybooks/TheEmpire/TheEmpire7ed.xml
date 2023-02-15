@@ -46,6 +46,11 @@
 				<Spell Name="Rot, Glorious Rot" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Cannon/>
+			<Mortar/>
+			<Helblaster/>
+		</LocalXmlSpecialRules>
 		<LocalXmlOption>
 			<FullPlateArmour Name="Full plate armour">AddToArmour: 4</FullPlateArmour>
 		</LocalXmlOption>
@@ -1231,9 +1236,7 @@
 				<Image/>
 				<Profile M='4' WS='3' BS='3' S='3' T='7' W='3' I='3' A='1' Ld='7'/>
 				<SpecialRules>
-					<Original>
-						<Rule>Cannon</Rule>
-					</Original>
+					<Cannon/>
 				</SpecialRules>
 			</Special>
 			<Special>
