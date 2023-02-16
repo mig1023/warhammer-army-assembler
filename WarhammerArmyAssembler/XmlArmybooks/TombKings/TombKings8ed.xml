@@ -47,6 +47,7 @@
 		</Magic>
 		<LocalXmlSpecialRules>
 			<Flammable/>
+			<HitsIfModelRemoved>If a model removed from play, then the enemy unit responsible will immediately suffer D6 Strength 5 hits</HitsIfModelRemoved>
 		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
@@ -214,9 +215,9 @@
 					<Undead/>
 					<General/>
 					<Flammable/>
+					<HitsIfModelRemoved/>
 					<Original>
 						<Rule>Use Lore of Nehekhara</Rule>
-						<Rule>If a model removed from play, then the enemy unit responsible will immediately suffer D6 Strength 5 hits</Rule>
 						<Rule>Any unit of Nehekharan Undead accompanied by a model with this rule uses the character's unmodified Weapon Skill in place of its own (use the highest Weapon Skill if the unit is joined by several characters with this rule)</Rule>
 						<Rule>Settra's Inspiring Presence has a range of 18"</Rule>
 					</Original>
