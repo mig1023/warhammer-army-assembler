@@ -46,6 +46,9 @@
 				<Spell Name="Flame Storm" Cast="15"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Vampiric/>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -309,8 +312,8 @@
 				<SpecialRules>
 					<Terror/>
 					<Undead/>
+					<Vampiric/>
 					<Original>
-						<Rule>Vampiric</Rule>
 						<Rule>The Hunger</Rule>
 						<Rule>All enemy units within 6" suffer a -1 penalty to their Leadership</Rule>
 						<Rule>At the beginning of the Close Combat round, after challenges have been issued and/or accepted, select a model in base contact with the Vampire: that model must take a Leadership test with a -3 modifier, if the test is failed, the model must re-roll successful To Hit rolls that phase</Rule>
