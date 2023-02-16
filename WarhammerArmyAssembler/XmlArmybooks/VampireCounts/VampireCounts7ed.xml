@@ -46,6 +46,9 @@
 				<Spell Name="Wall of Fire" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Vampire/>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -967,8 +970,8 @@
 					<Undead/>
 					<Regeneration/>
 					<Hate/>
+					<Vampire/>
 					<Original>
-						<Rule>Vampire</Rule>
 						<Rule>Bestial Fury</Rule>
 					</Original>
 				</SpecialRules>
