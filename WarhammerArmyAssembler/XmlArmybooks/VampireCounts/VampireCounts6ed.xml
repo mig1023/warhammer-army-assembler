@@ -44,6 +44,9 @@
 				<Spell Name="Wall of Fire" Cast="14"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Alive>Alive!</Alive>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -1215,8 +1218,8 @@
 				<SpecialRules>
 					<Fear/>
 					<PoisonAttack/>
+					<Alive/>
 					<Original>
-						<Rule>Alive!</Rule>
 						<Rule>Scavengers</Rule>
 					</Original>
 				</SpecialRules>
@@ -1237,8 +1240,8 @@
 					<Undead/>
 					<Fear/>
 					<LargeBase/>
+					<Alive/>
 					<Original>
-						<Rule>Alive!</Rule>
 						<Rule>Swarm</Rule>
 						<Rule>Flying move is restricted to a maximum of 10"</Rule>
 					</Original>
