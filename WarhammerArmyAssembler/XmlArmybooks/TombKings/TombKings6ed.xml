@@ -37,6 +37,9 @@
 		</Magic>
 		<LocalXmlSpecialRules>
 			<Flammable/>
+			<Embalmed/>
+			<TheCurse>The Curse<TheCurse/>
+			<MyWill>"My Will Be Done!"</MyWill>
 		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
@@ -365,9 +368,9 @@
 					<Undead/>
 					<MagicItems Points="100" Type="Hero"/>
 					<Original>
-						<Rule>Embalmed</Rule>
-						<Rule>The Curse</Rule>
-						<Rule>"My Will Be Done!"</Rule>
+						<Embalmed/>
+						<TheCurse/>
+						<MyWill/>
 					</Original>
 				</SpecialRules>
 				<Equipments>
@@ -424,9 +427,9 @@
 					<Undead/>
 					<MagicItems Points="50" Type="Hero"/>
 					<Original>
-						<Rule>Embalmed</Rule>
-						<Rule>The Curse</Rule>
-						<Rule>"My Will Be Done!"</Rule>
+						<Embalmed/>
+						<TheCurse/>
+						<MyWill/>
 					</Original>
 				</SpecialRules>
 				<Equipments>
