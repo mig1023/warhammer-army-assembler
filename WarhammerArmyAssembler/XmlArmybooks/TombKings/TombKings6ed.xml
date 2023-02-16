@@ -35,6 +35,9 @@
 				<Spell Name="Curse of Years" Cast="12"/>
 			</Dispell>
 		</Magic>
+		<LocalXmlSpecialRules>
+			<Flammable/>
+		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -300,8 +303,8 @@
 					<Slots>Lord</Slots>
 					<Undead/>
 					<General/>
+					<Flammable/>
 					<Original>
-						<Rule>Flammable</Rule>
 						<Rule>Settra's Army</Rule>
 						<Rule>The Will of Settra</Rule>
 						<Rule>If a model removed from play, then the enemy within 2D6" suffer 2D6 Strength 2 hits</Rule>
@@ -337,8 +340,8 @@
 					<Terror/>
 					<Regeneration/>
 					<ImmuneToPoison/>
+					<Flammable/>
 					<Original>
-						<Rule>Flammable</Rule>
 						<Rule>Any model or unit responsible for the death of Queen Khalida is affected by her curse on the dice roll of 4+: if affected, then roll a D6 for each model/unit, and on the dice roll of a 6, the model loses a wound that cannot be saved in any way (including Ward saves) nor Regenerated, roll again at the start of each of your Opponent's turns for the rest of the game, and they take a further wound on a roll of 6.</Rule>
 						<Rule>Any attacks that count as poisoned will inflict D3 wounds</Rule>
 						<Rule>May cast Horekhah's Incantation of Righteous Smiting once per Magic phase: it is automatically cast, and cannot be dispelled</Rule>
