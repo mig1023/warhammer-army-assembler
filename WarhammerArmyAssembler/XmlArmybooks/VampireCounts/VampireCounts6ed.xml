@@ -48,6 +48,7 @@
 			<Alive>Alive!</Alive>
 			<Swarm/>
 			<Ethereal/>
+			<NoMundaneWeapons>Cannot choose any mundane weapons or armour</NoMundaneWeapons>
 		</LocalXmlSpecialRules>
 	</Introduction>
 	<Content>
@@ -699,7 +700,7 @@
 						<Dependency/>
 						<AddToWeaponSkill>-2</AddToWeaponSkill>
 						<Rule>+1 to the total rolled when trying to cast a spell</Rule>
-						<Rule>Cannot choose any mundane weapons or armour</Rule>
+						<NoMundaneWeapons/>
 					</Option>
 					<Option>
 						<Name>Blood Dragon</Name>
