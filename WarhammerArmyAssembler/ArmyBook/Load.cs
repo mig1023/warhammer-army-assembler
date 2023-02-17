@@ -460,6 +460,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Format("{0}{1}.jpg", path, image);
         }
 
+        private static string AddCommonXmlSpecialRules(string specialRule) =>
+            Constants.CommonXmlSpecialRules[specialRule];
+
         private static Option AddCommonXmlSpecialRules(int id, string specialRule)
         {
             string rule = Constants.CommonXmlSpecialRules[specialRule];
@@ -686,6 +689,19 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newOption.Description = StringParse(xmlNode["Description"]);
             newOption.SpecialRuleDescription = AllStringParse(xmlNode, "Rule");
+
+            if (Constants.CommonXmlSpecialRules != null)
+            {
+                foreach (XmlNode specialRule in xmlNode.SelectNodes("*"))
+                {
+                    if (!Constants.CommonXmlSpecialRules.ContainsKey(specialRule.Name))
+                        continue;
+
+                    List<string> rulesList = newOption.SpecialRuleDescription.ToList();
+                    rulesList.Add(AddCommonXmlSpecialRules(specialRule.Name));
+                    newOption.SpecialRuleDescription = rulesList.ToArray();
+                }
+            }
 
             if (String.IsNullOrEmpty(newOption.Description) && (newOption.SpecialRuleDescription.Length > 0))
                 newOption.Description = newOption.SpecialRuleDescription[0];
