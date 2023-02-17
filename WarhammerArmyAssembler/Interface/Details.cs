@@ -4,7 +4,6 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -122,13 +121,15 @@ namespace WarhammerArmyAssembler.Interface
                         }
                         else
                         {
-                            bool thisIsStandartEquipment = !option.IsMagicItem() || (option.Points != 0) ||
+                            bool thisIsStandartEquip = !option.IsMagicItem() || (option.Points != 0) ||
                                 option.Honours || String.IsNullOrEmpty(option.Name);
 
-                            bool thisIsSpecialRuleOrMount = option.Realised && !option.Mount &&
+                            bool thisIsRuleOrMount = option.Realised && !option.Mount &&
                                 !option.Command && option.SpecialRuleDescription.Length == 0;
 
-                            if (head == "WEAPONS & ARMOUR" && thisIsStandartEquipment && !thisIsSpecialRuleOrMount)
+                            bool thisIsSpecRule = option.IsSpecaialRule();
+
+                            if (head == "WEAPONS & ARMOUR" && (thisIsStandartEquip || thisIsSpecRule) && !thisIsRuleOrMount)
                                 continue;
 
                             if (option.NativeArmour && unit.IsArmourOptionAdded())

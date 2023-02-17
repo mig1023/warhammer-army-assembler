@@ -9,8 +9,27 @@ namespace WarhammerArmyAssembler
 {
     public class Option : INotifyPropertyChanged
     {
-        public enum OptionType { Weapon, Armour, Additional, Shield, Arcane, Banner, Option, SlannOption, Powers, Info }
-        public enum OptionCategory { Option, Equipment, SpecialRule, Nope }
+        public enum OptionType
+        {
+            Weapon,
+            Armour,
+            Additional,
+            Shield,
+            Arcane,
+            Banner,
+            Option,
+            SlannOption,
+            Powers,
+            Info,
+        }
+
+        public enum OptionCategory
+        {
+            Option,
+            Equipment,
+            SpecialRule,
+            Nope,
+        }
 
         public string Name { get; set; }
         public int ID { get; set; }
@@ -351,6 +370,9 @@ namespace WarhammerArmyAssembler
 
         public bool IsEquipment() =>
             this.Category == OptionCategory.Equipment;
+
+        public bool IsSpecaialRule() =>
+            this.Category == OptionCategory.SpecialRule;
 
         public bool IsSlannOption() =>
             this.Type == OptionType.SlannOption;

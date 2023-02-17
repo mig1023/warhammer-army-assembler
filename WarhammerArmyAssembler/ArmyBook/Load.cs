@@ -469,7 +469,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 ID = id,
                 IDView = id.ToString(),
                 Name = specialRule,
-                Type = Option.OptionType.Additional,
+                Type = Option.OptionType.Info,
+                Category = Option.OptionCategory.SpecialRule,
                 SpecialRuleDescription = new string[] { rule },
             };
 

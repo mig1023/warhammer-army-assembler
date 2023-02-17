@@ -10,9 +10,30 @@ namespace WarhammerArmyAssembler
 {
     public class Unit : IComparable<Unit>
     {
-        public enum UnitType { Lord, Hero, Core, Special, Rare, Mount, ToCore, ToSpecial }
-        public enum MagicItemsTypes { Hero, Wizard, Unit }
-        public enum TestTypeTypes { Unit, Enemy }
+        public enum UnitType
+        {
+            Lord,
+            Hero,
+            Core,
+            Special,
+            Rare,
+            Mount,
+            ToCore,
+            ToSpecial
+        }
+
+        public enum MagicItemsTypes
+        {
+            Hero,
+            Wizard,
+            Unit,
+        }
+
+        public enum TestTypeTypes
+        {
+            Unit,
+            Enemy,
+        }
 
         public string Name { get; set; }
 
