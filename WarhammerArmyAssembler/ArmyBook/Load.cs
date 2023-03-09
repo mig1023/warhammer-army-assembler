@@ -130,9 +130,10 @@ namespace WarhammerArmyAssembler.ArmyBook
                 string xmlUnitName = StringParse(xmlUnit["Name"]);
                 string xmlUnitHomologue = StringParse(xmlUnit["Homologue"]);
 
-                bool equal = (xmlUnitHomologue == homologue) || (xmlUnitName == unitName);
+                bool equal = xmlUnitName == unitName;
+                bool isHomologue = !String.IsNullOrEmpty(homologue) && (xmlUnitHomologue == homologue);
 
-                if (!equal || (xmlUnit["Image"] == null))
+                if ((!equal && !isHomologue) || (xmlUnit["Image"] == null))
                     continue;
 
                 string image = StringParse(xmlUnit["Image"]);
