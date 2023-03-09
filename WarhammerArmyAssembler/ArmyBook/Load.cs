@@ -122,7 +122,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             string imagePath = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
                 StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/UnitsFolder")));
                 
-            string unitType = isHero ? "Heroes/*" : "Units/Unit";
+            string unitType = isHero ? "Heroes/*" : "Units/*";
             XmlNodeList xmlNodes = xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}", unitType));
 
             foreach (XmlNode xmlUnit in xmlNodes)
@@ -432,6 +432,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newUnit.ArmyColor = (SolidColorBrush)Data.FrontColor;
             newUnit.TooltipColor = (SolidColorBrush)Data.TooltipColor;
+
             newUnit.Image = TryFindImage(xmlUnit, newUnit);
 
             return newUnit;
