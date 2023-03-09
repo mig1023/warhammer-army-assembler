@@ -21,7 +21,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 HomologousSeries.Add(head, new List<string> { file });
         }
 
-        public static List<string> GetHomologue(string army, string unit, bool isHero)
+        public static List<string> GetHomologue(string army, string unit, string homologue, bool isHero)
         {
             List<string> images = new List<string>();
 
@@ -30,9 +30,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             IEnumerable<string> homologousSeries = HomologousSeries[army];
 
-            foreach (string homologue in homologousSeries.Reverse())
+            foreach (string homologueName in homologousSeries.Reverse())
             {
-                string homologueImage = Load.ArmyUnitImageOnly(homologue, unit, isHero);
+                string homologueImage = Load.ArmyUnitImageOnly(homologueName, unit, homologue, isHero);
 
                 if (!String.IsNullOrEmpty(homologueImage))
                     images.Add(homologueImage);

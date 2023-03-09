@@ -113,7 +113,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             return null;
         }
 
-        public static string ArmyUnitImageOnly(string xmlFileName, string unitName, bool isHero)
+        public static string ArmyUnitImageOnly(string xmlFileName, string unitName, string homologue, bool isHero)
         {
             XmlDocument xmlFile = new XmlDocument();
 
@@ -128,8 +128,11 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (XmlNode xmlUnit in xmlNodes)
             {
                 string xmlUnitName = StringParse(xmlUnit["Name"]);
+                string xmlUnitHomologue = StringParse(xmlUnit["Homologue"]);
 
-                if ((xmlUnitName != unitName) || (xmlUnit["Image"] == null))
+                bool equal = (xmlUnitHomologue == homologue) || (xmlUnitName == unitName);
+
+                if (!equal || (xmlUnit["Image"] == null))
                     continue;
 
                 string image = StringParse(xmlUnit["Image"]);
@@ -333,6 +336,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.IDView = id.ToString();
 
             newUnit.Name = StringParse(xmlUnit["Name"]);
+            newUnit.Homologue = StringParse(xmlUnit["Homologue"]);
             newUnit.Type = UnitTypeParse(xmlUnit);
             newUnit.Points = DoubleParse(xmlUnit["Points"]);
             newUnit.StaticPoints = DoubleParse(xmlUnit["StaticPoints"]);

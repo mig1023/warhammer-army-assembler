@@ -54,6 +54,7 @@ namespace WarhammerArmyAssembler
         }
 
         string Group { get; set; }
+        public string Homologue { get; set; }
         public int ID { get; set; }
         public string IDView { get; set; }
         public int ArmyID { get; set; }
@@ -312,6 +313,7 @@ namespace WarhammerArmyAssembler
                 Name = this.Name,
                 Personification = this.Personification,
                 Group = this.Group,
+                Homologue = this.Homologue,
                 ID = this.ID,
                 IDView = this.IDView,
                 ArmyID = this.ArmyID,
