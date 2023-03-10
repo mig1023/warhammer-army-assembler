@@ -196,7 +196,18 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (XmlNode option in specialRules)
             {
-                string value = String.IsNullOrEmpty(option.InnerText) ? option.Name : option.InnerText;
+                string value = option.InnerText;
+                
+                if (String.IsNullOrEmpty(value))
+                {
+                    List<string> multiWords = Regex.Split(option.Name, @"(?<!^)(?=[A-Z])").ToList();
+
+                    if (multiWords.Count < 2)
+                        value = option.Name;
+                    else
+                        value = String.Join(" ", multiWords);
+                };
+                
                 ruleList.Add(option.Name, value);
             }
 
@@ -424,7 +435,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                         newUnit.Options.Add(LoadOption(GetNextIndex(), xmlCommand, xml));
                 }
                 else
+                {
                     newUnit.Options.Add(LoadOption(GetNextIndex(), xmlOption, xml));
+                }
             }
 
             newUnit.SizableType = !newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize);
