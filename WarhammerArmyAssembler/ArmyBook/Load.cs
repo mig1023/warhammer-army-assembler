@@ -619,7 +619,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             string points = 
-                xmlNode.Attributes["PointsPerModel"]?.InnerText ??
+                xmlNode.Attributes["PointsPM"]?.InnerText ??
                 xmlNode.Attributes["Points"]?.InnerText ??
                 String.Empty;
 
@@ -630,7 +630,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                 AddToOption(xmlDocument, ref xmlNode, "Points", points);
 
-                if (xmlNode.Attributes["PointsPerModel"] != null)
+                if (xmlNode.Attributes["PointsPM"] != null)
                     AddToOption(xmlDocument, ref xmlNode, "PerModel", "True");
             }
 
