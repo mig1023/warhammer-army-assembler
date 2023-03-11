@@ -1065,9 +1065,9 @@
 						<OnlyOneInArmy/>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
-					<Spear PointsPerModel="1"/>
-					<AdditionalWeapon PointsPerModel="1"/>
-					<Shield PointsPerModel="1"/>
+					<Spear PointsPM="1"/>
+					<AdditionalWeapon PointsPM="1"/>
+					<Shield PointsPM="1"/>
 					<Command>
 						<Champion Points="15" Name="Orc Boss"/>
 						<Musician Points="10"/>
@@ -1134,15 +1134,15 @@
 						<OnlyOneInArmy/>
 						<ImpactHit>D3</ImpactHit>
 					</Option>
-					<Spear PointsPerModel="1"/>
-					<ShortBow PointsPerModel="1"/>
+					<Spear PointsPM="1"/>
+					<ShortBow PointsPM="1"/>
 					<Option>
 						<Name>Additional choppa</Name>
 						<Points>1</Points>
 						<PerModel/>
 						<AddToAttacks>1</AddToAttacks>
 					</Option>
-					<Shield PointsPerModel="1"/>
+					<Shield PointsPM="1"/>
 					<Command>
 						<Champion Points="15" Name="Savage Orc Boss"/>
 						<Musician Points="5"/>
@@ -1165,9 +1165,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Spear PointsPerModel="0,5" Dependency="Weapon"/>
-					<ShortBow PointsPerModel="0,5" Dependency="Weapon"/>
-					<Shield PointsPerModel="0,5"/>
+					<Spear PointsPM="0,5" Dependency="Weapon"/>
+					<ShortBow PointsPM="0,5" Dependency="Weapon"/>
+					<Shield PointsPM="0,5"/>
 					<Command>
 						<Champion Points="10" Name="Goblin Boss"/>
 						<Musician Points="10"/>
@@ -1192,9 +1192,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Spear PointsPerModel="1"/>
-					<ShortBow PointsPerModel="1"/>
-					<Shield PointsPerModel="1"/>
+					<Spear PointsPM="1"/>
+					<ShortBow PointsPM="1"/>
+					<Shield PointsPM="1"/>
 					<Command>
 						<Champion Points="10" Name="Wolf Rider Boss"/>
 						<Musician Points="10"/>
@@ -1254,7 +1254,7 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<ShortBow PointsPerModel="1"/>
+					<ShortBow PointsPM="1"/>
 					<Command>
 						<Champion Points="10" Name="Spider Rider Boss"/>
 						<Musician Points="10"/>
@@ -1284,7 +1284,7 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<Shield PointsPerModel="1"/>
+					<Shield PointsPM="1"/>
 					<Command>
 						<Champion Points="15" Name="Black Orc Boss"/>
 						<Musician Points="10"/>
@@ -1317,8 +1317,8 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<Shield PointsPerModel="2"/>
-					<Spear PointsPerModel="2"/>
+					<Shield PointsPM="2"/>
+					<Spear PointsPM="2"/>
 					<Command>
 						<Champion Points="15" Name="Boar Boy Boss"/>
 						<Musician Points="10"/>
@@ -1357,9 +1357,9 @@
 						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
-					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
-					<Spear PointsPerModel="2" Dependency="Weapon"/>
-					<Shield PointsPerModel="2" Dependencies="Additional weapon"/>
+					<AdditionalWeapon PointsPM="2" Dependency="Weapon"/>
+					<Spear PointsPM="2" Dependency="Weapon"/>
+					<Shield PointsPM="2" Dependencies="Additional weapon"/>
 					<Command>
 						<Champion Points="15" Name="Savage Orc Boar Boy Boss"/>
 						<Musician Points="10"/>
