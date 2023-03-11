@@ -699,8 +699,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Shield PointsPerModel="1" Dependency="Weapon"/>
-					<AdditionalWeapon PointsPerModel="1" Dependency="Weapon"/>
+					<Shield PointsPM="1" Dependency="Weapon"/>
+					<AdditionalWeapon PointsPM="1" Dependency="Weapon"/>
 					<Command>
 						<Champion Points="10" Name="Foe-render"/>
 						<Musician Points="5"/>
@@ -723,7 +723,7 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Spear PointsPerModel="1"/>
+					<Spear PointsPM="1"/>
 					<Option>
 						<Name>Halfhorn</Name>
 						<Dependency/>
@@ -822,9 +822,9 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>				
-					<Shield PointsPerModel="4" Dependency="Weapon"/>
-					<AdditionalWeapon PointsPerModel="4" Dependency="Weapon"/>
-					<GreatWeapon PointsPerModel="8" Dependency="Weapon"/>				
+					<Shield PointsPM="4" Dependency="Weapon"/>
+					<AdditionalWeapon PointsPM="4" Dependency="Weapon"/>
+					<GreatWeapon PointsPM="8" Dependency="Weapon"/>				
 					<Command>
 						<Champion Points="20" Name="Bloodkine" Magic="Type: Hero, Points: 25"/>
 						<Musician Points="10"/>
