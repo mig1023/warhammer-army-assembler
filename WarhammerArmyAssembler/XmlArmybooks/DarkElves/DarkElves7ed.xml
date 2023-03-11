@@ -967,7 +967,7 @@
 				</Equipments>
 				<Options>
 					<Crew Name="Assassin" Points="90"/>
-					<Shield PointsPerModel="1"/>
+					<Shield PointsPM="1"/>
 					<Command>
 						<Champion Points="6" Name="Lordling"/>
 						<Musician Points="3"/>
@@ -991,7 +991,7 @@
 				</Equipments>
 				<Options>
 					<Crew Name="Assassin" Points="90"/>
-					<Shield PointsPerModel="1"/>
+					<Shield PointsPM="1"/>
 					<Command>
 						<Champion Points="5" Name="Guardmaster"/>
 						<Musician Points="5"/>
@@ -1068,7 +1068,7 @@
 						<AddToArmour>6</AddToArmour>
 						<Rule>Not Fast Cavalry anymore</Rule>
 					</Option>
-					<RepeaterCrossbow PointsPerModel="5"/>
+					<RepeaterCrossbow PointsPM="5"/>
 				</Options>
 			</Core>
 			<Core>
@@ -1135,9 +1135,9 @@
 						<Name>Bloodshadde</Name>
 						<Points>18</Points>
 					</Option>
-					<LightArmour PointsPerModel="1"/>
-					<GreatWeapon PointsPerModel="2" Dependency="Weapon"/>
-					<AdditionalWeapon PointsPerModel="1" Dependency="Weapon"/>
+					<LightArmour PointsPM="1"/>
+					<GreatWeapon PointsPM="2" Dependency="Weapon"/>
+					<AdditionalWeapon PointsPM="1" Dependency="Weapon"/>
 				</Options>
 			</Special>
 			<Special>
