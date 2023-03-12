@@ -94,7 +94,7 @@
 				<Additional>
 					<Name>Gnarled Hide</Name>
 					<Points>15</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Description>The model has a scaly skin save of 5+, which is cumulative with other armour as normal</Description>
 				</Additional>
 				<Additional>
@@ -182,21 +182,21 @@
 				<Armour>
 					<Name>Blade-Blunter Armour</Name>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Rule>At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour: on the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon</Rule>
 					<Description>Heavy armour. At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour. On the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon. Instead it will count as a normal weapon of its type for the remainder of the battle</Description>
 				</Armour>
 				<Armour>
 					<Name>Trollhide</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Regeneration/>
 					<Description>Light armour. The wearer gains the Regeneration rule</Description>
 				</Armour>
 				<Armour>
 					<Name>Pelt of The Shadowgave</Name>
 					<Points>45</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>All shooting attacks directed at the character or his unit are at -1 To Hit</Rule>
 					<Rule>Spells that target the character or his unit deduct 2 from the casting roll</Rule>
 					<Description>Light armour. All shooting attacks directed at the bearer or his unit are at -1 To Hit. Spells that target the bearer or his unit deduct 2 from the casting roll</Description>
@@ -204,7 +204,7 @@
 				<Armour>
 					<Name>Blackened Plate</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Rule>2+ Ward save against all flaming attacks</Rule>
 					<Rule>Models in any unit that he is with have a 4+ Ward save against flaming attacks</Rule>
 					<Description>Heavy armour. The wearer of the Blackened Plate has a 2+ Ward save against all flaming attacks. Models in any unit that he is with have a 4+ Ward save against such attacks</Description>
@@ -212,7 +212,7 @@
 				<Additional>
 					<Name>Ramhorn Helm</Name>
 					<Points>15</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>For every armour save he passes, the character may immediately make a bonus attack at his basic Strength</Rule>
 					<Description>6+ armour save. This may be combined with other armour as normal. For every armour save he passes, the bearer may immediately make a bonus attack at his basic Strength</Description>
 				</Additional>
@@ -345,7 +345,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Dark Mail</Name>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 						<Rule>The Dark Mail negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Rule>
 					</Armour>
 				</Equipments>
@@ -800,7 +800,7 @@
 					</Option>
 					<Option>
 						<Name>Scaly Skin</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<PerModel/>
 						<Points>1</Points>
 					</Option>
