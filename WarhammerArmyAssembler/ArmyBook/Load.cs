@@ -615,7 +615,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                         typesIncluded = true;
                 }
                 else
+                {
                     AddToOption(xmlDocument, ref xmlNode, attributeLine);
+                }
             }
 
             string points = 
@@ -764,13 +766,35 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return null;
         }
 
+        private static XmlNode XmlValueSemiParser(XmlNode value, string name)
+        {
+            XmlNode xmlNode = value[name];
+
+            if (xmlNode == null)
+                return null;
+
+            if (!String.IsNullOrEmpty(xmlNode.InnerText))
+                return xmlNode;
+
+            string valueAttr = xmlNode.Attributes["Value"]?.InnerText ?? String.Empty;
+
+            if (!String.IsNullOrEmpty(valueAttr))
+                xmlNode.InnerText = valueAttr;
+
+            return xmlNode;
+        }
+
         private static void SetProperty(object element, XmlNode value, string name, string byAttr = "")
         {
-            bool isByAttr = !String.IsNullOrEmpty(byAttr);
+            XmlNode xmlNode = null;
+            bool notByAttr = String.IsNullOrEmpty(byAttr);
 
-            XmlNode xmlNode = isByAttr ? (XmlNode)value.Attributes[byAttr] : value[name];
+            if (notByAttr)
+                xmlNode = XmlValueSemiParser(value, name);
+            else
+                xmlNode = (XmlNode)value.Attributes[byAttr];
 
-            object propetyValue = PropertyByType(element, xmlNode, name, isByAttr);
+            object propetyValue = PropertyByType(element, xmlNode, name, !notByAttr);
 
             if (propetyValue != null)
                 element.GetType().GetProperty(name).SetValue(element, propetyValue);
