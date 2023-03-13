@@ -244,49 +244,49 @@
 					<Points>55</Points>
 					<Only>GrailVow</Only>
 					<Regeneration/>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Description>Character with the Grail Vow only. This armour replaces the Knight's heavy armour, and gives a 5+ Armour save that can be combined with other equipment as normal. In addition, the wearer has Regeneration</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of the Midsummer Sun</Name>
 					<Points>45</Points>
 					<Rule>Opponents suffer a -1 penalty to all rolls to hit the wearer and his mount with missile weapons and in close combat</Rule>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Description>This armour replaces the Knight's heavy armour, and gives a 5+ Armour save that may be combined with other armour as normal. Opponents suffer a -1 penalty to all rolls to hit the wearer and his mount with missile weapons and in close combat</Description>
 				</Armour>
 				<Shield>
 					<Name>The Grail Shield</Name>
 					<Points>35</Points>
 					<Only>GrailVow</Only>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToWard>4</AddToWard>
 					<Description>The shield provides a 6+ Armour save which may be combined with other armour as normal. The bearer's Ward save gained from the Blessing of the Lady is increased to 4+ against attacks of any Strength. If the model loses the Blessing, they lose this Ward save as normal</Description>
 				</Shield>
 				<Additional>
 					<Name>Gromril Great Helm</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>Gives a 6+ Armour save and may be worn in addition to normal armour. The wearer may re-roll failed Armour saves</Description>
 				</Additional>
 				<Armour>
 					<Name>Armour of Agilulf</Name>
 					<Points>25</Points>
-					<AddToArmour>4</AddToArmour>
+					<AddToArmour Value="4"/>
 					<WeaponSkillTo>10</WeaponSkillTo>
 					<Description>This armour replaces the Knight's heavy armour and includes a shield, giving a 4+ Armour save. The shield must be used at all times - so the wearer cannot use a weapon that requires two hands. In addition, the armour confers Weapon Skill 10 (which cannot be altered with other items. Virtues, etc) to whoever is wearing it</Description>
 				</Armour>
 				<Armour>
 					<Name>Cuirass of Fortune</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Reroll>ToWound</Reroll>
 					<Description>This armour replaces the Knight's heavy armour, and gives a 5+ Annour save which may be combined with other armour as normal. When rolling to wound in close combat, the Knight may re-roll any dice rolls of 1</Description>
 				</Armour>
 				<Shield>
 					<Name>Orcbane Shield</Name>
 					<Points>15</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Rule>
 					<Description>Gives a 6+ Armour save and may be combined with other armour as normal. Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Description>
 				</Shield>
@@ -557,7 +557,7 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>The Lion's Shield</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Rule>Louen has a Magic Resistance value equal to the total number of dice used in the casting of any spell that affects him</Rule>
 					</Armour>
 				</Equipments>
@@ -640,7 +640,7 @@
 					<Mount Name="Horse" Points="15"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Horse</On>
 						</Dependencies>
@@ -727,7 +727,7 @@
 					<Mount Name="Horse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Horse</On>
 						</Dependencies>
