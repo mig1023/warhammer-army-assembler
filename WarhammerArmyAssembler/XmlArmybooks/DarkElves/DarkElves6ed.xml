@@ -137,7 +137,7 @@
 				<Armour>
 					<Name>Armour of Living Death</Name>
 					<Points>100</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<AddToToughness>1</AddToToughness>
 					<AddToWounds>1</AddToWounds>
 					<Description>The Armour of Living Death counts as heavy armour, giving a 5+ armour save, which can be combined with other armour as normal. In addition, the model has +1 Toughness and +1 Wound</Description>
@@ -145,14 +145,14 @@
 				<Armour>
 					<Name>Armour of Eternal Servitude</Name>
 					<Points>60</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Regeneration/>
 					<Description>This light armour gives a basic 6+ save, which can be combined with other armour as normal. In addition, the wearer can regenerate</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of Ghrond</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
 					<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength</Description>
 				</Shield>
@@ -165,7 +165,7 @@
 				<Armour>
 					<Name>Blood Armour</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
 					<Description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improuved by 1 (to 4+ then 3+, etc) up to maximum of 1+</Description>
 				</Armour>
@@ -383,7 +383,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 						<AddToWard>2</AddToWard>
 						<NoMultiWounds/>
 						<Rule>2+ Ward save against non-magical attacks</Rule>
@@ -673,7 +673,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<AddToArmour Value="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -691,7 +691,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<AddToArmour Value="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
