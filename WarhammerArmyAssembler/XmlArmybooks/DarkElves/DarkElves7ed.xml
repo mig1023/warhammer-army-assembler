@@ -136,7 +136,7 @@
 					<Name>Dance of Doom</Name>
 					<Points>30</Points>
 					<Only>Khainite</Only>
-					<AddToWard>5</AddToWard>
+					<AddToWard Value="5"/>
 					<Description>The model has a 5+ ward save</Description>
 				</Additional>
 				<Additional>
@@ -334,7 +334,7 @@
 				<Additional>
 					<Name>Black Amulet</Name>
 					<Points>40</Points>
-					<AddToWard>4</AddToWard>
+					<AddToWard Value="4"/>
 					<Rule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</Rule>
 					<Description>The wearer has a 4+ ward save. If the wearer of the Black Amulet passes their ward save in close combat, then the attacking model suffers 1 wound instead (with no armour save allowed)</Description>
 				</Additional>
@@ -487,7 +487,7 @@
 					<Armour>
 						<Name>Armour of Midnight</Name>
 						<AddToArmour>5</AddToArmour>
-						<AddToWard>2</AddToWard>
+						<AddToWard Value="2"/>
 						<Rule>2+ ward save against non-magical attacks</Rule>
 						<NoMultiWounds/>
 					</Armour>
@@ -537,7 +537,7 @@
 					<HandWeapon/>
 					<Arcane>
 						<Name>Thousand and One Dark Blessing</Name>
-						<AddToWard>4</AddToWard>
+						<AddToWard Value="4"/>
 						<Rule>Magic Resistance (2)</Rule>
 					</Arcane>
 					<Arcane>
