@@ -289,7 +289,7 @@
 				<Armour>
 					<Name>Armour of Living Death</Name>
 					<Points>60</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<AddToToughness>1</AddToToughness>
 					<AddToWounds>1</AddToWounds>
 					<Stupidity/>
@@ -298,14 +298,14 @@
 				<Armour>
 					<Name>Armour of Eternal Servitude</Name>
 					<Points>35</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Regeneration/>
 					<Description>Heavy armour. The wearer can Regenerate</Description>
 				</Armour>
 				<Additional>
 					<Name>Cloak of Hag Graef</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Any ranged attack hits on the character have their Strength halved</Rule>
 					<Description>Sea Dragon cloak. In addition, any ranged attack hits on the character (including shooting, magic missiles and other spells with a Strength value) have their Strength halved before rolling to wound (rounding up)</Description>
 				</Additional>
@@ -318,14 +318,14 @@
 				<Shield>
 					<Name>Shield of Ghrond</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
 					<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength</Description>
 				</Shield>
 				<Armour>
 					<Name>Blood Armour</Name>
 					<Points>15</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
 					<Description>Heavy armour. For every unsaved wound the wearer inflicts in close combat, this save is improved by one point (to 4+ then 3+, etc) to a maximum total of 1+ (including any other bonuses for a shield. Sea Dragon cloak, and so on)</Description>
 				</Armour>
@@ -486,14 +486,14 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 						<AddToWard Value="2"/>
 						<Rule>2+ ward save against non-magical attacks</Rule>
 						<NoMultiWounds/>
 					</Armour>
 					<Armour>
 						<Name>Spellshield</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Rule>Magic resistance (2)</Rule>
 						<Rule>If a spell cast at Malekith is dispelled by a dispel roll, the caster suffers a Strength 6 hit</Rule>
 						<Rule>For Bound Items, the Spellshield inflicts one Strength 6 hit</Rule>
@@ -822,7 +822,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<AddToArmour Value="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1065,7 +1065,7 @@
 						<Name>Shields</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Rule>Not Fast Cavalry anymore</Rule>
 					</Option>
 					<RepeaterCrossbow PointsPM="5"/>
