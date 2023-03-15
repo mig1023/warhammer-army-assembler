@@ -103,14 +103,14 @@
 					<Only>Mortal</Only>
 					<AddToWeaponSkill Value="1"/>
 					<AddToStrength Value="1"/>
-					<AddToAttacks>1</AddToAttacks>
+					<AddToAttacks Value="1"/>
 					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Whip of Pleasure</Name>
 					<Points>50</Points>
 					<HitFirst/>
-					<AddToAttacks>1</AddToAttacks>
+					<AddToAttacks Value="1"/>
 					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
@@ -652,7 +652,7 @@
 					<HandWeapon>
 						<Name>The Slayer of Kings</Name>
 						<NoArmour/>
-						<AddToAttacks>5</AddToAttacks>
+						<AddToAttacks Value="5"/>
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Morkar</Name>
@@ -1149,7 +1149,7 @@
 						<Points>6</Points>
 						<PerModel/>
 						<AddToArmour>6</AddToArmour>
-						<AddToAttacks>1</AddToAttacks>
+						<AddToAttacks Value="1"/>
 						<OnlyOneSuchUnits/>
 					</Option>
 					<Halberd PointsPM="2"/>
@@ -1247,7 +1247,7 @@
 						<Points>12</Points>
 						<PerModel/>
 						<AddToArmour>6</AddToArmour>
-						<AddToAttacks>1</AddToAttacks>
+						<AddToAttacks Value="1"/>
 						<OnlyOneSuchUnits/>
 					</Option>
 					<MarkOfTzFUnit PointsPM="20" Dependency="Mark"/>
