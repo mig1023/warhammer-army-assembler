@@ -84,7 +84,7 @@
 				<Weapon>
 					<Name>Sword of Change</Name>
 					<Points>65</Points>
-					<AddToStrength>1</AddToStrength>
+					<AddToStrength Value="1"/>
 					<Rule>Every time an enemy character or monster takes an unsaved wound it must take a Toughness test: if the test is failed, the victim becomes a repulsive Spawn-thing, all enemy models in base contact with the victim take a S4 hit, the victim is then removed from play</Rule>
 					<Description>Confers +1 Strength. Every time an enemy character or monster takes an unsaved wound from the Sword of Change it must take a Toughness test. If the test is failed, the victim becomes a repulsive Spawn-thing. All enemy models in base contact with the victim take a S4 hit as the Spawn-thing flails wildly in its death throes (unsaved wounds will count towards combat resolution). The victim is then removed from play</Description>
 				</Weapon>
@@ -92,7 +92,7 @@
 					<Name>Chaos Runesword</Name>
 					<Points>50</Points>
 					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
+					<AddToStrength Value="1"/>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack</Description>
 				</Weapon>
@@ -125,7 +125,7 @@
 					<Name>Axe of Khorn</Name>
 					<Points>45</Points>
 					<KillingBlow/>
-					<AddToStrength>1</AddToStrength>
+					<AddToStrength Value="1"/>
 					<Description>This axe confers +1 Strength and the Killing Blow special rule upon the bearer</Description>
 				</Weapon>
 				<Weapon>
@@ -597,7 +597,7 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<HitLast/>
 						<Points>12</Points>
 						<Dependency Group="Weapon"/>
@@ -616,7 +616,7 @@
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
-						<AddToStrength>1</AddToStrength>
+						<AddToStrength Value="1"/>
 						<Points>8</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -944,7 +944,7 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<HitLast/>
 						<Points>8</Points>
 						<Dependency Group="Weapon"/>
@@ -963,7 +963,7 @@
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
-						<AddToStrength>1</AddToStrength>
+						<AddToStrength Value="1"/>
 						<Points>4</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -1554,7 +1554,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Ensorcelled weapon</Name>
-						<AddToStrength>1</AddToStrength>
+						<AddToStrength Value="1"/>
 					</HandWeapon>
 					<ChaosArmour/>
 					<Shield/>
@@ -1610,7 +1610,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToStrength>1</AddToStrength>
+						<AddToStrength Value="1"/>
 						<Frenzy/>
 					</Option>
 					<Option>
@@ -1737,7 +1737,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<HitLast/>
 						<Dependency/>
 						<PerModel/>
@@ -1776,7 +1776,7 @@
 							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
-						<AddToStrength>1</AddToStrength>
+						<AddToStrength Value="1"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
