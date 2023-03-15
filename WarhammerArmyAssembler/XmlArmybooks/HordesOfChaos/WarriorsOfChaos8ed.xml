@@ -96,7 +96,7 @@
 				<Powers>
 					<Name>Scaled Skin</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Description>The character has the Scaly Skin (5+) special rule</Description>
 				</Powers>
 				<Powers>
@@ -194,7 +194,7 @@
 					<Points>25</Points>
 					<HitFirst/>
 					<Stupidity/>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Description>The bearer of the Helm of Many Eyes counts his armour save as being one higher than normal. In addition, the bearer has both the Always Strikes First and Stupidity special rules</Description>
 				</Additional>
 				<Arcane>
@@ -268,7 +268,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -455,7 +455,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Auric Armour</Name>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 						<Regeneration/>
 					</Armour>
 					<Shield/>
@@ -487,12 +487,12 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Scarlet Armour</Name>
-						<AddToArmour>3</AddToArmour>
+						<AddToArmour Value="3"/>
 						<Rule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</Rule>
 					</Armour>
 					<Armour>
 						<Name>Daemonshield</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Rule>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</Rule>
 					</Armour>
 				</Equipments>
@@ -604,7 +604,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
@@ -626,7 +626,7 @@
 					<Option>
 						<Name>Barding</Name>
 						<Points>15</Points>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Demonic Mount</On>
 						</Dependencies>
@@ -646,7 +646,7 @@
 						<Dependencies>
 							<On>Mark of Khorne</On>
 						</Dependencies>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 					</Option>
 					<Mount Name="Manticore" Points="150"/>
 					<Mount Name="Chaos Dragon" Points="330"/>
@@ -694,7 +694,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
@@ -716,7 +716,7 @@
 					<Option>
 						<Name>Barding</Name>
 						<Points>15</Points>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Demonic Mount</On>
 						</Dependencies>
@@ -971,7 +971,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>16</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
@@ -993,7 +993,7 @@
 					<Option>
 						<Name>Barding</Name>
 						<Points>15</Points>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Demonic Mount</On>
 						</Dependencies>
@@ -1013,7 +1013,7 @@
 						<Dependencies>
 							<On>Mark of Khorne</On>
 						</Dependencies>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -1061,7 +1061,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>16</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
@@ -1083,7 +1083,7 @@
 					<Option>
 						<Name>Barding</Name>
 						<Points>15</Points>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Demonic Mount</On>
 						</Dependencies>
@@ -1116,7 +1116,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<AddToArmour Value="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1169,7 +1169,7 @@
 				<Options>
 					<Option>
 						<Name>Iron Hard Skin</Name>
-						<AddToArmour>4</AddToArmour>
+						<AddToArmour Value="4"/>
 						<Points>25</Points>
 					</Option>
 					<Option>
@@ -1430,7 +1430,7 @@
 						<Name>Scaly Hide</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Mutant Poisons</Name>
