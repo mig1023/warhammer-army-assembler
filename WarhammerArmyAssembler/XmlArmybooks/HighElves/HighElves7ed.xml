@@ -122,14 +122,14 @@
 				<Armour>
 					<Name>Armour of Protection</Name>
 					<Points>45</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToWard>4</AddToWard>
 					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. It also provides a 4+ Ward save</Description>
 				</Armour>
 				<Shield>
 					<Name>Golden Shield</Name>
 					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Reroll>OpponentToHit</Reroll>
 					<Description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all successful attempts to hit the bearer in close combat must be re-rolled</Description>
 				</Shield>
@@ -137,28 +137,28 @@
 					<Name>Armour of Stars</Name>
 					<Only>Infantry</Only>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>After any unsaved wound model is instantly teleported 3D6" in a random direction</Rule>
 					<Description>May only be worn by a model on foot. The Armour of Stars counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound he is instantly teleported 3D6" in a random direction</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Heroes</Name>
 					<Points>30</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may not attack</Description>
 				</Armour>
 				<Additional>
 					<Name>Temakador's Gauntlets</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToWard>5</AddToWard>
 					<Description>These gauntlets grant a 6+ armour save which can be combined with other equipment normally. They also give the bearer a 5+ Ward save against attacks of Strength 4 or greater</Description>
 				</Additional>
 				<Armour>
 					<Name>Shadow Armour</Name>
 					<Points>25</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Rule>Scout</Rule>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors)</Description>
 				</Armour>
@@ -171,14 +171,14 @@
 				<Additional>
 					<Name>Helm of Fortune</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
 				</Additional>
 				<Shield>
 					<Name>Dragonscale Shield</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<AddToWard>6</AddToWard>
 					<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save</Description>
 				</Shield>
@@ -186,7 +186,7 @@
 					<Name>Mask of the Merlord</Name>
 					<Points>10</Points>
 					<Only>Infantry</Only>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Can move over marsh, rivers, lakes or any other water features without penalty, and will benefit from soft cover while in such terrain</Rule>
 					<Description>Model on foot only. This mask confers a 6+ armour save which can be combined with other equipment normally. In addition, the wearer can move over marsh, rivers, lakes or any other water features without penalty, and will benefit from soft cover while in such terrain</Description>
 				</Additional>
@@ -519,7 +519,7 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>The Helm of Yvresse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<AddToWard>5</AddToWard>
 					</Armour>
 					<Arcane>
@@ -589,7 +589,7 @@
 						<Name>Tiranoc Chariot</Name>
 						<Points>85</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 					</Option>
 				</Options>
 				<Equipments>
@@ -616,7 +616,7 @@
 						<Name>Tiranoc Chariot</Name>
 						<Points>85</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 					</Option>
 				</Options>
 				<Equipments>
@@ -672,7 +672,7 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>Pelt of Charandis</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<ImmuneToPoison/>
 						<Rule>3+ Armour save against shooting attacks</Rule>
 					</Armour>
@@ -682,7 +682,7 @@
 						<Name>Lion Chariot</Name>
 						<Points>130</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 					</Option>
 				</Options>
 			</Hero>
@@ -713,7 +713,7 @@
 						<Name>Tiranoc Chariot</Name>
 						<Points>85</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -738,7 +738,7 @@
 						<Name>Tiranoc Chariot</Name>
 						<Points>85</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 					</Option>
 				</Options>
 				<Equipments>
@@ -826,7 +826,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -844,7 +844,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>4</AddToArmour>
+						<AddToArmour Value="4"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -862,7 +862,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<AddToArmour Value="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
