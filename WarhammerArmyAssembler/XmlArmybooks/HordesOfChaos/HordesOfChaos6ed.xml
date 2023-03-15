@@ -283,7 +283,7 @@
 					<Name>Power Familiar</Name>
 					<Points>50</Points>
 					<Only>Mortal</Only>
-					<AddToCast>1</AddToCast>
+					<AddToCast Value="1"/>
 					<AddToDispell>1</AddToDispell>
 					<Description>The Familiar adds one dice to both the Power dice and Dispel dice pool of the bearer's side</Description>
 				</Arcane>
@@ -331,7 +331,7 @@
 						<On>Mark of Khorne</On>
 					</Dependencies>
 					<AddToWizard>1</AddToWizard>
-					<AddToCast>1</AddToCast>
+					<AddToCast Value="1"/>
 					<AddToDispell>1</AddToDispell>
 					<Description>The bearer is a Level 1 Sorcerer and knows a random spell from the Lore of Fire, Shadow or Death (Chaos player's choice). If the bearer miscasts, roll twice on the Miscast table and apply both results</Description>
 				</Additional>
@@ -806,7 +806,7 @@
 						<Points>140</Points>
 						<Dependency Group="Mark"/>
 						<AddToWizard>4</AddToWizard>
-						<AddToCast>4</AddToCast>
+						<AddToCast Value="4"/>
 						<AddToDispell>2</AddToDispell>
 					</Option>
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
@@ -906,7 +906,7 @@
 						<Points>150</Points>
 						<Dependency Group="Mark"/>
 						<AddToWizard>4</AddToWizard>
-						<AddToCast>4</AddToCast>
+						<AddToCast Value="4"/>
 						<AddToDispell>2</AddToDispell>
 					</Option>
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
@@ -934,7 +934,7 @@
 						<Points>70</Points>
 						<Dependency Group="Mark"/>
 						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
+						<AddToCast Value="2"/>
 						<AddToDispell>1</AddToDispell>
 					</Option>
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
@@ -989,7 +989,7 @@
 					<Option>
 						<Name>Level 2 Sorcerer</Name>
 						<Points>40</Points>
-						<AddToCast>2</AddToCast>
+						<AddToCast Value="2"/>
 						<AddToDispell>1</AddToDispell>
 						<AddToWizard>2</AddToWizard>
 						<Dependencies>
@@ -1001,7 +1001,7 @@
 						<Points>70</Points>
 						<Dependency Group="Mark"/>
 						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
+						<AddToCast Value="2"/>
 						<AddToDispell>1</AddToDispell>
 					</Option>
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
@@ -1029,7 +1029,7 @@
 						<Points>70</Points>
 						<Dependency Group="Mark"/>
 						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
+						<AddToCast Value="2"/>
 						<AddToDispell>1</AddToDispell>
 					</Option>
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
