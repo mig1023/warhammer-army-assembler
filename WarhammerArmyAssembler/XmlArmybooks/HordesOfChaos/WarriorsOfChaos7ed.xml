@@ -158,28 +158,28 @@
 				<Armour>
 					<Name>Skinhidden Plate</Name>
 					<Points>60</Points>
-					<AddToArmour>4</AddToArmour>
+					<AddToArmour Value="4"/>
 					<AddToToughness>1</AddToToughness>
 					<Description>Chaos armour. The Skinhidden Plate confers +1 Toughness upon the wearer</Description>
 				</Armour>
 				<Shield>
 					<Name>Chaos Runeshield</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Negates the power of any magic or runic weapons carried by models in base contact</Rule>
 					<Description>Shield. Negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Damnation</Name>
 					<Points>45</Points>
-					<AddToArmour>4</AddToArmour>
+					<AddToArmour Value="4"/>
 					<Reroll>OpponentToHit</Reroll>
 					<Description>Chaos armour. Any model striking the wearer in close combat must re-roll successful rolls to hit</Description>
 				</Armour>
 				<Armour>
 					<Name>Crimson Armour of Dargan</Name>
 					<Points>40</Points>
-					<AddToArmour>4</AddToArmour>
+					<AddToArmour Value="4"/>
 					<NoKillingBlow/>
 					<NoMultiWounds/>
 					<Description>Chaos armour. The wearer is immune to Killing Blow. Furthermore, wounds suffered by the character can never be converted into multiple wounds - they do a single wound as normal</Description>
@@ -187,14 +187,14 @@
 				<Armour>
 					<Name>Armour of Morrslieb</Name>
 					<Points>35</Points>
-					<AddToArmour>4</AddToArmour>
+					<AddToArmour Value="4"/>
 					<AddToWard>4</AddToWard>
 					<Description>Chaos armour. Confers a 4+ Ward save against non-magical attacks</Description>
 				</Armour>
 				<Armour>
 					<Name>The Bronze Armour of Zhrakk</Name>
 					<Points>15</Points>
-					<AddToArmour>4</AddToArmour>
+					<AddToArmour Value="4"/>
 					<ImmuneToPsychology/>
 					<NoKillingBlow/>
 					<NotALeader/>
@@ -482,7 +482,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Auric Armour</Name>
-						<AddToArmour>1</AddToArmour>
+						<AddToArmour Value="1"/>
 						<Regeneration/>
 					</Armour>
 					<Shield/>
@@ -516,7 +516,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of the Storm</Name>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 						<Rule>If any lightning-based spell targets a unit within 12" of Kholek, the spell's effects are redirected toward Kholek instead</Rule>
 					</Armour>
 				</Equipments>
@@ -544,7 +544,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Scarlet Armour</Name>
-						<AddToArmour>3</AddToArmour>
+						<AddToArmour Value="3"/>
 						<Rule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</Rule>
 					</Armour>
 					<Armour>
@@ -1055,7 +1055,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<AddToArmour Value="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1268,7 +1268,7 @@
 						<Name>Scaly Skin</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 				</Options>
 			</Core>
