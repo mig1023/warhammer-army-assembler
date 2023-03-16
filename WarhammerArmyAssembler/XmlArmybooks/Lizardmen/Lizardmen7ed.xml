@@ -138,7 +138,7 @@
 					<Name>Hide of the Cold Ones</Name>
 					<Only>Infantry</Only>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<AddToToughness>1</AddToToughness>
 					<Fear/>
 					<Stupidity/>
@@ -148,21 +148,21 @@
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToLeadership>1</AddToLeadership>
 					<Description>Confers +1 to the model's armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
 				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Description>Shield. Any magic missile that strikes the bearer or any unit he is with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell or the unit the character is with. This in turn cannot be dispelled</Description>
 				</Shield>
 				<Shield>
 					<Name>The Mainming Shield</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToAttacks Value="1"/>
 					<Description>Shield. The Mainming Shield confres +1 Attack to the bearer. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
 				</Shield>
@@ -607,7 +607,7 @@
 				<Equipments>
 					<Armour>
 						<Name>The Shield of Aeons</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Rule>No benefits from charging Gar-Rok</Rule>
 					</Armour>
 					<HandWeapon>
@@ -967,7 +967,7 @@
 						<Name>Javelin and shield</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Command>
 						<Champion Points="6" Name="Brave"/>
