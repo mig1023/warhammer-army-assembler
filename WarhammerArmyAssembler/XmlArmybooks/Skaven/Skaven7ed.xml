@@ -71,7 +71,7 @@
 					<Name>The Fellblade</Name>
 					<Points>100</Points>
 					<StrengthTo Value="10"/>
-					<MultiWounds>D6</MultiWounds>
+					<MultiWounds Value="D6"/>
 					<Reroll>OpponentToWard</Reroll>
 					<Rule>Wound wielder with no armour save at the end of each turns on a 3+</Rule>
 					<Description>This sword gives the bearer Stringth 10 and successful ward saves must be re-rolled. Any unsaved wounds caused by the Fellblade are multiplied into D6 wounds. Roll a D6 at the end of each of the wielder's turns; on a 3+ there is no effect. On a roll of 1-2 the wielder suffers 1 wound with no armour save allowed</Description>
@@ -93,7 +93,7 @@
 					<Name>Blade of Corruption</Name>
 					<Points>35</Points>
 					<AddToStrength>1</AddToStrength>
-					<MultiWounds>2</MultiWounds>
+					<MultiWounds Value="2"/>
 					<Rule>Wielder suffers 2 wounds if roll 2 or more rolls of To Hit</Rule>
 					<Description>The wielder of this sword is granted +1 Strength to all Attacks. Any unsaved wound inflicted is multiplied to 2 wounds. If the wielder makes a to Hit roll that has two or more rolls of 1, the wielder immediately suffers a wound that miltiplied to 2 wounds. Other Attacks are carried out as normal</Description>
 				</Weapon>
@@ -101,7 +101,7 @@
 					<Name>Weeping Blade</Name>
 					<Points>30</Points>
 					<ArmourPiercing>1</ArmourPiercing>
-					<MultiWounds>D3</MultiWounds>
+					<MultiWounds Value="D3"/>
 					<Description>The Weeping Blade has the Armour Piercing special rule. Each unsaved wound is multiplied to D3 wounds</Description>
 				</Weapon>
 				<Weapon>
@@ -527,7 +527,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Doom Glaive</Name>
-						<MultiWounds>D3</MultiWounds>
+						<MultiWounds Value="D3"/>
 						<Rule>Each unsaved wound multiplied to D3 wound</Rule>
 					</HandWeapon>
 				</Equipments>
@@ -601,7 +601,7 @@
 					<HandWeapon>
 						<Name>Weeping Blade</Name>
 						<Rule>Armour Piercing</Rule>
-						<MultiWounds>D3</MultiWounds>
+						<MultiWounds Value="D3"/>
 						<Rule>Each unsaved wound is multiplied to D3 wounds</Rule>
 					</HandWeapon>
 					<RangeWeapon>
