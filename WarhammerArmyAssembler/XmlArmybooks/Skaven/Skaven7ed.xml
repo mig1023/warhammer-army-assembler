@@ -85,14 +85,14 @@
 				<Weapon>
 					<Name>Warplock-augmented Weapon</Name>
 					<Points>45</Points>
-					<AddToStrength>1</AddToStrength>
+					<AddToStrength Value="1"/>
 					<AddToAttacks>1</AddToAttacks>
 					<Description>A Warplock Weapon adds +1 Strength and +1 Attack to any model so equipped</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Blade of Corruption</Name>
 					<Points>35</Points>
-					<AddToStrength>1</AddToStrength>
+					<AddToStrength Value="1"/>
 					<MultiWounds Value="2"/>
 					<Rule>Wielder suffers 2 wounds if roll 2 or more rolls of To Hit</Rule>
 					<Description>The wielder of this sword is granted +1 Strength to all Attacks. Any unsaved wound inflicted is multiplied to 2 wounds. If the wielder makes a to Hit roll that has two or more rolls of 1, the wielder immediately suffers a wound that miltiplied to 2 wounds. Other Attacks are carried out as normal</Description>
@@ -107,7 +107,7 @@
 				<Weapon>
 					<Name>Dwarfbane</Name>
 					<Points>25</Points>
-					<AddToStrength>1</AddToStrength>
+					<AddToStrength Value="1"/>
 					<Rule>Re-roll all failed to Wound rolls against Dwarfs</Rule>
 					<ArmourPiercing>1</ArmourPiercing>
 					<Description>The wielder of this sword is granted +1 Strength to all Attacks. Additionaly against Dwarfs, all hits are Armour Piercing and the user re-rolls all failed to Wound rolls</Description>
@@ -436,7 +436,7 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Iron Frame</Name>
-						<AddToStrength>3</AddToStrength>
+						<AddToStrength Value="3"/>
 						<AddToArmour>3</AddToArmour>
 						<AddToWard>5</AddToWard>
 					</Armour>
