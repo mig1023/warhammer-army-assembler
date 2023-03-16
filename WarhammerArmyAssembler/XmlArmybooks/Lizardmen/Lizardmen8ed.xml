@@ -135,7 +135,7 @@
 				<Additional>
 					<Name>Sacred Stegadon Helm of Itza</Name>
 					<Points>40</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToToughness>1</AddToToughness>
 					<ImpactHit>D3</ImpactHit>
 					<Description>The wearer of the Sacred Stegadon Helm counts his armour save as being one point higher than normal. Furthermore, the Sacred Stegadon Helm grants the wearer +1 Toughness and the Impact Hits (D3) special rule</Description>
@@ -214,7 +214,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -516,7 +516,7 @@
 				<Equipments>
 					<Armour>
 						<Name>The Shield of Aeons</Name>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 						<Rule>Any enemy model that makes a successful charge against Gor-Rok and ends the Movement phase in base contact with him must immediately take a Dangerous Terrain test with a -1 penalty</Rule>
 					</Armour>
 					<HandWeapon>
@@ -949,7 +949,7 @@
 				<Options>
 					<Option>
 						<Name>Lustrian javelins and shields</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Command>
 						<Champion Points="10" Name="Patrol leader"/>
