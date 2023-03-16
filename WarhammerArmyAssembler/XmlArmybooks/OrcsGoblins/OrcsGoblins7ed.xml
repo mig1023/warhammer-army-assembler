@@ -165,14 +165,14 @@
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToToughness>1</AddToToughness>
 					<Description>Light armour. The wearer has +1 Toughness</Description>
 				</Armour>
 				<Shield>
 					<Name>Spliteful shield</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Strength 5 hit for each 1 on a enemy roll to Hit</Rule>
 					<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
 				</Shield>
@@ -392,7 +392,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Azhag's 'ard Amour</Name>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 						<AddToWard>5</AddToWard>
 					</Armour>
 					<Crown>
@@ -423,7 +423,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour>1</AddToArmour>
+						<AddToArmour Value="1"/>
 						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
@@ -754,7 +754,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>4</AddToArmour>
+						<AddToArmour Value="4"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1217,7 +1217,7 @@
 					<FearElves/>
 					<ScythedWheel/>
 					<Original>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 					</Original>
 				</SpecialRules>
 				<Equipments>
@@ -1307,7 +1307,7 @@
 						<Name>Stone troll</Name>
 						<Points>20</Points>
 						<PerModel/>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 						<AddToStrength Value="1"/>
 						<Rule>Magic Resistance (2)</Rule>
 					</Option>
