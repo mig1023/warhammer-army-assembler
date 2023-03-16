@@ -149,35 +149,35 @@
 				<Armour>
 					<Name>Armour of Protectyness</Name>
 					<Points>60</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<FirstWoundDiscount/>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also, the wearer discounts the first wound he suffers</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Mork</Name>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also gives the wearer and the unit he is with Magic Resistance (2)</Description>
 				</Armour>
 				<Shield>
 					<Name>Ironskin Shield</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToWard>4</AddToWard>
 					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also gives the bearer a 4+ Ward save</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>35</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
 				</Armour>
 				<Shield>
 					<Name>Ugbkag's Lucky Shield</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Discounts the first hit suffered in the battle</Rule>
 					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also, the bearer discounts the first hit suffered in the battle</Description>
 				</Shield>
@@ -192,7 +192,7 @@
 					<Name>Nobbla's 'Elmet</Name>
 					<Points>20</Points>
 					<Only>Goblin</Only>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToWard>6</AddToWard>
 					<Description>Gives the wearer a 6+ armour save and may be worn in addition to normal armour. Also gives the wearer a 6+ Ward save</Description>
 				</Additional>
@@ -399,7 +399,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour>1</AddToArmour>
+						<AddToArmour Value="1"/>
 						<AddToWard>5</AddToWard>
 					</Armour>
 					<Armour>
@@ -840,7 +840,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>4</AddToArmour>
+						<AddToArmour Value="4"/>
 					</Armour>
 				</Equipments>
 			</Mount>
