@@ -275,7 +275,7 @@
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
-					<AddToStrength>1</AddToStrength>
+					<AddToStrength Value="1"/>
 					<Description>The Vampire has +1 Strength on his profile</Description>
 				</Weapon>
 			</Group>
@@ -365,7 +365,7 @@
 				<Weapon>
 					<Name>The Black Axe of Krell</Name>
 					<Points>50</Points>
-					<AddToStrength>2</AddToStrength>
+					<AddToStrength Value="2"/>
 					<HitLast/>
 					<Rule>Any model which suffers 1 or more wounds must roll a D6 at the start of both its own and its enemy's Magic phases, on a roll of 1 or 2 it suffers 1 more wound with no armour save allowed</Rule>
 					<Description>The Black Axe of Krell is a Great Weapon and follows all the rules for normal Great Weapons. Also, any model which suffers 1 or more wounds from the Black Axe must roll a D6 at the start of both its own and its enemy's Magic phases for the rest of the game. On a roll of 1 or 2 it suffers 1 more wound with no armour save allowed (a Ward save can be taken as normal)</Description>
@@ -373,7 +373,7 @@
 				<Weapon>
 					<Name>Sword of Unholy Power</Name>
 					<Points>40</Points>
-					<AddToStrength>2</AddToStrength>
+					<AddToStrength Value="2"/>
 					<HitLast/>
 					<Rule>For each unsaved Wound gains an extra Power or Dispel dice in the following Magic phase</Rule>
 					<Description>For each unsaved wound caused by the blade the plaver may inimedutely get a magic dice. This dice is added to his pile of Power or Dispel dice in the following Magic phase, (depending on whether it is his own turn or his enemy's)</Description>
@@ -626,7 +626,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sword of Unholy Power</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<HitLast/>
 						<Rule>For each unsaved Wound gains an extra Power or Dispel dice in the following Magic phase</Rule>
 					</HandWeapon>
@@ -729,7 +729,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
@@ -849,7 +849,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
@@ -989,7 +989,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
@@ -1092,7 +1092,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Two-handed scythe</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<HitLast/>
 					</HandWeapon>
 				</Equipments>
@@ -1287,7 +1287,7 @@
 				<Options>
 					<Option>
 						<Name>Helberds</Name>
-						<AddToStrength>1</AddToStrength>
+						<AddToStrength Value="1"/>
 						<Points>2</Points>
 						<PerModel/>
 					</Option>
