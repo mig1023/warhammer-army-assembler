@@ -112,28 +112,28 @@
 				<Armour>
 					<Name>Armour of Eternity</Name>
 					<Points>70</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Reroll>OpponentToWound</Reroll>
 					<Description>Enemy models must re-roll successful rolls to wound against the character. Counts as light armour</Description>
 				</Armour>
 				<Armour>
 					<Name>Scorpion Armour</Name>
 					<Points>40</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Rule>The character can never suffer more than one wound due to combat resolution</Rule>
 					<Description>The character can never suffer more than one wound due to combat resolution (after any modifiers for being within 12" of the Battle Standard, etc). If the wearer is with a unit, no more than half the wounds suffered due to combat resolution can be allocated against the character. For example, if the unit suffers four wounds, two wounds are lost by the unit and two wounds are allocated to the character of which one is ignored. Counts as heavy armour</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of the Ages</Name>
 					<Points>35</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<AddToWounds>1</AddToWounds>
 					<Description>Counts as heavy armour. The bearer gains +1 Wound</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of Ptra</Name>
 					<Points>15</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>If the character makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Rule>
 					<Description>Counts as a shield. If the bearer makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Description>
 				</Shield>
@@ -323,7 +323,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Golden Magnificence</Name>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 						<Rule>Armour saving is nerev modified to worse than a 4+, even of hit by attack that normally allows no Armour save</Rule>
 					</Armour>
 					<Armour>
@@ -549,14 +549,14 @@
 						<Name>Shields</Name>
 						<PerModel/>
 						<Dependency/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Shields and spears</Name>
 						<Points>1</Points>
 						<PerModel/>
 						<Dependency/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<LightArmour PointsPM="1"/>
 					<Command>
