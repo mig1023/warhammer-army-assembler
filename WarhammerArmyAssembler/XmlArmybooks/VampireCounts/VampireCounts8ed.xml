@@ -159,7 +159,7 @@
 				<Armour>
 					<Name>Nightshroud</Name>
 					<Points>40</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Enemy models in base contact lose all Strength bonuses conferred from normal and magical weapons, and have the Always Strikes Last special rule</Rule>
 					<Description>The Nightshroud adds +1 to the bearer's armour save. Furthermore, enemy models in base contact with the wearer lose all Strength bonuses conferred from normal and magical weapons, and have the Always Strikes Last special rule</Description>
 				</Armour>
@@ -235,7 +235,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -365,7 +365,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Templehof</Name>
-						<AddToArmour>5</AddToArmour>
+						<AddToArmour Value="5"/>
 						<AddToWounds Value="2"/>
 					</Armour>
 				</Equipments>
@@ -374,7 +374,7 @@
 						<Name>Barded Nightmare</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Abyssal Terror" Points="120"/>
@@ -465,7 +465,7 @@
 						<Name>Barded Nightmare</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Abyssal Terror" Points="120"/>
@@ -500,7 +500,7 @@
 						<Name>Barded Nightmare</Name>
 						<Points>20</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Corpse Cart" Points="90"/>
@@ -558,7 +558,7 @@
 				<Options>
 					<Option>
 						<Name>Barded Nightmare</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Points>16</Points>
 						<Mount/>
 					</Option>
@@ -590,7 +590,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of the Barrows</Name>
-						<AddToArmour>4</AddToArmour>
+						<AddToArmour Value="4"/>
 						<Rule>If an enemy with a magic weapon wounds Krell in close combat and Krell passes his armour save, that magic weapon's abilities are nullified</Rule>
 					</Armour>
 				</Equipments>
@@ -721,7 +721,7 @@
 						<Name>Barded Nightmare</Name>
 						<Points>16</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Coven Throne" Points="230"/>
@@ -1078,7 +1078,7 @@
 				<Options>
 					<Option>
 						<Name>Skeletal Steed barding</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Points>3</Points>
 						<PerModel/>
 					</Option>
