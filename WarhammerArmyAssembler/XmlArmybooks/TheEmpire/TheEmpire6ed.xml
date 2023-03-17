@@ -140,28 +140,28 @@
 				<Armour>
 					<Name>The Gilded Armour</Name>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<Test Bet="Pass" Context="ArmourSave" Profile="Strength"/>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie, roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed, the Attack is lost</Description>
 				</Armour>
 				<Armour>
 					<Name>Dawn Armour</Name>
 					<Points>40</Points>
-					<AddToArmour>4</AddToArmour>
+					<AddToArmour Value="4"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Tarnus</Name>
 					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<AddToWard>5</AddToWard>
 					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save, he may make a 5+ Ward save. Wizards can wear this armour and cast spells</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of the Gorgon</Name>
 					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Can force one model in base contact to lose one Attack</Rule>
 					<Description>This shield confers a 6+ armour save which can he combined with other equipment normally. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
 				</Shield>
@@ -174,14 +174,14 @@
 				<Shield>
 					<Name>Bronze Shield</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
 					<Description>This shield gives a 6+ armour save which can be combined with other equipment normally. Also, the bearer ignores the first hit in the battle suffered from shooting or close combat</Description>
 				</Shield>
 				<Additional>
 					<Name>Helm of the Skaven Slayer</Name>
 					<Points>20</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>Causes Fear in all models in a Skaven army</Rule>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army</Description>
 				</Additional>
@@ -461,7 +461,7 @@
 					<Mount Name="Warhorse" Points="15"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -513,7 +513,7 @@
 					<Mount Name="Warhorse" Points="15"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -546,7 +546,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -594,7 +594,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -637,7 +637,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -662,7 +662,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
