@@ -96,7 +96,7 @@
 				<Weapon>
 					<Name>Sword of Sigismund</Name>
 					<Points>50</Points>
-					<AddToStrength>1</AddToStrength>
+					<AddToStrength Value="1"/>
 					<HitFirst/>
 					<Description>The wielder of this sword has +1 Strength and always strikes first in close combat, even before enemies that have charged. If the bearer is fighting another enemy who is also entitled to strike first (because of spells, special abilities, etc), then resolve attacks in Initiative order. If Initiative values are equal, roll a dice to determine who strikes first</Description>
 				</Weapon>
@@ -109,7 +109,7 @@
 				<Weapon>
 					<Name>Sword of Power</Name>
 					<Points>40</Points>
-					<AddToStrength>2</AddToStrength>
+					<AddToStrength Value="2"/>
 					<Description>The sword confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
 				</Weapon>
 				<Weapon>
@@ -395,7 +395,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Two-handed hammer</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<HitLast/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -491,7 +491,7 @@
 					<Option>
 						<Name>Cavalry hammer</Name>
 						<HitLast/>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<Points>6</Points>
 					</Option>
 				</Options>
@@ -577,7 +577,7 @@
 				<Options>
 					<Option>
 						<Name>Two-handed warhammer</Name>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 						<HitLast/>
 						<Points>4</Points>
 						<Dependency Group="Weapon"/>
@@ -885,7 +885,7 @@
 						<Name>Knights of the Inner Circle</Name>
 						<Points>3</Points>
 						<PerModel/>
-						<AddToStrength>1</AddToStrength>
+						<AddToStrength Value="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -907,7 +907,7 @@
 					<HandWeapon>
 						<Name>Cavalry hammer</Name>
 						<HitLast/>
-						<AddToStrength>2</AddToStrength>
+						<AddToStrength Value="2"/>
 					</HandWeapon>
 					<FullPlateArmour/>
 				</Equipments>
@@ -916,7 +916,7 @@
 						<Name>Knights of the Inner Circle</Name>
 						<Points>3</Points>
 						<PerModel/>
-						<AddToStrength>1</AddToStrength>
+						<AddToStrength Value="1"/>
 					</Option>
 					<Command>
 						<Musician Points="8"/>
