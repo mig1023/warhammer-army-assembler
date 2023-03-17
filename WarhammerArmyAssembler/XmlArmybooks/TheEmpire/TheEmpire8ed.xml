@@ -91,7 +91,7 @@
 				<Additional>
 					<Name>Helm of the Skavenslayer</Name>
 					<Points>15</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Fear/>
 					<Rule>Causes Terror in all models in a Skaven army</Rule>
 					<Description>Helm. The wearer of the Helm of the Skavenslayer counts his armour save as being one point higher than normal. The wearer also causes Fear. Against models from a Skaven army, the wearer causes Terror instead. However, all Skaven gain the Hatred special rule while attacking the wearer</Description>
@@ -159,7 +159,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -280,7 +280,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>6</Points>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 				</Options>
 			</Lord>
@@ -443,7 +443,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>6</Points>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 				</Options>
 			</Lord>
@@ -465,7 +465,7 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -523,7 +523,7 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -663,7 +663,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>4</Points>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -685,7 +685,7 @@
 					<Mount Name="Warhorse" Points="12"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -719,7 +719,7 @@
 					<Mount Name="Warhorse" Points="12"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -782,7 +782,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>2</Points>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 				</Options>
 			</Hero>
@@ -854,7 +854,7 @@
 						<Name>Bloodroar</Name>
 						<Points>25</Points>
 						<Rule>Enemy units must roll an additional D6, discarding the lowest result, for Leadership tests caused by this beast's Fear of Terror special rules</Rule>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Two Heads</Name>
@@ -1335,7 +1335,7 @@
 					<Option>
 						<Name>Barding for Warhorse</Name>
 						<PerModel/>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Points>1</Points>
 					</Option>
 					<Command>
