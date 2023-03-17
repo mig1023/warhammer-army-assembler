@@ -405,7 +405,7 @@
 				<Additional>
 					<Name>Wailing Helm</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Terror/>
 					<Description>Gives a 6+ armour save and may be worn in addition to normal armour. The wearer also causes terror</Description>
 				</Additional>
@@ -413,7 +413,7 @@
 					<Name>Armour of Bone</Name>
 					<Only>Infantry</Only>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<AddToArmour Value="5"/>
 					<FirstWoundDiscount/>
 					<Description>Gives a 5+ armour save and may be combined with other equipment. Wizard can wear this armour without losing his ability to cast spells. When the wearer fails his first armour save (of if he's wounded by an attack aganst which he cannot take an armour save at all), the armour crumbles to dust and is destroyed, but the wound is ignored</Description>
 				</Armour>
@@ -432,7 +432,7 @@
 					<Dependencies>
 						<Off>Lahmia</Off>
 					</Dependencies>
-					<AddToArmour>6</AddToArmour>
+					<AddToArmour Value="6"/>
 					<Rule>One enemy in base contact (bearer's choice) lose 1 Attack</Rule>
 					<Description>Gives a 6+ armour save and may be combined with other equipment normally. One enemy in base contact (bearer's choice) lose 1 Attack. All Bretonnian Knights and Characters hate the model carrying the shield</Description>
 				</Shield>
@@ -706,7 +706,7 @@
 						<Name>Blood Dragon</Name>
 						<Dependency/>
 						<AddToWeaponSkill>2</AddToWeaponSkill>
-						<AddToArmour>4</AddToArmour>
+						<AddToArmour Value="4"/>
 						<Rule>Full Plate Armour</Rule>
 						<Rule>Must always issue challenges and must always accept enemy challenges</Rule>
 					</Option>
@@ -759,7 +759,7 @@
 						<Dependencies>
 							<On>Blood Dragon</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Wizard Level="3" Points="50"/>
 					<Option>
@@ -776,7 +776,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Winged Nightmare</Name>
@@ -826,7 +826,7 @@
 						<Name>Blood Dragon</Name>
 						<Dependency/>
 						<AddToWeaponSkill>2</AddToWeaponSkill>
-						<AddToArmour>4</AddToArmour>
+						<AddToArmour Value="4"/>
 						<Rule>Full Plate Armour</Rule>
 						<Rule>Must always issue challenges and must always accept enemy challenges</Rule>
 					</Option>
@@ -879,7 +879,7 @@
 						<Dependencies>
 							<On>Blood Dragon</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Wizard Level="2" Points="35"/>
 					<Option>
@@ -896,7 +896,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Winged Nightmare</Name>
@@ -925,7 +925,7 @@
 					<Wizard Level="4" Points="35"/>
 					<Option>
 						<Name>Nightmare</Name>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 						<Points>12</Points>
 						<Mount/>
 					</Option>
@@ -935,7 +935,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Mount Name="Winged Nightmare" Points="175"/>
 					<Mount Name="Zombie Dragon" Points="300"/>
@@ -1021,7 +1021,7 @@
 						<Dependencies>
 							<On>Blood Dragon, Von Carstein</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<Option>
 						<Name>Nightmare</Name>
@@ -1037,7 +1037,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -1071,7 +1071,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -1104,7 +1104,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 				</Options>
 			</Hero>
@@ -1125,7 +1125,7 @@
 					<Wizard Level="2" Points="35"/>
 					<Option>
 						<Name>Nightmare</Name>
-						<AddToArmour>2</AddToArmour>
+						<AddToArmour Value="2"/>
 						<Points>8</Points>
 						<Mount/>
 					</Option>
@@ -1135,7 +1135,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 					</Option>
 				</Options>
 			</Hero>
@@ -1322,7 +1322,7 @@
 				<Options>
 					<Option>
 						<Name>Barding</Name>
-						<AddToArmour>6</AddToArmour>
+						<AddToArmour Value="6"/>
 						<Points>2</Points>
 						<PerModel/>
 					</Option>
