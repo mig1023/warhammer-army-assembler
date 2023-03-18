@@ -73,7 +73,7 @@
 				<Weapon>
 					<Name>Blade of Leaping Gold</Name>
 					<Points>70</Points>
-					<AddToAttacks Value="3"/>
+					<AddToAttacks Val="3"/>
 					<Rule>Any roll of 6 To Wound ignores armour saves</Rule>
 					<Description>The Blade of Leaping Gold grants the wielder +3 Attacks. In addition, any roll of 6 To Wound made with the Blade of Leaping Gold ignores armour saves</Description>
 				</Weapon>
@@ -81,7 +81,7 @@
 					<Name>Star Lance</Name>
 					<Only>Mount</Only>
 					<Points>30</Points>
-					<ChargeStrengthBonus Value="3"/>
+					<ChargeStrengthBonus Val="3"/>
 					<Rule>Armour saves cannot be taken on the turn he charges</Rule>
 					<Description>Mounted character only. The Star Lance can only be used in a turn in which the bearer makes a successful charge. Attacks with the Star Lance are resolved at +3 Strength, and armour saves cannot be taken against Wounds caused by the Star Lance. If the bearer did not make a successful charge this turn, or if his mount has been slain, he must instead fight using another weapon</Description>
 				</Weapon>
@@ -93,8 +93,8 @@
 				<Armour>
 					<Name>Armour of Caledor</Name>
 					<Points>25</Points>
-					<ArmourTo Value="2"/>
-					<AddToWard Value="6"/>
+					<ArmourTo Val="2"/>
+					<AddToWard Val="6"/>
 					<Rule>Fireborn</Rule>
 					<Description>The Armour of Caledor grants the wearer a 2+ Armour save that cannot be improved by any means. In addition, the Armour of Caledor grants the bearer a 6+ Ward save and the Fireborn special ride</Description>
 				</Armour>
@@ -102,7 +102,7 @@
 					<Name>Shadow Armour</Name>
 					<Points>25</Points>
 					<Only>Infantry</Only>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>Scout</Rule>
 					<Rule>Strider</Rule>
 					<Description>Model on foot only. The wearer of the Shadow Armour has a 5+ Armour save. In addition, the wearer has both the Scouts and Strider special rules</Description>
@@ -110,14 +110,14 @@
 				<Shield>
 					<Name>Shield of the Merwyrm</Name>
 					<Points>15</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Parry save of 4+</Rule>
 					<Description>Shield. Unless he is fighting with a weapon that has the Requires Two Hands special rule, the bearer of the Shield of the Merwyrm has a parry save of 4+ (even if he's fighting with a magic weapon)</Description>
 				</Shield>
 				<Additional>
 					<Name>Golden Crown of Atrazar</Name>
 					<Points>10</Points>
-					<WardForFirstWound Value="2"/>
+					<WardForFirstWound Val="2"/>
 					<Description>One use only. The Golden Crown of Atrazar bestows a 2+ Ward save against the first wounding hit suffered by the wearer (which cancels out not only the Wound, but also any Killing Blow or Multiple Wounds special rules the attack has) after which its power fades and it cannot be used again during the game</Description>
 				</Additional>
 				<Additional>
@@ -190,7 +190,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -280,19 +280,19 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sunfang</Name>
-						<AddToStrength Value="3"/>
+						<AddToStrength Val="3"/>
 						<Rule>Flaming Attacks</Rule>
 						<Rule>Once per battle, Tyrion can make a Strength 4 Breath Weapon attack with Flaming Attacks special rule</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Dragon Armour of Aenarion</Name>
-						<ArmourTo Value="1"/>
-						<AddToWard Value="4"/>
+						<ArmourTo Val="1"/>
+						<AddToWard Val="4"/>
 					</Armour>
 					<Armour>
 						<Name>Heart of Avelorn</Name>
 						<Rule>Magic Resistance (2)</Rule>
-						<WardForLastWound Value="2"/>
+						<WardForLastWound Val="2"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -315,7 +315,7 @@
 					<HandWeapon>
 						<Name>Sword of Teclis</Name>
 						<NoArmour/>
-						<WoundOn Value="2"/>
+						<WoundOn Val="2"/>
 					</HandWeapon>
 					<Arcane>
 						<Name>The Moon Staff of Lileath</Name>
@@ -323,9 +323,9 @@
 					</Arcane>
 					<Arcane>
 						<Name>The War Crown</Name>
-						<AddToWizard Value="1"/>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
 					</Arcane>
 					<Arcane>
 						<Name>Scroll of Hoeth</Name>
@@ -361,21 +361,21 @@
 					<HandWeapon>
 						<Name>Fangsword of Eltharion</Name>
 						<NoArmour/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 					</HandWeapon>
 					<LongBow/>
 					<HeavyArmour/>
 					<Armour>
 						<Name>Helm of Yvresse</Name>
-						<AddToArmour Value="6"/>
-						<AddToWard Value="5"/>
+						<AddToArmour Val="6"/>
+						<AddToWard Val="5"/>
 					</Armour>
 					<Arcane>
 						<Name>Talisman of Hoeth</Name>
 						<Rule>Magic Resitance(1)</Rule>
-						<AddToWizard Value="2"/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -407,7 +407,7 @@
 					</Arcane>
 					<Arcane>
 						<Name>Stone of Midnight</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</Rule>
 					</Arcane>
 				</Equipments>
@@ -436,7 +436,7 @@
 					<HandWeapon/>
 					<Armour>
 						<Name>The Shieldstone of Isha</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 					<Arcane>
 						<Name>Star of Avelorn</Name>
@@ -588,12 +588,12 @@
 					<HandWeapon>
 						<Name>Chayal</Name>
 						<KillingBlow/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 					</HandWeapon>
 					<HeavyArmour/>
 					<Armour>
 						<Name>Pelt of Charandis</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<ImmuneToPoison/>
 						<Rule>3+ Armour save against shooting attacks</Rule>
 					</Armour>
@@ -617,7 +617,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Phoenix Blade</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<MultiWounds Value="D3"/>
 						<Rule>Flaming attacks</Rule>
 					</HandWeapon>
@@ -826,7 +826,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -843,7 +843,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -861,7 +861,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
