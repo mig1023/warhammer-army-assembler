@@ -776,7 +776,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (!String.IsNullOrEmpty(xmlNode.InnerText))
                 return xmlNode;
 
-            string valueAttr = xmlNode.Attributes["Value"]?.InnerText ?? String.Empty;
+            string valueAttr = xmlNode.Attributes["Val"]?.InnerText ?? String.Empty;
 
             if (!String.IsNullOrEmpty(valueAttr))
                 xmlNode.InnerText = valueAttr;
