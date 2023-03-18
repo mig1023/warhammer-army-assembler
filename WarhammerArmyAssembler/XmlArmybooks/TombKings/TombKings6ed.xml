@@ -62,14 +62,14 @@
 					<Name>Destroyer of Eternities</Name>
 					<Points>70</Points>
 					<Only>Infantry</Only>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<KillingBlow/>
 					<Description>Counts as a great weapon and has the Killing Blow special ability. The player may choose to attack normally with the Destroyer of Kternities or make a special attack. If the special attack is chosen, all enemy models that are touching the Tomb King take two automatic hits. These hits do benefit from the special rules for great weapons and Killing blow. If a target is riding a monster or a chariot, then both take two automatic hits. In a challenge, only the model engaged in the challenge counts as being in contact with the Tomb King</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Crook and Flail of Radiance</Name>
 					<Points>50</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<HitFirst/>
 					<Description>+1 Attack. Always strikes first. If another character has this ability, then resolve the order of attacks in Initiative order. Requires two hands</Description>
 				</Weapon>
@@ -90,7 +90,7 @@
 					<Name>Flail of Skulls</Name>
 					<Points>45</Points>
 					<Flail/>
-					<MultiWounds Value="2"/>
+					<MultiWounds Val="2"/>
 					<Description>Counts as a flail. Each unsaved wound becomes two wounds</Description>
 				</Weapon>
 				<Weapon>
@@ -112,28 +112,28 @@
 				<Armour>
 					<Name>Armour of Eternity</Name>
 					<Points>70</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Reroll>OpponentToWound</Reroll>
 					<Description>Enemy models must re-roll successful rolls to wound against the character. Counts as light armour</Description>
 				</Armour>
 				<Armour>
 					<Name>Scorpion Armour</Name>
 					<Points>40</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>The character can never suffer more than one wound due to combat resolution</Rule>
 					<Description>The character can never suffer more than one wound due to combat resolution (after any modifiers for being within 12" of the Battle Standard, etc). If the wearer is with a unit, no more than half the wounds suffered due to combat resolution can be allocated against the character. For example, if the unit suffers four wounds, two wounds are lost by the unit and two wounds are allocated to the character of which one is ignored. Counts as heavy armour</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of the Ages</Name>
 					<Points>35</Points>
-					<AddToArmour Value="5"/>
-					<AddToWounds Value="1"/>
+					<AddToArmour Val="5"/>
+					<AddToWounds Val="1"/>
 					<Description>Counts as heavy armour. The bearer gains +1 Wound</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of Ptra</Name>
 					<Points>15</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>If the character makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Rule>
 					<Description>Counts as a shield. If the bearer makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Description>
 				</Shield>
@@ -142,7 +142,7 @@
 				<Additional>
 					<Name>Golden Ankhra</Name>
 					<Points>45</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Description>The model has a 4+ Ward save</Description>
 				</Additional>
 				<Additional>
@@ -323,12 +323,12 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Golden Magnificence</Name>
-						<AddToArmour Value="2"/>
+						<AddToArmour Val="2"/>
 						<Rule>Armour saving is nerev modified to worse than a 4+, even of hit by attack that normally allows no Armour save</Rule>
 					</Armour>
 					<Armour>
 						<Name>The Crown of Nehekhara</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Terror/>
 					</Armour>
 				</Equipments>
@@ -381,7 +381,7 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>6</Points>
@@ -440,7 +440,7 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>4</Points>
@@ -507,7 +507,7 @@
 			<Mount>
 				<Name>Chariot</Name>
 				<Chariot>2</Chariot>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Profile M='8' WS='3' BS='2' S='3' T='4' W='3' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
 					<ImpactHit>D6+1</ImpactHit>
@@ -517,7 +517,7 @@
 			<Mount>
 				<Name>Casket of Soul</Name>
 				<Chariot>1</Chariot>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Profile M='4' WS='3' BS='3' S='6' T='4' W='2' I='3' A='4' Ld='8'/>
 				<SpecialRules>
 					<Terror/>
@@ -549,14 +549,14 @@
 						<Name>Shields</Name>
 						<PerModel/>
 						<Dependency/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Shields and spears</Name>
 						<Points>1</Points>
 						<PerModel/>
 						<Dependency/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<LightArmour PointsPM="1"/>
 					<Command>
@@ -637,7 +637,7 @@
 				<Size>3-12</Size>
 				<Chariot>2</Chariot>
 				<Mount>Skeletal Steed</Mount>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image/>
 				<Profile M='8' WS='3' BS='2' S='3' T='4' W='3' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
@@ -699,7 +699,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Huge ritual blades</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</HandWeapon>
 				</Equipments>
@@ -740,7 +740,7 @@
 			<Rare>
 				<Name>Screaming Skull Catapult</Name>
 				<Points>90</Points>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image/>
 				<Profile M='4' WS='2' BS='2' S='3' T='7' W='3' I='2' A='1' Ld='5'/>
 				<SpecialRules>
