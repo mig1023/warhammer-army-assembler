@@ -78,8 +78,8 @@
 				<Armour>
 					<Name>The Helm of the Hunt</Name>
 					<Points>20</Points>
-					<AddToArmour Value="6"/>
-					<AddToWeaponSkill Value="1"/>
+					<AddToArmour Val="6"/>
+					<AddToWeaponSkill Val="1"/>
 					<Rule>Devastating Charge</Rule>
 					<Description>The wearer of the Helm of the Hunt counts his armour save as being one point higher than normal. Furthermore, the Helm of the Hunt grants the bearer the Devastating Charge special rule and +1 Weapon Skill on a turn in which he charges into combat</Description>
 				</Armour>
@@ -147,7 +147,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -248,13 +248,13 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Cloak of Isha</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 						<Rule>Magic Resistance (2)</Rule>
 						<Rule>At the start of each of your turns, roll a D6. On a score of 6, Orion regains a Wound lost earlier in the battle</Rule>
 					</Armour>
 					<Armour>
 						<Name>Horn of the Wild Hunt</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 						<Rule>At the start of each turn, the Horn of the Wild Hunt grants the Devastating Charge special rule to Orion, his unit, and all friendly Wood Elf units within 6"</Rule>
 					</Armour>
 				</Equipments>
@@ -331,13 +331,13 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Only>Infantry</Only>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency Group="Weapon"/>
 						<Points>3</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Dependency Group="Weapon"/>
 						<Points>6</Points>
 					</Option>
@@ -434,17 +434,17 @@
 						<Name>Wizard Level 3</Name>
 						<Points>35</Points>
 						<Dependency/>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
-						<AddToWizard Value="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
+						<AddToWizard Val="1"/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>70</Points>
 						<Dependency/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
-						<AddToWizard Value="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
+						<AddToWizard Val="2"/>
 					</Option>
 					<Option>
 						<Name>Strangleroots</Name>
@@ -497,13 +497,13 @@
 					<Option>
 						<Name>Additional weapon</Name>
 						<Only>Infantry</Only>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency Group="Weapon"/>
 						<Points>2</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency Group="Weapon"/>
 						<Points>4</Points>
@@ -598,9 +598,9 @@
 					<Option>
 						<Name>Wizard Level 1</Name>
 						<Points>35</Points>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
-						<AddToWizard Value="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
+						<AddToWizard Val="1"/>
 						<Rule>Use Lore of Shadow</Rule>
 					</Option>
 					<Option>
@@ -660,7 +660,7 @@
 			</Mount>
 			<Mount>
 				<Name>Hound of Orion</Name>
-				<ModelsInPack Value="2"/>
+				<ModelsInPack Val="2"/>
 				<Profile M='9' WS='4' BS='0' S='4' T='4' W='2' I='4' A='2' Ld='6'/>
 				<Equipments/>
 				<SpecialRules>
@@ -682,7 +682,7 @@
 				<Name>Warhawk</Name>
 				<Profile M='1' WS='4' BS='0' S='4' T='4' W='3' I='5' A='2' Ld='5'/>
 				<SpecialRules>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<KillingBlow/>
 					<FlyingCavalry/>
 					<ForestStalker/>
