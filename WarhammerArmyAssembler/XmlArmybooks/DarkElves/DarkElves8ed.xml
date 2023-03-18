@@ -92,7 +92,7 @@
 				<Additional>
 					<Name>The Black Amulet</Name>
 					<Points>60</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Rule>Any successful ward save while fighting in a challenge inflicts one Wound on the bearer's opponent with no Armour saves</Rule>
 					<Description>The wearer of the Black Amulet has a 4+ ward save. Furthermore, each time the bearer of the Black Amulet makes a successful ward save while fighting in a challenge, the Black Amulet inflicts one Wound on the bearer's opponent. Armour saves cannot be taken against Wounds d by the Black Amulet</Description>
 				</Additional>
@@ -157,7 +157,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -262,14 +262,14 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour Value="5"/>
-						<AddToWard Value="2"/>
+						<AddToArmour Val="5"/>
+						<AddToWard Val="2"/>
 						<Rule>2+ ward save against non-magical attacks</Rule>
 						<NoMultiWounds/>
 					</Armour>
 					<Armour>
 						<Name>Supreme Spellshield</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Rule>Magic resistance (2)</Rule>
 						<Rule>If a spell cast at Malekith is dispelled by a dispel roll, the caster suffers a D6 Strength 6 hits</Rule>
 					</Armour>
@@ -307,7 +307,7 @@
 					</Arcane>
 					<Arcane>
 						<Name>Thousand and One Dark Blessing</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>Magic Resistance (2)</Rule>
 					</Arcane>
 					<Option>
@@ -341,7 +341,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Deathsword and the Cursed Blade</Name>
-						<StrengthTo Value="10"/>
+						<StrengthTo Val="10"/>
 					</HandWeapon>
 					<Arcane>
 						<Name>Amulet of Dark Fire</Name>
@@ -375,10 +375,10 @@
 					<HeavyArmour/>
 					<Demon>
 						<Name>Tz'arkan</Name>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
-						<AddToToughness Value="2"/>
-						<AddToInitiative Value="2"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
+						<AddToToughness Val="2"/>
+						<AddToInitiative Val="2"/>
 						<Rule>Each time Malus Darkblade makes a To Hit roll of 1, a friendly model in base contact suffers an automatic hit at Malus Darkblade's Strength that must be re-rolled if it fails To Wound. Armour saves cannot be taken against Wounds Malus causes in this manner</Rule>
 					</Demon>
 				</Equipments>
@@ -501,7 +501,7 @@
 					<MurderousProwess/>
 					<PoisonAttack/>
 					<KillingBlow/>
-					<AddToWound Value="1"/>
+					<AddToWound Val="1"/>
 					<HateHighElves/>
 					<Original>
 						<Rule>Can choose to deploy 'hidden' within another friendly Dark Elf infantry unit, but not Harpies</Rule>
@@ -549,11 +549,11 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>Sea Dragon cloak</Name>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 					</Armour>
 					<Armour>
 						<Name>Helm of the Kraken</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Regeneration/>
 						<Terror/>
 					</Armour>
@@ -579,11 +579,11 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Crimson Death</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Grief</Name>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 						<Rule>Each time a model makes a successful To Hit roll against Kouran Darkhand in close combat, the model that struck the blow immediately suffers a Strength 5 hit</Rule>
 					</Armour>
 				</Equipments>
@@ -597,7 +597,7 @@
 				<Profile M='5' WS='6' BS='6' S='4' T='3' W='2' I='7' A='3' Ld='9'/>
 				<SpecialRules>
 					<Fear/>
-					<ExtendedKillingBlow Value="5"/>
+					<ExtendedKillingBlow Val="5"/>
 					<MurderousProwess/>
 					<Frenzy/>
 					<HateHighElves/>
@@ -608,12 +608,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The First Draich</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</HandWeapon>
 					<Armour>
 						<Name>Heavy armour</Name>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -752,7 +752,7 @@
 						<Name>Manbane</Name>
 						<Dependency/>
 						<Points>20</Points>
-						<AddToWound Value="1"/>
+						<AddToWound Val="1"/>
 					</Option>
 				</Options>
 				<Equipments>
@@ -808,7 +808,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -828,7 +828,7 @@
 				<Options>
 					<Option>
 						<Name>Iron Hard Skin</Name>
-						<AddToArmour Value="4"/>
+						<AddToArmour Val="4"/>
 						<Points>20</Points>
 					</Option>
 					<Option>
@@ -854,7 +854,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -888,7 +888,7 @@
 				<Name>Dark Pegasus</Name>
 				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Value="1"/>
+					<ChargeStrengthBonus Val="1"/>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -896,7 +896,7 @@
 				<Name>Dark Pegasus Sulephet</Name>
 				<Profile M='8' WS='4' BS='0' S='4' T='4' W='3' I='4' A='3' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Value="1"/>
+					<ChargeStrengthBonus Val="1"/>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -1017,7 +1017,7 @@
 					<LightArmour/>
 					<Armour>
 						<Name>Sea Dragon cloak</Name>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1227,7 +1227,7 @@
 			<Special>
 				<Name>Reaper Bolt Thrower</Name>
 				<Points>70</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Image/>
 				<Profile M='5' WS='4' BS='4' S='3' T='7' W='2' I='5' A='1' Ld='8'/>
 				<SpecialRules>
