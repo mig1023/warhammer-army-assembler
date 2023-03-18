@@ -79,16 +79,16 @@
 				<Weapon>
 					<Name>Bashas Axe of Stunty Smashin'</Name>
 					<Points>50</Points>
-					<ArmourPiercing Value="2"/>
-					<AddToStrength Value="1"/>
-					<AddToAttacks Value="1"/>
+					<ArmourPiercing Val="2"/>
+					<AddToStrength Val="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>The wielder of this weapon has the Armour Piercing special rule, and adds +1 to both his Attacks and Strength in close combat. This bonus is doubled if the wielder is in base contact with a model of Dwarfs. In addition, the wielder causes Fear in models of Dwarf army</Description>
 				</Weapon>
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>50</Points>
-					<AddToArmour Value="5"/>
-					<AddToToughness Value="1"/>
+					<AddToArmour Val="5"/>
+					<AddToToughness Val="1"/>
 					<ImpactHit>D6</ImpactHit>
 					<Description>Heavy Armour. The wearer has +D3 Toughness. Roll to determine the armour's effectiveness the first time the wearer is hit each turn, and use the result for the rest of the turn. In addition, the wearer has the Impact Hits (D6) special rule</Description>
 				</Armour>
@@ -96,13 +96,13 @@
 					<Name>Lucky Shrunken Head</Name>
 					<Points>50</Points>
 					<Only>Orc</Only>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The Lucky Shrunken Head can only be taken by a Savage Ore Shaman or Great Shaman. It increases the Warpaint save of the bearer and any unit he joins from 6+ to 5+. If Wurrzag is in the unit, his Warpaint save is increased to 4+</Description>
 				</Arcane>
 				<Banner>
 					<Name>Morks War Banner</Name>
 					<Points>100</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Rule>A unit with Mork's War Banner has Magic Resistance(D6). Roll to determine the effectiveness of the banner the first time the unit needs to take any saving throws against spells in a turn. The result is used for all such saves made that turn</Rule>
 					<Description>A unit with Mork's War Banner has Magic Resistance (D6). Roll to determine the effectiveness of the banner the first time the unit needs to take any saving throws against spells in a turn. The result is used for all such saves made that turn. In addition, all magic items belonging to enemy models that are in base contact with the bearer do not work (if an enemy in base contact has an item that would stop the banner from working, then roll off to see which item takes precedence)</Description>
 				</Banner>
@@ -158,7 +158,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -276,8 +276,8 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Azhag's 'Ard Armour</Name>
-						<AddToArmour Value="5"/>
-						<AddToWard Value="5"/>
+						<AddToArmour Val="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 					<Crown>
 						<Name>The Crown of Sorcery</Name>
@@ -303,13 +303,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour Value="1"/>
-						<AddToWard Value="5"/>
+						<AddToArmour Val="1"/>
+						<AddToWard Val="5"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -343,7 +343,7 @@
 					</Armour>
 					<Armour>
 						<Name>Warpaint of Wurrzag</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -365,13 +365,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Axe of Grom</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<KillingBlow/>
 						<Rule>Killing Blow on a 5+ against Elves</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Lucky banner</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -444,7 +444,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -474,7 +474,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -571,7 +571,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -644,7 +644,7 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Stinky Pelt</Name>
-						<AddToArmour Value="4"/>
+						<AddToArmour Val="4"/>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -716,7 +716,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -745,7 +745,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -843,7 +843,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1010,7 +1010,7 @@
 				<Name>Goblin Wolf Chariot</Name>
 				<Chariot>2</Chariot>
 				<Mount>Giant Wolf</Mount>
-				<ModelsInPack Value="5"/>
+				<ModelsInPack Val="5"/>
 				<Profile M='9' WS='3' BS='0' S='3' T='4' W='3' I='3' A='1' Ld='6' AS='5'/>
 				<SpecialRules>
 					<ImpactHit>D6+1</ImpactHit>
@@ -1021,7 +1021,7 @@
 				<Name>Orc Boar Chariot</Name>
 				<Chariot>2</Chariot>
 				<Mount>War Boar</Mount>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Profile M='7' WS='3' BS='3' S='3' T='5' W='4' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
 					<ImpactHit>D6+1</ImpactHit>
@@ -1060,8 +1060,8 @@
 						<Name>Big'Uns</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
@@ -1115,7 +1115,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1123,8 +1123,8 @@
 						<Name>Big'Uns</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Option>
@@ -1140,7 +1140,7 @@
 						<Name>Additional choppa</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</Option>
 					<Shield PointsPM="1"/>
 					<Command>
@@ -1278,7 +1278,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -1313,8 +1313,8 @@
 						<Name>Big'Uns</Name>
 						<Points>4</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Shield PointsPM="2"/>
@@ -1345,7 +1345,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1353,8 +1353,8 @@
 						<Name>Big'Uns</Name>
 						<Points>4</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<AdditionalWeapon PointsPM="2" Dependency="Weapon"/>
@@ -1372,7 +1372,7 @@
 				<Points>85</Points>
 				<Chariot>2</Chariot>
 				<Mount>War Boar</Mount>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image/>
 				<Profile M='7' WS='3' BS='3' S='3' T='5' W='4' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
@@ -1388,7 +1388,7 @@
 				<Options>
 					<Option>
 						<Name>Extra Orc Crew</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 				</Options>
@@ -1398,7 +1398,7 @@
 				<Points>50</Points>
 				<Chariot>2</Chariot>
 				<Mount>Giant Wolf</Mount>
-				<ModelsInPack Value="5"/>
+				<ModelsInPack Val="5"/>
 				<Profile M='9' WS='2' BS='3' S='3' T='4' W='3' I='2' A='3' Ld='6' AS='5'/>
 				<SpecialRules>
 					<ImpactHit>D6+1</ImpactHit>
@@ -1413,12 +1413,12 @@
 				<Options>
 					<Option>
 						<Name>Extra Goblin Crew</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 					<Option>
 						<Name>Extra Giant Wolf</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 				</Options>
@@ -1426,7 +1426,7 @@
 			<Rare>
 				<Name>Goblin Spear Chukka</Name>
 				<Points>35</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Profile M='4' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
 					<FearElves/>
@@ -1441,7 +1441,7 @@
 				<Options>
 					<Option>
 						<Name>Orc Bully</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>10</Points>
 					</Option>
 				</Options>
@@ -1470,7 +1470,7 @@
 				<Name>Night Goblin Squig Herd</Name>
 				<Points>3</Points>
 				<Size>4+</Size>
-				<ModelsInPack Value="2"/>
+				<ModelsInPack Val="2"/>
 				<Profile M='4' WS='2' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
 				<SpecialRules>
 					<FearElves/>
@@ -1533,7 +1533,7 @@
 			<Rare>
 				<Name>Goblin Rock Lobber</Name>
 				<Points>85</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Image>RockLabber</Image>
 				<Profile M='4' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1548,7 +1548,7 @@
 				<Options>
 					<Option>
 						<Name>Orc Bully</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>10</Points>
 					</Option>
 				</Options>
@@ -1556,7 +1556,7 @@
 			<Rare>
 				<Name>Doom Diver Catapult</Name>
 				<Points>80</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Profile M='4' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
 					<FearElves/>
@@ -1594,7 +1594,7 @@
 				<Options>
 					<Option>
 						<Name>Spiky Roller</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>15</Points>
 					</Option>
 					<Option>
@@ -1618,7 +1618,7 @@
 				<Name>Arachnarok Spider</Name>
 				<Points>290</Points>
 				<Mount>Forest Goblin Crew</Mount>
-				<ModelsInPack Value="9"/>
+				<ModelsInPack Val="9"/>
 				<Image>Arachnarok</Image>
 				<Profile M='4' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6' AS='4'/>
 				<SpecialRules>
@@ -1701,7 +1701,7 @@
 					<Fear/>
 					<Regeneration/>
 					<LargeBase/>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<TrollVomit/>
 				</SpecialRules>
 				<Equipments>
