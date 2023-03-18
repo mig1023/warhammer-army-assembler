@@ -82,18 +82,18 @@
 				</Weapon>
 				<Weapon>
 					<Name>Loremaster</Name>
-					<WizardTo Value="1"/>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
+					<WizardTo Val="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
 					<Points>40</Points>
 					<Honours/>
 					<Description>The character is a Level 1 Wizard. Note that he may not cast spells if he is wearing armour (remember that barding for his steed will not affect his spell casting)</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Swordmaster</Name>
-					<WizardTo Value="1"/>
+					<WizardTo Val="1"/>
 					<KillingBlow/>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<Dependencies>
 						<Off>Great weapon</Off>
 					</Dependencies>
@@ -119,7 +119,7 @@
 			<Group Name="Magic weapons">
 				<Weapon>
 					<Name>Blade of Leaping Gold</Name>
-					<AddToAttacks Value="3"/>
+					<AddToAttacks Val="3"/>
 					<Points>60</Points>
 					<Description>The blade confers +3 Attacks on the character wielding it</Description>
 				</Weapon>
@@ -139,7 +139,7 @@
 					<Name>Blade of Darting Steel</Name>
 					<Points>45</Points>
 					<HitFirst/>
-					<AddToHit Value="1"/>
+					<AddToHit Val="1"/>
 					<Description>The wielder always strikes first, even if his opponent charged that turn. If both models have this ability, roll off to see who strikes first in each Close Combat phase. In addition, the wielder adds +1 to his rolls to hit</Description>
 				</Weapon>
 				<Weapon>
@@ -165,51 +165,51 @@
 				<Armour>
 					<Name>Armour of Protection</Name>
 					<Points>45</Points>
-					<AddToArmour Value="6"/>
-					<AddToWard Value="4"/>
+					<AddToArmour Val="6"/>
+					<AddToWard Val="4"/>
 					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save he may make a 4+ Ward save</Description>
 				</Armour>
 				<Shield>
 					<Name>Golden Shield</Name>
 					<Points>35</Points>
-					<AddToArmour Value="6"/>
-					<SubOpponentToHit Value="1"/>
+					<AddToArmour Val="6"/>
+					<SubOpponentToHit Val="1"/>
 					<Description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all attempts to hit the bearer in close combat suffer a penalty of -1</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Stars</Name>
 					<Only>Infantry</Only>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>After any unsaved wound model is instantly teleported 3D6" in a random direction</Rule>
 					<Description>May only be worn by a model on foot. Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound then one of the gems will burst into brilliant white light as he is instantly teleported 3D6" in a random direction.\n\nNote that this means that he can only suffer 1 unsaved wound in a round of close combat as he will be teleported away before the second can strike him. However, if he was struck by a Killing Blow or a weapon that does multiple wounds per hit (such as a cannon ball) then he would still suffer the instant death or multiplied wounds as normal before teleporting away.\n\nIf the model is teleported into another model or impassable terrain then simply carry on moving it along in the same direction until it is 1" beyond. If the model teleports off the table then treat it as having pursued off</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Heroes</Name>
 					<Points>25</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may attack another model in base contact instead. Models who are Immune to Psychology are immune to this effect also</Description>
 				</Armour>
 				<Armour>
 					<Name>Shadow Armour</Name>
 					<Points>25</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>Scout</Rule>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors)</Description>
 				</Armour>
 				<Additional>
 					<Name>Helm of Fortune</Name>
 					<Points>25</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
 				</Additional>
 				<Shield>
 					<Name>Dragonscale Shield</Name>
 					<Points>20</Points>
-					<AddToArmour Value="5"/>
-					<AddToWard Value="6"/>
+					<AddToArmour Val="5"/>
+					<AddToWard Val="6"/>
 					<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save</Description>
 				</Shield>
 			</Group>
@@ -217,7 +217,7 @@
 				<Additional>
 					<Name>Vambraces of Defence</Name>
 					<Points>55</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>Gives the wearer a 4+ Ward save. In addition, the wearer may re-roll failed armour saves</Description>
 				</Additional>
@@ -247,7 +247,7 @@
 				<Additional>
 					<Name>Guardian Phoenix</Name>
 					<Points>25</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>Gives the wearer a 5+ Ward save</Description>
 				</Additional>
 				<Additional>
@@ -291,7 +291,7 @@
 				<Arcane>
 					<Name>Jewel of the Dusk</Name>
 					<Points>15</Points>
-					<AddToCast Value="1"/>
+					<AddToCast Val="1"/>
 					<Description>The jewel gives the Mage +1 Power dice in each of his own Magic phases. Only he may use this dice</Description>
 				</Arcane>
 				<Arcane>
@@ -317,9 +317,9 @@
 				<Additional>
 					<Name>Radiant Gem of Hoeth</Name>
 					<Points>45</Points>
-					<WizardTo Value="1"/>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
+					<WizardTo Val="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
 					<Description>The wearer counts as a Level 1 High Elf Mage. However, the wearer may still cast spells whilst wearing armour. This has no effect on characters who are already Wizards</Description>
 				</Additional>
 				<Additional>
@@ -417,12 +417,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Star Lance</Name>
-						<ChargeStrengthBonus Value="3"/>
+						<ChargeStrengthBonus Val="3"/>
 						<Rule>On the turn he charges, Imrik gets +3 Strength with no armour saves allowed</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Caledor</Name>
-						<ArmourTo Value="2"/>
+						<ArmourTo Val="2"/>
 						<Rule>Immune to all breath and all Flaming attacks</Rule>
 					</Armour>
 					<Armour>
@@ -449,14 +449,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sunfang</Name>
-						<AddToStrength Value="3"/>
+						<AddToStrength Val="3"/>
 						<Rule>Once per battle in his own Magic phase, Tyrion may use Sunfang to cast the bound spell Fury of Khaine (power level 6), the spell requires no Power dice to cast, all the power required is provided by Sunfang itself</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Dragon Armour of Aenarion</Name>
 						<Rule>Immune to all breath and all Flaming attacks</Rule>
-						<ArmourTo Value="1"/>
-						<AddToWard Value="4"/>
+						<ArmourTo Val="1"/>
+						<AddToWard Val="4"/>
 					</Armour>
 					<Armour>
 						<Name>Heart of Avelorn</Name>
@@ -464,7 +464,7 @@
 					</Armour>
 					<Armour>
 						<Name>Curse of Aenarion</Name>
-						<WardForLastWound Value="2"/>
+						<WardForLastWound Val="2"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -487,23 +487,23 @@
 					<HandWeapon>
 						<Name>Sword of Teclis</Name>
 						<NoArmour/>
-						<WoundOn Value="2"/>
+						<WoundOn Val="2"/>
 					</HandWeapon>
 					<Armour>
 						<Name>Curse of Aenarion</Name>
-						<WardForLastWound Value="2"/>
+						<WardForLastWound Val="2"/>
 					</Armour>
 					<Arcane>
 						<Name>Potions of Inner Strength</Name>
-						<WeaponSkillTo Value="6"/>
-						<BallisticSkillTo Value="4"/>
-						<StrengthTo Value="3"/>
-						<InitiativeTo Value="6"/>
-						<AttacksTo Value="3"/>
+						<WeaponSkillTo Val="6"/>
+						<BallisticSkillTo Val="4"/>
+						<StrengthTo Val="3"/>
+						<InitiativeTo Val="6"/>
+						<AttacksTo Val="3"/>
 					</Arcane>
 					<Arcane>
 						<Name>The Moon Staff of Lileath</Name>
-						<AddToCast Value="1"/>
+						<AddToCast Val="1"/>
 						<Rule>Once per battle, Moon Staff may granted D6 extra dice to cast, but no more additional dice for the rest of the battle</Rule>
 					</Arcane>
 					<Arcane>
@@ -654,7 +654,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -674,7 +674,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -951,7 +951,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Great axes</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 					</HandWeapon>
 					<HandWeapon/>
 					<LightArmour/>
