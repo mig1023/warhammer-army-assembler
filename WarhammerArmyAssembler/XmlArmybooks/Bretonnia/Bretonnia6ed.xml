@@ -84,9 +84,9 @@
 					<Virtue/>
 					<Points>35</Points>
 					<NotALeader/>
-					<AddToWeaponSkill Value="2"/>
-					<AddToInitiative Value="1"/>
-					<AddToAttacks Value="1"/>
+					<AddToWeaponSkill Val="2"/>
+					<AddToInitiative Val="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>The Knight gains the following bonuses to his profile: +2 Weapon Skill, +1 Initiative, +1 Attack. He may not be the army's General (even if he has the highest Leadership) and any friendly unit (including other Knightly characters, or units using a Knight's Leadership) taking any form of Leadership test within 6" of this model suffers a -1 penalty to their Leadership</Description>
 				</Weapon>
 				<Weapon>
@@ -107,7 +107,7 @@
 					<Name>Virtue of Duty</Name>
 					<Points>30</Points>
 					<NotALeader/>
-					<AddToCloseCombat Value="1"/>
+					<AddToCloseCombat Val="1"/>
 					<Description>One per army. May not be taken by the General. For as long as the General is alive, the model with this Virtue adds +1 to the combat resolution of any fight of which he is a part</Description>
 				</Weapon>
 				<Weapon>
@@ -135,7 +135,7 @@
 					<Name>Virtue of Purity</Name>
 					<Virtue/>
 					<Points>20</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The Knight will always start the game with the Blessing of the Lady, even if the army did not pray. In addition, the Ward save which the Knight gains from the Blessing is always 5+, regardless of the Strength of the attack</Description>
 				</Weapon>
 				<Weapon>
@@ -179,7 +179,7 @@
 					<Points>50</Points>
 					<OnlyGroup>QuestingVow</OnlyGroup>
 					<NoArmour/>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<HitLast/>
 					<Rule>May be used a hand weapon or a great weapon, decided at the start of combat as normal</Rule>
 					<Description>May be used as either a hand weapon or a great weapon, decided at the start of combat as normal. No Armour saves may be taken against the Sword of the Quest</Description>
@@ -189,7 +189,7 @@
 					<Points>40</Points>
 					<Only>GrailVow</Only>
 					<NoArmour/>
-					<WoundOn Value="3"/>
+					<WoundOn Val="3"/>
 					<Description>The character always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this. In effect this means that they will always wound opponents on at least a 3+. This modified Strength is also used to calculate Armour save modifiers</Description>
 				</Weapon>
 				<Weapon>
@@ -209,7 +209,7 @@
 				<Weapon>
 					<Name>Birth-sword of Carcassonne</Name>
 					<Points>35</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<Reroll>OpponentToArmour</Reroll>
 					<Description>The sword acids +1 Strength to the bearer. Enemies wounded by the sword must re-roll any successful Armour saves</Description>
 				</Weapon>
@@ -244,49 +244,49 @@
 					<Points>55</Points>
 					<Only>GrailVow</Only>
 					<Regeneration/>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Description>Character with the Grail Vow only. This armour replaces the Knight's heavy armour, and gives a 5+ Armour save that can be combined with other equipment as normal. In addition, the wearer has Regeneration</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of the Midsummer Sun</Name>
 					<Points>45</Points>
 					<Rule>Opponents suffer a -1 penalty to all rolls to hit the wearer and his mount with missile weapons and in close combat</Rule>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Description>This armour replaces the Knight's heavy armour, and gives a 5+ Armour save that may be combined with other armour as normal. Opponents suffer a -1 penalty to all rolls to hit the wearer and his mount with missile weapons and in close combat</Description>
 				</Armour>
 				<Shield>
 					<Name>The Grail Shield</Name>
 					<Points>35</Points>
 					<Only>GrailVow</Only>
-					<AddToArmour Value="6"/>
-					<AddToWard Value="4"/>
+					<AddToArmour Val="6"/>
+					<AddToWard Val="4"/>
 					<Description>The shield provides a 6+ Armour save which may be combined with other armour as normal. The bearer's Ward save gained from the Blessing of the Lady is increased to 4+ against attacks of any Strength. If the model loses the Blessing, they lose this Ward save as normal</Description>
 				</Shield>
 				<Additional>
 					<Name>Gromril Great Helm</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>Gives a 6+ Armour save and may be worn in addition to normal armour. The wearer may re-roll failed Armour saves</Description>
 				</Additional>
 				<Armour>
 					<Name>Armour of Agilulf</Name>
 					<Points>25</Points>
-					<AddToArmour Value="4"/>
-					<WeaponSkillTo Value="10"/>
+					<AddToArmour Val="4"/>
+					<WeaponSkillTo Val="10"/>
 					<Description>This armour replaces the Knight's heavy armour and includes a shield, giving a 4+ Armour save. The shield must be used at all times - so the wearer cannot use a weapon that requires two hands. In addition, the armour confers Weapon Skill 10 (which cannot be altered with other items. Virtues, etc) to whoever is wearing it</Description>
 				</Armour>
 				<Armour>
 					<Name>Cuirass of Fortune</Name>
 					<Points>20</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Reroll>ToWound</Reroll>
 					<Description>This armour replaces the Knight's heavy armour, and gives a 5+ Annour save which may be combined with other armour as normal. When rolling to wound in close combat, the Knight may re-roll any dice rolls of 1</Description>
 				</Armour>
 				<Shield>
 					<Name>Orcbane Shield</Name>
 					<Points>15</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Rule>
 					<Description>Gives a 6+ Armour save and may be combined with other armour as normal. Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Description>
 				</Shield>
@@ -301,14 +301,14 @@
 				<Additional>
 					<Name>Token of the Damsel</Name>
 					<Points>35</Points>
-					<WardForFirstWound Value="2"/>
+					<WardForFirstWound Val="2"/>
 					<Description>Against the first wounding hit suffered, the Knight gains a 2+ Ward save</Description>
 				</Additional>
 				<Additional>
 					<Name>Insignia of the Quest</Name>
 					<Points>30</Points>
 					<Only>QuestingVow</Only>
-					<WardForLastWound Value="3"/>
+					<WardForLastWound Val="3"/>
 					<Description>If the hearer is ever reduced to 1 Wound, then the Knight instantly gains a 3+ Ward save. If the character suffers multiple wounds that would kill him hefore he has gained this Ward save (eg, if he has more than one wound left and is hit by a cannon ball), he will be reduced to 1 Wound, then may attempt his 3+ Ward save to stay alive and nullify any further wounds caused by the same hit</Description>
 				</Additional>
 				<Additional>
@@ -320,7 +320,7 @@
 				<Additional>
 					<Name>Dragon's Claw</Name>
 					<Points>25</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The bearer's Ward save gained from the Blessing of the Lady is increased to 5+ against attacks of any Strength. If the model loses the Blessing, then it loses this Ward save as normal. In addition, as long as the bearer has the Blessing, he is immune to lire based attacks (such as Dragon's breath. Warp-fire Throwers and spells from the Lore of Fire)</Description>
 				</Additional>
 				<Additional>
@@ -480,7 +480,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Dolorous Blade</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Rule>The Dolorous Blade may be used in one of two ways. Either the Green Knight can use the Blade to gain +D6 Attacks, or it can be used to add +2 to his Strength. The Green Knight may change which method he is using to attack with in each Close Combat phase if he wishes to.</Rule>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -513,7 +513,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Girdle of Gold</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Armour>
 					<Arcane>
 						<Name>The Chalice of Potions</Name>
@@ -521,8 +521,8 @@
 					</Arcane>
 					<Arcane>
 						<Name>The Toad Familiar</Name>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -547,7 +547,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Sword of Couronne</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</HandWeapon>
 					<Lance/>
 					<Armour>
@@ -557,7 +557,7 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>The Lion's Shield</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Rule>Louen has a Magic Resistance value equal to the total number of dice used in the casting of any spell that affects him</Rule>
 					</Armour>
 				</Equipments>
@@ -588,7 +588,7 @@
 						<Dependency/>
 						<Points>28</Points>
 						<ImmuneToPsychology/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 						<Rule>5+ Ward save versus attacks with Strength 5 or higher</Rule>
 					</Option>
 					<Option>
@@ -607,7 +607,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Dependencies>
 							<On>Questing Vow</On>
 						</Dependencies>
@@ -640,7 +640,7 @@
 					<Mount Name="Horse" Points="15"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Horse</On>
 						</Dependencies>
@@ -675,7 +675,7 @@
 						<Dependency/>
 						<Points>21</Points>
 						<ImmuneToPsychology/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 						<Rule>5+ Ward save versus attacks with Strength 5 or higher</Rule>
 					</Option>
 					<Option>
@@ -694,7 +694,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Dependencies>
 							<On>Questing Vow</On>
 						</Dependencies>
@@ -727,7 +727,7 @@
 					<Mount Name="Horse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Horse</On>
 						</Dependencies>
@@ -753,7 +753,7 @@
 				<Name>Silvaron</Name>
 				<Profile M='10' WS='5' BS='0' S='4' T='4' W='3' I='5' A='2' Ld='8' Ward=''/>
 				<SpecialRules>
-					<ChargeStrengthBonus Value="2"/>
+					<ChargeStrengthBonus Val="2"/>
 					<Fear/>
 				</SpecialRules>
 			</Mount>
@@ -848,7 +848,7 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Pole-arm</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</HandWeapon>
 					<LightArmour/>
 					<Shield/>
