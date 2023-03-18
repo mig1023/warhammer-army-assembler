@@ -135,8 +135,8 @@
 				<Additional>
 					<Name>Sacred Stegadon Helm of Itza</Name>
 					<Points>40</Points>
-					<AddToArmour Value="6"/>
-					<AddToToughness Value="1"/>
+					<AddToArmour Val="6"/>
+					<AddToToughness Val="1"/>
 					<ImpactHit>D3</ImpactHit>
 					<Description>The wearer of the Sacred Stegadon Helm counts his armour save as being one point higher than normal. Furthermore, the Sacred Stegadon Helm grants the wearer +1 Toughness and the Impact Hits (D3) special rule</Description>
 				</Additional>
@@ -214,7 +214,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -343,7 +343,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Golden Death Mask</Name>
-						<SubOpponentToHit Value="1"/>
+						<SubOpponentToHit Val="1"/>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -367,8 +367,8 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Revered Spear of Tlanxla</Name>
-						<AddToStrength Value="1"/>
-						<MultiWounds Value="2"/>
+						<AddToStrength Val="1"/>
+						<MultiWounds Val="2"/>
 					</HandWeapon>
 					<LightArmour/>
 				</Equipments>
@@ -401,12 +401,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Blade of the Serpent's Tongue</Name>
-						<ChargeStrengthBonus Value="1"/>
+						<ChargeStrengthBonus Val="1"/>
 						<PoisonAttack/>
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Plaque of Sotek</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -433,7 +433,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -482,7 +482,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Star-stone Mace</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitFirst/>
 						<Rule>At the start of every Close Combat phase, all enemy models in base contact with Chakax must reveal their magic items. If Chakax scores one or more hits against a model with any magic items, roll a D6; on a 5+ one randomly determined magic item is immediately destroyed and cannot be used further in this game</Rule>
 					</HandWeapon>
@@ -493,7 +493,7 @@
 					</Armour>
 					<Armour>
 						<Name>Key to the Eternity Chamber</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -516,7 +516,7 @@
 				<Equipments>
 					<Armour>
 						<Name>The Shield of Aeons</Name>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 						<Rule>Any enemy model that makes a successful charge against Gor-Rok and ends the Movement phase in base contact with him must immediately take a Dangerous Terrain test with a -1 penalty</Rule>
 					</Armour>
 					<HandWeapon>
@@ -551,7 +551,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Monor Shield of the Old Ones</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 					<Armour>
 						<Name>Eye of the Old Ones</Name>
@@ -654,12 +654,12 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Only>Infantry</Only>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>2</Points>
 					</Option>
 					<Option>
 						<Name>Helberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>2</Points>
 					</Option>
 					<Spear Points="2"/>
@@ -689,7 +689,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<Only>Infantry</Only>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>2</Points>
 					</Option>
 					<Option>
@@ -949,7 +949,7 @@
 				<Options>
 					<Option>
 						<Name>Lustrian javelins and shields</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Command>
 						<Champion Points="10" Name="Patrol leader"/>
@@ -974,7 +974,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Helberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</HandWeapon>
 					<LightArmour/>
 					<Shield/>
@@ -1241,7 +1241,7 @@
 				<Name>Salamander Hunting Pack</Name>
 				<Points>80</Points>
 				<Size>1+</Size>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image>Salamander</Image>
 				<Profile M='6' WS='3' BS='3' S='5' T='4' W='3' I='4' A='2' Ld='4' AS='5'/>
 				<SpecialRules>
@@ -1259,7 +1259,7 @@
 					<Option>
 						<Name>Additional skink per pack</Name>
 						<Points>4</Points>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<PerModel/>
 					</Option>
 				</Options>
@@ -1268,7 +1268,7 @@
 				<Name>Razordon Hunting Pack</Name>
 				<Points>65</Points>
 				<Size>1+</Size>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image>Razordon</Image>
 				<Profile M='6' WS='3' BS='3' S='5' T='4' W='3' I='4' A='2' Ld='4' AS='5'/>
 				<SpecialRules>
@@ -1285,7 +1285,7 @@
 				<Options>
 					<Option>
 						<Name>Additional skink per pack</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>4</Points>
 						<PerModel/>
 					</Option>
