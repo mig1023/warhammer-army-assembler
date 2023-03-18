@@ -81,21 +81,21 @@
 					<Name>Axes of Khorgor</Name>
 					<Points>65</Points>
 					<Only>Infantry</Only>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Reroll>ToHit</Reroll>
 					<Description>This pair of axes requires two hands to use. The bearer gains +1 Attack and may re-roll any missed rolls to hit in close combat</Description>
 				</Weapon>
 				<Weapon>
 					<Name>The Black Maul</Name>
 					<Points>60</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<Frenzy/>
 					<Description>Adds +2 to the bearer's Strength, and the bearer is also subject to frenzy</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Bonecrusher Mace</Name>
 					<Points>55</Points>
-					<WoundOn Value="2"/>
+					<WoundOn Val="2"/>
 					<Rule>Against Castles, Empire Steam Tanks and in other situations where a roll to wound is not taken, the wielder counts as having double its Strength characteristic, to a maximum of 10</Rule>
 					<Description>The Mace always wounds on a 2+. Armour saves are taken using the wielder's normal Strength. Against Castles, Empire Steam Tanks and in other situations where a roll to wound is not taken, the wielder counts as having double its Strength characteristic, to a maximum of 10</Description>
 				</Weapon>
@@ -109,7 +109,7 @@
 					<Name>Slaughterer's Blade</Name>
 					<Only>Infantry</Only>
 					<Points>40</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<HitLast/>
 					<Rule>For each wound inflicted to enemy, roll a D6 immediately: hach roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total)</Rule>
 					<Description>The Slaughterer's Blade counts as a great weapon in all respects. In addition, for each wound inflicted with the Slaughterer's Blade, roll a D6 immediately. Hach roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total). Wounds regained in this way do not count towards combat resolution</Description>
@@ -125,14 +125,14 @@
 				<Additional>
 					<Name>Pelt of The Dark Young</Name>
 					<Points>25</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Magic Resistance (1)</Rule>
 					<Description>The Pelt confers a 6+ Scaly Skin save that can be combined with normal armour. It also gives the bearer and any unit he joins Magic Resistance (1)</Description>
 				</Additional>
 				<Armour>
 					<Name>Trollhide Armour</Name>
 					<Points>20</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Regeneration/>
 					<Description>Trollhide Armour counts as a suit of heavy armour. The wearer may also Regenerate, except that lost Wounds are only regained on the roll of a 6, rather than a 4, 5 or 6</Description>
 				</Armour>
@@ -145,7 +145,7 @@
 				<Armour>
 					<Name>Chaos armour</Name>
 					<Points>10</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<Description>Chaos Armour gives a 4+ Armour save, that can be combined with other equipment as normal (other than light armour and heavy armour). A model may wear Chaos Armour and still cast spells</Description>
 				</Armour>
 			</Group>
@@ -153,14 +153,14 @@
 				<Additional>
 					<Name>Crown of Horns</Name>
 					<Points>30</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Rule>+1 to any attempts to rally to a unit</Rule>
 					<Description>The bearer benefits from a 5+ Ward save and confers +1 to any attempts to rally to a unit he has joined, in addition to other modifiers</Description>
 				</Additional>
 				<Additional>
 					<Name>Rune of The True Beast</Name>
 					<Points>30</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Rule>Ridden monsters, lone monsters, the steeds pulling chariots, cavalry mounts and swarms may never direct their attacks at a model bearing the Rune of the True Beast, although their riders may attack as normal</Rule>
 				</Additional>
 				<Additional>
@@ -205,7 +205,7 @@
 				<Arcane>
 					<Name>Staff of Darkoth</Name>
 					<Points>25</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<HitLast/>
 					<Rule>Shaman knows spell The Wild Call</Rule>
 					<Description>Counts as a braystaff. Also, the Shaman knows following spell in addition to his other spells:\n\nThe Wild Call (9+ to cast)\nCast on a Beast Herd, Bestigor or Warhounds unit within 12" of the caster and within its normal charge range of an enemy. The unit may declare and make a normal charge move immediately, though the charged unit may only stand as a reaction</Description>
@@ -215,7 +215,7 @@
 				<Banner>
 					<Name>The Beast Banner</Name>
 					<Points>60</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>All Beasts of Chaos models in the unit, including characters, gain +1 Attack when they charge</Description>
 				</Banner>
 				<Banner>
@@ -264,14 +264,14 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Scourge</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Rule>Khazrak makes one attack with Scourge in each Close Combat phase, in addition to his four normal hand weapon attacks, if you successfully roll to wound with Scourge, Khazrak may immediately roll to wound again, and so on until he fails to make the required score</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>The Dark Mail</Name>
 						<Rule>Magic Resistance (1)</Rule>
 						<Rule>If he or the unit he is with is the target of a spell that is successfully cast, Khazrak gains +1 Strength (to a maximum of 10) for the remainder of the battle</Rule>
-						<AddToArmour Value="2"/>
+						<AddToArmour Val="2"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -286,7 +286,7 @@
 				<SpecialRules>
 					<ImmuneToPsychology/>
 					<General/>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Slots>Hero</Slots>
 					<Raiders/>
 					<Ambush/>
@@ -334,15 +334,15 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Beast-Roar</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
-						<AddToDispell Value="2"/>
+						<AddToDispell Val="2"/>
 						<Rule>If a Wizard (friend or enemy) rolls a double when rolling on the Miscast table, then the unfortunate Wizard is instantly turned into a Chaos Spawn under the control of the Beastmen player</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Skull-Weave</Name>
 						<Terror/>
-						<SubOpponentToHit Value="1"/>
+						<SubOpponentToHit Val="1"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -418,7 +418,7 @@
 					<Wizard Level="4" Points="35"/>
 					<Option>
 						<Name>Braystaff</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency Group="Weapon"/>
 						<Points>8</Points>
@@ -475,7 +475,7 @@
 					<Wizard Level="2" Points="35"/>
 					<Option>
 						<Name>Braystaff</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency Group="Weapon"/>
 						<Points>6</Points>
@@ -536,7 +536,7 @@
 						<Name>Ungors</Name>
 						<Points>4</Points>
 						<PerModel/>
-						<Countable Min="5" Value="5">
+						<Countable Min="5" Val="5">
 							<ExportToUnitSize/>
 						</Countable>
 					</Option>
@@ -779,7 +779,7 @@
 				<Options>
 					<Option>
 						<Name>Mutant Monstrosity</Name>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 						<Points>20</Points>
 					</Option>
 				</Options>
@@ -808,7 +808,7 @@
 					<Option>
 						<Name>Bloodbeast of Khorne</Name>
 						<Dependency/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>15</Points>
 					</Option>
 					<Option>
