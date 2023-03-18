@@ -84,16 +84,16 @@
 				<Weapon>
 					<Name>Sword of Change</Name>
 					<Points>65</Points>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<Rule>Every time an enemy character or monster takes an unsaved wound it must take a Toughness test: if the test is failed, the victim becomes a repulsive Spawn-thing, all enemy models in base contact with the victim take a S4 hit, the victim is then removed from play</Rule>
 					<Description>Confers +1 Strength. Every time an enemy character or monster takes an unsaved wound from the Sword of Change it must take a Toughness test. If the test is failed, the victim becomes a repulsive Spawn-thing. All enemy models in base contact with the victim take a S4 hit as the Spawn-thing flails wildly in its death throes (unsaved wounds will count towards combat resolution). The victim is then removed from play</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Chaos Runesword</Name>
 					<Points>50</Points>
-					<AddToWeaponSkill Value="1"/>
-					<AddToStrength Value="1"/>
-					<AddToAttacks Value="1"/>
+					<AddToWeaponSkill Val="1"/>
+					<AddToStrength Val="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack</Description>
 				</Weapon>
 				<Weapon>
@@ -125,7 +125,7 @@
 					<Name>Axe of Khorn</Name>
 					<Points>45</Points>
 					<KillingBlow/>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<Description>This axe confers +1 Strength and the Killing Blow special rule upon the bearer</Description>
 				</Weapon>
 				<Weapon>
@@ -158,28 +158,28 @@
 				<Armour>
 					<Name>Skinhidden Plate</Name>
 					<Points>60</Points>
-					<AddToArmour Value="4"/>
-					<AddToToughness Value="1"/>
+					<AddToArmour Val="4"/>
+					<AddToToughness Val="1"/>
 					<Description>Chaos armour. The Skinhidden Plate confers +1 Toughness upon the wearer</Description>
 				</Armour>
 				<Shield>
 					<Name>Chaos Runeshield</Name>
 					<Points>50</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Negates the power of any magic or runic weapons carried by models in base contact</Rule>
 					<Description>Shield. Negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Damnation</Name>
 					<Points>45</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<Reroll>OpponentToHit</Reroll>
 					<Description>Chaos armour. Any model striking the wearer in close combat must re-roll successful rolls to hit</Description>
 				</Armour>
 				<Armour>
 					<Name>Crimson Armour of Dargan</Name>
 					<Points>40</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<NoKillingBlow/>
 					<NoMultiWounds/>
 					<Description>Chaos armour. The wearer is immune to Killing Blow. Furthermore, wounds suffered by the character can never be converted into multiple wounds - they do a single wound as normal</Description>
@@ -187,14 +187,14 @@
 				<Armour>
 					<Name>Armour of Morrslieb</Name>
 					<Points>35</Points>
-					<AddToArmour Value="4"/>
-					<AddToWard Value="4"/>
+					<AddToArmour Val="4"/>
+					<AddToWard Val="4"/>
 					<Description>Chaos armour. Confers a 4+ Ward save against non-magical attacks</Description>
 				</Armour>
 				<Armour>
 					<Name>The Bronze Armour of Zhrakk</Name>
 					<Points>15</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<ImmuneToPsychology/>
 					<NoKillingBlow/>
 					<NotALeader/>
@@ -230,7 +230,7 @@
 				<Weapon>
 					<Name>Collar of Khorne</Name>
 					<Points>25</Points>
-					<AddToWard Value="6"/>
+					<AddToWard Val="6"/>
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>The model with the Collar of Khorne has Magic Resistance (2) and a 6+ Ward save</Description>
 				</Weapon>
@@ -271,7 +271,7 @@
 				<Arcane>
 					<Name>Power Familiar</Name>
 					<Points>25</Points>
-					<AddToCast Value="1"/>
+					<AddToCast Val="1"/>
 					<Description>The familiar adds one power dice to its owner's pool during each friendly Magic phase</Description>
 				</Arcane>
 				<Arcane>
@@ -307,7 +307,7 @@
 					<Dependencies>
 						<Off>Mark of Khorne</Off>
 					</Dependencies>
-					<AddToCast Value="1"/>
+					<AddToCast Val="1"/>
 					<Rule>Knows a random spell from the Lore of Fire, Shadow or Death (player's choice)</Rule>
 					<Rule>Roll 1D6+1 instead of 2D6 on the Miscast table</Rule>
 					<Description>The bearer knows a random spell from the Lore of Fire, Shadow or Death (player's choice) and generates a single extra power dice, though he does not generate extra dispel dice. If the bearer ever miscasts, roll 1D6+1 instead of 2D6 on the Miscast table</Description>
@@ -397,7 +397,7 @@
 				<Profile M='4' WS='9' BS='5' S='5' T='5' W='4' I='7' A='5' Ld='10'/>
 				<SpecialRules>
 					<ImmuneToPsychology/>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<ImmuneToPoison/>
 					<EyeOfGods/>
 					<Original>
@@ -416,7 +416,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Morkar</Name>
-						<ArmourTo Value="1"/>
+						<ArmourTo Val="1"/>
 						<Rule>No attack against him may ever have a better chance to wound him than a 3+ roll</Rule>
 					</Armour>
 					<Armour>
@@ -426,7 +426,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Eye of Sheerian</Name>
-						<AddToWard Value="3"/>
+						<AddToWard Val="3"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -454,7 +454,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -478,11 +478,11 @@
 					<HandWeapon>
 						<Name>Sliverslash</Name>
 						<HitFirst/>
-						<AddToAttacks Value="2"/>
+						<AddToAttacks Val="2"/>
 					</HandWeapon>
 					<Armour>
 						<Name>Auric Armour</Name>
-						<AddToArmour Value="1"/>
+						<AddToArmour Val="1"/>
 						<Regeneration/>
 					</Armour>
 					<Shield/>
@@ -516,7 +516,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of the Storm</Name>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 						<Rule>If any lightning-based spell targets a unit within 12" of Kholek, the spell's effects are redirected toward Kholek instead</Rule>
 					</Armour>
 				</Equipments>
@@ -538,13 +538,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Spear Slaupnir</Name>
-						<ArmourPiercing Value="1"/>
-						<ChargeStrengthBonus Value="2"/>
+						<ArmourPiercing Val="1"/>
+						<ChargeStrengthBonus Val="2"/>
 						<KillingBlow/>
 					</HandWeapon>
 					<Armour>
 						<Name>The Scarlet Armour</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 						<Rule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</Rule>
 					</Armour>
 					<Armour>
@@ -576,7 +576,7 @@
 					<ChaosArmour/>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -597,14 +597,14 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Points>12</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Additional weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>8</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -616,7 +616,7 @@
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>8</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -637,7 +637,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -711,7 +711,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 						<Rule>+1 on attempts to cast spell</Rule>
 					</Option>
 					<Option>
@@ -784,7 +784,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>15</Points>
 						<Dependency/>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 						<Rule>+1 on attempts to cast spell</Rule>
 					</Option>
 					<Option>
@@ -802,7 +802,7 @@
 				<Wizard>2</Wizard>
 				<Profile M='4' WS='4' BS='2' S='4' T='4' W='2' I='2' A='2' Ld='8'/>
 				<SpecialRules>
-					<ExtendedRegeneration Value="5"/>
+					<ExtendedRegeneration Val="5"/>
 					<WillOfChaos/>
 					<EyeOfGods/>
 					<Original>
@@ -890,7 +890,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 						<Rule>+1 on attempts to cast spell</Rule>
 					</Option>
 					<Option>
@@ -944,14 +944,14 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Points>8</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Additional weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>4</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -963,7 +963,7 @@
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>4</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -984,7 +984,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1055,7 +1055,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1155,7 +1155,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1203,7 +1203,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1248,7 +1248,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1268,7 +1268,7 @@
 						<Name>Scaly Skin</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 				</Options>
 			</Core>
@@ -1306,7 +1306,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1372,7 +1372,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1437,7 +1437,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1478,7 +1478,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1554,7 +1554,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Ensorcelled weapon</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</HandWeapon>
 					<ChaosArmour/>
 					<Shield/>
@@ -1576,7 +1576,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1610,7 +1610,7 @@
 						<Name>Mark of Khorne</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Frenzy/>
 					</Option>
 					<Option>
@@ -1623,7 +1623,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1681,7 +1681,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
@@ -1730,14 +1730,14 @@
 				<Options>
 					<Option>
 						<Name>Additional hand weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency/>
 						<PerModel/>
 						<Points>10</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<PerModel/>
@@ -1776,7 +1776,7 @@
 							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
 						</Dependencies>
 						<Frenzy/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1788,7 +1788,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
