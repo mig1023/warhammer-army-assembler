@@ -69,14 +69,14 @@
 					<Points>55</Points>
 					<NoArmour/>
 					<MultiWounds Value="D6"/>
-					<StrengthTo Value="8"/>
+					<StrengthTo Val="8"/>
 					<Rule>Thundermace single attack</Rule>
 					<Description>The Thundermace is a two-handed weapon that follows all the rules for great weapons. A Tyrant with the Thundermace may opt to make only one attack per Close Combat phase. On a successful hit (use the highest Weapon Skill amongst the enemy models in base contact to determine whether the Tyrant hits), place the small template anywhere so that it is touching but not overlapping the 'tyrant's base (it may touch friendly models should you so wish, though it does not affect them). Determine casualties exactly as if the unit had suffered a direct hit by a Strength 4(8) stone thrower. In a challenge, a Tyrant choosing to use this special attack does not use a template but instead strikes at Strength 8, doing D6 wounds and ignoring normal Armour Saves</Description>
 				</Weapon>
 				<Weapon>
 					<Name>The Tenderiser</Name>
 					<Points>50</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<HitLast/>
 					<MultiWounds Value="D3"/>
 					<Description>The Tenderiser is a two-handed weapon that follows all the rules for great weapons. A model wounded by the Tenderiser (after saves, etc) loses not one but D3 wound</Description>
@@ -84,7 +84,7 @@
 				<Weapon>
 					<Name>Siegebreaker</Name>
 					<Points>30</Points>
-					<AddToStrength Value="3"/>
+					<AddToStrength Val="3"/>
 					<HitLast/>
 					<MultiWounds Value="D6"/>
 					<Rule>When rolling to hit, compare the Ogre's Weapon Skill with the enemy's Initiative value instead his Weapon Skill</Rule>
@@ -107,21 +107,21 @@
 				<Armour>
 					<Name>Mastodon Armour</Name>
 					<Points>50</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>If character is killed by an attack that is not made in close combat, then rolls a dice: on the roll of a 2+ he is return to life with 1 wound at the end of the phase</Rule>
 					<Description>The Mastodon Armour is heavy armour (5+ Armour Save). If at any point the wielder is killed by an attack that is not made in close combat, then rolls a dice. On the roll of a 2+ he is return to life with 1 wound at the end of the phase</Description>
 				</Armour>
 				<Additional>
 					<Name>Greatskull</Name>
 					<Points>35</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Any spellcaster that targets the character or the unit he is with, will miscast on any roll of a double 2 or a double 3 as well as on the roll of a double 1</Rule>
 					<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. Any spellcaster that targets the character with the Greatskull, or the unit he is with, will miscast on any roll of a double 2 or a double 3 as well as on the roll of a double 1</Description>
 				</Additional>
 				<Additional>
 					<Name>Bullgut</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Unit Strength as 6</Rule>
 					<Rule>Impact hits caused by the Ogre's Bull Charge are considered to be Armour Piercing</Rule>
 					<Description>The Bullgut confers a 6+ Armour Save that can be combined with other equipment normally. On any turn the bearer charges, he counts his Unit Strength as 6, and any impact hits caused by the Ogre's Bull Charge are considered to be Armour Piercing</Description>
@@ -129,7 +129,7 @@
 				<Additional>
 					<Name>Gut Maw</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>If character kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent, if character is already at full Wounds, then he may add +1 Wound to his profile</Rule>
 					<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. If an Ogre wearing the Gut Maw kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent. If the owner of the Gut Maw is already at full Wounds, then he may add +1 Wound to his profile</Description>
 				</Additional>
@@ -150,7 +150,7 @@
 				<Additional>
 					<Name>Wyrdstone necklace</Name>
 					<Points>20</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Rule>Roll a D6 after deployment, if the result is a 1 the bearer suffers a wound with no saves allowed</Rule>
 					<Rule>For each individual wound the bearer suffers, roll a D6. If this roll is higher than the result of the To Wound roll, that wound is discounted</Rule>
 					<Description>The Ogre with this item gains a 5+ Ward Save. Roll a D6 after deployment, if the result is a 1 the bearer suffers a wound with no saves allowed</Description>
@@ -158,20 +158,20 @@
 				<Additional>
 					<Name>Gnoblar Thiefstone</Name>
 					<Points>15</Points>
-					<Runic Value="1"/>
+					<Runic Val="1"/>
 					<Rule>Magic Resistance (1)</Rule>
 					<Description>Due to the magical flux generated by this item, the wearer and the unit he is with benefits from Magic Resistance (1). A character may take more than one Thiefstone (to a maximum of three) at 15 points per stone, each additional Thiefstone adds +1 to his Magic Resistance</Description>
 				</Additional>
 				<Additional>
 					<Name>Gnoblar Thiefstone</Name>
 					<Points>30</Points>
-					<Runic Value="2"/>
+					<Runic Val="2"/>
 					<Rule>Magic Resistance (2)</Rule>
 				</Additional>
 				<Additional>
 					<Name>Gnoblar Thiefstone</Name>
 					<Points>45</Points>
-					<Runic Value="3"/>
+					<Runic Val="3"/>
 					<Rule>Magic Resistance (3)</Rule>
 				</Additional>
 			</Group>
@@ -224,7 +224,7 @@
 					<Name>Greyback Pelt</Name>
 					<Points>35</Points>
 					<Rule>May move difficult terrain as if it were open ground</Rule>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Description>Hunters and Tyrants only. A character with the Greyback Pelt (and any Sabretusks that accompany that character) may move difficult terrain as if it were open ground. Enemies suffer a -1 to hit the wearer in close combat. No Yhetees may be used in an army that includes a character with the Greyback Pelt</Description>
 				</Additional>
 				<Additional>
@@ -302,7 +302,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sceptre of the Titans</Name>
-						<StrengthTo Value="10"/>
+						<StrengthTo Val="10"/>
 						<MultiWounds Value="D3"/>
 					</HandWeapon>
 					<Armour>
@@ -331,28 +331,28 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>14</Points>
 					</Option>
 					<Option>
 						<Name>Additional weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency/>
 						<Points>10</Points>
 					</Option>
 					<Option>
 						<Name>Ironfists</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependency/>
 						<Points>12</Points>
 					</Option>
 					<Option>
 						<Name>Cathalayan longsword</Name>
-						<AddToWeaponSkill Value="1"/>
-						<AddToInitiative Value="1"/>
-						<ArmourPiercing Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToInitiative Val="1"/>
+						<ArmourPiercing Val="1"/>
 						<Dependency/>
 						<Points>10</Points>
 					</Option>
@@ -423,28 +423,28 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>8</Points>
 					</Option>
 					<Option>
 						<Name>Additional weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency/>
 						<Points>8</Points>
 					</Option>
 					<Option>
 						<Name>Ironfists</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependency/>
 						<Points>10</Points>
 					</Option>
 					<Option>
 						<Name>Cathalayan longsword</Name>
-						<AddToWeaponSkill Value="1"/>
-						<AddToInitiative Value="1"/>
-						<ArmourPiercing Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToInitiative Val="1"/>
+						<ArmourPiercing Val="1"/>
 						<Dependency/>
 						<Points>8</Points>
 					</Option>
@@ -551,14 +551,14 @@
 				<Options>
 					<Option>
 						<Name>Additional weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency/>
 						<PerModel/>
 						<Points>4</Points>
 					</Option>
 					<Option>
 						<Name>Ironfists</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependency/>
 						<PerModel/>
 						<Points>5</Points>
@@ -738,15 +738,15 @@
 					<HeavyArmour PointsPM="4"/>
 					<Option>
 						<Name>Cathalayan longsword</Name>
-						<AddToWeaponSkill Value="1"/>
-						<AddToInitiative Value="1"/>
-						<ArmourPiercing Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToInitiative Val="1"/>
+						<ArmourPiercing Val="1"/>
 						<Dependency/>
 						<Points>6</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>6</Points>
