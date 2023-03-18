@@ -70,7 +70,7 @@
 				<Weapon>
 					<Name>The Fellblade</Name>
 					<Points>100</Points>
-					<StrengthTo Value="10"/>
+					<StrengthTo Val="10"/>
 					<MultiWounds Value="D6"/>
 					<Reroll>OpponentToWard</Reroll>
 					<Rule>Wound wielder with no armour save at the end of each turns on a 3+</Rule>
@@ -85,31 +85,31 @@
 				<Weapon>
 					<Name>Warplock-augmented Weapon</Name>
 					<Points>45</Points>
-					<AddToStrength Value="1"/>
-					<AddToAttacks Value="1"/>
+					<AddToStrength Val="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>A Warplock Weapon adds +1 Strength and +1 Attack to any model so equipped</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Blade of Corruption</Name>
 					<Points>35</Points>
-					<AddToStrength Value="1"/>
-					<MultiWounds Value="2"/>
+					<AddToStrength Val="1"/>
+					<MultiWounds Val="2"/>
 					<Rule>Wielder suffers 2 wounds if roll 2 or more rolls of To Hit</Rule>
 					<Description>The wielder of this sword is granted +1 Strength to all Attacks. Any unsaved wound inflicted is multiplied to 2 wounds. If the wielder makes a to Hit roll that has two or more rolls of 1, the wielder immediately suffers a wound that miltiplied to 2 wounds. Other Attacks are carried out as normal</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Weeping Blade</Name>
 					<Points>30</Points>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<MultiWounds Value="D3"/>
 					<Description>The Weeping Blade has the Armour Piercing special rule. Each unsaved wound is multiplied to D3 wounds</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Dwarfbane</Name>
 					<Points>25</Points>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<Rule>Re-roll all failed to Wound rolls against Dwarfs</Rule>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<Description>The wielder of this sword is granted +1 Strength to all Attacks. Additionaly against Dwarfs, all hits are Armour Piercing and the user re-rolls all failed to Wound rolls</Description>
 				</Weapon>
 				<Weapon>
@@ -123,21 +123,21 @@
 				<Armour>
 					<Name>Warpstone Armour</Name>
 					<Points>30</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<Rule>Strength 4 hit against enemy for each successful armour save</Rule>
 					<Description>Warpstone Armour gives its wearer a 4+ armour save. For each successful armour save made by the bearer in close combat, the armour immediately inflicts a Strength 4 hit against the model that struck the blow. Any casualties caused will count towards combat resolution. Warpstone Armour can be worn by Clan Skryre Warlock Engineers</Description>
 				</Armour>
 				<Armour>
 					<Name>World's Edge Armour</Name>
 					<Points>25</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<Rule>First wound by Strength 6+ is discounted, but armour is completely destroyed</Rule>
 					<Description>The armour gives its wearer a 4+ armour save. The first time the wearer is wounded by a Strength high enough to completely cancel his armour save, or is not permitted an armour save for any reason, the wound is discounted, but the armour is completely destroyed</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of Distraction</Name>
 					<Points>15</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Any models in base contact suffer -1 Attack</Rule>
 					<Description>Any models in base contact wishing to strike the bearer of this shield suffer -1 Attack, to a minimum of 1</Description>
 				</Shield>
@@ -146,7 +146,7 @@
 				<Additional>
 					<Name>Foul Pendant</Name>
 					<Points>30</Points>
-					<AddToWard Value="6"/>
+					<AddToWard Val="6"/>
 					<Description>This wicked token of the Horned Rat’s power confers a 5+ ward save upon the bearer</Description>
 				</Additional>
 				<Additional>
@@ -178,8 +178,8 @@
 				<Arcane>
 					<Name>Scrying Stone</Name>
 					<Points>15</Points>
-					<AddToWard Value="3"/>
-					<WardForFirstWound Value="3"/>
+					<AddToWard Val="3"/>
+					<WardForFirstWound Val="3"/>
 					<Description>One use only. The bearer of this mystical ball gains a 3+ ward save against the first wound suffered. If the wound is saved because of the ward save of the Scrying Ball, the bearer will be subject to Stupidity in the following friendly turn as he awaits further helpful instructions from the mysterious globe</Description>
 				</Arcane>
 				<Arcane>
@@ -264,7 +264,7 @@
 					<Name>Warlock optics</Name>
 					<Only>Skryre</Only>
 					<Points>20</Points>
-					<AddToBallisticSkill Value="1"/>
+					<AddToBallisticSkill Val="1"/>
 					<Description>A Warlock Engineer equipped with Warlock Optics adds +1 to his Ballistic Skill. Additionally, a model so equipped can see partially see through objects and so suffers no penalty for shooting at targets in cover</Description>
 				</Weapon>
 			</Group>
@@ -361,7 +361,7 @@
 					<Frenzy/>
 					<Terror/>
 					<StrengthInNumbers/>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<ScurryAway/>
 					<Original>
 						<Rule>Plague Monks as Core units</Rule>
@@ -401,7 +401,7 @@
 					</HandWeapon>
 					<Armour>
 						<Rule>Blessing of the Horned Rat</Rule>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>Frendly model within 6" takes a wound instead</Rule>
 					</Armour>
 					<Armour>
@@ -436,9 +436,9 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Iron Frame</Name>
-						<AddToStrength Value="3"/>
-						<AddToArmour Value="3"/>
-						<AddToWard Value="5"/>
+						<AddToStrength Val="3"/>
+						<AddToArmour Val="3"/>
+						<AddToWard Val="5"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -469,7 +469,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Whip of Domination</Name>
-						<AddToAttack Value="1"/>
+						<AddToAttack Val="1"/>
 						<Rule>-2 enemy Leadership penalty after unsaved wound</Rule>
 					</HandWeapon>
 					<LightArmour/>
@@ -499,11 +499,11 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Additional blade</Name>
-						<AddToAttack Value="1"/>
+						<AddToAttack Val="1"/>
 					</HandWeapon>
 					<Armour>
 						<Name>Warp-shared Armour</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 						<Rule>Strength 5 hit against the enemy for each succeful armour save</Rule>
 					</Armour>
 				</Equipments>
@@ -613,7 +613,7 @@
 					</Armour>
 					<Armour>
 						<Rule>Dodge</Rule>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -640,7 +640,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Lucky Skullhelm</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>Re-roll a dice once per game</Rule>
 					</Armour>
 				</Equipments>
@@ -671,7 +671,7 @@
 					</RangeWeapon>
 					<Armour>
 						<Rule>Dodge</Rule>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -694,17 +694,17 @@
 					<Option>
 						<Name>Level 1 Wizard</Name>
 						<Points>50</Points>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
-						<AddToWizard Value="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
+						<AddToWizard Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Level 2 Wizard</Name>
 						<Points>85</Points>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
-						<AddToWizard Value="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
+						<AddToWizard Val="2"/>
 						<Dependency/>
 					</Option>
 					<Option>
@@ -764,8 +764,8 @@
 					<Option>
 						<Name>Level 2 Wizard</Name>
 						<Points>35</Points>
-						<AddToCast Value="1"/>
-						<AddToWizard Value="1"/>
+						<AddToCast Val="1"/>
+						<AddToWizard Val="1"/>
 					</Option>
 					<Option>
 						<Name>Plague Censer</Name>
@@ -776,7 +776,7 @@
 					<Flail Points="4"/>
 					<Option>
 						<Name>Additional hand weapon</Name>
-						<AddToAttack Value="1"/>
+						<AddToAttack Val="1"/>
 						<Points>2</Points>
 					</Option>
 					<Mount Name="Great Pox Rat" Points="30"/>
@@ -843,7 +843,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Borne Litter</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1109,7 +1109,7 @@
 				<Name>Giant Rats</Name>
 				<Points>23</Points>
 				<Size>1+</Size>
-				<ModelsInPack>6</ModelsInPack>
+				<ModelsInPack Val="6"/>
 				<Image/>
 				<Profile M='6' WS='3' BS='1' S='3' T='3' W='5' I='5' A='5' Ld='5'/>
 				<SpecialRules>
