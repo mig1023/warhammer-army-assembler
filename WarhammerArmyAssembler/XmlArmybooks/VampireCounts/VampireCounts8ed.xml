@@ -67,7 +67,7 @@
 				<Powers>
 					<Name>Curse of the Revenant</Name>
 					<Points>55</Points>
-					<AddToWounds Value="1"/>
+					<AddToWounds Val="1"/>
 					<Description>This Vampire has +1 Wound on his profile</Description>
 				</Powers>
 				<Powers>
@@ -128,14 +128,14 @@
 				<Powers>
 					<Name>Master Strike</Name>
 					<Points>15</Points>
-					<AttacksTo Value="1"/>
+					<AttacksTo Val="1"/>
 					<HeroicKillingBlow/>
 					<Description>The Vampire may exchange all of his Attacks for a single Attack with the Heroic Killing Blow special rule</Description>
 				</Powers>
 				<Powers>
 					<Name>Dread Knight</Name>
 					<Points>10</Points>
-					<AddToWeaponSkill Value="2"/>
+					<AddToWeaponSkill Val="2"/>
 					<Rule>Unless he is part of a combat containing Krell or a Vampiric character with higher Leadership, he must always issue a challenge when possible, and must answer any challenge issued by the enemy</Rule>
 					<Description>The Vampire has +2 Weapon Skill. In addition, unless he is part of a combat containing Krell or a Vampiric character with higher Leadership, he must always issue a challenge when possible, and must answer any challenge issued by the enemy</Description>
 				</Powers>
@@ -159,7 +159,7 @@
 				<Armour>
 					<Name>Nightshroud</Name>
 					<Points>40</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Enemy models in base contact lose all Strength bonuses conferred from normal and magical weapons, and have the Always Strikes Last special rule</Rule>
 					<Description>The Nightshroud adds +1 to the bearer's armour save. Furthermore, enemy models in base contact with the wearer lose all Strength bonuses conferred from normal and magical weapons, and have the Always Strikes Last special rule</Description>
 				</Armour>
@@ -235,7 +235,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -328,13 +328,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Blood Drinker</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Rule>Restores lost Wounds on a score of 4+ for the purposes of The Hunger special rule</Rule>
 					</HandWeapon>
 					<HeavyArmour/>
 					<Armour>
 						<Name>Carstein Ring</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>The first time Vlad is removed from play, roll a D6 at the end of the phase: on a score of 2+ the vampire is immediately returned to 'life' with a single Wound</Rule>
 					</Armour>
 				</Equipments>
@@ -365,8 +365,8 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Templehof</Name>
-						<AddToArmour Value="5"/>
-						<AddToWounds Value="2"/>
+						<AddToArmour Val="5"/>
+						<AddToWounds Val="2"/>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -374,7 +374,7 @@
 						<Name>Barded Nightmare</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Abyssal Terror" Points="120"/>
@@ -397,7 +397,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Chaos Tomb Blade</Name>
-						<AddToAttacks Value="2"/>
+						<AddToAttacks Val="2"/>
 						<Rule>If Kemmler is in a unit of Skeleton Warriors or Grave Guard, for each model he slays in close combat, an extra model is added to his unit following the rules for Resurrecting Fallen Warriors</Rule>
 					</HandWeapon>
 					<HandWeapon>
@@ -441,13 +441,13 @@
 					</Option>
 					<Option>
 						<Name>Additional hand weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>4</Points>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Points>6</Points>
 						<Dependency/>
@@ -465,7 +465,7 @@
 						<Name>Barded Nightmare</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Abyssal Terror" Points="120"/>
@@ -500,7 +500,7 @@
 						<Name>Barded Nightmare</Name>
 						<Points>20</Points>
 						<Mount/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Corpse Cart" Points="90"/>
@@ -558,7 +558,7 @@
 				<Options>
 					<Option>
 						<Name>Barded Nightmare</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Points>16</Points>
 						<Mount/>
 					</Option>
@@ -583,14 +583,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Black Axe of Krell</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<MultiWounds Value="D3"/>
 						<HitLast/>
 						<Rule>Any model taking an unsaved Wound must roll a D6 at the start of each of its subsequent turns: if the result is higher than the number of Wounds it has remaining, that model suffers an additional Wound with no armour saves allowed</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of the Barrows</Name>
-						<AddToArmour Value="4"/>
+						<AddToArmour Val="4"/>
 						<Rule>If an enemy with a magic weapon wounds Krell in close combat and Krell passes his armour save, that magic weapon's abilities are nullified</Rule>
 					</Armour>
 				</Equipments>
@@ -614,7 +614,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sword of Waldenhof</Name>
-						<MultiWounds Value="2"/>
+						<MultiWounds Val="2"/>
 					</HandWeapon>
 					<HandWeapon/>
 					<HeavyArmour/>
@@ -696,13 +696,13 @@
 					<Wizard Level="2" Points="35"/>
 					<Option>
 						<Name>Additional hand weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>3</Points>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Points>8</Points>
 						<Dependency/>
@@ -721,7 +721,7 @@
 						<Name>Barded Nightmare</Name>
 						<Points>16</Points>
 						<Mount/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Mount Name="Hellsteed" Points="30"/>
 					<Mount Name="Coven Throne" Points="230"/>
@@ -829,7 +829,7 @@
 						<Name>Sword-claws</Name>
 						<Command/>
 						<Points>10</Points>
-						<ArmourPiercing Value="1"/>
+						<ArmourPiercing Val="1"/>
 					</Option>
 				</Options>
 			</Mount>
@@ -1078,7 +1078,7 @@
 				<Options>
 					<Option>
 						<Name>Skeletal Steed barding</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Points>3</Points>
 						<PerModel/>
 					</Option>
