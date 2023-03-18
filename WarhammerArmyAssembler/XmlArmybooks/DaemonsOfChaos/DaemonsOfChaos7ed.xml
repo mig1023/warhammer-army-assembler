@@ -204,9 +204,9 @@
 					<Option>
 						<Name>Wizard Level 1</Name>
 						<Points>50</Points>
-						<AddToWizard Value="1"/>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
 						<Dependencies>
 							<Off>Dedicate to Khorne, Wizard level 2</Off>
 						</Dependencies>
@@ -214,9 +214,9 @@
 					<Option>
 						<Name>Wizard Level 2</Name>
 						<Points>50</Points>
-						<AddToWizard Value="2"/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
 						<Dependencies>
 							<Off>Dedicate to Khorne, Wizard level 1</Off>
 						</Dependencies>
@@ -264,7 +264,7 @@
 						<Name>Awesome Strength</Name>
 						<Points>75</Points>
 						<MagicItemsPoints/>
-						<StrengthTo Value="10"/>
+						<StrengthTo Val="10"/>
 					</Option>
 					<Option>
 						<Name>Dark Insanity</Name>
@@ -320,17 +320,17 @@
 					<Option>
 						<Name>Wizard Level 3</Name>
 						<Points>50</Points>
-						<AddToWizard Value="1"/>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>85</Points>
-						<AddToWizard Value="2"/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
@@ -396,24 +396,24 @@
 					<Option>
 						<Name>Wizard Level 2</Name>
 						<Points>35</Points>
-						<AddToWizard Value="1"/>
-						<AddToCast Value="1"/>
+						<AddToWizard Val="1"/>
+						<AddToCast Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 3</Name>
 						<Points>85</Points>
-						<AddToWizard Value="2"/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>120</Points>
-						<AddToWizard Value="3"/>
-						<AddToCast Value="3"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="3"/>
+						<AddToCast Val="3"/>
+						<AddToDispell Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
@@ -434,7 +434,7 @@
 						<Name>Trapping of Nurgle</Name>
 						<Points>50</Points>
 						<MagicItemsPoints/>
-						<AddToArmour Value="4"/>
+						<AddToArmour Val="4"/>
 						<Regeneration/>
 					</Option>
 					<NoxiousVapours Points="25"/>
@@ -457,7 +457,7 @@
 				<SpecialRules>
 					<Terror/>
 					<HitFirst/>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<LargeBase/>
 					<LargeTarget/>
 					<MagicItems Points="100" Type="Hero"/>
@@ -470,24 +470,24 @@
 					<Option>
 						<Name>Wizard Level 2</Name>
 						<Points>35</Points>
-						<AddToWizard Value="1"/>
-						<AddToCast Value="1"/>
+						<AddToWizard Val="1"/>
+						<AddToCast Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 3</Name>
 						<Points>85</Points>
-						<AddToWizard Value="2"/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>120</Points>
-						<AddToWizard Value="3"/>
-						<AddToCast Value="3"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="3"/>
+						<AddToCast Val="3"/>
+						<AddToDispell Val="1"/>
 						<Dependency/>
 					</Option>
 					<Option>
@@ -535,7 +535,7 @@
 				<Image/>
 				<Profile M='4' WS='9' BS='0' S='6' T='4' W='2' I='9' A='4' Ld='8' Ward=''/>
 				<SpecialRules>
-					<ExtendedKillingBlow Value="5"/>
+					<ExtendedKillingBlow Val="5"/>
 					<Hate/>
 					<ImmuneToPsychology/>
 					<Fear/>
@@ -551,7 +551,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Cloak of Skulls</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 						<Rule>Magic Resistance (2)</Rule>
 					</Armour>
 				</Equipments>
@@ -611,7 +611,7 @@
 				<Image>Masque</Image>
 				<Profile M='10' WS='7' BS='0' S='4' T='3' W='2' I='7' A='5' Ld='8' Ward=''/>
 				<SpecialRules>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<ImmuneToPsychology/>
 					<Fear/>
 					<Daemonic/>
@@ -730,9 +730,9 @@
 						<Name>Wizard Level 1</Name>
 						<Points>50</Points>
 						<MagicItemsPoints/>
-						<AddToWizard Value="1"/>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
 					</Option>
 					<StaffOfNurgle Points="50"/>
 					<NoxiousVapours Points="25"/>
@@ -763,7 +763,7 @@
 				<SpecialRules>
 					<ImmuneToPsychology/>
 					<Fear/>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<HitFirst/>
 					<MagicItems Points="50" Type="Wizard"/>
 					<Daemonic/>
@@ -882,7 +882,7 @@
 					<ImpactHit>D6+1</ImpactHit>
 					<ImmuneToPsychology/>
 					<Fear/>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<PoisonAttack/>
 					<Daemonic/>
 					<FlamingAttacks/>
@@ -1034,7 +1034,7 @@
 				<Image>Demonettes</Image>
 				<Profile M='6' WS='5' BS='0' S='3' T='3' W='1' I='5' A='2' Ld='7' Ward=''/>
 				<SpecialRules>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<ImmuneToPsychology/>
 					<Fear/>
 					<Daemonic/>
@@ -1149,7 +1149,7 @@
 				<Mount>Steed of Slaanesh</Mount>
 				<Profile M='6' WS='5' BS='0' S='3' T='3' W='1' I='5' A='2' Ld='7' Ward=''/>
 				<SpecialRules>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<ImmuneToPsychology/>
 					<Fear/>
 					<Daemonic/>
@@ -1255,7 +1255,7 @@
 				<Image>Fiends</Image>
 				<Profile M='10' WS='4' BS='0' S='4' T='4' W='3' I='6' A='4' Ld='7' Ward=''/>
 				<SpecialRules>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<ImmuneToPsychology/>
 					<Fear/>
 					<Daemonic/>
