@@ -82,31 +82,31 @@
 				<Additional>
 					<Name>Many-Limbed Fiend</Name>
 					<Points>20</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>The model may make a bonus attack in addition to his normal attacks. This bonus attack is always at the model's basic Strength and is never augmented by equipment or magic weapons</Description>
 				</Additional>
 				<Additional>
 					<Name>Gouge-Tusks</Name>
 					<Points>15</Points>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<Description>All of the model's close combat attacks are armour piercing</Description>
 				</Additional>
 				<Additional>
 					<Name>Gnarled Hide</Name>
 					<Points>15</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Description>The model has a scaly skin save of 5+, which is cumulative with other armour as normal</Description>
 				</Additional>
 				<Additional>
 					<Name>Rune of The True Beast</Name>
 					<Points>15</Points>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Description>Ridden monsters, monsters, the steeds pulling chariots, cavalry mounts and swarms suffer -1 To Hit the model bearing the Rune of the True Beast in close combat, although their riders may attack as normal</Description>
 				</Additional>
 				<Additional>
 					<Name>Uncanny Senses</Name>
 					<Points>10</Points>
-					<AddToInitiative Value="1"/>
+					<AddToInitiative Val="1"/>
 					<Description>The model has +1 Initiative</Description>
 				</Additional>
 				<Additional>
@@ -133,7 +133,7 @@
 				<Weapon>
 					<Name>Stonecrusher Mace</Name>
 					<Points>65</Points>
-					<AddToStrength Value="3"/>
+					<AddToStrength Val="3"/>
 					<Rule>When rolling To Wound against war machines and chariots or buildings, the character's Strength is increased to 10</Rule>
 					<Description>Stonecrusher Mace confers +3 Strength. When rolling To Wound against war machines and chariots (including War Altars, War Shrines, Steam Tanks and Corpse Carts, and so on) or buildings, the character's Strength is increased to 10</Description>
 				</Weapon>
@@ -155,7 +155,7 @@
 					<Name>Axes of Khorgor</Name>
 					<Points>40</Points>
 					<Terror/>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Reroll>ToHit</Reroll>
 					<Description>Requires two hands. The bearer gains +1 Attack and may re-roll any missed To Hit rolls in close combat</Description>
 				</Weapon>
@@ -182,21 +182,21 @@
 				<Armour>
 					<Name>Blade-Blunter Armour</Name>
 					<Points>50</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour: on the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon</Rule>
 					<Description>Heavy armour. At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour. On the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon. Instead it will count as a normal weapon of its type for the remainder of the battle</Description>
 				</Armour>
 				<Armour>
 					<Name>Trollhide</Name>
 					<Points>50</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Regeneration/>
 					<Description>Light armour. The wearer gains the Regeneration rule</Description>
 				</Armour>
 				<Armour>
 					<Name>Pelt of The Shadowgave</Name>
 					<Points>45</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>All shooting attacks directed at the character or his unit are at -1 To Hit</Rule>
 					<Rule>Spells that target the character or his unit deduct 2 from the casting roll</Rule>
 					<Description>Light armour. All shooting attacks directed at the bearer or his unit are at -1 To Hit. Spells that target the bearer or his unit deduct 2 from the casting roll</Description>
@@ -204,7 +204,7 @@
 				<Armour>
 					<Name>Blackened Plate</Name>
 					<Points>20</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>2+ Ward save against all flaming attacks</Rule>
 					<Rule>Models in any unit that he is with have a 4+ Ward save against flaming attacks</Rule>
 					<Description>Heavy armour. The wearer of the Blackened Plate has a 2+ Ward save against all flaming attacks. Models in any unit that he is with have a 4+ Ward save against such attacks</Description>
@@ -212,7 +212,7 @@
 				<Additional>
 					<Name>Ramhorn Helm</Name>
 					<Points>15</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>For every armour save he passes, the character may immediately make a bonus attack at his basic Strength</Rule>
 					<Description>6+ armour save. This may be combined with other armour as normal. For every armour save he passes, the bearer may immediately make a bonus attack at his basic Strength</Description>
 				</Additional>
@@ -299,7 +299,7 @@
 				<Banner>
 					<Name>The Beast Banner</Name>
 					<Points>75</Points>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<Rule>Unit have a +1 bonus to Strength</Rule>
 					<Description>The bearer and any unit he has joined have a +1 bonus to their Strength</Description>
 				</Banner>
@@ -345,7 +345,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Dark Mail</Name>
-						<AddToArmour Value="2"/>
+						<AddToArmour Val="2"/>
 						<Rule>The Dark Mail negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Rule>
 					</Armour>
 				</Equipments>
@@ -800,7 +800,7 @@
 					</Option>
 					<Option>
 						<Name>Scaly Skin</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<PerModel/>
 						<Points>1</Points>
 					</Option>
@@ -857,7 +857,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<AddToArmour Value="-1"/>
 						<HitLast/>
 						<PerModel/>
