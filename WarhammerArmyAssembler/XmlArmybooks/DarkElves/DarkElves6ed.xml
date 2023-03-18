@@ -75,7 +75,7 @@
 					<Only>Infantry</Only>
 					<Points>80</Points>
 					<Rule>Strength double that of his target's Toughness</Rule>
-					<WoundOn Value="2"/>
+					<WoundOn Val="2"/>
 					<HitLast/>
 					<Description>When rolling to wound in close combat and for armour save modifier purposes, the wielder counts as having a Strength double that of his target's Toughness. However, the Executioner's Axe is two-handed and the wielder always strikes last except in the turn he the turn he charges</Description>
 				</Weapon>
@@ -99,7 +99,7 @@
 				<Weapon>
 					<Name>Crimson Death</Name>
 					<Points>35</Points>
-					<StrengthTo Value="6"/>
+					<StrengthTo Val="6"/>
 					<Description>A model wielding Crimson Death always strikes with Strength 6. No other modifiers will ever reduce this. Requires two hands to use</Description>
 				</Weapon>
 				<Weapon>
@@ -137,35 +137,35 @@
 				<Armour>
 					<Name>Armour of Living Death</Name>
 					<Points>100</Points>
-					<AddToArmour Value="5"/>
-					<AddToToughness Value="1"/>
-					<AddToWounds Value="1"/>
+					<AddToArmour Val="5"/>
+					<AddToToughness Val="1"/>
+					<AddToWounds Val="1"/>
 					<Description>The Armour of Living Death counts as heavy armour, giving a 5+ armour save, which can be combined with other armour as normal. In addition, the model has +1 Toughness and +1 Wound</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Eternal Servitude</Name>
 					<Points>60</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Regeneration/>
 					<Description>This light armour gives a basic 6+ save, which can be combined with other armour as normal. In addition, the wearer can regenerate</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of Ghrond</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
 					<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Darkness</Name>
 					<Points>25</Points>
-					<ArmourTo Value="2"/>
+					<ArmourTo Val="2"/>
 					<Description>This armour includers a shield and gives a save of 2+ which cannot be improved in any way</Description>
 				</Armour>
 				<Armour>
 					<Name>Blood Armour</Name>
 					<Points>20</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
 					<Description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improuved by 1 (to 4+ then 3+, etc) up to maximum of 1+</Description>
 				</Armour>
@@ -174,7 +174,7 @@
 				<Additional>
 					<Name>Black Amulet</Name>
 					<Points>50</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Rule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</Rule>
 					<Description>The wearer has a 5+ Ward save against close combat hits. If the wearer of the Black Amulet passes his Ward save then the attacking model suffers 1 wound instead (with no armour save allowed)</Description>
 				</Additional>
@@ -187,14 +187,14 @@
 				<Additional>
 					<Name>Crown of Black Iron</Name>
 					<Points>35</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Rule>Completely immune to the effects of Light Magic and High Magic</Rule>
 					<Description>The character has a 5+ Ward save. In addition to this, the wearer is completely immune to the effects of Light Magic and High Magic spells. Note that this is not a Dispel and thus other models (excluding the character's mount) may be affected by High Magic and Light Magic.</Description>
 				</Additional>
 				<Additional>
 					<Name>Seal of Ghrond</Name>
 					<Points>25</Points>
-					<AddToDispell Value="1"/>
+					<AddToDispell Val="1"/>
 					<Description>The seal of Ghrond adds one dice to the Dispel dice pool of the army</Description>
 				</Additional>
 				<Additional>
@@ -241,7 +241,7 @@
 				<Arcane>
 					<Name>Darkstar Cloak</Name>
 					<Points>20</Points>
-					<AddToCast Value="1"/>
+					<AddToCast Val="1"/>
 					<Description>The cloak gives the Sorceress +1 power dice in each of her own Magic phase. Only she may use this extra dice</Description>
 				</Arcane>
 				<Arcane>
@@ -256,13 +256,13 @@
 					<Name>Banner of Nagarythe</Name>
 					<Points>150</Points>
 					<Unbreakable/>
-					<AddToCloseCombat Value="1"/>
+					<AddToCloseCombat Val="1"/>
 					<Description>This standard adds +1 to the combat resolution of all units withn 6" and the unit carrying the banner is Unbreakable</Description>
 				</Banner>
 				<Banner>
 					<Name>Hydra Banner</Name>
 					<Points>80</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>All models in the unit (including mounts) gain +1 Attack in the first round of any hand-to-hand combat</Description>
 				</Banner>
 				<Banner>
@@ -310,7 +310,7 @@
 					<Name>Dance of Doom</Name>
 					<Points>30</Points>
 					<Only>Khainite</Only>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The model has a 5+ Ward save</Description>
 				</Additional>
 				<Additional>
@@ -324,7 +324,7 @@
 					<Name>Rune of Khaine</Name>
 					<Points>25</Points>
 					<Only>Khainite</Only>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Rule>Must always pursue fleeing enemies</Rule>
 					<Description>The Rune of Khaine grants +1 Attack to its bearer. A model marked with the Rune of Khaine must always pursue fleeing enemies</Description>
 				</Weapon>
@@ -378,13 +378,13 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Hand of Khaine</Name>
-						<StrengthTo Value="6"/>
+						<StrengthTo Val="6"/>
 						<NoArmour/>
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour Value="5"/>
-						<AddToWard Value="2"/>
+						<AddToArmour Val="5"/>
+						<AddToWard Val="2"/>
 						<NoMultiWounds/>
 						<Rule>2+ Ward save against non-magical attacks</Rule>
 					</Armour>
@@ -410,11 +410,11 @@
 					<HandWeapon>
 						<Name>Heartrender</Name>
 						<KillingBlow/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 					</HandWeapon>
 					<Arcane>
 						<Name>Thousand and One Dark Blessing</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>Magic Resistance (1)</Rule>
 					</Arcane>
 					<Arcane>
@@ -444,10 +444,10 @@
 					<HeavyArmour/>
 					<Demon>
 						<Name>Tz'arkan</Name>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
-						<AddToToughness Value="2"/>
-						<AddToInitiative Value="2"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
+						<AddToToughness Val="2"/>
+						<AddToInitiative Val="2"/>
 						<Rule>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6: on a 4+ Tz'arkan's murderous rage drives Malus to attack his allies</Rule>
 					</Demon>
 				</Equipments>
@@ -633,7 +633,7 @@
 				<Name>Dark Pegasus</Name>
 				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Value="1"/>
+					<ChargeStrengthBonus Val="1"/>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -641,7 +641,7 @@
 				<Name>Dark Pegasus Sulephet</Name>
 				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Value="1"/>
+					<ChargeStrengthBonus Val="1"/>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -673,7 +673,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -691,7 +691,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -913,7 +913,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Vicious claws and temperament</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</HandWeapon>
 				</Equipments>
 			</Special>
