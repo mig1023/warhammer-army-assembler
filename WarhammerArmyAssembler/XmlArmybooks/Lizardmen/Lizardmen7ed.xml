@@ -81,14 +81,14 @@
 				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
 					<Points>65</Points>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<NoArmour/>
 					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Scimitar of the Sun Resplendent</Name>
 					<Points>50</Points>
-					<AddToAttacks Value="2"/>
+					<AddToAttacks Val="2"/>
 					<Description>The wielder of this blade has +2 Attacks</Description>
 				</Weapon>
 				<Weapon>
@@ -108,7 +108,7 @@
 				<Weapon>
 					<Name>Piranha Blade</Name>
 					<Points>35</Points>
-					<MultiWounds Value="2"/>
+					<MultiWounds Val="2"/>
 					<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
 				</Weapon>
 				<Weapon>
@@ -129,7 +129,7 @@
 					<Name>Burning Blade of Chotec</Name>
 					<Points>20</Points>
 					<Rule>Flaming attacks</Rule>
-					<ArmourPiercing Value="2"/>
+					<ArmourPiercing Val="2"/>
 					<Description>Flaming attacks. Targets struck by the Burning of Chotek suffer a -2 penalty to their armour save in addition to any modifiers from the user's Strength</Description>
 				</Weapon>
 			</Group>
@@ -138,8 +138,8 @@
 					<Name>Hide of the Cold Ones</Name>
 					<Only>Infantry</Only>
 					<Points>50</Points>
-					<AddToArmour Value="5"/>
-					<AddToToughness Value="1"/>
+					<AddToArmour Val="5"/>
+					<AddToToughness Val="1"/>
 					<Fear/>
 					<Stupidity/>
 					<Description>Heavy armour. The wearer causes Fear and has +1 Toughness, but becomes subject to Stupidity</Description>
@@ -148,22 +148,22 @@
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>50</Points>
-					<AddToArmour Value="6"/>
-					<AddToLeadership Value="1"/>
+					<AddToArmour Val="6"/>
+					<AddToLeadership Val="1"/>
 					<Description>Confers +1 to the model's armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
 				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Description>Shield. Any magic missile that strikes the bearer or any unit he is with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell or the unit the character is with. This in turn cannot be dispelled</Description>
 				</Shield>
 				<Shield>
 					<Name>The Mainming Shield</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
-					<AddToAttacks Value="1"/>
+					<AddToArmour Val="6"/>
+					<AddToAttacks Val="1"/>
 					<Description>Shield. The Mainming Shield confres +1 Attack to the bearer. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
 				</Shield>
 			</Group>
@@ -185,7 +185,7 @@
 					<Name>Divine Plaque of Protection</Name>
 					<Only>Slann</Only>
 					<Points>30</Points>
-					<AddToWard Value="2"/>
+					<AddToWard Val="2"/>
 					<Description>The Slann's Shield of the Old Ones ward save in increased from 4+ to 2+ against the ranged attacks</Description>
 				</Arcane>
 				<Additional>
@@ -284,19 +284,19 @@
 				<Additional>
 					<Name>Aura of Quetzl</Name>
 					<Points>40</Points>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
 				</Additional>
 				<Additional>
 					<Name>Glyph Necklace</Name>
 					<Points>30</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The character wearing this gains a 5+ ward save</Description>
 				</Additional>
 				<Additional>
 					<Name>Amulet of Itza</Name>
 					<Points>30</Points>
-					<WardForFirstWound Value="2"/>
+					<WardForFirstWound Val="2"/>
 					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered, after Armour saves have boon taken</Description>
 				</Additional>
 			</Group>
@@ -367,7 +367,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Golden Death Mask</Name>
-						<SubOpponentToHit Value="1"/>
+						<SubOpponentToHit Val="1"/>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -392,14 +392,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Cobra Mace of Mazadamundi</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitFirst/>
 						<PoisonAttack/>
 						<Rule>Destruction of magic weapons</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Armour>
 					<Banner>
 						<Name>Sun Standard of Hexoatl</Name>
@@ -427,8 +427,8 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Revered Spear of Tlanxla</Name>
-						<AddToStrength Value="1"/>
-						<MultiWounds Value="2"/>
+						<AddToStrength Val="1"/>
+						<MultiWounds Val="2"/>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -458,12 +458,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Blade of the Serpent's Tongue</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<PoisonAttack/>
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Plaque of Sotek</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -526,7 +526,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -574,7 +574,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Star-Stone Mace</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Rule>Enemy magic weapon count as mundane</Rule>
 					</HandWeapon>
 					<Armour>
@@ -584,7 +584,7 @@
 					</Armour>
 					<Armour>
 						<Name>Key to the Eternity Chamber</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 						<Rule>Enemy strikes last</Rule>
 					</Armour>
 				</Equipments>
@@ -607,12 +607,12 @@
 				<Equipments>
 					<Armour>
 						<Name>The Shield of Aeons</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Rule>No benefits from charging Gar-Rok</Rule>
 					</Armour>
 					<HandWeapon>
 						<Name>The Mace of Ulamak</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Reroll>ToHit</Reroll>
 					</HandWeapon>
 				</Equipments>
@@ -642,7 +642,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Palanquin of Constellations</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 						<Rule>Place in skinks second rank</Rule>
 					</Armour>
 				</Equipments>
@@ -670,9 +670,9 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Mask of Heavens</Name>
-						<SubOpponentToHit Value="1"/>
+						<SubOpponentToHit Val="1"/>
 						<Rule>Magic Resistance (1)</Rule>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -685,7 +685,7 @@
 				<SpecialRules>
 					<ColdBlooded/>
 					<PoisonAttack/>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Aquatic/>
 					<Original>
 						<Rule>Scout</Rule>
@@ -716,7 +716,7 @@
 					<GreatWeapon Points="6"/>
 					<Option>
 						<Name>Helberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>4</Points>
 					</Option>
 					<AdditionalWeapon Points="4" Only="Infantry"/>
@@ -967,7 +967,7 @@
 						<Name>Javelin and shield</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Command>
 						<Champion Points="6" Name="Brave"/>
@@ -1004,7 +1004,7 @@
 				<SpecialRules>
 					<ColdBlooded/>
 					<PoisonAttack/>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Skirmishers/>
 					<Aquatic/>
 					<Original>
@@ -1066,7 +1066,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Helberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</HandWeapon>
 					<HandWeapon/>
 					<LightArmour/>
@@ -1175,7 +1175,7 @@
 				<Name>Salamander Hunting Pack</Name>
 				<Points>75</Points>
 				<Size>1-3</Size>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image>Salamander</Image>
 				<Profile M='6' WS='3' BS='3' S='5' T='4' W='3' I='4' A='2' Ld='6' AS='5'/>
 				<SpecialRules>
@@ -1191,7 +1191,7 @@
 				<Options>
 					<Option>
 						<Name>Handler</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 						<PerModel/>
 					</Option>
@@ -1201,7 +1201,7 @@
 				<Name>Razordon Hunting Pack</Name>
 				<Points>75</Points>
 				<Size>1-3</Size>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image/>
 				<Profile M='6' WS='3' BS='3' S='5' T='4' W='3' I='4' A='2' Ld='6' AS='5'/>
 				<SpecialRules>
@@ -1217,7 +1217,7 @@
 				<Options>
 					<Option>
 						<Name>Handler</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 						<PerModel/>
 					</Option>
