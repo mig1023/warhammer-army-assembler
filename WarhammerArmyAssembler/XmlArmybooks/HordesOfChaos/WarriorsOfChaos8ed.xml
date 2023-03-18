@@ -96,7 +96,7 @@
 				<Powers>
 					<Name>Scaled Skin</Name>
 					<Points>20</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Description>The character has the Scaly Skin (5+) special rule</Description>
 				</Powers>
 				<Powers>
@@ -194,7 +194,7 @@
 					<Points>25</Points>
 					<HitFirst/>
 					<Stupidity/>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Description>The bearer of the Helm of Many Eyes counts his armour save as being one higher than normal. In addition, the bearer has both the Always Strikes First and Stupidity special rules</Description>
 				</Additional>
 				<Arcane>
@@ -268,7 +268,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -364,7 +364,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Morkar</Name>
-						<ArmourTo Value="3"/>
+						<ArmourTo Val="3"/>
 						<Rule>No attack against him may ever have a better chance to wound him than a 3+ roll</Rule>
 					</Armour>
 					<Armour>
@@ -374,7 +374,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Eye of Sheerian</Name>
-						<AddToWard Value="3"/>
+						<AddToWard Val="3"/>
 					</Armour>
 					<Shield/>
 				</Equipments>
@@ -403,7 +403,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -451,11 +451,11 @@
 					<HandWeapon>
 						<Name>Sliverslash</Name>
 						<HitFirst/>
-						<AddToAttacks Value="2"/>
+						<AddToAttacks Val="2"/>
 					</HandWeapon>
 					<Armour>
 						<Name>Auric Armour</Name>
-						<AddToArmour Value="2"/>
+						<AddToArmour Val="2"/>
 						<Regeneration/>
 					</Armour>
 					<Shield/>
@@ -481,18 +481,18 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Spear Slaupnir</Name>
-						<ArmourPiercing Value="1"/>
-						<ChargeStrengthBonus Value="2"/>
+						<ArmourPiercing Val="1"/>
+						<ChargeStrengthBonus Val="2"/>
 						<KillingBlow/>
 					</HandWeapon>
 					<Armour>
 						<Name>The Scarlet Armour</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 						<Rule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</Rule>
 					</Armour>
 					<Armour>
 						<Name>Daemonshield</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Rule>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</Rule>
 					</Armour>
 				</Equipments>
@@ -520,7 +520,7 @@
 					<ChaosArmour/>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -541,14 +541,14 @@
 				<Options>
 					<Option>
 						<Name>Additional weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>6</Points>
 						<Only>Infantry</Only>
 						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Points>8</Points>
 						<Dependency Group="Weapon"/>
@@ -561,7 +561,7 @@
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>8</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -584,7 +584,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -604,7 +604,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
@@ -626,7 +626,7 @@
 					<Option>
 						<Name>Barding</Name>
 						<Points>15</Points>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Demonic Mount</On>
 						</Dependencies>
@@ -646,7 +646,7 @@
 						<Dependencies>
 							<On>Mark of Khorne</On>
 						</Dependencies>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 					</Option>
 					<Mount Name="Manticore" Points="150"/>
 					<Mount Name="Chaos Dragon" Points="330"/>
@@ -674,7 +674,7 @@
 						<Points>15</Points>
 						<PerModel/>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -694,7 +694,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
@@ -716,7 +716,7 @@
 					<Option>
 						<Name>Barding</Name>
 						<Points>15</Points>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Demonic Mount</On>
 						</Dependencies>
@@ -777,7 +777,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependency/>
-						<SubOpponentToHit Value="1"/>
+						<SubOpponentToHit Val="1"/>
 						<Rule>Hate Daemon of Tzeentch</Rule>
 					</Option>
 					<Option>
@@ -785,7 +785,7 @@
 						<Points>5</Points>
 						<PerModel/>
 						<Dependency/>
-						<ArmourPiercing Value="1"/>
+						<ArmourPiercing Val="1"/>
 						<Rule>Hate Daemon of Khorne</Rule>
 					</Option>
 					<Option>
@@ -857,7 +857,7 @@
 				<SpecialRules>
 					<Regeneration/>
 					<PoisonAttack/>
-					<ExtendedRegeneration Value="5"/>
+					<ExtendedRegeneration Val="5"/>
 					<EyeOfGods/>
 					<Original>
 						<Rule>All models in that unit have the Poisoned Attacks special rule</Rule>
@@ -890,7 +890,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Brass Collar of Khorne</Name>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 						<Rule>Magic Resistance (3)</Rule>
 					</Armour>
 					<Armour>
@@ -915,7 +915,7 @@
 				<Options>
 					<Option>
 						<Name>Additional weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>3</Points>
 						<Only>Infantry</Only>
 						<Dependency Group="Weapon"/>
@@ -928,14 +928,14 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Points>6</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>6</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -951,7 +951,7 @@
 						<Points>10</Points>
 						<PerModel/>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -971,7 +971,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>16</Points>
 						<Mount/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
@@ -993,7 +993,7 @@
 					<Option>
 						<Name>Barding</Name>
 						<Points>15</Points>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Demonic Mount</On>
 						</Dependencies>
@@ -1013,7 +1013,7 @@
 						<Dependencies>
 							<On>Mark of Khorne</On>
 						</Dependencies>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -1041,7 +1041,7 @@
 						<Points>15</Points>
 						<PerModel/>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1061,7 +1061,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>16</Points>
 						<Mount/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
@@ -1083,7 +1083,7 @@
 					<Option>
 						<Name>Barding</Name>
 						<Points>15</Points>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Demonic Mount</On>
 						</Dependencies>
@@ -1116,7 +1116,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1169,7 +1169,7 @@
 				<Options>
 					<Option>
 						<Name>Iron Hard Skin</Name>
-						<AddToArmour Value="4"/>
+						<AddToArmour Val="4"/>
 						<Points>25</Points>
 					</Option>
 					<Option>
@@ -1193,7 +1193,7 @@
 				<Profile M='10' WS='3' BS='0' S='3' T='3' W='1' I='5' A='1' Ld='7'/>
 				<SpecialRules>
 					<Fear/>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<PoisonAttack/>
 					<DaemonicAttacks/>
 					<Original>
@@ -1210,7 +1210,7 @@
 				<Profile M='10' WS='3' BS='0' S='3' T='3' W='3' I='5' A='1' Ld='7'/>
 				<SpecialRules>
 					<Fear/>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 					<PoisonAttack/>
 					<DaemonicAttacks/>
 					<EyeOfGods/>
@@ -1252,7 +1252,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1274,14 +1274,14 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependency Group="Weapon"/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<Points>3</Points>
 						<PerModel/>
 						<Dependency Group="Weapon"/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</Option>
 					<Option>
@@ -1289,7 +1289,7 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependency Group="Weapon"/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</Option>
 					<Command>
 						<Champion>
@@ -1325,7 +1325,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1355,7 +1355,7 @@
 						<Points>1</Points>
 						<PerModel/>
 						<Dependency Group="Weapon"/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</Option>
 					<Command>
@@ -1430,7 +1430,7 @@
 						<Name>Scaly Hide</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mutant Poisons</Name>
@@ -1470,7 +1470,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1514,7 +1514,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1633,7 +1633,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1655,14 +1655,14 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependency Group="Weapon"/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<Points>3</Points>
 						<PerModel/>
 						<Dependency Group="Weapon"/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</Option>
 					<Option>
@@ -1670,7 +1670,7 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependency Group="Weapon"/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</Option>
 					<Command>
 						<Champion>
@@ -1712,7 +1712,7 @@
 						<Points>2</Points>
 						<PerModel/>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1781,7 +1781,7 @@
 						<Points>4</Points>
 						<PerModel/>
 						<Dependency Group="Mark"/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1799,7 +1799,7 @@
 					</Option>
 					<Option>
 						<Name>Additional weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<PerModel/>
 						<Points>3</Points>
 						<Dependency Group="Weapon"/>
@@ -1809,7 +1809,7 @@
 						<Points>8</Points>
 						<Dependency Group="Weapon"/>
 						<PerModel/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</Option>
 					<Command>
@@ -1846,14 +1846,14 @@
 						<Points>3</Points>
 						<PerModel/>
 						<Dependency/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
 						<Points>8</Points>
 						<PerModel/>
 						<Dependency/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</Option>
 					<Option>
@@ -1861,7 +1861,7 @@
 						<Points>8</Points>
 						<PerModel/>
 						<Dependency/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</Option>
 					<Command>
 						<Champion Points="10" Name="Dragon Ogre Shartak"/>
@@ -1950,7 +1950,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -1992,7 +1992,7 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
@@ -2048,14 +2048,14 @@
 				<Options>
 					<Option>
 						<Name>Additional hand weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency/>
 						<PerModel/>
 						<Points>5</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<PerModel/>
@@ -2087,25 +2087,25 @@
 						<Points>10</Points>
 						<Dependency/>
 						<Frenzy/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</Option>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>15</Points>
 						<Dependency/>
-						<AddToToughness Value="1"/>
+						<AddToToughness Val="1"/>
 					</Option>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>15</Points>
 						<Dependency/>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Option>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
 						<Dependency/>
-						<AddToInitiative Value="1"/>
+						<AddToInitiative Val="1"/>
 					</Option>
 				</Options>
 			</Rare>
