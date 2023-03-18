@@ -61,7 +61,7 @@
 					<Name>Blessed Spawning of Tzunki</Name>
 					<Points>5</Points>
 					<TypeUnitIncrese/>
-					<AddToInitiative Value="1"/>
+					<AddToInitiative Val="1"/>
 					<Rule>Aquatic</Rule>
 					<Description>Aquatic, +1 Initiative</Description>
 				</Powers>
@@ -69,14 +69,14 @@
 					<Name>Blessed Spawning of Sotek</Name>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>When the unit/character charges, they get +1 Attack for that round of combat</Description>
 				</Powers>
 				<Powers>
 					<Name>Blessed Spawning of Quetzl</Name>
 					<Points>15</Points>
 					<TypeUnitIncrese/>
-					<AddToArmour Value="1"/>
+					<AddToArmour Val="1"/>
 					<Description>Scaly Skin save increased by +1</Description>
 				</Powers>
 				<Powers>
@@ -103,7 +103,7 @@
 					<Name>Blessed Spawning of Tepok</Name>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
-					<AddToDispell Value="1"/>
+					<AddToDispell Val="1"/>
 					<Description>The presence of the unit or character on the battlefield adds one dice to the player's Dispel dice pool</Description>
 				</Powers>
 				<Powers>
@@ -137,7 +137,7 @@
 					<Name>Cupped Hands of the Old Ones</Name>
 					<Only>Slann</Only>
 					<Points>50</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The entire unit that is accompanying the Slann gains a 5+ Ward save. Note, however, that the unit does not get this increase against models that are attacking it in close combat, for they are slightiy inside the mystical shield</Description>
 				</Arcane>
 				<Arcane>
@@ -151,8 +151,8 @@
 					<Name>Plaque of Dominion</Name>
 					<Only>Slann</Only>
 					<Points>50</Points>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
 					<Description>Adds an extra +1 dice to the Lizsmdmen player's Power dice and Dispel pools</Description>
 				</Arcane>
 				<Arcane>
@@ -167,14 +167,14 @@
 				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
 					<Points>65</Points>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<NoArmour/>
 					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Scimitar of the Sun Resplendent</Name>
 					<Points>50</Points>
-					<AddToAttacks Value="2"/>
+					<AddToAttacks Val="2"/>
 					<Description>The wielder of this blade has +2 Attacks</Description>
 				</Weapon>
 				<Weapon>
@@ -186,7 +186,7 @@
 				<Weapon>
 					<Name>Piranha Blade</Name>
 					<Points>35</Points>
-					<MultiWounds Value="2"/>
+					<MultiWounds Val="2"/>
 					<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
 				</Weapon>
 				<Weapon>
@@ -213,7 +213,7 @@
 				<Weapon>
 					<Name>Burning Blade of Chotec</Name>
 					<Points>20</Points>
-					<ArmourPiercing Value="2"/>
+					<ArmourPiercing Val="2"/>
 					<Rule>Flaming attacks</Rule>
 					<Description>Targets struck by the Burning Blade of Chotec suffer a -2 penalty to their Armour save in addition to any modifiers from the user's Strength. All attacks made with this weapon count as flaming attacks</Description>
 				</Weapon>
@@ -223,22 +223,22 @@
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>40</Points>
-					<AddToArmour Value="6"/>
-					<AddToLeadership Value="1"/>
+					<AddToArmour Val="6"/>
+					<AddToLeadership Val="1"/>
 					<Description>Confers +1 to the model's Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
 				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, any magic missile that strikes the bearer or any unit he is with is deflected on the roll of 4+ on a D6. If the spell is deflected, the results of the magic missile is resolved against the caster of the spell or the unit the character is with (following the normal targeting rules). This in turn cannot be dispelled</Description>
 				</Shield>
 				<Shield>
 					<Name>The Mainming Shield</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
-					<AddToAttacks Value="1"/>
+					<AddToArmour Val="6"/>
+					<AddToAttacks Val="1"/>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
 				</Shield>
 			</Group>
@@ -266,7 +266,7 @@
 					<Name>Charm of the Jaguar Warrior</Name>
 					<Only>Infantry</Only>
 					<Points>20</Points>
-					<MovementTo Value="9"/>
+					<MovementTo Val="9"/>
 					<Description>The model's Movement is increased to 9</Description>
 				</Additional>
 				<Arcane>
@@ -318,7 +318,7 @@
 				<Additional>
 					<Name>Amulet of Itza</Name>
 					<Points>40</Points>
-					<WardForFirstWound Value="2"/>
+					<WardForFirstWound Val="2"/>
 					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered</Description>
 				</Additional>
 				<Additional>
@@ -330,7 +330,7 @@
 				<Additional>
 					<Name>Glyph Necklace</Name>
 					<Points>30</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The character wearing this gains a 5+ ward save</Description>
 				</Additional>
 			</Group>
@@ -373,8 +373,8 @@
 					<ColdBlooded/>
 					<LargeBase/>
 					<Slots>Hero, Rare</Slots>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
 					<Original>
 						<Rule>The Spirit of venerable Lord Kroak</Rule>
 						<Rule>No Miscast roll</Rule>
@@ -389,11 +389,11 @@
 				<Equipments>
 					<Armour>
 						<Name>Golden Death Mask</Name>
-						<SubOpponentToHit Value="1"/>
+						<SubOpponentToHit Val="1"/>
 					</Armour>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Value="3"/>
+						<AddToWard Val="3"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -415,7 +415,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Revered Spear of Tlanxla</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</HandWeapon>
 					<RangeWeapon>
 						<Name>Hands of Gods</Name>
@@ -450,7 +450,7 @@
 					<Option>
 						<Name>Third Generation</Name>
 						<Slots>Hero</Slots>
-						<AddToWounds Value="1"/>
+						<AddToWounds Val="1"/>
 						<Points>85</Points>
 						<Dependency/>
 						<Rule>No roll on the Miscast Table</Rule>
@@ -459,7 +459,7 @@
 					<Option>
 						<Name>Second Generation</Name>
 						<Slots>Hero, Rare</Slots>
-						<AddToWounds Value="2"/>
+						<AddToWounds Val="2"/>
 						<Points>135</Points>
 						<Dependency/>
 						<Rule>No roll on the Miscast Table</Rule>
@@ -471,7 +471,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -483,7 +483,7 @@
 				<Profile M='4' WS='6' BS='0' S='5' T='5' W='3' I='3' A='5' Ld='8' AS='5'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Hero"/>
-					<MagicPowersCount Value="3"/>
+					<MagicPowersCount Val="3"/>
 					<ColdBlooded/>
 				</SpecialRules>
 				<Options>
@@ -507,7 +507,7 @@
 				<Profile M='4' WS='5' BS='0' S='5' T='4' W='2' I='3' A='4' Ld='8' AS='5'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
-					<MagicPowersCount Value="2"/>
+					<MagicPowersCount Val="2"/>
 					<ColdBlooded/>
 				</SpecialRules>
 				<Options>
@@ -530,7 +530,7 @@
 				<Profile M='6' WS='4' BS='4' S='4' T='3' W='2' I='5' A='3' Ld='6'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
-					<MagicPowersCount Value="1"/>
+					<MagicPowersCount Val="1"/>
 					<ColdBlooded/>
 					<PoisonAttack/>
 					<Aquatic/>
@@ -557,7 +557,7 @@
 				<Profile M='6' WS='2' BS='3' S='3' T='2' W='2' I='4' A='1' Ld='5'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Wizard"/>
-					<MagicPowersCount Value="1"/>
+					<MagicPowersCount Val="1"/>
 					<ColdBlooded/>
 					<Aquatic/>
 				</SpecialRules>
@@ -607,7 +607,7 @@
 				<Image/>
 				<Profile M='4' WS='3' BS='0' S='4' T='4' W='1' I='1' A='2' Ld='8' AS='6'/>
 				<SpecialRules>
-					<MagicPowersCount Value="2"/>
+					<MagicPowersCount Val="2"/>
 					<ColdBlooded/>
 				</SpecialRules>
 				<Equipments>
@@ -643,13 +643,13 @@
 					<Option>
 						<Name>Javelin and shield</Name>
 						<PerModel/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Scouts</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Command>
 						<Champion Points="5" Name="Brave"/>
@@ -754,7 +754,7 @@
 				<SpecialRules>
 					<ColdBlooded/>
 					<PoisonAttack/>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Skirmishers/>
 					<Aquatic/>
 					<Original>
@@ -825,7 +825,7 @@
 				<Name>Salamander Hunting Pack</Name>
 				<Points>65</Points>
 				<Size>1-3</Size>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image>Salamander</Image>
 				<Profile M='6' WS='3' BS='3' S='5' T='4' W='3' I='4' A='2' Ld='5' AS='5'/>
 				<SpecialRules>
