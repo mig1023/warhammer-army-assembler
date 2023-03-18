@@ -83,8 +83,8 @@
 				<Weapon>
 					<Name>The Mace of Helsturm</Name>
 					<Points>65</Points>
-					<StrengthTo Value="10"/>
-					<AttacksTo Value="1"/>
+					<StrengthTo Val="10"/>
+					<AttacksTo Val="1"/>
 					<MultiWounds Value="D6"/>
 					<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds</Description>
 				</Weapon>
@@ -96,20 +96,20 @@
 				<Weapon>
 					<Name>Sword of Sigismund</Name>
 					<Points>50</Points>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<HitFirst/>
 					<Description>The wielder of this sword has +1 Strength and always strikes first in close combat, even before enemies that have charged. If the bearer is fighting another enemy who is also entitled to strike first (because of spells, special abilities, etc), then resolve attacks in Initiative order. If Initiative values are equal, roll a dice to determine who strikes first</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Righteous Steel</Name>
 					<Points>45</Points>
-					<HitOn Value="2"/>
+					<HitOn Val="2"/>
 					<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Power</Name>
 					<Points>40</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<Description>The sword confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
 				</Weapon>
 				<Weapon>
@@ -132,7 +132,7 @@
 				<Weapon>
 					<Name>Wyrmslayer Sword</Name>
 					<Points>20</Points>
-					<WoundOn Value="4"/>
+					<WoundOn Val="4"/>
 					<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but Large Targets lose their armour save due to the scaly skin special rule against hits from this sword</Description>
 				</Weapon>
 			</Group>
@@ -140,48 +140,48 @@
 				<Armour>
 					<Name>The Gilded Armour</Name>
 					<Points>50</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Test Bet="Pass" Context="ArmourSave" Profile="Strength"/>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie, roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed, the Attack is lost</Description>
 				</Armour>
 				<Armour>
 					<Name>Dawn Armour</Name>
 					<Points>40</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Tarnus</Name>
 					<Points>35</Points>
-					<AddToArmour Value="6"/>
-					<AddToWard Value="5"/>
+					<AddToArmour Val="6"/>
+					<AddToWard Val="5"/>
 					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save, he may make a 5+ Ward save. Wizards can wear this armour and cast spells</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of the Gorgon</Name>
 					<Points>35</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Can force one model in base contact to lose one Attack</Rule>
 					<Description>This shield confers a 6+ armour save which can he combined with other equipment normally. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Meteoric Iron</Name>
 					<Points>30</Points>
-					<ArmourTo Value="1"/>
+					<ArmourTo Val="1"/>
 					<Description>This suit of armour gives the bearer a 1+ armour save which cannot be improved by any means</Description>
 				</Armour>
 				<Shield>
 					<Name>Bronze Shield</Name>
 					<Points>25</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
 					<Description>This shield gives a 6+ armour save which can be combined with other equipment normally. Also, the bearer ignores the first hit in the battle suffered from shooting or close combat</Description>
 				</Shield>
 				<Additional>
 					<Name>Helm of the Skaven Slayer</Name>
 					<Points>20</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Causes Fear in all models in a Skaven army</Rule>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army</Description>
 				</Additional>
@@ -190,7 +190,7 @@
 				<Additional>
 					<Name>Shroud of Magnus</Name>
 					<Points>60</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Rule>Totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force</Rule>
 					<Description>This item gives a 5+ Ward save. A model carrying the Shroud and his mount are totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force. Note that the spell will not be dispelled and that other models in a unit the character is with will be affected normally</Description>
 				</Additional>
@@ -203,13 +203,13 @@
 				<Additional>
 					<Name>Holy Relic</Name>
 					<Points>45</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Description>The Holy Relic gives its bearer a 4+ Ward save</Description>
 				</Additional>
 				<Additional>
 					<Name>The White Cloak</Name>
 					<Points>35</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Rule>Immune to all cold-based spells attacks</Rule>
 					<Description>This item gives a 5+ Ward save. Also, the wearer is immune to all cold-based spells attacks (White Dragon's breath, etc)</Description>
 				</Additional>
@@ -222,7 +222,7 @@
 				<Additional>
 					<Name>The Crimson Amulet</Name>
 					<Points>20</Points>
-					<AddToWard Value="6"/>
+					<AddToWard Val="6"/>
 					<Rule>Automatically passes any characteristic tests he has to take (except Leadership tests)</Rule>
 					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests)</Description>
 				</Additional>
@@ -385,7 +385,7 @@
 				<SpecialRules>
 					<Fear/>
 					<Slots>Hero</Slots>
-					<AddToDispell Value="2"/>
+					<AddToDispell Val="2"/>
 					<Original>
 						<Rule>When he joins a unit, even characters in the unit and models who are normally Immune to Psychology will share Luihor's burning hatred for all blasphemies against Sigmar</Rule>
 						<Rule>Cannot join units of Knights of the White Wolf</Rule>
@@ -395,7 +395,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Two-handed hammer</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -461,7 +461,7 @@
 					<Mount Name="Warhorse" Points="15"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -491,7 +491,7 @@
 					<Option>
 						<Name>Cavalry hammer</Name>
 						<HitLast/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Points>6</Points>
 					</Option>
 				</Options>
@@ -513,7 +513,7 @@
 					<Mount Name="Warhorse" Points="15"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -546,7 +546,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -564,7 +564,7 @@
 				<SpecialRules>
 					<Hate/>
 					<MagicItems Points="50" Type="Hero"/>
-					<AddToDispell Value="1"/>
+					<AddToDispell Val="1"/>
 					<Original>
 						<Rule>Prayer of Sigmar</Rule>
 					</Original>
@@ -577,14 +577,14 @@
 				<Options>
 					<Option>
 						<Name>Two-handed warhammer</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Points>4</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Second warhammer</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>4</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -594,7 +594,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -637,7 +637,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -662,7 +662,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -885,7 +885,7 @@
 						<Name>Knights of the Inner Circle</Name>
 						<Points>3</Points>
 						<PerModel/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -907,7 +907,7 @@
 					<HandWeapon>
 						<Name>Cavalry hammer</Name>
 						<HitLast/>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 					</HandWeapon>
 					<FullPlateArmour/>
 				</Equipments>
@@ -916,7 +916,7 @@
 						<Name>Knights of the Inner Circle</Name>
 						<Points>3</Points>
 						<PerModel/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</Option>
 					<Command>
 						<Musician Points="8"/>
