@@ -75,8 +75,8 @@
 				<Weapon>
 					<Name>The Mace of Helsturm</Name>
 					<Points>50</Points>
-					<AddToStrength Value="10"/>
-					<AttacksTo Value="1"/>
+					<AddToStrength Val="10"/>
+					<AttacksTo Val="1"/>
 					<MultiWounds Value="D3"/>
 					<HitLast/>
 					<Description>Always Strikes Last. Requires Two Hands. The wielder of this weapon strikes at +2 Strength in close combat. Instead of attacking normally, the bearer can choose to forfeit all of his normal Attacks to make a single, special Attack (which still has the Always Strikes Last special rule). If this Attack hits, it is resolved at Strength 10 and has both the Flaming Attacks and Multiple Wounds (D3) special rules</Description>
@@ -84,14 +84,14 @@
 				<Armour>
 					<Name>Armour of Meteoric Iron</Name>
 					<Points>50</Points>
-					<ArmourTo Value="1"/>
-					<AddToWard Value="6"/>
+					<ArmourTo Val="1"/>
+					<AddToWard Val="6"/>
 					<Description>The Armour of Meteoric Iron grants the wearer both a 1+ armour save (that cannot be improved by any means) and a 6+ ward save</Description>
 				</Armour>
 				<Additional>
 					<Name>Helm of the Skavenslayer</Name>
 					<Points>15</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Fear/>
 					<Rule>Causes Terror in all models in a Skaven army</Rule>
 					<Description>Helm. The wearer of the Helm of the Skavenslayer counts his armour save as being one point higher than normal. The wearer also causes Fear. Against models from a Skaven army, the wearer causes Terror instead. However, all Skaven gain the Hatred special rule while attacking the wearer</Description>
@@ -99,8 +99,8 @@
 				<Additional>
 					<Name>The White Cloak of Ulric</Name>
 					<Points>50</Points>
-					<SubOpponentToHit Value="1"/>
-					<AddToWard Value="5"/>
+					<SubOpponentToHit Val="1"/>
+					<AddToWard Val="5"/>
 					<Rule>2+ Ward save against Flaming Attacks</Rule>
 					<Description>Enemies in base contact with the wearer are at -1 to all rolls To Hit. In addition, the wearer has a 5+ ward save, increasing to a 2+ ward save against Wounds caused by Flaming Attacks</Description>
 				</Additional>
@@ -159,7 +159,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -250,7 +250,7 @@
 					<FullPlateArmour/>
 					<Armour>
 						<Name>The Silver Seal</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>Magic Resistance (3)</Rule>
 					</Armour>
 				</Equipments>
@@ -280,7 +280,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>6</Points>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 				</Options>
 			</Lord>
@@ -400,7 +400,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Hand weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</HandWeapon>
 					<FullPlateArmour/>
 					<Armour>
@@ -443,7 +443,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>6</Points>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 				</Options>
 			</Lord>
@@ -465,7 +465,7 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -523,7 +523,7 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -600,7 +600,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Massive warhammer</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -663,7 +663,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>4</Points>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -685,7 +685,7 @@
 					<Mount Name="Warhorse" Points="12"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -719,7 +719,7 @@
 					<Mount Name="Warhorse" Points="12"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -782,7 +782,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>2</Points>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 				</Options>
 			</Hero>
@@ -838,7 +838,7 @@
 				<Name>Demigryph</Name>
 				<Profile M='8' WS='4' BS='0' S='5' T='4' W='3' I='4' A='3' Ld='7'/>
 				<SpecialRules>
-					<ArmourPiercing Value="1"/>
+					<ArmourPiercing Val="1"/>
 				</SpecialRules>
 			</Mount>
 			<Mount>
@@ -854,11 +854,11 @@
 						<Name>Bloodroar</Name>
 						<Points>25</Points>
 						<Rule>Enemy units must roll an additional D6, discarding the lowest result, for Leadership tests caused by this beast's Fear of Terror special rules</Rule>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Two Heads</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Rule>+1 To Hit against models with the Large Target special rule</Rule>
 						<Points>30</Points>
 					</Option>
@@ -888,7 +888,7 @@
 				<Image/>
 				<Profile M='8' WS='3' BS='3' S='5' T='5' W='5' I='3' A='1' Ld='7' AS='5'/>
 				<SpecialRules>
-					<AddToHit Value="1"/>
+					<AddToHit Val="1"/>
 					<LargeTarget/>
 					<Original>
 						<Rule>Locus of Azyr</Rule>
@@ -910,7 +910,7 @@
 				<Equipments>
 					<Arcane>
 						<Rule>All friendly units within 6" have a 6+ Ward save</Rule>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 					</Arcane>
 				</Equipments>
 			</Mount>
@@ -1165,7 +1165,7 @@
 						<Name>Knights of the Inner Circle</Name>
 						<Points>3</Points>
 						<PerModel/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -1219,7 +1219,7 @@
 					<Option>
 						<Name>Halberd</Name>
 						<Dependency/>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</Option>
 					<Command>
 						<Champion Points="10" Name="Preceptor"/>
@@ -1335,7 +1335,7 @@
 					<Option>
 						<Name>Barding for Warhorse</Name>
 						<PerModel/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Points>1</Points>
 					</Option>
 					<Command>
@@ -1458,7 +1458,7 @@
 				<Chariot>2</Chariot>
 				<Profile M='8' WS='3' BS='3' S='5' T='5' W='5' I='3' A='1' Ld='7' AS='5'/>
 				<SpecialRules>
-					<AddToHit Value="1"/>
+					<AddToHit Val="1"/>
 					<LargeTarget/>
 					<Original>
 						<Rule>Locus of Azyr</Rule>
@@ -1483,7 +1483,7 @@
 				</SpecialRules>
 				<Equipments>
 					<Arcane>
-						<AddToWard Value="6"/>
+						<AddToWard Val="6"/>
 						<Rule>All friendly units within 6" have a 6+ Ward save</Rule>
 					</Arcane>
 				</Equipments>
