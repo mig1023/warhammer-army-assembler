@@ -101,16 +101,16 @@
 					<Name>Chaos Runesword</Name>
 					<Points>70</Points>
 					<Only>Mortal</Only>
-					<AddToWeaponSkill Value="1"/>
-					<AddToStrength Value="1"/>
-					<AddToAttacks Value="1"/>
+					<AddToWeaponSkill Val="1"/>
+					<AddToStrength Val="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Whip of Pleasure</Name>
 					<Points>50</Points>
 					<HitFirst/>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
@@ -169,7 +169,7 @@
 				<Shield>
 					<Name>Spelleater Shield</Name>
 					<Points>75</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Magic Resistance (2)</Rule>
 					<Rule>Roll a D6 each time a spell is dispelled. On a roll of 4+ the spell is destroyed and the enemy Wizard may not cast it for the rest of the battle.</Rule>
 					<Description>The Spelleater Shield is treated like a normal shield. In addition, it grants Magic Resistance (2) to the character and any unit he is with. Roll a D6 each time a spell is cast at the bearer of the Spelleater Shield and is dispelled. On a roll of 4 or more, the spell is destroyed and the enemy Wizard mav not cast it for the rest of the battle</Description>
@@ -178,7 +178,7 @@
 				<Shield>
 					<Name>Chaos Runeshield</Name>
 					<Points>50</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Runeshiel negates the power of any magic weapons carried by models in base contac.</Rule>
 					<Description>The Chaos Runeshield is treated like a normal shield. It also negates the power of any magic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Description>
 					<Only>Mortal</Only>
@@ -186,22 +186,22 @@
 				<Armour>
 					<Name>Armour of Tortured Souls</Name>
 					<Points>40</Points>
-					<AddToArmour Value="4"/>
-					<AddToToughness Value="1"/>
+					<AddToArmour Val="4"/>
+					<AddToToughness Val="1"/>
 					<Description>The Armour of Tortured Souls is a suit of Chaos armour. The wearer counts as having +1 Toughness against mundane attacks (not against spells, magic items, etc)</Description>
 					<Only>Mortal</Only>
 				</Armour>
 				<Armour>
 					<Name>Armour of Damnation</Name>
 					<Points>30</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<Reroll>OpponentToHit</Reroll>
 					<Description>The Armour of Damnation is a suit of Chaos armour. In addition, any model attacking the wearer in close combat must re-roll successful rolls to hit</Description>
 				</Armour>
 				<Shield>
 					<Name>Bone Shield</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Strength 4 hit for each successful armour save</Rule>
 					<Description>The Bane Shield is treated like a normal shield. In addition, for each successful armour save in close combat, the shield inflicts a Strength 4 hit on the model that struck the blow</Description>
 					<Only>Mortal</Only>
@@ -209,7 +209,7 @@
 				<Armour>
 					<Name>Crimson Armour of Dargan</Name>
 					<Points>20</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The Crimson Armour is a suit of Chaos armour. In addition, any model wishing to attack the wearer in close combat must first pass a Leadership test or they may not attack that combat round</Description>
 					<Only>Mortal</Only>
@@ -247,7 +247,7 @@
 					<Name>Gaze of the Gods</Name>
 					<Points>30</Points>
 					<Only>Mortal</Only>
-					<AddToWard Value="3"/>
+					<AddToWard Val="3"/>
 					<Rule>If the model is fleeing at the start of a Chaos Magic phase he is turned into a Chaos Spawn</Rule>
 					<Description>The model gains a 4+ Ward save. If the model is fleeing at the start of a Chaos Magic phase, for any reason, the wrath of the Chaos gods is immediately visited upon him and he is turned into a Chaos Spawn, with the same number of wounds remaining as the character had. If you do not have a Spawn model to replace the character then he simply counts as slain. For Victory points purposes, the character is not counted as slain or below half Wounds unless the Spawn he has turned into is slain or is below half Wounds</Description>
 				</Additional>
@@ -283,8 +283,8 @@
 					<Name>Power Familiar</Name>
 					<Points>50</Points>
 					<Only>Mortal</Only>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
 					<Description>The Familiar adds one dice to both the Power dice and Dispel dice pool of the bearer's side</Description>
 				</Arcane>
 				<Arcane>
@@ -330,9 +330,9 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<AddToWizard Value="1"/>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
+					<AddToWizard Val="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
 					<Description>The bearer is a Level 1 Sorcerer and knows a random spell from the Lore of Fire, Shadow or Death (Chaos player's choice). If the bearer miscasts, roll twice on the Miscast table and apply both results</Description>
 				</Additional>
 				<Additional>
@@ -510,7 +510,7 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<ArmourTo Value="4"/>
+					<ArmourTo Val="4"/>
 					<Description>The Daemon has an armour save of 4+ in addition to its Daemonic aura</Description>
 				</Additional>
 				<Weapon>
@@ -520,7 +520,7 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<Description>The Daemon has +1 Strength on its profile</Description>
 				</Weapon>
 			</Group>
@@ -573,7 +573,7 @@
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Description>Any unit in close combat with one or more models with a Cloud of Flies suffers a -1 modifier on its rolls to hit</Description>
 				</Additional>
 				<Weapon>
@@ -652,11 +652,11 @@
 					<HandWeapon>
 						<Name>The Slayer of Kings</Name>
 						<NoArmour/>
-						<AddToAttacks Value="5"/>
+						<AddToAttacks Val="5"/>
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Morkar</Name>
-						<ArmourTo Value="1"/>
+						<ArmourTo Val="1"/>
 					</Armour>
 					<Armour>
 						<Name>The Crown of Domination</Name>
@@ -664,7 +664,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Eye of Sheerian</Name>
-						<AddToWard Value="3"/>
+						<AddToWard Val="3"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -719,11 +719,11 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Khorne</Name>
-						<AddToArmour Value="4"/>
+						<AddToArmour Val="4"/>
 					</Armour>
 					<Arcane>
 						<Name>Might of Khorne</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -779,7 +779,7 @@
 					<Slots>Hero, Rare</Slots>
 					<LargeBase/>
 					<LargeTarget/>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Daemonic/>
 					<Original>
 						<Rule>In Chaos player's Shooting phase if Daemon is not in combat it may unleash Stream of Corruption - Breath attack, Strength 3 with -2 armour saving throw modifier</Rule>
@@ -805,9 +805,9 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>140</Points>
 						<Dependency Group="Mark"/>
-						<AddToWizard Value="4"/>
-						<AddToCast Value="4"/>
-						<AddToDispell Value="2"/>
+						<AddToWizard Val="4"/>
+						<AddToCast Val="4"/>
+						<AddToDispell Val="2"/>
 					</Option>
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 					<MarkOfKhorne Points="40" Dependency="Mark"/>
@@ -867,7 +867,7 @@
 						<Name>Mark of Nurgle</Name>
 						<Points>50</Points>
 						<Dependency/>
-						<AddToWounds Value="1"/>
+						<AddToWounds Val="1"/>
 					</Option>
 					<Mount Name="Demonic mount" Points="50"/>
 					<Mount Name="Chaos Steed" Points="24"/>
@@ -905,9 +905,9 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>150</Points>
 						<Dependency Group="Mark"/>
-						<AddToWizard Value="4"/>
-						<AddToCast Value="4"/>
-						<AddToDispell Value="2"/>
+						<AddToWizard Val="4"/>
+						<AddToCast Val="4"/>
+						<AddToDispell Val="2"/>
 					</Option>
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 					<MarkOfKhorne Points="35" Dependency="Mark"/>
@@ -933,9 +933,9 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>70</Points>
 						<Dependency Group="Mark"/>
-						<AddToWizard Value="2"/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
 					</Option>
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
 					<MarkOfKhorne Points="35" Dependency="Mark"/>
@@ -989,9 +989,9 @@
 					<Option>
 						<Name>Level 2 Sorcerer</Name>
 						<Points>40</Points>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
-						<AddToWizard Value="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
+						<AddToWizard Val="2"/>
 						<Dependencies>
 							<Off>Mark of Tzeentch</Off>
 						</Dependencies>
@@ -1000,9 +1000,9 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>70</Points>
 						<Dependency Group="Mark"/>
-						<AddToWizard Value="2"/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
 					</Option>
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
 					<MarkOfKhorne Points="35" Dependency="Mark"/>
@@ -1028,9 +1028,9 @@
 						<Name>Mark of Tzeentch</Name>
 						<Points>70</Points>
 						<Dependency Group="Mark"/>
-						<AddToWizard Value="2"/>
-						<AddToCast Value="2"/>
-						<AddToDispell Value="1"/>
+						<AddToWizard Val="2"/>
+						<AddToCast Val="2"/>
+						<AddToDispell Val="1"/>
 					</Option>
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
 					<MarkOfKhorne Points="35" Dependency="Mark"/>
@@ -1097,7 +1097,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1148,8 +1148,8 @@
 						<Name>Chosen</Name>
 						<Points>6</Points>
 						<PerModel/>
-						<AddToArmour Value="6"/>
-						<AddToAttacks Value="1"/>
+						<AddToArmour Val="6"/>
+						<AddToAttacks Val="1"/>
 						<OnlyOneSuchUnits/>
 					</Option>
 					<Halberd PointsPM="2"/>
@@ -1246,8 +1246,8 @@
 						<Name>Chosen</Name>
 						<Points>12</Points>
 						<PerModel/>
-						<AddToArmour Value="6"/>
-						<AddToAttacks Value="1"/>
+						<AddToArmour Val="6"/>
+						<AddToAttacks Val="1"/>
 						<OnlyOneSuchUnits/>
 					</Option>
 					<MarkOfTzFUnit PointsPM="20" Dependency="Mark"/>
@@ -1346,7 +1346,7 @@
 				<Image/>
 				<Profile M='4' WS='4' BS='0' S='4' T='4' W='1' I='4' A='1' Ld='8'/>
 				<SpecialRules>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Original>
 						<Rule>Breath attack Strength 3 with a -2 armour modifier</Rule>
 					</Original>
@@ -1366,7 +1366,7 @@
 				<Image/>
 				<Profile M='4' WS='3' BS='0' S='3' T='3' W='4' I='2' A='4' Ld='8'/>
 				<SpecialRules>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Original>
 						<Rule>Swarn</Rule>
 					</Original>
