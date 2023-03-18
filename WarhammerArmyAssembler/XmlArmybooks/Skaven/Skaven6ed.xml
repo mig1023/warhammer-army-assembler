@@ -69,7 +69,7 @@
 				<Weapon>
 					<Name>The Fellblade</Name>
 					<Points>85</Points>
-					<StrengthTo Value="10"/>
+					<StrengthTo Val="10"/>
 					<MultiWounds Value="D6"/>
 					<Rule>Wound wielder with no armour save at the end of each turns on a 3+</Rule>
 					<Description>The Fellblade's wielder has Strength 10. Each unsaved wound is multiplied into D6 wounds. Roll a dice at the end of the wielder s turn: on a 3+ there is no effect; on a roll of 1-2 the wielder suffers 1 wound with no armour save allowed</Description>
@@ -83,7 +83,7 @@
 				<Weapon>
 					<Name>Blade of Black Fury</Name>
 					<Points>50</Points>
-					<AddToAttacks Value="2"/>
+					<AddToAttacks Val="2"/>
 					<Description>The sword confers +2 Attacks to the wielder</Description>
 				</Weapon>
 				<Weapon>
@@ -96,27 +96,27 @@
 				<Weapon>
 					<Name>Weeping Blade</Name>
 					<Points>45</Points>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<MultiWounds Value="D3"/>
 					<Description>The wielder has +1 Strength. Each unsaved Wound is multiplied into D3 wounds</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Cursed Blade of Delirium</Name>
 					<Points>45</Points>
-					<WeaponSkillTo Value="10"/>
+					<WeaponSkillTo Val="10"/>
 					<Description>The wielder's Weapon Skill is raised to 10</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Headsplitter</Name>
 					<Points>40</Points>
-					<WoundOn>2</WoundOn>
+					<WoundOn Val="2"/>
 					<NoArmour/>
 					<Description>This is treated as a normal sling, but against models with Toughness 5 or more, it always wounds on a 2+ with no armour saves allowed</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Desolate Blade</Name>
 					<Points>40</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<Description>The sword confers +2 Strength to all close combat attacks made by the wielder</Description>
 				</Weapon>
 				<Weapon>
@@ -164,21 +164,21 @@
 				<Armour>
 					<Name>Rust Armour</Name>
 					<Points>50</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>If the wearer is wounded by a hit with a Strength sufficiently high to completely cancel his armour save (or a hit that does not allow armour saves), the wound is discounted but the armour falls to pieces and is destroyed</Rule>
 					<Description>Gives a 5+ Armour save that can be Combined with other armour as normal. In addition, if the wearer is wounded by a hit with a Strength sufficiently high to completely cancel his armour save (or a hit that does not allow armour saves at all, such as from a cannon ball), the wound is discounted but the armour falls to pieces and is destroyed</Description>
 				</Armour>
 				<Armour>
 					<Name>Warpstone Armour</Name>
 					<Points>35</Points>
-					<AddToArmour Value="4"/>
+					<AddToArmour Val="4"/>
 					<Rule>Strength 4 hit against enemy for each successful armour save</Rule>
 					<Description>Warpstone Armour gives its wearer a 4+ armour save. For each successful armour save made by the bearer in close combat, the armour immediately inflicts a Strength 4 hit against the model that struck the blow</Description>
 				</Armour>
 				<Armour>
 					<Name>Cautious Shield</Name>
 					<Points>25</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Can force one model in base contact to lose 1 Attack (2 Attack if decide not to attack enemy)</Rule>
 					<Description>Gives a 6+ armour save rhat can he combined with other armour as normal. The bearer can force one model in base contact to lose 1 Attack (he can choose which Attack in the case of opponents with different Attacks, such as cavalry models).\n\nIn addition, the model can decide not to attack at all, but to wield the shield with jwo hands and concentrate on defence. If he decides to do this, the chosen enemy will lose 2 Attacks. The player must declare which way the shield will be used at the beginning of each Close Combat phase, before any side strikes blows</Description>
 				</Armour>
@@ -199,20 +199,20 @@
 				<Additional>
 					<Name>Foul Pendant</Name>
 					<Points>30</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The pendant confers a 5+ Ward save to the bearer</Description>
 				</Additional>
 				<Additional>
 					<Name>Warpstone Amulet</Name>
 					<Points>25</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Rule>At the end of the game roll a D6: on the result of 1, the character counts as a casualty</Rule>
 					<Description>The Amulet confers to the bearer a 4+ Ward save. At the end of the game roll a D6. On the result of 1, the character succumbs to the mutating power of the warpstone and counts as a casualty for the purposes of allocating Victory points, and cannot contest table quarters. No re-rolls are allowed for this final roll</Description>
 				</Additional>
 				<Additional>
 					<Name>Ring of Darkness</Name>
 					<Points>25</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Rule>Magic Resistance (1)</Rule>
 					<Description>The bearer and the unit he is with have Magic Resistance (1). Also, when a spell, magic item or any other scrying magic would force the Skaven player to reveal magic items or any other 'hidden' presence in the unit, the Skaven player must only reveal the presence of this ring. Everything else remains hidden</Description>
 				</Additional>
@@ -247,9 +247,9 @@
 					<Name>Liber Bubonicus</Name>
 					<Points>40</Points>
 					<Only>Pestilens</Only>
-					<AddToWizard Value="1"/>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
+					<AddToWizard Val="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
 					<Rule>Skavenbrew</Rule>
 					<Description>The bearer is a Level 1 Wizard, but has no Warpstone tokens. He knows the Pestilent Breath spell</Description>
 				</Weapon>
@@ -361,7 +361,7 @@
 					</HandWeapon>
 					<Armour>
 						<Rule>Blessed by the Horned Rat</Rule>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Armour>
 					<Armour>
 						<Name>Amulet of the Horned One</Name>
@@ -402,7 +402,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Dominatator</Name>
-						<AddToAttack Value="1"/>
+						<AddToAttack Val="1"/>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -492,7 +492,7 @@
 					<Flail Points="4"/>
 					<Option>
 						<Name>Additional hand weapon</Name>
-						<AddToAttack Value="1"/>
+						<AddToAttack Val="1"/>
 						<Points>4</Points>
 					</Option>
 				</Options>
@@ -543,7 +543,7 @@
 					</Option>
 					<Option>
 						<Name>Warp-blades</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>15</Points>
 					</Option>
 					<Option>
@@ -552,7 +552,7 @@
 					</Option>
 					<Option>
 						<Name>Supercharged warp-power accumulator</Name>
-						<AddToCast Value="1"/>
+						<AddToCast Val="1"/>
 						<Points>15</Points>
 					</Option>
 				</Options>
@@ -594,7 +594,7 @@
 					<Fear/>
 					<LargeBase/>
 					<Original>
-						<AddToCast Value="2"/>
+						<AddToCast Val="2"/>
 						<Rule>Magic Resistance (2)</Rule>
 						<Rule>D6 Impacts Hits</Rule>
 						<Rule>Ringing the Bell</Rule>
@@ -724,7 +724,7 @@
 				<Name>Giant Rats</Name>
 				<Points>30</Points>
 				<Size>1+</Size>
-				<ModelsInPack>6</ModelsInPack>
+				<ModelsInPack Val="6"/>
 				<Image/>
 				<Profile M='6' WS='3' BS='0' S='3' T='3' W='1' I='4' A='1' Ld='5'/>
 				<SpecialRules>
@@ -916,7 +916,7 @@
 				<Name>Rat Ogres</Name>
 				<Points>50</Points>
 				<Size>1+</Size>
-				<ModelsInPack>2</ModelsInPack>
+				<ModelsInPack Val="2"/>
 				<Image/>
 				<Profile M='6' WS='3' BS='0' S='5' T='4' W='3' I='3' A='3' Ld='5'/>
 				<SpecialRules>
