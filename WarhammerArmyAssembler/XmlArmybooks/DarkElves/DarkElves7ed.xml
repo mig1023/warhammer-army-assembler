@@ -95,7 +95,7 @@
 				<Additional>
 					<Name>Black Dragon Egg</Name>
 					<Points>30</Points>
-					<ToughnessTo Value="6"/>
+					<ToughnessTo Val="6"/>
 					<Rule>Toughness 6 and the Noxious Breath attack for 1 turn. One use only.</Rule>
 					<Description>One use only. The model may consume the Black Dragon Egg at the start of any player turn. For the remainder of that turn the model has Toughness 6 and the Noxious Breath attack</Description>
 				</Additional>
@@ -136,7 +136,7 @@
 					<Name>Dance of Doom</Name>
 					<Points>30</Points>
 					<Only>Khainite</Only>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The model has a 5+ ward save</Description>
 				</Additional>
 				<Additional>
@@ -204,7 +204,7 @@
 					<Name>Executioner's Axe</Name>
 					<Only>Infantry</Only>
 					<Points>80</Points>
-					<AddToStrength Value="10"/>
+					<AddToStrength Val="10"/>
 					<MultiWounds Value="D3"/>
 					<Description>Requires two hands. Strikes last. In close combat, the wielder counts as having a Strength double that of their target's Toughness, up to a maximum of Strength 10. In addition, the Executioner's Axe causes D3 wounds</Description>
 				</Weapon>
@@ -241,7 +241,7 @@
 				<Weapon>
 					<Name>Caledor's Bane</Name>
 					<Points>35</Points>
-					<ChargeStrengthBonus Value="3"/>
+					<ChargeStrengthBonus Val="3"/>
 					<Rule>Enemy may not use Scaly Skin saving</Rule>
 					<Description>+3 Strength on the charge. Models may not use Scaly Skin saving throws against hits from Caledor's Bane</Description>
 				</Weapon>
@@ -260,7 +260,7 @@
 				<Weapon>
 					<Name>Crimson Death</Name>
 					<Points>25</Points>
-					<StrengthTo Value="6"/>
+					<StrengthTo Val="6"/>
 					<Description>Requires two hands to use. A model wielding Crimson Death always strikes with Strength 6. No other modifiers or magic items can ever modify this</Description>
 				</Weapon>
 				<Weapon>
@@ -273,15 +273,15 @@
 				<Weapon>
 					<Name>Whip of Agony</Name>
 					<Points>25</Points>
-					<StrengthTo Value="5"/>
+					<StrengthTo Val="5"/>
 					<Description>Beastmaster's scourge. A model wielding the Whip of Agony always strikes with Strength 5. No other modifiers or magic items can ever modify this</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Soulrender</Name>
 					<Points>15</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<HitLast/>
-					<ArmourPiercing Value="2"/>
+					<ArmourPiercing Val="2"/>
 					<Description>Great weapon. Armour piercing</Description>
 				</Weapon>
 			</Group>
@@ -289,43 +289,43 @@
 				<Armour>
 					<Name>Armour of Living Death</Name>
 					<Points>60</Points>
-					<AddToArmour Value="5"/>
-					<AddToToughness Value="1"/>
-					<AddToWounds Value="1"/>
+					<AddToArmour Val="5"/>
+					<AddToToughness Val="1"/>
+					<AddToWounds Val="1"/>
 					<Stupidity/>
 					<Description>Heavy armour. In addition, the model has +1 Toughness and +1 Wound. Roll a D6 before deploying any models. On a roll of a 1, the wearer succumbs to the Armour of Living Death and is subject to stupidity for the battle</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Eternal Servitude</Name>
 					<Points>35</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Regeneration/>
 					<Description>Heavy armour. The wearer can Regenerate</Description>
 				</Armour>
 				<Additional>
 					<Name>Cloak of Hag Graef</Name>
 					<Points>25</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Any ranged attack hits on the character have their Strength halved</Rule>
 					<Description>Sea Dragon cloak. In addition, any ranged attack hits on the character (including shooting, magic missiles and other spells with a Strength value) have their Strength halved before rolling to wound (rounding up)</Description>
 				</Additional>
 				<Armour>
 					<Name>Armour of Darkness</Name>
 					<Points>25</Points>
-					<ArmourTo Value="1"/>
+					<ArmourTo Val="1"/>
 					<Description>This armour gives a total save of 1+ that cannot be further increased in any way (with a shield, chariot, mount and so on)</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of Ghrond</Name>
 					<Points>25</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
 					<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength</Description>
 				</Shield>
 				<Armour>
 					<Name>Blood Armour</Name>
 					<Points>15</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
 					<Description>Heavy armour. For every unsaved wound the wearer inflicts in close combat, this save is improved by one point (to 4+ then 3+, etc) to a maximum total of 1+ (including any other bonuses for a shield. Sea Dragon cloak, and so on)</Description>
 				</Armour>
@@ -334,7 +334,7 @@
 				<Additional>
 					<Name>Black Amulet</Name>
 					<Points>40</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Rule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</Rule>
 					<Description>The wearer has a 4+ ward save. If the wearer of the Black Amulet passes their ward save in close combat, then the attacking model suffers 1 wound instead (with no armour save allowed)</Description>
 				</Additional>
@@ -353,7 +353,7 @@
 				<Additional>
 					<Name>Seal of Ghrond</Name>
 					<Points>30</Points>
-					<AddToDispell Value="1"/>
+					<AddToDispell Val="1"/>
 					<Description>Add 1 dice to the dispel dice pool</Description>
 				</Additional>
 				<Armour>
@@ -391,7 +391,7 @@
 				<Arcane>
 					<Name>Darkstar Cloak</Name>
 					<Points>25</Points>
-					<AddToCast Value="1"/>
+					<AddToCast Val="1"/>
 					<Description>The cloak gives the Sorceress +1 power dice in each Magic phase. Only she may use this extra dice</Description>
 				</Arcane>
 				<Arcane>
@@ -412,13 +412,13 @@
 					<Name>Banner of Nagarythe</Name>
 					<Points>125</Points>
 					<Unbreakable/>
-					<AddToCloseCombat Value="1"/>
+					<AddToCloseCombat Val="1"/>
 					<Description>This standard gives an additional +1 to the combat resolution score of friendly units in combat within 12", and the unit containing the banner is Unbreakable</Description>
 				</Banner>
 				<Banner>
 					<Name>Hydra Banner</Name>
 					<Points>75</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>All models in the unit gain +1 Attack in the first round of any hand-to-hand combat (including mounts)</Description>
 				</Banner>
 				<Banner>
@@ -448,7 +448,7 @@
 				<Banner>
 					<Name>Banner of Murder</Name>
 					<Points>25</Points>
-					<ArmourPiercing Value="2"/>
+					<ArmourPiercing Val="2"/>
 					<Description>A unit with the Banner of Murder gains the Armour Piercing rule</Description>
 				</Banner>
 				<Banner>
@@ -486,22 +486,22 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour Value="5"/>
-						<AddToWard Value="2"/>
+						<AddToArmour Val="5"/>
+						<AddToWard Val="2"/>
 						<Rule>2+ ward save against non-magical attacks</Rule>
 						<NoMultiWounds/>
 					</Armour>
 					<Armour>
 						<Name>Spellshield</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Rule>Magic resistance (2)</Rule>
 						<Rule>If a spell cast at Malekith is dispelled by a dispel roll, the caster suffers a Strength 6 hit</Rule>
 						<Rule>For Bound Items, the Spellshield inflicts one Strength 6 hit</Rule>
 					</Armour>
 					<Arcane>
 						<Name>Circlet of Iron</Name>
-						<AddToCast Value="1"/>
-						<AddToDispell Value="1"/>
+						<AddToCast Val="1"/>
+						<AddToDispell Val="1"/>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -537,7 +537,7 @@
 					<HandWeapon/>
 					<Arcane>
 						<Name>Thousand and One Dark Blessing</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>Magic Resistance (2)</Rule>
 					</Arcane>
 					<Arcane>
@@ -574,12 +574,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Deathsword</Name>
-						<StrengthTo Value="10"/>
+						<StrengthTo Val="10"/>
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Parrying Blade</Name>
 						<Rule>One model in base contact loses one Attack (to a minimum of 1)</Rule>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</HandWeapon>
 					<Arcane>
 						<Name>Amulet of Fire</Name>
@@ -662,11 +662,11 @@
 					<HeavyArmour/>
 					<Demon>
 						<Name>Tz'arkan</Name>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
-						<AddToToughness Value="2"/>
-						<AddToInitiative Value="2"/>
-						<AddToLeadership Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
+						<AddToToughness Val="2"/>
+						<AddToInitiative Val="2"/>
+						<AddToLeadership Val="1"/>
 						<Rule>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6. On a 1-3 Tz'arkan's murderous rage drives Malus to attack his allies</Rule>
 					</Demon>
 				</Equipments>
@@ -822,7 +822,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="3"/>
+						<AddToArmour Val="3"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -851,7 +851,7 @@
 				<Name>Dark Pegasus Sulephet</Name>
 				<Profile M='8' WS='4' BS='0' S='4' T='4' W='3' I='4' A='3' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Value="1"/>
+					<ChargeStrengthBonus Val="1"/>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -859,7 +859,7 @@
 				<Name>Dark Pegasus</Name>
 				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Value="1"/>
+					<ChargeStrengthBonus Val="1"/>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -1065,7 +1065,7 @@
 						<Name>Shields</Name>
 						<Points>1</Points>
 						<PerModel/>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Rule>Not Fast Cavalry anymore</Rule>
 					</Option>
 					<RepeaterCrossbow PointsPM="5"/>
