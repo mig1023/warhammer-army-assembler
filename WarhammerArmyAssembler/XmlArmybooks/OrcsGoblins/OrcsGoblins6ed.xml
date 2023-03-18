@@ -96,19 +96,19 @@
 				<Weapon>
 					<Name>Basha's Big Aхе of Bashin'</Name>
 					<Points>50</Points>
-					<AddToAttacks Value="2"/>
+					<AddToAttacks Val="2"/>
 					<Description>The axe gives the wielder +2 Attacks in close combat</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Hacka's Sword of Hacking</Name>
 					<Points>45</Points>
-					<HitOn Value="2"/>
+					<HitOn Val="2"/>
 					<Description>Ihe Sword of Hackin' hits on 2+ regardless of the wielder's WS</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Fumpa's Club of Fumpin'</Name>
 					<Points>40</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<Description>The Club of Fumpin confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
 				</Weapon>
 				<Weapon>
@@ -121,7 +121,7 @@
 					<Name>Porko's Pigstikka</Name>
 					<Only>Mount</Only>
 					<Points>40</Points>
-					<ChargeStrengthBonus Value="1"/>
+					<ChargeStrengthBonus Val="1"/>
 					<Rule>+1 Strength extra Attack per rank in the enemy unit (up to a maximum of +3)</Rule>
 					<Description>The Pigstikka gives the wielder +1 Strength on the turn he charges. In addition, on the turn he charges he also gets one extra Attack per rank in the enemy unit (up to a maximum of +3)</Description>
 				</Weapon>
@@ -149,35 +149,35 @@
 				<Armour>
 					<Name>Armour of Protectyness</Name>
 					<Points>60</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<FirstWoundDiscount/>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also, the wearer discounts the first wound he suffers</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Mork</Name>
 					<Points>50</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>Magic Resistance (2)</Rule>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also gives the wearer and the unit he is with Magic Resistance (2)</Description>
 				</Armour>
 				<Shield>
 					<Name>Ironskin Shield</Name>
 					<Points>50</Points>
-					<AddToArmour Value="6"/>
-					<AddToWard Value="4"/>
+					<AddToArmour Val="6"/>
+					<AddToWard Val="4"/>
 					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also gives the bearer a 4+ Ward save</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>35</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Reroll>ToArmour</Reroll>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
 				</Armour>
 				<Shield>
 					<Name>Ugbkag's Lucky Shield</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Discounts the first hit suffered in the battle</Rule>
 					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also, the bearer discounts the first hit suffered in the battle</Description>
 				</Shield>
@@ -185,15 +185,15 @@
 					<Name>Drog's Dead 'Ard Armour</Name>
 					<Points>30</Points>
 					<Only>Orc</Only>
-					<ArmourTo Value="6"/>
+					<ArmourTo Val="6"/>
 					<Description>Gives the wearer a 1+ armour save that cannot be improved</Description>
 				</Armour>
 				<Additional>
 					<Name>Nobbla's 'Elmet</Name>
 					<Points>20</Points>
 					<Only>Goblin</Only>
-					<AddToArmour Value="6"/>
-					<AddToWard Value="6"/>
+					<AddToArmour Val="6"/>
+					<AddToWard Val="6"/>
 					<Description>Gives the wearer a 6+ armour save and may be worn in addition to normal armour. Also gives the wearer a 6+ Ward save</Description>
 				</Additional>
 			</Group>
@@ -207,13 +207,13 @@
 				<Additional>
 					<Name>Warboss Umm's Best Big Boss's 'at</Name>
 					<Points>30</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>Magical Boss's 'at wot protects you - giz you a 5+ Ward save dunnit. May be worn in addition to normal or magical armour</Description>
 				</Additional>
 				<Armour>
 					<Name>Magical Warpaint</Name>
 					<Points>25</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>Savage Orcs only. If the wearer fails his armour save, he may make a 5+ Ward save. A model cannot wear any armour (not even magical) if it has the Magical Warpaint, though it may carry a shield</Description>
 				</Armour>
 				<Additional>
@@ -273,7 +273,7 @@
 					<Name>Warboss Imbad's Iron Gnashas</Name>
 					<Only>Orc</Only>
 					<Points>50</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<KillingBlow/>
 					<Description>The character wearing the Gnashas gains +1 Attack in close combat. This additional attack counts as being made with the Killing Blow special ability</Description>
 				</Weapon>
@@ -281,13 +281,13 @@
 					<Name>Effigy of Mork</Name>
 					<Only>Orc</Only>
 					<Points>40</Points>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Description>Savage Orcs only. All close combat attacks that are made against the bearer are at -1 to hit</Description>
 				</Additional>
 				<Weapon>
 					<Name>Bigged's 'Ed Kickin Boots</Name>
 					<Points>40</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>Iron-shod unpleasantness. In close combat the wearer gets one additional automatic hit at his basic Strength value in addition to his normal Attacks</Description>
 				</Weapon>
 				<Additional>
@@ -307,7 +307,7 @@
 					<Name>'Edbuttin' 'At</Name>
 					<Only>Orc</Only>
 					<Points>25</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Rule>One extra Attack with the Killing Blow special ability</Rule>
 					<Description>May only be used in challenges. The wearer gets one extra Attack, made before all other blows are struck. This Attack is made with the Killing Blow special ability and is resolved at the wearer's normal Strength. Even if the opponent is killed by the 'eadbutt, the character wearing the 'At should still make his remaining attacks to calculate overkill for combat resolution</Description>
 				</Weapon>
@@ -332,7 +332,7 @@
 					<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
 					<Only>Goblin</Only>
 					<Points>75</Points>
-					<AddToLeadership Value="1"/>
+					<AddToLeadership Val="1"/>
 					<Description>Common Goblins (including characters) in a unit with Rowdy Grott's Big Red Raggedy Banner get a +1 Leadership bonus up to a maximum value of 9</Description>
 				</Banner>
 				<Banner>
@@ -351,7 +351,7 @@
 				<Banner>
 					<Name>Gork's WAAAGH! banner</Name>
 					<Points>30</Points>
-					<AddToMovement Value="1"/>
+					<AddToMovement Val="1"/>
 					<Description>The unit that carries Gork's Waaagh! banner adds +1 to its Movement value (i.e. +1" on its normal move and +2" on its charge and march) so long as it moves towards the closest enemy by the shortest route</Description>
 				</Banner>
 				<Banner>
@@ -386,7 +386,7 @@
 					<Hate/>
 					<ImmuneToPsychology/>
 					<General/>
-					<AddToCloseCombat Value="2"/>
+					<AddToCloseCombat Val="2"/>
 					<Slots>Hero, Special</Slots>
 					<IgnoreGreenskinPanic/>
 					<QuellAnimosity/>
@@ -394,13 +394,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour Value="1"/>
-						<AddToWard Value="5"/>
+						<AddToArmour Val="1"/>
+						<AddToWard Val="5"/>
 					</Armour>
 					<Armour>
 						<Name>Mork's All-Seeing Eye</Name>
@@ -442,7 +442,7 @@
 					</Armour>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -840,7 +840,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="4"/>
+						<AddToArmour Val="4"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -892,8 +892,8 @@
 						<Name>Big'Uns</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -949,8 +949,8 @@
 						<Name>Big'Uns</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -1116,8 +1116,8 @@
 						<Name>Big'Uns</Name>
 						<Points>4</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -1148,8 +1148,8 @@
 						<Name>Big'Uns</Name>
 						<Points>4</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Spear PointsPM="1"/>
@@ -1165,7 +1165,7 @@
 				<Name>Night Goblin Squig Herd</Name>
 				<Points>16</Points>
 				<Size>5+</Size>
-				<ModelsInPack Value="2"/>
+				<ModelsInPack Val="2"/>
 				<Singleton/>
 				<Image>SquigHerd</Image>
 				<Profile M='2D6' WS='4' BS='0' S='5' T='3' W='1' I='3' A='2' Ld='5'/>
@@ -1197,7 +1197,7 @@
 				<Points>80</Points>
 				<Chariot>2</Chariot>
 				<Mount>Boar</Mount>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image>OrcChariot</Image>
 				<Profile M='7' WS='3' BS='0' S='3' T='5' W='4' I='2' A='1' Ld='7' AS='4'/>
 				<SpecialRules>
@@ -1214,7 +1214,7 @@
 				<Options>
 					<Option>
 						<Name>Extra Orc</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>6</Points>
 					</Option>
 				</Options>
@@ -1224,7 +1224,7 @@
 				<Points>60</Points>
 				<Chariot/>
 				<Mount>Wolf</Mount>
-				<ModelsInPack Value="5"/>
+				<ModelsInPack Val="5"/>
 				<Image>WolfChariot</Image>
 				<Profile M='9' WS='3' BS='0' S='3' T='4' W='3' I='2' A='1' Ld='6' AS='5'/>
 				<SpecialRules>
@@ -1240,12 +1240,12 @@
 				<Options>
 					<Option>
 						<Name>Extra Goblin</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>3</Points>
 					</Option>
 					<Option>
 						<Name>Extra Wolf</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>7</Points>
 					</Option>
 					<Spear Points="3"/>
@@ -1254,7 +1254,7 @@
 			<Special>
 				<Name>Goblin Rock Lobber</Name>
 				<Points>70</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Image>RockLobber</Image>
 				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1268,7 +1268,7 @@
 				<Options>
 					<Option>
 						<Name>Orc Bully</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 				</Options>
@@ -1276,7 +1276,7 @@
 			<Special>
 				<Name>Goblin Spear Chukka</Name>
 				<Points>35</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Image>SpearChukka</Image>
 				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1290,7 +1290,7 @@
 				<Options>
 					<Option>
 						<Name>Orc Bully</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 				</Options>
@@ -1321,14 +1321,14 @@
 						<Name>River troll</Name>
 						<Points>10</Points>
 						<PerModel/>
-						<SubOpponentToHit Value="1"/>
+						<SubOpponentToHit Val="1"/>
 					</Option>
 				</Options>
 			</Rare>
 			<Rare>
 				<Name>Goblin Doom Diver Catapult</Name>
 				<Points>80</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Image>DoomDiver</Image>
 				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1342,7 +1342,7 @@
 				<Options>
 					<Option>
 						<Name>Orc Bully</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 				</Options>
