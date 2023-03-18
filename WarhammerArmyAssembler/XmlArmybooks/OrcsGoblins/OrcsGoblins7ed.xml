@@ -91,7 +91,7 @@
 					<Name>Basha's Bloodaxe</Name>
 					<Only>Orc</Only>
 					<Points>50</Points>
-					<Flail Value="1"/>
+					<Flail Val="1"/>
 					<Frenzy/>
 					<Description>Grants +1 Strength in the first round of combat. The wielder of this weapon is subject to Frenzy (D6 extra attacks). The wielder can never lose his Frenzy</Description>
 				</Weapon>
@@ -117,7 +117,7 @@
 				<Weapon>
 					<Name>Ulag's Akrit axe</Name>
 					<Points>25</Points>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<Reroll>ToHit</Reroll>
 					<Flail/>
 					<Description>The wielder may re-roll any missed to hit rolls. It also grants +1 Strength in the first round of combat</Description>
@@ -141,16 +141,16 @@
 				<Weapon>
 					<Name>Mortog's best Basha</Name>
 					<Points>15</Points>
-					<AddToWeaponSkill Value="1"/>
-					<AddToStrength Value="1"/>
-					<AddToInitiative Value="1"/>
+					<AddToWeaponSkill Val="1"/>
+					<AddToStrength Val="1"/>
+					<AddToInitiative Val="1"/>
 					<Description>The wielder of this blafe gains +1 Wepon Skill, +1 Strength and +1 Initiative</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sneaky Skewerer</Name>
 					<Only>Goblin</Only>
 					<Points>10</Points>
-					<ArmourPiercing Value="3"/>
+					<ArmourPiercing Val="3"/>
 					<Description>Wounds caused by this weapon suffer an additional -3 armour save modifier</Description>
 				</Weapon>
 				<Weapon>
@@ -165,14 +165,14 @@
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>50</Points>
-					<AddToArmour Value="6"/>
-					<AddToToughness Value="1"/>
+					<AddToArmour Val="6"/>
+					<AddToToughness Val="1"/>
 					<Description>Light armour. The wearer has +1 Toughness</Description>
 				</Armour>
 				<Shield>
 					<Name>Spliteful shield</Name>
 					<Points>25</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Strength 5 hit for each 1 on a enemy roll to Hit</Rule>
 					<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
 				</Shield>
@@ -181,13 +181,13 @@
 				<Additional>
 					<Name>Effigy of Mork</Name>
 					<Points>35</Points>
-					<SubOpponentToHit Value="1"/>
+					<SubOpponentToHit Val="1"/>
 					<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
 				</Additional>
 				<Additional>
 					<Name>Warboss Umm's Best Boss 'at</Name>
 					<Points>30</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>Grants the rearer a 5+ Ward save</Description>
 				</Additional>
 				<Additional>
@@ -269,7 +269,7 @@
 				<Weapon>
 					<Name>Bigged's Kickin' boots</Name>
 					<Points>30</Points>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>Grants the wearer +1 Atack on his profile</Description>
 				</Weapon>
 				<Weapon>
@@ -387,13 +387,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Slagga's Slashas</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Reroll>ToHit</Reroll>
 					</HandWeapon>
 					<Armour>
 						<Name>Azhag's 'ard Amour</Name>
-						<AddToArmour Value="5"/>
-						<AddToWard Value="5"/>
+						<AddToArmour Val="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 					<Crown>
 						<Name>The Crown of Sorcery</Name>
@@ -418,13 +418,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour Value="1"/>
-						<AddToWard Value="5"/>
+						<AddToArmour Val="1"/>
+						<AddToWard Val="5"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -444,12 +444,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Axe of Grom</Name>
-						<AddToStrength Value="2"/>
-						<ExtendedKillingBlow Value="5"/>
+						<AddToStrength Val="2"/>
+						<ExtendedKillingBlow Val="5"/>
 					</HandWeapon>
 					<Armour>
 						<Name>Lucky banner</Name>
-						<AddToWard Value="5"/>
+						<AddToWard Val="5"/>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -498,14 +498,14 @@
 					<Option>
 						<Name>Savage Orc</Name>
 						<Points>5</Points>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Frenzy/>
 						<Rule>Warprint</Rule>
 					</Option>
 					<Option>
 						<Name>Black Orc</Name>
 						<Points>25</Points>
-						<AddToWeaponSkill Value="1"/>
+						<AddToWeaponSkill Val="1"/>
 					</Option>
 					<GreatWeapon Points="6" Dependencies="Black Orc"/>
 					<AdditionalWeapon Points="6" Only="Infantry"/>
@@ -535,7 +535,7 @@
 					<Wizard Level="4" Points="35"/>
 					<Option>
 						<Name>Savage Orc</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Frenzy/>
 						<Points>5</Points>
 					</Option>
@@ -563,7 +563,7 @@
 					<Option>
 						<Name>Night Goblin</Name>
 						<Points>-10</Points>
-						<AddToInitiative Value="1"/>
+						<AddToInitiative Val="1"/>
 						<AddToLeadership Value="-1"/>
 					</Option>
 					<GreatWeapon Points="6"/>
@@ -603,7 +603,7 @@
 					<Option>
 						<Name>Night Goblin</Name>
 						<Points>-5</Points>
-						<AddToInitiative Value="1"/>
+						<AddToInitiative Val="1"/>
 						<AddToLeadership Value="-1"/>
 					</Option>
 					<Wizard Level="4" Points="35"/>
@@ -627,14 +627,14 @@
 					<Option>
 						<Name>Savage Orc</Name>
 						<Points>5</Points>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Frenzy/>
 						<Rule>Warprint</Rule>
 					</Option>
 					<Option>
 						<Name>Black Orc</Name>
 						<Points>15</Points>
-						<AddToWeaponSkill Value="1"/>
+						<AddToWeaponSkill Val="1"/>
 					</Option>
 					<BattleStandardBearer Points="25" Dependencies="Great weapon, Additional weapon, Spear, Shield"/>
 					<GreatWeapon Points="4" Dependencies="Black Orc, Battle Standard Bearer"/>
@@ -664,7 +664,7 @@
 					<Option>
 						<Name>Savage Orc</Name>
 						<Points>5</Points>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Frenzy/>
 						<Rule>Warprint</Rule>
 					</Option>
@@ -690,7 +690,7 @@
 					<Option>
 						<Name>Night Goblin</Name>
 						<Points>-5</Points>
-						<AddToInitiative Value="1"/>
+						<AddToInitiative Val="1"/>
 						<AddToLeadership Value="-1"/>
 					</Option>
 					<BattleStandardBearer Points="25" Dependencies="Great weapon, Additional weapon, Spear, Shield"/>
@@ -731,7 +731,7 @@
 					<Option>
 						<Name>Night Goblin</Name>
 						<Points>-5</Points>
-						<AddToInitiative Value="1"/>
+						<AddToInitiative Val="1"/>
 						<AddToLeadership Value="-1"/>
 					</Option>
 					<Wizard Level="2" Points="35"/>
@@ -754,7 +754,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Value="4"/>
+						<AddToArmour Val="4"/>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -803,7 +803,7 @@
 				<Name>Goblin Wolf Chariot</Name>
 				<Chariot>2</Chariot>
 				<Mount>Wolf</Mount>
-				<ModelsInPack Value="5"/>
+				<ModelsInPack Val="5"/>
 				<Profile M='9' WS='3' BS='0' S='3' T='4' W='3' I='3' A='1' AS='5'/>
 				<SpecialRules>
 					<FearElves/>
@@ -817,7 +817,7 @@
 				<Name>Orc Boar Chariot</Name>
 				<Chariot>2</Chariot>
 				<Mount>Boar</Mount>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Profile M='7' WS='3' S='3' T='5' W='4' I='2' A='1' AS='4'/>
 				<SpecialRules>
 					<ImpactHit>D6</ImpactHit>
@@ -846,15 +846,15 @@
 						<Name>Big'Uns</Name>
 						<Points>4</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Option>
 						<Name>Additional choppa</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</Option>
 					<Spear PointsPM="1"/>
 					<Shield PointsPM="1"/>
@@ -904,15 +904,15 @@
 						<Name>Big'Uns</Name>
 						<Points>4</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Option>
 						<Name>Additional choppa</Name>
 						<Points>2</Points>
 						<PerModel/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</Option>
 					<Spear PointsPM="1"/>
 					<Bow PointsPM="2"/>
@@ -1095,8 +1095,8 @@
 						<Name>Big'Uns</Name>
 						<Points>8</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -1126,8 +1126,8 @@
 						<Name>Big'Uns</Name>
 						<Points>8</Points>
 						<PerModel/>
-						<AddToWeaponSkill Value="1"/>
-						<AddToStrength Value="1"/>
+						<AddToWeaponSkill Val="1"/>
+						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
 					<Spear PointsPM="2"/>
@@ -1144,7 +1144,7 @@
 				<Points>80</Points>
 				<Chariot>2</Chariot>
 				<Mount>Boar</Mount>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image>OrcChariot</Image>
 				<Profile M='7' WS='3' S='3' T='5' W='4' I='2' A='1' Ld='7'/>
 				<SpecialRules>
@@ -1160,7 +1160,7 @@
 				<Options>
 					<Option>
 						<Name>Extra Orc</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 				</Options>
@@ -1188,7 +1188,7 @@
 				<Name>Night Goblin Squig Herd</Name>
 				<Points>15</Points>
 				<Size>1+</Size>
-				<ModelsInPack Value="5"/>
+				<ModelsInPack Val="5"/>
 				<Image>SquigHerd</Image>
 				<Profile M='6' WS='4' BS='0' S='5' T='3' W='1' I='3' A='2' Ld='5'/>
 				<SpecialRules>
@@ -1209,7 +1209,7 @@
 				<Points>60</Points>
 				<Chariot>2</Chariot>
 				<Mount>Wolf</Mount>
-				<ModelsInPack Value="5"/>
+				<ModelsInPack Val="5"/>
 				<Image>GoblinChariot</Image>
 				<Profile M='9' WS='3' S='3' T='4' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1217,7 +1217,7 @@
 					<FearElves/>
 					<ScythedWheel/>
 					<Original>
-						<AddToArmour Value="5"/>
+						<AddToArmour Val="5"/>
 					</Original>
 				</SpecialRules>
 				<Equipments>
@@ -1228,12 +1228,12 @@
 				<Options>
 					<Option>
 						<Name>Extra Goblin</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>3</Points>
 					</Option>
 					<Option>
 						<Name>Extra Wolf</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>3</Points>
 					</Option>
 				</Options>
@@ -1241,7 +1241,7 @@
 			<Special>
 				<Name>Goblin Rock Lobber</Name>
 				<Points>70</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Image>RockLobber</Image>
 				<Profile WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1256,7 +1256,7 @@
 				<Options>
 					<Option>
 						<Name>Orc Bully</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 				</Options>
@@ -1264,7 +1264,7 @@
 			<Special>
 				<Name>Goblin Spear Chukka</Name>
 				<Points>35</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Image>SpearChukka</Image>
 				<Profile WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1279,7 +1279,7 @@
 				<Options>
 					<Option>
 						<Name>Orc Bully</Name>
-						<AddToModelsInPack Value="1"/>
+						<AddToModelsInPack Val="1"/>
 						<Points>5</Points>
 					</Option>
 				</Options>
@@ -1307,22 +1307,22 @@
 						<Name>Stone troll</Name>
 						<Points>20</Points>
 						<PerModel/>
-						<AddToArmour Value="5"/>
-						<AddToStrength Value="1"/>
+						<AddToArmour Val="5"/>
+						<AddToStrength Val="1"/>
 						<Rule>Magic Resistance (2)</Rule>
 					</Option>
 					<Option>
 						<Name>River troll</Name>
 						<Points>20</Points>
 						<PerModel/>
-						<SubOpponentToHit Value="1"/>
+						<SubOpponentToHit Val="1"/>
 					</Option>
 				</Options>
 			</Rare>
 			<Rare>
 				<Name>Goblin Doom Diver Catapult</Name>
 				<Points>80</Points>
-				<ModelsInPack Value="3"/>
+				<ModelsInPack Val="3"/>
 				<Image>DoomDiverCatapult</Image>
 				<Profile WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
