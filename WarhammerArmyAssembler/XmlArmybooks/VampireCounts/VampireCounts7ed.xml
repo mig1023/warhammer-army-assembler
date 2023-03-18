@@ -86,8 +86,8 @@
 				<Powers>
 					<Name>Dark Acolyte</Name>
 					<Points>30</Points>
-					<AddToCast Value="1"/>
-					<AddToWizard Value="1"/>
+					<AddToCast Val="1"/>
+					<AddToWizard Val="1"/>
 					<Description>This Vampire has an additional Magic level</Description>
 				</Powers>
 				<Powers>
@@ -118,15 +118,15 @@
 				<Powers>
 					<Name>Avatar of Death</Name>
 					<Points>20</Points>
-					<AddToArmour Value="5"/>
-					<AddToStrength Value="2"/>
+					<AddToArmour Val="5"/>
+					<AddToStrength Val="2"/>
 					<Description>The Vampire wears heavy armour and is armed with either a great weapon, hand weapon and shield or two hand weapons</Description>
 				</Powers>
 				<Powers>
 					<Name>Dread Knight</Name>
 					<Points>25</Points>
 					<Lance/>
-					<ArmourTo Value="2"/>
+					<ArmourTo Val="2"/>
 					<Description>The Vampire has a lance, heavy armour, a shield and rides a barded Nightmare</Description>
 				</Powers>
 				<Powers>
@@ -137,7 +137,7 @@
 				<Powers>
 					<Name>Walking Death</Name>
 					<Points>25</Points>
-					<AddToCloseCombat Value="1"/>
+					<AddToCloseCombat Val="1"/>
 					<Description>The presence of one or more Vampires with this power in a combat adds +1 to their side's combat resolution</Description>
 				</Powers>
 				<Powers>
@@ -191,7 +191,7 @@
 					<Name>The Black Axe of Krell</Name>
 					<Points>50</Points>
 					<Only>Wight King</Only>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<MultiWounds Value="D3"/>
 					<HitLast/>
 					<Test Bet="Wound" Context="Wound" Profile="Toughness"/>
@@ -232,15 +232,15 @@
 				<Armour>
 					<Name>Walach's Bloody Hauberk</Name>
 					<Points>45</Points>
-					<AddToArmour Value="4"/>
-					<AddToWard Value="5"/>
+					<AddToArmour Val="4"/>
+					<AddToWard Val="5"/>
 					<Description>The wearer has a 4+ armour save that may be combined with steeds, shield, etc. Walach's Bloody Hauberk also confers a 5+ ward save</Description>
 				</Armour>
 				<Armour>
 					<Name>The Accursed Armour</Name>
 					<Points>25</Points>
-					<AddToArmour Value="5"/>
-					<AddToToughness Value="1"/>
+					<AddToArmour Val="5"/>
+					<AddToToughness Val="1"/>
 					<AddToWeaponSkill Value="-3"/>
 					<AddToInitiative Value="-3"/>
 					<Description>Heavy armour. The wearer has +1 Toughness, but suffers -3 Weapon Skill and -3 Initiative</Description>
@@ -248,14 +248,14 @@
 				<Armour>
 					<Name>The Flayed Hauberk</Name>
 					<Points>25</Points>
-					<ArmourTo Value="2"/>
+					<ArmourTo Val="2"/>
 					<Description>The Flayed Hauberk grants the wearer a 2+ armour save that cannot be improved by any means (shield, mount and so on)</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Night</Name>
 					<Only>Infantry</Only>
 					<Points>25</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<Rule>Enemies suffer a -2 to hit penalty</Rule>
 					<Description>Models on foot only. Heavy armour. As long as the wearer is on his own, enemies suffer a -2 to hit penalty when shooting at him</Description>
 				</Armour>
@@ -263,7 +263,7 @@
 					<Name>Nightshroud</Name>
 					<Only>Infantry</Only>
 					<Points>20</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>Enemy models lose all charging bonuses, lose the Always Strikes First rule</Rule>
 					<Description>Light armour. Enemy models wishing to attack the wearer lose all charging bonuses, lose the Always Strikes First rule (if diey have it) and have their Initiative reduced to 1</Description>
 				</Armour>
@@ -271,7 +271,7 @@
 					<Name>The Cadaverous Cuirass</Name>
 					<Only>Vampire</Only>
 					<Points>15</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<NoKillingBlow/>
 					<ImmuneToPoison/>
 					<Description>Heavy armour. Killing Blow and/or Poisoned Attacks have no additional effect against the wearer</Description>
@@ -303,7 +303,7 @@
 					<Name>Talisman of the Lycni</Name>
 					<Only>Vampire</Only>
 					<Points>10</Points>
-					<MovementTo Value="9"/>
+					<MovementTo Val="9"/>
 					<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9</Description>
 				</Weapon>
 			</Group>
@@ -318,7 +318,7 @@
 				<Additional>
 					<Name>Crown of the Damned</Name>
 					<Points>35</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Stupidity/>
 					<Description>Grants the bearer a 4+ ward save, but the bearer is subject to Stupidity</Description>
 				</Additional>
@@ -331,7 +331,7 @@
 				<Additional>
 					<Name>The Gem of Blood</Name>
 					<Points>25</Points>
-					<WardForFirstWound Value="2"/>
+					<WardForFirstWound Val="2"/>
 					<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed</Description>
 				</Additional>
 			</Group>
@@ -449,7 +449,7 @@
 					<Terror/>
 					<Undead/>
 					<Reroll>ToWound</Reroll>
-					<AddToCloseCombat Value="1"/>
+					<AddToCloseCombat Val="1"/>
 					<Original>
 						<Rule>Enemy within 6" are at -1 Ld</Rule>
 					</Original>
@@ -488,13 +488,13 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Templehof</Name>
-						<AddToWounds Value="2"/>
+						<AddToWounds Val="2"/>
 					</Armour>
 				</Equipments>
 				<Options>
 					<Option>
 						<Name>Nightmare</Name>
-						<AddToArmour Value="2"/>
+						<AddToArmour Val="2"/>
 						<Points>20</Points>
 						<Mount/>
 					</Option>
@@ -535,7 +535,7 @@
 				<SpecialRules>
 					<Undead/>
 					<MagicItems Count="1" Type="Hero"/>
-					<AddToCloseCombat Value="1"/>
+					<AddToCloseCombat Val="1"/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -546,7 +546,7 @@
 				<Options>
 					<Option>
 						<Name>Nightmare</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Points>20</Points>
 						<Mount/>
 					</Option>
@@ -571,7 +571,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sword of Waldenhof</Name>
-						<MultiWounds Value="2"/>
+						<MultiWounds Val="2"/>
 					</HandWeapon>
 					<HeavyArmour/>
 				</Equipments>
@@ -614,7 +614,7 @@
 				<Options>
 					<Option>
 						<Name>Nightmare</Name>
-						<AddToArmour Value="2"/>
+						<AddToArmour Val="2"/>
 						<Points>15</Points>
 						<Mount/>
 					</Option>
@@ -910,7 +910,7 @@
 				<Options>
 					<Option>
 						<Name>Skeletal Steed barding</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Points>4</Points>
 						<PerModel/>
 					</Option>
