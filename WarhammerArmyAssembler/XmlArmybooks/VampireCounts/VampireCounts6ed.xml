@@ -78,7 +78,7 @@
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
-					<AddToCloseCombat Value="1"/>
+					<AddToCloseCombat Val="1"/>
 					<Description>The presence of one or more von Carstein Vampires with this power in a combat adds +1 io their side's combat resolution</Description>
 				</Weapon>
 				<Weapon>
@@ -105,7 +105,7 @@
 					<Dependencies>
 						<On>Von Carstein</On>
 					</Dependencies>
-					<MovementTo Value="9"/>
+					<MovementTo Val="9"/>
 					<Description>The Movement of the Vampire is increased to 9 as long as he is moving on foot</Description>
 				</Weapon>
 			</Group>
@@ -116,7 +116,7 @@
 					<Dependencies>
 						<On>Blood Dragon</On>
 					</Dependencies>
-					<AddToAttacks Value="1"/>
+					<AddToAttacks Val="1"/>
 					<Description>The Vampire has +1 Attack</Description>
 				</Weapon>
 				<Weapon>
@@ -152,7 +152,7 @@
 					<Dependencies>
 						<On>Blood Dragon</On>
 					</Dependencies>
-					<ChargeStrengthBonus Value="1"/>
+					<ChargeStrengthBonus Val="1"/>
 					<Description>The Vampire has +1 Strength the turn he charges</Description>
 				</Weapon>
 				<Weapon>
@@ -172,9 +172,9 @@
 					<Dependencies>
 						<On>Necrarch</On>
 					</Dependencies>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
-					<AddToWizard Value="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
+					<AddToWizard Val="1"/>
 					<Description>The Vampire has one extra Magic Level. A Thrall with this power is a Level 1 Wizard in all respects and can be the army's General</Description>
 				</Weapon>
 				<Weapon>
@@ -192,7 +192,7 @@
 					<Dependencies>
 						<On>Necrarch</On>
 					</Dependencies>
-					<AddToCast Value="1"/>
+					<AddToCast Val="1"/>
 					<Description>The presence of the Vampire on the battlefield adds one dice to the player's pile of Power dice (no effect on the Dispel dice)</Description>
 				</Weapon>
 				<Weapon>
@@ -239,7 +239,7 @@
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
-					<AddToWounds Value="1"/>
+					<AddToWounds Val="1"/>
 					<Description>The Vampire has +1 Wound on his profile</Description>
 				</Weapon>
 				<Weapon>
@@ -275,7 +275,7 @@
 					<Dependencies>
 						<On>Strigoi</On>
 					</Dependencies>
-					<AddToStrength Value="1"/>
+					<AddToStrength Val="1"/>
 					<Description>The Vampire has +1 Strength on his profile</Description>
 				</Weapon>
 			</Group>
@@ -304,7 +304,7 @@
 					<Dependencies>
 						<On>Lahmia</On>
 					</Dependencies>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>The Vampire has a Ward save of 5+</Description>
 				</Weapon>
 				<Weapon>
@@ -365,7 +365,7 @@
 				<Weapon>
 					<Name>The Black Axe of Krell</Name>
 					<Points>50</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<HitLast/>
 					<Rule>Any model which suffers 1 or more wounds must roll a D6 at the start of both its own and its enemy's Magic phases, on a roll of 1 or 2 it suffers 1 more wound with no armour save allowed</Rule>
 					<Description>The Black Axe of Krell is a Great Weapon and follows all the rules for normal Great Weapons. Also, any model which suffers 1 or more wounds from the Black Axe must roll a D6 at the start of both its own and its enemy's Magic phases for the rest of the game. On a roll of 1 or 2 it suffers 1 more wound with no armour save allowed (a Ward save can be taken as normal)</Description>
@@ -373,7 +373,7 @@
 				<Weapon>
 					<Name>Sword of Unholy Power</Name>
 					<Points>40</Points>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<HitLast/>
 					<Rule>For each unsaved Wound gains an extra Power or Dispel dice in the following Magic phase</Rule>
 					<Description>For each unsaved wound caused by the blade the plaver may inimedutely get a magic dice. This dice is added to his pile of Power or Dispel dice in the following Magic phase, (depending on whether it is his own turn or his enemy's)</Description>
@@ -397,7 +397,7 @@
 					<Name>Sword of Kings</Name>
 					<Points>25</Points>
 					<Only>Wight Lord</Only>
-					<ExtendedKillingBlow Value="5"/>
+					<ExtendedKillingBlow Val="5"/>
 					<Description>This sword scores a Killing Blow on the result of a 5+</Description>
 				</Weapon>
 			</Group>
@@ -405,7 +405,7 @@
 				<Additional>
 					<Name>Wailing Helm</Name>
 					<Points>50</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Terror/>
 					<Description>Gives a 6+ armour save and may be worn in addition to normal armour. The wearer also causes terror</Description>
 				</Additional>
@@ -413,7 +413,7 @@
 					<Name>Armour of Bone</Name>
 					<Only>Infantry</Only>
 					<Points>50</Points>
-					<AddToArmour Value="5"/>
+					<AddToArmour Val="5"/>
 					<FirstWoundDiscount/>
 					<Description>Gives a 5+ armour save and may be combined with other equipment. Wizard can wear this armour without losing his ability to cast spells. When the wearer fails his first armour save (of if he's wounded by an attack aganst which he cannot take an armour save at all), the armour crumbles to dust and is destroyed, but the wound is ignored</Description>
 				</Armour>
@@ -423,7 +423,7 @@
 					<Dependencies>
 						<Off>Lahmia</Off>
 					</Dependencies>
-					<ArmourTo Value="1"/>
+					<ArmourTo Val="1"/>
 					<Description>1+ armour save. This cannot be improved by any means</Description>
 				</Armour>
 				<Shield>
@@ -432,7 +432,7 @@
 					<Dependencies>
 						<Off>Lahmia</Off>
 					</Dependencies>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Rule>One enemy in base contact (bearer's choice) lose 1 Attack</Rule>
 					<Description>Gives a 6+ armour save and may be combined with other equipment normally. One enemy in base contact (bearer's choice) lose 1 Attack. All Bretonnian Knights and Characters hate the model carrying the shield</Description>
 				</Shield>
@@ -445,14 +445,14 @@
 						<On>Von Carstein</On>
 					</Dependencies>
 					<Points>75</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Regeneration/>
 					<Description>The model has a 4+ Ward save and the Regeneration special rule</Description>
 				</Additional>
 				<Additional>
 					<Name>Obsidian Amulet</Name>
 					<Points>45</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Rule>Magic Resistance (1)</Rule>
 					<Rule>Ward save against wounds caused by magic weapons, spells or indeed any form of magical attack</Rule>
 					<Description>The bearer has a 4+ Ward save against wounds caused by magic weapons, spells or indeed any form of magical attack. In addition, the ring confers Magic Resistance (1)</Description>
@@ -460,7 +460,7 @@
 				<Additional>
 					<Name>Crown of the Damned</Name>
 					<Points>35</Points>
-					<AddToWard Value="4"/>
+					<AddToWard Val="4"/>
 					<Stupidity/>
 					<Description>4+ Ward save. The wearer is subject to Stupidity (even if the model is normally Immune to Psychology)</Description>
 				</Additional>
@@ -473,13 +473,13 @@
 				<Additional>
 					<Name>Ring of Night</Name>
 					<Points>30</Points>
-					<AddToWard Value="5"/>
+					<AddToWard Val="5"/>
 					<Description>5+ Ward save</Description>
 				</Additional>
 				<Additional>
 					<Name>The Gem of Blood</Name>
 					<Points>25</Points>
-					<WardForFirstWound Value="2"/>
+					<WardForFirstWound Val="2"/>
 					<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed</Description>
 				</Additional>
 			</Group>
@@ -490,8 +490,8 @@
 					<Dependencies>
 						<Off>Blood Dragon</Off>
 					</Dependencies>
-					<AddToCast Value="1"/>
-					<AddToDispell Value="1"/>
+					<AddToCast Val="1"/>
+					<AddToDispell Val="1"/>
 					<Description>The Familiar adds one dice to both the Power dice and the Dispel dice pool of the bearer's side</Description>
 				</Arcane>
 				<Arcane>
@@ -587,7 +587,7 @@
 					<Name>Banner of the Barrows</Name>
 					<Points>45</Points>
 					<Only>Wights</Only>
-					<HitOn Value="3"/>
+					<HitOn Val="3"/>
 					<Description>All Wights (Grave Guard, Black Knight and Wight lords) in the unit carrying the Banner will hit the enemy on a 3+ regardless of relative Weapon Skills or any other modifier</Description>
 				</Banner>
 				<Banner>
@@ -626,13 +626,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sword of Unholy Power</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Rule>For each unsaved Wound gains an extra Power or Dispel dice in the following Magic phase</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Cloak of Darkness</Name>
-						<AddToWard Value="3"/>
+						<AddToWard Val="3"/>
 					</Armour>
 					<Arcane>
 						<Name>Ebony Staff</Name>
@@ -650,7 +650,7 @@
 				<Profile M='6' WS='7' BS='5' S='5' T='5' W='4' I='8' A='5' Ld='10' AS='5'/>
 				<SpecialRules>
 					<Undead/>
-					<AddToCast Value="1"/>
+					<AddToCast Val="1"/>
 					<Slots>Hero, Hero, Hero</Slots>
 					<Original>
 						<Rule>Knows all six Necromantic spells</Rule>
@@ -671,7 +671,7 @@
 					</Arcane>
 					<Arcane>
 						<Name>Circlet of Rathek</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -705,15 +705,15 @@
 					<Option>
 						<Name>Blood Dragon</Name>
 						<Dependency/>
-						<AddToWeaponSkill Value="2"/>
-						<AddToArmour Value="4"/>
+						<AddToWeaponSkill Val="2"/>
+						<AddToArmour Val="4"/>
 						<Rule>Full Plate Armour</Rule>
 						<Rule>Must always issue challenges and must always accept enemy challenges</Rule>
 					</Option>
 					<Option>
 						<Name>Strigoi</Name>
 						<Dependency/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Hate/>
 						<NoMundaneWeapons/>
 						<Rule>Cannot use any magic item</Rule>
@@ -721,7 +721,7 @@
 					<Option>
 						<Name>Lahmia</Name>
 						<Dependency/>
-						<AddToInitiative Value="2"/>
+						<AddToInitiative Val="2"/>
 						<Hate/>
 						<Rule>All models in base contact suffer a -1 to their Leadership</Rule>
 						<NoMundaneWeapons/>
@@ -729,7 +729,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
@@ -741,7 +741,7 @@
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>6</Points>
 					</Option>
 					<Option>
@@ -759,7 +759,7 @@
 						<Dependencies>
 							<On>Blood Dragon</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Wizard Level="3" Points="50"/>
 					<Option>
@@ -776,7 +776,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Winged Nightmare</Name>
@@ -825,15 +825,15 @@
 					<Option>
 						<Name>Blood Dragon</Name>
 						<Dependency/>
-						<AddToWeaponSkill Value="2"/>
-						<AddToArmour Value="4"/>
+						<AddToWeaponSkill Val="2"/>
+						<AddToArmour Val="4"/>
 						<Rule>Full Plate Armour</Rule>
 						<Rule>Must always issue challenges and must always accept enemy challenges</Rule>
 					</Option>
 					<Option>
 						<Name>Strigoi</Name>
 						<Dependency/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Hate/>
 						<NoMundaneWeapons/>
 						<Rule>Cannot use any magic item</Rule>
@@ -841,7 +841,7 @@
 					<Option>
 						<Name>Lahmia</Name>
 						<Dependency/>
-						<AddToInitiative Value="2"/>
+						<AddToInitiative Val="2"/>
 						<Hate/>
 						<Rule>All models in base contact suffer a -1 to their Leadership</Rule>
 						<NoMundaneWeapons/>
@@ -849,7 +849,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
@@ -861,7 +861,7 @@
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>6</Points>
 					</Option>
 					<Option>
@@ -879,7 +879,7 @@
 						<Dependencies>
 							<On>Blood Dragon</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Wizard Level="2" Points="35"/>
 					<Option>
@@ -896,7 +896,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Winged Nightmare</Name>
@@ -925,7 +925,7 @@
 					<Wizard Level="4" Points="35"/>
 					<Option>
 						<Name>Nightmare</Name>
-						<AddToArmour Value="2"/>
+						<AddToArmour Val="2"/>
 						<Points>12</Points>
 						<Mount/>
 					</Option>
@@ -935,7 +935,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Mount Name="Winged Nightmare" Points="175"/>
 					<Mount Name="Zombie Dragon" Points="300"/>
@@ -967,13 +967,13 @@
 					<Option>
 						<Name>Blood Dragon</Name>
 						<Dependency/>
-						<AddToWeaponSkill Value="2"/>
+						<AddToWeaponSkill Val="2"/>
 						<Rule>Must always issue challenges and must always accept enemy challenges</Rule>
 					</Option>
 					<Option>
 						<Name>Strigoi</Name>
 						<Dependency/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Hate/>
 						<NoMundaneWeapons/>
 						<Rule>Cannot use any magic item</Rule>
@@ -981,7 +981,7 @@
 					<Option>
 						<Name>Lahmia</Name>
 						<Dependency/>
-						<AddToInitiative Value="2"/>
+						<AddToInitiative Val="2"/>
 						<Hate/>
 						<Rule>All models in base contact suffer a -1 to their Leadership</Rule>
 						<NoMundaneWeapons/>
@@ -989,7 +989,7 @@
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
@@ -1001,7 +1001,7 @@
 						<Dependencies>
 							<On>Von Carstein, Blood Dragon</On>
 						</Dependencies>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Points>4</Points>
 					</Option>
 					<Option>
@@ -1021,7 +1021,7 @@
 						<Dependencies>
 							<On>Blood Dragon, Von Carstein</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<Option>
 						<Name>Nightmare</Name>
@@ -1037,7 +1037,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -1071,7 +1071,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -1092,7 +1092,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Two-handed scythe</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 					</HandWeapon>
 				</Equipments>
@@ -1104,7 +1104,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 				</Options>
 			</Hero>
@@ -1125,7 +1125,7 @@
 					<Wizard Level="2" Points="35"/>
 					<Option>
 						<Name>Nightmare</Name>
-						<AddToArmour Value="2"/>
+						<AddToArmour Val="2"/>
 						<Points>8</Points>
 						<Mount/>
 					</Option>
@@ -1135,7 +1135,7 @@
 						<Dependencies>
 							<On>Nightmare</On>
 						</Dependencies>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 					</Option>
 				</Options>
 			</Hero>
@@ -1287,7 +1287,7 @@
 				<Options>
 					<Option>
 						<Name>Helberds</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Points>2</Points>
 						<PerModel/>
 					</Option>
@@ -1322,7 +1322,7 @@
 				<Options>
 					<Option>
 						<Name>Barding</Name>
-						<AddToArmour Value="6"/>
+						<AddToArmour Val="6"/>
 						<Points>2</Points>
 						<PerModel/>
 					</Option>
