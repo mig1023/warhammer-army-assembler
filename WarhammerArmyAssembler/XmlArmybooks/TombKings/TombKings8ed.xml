@@ -58,7 +58,7 @@
 					<Name>Destroyer of Eternities</Name>
 					<Points>80</Points>
 					<Only>Infantry</Only>
-					<AddToStrength Value="2"/>
+					<AddToStrength Val="2"/>
 					<HeroicKillingBlow/>
 					<Description>Tomb King on foot only. Attacks made with the Destroyer of Eternities are at +2 Strength, and have the Heroic Killing Blow special rule. The wielder can choose to exchange all of his Attacks to make a special 'Sweeping Attack' - if he does so, all enemy models in base contact with the wielder suffer a single automatic hit (also at +2 Strength and with Heroic Killing Blow). If a target is a character riding a chariot or monster, then both the rider and mount each take a single automatic hit. In a challenge, only the models engaged in the challenge count as being in base contact with the Tomb King</Description>
 				</Weapon>
@@ -132,7 +132,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Value="6"/>
+					<AddToArmour Val="6"/>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -236,7 +236,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Scarab Brooch of Usirian</Name>
-						<AddToWard Value="4"/>
+						<AddToWard Val="4"/>
 						<Rule>Magic Resistance (1)</Rule>
 					</Armour>
 				</Equipments>
@@ -291,8 +291,8 @@
 					</RangeWeapon>
 					<Arcana>
 						<Name>The Liber Mortis</Name>
-						<AddToCast Value="1"/>
-						<AddToWizard Value="1"/>
+						<AddToCast Val="1"/>
+						<AddToWizard Val="1"/>
 					</Arcana>
 				</Equipments>
 				<Options>
@@ -361,7 +361,7 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>6</Points>
@@ -470,7 +470,7 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Whip</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</HandWeapon>
 					<LightArmour/>
 				</Equipments>
@@ -495,7 +495,7 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>4</Points>
@@ -538,7 +538,7 @@
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>4</Points>
@@ -550,7 +550,7 @@
 					</Option>
 					<Option>
 						<Name>Halberd</Name>
-						<AddToStrength Value="1"/>
+						<AddToStrength Val="1"/>
 						<Dependency/>
 						<Points>2</Points>
 					</Option>
@@ -603,14 +603,14 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Whip</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 					</HandWeapon>
 					<LightArmour/>
 				</Equipments>
 				<Options>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>6</Points>
@@ -681,7 +681,7 @@
 				<Name>Skeleton Chariot</Name>
 				<Size>3+</Size>
 				<Chariot>2</Chariot>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Profile M='8' WS='2' BS='2' S='3' T='4' W='3' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
 					<ImpactHit>D6+1</ImpactHit>
@@ -824,7 +824,7 @@
 				<Size>3+</Size>
 				<Chariot>2</Chariot>
 				<Mount>Skeletal Steed</Mount>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Image>Chariots</Image>
 				<Profile M='8' WS='3' BS='2' S='3' T='4' W='3' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
@@ -946,7 +946,7 @@
 					<Option>
 						<Name>Additional hand weapon</Name>
 						<AddToStrength Value="-2"/>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency/>
 					</Option>
 					<Command>
@@ -1048,13 +1048,13 @@
 				<Options>
 					<Option>
 						<Name>Additional hand weapon</Name>
-						<AddToAttacks Value="1"/>
+						<AddToAttacks Val="1"/>
 						<Dependency/>
 						<Points>5</Points>
 					</Option>
 					<Option>
 						<Name>Great weapon</Name>
-						<AddToStrength Value="2"/>
+						<AddToStrength Val="2"/>
 						<HitLast/>
 						<Dependency/>
 						<Points>10</Points>
@@ -1117,7 +1117,7 @@
 			<Rare>
 				<Name>Screaming Skull Catapult</Name>
 				<Points>90</Points>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Mount>Skeleton Crew</Mount>
 				<Profile M='4' WS='2' BS='2' S='3' T='7' W='3' I='2' A='1' Ld='5'/>
 				<SpecialRules>
@@ -1138,7 +1138,7 @@
 			<Rare>
 				<Name>Casket of Souls</Name>
 				<Points>135</Points>
-				<ModelsInPack Value="4"/>
+				<ModelsInPack Val="4"/>
 				<Mount>Casket Guard</Mount>
 				<Profile T="10" W="3"/>
 				<SpecialRules>
