@@ -44,7 +44,9 @@ namespace WarhammerArmyAssembler.Interface
                     unit.PointsView = String.Format(" {0} pts (+{1} pts)", unit.Points, unit.StaticPoints);
 
                 unit.InterfaceColor = ArmyBook.Data.FrontColor;
-                categories[(int)unit.Type].Items.Add(unit);
+
+                int category = unit.DogsOfWar ? ArmyBook.Constants.DogsOfWarCategory : (int)unit.Type;
+                categories[category].Items.Add(unit);
             }
 
             foreach (Unit unitType in categories)

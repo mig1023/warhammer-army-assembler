@@ -170,6 +170,7 @@ namespace WarhammerArmyAssembler.Army
             new Unit() { Name = "Core" },
             new Unit() { Name = "Special" },
             new Unit() { Name = "Rare" },
+            new Unit() { Name = "Dogs of War" },
         };
 
         public static Unit GetArmyGeneral() => Data.Units.Values.Where(x => x.CurrentGeneral).FirstOrDefault();

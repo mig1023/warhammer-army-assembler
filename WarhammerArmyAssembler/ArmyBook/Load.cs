@@ -21,9 +21,11 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             XmlNodeList xmlNodes = xmlFile.SelectNodes(path);
 
+            bool dogsOfWar = !String.IsNullOrEmpty(currentArmyLimit);
+
             foreach (XmlNode xmlUnit in xmlNodes)
             {
-                if (!String.IsNullOrEmpty(currentArmyLimit) && CurrentArmyLimitFail(xmlUnit, currentArmyLimit))
+                if (dogsOfWar && CurrentArmyLimitFail(xmlUnit, currentArmyLimit))
                     continue;
 
                 int newID = GetNextIndex(); 

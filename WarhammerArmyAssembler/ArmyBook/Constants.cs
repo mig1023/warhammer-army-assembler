@@ -8,6 +8,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static double Hulf = 0.5;
         public static int BaseArmySize = 2000;
         public static int LargeArmySize = 3000;
+        public static int DogsOfWarCategory = 5;
 
         public static string CommonXmlOptionPath { get; set; }
         public static string EnemiesOptionPath { get; set; }
