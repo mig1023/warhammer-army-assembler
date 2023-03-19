@@ -71,7 +71,7 @@
 					<Name>The Fellblade</Name>
 					<Points>100</Points>
 					<StrengthTo Val="10"/>
-					<MultiWounds Value="D6"/>
+					<MultiWounds Val="D6"/>
 					<Reroll>OpponentToWard</Reroll>
 					<Rule>Wound wielder with no armour save at the end of each turns on a 3+</Rule>
 					<Description>This sword gives the bearer Stringth 10 and successful ward saves must be re-rolled. Any unsaved wounds caused by the Fellblade are multiplied into D6 wounds. Roll a D6 at the end of each of the wielder's turns; on a 3+ there is no effect. On a roll of 1-2 the wielder suffers 1 wound with no armour save allowed</Description>
@@ -101,7 +101,7 @@
 					<Name>Weeping Blade</Name>
 					<Points>30</Points>
 					<ArmourPiercing Val="1"/>
-					<MultiWounds Value="D3"/>
+					<MultiWounds Val="D3"/>
 					<Description>The Weeping Blade has the Armour Piercing special rule. Each unsaved wound is multiplied to D3 wounds</Description>
 				</Weapon>
 				<Weapon>
@@ -318,7 +318,7 @@
 				<Banner>
 					<Name>Grand Banner of Clan Superiority</Name>
 					<Points>30</Points>
-					<AddToCloseCombat Value="D3"/>
+					<AddToCloseCombat Val="D3"/>
 					<Description>In any combat in which a unit bearing a Grand Banner of Clan Superiority has more ranks than its opponents, the banner will add not 1 as per a normal banner, but instead a total of D3 to its bearer’s combat resolution. Roll at the end of each combat</Description>
 				</Banner>
 				<Banner>
@@ -527,7 +527,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Doom Glaive</Name>
-						<MultiWounds Value="D3"/>
+						<MultiWounds Val="D3"/>
 						<Rule>Each unsaved wound multiplied to D3 wound</Rule>
 					</HandWeapon>
 				</Equipments>
@@ -601,7 +601,7 @@
 					<HandWeapon>
 						<Name>Weeping Blade</Name>
 						<Rule>Armour Piercing</Rule>
-						<MultiWounds Value="D3"/>
+						<MultiWounds Val="D3"/>
 						<Rule>Each unsaved wound is multiplied to D3 wounds</Rule>
 					</HandWeapon>
 					<RangeWeapon>
@@ -1165,7 +1165,7 @@
 				<Options>
 					<Option>
 						<Name>Snare-net</Name>
-						<AddToAttacks Value="-1"/>
+						<AddToAttacks Val="-1"/>
 					</Option>
 					<Option>
 						<Name>Slings</Name>
