@@ -44,11 +44,11 @@
 				<Spell Name="The Call of the Hunt" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalXmlSpecialRules>
+		<LocalSpecialRules>
 			<Raiders/>
 			<Ambush/>
-		</LocalXmlSpecialRules>		
-		<LocalXmlOption>
+		</LocalSpecialRules>		
+		<LocalOption>
 			<MarkOfKhorne Name="Mark of Khorne">Frenzy; AddToDispell: 1</MarkOfKhorne>
 			<MarkOfNurgle Name="Mark of Nurgle">Fear; AddToWounds: 1</MarkOfNurgle>
 			<MarkOfTzBig Name="Mark of Tzeentch">AddToWizard: 4; AddToCast: 4; AddToDispell: 2</MarkOfTzBig>
@@ -60,7 +60,7 @@
 			<MarkOfNuFUnits Name="Mark of Nurgle">Fear</MarkOfNuFUnits>
 			<MarkOfTzFUnits Name="Mark of Tzeentch">AddToCast: 1</MarkOfTzFUnits>
 			<MarkOfSlFUnits Name="Mark of Slaanesh">ImmuneToPsychology</MarkOfSlFUnits>
-		</LocalXmlOption>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
