@@ -44,11 +44,11 @@
 				<Spell Name="The Comet of Cassanora" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalXmlSpecialRules>
+		<LocalSpecialRules>
 			<Daemonic/>
 			<FlamingAttacks/>
-		</LocalXmlSpecialRules>
-		<LocalXmlOption>
+		</LocalSpecialRules>
+		<LocalOption>
 			<Etherblade>MagicItemsPoints; NoArmour</Etherblade>
 			<ArmedMonstrosity Name="Armed Monstrosity">MagicItemsPoints; AddToAttacks: 2</ArmedMonstrosity>
 			<DRobes Name="Daemonic Robes">MagicItemsPoints;	Rule: Can never be wounded on better than a 3+</DRobes>
@@ -81,7 +81,7 @@
 			<IconOfWar Name="Icon of Endless War">Rule: Adds D6" to its first charge move</IconOfWar>
 			<BanOfEcstasy Name="Banner of Ecstasy">Stubborn</BanOfEcstasy>
 			<SirenStandard Name="Siren Standard">Rule: Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee</SirenStandard>
-		</LocalXmlOption>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts/>
