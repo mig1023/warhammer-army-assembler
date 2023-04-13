@@ -785,7 +785,8 @@ namespace WarhammerArmyAssembler.Interface
                 main.enemyTestUnit,
                 main.enemyGridContainer,
                 main.enemyGroupText,
-                main.enemyGroup
+                main.enemyGroup,
+                main.startBattleRoyale
             };
 
             foreach (FrameworkElement element in elements)
@@ -823,7 +824,6 @@ namespace WarhammerArmyAssembler.Interface
                 royalConsoleSize = -70;
 
                 main.startBattleRoyale.Visibility = Visibility.Visible;
-                main.startBattleRoyale.Margin = Thick(main.startStatisticTest, top: 10, left: 0);
             }
 
             if (unitTestHeight + 140 < main.armyUnitTestScroll.ActualHeight)
