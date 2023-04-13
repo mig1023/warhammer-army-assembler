@@ -418,8 +418,17 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
 
                 if (additionalParam["Original"] != null)
+                {
+                    if (additionalParam["Original"].SelectNodes("*").Count == 0)
+                    {
+                        XmlElement option = xml.CreateElement("Rule");
+                        option.InnerText = additionalParam["Original"].InnerText;
+                        additionalParam["Original"].AppendChild(option);
+                    }
+
                     newUnit.Options.Add(LoadOption(GetNextIndex(), additionalParam["Original"],
                         xml, commonXmlOption: enemyCommonXmlOption));
+                }
 
                 AddCommonXmlOptionBySpecialRules(xml, additionalParam, ref newUnit,
                     enemyCommonXmlOption ?? Constants.CommonXmlOption);
