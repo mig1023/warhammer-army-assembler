@@ -1,33 +1,76 @@
 <Options>
 	<Group Name="Options">
 		<HandWeapon Name="Hand weapon"/>
-		<AdditionalWeapon Name="Additional weapon">AddToAttacks: 1</AdditionalWeapon>		
-		<GreatWeapon Name="Great weapon">AddToStrength: 2; HitLast</GreatWeapon>
-		<Halberd>AddToStrength: 1</Halberd>
-		<Flail>Flail</Flail>
-		<TwoHandsWeapon Name="Two hands weapons">AddoAttacks: 1</TwoHandsWeapon>
+		<AdditionalWeapon Name="Additional weapon">
+			AddToAttacks: 1
+		</AdditionalWeapon>		
+		<GreatWeapon Name="Great weapon">
+			AddToStrength: 2;
+			HitLast
+		</GreatWeapon>
+		<Halberd>
+			AddToStrength: 1
+		</Halberd>
+		<Flail>
+			Flail
+		</Flail>
+		<TwoHandsWeapon Name="Two hands weapons">
+			AddoAttacks: 1
+		</TwoHandsWeapon>
 		<Spear/>
-		<Lance>Lance</Lance>
-		<LightArmour Name="Light armour">AddToArmour: 6</LightArmour>
-		<LightNativeArmour Name="Light armour">AddToArmour: 6; NativeArmour</LightNativeArmour>
-		<HeavyArmour Name="Heavy armour">AddToArmour: 5</HeavyArmour>
-		<HeavyNativeArmour Name="Heavy armour">AddToArmour: 5; NativeArmour</HeavyNativeArmour>
-		<Shield>AddToArmour: 6</Shield>
-		<ThickSkinned>AddToArmour: 5</ThickSkinned>
+		<Lance>
+			Lance
+		</Lance>
+		<LightArmour Name="Light armour">
+			AddToArmour: 6
+		</LightArmour>
+		<LightNativeArmour Name="Light armour">
+			AddToArmour: 6;
+			NativeArmour
+		</LightNativeArmour>
+		<HeavyArmour Name="Heavy armour">
+			AddToArmour: 5
+		</HeavyArmour>
+		<HeavyNativeArmour Name="Heavy armour">
+			AddToArmour: 5;
+			NativeArmour
+		</HeavyNativeArmour>
+		<Shield>
+			AddToArmour: 6
+		</Shield>
+		<ThickSkinned>
+			AddToArmour: 5
+		</ThickSkinned>
 		<CrossBow Name="Crossbow"/>
 		<Bow/>
 		<ShortBow Name="Short bow"/>
 		<LongBow Name="Longbow"/>
-		<Champion>Command</Champion>
-		<Musician>Command</Musician>
-		<StandardBearer Name="Standard bearer">Command</StandardBearer>
-		<BattleStandardBearer Name="Battle Standard Bearer">OnlyOneInArmy</BattleStandardBearer>
+		<Champion>
+			Command
+		</Champion>
+		<Musician>
+			Command
+		</Musician>
+		<StandardBearer Name="Standard bearer">
+			Command
+		</StandardBearer>
+		<BattleStandardBearer Name="Battle Standard Bearer">
+			OnlyOneInArmy
+		</BattleStandardBearer>
 	</Group>
 	<Group Name="Special rules">
-		<Fly>Rule: Fly</Fly>
-		<FlyingCavalry>Rule: Flying Cavalry</FlyingCavalry>
-		<LargeTarget>Rule: Large target</LargeTarget>
-		<Skirmishers>Rule: Skirmishers</Skirmishers>
+		<Fly>
+			Rule: Fly
+		</Fly>
+		<FlyingCavalry>
+			Rule: Flying Cavalry
+		</FlyingCavalry>
+		<LargeTarget>
+			Rule: Large target
+		</LargeTarget>
+		<Skirmishers>
+			Rule: Skirmishers
+		</Skirmishers>
 	</Group>
 	<Group Name="6ed/7ed common magic items">
 		<SwordOfStriking Name="Sword of Striking">
