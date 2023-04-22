@@ -605,6 +605,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (((name == "Champion") || (name == "Musician")) && (xmlNode.Attributes["Name"] != null))
                 name = xmlNode.Attributes["Name"].InnerText;
 
+            if ((name == "Hand weapon") && !String.IsNullOrEmpty(xmlNode.InnerText))
+                name = xmlNode.InnerText;
+
             AddToOption(xmlDocument, ref xmlNode, "Name", name);
 
             bool typesIncluded = false;
