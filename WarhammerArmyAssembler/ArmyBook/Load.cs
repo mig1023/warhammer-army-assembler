@@ -597,6 +597,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlNode.AppendChild(xmlDependencies);
         }
 
+        private static bool EmptyNameSpecific(string name) =>
+            (name == "Hand weapon") || (name == "Range weapon");
+
         private static void CreateOption(string name, string attributes, XmlDocument xmlDocument, ref XmlNode xmlNode)
         {
             if (xmlNode["Name"] != null)
@@ -605,7 +608,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (((name == "Champion") || (name == "Musician")) && (xmlNode.Attributes["Name"] != null))
                 name = xmlNode.Attributes["Name"].InnerText;
 
-            if ((name == "Hand weapon") && !String.IsNullOrEmpty(xmlNode.InnerText))
+            if (EmptyNameSpecific(name) && !String.IsNullOrEmpty(xmlNode.InnerText))
                 name = xmlNode.InnerText;
 
             AddToOption(xmlDocument, ref xmlNode, "Name", name);
