@@ -700,12 +700,21 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Countable = CountableParse(xmlNode["Countable"]),
                 ImpactHitByFront = BoolParse(xmlNode["ImpactHitByFront"]) ? 1 : 0,
                 ParamTests = ParamParse(xmlNode),
-                Points = DoubleParse(xmlNode["Points"]),
-                VirtueOriginalPoints = DoubleParse(xmlNode["Points"]),
                 MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]),
                 ArtefactGroup = artefactGroup ?? String.Empty,
                 TooltipColor = (SolidColorBrush)Data.TooltipColor,
             };
+
+            if (xmlNode["PointsPerModel"] != null)
+            {
+                newOption.Points = DoubleParse(xmlNode["PointsPerModel"]);
+                newOption.PerModel = true;
+            }
+            else
+            {
+                newOption.Points = DoubleParse(xmlNode["Points"]);
+                newOption.VirtueOriginalPoints = DoubleParse(xmlNode["Points"]);
+            }
 
             if (category != Option.OptionCategory.Nope)
                 newOption.Category = category;

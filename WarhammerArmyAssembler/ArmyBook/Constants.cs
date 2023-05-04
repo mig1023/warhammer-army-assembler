@@ -169,7 +169,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             "FirstWoundDiscount",
             "NotALeader",
             "General",
-            "PerModel",
             "MagicItemsPoints",
             "AddToWard",
             "AddToCast",
