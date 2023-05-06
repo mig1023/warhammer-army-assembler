@@ -6,11 +6,14 @@ namespace WarhammerArmyAssembler.Army
 {
     class Checks
     {
-        public static bool IsUnitExistInArmy(int unitID) => Data.Units.ContainsKey(unitID);
+        public static bool IsUnitExistInArmy(int unitID) =>
+            Data.Units.ContainsKey(unitID);
 
-        public static bool ThisIsAftefact(int id) => ArmyBook.Data.Artefact.ContainsKey(id);
+        public static bool ThisIsAftefact(int id) =>
+            ArmyBook.Data.Artefact.ContainsKey(id);
 
-        public static bool IsUnitExistInArmyByArmyBookID(int UnitID) => Data.Units.Values.Where(x => x.ID == UnitID).FirstOrDefault() != null;
+        public static bool IsUnitExistInArmyByArmyBookID(int UnitID) =>
+            Data.Units.Values.Where(x => x.ID == UnitID).FirstOrDefault() != null;
 
         public static bool IsRunicCombinationAlreadyExist(Unit unit, Option newOption)
         {
@@ -81,12 +84,12 @@ namespace WarhammerArmyAssembler.Army
             int limitForArmy = -1;
 
             if (unit.Type == Unit.UnitType.Special)
-                limitForArmy = (Data.MaxPoints >= ArmyBook.Constants.LargeArmySize ? 6 : 3);
+                limitForArmy = Data.MaxPoints >= ArmyBook.Constants.LargeArmySize ? 6 : 3;
 
             else if (unit.Type == Unit.UnitType.Rare)
-                limitForArmy = (Data.MaxPoints >= ArmyBook.Constants.LargeArmySize ? 4 : 2);
+                limitForArmy = Data.MaxPoints >= ArmyBook.Constants.LargeArmySize ? 4 : 2;
 
-            return (limitForArmy < 0 ? true : (alreadyInArmy < limitForArmy));
+            return limitForArmy < 0 ? true : (alreadyInArmy < limitForArmy);
         }
 
         public static bool IsArmyUnitMaxLimitOk(Unit newUnit) =>
@@ -114,14 +117,15 @@ namespace WarhammerArmyAssembler.Army
             if (Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core))
                 return "Not enough core unit in army";
 
-            else if (Params.GetArmyUnitsNumber(Unit.UnitType.Hero) + (Params.GetArmyUnitsNumber(Unit.UnitType.Lord)) <= 0)
+            else if (Params.GetArmyUnitsNumber(Unit.UnitType.Hero) + Params.GetArmyUnitsNumber(Unit.UnitType.Lord) <= 0)
                 return "Not enough characters in army";
 
             else
                 return String.Empty;
         }
 
-        public static bool IsArmyValid() => String.IsNullOrEmpty(ArmyProblems());
+        public static bool IsArmyValid() =>
+            String.IsNullOrEmpty(ArmyProblems());
 
         public static bool IsArmyFullForTypeIcrease(Unit unit)
         {
@@ -139,7 +143,7 @@ namespace WarhammerArmyAssembler.Army
             else
                 return false;
 
-            return Army.Params.GetArmyUnitsNumber(type) >= Army.Params.GetArmyMaxUnitsNumber(type);
+            return Params.GetArmyUnitsNumber(type) >= Params.GetArmyMaxUnitsNumber(type);
         }
     }
 }
