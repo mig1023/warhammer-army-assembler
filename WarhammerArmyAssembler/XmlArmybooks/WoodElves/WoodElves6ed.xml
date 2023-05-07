@@ -74,6 +74,9 @@
 				AddToAttacks: 1;
 				NotALeader
 			</Alter>
+			<Scout>
+				Rule: Scout
+			</Scout>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -525,12 +528,7 @@
 					<WildRider Points="50" Dependency="Skill"/>
 					<Waywatcher Points="45" Dependency="Skill"/>
 					<Alter Points="35" Dependency="Skill"/>
-					<Option>
-						<Name>Scout</Name>
-						<Points>25</Points>
-						<Rule>Scout</Rule>
-						<Dependency/>
-					</Option>
+					<Scout Points="25" Dependency="Skill"/>
 					<Option>
 						<Name>Eternal</Name>
 						<Points>10</Points>
