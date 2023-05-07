@@ -606,12 +606,7 @@
 					<MagicItems Points="50" Type="Hero"/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Dependency/>
-						<Points>4</Points>
-					</Option>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
 					<Option>
 						<Name>Spear</Name>
 						<Dependency/>
