@@ -51,7 +51,7 @@
 			<NoMundaneWeapons>Cannot choose any mundane weapons or armour</NoMundaneWeapons>
 		</LocalSpecialRules>
 		<LocalOption>
-			<VonCarsteinLord/>
+			<VonCarsteinLord Name="Von Carstein"/>
 			<NecrarchLord Name="Necrarch">
 				AddToWeaponSkill: -2;
 				Rule: +1 to the total rolled when trying to cast a spell;
@@ -807,42 +807,11 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Von Carstein</Name>
-						<Dependency/>
-					</Option>
-					<Option>
-						<Name>Necrarch</Name>
-						<Dependency/>
-						<AddToWeaponSkill Val="-2"/>
-						<Rule>+1 to the total rolled when trying to cast a spell</Rule>
-						<NoMundaneWeapons/>
-					</Option>
-					<Option>
-						<Name>Blood Dragon</Name>
-						<Dependency/>
-						<AddToWeaponSkill Val="2"/>
-						<AddToArmour Val="4"/>
-						<Rule>Full Plate Armour</Rule>
-						<Rule>Must always issue challenges and must always accept enemy challenges</Rule>
-					</Option>
-					<Option>
-						<Name>Strigoi</Name>
-						<Dependency/>
-						<AddToAttacks Val="1"/>
-						<Hate/>
-						<NoMundaneWeapons/>
-						<Rule>Cannot use any magic item</Rule>
-					</Option>
-					<Option>
-						<Name>Lahmia</Name>
-						<Dependency/>
-						<AddToInitiative Val="2"/>
-						<Hate/>
-						<Rule>All models in base contact suffer a -1 to their Leadership</Rule>
-						<NoMundaneWeapons/>
-						<AddToWeaponSkill Val="-1"/>
-					</Option>
+					<VonCarsteinLord Dependency="Blood"/>
+					<NecrarchLord Dependency="Blood"/>
+					<BloodDragonLord Dependency="Blood"/>
+					<StrigoiLord Dependency="Blood"/>
+					<LahmiaLord Dependency="Blood"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
