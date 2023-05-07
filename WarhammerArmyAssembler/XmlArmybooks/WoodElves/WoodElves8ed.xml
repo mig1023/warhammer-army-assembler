@@ -54,6 +54,7 @@
 			<BonusAttemptsToCast>+1 to all attempts to cast spells</BonusAttemptsToCast>
 		</LocalSpecialRules>
 		<LocalOption>
+			<AsraiLongbow Name="Asrai longbow"/>
 			<AsraiSpear Name="Asrai spear"/>
 			<HagbaneTips Name="Hagbane tips"/>
 			<TrueflightArrows Name="Trueflight arrows"/>
@@ -361,10 +362,7 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="4" Points="35"/>
-					<Option>
-						<Name>Asrai longbow</Name>
-						<Points>5</Points>
-					</Option>
+					<AsraiLongbow Points="5"/>
 					<Mount Name="Elven Steed" Points="20"/>
 					<Mount Name="Great Eagle" Points="50"/>
 					<Mount Name="Unicorn" Points="60"/>
