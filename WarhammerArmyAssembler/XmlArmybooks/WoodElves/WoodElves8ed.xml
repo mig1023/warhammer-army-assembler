@@ -648,11 +648,11 @@
 				</Equipments>
 				<Options>
 					<HagbaneTips PointsPerModel="3" Dependency="Range"/>
-					<TrueflightArrows Points="3" Dependency="Range"/>
-					<MoontireShot Points="4" Dependency="Range"/>
-					<StarfireShafts Points="4" Dependency="Range"/>
-					<SwiftshiverShards Points="4" Dependency="Range"/>
-					<ArcaneBodkins Points="5" Dependency="Range"/>
+					<TrueflightArrows PointsPerModel="3" Dependency="Range"/>
+					<MoontireShot PointsPerModel="4" Dependency="Range"/>
+					<StarfireShafts PointsPerModel="4" Dependency="Range"/>
+					<SwiftshiverShards PointsPerModel="4" Dependency="Range"/>
+					<ArcaneBodkins PointsPerModel="5" Dependency="Range"/>
 					<Command>
 						<Champion Points="10" Name="Lord's Bowman"/>
 						<Musician Points="5"/>
@@ -698,11 +698,7 @@
 					<RangeWeapon>Asrai longbow</RangeWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Hagbane tips</Name>
-						<PointsPerModel>3</PointsPerModel>
-						<Dependency/>
-					</Option>
+					<HagbaneTips PointsPerModel="3" Dependency="Range"/>
 					<Option>
 						<Name>Trueflight arrows</Name>
 						<PointsPerModel>3</PointsPerModel>
