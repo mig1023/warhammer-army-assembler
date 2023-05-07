@@ -62,6 +62,7 @@
 			<StarfireShafts Name="Starfire shafts"/>
 			<SwiftshiverShards Name="Swiftshiver shards"/>
 			<ArcaneBodkins Name="Arcane bodkins"/>
+			<Strangleroots>Rule: Shooting attack with Range 12", Strength 5 and Multiple Shots(D6+1)</Strangleroots>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -406,11 +407,7 @@
 						<AddToDispell Val="1"/>
 						<AddToWizard Val="2"/>
 					</Option>
-					<Option>
-						<Name>Strangleroots</Name>
-						<Rule>Shooting attack with Range 12", Strength 5 and Multiple Shots(D6+1)</Rule>
-						<Points>20</Points>
-					</Option>
+					<Strangleroots Points="20"/>
 				</Options>
 			</Lord>
 			<Hero>
@@ -1079,11 +1076,7 @@
 					<Original>A model can choose to make a single Tree Whack in place of making his normal close combat attacks. It must be declared before rolling To Hit. To resolve a Tree Whack, nominate an enemy model in base contact. That model must pass an Initiative test or suffer D6 Wounds with no armour saves allowed. A character with this special rule may make a Tree Whack in a challenge.</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Strangleroots</Name>
-						<Rule>Shooting attack with Range 12", Strength 5 and Multiple Shots(D6+1)</Rule>
-						<Points>20</Points>
-					</Option>
+					<Strangleroots Points="20"/>
 				</Options>
 			</Rare>
 		</Units>
