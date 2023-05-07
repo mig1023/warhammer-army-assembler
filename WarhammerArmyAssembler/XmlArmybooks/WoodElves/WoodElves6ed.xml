@@ -49,6 +49,16 @@
 			<StrangleRoots>Strangle-roots</StrangleRoots>
 			<TreeSinging/>
 		</LocalSpecialRules>
+		<LocalOption>
+			<Wardancer>
+				AddToStrength: 1;
+				AddToAttacks: 1;
+				Rule: Shadow dances of Loec;
+				ImmuneToPsychology;
+				AddToWard: 6,
+				Rule: Magic Resistance (1)
+			</Wardancer>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -495,17 +505,7 @@
 					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<LightArmour Points="3"/>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Wardancer</Name>
-						<Points>50</Points>
-						<AddToStrength Val="1"/>
-						<AddToAttacks Val="1"/>
-						<Rule>Shadow dances of Loec</Rule>
-						<ImmuneToPsychology/>
-						<AddToWard Val="6"/>
-						<Rule>Magic Resistance (1)</Rule>
-						<Dependency/>
-					</Option>
+					<Wardancer Points="50" Dependency="Skill"/>
 					<Option>
 						<Name>Wild Rider</Name>
 						<Points>50</Points>
