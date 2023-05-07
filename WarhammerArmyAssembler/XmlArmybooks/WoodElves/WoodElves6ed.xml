@@ -77,6 +77,9 @@
 			<Scout>
 				Rule: Scout
 			</Scout>
+			<Eternal>
+				AddToArmour: 5
+			</Eternal>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -529,12 +532,7 @@
 					<Waywatcher Points="45" Dependency="Skill"/>
 					<Alter Points="35" Dependency="Skill"/>
 					<Scout Points="25" Dependency="Skill"/>
-					<Option>
-						<Name>Eternal</Name>
-						<Points>10</Points>
-						<AddToArmour Val="5"/>
-						<Dependency/>
-					</Option>
+					<Eternal Points="10" Dependency="Skill"/>
 					<Option>
 						<Name>Great Stag</Name>
 						<Points>50</Points>
