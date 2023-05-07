@@ -69,6 +69,13 @@
 				NoMundaneWeapons;
 				Rule: Cannot use any magic item
 			</StrigoiLord>
+			<LahmiaLord>
+				AddToInitiative: 2;
+				Hate;
+				Rule: All models in base contact suffer a -1 to their Leadership;
+				NoMundaneWeapons;
+				AddToWeaponSkill: -1
+			</LahmiaLord>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -715,15 +722,7 @@
 					<NecrarchLord Dependency="Blood"/>
 					<BloodDragonLord Dependency="Blood"/>
 					<StrigoiLord Dependency="Blood"/>
-					<Option>
-						<Name>Lahmia</Name>
-						<Dependency/>
-						<AddToInitiative Val="2"/>
-						<Hate/>
-						<Rule>All models in base contact suffer a -1 to their Leadership</Rule>
-						<NoMundaneWeapons/>
-						<AddToWeaponSkill Val="-1"/>
-					</Option>
+					<LahmiaLord Dependency="Blood"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
