@@ -68,6 +68,12 @@
 				Rule: Lethal shot;
 				Rule: Forest Stalker
 			</Waywatcher>
+			<Alter>
+				MovementTo: 9;
+				InitiativeTo: 9;
+				AddToAttacks: 1;
+				NotALeader
+			</Alter>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -518,15 +524,7 @@
 					<Wardancer Points="50" Dependency="Skill"/>
 					<WildRider Points="50" Dependency="Skill"/>
 					<Waywatcher Points="45" Dependency="Skill"/>
-					<Option>
-						<Name>Alter</Name>
-						<Points>35</Points>
-						<MovementTo Val="9"/>
-						<InitiativeTo Val="9"/>
-						<AddToAttacks Val="1"/>
-						<NotALeader/>
-						<Dependency/>
-					</Option>
+					<Alter Points="35" Dependency="Skill"/>
 					<Option>
 						<Name>Scout</Name>
 						<Points>25</Points>
