@@ -445,13 +445,7 @@
 				</SpecialRules>
 				<Options>
 					<AsraiSpear Points="2" Dependency="Weapon"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Only>Infantry</Only>
-						<AddToAttacks Val="1"/>
-						<Dependency Group="Weapon"/>
-						<Points>2</Points>
-					</Option>
+					<AdditionalWeapon Points="2" Only="Infantry" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
