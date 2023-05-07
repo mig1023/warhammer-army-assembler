@@ -63,6 +63,12 @@
 				Rule: Full Plate Armour;
 				Rule: Must always issue challenges and must always accept enemy challenges
 			</BloodDragonLord>
+			<StrigoiLord>
+				AddToAttacks: 1;
+				Hate;
+				NoMundaneWeapons;
+				Rule: Cannot use any magic item
+			</StrigoiLord>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -708,14 +714,7 @@
 					<VonCarsteinLord Dependency="Blood"/>
 					<NecrarchLord Dependency="Blood"/>
 					<BloodDragonLord Dependency="Blood"/>
-					<Option>
-						<Name>Strigoi</Name>
-						<Dependency/>
-						<AddToAttacks Val="1"/>
-						<Hate/>
-						<NoMundaneWeapons/>
-						<Rule>Cannot use any magic item</Rule>
-					</Option>
+					<StrigoiLord Dependency="Blood"/>
 					<Option>
 						<Name>Lahmia</Name>
 						<Dependency/>
