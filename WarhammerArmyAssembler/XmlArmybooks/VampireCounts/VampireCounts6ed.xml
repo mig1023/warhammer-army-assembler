@@ -76,13 +76,13 @@
 				NoMundaneWeapons;
 				Rule: Cannot use any magic item
 			</Strigoi>
-			<LahmiaLord Name="Lahmia">
+			<Lahmia>
 				AddToInitiative: 2;
 				Hate;
 				Rule: All models in base contact suffer a -1 to their Leadership;
 				NoMundaneWeapons;
 				AddToWeaponSkill: -1
-			</LahmiaLord>
+			</Lahmia>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -729,7 +729,7 @@
 					<NecrarchLord Dependency="Blood"/>
 					<BloodDragonLord Dependency="Blood"/>
 					<Strigoi Dependency="Blood"/>
-					<LahmiaLord Dependency="Blood"/>
+					<Lahmia Dependency="Blood"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
@@ -818,7 +818,7 @@
 					<NecrarchLord Dependency="Blood"/>
 					<BloodDragonLord Dependency="Blood"/>
 					<Strigoi Dependency="Blood"/>
-					<LahmiaLord Dependency="Blood"/>
+					<Lahmia Dependency="Blood"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
@@ -931,15 +931,7 @@
 					<NecrarchHero Dependency="Blood"/>
 					<BloodDragonHero Dependency="Blood"/>
 					<Strigoi Dependency="Blood"/>
-					<Option>
-						<Name>Lahmia</Name>
-						<Dependency/>
-						<AddToInitiative Val="2"/>
-						<Hate/>
-						<Rule>All models in base contact suffer a -1 to their Leadership</Rule>
-						<NoMundaneWeapons/>
-						<AddToWeaponSkill Val="-1"/>
-					</Option>
+					<Lahmia Dependency="Blood"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
