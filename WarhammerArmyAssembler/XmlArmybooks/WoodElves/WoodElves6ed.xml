@@ -62,8 +62,12 @@
 				AddToWard: 5;
 				Rule: Magic Resistance (1);
 				AddToAttacks: 1;
-				ImmuneToPsychology;
+				ImmuneToPsychology
 			</WildRider>
+			<Waywatcher>
+				Rule: Lethal shot;
+				Rule: Forest Stalker
+			</Waywatcher>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -513,13 +517,7 @@
 					<Shield Points="3"/>
 					<Wardancer Points="50" Dependency="Skill"/>
 					<WildRider Points="50" Dependency="Skill"/>
-					<Option>
-						<Name>Waywatcher</Name>
-						<Points>45</Points>
-						<Rule>Lethal shot</Rule>
-						<Rule>Forest Stalker</Rule>
-						<Dependency/>
-					</Option>
+					<Waywatcher Points="45" Dependency="Skill"/>
 					<Option>
 						<Name>Alter</Name>
 						<Points>35</Points>
