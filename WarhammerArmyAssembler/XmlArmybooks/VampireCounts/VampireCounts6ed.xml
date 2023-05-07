@@ -52,6 +52,11 @@
 		</LocalSpecialRules>
 		<LocalOption>
 			<VonCarsteinLord/>
+			<NecrarchLord Name="Necrarch">
+				AddToWeaponSkill: -2;
+				Rule: +1 to the total rolled when trying to cast a spell;
+				NoMundaneWeapons
+			</NecrarchLord>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -695,17 +700,7 @@
 				</Equipments>
 				<Options>
 					<VonCarsteinLord Dependency="Blood"/>
-					<Option>
-						<Name>Von Carstein</Name>
-						<Dependency/>
-					</Option>
-					<Option>
-						<Name>Necrarch</Name>
-						<Dependency/>
-						<AddToWeaponSkill Val="-2"/>
-						<Rule>+1 to the total rolled when trying to cast a spell</Rule>
-						<NoMundaneWeapons/>
-					</Option>
+					<NecrarchLord Dependency="Blood"/>
 					<Option>
 						<Name>Blood Dragon</Name>
 						<Dependency/>
