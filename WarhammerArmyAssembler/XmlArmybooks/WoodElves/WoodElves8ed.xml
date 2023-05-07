@@ -329,12 +329,7 @@
 						<Dependency Group="Weapon"/>
 						<Points>3</Points>
 					</Option>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<Dependency Group="Weapon"/>
-						<Points>6</Points>
-					</Option>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<Shield Points="3"/>
 					<Option>
 						<Name>Hagbane tips</Name>
