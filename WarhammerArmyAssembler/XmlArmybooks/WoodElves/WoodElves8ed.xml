@@ -53,6 +53,9 @@
 			<Flammable/>
 			<BonusAttemptsToCast>+1 to all attempts to cast spells</BonusAttemptsToCast>
 		</LocalSpecialRules>
+		<LocalOption>
+			<AsraiSpear Name="Asrai spear"/>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -317,11 +320,7 @@
 					<Original>Once both sides have deployed, but before the first turn begins, check to see if the enemy General is within 36" and within line of sight of at least one of your models with this special rule. If he is, he immediately suffers a single Strength 3 hit against which no armour saves can be taken. Otherwise, nothing happens</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Asrai spear</Name>
-						<Dependency Group="Weapon"/>
-						<Points>3</Points>
-					</Option>
+					<AsraiSpear Points="3" Dependency="Weapon"/>
 					<AdditionalWeapon Points="3" Only="Infantry" Dependency="Weapon"/>
 					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<Shield Points="3"/>
