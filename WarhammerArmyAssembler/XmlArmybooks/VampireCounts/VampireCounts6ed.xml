@@ -50,6 +50,9 @@
 			<Ethereal/>
 			<NoMundaneWeapons>Cannot choose any mundane weapons or armour</NoMundaneWeapons>
 		</LocalSpecialRules>
+		<LocalOption>
+			<VonCarsteinLord/>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -691,6 +694,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
+					<VonCarsteinLord Dependency="Blood"/>
 					<Option>
 						<Name>Von Carstein</Name>
 						<Dependency/>
