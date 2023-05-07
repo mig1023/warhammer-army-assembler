@@ -55,6 +55,7 @@
 		</LocalSpecialRules>
 		<LocalOption>
 			<AsraiSpear Name="Asrai spear"/>
+			<HagbaneTips Name="Hagbane tips"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -324,11 +325,7 @@
 					<AdditionalWeapon Points="3" Only="Infantry" Dependency="Weapon"/>
 					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<Shield Points="3"/>
-					<Option>
-						<Name>Hagbane tips</Name>
-						<Points>3</Points>
-						<Dependency Group="Range"/>
-					</Option>
+					<HagbaneTips Points="3" Dependency="Range"/>
 					<Option>
 						<Name>Trueflight arrows</Name>
 						<Points>3</Points>
