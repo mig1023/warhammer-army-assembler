@@ -66,6 +66,10 @@
 				Rule: Full Plate Armour;
 				Rule: Must always issue challenges and must always accept enemy challenges
 			</BloodDragonLord>
+			<BloodDragonHero Name="Blood Dragon">
+				AddToWeaponSkill: 2;
+				Rule: Must always issue challenges and must always accept enemy challenges
+			</BloodDragonHero>
 			<StrigoiLord Name="Strigoi">
 				AddToAttacks: 1;
 				Hate;
@@ -925,12 +929,7 @@
 				<Options>
 					<VonCarstein Dependency="Blood"/>
 					<NecrarchHero Dependency="Blood"/>
-					<Option>
-						<Name>Blood Dragon</Name>
-						<Dependency/>
-						<AddToWeaponSkill Val="2"/>
-						<Rule>Must always issue challenges and must always accept enemy challenges</Rule>
-					</Option>
+					<BloodDragonHero Dependency="Blood"/>
 					<Option>
 						<Name>Strigoi</Name>
 						<Dependency/>
