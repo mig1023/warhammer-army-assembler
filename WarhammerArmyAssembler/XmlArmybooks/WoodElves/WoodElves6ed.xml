@@ -611,17 +611,7 @@
 					<GreatWeapon Points="4" Dependency="Weapon"/>
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
-					<Option>
-						<Name>Wardancer</Name>
-						<Points>30</Points>
-						<AddToStrength Val="1"/>
-						<AddToAttacks Val="1"/>
-						<Rule>Shadow dances of Loec</Rule>
-						<ImmuneToPsychology/>
-						<AddToWard Val="6"/>
-						<Rule>Magic Resistance (1)</Rule>
-						<Dependency/>
-					</Option>
+					<Wardancer Points="30" Dependency="Skill"/>
 					<Option>
 						<Name>Wild Rider</Name>
 						<Points>35</Points>
