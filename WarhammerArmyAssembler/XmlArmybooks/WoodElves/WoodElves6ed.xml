@@ -612,15 +612,7 @@
 					<LightArmour Points="2"/>
 					<Shield Points="2"/>
 					<Wardancer Points="30" Dependency="Skill"/>
-					<Option>
-						<Name>Wild Rider</Name>
-						<Points>35</Points>
-						<AddToWard Val="5"/>
-						<Rule>Magic Resistance (1)</Rule>
-						<AddToAttacks Val="1"/>
-						<ImmuneToPsychology/>
-						<Dependency/>
-					</Option>
+					<WildRider Points="35" Dependency="Skill"/>
 					<Option>
 						<Name>Waywatcher</Name>
 						<Points>35</Points>
