@@ -446,13 +446,7 @@
 				<Options>
 					<AsraiSpear Points="2" Dependency="Weapon"/>
 					<AdditionalWeapon Points="2" Only="Infantry" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Dependency Group="Weapon"/>
-						<Points>4</Points>
-					</Option>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
 					<Shield Points="2"/>
 					<Option>
 						<Name>Hagbane tips</Name>
