@@ -70,12 +70,12 @@
 				AddToWeaponSkill: 2;
 				Rule: Must always issue challenges and must always accept enemy challenges
 			</BloodDragonHero>
-			<StrigoiLord Name="Strigoi">
+			<Strigoi>
 				AddToAttacks: 1;
 				Hate;
 				NoMundaneWeapons;
 				Rule: Cannot use any magic item
-			</StrigoiLord>
+			</Strigoi>
 			<LahmiaLord Name="Lahmia">
 				AddToInitiative: 2;
 				Hate;
@@ -728,7 +728,7 @@
 					<VonCarstein Dependency="Blood"/>
 					<NecrarchLord Dependency="Blood"/>
 					<BloodDragonLord Dependency="Blood"/>
-					<StrigoiLord Dependency="Blood"/>
+					<Strigoi Dependency="Blood"/>
 					<LahmiaLord Dependency="Blood"/>
 					<Option>
 						<Name>Great weapon</Name>
@@ -817,7 +817,7 @@
 					<VonCarstein Dependency="Blood"/>
 					<NecrarchLord Dependency="Blood"/>
 					<BloodDragonLord Dependency="Blood"/>
-					<StrigoiLord Dependency="Blood"/>
+					<Strigoi Dependency="Blood"/>
 					<LahmiaLord Dependency="Blood"/>
 					<Option>
 						<Name>Great weapon</Name>
@@ -930,14 +930,7 @@
 					<VonCarstein Dependency="Blood"/>
 					<NecrarchHero Dependency="Blood"/>
 					<BloodDragonHero Dependency="Blood"/>
-					<Option>
-						<Name>Strigoi</Name>
-						<Dependency/>
-						<AddToAttacks Val="1"/>
-						<Hate/>
-						<NoMundaneWeapons/>
-						<Rule>Cannot use any magic item</Rule>
-					</Option>
+					<Strigoi Dependency="Blood"/>
 					<Option>
 						<Name>Lahmia</Name>
 						<Dependency/>
