@@ -322,13 +322,7 @@
 						<Dependency Group="Weapon"/>
 						<Points>3</Points>
 					</Option>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Only>Infantry</Only>
-						<AddToAttacks Val="1"/>
-						<Dependency Group="Weapon"/>
-						<Points>3</Points>
-					</Option>
+					<AdditionalWeapon Points="3" Only="Infantry" Dependency="Weapon"/>
 					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<Shield Points="3"/>
 					<Option>
