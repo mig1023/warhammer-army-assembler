@@ -739,14 +739,7 @@
 					<Shield Points="3" Dependencies="On: Blood Dragon"/>
 					<Wizard Level="3" Points="50"/>
 					<Mount Name="Nightmare" Points="12" Dependencies="Off: Strigoi"/>
-					<Option>
-						<Name>Barding</Name>
-						<Points>6</Points>
-						<Dependencies>
-							<On>Nightmare</On>
-						</Dependencies>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Barding Points="6" Dependencies="On: Nightmare"/>
 					<Option>
 						<Name>Winged Nightmare</Name>
 						<Points>175</Points>
