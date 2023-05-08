@@ -83,6 +83,9 @@
 				NoMundaneWeapons;
 				AddToWeaponSkill: -1
 			</Lahmia>
+			<Barding>
+				AddToArmour: 6
+			</Barding>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -938,22 +941,8 @@
 					<LightArmour Points="2" Dependencies="Heavy armour; On: Von Carstein, Blood Dragon"/>
 					<HeavyArmour Points="4" Dependencies="Light armour; On: Von Carstein, Blood Dragon"/>
 					<Shield Points="2" Dependencies="On: Blood Dragon, Von Carstein"/>
-					<Option>
-						<Name>Nightmare</Name>
-						<Points>12</Points>
-						<Dependencies>
-							<Off>Strigoi</Off>
-						</Dependencies>
-						<Mount/>
-					</Option>
-					<Option>
-						<Name>Barding</Name>
-						<Points>6</Points>
-						<Dependencies>
-							<On>Nightmare</On>
-						</Dependencies>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Mount Name="Nightmare" Points="12" Dependencies="Off: Strigoi"/>
+					<Barding Points="6" Dependencies="On: Nightmare"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
 			</Hero>
