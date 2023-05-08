@@ -848,14 +848,7 @@
 				<Options>
 					<Wizard Level="4" Points="35"/>
 					<Mount Name="Nightmare" Points="12"/>
-					<Option>
-						<Name>Barding</Name>
-						<Points>6</Points>
-						<Dependencies>
-							<On>Nightmare</On>
-						</Dependencies>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Barding Points="6" Dependencies="On: Nightmare"/>
 					<Mount Name="Winged Nightmare" Points="175"/>
 					<Mount Name="Zombie Dragon" Points="300"/>
 				</Options>
