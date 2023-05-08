@@ -934,15 +934,7 @@
 					<Lahmia Dependency="Blood"/>
 					<GreatWeapon Points="4" Dependencies="Off: Additional weapon, Lance; On: Von Carstein, Blood Dragon"/>
 					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon, Lance; On: Von Carstein, Blood Dragon"/>
-					<Option>
-						<Name>Lance</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<On>Von Carstein, Blood Dragon</On>
-						</Dependencies>
-						<Points>4</Points>
-						<Lance/>
-					</Option>
+					<Lance Points="4" Dependencies="Off: Additional weapon, Great weapon; On: Von Carstein, Blood Dragon"/>
 					<LightArmour Points="2" Dependencies="Heavy armour; On: Von Carstein, Blood Dragon"/>
 					<HeavyArmour Points="4" Dependencies="Light armour; On: Von Carstein, Blood Dragon"/>
 					<Option>
