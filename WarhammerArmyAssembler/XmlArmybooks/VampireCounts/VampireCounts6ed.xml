@@ -823,14 +823,7 @@
 					<Strigoi Dependency="Blood"/>
 					<Lahmia Dependency="Blood"/>
 					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Lance; On: Von Carstein, Blood Dragon"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<Dependencies>
-							<On>Von Carstein, Blood Dragon</On>
-						</Dependencies>
-						<AddToAttacks Val="1"/>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6" Dependencies="Off: Great weapon, Lance; On: Von Carstein, Blood Dragon"/>
 					<Option>
 						<Name>Lance</Name>
 						<Only>Mount</Only>
