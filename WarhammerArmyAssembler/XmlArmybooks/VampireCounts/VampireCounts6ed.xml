@@ -736,14 +736,7 @@
 					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Lance; On: Von Carstein, Blood Dragon"/>
 					<AdditionalWeapon Points="6" Dependencies="Off: Great weapon, Lance; On: Von Carstein, Blood Dragon"/>
 					<Lance Points="6" Only="Mount" Dependencies="Off: Additional weapon, Great weapon; On: Von Carstein, Blood Dragon"/>
-					<Option>
-						<Name>Shield</Name>
-						<Points>3</Points>
-						<Dependencies>
-							<On>Blood Dragon</On>
-						</Dependencies>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Shield Points="3" Dependencies="On: Blood Dragon"/>
 					<Wizard Level="3" Points="50"/>
 					<Option>
 						<Name>Nightmare</Name>
