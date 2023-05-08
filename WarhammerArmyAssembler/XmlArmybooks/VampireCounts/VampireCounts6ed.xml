@@ -932,8 +932,8 @@
 					<BloodDragonHero Dependency="Blood"/>
 					<Strigoi Dependency="Blood"/>
 					<Lahmia Dependency="Blood"/>
-					<GreatWeapon Points="4" Dependencies="Weapon, On: Von Carstein, Blood Dragon"/>
-					<AdditionalWeapon Points="4" Dependencies="Weapon, On: Von Carstein, Blood Dragon"/>
+					<GreatWeapon Points="4" Dependencies="Off: Additional weapon, Lance; On: Von Carstein, Blood Dragon"/>
+					<AdditionalWeapon Points="4" Dependencies="Off: Great weapon, Lance; On: Von Carstein, Blood Dragon"/>
 					<Option>
 						<Name>Lance</Name>
 						<Only>Mount</Only>
