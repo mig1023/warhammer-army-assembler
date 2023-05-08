@@ -932,14 +932,7 @@
 				</Equipments>
 				<Options>
 					<Mount Name="Nightmare" Points="8"/>
-					<Option>
-						<Name>Barding</Name>
-						<Points>4</Points>
-						<Dependencies>
-							<On>Nightmare</On>
-						</Dependencies>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Barding Points="4" Dependencies="On: Nightmare"/>
 				</Options>
 			</Hero>
 			<Hero>
