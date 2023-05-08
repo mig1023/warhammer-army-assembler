@@ -644,13 +644,7 @@
 				<Options>
 					<Wizard Level="2" Points="35"/>
 					<AdditionalWeapon Points="3" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Points>8</Points>
-						<Dependency/>
-					</Option>
+					<GreatWeapon Points="8" Dependency="Weapon"/>
 					<Option>
 						<Name>Lance</Name>
 						<Only>Mount</Only>
