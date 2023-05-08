@@ -52,6 +52,11 @@
 			<MayUseInvocation>The Vampire may use Invocation of Nehek to increase units of Skeleton Warriors beyond their starting size, and adds +1 to his casting roll when casting Invocation of Nehek on these units</MayUseInvocation>
 			<FlamingAttacks/>
 		</LocalSpecialRules>
+		<LocalOption>
+			<Barding>
+				AddToArmour: 6
+			</Barding>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -644,13 +649,7 @@
 					<AdditionalWeapon Points="8" Only="Infantry"/>
 					<Lance Points="12" Only="Mount"/>
 					<Mount Name="Skeletal Steed" Points="15"/>
-					<Option>
-						<Name>Barding for Skeletal Steed</Name>
-						<Dependencies>
-							<On>Skeletal Steed</On>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
+					<Barding Points="5" Dependencies="On: Skeletal Steed"/>
 				</Options>
 			</Hero>
 		</Heroes>
