@@ -932,15 +932,7 @@
 					<BloodDragonHero Dependency="Blood"/>
 					<Strigoi Dependency="Blood"/>
 					<Lahmia Dependency="Blood"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<Dependencies>
-							<On>Von Carstein, Blood Dragon</On>
-						</Dependencies>
-						<HitLast/>
-						<Points>4</Points>
-					</Option>
+					<GreatWeapon Points="4" Dependencies="Weapon, On: Von Carstein, Blood Dragon"/>
 					<Option>
 						<Name>Additional weapon</Name>
 						<Dependencies>
