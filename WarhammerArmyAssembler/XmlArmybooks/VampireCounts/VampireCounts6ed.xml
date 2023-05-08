@@ -733,15 +733,7 @@
 					<BloodDragonLord Dependency="Blood"/>
 					<Strigoi Dependency="Blood"/>
 					<Lahmia Dependency="Blood"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<Dependencies>
-							<On>Von Carstein, Blood Dragon</On>
-						</Dependencies>
-						<HitLast/>
-						<Points>6</Points>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Additional weapon, Lance; On: Von Carstein, Blood Dragon"/>
 					<Option>
 						<Name>Additional weapon</Name>
 						<Dependencies>
