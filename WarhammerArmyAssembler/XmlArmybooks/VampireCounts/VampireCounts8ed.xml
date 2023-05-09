@@ -54,6 +54,11 @@
 			<TheHunger/>
 			<Loremaster/>
 		</LocalSpecialRules>
+		<LocalOption>
+			<Balefire>
+				Rule: Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"
+			</Balefire>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -798,12 +803,7 @@
 					<Original>Vigour Mortis</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Balefire</Name>
-						<Points>15</Points>
-						<Dependency/>
-						<Rule>Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"</Rule>
-					</Option>
+					<Balefire Points="15" Dependency="Skill"/>
 					<Option>
 						<Name>Unholy Lodestone</Name>
 						<Points>30</Points>
