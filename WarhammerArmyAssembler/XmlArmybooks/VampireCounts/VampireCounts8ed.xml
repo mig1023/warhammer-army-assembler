@@ -1188,12 +1188,7 @@
 				</SpecialRules>
 				<Options>
 					<RancidMaw Points="15" Dependency="Skill"/>
-					<Option>
-						<Name>Infested</Name>
-						<Points>10</Points>
-						<Dependency/>
-						<Rule>When Terrorgheist removed as casualty, all units in base contact (friend or foe) take 3D6 Strength 2 hits</Rule>
-					</Option>
+					<Infested Points="10" Dependency="Skill"/>
 				</Options>
 			</Rare>
 			<Rare>
