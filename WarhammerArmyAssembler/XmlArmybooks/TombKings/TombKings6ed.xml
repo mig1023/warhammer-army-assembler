@@ -43,6 +43,11 @@
 			<FastCavalry/>
 			<FromBelow>"It Came From Below..."</FromBelow>
 		</LocalSpecialRules>
+		<LocalOption>
+			<ShieldsAndSpears Name="Shields and spears">
+				AddToArmour: 6
+			</ShieldsAndSpears>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -513,13 +518,8 @@
 					<Bow/>
 				</Equipments>
 				<Options>
-					<Shield Dependency="Weapon"/>
-					<Option>
-						<Name>Shields and spears</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<Dependency/>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Shield PointsPerModel="0" Dependency="Weapon"/>
+					<ShieldsAndSpears PointsPerModel="1" Dependency="Weapon"/>
 					<LightArmour PointsPerModel="1"/>
 					<Command>
 						<Musician Points="5"/>
