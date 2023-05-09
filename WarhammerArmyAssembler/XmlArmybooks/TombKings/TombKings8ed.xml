@@ -356,13 +356,7 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="6" Dependency="Weapon"/>
-					<Option>
-						<Name>Flail</Name>
-						<Only>Infantry</Only>
-						<Flail/>
-						<Dependency/>
-						<Points>6</Points>
-					</Option>
+					<Flail Points="6" Only="Infantry" Dependency="Weapon"/>
 					<Option>
 						<Name>Spear</Name>
 						<Dependency/>
