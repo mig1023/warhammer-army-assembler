@@ -381,11 +381,7 @@
 				<Options>
 					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<Flail Points="3" Only="Infantry" Dependency="Weapon"/>
-					<Option>
-						<Name>Spear</Name>
-						<Dependency/>
-						<Points>3</Points>
-					</Option>
+					<Spear Points="3" Dependency="Weapon"/>
 					<LightArmour Points="3"/>
 					<Shield Points="3"/>
 					<Mount Name="Chariot" Points="45"/>
