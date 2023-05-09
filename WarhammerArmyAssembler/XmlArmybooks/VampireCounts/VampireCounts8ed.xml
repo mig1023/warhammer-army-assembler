@@ -927,12 +927,7 @@
 						<Points>1</Points>
 					</Option>
 					<Balefire Points="15" Dependency="Skill"/>
-					<Option>
-						<Name>Unholy Lodestone</Name>
-						<Points>30</Points>
-						<Dependency/>
-						<Rule>When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored</Rule>
-					</Option>
+					<UnholyLodestone Points="30" Dependency="Skill"/>
 				</Options>
 			</Special>
 			<Special>
