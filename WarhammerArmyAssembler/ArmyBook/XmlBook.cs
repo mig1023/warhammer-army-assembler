@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
+using System.Windows;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
@@ -114,8 +115,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                     {
                         xmlFile.Load(file);
                     }
-                    catch (XmlException)
+                    catch (XmlException ex)
                     {
+                        MessageBox.Show(ex.Message, String.Format("{0} xml error", Path.GetFileName(file)));
                         continue;
                     }
 
