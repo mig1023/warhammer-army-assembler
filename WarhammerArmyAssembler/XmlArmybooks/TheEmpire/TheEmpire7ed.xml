@@ -572,14 +572,7 @@
 					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="3"/>
 					<Mount Name="Warhorse" Points="15"/>
-					<Option>
-						<Name>Barding for Warhorse</Name>
-						<AddToArmour Val="6"/>
-						<Dependencies>
-							<On>Warhorse</On>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<Barding Points="6" Dependencies="On: Warhorse"/>
 					<Mount Name="The War Altar" Points="100"/>
 				</Options>
 			</Lord>
