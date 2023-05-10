@@ -60,6 +60,10 @@
 			</FullPlateArmour>
 			<Pistol/>
 			<Handgun/>
+			<TwoHandedWarhammer Name="Two-handed warhammer">
+				<AddToStrength Val="2"/>
+				<HitLast/>
+			</TwoHandedWarhammer>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -559,12 +563,7 @@
 					</Arcane>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Two-handed warhammer</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Points>6</Points>
-					</Option>
+					<TwoHandedWarhammer Points="6"/>
 					<Option>
 						<Name>Second warhammer</Name>
 						<AddToAttacks Val="1"/>
