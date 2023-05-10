@@ -50,6 +50,11 @@
 			<HitsIfModelRemoved>If a model removed from play, then the enemy unit responsible will immediately suffer D6 Strength 5 hits</HitsIfModelRemoved>
 			<Entombed>Entombed Beneath the Send</Entombed>
 		</LocalSpecialRules>
+		<LocalOption>
+			<EnvenomedSting Name="Envenomed Sting">
+				PoisonAttack
+			</EnvenomedSting>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -624,11 +629,7 @@
 					<Original>Thundercrush Attack (though it can still Thunderstomp)</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Envenomed Sting</Name>
-						<PoisonAttack/>
-						<Points>10</Points>
-					</Option>
+					<EnvenomedSting Points="10"/>
 					<Option>
 						<Name>Fiery Roar</Name>
 						<Rule>A Khemrian Warsphinx has a Strength 4 Breath Weapon with the Flaming Attacks special rule</Rule>
