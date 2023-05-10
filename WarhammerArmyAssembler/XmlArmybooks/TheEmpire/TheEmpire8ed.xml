@@ -74,6 +74,10 @@
 				Rule: Enemy units must roll an additional D6, discarding the lowest result, for Leadership tests caused by this beast's Fear of Terror special rules;
 				AddToArmour: 6
 			</Bloodroar>
+			<TwoHeads Name="Two Heads">
+				AddToAttacks: 1;
+				Rule: +1 To Hit against models with the Large Target special rule
+			</TwoHeads>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -787,12 +791,7 @@
 				</SpecialRules>
 				<Options>
 					<Bloodroar Points="25"/>
-					<Option>
-						<Name>Two Heads</Name>
-						<AddToAttacks Val="1"/>
-						<Rule>+1 To Hit against models with the Large Target special rule</Rule>
-						<Points>30</Points>
-					</Option>
+					<TwoHeads Points="30"/>
 				</Options>
 			</Mount>
 			<Mount>
