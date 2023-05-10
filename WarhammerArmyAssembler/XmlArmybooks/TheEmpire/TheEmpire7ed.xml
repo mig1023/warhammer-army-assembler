@@ -664,14 +664,7 @@
 					<FullPlateArmour Points="8" Dependency="Armour"/>
 					<Shield Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
-					<Option>
-						<Name>Barding for Warhorse</Name>
-						<AddToArmour Val="6"/>
-						<Dependencies>
-							<On>Warhorse</On>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<Barding Points="4" Dependencies="On: Warhorse"/>
 					<Mount Name="Imperial Pegasus" Points="50"/>
 					<Mount Name="Griffon" Points="200"/>
 					<BattleStandardBearer Points="25"/>
