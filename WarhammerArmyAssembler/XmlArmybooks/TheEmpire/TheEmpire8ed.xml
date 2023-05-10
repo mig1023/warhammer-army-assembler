@@ -78,6 +78,9 @@
 				AddToAttacks: 1;
 				Rule: +1 To Hit against models with the Large Target special rule
 			</TwoHeads>
+			<IronHardHoove Name="Iron-hard Hoove">
+				Rule: Re-rolls failed To Wound rolls when making a Stomp
+			</IronHardHoove>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -801,11 +804,7 @@
 					<Fly/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Iron-hard Hooves</Name>
-						<Points>5</Points>
-						<Rule>Re-rolls failed To Wound rolls when making a Stomp</Rule>
-					</Option>
+					<IronHardHoove Points="5"/>
 					<Option>
 						<Name>Swift as the Wind</Name>
 						<Rule>Re-roll ant dice results of a 1 when determining its charge range</Rule>
