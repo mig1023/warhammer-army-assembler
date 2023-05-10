@@ -68,6 +68,8 @@
 			<GrenadeBlunderbuss Name="Grenade blunderbuss"/>
 			<HochlandLongRifle Name="Hochland long rifle"/>
 			<PigeonBombs Name="Pigeon bombs"/>
+			<RepeaterHandgun Name="Repeater handgun"/>
+			<RepeaterPistol Name="Repeater pistol"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -706,19 +708,11 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<GrenadeBlunderbuss Points="10" Dependency="Weapon"/>
-					<HochlandLongRifle Points="20" Dependency="Weapon"/>
-					<PigeonBombs Points="20" Dependency="Weapon"/>
-					<Option>
-						<Name>Repeater handgun</Name>
-						<Dependency/>
-						<Points>10</Points>
-					</Option>
-					<Option>
-						<Name>Repeater pistol</Name>
-						<Dependency/>
-						<Points>10</Points>
-					</Option>
+					<GrenadeBlunderbuss Points="10" Dependency="Range"/>
+					<HochlandLongRifle Points="20" Dependency="Range"/>
+					<PigeonBombs Points="20" Dependency="Range"/>
+					<RepeaterHandgun Points="10" Dependency="Range"/>
+					<RepeaterPistol Points="10" Dependency="Range"/>
 					<Option>
 						<Name>Pistol</Name>
 						<Dependency/>
