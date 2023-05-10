@@ -57,6 +57,7 @@
 			<FieryRoar Name="Fiery Roar">
 				Rule: A Khemrian Warsphinx has a Strength 4 Breath Weapon with the Flaming Attacks special rule
 			</FieryRoar>
+			<BowOfDesert Name="Bow of the desert"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -952,11 +953,7 @@
 				<Options>
 					<AdditionalWeapon Points="5" Dependency="Weapon"/>
 					<GreatWeapon Points="10" Dependency="Weapon"/>
-					<Option>
-						<Name>Bow of the desert</Name>
-						<Dependency/>
-						<Points>20</Points>
-					</Option>
+					<BowOfDesert Points="20" Dependency="Weapon"/>
 				</Options>
 			</Rare>
 			<Rare>
