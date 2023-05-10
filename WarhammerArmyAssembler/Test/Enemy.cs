@@ -50,6 +50,12 @@ namespace WarhammerArmyAssembler
         public static void Clean() =>
             EnemiesDirectories = new Dictionary<string, List<Enemy>>();
 
+        public static bool AlreadyLoaded() =>
+            EnemiesDirectories != null;
+
+        public static bool CantBeLoaded() =>
+         String.IsNullOrEmpty(ArmyBook.Constants.EnemiesOptionPath);
+
         public static void Add(XmlNode xmlEnemy, XmlNode xmlSize, XmlNode xmlType)
         {
             List<string> enemyPath = xmlEnemy.InnerText

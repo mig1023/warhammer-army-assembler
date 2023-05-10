@@ -453,6 +453,8 @@ namespace WarhammerArmyAssembler
             if (container == null)
                 return;
 
+            ArmyBook.Load.Enemies();
+
             Interface.Test.TestCanvasPrepare(container.DataContext as Unit);
             Interface.Changes.Move(Interface.Changes.MovingType.ToRight);
         }

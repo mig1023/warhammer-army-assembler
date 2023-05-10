@@ -216,9 +216,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             return ruleList;
         }
 
-        private static void LoadEnemies()
+        public static void Enemies()
         {
-            if (String.IsNullOrEmpty(Constants.EnemiesOptionPath))
+            if (Enemy.AlreadyLoaded() || Enemy.CantBeLoaded())
                 return;
 
             Enemy.Clean();
@@ -248,8 +248,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.Units.Clear();
             Data.Mounts.Clear();
             Data.Artefact.Clear();
-
-            LoadEnemies();
 
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(xmlFileName);
