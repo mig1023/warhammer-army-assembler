@@ -60,6 +60,7 @@
 			<Barding Name="Barding for Warhorse">
 				AddToArmour: 6
 			</Barding>
+			<RepeaterPistol Name="Repeater pistol"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -587,11 +588,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Repeater pistol</Name>
-						<Points>10</Points>
-						<Dependency/>
-					</Option>
+					<RepeaterPistol Points="10" Dependency="Weapon"/>
 					<Option>
 						<Name>Handgun</Name>
 						<Points>15</Points>
