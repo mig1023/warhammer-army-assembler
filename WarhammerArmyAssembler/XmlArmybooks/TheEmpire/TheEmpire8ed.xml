@@ -65,6 +65,7 @@
 			<Barding Name="Barding for Warhorse">
 				AddToArmour: 6
 			</Barding>
+			<GrenadeBlunderbuss Name="Grenade blunderbuss"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -703,11 +704,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Grenade blunderbuss</Name>
-						<Dependency/>
-						<Points>10</Points>
-					</Option>
+					<GrenadeBlunderbuss Points="10" Dependency="Weapon"/>
 					<Option>
 						<Name>Hochland long rifke</Name>
 						<Dependency/>
