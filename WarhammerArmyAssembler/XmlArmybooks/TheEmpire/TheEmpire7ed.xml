@@ -61,9 +61,12 @@
 			<Pistol/>
 			<Handgun/>
 			<TwoHandedWarhammer Name="Two-handed warhammer">
-				<AddToStrength Val="2"/>
-				<HitLast/>
+				AddToStrength: 2;
+				HitLast
 			</TwoHandedWarhammer>
+			<SecondWarhammer Name="Second warhammer">
+				AddToAttacks: 1
+			</SecondWarhammer>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -564,11 +567,7 @@
 				</Equipments>
 				<Options>
 					<TwoHandedWarhammer Points="6"/>
-					<Option>
-						<Name>Second warhammer</Name>
-						<AddToAttacks Val="1"/>
-						<Points>6</Points>
-					</Option>
+					<SecondWarhammer Points="6" Dependencies="On: Two-handed warhammer"/>
 					<LightArmour Points="2" Dependency="Armour"/>
 					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="3"/>
