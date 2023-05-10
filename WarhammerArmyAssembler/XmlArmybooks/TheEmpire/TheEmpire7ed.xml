@@ -591,14 +591,7 @@
 				<Options>
 					<Wizard Level="4" Points="35"/>
 					<Mount Name="Warhorse" Points="15"/>
-					<Option>
-						<Name>Barding for Warhorse</Name>
-						<AddToArmour Val="6"/>
-						<Dependencies>
-							<On>Warhorse</On>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<Barding Points="6" Dependencies="On: Warhorse"/>
 					<Mount Name="Imperial Pegasus" Points="50"/>
 				</Options>
 			</Lord>
