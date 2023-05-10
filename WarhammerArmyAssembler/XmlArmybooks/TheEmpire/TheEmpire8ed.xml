@@ -638,14 +638,7 @@
 					<Shield Points="2"/>
 					<Mount Name="Imperial Pegasus" Points="45"/>
 					<Mount Name="Warhorse" Points="12"/>
-					<Option>
-						<Name>Barding for warhorse</Name>
-						<Dependencies>
-							<On>Warhorse</On>
-						</Dependencies>
-						<Points>4</Points>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Barding Points="4" Dependencies="On: Warhorse"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
 			</Hero>
