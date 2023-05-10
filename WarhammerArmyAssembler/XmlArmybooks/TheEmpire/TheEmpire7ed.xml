@@ -70,6 +70,7 @@
 			<Barding Name="Barding for Warhorse">
 				AddToArmour: 6
 			</Barding>
+			<RepeaterPistol Name="Repeater pistol"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -736,10 +737,7 @@
 					<Mount Name="Warhorse" Points="10"/>
 					<Barding Points="4" Dependencies="On: Warhorse"/>
 					<Mount Name="Mechanical Steed" Points="25"/>
-					<Option>
-						<Name>Repeater pistol</Name>
-						<Points>10</Points>
-					</Option>
+					<RepeaterPistol Points="10"/>
 					<Option>
 						<Name>Hochland long rifle</Name>
 						<Points>20</Points>
