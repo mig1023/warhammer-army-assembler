@@ -513,14 +513,7 @@
 						<OnlyOneInArmy/>
 					</Option>
 					<Mount Name="Warhorse" Points="18"/>
-					<Option>
-						<Name>Barding for Warhorse</Name>
-						<AddToArmour Val="6"/>
-						<Dependencies>
-							<On>Warhorse</On>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<Barding Points="6" Dependencies="On: Warhorse"/>
 				</Options>
 			</Lord>
 			<Lord>
