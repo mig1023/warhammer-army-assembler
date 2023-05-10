@@ -61,6 +61,7 @@
 				AddToArmour: 6
 			</Barding>
 			<RepeaterPistol Name="Repeater pistol"/>
+			<HochlandLongRifle Name="Hochland long rifle"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -588,13 +589,9 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<RepeaterPistol Points="10" Dependency="Weapon"/>
+					<RepeaterPistol Points="10" Dependency="Range"/>
 					<Handgun Points="15" Dependency="Range"/>
-					<Option>
-						<Name>Hochland long rifle</Name>
-						<Points>20</Points>
-						<Dependency/>
-					</Option>
+					<HochlandLongRifle Points="20" Dependency="Range"/>
 					<LightArmour Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
 					<Option>
