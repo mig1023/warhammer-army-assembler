@@ -81,6 +81,9 @@
 			<IronHardHoove Name="Iron-hard Hoove">
 				Rule: Re-rolls failed To Wound rolls when making a Stomp
 			</IronHardHoove>
+			<SwiftWind Name="Swift as the Wind">
+				Rule: Re-roll ant dice results of a 1 when determining its charge range
+			</Option>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -805,11 +808,7 @@
 				</SpecialRules>
 				<Options>
 					<IronHardHoove Points="5"/>
-					<Option>
-						<Name>Swift as the Wind</Name>
-						<Rule>Re-roll ant dice results of a 1 when determining its charge range</Rule>
-						<Points>10</Points>
-					</Option>
+					<SwiftWind Points="10"/>
 				</Options>
 			</Mount>
 			<Mount>
