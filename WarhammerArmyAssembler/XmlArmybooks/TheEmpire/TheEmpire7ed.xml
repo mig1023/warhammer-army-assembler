@@ -688,11 +688,7 @@
 				</Equipments>
 				<Options>
 					<TwoHandedWarhammer Points="4"/>
-					<Option>
-						<Name>Second warhammer</Name>
-						<AddToAttacks Val="1"/>
-						<Points>4</Points>
-					</Option>
+					<SecondWarhammer Points="4" Dependencies="On: Two-handed warhammer"/>
 					<LightArmour Points="2" Dependency="Armour"/>
 					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="2"/>
