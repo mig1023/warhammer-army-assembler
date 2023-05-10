@@ -67,6 +67,7 @@
 			</Barding>
 			<GrenadeBlunderbuss Name="Grenade blunderbuss"/>
 			<HochlandLongRifle Name="Hochland long rifle"/>
+			<PigeonBombs Name="Pigeon bombs"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -707,11 +708,7 @@
 				<Options>
 					<GrenadeBlunderbuss Points="10" Dependency="Weapon"/>
 					<HochlandLongRifle Points="20" Dependency="Weapon"/>
-					<Option>
-						<Name>Pigeon bombs</Name>
-						<Dependency/>
-						<Points>20</Points>
-					</Option>
+					<PigeonBombs Points="20" Dependency="Weapon"/>
 					<Option>
 						<Name>Repeater handgun</Name>
 						<Dependency/>
