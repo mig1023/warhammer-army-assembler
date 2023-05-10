@@ -66,6 +66,7 @@
 				AddToArmour: 6
 			</Barding>
 			<GrenadeBlunderbuss Name="Grenade blunderbuss"/>
+			<HochlandLongRifle Name="Hochland long rifle"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -705,11 +706,7 @@
 				</Equipments>
 				<Options>
 					<GrenadeBlunderbuss Points="10" Dependency="Weapon"/>
-					<Option>
-						<Name>Hochland long rifke</Name>
-						<Dependency/>
-						<Points>20</Points>
-					</Option>
+					<HochlandLongRifle Points="20" Dependency="Weapon"/>
 					<Option>
 						<Name>Pigeon bombs</Name>
 						<Dependency/>
