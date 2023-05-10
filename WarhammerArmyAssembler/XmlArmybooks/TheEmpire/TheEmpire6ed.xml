@@ -594,14 +594,7 @@
 					<HochlandLongRifle Points="20" Dependency="Range"/>
 					<LightArmour Points="2"/>
 					<Mount Name="Warhorse" Points="10"/>
-					<Option>
-						<Name>Barding for Warhorse</Name>
-						<AddToArmour Val="6"/>
-						<Dependencies>
-							<On>Warhorse</On>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<Barding Points="4" Dependencies="On: Warhorse"/>
 				</Options>
 			</Hero>
 			<Hero>
