@@ -501,13 +501,7 @@
 					<GreatWeapon Points="4" Dependency="Weapon"/>
 					<Spear Points="2" Dependency="Weapon"/>
 					<Halberd Points="2" Dependency="Weapon"/>
-					<Option>
-						<Name>Flail</Name>
-						<Only>Infantry</Only>
-						<Fail/>
-						<Dependency/>
-						<Points>4</Points>
-					</Option>
+					<Flail Points="4" Only="Infantry" Dependency="Weapon"/>
 					<Shield Points="2"/>
 					<Mount Name="Skeleton Chariot" Points="55"/>
 					<BattleStandardBearer Points="25"/>
