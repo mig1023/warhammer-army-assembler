@@ -647,10 +647,10 @@ namespace WarhammerArmyAssembler.ArmyBook
                 if (!typesIncluded)
                     AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
 
-                AddToOption(xmlDocument, ref xmlNode, "Points", points);
+                string pointsSource = xmlNode.Attributes["PointsPerModel"] != null ?
+                    "PointsPerModel" : "Points";
 
-                if (xmlNode.Attributes["PointsPerModel"] != null)
-                    AddToOption(xmlDocument, ref xmlNode, "PerModel", "True");
+                AddToOption(xmlDocument, ref xmlNode, pointsSource, points);
             }
 
             if (xmlNode.Attributes["Dependency"] != null)
