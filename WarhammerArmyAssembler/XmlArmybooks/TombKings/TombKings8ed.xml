@@ -950,12 +950,7 @@
 					</HeadWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Dependency/>
-						<Points>5</Points>
-					</Option>
+					<AdditionalWeapon Points="5" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
