@@ -62,6 +62,9 @@
 			<FullPlateArmour Name="Full plate armour">
 				AddToArmour: 4
 			</FullPlateArmour>
+			<Barding Name="Barding for Warhorse">
+				AddToArmour: 6
+			</Barding>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -276,14 +279,7 @@
 					<Mount Name="The Imperial Dragon" Points="300"/>
 					<Mount Name="Imperial Pegasus" Points="45"/>
 					<Mount Name="Warhorse" Points="18"/>
-					<Option>
-						<Name>Barding for warhorse</Name>
-						<Dependencies>
-							<On>Warhorse</On>
-						</Dependencies>
-						<Points>6</Points>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Barding Points="6" Dependencies="On: Warhorse"/>
 				</Options>
 			</Lord>
 			<Lord>
