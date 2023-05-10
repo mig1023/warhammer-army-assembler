@@ -70,6 +70,10 @@
 			<PigeonBombs Name="Pigeon bombs"/>
 			<RepeaterHandgun Name="Repeater handgun"/>
 			<RepeaterPistol Name="Repeater pistol"/>
+			<Bloodroar>
+				Rule: Enemy units must roll an additional D6, discarding the lowest result, for Leadership tests caused by this beast's Fear of Terror special rules;
+				AddToArmour: 6
+			</Bloodroar>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -717,14 +721,7 @@
 					<LightArmour Points="1"/>
 					<Mount Name="Mechanical Steed" Points="25"/>
 					<Mount Name="Warhorse" Points="12"/>
-					<Option>
-						<Name>Barding for warhorse</Name>
-						<Dependencies>
-							<On>Warhorse</On>
-						</Dependencies>
-						<Points>2</Points>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Barding Points="2" Dependencies="On: Warhorse"/>
 				</Options>
 			</Hero>
 			<Hero>
@@ -789,12 +786,7 @@
 					<LargeTarget/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Bloodroar</Name>
-						<Points>25</Points>
-						<Rule>Enemy units must roll an additional D6, discarding the lowest result, for Leadership tests caused by this beast's Fear of Terror special rules</Rule>
-						<AddToArmour Val="6"/>
-					</Option>
+					<Bloodroar Points="25"/>
 					<Option>
 						<Name>Two Heads</Name>
 						<AddToAttacks Val="1"/>
