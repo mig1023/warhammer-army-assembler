@@ -59,6 +59,7 @@
 				AddToArmour: 4
 			</FullPlateArmour>
 			<Pistol/>
+			<Handgun/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -514,10 +515,7 @@
 					<Lance Points="6" Only="Mount"/>
 					<Pistol Points="9"/>
 					<LongBow Points="10"/>
-					<Option>
-						<Name>Handgun</Name>
-						<Points>10</Points>
-					</Option>
+					<Handgun Points="10"/>
 					<LightArmour Points="3" Dependency="Armour"/>
 					<HeavyArmour Points="6" Dependency="Armour"/>
 					<FullPlateArmour Points="12" Dependency="Armour"/>
