@@ -50,6 +50,9 @@
 			<LossOfPackmaster>Loss of Packmaster</LossOfPackmaster>
 			<Scirmishers/>
 		</LocalSpecialRules>
+		<LocalOption>
+			<WarplockPistol Name="Warplock pistol"/>
+		</LocalOption>	
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -420,10 +423,7 @@
 					<GreatWeapon Points="6"/>
 					<AdditionalWeapon Points="6"/>
 					<Halberd Points="6"/>
-					<Option>
-						<Name>Warplock pistol</Name>
-						<Points>15</Points>
-					</Option>
+					<WarplockPistol Points="15"/>
 					<LightArmour Points="3" Dependency="Armour"/>
 					<HeavyArmour Points="6" Dependency="Armour"/>
 					<Shield Points="3"/>
