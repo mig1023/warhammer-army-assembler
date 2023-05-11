@@ -66,6 +66,9 @@
 			</PlagueRats>
 			<Slings/>
 			<ThrowingStars Name="Throwing stars"/>
+			<PoisonedWeapons Name="Poisoned hand weapons">
+				PoisonAttack
+			</PoisonedWeapons>
 		</LocalOption>	
 	</Introduction>
 	<Content>
@@ -780,11 +783,7 @@
 				<Options>
 					<Slings PointsPerModel="5"/>
 					<ThrowingStars PointsPerModel="3"/>
-					<Option>
-						<Name>Poisoned hand weapons</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<PoisonAttack/>
-					</Option>
+					<PoisonedWeapons PointsPerModel="2"/>
 					<Option>
 						<Name>Poisoned Throwing stars</Name>
 						<PointsPerModel>1</PointsPerModel>
