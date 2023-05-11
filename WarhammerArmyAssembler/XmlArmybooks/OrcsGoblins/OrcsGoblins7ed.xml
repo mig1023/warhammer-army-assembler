@@ -63,6 +63,10 @@
 			<BlackOrc Name="Black Orc">
 				AddToWeaponSkill: 1
 			</BlackOrc>
+			<NightGoblin Name="Night Goblin">
+				AddToInitiative: 1;
+				AddToLeadership: -1
+			</NightGoblin>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -551,12 +555,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Night Goblin</Name>
-						<Points>-10</Points>
-						<AddToInitiative Val="1"/>
-						<AddToLeadership Val="-1"/>
-					</Option>
+					<NightGoblin Points="-10"/>
 					<GreatWeapon Points="6"/>
 					<AdditionalWeapon Points="6" Only="Infantry"/>
 					<Spear Points="3" Only="Mount"/>
