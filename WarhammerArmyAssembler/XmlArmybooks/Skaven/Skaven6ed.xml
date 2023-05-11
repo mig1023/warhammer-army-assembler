@@ -53,6 +53,9 @@
 		<LocalOption>
 			<WarplockPistol Name="Warplock pistol"/>
 			<Whip/>
+			<Warpblades Name="Warp-blades">
+				AddToStrength: 1
+			</Warpblades>
 		</LocalOption>	
 	</Introduction>
 	<Content>
@@ -525,11 +528,7 @@
 				</Equipments>
 				<Options>
 					<WarplockPistol Points="10"/>
-					<Option>
-						<Name>Warp-blades</Name>
-						<AddToStrength Val="1"/>
-						<Points>15</Points>
-					</Option>
+					<Warpblades Points="15"/>
 					<Option>
 						<Name>Upgraded warp-energy condenser</Name>
 						<Points>10</Points>
