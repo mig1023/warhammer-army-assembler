@@ -74,6 +74,11 @@
 			<AdditionalChoppa Name="Additional choppa">
 				AddToAttacks: 1
 			</AdditionalChoppa>
+			<Biguns Name="Big'Uns">
+				AddToWeaponSkill: 1;
+				AddToStrength: 1;
+				OnlyOneInArmy
+			</Biguns>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1109,14 +1114,8 @@
 					</Armour>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Big'Uns</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<AddToWeaponSkill Val="1"/>
-						<AddToStrength Val="1"/>
-						<OnlyOneInArmy/>
-					</Option>
-					<BigStabbas PointsPerModel="20"/>
+					<Biguns PointsPerModel="2"/>
+					<BigStabbas Points="20"/>
 					<Spear PointsPerModel="1"/>
 					<ShortBow PointsPerModel="1"/>
 					<AdditionalChoppa PointsPerModel="1"/>
