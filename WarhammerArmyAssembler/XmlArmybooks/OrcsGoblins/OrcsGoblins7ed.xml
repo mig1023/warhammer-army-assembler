@@ -76,6 +76,9 @@
 				AddToAttacks: 1
 			</AdditionalChoppa>
 			<Nets/>
+			<ExtraOrc Name="Extra Orc">
+				AddToModelsInPack: 1
+			</ExtraOrc>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1077,11 +1080,7 @@
 					<ThickSkinned/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Extra Orc</Name>
-						<AddToModelsInPack Val="1"/>
-						<Points>5</Points>
-					</Option>
+					<ExtraOrc Points="5"/>
 				</Options>
 			</Special>
 			<Special>
