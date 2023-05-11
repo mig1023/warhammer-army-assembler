@@ -56,6 +56,9 @@
 			<WarplockPistol Name="Warplock pistol"/>
 			<Warpmusket/>
 			<Slings/>
+			<SnareNet Name="Snare-net">
+				AddToAttacks: -1
+			</SnareNet>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1104,10 +1107,7 @@
 					<RangeWeapon>Throwing stars</RangeWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Snare-net</Name>
-						<AddToAttacks Val="-1"/>
-					</Option>
+					<SnareNet/>
 					<Option>
 						<Name>Slings</Name>
 						<PointsPerModel>1</PointsPerModel>
