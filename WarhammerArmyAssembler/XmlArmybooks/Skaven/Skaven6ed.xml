@@ -69,6 +69,7 @@
 			<PoisonedWeapons Name="Poisoned hand weapons">
 				PoisonAttack
 			</PoisonedWeapons>
+			<PoisonedThrowingStars Name="Poisoned Throwing stars"/>
 		</LocalOption>	
 	</Introduction>
 	<Content>
@@ -784,13 +785,7 @@
 					<Slings PointsPerModel="5"/>
 					<ThrowingStars PointsPerModel="3"/>
 					<PoisonedWeapons PointsPerModel="2"/>
-					<Option>
-						<Name>Poisoned Throwing stars</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<Dependencies>
-							<On>Throwing stars</On>
-						</Dependencies>
-					</Option>
+					<PoisonedThrowingStars PointsPerModel="1" Dependencies="On: Throwing stars"/>
 					<Option>
 						<Name>Tunnelling teams</Name>
 						<PointsPerModel>3</PointsPerModel>
