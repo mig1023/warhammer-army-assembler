@@ -61,6 +61,11 @@
 				HitLast
 			</GreatAxe>
 			<Warprint>AddToWard: 6</Warprint>
+			<Biguns Name="Big'Uns">
+				AddToWeaponSkill: 1;
+				AddToStrength: 1;
+				OnlyOneInArmy
+			</Option>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -891,13 +896,7 @@
 					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
 					<Spear PointsPerModel="2" Dependency="Weapon"/>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Big'Uns</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<AddToWeaponSkill Val="1"/>
-						<AddToStrength Val="1"/>
-						<OnlyOneInArmy/>
-					</Option>
+					<Biguns PointsPerModel="2"/>
 					<Command>
 						<Musician Points="5"/>
 						<StandardBearer Points="10"/>
