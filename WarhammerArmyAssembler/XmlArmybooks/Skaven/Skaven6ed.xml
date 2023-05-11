@@ -741,11 +741,7 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<Spear PointsPerModel="1" Dependency="Weapon"/>
-					<Option>
-						<Name>Slings</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<Slings PointsPerModel="2" Dependency="Weapon"/>
 					<Command>
 						<Musician Points="4"/>
 						<Champion Points="8" Name="Pawleader"/>
