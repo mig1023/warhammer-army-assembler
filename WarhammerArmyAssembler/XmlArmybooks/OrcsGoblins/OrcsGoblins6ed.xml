@@ -66,6 +66,7 @@
 				AddToStrength: 1;
 				OnlyOneInArmy
 			</Biguns>
+			<Nets/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1024,10 +1025,7 @@
 				<Options>
 					<Spear PointsPerModel="1" Dependency="Weapon"/>
 					<Bow PointsPerModel="1" Dependency="Weapon"/>
-					<Option>
-						<Name>Nets</Name>
-						<PointsPerModel>2</PointsPerModel>
-					</Option>
+					<Nets PointsPerModel="2"/>
 					<Option>
 						<Name>Fanatic</Name>
 						<Points>25</Points>
