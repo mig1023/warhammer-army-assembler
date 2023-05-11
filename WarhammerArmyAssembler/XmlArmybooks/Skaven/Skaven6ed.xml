@@ -65,6 +65,7 @@
 				PoisonAttack
 			</PlagueRats>
 			<Slings/>
+			<ThrowingStars Name="Throwing stars"/>
 		</LocalOption>	
 	</Introduction>
 	<Content>
@@ -718,10 +719,7 @@
 				<Options>
 					<AdditionalWeapon PointsPerModel="2"/>
 					<Slings PointsPerModel="4"/>
-					<Option>
-						<Name>Throwing stars</Name>
-						<PointsPerModel>2</PointsPerModel>
-					</Option>
+					<ThrowingStars PointsPerModel="2"/>
 					<Command>
 						<Champion Points="10" Name="Nightleader"/>
 					</Command>
