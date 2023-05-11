@@ -70,6 +70,9 @@
 				PoisonAttack
 			</PoisonedWeapons>
 			<PoisonedThrowingStars Name="Poisoned Throwing stars"/>
+			<TunnellingTeams Name="Tunnelling teams">
+				Rule: Tunnelling rule
+			</TunnellingTeams>
 		</LocalOption>	
 	</Introduction>
 	<Content>
@@ -786,11 +789,7 @@
 					<ThrowingStars PointsPerModel="3"/>
 					<PoisonedWeapons PointsPerModel="2"/>
 					<PoisonedThrowingStars PointsPerModel="1" Dependencies="On: Throwing stars"/>
-					<Option>
-						<Name>Tunnelling teams</Name>
-						<PointsPerModel>3</PointsPerModel>
-						<Rule>Tunnelling rule</Rule>
-					</Option>
+					<TunnellingTeams PointsPerModel="3"/>
 					<Command>
 						<Champion Points="12" Name="Black Skaven"/>
 					</Command>
