@@ -55,6 +55,14 @@
 		</LocalSpecialRules>
 		<LocalOption>
 			<Choppa/>
+			<SavageOrc Name="Savage Orc">
+				AddToAttacks: 1;
+				Frenzy;
+				Rule: Warprint
+			</SavageOrc>
+			<BlackOrc Name="Black Orc">
+				AddToWeaponSkill: 1
+			</BlackOrc>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -493,18 +501,8 @@
 					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Savage Orc</Name>
-						<Points>5</Points>
-						<AddToAttacks Val="1"/>
-						<Frenzy/>
-						<Rule>Warprint</Rule>
-					</Option>
-					<Option>
-						<Name>Black Orc</Name>
-						<Points>25</Points>
-						<AddToWeaponSkill Val="1"/>
-					</Option>
+					<SavageOrc Points="5"/>
+					<BlackOrc Points="25"/>
 					<GreatWeapon Points="6" Dependencies="Black Orc"/>
 					<AdditionalWeapon Points="6" Only="Infantry"/>
 					<Spear Points="3" Only="Mount"/>
