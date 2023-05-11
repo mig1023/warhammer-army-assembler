@@ -71,6 +71,9 @@
 				ImpactHit: D3;
 				OnlyOneInArmy
 			</BigStabbas>
+			<AdditionalChoppa Name="Additional choppa">
+				AddToAttacks: 1
+			</AdditionalChoppa>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1116,11 +1119,7 @@
 					<BigStabbas PointsPerModel="20"/>
 					<Spear PointsPerModel="1"/>
 					<ShortBow PointsPerModel="1"/>
-					<Option>
-						<Name>Additional choppa</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<AddToAttacks Val="1"/>
-					</Option>
+					<AdditionalChoppa PointsPerModel="1"/>
 					<Shield PointsPerModel="1"/>
 					<Command>
 						<Champion Points="15" Name="Savage Orc Boss"/>
