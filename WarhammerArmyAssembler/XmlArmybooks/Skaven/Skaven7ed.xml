@@ -55,6 +55,7 @@
 			<WarlockWeapon Name="Warlock-Augmented Weapon"/>
 			<WarplockPistol Name="Warplock pistol"/>
 			<Warpmusket/>
+			<Slings/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1016,10 +1017,7 @@
 				<Options>
 					<Spear PointsPerModel="0,5"/>
 					<Shield PointsPerModel="0,5"/>
-					<Option>
-						<Name>Slings</Name>
-						<PointsPerModel>0,5</PointsPerModel>
-					</Option>
+					<Slings PointsPerModel="0,5"/>
 					<Command>
 						<Musician Points="4"/>
 						<Champion Points="8" Name="Pawleader"/>
