@@ -61,6 +61,9 @@
 				AddToCast: 1
 			</Accumulator>
 			<SmokeBombs Name="Smoke bombs"/>
+			<PlagueRats Name="Plague Rats">
+				PoisonAttack
+			</PlagueRats>
 		</LocalOption>	
 	</Introduction>
 	<Content>
@@ -682,11 +685,7 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Plague Rats</Name>
-						<PointsPerModel>20</PointsPerModel>
-						<PoisonAttack/>
-					</Option>
+					<PlagueRats PointsPerModel="20"/>
 				</Options>
 			</Core>
 			<Core>
