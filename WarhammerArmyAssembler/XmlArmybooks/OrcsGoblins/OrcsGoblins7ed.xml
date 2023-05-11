@@ -88,6 +88,11 @@
 			<OrcBully Name="Orc Bully">
 				AddToModelsInPack: 1
 			</OrcBully>
+			<StoneTroll Name="Stone troll">
+				AddToArmour: 5;
+				AddToStrength: 1;
+				Rule: Magic Resistance (2)
+			</StoneTroll>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1206,13 +1211,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Stone troll</Name>
-						<PointsPerModel>20</PointsPerModel>
-						<AddToArmour Val="5"/>
-						<AddToStrength Val="1"/>
-						<Rule>Magic Resistance (2)</Rule>
-					</Option>
+					<StoneTroll PointsPerModel="20"/> 
 					<Option>
 						<Name>River troll</Name>
 						<PointsPerModel>20</PointsPerModel>
