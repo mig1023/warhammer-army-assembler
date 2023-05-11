@@ -57,6 +57,9 @@
 				AddToStrength: 1
 			</Warpblades>
 			<UpgradedCondenser Name="Upgraded warp-energy condenser"/>
+			<Accumulator Name="Supercharged warp-power accumulator">
+				AddToCast: 1
+			</Accumulator>
 		</LocalOption>	
 	</Introduction>
 	<Content>
@@ -531,11 +534,7 @@
 					<WarplockPistol Points="10"/>
 					<Warpblades Points="15"/>
 					<UpgradedCondenser Points="10"/>
-					<Option>
-						<Name>Supercharged warp-power accumulator</Name>
-						<AddToCast Val="1"/>
-						<Points>15</Points>
-					</Option>
+					<Accumulator Points="15"/>
 				</Options>
 			</Hero>
 			<Hero>
