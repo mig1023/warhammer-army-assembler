@@ -65,7 +65,7 @@
 				AddToWeaponSkill: 1;
 				AddToStrength: 1;
 				OnlyOneInArmy
-			</Option>
+			</Biguns>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -946,13 +946,7 @@
 					<Bow PointsPerModel="3" Dependency="Weapon"/>
 					<Warprint PointsPerModel="3"/>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Big'Uns</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<AddToWeaponSkill Val="1"/>
-						<AddToStrength Val="1"/>
-						<OnlyOneInArmy/>
-					</Option>
+					<Biguns PointsPerModel="2"/>
 					<Command>
 						<Musician Points="5"/>
 						<StandardBearer Points="10"/>
