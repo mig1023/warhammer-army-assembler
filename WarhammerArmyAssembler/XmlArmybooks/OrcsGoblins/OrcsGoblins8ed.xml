@@ -64,7 +64,13 @@
 			<Waaagh>Waaagh!</Waaagh>
 		</LocalSpecialRules>
 		<LocalOption>
-			<Choppa>Flail</Choppa>
+			<Choppa>
+				Flail
+			</Choppa>
+			<BigStabbas Name="Big Stabbas">
+				ImpactHit: D3;
+				OnlyOneInArmy
+			</BigStabbas>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1107,12 +1113,7 @@
 						<AddToStrength Val="1"/>
 						<OnlyOneInArmy/>
 					</Option>
-					<Option>
-						<Name>Big Stabbas</Name>
-						<PointsPerModel>20</PointsPerModel>
-						<OnlyOneInArmy/>
-						<ImpactHit Val="D3"/>
-					</Option>
+					<BigStabbas PointsPerModel="20"/>
 					<Spear PointsPerModel="1"/>
 					<ShortBow PointsPerModel="1"/>
 					<Option>
