@@ -62,6 +62,7 @@
 			<PoisonedWeapon Name="Poisoned Attacks">
 				PoisonAttack
 			</PoisonedWeapon>
+			<SmokeBombs Name="Smoke Bombs"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1116,13 +1117,7 @@
 					<Command>
 						<Champion Points="12" Name="Deathrunner"/>
 					</Command>
-					<Option>
-						<Name>Smoke Bombs</Name>
-						<Points>10</Points>
-						<Dependencies>
-							<On>Deathrunner</On>
-						</Dependencies>
-					</Option>
+					<SmokeBombs Points="10" Dependencies="On: Deathrunner"/>
 					<Option>
 						<Name>Weeping Blade</Name>
 						<Points>30</Points>
