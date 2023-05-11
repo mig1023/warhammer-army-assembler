@@ -59,6 +59,9 @@
 			<SnareNet Name="Snare-net">
 				AddToAttacks: -1
 			</SnareNet>
+			<PoisonedWeapon Name="Poisoned Attacks">
+				PoisonAttack
+			</PoisonedWeapon>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1109,11 +1112,7 @@
 				<Options>
 					<SnareNet/>
 					<Slings PointsPerModel="1"/>
-					<Option>
-						<Name>Poisoned Attacks</Name>
-						<PointsPerModel>5</PointsPerModel>
-						<PoisonAttack/>
-					</Option>
+					<PoisonedWeapon PointsPerModel="5"/>
 					<Command>
 						<Champion Points="12" Name="Deathrunner"/>
 					</Command>
