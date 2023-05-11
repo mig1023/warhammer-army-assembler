@@ -51,6 +51,9 @@
 			<AttackedUnit/>
 			<VerminousValour/>
 		</LocalSpecialRules>
+		<LocalOption>
+			<WarlockWeapon Name="Warlock-Augmented Weapon"/>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -695,10 +698,7 @@
 						<AddToWizard Val="2"/>
 						<Dependency/>
 					</Option>
-					<Option>
-						<Name>Warlock-Augmented Weapon</Name>
-						<Points>45</Points>
-					</Option>
+					<WarlockWeapon Points="45"/>
 					<Option>
 						<Name>Warplock Pistol</Name>
 						<Points>8</Points>
