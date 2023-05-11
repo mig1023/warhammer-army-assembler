@@ -82,6 +82,9 @@
 			<StoneTroll Name="Stone troll">
 				Rule: Magic Resistance (2)
 			</StoneTroll>
+			<RiverTroll Name="River troll">
+				SubOpponentToHit: 1
+			</RiverTroll>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1267,11 +1270,7 @@
 				</SpecialRules>
 				<Options>
 					<StoneTroll PointsPerModel="5"/>
-					<Option>
-						<Name>River troll</Name>
-						<PointsPerModel>10</PointsPerModel>
-						<SubOpponentToHit Val="1"/>
-					</Option>
+					<RiverTroll PointsPerModel="10"/>
 				</Options>
 			</Rare>
 			<Rare>
