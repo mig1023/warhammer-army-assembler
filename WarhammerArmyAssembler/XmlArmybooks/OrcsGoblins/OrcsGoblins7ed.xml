@@ -656,12 +656,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Night Goblin</Name>
-						<Points>-5</Points>
-						<AddToInitiative Val="1"/>
-						<AddToLeadership Val="-1"/>
-					</Option>
+					<NightGoblin Points="-5"/>
 					<BattleStandardBearer Points="25" Dependencies="Great weapon, Additional weapon, Spear, Shield"/>
 					<GreatWeapon Points="4" Dependencies="Battle Standard Bearer"/>
 					<AdditionalWeapon Points="4" Only="Infantry" Dependencies="Battle Standard Bearer"/>
