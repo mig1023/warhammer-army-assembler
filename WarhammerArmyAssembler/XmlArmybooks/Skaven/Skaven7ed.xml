@@ -64,6 +64,7 @@
 			</PoisonedWeapon>
 			<SmokeBombs Name="Smoke Bombs"/>
 			<WeepingBlade Name="Weeping Blade"/>
+			<DeathGlobe Name="Death Globe"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1248,13 +1249,7 @@
 					<Command>
 						<Champion Points="5" Name="Bombardier"/>
 					</Command>
-					<Option>
-						<Name>Death Globe</Name>
-						<Points>25</Points>
-						<Dependencies>
-							<On>Bombardier</On>
-						</Dependencies>
-					</Option>
+					<DeathGlobe Points="25" Dependencies="On: Bombardier"/>
 					<Crew Name="Poison Wind Mortar" Points="65"/>
 				</Options>
 			</Special>
