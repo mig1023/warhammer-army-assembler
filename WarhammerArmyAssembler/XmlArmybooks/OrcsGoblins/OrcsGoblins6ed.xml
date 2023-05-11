@@ -79,6 +79,9 @@
 			<OrcBully Name="Orc Bully">
 				AddToModelsInPack: 1
 			</ExtraWolf>
+			<StoneTroll Name="Stone troll">
+				Rule: Magic Resistance (2)
+			</StoneTroll>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1263,11 +1266,7 @@
 					<Original>Troll Vomit</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Stone troll</Name>
-						<PointsPerModel>5</PointsPerModel>
-						<Rule>Magic Resistance (2)</Rule>
-					</Option>
+					<StoneTroll PointsPerModel="5"/>
 					<Option>
 						<Name>River troll</Name>
 						<PointsPerModel>10</PointsPerModel>
