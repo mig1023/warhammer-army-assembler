@@ -79,6 +79,9 @@
 			<ExtraOrc Name="Extra Orc">
 				AddToModelsInPack: 1
 			</ExtraOrc>
+			<ExtraGoblin Name="Extra Goblin">
+				AddToModelsInPack: 1
+			</ExtraGoblin>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1142,11 +1145,7 @@
 					<ShortBow/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Extra Goblin</Name>
-						<AddToModelsInPack Val="1"/>
-						<Points>3</Points>
-					</Option>
+					<ExtraGoblin Points="3"/>
 					<Option>
 						<Name>Extra Wolf</Name>
 						<AddToModelsInPack Val="1"/>
