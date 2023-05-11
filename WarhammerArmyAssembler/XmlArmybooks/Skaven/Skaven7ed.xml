@@ -63,6 +63,7 @@
 				PoisonAttack
 			</PoisonedWeapon>
 			<SmokeBombs Name="Smoke Bombs"/>
+			<WeepingBlade Name="Weeping Blade"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1118,13 +1119,7 @@
 						<Champion Points="12" Name="Deathrunner"/>
 					</Command>
 					<SmokeBombs Points="10" Dependencies="On: Deathrunner"/>
-					<Option>
-						<Name>Weeping Blade</Name>
-						<Points>30</Points>
-						<Dependencies>
-							<On>Deathrunner</On>
-						</Dependencies>
-					</Option>
+					<WeepingBlade Points="30" Dependencies="On: Deathrunner"/>
 					<Crew Name="Warp-grinder" Points="60"/>
 				</Options>
 			</Special>
