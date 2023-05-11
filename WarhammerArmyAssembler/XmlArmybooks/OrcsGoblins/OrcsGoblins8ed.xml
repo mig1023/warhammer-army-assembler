@@ -79,6 +79,7 @@
 				AddToStrength: 1;
 				OnlyOneInArmy
 			</Biguns>
+			<Netters/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1197,10 +1198,7 @@
 				<Options>
 					<Spear Dependency="Weapon"/>
 					<ShortBow Dependency="Weapon"/>
-					<Option>
-						<Name>Netters</Name>
-						<Points>45</Points>
-					</Option>
+					<Netters Points="45"/>
 					<Command>
 						<Champion Points="10" Name="Night Goblin Boss"/>
 						<Musician Points="10"/>
