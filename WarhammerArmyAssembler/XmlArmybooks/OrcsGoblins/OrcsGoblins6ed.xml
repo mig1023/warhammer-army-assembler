@@ -60,7 +60,9 @@
 				AddToStrength: 2;
 				HitLast
 			</GreatAxe>
-			<Warprint>AddToWard: 6</Warprint>
+			<Warprint>
+				AddToWard: 6
+			</Warprint>
 			<Biguns Name="Big'Uns">
 				AddToWeaponSkill: 1;
 				AddToStrength: 1;
@@ -78,7 +80,7 @@
 			</ExtraWolf>
 			<OrcBully Name="Orc Bully">
 				AddToModelsInPack: 1
-			</ExtraWolf>
+			</OrcBully>
 			<StoneTroll Name="Stone troll">
 				Rule: Magic Resistance (2)
 			</StoneTroll>
@@ -1286,11 +1288,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Orc Bully</Name>
-						<AddToModelsInPack Val="1"/>
-						<Points>5</Points>
-					</Option>
+					<OrcBully Points="5"/>
 				</Options>
 			</Rare>
 			<Rare>
