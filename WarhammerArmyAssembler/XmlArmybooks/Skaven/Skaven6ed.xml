@@ -64,6 +64,7 @@
 			<PlagueRats Name="Plague Rats">
 				PoisonAttack
 			</PlagueRats>
+			<Slings/>
 		</LocalOption>	
 	</Introduction>
 	<Content>
@@ -716,10 +717,7 @@
 				</Equipments>
 				<Options>
 					<AdditionalWeapon PointsPerModel="2"/>
-					<Option>
-						<Name>Slings</Name>
-						<PointsPerModel>4</PointsPerModel>
-					</Option>
+					<Slings PointsPerModel="4"/>
 					<Option>
 						<Name>Throwing stars</Name>
 						<PointsPerModel>2</PointsPerModel>
