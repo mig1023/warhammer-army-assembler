@@ -104,6 +104,9 @@
 			<GiantSpores Name="Giant Explodin' Spores">
 				Rule: Impact Hits ignores armour saves
 			</GiantSpores>
+			<Flingers>
+				Rule: The Flinger is a range attack with range 12-48", Strength 1(3) and Multiple Wounds (D3). Any unit hit by a Flinger is covered in a mass of sticky webs, and has the Always Strikes Last special rule until the end of its next turn
+			</Flingers>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1570,12 +1573,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Flingers</Name>
-						<Points>30</Points>
-						<Dependency/>
-						<Rule>The Flinger is a range attack with range 12-48", Strength 1(3) and Multiple Wounds (D3). Any unit hit by a Flinger is covered in a mass of sticky webs, and has the Always Strikes Last special rule until the end of its next turn</Rule>
-					</Option>
+					<Flingers Points="30" Dependency="Skill"/>
 					<Option>
 						<Name>Catchweb Spidershrine</Name>
 						<Points>40</Points>
