@@ -518,13 +518,7 @@
 				<Options>
 					<Wizard Level="2" Points="35"/>
 					<AdditionalWeapon Points="2" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Dependency/>
-						<Points>9</Points>
-					</Option>
+					<GreatWeapon Points="9" Dependency="Weapon"/>
 				</Options>
 			</Hero>
 		</Heroes>
