@@ -54,6 +54,7 @@
 			</Ironfists>
 			<OgrePistol Name="Ogre pistol"/>
 			<BraceOgrePistol Name="Brace of Ogre pistol"/>
+			<HarpoonLauncher Name="Harpoon launcher"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -465,11 +466,7 @@
 					<AdditionalWeapon Points="3" Dependency="Weapon"/>
 					<Ironfists Points="4" Dependency="Weapon"/>
 					<GreatWeapon Points="11" Dependency="Weapon"/>
-					<Option>
-						<Name>Harpoon launcher</Name>
-						<Dependency/>
-						<Points>10</Points>
-					</Option>
+					<HarpoonLauncher Points="10" Dependency="Weapon"/>
 					<Option>
 						<Name>Blood vulture</Name>
 						<Dependency/>
