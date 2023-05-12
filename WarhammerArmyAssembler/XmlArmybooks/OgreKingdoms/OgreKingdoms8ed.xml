@@ -53,6 +53,7 @@
 				AddToArmour: 6
 			</Ironfists>
 			<OgrePistol Name="Ogre pistol"/>
+			<BraceOgrePistol Name="Brace of Ogre pistol"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -357,11 +358,7 @@
 					<Ironfists Points="5" Dependency="Weapon"/>
 					<GreatWeapon Points="12" Dependency="Weapon"/>
 					<OgrePistol Points="8" Dependency="Weapon"/>
-					<Option>
-						<Name>Brace of Ogre pistol</Name>
-						<Dependency/>
-						<Points>14</Points>
-					</Option>
+					<BraceOgrePistol Points="14" Dependency="Weapon"/>
 					<HeavyArmour Points="5"/>
 				</Options>
 			</Lord>
