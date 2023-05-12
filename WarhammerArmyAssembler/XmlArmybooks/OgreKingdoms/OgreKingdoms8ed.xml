@@ -729,12 +729,7 @@
 				<Options>
 					<HeavyArmour Points="5"/>
 					<GreatWeapon PointsPerModel="8" Dependency="Weapon"/>
-					<Option>
-						<Name>Ironfists</Name>
-						<AddToArmour Val="6"/>
-						<Dependency/>
-						<PointsPerModel>5</PointsPerModel>
-					</Option>
+					<Ironfists PointsPerModel="5" Dependency="Weapon"/>
 					<Command>
 						<Champion Points="10" Name="Crusher"/>
 						<Musician Points="8" Name="Bellower"/>
