@@ -641,14 +641,7 @@
 				</Equipments>
 				<Options>
 					<HeavyArmour PointsPerModel="4"/>
-					<Option>
-						<Name>Cathalayan longsword</Name>
-						<AddToWeaponSkill Val="1"/>
-						<AddToInitiative Val="1"/>
-						<ArmourPiercing Val="1"/>
-						<Dependency/>
-						<Points>6</Points>
-					</Option>
+					<CathalayanLongsword PointsPerModel="6" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
