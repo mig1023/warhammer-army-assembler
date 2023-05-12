@@ -92,6 +92,9 @@
 			<OrcBully Name="Orc Bully">
 				AddToModelsInPack: 1
 			</OrcBully>
+			<SpikyRoller Name="Spiky Roller">
+				AddToStrength: 1
+			</SpikyRoller>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1526,11 +1529,7 @@
 					<HandWeapon>Crude hand weapon</HandWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spiky Roller</Name>
-						<AddToStrength Val="1"/>
-						<Points>15</Points>
-					</Option>
+					<SpikyRoller Points="15"/>
 					<Option>
 						<Name>Out-rigga</Name>
 						<Rule>4D6 for the movement</Rule>
