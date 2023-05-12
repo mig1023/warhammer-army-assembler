@@ -60,6 +60,7 @@
 			</CathalayanLongsword>
 			<BraceHandguns Name="Brace of handguns"/>
 			<LuckGnoblar Name="Luck-Gnoblar"/>
+			<LookOutGnoblar Name="Look-out Gnoblar"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -493,13 +494,7 @@
 						<Champion Points="10" Name="Bellower"/>
 						<StandardBearer Points="20"/>
 					</Command>
-					<Option>
-						<Name>Look-out Gnoblar</Name>
-						<Dependencies>
-							<On>Standard bearer</On>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
+					<LookOutGnoblar Points="5" Dependencies="On: Standard bearer"/>
 				</Options>
 			</Core>
 			<Core>
