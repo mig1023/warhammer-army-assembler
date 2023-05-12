@@ -674,13 +674,7 @@
 						<Musician Points="10"/>
 						<StandardBearer Points="20" Magic="Type: Unit, Points: 50"/>
 					</Command>
-					<Option>
-						<Name>Look-out Gnoblar</Name>
-						<Dependencies>
-							<On>Standard bearer</On>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
+					<LookOutGnoblar Points="5" Dependencies="On: Standard bearer"/>
 				</Options>
 			</Special>
 			<Special>
