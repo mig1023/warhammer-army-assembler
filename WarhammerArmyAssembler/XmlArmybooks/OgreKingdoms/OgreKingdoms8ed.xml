@@ -56,6 +56,7 @@
 			<BraceOgrePistol Name="Brace of Ogre pistol"/>
 			<HarpoonLauncher Name="Harpoon launcher"/>
 			<BloodVulture Name="Blood vulture"/>
+			<LookOutGnoblar Name="Look-out Gnoblar"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -576,13 +577,7 @@
 						<Musician Points="10"/>
 						<StandardBearer Points="20"/>
 					</Command>
-					<Option>
-						<Name>Look-out Gnoblar</Name>
-						<Dependencies>
-							<On>Standard bearer</On>
-						</Dependencies>
-						<Points>5</Points>
-					</Option>
+					<LookOutGnoblar Points="2" Dependencies="On: Standard bearer"/>
 				</Options>
 			</Core>
 			<Core>
