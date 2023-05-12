@@ -485,12 +485,7 @@
 					<HandWeapon>Ogre club</HandWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Dependency/>
-						<PointsPerModel>4</PointsPerModel>
-					</Option>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
 					<Option>
 						<Name>Ironfists</Name>
 						<AddToArmour Val="6"/>
