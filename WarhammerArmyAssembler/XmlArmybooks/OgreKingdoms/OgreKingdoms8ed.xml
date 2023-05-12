@@ -517,12 +517,7 @@
 				</Equipments>
 				<Options>
 					<Wizard Level="2" Points="35"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Dependency/>
-						<Points>2</Points>
-					</Option>
+					<AdditionalWeapon Points="2" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
