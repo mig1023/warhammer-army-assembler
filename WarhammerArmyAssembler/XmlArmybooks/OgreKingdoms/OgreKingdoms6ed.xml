@@ -58,6 +58,7 @@
 				AddToInitiative: 1;
 				ArmourPiercing: 1
 			</CathalayanLongsword>
+			<BraceHandguns Name="Brace of handguns"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -338,12 +339,8 @@
 					<GreatWeapon Points="14" Dependency="Weapon"/>
 					<AdditionalWeapon Points="10" Dependency="Weapon"/>
 					<Ironfists Points="12" Dependency="Weapon"/>
-					<CathalayanLongsword Points="10" Dependency="Weapon"/> 
-					<Option>
-						<Name>Brace of handguns</Name>
-						<Dependency/>
-						<Points>12</Points>
-					</Option>
+					<CathalayanLongsword Points="10" Dependency="Weapon"/>
+					<BraceHandguns Points="12" Dependency="Weapon"/>
 					<HeavyArmour Points="6"/>
 					<Option>
 						<Name>Sword-Gnoblars</Name>
