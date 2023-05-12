@@ -569,12 +569,7 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Dependency/>
-						<PointsPerModel>1</PointsPerModel>
-					</Option>
+					<AdditionalWeapon PointsPerModel="1" Dependency="Weapon"/>
 					<Option>
 						<Name>Ironfists</Name>
 						<AddToArmour Val="6"/>
