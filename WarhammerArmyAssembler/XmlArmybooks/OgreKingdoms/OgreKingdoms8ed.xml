@@ -570,12 +570,7 @@
 				</Equipments>
 				<Options>
 					<AdditionalWeapon PointsPerModel="1" Dependency="Weapon"/>
-					<Option>
-						<Name>Ironfists</Name>
-						<AddToArmour Val="6"/>
-						<Dependency/>
-						<PointsPerModel>2</PointsPerModel>
-					</Option>
+					<Ironfists PointsPerModel="2" Dependency="Weapon"/>
 					<Command>
 						<Champion Points="10" Name="Crusher"/>
 						<Musician Points="10"/>
