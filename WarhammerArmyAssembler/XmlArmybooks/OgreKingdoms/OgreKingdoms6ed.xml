@@ -642,13 +642,7 @@
 				<Options>
 					<HeavyArmour PointsPerModel="4"/>
 					<CathalayanLongsword PointsPerModel="6" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Dependency/>
-						<Points>6</Points>
-					</Option>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<Option>
 						<Name>Brace of handguns</Name>
 						<Dependency/>
