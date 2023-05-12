@@ -664,12 +664,7 @@
 					<LightNativeArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Dependency/>
-						<PointsPerModel>2</PointsPerModel>
-					</Option>
+					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
