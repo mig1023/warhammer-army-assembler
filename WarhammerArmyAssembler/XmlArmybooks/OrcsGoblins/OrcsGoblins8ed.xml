@@ -95,6 +95,9 @@
 			<SpikyRoller Name="Spiky Roller">
 				AddToStrength: 1
 			</SpikyRoller>
+			<OutRigg Name="Out-rigg">
+				Rule: 4D6 for the movement
+			</OutRigg>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1530,11 +1533,7 @@
 				</Equipments>
 				<Options>
 					<SpikyRoller Points="15"/>
-					<Option>
-						<Name>Out-rigga</Name>
-						<Rule>4D6 for the movement</Rule>
-						<Points>10</Points>
-					</Option>
+					<OutRigg Points="10"/>
 					<Option>
 						<Name>Flappas</Name>
 						<Rule>A Pump Wagon fitted with flappas only has to take Dangerous Terrain tests if they end their move in Dangerous Terrain</Rule>
