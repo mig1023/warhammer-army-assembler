@@ -48,6 +48,11 @@
 		<LocalSpecialRules>
 			<BeastRider/>
 		</LocalSpecialRules>
+		<LocalOption>
+			<Ironfists>
+				AddToArmour: 6
+			</Ironfists>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -348,12 +353,7 @@
 				</Equipments>
 				<Options>
 					<AdditionalWeapon Points="3" Dependency="Weapon"/>
-					<Option>
-						<Name>Ironfists</Name>
-						<AddToArmour Val="6"/>
-						<Dependency/>
-						<Points>5</Points>
-					</Option>
+					<Ironfists Points="5" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
