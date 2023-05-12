@@ -735,13 +735,7 @@
 						<Musician Points="8" Name="Bellower"/>
 						<StandardBearer Points="10" Magic="Type: Unit, Points: 50"/>
 					</Command>
-					<Option>
-						<Name>Brace of Ogre pistol</Name>
-						<Dependencies>
-							<On>Crusher</On>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<BraceOgrePistol Points="6" Dependencies="On: Crusher"/>
 				</Options>
 			</Special>
 			<Special>
