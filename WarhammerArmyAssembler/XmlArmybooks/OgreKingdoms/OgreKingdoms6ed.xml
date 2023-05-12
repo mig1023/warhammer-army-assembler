@@ -49,6 +49,11 @@
 			<Bicker/>
 			<UseGutMagic/>
 		</LocalSpecialRules>
+		<LocalOption>
+			<Ironfists>
+				AddToArmour: 6
+			</Ironfists>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -327,12 +332,7 @@
 				<Options>
 					<GreatWeapon Points="14" Dependency="Weapon"/>
 					<AdditionalWeapon Points="10" Dependency="Weapon"/>
-					<Option>
-						<Name>Ironfists</Name>
-						<AddToArmour Val="6"/>
-						<Dependency/>
-						<Points>12</Points>
-					</Option>
+					<Ironfists Points="12" Dependency="Weapon"/>
 					<Option>
 						<Name>Cathalayan longsword</Name>
 						<AddToWeaponSkill Val="1"/>
