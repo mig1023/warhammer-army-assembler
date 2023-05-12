@@ -58,6 +58,9 @@
 			<BloodVulture Name="Blood vulture"/>
 			<LookOutGnoblar Name="Look-out Gnoblar"/>
 			<GnoblarTrappers Name="Gnoblar Trappers"/>
+			<Chaintrap>
+				RealisedByDefault
+			</Chaintrap>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -823,11 +826,7 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Chaintrap</Name>
-						<Dependency/>
-						<RealisedByDefault/>
-					</Option>
+					<Chaintrap Dependency="Weapon"/>
 					<HarpoonLauncher Dependency="Weapon"/>
 				</Options>
 			</Rare>
