@@ -728,13 +728,7 @@
 				</Equipments>
 				<Options>
 					<HeavyArmour Points="5"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Dependency/>
-						<PointsPerModel>8</PointsPerModel>
-					</Option>
+					<GreatWeapon PointsPerModel="8" Dependency="Weapon"/>
 					<Option>
 						<Name>Ironfists</Name>
 						<AddToArmour Val="6"/>
