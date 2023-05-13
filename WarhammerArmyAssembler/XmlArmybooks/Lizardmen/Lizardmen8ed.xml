@@ -67,7 +67,8 @@
 			</PoisonedAttacks>
 			<LustrianJavelinsSshields Name="Lustrian javelins and shields">
 				AddToArmour: 6
-			</LustrianJavelinsSshields>	
+			</LustrianJavelinsSshields>
+			<FireleechBolas Name="Fireleech bolas"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1048,10 +1049,7 @@
 					<RangeWeapon>Lustrian javelin</RangeWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Fireleech bolas</Name>
-						<PointsPerModel>1</PointsPerModel>
-					</Option>
+					<FireleechBolas PointsPerModel="1"/>
 					<Command>
 						<Champion Points="10" Name="Sky Leader"/>
 					</Command>
