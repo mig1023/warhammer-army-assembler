@@ -55,7 +55,7 @@
 				AddToWizard: 4;
 				AddToCast: 4;
 				AddToDispell: 2;
-			</Option>
+			</BigMarkOfTzeentch>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
@@ -866,12 +866,7 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="4" Points="35"/>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Points>25</Points>
-						<Dependency/>
-						<ImmuneToPsychology/>
-					</Option>
+					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>50</Points>
