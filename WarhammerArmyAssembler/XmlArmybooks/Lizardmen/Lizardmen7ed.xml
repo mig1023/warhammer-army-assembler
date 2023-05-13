@@ -59,6 +59,9 @@
 		<LocalOption>
 			<Blowpipe/>
 			<Javelins/>
+			<JavelinAndShield Name="Javelin and shield">
+				AddToArmour: 6
+			</JavelinAndShield>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -948,11 +951,7 @@
 					<RangeWeapon>Javelin</RangeWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Javelin and shield</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<AddToArmour Val="6"/>
-					</Option>
+					<JavelinAndShield PointsPerModel="1"/>
 					<Command>
 						<Champion Points="6" Name="Brave"/>
 					</Command>
