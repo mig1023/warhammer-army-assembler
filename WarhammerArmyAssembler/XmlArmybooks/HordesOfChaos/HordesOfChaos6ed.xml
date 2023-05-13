@@ -900,14 +900,7 @@
 					<TwoBreathWeapon/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Points>150</Points>
-						<Dependency Group="Mark"/>
-						<AddToWizard Val="4"/>
-						<AddToCast Val="4"/>
-						<AddToDispell Val="2"/>
-					</Option>
+					<BigMarkOfTzeentch Points="150" Dependency="Mark"/>
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 					<MarkOfKhorne Points="35" Dependency="Mark"/>
 					<MarkOfNurgle Points="50" Dependency="Mark"/>
