@@ -80,6 +80,11 @@
 				AddToArmour: 4;
 				NativeArmour
 			</ChaosArmour>
+			<Chosen>
+				AddToArmour: 6;
+				AddToAttacks: 1;
+				OnlyOneSuchUnits
+			</Chosen>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1120,13 +1125,7 @@
 					<HeavyArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Chosen</Name>
-						<PointsPerModel>6</PointsPerModel>
-						<AddToArmour Val="6"/>
-						<AddToAttacks Val="1"/>
-						<OnlyOneSuchUnits/>
-					</Option>
+					<Chosen PointsPerModel="6"/>
 					<Halberd PointsPerModel="2"/>
 					<AdditionalWeapon PointsPerModel="3"/>
 					<GreatWeapon PointsPerModel="2"/>
