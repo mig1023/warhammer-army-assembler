@@ -71,6 +71,9 @@
 			<FireleechBolas Name="Fireleech bolas"/>
 			<SolarEngine Name="Solar Engine"/>
 			<EngineOfGods Name="Engine of the Gods"/>
+			<AdditionalSkink Name="Additional skink per pack">
+				AddToModelsInPack: 1
+			</AdditionalSkink>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1171,11 +1174,7 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Additional skink per pack</Name>
-						<PointsPerModel>4</PointsPerModel>
-						<AddToModelsInPack Val="1"/>
-					</Option>
+					<AdditionalSkink PointsPerModel="4"/>
 				</Options>
 			</Rare>
 			<Rare>
