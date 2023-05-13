@@ -56,6 +56,11 @@
 				AddToCast: 4;
 				AddToDispell: 2;
 			</BigMarkOfTzeentch>
+			<LtlMarkOfTzeentch Name="Mark of Tzeentch">
+				AddToWizard: 2;
+				AddToCast: 2;
+				AddToDispell: 1;
+			</LtlMarkOfTzeentch>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
@@ -921,14 +926,7 @@
 					<Flail Points="2"/>
 					<Halberd Points="4"/>
 					<Shield Points="2"/>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Points>70</Points>
-						<Dependency Group="Mark"/>
-						<AddToWizard Val="2"/>
-						<AddToCast Val="2"/>
-						<AddToDispell Val="1"/>
-					</Option>
+					<LtlMarkOfTzeentch Points="70" Dependency="Mark"/>
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
 					<MarkOfKhorne Points="35" Dependency="Mark"/>
 					<MarkOfNurgle Points="40" Dependency="Mark"/>
