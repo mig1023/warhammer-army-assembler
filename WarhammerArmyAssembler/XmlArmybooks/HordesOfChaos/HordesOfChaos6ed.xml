@@ -986,14 +986,7 @@
 							<Off>Mark of Tzeentch</Off>
 						</Dependencies>
 					</Option>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Points>70</Points>
-						<Dependency Group="Mark"/>
-						<AddToWizard Val="2"/>
-						<AddToCast Val="2"/>
-						<AddToDispell Val="1"/>
-					</Option>
+					<LtlMarkOfTzeentch Points="70" Dependency="Mark"/>
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
 					<MarkOfKhorne Points="35" Dependency="Mark"/>
 					<MarkOfNurgle Points="40" Dependency="Mark"/>
