@@ -86,6 +86,7 @@
 				OnlyOneSuchUnits
 			</Chosen>
 			<ThrowingAxes Name="Throwing axes"/>
+			<ThrowingSpears Name="Throwing spears"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1182,10 +1183,7 @@
 					<Spears PointsPerModel="1"/>
 					<Flail PointsPerModel="2"/>
 					<ThrowingAxes PointsPerModel="4"/>
-					<Option>
-						<Name>Throwing spears</Name>
-						<PointsPerModel>4</PointsPerModel>
-					</Option>
+					<ThrowingSpears PointsPerModel="4"/>
 					<Shield PointsPerModel="2"/>
 					<Command>
 						<Champion Points="12" Name="Chieftain"/>
