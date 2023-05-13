@@ -62,6 +62,9 @@
 			<JavelinAndShield Name="Javelin and shield">
 				AddToArmour: 6
 			</JavelinAndShield>
+			<Handler>
+				AddToModelsInPack: 1
+			</Handler>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1152,11 +1155,7 @@
 					<Original>Spout Flame</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Handler</Name>
-						<AddToModelsInPack Val="1"/>
-						<PointsPerModel>5</PointsPerModel>
-					</Option>
+					<Handler PointsPerModel="5"/>
 				</Options>
 			</Rare>
 			<Rare>
