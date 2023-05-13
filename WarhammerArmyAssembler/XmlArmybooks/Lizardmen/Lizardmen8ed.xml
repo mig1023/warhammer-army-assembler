@@ -62,6 +62,9 @@
 				Bloodroar
 			</Bloodroar>
 			<LopingStride Name="Loping Stride"/>
+			<PoisonedAttacks>
+				PoisonAttack
+			</PoisonedAttacks>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -844,9 +847,7 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Spears</Name>
-					</Option>
+					<Spears/>
 					<Command>
 						<Musician Points="10"/>
 						<StandardBearer Points="10"/>
@@ -878,11 +879,7 @@
 							<ExportToUnitSize/>
 						</Countable>
 					</Option>
-					<Option>
-						<Name>Poisoned attacks</Name>
-						<PoisonAttack/>
-						<PointsPerModel>2</PointsPerModel>
-					</Option>
+					<PoisonedAttacks PointsPerModel="2"/>
 					<Command>
 						<Musician Points="10"/>
 						<StandardBearer Points="10"/>
