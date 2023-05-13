@@ -65,6 +65,9 @@
 			<PoisonedAttacks>
 				PoisonAttack
 			</PoisonedAttacks>
+			<LustrianJavelinsSshields Name="Lustrian javelins and shields">
+				AddToArmour: 6
+			</LustrianJavelinsSshields>	
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -904,10 +907,7 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Lustrian javelins and shields</Name>
-						<AddToArmour Val="6"/>
-					</Option>
+					<LustrianJavelinsSshields/>
 					<Command>
 						<Champion Points="10" Name="Patrol leader"/>
 					</Command>
