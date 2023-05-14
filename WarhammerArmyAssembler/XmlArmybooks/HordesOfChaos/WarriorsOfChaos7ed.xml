@@ -77,6 +77,9 @@
 			<PoisonedAttacks Name="Poisoned attacks">
 				PoisonAttack
 			</PoisonedAttacks>
+			<ScalySkin Name="Scaly Skin">
+				AddToArmour: 6
+			</ScalySkin>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1076,11 +1079,7 @@
 					<Shield PointsPerModel="1"/>
 					<Flail PointsPerModel="1"/>
 					<PoisonedAttacks PointsPerModel="3"/>
-					<Option>
-						<Name>Scaly Skin</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<AddToArmour Val="6"/>
-					</Option>
+					<ScalySkin PointsPerModel="1"/>
 				</Options>
 			</Core>
 			<Core>
