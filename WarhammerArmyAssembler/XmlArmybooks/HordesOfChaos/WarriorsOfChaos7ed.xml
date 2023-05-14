@@ -80,6 +80,8 @@
 			<ScalySkin Name="Scaly Skin">
 				AddToArmour: 6
 			</ScalySkin>
+			<ThrowingSpears Name="Throwing spears"/>
+			<ThrowingAxes Name="Throwing axes"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1108,14 +1110,8 @@
 					<LightArmour PointsPerModel="1"/>
 					<Flail PointsPerModel="2"/>
 					<Spears PointsPerModel="1"/>
-					<Option>
-						<Name>Throwing spears</Name>
-						<PointsPerModel>1</PointsPerModel>
-					</Option>
-					<Option>
-						<Name>Throwing axes</Name>
-						<PointsPerModel>2</PointsPerModel>
-					</Option>
+					<ThrowingSpears PointsPerModel="1"/> 
+					<ThrowingAxes PointsPerModel="2"/> 
 					<Command>
 						<Musician Points="6"/>
 						<Champion Points="12" Name="Chieftain"/>
