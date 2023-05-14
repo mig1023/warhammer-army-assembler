@@ -63,6 +63,9 @@
 			<MarkOfTzeentch Name="Mark of Tzeentch">
 				AddToWard: 6
 			</Option>
+			<MarkOfSlaanesh Name="Mark of Slaanesh">
+				ImmuneToPsychology
+			</MarkOfSlaanesh>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -611,12 +614,7 @@
 					<MarkOfKhorne Points="15" Dependency="Mark"/>
 					<MarkOfNurgle Points="20" Dependency="Mark"/>
 					<MarkOfTzeentch Points="10" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Points>5</Points>
-						<Dependency Group="Mark"/>
-						<ImmuneToPsychology/>
-					</Option>
+					<MarkOfSlaanesh Points="5" Dependency="Mark"/>
 					<Mount Name="Chaos Dragon" Points="360"/>
 					<Mount Name="Chaos Steed" Points="24"/>
 					<Mount Name="Manticore" Points="200"/>
