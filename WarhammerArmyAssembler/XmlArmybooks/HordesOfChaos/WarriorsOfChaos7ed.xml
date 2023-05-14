@@ -57,6 +57,9 @@
 			<MarkOfKhorne Name="Mark of Khorne">
 				Frenzy
 			</MarkOfKhorne>
+			<MarkOfNurgle Name="Mark of Nurgle">
+				Rule: -1 to hit shooting and -1 WS in close combat
+			</Option>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -603,12 +606,7 @@
 					<Halberd Points="8" Dependency="Weapon"/>
 					<Shield Points="10"/>
 					<MarkOfKhorne Points="15" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Points>20</Points>
-						<Dependency Group="Mark"/>
-						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
-					</Option>
+					<MarkOfNurgle Points="20" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
