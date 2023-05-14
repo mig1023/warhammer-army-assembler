@@ -1380,12 +1380,7 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional hand weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Dependency/>
-						<PointsPerModel>10</PointsPerModel>
-					</Option>
+					<AdditionalWeapon Points="10" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
