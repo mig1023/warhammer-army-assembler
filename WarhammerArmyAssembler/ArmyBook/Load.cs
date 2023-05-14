@@ -596,7 +596,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         }
 
         private static bool EmptyNameSpecific(string name) =>
-            (name == "Hand weapon") || (name == "Range weapon");
+            (name == "Hand weapon") || (name == "Range weapon") || (name == "Mark");
 
         private static void CreateOption(string name, string attributes, XmlDocument xmlDocument, ref XmlNode xmlNode)
         {

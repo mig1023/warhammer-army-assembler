@@ -49,7 +49,6 @@
 			<Daemonic/>
 			<TwoBreathWeapon/>
 			<FastCavalry/>
-			<MarkOfKhorne>Mark of Khorne</MarkOfKhorne>
 		</LocalSpecialRules>
 		<LocalOption>
 			<BigMarkOfTzeentch Name="Mark of Tzeentch">
@@ -1257,10 +1256,12 @@
 				<SpecialRules>
 					<Frenzy/>
 					<Original>Magic Resistance (1)</Original>
-					<MarkOfKhorne/>
 				</SpecialRules>
 				<Equipments>
 					<LightArmour/>
+					<Mark>
+						<Name>Mark of Khorne</Name>
+					</Mark>
 				</Equipments>
 				<Options>
 					<Command>
@@ -1281,8 +1282,12 @@
 					<NoCoreSlot/>
 					<FastCavalry/>
 					<Original>Magic Resistance (2)</Original>
-					<MarkOfKhorne/>
 				</SpecialRules>
+				<Equipments>
+					<Mark>
+						<Name>Mark of Khorne</Name>
+					</Mark>
+				</Equipments>
 			</Special>
 			<Special>
 				<Name>Plaguebearer</Name>
@@ -1294,8 +1299,12 @@
 				<SpecialRules>
 					<SubOpponentToHit Val="1"/>
 					<Original>Breath attack Strength 3 with a -2 armour modifier</Original>
-					<MarkOfKhorne/>
 				</SpecialRules>
+				<Equipments>
+					<Mark>
+						<Name>Mark of Nurgle</Name>
+					</Mark>
+				</Equipments>
 			</Special>
 			<Special>
 				<Name>Nurglings</Name>
