@@ -54,6 +54,9 @@
 				AddToArmour: 4;
 				NativeArmour
 			</ChaosArmour>
+			<MarkOfKhorne Name="Mark of Khorne">
+				Frenzy
+			</MarkOfKhorne>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -599,12 +602,7 @@
 					<Flail Points="8" Dependency="Weapon"/>
 					<Halberd Points="8" Dependency="Weapon"/>
 					<Shield Points="10"/>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Points>15</Points>
-						<Dependency Group="Mark"/>
-						<Frenzy/>
-					</Option>
+					<MarkOfKhorne Points="15" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>20</Points>
