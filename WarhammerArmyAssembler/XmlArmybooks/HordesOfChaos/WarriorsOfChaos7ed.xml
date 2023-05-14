@@ -595,12 +595,7 @@
 				</Equipments>
 				<Options>
 					<GreatWeapon Points="12" Dependency="Weapon"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Points>8</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<AdditionalWeapon Points="8" Dependency="Weapon"/>
 					<Option>
 						<Name>Flail</Name>
 						<Points>8</Points>
