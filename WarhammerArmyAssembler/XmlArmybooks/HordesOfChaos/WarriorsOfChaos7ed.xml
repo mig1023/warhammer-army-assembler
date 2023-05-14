@@ -82,6 +82,9 @@
 				ImmuneToPsychology;
 				HitFirst
 			</MarkOfSlaaneshSpawn>
+			<MarkOfSlaaneshGiant Name="Mark of Slaanesh">
+				HitFirst
+			</MarkOfSlaaneshGiant>
 			<PoisonedAttacks Name="Poisoned attacks">
 				PoisonAttack
 			</PoisonedAttacks>
@@ -1409,12 +1412,7 @@
 					<MarkOfKhorneSpawn Points="30" Dependency="Mark"/>
 					<MarkOfNurgle Points="40" Dependency="Mark"/>
 					<MarkOfTzeentch Points="20" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Points>40</Points>
-						<Dependency/>
-						<HitFirst/>
-					</Option>
+					<MarkOfSlaaneshGiant Points="40" Dependency="Mark"/>
 				</Options>
 			</Rare>
 		</Units>
