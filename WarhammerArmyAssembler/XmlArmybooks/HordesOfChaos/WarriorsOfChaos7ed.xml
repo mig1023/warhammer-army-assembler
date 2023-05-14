@@ -62,7 +62,11 @@
 			</MarkOfNurgle>
 			<MarkOfTzeentch Name="Mark of Tzeentch">
 				AddToWard: 6
-			</Option>
+			</MarkOfTzeentch>
+			<MarkOfTzeentchWithCast Name="Mark of Tzeentch">
+				AddToWard: 6;
+				Rule: +1 on attempts to cast spell
+			</MarkOfTzeentchWithCast>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
@@ -672,13 +676,7 @@
 				<Options>
 					<Wizard Level="4" Points="35"/>
 					<MarkOfNurgle Points="20" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Points>20</Points>
-						<Dependency/>
-						<AddToWard Val="6"/>
-						<Rule>+1 on attempts to cast spell</Rule>
-					</Option>
+					<MarkOfTzeentchWithCast Points="20" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
