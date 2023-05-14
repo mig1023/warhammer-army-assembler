@@ -818,13 +818,7 @@
 				<Options>
 					<Wizard Level="2" Points="35"/>
 					<MarkOfNurgle Points="20" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Points>20</Points>
-						<Dependency/>
-						<AddToWard Val="6"/>
-						<Rule>+1 on attempts to cast spell</Rule>
-					</Option>
+					<MarkOfTzeentchWithCast Points="20" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
