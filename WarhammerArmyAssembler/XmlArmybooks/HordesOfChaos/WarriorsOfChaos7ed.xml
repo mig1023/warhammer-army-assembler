@@ -74,6 +74,9 @@
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
+			<PoisonedAttacks Name="Poisoned attacks">
+				PoisonAttack
+			</PoisonedAttacks>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1072,11 +1075,7 @@
 					<MarkOfSlaanesh Points="10" Dependency="Mark"/>
 					<Shield PointsPerModel="1"/>
 					<Flail PointsPerModel="1"/>
-					<Option>
-						<Name>Poisoned attacks</Name>
-						<PointsPerModel>3</PointsPerModel>
-						<PoisonAttack/>
-					</Option>
+					<PoisonedAttacks PointsPerModel="3"/>
 					<Option>
 						<Name>Scaly Skin</Name>
 						<PointsPerModel>1</PointsPerModel>
