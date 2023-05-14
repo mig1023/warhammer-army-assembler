@@ -57,6 +57,10 @@
 			<MarkOfKhorne Name="Mark of Khorne">
 				Frenzy
 			</MarkOfKhorne>
+			<MarkOfKhorneSpawn Name="Mark of Khorne">
+				AddToStrength: 1;
+				Frenzy
+			</MarkOfKhorneSpawn>
 			<MarkOfNurgle Name="Mark of Nurgle">
 				Rule: -1 to hit shooting and -1 WS in close combat
 			</MarkOfNurgle>
@@ -1296,13 +1300,7 @@
 					</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Points>20</Points>
-						<Dependency/>
-						<AddToStrength Val="1"/>
-						<Frenzy/>
-					</Option>
+					<MarkOfKhorneSpawn Points="20" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>30</Points>
