@@ -1406,21 +1406,8 @@
 					<HandWeapon>Big rock, club or dead animal</HandWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Points>30</Points>
-						<Dependencies>
-							<Off>Mark of Tzeentch, Mark of Slaanesh, Mark of Nurgle</Off>
-						</Dependencies>
-						<Frenzy/>
-						<AddToStrength Val="1"/>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Points>40</Points>
-						<Dependency/>
-						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
-					</Option>
+					<MarkOfKhorneSpawn Points="30" Dependency="Mark"/>
+					<MarkOfNurgle Points="40" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>20</Points>
