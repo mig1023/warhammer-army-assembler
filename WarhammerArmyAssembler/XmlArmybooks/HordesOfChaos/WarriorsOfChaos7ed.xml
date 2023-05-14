@@ -59,6 +59,9 @@
 			</MarkOfKhorne>
 			<MarkOfNurgle Name="Mark of Nurgle">
 				Rule: -1 to hit shooting and -1 WS in close combat
+			</MarkOfNurgle>
+			<MarkOfTzeentch Name="Mark of Tzeentch">
+				AddToWard: 6
 			</Option>
 		</LocalOption>
 	</Introduction>
@@ -607,12 +610,7 @@
 					<Shield Points="10"/>
 					<MarkOfKhorne Points="15" Dependency="Mark"/>
 					<MarkOfNurgle Points="20" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Tzeentch</Name>
-						<Points>10</Points>
-						<Dependency Group="Mark"/>
-						<AddToWard Val="6"/>
-					</Option>
+					<MarkOfTzeentch Points="10" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>5</Points>
