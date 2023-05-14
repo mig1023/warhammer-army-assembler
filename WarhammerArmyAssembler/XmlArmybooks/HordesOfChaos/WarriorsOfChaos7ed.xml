@@ -78,6 +78,10 @@
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
+			<MarkOfSlaanesh Name="Mark of Slaanesh">
+				ImmuneToPsychology;
+				HitFirst
+			</MarkOfSlaanesh>
 			<PoisonedAttacks Name="Poisoned attacks">
 				PoisonAttack
 			</PoisonedAttacks>
@@ -1303,6 +1307,7 @@
 					<MarkOfKhorneSpawn Points="20" Dependency="Mark"/>
 					<MarkOfNurgle Points="30" Dependency="Mark"/>
 					<MarkOfTzeentch Points="10" Dependency="Mark"/>
+					
 					<Option>
 						<Name>Mark of Slaanesh</Name>
 						<Points>20</Points>
