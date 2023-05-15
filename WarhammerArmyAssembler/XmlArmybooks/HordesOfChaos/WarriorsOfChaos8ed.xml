@@ -1221,11 +1221,7 @@
 					<Flail PointsPerModel="2"/>
 					<ThrowingAxes PointsPerModel="2" Dependency="Range"/>
 					<Javelins PointsPerModel="1" Dependency="Range"/>
-					<Option>
-						<Name>Spears</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<Spears PointsPerModel="1" Dependency="Weapon"/>
 					<Option>
 						<Name>Flail</Name>
 						<PointsPerModel>2</PointsPerModel>
