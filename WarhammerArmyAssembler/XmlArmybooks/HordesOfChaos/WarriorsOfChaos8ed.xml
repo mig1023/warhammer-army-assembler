@@ -904,18 +904,8 @@
 				<Options>
 					<Wizard Level="2" Points="35"/>
 					<MarkOfKhorne Points="15" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<PointsPerModel>10</PointsPerModel>
-						<Dependency/>
-						<Rule>-1 to hit shooting and -1 WS in close combat</Rule>
-					</Option>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<PointsPerModel>5</PointsPerModel>
-						<Dependency/>
-						<ImmuneToPsychology/>
-					</Option>
+					<MarkOfNurgle Points="10" Dependency="Mark"/>
+					<MarkOfSlaanesh Points="5" Dependency="Mark"/>
 					<Option>
 						<Name>Chaos Steed</Name>
 						<Points>16</Points>
