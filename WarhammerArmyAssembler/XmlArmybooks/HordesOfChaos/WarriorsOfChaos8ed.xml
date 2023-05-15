@@ -1081,12 +1081,7 @@
 					<Shield PointsPerModel="1"/>
 					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
 					<GreatWeapon PointsPerModel="3" Dependency="Weapon"/>
-					<Option>
-						<Name>Halberd</Name>
-						<PointsPerModel>3</PointsPerModel>
-						<Dependency Group="Weapon"/>
-						<AddToStrength Val="1"/>
-					</Option>
+					<Halberd PointsPerModel="3" Dependency="Weapon"/>
 					<Command>
 						<Champion>
 							<Name>Aspiring Champion</Name>
