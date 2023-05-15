@@ -1222,12 +1222,7 @@
 					<ThrowingAxes PointsPerModel="2" Dependency="Range"/>
 					<Javelins PointsPerModel="1" Dependency="Range"/>
 					<Spears PointsPerModel="1" Dependency="Weapon"/>
-					<Option>
-						<Name>Flail</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency Group="Weapon"/>
-						<Flail/>
-					</Option>
+					<Flail PointsPerModel="2" Dependency="Weapon"/>
 					<Command>
 						<Champion Points="10" Name="Marauder Horseman"/>
 						<Musician Points="10"/>
