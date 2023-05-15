@@ -91,6 +91,9 @@
 			<Barding>
 				AddToArmour: 6
 			</Barding>
+			<IronHardSkin Name="Iron Hard Skin">
+				AddToArmour: 4
+			</IronHardSkin>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1007,11 +1010,7 @@
 					<Original>Uncontrollable</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Iron Hard Skin</Name>
-						<AddToArmour Val="4"/>
-						<Points>25</Points>
-					</Option>
+					<IronHardSkin Points="25"/>
 					<Option>
 						<Name>Venom Tail</Name>
 						<Rule>Additional Poisoned Attack with Multiple Wounds (2) special rules, +1 To Hit bonus if it is targeted against a unit in the Manticore's rear arc.</Rule>
