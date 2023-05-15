@@ -110,6 +110,9 @@
 			<ForsakenOfSlaanesh Name="Forsaken of Slaanesh">
 				Swiftstride
 			</ForsakenOfSlaanesh>
+			<Vinguard>
+				Rule: Vinguard special rule
+			</Vinguard>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1160,11 +1163,7 @@
 				<Image>Warhounds</Image>
 				<Profile M='7' WS='4' BS='0' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
 				<Options>
-					<Option>
-						<Name>Vinguard</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Rule>Vinguard special rule</Rule>
-					</Option>
+					<Vinguard PointsPerModel="2"/>
 					<Option>
 						<Name>Scaly Hide</Name>
 						<PointsPerModel>1</PointsPerModel>
