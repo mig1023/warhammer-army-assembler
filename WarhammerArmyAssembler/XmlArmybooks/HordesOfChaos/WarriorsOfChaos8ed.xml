@@ -843,13 +843,7 @@
 					<ChaosArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Points>3</Points>
-						<Only>Infantry</Only>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<AdditionalWeapon Points="3" Only="Infantry" Dependency="Weapon"/>
 					<Option>
 						<Name>Flail</Name>
 						<Points>5</Points>
