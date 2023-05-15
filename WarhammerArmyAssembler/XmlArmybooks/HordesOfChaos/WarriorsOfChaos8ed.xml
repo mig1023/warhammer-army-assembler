@@ -68,6 +68,9 @@
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
+			<DaemonicFlight Name="Daemonic Flight">
+				Rule: Fly
+			</DaemonicFlight>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -693,11 +696,7 @@
 				</SpecialRules>
 				<Options>
 					<ChaosArmour Points="20"/>
-					<Option>
-						<Name>Daemonic Flight</Name>
-						<Points>40</Points>
-						<Rule>Fly</Rule>
-					</Option>
+					<DaemonicFlight Points="40"/>
 					<Option>
 						<Name>Daemon of Khorne</Name>
 						<Points>10</Points>
