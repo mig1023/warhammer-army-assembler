@@ -104,6 +104,9 @@
 			<ForsakenOfTzeentch Name="Forsaken of Tzeentch">
 				Rule: Magic Resistance (2)
 			</ForsakenOfKhorne>
+			<ForsakenOfNurgle Name="Forsaken of Nurgle">
+				Fear
+			</ForsakenOfNurgle>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1143,12 +1146,7 @@
 				<Options>
 					<ForsakenOfKhorne PointsPerModel="2" Dependency="Mark"/>
 					<ForsakenOfTzeentch PointsPerModel="1" Dependency="Mark"/>
-					<Option>
-						<Name>Forsaken of Nurgle</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency/>
-						<Fear/>
-					</Option>
+					<ForsakenOfNurgle PointsPerModel="2" Dependency="Mark"/>
 					<Option>
 						<Name>Forsaken of Slaanesh</Name>
 						<PointsPerModel>2</PointsPerModel>
