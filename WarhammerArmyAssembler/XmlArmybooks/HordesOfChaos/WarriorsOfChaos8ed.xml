@@ -845,13 +845,7 @@
 				<Options>
 					<AdditionalWeapon Points="3" Only="Infantry" Dependency="Weapon"/>
 					<Flail Points="5" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Points>6</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<GreatWeapon Points="6" Dependency="Weapon"/>
 					<Option>
 						<Name>Halberd</Name>
 						<AddToStrength Val="1"/>
