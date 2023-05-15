@@ -1079,12 +1079,7 @@
 					<MarkOfNurgle PointsPerModel="2" Dependency="Mark"/>
 					<MarkOfSlaanesh Points="1" Dependency="Mark"/>
 					<Shield PointsPerModel="1"/>
-					<Option>
-						<Name>Additional weapon</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency Group="Weapon"/>
-						<AddToAttacks Val="1"/>
-					</Option>
+					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<PointsPerModel>3</PointsPerModel>
