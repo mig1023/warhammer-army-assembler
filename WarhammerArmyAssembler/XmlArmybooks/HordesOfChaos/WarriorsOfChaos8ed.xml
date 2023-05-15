@@ -541,13 +541,7 @@
 				</Equipments>
 				<Options>
 					<AdditionalWeapon Points="6" Only="Infantry" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Points>8</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<GreatWeapon Points="8" Dependency="Weapon"/>
 					<Option>
 						<Name>Flail</Name>
 						<Points>6</Points>
