@@ -84,6 +84,10 @@
 				SubOpponentToHit: 1;
 				Rule: Hate Daemon of Tzeentch
 			</DaemonOfNurgle>
+			<DaemonOfSlaanesh Name="Daemon of Slaanesh">
+				ArmourPiercing: 1;
+				Rule: Hate Daemon of Khorne
+			</DaemonOfSlaanesh>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -713,13 +717,7 @@
 					<DaemonOfKhorne Points="10" Dependency="Mark"/>
 					<DaemonOfTzeentch Points="15" Dependency="Mark"/>
 					<DaemonOfNurgle Points="10" Dependency="Mark"/>
-					<Option>
-						<Name>Daemon of Slaanesh</Name>
-						<PointsPerModel>5</PointsPerModel>
-						<Dependency/>
-						<ArmourPiercing Val="1"/>
-						<Rule>Hate Daemon of Khorne</Rule>
-					</Option>
+					<DaemonOfSlaanesh Points="5" Dependency="Mark"/>
 					<Option>
 						<Name>Wizard Level</Name>
 						<Points>35</Points>
