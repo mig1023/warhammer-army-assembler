@@ -673,14 +673,7 @@
 						</Dependencies>
 					</Option>
 					<Mount Name="Demonic Mount" Points="35"/>
-					<Option>
-						<Name>Barding</Name>
-						<Points>15</Points>
-						<AddToArmour Val="6"/>
-						<Dependencies>
-							<On>Demonic Mount</On>
-						</Dependencies>
-					</Option>
+					<Barding Points="15" Dependencies="On: Demonic Mount"/>
 					<Option>
 						<Name>Palanquin of Nurgle</Name>
 						<Points>40</Points>
