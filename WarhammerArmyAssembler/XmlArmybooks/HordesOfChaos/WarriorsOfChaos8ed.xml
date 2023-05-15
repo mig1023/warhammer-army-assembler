@@ -71,6 +71,10 @@
 			<DaemonicFlight Name="Daemonic Flight">
 				Rule: Fly
 			</DaemonicFlight>
+			<DaemonOfKhorne Name="Daemon of Khorne">
+				Rule: Hate Daemon of Slaanesh;
+				Rule: +1 Strength for the rest of the turn after successful charge
+			</Option>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -697,13 +701,7 @@
 				<Options>
 					<ChaosArmour Points="20"/>
 					<DaemonicFlight Points="40"/>
-					<Option>
-						<Name>Daemon of Khorne</Name>
-						<Points>10</Points>
-						<Dependency/>
-						<Rule>Hate Daemon of Slaanesh</Rule>
-						<Rule>+1 Strength for the rest of the turn after successful charge</Rule>
-					</Option>
+					<DaemonOfKhorne Points="10" Dependency="Mark"/>
 					<Option>
 						<Name>Daemon of Tzeentch</Name>
 						<PointsPerModel>15</PointsPerModel>
