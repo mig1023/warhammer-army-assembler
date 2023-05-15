@@ -118,7 +118,8 @@
 			</ScalyHide>
 			<MutantPoisons Name="Mutant Poisons">
 				PoisonAttack
-			</Mutant>
+			</MutantPoisons>
+			<ThrowingAxes Name="Throwing axes"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1217,11 +1218,7 @@
 					<Shield PointsPerModel="1"/>
 					<LightArmour PointsPerModel="1"/>
 					<Flail PointsPerModel="2"/>
-					<Option>
-						<Name>Throwing axes</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency Group="Range"/>
-					</Option>
+					<ThrowingAxes PointsPerModel="2" Dependency="Range"/>
 					<Option>
 						<Name>Javelins</Name>
 						<PointsPerModel>1</PointsPerModel>
