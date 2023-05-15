@@ -80,6 +80,10 @@
 				Rule: Re-roll Ward save results of 1;
 				Rule: Re-roll Channelling results of 1
 			</DaemonOfTzeentch>
+			<DaemonOfNurgle Name="Daemon of Nurgle">
+				SubOpponentToHit: 1;
+				Rule: Hate Daemon of Tzeentch
+			</DaemonOfNurgle>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -708,13 +712,7 @@
 					<DaemonicFlight Points="40"/>
 					<DaemonOfKhorne Points="10" Dependency="Mark"/>
 					<DaemonOfTzeentch Points="15" Dependency="Mark"/>
-					<Option>
-						<Name>Daemon of Nurgle</Name>
-						<PointsPerModel>10</PointsPerModel>
-						<Dependency/>
-						<SubOpponentToHit Val="1"/>
-						<Rule>Hate Daemon of Tzeentch</Rule>
-					</Option>
+					<DaemonOfNurgle Points="10" Dependency="Mark"/>
 					<Option>
 						<Name>Daemon of Slaanesh</Name>
 						<PointsPerModel>5</PointsPerModel>
