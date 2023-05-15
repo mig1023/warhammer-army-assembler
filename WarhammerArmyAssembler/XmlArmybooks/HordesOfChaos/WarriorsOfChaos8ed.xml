@@ -116,6 +116,9 @@
 			<ScalyHide Name="Scaly Hide">
 				AddToArmour: 6
 			</ScalyHide>
+			<MutantPoisons Name="Mutant Poisons">
+				PoisonAttack
+			</Mutant>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1168,11 +1171,7 @@
 				<Options>
 					<Vinguard PointsPerModel="2"/>
 					<ScalyHide PointsPerModel="1"/>
-					<Option>
-						<Name>Mutant Poisons</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<PoisonAttack/>
-					</Option>
+					<MutantPoisons PointsPerModel="1"/>
 				</Options>
 			</Core>
 			<Core>
