@@ -113,6 +113,9 @@
 			<Vinguard>
 				Rule: Vinguard special rule
 			</Vinguard>
+			<ScalyHide Name="Scaly Hide">
+				AddToArmour: 6
+			</ScalyHide>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1164,11 +1167,7 @@
 				<Profile M='7' WS='4' BS='0' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
 				<Options>
 					<Vinguard PointsPerModel="2"/>
-					<Option>
-						<Name>Scaly Hide</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<AddToArmour Val="6"/>
-					</Option>
+					<ScalyHide PointsPerModel="1"/>
 					<Option>
 						<Name>Mutant Poisons</Name>
 						<PointsPerModel>1</PointsPerModel>
