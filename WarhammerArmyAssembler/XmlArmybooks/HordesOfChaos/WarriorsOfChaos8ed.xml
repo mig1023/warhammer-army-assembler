@@ -120,6 +120,7 @@
 				PoisonAttack
 			</MutantPoisons>
 			<ThrowingAxes Name="Throwing axes"/>
+			<Javelins/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1219,11 +1220,7 @@
 					<LightArmour PointsPerModel="1"/>
 					<Flail PointsPerModel="2"/>
 					<ThrowingAxes PointsPerModel="2" Dependency="Range"/>
-					<Option>
-						<Name>Javelins</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<Dependency Group="Range"/>
-					</Option>
+					<Javelins PointsPerModel="1" Dependency="Range"/>
 					<Option>
 						<Name>Spears</Name>
 						<PointsPerModel>1</PointsPerModel>
