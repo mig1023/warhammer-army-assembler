@@ -544,13 +544,7 @@
 					<GreatWeapon Points="8" Dependency="Weapon"/>
 					<Flail Points="6" Dependency="Weapon"/>
 					<Halberd Points="8" Dependency="Weapon"/>
-					<Option>
-						<Name>Lance</Name>
-						<Only>Mount</Only>
-						<Points>8</Points>
-						<Dependency Group="Weapon"/>
-						<Lance/>
-					</Option>
+					<Lance Points="8" Only="Mount" Dependency="Weapon"/>
 					<Shield Points="5"/>
 					<Option>
 						<Name>Mark of Khorne</Name>
