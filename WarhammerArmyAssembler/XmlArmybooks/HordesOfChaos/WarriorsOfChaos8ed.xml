@@ -1080,13 +1080,7 @@
 					<MarkOfSlaanesh Points="1" Dependency="Mark"/>
 					<Shield PointsPerModel="1"/>
 					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<PointsPerModel>3</PointsPerModel>
-						<Dependency Group="Weapon"/>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-					</Option>
+					<GreatWeapon PointsPerModel="3" Dependency="Weapon"/>
 					<Option>
 						<Name>Halberd</Name>
 						<PointsPerModel>3</PointsPerModel>
