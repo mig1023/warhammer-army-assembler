@@ -1111,13 +1111,7 @@
 					<Shield PointsPerModel="1"/>
 					<LightArmour PointsPerModel="1"/>
 					<Flail PointsPerModel="1" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<Dependency Group="Weapon"/>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-					</Option>
+					<GreatWeapon PointsPerModel="1" Dependency="Weapon"/>
 					<Command>
 						<Champion Points="10" Name="Marauder Chieftain"/>
 						<Musician Points="10"/>
