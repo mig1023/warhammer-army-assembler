@@ -540,13 +540,7 @@
 					<ChaosArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<AddToAttacks Val="1"/>
-						<Points>6</Points>
-						<Only>Infantry</Only>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<AdditionalWeapon Points="6" Only="Infantry" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
