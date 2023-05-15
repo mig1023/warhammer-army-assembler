@@ -74,7 +74,12 @@
 			<DaemonOfKhorne Name="Daemon of Khorne">
 				Rule: Hate Daemon of Slaanesh;
 				Rule: +1 Strength for the rest of the turn after successful charge
-			</Option>
+			</DaemonOfKhorne>
+			<DaemonOfTzeentch Name="Daemon of Tzeentch">
+				Rule: Hate Daemon of Nurgle;
+				Rule: Re-roll Ward save results of 1;
+				Rule: Re-roll Channelling results of 1
+			</DaemonOfTzeentch>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -702,14 +707,7 @@
 					<ChaosArmour Points="20"/>
 					<DaemonicFlight Points="40"/>
 					<DaemonOfKhorne Points="10" Dependency="Mark"/>
-					<Option>
-						<Name>Daemon of Tzeentch</Name>
-						<PointsPerModel>15</PointsPerModel>
-						<Dependency/>
-						<Rule>Hate Daemon of Nurgle</Rule>
-						<Rule>Re-roll Ward save results of 1</Rule>
-						<Rule>Re-roll Channelling results of 1</Rule>
-					</Option>
+					<DaemonOfTzeentch Points="15" Dependency="Mark"/>
 					<Option>
 						<Name>Daemon of Nurgle</Name>
 						<PointsPerModel>10</PointsPerModel>
