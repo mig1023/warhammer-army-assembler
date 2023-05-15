@@ -94,6 +94,10 @@
 			<IronHardSkin Name="Iron Hard Skin">
 				AddToArmour: 4
 			</IronHardSkin>
+			<VenomTail Name="Venom Tail">
+				Rule: Additional Poisoned Attack with Multiple Wounds (2) special rules, +1 To Hit bonus if it is targeted against a unit in the Manticore's rear arc;
+				HitLast
+			</VenomTail>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1011,12 +1015,7 @@
 				</SpecialRules>
 				<Options>
 					<IronHardSkin Points="25"/>
-					<Option>
-						<Name>Venom Tail</Name>
-						<Rule>Additional Poisoned Attack with Multiple Wounds (2) special rules, +1 To Hit bonus if it is targeted against a unit in the Manticore's rear arc.</Rule>
-						<HitLast/>
-						<Points>10</Points>
-					</Option>
+					<VenomTail Points="10"/>
 				</Options>
 			</Mount>
 			<Mount>
