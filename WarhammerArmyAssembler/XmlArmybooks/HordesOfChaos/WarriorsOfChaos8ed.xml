@@ -63,6 +63,9 @@
 				Frenzy;
 				AddToStrength: 1
 			</GiantMarkOfKhorne>
+			<SpawnMarkOfKhorne Name="Mark of Khorne">
+				Rule: Devastating Charge
+			</SpawnMarkOfKhorne>
 			<MarkOfTzeentch Name="Mark of Tzeentch">
 				AddToWard: 6
 			</MarkOfTzeentch>
@@ -72,6 +75,9 @@
 			<GiantMarkOfNurgle Name="Mark of Nurgle">
 				AddToToughness: 1
 			</GiantMarkOfNurgle>
+			<SpawnMarkOfNurgle Name="Mark of Nurgle">
+				PoisonAttack
+			</SpawnMarkOfNurgle>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
@@ -1569,18 +1575,8 @@
 					<Unbreakable/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Points>5</Points>
-						<Dependency/>
-						<Rule>Devastating Charge</Rule>
-					</Option>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Points>20</Points>
-						<Dependency/>
-						<PoisonAttack/>
-					</Option>
+					<SpawnMarkOfKhorne Points="5" Dependency="Mark"/>
+					<SpawnMarkOfNurgle Points="20" Dependency="Mark"/> 
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>10</Points>
