@@ -69,6 +69,9 @@
 			<MarkOfNurgle Name="Mark of Nurgle">
 				Rule: -1 to hit shooting and -1 WS in close combat
 			</MarkOfNurgle>
+			<GiantMarkOfNurgle Name="Mark of Nurgle">
+				AddToToughness: 1
+			</GiantMarkOfNurgle>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
@@ -1548,12 +1551,7 @@
 				</Equipments>
 				<Options>
 					<GiantMarkOfKhorne Points="10" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Nurgle</Name>
-						<Points>15</Points>
-						<Dependency/>
-						<AddToToughness Val="1"/>
-					</Option>
+					<GiantMarkOfNurgle Points="15" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Tzeentch</Name>
 						<Points>15</Points>
