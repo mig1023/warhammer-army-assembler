@@ -123,6 +123,9 @@
 			<Javelins/>
 			<Hellscourges/>
 			<EnsorcelledWeapons Name="Ensorcelled weapons"/>
+			<FlamingBreath Name="Flaming Breath">
+				Rule: Strength 4 Breath Weapon with Flaming Attacks special rule
+			</FlamingBreath>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1420,11 +1423,7 @@
 					<Original>Fiend Tail</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Flaming Breath</Name>
-						<Points>30</Points>
-						<Rule>Strength 4 Breath Weapon with Flaming Attacks special rule</Rule>
-					</Option>
+					<FlamingBreath Points="30"/>
 					<Option>
 						<Name>Regenerating Flesh</Name>
 						<Points>15</Points>
