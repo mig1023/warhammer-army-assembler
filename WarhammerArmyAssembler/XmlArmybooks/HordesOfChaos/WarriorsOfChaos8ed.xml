@@ -129,6 +129,9 @@
 			<RegeneratingFlesh Name="Regenerating Flesh">
 				Regeneration
 			</RegeneratingFlesh>
+			<VenemousOoze Name="Venemous Ooze">
+				PoisonAttack
+			</VenemousOoze>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1428,11 +1431,7 @@
 				<Options>
 					<FlamingBreath Points="30"/>
 					<RegeneratingFlesh Points="15"/>
-					<Option>
-						<Name>Venemous Ooze</Name>
-						<Points>15</Points>
-						<PoisonAttack/>
-					</Option>
+					<VenemousOoze Points="15"/>
 				</Options>
 			</Special>
 			<Special>
