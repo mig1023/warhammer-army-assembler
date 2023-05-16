@@ -1383,12 +1383,7 @@
 					<LightArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Additional weapon</Name>
-						<PointsPerModel>3</PointsPerModel>
-						<Dependency/>
-						<AddToAttacks Val="1"/>
-					</Option>
+					<AdditionalWeapon PointsPerModel="3" Dependency="Weapon"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<PointsPerModel>8</PointsPerModel>
