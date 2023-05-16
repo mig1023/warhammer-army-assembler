@@ -59,6 +59,10 @@
 			<MarkOfKhorne Name="Mark of Khorne">
 				Frenzy
 			</MarkOfKhorne>
+			<GiantMarkOfKhorne Name="Mark of Khorne">
+				Frenzy;
+				AddToStrength: 1
+			</GiantMarkOfKhorne>
 			<MarkOfTzeentch Name="Mark of Tzeentch">
 				AddToWard: 6
 			</MarkOfTzeentch>
@@ -1543,13 +1547,7 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Mark of Khorne</Name>
-						<Points>10</Points>
-						<Dependency/>
-						<Frenzy/>
-						<AddToStrength Val="1"/>
-					</Option>
+					<GiantMarkOfKhorne Points="10" Dependency="Mark"/>
 					<Option>
 						<Name>Mark of Nurgle</Name>
 						<Points>15</Points>
