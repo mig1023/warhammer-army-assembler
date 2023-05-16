@@ -126,6 +126,9 @@
 			<FlamingBreath Name="Flaming Breath">
 				Rule: Strength 4 Breath Weapon with Flaming Attacks special rule
 			</FlamingBreath>
+			<RegeneratingFlesh Name="Regenerating Flesh">
+				Regeneration
+			</RegeneratingFlesh>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1424,11 +1427,7 @@
 				</SpecialRules>
 				<Options>
 					<FlamingBreath Points="30"/>
-					<Option>
-						<Name>Regenerating Flesh</Name>
-						<Points>15</Points>
-						<Regeneration/>
-					</Option>
+					<RegeneratingFlesh Points="15"/>
 					<Option>
 						<Name>Venemous Ooze</Name>
 						<Points>15</Points>
