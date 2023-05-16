@@ -75,6 +75,9 @@
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
+			<GiantMarkOfSlaanesh Name="Mark of Slaanesh">
+				AddToInitiative: 1
+			</GiantMarkOfSlaanesh>
 			<DaemonicFlight Name="Daemonic Flight">
 				Rule: Fly
 			</DaemonicFlight>
@@ -1553,12 +1556,7 @@
 					<GiantMarkOfKhorne Points="10" Dependency="Mark"/>
 					<GiantMarkOfNurgle Points="15" Dependency="Mark"/>
 					<MarkOfTzeentch Points="15" Dependency="Mark"/>
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Points>5</Points>
-						<Dependency/>
-						<AddToInitiative Val="1"/>
-					</Option>
+					<GiantMarkOfSlaanesh Points="15" Dependency="Mark"/>
 				</Options>
 			</Rare>
 			<Rare>
