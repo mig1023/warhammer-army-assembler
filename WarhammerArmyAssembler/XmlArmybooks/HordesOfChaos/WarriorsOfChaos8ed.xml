@@ -1385,12 +1385,7 @@
 				<Options>
 					<AdditionalWeapon PointsPerModel="3" Dependency="Weapon"/>
 					<GreatWeapon PointsPerModel="8" Dependency="Weapon"/>
-					<Option>
-						<Name>Halberd</Name>
-						<PointsPerModel>8</PointsPerModel>
-						<Dependency/>
-						<AddToStrength Val="1"/>
-					</Option>
+					<Halberd PointsPerModel="8" Dependency="Weapon"/>
 					<Command>
 						<Champion Points="10" Name="Dragon Ogre Shartak"/>
 					</Command>
