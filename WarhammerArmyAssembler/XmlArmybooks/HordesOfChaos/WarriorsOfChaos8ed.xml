@@ -1355,13 +1355,7 @@
 					<MarkOfNurgle PointsPerModel="4" Dependency="Mark"/>
 					<MarkOfSlaanesh PointsPerModel="2" Dependency="Mark"/>
 					<AdditionalWeapon PointsPerModel="3" Dependency="Weapon"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<PointsPerModel>8</PointsPerModel>
-						<Dependency Group="Weapon"/>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-					</Option>
+					<GreatWeapon PointsPerModel="8" Dependency="Weapon"/>
 					<Command>
 						<Champion>
 							<Name>Ogre Mutant</Name>
