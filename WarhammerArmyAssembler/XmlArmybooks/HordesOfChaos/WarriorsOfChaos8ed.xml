@@ -87,6 +87,9 @@
 			<GiantMarkOfSlaanesh Name="Mark of Slaanesh">
 				AddToInitiative: 1
 			</GiantMarkOfSlaanesh>
+			<SpawnMarkOfSlaanesh>
+				HitFirst
+			</SpawnMarkOfSlaanesh>
 			<DaemonicFlight Name="Daemonic Flight">
 				Rule: Fly
 			</DaemonicFlight>
@@ -1581,12 +1584,7 @@
 					<SpawnMarkOfKhorne Points="5" Dependency="Mark"/>
 					<SpawnMarkOfNurgle Points="20" Dependency="Mark"/>
 					<SpawnMarkOfTzeentch Points="10" Dependency="Mark"/> 
-					<Option>
-						<Name>Mark of Slaanesh</Name>
-						<Points>10</Points>
-						<Dependency/>
-						<HitFirst/>
-					</Option>
+					<SpawnMarkOfSlaanesh Points="10" Dependency="Mark"/> 
 				</Options>
 			</Rare>
 		</Units>
