@@ -45,6 +45,7 @@
 			<Pistol/>
 			<Crossbow/>
 			<DwarfHandgun Name="Dwarf handgun"/>
+			<BracePistols Name="Brace of pistols"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -791,11 +792,7 @@
 				<Options>
 					<GreatWeapon Points="4" Dependency="Weapon"/>
 					<Pistol Points="7" Dependency="Weapon"/>
-					<Option>
-						<Name>Brace of pistols</Name>
-						<Points>14</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<BracePistols Points="14" Dependency="Weapon"/>
 					<DwarfHandgun Points="14"/>
 					<LightArmour Points="2" Dependency="Armour"/>
 					<HeavyArmour Points="4" Dependency="Armour"/>
