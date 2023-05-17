@@ -53,6 +53,9 @@
 			<BlastingCharges Name="Blasting charges">
 				Rule: Missile weapons with one use only rule and range attack with range 4", Strength 4 and Armour Piercing, Flaming Attacks special rules
 			</BlastingCharges>
+			<SteamDrill Name="Steam drill">
+				Rule: Can re-roll a failed arrival for its Ambushers special rule
+			</SteamDrill>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1322,14 +1325,7 @@
 					<BlastingCharges PointsPerModel="2"/>
 					<Command>
 						<Champion Points="10" Name="Prospector"/>
-						<Option>
-							<Name>Steam drill</Name>
-							<Points>25</Points>
-							<Rule>Can re-roll a failed arrival for its Ambushers special rule</Rule>
-							<Dependencies>
-								<On>Prospector</On>
-							</Dependencies>
-						</Option>
+						<SteamDrill Points="25" Dependencies="On: Prospector"/>
 						<Musician Points="10"/>
 						<StandardBearer Points="10"/>
 					</Command>
