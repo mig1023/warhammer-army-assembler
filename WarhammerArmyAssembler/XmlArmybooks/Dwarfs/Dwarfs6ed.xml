@@ -47,6 +47,7 @@
 			<DwarfHandgun Name="Dwarf handgun"/>
 			<BracePistols Name="Brace of pistols"/>
 			<DwarfPistols Name="Dwarf pistols"/>
+			<ThrowingAxe Name="Throwing axe"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -944,10 +945,7 @@
 				<Options>
 					<Shield PointsPerModel="1"/>
 					<Crossbow PointsPerModel="5"/>
-					<Option>
-						<Name>Throwing axe</Name>
-						<PointsPerModel>3</PointsPerModel>
-					</Option>
+					<ThrowingAxe PointsPerModel="3"/>
 					<Command>
 						<Musician Points="6"/>
 						<StandardBearer Points="12"/>
