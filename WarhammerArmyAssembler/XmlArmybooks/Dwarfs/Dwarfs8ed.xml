@@ -58,6 +58,7 @@
 			</SteamDrill>
 			<BrimstoneGun Name="Brimstone gun"/> 
 			<VanguardDeploymentRule Name="Vanguard deployment rule"/> 
+			<TrollhammerTorpedo Name="Trollhammer torpedo"/> 
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1535,14 +1536,7 @@
 						<Champion Points="10" Name="Ironwarden"/>
 						<CinderblastBombs Points="15" Dependencies="On: Ironwarden"/>
 						<DrakefirePistols Dependencies="On: Ironwarden; Off: Trollhammer torpedo"/>
-						<Option>
-							<Name>Trollhammer torpedo</Name>
-							<Points>20</Points>
-							<Dependencies>
-								<On>Ironwarden</On>
-								<Off>Brace of Drakefire pistols</Off>
-							</Dependencies>
-						</Option>
+						<TrollhammerTorpedo Points="20" Dependencies="On: Ironwarden; Off: Brace of Drakefire pistols"/> 
 						<Musician Points="10"/>
 						<StandardBearer Points="10" Magic="Type: Unit, Points: 50"/>
 					</Command>
