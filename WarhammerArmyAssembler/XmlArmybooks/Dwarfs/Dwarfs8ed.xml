@@ -1534,13 +1534,7 @@
 					<Command>
 						<Champion Points="10" Name="Ironwarden"/>
 						<CinderblastBombs Points="15" Dependencies="On: Ironwarden"/>
-						<Option>
-							<Name>Brace of Drakefire pistols</Name>
-							<Dependencies>
-								<On>Ironwarden</On>
-								<Off>Trollhammer torpedo</Off>
-							</Dependencies>
-						</Option>
+						<DrakefirePistols Dependencies="On: Ironwarden; Off: Trollhammer torpedo"/>
 						<Option>
 							<Name>Trollhammer torpedo</Name>
 							<Points>20</Points>
