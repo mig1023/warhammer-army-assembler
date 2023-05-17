@@ -53,6 +53,7 @@
 				AddToArmour: 5;
 				Rule: Immune to all breath and all Flaming attacks
 			</DragonArmour>
+			<SwapSpears Name="Swap spear for bow"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -785,11 +786,7 @@
 				</Equipments>
 				<Options>
 					<Bow PointsPerModel="4" Dependency="Range"/>
-					<Option>
-						<Name>Swap spear for bow</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency/>
-					</Option>
+					<SwapSpears PointsPerModel="2" Dependency="Range"/>
 					<Command>
 						<Champion Points="7" Name="Harbinger"/>
 						<Musician Points="7"/>
