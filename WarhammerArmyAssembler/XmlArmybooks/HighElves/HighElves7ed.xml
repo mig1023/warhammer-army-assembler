@@ -54,6 +54,7 @@
 				AddToArmour: 5;
 				Rule: Immune to all breath and all Flaming attacks
 			</DragonArmour>
+			<ExchangeSpears Name="Exchange spear for bow"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1108,11 +1109,7 @@
 				</Equipments>
 				<Options>
 					<Bow PointsPerModel="6" Dependency="Range"/>
-					<Option>
-						<Name>Exchange spear for bow</Name>
-						<PointsPerModel>5</PointsPerModel>
-						<Dependency/>
-					</Option>
+					<ExchangeSpears PointsPerModel="5" Dependency="Range"/>
 					<Command>
 						<Musician Points="7"/>
 						<StandardBearer Points="14"/>
