@@ -1199,12 +1199,7 @@
 					<GreatWeapon PointsPerModel="2"/>
 					<Command>
 						<Champion Points="10" Name="Veteran"/>
-						<Option>
-							<Name>Dwarf pistols</Name>
-							<Dependencies>
-								<On>Veteran</On>
-							</Dependencies>
-						</Option>
+						<DwarfPistol Dependencies="On: Veteran"/>
 						<Musician Points="10"/>
 						<StandardBearer Points="10"/>
 					</Command>
