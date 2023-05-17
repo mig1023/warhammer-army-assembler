@@ -72,6 +72,7 @@
 			<Swiftsense/>
 			<ShreddingTalon/>
 			<SwoopingStrike/>
+			<ReplaceSpears Name="Replace spears with bows"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1024,11 +1025,7 @@
 				</Equipments>
 				<Options>
 					<Bows PointsPerModel="3" Dependency="Range"/>
-					<Option>
-						<Name>Replace spears with bows</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<Dependency/>
-					</Option>
+					<ReplaceSpears PointsPerModel="1" Dependency="Range"/>
 					<Command>
 						<Champion Points="10" Name="Harbinger"/>
 						<Musician Points="10"/>
