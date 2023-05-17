@@ -1533,13 +1533,7 @@
 					<Shield PointsPerModel="1"/>
 					<Command>
 						<Champion Points="10" Name="Ironwarden"/>
-						<Option>
-							<Name>Cinderblast Bomb</Name>
-							<Points>15</Points>
-							<Dependencies>
-								<On>Ironwarden</On>
-							</Dependencies>
-						</Option>
+						<CinderblastBombs Points="15" Dependencies="On: Ironwarden"/>
 						<Option>
 							<Name>Brace of Drakefire pistols</Name>
 							<Dependencies>
