@@ -46,6 +46,7 @@
 			<Crossbow/>
 			<DwarfHandgun Name="Dwarf handgun"/>
 			<BracePistols Name="Brace of pistols"/>
+			<DwarfPistols Name="Dwarf pistols"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -893,13 +894,7 @@
 						<StandardBearer Points="10"/>
 						<Champion Points="10" Name="Veteran"/>
 					</Command>
-					<Option>
-						<Name>Dwarf pistols</Name>
-						<Points>2</Points>
-						<Dependencies>
-							<On>Veteran</On>
-						</Dependencies>
-					</Option>
+					<DwarfPistols Points="2" Dependencies="On: Veteran"/>
 				</Options>
 			</Core>
 			<Core>
