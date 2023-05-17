@@ -48,6 +48,7 @@
 			<DwarfCrossbow Name="Dwarf crossbow"/>
 			<DwarfPistol Name="Dwarf pistol"/>
 			<BraceOfPistols Name="Brace of Dwarf pistols"/>
+			<DrakefirePistols Name="A brace of drakefire pistols"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1287,12 +1288,7 @@
 				<Options>
 					<Command>
 						<Champion Points="10" Name="Ironbeard"/>
-						<Option>
-							<Name>A brace of drakefire pistols</Name>
-							<Dependencies>
-								<On>Ironbeard</On>
-							</Dependencies>
-						</Option>
+						<DrakefirePistols Dependencies="On: Ironbeard"/>
 						<Option>
 							<Name>Cinderblast bombs</Name>
 							<Points>15</Points>
