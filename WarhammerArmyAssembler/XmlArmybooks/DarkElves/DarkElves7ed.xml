@@ -69,6 +69,7 @@
 				Rule: Each wound inflicted on an enemy character or champion (after saves, etc) also deducts 1 from the model's S, A and T for the remainder of the game
 			</Darksword>
 			<BeastmasterScourge Name="Beastmaster's scourge"/>
+			<PairHandbowToReaver Name="Pair of handbow to Reaver"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1005,18 +1006,12 @@
 					<Crew Name="Assassin" Points="90"/>
 					<Command>
 						<Champion Points="10" Name="Reaver"/>
+						<PairHandbowToReaver Points="3" Dependencies="On: Reaver"/>
 						<Musician Points="5"/>
 						<StandardBearer Points="10"/>
 					</Command>
 					<Option>
 						<Name>Handbow</Name>
-					</Option>
-					<Option>
-						<Name>Pair of handbow to Reaver</Name>
-						<Dependencies>
-							<On>Reaver</On>
-						</Dependencies>
-						<Points>3</Points>
 					</Option>
 				</Options>
 			</Core>
