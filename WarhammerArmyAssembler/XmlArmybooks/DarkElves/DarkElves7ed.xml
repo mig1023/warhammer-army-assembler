@@ -71,6 +71,10 @@
 			<BeastmasterScourge Name="Beastmaster's scourge"/>
 			<PairHandbowToReaver Name="Pair of handbow to Reaver"/>
 			<Handbow/>
+			<CavalryShields Name="Shields">
+				AddToArmour: 6;
+				Rule: Not Fast Cavalry anymore
+			</CavalryShields>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1037,12 +1041,7 @@
 						<Musician Points="7"/>
 						<StandardBearer Points="14"/>
 					</Command>
-					<Option>
-						<Name>Shields</Name>
-						<PointsPerModel>1</PointsPerModel>
-						<AddToArmour Val="6"/>
-						<Rule>Not Fast Cavalry anymore</Rule>
-					</Option>
+					<CavalryShields PointsPerModel="1"/>
 					<RepeaterCrossbow PointsPerModel="5"/>
 				</Options>
 			</Core>
