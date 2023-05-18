@@ -62,6 +62,10 @@
 			<SeaDragonCloak Name="Sea Dragon Cloak">
 				AddToArmour: 5
 			</SeaDragonCloak>
+			<CryOfWar>
+				Fear;
+				Rule: All Fear tests taken by enemy units in base contact with this model must be taken with a -3 penalty to Leadership
+			</CryOfWar>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -676,13 +680,7 @@
 					<HateHighElves/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Cry of War</Name>
-						<Points>15</Points>
-						<Dependency/>
-						<Fear/>
-						<Rule>All Fear tests taken by enemy units in base contact with this model must be taken with a -3 penalty to Leadership</Rule>
-					</Option>
+					<CryOfWar Points="15" Dependency="Skill"/>
 					<Option>
 						<Name>Witchbrew</Name>
 						<Points>30</Points>
