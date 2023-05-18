@@ -68,6 +68,7 @@
 			<Darksword Name="The Darksword">
 				Rule: Each wound inflicted on an enemy character or champion (after saves, etc) also deducts 1 from the model's S, A and T for the remainder of the game
 			</Darksword>
+			<BeastmasterScourge Name="Beastmaster's scourge"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -763,10 +764,7 @@
 					<GreatWeapon Points="4"/>
 					<Halberd Points="4"/>
 					<AdditionalWeapon Points="4" Only="Infantry"/>
-					<Option>
-						<Name>Beastmaster's scourge</Name>
-						<Points>6</Points>
-					</Option>
+					<BeastmasterScourge Points="6"/>
 					<RepeaterCrossbow Points="10"/>
 					<RepeaterHandbow Points="8"/>
 					<PairOfHandbow Points="16"/>
