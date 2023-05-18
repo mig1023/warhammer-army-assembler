@@ -60,8 +60,11 @@
 			<RepeaterHandbow Name="Repeater handbow"/>
 			<PairOfHandbow Name="Pair of repeater handbow"/>
 			<SeaDragonCloak Name="Sea Dragon Cloak">
-				AddToArmour: 
+				AddToArmour: 6
 			</SeaDragonCloak>
+			<Heartrender>
+				KillingBlow
+			</Heartrender>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -523,12 +526,7 @@
 					<DruchiiSorcery/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Heartrender</Name>
-						<Points>45</Points>
-						<KillingBlow/>
-						<Dependency/>
-					</Option>
+					<Heartrender Points="45" Dependency="Weapon"/>
 					<Option>
 						<Name>The Darksword</Name>
 						<Points>25</Points>
