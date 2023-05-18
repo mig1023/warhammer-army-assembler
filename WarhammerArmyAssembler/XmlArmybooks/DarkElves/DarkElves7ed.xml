@@ -65,6 +65,9 @@
 			<Heartrender>
 				KillingBlow
 			</Heartrender>
+			<Darksword Name="The Darksword">
+				Rule: Each wound inflicted on an enemy character or champion (after saves, etc) also deducts 1 from the model's S, A and T for the remainder of the game
+			</Darksword>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -527,12 +530,7 @@
 				</SpecialRules>
 				<Options>
 					<Heartrender Points="45" Dependency="Weapon"/>
-					<Option>
-						<Name>The Darksword</Name>
-						<Points>25</Points>
-						<Rule>Each wound inflicted on an enemy character or champion (after saves, etc) also deducts 1 from the model's S, A and T for the remainder of the game</Rule>
-						<Dependency/>
-					</Option>
+					<Darksword Points="25" Dependency="Weapon"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
