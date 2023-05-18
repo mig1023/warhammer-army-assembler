@@ -70,6 +70,9 @@
 				Frenzy;
 				Rule: All models in the same unit, have the Frenzy special rule. If they already have the Frenzy special rule, that Frenzy grants +2 Attacks instead of just +1, but the unit suffers a -3 penalty to Leadership when testing not to declare a charge
 			</Witchbrew>
+			<RuneOfKhaine Name="Rune of Khaine">
+				Rule: +D3 Attacks (roll each round of combat, immediately before the model attacks)
+			</RuneOfKhaine>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -686,12 +689,7 @@
 				<Options>
 					<CryOfWar Points="15" Dependency="Skill"/>
 					<Witchbrew Points="30" Dependency="Skill"/>
-					<Option>
-						<Name>Rune of Khaine</Name>
-						<Points>40</Points>
-						<Dependency/>
-						<Rule>+D3 Attacks (roll each round of combat, immediately before the model attacks)</Rule>
-					</Option>
+					<RuneOfKhaine Points="340" Dependency="Skill"/>
 					<Mount Name="Cauldron of Blood" Points="190"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
