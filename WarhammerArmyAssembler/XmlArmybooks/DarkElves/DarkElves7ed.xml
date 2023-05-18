@@ -75,6 +75,7 @@
 				AddToArmour: 6;
 				Rule: Not Fast Cavalry anymore
 			</CavalryShields>
+			<Bloodshadde/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1101,10 +1102,7 @@
 				</Equipments>
 				<Options>
 					<Crew Name="Assassin" Points="90"/>
-					<Option>
-						<Name>Bloodshadde</Name>
-						<Points>18</Points>
-					</Option>
+					<Bloodshadde Points="18"/>
 					<LightArmour PointsPerModel="1"/>
 					<GreatWeapon PointsPerModel="2" Dependency="Weapon"/>
 					<AdditionalWeapon PointsPerModel="1" Dependency="Weapon"/>
