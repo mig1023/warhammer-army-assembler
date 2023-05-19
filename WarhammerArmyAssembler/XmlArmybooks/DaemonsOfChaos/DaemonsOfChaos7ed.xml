@@ -175,6 +175,7 @@
 				MagicItemsPoints;
 				HitFirst
 			</UnnaturalSwiftness>
+			<DedicateTzeentch Name="Dedicate to Tzeentch"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -273,11 +274,7 @@
 					<Daemonic/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Dedicate to Tzeentch</Name>
-						<Points>35</Points>
-						<Dependency/>
-					</Option>
+					<DedicateTzeentch Points="35" Dependency="Mark"/>
 					<Option>
 						<Name>Dedicate to Slaanesh</Name>
 						<Points>35</Points>
