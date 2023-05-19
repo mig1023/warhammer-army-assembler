@@ -162,27 +162,23 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static Dictionary<string, string> CommonXmlOption(XmlDocument armybook)
         {
-            if (String.IsNullOrEmpty(Constants.CommonXmlOptionPath))
-                return null;
-
             Dictionary<string, string> commonXmlOption = new Dictionary<string, string>();
-
-            if ((armybook == null) && (Constants.CommonXmlOption != null))
-            {
-                return Constants.CommonXmlOption;
-            }
-            else
-            {
-                XmlDocument xmlFile = new XmlDocument();
-                xmlFile.Load(Constants.CommonXmlOptionPath);
-                LoadCommonXmlOptionFromFile(xmlFile, "Options/*/*", commonXmlOption);
-
-                if (armybook == null)
-                    Constants.CommonXmlOption = commonXmlOption;
-            }
 
             if (armybook != null)
                 LoadCommonXmlOptionFromFile(armybook, "ArmyBook/Introduction/LocalOption/*", commonXmlOption);
+
+            if (String.IsNullOrEmpty(Constants.CommonXmlOptionPath))
+                return commonXmlOption;
+
+            if ((armybook == null) && (Constants.CommonXmlOption != null))
+                return Constants.CommonXmlOption;
+
+            XmlDocument xmlFile = new XmlDocument();
+            xmlFile.Load(Constants.CommonXmlOptionPath);
+            LoadCommonXmlOptionFromFile(xmlFile, "Options/*/*", commonXmlOption);
+
+            if (armybook == null)
+                Constants.CommonXmlOption = commonXmlOption;
 
             return commonXmlOption;
         }
