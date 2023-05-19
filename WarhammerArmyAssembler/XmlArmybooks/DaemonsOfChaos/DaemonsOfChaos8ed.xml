@@ -68,30 +68,30 @@
 			</DaemonOfNurgle>
 			<Plaguesword>PoisonAttack</Plaguesword>
 			<Hellblade>KillingBlow</Hellblade>
-			<ChaosArmour Name="Chaos Armour">
+			<ChaosArmour>
 				AddToArmour: 4
 			</ChaosArmour>
-			<DaemonicFlight Name="Daemonic Flight">
+			<DaemonicFlight>
 				Rule: Fly
 			</DaemonicFlight>
-			<LesserLocus Name="Lesser Locus of Abjuration">
+			<Abjuration Name="Lesser Locus of Abjuration">
 				Rule: +1 Magic Resistance
-			</LesserLocus>
-			<GreaterLocus Name="Greater Locus of Fury">
+			</Abjuration>
+			<Fury Name="Greater Locus of Fury">
 				Frenzy
-			</GreaterLocus>
-			<ExaltedLocus Name="Exalted Locus of Wrath">
+			</Fury>
+			<Wrath Name="Exalted Locus of Wrath">
 				Hate
-			</ExaltedLocus>
-			<LocusTransmogrification Name="Lesser Locus of Transmogrification">
+			</Wrath>
+			<Transmogrification Name="Lesser Locus of Transmogrification">
 				Rule: When a model is slain, place D3+1 Blue Horror
-			</LocusTransmogrification>
+			</Transmogrification>
 			<LocusChange Name="Greater Locus of Change">
 				Rule: At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again
 			</LocusChange>
-			<LocusConjuration Name="Exalted Locus of Conjuration">
+			<Conjuration Name="Exalted Locus of Conjuration">
 				Rule: Spells cast by this model, and any models in his unit, are resolved at +1 Strength
-			</LocusConjuration>
+			</Conjuration>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -740,9 +740,9 @@
 					<Original>Magic Resistance (1)</Original>
 				</SpecialRules>
 				<Options>
-					<LesserLocus Points="30" Dependency="Skill"/>
-					<GreaterLocus Points="60" Dependency="Skill"/>
-					<ExaltedLocus Points="75" Dependency="Skill"/>
+					<Abjuration Points="30" Dependency="Skill"/>
+					<Fury Points="60" Dependency="Skill"/>
+					<Wrath Points="75" Dependency="Skill"/>
 					<Mount Name="Juggernaut" Points="50"/>
 					<Mount Name="Blood Throne" Points="160"/>
 					<BattleStandardBearer Points="25"/>
@@ -765,9 +765,9 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="2" Points="35"/>
-					<LocusTransmogrification Points="25" Dependency="Skill"/>
+					<Transmogrification Points="25" Dependency="Skill"/>
 					<LocusChange Points="35" Dependency="Skill"/>
-					<LocusConjuratio Points="50" Dependency="Skill"/>
+					<Conjuration Points="50" Dependency="Skill"/>
 					<Mount Name="Disc of Tzeentch" Points="20"/>
 					<Mount Name="Burning Chariot" Points="60"/>
 					<BattleStandardBearer Points="25"/>
