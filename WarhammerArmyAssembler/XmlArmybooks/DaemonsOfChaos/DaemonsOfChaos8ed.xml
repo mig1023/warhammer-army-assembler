@@ -74,6 +74,12 @@
 			<DaemonicFlight Name="Daemonic Flight">
 				Rule: Fly
 			</DaemonicFlight>
+			<LesserLocus Name="Lesser Locus of Abjuration">
+				Rule: +1 Magic Resistance
+			</LesserLocus>
+			<GreaterLocus Name="Greater Locus of Fury">
+				Frenzy
+			</GreaterLocus>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -722,18 +728,8 @@
 					<Original>Magic Resistance (1)</Original>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Lesser Locus of Abjuration</Name>
-						<Points>30</Points>
-						<Rule>+1 Magic Resistance</Rule>
-						<Dependency/>
-					</Option>
-					<Option>
-						<Name>Greater Locus of Fury</Name>
-						<Points>60</Points>
-						<Frenzy/>
-						<Dependency/>
-					</Option>
+					<LesserLocus Points="30" Dependency="Skill"/>
+					<GreaterLocus Points="60" Dependency="Skill"/>
 					<Option>
 						<Name>Exalted Locus of Wrath</Name>
 						<Points>75</Points>
