@@ -80,6 +80,9 @@
 			<GreaterLocus Name="Greater Locus of Fury">
 				Frenzy
 			</GreaterLocus>
+			<ExaltedLocus Name="Exalted Locus of Wrath">
+				Hate
+			</ExaltedLocus>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -730,12 +733,7 @@
 				<Options>
 					<LesserLocus Points="30" Dependency="Skill"/>
 					<GreaterLocus Points="60" Dependency="Skill"/>
-					<Option>
-						<Name>Exalted Locus of Wrath</Name>
-						<Points>75</Points>
-						<Hate/>
-						<Dependency/>
-					</Option>
+					<ExaltedLocus Points="75" Dependency="Skill"/>
 					<Mount Name="Juggernaut" Points="50"/>
 					<Mount Name="Blood Throne" Points="160"/>
 					<BattleStandardBearer Points="25"/>
