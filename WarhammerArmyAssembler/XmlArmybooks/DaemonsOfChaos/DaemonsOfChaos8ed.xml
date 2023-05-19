@@ -83,6 +83,9 @@
 			<ExaltedLocus Name="Exalted Locus of Wrath">
 				Hate
 			</ExaltedLocus>
+			<LocusTransmogrification Name="Lesser Locus of Transmogrification">
+				Rule: When a model is slain, place D3+1 Blue Horror
+			</LocusTransmogrification>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -756,12 +759,7 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="2" Points="35"/>
-					<Option>
-						<Name>Lesser Locus of Transmogrification</Name>
-						<Points>25</Points>
-						<Rule>When a model is slain, place D3+1 Blue Horror</Rule>
-						<Dependency/>
-					</Option>
+					<LocusTransmogrification Points="25" Dependency="Skill"/>
 					<Option>
 						<Name>Greater Locus of Change</Name>
 						<Points>35</Points>
