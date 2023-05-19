@@ -178,6 +178,7 @@
 			<DedicateTzeentch Name="Dedicate to Tzeentch"/>
 			<DedicateSlaanesh Name="Dedicate to Slaanesh"/>
 			<DedicateKhorne Name="Dedicate to Khorne"/>
+			<DedicateNurgle Name="Dedicate to Nurgle"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -279,11 +280,7 @@
 					<DedicateTzeentch Points="35" Dependency="Mark"/>
 					<DedicateSlaanesh Points="35" Dependency="Mark"/>
 					<DedicateKhorne Points="35" Dependency="Mark"/>
-					<Option>
-						<Name>Dedicate to Nurgle</Name>
-						<Points>35</Points>
-						<Dependency/>
-					</Option>
+					<DedicateNurgle Points="35" Dependency="Mark"/>
 					<Option>
 						<Name>Wizard Level 1</Name>
 						<Points>50</Points>
