@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Media.Imaging;
 using System.Xml;
+using System.Text.RegularExpressions;
 
 namespace WarhammerArmyAssembler.ArmyBook
 {
@@ -78,6 +79,19 @@ namespace WarhammerArmyAssembler.ArmyBook
                         return ifOnly;
 
             return String.Empty;
+        }
+
+        private static string CaptalLetter(string lower)
+        {
+            char[] upper = lower.ToCharArray();
+            upper[0] = char.ToUpper(upper[0]);
+            return new String(upper);
+        }
+
+        public static string CamelNameSplit(string name)
+        {
+            List<string> multiWords = Regex.Split(name, @"(?<!^)(?=[A-Z])").Select(x => x.ToLower()).ToList();
+            return multiWords.Count < 2 ? name : CaptalLetter(String.Join(" ", multiWords));
         }
     }
 }

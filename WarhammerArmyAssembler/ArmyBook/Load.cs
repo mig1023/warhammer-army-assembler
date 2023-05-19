@@ -154,7 +154,11 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             foreach (XmlNode option in xmlFile.SelectNodes(path))
             {
-                string title = option.Attributes["Name"]?.InnerText ?? option.Name;
+                string title = option.Attributes["Name"]?.InnerText ?? String.Empty;
+                    
+                if (String.IsNullOrEmpty(title))
+                    title = Services.CamelNameSplit(option.Name);
+                    
                 string value = String.Format("{0}|{1}", title, option.InnerText);
                 commonXmlOption.Add(option.Name, value);
             }
