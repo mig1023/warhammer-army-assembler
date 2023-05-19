@@ -171,6 +171,10 @@
 			<SirenStandard Name="Siren Standard">
 				Rule: Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee
 			</SirenStandard>
+			<UnnaturalSwiftness Name="Unnatural Swiftness">
+				MagicItemsPoints;
+				HitFirst
+			</UnnaturalSwiftness>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -316,12 +320,7 @@
 					<ImmortalFury Points="25"/>
 					<IridCorona Points="25"/>
 					<SoulHunger Points="25"/>
-					<Option>
-						<Name>Unnatural Swiftness</Name>
-						<Points>25</Points>
-						<MagicItemsPoints/>
-						<HitFirst/>
-					</Option>
+					<UnnaturalSwiftness Points="25"/>
 					<WingedHorror Points="20"/>
 				</Options>
 				<Equipments>
