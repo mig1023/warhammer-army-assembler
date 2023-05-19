@@ -89,6 +89,9 @@
 			<LocusChange Name="Greater Locus of Change">
 				Rule: At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again
 			</LocusChange>
+			<LocusConjuration Name="Exalted Locus of Conjuration">
+				Rule: Spells cast by this model, and any models in his unit, are resolved at +1 Strength
+			</LocusConjuration>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -764,12 +767,7 @@
 					<Wizard Level="2" Points="35"/>
 					<LocusTransmogrification Points="25" Dependency="Skill"/>
 					<LocusChange Points="35" Dependency="Skill"/>
-					<Option>
-						<Name>Exalted Locus of Conjuration</Name>
-						<Points>50</Points>
-						<Rule>Spells cast by this model, and any models in his unit, are resolved at +1 Strength</Rule>
-						<Dependency/>
-					</Option>
+					<LocusConjuratio Points="50" Dependency="Skill"/>
 					<Mount Name="Disc of Tzeentch" Points="20"/>
 					<Mount Name="Burning Chariot" Points="60"/>
 					<BattleStandardBearer Points="25"/>
