@@ -86,6 +86,9 @@
 			<LocusTransmogrification Name="Lesser Locus of Transmogrification">
 				Rule: When a model is slain, place D3+1 Blue Horror
 			</LocusTransmogrification>
+			<LocusChange Name="Greater Locus of Change">
+				Rule: At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again
+			</LocusChange>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -760,12 +763,7 @@
 				<Options>
 					<Wizard Level="2" Points="35"/>
 					<LocusTransmogrification Points="25" Dependency="Skill"/>
-					<Option>
-						<Name>Greater Locus of Change</Name>
-						<Points>35</Points>
-						<Rule>At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again</Rule>
-						<Dependency/>
-					</Option>
+					<LocusChange Points="35" Dependency="Skill"/>
 					<Option>
 						<Name>Exalted Locus of Conjuration</Name>
 						<Points>50</Points>
