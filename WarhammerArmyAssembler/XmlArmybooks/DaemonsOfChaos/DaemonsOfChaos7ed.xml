@@ -176,6 +176,7 @@
 				HitFirst
 			</UnnaturalSwiftness>
 			<DedicateTzeentch Name="Dedicate to Tzeentch"/>
+			<DedicateSlaanesh Name="Dedicate to Slaanesh"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -275,11 +276,7 @@
 				</SpecialRules>
 				<Options>
 					<DedicateTzeentch Points="35" Dependency="Mark"/>
-					<Option>
-						<Name>Dedicate to Slaanesh</Name>
-						<Points>35</Points>
-						<Dependency/>
-					</Option>
+					<DedicateSlaanesh Points="35" Dependency="Mark"/>
 					<Option>
 						<Name>Dedicate to Khorne</Name>
 						<Points>35</Points>
