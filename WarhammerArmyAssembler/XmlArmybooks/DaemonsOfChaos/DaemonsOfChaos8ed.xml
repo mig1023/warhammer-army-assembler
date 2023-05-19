@@ -71,6 +71,9 @@
 			<ChaosArmour Name="Chaos Armour">
 				AddToArmour: 4
 			</ChaosArmour>
+			<DaemonicFlight Name="Daemonic Flight">
+				Rule: Fly
+			</DaemonicFlight>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -577,11 +580,7 @@
 						</Countable>
 					</Option>
 					<ChaosArmour Points="20"/>
-					<Option>
-						<Name>Daemonic Flight</Name>
-						<Points>40</Points>
-						<Rule>Fly</Rule>
-					</Option>
+					<DaemonicFlight Points="40"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
