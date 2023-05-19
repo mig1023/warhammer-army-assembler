@@ -55,15 +55,15 @@
 		</LocalSpecialRules>
 		<LocalOption>
 			<Choppa/>
-			<SavageOrc Name="Savage Orc">
+			<SavageOrc>
 				AddToAttacks: 1;
 				Frenzy;
 				Rule: Warprint
 			</SavageOrc>
-			<BlackOrc Name="Black Orc">
+			<BlackOrc>
 				AddToWeaponSkill: 1
 			</BlackOrc>
-			<NightGoblin Name="Night Goblin">
+			<NightGoblin>
 				AddToInitiative: 1;
 				AddToLeadership: -1
 			</NightGoblin>
@@ -72,27 +72,30 @@
 				AddToStrength: 1;
 				OnlyOneInArmy
 			</Biguns>
-			<AdditionalChoppa Name="Additional choppa">
+			<AdditionalChoppa>
 				AddToAttacks: 1
 			</AdditionalChoppa>
 			<Nets/>
-			<ExtraOrc Name="Extra Orc">
+			<ExtraOrc>
 				AddToModelsInPack: 1
 			</ExtraOrc>
-			<ExtraGoblin Name="Extra Goblin">
+			<ExtraGoblin>
 				AddToModelsInPack: 1
 			</ExtraGoblin>
-			<ExtraWolf Name="Extra Wolf">
+			<ExtraWolf>
 				AddToModelsInPack: 1
 			</ExtraWolf>
-			<OrcBully Name="Orc Bully">
+			<OrcBully>
 				AddToModelsInPack: 1
 			</OrcBully>
-			<StoneTroll Name="Stone troll">
+			<StoneTroll>
 				AddToArmour: 5;
 				AddToStrength: 1;
 				Rule: Magic Resistance (2)
 			</StoneTroll>
+			<RiverTroll>
+				SubOpponentToHit: 1
+			</RiverTroll>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1211,12 +1214,8 @@
 					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<StoneTroll PointsPerModel="20"/> 
-					<Option>
-						<Name>River troll</Name>
-						<PointsPerModel>20</PointsPerModel>
-						<SubOpponentToHit Val="1"/>
-					</Option>
+					<StoneTroll PointsPerModel="20" Dependency="Type"/>
+					<RiverTroll PointsPerModel="20" Dependency="Type"/>
 				</Options>
 			</Rare>
 			<Rare>
