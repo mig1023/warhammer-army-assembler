@@ -68,6 +68,9 @@
 			</DaemonOfNurgle>
 			<Plaguesword>PoisonAttack</Plaguesword>
 			<Hellblade>KillingBlow</Hellblade>
+			<ChaosArmour Name="Chaos Armour">
+				AddToArmour: 4
+			</ChaosArmour>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -573,11 +576,7 @@
 							<ExportToWizardLevel/>
 						</Countable>
 					</Option>
-					<Option>
-						<Name>Chaos Armour</Name>
-						<Points>20</Points>
-						<AddToArmour Val="4"/>
-					</Option>
+					<ChaosArmour Points="20"/>
 					<Option>
 						<Name>Daemonic Flight</Name>
 						<Points>40</Points>
