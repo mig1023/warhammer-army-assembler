@@ -179,6 +179,16 @@
 			<DedicateSlaanesh Name="Dedicate to Slaanesh"/>
 			<DedicateKhorne Name="Dedicate to Khorne"/>
 			<DedicateNurgle Name="Dedicate to Nurgle"/>
+			<WizardLevel1Prince Name="Wizard Level 1">
+				AddToWizard: 1;
+				AddToCast: 1;
+				AddToDispell: 1
+			</WizardLevel1Prince>
+			<WizardLevel2Prince Name="Wizard Level 2">
+				AddToWizard: 2;
+				AddToCast: 2;
+				AddToDispell: 1
+			</WizardLevel2Prince>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -281,26 +291,8 @@
 					<DedicateSlaanesh Points="35" Dependency="Mark"/>
 					<DedicateKhorne Points="35" Dependency="Mark"/>
 					<DedicateNurgle Points="35" Dependency="Mark"/>
-					<Option>
-						<Name>Wizard Level 1</Name>
-						<Points>50</Points>
-						<AddToWizard Val="1"/>
-						<AddToCast Val="1"/>
-						<AddToDispell Val="1"/>
-						<Dependencies>
-							<Off>Dedicate to Khorne, Wizard level 2</Off>
-						</Dependencies>
-					</Option>
-					<Option>
-						<Name>Wizard Level 2</Name>
-						<Points>50</Points>
-						<AddToWizard Val="2"/>
-						<AddToCast Val="2"/>
-						<AddToDispell Val="1"/>
-						<Dependencies>
-							<Off>Dedicate to Khorne, Wizard level 1</Off>
-						</Dependencies>
-					</Option>
+					<WizardLevel1Prince Points="50" Dependencies="Off: Dedicate to Khorne, Wizard level 2"/>
+					<WizardLevel2Prince Points="85" Dependencies="Off: Dedicate to Khorne, Wizard level 1"/>
 					<Etherblade Points="50"/>
 					<ArmedMonstrosity Points="50"/>
 					<DRobes Points="25"/>
