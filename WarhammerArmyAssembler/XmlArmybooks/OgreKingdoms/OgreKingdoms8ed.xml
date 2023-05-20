@@ -735,10 +735,10 @@
 					<Ironfists PointsPerModel="5" Dependency="Weapon"/>
 					<Command>
 						<Champion Points="10" Name="Crusher"/>
+						<BraceOgrePistol Points="6" Dependencies="On: Crusher"/>
 						<Musician Points="8" Name="Bellower"/>
 						<StandardBearer Points="10" Magic="Type: Unit, Points: 50"/>
-					</Command>
-					<BraceOgrePistol Points="6" Dependencies="On: Crusher"/>
+					</Command>		
 				</Options>
 			</Special>
 			<Special>
