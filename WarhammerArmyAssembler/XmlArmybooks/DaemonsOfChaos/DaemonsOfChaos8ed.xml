@@ -92,9 +92,12 @@
 			<Conjuration Name="Exalted Locus of Conjuration">
 				Rule: Spells cast by this model, and any models in his unit, are resolved at +1 Strength
 			</Conjuration>
-			<Virulence>
+			<Virulence Name="Lesser Locus of Virulence">
 				Rule: Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+
 			</Virulence>
+			<Fecundity Name="Greater Locus of Fecundity">
+				Regeneration
+			</Fecundity>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -799,12 +802,7 @@
 						<AddToDispell Val="1"/>
 					</Option>
 					<Virulence Points="40" Dependency="Skill"/>
-					<Option>
-						<Name>Greater Locus of Fecundity</Name>
-						<Points>45</Points>
-						<Regeneration/>
-						<Dependency/>
-					</Option>
+					<Fecundity Points="45" Dependency="Skill"/>
 					<Option>
 						<Name>Exalted Locus of Contagion</Name>
 						<Points>50</Points>
