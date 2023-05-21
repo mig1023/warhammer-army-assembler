@@ -47,6 +47,12 @@
 		<LocalSpecialRules>
 			<LeadershipOfKnight>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</LeadershipOfKnight>
 		</LocalSpecialRules>
+		<LocalOption>
+			<QuestingVow Name="Questing Vow">
+				Group: QuestingVow;
+				Rule: May re-roll any failed Psychology tests
+			</QuestingVow>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -573,13 +579,7 @@
 					<HeavyNativeArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Questing Vow</Name>
-						<Group>QuestingVow</Group>
-						<Dependency/>
-						<Points>12</Points>
-						<Rule>May re-roll any failed Psychology tests</Rule>
-					</Option>
+					<QuestingVow Points="12" Dependency="Vow"/>
 					<Option>
 						<Name>Grail Vow</Name>
 						<Group>GrailVow</Group>
