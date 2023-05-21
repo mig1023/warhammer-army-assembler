@@ -100,6 +100,9 @@
 			<BeastOfNurgle Name="Beast of Nurgle">
 				PoisonAttack
 			</BeastOfNurgle>
+			<FiendOfSlaanesh Name="Fiend of Slaanesh">
+				Rule: Movement 3D6
+			</FiendOfSlaanesh>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -801,12 +804,7 @@
 				</SpecialRules>
 				<Options>
 					<BeastOfNurgle Points="15" Dependency="Mark"/>
-					<Option>
-						<Name>Fiend of Slaanesh</Name>
-						<Dependency/>
-						<Rule>Movement 3D6</Rule>
-						<Points>15</Points>
-					</Option>
+					<FiendOfSlaanesh Points="15" Dependency="Mark"/>
 					<Option>
 						<Name>Bloodbeast of Khorne</Name>
 						<Dependency/>
