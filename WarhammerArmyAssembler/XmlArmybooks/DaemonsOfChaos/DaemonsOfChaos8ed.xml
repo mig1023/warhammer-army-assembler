@@ -115,6 +115,7 @@
 			</PlagueProboscis>
 			<VenomSting Name="Venom Sting"/>
 			<Ambushers/>
+			<DaemonsOfTzeentch Name="Daemons of Tzeentch"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1179,11 +1180,7 @@
 					<Daemonic/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Daemons of Tzeentch</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency/>
-					</Option>
+					<DaemonsOfTzeentch PointsPerModel="2" Dependency="Mark"/>
 					<Option>
 						<Name>Daemons of Slaanesh</Name>
 						<PointsPerModel>2</PointsPerModel>
