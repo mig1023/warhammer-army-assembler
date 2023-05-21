@@ -98,6 +98,9 @@
 			<Fecundity Name="Greater Locus of Fecundity">
 				Regeneration
 			</Fecundity>
+			<Contagion Name="Exalted Locus of Contagion">
+				Rule: If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4
+			</Contagion>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -803,12 +806,7 @@
 					</Option>
 					<Virulence Points="40" Dependency="Skill"/>
 					<Fecundity Points="45" Dependency="Skill"/>
-					<Option>
-						<Name>Exalted Locus of Contagion</Name>
-						<Points>50</Points>
-						<Rule>If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4</Rule>
-						<Dependency/>
-					</Option>
+					<Contagion Points="50" Dependency="Skill"/>
 					<Mount Name="Palanquin" Points="50"/>
 					<BattleStandardBearer Points="25"/>
 				</Options>
