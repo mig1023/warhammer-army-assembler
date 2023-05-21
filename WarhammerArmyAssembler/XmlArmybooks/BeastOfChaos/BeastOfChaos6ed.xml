@@ -106,6 +106,9 @@
 			<BloodbeastOfKhorne Name="Bloodbeast of Khorne">
 				AddToStrength: 1
 			</BloodbeastOfKhorne>
+			<FirewyrmOfTzeentch Name="Firewyrm of Tzeentch">
+				Rule: Strength 3 breath weapon
+			</FirewyrmOfTzeentch>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -809,12 +812,7 @@
 					<BeastOfNurgle Points="15" Dependency="Mark"/>
 					<FiendOfSlaanesh Points="15" Dependency="Mark"/>
 					<BloodbeastOfKhorne Points="15" Dependency="Mark"/>
-					<Option>
-						<Name>Firewyrm of Tzeentch</Name>
-						<Dependency/>
-						<Rule>Strength 3 breath weapon</Rule>
-						<Points>15</Points>
-					</Option>
+					<FirewyrmOfTzeentch Points="15" Dependency="Mark"/>
 				</Options>
 			</Rare>
 		</Units>
