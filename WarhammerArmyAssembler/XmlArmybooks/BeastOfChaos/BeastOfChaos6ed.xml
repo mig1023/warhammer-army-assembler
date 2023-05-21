@@ -57,38 +57,38 @@
 				Fear;
 				AddToWounds: 1
 			</MarkOfNurgle>
-			<MarkOfTzBig Name="Mark of Tzeentch">
+			<MarkOfTzeentchLord Name="Mark of Tzeentch">
 				AddToWizard: 4;
 				AddToCast: 4;
 				AddToDispell: 2
-			</MarkOfTzBig>
-			<MarkOfTzLtl Name="Mark of Tzeentch">
+			</MarkOfTzeentchLord>
+			<MarkOfTzeentch Name="Mark of Tzeentch">
 				AddToWizard: 2;
 				AddToCast: 2;
 				AddToDispell: 1
-			</MarkOfTzLtl>
+			</MarkOfTzeentch>
 			<MarkOfSlaanesh Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlaanesh>
-			<MarkOfSlHitFirst Name="Mark of Slaanesh">
+			<MarkOfSlaaneshDragon Name="Mark of Slaanesh">
 				HitFirst
-			</MarkOfSlHitFirst>
-			<MarkOfChUndFUnits Name="Mark of Chaos Undivided">
+			</MarkOfSlaaneshDragon>
+			<MarkOfChaosUndivided Name="Mark of Chaos Undivided">
 				Rule: May re-roll failed Psychology tests
-			</MarkOfChUndFUnits>
-			<MarkOfKhFUnits Name="Mark of Khorne">
+			</MarkOfChaosUndivided>
+			<MarkOfKhorneUnit Name="Mark of Khorne">
 				Frenzy;
 				AddToDispell: 1
-			</MarkOfKhFUnits>
-			<MarkOfNuFUnits Name="Mark of Nurgle">
+			</MarkOfKhorneUnit>
+			<MarkOfNurgleUnit Name="Mark of Nurgle">
 				Fear
-			</MarkOfNuFUnits>
-			<MarkOfTzFUnits Name="Mark of Tzeentch">
+			</MarkOfNurgleUnit>
+			<MarkOfTzeentchUnit Name="Mark of Tzeentch">
 				AddToCast: 1
-			</MarkOfTzFUnits>
-			<MarkOfSlFUnits Name="Mark of Slaanesh">
+			</MarkOfTzeentchUnit>
+			<MarkOfSlaaneshUnit Name="Mark of Slaanesh">
 				ImmuneToPsychology
-			</MarkOfSlFUnits>
+			</MarkOfSlaaneshUnit>
 			<Braystaff>
 				AddToStrength: 2;
 				HitLast;
@@ -413,7 +413,7 @@
 					<HeavyArmour Points="6" Dependency="Armour"/>
 					<MarkOfKhorne Points="40" Dependency="Mark"/>
 					<MarkOfNurgle Points="50" Dependency="Mark"/>
-					<MarkOfTzBig Points="140" Dependency="Mark"/>
+					<MarkOfTzeentchLord Points="140" Dependency="Mark"/>
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 					<Mount Name="Tuskgor Chariot" Points="85"/>
 				</Options>
@@ -442,7 +442,7 @@
 					<HeavyArmour Points="6" Dependency="Armour"/>				
 					<MarkOfKhorne Points="40" Dependency="Mark"/>
 					<MarkOfNurgle Points="50" Dependency="Mark"/>
-					<MarkOfTzLtl Points="80" Dependency="Mark"/>
+					<MarkOfTzeentch Points="80" Dependency="Mark"/>
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 				</Options>
 				<Equipments>
@@ -491,7 +491,7 @@
 					<HeavyArmour Points="4" Dependency="Armour"/>			
 					<MarkOfKhorne Points="40" Dependency="Mark"/>
 					<MarkOfNurgle Points="50" Dependency="Mark"/>
-					<MarkOfTzLtl Points="70" Dependency="Mark"/>
+					<MarkOfTzeentch Points="70" Dependency="Mark"/>
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 				</Options>
 				<Equipments>
@@ -594,11 +594,11 @@
 						<StandardBearer Points="12" Magic="Type: Unit, Points: 50"/>
 						<Champion Points="12" Name="Gouge-horn"/>
 					</Command>					
-					<MarkOfChUndFUnits Dependency="Mark"/>
-					<MarkOfTzFUnits Points="20" Dependency="Mark"/>
-					<MarkOfKhFUnits Points="45" Dependency="Mark"/>
-					<MarkOfNuFUnits Points="50" Dependency="Mark"/>				
-					<MarkOfSlFUnits Points="20" Dependency="Mark"/>
+					<MarkOfChaosUndivided Dependency="Mark"/>
+					<MarkOfTzeentchUnit Points="20" Dependency="Mark"/>
+					<MarkOfKhorneUnit Points="45" Dependency="Mark"/>
+					<MarkOfNurgleUnit Points="50" Dependency="Mark"/>				
+					<MarkOfSlaaneshUnit Points="20" Dependency="Mark"/>
 				</Options>
 			</Core>
 			<Core>
@@ -719,11 +719,11 @@
 						<StandardBearer Points="20"/>
 						<Champion Points="20" Name="Bloodkine"/>
 					</Command>					
-					<MarkOfChUndFUnits Dependency="Mark"/>
-					<MarkOfTzFUnits Points="20" Dependency="Mark"/>
-					<MarkOfKhFUnits Points="45" Dependency="Mark"/>
-					<MarkOfNuFUnits Points="50" Dependency="Mark"/>				
-					<MarkOfSlFUnits Points="20" Dependency="Mark"/>
+					<MarkOfChaosUndivided Dependency="Mark"/>
+					<MarkOfTzeentchUnit Points="20" Dependency="Mark"/>
+					<MarkOfKhorneUnit Points="45" Dependency="Mark"/>
+					<MarkOfNurgleUnit Points="50" Dependency="Mark"/>				
+					<MarkOfSlaaneshUnit Points="20" Dependency="Mark"/>
 				</Options>
 			</Special>
 			<Rare>
@@ -771,10 +771,10 @@
 					<AdditionalWeapon Points="6" Dependency="Weapon"/>
 					<GreatWeapon Points="8" Dependency="Weapon"/>
 					<LightArmour Points="3"/>
-					<MarkOfTzLtl Points="80" Dependency="Mark"/>
+					<MarkOfTzeentch Points="80" Dependency="Mark"/>
 					<MarkOfKhorne Points="35" Dependency="Mark"/>
 					<MarkOfNurgle Points="50" Dependency="Mark"/>
-					<MarkOfSlHitFirst Points="40" Dependency="Mark"/>
+					<MarkOfSlaaneshDragon Points="40" Dependency="Mark"/>
 				</Options>
 			</Rare>
 			<Rare>
