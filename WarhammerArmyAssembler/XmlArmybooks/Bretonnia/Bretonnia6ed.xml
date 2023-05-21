@@ -52,6 +52,12 @@
 				Group: QuestingVow;
 				Rule: May re-roll any failed Psychology tests
 			</QuestingVow>
+			<GrailVow Name="Grail Vow">
+				Group: GrailVow;
+				ImmuneToPsychology;
+				AddToWard: 6;
+				Rule: 5+ Ward save versus attacks with Strength 5 or higher
+			</GrailVow>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -580,15 +586,7 @@
 				</Equipments>
 				<Options>
 					<QuestingVow Points="12" Dependency="Vow"/>
-					<Option>
-						<Name>Grail Vow</Name>
-						<Group>GrailVow</Group>
-						<Dependency/>
-						<Points>28</Points>
-						<ImmuneToPsychology/>
-						<AddToWard Val="6"/>
-						<Rule>5+ Ward save versus attacks with Strength 5 or higher</Rule>
-					</Option>
+					<GrailVow Points="28" Dependency="Vow"/>
 					<Option>
 						<Name>Morning star</Name>
 						<Flail/>
