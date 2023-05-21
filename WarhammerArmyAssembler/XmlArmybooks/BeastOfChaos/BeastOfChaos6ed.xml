@@ -496,14 +496,8 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="2" Points="35"/>
-					<Option>
-						<Name>Braystaff</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Dependency Group="Weapon"/>
-						<Points>6</Points>
-					</Option>
-					<AdditionalWeapon PointsPerModel="4" Dependency="Weapon"/>
+					<Braystaff Points="6" Dependency="Weapon"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
 					<MarkOfNurgle Points="40" Dependency="Mark"/>				
 					<MarkOfSlaanesh Points="20" Dependency="Mark"/>
 				</Options>
