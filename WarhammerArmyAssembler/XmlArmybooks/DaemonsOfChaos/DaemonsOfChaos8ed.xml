@@ -120,6 +120,7 @@
 			<DaemonsOfKhorne Name="Daemons of Khorne"/>
 			<DaemonsOfNurgle Name="Daemons of Nurgle"/>
 			<DaemonboneClaw Name="Daemonbone Claw"/>
+			<BalefulTorrent Name="Baleful Torrent"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1252,11 +1253,7 @@
 					<DaemonOfKhorne Points="5" Dependency="Daemons"/>
 					<DaemonOfNurgle Points="5" Dependency="Daemons"/>
 					<DaemonboneClaw Points="10"/>
-					<Option>
-						<Name>Baleful Torrent</Name>
-						<Points>50</Points>
-						<Dependency/>
-					</Option>
+					<BalefulTorrent Points="50" Dependency="Weapon">
 					<Option>
 						<Name>Phlegm Bombardment</Name>
 						<Points>50</Points>
