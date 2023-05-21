@@ -591,15 +591,7 @@
 					<QuestingVow Points="12" Dependency="Vow"/>
 					<GrailVow Points="28" Dependency="Vow"/>
 					<MorningStar Points="6"/>
-					<Option>
-						<Name>Lance</Name>
-						<Only>Mount</Only>
-						<Dependencies>
-							<Off>Questing Vow</Off>
-						</Dependencies>
-						<Points>6</Points>
-						<Lance/>
-					</Option>
+					<Lance Points="6" Only="Mount" Dependencies="Off: Questing Vow"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
