@@ -66,6 +66,7 @@
 			<Barding Name="Barding for Warhorse">
 				AddToArmour: 6
 			</Barding>
+			<Braziers/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -812,10 +813,7 @@
 				<Options>
 					<LightArmour PointsPerModel="1"/>
 					<Skirmishers PointsPerModel="1"/>
-					<Option>
-						<Name>Braziers</Name>
-						<Points>5</Points>
-					</Option>
+					<Braziers Points="5"/>
 					<Command>
 						<Champion Points="5" Name="Villein"/>
 						<Musician Points="5"/>
