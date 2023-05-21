@@ -116,6 +116,7 @@
 			<VenomSting Name="Venom Sting"/>
 			<Ambushers/>
 			<DaemonsOfTzeentch Name="Daemons of Tzeentch"/>
+			<DaemonsOfSlaanesh Name="Daemons of Slaanesh"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1181,11 +1182,7 @@
 				</SpecialRules>
 				<Options>
 					<DaemonsOfTzeentch PointsPerModel="2" Dependency="Mark"/>
-					<Option>
-						<Name>Daemons of Slaanesh</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency/>
-					</Option>
+					<DaemonsOfSlaanesh PointsPerModel="2" Dependency="Mark"/>
 					<Option>
 						<Name>Daemons of Khorne</Name>
 						<PointsPerModel>2</PointsPerModel>
