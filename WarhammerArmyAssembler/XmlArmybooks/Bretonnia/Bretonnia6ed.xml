@@ -664,14 +664,7 @@
 				<Options>
 					<Wizard Level="2" Points="35"/>
 					<Mount Name="Horse" Points="10"/>
-					<Option>
-						<Name>Barding for Warhorse</Name>
-						<AddToArmour Val="6"/>
-						<Dependencies>
-							<On>Horse</On>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
+					<Barding Points="4" Dependencies="On: Horse"/>
 				</Options>
 			</Hero>
 		</Heroes>
