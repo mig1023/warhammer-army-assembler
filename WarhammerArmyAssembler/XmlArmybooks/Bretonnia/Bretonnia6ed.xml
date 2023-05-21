@@ -58,6 +58,9 @@
 				AddToWard: 6;
 				Rule: 5+ Ward save versus attacks with Strength 5 or higher
 			</GrailVow>
+			<MorningStar Name="Morning star">
+				Flail
+			</MorningStar>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -587,11 +590,7 @@
 				<Options>
 					<QuestingVow Points="12" Dependency="Vow"/>
 					<GrailVow Points="28" Dependency="Vow"/>
-					<Option>
-						<Name>Morning star</Name>
-						<Flail/>
-						<Points>6</Points>
-					</Option>
+					<MorningStar Points="6"/>
 					<Option>
 						<Name>Lance</Name>
 						<Only>Mount</Only>
