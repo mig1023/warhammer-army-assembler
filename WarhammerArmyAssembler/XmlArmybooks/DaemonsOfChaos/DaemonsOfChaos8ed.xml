@@ -113,6 +113,7 @@
 			<PlagueProboscis Name="Plague Proboscis">
 				PoisonAttack
 			</PlagueProboscis>
+			<VenomSting Name="Venom Sting"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -927,11 +928,7 @@
 				</SpecialRules>
 				<Options>
 					<PlagueProboscis Points="5" Dependency="Skill"/>
-					<Option>
-						<Name>Venom Sting</Name>
-						<Points>10</Points>
-						<Dependency/>
-					</Option>
+					<VenomSting Points="10" Dependency="Skill"/>
 				</Options>
 			</Mount>
 			<Mount>
