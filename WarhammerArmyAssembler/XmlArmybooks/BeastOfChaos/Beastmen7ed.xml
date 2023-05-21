@@ -59,6 +59,7 @@
 			<ScalySkin Name="Scaly Skin">
 				AddToArmour: 6
 			</ScalySkin>
+			<ThrowingAxes/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -826,11 +827,7 @@
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Throwing axes</Name>
-						<PerModel/>
-						<Points>2</Points>
-					</Option>
+					<ThrowingAxes PointsPerModel="2"/>
 					<Option>
 						<Name>Great weapon</Name>
 						<AddToStrength Val="2"/>
