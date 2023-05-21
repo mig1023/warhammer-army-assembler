@@ -119,6 +119,7 @@
 			<DaemonsOfSlaanesh Name="Daemons of Slaanesh"/>
 			<DaemonsOfKhorne Name="Daemons of Khorne"/>
 			<DaemonsOfNurgle Name="Daemons of Nurgle"/>
+			<DaemonboneClaw Name="Daemonbone Claw"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1250,10 +1251,7 @@
 					<DaemonOfSlaanesh Dependency="Daemons"/>
 					<DaemonOfKhorne Points="5" Dependency="Daemons"/>
 					<DaemonOfNurgle Points="5" Dependency="Daemons"/>
-					<Option>
-						<Name>Daemonbone Claw</Name>
-						<Points>10</Points>
-					</Option>
+					<DaemonboneClaw Points="10"/>
 					<Option>
 						<Name>Baleful Torrent</Name>
 						<Points>50</Points>
