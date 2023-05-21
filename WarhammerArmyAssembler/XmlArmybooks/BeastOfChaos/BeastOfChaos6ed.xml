@@ -97,6 +97,9 @@
 			<MutantMonstrosity Name="Mutant Monstrosity">
 				AddToArmour: 5
 			</MutantMonstrosity>
+			<BeastOfNurgle Name="Beast of Nurgle">
+				PoisonAttack
+			</BeastOfNurgle>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -797,12 +800,7 @@
 					<Unbreakable/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Beast of Nurgle</Name>
-						<Dependency/>
-						<PoisonAttack/>
-						<Points>15</Points>
-					</Option>
+					<BeastOfNurgle Points="15" Dependency="Mark"/>
 					<Option>
 						<Name>Fiend of Slaanesh</Name>
 						<Dependency/>
