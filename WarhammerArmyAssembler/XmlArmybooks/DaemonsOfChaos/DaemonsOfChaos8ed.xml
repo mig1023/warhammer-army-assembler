@@ -117,6 +117,7 @@
 			<Ambushers/>
 			<DaemonsOfTzeentch Name="Daemons of Tzeentch"/>
 			<DaemonsOfSlaanesh Name="Daemons of Slaanesh"/>
+			<DaemonsOfKhorne Name="Daemons of Khorne"/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1183,11 +1184,7 @@
 				<Options>
 					<DaemonsOfTzeentch PointsPerModel="2" Dependency="Mark"/>
 					<DaemonsOfSlaanesh PointsPerModel="2" Dependency="Mark"/>
-					<Option>
-						<Name>Daemons of Khorne</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Dependency/>
-					</Option>
+					<DaemonsOfKhorne PointsPerModel="2" Dependency="Mark"/>
 					<Option>
 						<Name>Daemons of Nurgle</Name>
 						<PointsPerModel>2</PointsPerModel>
