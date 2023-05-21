@@ -103,6 +103,9 @@
 			<FiendOfSlaanesh Name="Fiend of Slaanesh">
 				Rule: Movement 3D6
 			</FiendOfSlaanesh>
+			<BloodbeastOfKhorne Name="Bloodbeast of Khorne">
+				AddToStrength: 1
+			</BloodbeastOfKhorne>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -805,12 +808,7 @@
 				<Options>
 					<BeastOfNurgle Points="15" Dependency="Mark"/>
 					<FiendOfSlaanesh Points="15" Dependency="Mark"/>
-					<Option>
-						<Name>Bloodbeast of Khorne</Name>
-						<Dependency/>
-						<AddToStrength Val="1"/>
-						<Points>15</Points>
-					</Option>
+					<BloodbeastOfKhorne Points="15" Dependency="Mark"/>
 					<Option>
 						<Name>Firewyrm of Tzeentch</Name>
 						<Dependency/>
