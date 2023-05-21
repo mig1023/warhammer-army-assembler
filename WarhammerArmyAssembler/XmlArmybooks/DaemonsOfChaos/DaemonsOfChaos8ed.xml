@@ -107,6 +107,9 @@
 			<Swiftness Name="Greater Locus of Swiftness"/>
 				Rule: This model, and all models in her unit, have the Always Strikes First special rule
 			</Swiftness>
+			<Beguilement Name="Exalted Locus of Beguilement">
+				Rule: Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase
+			</Beguilement>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -833,12 +836,7 @@
 					<Wizard Level="1" Points="35"/>
 					<Grace Points="5" Dependency="Skill"/>
 					<Swiftness Points="50" Dependency="Skill"/>
-					<Option>
-						<Name>Exalted Locus of Beguilement</Name>
-						<Points>60</Points>
-						<Rule>Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase</Rule>
-						<Dependency/>
-					</Option>
+					<Beguilement Points="60" Dependency="Skill"/>
 					<Mount Name="Steed of Slaanesh" Points="25"/>
 					<Mount Name="Seeker Chariot" Points="85"/>
 					<Mount Name="Exalted Seeker Chariot" Points="190"/>
