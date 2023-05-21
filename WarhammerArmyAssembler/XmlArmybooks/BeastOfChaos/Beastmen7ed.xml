@@ -60,6 +60,11 @@
 				AddToArmour: 6
 			</ScalySkin>
 			<ThrowingAxes/>
+			<GreatWeaponSpecific Name="Great weapon">
+				AddToStrength: 2;
+				AddToArmour: -1;
+				HitLast
+			</GreatWeaponSpecific>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -828,28 +833,21 @@
 				</Equipments>
 				<Options>
 					<ThrowingAxes PointsPerModel="2"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<AddToArmour Val="-1"/>
-						<HitLast/>
-						<PerModel/>
-						<Points>2</Points>
-					</Option>
-					<Option>
-						<Name>Gorehoof</Name>
-						<Dependency/>
-						<Command/>
-						<Points>14</Points>
-					</Option>
-					<Option>
-						<Name>Ghorros Warhoof</Name>
-						<Dependency/>
-						<Command/>
-						<OnlyOneInArmy/>
-						<Points>155</Points>
-					</Option>
+					<GreatWeaponSpecific PointsPerModel="2"/>
 					<Command>
+						<Option>
+							<Name>Gorehoof</Name>
+							<Dependency/>
+							<Command/>
+							<Points>14</Points>
+						</Option>
+						<Option>
+							<Name>Ghorros Warhoof</Name>
+							<Dependency/>
+							<Command/>
+							<OnlyOneInArmy/>
+							<Points>155</Points>
+						</Option>
 						<Musician Points="7"/>
 						<StandardBearer Points="14"/>
 					</Command>
