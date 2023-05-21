@@ -101,6 +101,9 @@
 			<Contagion Name="Exalted Locus of Contagion">
 				Rule: If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4
 			</Contagion>
+			<Grace Name="Lesser Locus of Grace">
+				Rule: This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)
+			</Grace>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -825,12 +828,7 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="1" Points="35"/>
-					<Option>
-						<Name>Lesser Locus of Grace</Name>
-						<Points>5</Points>
-						<Rule>This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)</Rule>
-						<Dependency/>
-					</Option>
+					<Grace Points="5" Dependency="Skill"/>
 					<Option>
 						<Name>Greater Locus of Swiftness</Name>
 						<Points>50</Points>
