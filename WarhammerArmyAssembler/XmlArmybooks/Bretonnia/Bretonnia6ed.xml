@@ -592,15 +592,7 @@
 					<GrailVow Points="28" Dependency="Vow"/>
 					<MorningStar Points="6"/>
 					<Lance Points="6" Only="Mount" Dependencies="Off: Questing Vow"/>
-					<Option>
-						<Name>Great weapon</Name>
-						<AddToStrength Val="2"/>
-						<Dependencies>
-							<On>Questing Vow</On>
-						</Dependencies>
-						<HitLast/>
-						<Points>6</Points>
-					</Option>
+					<GreatWeapon Points="6" Dependencies="Off: Questing Vow"/>
 					<Shield Points="3"/>
 					<Mount Name="Barded Warhorse" Points="21"/>
 					<Mount Name="Royal Pegasus" Points="50"/>
