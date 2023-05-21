@@ -93,6 +93,7 @@
 				AddToStrength: 2;
 				HitLast;
 			</Braystaff>
+			<ThrowingAxes/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -670,10 +671,7 @@
 					<LightNativeArmour/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Throwing axes</Name>
-						<PointsPerModel>3</PointsPerModel>
-					</Option>
+					<ThrowingAxes PointsPerModel="3"/>>
 					<Shield PointsPerModel="2"/>
 					<Command>
 						<Musician Points="7"/>
