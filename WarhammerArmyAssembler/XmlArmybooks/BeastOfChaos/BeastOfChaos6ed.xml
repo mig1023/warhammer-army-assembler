@@ -89,6 +89,10 @@
 			<MarkOfSlFUnits Name="Mark of Slaanesh">
 				ImmuneToPsychology
 			</MarkOfSlFUnits>
+			<Braystaff>
+				AddToStrength: 2;
+				HitLast;
+			</Braystaff>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -443,14 +447,8 @@
 				</SpecialRules>
 				<Options>
 					<Wizard Level="4" Points="35"/>
-					<Option>
-						<Name>Braystaff</Name>
-						<AddToStrength Val="2"/>
-						<HitLast/>
-						<Dependency Group="Weapon"/>
-						<Points>8</Points>
-					</Option>
-					<AdditionalWeapon PointsPerModel="6" Dependency="Weapon"/>
+					<Braystaff Points="8" Dependency="Weapon"/>
+					<AdditionalWeapon Points="6" Dependency="Weapon"/>
 					<MarkOfNurgle Points="50" Dependency="Mark"/>				
 					<MarkOfSlaanesh Points="25" Dependency="Mark"/>
 					<Mount Name="Tuskgor Chariot" Points="85"/>
