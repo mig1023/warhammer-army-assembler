@@ -122,6 +122,7 @@
 			<DaemonboneClaw Name="Daemonbone Claw"/>
 			<BalefulTorrent/>
 			<PhlegmBombardment/>
+			<WarpGaze/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -1256,11 +1257,7 @@
 					<DaemonboneClaw Points="10"/>
 					<BalefulTorrent Points="50" Dependency="Weapon">
 					<PhlegmBombardment Points="50" Dependency="Weapon">
-					<Option>
-						<Name>Warp Gaze</Name>
-						<Points>55</Points>
-						<Dependency/>
-					</Option>
+					<WarpGaze Points="55" Dependency="Weapon">
 				</Options>
 			</Rare>
 			<Rare>
