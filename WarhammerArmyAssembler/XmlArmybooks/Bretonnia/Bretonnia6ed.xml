@@ -50,6 +50,8 @@
 		<LocalOption>
 			<QuestingVow Name="Questing Vow">
 				Group: QuestingVow;
+				HitLast;
+				AddToStrength: 2;
 				Rule: May re-roll any failed Psychology tests
 			</QuestingVow>
 			<GrailVow Name="Grail Vow">
@@ -61,6 +63,9 @@
 			<MorningStar Name="Morning star">
 				Flail
 			</MorningStar>
+			<Barding Name="Barding for Warhorse">
+				AddToArmour: 6
+			</Barding>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -615,14 +620,7 @@
 				<Options>
 					<Wizard Level="4" Points="35"/>
 					<Mount Name="Horse" Points="15"/>
-					<Option>
-						<Name>Barding for Warhorse</Name>
-						<AddToArmour Val="6"/>
-						<Dependencies>
-							<On>Horse</On>
-						</Dependencies>
-						<Points>6</Points>
-					</Option>
+					<Barding Points="6" Dependencies="On: Horse"/>
 					<Mount Name="Royal Pegasus" Points="50"/>
 				</Options>
 			</Lord>
