@@ -94,6 +94,9 @@
 				HitLast;
 			</Braystaff>
 			<ThrowingAxes/>
+			<MutantMonstrosity Name="Mutant Monstrosity">
+				AddToArmour: 5
+			</MutantMonstrosity>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -782,11 +785,7 @@
 					<HandWeapon>Big club, rock or dead animal</HandWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Mutant Monstrosity</Name>
-						<AddToArmour Val="5"/>
-						<Points>20</Points>
-					</Option>
+					<MutantMonstrosity Points="20"/>
 				</Options>
 			</Rare>
 			<Rare>
