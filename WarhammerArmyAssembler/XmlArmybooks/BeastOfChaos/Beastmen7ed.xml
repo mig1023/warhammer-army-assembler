@@ -52,6 +52,11 @@
 			<Bloodgreed/>
 			<BeastmanAmbush/>
 		</LocalSpecialRules>
+		<LocalOption>
+			<PoisonedAttacks>
+				PoisonAttack
+			</PoisonedAttacks>
+		</LocalOption>
 	</Introduction>
 	<Content>
 		<Artefacts>
@@ -706,20 +711,20 @@
 				</Equipments>
 				<Options>
 					<Spear PointsPerModel="1"/>
-					<Option>
-						<Name>Halfhorn</Name>
-						<Dependency/>
-						<Command/>
-						<Points>6</Points>
-					</Option>
-					<Option>
-						<Name>Ungrol Four-Horn</Name>
-						<Dependency/>
-						<Command/>
-						<OnlyOneInArmy/>
-						<Points>75</Points>
-					</Option>
 					<Command>
+						<Option>
+							<Name>Halfhorn</Name>
+							<Dependency/>
+							<Command/>
+							<Points>6</Points>
+						</Option>
+						<Option>
+							<Name>Ungrol Four-Horn</Name>
+							<Dependency/>
+							<Command/>
+							<OnlyOneInArmy/>
+							<Points>75</Points>
+						</Option>
 						<Musician Points="3"/>
 						<StandardBearer Points="6"/>
 					</Command>
@@ -772,11 +777,7 @@
 					<NoCoreSlot/>
 				</SpecialRules>
 				<Options>
-					<Option>
-						<Name>Poisoned Attacks</Name>
-						<PoisonAttack/>
-						<PointsPerModel>3</PointsPerModel>
-					</Option>
+					<PoisonedAttacks PointsPerModel="3"/>
 					<Option>
 						<Name>Scaly Skin</Name>
 						<AddToArmour Val="6"/>
