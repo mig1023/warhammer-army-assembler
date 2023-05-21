@@ -65,6 +65,7 @@
 				AddToArmour: -1;
 				HitLast
 			</GreatWeaponSpecific>
+			<Scout/>
 		</LocalOption>
 	</Introduction>
 	<Content>
@@ -865,11 +866,7 @@
 					<HandWeapon>Claws</HandWeapon>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Scout</Name>
-						<PerModel/>
-						<Points>3</Points>
-					</Option>
+					<Scout PointsPerModel="3"/>
 				</Options>
 			</Special>
 			<Special>
