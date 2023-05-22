@@ -687,14 +687,7 @@
 					<Shield Points="2" Dependencies="Battle Standard Bearer"/>
 					<Mount Name="Wolf" Points="12"/>
 					<Mount Name="Gigantic spider" Points="40"/>
-					<Option>
-						<Name>Great squig</Name>
-						<Points>50</Points>
-						<Mount/>
-						<Dependencies>
-							<On>Night Goblin</On>
-						</Dependencies>
-					</Option>
+					<Mount Name="Great squig" Points="50" Dependencies="On: Night Goblin"/>
 					<Mount Name="Goblin Wolf chariot" Points="60"/>
 				</Options>
 			</Hero>
