@@ -646,14 +646,7 @@
 					<Mount Name="Chaos Steed" Points="24"/>
 					<Mount Name="Manticore" Points="200"/>
 					<Mount Name="Demonic Mount" Points="50"/>
-					<Option>
-						<Name>Disc of Tzeentch</Name>
-						<Points>20</Points>
-						<Mount/>
-						<Dependencies>
-							<On>Mark of Tzeentch</On>
-						</Dependencies>
-					</Option>
+					<Mount Name="Disc of Tzeentch" Points="20" Dependencies="On: Mark of Tzeentch"/>
 					<Option>
 						<Name>Juggernaut</Name>
 						<Points>50</Points>
