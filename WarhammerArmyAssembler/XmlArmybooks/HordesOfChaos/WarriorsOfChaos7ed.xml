@@ -647,14 +647,7 @@
 					<Mount Name="Manticore" Points="200"/>
 					<Mount Name="Demonic Mount" Points="50"/>
 					<Mount Name="Disc of Tzeentch" Points="20" Dependencies="On: Mark of Tzeentch"/>
-					<Option>
-						<Name>Juggernaut</Name>
-						<Points>50</Points>
-						<Mount/>
-						<Dependencies>
-							<On>Mark of Khorne</On>
-						</Dependencies>
-					</Option>
+					<Mount Name="Juggernaut" Points="50" Dependencies="On: Mark of Khorne"/>
 					<Option>
 						<Name>Palanquin of Nurgle</Name>
 						<Points>50</Points>
