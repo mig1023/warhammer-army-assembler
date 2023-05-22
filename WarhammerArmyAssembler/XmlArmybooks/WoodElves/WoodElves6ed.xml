@@ -624,14 +624,7 @@
 				<Options>
 					<Wizard Level="2" Points="35"/>
 					<Glamourweave Points="20"/>
-					<Option>
-						<Name>Unicorn</Name>
-						<Points>65</Points>
-						<Dependencies>
-							<On>Glamourweave</On>
-						</Dependencies>
-						<Mount/>
-					</Option>
+					<Mount Name="Unicorn" Points="65" Dependencies="On: Glamourweave"/>
 					<Mount Name="Elven Steed" Points="12"/>
 				</Options>
 				<Equipments>
