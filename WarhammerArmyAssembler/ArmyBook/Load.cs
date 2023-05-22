@@ -543,6 +543,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             AddToOption(xmlDocument, ref xmlNode, "Points", xmlNode.Attributes["Points"]?.InnerText ?? "0");
             AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
             AddToOption(xmlDocument, ref xmlNode, "Mount", "True");
+
+            if (xmlNode.Attributes["Dependencies"] != null)
+                AddDependencies(xmlDocument, ref xmlNode, xmlNode.Attributes["Dependencies"].InnerText);
         }
 
         private static void CreateWizardOption(XmlDocument xmlDocument, ref XmlNode xmlNode)
