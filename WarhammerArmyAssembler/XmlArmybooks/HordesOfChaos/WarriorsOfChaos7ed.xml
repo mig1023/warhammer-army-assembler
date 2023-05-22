@@ -792,14 +792,7 @@
 					<MarkOfSlaanesh Points="5" Dependency="Mark"/>
 					<Mount Name="Chaos Steed" Points="16"/>
 					<Mount Name="Demonic Mount" Points="50"/>
-					<Option>
-						<Name>Disc of Tzeentch</Name>
-						<Points>20</Points>
-						<Mount/>
-						<Dependencies>
-							<On>Mark of Tzeentch</On>
-						</Dependencies>
-					</Option>
+					<Mount Name="Disc of Tzeentch" Points="20" Dependencies="On: Mark of Tzeentch"/>
 					<Option>
 						<Name>Palanquin of Nurgle</Name>
 						<Points>50</Points>
