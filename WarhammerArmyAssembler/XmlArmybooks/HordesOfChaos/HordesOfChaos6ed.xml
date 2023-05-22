@@ -912,14 +912,7 @@
 					<MarkOfNurgle Points="40" Dependency="Mark"/>
 					<Mount Name="Demonic mount" Points="50"/>
 					<Mount Name="Chaos Steed" Points="16"/>
-					<Option>
-						<Name>Disc of Tzeentch</Name>
-						<Points>45</Points>
-						<Mount/>
-						<Dependencies>
-							<On>Mark of Tzeentch</On>
-						</Dependencies>
-					</Option>
+					<Mount Name="Disc of Tzeentch" Points="45" Dependencies="On: Mark of Tzeentch"/>
 					<Option>
 						<Name>Juggernaut of Khorne</Name>
 						<Points>55</Points>
