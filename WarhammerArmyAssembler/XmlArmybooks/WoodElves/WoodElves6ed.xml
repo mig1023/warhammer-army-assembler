@@ -603,14 +603,7 @@
 					<Alter Points="25" Dependency="Skill"/>
 					<Scout Points="15" Dependency="Skill"/>
 					<Eternal Points="5" Dependency="Skill"/>
-					<Option>
-						<Name>Great Stag</Name>
-						<Points>50</Points>
-						<Dependencies>
-							<On>Wild Rider</On>
-						</Dependencies>
-						<Mount/>
-					</Option>
+					<Mount Name="Great Stag" Points="50" Dependencies="On: Wild Rider"/>
 					<Mount Name="Elven Steed" Points="12"/>
 					<Mount Name="Great Eagle" Points="50"/>
 					<BattleStandardBearer Points="25"/>
