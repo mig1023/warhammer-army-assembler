@@ -913,14 +913,7 @@
 					<Mount Name="Demonic mount" Points="50"/>
 					<Mount Name="Chaos Steed" Points="16"/>
 					<Mount Name="Disc of Tzeentch" Points="45" Dependencies="On: Mark of Tzeentch"/>
-					<Option>
-						<Name>Juggernaut of Khorne</Name>
-						<Points>55</Points>
-						<Mount/>
-						<Dependencies>
-							<On>Mark of Khorne</On>
-						</Dependencies>
-					</Option>
+					<Mount Name="Juggernaut" Points="55" Dependencies="On: Mark of Khorne"/>
 					<Option>
 						<Name>Steed of Slaanesh</Name>
 						<Points>40</Points>
