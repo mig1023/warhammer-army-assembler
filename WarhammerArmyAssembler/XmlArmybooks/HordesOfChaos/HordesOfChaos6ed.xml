@@ -862,14 +862,7 @@
 					<MarkOfNurgle Points="50" Dependency="Mark"/>
 					<Mount Name="Demonic mount" Points="50"/>
 					<Mount Name="Chaos Steed" Points="24"/>
-					<Option>
-						<Name>Steed of Slaanesh</Name>
-						<Points>40</Points>
-						<Mount/>
-						<Dependencies>
-							<On>Mark of Slaanesh</On>
-						</Dependencies>
-					</Option>
+					<Mount Name="Steed of Slaanesh" Points="40" Dependencies="On: Mark of Slaanesh"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
