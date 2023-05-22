@@ -912,14 +912,7 @@
 						<Mount/>
 						<AddToArmour Val="6"/>
 					</Option>
-					<Option>
-						<Name>Steed of Slaanesh</Name>
-						<Points>25</Points>
-						<Mount/>
-						<Dependencies>
-							<On>Mark of Slaanesh</On>
-						</Dependencies>
-					</Option>
+					<Mount Name="Steed of Slaanesh" Points="25" Dependencies="On: Mark of Slaanesh"/>
 					<Option>
 						<Name>Disc of Tzeentch</Name>
 						<Points>30</Points>
