@@ -258,9 +258,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlNode armyFile = Services.Intro(xmlFile, "Styles/Images/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
-            Army.Data.Name = LoadString(xmlFile, "Army");
+            Army.Data.Name = LoadString(xmlFile, "Info/Army");
             Army.Data.InternalName = LoadString(xmlFile, "InternalName");
-            Army.Data.ArmyEdition = LoadInt(xmlFile, "Edition");
+            Army.Data.ArmyEdition = LoadInt(xmlFile, "Info/Edition");
 
             Data.FrontColor = LoadColor(xmlFile, "Front");
             Data.BackColor = LoadColor(xmlFile, "Back");
