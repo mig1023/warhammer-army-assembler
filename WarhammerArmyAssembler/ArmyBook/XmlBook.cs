@@ -126,9 +126,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                     if ((armyName == null) || (armyName.InnerText == "Dogs of War"))
                         continue;
 
-                    XmlNode armyInternalName = Services.Intro(xmlFile, "InternalName");
+                    XmlNode armyInternal = Services.Intro(xmlFile, "Internal");
                     XmlNode armyEdition = Services.Intro(xmlFile, "Info/Edition");
-                    string armyOrderName = armyInternalName.InnerText;
+                    string armyOrderName = armyInternal.InnerText;
 
                     if (ChangeArmybookWindow.sortedByEditions)
                         armyOrderName = armyEdition.InnerText + armyOrderName;
@@ -136,7 +136,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                         armyOrderName += armyEdition.InnerText;
 
                     files.Add(armyOrderName, file);
-                    AddHomologue(armyInternalName.InnerText, file);
+                    AddHomologue(armyInternal.InnerText, file);
                 }
             }
             catch
