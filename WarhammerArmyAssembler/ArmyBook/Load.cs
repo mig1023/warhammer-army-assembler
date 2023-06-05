@@ -259,7 +259,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Info/Army");
-            Army.Data.InternalName = LoadString(xmlFile, "InternalName");
+            Army.Data.Internal = LoadString(xmlFile, "Internal");
             Army.Data.ArmyEdition = LoadInt(xmlFile, "Info/Edition");
 
             Data.FrontColor = LoadColor(xmlFile, "Front");
@@ -282,7 +282,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Heroes/*", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Mounts/*", ref Data.Mounts);
 
-            LoadDogsOfWar(Army.Data.InternalName);
+            LoadDogsOfWar(Army.Data.Internal);
 
             foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/Group"))
             {

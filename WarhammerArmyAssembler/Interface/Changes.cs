@@ -729,7 +729,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static string TryHomologueImage(Unit unit)
         {
-            List<string> homologuesLine = ArmyBook.XmlBook.GetHomologue(Army.Data.InternalName,
+            List<string> homologuesLine = ArmyBook.XmlBook.GetHomologue(Army.Data.Internal,
                 unit.Name, unit.Homologue, unit.IsHero());
 
             foreach (string homologueImage in homologuesLine)
