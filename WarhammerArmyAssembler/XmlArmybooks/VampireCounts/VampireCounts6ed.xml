@@ -772,7 +772,7 @@
 					<Shield Points="3" Dependencies="On: Blood Dragon"/>
 					<Wizard Level="2" Points="35"/>
 					<Mount Name="Nightmare" Points="12" Dependencies="Off: Strigoi"/>
-					<Barding Points="6" Dependencies="On: Nightmare"/>
+					<Barding Points="6" For="Nightmare"/>
 					<Mount Name="Winged Nightmare" Points="175" Dependencies="Off: Strigoi"/>
 				</Options>
 			</Lord>
@@ -792,7 +792,7 @@
 				<Options>
 					<Wizard Level="4" Points="35"/>
 					<Mount Name="Nightmare" Points="12"/>
-					<Barding Points="6" Dependencies="On: Nightmare"/>
+					<Barding Points="6" For="Nightmare"/>
 					<Mount Name="Winged Nightmare" Points="175"/>
 					<Mount Name="Zombie Dragon" Points="300"/>
 				</Options>
