@@ -544,8 +544,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             AddToOption(xmlDocument, ref xmlNode, "Type", "Option");
             AddToOption(xmlDocument, ref xmlNode, "Mount", "True");
 
-            if (xmlNode.Attributes["Dependencies"] != null)
-                AddDependencies(xmlDocument, ref xmlNode, xmlNode.Attributes["Dependencies"].InnerText);
+            if ((xmlNode.Attributes["Dependencies"] != null) || (xmlNode.Attributes["For"] != null))
+                AddDependencies(xmlDocument, ref xmlNode);
         }
 
         private static void CreateWizardOption(XmlDocument xmlDocument, ref XmlNode xmlNode)
@@ -563,8 +563,18 @@ namespace WarhammerArmyAssembler.ArmyBook
                 AddToOption(xmlDocument, ref xmlNode, "AddToDispell", "1");
         }
 
-        private static void AddDependencies(XmlDocument xmlDocument, ref XmlNode xmlNode, string dependencies)
+        private static string GetDependenciesLine(XmlNode xmlNode)
         {
+            if (xmlNode.Attributes["For"] != null)
+                return String.Format("On: {0}", xmlNode.Attributes["For"].InnerText);
+            else
+                return xmlNode.Attributes["Dependencies"].InnerText;
+        }
+
+        private static void AddDependencies(XmlDocument xmlDocument, ref XmlNode xmlNode)
+        {
+            string dependencies = GetDependenciesLine(xmlNode);
+
             XmlElement xmlDependencies = xmlDocument.CreateElement("Dependencies");
 
             List<string> allDependencies = dependencies.Split(';').ToList();
@@ -660,8 +670,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 AddToOption(xmlDocument, ref xmlNode, "Dependency", attributes: dependency);
             }
 
-            if (xmlNode.Attributes["Dependencies"] != null)
-                AddDependencies(xmlDocument, ref xmlNode, xmlNode.Attributes["Dependencies"].InnerText);
+            if ((xmlNode.Attributes["Dependencies"] != null) || (xmlNode.Attributes["For"] != null))
+                AddDependencies(xmlDocument, ref xmlNode);
 
             if (xmlNode.Attributes["Magic"] != null)
                 AddToOption(xmlDocument, ref xmlNode, "MagicItems", attributes: xmlNode.Attributes["Magic"].InnerText);
