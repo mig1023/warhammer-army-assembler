@@ -18,6 +18,7 @@ namespace WarhammerArmyAssembler
             Special,
             Rare,
             Mount,
+            Crew,
             ToCore,
             ToSpecial
         }

@@ -182,7 +182,12 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             bool success = Enum.TryParse(xmlNode.Name, out UnitType value);
 
-            return (success ? value : UnitType.Core);
+            if (success && (value == UnitType.Crew))
+                return UnitType.Mount;
+            else if (success)
+                return value;
+            else
+                return UnitType.Core;
         }
 
         public static MagicItemsTypes MagicItemsTypeParse(XmlNode xmlNode)
