@@ -605,7 +605,7 @@
 						<Champion Points="10" Name="Gutlord"/>
 						<Musician Points="10"/>
 						<StandardBearer Points="20" Magic="Type: Unit, Points: 50"/>
-						<LookOutGnoblar Points="5" Dependencies="On: Standard bearer"/>
+						<LookOutGnoblar Points="5" For="On: Standard bearer"/>
 					</Command>
 				</Options>
 			</Core>
@@ -678,7 +678,7 @@
 						<Champion Points="10" Name="Captain"/>
 						<Musician Points="10"/>
 						<StandardBearer Points="20" Magic="Type: Unit, Points: 50"/>
-						<LookOutGnoblar Points="5" Dependencies="On: Standard bearer"/>
+						<LookOutGnoblar Points="5" For="Standard bearer"/>
 					</Command>
 				</Options>
 			</Special>
