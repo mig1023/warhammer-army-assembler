@@ -1330,7 +1330,7 @@
 					<BlastingCharges PointsPerModel="2"/>
 					<Command>
 						<Champion Points="10" Name="Prospector"/>
-						<SteamDrill Points="25" Dependencies="On: Prospector"/>
+						<SteamDrill Points="25" For="Prospector"/>
 						<Musician Points="10"/>
 						<StandardBearer Points="10"/>
 					</Command>
