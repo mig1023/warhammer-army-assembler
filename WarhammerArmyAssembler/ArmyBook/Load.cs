@@ -97,7 +97,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                     continue;
 
                 Unit enemy = LoadUnit(0, unit, xmlFile, target, enemyCommonXmlOption);
-                enemy.Armybook = xmlFile.SelectSingleNode("ArmyBook/Introduction/Army").InnerText;
+                enemy.Armybook = xmlFile.SelectSingleNode("ArmyBook/Introduction/Info/Army").InnerText;
 
                 if (unit["Mount"] != null)
                 {
