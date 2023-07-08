@@ -765,7 +765,27 @@ namespace WarhammerArmyAssembler.Interface
 
             main.armybookDetailScroll.Visibility = Visibility.Visible;
             main.armybookArtefactDetailScroll.Visibility = Visibility.Hidden;
-            main.profileMods.Visibility = hasMods ? Visibility.Visible : Visibility.Hidden;
+
+            if (hasMods)
+            {
+                main.profileMods.Text = "↑ modified by artefacts or special rules";
+                main.profileMods.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                main.profileMods.Text = String.Empty;
+                main.profileMods.Visibility = Visibility.Hidden;
+            }
+
+            if (unit.ImageFromAnotherEdition)
+            {
+                main.profileMods.Visibility = Visibility.Visible;
+
+                if (!String.IsNullOrEmpty(main.profileMods.Text))
+                    main.profileMods.Text += "\n";
+
+                main.profileMods.Text += "← picture from another edition";
+            }
         }
 
         public static void armyUnitTest_Resize()

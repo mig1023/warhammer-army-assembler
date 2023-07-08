@@ -185,6 +185,7 @@ namespace WarhammerArmyAssembler
         public SolidColorBrush ArmyColor { get; set; }
         public SolidColorBrush TooltipColor { get; set; }
         public string Image { get; set; }
+        public bool ImageFromAnotherEdition { get; set; }
 
         public string RulesView { get; set; }
 
@@ -417,6 +418,7 @@ namespace WarhammerArmyAssembler
                 ArmyColor = this.ArmyColor,
                 TooltipColor = this.TooltipColor,
                 Image = this.Image,
+                ImageFromAnotherEdition = this.ImageFromAnotherEdition,
             };
 
             newUnit.Movement = this.Movement.Clone();
