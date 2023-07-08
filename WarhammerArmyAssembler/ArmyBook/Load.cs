@@ -135,15 +135,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 bool equal = xmlUnitName == unitName;
                 bool isHomologue = !String.IsNullOrEmpty(homologue) && (xmlUnitHomologue == homologue);
 
-                if (!equal && !isHomologue)
-                    continue;
-
-                string image = StringParse(xmlUnit["Image"]);
-
-                if (String.IsNullOrEmpty(image))
-                    return ImagePathByName(xmlUnit, imagePath);
-                else 
-                    return FullImagePath(image, imagePath);
+                if (equal || isHomologue)
+                    return TryFindImage(xmlUnit, newUnit: null, path: imagePath, out bool _);
             }
 
             return String.Empty;
@@ -455,23 +448,38 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.ArmyColor = (SolidColorBrush)Data.FrontColor;
             newUnit.TooltipColor = (SolidColorBrush)Data.TooltipColor;
 
-            newUnit.Image = TryFindImage(xmlUnit, newUnit);
+            newUnit.Image = TryFindImage(xmlUnit, newUnit, path: String.Empty, out bool _);
 
             return newUnit;
         }
 
-        private static string TryFindImage(XmlNode xmlUnit, Unit newUnit)
+        private static string TryFindImage(XmlNode xmlUnit, Unit newUnit,
+            string path, out bool anotherEdition)
         {
-            string image = StringParse(xmlUnit["Image"]);
+            anotherEdition = false;
 
-            if (xmlUnit["Image"] == null)
-                return Interface.Changes.TryHomologueImage(newUnit);
+            string imageByPath = StringParse(xmlUnit["Image"]);
 
-            else if (String.IsNullOrEmpty(image))
-                return ImagePathByName(xmlUnit);
+            if (!String.IsNullOrEmpty(imageByPath))
+                return FullImagePath(imageByPath);
 
-            else
-                return FullImagePath(image);
+            string imageByName = ImagePathByName(xmlUnit, path);
+
+            if (!String.IsNullOrEmpty(imageByName))
+                return imageByName;
+
+            if (newUnit == null)
+                return String.Empty;
+
+            string imageByHomologue = Interface.Changes.TryHomologueImage(newUnit);
+
+            if (!String.IsNullOrEmpty(imageByHomologue))
+            {
+                anotherEdition = true;
+                return imageByHomologue;
+            }
+
+            return String.Empty;
         }
 
         private static string ImagePathByName(XmlNode xmlUnit, string imagePath = "")
