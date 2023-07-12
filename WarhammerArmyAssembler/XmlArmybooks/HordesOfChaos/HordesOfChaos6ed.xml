@@ -47,50 +47,52 @@
 				<Spell Name="Wall of Fire" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Daemonic/>
-			<TwoBreathWeapon/>
-			<FastCavalry/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<BigMarkOfTzeentch Name="Mark of Tzeentch">
-				AddToWizard: 4;
-				AddToCast: 4;
-				AddToDispell: 2;
-			</BigMarkOfTzeentch>
-			<LtlMarkOfTzeentch Name="Mark of Tzeentch">
-				AddToWizard: 2;
-				AddToCast: 2;
-				AddToDispell: 1;
-			</LtlMarkOfTzeentch>
-			<MarkOfSlaanesh Name="Mark of Slaanesh">
-				ImmuneToPsychology
-			</MarkOfSlaanesh>
-			<MarkOfKhorne Name="Mark of Khorne">
-				Frenzy
-			</MarkOfKhorne>
-			<MarkOfNurgle Name="Mark of Nurgle">
-				AddToWounds: 1
-			</MarkOfNurgle>
-			<MarkOfNurgleUnit Name="Mark of Nurgle">
-				Fear
-			</MarkOfNurgleUnit>
-			<MarkOfTzeentchUnit Name="Mark of Tzeentch">
-				AddToCast: 1
-			</MarkOfTzeentchUnit>
-			<ChaosArmour>
-				AddToArmour: 4;
-				NativeArmour
-			</ChaosArmour>
-			<Chosen>
-				AddToArmour: 6;
-				AddToAttacks: 1;
-				OnlyOneSuchUnits
-			</Chosen>
-			<ThrowingAxes/>
-			<ThrowingSpears/>
-			<Mark/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Daemonic/>
+				<TwoBreathWeapon/>
+				<FastCavalry/>
+			</SpecialRules>
+			<Options>
+				<BigMarkOfTzeentch Name="Mark of Tzeentch">
+					AddToWizard: 4;
+					AddToCast: 4;
+					AddToDispell: 2;
+				</BigMarkOfTzeentch>
+				<LtlMarkOfTzeentch Name="Mark of Tzeentch">
+					AddToWizard: 2;
+					AddToCast: 2;
+					AddToDispell: 1;
+				</LtlMarkOfTzeentch>
+				<MarkOfSlaanesh Name="Mark of Slaanesh">
+					ImmuneToPsychology
+				</MarkOfSlaanesh>
+				<MarkOfKhorne Name="Mark of Khorne">
+					Frenzy
+				</MarkOfKhorne>
+				<MarkOfNurgle Name="Mark of Nurgle">
+					AddToWounds: 1
+				</MarkOfNurgle>
+				<MarkOfNurgleUnit Name="Mark of Nurgle">
+					Fear
+				</MarkOfNurgleUnit>
+				<MarkOfTzeentchUnit Name="Mark of Tzeentch">
+					AddToCast: 1
+				</MarkOfTzeentchUnit>
+				<ChaosArmour>
+					AddToArmour: 4;
+					NativeArmour
+				</ChaosArmour>
+				<Chosen>
+					AddToArmour: 6;
+					AddToAttacks: 1;
+					OnlyOneSuchUnits
+				</Chosen>
+				<ThrowingAxes/>
+				<ThrowingSpears/>
+				<Mark/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
