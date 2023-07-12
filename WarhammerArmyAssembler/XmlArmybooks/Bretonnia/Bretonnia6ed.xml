@@ -46,30 +46,32 @@
 				<Spell Name="Curse of Years" Cast="12"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<LeadershipOfKnight>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</LeadershipOfKnight>
-		</LocalSpecialRules>
-		<LocalOption>
-			<QuestingVow Name="Questing Vow">
-				Group: QuestingVow;
-				HitLast;
-				AddToStrength: 2;
-				Rule: May re-roll any failed Psychology tests
-			</QuestingVow>
-			<GrailVow Name="Grail Vow">
-				Group: GrailVow;
-				ImmuneToPsychology;
-				AddToWard: 6;
-				Rule: 5+ Ward save versus attacks with Strength 5 or higher
-			</GrailVow>
-			<MorningStar Name="Morning star">
-				Flail
-			</MorningStar>
-			<Barding Name="Barding for Warhorse">
-				AddToArmour: 6
-			</Barding>
-			<Braziers/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<LeadershipOfKnight>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</LeadershipOfKnight>
+			</SpecialRules>
+			<Options>
+				<QuestingVow Name="Questing Vow">
+					Group: QuestingVow;
+					HitLast;
+					AddToStrength: 2;
+					Rule: May re-roll any failed Psychology tests
+				</QuestingVow>
+				<GrailVow Name="Grail Vow">
+					Group: GrailVow;
+					ImmuneToPsychology;
+					AddToWard: 6;
+					Rule: 5+ Ward save versus attacks with Strength 5 or higher
+				</GrailVow>
+				<MorningStar Name="Morning star">
+					Flail
+				</MorningStar>
+				<Barding Name="Barding for Warhorse">
+					AddToArmour: 6
+				</Barding>
+				<Braziers/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
