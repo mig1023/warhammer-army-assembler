@@ -50,83 +50,85 @@
 				<Spell Name="Fiery convocation" Cast="21"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Daemonic/>
-			<FlamingAttacks/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<DaemonOfTzeentch Name="Daemon of Tzeentch">
-				Rule: Re-roll Ward save results of 1;
-				Rule: Re-roll Channelling results of 1
-			</DaemonOfTzeentch>
-			<DaemonOfSlaanesh Name="Daemon of Slaanesh">
-				ArmourPiercing: 1
-			</DaemonOfSlaanesh>
-			<DaemonOfKhorne Name="Daemon of Khorne">
-				Rule: On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn
-			</DaemonOfKhorne>
-			<DaemonOfNurgle Name="Daemon of Nurgle">
-				SubOpponentToHit: 1
-			</DaemonOfNurgle>
-			<Plaguesword>PoisonAttack</Plaguesword>
-			<Hellblade>KillingBlow</Hellblade>
-			<ChaosArmour>
-				AddToArmour: 4
-			</ChaosArmour>
-			<DaemonicFlight>
-				Rule: Fly
-			</DaemonicFlight>
-			<Abjuration Name="Lesser Locus of Abjuration">
-				Rule: +1 Magic Resistance
-			</Abjuration>
-			<Fury Name="Greater Locus of Fury">
-				Frenzy
-			</Fury>
-			<Wrath Name="Exalted Locus of Wrath">
-				Hate
-			</Wrath>
-			<Transmogrification Name="Lesser Locus of Transmogrification">
-				Rule: When a model is slain, place D3+1 Blue Horror
-			</Transmogrification>
-			<LocusChange Name="Greater Locus of Change">
-				Rule: At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again
-			</LocusChange>
-			<Conjuration Name="Exalted Locus of Conjuration">
-				Rule: Spells cast by this model, and any models in his unit, are resolved at +1 Strength
-			</Conjuration>
-			<Virulence Name="Lesser Locus of Virulence">
-				Rule: Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+
-			</Virulence>
-			<Fecundity Name="Greater Locus of Fecundity">
-				Regeneration
-			</Fecundity>
-			<Contagion Name="Exalted Locus of Contagion">
-				Rule: If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4
-			</Contagion>
-			<Grace Name="Lesser Locus of Grace">
-				Rule: This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)
-			</Grace>
-			<Swiftness Name="Greater Locus of Swiftness">
-				Rule: This model, and all models in her unit, have the Always Strikes First special rule
-			</Swiftness>
-			<Beguilement Name="Exalted Locus of Beguilement">
-				Rule: Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase
-			</Beguilement>
-			<PlagueProboscis Name="Plague Proboscis">
-				PoisonAttack
-			</PlagueProboscis>
-			<VenomSting Name="Venom Sting"/>
-			<Ambushers/>
-			<DaemonsOfTzeentch Name="Daemons of Tzeentch"/>
-			<DaemonsOfSlaanesh Name="Daemons of Slaanesh"/>
-			<DaemonsOfKhorne Name="Daemons of Khorne"/>
-			<DaemonsOfNurgle Name="Daemons of Nurgle"/>
-			<DaemonboneClaw Name="Daemonbone Claw"/>
-			<BalefulTorrent/>
-			<PhlegmBombardment/>
-			<WarpGaze/>
-			<DeathsHeads Name="Death's Heads"/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Daemonic/>
+				<FlamingAttacks/>
+			</SpecialRules>
+			<Options>
+				<DaemonOfTzeentch Name="Daemon of Tzeentch">
+					Rule: Re-roll Ward save results of 1;
+					Rule: Re-roll Channelling results of 1
+				</DaemonOfTzeentch>
+				<DaemonOfSlaanesh Name="Daemon of Slaanesh">
+					ArmourPiercing: 1
+				</DaemonOfSlaanesh>
+				<DaemonOfKhorne Name="Daemon of Khorne">
+					Rule: On a turn in which a model with this special rule makes a successful charge, it has a +1 bonus to its Strength for the rest of the turn
+				</DaemonOfKhorne>
+				<DaemonOfNurgle Name="Daemon of Nurgle">
+					SubOpponentToHit: 1
+				</DaemonOfNurgle>
+				<Plaguesword>PoisonAttack</Plaguesword>
+				<Hellblade>KillingBlow</Hellblade>
+				<ChaosArmour>
+					AddToArmour: 4
+				</ChaosArmour>
+				<DaemonicFlight>
+					Rule: Fly
+				</DaemonicFlight>
+				<Abjuration Name="Lesser Locus of Abjuration">
+					Rule: +1 Magic Resistance
+				</Abjuration>
+				<Fury Name="Greater Locus of Fury">
+					Frenzy
+				</Fury>
+				<Wrath Name="Exalted Locus of Wrath">
+					Hate
+				</Wrath>
+				<Transmogrification Name="Lesser Locus of Transmogrification">
+					Rule: When a model is slain, place D3+1 Blue Horror
+				</Transmogrification>
+				<LocusChange Name="Greater Locus of Change">
+					Rule: At the start of the turn, roll a D6: this model, and all models in his unit, have a Strength value equal to the result until you roll again
+				</LocusChange>
+				<Conjuration Name="Exalted Locus of Conjuration">
+					Rule: Spells cast by this model, and any models in his unit, are resolved at +1 Strength
+				</Conjuration>
+				<Virulence Name="Lesser Locus of Virulence">
+					Rule: Poisoned Attacks made by this model, and all models in his unit, automatically wound on a To Hit roll of 5+
+				</Virulence>
+				<Fecundity Name="Greater Locus of Fecundity">
+					Regeneration
+				</Fecundity>
+				<Contagion Name="Exalted Locus of Contagion">
+					Rule: If this model, or any model in his unit, scores a 6 To Hit with a Poisoned Attack, the target immediately suffers an additional automatic hit resolved at Strength 4
+				</Contagion>
+				<Grace Name="Lesser Locus of Grace">
+					Rule: This model, and all models in her unit, automatically pass Dangerous Terrain tests, "Look Out Sir!" tests and characteristic tests (but not Leadership tests)
+				</Grace>
+				<Swiftness Name="Greater Locus of Swiftness">
+					Rule: This model, and all models in her unit, have the Always Strikes First special rule
+				</Swiftness>
+				<Beguilement Name="Exalted Locus of Beguilement">
+					Rule: Challenges issued by this model can't be refused, and you (not your opponent) choose which enemy accept; Any enemy in base contact has its Initiative reduced by 3 (to a minimum of 1) until the end of the phase
+				</Beguilement>
+				<PlagueProboscis Name="Plague Proboscis">
+					PoisonAttack
+				</PlagueProboscis>
+				<VenomSting Name="Venom Sting"/>
+				<Ambushers/>
+				<DaemonsOfTzeentch Name="Daemons of Tzeentch"/>
+				<DaemonsOfSlaanesh Name="Daemons of Slaanesh"/>
+				<DaemonsOfKhorne Name="Daemons of Khorne"/>
+				<DaemonsOfNurgle Name="Daemons of Nurgle"/>
+				<DaemonboneClaw Name="Daemonbone Claw"/>
+				<BalefulTorrent/>
+				<PhlegmBombardment/>
+				<WarpGaze/>
+				<DeathsHeads Name="Death's Heads"/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
