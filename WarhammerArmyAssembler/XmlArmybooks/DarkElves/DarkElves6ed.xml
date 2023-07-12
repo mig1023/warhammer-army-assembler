@@ -46,17 +46,19 @@
 				<Spell Name="Vaul's Unmaking" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<HateHighElves/>
-			<SectEnmity/>
-			<NoxiousBreath/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<SeaDragonCloak Name="Sea Dragon Cloak">
-				AddToArmour: 6
-			</SeaDragonCloak>
-			<RepeaterCrossbow/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<HateHighElves/>
+				<SectEnmity/>
+				<NoxiousBreath/>
+			</SpecialRules>
+			<Options>
+				<SeaDragonCloak Name="Sea Dragon Cloak">
+					AddToArmour: 6
+				</SeaDragonCloak>
+				<RepeaterCrossbow/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
