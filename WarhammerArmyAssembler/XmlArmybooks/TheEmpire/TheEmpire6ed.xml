@@ -50,23 +50,25 @@
 				<Spell Name="Sumptuous Pestilience" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Cannon/>
-			<Mortar/>
-			<Helblaster/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Pistol/>
-			<Handgun/>
-			<FullPlateArmour>
-				AddToArmour: 4
-			</FullPlateArmour>
-			<Barding Name="Barding for Warhorse">
-				AddToArmour: 6
-			</Barding>
-			<RepeaterPistol/>
-			<HochlandLongRifle/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Cannon/>
+				<Mortar/>
+				<Helblaster/>
+			</SpecialRules>
+			<Options>
+				<Pistol/>
+				<Handgun/>
+				<FullPlateArmour>
+					AddToArmour: 4
+				</FullPlateArmour>
+				<Barding Name="Barding for Warhorse">
+					AddToArmour: 6
+				</Barding>
+				<RepeaterPistol/>
+				<HochlandLongRifle/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
