@@ -47,17 +47,19 @@
 				<Spell Name="Sumptuous Pestilience" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Aquatic/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Blowpipe/>
-			<Javelins/>
-			<Scout/>
-			<JavelinAndShield>
-				AddToArmour: 6
-			</JavelinAndShield>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Aquatic/>
+			</SpecialRules>
+			<Options>
+				<Blowpipe/>
+				<Javelins/>
+				<Scout/>
+				<JavelinAndShield>
+					AddToArmour: 6
+				</JavelinAndShield>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
