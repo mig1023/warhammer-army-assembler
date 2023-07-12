@@ -45,24 +45,26 @@
 				<Spell Name="Waaagh!" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<LargelyInsignificant/>
-			<Bicker/>
-			<UseGutMagic/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Ironfists>
-				AddToArmour: 6
-			</Ironfists>
-			<CathalayanLongsword>
-				AddToWeaponSkill: 1;
-				AddToInitiative: 1;
-				ArmourPiercing: 1
-			</CathalayanLongsword>
-			<BraceHandguns Name="Brace of handguns"/>
-			<LuckGnoblar Name="Luck-Gnoblar"/>
-			<LookOutGnoblar Name="Look-out Gnoblar"/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<LargelyInsignificant/>
+				<Bicker/>
+				<UseGutMagic/>
+			</SpecialRules>
+			<Options>
+				<Ironfists>
+					AddToArmour: 6
+				</Ironfists>
+				<CathalayanLongsword>
+					AddToWeaponSkill: 1;
+					AddToInitiative: 1;
+					ArmourPiercing: 1
+				</CathalayanLongsword>
+				<BraceHandguns Name="Brace of handguns"/>
+				<LuckGnoblar Name="Luck-Gnoblar"/>
+				<LookOutGnoblar Name="Look-out Gnoblar"/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
