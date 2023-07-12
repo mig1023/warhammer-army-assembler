@@ -46,18 +46,20 @@
 				<Spell Name="Black Horror" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Chariot/>
-			<Scout/>
-			<DragonFire/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<DragonArmour>
-				AddToArmour: 5;
-				Rule: Immune to all breath and all Flaming attacks
-			</DragonArmour>
-			<ExchangeSpears Name="Exchange spear for bow"/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Chariot/>
+				<Scout/>
+				<DragonFire/>
+			</SpecialRules>
+			<Options>
+				<DragonArmour>
+					AddToArmour: 5;
+					Rule: Immune to all breath and all Flaming attacks
+				</DragonArmour>
+				<ExchangeSpears Name="Exchange spear for bow"/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
