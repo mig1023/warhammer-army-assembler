@@ -50,33 +50,35 @@
 				<Spell Name="Arnzipal's Black Horror" Cast="17"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<ValourOfAge>Valour of Age</ValourOfAge>
-			<FlamingAttacks/>
-			<MartialProwess/>
-			<Scout/>
-			<HateDarkElves/>
-			<DragonFire/>
-			<ForestStrider/>
-			<MagicalAttacks/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<DragonArmour>
-				AddToArmour: 5;
-				Rule: Immune to all breath and all Flaming attacks
-			</DragonArmour>
-			<LionCloak>
-				AddToArmour: 5
-			</LionCloak>
-			<IthilmarBarding>
-				AddToArmour: 6
-			</IthilmarBarding>
-			<Swiftsense/>
-			<ShreddingTalon/>
-			<SwoopingStrike/>
-			<ReplaceSpears Name="Replace spears with bows"/>
-			<EagleEyeBoltThrower Name="Eagle Eye Bolt Thrower"/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<ValourOfAge>Valour of Age</ValourOfAge>
+				<FlamingAttacks/>
+				<MartialProwess/>
+				<Scout/>
+				<HateDarkElves/>
+				<DragonFire/>
+				<ForestStrider/>
+				<MagicalAttacks/>
+			</SpecialRules>
+			<Options>
+				<DragonArmour>
+					AddToArmour: 5;
+					Rule: Immune to all breath and all Flaming attacks
+				</DragonArmour>
+				<LionCloak>
+					AddToArmour: 5
+				</LionCloak>
+				<IthilmarBarding>
+					AddToArmour: 6
+				</IthilmarBarding>
+				<Swiftsense/>
+				<ShreddingTalon/>
+				<SwoopingStrike/>
+				<ReplaceSpears Name="Replace spears with bows"/>
+				<EagleEyeBoltThrower Name="Eagle Eye Bolt Thrower"/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
