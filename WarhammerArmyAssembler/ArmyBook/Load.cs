@@ -162,7 +162,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Dictionary<string, string> commonXmlOption = new Dictionary<string, string>();
 
             if (armybook != null)
-                LoadCommonXmlOptionFromFile(armybook, "ArmyBook/Introduction/LocalOption/*", commonXmlOption);
+                LoadCommonXmlOptionFromFile(armybook, "ArmyBook/Introduction/Local/Options/*", commonXmlOption);
 
             if (String.IsNullOrEmpty(Constants.CommonXmlOptionPath))
                 return commonXmlOption;
@@ -184,7 +184,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             Dictionary<string, string> ruleList = new Dictionary<string, string>();
 
-            XmlNodeList specialRules = armybook.SelectNodes("ArmyBook/Introduction/LocalSpecialRules/*");
+            XmlNodeList specialRules = armybook.SelectNodes("ArmyBook/Introduction/Local/SpecialRules/*");
 
             if (specialRules == null)
                 return ruleList;
