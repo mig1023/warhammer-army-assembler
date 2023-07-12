@@ -50,27 +50,29 @@
 				<Spell Name="Vaul's Unmaking" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<ScurryAway>Scurry Away!</ScurryAway>
-			<AttackedUnit/>
-			<VerminousValour/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<WarlockWeapon Name="Warlock-Augmented Weapon"/>
-			<WarplockPistol Name="Warplock pistol"/>
-			<Warpmusket/>
-			<Slings/>
-			<SnareNet Name="Snare-net">
-				AddToAttacks: -1
-			</SnareNet>
-			<PoisonedWeapon Name="Poisoned Attacks">
-				PoisonAttack
-			</PoisonedWeapon>
-			<SmokeBombs/>
-			<WeepingBlade/>
-			<DeathGlobe Name="Death Globe"/>
-			<WarpstoneSpikes/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<ScurryAway>Scurry Away!</ScurryAway>
+				<AttackedUnit/>
+				<VerminousValour/>
+			</SpecialRules>
+			<Option>
+				<WarlockWeapon Name="Warlock-Augmented Weapon"/>
+				<WarplockPistol Name="Warplock pistol"/>
+				<Warpmusket/>
+				<Slings/>
+				<SnareNet Name="Snare-net">
+					AddToAttacks: -1
+				</SnareNet>
+				<PoisonedWeapon Name="Poisoned Attacks">
+					PoisonAttack
+				</PoisonedWeapon>
+				<SmokeBombs/>
+				<WeepingBlade/>
+				<DeathGlobe Name="Death Globe"/>
+				<WarpstoneSpikes/>
+			</Option>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
