@@ -48,17 +48,19 @@
 				<Spell Name="Wall of Fire" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Vampire/>
-			<Ethereal/>
-			<MayUseInvocation>The Vampire may use Invocation of Nehek to increase units of Skeleton Warriors beyond their starting size, and adds +1 to his casting roll when casting Invocation of Nehek on these units</MayUseInvocation>
-			<FlamingAttacks/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Barding>
-				AddToArmour: 6
-			</Barding>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Vampire/>
+				<Ethereal/>
+				<MayUseInvocation>The Vampire may use Invocation of Nehek to increase units of Skeleton Warriors beyond their starting size, and adds +1 to his casting roll when casting Invocation of Nehek on these units</MayUseInvocation>
+				<FlamingAttacks/>
+			</SpecialRules>
+			<Options>
+				<Barding>
+					AddToArmour: 6
+				</Barding>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
