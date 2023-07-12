@@ -50,36 +50,38 @@
 				<Spell Name="Rot, Glorious Rot" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Cannon/>
-			<Mortar/>
-			<Helblaster/>
-			<StateTroops/>
-			<Militia/>
-			<FastCavalry/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<FullPlateArmour>
-				AddToArmour: 4
-			</FullPlateArmour>
-			<Pistol/>
-			<Handgun/>
-			<TwoHandedWarhammer Name="Two-handed warhammer">
-				AddToStrength: 2;
-				HitLast
-			</TwoHandedWarhammer>
-			<SecondWarhammer>
-				AddToAttacks: 1
-			</SecondWarhammer>
-			<Barding Name="Barding for Warhorse">
-				AddToArmour: 6
-			</Barding>
-			<RepeaterPistol/>
-			<HochlandLongRifle/>
-			<GrenadeLaunchingBlunderbuss/>
-			<RepeaterHandgun/>
-			<PigeonBombs/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Cannon/>
+				<Mortar/>
+				<Helblaster/>
+				<StateTroops/>
+				<Militia/>
+				<FastCavalry/>
+			</SpecialRules>
+			<Options>
+				<FullPlateArmour>
+					AddToArmour: 4
+				</FullPlateArmour>
+				<Pistol/>
+				<Handgun/>
+				<TwoHandedWarhammer Name="Two-handed warhammer">
+					AddToStrength: 2;
+					HitLast
+				</TwoHandedWarhammer>
+				<SecondWarhammer>
+					AddToAttacks: 1
+				</SecondWarhammer>
+				<Barding Name="Barding for Warhorse">
+					AddToArmour: 6
+				</Barding>
+				<RepeaterPistol/>
+				<HochlandLongRifle/>
+				<GrenadeLaunchingBlunderbuss/>
+				<RepeaterHandgun/>
+				<PigeonBombs/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
