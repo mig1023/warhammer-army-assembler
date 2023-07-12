@@ -46,46 +46,48 @@
 				<Spell Name="Sumptuous Pestilience" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Flammable/>
-			<StrangleRoots>Strangle-roots</StrangleRoots>
-			<TreeSinging/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Wardancer>
-				AddToStrength: 1;
-				AddToAttacks: 1;
-				Rule: Shadow dances of Loec;
-				ImmuneToPsychology;
-				AddToWard: 6,
-				Rule: Magic Resistance (1)
-			</Wardancer>
-			<WildRider Name="Wild Rider">
-				AddToWard: 5;
-				Rule: Magic Resistance (1);
-				AddToAttacks: 1;
-				ImmuneToPsychology
-			</WildRider>
-			<Waywatcher>
-				Rule: Lethal shot;
-				Rule: Forest Stalker
-			</Waywatcher>
-			<Alter>
-				MovementTo: 9;
-				InitiativeTo: 9;
-				AddToAttacks: 1;
-				NotALeader
-			</Alter>
-			<Scout>
-				Rule: Scout
-			</Scout>
-			<Eternal>
-				AddToArmour: 5
-			</Eternal>
-			<Glamourweave>
-				AddToWard: 5
-			</Glamourweave>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Flammable/>
+				<StrangleRoots>Strangle-roots</StrangleRoots>
+				<TreeSinging/>
+			</SpecialRules>
+			<Options>
+				<Wardancer>
+					AddToStrength: 1;
+					AddToAttacks: 1;
+					Rule: Shadow dances of Loec;
+					ImmuneToPsychology;
+					AddToWard: 6,
+					Rule: Magic Resistance (1)
+				</Wardancer>
+				<WildRider Name="Wild Rider">
+					AddToWard: 5;
+					Rule: Magic Resistance (1);
+					AddToAttacks: 1;
+					ImmuneToPsychology
+				</WildRider>
+				<Waywatcher>
+					Rule: Lethal shot;
+					Rule: Forest Stalker
+				</Waywatcher>
+				<Alter>
+					MovementTo: 9;
+					InitiativeTo: 9;
+					AddToAttacks: 1;
+					NotALeader
+				</Alter>
+				<Scout>
+					Rule: Scout
+				</Scout>
+				<Eternal>
+					AddToArmour: 5
+				</Eternal>
+				<Glamourweave>
+					AddToWard: 5
+				</Glamourweave>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
