@@ -37,19 +37,21 @@
 				<Spell Name="Curse of Years" Cast="12"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Flammable/>
-			<Embalmed/>
-			<TheCurse/>
-			<MyWill>"My Will Be Done!"</MyWill>
-			<FastCavalry/>
-			<FromBelow>"It Came From Below..."</FromBelow>
-		</LocalSpecialRules>
-		<LocalOption>
-			<ShieldsAndSpears>
-				AddToArmour: 6
-			</ShieldsAndSpears>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Flammable/>
+				<Embalmed/>
+				<TheCurse/>
+				<MyWill>"My Will Be Done!"</MyWill>
+				<FastCavalry/>
+				<FromBelow>"It Came From Below..."</FromBelow>
+			</SpecialRules>
+			<Options>
+				<ShieldsAndSpears>
+					AddToArmour: 6
+				</ShieldsAndSpears>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
