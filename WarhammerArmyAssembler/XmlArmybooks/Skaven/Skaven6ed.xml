@@ -49,35 +49,37 @@
 				<Spell Name="Vaul's Unmaking" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<MixedUnit/>
-			<LossOfPackmaster>Loss of Packmaster</LossOfPackmaster>
-			<Scirmishers/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<WarplockPistol/>
-			<Whip/>
-			<Warpblades Name="Warp-blades">
-				AddToStrength: 1
-			</Warpblades>
-			<UpgradedCondenser Name="Upgraded warp-energy condenser"/>
-			<Accumulator Name="Supercharged warp-power accumulator">
-				AddToCast: 1
-			</Accumulator>
-			<SmokeBombs/>
-			<PlagueRats>
-				PoisonAttack
-			</PlagueRats>
-			<Slings/>
-			<ThrowingStars/>
-			<PoisonedWeapons Name="Poisoned hand weapons">
-				PoisonAttack
-			</PoisonedWeapons>
-			<PoisonedThrowingStars/>
-			<TunnellingTeams>
-				Rule: Tunnelling rule
-			</TunnellingTeams>
-		</LocalOption>	
+		<Local>
+			<SpecialRules>
+				<MixedUnit/>
+				<LossOfPackmaster>Loss of Packmaster</LossOfPackmaster>
+				<Scirmishers/>
+			</SpecialRules>
+			<Options>
+				<WarplockPistol/>
+				<Whip/>
+				<Warpblades Name="Warp-blades">
+					AddToStrength: 1
+				</Warpblades>
+				<UpgradedCondenser Name="Upgraded warp-energy condenser"/>
+				<Accumulator Name="Supercharged warp-power accumulator">
+					AddToCast: 1
+				</Accumulator>
+				<SmokeBombs/>
+				<PlagueRats>
+					PoisonAttack
+				</PlagueRats>
+				<Slings/>
+				<ThrowingStars/>
+				<PoisonedWeapons Name="Poisoned hand weapons">
+					PoisonAttack
+				</PoisonedWeapons>
+				<PoisonedThrowingStars/>
+				<TunnellingTeams>
+					Rule: Tunnelling rule
+				</TunnellingTeams>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
