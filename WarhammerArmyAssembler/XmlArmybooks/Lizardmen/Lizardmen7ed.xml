@@ -46,28 +46,30 @@
 				<Spell Name="Rot, Glorious Rot" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Aquatic/>
-			<DozenUnitStrength>Unit Strength 10</DozenUnitStrength>
-			<ThreeUnitStrength>Unit Strength 3</ThreeUnitStrength>
-			<HuntingPack/>
-			<UltimatePredator/>
-			<Channelling/>
-			<HitAndRun>Hit and Run</HitAndRun>
-			<DropRocks>Drop Rocks</DropRocks>
-			<ArborealPredators/>
-			<SacredDuty/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Blowpipe/>
-			<Javelins/>
-			<JavelinAndShield>
-				AddToArmour: 6
-			</JavelinAndShield>
-			<Handler>
-				AddToModelsInPack: 1
-			</Handler>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Aquatic/>
+				<DozenUnitStrength>Unit Strength 10</DozenUnitStrength>
+				<ThreeUnitStrength>Unit Strength 3</ThreeUnitStrength>
+				<HuntingPack/>
+				<UltimatePredator/>
+				<Channelling/>
+				<HitAndRun>Hit and Run</HitAndRun>
+				<DropRocks>Drop Rocks</DropRocks>
+				<ArborealPredators/>
+				<SacredDuty/>
+			</SpecialRules>
+			<Options>
+				<Blowpipe/>
+				<Javelins/>
+				<JavelinAndShield>
+					AddToArmour: 6
+				</JavelinAndShield>
+				<Handler>
+					AddToModelsInPack: 1
+				</Handler>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
