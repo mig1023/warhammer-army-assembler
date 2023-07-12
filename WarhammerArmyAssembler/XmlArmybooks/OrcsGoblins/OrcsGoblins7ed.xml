@@ -50,57 +50,59 @@
 				<Spell Name="The Call of the Hunt" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<FearElves/>
-			<HateDwarfs/>
-			<TuskerCharge/>
-			<ScythedWheel/>
-			<FastCavalry/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Choppa/>
-			<SavageOrc>
-				AddToAttacks: 1;
-				Frenzy;
-				Rule: Warprint
-			</SavageOrc>
-			<BlackOrc>
-				AddToWeaponSkill: 1
-			</BlackOrc>
-			<NightGoblin>
-				AddToInitiative: 1;
-				AddToLeadership: -1
-			</NightGoblin>
-			<Biguns Name="Big'Uns">
-				AddToWeaponSkill: 1;
-				AddToStrength: 1;
-				OnlyOneInArmy
-			</Biguns>
-			<AdditionalChoppa>
-				AddToAttacks: 1
-			</AdditionalChoppa>
-			<Nets/>
-			<ExtraOrc>
-				AddToModelsInPack: 1
-			</ExtraOrc>
-			<ExtraGoblin>
-				AddToModelsInPack: 1
-			</ExtraGoblin>
-			<ExtraWolf>
-				AddToModelsInPack: 1
-			</ExtraWolf>
-			<OrcBully>
-				AddToModelsInPack: 1
-			</OrcBully>
-			<StoneTroll>
-				AddToArmour: 5;
-				AddToStrength: 1;
-				Rule: Magic Resistance (2)
-			</StoneTroll>
-			<RiverTroll>
-				SubOpponentToHit: 1
-			</RiverTroll>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<FearElves/>
+				<HateDwarfs/>
+				<TuskerCharge/>
+				<ScythedWheel/>
+				<FastCavalry/>
+			</SpecialRules>
+			<Options>
+				<Choppa/>
+				<SavageOrc>
+					AddToAttacks: 1;
+					Frenzy;
+					Rule: Warprint
+				</SavageOrc>
+				<BlackOrc>
+					AddToWeaponSkill: 1
+				</BlackOrc>
+				<NightGoblin>
+					AddToInitiative: 1;
+					AddToLeadership: -1
+				</NightGoblin>
+				<Biguns Name="Big'Uns">
+					AddToWeaponSkill: 1;
+					AddToStrength: 1;
+					OnlyOneInArmy
+				</Biguns>
+				<AdditionalChoppa>
+					AddToAttacks: 1
+				</AdditionalChoppa>
+				<Nets/>
+				<ExtraOrc>
+					AddToModelsInPack: 1
+				</ExtraOrc>
+				<ExtraGoblin>
+					AddToModelsInPack: 1
+				</ExtraGoblin>
+				<ExtraWolf>
+					AddToModelsInPack: 1
+				</ExtraWolf>
+				<OrcBully>
+					AddToModelsInPack: 1
+				</OrcBully>
+				<StoneTroll>
+					AddToArmour: 5;
+					AddToStrength: 1;
+					Rule: Magic Resistance (2)
+				</StoneTroll>
+				<RiverTroll>
+					SubOpponentToHit: 1
+				</RiverTroll>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
