@@ -47,20 +47,22 @@
 				<Spell Name="Wind of Undeath" Cast="17"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Flammable/>
-			<HitsIfModelRemoved>If a model removed from play, then the enemy unit responsible will immediately suffer D6 Strength 5 hits</HitsIfModelRemoved>
-			<Entombed>Entombed Beneath the Send</Entombed>
-		</LocalSpecialRules>
-		<LocalOption>
-			<EnvenomedSting>
-				PoisonAttack
-			</EnvenomedSting>
-			<FieryRoar>
-				Rule: A Khemrian Warsphinx has a Strength 4 Breath Weapon with the Flaming Attacks special rule
-			</FieryRoar>
-			<BowOfDesert Name="Bow of the desert"/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Flammable/>
+				<HitsIfModelRemoved>If a model removed from play, then the enemy unit responsible will immediately suffer D6 Strength 5 hits</HitsIfModelRemoved>
+				<Entombed>Entombed Beneath the Send</Entombed>
+			</SpecialRules>
+			<Options>
+				<EnvenomedSting>
+					PoisonAttack
+				</EnvenomedSting>
+				<FieryRoar>
+					Rule: A Khemrian Warsphinx has a Strength 4 Breath Weapon with the Flaming Attacks special rule
+				</FieryRoar>
+				<BowOfDesert Name="Bow of the desert"/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
