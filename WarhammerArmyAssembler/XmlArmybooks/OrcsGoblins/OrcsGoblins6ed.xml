@@ -50,48 +50,50 @@
 				<Spell Name="The Call of the Hunt" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Animosity/>
-			<FearElves/>
-			<HateDwarfs/>
-			<TuskerCharge/>
-			<IgnoreGreenskinPanic/>
-			<QuellAnimosity/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Choppa/>
-			<GreatAxe>
-				AddToStrength: 2;
-				HitLast
-			</GreatAxe>
-			<Warprint>
-				AddToWard: 6
-			</Warprint>
-			<Biguns Name="Big'Uns">
-				AddToWeaponSkill: 1;
-				AddToStrength: 1;
-				OnlyOneInArmy
-			</Biguns>
-			<Nets/>
-			<ExtraOrc>
-				AddToModelsInPack: 1
-			</ExtraOrc>
-			<ExtraGoblin>
-				AddToModelsInPack: 1
-			</ExtraGoblin>
-			<ExtraWolf>
-				AddToModelsInPack: 1
-			</ExtraWolf>
-			<OrcBully>
-				AddToModelsInPack: 1
-			</OrcBully>
-			<StoneTroll>
-				Rule: Magic Resistance (2)
-			</StoneTroll>
-			<RiverTroll>
-				SubOpponentToHit: 1
-			</RiverTroll>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Animosity/>
+				<FearElves/>
+				<HateDwarfs/>
+				<TuskerCharge/>
+				<IgnoreGreenskinPanic/>
+				<QuellAnimosity/>
+			</SpecialRules>
+			<Options>
+				<Choppa/>
+				<GreatAxe>
+					AddToStrength: 2;
+					HitLast
+				</GreatAxe>
+				<Warprint>
+					AddToWard: 6
+				</Warprint>
+				<Biguns Name="Big'Uns">
+					AddToWeaponSkill: 1;
+					AddToStrength: 1;
+					OnlyOneInArmy
+				</Biguns>
+				<Nets/>
+				<ExtraOrc>
+					AddToModelsInPack: 1
+				</ExtraOrc>
+				<ExtraGoblin>
+					AddToModelsInPack: 1
+				</ExtraGoblin>
+				<ExtraWolf>
+					AddToModelsInPack: 1
+				</ExtraWolf>
+				<OrcBully>
+					AddToModelsInPack: 1
+				</OrcBully>
+				<StoneTroll>
+					Rule: Magic Resistance (2)
+				</StoneTroll>
+				<RiverTroll>
+					SubOpponentToHit: 1
+				</RiverTroll>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
