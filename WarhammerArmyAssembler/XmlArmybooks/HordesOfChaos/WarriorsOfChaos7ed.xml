@@ -46,56 +46,58 @@
 				<Spell Name="Wall of Fire" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<WillOfChaos>The Will of Chaos</WillOfChaos>
-			<EyeOfGods>Eye of the Gods</EyeOfGods>
-			<FlamingAttacks/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<ChaosArmour>
-				AddToArmour: 4;
-				NativeArmour
-			</ChaosArmour>
-			<MarkOfKhorne Name="Mark of Khorne">
-				Frenzy
-			</MarkOfKhorne>
-			<MarkOfKhorneSpawn Name="Mark of Khorne">
-				AddToStrength: 1;
-				Frenzy
-			</MarkOfKhorneSpawn>
-			<MarkOfNurgle Name="Mark of Nurgle">
-				Rule: -1 to hit shooting and -1 WS in close combat
-			</MarkOfNurgle>
-			<MarkOfTzeentch Name="Mark of Tzeentch">
-				AddToWard: 6
-			</MarkOfTzeentch>
-			<MarkOfTzeentchWithCast Name="Mark of Tzeentch">
-				AddToWard: 6;
-				Rule: +1 on attempts to cast spell
-			</MarkOfTzeentchWithCast>
-			<MarkOfTzeentchWithWard Name="Mark of Tzeentch">
-				AddToWard: 5;
-				Rule: +1 on attempts to cast spell
-			</MarkOfTzeentchWithWard>
-			<MarkOfSlaanesh Name="Mark of Slaanesh">
-				ImmuneToPsychology
-			</MarkOfSlaanesh>
-			<MarkOfSlaaneshSpawn Name="Mark of Slaanesh">
-				ImmuneToPsychology;
-				HitFirst
-			</MarkOfSlaaneshSpawn>
-			<MarkOfSlaaneshGiant Name="Mark of Slaanesh">
-				HitFirst
-			</MarkOfSlaaneshGiant>
-			<PoisonedAttacks>
-				PoisonAttack
-			</PoisonedAttacks>
-			<ScalySkin>
-				AddToArmour: 6
-			</ScalySkin>
-			<ThrowingSpears/>
-			<ThrowingAxes/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<WillOfChaos>The Will of Chaos</WillOfChaos>
+				<EyeOfGods>Eye of the Gods</EyeOfGods>
+				<FlamingAttacks/>
+			</SpecialRules>
+			<Options>
+				<ChaosArmour>
+					AddToArmour: 4;
+					NativeArmour
+				</ChaosArmour>
+				<MarkOfKhorne Name="Mark of Khorne">
+					Frenzy
+				</MarkOfKhorne>
+				<MarkOfKhorneSpawn Name="Mark of Khorne">
+					AddToStrength: 1;
+					Frenzy
+				</MarkOfKhorneSpawn>
+				<MarkOfNurgle Name="Mark of Nurgle">
+					Rule: -1 to hit shooting and -1 WS in close combat
+				</MarkOfNurgle>
+				<MarkOfTzeentch Name="Mark of Tzeentch">
+					AddToWard: 6
+				</MarkOfTzeentch>
+				<MarkOfTzeentchWithCast Name="Mark of Tzeentch">
+					AddToWard: 6;
+					Rule: +1 on attempts to cast spell
+				</MarkOfTzeentchWithCast>
+				<MarkOfTzeentchWithWard Name="Mark of Tzeentch">
+					AddToWard: 5;
+					Rule: +1 on attempts to cast spell
+				</MarkOfTzeentchWithWard>
+				<MarkOfSlaanesh Name="Mark of Slaanesh">
+					ImmuneToPsychology
+				</MarkOfSlaanesh>
+				<MarkOfSlaaneshSpawn Name="Mark of Slaanesh">
+					ImmuneToPsychology;
+					HitFirst
+				</MarkOfSlaaneshSpawn>
+				<MarkOfSlaaneshGiant Name="Mark of Slaanesh">
+					HitFirst
+				</MarkOfSlaaneshGiant>
+				<PoisonedAttacks>
+					PoisonAttack
+				</PoisonedAttacks>
+				<ScalySkin>
+					AddToArmour: 6
+				</ScalySkin>
+				<ThrowingSpears/>
+				<ThrowingAxes/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
