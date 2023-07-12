@@ -50,34 +50,36 @@
 				<Spell Name="Plague Wind" Cast="17"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Aquatic/>
-			<ForestStrider/>
-			<Scout/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Blowpipe/>
-			<LustrianJavelins/>
-			<UnstoppableStampede/>
-			<SharpenedHorns/>
-			<Bloodroar>
-				Bloodroar
-			</Bloodroar>
-			<LopingStride/>
-			<PoisonedAttacks>
-				PoisonAttack
-			</PoisonedAttacks>
-			<LustrianJavelinsSshields Name="Lustrian javelins and shields">
-				AddToArmour: 6
-			</LustrianJavelinsSshields>
-			<FireleechBolas/>
-			<SolarEngine/>
-			<EngineOfGods Name="Engine of the Gods"/>
-			<AdditionalSkink Name="Additional skink per pack">
-				AddToModelsInPack: 1
-			</AdditionalSkink>
-			<DiviningRod Name="Divining Rod"/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Aquatic/>
+				<ForestStrider/>
+				<Scout/>
+			</SpecialRules>
+			<Options>
+				<Blowpipe/>
+				<LustrianJavelins/>
+				<UnstoppableStampede/>
+				<SharpenedHorns/>
+				<Bloodroar>
+					Bloodroar
+				</Bloodroar>
+				<LopingStride/>
+				<PoisonedAttacks>
+					PoisonAttack
+				</PoisonedAttacks>
+				<LustrianJavelinsSshields Name="Lustrian javelins and shields">
+					AddToArmour: 6
+				</LustrianJavelinsSshields>
+				<FireleechBolas/>
+				<SolarEngine/>
+				<EngineOfGods Name="Engine of the Gods"/>
+				<AdditionalSkink Name="Additional skink per pack">
+					AddToModelsInPack: 1
+				</AdditionalSkink>
+				<DiviningRod Name="Divining Rod"/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
