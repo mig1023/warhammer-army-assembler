@@ -48,27 +48,29 @@
 				<Spell Name="Fiery convocation" Cast="21"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<PrimalFury/>
-			<ManBane>Man-bane</ManBane>
-			<Bloodgreed/>
-			<BeastmanAmbush/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<PoisonedAttacks>
-				PoisonAttack
-			</PoisonedAttacks>
-			<ScalySkin Name="Scaly Skin">
-				AddToArmour: 6
-			</ScalySkin>
-			<ThrowingAxes/>
-			<GreatWeaponSpecific Name="Great weapon">
-				AddToStrength: 2;
-				AddToArmour: -1;
-				HitLast
-			</GreatWeaponSpecific>
-			<Scout/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<PrimalFury/>
+				<ManBane>Man-bane</ManBane>
+				<Bloodgreed/>
+				<BeastmanAmbush/>
+			</SpecialRules>
+			<Options>
+				<PoisonedAttacks>
+					PoisonAttack
+				</PoisonedAttacks>
+				<ScalySkin Name="Scaly Skin">
+					AddToArmour: 6
+				</ScalySkin>
+				<ThrowingAxes/>
+				<GreatWeaponSpecific Name="Great weapon">
+					AddToStrength: 2;
+					AddToArmour: -1;
+					HitLast
+				</GreatWeaponSpecific>
+				<Scout/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
