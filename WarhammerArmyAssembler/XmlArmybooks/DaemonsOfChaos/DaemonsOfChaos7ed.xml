@@ -46,152 +46,154 @@
 				<Spell Name="The Comet of Cassanora" Cast="13"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Daemonic/>
-			<FlamingAttacks/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Etherblade>
-				MagicItemsPoints;
-				NoArmour
-			</Etherblade>
-			<ArmedMonstrosity>
-				MagicItemsPoints;
-				AddToAttacks: 2
-			</ArmedMonstrosity>
-			<DRobes Name="Daemonic Robes">
-				MagicItemsPoints;
-				Rule: Can never be wounded on better than a 3+
-			</DRobes>
-			<EnrGaze Name="Enrapturing Gaze">
-				MagicItemsPoints;
-				Rule: Models in base contact may not use another model's Leadership value
-			</EnrGaze>
-			<IridCorona Name="Iridescent Corona">
-				MagicItemsPoints;
-				Rule: Enemy models in base contact at start of any combat suffer a Flaming Strength 3 hit before any blows are struck
-			</IridCorona>
-			<ImmortalFury Name="Immortal Fury">
-				MagicItemsPoints;
-				Reroll: ToHit
-			</ImmortalFury>
-			<SoulHunger Name="Soul Hunger">
-				MagicItemsPoints;
-				Reroll: ToWound
-			</SoulHunger>
-			<WingedHorror Name="Winged Horror">
-				MagicItemsPoints;
-				Rule: Fly
-			</WingedHorror>
-			<ObsArmour Name="Obsidian Armour">
-				MagicItemsPoints;
-				AddToArmour: 3;
-				Rule: Magic weapons carriad by enemy models lose their magical abilities in base contact
-			</ObsArmour>
-			<FireBlade Name="Firestorm Blade">
-				MagicItemsPoints;
-				AddToStrength: 1;
-				Rule: Flaming Attacks
-			</FireBlade>
-			<SpellBreaker Name="Spell Breaker">
-				MagicItemsPoints;
-				Rule: Once per battle may automatically dispel one enemy spell
-			</SpellBreaker>
-			<ArmOfKhorne Name="Armour of Khorne">
-				MagicItemsPoints;
-				AddToArmour: 3
-			</ArmOfKhorne>
-			<PowerVortex Name="Power Vortex">
-				MagicItemsPoints;
-				AddToCast: 1
-			</PowerVortex>
-			<FlOfTzeentch Name="Flames of Tzeentch">
-				MagicItemsPoints;
-				Rule: D6 bolts in the Shooting phase with a range of 18" and a Strength of 4
-			</FlOfTzeentch>
-			<MasterOfSorcery Name="Master of Sorcery">
-				MagicItemsPoints;
-				Rule: Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses
-			</MasterOfSorcery>
-			<StaffOfNurgle Name="Staff of Nurgle">
-				MagicItemsPoints;
-				Rule: Bound spell, Power level 3: Rancid Visitation
-			</StaffOfNurgle>
-			<NoxiousVapours Name="Noxious Vapours">
-				MagicItemsPoints;
-				Rule: All enemies models in base contact lose the Always Strikes First rule and always strike last
-			</NoxiousVapours>
-			<PestilentMucus Name="Pestilent Mucus">
-				MagicItemsPoints;
-				Rule: When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed
-			</PestilentMucus>
-			<NurglesRot Name="Nurgle's Rot">
-				MagicItemsPoints;
-				Rule: Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed
-			</NurglesRot>
-			<StreamOfBile Name="Stream of Bile">
-				MagicItemsPoints;
-				Rule: Strength 4 breath weapon
-			</StreamOfBile>
-			<SlimeTrail Name="Slime Trail">
-				MagicItemsPoints;
-				Rule: Enemy inits do not receive combat result bonuses for attacking the flank or rear
-			</SlimeTrail>
-			<SirenSong Name="Siren Song">
-				MagicItemsPoints;
-				Rule: Once per game, before charges are declared, nominate one enemy within 20", the target unit must either declare a charge against the Daemon (or the unit it is with) or immediately flee, exactly as if it had failed a Panic test
-			</SirenSong>
-			<SoporificMusk Name="Soporific Musk">
-				MagicItemsPoints;
-				Rule: A unit in base contact rolls an extra dice when fleeing and then discards the highest result
-			</SoporificMusk>
-			<StandardOfGlory Name="Standard of Chaos Glory">
-				Stubborn;
-				Rule: All Daemons within 12" are stubborn
-			</StandardOfGlory>
-			<BanOfHellfire Name="Banner of Hellfire">
-				Rule: Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat
-			</BanOfHellfire>
-			<GreatIcon Name="Great Icon of Despair">
-				Rule: All enemy units within 12" suffer a -2 penalty to their Leadership
-			</GreatIcon>
-			<BanOfVictory Name="Banner of Unholy Victory">
-				AddToCloseCombat: D3
-			</BanOfVictory>
-			<StandOfSundering Name="Great Standard of Sundering">
-				Rule: All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3
-			</StandOfSundering>
-			<SkullTotem Name="Skull Totem">
-				Rule: May march even if enemy models are within 8"
-			</SkullTotem>
-			<IconOfWar Name="Icon of Endless War">
-				Rule: Adds D6" to its first charge move
-			</IconOfWar>
-			<BanOfEcstasy Name="Banner of Ecstasy">
-				Stubborn
-			</BanOfEcstasy>
-			<SirenStandard Name="Siren Standard">
-				Rule: Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee
-			</SirenStandard>
-			<UnnaturalSwiftness Name="Unnatural Swiftness">
-				MagicItemsPoints;
-				HitFirst
-			</UnnaturalSwiftness>
-			<DedicateTzeentch Name="Dedicate to Tzeentch"/>
-			<DedicateSlaanesh Name="Dedicate to Slaanesh"/>
-			<DedicateKhorne Name="Dedicate to Khorne"/>
-			<DedicateNurgle Name="Dedicate to Nurgle"/>
-			<WizardLevel1Prince Name="Wizard Level 1">
-				AddToWizard: 1;
-				AddToCast: 1;
-				AddToDispell: 1
-			</WizardLevel1Prince>
-			<WizardLevel2Prince Name="Wizard Level 2">
-				AddToWizard: 2;
-				AddToCast: 2;
-				AddToDispell: 1
-			</WizardLevel2Prince>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Daemonic/>
+				<FlamingAttacks/>
+			</SpecialRules>
+			<Options>
+				<Etherblade>
+					MagicItemsPoints;
+					NoArmour
+				</Etherblade>
+				<ArmedMonstrosity>
+					MagicItemsPoints;
+					AddToAttacks: 2
+				</ArmedMonstrosity>
+				<DRobes Name="Daemonic Robes">
+					MagicItemsPoints;
+					Rule: Can never be wounded on better than a 3+
+				</DRobes>
+				<EnrGaze Name="Enrapturing Gaze">
+					MagicItemsPoints;
+					Rule: Models in base contact may not use another model's Leadership value
+				</EnrGaze>
+				<IridCorona Name="Iridescent Corona">
+					MagicItemsPoints;
+					Rule: Enemy models in base contact at start of any combat suffer a Flaming Strength 3 hit before any blows are struck
+				</IridCorona>
+				<ImmortalFury Name="Immortal Fury">
+					MagicItemsPoints;
+					Reroll: ToHit
+				</ImmortalFury>
+				<SoulHunger Name="Soul Hunger">
+					MagicItemsPoints;
+					Reroll: ToWound
+				</SoulHunger>
+				<WingedHorror Name="Winged Horror">
+					MagicItemsPoints;
+					Rule: Fly
+				</WingedHorror>
+				<ObsArmour Name="Obsidian Armour">
+					MagicItemsPoints;
+					AddToArmour: 3;
+					Rule: Magic weapons carriad by enemy models lose their magical abilities in base contact
+				</ObsArmour>
+				<FireBlade Name="Firestorm Blade">
+					MagicItemsPoints;
+					AddToStrength: 1;
+					Rule: Flaming Attacks
+				</FireBlade>
+				<SpellBreaker Name="Spell Breaker">
+					MagicItemsPoints;
+					Rule: Once per battle may automatically dispel one enemy spell
+				</SpellBreaker>
+				<ArmOfKhorne Name="Armour of Khorne">
+					MagicItemsPoints;
+					AddToArmour: 3
+				</ArmOfKhorne>
+				<PowerVortex Name="Power Vortex">
+					MagicItemsPoints;
+					AddToCast: 1
+				</PowerVortex>
+				<FlOfTzeentch Name="Flames of Tzeentch">
+					MagicItemsPoints;
+					Rule: D6 bolts in the Shooting phase with a range of 18" and a Strength of 4
+				</FlOfTzeentch>
+				<MasterOfSorcery Name="Master of Sorcery">
+					MagicItemsPoints;
+					Rule: Can use any of the Lores of Magic, it knows all the spells from whichever Lore it chooses
+				</MasterOfSorcery>
+				<StaffOfNurgle Name="Staff of Nurgle">
+					MagicItemsPoints;
+					Rule: Bound spell, Power level 3: Rancid Visitation
+				</StaffOfNurgle>
+				<NoxiousVapours Name="Noxious Vapours">
+					MagicItemsPoints;
+					Rule: All enemies models in base contact lose the Always Strikes First rule and always strike last
+				</NoxiousVapours>
+				<PestilentMucus Name="Pestilent Mucus">
+					MagicItemsPoints;
+					Rule: When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed
+				</PestilentMucus>
+				<NurglesRot Name="Nurgle's Rot">
+					MagicItemsPoints;
+					Rule: Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed
+				</NurglesRot>
+				<StreamOfBile Name="Stream of Bile">
+					MagicItemsPoints;
+					Rule: Strength 4 breath weapon
+				</StreamOfBile>
+				<SlimeTrail Name="Slime Trail">
+					MagicItemsPoints;
+					Rule: Enemy inits do not receive combat result bonuses for attacking the flank or rear
+				</SlimeTrail>
+				<SirenSong Name="Siren Song">
+					MagicItemsPoints;
+					Rule: Once per game, before charges are declared, nominate one enemy within 20", the target unit must either declare a charge against the Daemon (or the unit it is with) or immediately flee, exactly as if it had failed a Panic test
+				</SirenSong>
+				<SoporificMusk Name="Soporific Musk">
+					MagicItemsPoints;
+					Rule: A unit in base contact rolls an extra dice when fleeing and then discards the highest result
+				</SoporificMusk>
+				<StandardOfGlory Name="Standard of Chaos Glory">
+					Stubborn;
+					Rule: All Daemons within 12" are stubborn
+				</StandardOfGlory>
+				<BanOfHellfire Name="Banner of Hellfire">
+					Rule: Bound spell, Power level 5: D6 Strength 6 hits on every enemy unit within 12" - even those that are in combat
+				</BanOfHellfire>
+				<GreatIcon Name="Great Icon of Despair">
+					Rule: All enemy units within 12" suffer a -2 penalty to their Leadership
+				</GreatIcon>
+				<BanOfVictory Name="Banner of Unholy Victory">
+					AddToCloseCombat: D3
+				</BanOfVictory>
+				<StandOfSundering Name="Great Standard of Sundering">
+					Rule: All Wizards suffer a -2 penalty to cast spells from that Lore, any spells cast from the Lore of Light will miscast on the roll of a double 1, 2 or 3
+				</StandOfSundering>
+				<SkullTotem Name="Skull Totem">
+					Rule: May march even if enemy models are within 8"
+				</SkullTotem>
+				<IconOfWar Name="Icon of Endless War">
+					Rule: Adds D6" to its first charge move
+				</IconOfWar>
+				<BanOfEcstasy Name="Banner of Ecstasy">
+					Stubborn
+				</BanOfEcstasy>
+				<SirenStandard Name="Siren Standard">
+					Rule: Any enemy unit charged may only choose hold as a charge reaction, they may not stand and shoot or voluntarily flee
+				</SirenStandard>
+				<UnnaturalSwiftness Name="Unnatural Swiftness">
+					MagicItemsPoints;
+					HitFirst
+				</UnnaturalSwiftness>
+				<DedicateTzeentch Name="Dedicate to Tzeentch"/>
+				<DedicateSlaanesh Name="Dedicate to Slaanesh"/>
+				<DedicateKhorne Name="Dedicate to Khorne"/>
+				<DedicateNurgle Name="Dedicate to Nurgle"/>
+				<WizardLevel1Prince Name="Wizard Level 1">
+					AddToWizard: 1;
+					AddToCast: 1;
+					AddToDispell: 1
+				</WizardLevel1Prince>
+				<WizardLevel2Prince Name="Wizard Level 2">
+					AddToWizard: 2;
+					AddToCast: 2;
+					AddToDispell: 1
+				</WizardLevel2Prince>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts/>
