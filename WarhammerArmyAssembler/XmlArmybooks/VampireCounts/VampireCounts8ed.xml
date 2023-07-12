@@ -48,28 +48,30 @@
 				<Spell Name="Flame Storm" Cast="15"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<Vampiric/>
-			<Ethereal/>
-			<ChillGrasp/>
-			<Chariot/>
-			<TheHunger/>
-			<Loremaster/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Balefire>
-				Rule: Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"
-			</Balefire>
-			<UnholyLodestone>
-				Rule: When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored
-			</UnholyLodestone>
-			<RancidMaw>
-				PoisonAttack
-			</RancidMaw>
-			<Infested>
-				Rule: When Terrorgheist removed as casualty, all units in base contact (friend or foe) take 3D6 Strength 2 hits
-			</Infested>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<Vampiric/>
+				<Ethereal/>
+				<ChillGrasp/>
+				<Chariot/>
+				<TheHunger/>
+				<Loremaster/>
+			</SpecialRules>
+			<Options>
+				<Balefire>
+					Rule: Enemy Wizard suffer a -1 modifier to their casting rolls if there is one or more units with the Balefire within 24"
+				</Balefire>
+				<UnholyLodestone>
+					Rule: When friendly Wizard within 6" successfully casts Invocation of Nehek, he may re-roll a single D6 to determine how many Wounds are restored
+				</UnholyLodestone>
+				<RancidMaw>
+					PoisonAttack
+				</RancidMaw>
+				<Infested>
+					Rule: When Terrorgheist removed as casualty, all units in base contact (friend or foe) take 3D6 Strength 2 hits
+				</Infested>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
