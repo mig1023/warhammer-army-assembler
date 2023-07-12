@@ -37,19 +37,21 @@
 				<Spell Name="Plague" Cast="15"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<WarMachine/>
-		</LocalSpecialRules>		
-		<LocalOption>
-			<GromrilArmour>
-				AddToArmour: 4
-			</GromrilArmour>
-			<Pistol/>
-			<DwarfHandgun/>
-			<BracePistols Name="Brace of pistols"/>
-			<DwarfPistols/>
-			<ThrowingAxe/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<WarMachine/>
+			</SpecialRules>		
+			<Options>
+				<GromrilArmour>
+					AddToArmour: 4
+				</GromrilArmour>
+				<Pistol/>
+				<DwarfHandgun/>
+				<BracePistols Name="Brace of pistols"/>
+				<DwarfPistols/>
+				<ThrowingAxe/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
