@@ -46,17 +46,19 @@
 				<Spell Name="Arnizipal's Black Horror" Cast="14"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<ThreeRanks>Fight in three ranks with spears</ThreeRanks>
-			<BreatheFire/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<DragonArmour>
-				AddToArmour: 5;
-				Rule: Immune to all breath and all Flaming attacks
-			</DragonArmour>
-			<SwapSpears Name="Swap spear for bow"/>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<ThreeRanks>Fight in three ranks with spears</ThreeRanks>
+				<BreatheFire/>
+			</SpecialRules>
+			<Options>
+				<DragonArmour>
+					AddToArmour: 5;
+					Rule: Immune to all breath and all Flaming attacks
+				</DragonArmour>
+				<SwapSpears Name="Swap spear for bow"/>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
