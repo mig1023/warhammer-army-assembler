@@ -48,26 +48,28 @@
 				<Spell Name="Savage Dominin" Cast="18"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<ForestStalker/>
-			<Scouts/>
-			<FastCavalry/>
-			<Flammable/>
-			<BonusAttemptsToCast>+1 to all attempts to cast spells</BonusAttemptsToCast>
-		</LocalSpecialRules>
-		<LocalOption>
-			<AsraiLongbow/>
-			<AsraiSpear/>
-			<HagbaneTips/>
-			<TrueflightArrows/>
-			<MoontireShot/>
-			<StarfireShafts/>
-			<SwiftshiverShards/>
-			<ArcaneBodkins/>
-			<Strangleroots>
-				Rule: Shooting attack with Range 12", Strength 5 and Multiple Shots(D6+1)
-			</Strangleroots>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<ForestStalker/>
+				<Scouts/>
+				<FastCavalry/>
+				<Flammable/>
+				<BonusAttemptsToCast>+1 to all attempts to cast spells</BonusAttemptsToCast>
+			</SpecialRules>
+			<Options>
+				<AsraiLongbow/>
+				<AsraiSpear/>
+				<HagbaneTips/>
+				<TrueflightArrows/>
+				<MoontireShot/>
+				<StarfireShafts/>
+				<SwiftshiverShards/>
+				<ArcaneBodkins/>
+				<Strangleroots>
+					Rule: Shooting attack with Range 12", Strength 5 and Multiple Shots(D6+1)
+				</Strangleroots>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
