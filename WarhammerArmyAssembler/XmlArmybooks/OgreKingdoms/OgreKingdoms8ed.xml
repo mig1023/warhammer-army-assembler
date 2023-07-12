@@ -47,23 +47,25 @@
 				<Spell Name="Foot of Gork" Cast="17"/>
 			</Dispell>
 		</Magic>
-		<LocalSpecialRules>
-			<BeastRider/>
-		</LocalSpecialRules>
-		<LocalOption>
-			<Ironfists>
-				AddToArmour: 6
-			</Ironfists>
-			<OgrePistol/>
-			<BraceOgrePistol Name="Brace of Ogre pistol"/>
-			<HarpoonLauncher/>
-			<BloodVulture/>
-			<LookOutGnoblar Name="Look-out Gnoblar"/>
-			<GnoblarTrappers/>
-			<Chaintrap>
-				RealisedByDefault
-			</Chaintrap>
-		</LocalOption>
+		<Local>
+			<SpecialRules>
+				<BeastRider/>
+			</SpecialRules>
+			<Options>
+				<Ironfists>
+					AddToArmour: 6
+				</Ironfists>
+				<OgrePistol/>
+				<BraceOgrePistol Name="Brace of Ogre pistol"/>
+				<HarpoonLauncher/>
+				<BloodVulture/>
+				<LookOutGnoblar Name="Look-out Gnoblar"/>
+				<GnoblarTrappers/>
+				<Chaintrap>
+					RealisedByDefault
+				</Chaintrap>
+			</Options>
+		</Local>
 	</Introduction>
 	<Content>
 		<Artefacts>
