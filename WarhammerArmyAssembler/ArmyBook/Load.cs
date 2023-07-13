@@ -122,7 +122,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             xmlFile.Load(xmlFileName);
 
             string imagePath = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Units")));
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Folders/Units")));
                 
             string unitType = isHero ? "Heroes/*" : "Units/*";
             XmlNodeList xmlNodes = xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}", unitType));
@@ -248,7 +248,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Constants.CommonXmlOption = CommonXmlOption(xmlFile);
             Constants.CommonXmlSpecialRules = CommonXmlSpecialRules(xmlFile);
 
-            XmlNode armyFile = Services.Intro(xmlFile, "Styles/Images/Symbol");
+            XmlNode armyFile = Services.Intro(xmlFile, "Styles/Images/Files/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Info/Army");
@@ -265,7 +265,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
 
             Army.Data.UnitsImagesDirectory = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Units")));
+                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Folders/Units")));
 
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
