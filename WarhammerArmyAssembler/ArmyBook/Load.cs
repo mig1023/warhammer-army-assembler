@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Windows.Media;
 using System.Xml;
@@ -784,67 +783,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             return newOption;
-        }
-
-        private static object PropertyByType(object element, XmlNode value,
-            string paramName, bool byAttr = false)
-        {
-            PropertyInfo param = element.GetType().GetProperty(paramName);
-
-            if (param.PropertyType == typeof(Profile))
-                return ProfileParse(value);
-
-            else if (byAttr)
-                return null;
-
-            else if (param.PropertyType == typeof(bool))
-                return BoolParse(value);
-
-            else if (param.PropertyType == typeof(int?))
-                return IntNullableParse(value);
-
-            else if (param.PropertyType == typeof(int))
-                return IntParse(value);
-
-            else if (param.PropertyType == typeof(string))
-                return StringParse(value);
-
-            else
-                return null;
-        }
-
-        private static XmlNode XmlValueSemiParser(XmlNode value, string name)
-        {
-            XmlNode xmlNode = value[name];
-
-            if (xmlNode == null)
-                return null;
-
-            if (!String.IsNullOrEmpty(xmlNode.InnerText))
-                return xmlNode;
-
-            string valueAttr = xmlNode.Attributes["Val"]?.InnerText ?? String.Empty;
-
-            if (!String.IsNullOrEmpty(valueAttr))
-                xmlNode.InnerText = valueAttr;
-
-            return xmlNode;
-        }
-
-        private static void SetProperty(object element, XmlNode value, string name, string byAttr = "")
-        {
-            XmlNode xmlNode = null;
-            bool notByAttr = String.IsNullOrEmpty(byAttr);
-
-            if (notByAttr)
-                xmlNode = XmlValueSemiParser(value, name);
-            else
-                xmlNode = (XmlNode)value.Attributes[byAttr];
-
-            object propetyValue = PropertyByType(element, xmlNode, name, !notByAttr);
-
-            if (propetyValue != null)
-                element.GetType().GetProperty(name).SetValue(element, propetyValue);
         }
     }
 }
