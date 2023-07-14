@@ -9,6 +9,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static int BaseArmySize = 2000;
         public static int LargeArmySize = 3000;
         public static int DogsOfWarCategory = 5;
+        public static int SingleRunicItem = 1;
 
         public static string CommonXmlOptionPath { get; set; }
         public static string EnemiesOptionPath { get; set; }
@@ -160,7 +161,6 @@ namespace WarhammerArmyAssembler.ArmyBook
             "HitOn",
             "OpponentHitOn",
             "WoundOn",
-            "Runic",
             "MasterRunic",
             "RandomGroup",
             "TypeUnitIncrese",

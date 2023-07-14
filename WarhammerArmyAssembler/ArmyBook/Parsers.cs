@@ -22,6 +22,17 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static Profile ProfileParse(XmlNode xmlNode) =>
             new Profile { Value = IntParse(xmlNode), Null = (xmlNode == null) };
 
+        public static int RunicParse(XmlNode xmlNode)
+        {
+            if (xmlNode == null)
+                return 0;
+
+            string valueAttr = xmlNode.Attributes["Val"]?.InnerText ?? String.Empty;
+            bool success = int.TryParse(valueAttr, out int value);
+
+            return (success ? value : Constants.SingleRunicItem);
+        }
+
         public static int IntParse(string xmlNode, int? byDefault = null)
         {
             if (xmlNode.StartsWith("D6"))
@@ -37,7 +48,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             return (success ? value : (byDefault ?? 0));
         }
 
-        public static Profile ProfileParse(string xmlNode) => new Profile { Value = IntParse(xmlNode) };
+        public static Profile ProfileParse(string xmlNode) =>
+            new Profile { Value = IntParse(xmlNode) };
 
         public static Profile IntNullableParse(XmlNode xmlNode)
         {
@@ -216,7 +228,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 
         }
 
-        public static bool BoolParse(XmlNode xmlNode) => xmlNode != null;  
+        public static bool BoolParse(XmlNode xmlNode) =>
+            xmlNode != null;  
         
         public static void SizeParse(string line, out int min, out int max)
         {

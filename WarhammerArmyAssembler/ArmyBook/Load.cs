@@ -754,6 +754,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (string name in Constants.OptionProperties)
                 SetProperty(newOption, xmlNode, name);
 
+            newOption.Runic = RunicParse(xmlNode["Runic"]);
             newOption.Description = StringParse(xmlNode["Description"]);
             newOption.SpecialRuleDescription = AllStringParse(xmlNode, "Rule");
 
