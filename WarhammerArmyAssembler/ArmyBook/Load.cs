@@ -152,7 +152,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 if (String.IsNullOrEmpty(title))
                     title = Services.CamelNameSplit(option.Name);
                     
-                string value = String.Format("{0}|{1}", title, option.InnerText);
+                string value = $"{title}|{option.InnerText}";
                 commonXmlOption.Add(option.Name, value);
             }
         }
@@ -264,8 +264,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
 
-            Army.Data.UnitsImagesDirectory = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Folders/Units")));
+            string path = Path.GetDirectoryName(xmlFileName);
+            XmlNode folder = xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Folders/Units");
+            Army.Data.UnitsImagesDirectory = $"{path}\\Images\\{StringParse(folder)}\\";
 
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
@@ -316,7 +317,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static void LoadSpells(XmlDocument xmlFile, string magic, ref Dictionary<string, int> spells)
         {
-            foreach (XmlNode spell in xmlFile.SelectNodes(String.Format("ArmyBook/Introduction/Magic/{0}/Spell", magic)))
+            foreach (XmlNode spell in xmlFile.SelectNodes($"ArmyBook/Introduction/Magic/{magic}/Spell"))
             {
                 string spellName = spell.Attributes["Name"].Value;
 
