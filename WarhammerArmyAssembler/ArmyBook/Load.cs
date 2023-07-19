@@ -120,11 +120,12 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             xmlFile.Load(xmlFileName);
 
-            string imagePath = String.Format("{0}\\Images\\{1}\\", Path.GetDirectoryName(xmlFileName),
-                StringParse(xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Folders/Units")));
+            string path = Path.GetDirectoryName(xmlFileName);
+            XmlNode folder = xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Folders/Units");
+            string imagePath = $"{path}\\Images\\{StringParse(folder)}\\";
                 
             string unitType = isHero ? "Heroes/*" : "Units/*";
-            XmlNodeList xmlNodes = xmlFile.SelectNodes(String.Format("ArmyBook/Content/{0}", unitType));
+            XmlNodeList xmlNodes = xmlFile.SelectNodes($"ArmyBook/Content/{unitType}");
 
             foreach (XmlNode xmlUnit in xmlNodes)
             {
