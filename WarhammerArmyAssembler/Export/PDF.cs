@@ -45,8 +45,8 @@ namespace WarhammerArmyAssembler.Export
             {
                 foreach (Unit unit in unitType.Items)
                 {
-                    AddText(String.Format("{0}", Services.UnitSizeIfNeed(unit)), leftColumn: true, newLine: false);
-                    AddText(String.Format("{0}{1}", Services.GetUnitName(unit), Services.UnitPointsLine(unit)), lineHeight: 10);
+                    AddText($"{Services.UnitSizeIfNeed(unit)}", leftColumn: true, newLine: false);
+                    AddText($"{Services.GetUnitName(unit)}{Services.UnitPointsLine(unit)}", lineHeight: 10);
 
                     List<string> linesForEachUnit = new List<string> { unit.GetEquipmentLine() };
 
@@ -67,8 +67,13 @@ namespace WarhammerArmyAssembler.Export
 
             AddText(lineHeight: 8);
 
-            AddText(String.Format("Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
-                Army.Params.GetArmyPoints(), Army.Params.GetArmySize(), Army.Params.GetArmyCast(), Army.Params.GetArmyDispell()),
+            double points = Army.Params.GetArmyPoints();
+            double size = Army.Params.GetArmySize();
+            double cast = Army.Params.GetArmyCast();
+            double dispell = Army.Params.GetArmyDispell();
+
+
+            AddText($"Points: {points} / Models: {size} / Cast: {cast} / Dispell: {dispell}",
                 fontSize: 12, lineHeight: 18, leftColumn: true);
 
             document.Close();
