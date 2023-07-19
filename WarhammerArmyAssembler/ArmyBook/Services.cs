@@ -47,10 +47,10 @@ namespace WarhammerArmyAssembler.ArmyBook
         }
 
         public static XmlNode Intro(XmlDocument xmlFile, string name) =>
-            xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/{0}", name));
+            xmlFile.SelectSingleNode($"ArmyBook/Introduction/{name}");
 
         public static XmlNode StyleColor(XmlDocument xmlFile, string name) =>
-            xmlFile.SelectSingleNode(String.Format("ArmyBook/Introduction/Styles/Colors/{0}", name));
+            xmlFile.SelectSingleNode($"ArmyBook/Introduction/Styles/Colors/{name}");
 
         public static BitmapImage GetUnitImage(string path)
         {
