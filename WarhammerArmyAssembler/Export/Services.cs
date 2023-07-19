@@ -22,7 +22,7 @@ namespace WarhammerArmyAssembler.Export
         }
 
         public static string GetArmyName() =>
-            (String.IsNullOrWhiteSpace(Army.Data.RosterName) ? "warhammer fantasy battles" : Army.Data.RosterName);
+            String.IsNullOrWhiteSpace(Army.Data.RosterName) ? "warhammer fantasy battles" : Army.Data.RosterName;
 
         private static string NewFileName(int newIndex, string fileType, out string newFileName)
         {
@@ -34,7 +34,7 @@ namespace WarhammerArmyAssembler.Export
         }
 
         public static string GetUnitName(Unit unit) =>
-            (String.IsNullOrEmpty(unit.Personification) ? unit.Name : string.Format("{0} / {1}", unit.Personification, unit.Name));
+            String.IsNullOrEmpty(unit.Personification) ? unit.Name : $"{unit.Personification} / {unit.Name}";
 
         private static void ExportDirectory()
         {
