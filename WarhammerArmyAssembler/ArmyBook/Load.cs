@@ -675,7 +675,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (xmlNode.Attributes["Dependency"] != null)
             {
-                string dependency = String.Format("Group:{0}", xmlNode.Attributes["Dependency"].InnerText);
+                string dependency = $"Group:{xmlNode.Attributes["Dependency"].InnerText}";
                 AddToOption(xmlDocument, ref xmlNode, "Dependency", attributes: dependency);
             }
 
@@ -747,8 +747,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (string name in Constants.ProfilesNames.Keys)
             {
-                SetProperty(newOption, xmlNode, String.Format("AddTo{0}", name));
-                SetProperty(newOption, xmlNode, String.Format("{0}To", name));
+                SetProperty(newOption, xmlNode, $"AddTo{name}");
+                SetProperty(newOption, xmlNode, $"{name}To");
             }
 
             foreach (string name in Constants.OptionProperties)
@@ -775,7 +775,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newOption.Description = newOption.SpecialRuleDescription[0];
 
             if (!String.IsNullOrEmpty(newOption.Description) && !Regex.IsMatch(newOption.Description, @"\.$"))
-                newOption.Description = String.Format("{0}.", newOption.Description);
+                newOption.Description = $"{newOption.Description}.";
 
             if (xmlNode["MagicItems"] != null)
             {
