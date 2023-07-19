@@ -319,11 +319,10 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             foreach (XmlNode spell in xmlFile.SelectNodes($"ArmyBook/Introduction/Magic/{magic}/Spell"))
             {
-                string spellName = spell.Attributes["Name"].Value;
-
                 if (!int.TryParse(spell.Attributes["Cast"]?.Value, out int spellDifficulty))
                     continue;
 
+                string spellName = spell.Attributes["Name"].Value;
                 spells.Add(spellName, spellDifficulty);
             }
         }
@@ -495,7 +494,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static string FullImagePath(string image, string imagePath = "")
         {
             string path = String.IsNullOrEmpty(imagePath) ? Army.Data.UnitsImagesDirectory : imagePath;
-            return String.Format("{0}{1}.jpg", path, image);
+            return $"{path}{image}.jpg";
         }
 
         private static string AddCommonXmlSpecialRules(string specialRule) =>
