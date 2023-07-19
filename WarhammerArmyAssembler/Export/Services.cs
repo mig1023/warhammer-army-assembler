@@ -12,7 +12,6 @@ namespace WarhammerArmyAssembler.Export
             ExportDirectory();
 
             int fileIndex = 0;
-
             string fileName = String.Empty;
 
             while (File.Exists(NewFileName(fileIndex, fileType, out fileName)))
@@ -48,17 +47,18 @@ namespace WarhammerArmyAssembler.Export
 
             foreach (Option option in unit.Options)
                 if ((option.Countable != null) && (option.Countable.ExportToUnitSize) && (option.Countable.Value > 0))
-                    unitSize += String.Format("+{0}", option.Countable.Value.ToString());
+                    unitSize += $"+{option.Countable.Value}";
 
             return (unit.IsHeroOrHisMount() ? String.Empty : unitSize + ' ');
         }
 
         static public string UnitPointsLine(Unit unit) =>
-            (unit.GetUnitPoints() > 0 ? String.Format(" ({0} pts)", unit.GetUnitPoints()) : String.Empty);
+            unit.GetUnitPoints() > 0 ? $" ({unit.GetUnitPoints()} pts)" : String.Empty;
 
-        static public string AllArmyName() => String.Format("{0} // {1}", Army.Data.Name, GetArmyName());
+        static public string AllArmyName() =>
+            String.Format("{0} // {1}", Army.Data.Name, GetArmyName());
 
         static public string AllArmyPointsAndEdition() =>
-            String.Format("{0} pts, {1}th Edition", Army.Data.MaxPoints, Army.Data.ArmyEdition);
+            $"{Army.Data.MaxPoints} pts, {Army.Data.ArmyEdition}th Edition";
     }
 }
