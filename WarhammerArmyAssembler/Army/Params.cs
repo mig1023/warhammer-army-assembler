@@ -208,7 +208,7 @@ namespace WarhammerArmyAssembler.Army
                 int count = Data.Units.Values.Count(x => x.Name == entry.Name);
 
                 if (count > 1)
-                    units.Add(String.Format("{0} x {1}", entry.Name, count));
+                    units.Add($"{entry.Name} x {count}");
                 else
                     units.Add(entry.Name);
             }
