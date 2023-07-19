@@ -21,11 +21,12 @@ namespace WarhammerArmyAssembler.Export
                 foreach (Unit unit in unitType.Items.Where(x => x.Type != Unit.UnitType.Mount))
                 {
                     string equipmentLine = unit.GetEquipmentLine();
+                    string sizeUnit = Services.UnitSizeIfNeed(unit);
+                    string nameUnit = Services.GetUnitName(unit);
+                    string pointsUnit = Services.UnitPointsLine(unit);
+                    string equipment = String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": ";
 
-                    Add(fileName, String.Format("{0}{1}{2}{3}{4}",
-                        Services.UnitSizeIfNeed(unit), Services.GetUnitName(unit), Services.UnitPointsLine(unit), 
-                        (String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": "),
-                        equipmentLine));
+                    Add(fileName, $"{sizeUnit}{nameUnit}{pointsUnit}{equipment}{equipmentLine}");
                 }
 
             Add(fileName);
@@ -35,8 +36,7 @@ namespace WarhammerArmyAssembler.Export
             int cast = Army.Params.GetArmyCast();
             int dispell = Army.Params.GetArmyDispell();
 
-            Add(fileName, String.Format("Points: {0} / Models: {1} / Cast: {2} / Dispell: {3}",
-                points, size, cast, dispell));
+            Add(fileName, $"Points: {points} / Models: {size} / Cast: {cast} / Dispell: {dispell}");
 
             System.Diagnostics.Process.Start(fileName);
 
