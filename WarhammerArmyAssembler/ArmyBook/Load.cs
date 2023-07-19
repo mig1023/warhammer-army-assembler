@@ -564,7 +564,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             int level = int.Parse(xmlNode.Attributes["Level"].InnerText);
 
-            AddToOption(xmlDocument, ref xmlNode, "Name", String.Format("Wizard Level {0}", level));
+            AddToOption(xmlDocument, ref xmlNode, "Name", $"Wizard Level {level}");
             AddToOption(xmlDocument, ref xmlNode, "AddToCast", "1");
             AddToOption(xmlDocument, ref xmlNode, "AddToWizard", "1");
 
@@ -575,7 +575,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static string GetDependenciesLine(XmlNode xmlNode)
         {
             if (xmlNode.Attributes["For"] != null)
-                return String.Format("On: {0}", xmlNode.Attributes["For"].InnerText);
+                return $"On: {xmlNode.Attributes["For"].InnerText}";
             else
                 return xmlNode.Attributes["Dependencies"].InnerText;
         }
