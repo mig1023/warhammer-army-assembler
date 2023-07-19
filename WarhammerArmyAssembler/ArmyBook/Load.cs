@@ -80,7 +80,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             string path = pathList[0];
             name = pathList[1];
 
-            return String.Format("ArmyBook/Content/{0}/{1}", Constants.EnemyPathTypes[path], path);
+            return $"ArmyBook/Content/{Constants.EnemyPathTypes[path]}/{path}";
         }
 
         public static Unit ArmyUnitOnly(string xmlFileName, string unitName, Unit target,
