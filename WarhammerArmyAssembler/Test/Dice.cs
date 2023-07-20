@@ -123,44 +123,44 @@ namespace WarhammerArmyAssembler.Test
                 int rankBonus = GetRankBonus(unit);
 
                 if (rankBonus <= 0)
-                    Data.Console(Data.supplText, "({0} LD, ", condition);
+                    Data.Console(Data.supplText, $"({condition} LD, ");
                 else
                 {
                     condition += rankBonus;
                     condition = Unit.ParamNormalization(condition);
 
-                    Data.Console(Data.supplText, "({0} LD with rank bonus, ", condition);
+                    Data.Console(Data.supplText, $"({condition} LD with rank bonus, ");
                 }
             }
             else if (paramTest)
-                Data.Console(Data.supplText, "({0} {1}, ", condition, diceType.ToString());
+                Data.Console(Data.supplText, $"({condition} {diceType.ToString()}, ");
             else
-                Data.Console(Data.supplText, "({0}+, ", condition);
+                Data.Console(Data.supplText, $"({condition}+, ");
 
             int result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
 
             bool testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, out string addResult, breakTest, paramTest);
 
-            Data.Console(Data.supplText, "{0}{1}", result, addResult);
+            Data.Console(Data.supplText, $"{result}{addResult}");
 
             if ((diceType == Types.AS) && (result == 1))
            
             if ((diceType == Types.WS) && !paramTest)
             {
                 if (unit.AddToHit > 0)
-                    Data.Console(Data.supplText, ", +{0} bonus", unit.AddToHit);
+                    Data.Console(Data.supplText, $", +{unit.AddToHit} bonus");
 
                 if (enemy.SubOpponentToHit > 0)
-                    Data.Console(Data.supplText, ", -{0} penalty", enemy.SubOpponentToHit);
+                    Data.Console(Data.supplText, $", -{enemy.SubOpponentToHit} penalty");
             }
 
             if ((diceType == Types.S) && !paramTest)
             {
                 if (unit.AddToWound > 0)
-                    Data.Console(Data.supplText, ", +{0} bonus", unit.AddToWound);
+                    Data.Console(Data.supplText, $", +{unit.AddToWound} bonus");
 
                 if (enemy.SubOpponentToWound > 0)
-                    Data.Console(Data.supplText, ", -{0} penalty", enemy.SubOpponentToWound);
+                    Data.Console(Data.supplText, $", -{enemy.SubOpponentToWound} penalty");
             }
 
             bool hateHitReroll = unit.Hate && (diceType == Types.WS);
@@ -173,14 +173,14 @@ namespace WarhammerArmyAssembler.Test
                 result = RollAll(diceType, unitTestPassed, 1, enemy: hisOpponent);
                 testPassed = TestPassedByDice(unit, enemy, result, supplCondition, diceType, out string addAddRoll, breakTest, paramTest);
 
-                Data.Console(Data.supplText, " --> {0}+, {1}{2}", supplCondition, result, addAddRoll);
+                Data.Console(Data.supplText, $" --> {supplCondition}+, {result}{addAddRoll}");
             }
             else if (canBeRerolled || mustBeRerolled)
             {
                 result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
                 testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, out string addReroll, breakTest, paramTest);
 
-                Data.Console(Data.supplText, ", reroll --> {0}{1}", result, addReroll);
+                Data.Console(Data.supplText, $", reroll --> {result}{addReroll}");
             }
 
             dice = result;

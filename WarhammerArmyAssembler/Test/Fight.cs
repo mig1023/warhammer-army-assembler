@@ -97,15 +97,15 @@ namespace WarhammerArmyAssembler.Test
             Interface.Test.PreventConsoleOutput(prevent: false);
 
             if (royalNotation)
-                Data.Console(Data.text, "vs {0}: win: {1:f1}% defeat: {2:f1}%\n",
-                    enemy.Name, (double)result[1] / 10, (double)result[2] / 10);                
+                Data.Console(Data.text, $"vs {enemy.Name}: win: {(double)result[1] / 10:f1}% " +
+                    $"defeat: {((double)result[2] / 10):f1}%\n");                
             else
             {
-                Data.Console(Data.text, "{0} win: {1:f1}%\n{2} win: {3:f1}%",
-                    unit.Name, (double)result[1] / 10, enemy.Name, (double)result[2] / 10);
+                Data.Console(Data.text, $"{unit.Name} win: {(double)result[1] / 10:f1}%" +
+                    $"\n{enemy.Name} win: {((double)result[2] / 10):f1}%");
 
                 if (result[0] > 0)
-                    Data.Console(Data.text, "\nNobody win: {0:f1}%", (double)result[0] / 10);
+                    Data.Console(Data.text, $"\nNobody win: {(double)result[0] / 10:f1}%");
             }
 
             WinDefeatScale(result[1], result[2]);
@@ -227,7 +227,7 @@ namespace WarhammerArmyAssembler.Test
             {
                 round += 1;
 
-                Data.Console(Data.supplText, "\n\nround: {0}\n", round);
+                Data.Console(Data.supplText, $"\n\nround: {round}\n");
 
                 foreach (Unit u in new List<Unit> { unit, enemy })
                     UnitRoundShow(u, u == unit);
@@ -258,7 +258,7 @@ namespace WarhammerArmyAssembler.Test
                     Unit opponent = SelectOpponent(participants, u);
 
                     if ((participants.Count > 2) && (actor.Wounds.Value > 0))
-                        Data.Console(Data.supplText, "\n\n{0} chose {1} as his opponent", actor.Name, opponent.Name);
+                        Data.Console(Data.supplText, $"\n\n{actor.Name} chose {opponent.Name} as his opponent");
 
                     int woundsAtStartOfRound = opponent.Wounds.Value;
 
@@ -290,7 +290,7 @@ namespace WarhammerArmyAssembler.Test
                         Regeneration(opponent, (woundsAtStartOfRound - opponent.Wounds.Value));
 
                     if (opponent.Wounds.Value <= 0)
-                        Data.Console(Data.badText, "\n\n{0} SLAIN", opponent.Name);
+                        Data.Console(Data.badText, $"\n\n{opponent.Name} SLAIN");
                 }
 
                 Data.Console(Data.text, "\n");
@@ -341,17 +341,17 @@ namespace WarhammerArmyAssembler.Test
 
             if (enemy.Wounds.Value + (enemy.Mount != null && enemy.Mount.IsNotSimpleMount() ? enemy.Mount.Wounds.Value : 0) <= 0)
             {
-                Data.Console(Data.text, "{0} win", unit.Name);
+                Data.Console(Data.text, $"{unit.Name} win");
                 return 1;
             }
             else if (unit.Wounds.Value + (unit.Mount != null && unit.Mount.IsNotSimpleMount() ? unit.Mount.Wounds.Value : 0) <= 0)
             {
-                Data.Console(Data.text, "{0} win", enemy.Name);
+                Data.Console(Data.text, $"{enemy.Name} win");
                 return 2;
             }
             else
             {
-                Data.Console(Data.text, "{0} and {1} failed to kill each other", unit.Name, enemy.Name);
+                Data.Console(Data.text, $"{unit.Name} and {enemy.Name} failed to kill each other");
                 return 0;
             }
         }
@@ -438,7 +438,10 @@ namespace WarhammerArmyAssembler.Test
         private static int PrintAttack(Unit unit, Dictionary<int, int> death, Unit tUnit, Unit tEnemy, Unit tMount)
         {
             if (unit.Frenzy)
-                Data.Console(Data.supplText, "\n{0} --> is {1}frenzy", unit.Name, (unit.BloodFrenzy ? "blood " : String.Empty));
+            {
+                string blood = unit.BloodFrenzy ? "blood " : String.Empty;
+                Data.Console(Data.supplText, $"\n{unit.Name} --> is {blood}frenzy");
+            }
 
             int deathInRound = death[unit.ID];
 
@@ -452,7 +455,8 @@ namespace WarhammerArmyAssembler.Test
             if ((!unit.IsHeroOrHisMount()) && (unit.Wounds.Value > 0) && (deathInRound > 0))
             {
                 unitFront -= deathInRound;
-                Data.Console(Data.supplText, "\n\n-{0} unit{1} in {2} front", deathInRound, (deathInRound > 1 ? "s" : String.Empty), unit.Name);
+                string multiple = deathInRound > 1 ? "s" : String.Empty;
+                Data.Console(Data.supplText, $"\n\n-{deathInRound} unit{multiple} in {unit.Name} front");
             }
 
             if (unit.IsUnit())
@@ -483,7 +487,7 @@ namespace WarhammerArmyAssembler.Test
             if (current == 0)
                 Data.Console(Data.supplText, "\n");
 
-            Data.Console(Data.supplText, "\n{0} attacks for {1}: {2}", unitName, Unit.GetRandomAttacksLine(attackNum), attacks);
+            Data.Console(Data.supplText, $"\n{unitName} attacks for {Unit.GetRandomAttacksLine(attackNum)}: {attacks}");
 
             return attacks;
         }
@@ -495,7 +499,7 @@ namespace WarhammerArmyAssembler.Test
 
             unit.Frenzy = false;
             unit.Attacks.Value -= 1;
-            Data.Console(Data.supplText, "\n{0} lost his frenzy", unit.Name);
+            Data.Console(Data.supplText, $"\n{unit.Name} lost his frenzy");
         }
 
         private static bool BecameBloodFrenzy(ref Unit unit)
@@ -505,7 +509,7 @@ namespace WarhammerArmyAssembler.Test
 
             unit.Frenzy = true;
             unit.Attacks.Value += 1;
-            Data.Console(Data.supplText, " <-- {0} become subject to blood frenzy", unit.Name);
+            Data.Console(Data.supplText, $" <-- {unit.Name} become subject to blood frenzy");
 
             return true;
         }
