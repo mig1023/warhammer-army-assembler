@@ -47,10 +47,10 @@ namespace WarhammerArmyAssembler
                 string mount = this.Type == Unit.UnitType.Mount ? "↳ " : String.Empty;
 
                 if (!String.IsNullOrEmpty(this.Personification))
-                    return string.Format("{0}{1} ({2})", mount, this.Personification, Name);
+                    return $"{mount}{this.Personification} ({Name})";
 
                 else
-                    return string.Format("{0}{1}", mount, Name);
+                    return $"{mount}{Name}";
             }
         }
 
@@ -490,7 +490,7 @@ namespace WarhammerArmyAssembler
             string param = attack.ToString();
             string addToDice = (param[2] == '0' ? String.Empty : "+" + param[2].ToString());
 
-            return String.Format("{0}D{1}{2}", param[0], param[1], addToDice);
+            return $"{param[0]}D{param[1]}{addToDice}";
         }
 
         private string AddFromAnyOption(ref Unit unit, string name, bool reversParam = false,
@@ -525,12 +525,12 @@ namespace WarhammerArmyAssembler
                 if (OptionTypeAlreadyUsed(option, ref alreadyArmour, ref alreadyShield))
                     continue;
 
-                int optionToValue = PropertyByName(String.Format("{0}To", name), option);
+                int optionToValue = PropertyByName($"{name}To", option);
 
                 if (optionToValue > 0)
                     return optionToValue.ToString() + (reversParam ? "+" : "*");
 
-                int optionValue = PropertyByName(String.Format("AddTo{0}", name), option);
+                int optionValue = PropertyByName($"AddTo{name}", option);
 
                 if ((optionValue != 0) && reversParam)
                 {
