@@ -123,8 +123,8 @@ namespace WarhammerArmyAssembler.Interface
             }
             else if (!Checks.EnoughUnitPointsForAddArtefact(id, unit, pointsPenalty: prevRunicPointsPenalty))
             {
-                string slots = unit.MagicItemCount > 0 ? "slots" : "points";
-                Error($"Not enough magic item {slots} to add an item");
+                string type = unit.MagicItemCount > 0 ? "slots" : "points";
+                Error($"Not enough magic item {type} to add an item");
             }
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, artefact.Points, 0))
             {
@@ -170,23 +170,33 @@ namespace WarhammerArmyAssembler.Interface
             bool lordInHeroSlot = (unit.Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
 
             if (unit.Character && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
+            {
                 Error("Personalities cannot be repeated");
-
+            }
             else if ((!slotExists && !coreUnit) || lordInHeroSlot)
-                Error(String.Format("The number of {0} of this type has been exhausted.", unit.IsHero() ? "heroes" : "units"));
-
+            {
+                string type = unit.IsHero() ? "heroes" : "units";
+                Error($"The number of {type} of this type has been exhausted.");
+            }
             else if (!Checks.EnoughPointsForAddUnit(id))
-                Error(String.Format("Not enough points to add a {0}", unit.IsHero() ? "hero" : "unit"));
-
+            {
+                string type = unit.IsHero() ? "hero" : "unit";
+                Error($"Not enough points to add a {type}");
+            }
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, unit.Points, unit.StaticPoints))
-                Error(String.Format("The {0} has reached a point cost limit", unit.UnitTypeName()));
-
+            {
+                string type = unit.UnitTypeName();
+                Error($"The {type} has reached a point cost limit");
+            }
             else if (!Army.Checks.IsArmyDublicationOk(unit))
-                Error(String.Format("Army can't include as many duplicates of {0}", unit.UnitTypeName()));
-
+            {
+                string type = unit.UnitTypeName();
+                Error($"Army can't include as many duplicates of {type}");
+            }
             else if (!Army.Checks.IsArmyUnitMaxLimitOk(unit))
+            {
                 Error("Only one unit of this type can be in the army");
-
+            }
             else
             {
                 CurrentSelectedUnit = Army.Mod.AddUnitByID(id);
