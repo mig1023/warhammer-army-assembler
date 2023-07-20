@@ -549,7 +549,8 @@ namespace WarhammerArmyAssembler.Interface
                 xmlFile.Load(armyName);
 
                 XmlNode armyFile = Intro(xmlFile, "Styles/Images/Files/Cover");
-                string source = String.Format("{0}\\Images\\{1}", Path.GetDirectoryName(armyName), armyFile.InnerText);
+                string path = Path.GetDirectoryName(armyName);
+                string source = $"{path}\\Images\\{armyFile.InnerText}";
 
                 Image newImage = new Image()
                 {
@@ -569,9 +570,14 @@ namespace WarhammerArmyAssembler.Interface
                 Brush lineColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
 
                 if (String.IsNullOrEmpty(illustration))
+                {
                     illustration = source;
+                }
                 else
-                    illustration = String.Format("{0}\\Images\\{1}", Path.GetDirectoryName(armyName), illustration);
+                {
+                    string picturePath = Path.GetDirectoryName(armyName);
+                    illustration = $"{picturePath}\\Images\\{illustration}";
+                }
 
                 int armyEdition = int.Parse(edition);
 
