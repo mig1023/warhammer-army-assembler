@@ -42,9 +42,9 @@ namespace WarhammerArmyAssembler.Test
             int len = name.Length + 6;
             string firestLineFix = (current == 0 ? "\n" : String.Empty);
 
-            Data.Console(Data.supplText, String.Format("\n\t{0}\n{1}", new String('/', len), firestLineFix));
-            Data.Console(Data.supplText, "\t// {0} //\n", name.ToUpper());
-            Data.Console(Data.supplText, String.Format("\t{0}\n\n\n", new String('/', len)));
+            Data.Console(Data.supplText, $"\n\t{new String('/', len)}\n{firestLineFix}");
+            Data.Console(Data.supplText, $"\t// {name.ToUpper()} //\n");
+            Data.Console(Data.supplText, $"\t{new String('/', len)}\n\n\n");
         }
 
         public static void BattleRoyaleTest(Unit unit, Unit unitMount, IProgress<string> progress)
@@ -75,7 +75,7 @@ namespace WarhammerArmyAssembler.Test
                     int enemyCount = Enemy.Count();
 
                     if (current < enemyCount)
-                        progress.Report(String.Format("{0}/{1} {2}", current, enemyCount, enemy.Name));
+                        progress.Report($"{current}/{enemyCount} {enemy.Name}");
                     else
                         progress.Report("Preparing a report... please wait");
 
