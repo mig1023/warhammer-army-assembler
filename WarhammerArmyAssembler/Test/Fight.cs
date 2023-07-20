@@ -213,9 +213,9 @@ namespace WarhammerArmyAssembler.Test
                     enemy.Mount.Name += " (enemy)";
             }
 
-            string testHead = String.Format("{0} vs {1}", unit.Name, enemy.Name);
+            string testHead = $"{unit.Name} vs {enemy.Name}";
             Data.Console(Data.text, testHead);
-            Data.Console(Data.supplText, String.Format("\n{0}", new string('-', testHead.Length)));
+            Data.Console(Data.supplText, $"\n{new string('-', testHead.Length)}");
 
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
             InitRoundWounds(participants, ref roundWounds);
@@ -375,7 +375,7 @@ namespace WarhammerArmyAssembler.Test
 
         private static void AddRoundBonus(string unitName, string bonusName, ref int roundBonus, int bonus)
         {
-            Data.Console(Data.supplText, String.Format("\n{0} have +{1} battle result bonus by {2}", unitName, bonus, bonusName));
+            Data.Console(Data.supplText, $"\n{unitName} have +{bonus} battle result bonus by {bonusName}");
             roundBonus += 1;
         }
 
