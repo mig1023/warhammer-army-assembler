@@ -708,8 +708,8 @@ namespace WarhammerArmyAssembler.Interface
 
             footer.RowDefinitions.Add(new RowDefinition());
 
-            footer.Children.Add(FooterElement(String.Format("Released: {0}", released), HorizontalAlignment.Left, 0, lineColor));
-            footer.Children.Add(FooterElement(String.Format("Written by {0}", authors), HorizontalAlignment.Center, 1, lineColor));
+            footer.Children.Add(FooterElement($"Released: {released}", HorizontalAlignment.Left, 0, lineColor));
+            footer.Children.Add(FooterElement($"Written by {authors}", HorizontalAlignment.Center, 1, lineColor));
             footer.Children.Add(FooterElement("© Games Workshop", HorizontalAlignment.Right, 2, lineColor));
 
             return footer;
@@ -717,12 +717,13 @@ namespace WarhammerArmyAssembler.Interface
 
         private static TextBlock FooterElement(string text, HorizontalAlignment aligment, int column, Brush lineColor)
         {
-            TextBlock element = new TextBlock();
-
-            element.Text = text;
-            element.HorizontalAlignment = aligment;
-            element.FontSize = 11;
-            element.Foreground = lineColor;
+            TextBlock element = new TextBlock
+            {
+                Text = text,
+                HorizontalAlignment = aligment,
+                FontSize = 11,
+                Foreground = lineColor,
+            };
 
             Grid.SetColumn(element, column);
             Grid.SetRow(element, 0);
@@ -765,13 +766,17 @@ namespace WarhammerArmyAssembler.Interface
             foreach (string homologueImage in homologuesLine)
             {
                 if (String.IsNullOrEmpty(homologueImage))
+                {
                     continue;
-
+                }
                 else if (homologueImage.EndsWith(".jpg"))
+                {
                     return homologueImage;
-
+                }
                 else
-                    return String.Format("{0}.jpg", homologueImage);
+                {
+                    return $"{homologueImage}.jpg";
+                }
             }
 
             return String.Empty;
