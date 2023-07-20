@@ -17,9 +17,9 @@ namespace WarhammerArmyAssembler
         public string Fullname()
         {
             if (this.Size > 1)
-                return String.Format("{0} {1} ({2})", this.Size, this.Name, this.Armybook);
+                return $"{this.Size} {this.Name} ({this.Armybook})";
             else
-                return String.Format("{0} ({1})", this.Name, this.Armybook);
+                return $"{this.Name} ({this.Armybook})";
         }
 
         public static Enemy ByName(string enemyName)
@@ -62,7 +62,7 @@ namespace WarhammerArmyAssembler
                 .Split(new string[] { ".xml\\" }, StringSplitOptions.None)
                 .ToList();
 
-            string armybook = String.Format("{0}.xml", enemyPath[0]);
+            string armybook = $"{enemyPath[0]}.xml";
             string enemy = enemyPath[1];
             string anotherType = xmlType?.InnerText ?? String.Empty;
 
