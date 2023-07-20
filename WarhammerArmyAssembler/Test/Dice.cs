@@ -32,7 +32,7 @@ namespace WarhammerArmyAssembler.Test
                         continue;
                 }
 
-                string rerollType = unitReroll.Trim().Replace(String.Format("({0})", strParam), String.Empty);
+                string rerollType = unitReroll.Trim().Replace($"({strParam})", String.Empty);
 
                 foreach (string reroll in unitRerolls.Keys.ToList())
                     if ((rerollType == reroll) && (unitRerolls[reroll] == diceType))
