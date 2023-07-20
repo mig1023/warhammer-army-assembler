@@ -102,6 +102,15 @@ namespace WarhammerArmyAssembler.Test
                 }
         }
 
+        private static string ContextAndRepeat(Param type)
+        {
+            if (type.Context == ContextType.Round)
+                return String.Empty;
+
+            string after = type.Repeat == RepeatType.Once ? "first" : "each";
+            return $"After {after} ";
+        }
+
         public static void Describe(List<Param> param, ref List<string> rules)
         {
             foreach (Param p in param)
@@ -122,14 +131,11 @@ namespace WarhammerArmyAssembler.Test
                     [TestType.Pass] = "skip a round without attack",
                 };
 
-                string head = String.Format("After {0} ", (p.Repeat == RepeatType.Once ? "first" : "each"));
-
-                if (p.Context == ContextType.Round)
-                    head = String.Empty;
-
+                string head = ContextAndRepeat(p);
                 string opponent = (p.MountsOnly ? "opponent's mount" : "opponent");
 
-                rules.Add(String.Format("{0}{1} {2} must pass {3} test or {4}", head, contextType[p.Context], opponent, p.Type, betType[p.Bet]));
+                rules.Add($"{head}{contextType[p.Context]} {opponent} " +
+                    $"must pass {p.Type} test or {betType[p.Bet]}");
             }
         }
     }
