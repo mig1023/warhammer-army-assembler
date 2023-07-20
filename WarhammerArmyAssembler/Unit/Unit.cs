@@ -1026,7 +1026,7 @@ namespace WarhammerArmyAssembler
                         {
                             string secondElement = String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ";
                             string[] rerollsParams = reroll.Split('(');
-                            lineParamValue += String.Format("{0}{1}", secondElement, SpecialRules.RerollsLines[rerollsParams[0]]);
+                            lineParamValue += $"{secondElement}{SpecialRules.RerollsLines[rerollsParams[0]]}";
 
                             if (rerollsParams.Length > 1)
                                 lineParamValue += "(" + rerollsParams[1];
@@ -1068,7 +1068,7 @@ namespace WarhammerArmyAssembler
 
             if ((fullCommand == 3) && !String.IsNullOrEmpty(characterCommander))
             {
-                rules.Add(String.Format("FC ({0})", characterCommander));
+                rules.Add($"FC ({characterCommander})");
             }
             else if (fullCommand == 3)
             {
@@ -1083,7 +1083,7 @@ namespace WarhammerArmyAssembler
             string rulesLine = String.Empty;
 
             foreach (string rule in rules)
-                rulesLine += String.Format("{0}; ", rule);
+                rulesLine += "{rule}; ";
 
             return rulesLine;
         }
