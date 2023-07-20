@@ -883,8 +883,7 @@ namespace WarhammerArmyAssembler
                 return String.Empty;
 
             string cleanParam = param.Replace("*", String.Empty);
-
-            return String.Format("{0}={1}, ", shortName, cleanParam);
+            return $"{shortName}={cleanParam}, ";
         }
 
         public string GetModifiedParamsLine()
@@ -919,16 +918,16 @@ namespace WarhammerArmyAssembler
 
         public string SelfDescription()
         {
-            string describe = String.Format("\nUnit type: {0}", Type);
+            string describe = $"\nUnit type: {Type}";
 
             if (Character)
                 describe += " (character)";
 
             if (!IsHeroOrHisMount())
             {
-                string minAndMax = String.Format("\nUnit size: {0} - {1}", MinSize, MaxSize);
+                string minAndMax = $"\nUnit size: {MinSize} - {MaxSize}";
                 string plus = MinSize == MaxSize ? String.Empty : "+";
-                string minOnly = String.Format("\nUnit size: {0}{1}", MinSize, plus);
+                string minOnly = $"\nUnit size: {MinSize}{plus}";
 
                 describe += (MaxSize > 0) && (MinSize != MaxSize) ? minAndMax : minOnly;
 
@@ -939,10 +938,10 @@ namespace WarhammerArmyAssembler
             int wizard = GetUnitWizard();
 
             if (wizard > 0)
-                describe += String.Format("\nWizard: {0}", wizard);
+                describe += $"\nWizard: {wizard}";
 
             if (!String.IsNullOrEmpty(Group))
-                describe += String.Format("\nGroup: {0}", Group);
+                describe += $"\nGroup: {Group}";
 
             return describe;
         }
