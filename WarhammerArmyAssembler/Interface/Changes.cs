@@ -677,13 +677,13 @@ namespace WarhammerArmyAssembler.Interface
                 },
                 new TextBlock
                 {
-                    Text = String.Format("{0}th Edition", edition),
+                    Text = $"{edition}th Edition",
                     FontSize = 14,
                     Margin = new Thickness(0, -7, 0, 0),
                 },
                 new TextBlock
                 {
-                    Text = String.Format("\n{0}\n", description),
+                    Text = $"\n{description}\n",
                     TextWrapping = TextWrapping.Wrap,
                     FontSize = 9,
                     TextAlignment = TextAlignment.Justify,
