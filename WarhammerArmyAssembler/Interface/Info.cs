@@ -45,11 +45,14 @@ namespace WarhammerArmyAssembler.Interface
             return line.ToString();
         }
 
-        public static string ArmyUnits() => String.Format("CORE UNITS:\n{0}\n\nSPECIAL UNITS:\n{1}\n\nRARE UNITS:\n{2}",
-            UnitsByType(Unit.UnitType.Core), UnitsByType(Unit.UnitType.Special), UnitsByType(Unit.UnitType.Rare));
+        public static string ArmyUnits() =>
+            $"CORE UNITS:\n{UnitsByType(Unit.UnitType.Core)}\n\n" +
+            $"SPECIAL UNITS:\n{UnitsByType(Unit.UnitType.Special)}\n\n" +
+            $"RARE UNITS:\n{UnitsByType(Unit.UnitType.Rare)}";
 
-        public static string ArmyHeroes() => String.Format("LORDS:\n{0}\n\nHEROES:\n{1}",
-            UnitsByType(Unit.UnitType.Lord), UnitsByType(Unit.UnitType.Hero));
+        public static string ArmyHeroes() =>
+            $"LORDS:\n{UnitsByType(Unit.UnitType.Lord)}\n\n" +
+            $"HEROES:\n{UnitsByType(Unit.UnitType.Hero)}";
 
         public static string ArmyModels()
         {
