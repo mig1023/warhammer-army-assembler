@@ -62,8 +62,5 @@ namespace WarhammerArmyAssembler.Test
 
         public static void Console(Brush color, string line) =>
             Interface.Test.LineToConsole(line, color);
-
-        public static void Console(Brush color, string line, params object[] p) =>
-            Console(color, String.Format(line, p));
     }
 }

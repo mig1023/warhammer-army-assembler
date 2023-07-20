@@ -13,7 +13,7 @@ namespace WarhammerArmyAssembler.Test
 
             int attackType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
 
-            Data.Console(Data.text, "\n\n{0} chose special attack ", unit.Name);
+            Data.Console(Data.text, $"\n\n{unit.Name} chose special attack ");
 
             if (attackType == 1)
             {
@@ -24,7 +24,7 @@ namespace WarhammerArmyAssembler.Test
             }
             else if (opponentIsMonster && (attackType >= 2) && (attackType <= 4))
             {
-                Data.Console(Data.text, "--> Thump with Club --> {0} must pass Initiative test", giantOpponent.Name);
+                Data.Console(Data.text, $"--> Thump with Club --> {giantOpponent.Name} must pass Initiative test");
 
                 if (Dice.Roll(unit, Dice.Types.I, giantOpponent, giantOpponent.Initiative.Value, 1, paramTest: true, hiddenDice: true))
                     Data.Console(Data.goodText, " --> passed");
@@ -43,12 +43,12 @@ namespace WarhammerArmyAssembler.Test
                     else
                     {
                         int wounds = firstWoundDice + secondWoundDice;
-                        Data.Console(Data.badText, " --> Giant's inflict {0} wounds", wounds);
+                        Data.Console(Data.badText, $" --> Giant's inflict {wounds} wounds");
 
                         if (wounds > giantOpponent.Wounds.Original)
                         {
                             wounds = giantOpponent.Wounds.Original;
-                            Data.Console(Data.supplText, ", only {0} can be inflicted", wounds);
+                            Data.Console(Data.supplText, $", only {wounds} can be inflicted");
                         }
 
                         roundWounds[giantOpponent.ID] += wounds;
@@ -59,7 +59,7 @@ namespace WarhammerArmyAssembler.Test
             else if (opponentIsMonster && (attackType >= 5))
             {
                 Data.Console(Data.text, "--> 'Eadbutt");
-                Data.Console(Data.badText, " --> {0} WOUND", giantOpponent.Name);
+                Data.Console(Data.badText, $" --> {giantOpponent.Name} WOUND");
 
                 roundWounds[giantOpponent.ID] += 1;
                 giantOpponent.Wounds.Value -= 1;
@@ -67,12 +67,12 @@ namespace WarhammerArmyAssembler.Test
             }
             else if (!opponentIsMonster && (attackType == 2))
             {
-                Data.Console(Data.text, "--> Jump Up and Down", unit.Name);
+                Data.Console(Data.text, "--> Jump Up and Down");
 
                 if (Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true) == 1)
                 {
                     Data.Console(Data.text, " --> fall");
-                    Data.Console(Data.badText, " --> {0} WOUND", unit.Name);
+                    Data.Console(Data.badText, $" --> {unit.Name} WOUND");
 
                     unit.PassThisRound = true;
                     roundWounds[unit.ID] += 1;
@@ -100,14 +100,14 @@ namespace WarhammerArmyAssembler.Test
 
                 int pickType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
                 Data.Console(Data.text, pickUpType[pickType]);
-                Data.Console(Data.badText, " --> {0} SLAIN", giantOpponent.Name);
+                Data.Console(Data.badText, $" --> {giantOpponent.Name} SLAIN");
 
                 roundWounds[giantOpponent.ID] += giantOpponent.Wounds.Original;
                 giantOpponent.Wounds.Value -= giantOpponent.Wounds.Original;
             }
             else
             {
-                Data.Console(Data.text, "--> {0} Swing with Club", unit.Name);
+                Data.Console(Data.text, $"--> {unit.Name} Swing with Club");
 
                 int attacks = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
                 roundWounds[giantOpponent.ID] += Fight.Round(ref unit, ref giantOpponent, attacks, round);
@@ -129,18 +129,18 @@ namespace WarhammerArmyAssembler.Test
             {
                 attacks = 1;
                 unit.MultiWounds = "D3";
-                Data.Console(Data.supplText, "\n\n{0} feed: 1 attack with D3 multiwound", unit.Name);
+                Data.Console(Data.supplText, $"\n\n{unit.Name} feed: 1 attack with D3 multiwound");
             }
             else if ((attackType > 2) && (attackType < 5))
             {
                 attacks = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 3, hiddenDice: true);
-                Data.Console(Data.supplText, "\n\n{0} flailing fists: 3D6 attacks", unit.Name);
+                Data.Console(Data.supplText, $"\n\n{unit.Name} flailing fists: 3D6 attacks");
             }
             else
             {
                 attacks = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 2, hiddenDice: true);
                 unit.AutoHit = true;
-                Data.Console(Data.supplText, "\n\n{0} avalanche of flesh: 2D6 attack with autohit", unit.Name);
+                Data.Console(Data.supplText, $"\n\n{unit.Name} avalanche of flesh: 2D6 attack with autohit");
             }
 
             roundWounds[hellOpponent.ID] += Fight.Round(ref unit, ref hellOpponent, attacks, round);
@@ -182,11 +182,11 @@ namespace WarhammerArmyAssembler.Test
             {
                 int steamPoint = Data.rand.Next(unit.Wounds.Value / 2) + (Data.rand.Next(6) + 1);
 
-                Data.Console(Data.text, "\n\n{0} generate {1} steam point ", unit.Name, steamPoint);
+                Data.Console(Data.text, $"\n\n{unit.Name} generate {steamPoint} steam point ");
 
                 if (steamPoint > unit.Wounds.Value)
                 {
-                    Data.Console(Data.badText, "--> boiler fail, {0} WOUND", unit.Name);
+                    Data.Console(Data.badText, $"--> boiler fail, {unit.Name} WOUND");
 
                     impactOutLine = String.Empty;
                     steamFail = true;
@@ -196,7 +196,7 @@ namespace WarhammerArmyAssembler.Test
 
                 int steamImpactHit = steamPoint * (Data.rand.Next(3) + 1);
 
-                Data.Console(Data.supplText, "--> {2} impact hits", unit.Name, steamPoint, steamImpactHit);
+                Data.Console(Data.supplText, $"--> {steamImpactHit} impact hits");
                 impactOutLine = steamImpactHit.ToString();
 
                 return steamImpactHit;

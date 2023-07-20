@@ -877,7 +877,7 @@ namespace WarhammerArmyAssembler.Test
             if ((killingBlow || extendedKillingBlow) && !enemy.NoKillingBlow && !attackIsPoisoned)
             {
                 attackWithKillingBlow = true;
-                string  = unit.HeroicKillingBlow ? "heroic " : String.Empty;
+                string heroic = unit.HeroicKillingBlow ? "heroic " : String.Empty;
                 Data.Console(Data.text, " --> {heroic}killing blow");
                 return true;
             }

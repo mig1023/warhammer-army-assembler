@@ -73,8 +73,9 @@ namespace WarhammerArmyAssembler.Test
         {
             bool roundFormat = ((context == ContextType.Hit) || (context == ContextType.Wound));
 
-            string newLine = (testCount >= 1 ? "\n" : "\n\n");
-            Data.Console(Data.text, (roundFormat ? " --> " : newLine) + "{0} must pass {1} test ", unit.Name, param);
+            string newLine = testCount >= 1 ? "\n" : "\n\n";
+            string startLine = roundFormat ? " --> " : newLine;
+            Data.Console(Data.text, $"{startLine}{unit.Name} must pass {param} test ");
 
             Profile paramProfile = (Profile)typeof(Unit).GetProperty(param).GetValue(unit);
             int diceNum = ((param == "Leadership") ? 2 : 1);
