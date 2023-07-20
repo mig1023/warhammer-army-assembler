@@ -603,7 +603,7 @@ namespace WarhammerArmyAssembler
             if (count > 2)
                 count = 2;
 
-            return (SolidColorBrush)new BrushConverter().ConvertFromString(String.Format("#{0}", colors[count]));
+            return (SolidColorBrush)new BrushConverter().ConvertFromString($"#{colors[count]}");
         }
 
         public Unit GetOptionRules(out bool hasMods, bool directModification = false)
@@ -751,10 +751,10 @@ namespace WarhammerArmyAssembler
             else
             {
                 if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points, 0))
-                    Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
+                    Interface.Changes.Error($"The {this.UnitTypeName()} has reached a point cost limit");
 
                 else if (!Interface.Checks.EnoughUnitPointsForAddOption(option.Points))
-                    Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
+                    Interface.Changes.Error($"Not enough points to add {this.UnitTypeName()}");
 
                 else if (option.Countable.Nullable && (option.Countable.Value == 0) && (option.Countable.Min > 1))
                     option.Countable.Value = option.Countable.Min;
@@ -801,12 +801,12 @@ namespace WarhammerArmyAssembler
 
                     if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points, 0))
                     {
-                        Interface.Changes.Error(String.Format("The {0} has reached a point cost limit", this.UnitTypeName()));
+                        Interface.Changes.Error($"The {this.UnitTypeName()} has reached a point cost limit");
                         return;
                     }
                     else if (!Interface.Checks.EnoughUnitPointsForAddOption(optionPoints))
                     {
-                        Interface.Changes.Error(String.Format("Not enough points to add", this.UnitTypeName()));
+                        Interface.Changes.Error($"Not enough points to add {this.UnitTypeName()}");
                         return;
                     }
                     else
