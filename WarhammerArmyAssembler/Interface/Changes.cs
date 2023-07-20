@@ -116,19 +116,24 @@ namespace WarhammerArmyAssembler.Interface
 
             if (artefact.Virtue)
                 artefact.Points = Army.Params.GetVirtuePoints(id);
-                
+
             if (!Checks.EnoughPointsForAddArtefact(id, prevRunicPointsPenalty))
+            {
                 Error("Not enough points add an item");
-
+            }
             else if (!Checks.EnoughUnitPointsForAddArtefact(id, unit, pointsPenalty: prevRunicPointsPenalty))
-                Error(String.Format("Not enough magic item {0} to add an item", unit.MagicItemCount > 0 ? "slots" : "points"));
-
+            {
+                string slots = unit.MagicItemCount > 0 ? "slots" : "points";
+                Error($"Not enough magic item {slots} to add an item");
+            }
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, artefact.Points, 0))
+            {
                 Error("For this type, a point cost limit has been reached");
-
+            }
             else if (artefact.TypeUnitIncrese && Army.Checks.IsArmyFullForTypeIcrease(unit))
+            {
                 Error("Cant upgrade unit type: the army already has many such units");
-
+            }
             else
             {
                 if (prevRunicItem != null)
