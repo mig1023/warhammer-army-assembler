@@ -450,7 +450,9 @@ namespace WarhammerArmyAssembler.Interface
 
             string armyFile = Intro(xmlFile, "Styles/Images/Files/Cover").InnerText;
             changeArmybook.imageArmybook.Source = GetImage(armyFile, armyName);
-            changeArmybook.listArmybookVer.Content = String.Format("{0}th edition", Intro(xmlFile, "Info/Edition").InnerText);
+
+            string edition = Intro(xmlFile, "Info/Edition").InnerText;
+            changeArmybook.listArmybookVer.Content = $"{edition}th edition";
             changeArmybook.UpdateLayout();
 
             Brush mainColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
