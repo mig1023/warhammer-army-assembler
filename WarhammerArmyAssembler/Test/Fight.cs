@@ -527,7 +527,7 @@ namespace WarhammerArmyAssembler.Test
 
             Unit terrorSource = (((enemyFriend != null) && !enemy.Terror) ? enemyFriend : enemy);
 
-            Data.Console(Data.text, "\n\n{0} try to resist of terror by {1} ", unit.Name, terrorSource.Name);
+            Data.Console(Data.text, $"\n\n{unit.Name} try to resist of terror by {terrorSource.Name} ");
 
             if (unit.Unbreakable)
                 Data.Console(Data.goodText, " --> autopassed (unbreakable)");
@@ -566,14 +566,14 @@ namespace WarhammerArmyAssembler.Test
                 if ((enemy.Wounds.Value < wounded) && !enemy.WoundedWithKillingBlow)
                 {
                     wounded = enemy.Wounds.Value;
-                    Data.Console(Data.supplText, ", only {0} can be inflicted", wounded);
+                    Data.Console(Data.supplText, $", only {wounded} can be inflicted");
                 }
 
                 enemy.Wounds.Value -= wounded;
 
                 if (additionalAttack)
                 {
-                    Data.Console(Data.supplText, " <-- {0} have additional attack by predatory fighter rule", unit.Name);
+                    Data.Console(Data.supplText, $" <-- {unit.Name} have additional attack by predatory fighter rule");
                     attackNumber += 1;
                 }
 
@@ -595,9 +595,9 @@ namespace WarhammerArmyAssembler.Test
             for (int i = 0; i < roundWounds; i++)
             {
                 if (regeneration == 4)
-                    Data.Console(Data.text, "\n{0} --> regeneration ", unit.Name);
+                    Data.Console(Data.text, $"\n{unit.Name} --> regeneration ");
                 else
-                    Data.Console(Data.text, "\n{0} --> regeneration ({1}+) ", unit.Name, regeneration);
+                    Data.Console(Data.text, $"\n{unit.Name} --> regeneration ({regeneration}+) ");
 
                 if (Dice.Roll(unit, Dice.Types.REGENERATION, unit, regeneration))
                 {
@@ -614,7 +614,11 @@ namespace WarhammerArmyAssembler.Test
             Data.Console(Data.supplText, "\nround fight order:");
 
             foreach (Unit u in allParticipants)
-                Data.Console(Data.supplText, "{0} {1}", (u == allParticipants[0] ? String.Empty : " -->"), u.Name);
+            {
+                string participant = u == allParticipants[0] ? String.Empty : " -->";
+                Data.Console(Data.supplText, $"{participant} {u.Name}");
+            }
+                
         }
 
         public static bool CheckInitiative(Unit unit, Unit enemy)
@@ -657,7 +661,7 @@ namespace WarhammerArmyAssembler.Test
             Unit enemy = units[2];
             Unit enemyFriend = units[3];
 
-            Data.Console(Data.text, "\n{0} break test --> ", unit.Name);
+            Data.Console(Data.text, $"\n{unit.Name} break test --> ");
 
             int temoraryLeadership = unit.Leadership.Value;
 
@@ -688,7 +692,8 @@ namespace WarhammerArmyAssembler.Test
 
             else if (thereAreMoreOfThem && (enemyFearOrTerror || enemyMountFearOrTerror) && !itNotFear)
             {
-                Data.Console(Data.badText, "autobreak by {0} fear", (enemyFearOrTerror ? enemy.Name : enemyFriend.Name));
+                string enemyName = enemyFearOrTerror ? enemy.Name : enemyFriend.Name;
+                Data.Console(Data.badText, $"autobreak by {enemyName} fear");
                 return true;
             }
             else
@@ -703,7 +708,7 @@ namespace WarhammerArmyAssembler.Test
                     {
                         int additionalWounds = (dice - temoraryLeadership);
 
-                        Data.Console(Data.badText, " --> {0} additional wounds", additionalWounds);
+                        Data.Console(Data.badText, $" --> {additionalWounds} additional wounds");
 
                         if (unit.Wounds.Value < additionalWounds)
                             additionalWounds = unit.Wounds.Value;
@@ -734,10 +739,11 @@ namespace WarhammerArmyAssembler.Test
 
             if ((unit.Wounds.Value > 0) && (enemy.Wounds.Value > 0))
             {
-                Data.Console(Data.text, "\n{0} --> hit{1}", unit.Name, (!impactHit ? " " : String.Empty));
+                string spacer = !impactHit ? " " : String.Empty;
+                Data.Console(Data.text, $"\n{unit.Name} --> hit{spacer}");
 
                 if (impactHit)
-                    Data.Console(Data.supplText, " ({0} impact hit)", impactLine);
+                    Data.Console(Data.supplText, $" ({impactLine} impact hit)");
 
                 int diceForHit = 0;
 
@@ -764,13 +770,13 @@ namespace WarhammerArmyAssembler.Test
                     ) {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
-                            Data.Console(Data.badText, " --> {0} SLAIN", enemy.Name);
+                            Data.Console(Data.badText, $" --> {enemy.Name} SLAIN");
                             enemy.WoundedWithKillingBlow = true;
                             return enemy.Wounds.Value;
                         }
                         else
                         {
-                            Data.Console(Data.badText, " --> {0} {1}", enemy.Name, "WOUND");
+                            Data.Console(Data.badText, $" --> {enemy.Name} WOUND");
 
                             Param.Tests(ref enemy, unit, context: Param.ContextType.Wound);
 
@@ -838,7 +844,7 @@ namespace WarhammerArmyAssembler.Test
 
             int multiwounds = RandomParamParse(unit.MultiWounds);
 
-            Data.Console(Data.text, " <-- {0} multiple wounds", multiwounds);
+            Data.Console(Data.text, $" <-- {multiwounds} multiple wounds");
 
             if (enemy.FirstWoundDiscount)
             {
@@ -871,7 +877,8 @@ namespace WarhammerArmyAssembler.Test
             if ((killingBlow || extendedKillingBlow) && !enemy.NoKillingBlow && !attackIsPoisoned)
             {
                 attackWithKillingBlow = true;
-                Data.Console(Data.text, " --> {0}killing blow", (unit.HeroicKillingBlow ? "heroic " : String.Empty));
+                string  = unit.HeroicKillingBlow ? "heroic " : String.Empty;
+                Data.Console(Data.text, " --> {heroic}killing blow");
                 return true;
             }
 
