@@ -95,7 +95,7 @@ namespace WarhammerArmyAssembler.Army
         public static bool IsArmyUnitMaxLimitOk(Unit newUnit) =>
             !newUnit.Singleton || !(Data.Units.Values.Where(x => x.ID == newUnit.ID).FirstOrDefault() != null);
 
-        public static int IsOptionAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
+        public static int OptionsAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
         {
             foreach (KeyValuePair<int, Unit> entry in Data.Units)
             {
