@@ -61,9 +61,12 @@ namespace WarhammerArmyAssembler.Interface
             int large = UnitsByBase(Army.Params.BasesTypes.large);
             int chariot = UnitsByBase(Army.Params.BasesTypes.chariot);
 
-            return String.Format("Normal base:\t{0}\n\nCavalry base:\t{1}\n\nLarge base:\t{2}\n\nChariots:\t\t{3}",
-                normal, cavalry, large, chariot);
+            return $"Normal base:\t{normal}\n\nCavalry base:\t{cavalry}\n\n" +
+                $"Large base:\t{large}\n\nChariots:\t\t{chariot}";
         }
+
+        private static string SpellDispell(int value) =>
+            CastingProbability(value, Army.Params.GetArmyDispell());
 
         public static string ArmyDispell()
         {
@@ -72,17 +75,19 @@ namespace WarhammerArmyAssembler.Interface
 
             var spellList = ArmyBook.Data.Dispell.
                 OrderBy(x => x.Value).
-                Select(x => String.Format("~ {0}+\t{1} ({2} dispells)",
-                    x.Value, x.Key, CastingProbability(x.Value, Army.Params.GetArmyDispell())));
+                Select(x => $"~ {x.Value}+\t{x.Key} ({SpellDispell(x.Value)} dispells)");
 
             string lore = ArmyBook.Data.EnemyMagicLoreName;
             string enemy = ArmyBook.Data.EnemyMagicName;
-
             int dispScrolls = Army.Params.GetArmyDispellScroll();
-            string footer = (dispScrolls > 0 ? String.Format("\n\n\n+ {0} Dispell Scrolls", dispScrolls) : String.Empty);
+            string footer = dispScrolls > 0 ? $"\n\n\n+ {dispScrolls} Dispell Scrolls" : String.Empty;
+            string spells = String.Join("\n\n", spellList);
 
-            return String.Format("ENEMY MAGIC:\n\n{0}\nby {1}\n\n\n{2}{3}", lore, enemy, String.Join("\n\n", spellList), footer);
+            return $"ENEMY MAGIC:\n\n{lore}\nby {enemy}\n\n\n{spells}{footer}";
         }
+
+        private static string SpellCast(int value) =>
+            CastingProbability(value, Army.Params.GetArmyCast());
 
         public static string ArmyCast()
         {
@@ -91,16 +96,16 @@ namespace WarhammerArmyAssembler.Interface
 
             var spellList = ArmyBook.Data.Magic.
                 OrderBy(x => x.Value).
-                Select(x => String.Format("{0}+\t{1} ({2} spells)",
-                x.Value, x.Key, CastingProbability(x.Value, Army.Params.GetArmyCast())));
+                Select(x =>$"{x.Value}+\t{x.Key} ({SpellCast(x.Value)} spells)");
 
             string loreName = ArmyBook.Data.MagicLoreName.ToUpper();
             string footer = String.Empty;
-                
-            if (!String.IsNullOrEmpty(ArmyBook.Data.MagicOptions))
-                footer = String.Format("\n\n\nAnother magic options:\n{0}", ArmyBook.Data.MagicOptions);
+            string spells = String.Join("\n\n", spellList);
 
-            return String.Format("{0}\n\n\n{1}{2}", loreName, String.Join("\n\n", spellList), footer);
+            if (!String.IsNullOrEmpty(ArmyBook.Data.MagicOptions))
+                footer = $"\n\n\nAnother magic options:\n{ArmyBook.Data.MagicOptions}";     
+
+            return $"{loreName}\n\n\n{spells}{footer}";
         }
 
         private static string CastingProbability(int difficulty, int cast)
@@ -118,9 +123,9 @@ namespace WarhammerArmyAssembler.Interface
                     spellsMax = cast;
 
                 if ((spellsMax > spellsMin) && (spellsMin > 0))
-                    return String.Format("~{0}-{1}", spellsMin, spellsMax);
+                    return $"~{spellsMin}-{spellsMax}";
                 else
-                    return String.Format("~{0}", spellsMax);
+                    return $"~{spellsMax}";
             }
         }
 
