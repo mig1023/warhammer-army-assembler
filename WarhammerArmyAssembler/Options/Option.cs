@@ -334,15 +334,20 @@ namespace WarhammerArmyAssembler
         public int GetWizardLevelBonus() =>
             this.Countable.Value - (this.Countable.Nullable && (this.Countable.Value > 0) ? 1 : 0);
 
-        public string FullName() =>
-            Runic > 1 ? String.Format("{0} {1}", (Runic > 2 ? "Three" : "Two"), Name.Replace("Rune", "runes")) : Name;
+        public string FullName()
+        {
+            string runic = Runic > 2 ? "Three" : "Two";
+            string name = Name.Replace("Rune", "runes");
+
+            return Runic > 1 ? $"{runic} {name}" : Name;
+        }
 
         public string SelfDescription()
         {
             string describe = String.Empty;
 
             if (!String.IsNullOrEmpty(Only))
-                describe += String.Format("\nOnly for: {0}", Only);
+                describe += $"\nOnly for: {Only}";
 
             if (OnlyOneInArmy)
                 describe += "\nOnly one in army";
