@@ -170,7 +170,8 @@ namespace WarhammerArmyAssembler.Interface
                 Changes.main.enemyForTest.Items.Add(enemy.Fullname());
         }
 
-        public static void CleanConsole() => Changes.main.testConsole.Document.Blocks.Clear();
+        public static void CleanConsole() =>
+            Changes.main.testConsole.Document.Blocks.Clear();
 
         public static void LineToConsole(string line, Brush color = null)
         {
