@@ -52,7 +52,7 @@ namespace WarhammerArmyAssembler.Interface
             string specialRules = unitForLoad.GetSpecialRulesLine(onlyUnitParam: onlyUnitRules);
 
             if (!String.IsNullOrEmpty(specialRules))
-                target.Text = String.Format("Special: {0}", specialRules);
+                target.Text = $"Special: {specialRules}";
             else
                 target.Text = String.Empty;
         }
