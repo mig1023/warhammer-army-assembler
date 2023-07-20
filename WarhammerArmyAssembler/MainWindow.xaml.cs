@@ -225,7 +225,7 @@ namespace WarhammerArmyAssembler
                 u.Size = ErrorAndReturnSizeBack("Unit size is less than the minimum allowed", u.ID);
 
             else if ((u.Size > Army.Data.Units[u.ID].Size) && (!Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, diff, u.StaticPoints)))
-                u.Size = ErrorAndReturnSizeBack(String.Format("The {0} has reached a point cost limit", u.UnitTypeName()), u.ID);
+                u.Size = ErrorAndReturnSizeBack($"The {u.UnitTypeName()} has reached a point cost limit", u.ID);
 
             else
                 Army.Data.Units[u.ID].Size = u.Size;
@@ -518,7 +518,7 @@ namespace WarhammerArmyAssembler
                 newButtonCaption = "Normal";
             }
 
-            maximizeWindow.Content = String.Format("  {0}  |", newButtonCaption);
+            maximizeWindow.Content = $"  {newButtonCaption}  |";
         }
 
         private void minimizeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) =>
