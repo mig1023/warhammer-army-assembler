@@ -42,13 +42,13 @@ namespace WarhammerArmyAssembler.Interface
             Unit unit = Army.Data.Units[unitID];
 
             if (head == ArmyBook.Data.MagicItemsStyle)
-                return String.Format("{0} / {1}", unit.MagicPointsAlreadyUsed(), unit.GetUnitMagicPoints());
+                return $"{unit.MagicPointsAlreadyUsed()} / {unit.GetUnitMagicPoints()}";
 
             if ((head == ArmyBook.Data.MagicPowersStyle) && (unit.MagicPowersCount > 0))
-                return String.Format("{0} / {1}", unit.MagicPowersCountAlreadyUsed(), unit.GetMagicPowersCount());
+                return $"{unit.MagicPowersCountAlreadyUsed()} / {unit.GetMagicPowersCount()}";
 
-            else if (head == ArmyBook.Data.MagicPowersStyle)
-                return String.Format("{0} / {1}", unit.MagicPowersPointsAlreadyUsed(), unit.GetUnitMagicPowersPoints());
+            if (head == ArmyBook.Data.MagicPowersStyle)
+                return $"{unit.MagicPowersPointsAlreadyUsed()} / {unit.GetUnitMagicPowersPoints()}";
 
             return String.Empty;
         }
