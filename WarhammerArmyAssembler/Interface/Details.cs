@@ -179,7 +179,7 @@ namespace WarhammerArmyAssembler.Interface
                     Changes.main.unitName.Margin.Top
                 };
 
-                AddLabel(caption: String.Format("Wizard Level {0}", wizard), margins: wizardMargins, height: 25,
+                AddLabel(caption: $"Wizard Level {wizard}", margins: wizardMargins, height: 25,
                     lastColumnMaxWidth: ref lastColumnMaxWidth);
             }
 
@@ -450,15 +450,18 @@ namespace WarhammerArmyAssembler.Interface
             bool canBeReducedByNullable = (option.Countable.Min > 0) && option.Countable.Nullable;
             bool canBeReduced = ((option.Countable.Value > 0) && (canBeReducedByMin || canBeReducedByNullable)) && enabled;
 
-            double left = AddButtonPart("-", margins, 0, id, (canBeReduced ? backFirst : Brushes.Gainsboro), enabled: canBeReduced, countable: true);
+            double left = AddButtonPart("-", margins, 0, id,
+                (canBeReduced ? backFirst : Brushes.Gainsboro), enabled: canBeReduced, countable: true);
 
-            left += AddButtonPart(option.Countable.Value.ToString(), margins, left, id, backSecond, enabled: enabled, countable: true, withoutBorder: true);
+            left += AddButtonPart(option.Countable.Value.ToString(),
+                margins, left, id, backSecond, enabled: enabled, countable: true, withoutBorder: true);
 
             bool canByIncreasedByDependency = ((maxByDependency == 0) || (option.Countable.Value < maxByDependency));
             bool canBeIncreasedByMaxParam = ((option.Countable.Max == 0) || (option.Countable.Value < option.Countable.Max));
             bool canBeIncreased = canByIncreasedByDependency && canBeIncreasedByMaxParam && enabled;
 
-            AddButtonPart("+", margins, left, id, (canBeIncreased ? backFirst : Brushes.Gainsboro), enabled: canBeIncreased, countable: true);
+            AddButtonPart("+", margins, left, id, (canBeIncreased ? backFirst : Brushes.Gainsboro),
+                enabled: canBeIncreased, countable: true);
         }
 
         private static double AddButton(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
@@ -478,29 +481,50 @@ namespace WarhammerArmyAssembler.Interface
 
             if (option.IsMagicItem() || option.IsPowers())
             {
-                string drop = String.Format("drop {0}", option.IsPowers() ? "power" : "artefact");
-                AddButtonPart(drop, margins, 0, id, ArmyBook.Data.FrontColor, 154);
+                string powers = option.IsPowers() ? "power" : "artefact";
+                AddButtonPart($"drop {powers}", margins, 0, id, ArmyBook.Data.FrontColor, 154);
 
                 return height;
             }
 
             if (option.Countable != null)
-                AddButtonsCountable(caption: option.Countable.Value.ToString(), backFirst: ArmyBook.Data.BackColor,
-                    backSecond: ArmyBook.Data.FrontColor, option: option, unit: unit, margins: margins, id: id, enabled: optionIsEnabled);
+                AddButtonsCountable(
+                    caption: option.Countable.Value.ToString(),
+                    backFirst: ArmyBook.Data.BackColor,
+                    backSecond: ArmyBook.Data.FrontColor,
+                    option: option,
+                    unit: unit,
+                    margins: margins,
+                    id: id,
+                    enabled: optionIsEnabled);
 
             else if (!optionIsEnabled)
-                AddButtonAllParts(captionFirst: String.Empty, captionSecond: String.Empty, backgroundFirst: Brushes.WhiteSmoke,
-                    backgroundSecond: Brushes.Gainsboro, margins: margins, id: id, enabled: false);
+                AddButtonAllParts(
+                    captionFirst: String.Empty,
+                    captionSecond: String.Empty,
+                    backgroundFirst: Brushes.WhiteSmoke,
+                    backgroundSecond: Brushes.Gainsboro,
+                    margins: margins,
+                    id: id,
+                    enabled: false);
 
             else if (option.Realised)
-                AddButtonAllParts(captionFirst: ArmyBook.Data.DropStyle, captionSecond: String.Empty,
-                    backgroundFirst: ArmyBook.Data.BackColor, backgroundSecond: ArmyBook.Data.FrontColor,
-                    margins: margins, id: id);
+                AddButtonAllParts(
+                    captionFirst: ArmyBook.Data.DropStyle,
+                    captionSecond: String.Empty,
+                    backgroundFirst: ArmyBook.Data.BackColor,
+                    backgroundSecond: ArmyBook.Data.FrontColor,
+                    margins: margins,
+                    id: id);
 
             else
-                AddButtonAllParts(captionFirst: String.Empty, captionSecond: ArmyBook.Data.AddStyle,
-                    backgroundFirst: (Brush)(new BrushConverter().ConvertFrom("#E1E1E1")),
-                    backgroundSecond: Brushes.Silver, margins: margins, id: id);
+                AddButtonAllParts(
+                    captionFirst: String.Empty,
+                    captionSecond: ArmyBook.Data.AddStyle,
+                    backgroundFirst: (Brush)new BrushConverter().ConvertFrom("#E1E1E1"),
+                    backgroundSecond: Brushes.Silver,
+                    margins: margins,
+                    id: id);
 
             return height;
         }
