@@ -209,14 +209,18 @@ namespace WarhammerArmyAssembler.Interface
             Unit currentUnit = Army.Data.Units[unit];
 
             if (!Checks.EnoughUnitPointsForAddOption(points))
+            {
                 Error("Not enough points to add a mount");
-
+            }
             else if (currentUnit.MountOn > 0)
+            {
                 Error("The hero already has a mount");
-
+            }
             else if (!Army.Checks.IsArmyUnitsPointsPercentOk(currentUnit.Type, points, currentUnit.StaticPoints))
-                Error(String.Format("The {0} has reached a point cost limit", currentUnit.UnitTypeName()));
-
+            {
+                string type = currentUnit.UnitTypeName();
+                Error($"The {type} has reached a point cost limit");
+            }
             else
             {
                 Army.Mod.AddMountByID(id, unit);
