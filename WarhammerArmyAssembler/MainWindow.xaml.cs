@@ -229,19 +229,25 @@ namespace WarhammerArmyAssembler
             double diff = u.GetUnitPoints() - Army.Data.Units[u.ID].GetUnitPoints();
 
             if (!Interface.Checks.EnoughPointsForEditUnit(u.ID, u.Size))
+            {
                 u.Size = ErrorAndReturnSizeBack("Not enough points to change", u.ID);
-
+            }
             else if ((u.MaxSize != 0) && (u.Size > u.MaxSize))
+            {
                 u.Size = ErrorAndReturnSizeBack("Unit size exceeds the maximum allowed", u.ID);
-
+            }
             else if (u.Size < u.MinSize)
+            {
                 u.Size = ErrorAndReturnSizeBack("Unit size is less than the minimum allowed", u.ID);
-
+            }
             else if ((u.Size > Army.Data.Units[u.ID].Size) && (!Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, diff, u.StaticPoints)))
+            {
                 u.Size = ErrorAndReturnSizeBack($"The {u.UnitTypeName()} has reached a point cost limit", u.ID);
-
+            }
             else
+            {
                 Army.Data.Units[u.ID].Size = u.Size;
+            }
 
             Interface.Reload.ReloadArmyData();
             Interface.Details.UpdateUnitDescription(u.ID, Army.Data.Units[u.ID]);
@@ -364,7 +370,8 @@ namespace WarhammerArmyAssembler
             Interface.Changes.Move(Interface.Changes.MovingType.ToMain);
         }
 
-        private void closeDetail_Click(object sender, RoutedEventArgs e) => Interface.Changes.DetailResize(open: false);
+        private void closeDetail_Click(object sender, RoutedEventArgs e) =>
+            Interface.Changes.DetailResize(open: false);
 
         private void closeErrorDetail_Click(object sender, RoutedEventArgs e) =>
             Interface.Changes.Move(Interface.Changes.MovingType.ToMain, err: true);
@@ -374,7 +381,10 @@ namespace WarhammerArmyAssembler
 
         private void unitDelete_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if ((e.LeftButton != MouseButtonState.Pressed) || (e.ClickCount != 2) || !Interface.Changes.ConfirmedDataCleaning())
+            if ((e.LeftButton != MouseButtonState.Pressed) || (e.ClickCount != 2))
+                return;
+
+            if (!Interface.Changes.ConfirmedDataCleaning())
                 return;
 
             Interface.Changes.DetailResize(open: false);
@@ -404,9 +414,11 @@ namespace WarhammerArmyAssembler
 
         private void unitDetailScroll_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (Army.Checks.IsUnitExistInArmy(Interface.Changes.CurrentSelectedUnit))
-                Interface.Details.UpdateUnitDescription(
-                    Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
+            if (!Army.Checks.IsUnitExistInArmy(Interface.Changes.CurrentSelectedUnit))
+                return;
+
+            Interface.Details.UpdateUnitDescription(Interface.Changes.CurrentSelectedUnit,
+                Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
         }
 
         private void armyPoints_MouseDown(object sender, MouseButtonEventArgs e) =>
@@ -442,7 +454,8 @@ namespace WarhammerArmyAssembler
                 e.Cancel = true;
         }
 
-        private void Window_Closed(object sender, EventArgs e) => Environment.Exit(0);
+        private void Window_Closed(object sender, EventArgs e) =>
+            Environment.Exit(0);
 
         private void ArmyList_SizeChanged(object sender, SizeChangedEventArgs e)
         {
@@ -504,7 +517,8 @@ namespace WarhammerArmyAssembler
             column.TextWrapping = Interface.Services.ChangeTextWrapping(column);
         }
 
-        private void dragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.DragMove();
+        private void dragWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) =>
+            this.DragMove();
 
         private void dragWindowBottom_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -512,7 +526,8 @@ namespace WarhammerArmyAssembler
                 maximizeWindow_MouseLeftButtonDown(null, null);
         }
 
-        public void closeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) => this.Close();
+        public void closeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) =>
+            this.Close();
 
         private void maximizeWindow_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
