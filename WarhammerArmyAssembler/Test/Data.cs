@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows;
-using System.Threading.Tasks;
 using System.Windows.Media;
 
 namespace WarhammerArmyAssembler.Test
@@ -42,7 +40,9 @@ namespace WarhammerArmyAssembler.Test
                     .GetUnitMultiplier(size);
             }
             else
+            {
                 Data.unitMount = null;
+            }
         }
 
         public static void PrepareEnemy(string enemyName)
