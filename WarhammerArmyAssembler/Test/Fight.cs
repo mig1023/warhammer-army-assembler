@@ -23,13 +23,17 @@ namespace WarhammerArmyAssembler.Test
             Interface.Test.VisibilityTest(before: true);
 
             if (testType == Data.TestTypes.battleRoyale)
+            {
                 await Task.Run(() => Fight.BattleRoyaleTest(Data.unit, Data.unitMount, current));
-
+            }
             else if (testType == Data.TestTypes.statisticTest)
+            {
                 await Task.Run(() => Fight.StatisticTest(Data.unit, Data.unitMount, Data.enemy, Data.enemyMount));
-
+            }
             else
+            {
                 await Task.Run(() => Fight.FullTest(Data.unit, Data.unitMount, Data.enemy, Data.enemyMount));
+            }
 
             foreach (Interface.Text line in Data.testConsole)
                 Interface.Test.FromConsoleToOutput(line.Content, line.Color);
@@ -97,11 +101,15 @@ namespace WarhammerArmyAssembler.Test
             Interface.Test.PreventConsoleOutput(prevent: false);
 
             if (royalNotation)
-                Data.Console(Data.text, $"vs {enemy.Name}: win: {(double)result[1] / 10:f1}% " +
-                    $"defeat: {((double)result[2] / 10):f1}%\n");                
+            {
+                Data.Console(Data.text, $"vs {enemy.Name}: " +
+                    $"win: {(double)result[1] / 10:f1}% " +
+                    $"defeat: {((double)result[2] / 10):f1}%\n");
+            }
             else
             {
-                Data.Console(Data.text, $"{unit.Name} win: {(double)result[1] / 10:f1}%" +
+                Data.Console(Data.text, $"{unit.Name} " +
+                    $"win: {(double)result[1] / 10:f1}%" +
                     $"\n{enemy.Name} win: {((double)result[2] / 10):f1}%");
 
                 if (result[0] > 0)
@@ -175,10 +183,14 @@ namespace WarhammerArmyAssembler.Test
                     opponentsWounds.Add(u.TestType, value);
             }
 
-            return (opponentsWounds[Unit.TestTypeTypes.Unit] > 0) && (opponentsWounds[Unit.TestTypeTypes.Enemy] > 0);
+            bool isUnitsHasWounds = opponentsWounds[Unit.TestTypeTypes.Unit] > 0;
+            bool isOpponentsHasWounds = opponentsWounds[Unit.TestTypeTypes.Enemy] > 0;
+
+            return isUnitsHasWounds && isOpponentsHasWounds;
         }
 
-        public static int FullTest(Unit originalUnit, Unit originalUnitMount, Unit originalEnemy, Unit originalEnemyMount)
+        public static int FullTest(Unit originalUnit, Unit originalUnitMount,
+            Unit originalEnemy, Unit originalEnemyMount)
         {
             round = 0;
 
@@ -233,9 +245,6 @@ namespace WarhammerArmyAssembler.Test
                     UnitRoundShow(u, u == unit);
 
                 participants.Sort((a, b) => a.CompareTo(b));
-
-                //if (round == 1)
-                //    participants.Sort((a, b) => a.CompareTo(b));
 
                 ShowRoundOrder(participants);
 
