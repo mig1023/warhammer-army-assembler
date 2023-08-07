@@ -311,15 +311,23 @@ namespace WarhammerArmyAssembler.Test
                     bool draw = true;
 
                     foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
-                        if (!((u.Key == unit.Mount) && (unit.Wounds.Value > 0)) && !((u.Key == enemy.Mount) && (enemy.Wounds.Value > 0)))
+                    {
+                        bool unitMount = (u.Key == unit.Mount) && (unit.Wounds.Value > 0);
+                        bool enemyMount = (u.Key == enemy.Mount) && (enemy.Wounds.Value > 0);
+
+                        if (!unitMount && !enemyMount)
                             battleResult[u.Key.ID] += RoundBonus(u.Value);
+                    }
                         
                     foreach (KeyValuePair<Unit, List<Unit>> u in BreakTestOrder)
                     {
                         if (u.Key.Wounds.Value <= 0)
                             continue;
 
-                        if (((u.Key == unit.Mount) && (unit.Wounds.Value > 0)) || ((u.Key == enemy.Mount) && (enemy.Wounds.Value > 0)))
+                        bool unitMount = (u.Key == unit.Mount) && (unit.Wounds.Value > 0);
+                        bool enemyMount = (u.Key == enemy.Mount) && (enemy.Wounds.Value > 0);
+
+                        if (unitMount || enemyMount)
                             continue;
 
                         if (RoundLostBy(u.Value, battleResult))
