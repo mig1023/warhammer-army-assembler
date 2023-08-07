@@ -89,7 +89,9 @@ namespace WarhammerArmyAssembler
             }
                 
             if (ArmyBook.Data.Artefact.ContainsKey(id) && ArmyBook.Data.Artefact[id].ArtefactAlreadyUsed)
+            {
                 return;
+            }
             else
             {
                 Interface.Changes.DragSender = sender;
@@ -109,9 +111,7 @@ namespace WarhammerArmyAssembler
 
             if (thisIsUnit)
             {
-                Unit unit = ArmyBook.Data.Units[id];
-
-                armyUnitImage.Source = ArmyBook.Services.GetUnitImage(unit.Image);
+                armyUnitImage.Source = ArmyBook.Services.GetUnitImage(ArmyBook.Data.Units[id].Image);
                 whithImage = armyUnitImage.Source != null;
             }
 
@@ -136,11 +136,17 @@ namespace WarhammerArmyAssembler
 
             UpdateLayout();
 
-            double descrHeight = armyUnitDescription.ActualHeight > 0 ? armyUnitDescription.ActualHeight : 20;
-            double specHeight = armyUnitSpecific.ActualHeight > 0 ? armyUnitSpecific.ActualHeight : 20;
-            double paramsHeight = detailUnitGrid.ActualHeight > 0 ? detailUnitGrid.ActualHeight : 20;
+            double descrHeight = armyUnitDescription.ActualHeight > 0 ?
+                armyUnitDescription.ActualHeight : 20;
+
+            double specHeight = armyUnitSpecific.ActualHeight > 0 ?
+                armyUnitSpecific.ActualHeight : 20;
+
+            double paramsHeight = detailUnitGrid.ActualHeight > 0 ?
+                detailUnitGrid.ActualHeight : 20;
             
-            armybookArtefactDetail.Height = armyUnitDescription.Margin.Top + descrHeight + specHeight + 20;
+            armybookArtefactDetail.Height = armyUnitDescription.Margin.Top + 
+                descrHeight + specHeight + 20;
             armybookDetail.Height = armybookArtefactDetail.Height + paramsHeight;
 
             double top = armyUnitDescription.Margin.Top + 35;
@@ -149,12 +155,15 @@ namespace WarhammerArmyAssembler
             armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
 
             double detailGridSubline = detailUnitGridBorder.Margin.Top + detailUnitGridBorder.ActualHeight;
-            profileMods.Margin = Interface.Changes.Thick(detailUnitGridBorder, left: 230, top: detailGridSubline);
+
+            profileMods.Margin = Interface.Changes.Thick(detailUnitGridBorder, 
+                left: 230, top: detailGridSubline);
 
             armyUnitSpecific.Foreground = ArmyBook.Data.FrontColor;
 
             top = armyArtefactDescription.Margin.Top + armyArtefactDescription.ActualHeight + 15;
-            armyArtefactSpecific.Margin = Interface.Changes.Thick(armyArtefactSpecific, left: 20, top: top);
+            armyArtefactSpecific.Margin = Interface.Changes.Thick(armyArtefactSpecific, 
+                left: 20, top: top);
             armyArtefactSpecific.Foreground = ArmyBook.Data.FrontColor;
         }
 
@@ -174,10 +183,14 @@ namespace WarhammerArmyAssembler
                 return;
 
             if ((sender is ScrollViewer) && Army.Checks.ThisIsAftefact(id))
+            {
                 Interface.Changes.ArmyGridDropArtefact(id, Interface.Changes.CurrentSelectedUnit);
+            }
             else
-                Interface.Details.UpdateUnitDescription(
-                    Interface.Changes.CurrentSelectedUnit, Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
+            {
+                Interface.Details.UpdateUnitDescription(Interface.Changes.CurrentSelectedUnit, 
+                    Army.Data.Units[Interface.Changes.CurrentSelectedUnit]);
+            }
 
             HideStartArmyHelpText();
         }
