@@ -133,10 +133,13 @@ namespace WarhammerArmyAssembler
         private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Left)
+            {
                 Interface.Changes.PreviewArmyList(prev: true);
-
+            }
             else if (e.Key == Key.Right)
+            {
                 Interface.Changes.PreviewArmyList(next: true);
+            }
         }
 
         private void showArmyAdditionalName_MouseDown(object sender, MouseButtonEventArgs e)
@@ -168,7 +171,8 @@ namespace WarhammerArmyAssembler
                 sortedBy.Margin = Interface.Changes.Thick(sortedBy, left: 0);
             }
 
-            Interface.Changes.LoadAllArmy(ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory), reload: true);
+            List<string> xmlBooks = ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
+            Interface.Changes.LoadAllArmy(xmlBooks, reload: true);
             Interface.Changes.PreviewArmyList();
         }
 
