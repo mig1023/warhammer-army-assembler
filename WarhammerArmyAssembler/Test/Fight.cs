@@ -889,12 +889,12 @@ namespace WarhammerArmyAssembler.Test
             if (randParams[1].Contains('+'))
             {
                 string[] randNumber = randParams[1].Split('+');
-                _ = int.TryParse(randNumber[0], out diceSize);
-                _ = int.TryParse(randNumber[1], out addSomething);
+                int.TryParse(randNumber[0], out diceSize);
+                int.TryParse(randNumber[1], out addSomething);
             }
             else
             {
-                _ = int.TryParse(randParams[1], out diceSize);
+                int.TryParse(randParams[1], out diceSize);
                 addSomething = 0;
             }
         }
@@ -904,7 +904,9 @@ namespace WarhammerArmyAssembler.Test
             int randomParam = 0;
 
             if (!param.Contains("D"))
+            {
                 randomParam = int.Parse(param);
+            }
             else
             {
                 RandomParamValues(param, out int diceNumber, out int diceSize, out int addSomething);
